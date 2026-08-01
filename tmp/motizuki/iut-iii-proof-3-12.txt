@@ -1,0 +1,787 @@
+
+=== PDF PAGE 184 ===
+184 SHINICHI MOCHIZUKI
+to this 1-column arithmetic holomorphic structure. That is to say,“expressibil-
+ity relative to the arithmetic holomorphic structure in the1-column”[cf. (SHE)]
+amounts preciselyto
+“expressibility via operations that are valid/executable/well-deﬁned even
+when subject to thecondition that thepilot-object log-volumeasso-
+ciated to the input data (F⊩▶×μ-)prime-strip [which is, of course, linked/
+related, via isomorphisms ofF⊩▶-prime-strips, to the possible output data
+F⊩▶-prime-strips!] be equal to theﬁxed value−|log(q)|∈R”.
+In particular, the discussion of (xi-d) thus yields the following conclusion:
+The multiradial construction algorithmof Theorem 3.11, followed by for-
+mation of theholomorphic hulland application of thelog-volume, yields a
+collection ofpossible log-volumes of pilot-object output data
+R≤−|log(Θ)| ⊆R
+that arelinked/related [cf. (IPL)], viaisomorphisms ofF⊩▶-prime-
+strips,t ot h epilot-object log-volume
+−|log(q)|∈R
+of theinput data (F⊩▶×μ-)prime-strip [cf. (SHE)].
+(xi-f) Thus, we conclude from (xi-e) that
+the construction of the subsetR≤−|log(Θ)| ⊆R of possible pilot-object
+log-volumes of output data issubject to thecondition that this con-
+struction of output data possibilities constitutes, in particular, a construc-
+tion [perhaps only up to some sort of“approximation”, as a result of vari-
+ous indeterminacies]o ft h epilot-object log-volumeof theinput data
+(F⊩▶×μ-)prime-strip,n a m e l y ,−|log(q)|∈R.
+The inclusion−|log(q)|∈R≤−|log(Θ)|, hence also the inequality
+−|log(q)|≤−|log(Θ)|∈R
+— i.e., the conclusion thatCΘ ≥−1 for any CΘ ∈R such that−|log(Θ)|≤
+CΘ·|log(q)| — in the statement of Corollary 3.12, then follows formally.
+(xi-g) Thus, in summary,
+the multiradial construction algorithmof Theorem 3.11, followed by
+formation of theholomorphic hulland application of thelog-volume,
+yields two tautologically equivalent ways to computethe log-volume
+of theq-pilot object at(1,0) — cf. Fig. 3.8 below.
+=== PDF PAGE 185 ===
+INTER-UNIVERSAL TEICHM¨ULLER THEORY III 185
+multiradial
+representation
+at 0-column (0,◦)
+permutation
+symmetry of
+≈
+´etale-picture
+multiradial
+representation
+at 1-column (1,◦)
+Kummer-
+detach-
+ment
+via
+log-
+Kummer
+⇑
+com-
+pati-
+bly
+with
+Θ×μ
+LGP-
+link
+com-
+pari-
+son
+via
+⇓
+hol.
+hull,
+log-
+vol.
+Θ-pilot object in
+Θ±ellNF-Hodge
+theater at (0,0)
+(−)⊩▶-portion,
+(−)⊢×μ-portion
+≈
+of Θ×μ
+LGP-link
+q-pilot object in
+Θ±ellNF-Hodge
+theater at (1,0)
+Fig. 3.8: Two tautologically equivalent ways to compute
+the log-volume of theq-pilot object at (1,0)
+(xi-h) In this context, it is useful to recall that the above argument depends, in
+an essential way [cf. the discussion of (ii), (vi)], on the theory of [EtTh], whichdoes
+not admit any evident generalizationto the case ofN-th tensor powers of Θ-pilot
+objects, forN≥2. That is to say, thelog-volumeof such anN-th tensor power of a
+Θ-pilot object must always be computed as the result ofmultiplying the log-volume
+of the original Θ-pilot object byN — cf. Remark 2.1.1, (iv); [IUTchII], Remark
+3.6.4, (iii), (iv). In particular, although the analogue of the above argument for such
+an N-th tensor power would lead tosharper inequalities than the inequalities
+obtained here, it is diﬃcult to see how to obtain such sharper inequalities via a
+routine generalization of the above argument. In fact, as we shall see in [IUTchIV],
+these sharper inequalities are known to befalse [cf. [IUTchIV], Remark 2.3.2, (ii)].
+(xii) In the context of the argument of (xi), it is useful to observe the important
+role played by theglobal realiﬁed Frobenioids that appear in the Θ×μ
+LGP-link. That
+istosay, sinceultimatelyoneisonlyconcernedwiththecomputationof log-volumes,
+it might appear, at ﬁrst glance, that it is possible to dispense with the use of
+such global Frobenioids and instead work only with the variouslocal Frobenioids,
+for v∈V, that are directly related to the computation of log-volumes. On the
+other hand, observe that since the isomorphism of [local or global!] Frobenioids
+arising from the Θ×μ
+LGP-link only preserves isomorphism classes of objects of
+these Frobenioids [cf. the discussion of Remark 3.6.2, (i)], to work only with local
+Frobenioids means that one must contend with theindeterminacy of not knowing
+whether, for instance, such a local Frobenioid object at somev∈Vnon corresponds
+to a given open submoduleof the log-shell atv or to, say, thepN
+v -multiple of this
+submodule,f o rN∈Z. Put another way, one must contend with the indeterminacy
+arising from the fact that, unlike the case with the global Frobenioids “F⊛
+MOD”,
+“F⊛R
+MOD”, objectsofthevariouslocalFrobenioidsthatariseadmit endomorphisms
+=== PDF PAGE 186 ===
+186 SHINICHI MOCHIZUKI
+which are not automorphisms. This indeterminacy has the eﬀect of rendering
+meaningless any attempt to perform a precise log-volume computation as in (xi).
+⃝
+Remark 3.12.1.
+(i) In [IUTchIV], we shall be concerned with obtainingmore explicit upper
+bounds on−|log(Θ)|, i.e.,estimates “CΘ” as in the statement of Corollary 3.12.
+(ii) It is not diﬃcult to verify that, forλ∈Q>0, one may obtain a similar
+theory to the theory developed in the present series of papers [cf. the discussion of
+Remark 3.11.1, (ii)] for“generalized Θ×μ
+LGP-links”of the form
+qλ ↦→ q
+( 12
+...
+(l⋇)2
+)
+— i.e., so the theory developed in the present series of papers corresponds to the
+case of λ= 1. This sort of “generalized Θ×μ
+LGP-link” is roughly reminiscent of —
+but by no means equivalent to! — the sort of issues considered in the discussion
+of Remark 2.2.2, (i). Here, we observe that raising to theλ-th power on the “q
+side”diﬀers quite fundamentallyfrom raising to theλ-th power on the “q(12...(l⋇)2)
+side”, an issue that is discussed brieﬂy [in the case ofλ= N] in the ﬁnal portion of
+Step (xi) of the proof of Corollary 3.12. That is to say, “generalized Θ×μ
+LGP-links”
+as in the above displaydiﬀer fundamentallyboth from the situation of Remark
+2.2.2, (i), and the situation discussed in the ﬁnal portion of Step (xi) of the proof of
+Corollary 3.12 in that the theory of theﬁrst powerof the´etale theta functionis
+left unchanged [i.e., relative to the theory developed in the present series of papers]
+— cf. the discussion of Remark 2.2.2, (i); Step (xi) of the proof of Corollary 3.12.
+At any rate, in the case of “generalized Θ×μ
+LGP-links” as in the above display, one
+may apply the same arguments as the arguments used to prove Corollary 3.12 to
+conclude theinequality
+CΘ≥−λ
+— i.e., which issharper,f o rλ<1, than the inequality obtained in Corollary 3.12 in
+t h ec a s eo fλ= 1. In fact, however, such sharper inequalities will not be of interest
+to us, since, in [IUTchIV], our estimates for the upper boundCΘ will besuﬃciently
+rough as to be unaﬀectedby adding a constant of absolute value≤1.
+(iii) In the context of the discussion of (ii) above, it is of interest to note that
+the multiradial theory ofmono-theta-theoretic cyclotomic rigidity, and, in
+particular, the theory of theﬁrst power of the ´etale theta function,m a yb e
+regarded as a theory that concerns a sort of“canonical proﬁnite volume”on
+the elliptic curves under consideration associated to theﬁrst power of the am-
+ple line bundle corresponding to the ´etale theta function. This point of view is
+also of interest in the context of the discussion of various approaches tocyclotomic
+rigidity summarized in Fig. 3.7 [cf. also the discussion of Remark 2.3.3]. Indeed,
+the elementary fact “Q>0
+⋂ ˆZ× = {1}”, which plays a key role in themulti-
+radial algorithms for cyclotomic rigidity isomorphisms in thenumber ﬁeld case
+=== PDF PAGE 187 ===
+INTER-UNIVERSAL TEICHM¨ULLER THEORY III 187
+[cf. [IUTchI], Example 5.1, (v), as well as the discussion of Remarks 2.3.2, 2.3.3
+of the present paper], may be regarded as an immediate consequence of an easy
+interpretation of the product formula in terms of thegeometry of the domain in
+the archimedean completion of the number ﬁeldQ determined by the inequality
+“≤1”, i.e., a domain which may be thought of as a sort of concrete geometric
+representation of a“canonical unit of volume”of the number ﬁeldQ.
+Remark 3.12.2.
+(i) One of the main themes of the present series of papers is the issue of
+dismantling the two underlying combinatorial dimensionsof a number ﬁeld
+— cf. Remarks 1.2.2, (vi), of the present paper, as well as [IUTchI], Remarks 3.9.3,
+6.12.3, 6.12.6; [IUTchII], Remarks 4.7.5, 4.7.6, 4.11.2, 4.11.3, 4.11.4. The principle
+examples of this topic may be summarized as follows:
+(a) splittings of various monoids intounit and value groupportions;
+(b) separating the “Fl” arising from thel-torsion points of the elliptic curve
+— which may be thought of as a sort of“ﬁnite approximation”of Z!—
+i n t oa[multiplicative] F⋇
+l -symmetry — which may also be thought of
+as corresponding to theglobal arithmeticportion of the arithmetic funda-
+mental groups involved — and a(n) [additive] F⋊±
+l -symmetry —w h i c h
+may also be thought of as corresponding to thegeometric p o r t i o no ft h e
+arithmetic fundamental groups involved;
+(c) separating the ring structures of the various global number ﬁelds
+that appear into their respective underlyingadditive structures — which
+may be related directly to the variouslog-shells that appear — and their
+respective underlyingmultiplicativestructures — which may be related
+directly to the variousFrobenioidsthat appear.
+From the point of view of Theorem 3.11, example (a) may be seen in the“non-
+interference”properties that underlie the log-Kummer correspondences of
+T h e o r e m3 . 1 1 ,( i i ) ,( b ) ,( c ) ,a sw e l la si nt h eΘ×μ
+LGP-link compatibilityproperties
+discussed in Theorem 3.11, (ii), (c), (d).
+(ii) On the other hand, another important theme of the present§3 consists
+o ft h ei s s u eo f“reassembling”these two dismantled combinatorial dimensionsby
+means of themultiradial mono-analytic containers furnished by themono-
+analytic log-shells— cf. Fig. 3.6 — i.e., of exhibiting the extent to which these
+two dismantled combinatorial dimensionscannot be separatedfrom one another,
+at least in the case of the Θ-pilot object, by describing the“structure of the
+intertwining”between these two dimensions that existed prior to their separa-
+tion. From this point of view, one may think of themultiradial representations
+discussed in Theorem 3.11, (i) [cf. also Theorem 3.11, (ii), (iii)], as theﬁnal output
+of this “reassembling procedure” for Θ-pilot objects. From the point of view of
+example (a) of the discussion of (i), this “reassembling procedure” allows one to
+compute/estimate the value group portionsof various monoids of arithmetic
+interest in terms of theunit group portions of these monoids. It is precisely
+these estimates that give rise to theinequality obtained in Corollary 3.12. That is
+to say, from the point of view ofdismantling/reassembling the intertwining between
+=== PDF PAGE 188 ===
+188 SHINICHI MOCHIZUKI
+value group and unit group portions, the argument of the proof of Corollary 3.12
+may be summarized as follows:
+(aitw) When considered from the point of view of log-volumes of Θ-pilot
+and q-pilot objects, the correspondence of the Θ×μ
+LGP-link [i.e., that sends
+Θ-pilot objects toq-pilot objects] may seem a bit“mysterious”or even,
+at ﬁrst glance,“self-contradictory”to some readers.
+(bitw) On the other hand, this correspondence of the Θ×μ
+LGP-link is made possi-
+ble by the fact that one works with Θ-pilot orq-pilot objects in terms of
+“suﬃciently weakened data”[namely, theF⊩▶×μ-prime-strips that
+appear in the deﬁnition of the Θ×μ
+LGP-link], i.e., data that is “suﬃciently
+weak” thatone can no longer distinguish betweenΘ-pilot and q-pilot ob-
+jects.
+(citw) Thus, if one thinks of theF⊩▶×μ-prime-strips that appear in the domain
+and codomain of the Θ×μ
+LGP-link as a“single abstract F⊩▶×μ-prime-
+strip”that is regarded/only known up to isomorphism, then the issue
+of which log-volume such an abstractF⊩▶×μ-prime-strip corresponds to
+[cf. (aitw)] is precisely the issue of“which intertwiningbetween value
+group and unit group portions”one considers, i.e., the issue of“which
+arithmetic holomorphic structure”[of the arithmetic holomorphic struc-
+tures that appear in the domain and codomain of the Θ×μ
+LGP-link] that one
+works in. Put another way, it is essentially atautological consequenceof
+the fact that these two arithmetic holomorphic structures in thedomain
+and codomainof the Θ×μ
+LGP-link aredistinguished from one another that
+the Θ×μ
+LGP-link yields a situation in whichboth the Θ-intertwining [i.e.,
+the intertwining associated to the Θ-pilot object in the domain of the
+Θ×μ
+LGP-link] and the q-intertwining [i.e., the intertwining associated to
+the q-pilot object in the codomain of the Θ×μ
+LGP-link] aresimultaneously
+valid, i.e.,
+(
+q-intertwining holds
+)
+∧
+(
+Θ-intertwining holds
+)
+— cf. the discussion of the“distinct labels approach”in Remark 3.11.1,
+(vii).
+(ditw) On the other hand, from the point of view of the analogy between
+multiradiality and the classical theory ofparallel transport via con-
+nections [cf. [IUTchII], Remark 1.7.1], the multiradial representa-
+tion of Theorem 3.11 [cf. also the discussion of Remark 3.11.1, especially
+Remark 3.11.1, (ii), (iii)] asserts that, up to the relatively mild “mon-
+odromy”constituted by theindeterminacies (Ind1), (Ind2), (Ind3), one
+may “parallel transport”or “confuse”the Θ-pilot object in thedo-
+main of the Θ×μ
+LGP-link, i.e., the Θ-pilot object represented relative to its
+“native intertwining/arithmetic holomorphic structure”, with the Θ-pilot
+object represented relative to the“alien intertwining/arithmetic holomor-
+phic structure”in thecodomain of the Θ×μ
+LGP-link.
+(eitw) In particular, one mayﬁx the arithmetic holomorphic structure of the
+codomainof the Θ×μ
+LGP-link, i.e., the“native intertwining/arithmetic holo-
+morphic structure”associated to theq-pilot objectin thecodomainof the
+=== PDF PAGE 189 ===
+INTER-UNIVERSAL TEICHM¨ULLER THEORY III 189
+Θ×μ
+LGP-link, and then, byapplying (ditw)a n dw o r k i n gu pt ot h eindeter-
+minacies (Ind1), (Ind2), (Ind3) [cf. also the subtleties discussed in (iv),
+(v) below; Remark 3.9.5, (vii), (viii), (ix)], construct the “native in-
+tertwining/arithmetic holomorphic structure”associated to the Θ-pilot
+object in thedomain of the Θ×μ
+LGP-link as a mathematical structure that
+is intrinsically associated to the underlying structure of — hence, in
+particular, simultaneously with/without invalidatingthe conditions
+imposed by — the“native intertwining/arithmetic holomorphic structure”
+associated to theq-pilot object in thecodomain of the Θ×μ
+LGP-link [cf.
+the discussion of Remark 3.11.1, especially Remark 3.11.1, (ii), (iii)]. In-
+deed, this point of view is precisely the point of view that is taken in the
+proof of Corollary 3.12 [cf., especially, Step (xi)].
+(fitw) One way of summarizing the situation described in (eitw)i si nt e r m s
+of logical relationsas follows. Themultiradial representationof The-
+orem 3.11 [cf. also the discussion of Remark 3.11.1] may be thought of
+[cf. theﬁrst “=⇒” of the following display] as an algorithm for construct-
+ing, up to suitable indeterminacies[cf. the discussion of (eitw)], the
+“Θ-intertwining”as a mathematical structure that isintrinsically as-
+sociated to the underlying structure of — hence, in particular,simulta-
+neously with/without invalidating[cf. thelogical relator “AND”, i.e.,
+“∧”] the conditions imposed by — the“ q-intertwining”, while holding
+the “single abstractF⊩▶×μ-prime-strip”of the discussion of (bitw),
+(citw) ﬁxed, i.e., in symbols:
+(
+q-itw.
+)
+=⇒
+(
+q-itw.
+)
+∧
+(
+Θ-itw./indets.
+)
+=⇒
+(
+Θ-itw./indets.
+)
+—w h e r et h esecond “=⇒” of the above display ispurely formal;“ i t w . ”
+and “/indets.” are to be understood, respectively as abbreviations for “in-
+tertwining holds” and “up to suitable indeterminacies”. Here, we observe
+that
+the “∧” of the above display may be regarded as the“image”of,
+hence, in particular, as aconsequenceof, the “∧” in the display
+of (c
+itw), via the various(sub)quotient operations discussed
+in Remark 3.9.5, (viii), i.e., whose subtlecompatibility properties
+allow one to conclude the “∧” of the above display from the “∧”
+in the display of (citw).
+Thus, at the level oflogical relations,
+the q-intertwining, hence also thelog-volume of theq-pilot ob-
+ject in the codomain of the Θ×μ
+LGP-link, may be thought of as a
+special case of the Θ-intertwining, i.e., at a more concrete
+level, of thelog-volume of the Θ-pilot objectin the domain of the
+Θ×μ
+LGP-link, regarded up tosuitable indeterminacies.
+Corollary 3.12 then follows,essentially formally.
+Alternatively, from the point of view of“[very rough!] toy models”, i.e., whose goal
+lies solely in representing certainoverall qualitative aspectsof a situation, one may
+think of the discussion of (aitw)∼(fitw) given above in the following terms:
+=== PDF PAGE 190 ===
+190 SHINICHI MOCHIZUKI
+(atoy) Consider two distinct copiesqR and ΘR of thetopological ﬁeld of
+real numbers R, equipped with labels “q” and “Θ”, together with an
+abstract symbol“∗”a n dassignments
+λq : ∗↦→q(−h)∈qR,λ Θ : ∗↦→Θ(−2h)∈ΘR,
+— where, in the present discussion, we shall write “q(−)”, “Θ(−)” to
+denote the respective elements/subsets ofqR, ΘR determined by an ele-
+ment/subset “(−)” ofR; h∈R>0 is a positive real number that we are
+interested inbounding from above. If oneforgets the distinct labels“q”
+and “Θ”, then these two assignmentsλq, λΘ are mutually incompatible
+and cannot be considered simultaneously, i.e., theycontradictone another
+[in the sense thatR∋−h̸=−2h∈R].
+(btoy) One aspect of the situation of (atoy) that renders thesimultaneous con-
+siderationof the two assignmentsλq, λΘ valid — i.e., at the level oflogical
+relations,
+(
+∗↦→q(−h)∈qR
+)
+∧
+(
+∗↦→Θ(−2h)∈ΘR
+)
+— is the use of theabstract symbol“∗”, i.e., which is,a priori,e n t i r e l y
+unrelated to any copies ofR [such asqR, ΘR].
+(ctoy) The other aspect of the situation of (atoy) that renders thesimultaneous
+consideration of the two assignmentsλq, λΘ valid— i.e., at the level of
+logical relations,
+(
+∗↦→q(−h)∈qR
+)
+∧
+(
+∗↦→Θ(−2h)∈ΘR
+)
+— is the use of thedistinct labels “q”, “Θ” for the copies ofR that
+appear in the assignmentsλq, λΘ.
+(dtoy) Now let us consider analternative approach to constructingthe assign-
+mentλΘ: We constructλΘ as the“assignment with indeterminacies”
+λInd
+Θ : ∗↦→ΘR≤−2h+ϵ⊆ΘR
+—w h e r eR≤−2h+ϵ
+def
+={x∈R| x≤−2h+ϵ}⊆R; ϵ∈R>0 is some positive
+number.
+(etoy) Now suppose that oneveriﬁes that one mayconstruct the “assignment
+with indeterminacies”λInd
+Θ of (dtoy) as a mathematical structure that is
+intrinsically associated to the underlying structure of the assignment
+λq — hence, in particular,simultaneously with/without invalidating
+the conditions imposed by — the assignmentλq,e v e ni fo n eforgets the
+labels“q”, “Θ”thatwereappendedtocopiesofR, i.e., evenifoneidentiﬁes
+qR, ΘR, in the usual way, withR [cf. the properties (IPL), (SHE) of
+Remark 3.11.1, (iii)]. That is to say, we suppose that one can show that
+theassignmentsdetermined, respectively, byλq, λInd
+Θ , byidentifyingcopies
+of R,n a m e l y ,
+=== PDF PAGE 191 ===
+INTER-UNIVERSAL TEICHM¨ULLER THEORY III 191
+∗↦→−h∈R, ∗↦→R≤−2h+ϵ⊆R
+— where the latter assignment may be considered as the assignment that
+maps∗to “some [undetermined] element∈R≤−2h+ϵ”—a r es u c ht h a t
+one may construct the latter assignment as a mathematical structure that
+is intrinsically associated to — hence, in particular,simultaneously
+with/without invalidatingthe conditions imposed by — the former as-
+signment. Here, wenotethatitis not particularly relevantthat“R≤−2h+ϵ”
+arose as some sort of“perturbation via indeterminacies of2h”[cf. the
+property (HIS) of Remark 3.11.1, (iv)].
+(ftoy) Thediscussionof(e toy)maybesummarizedatthelevelof logical relations
+[cf. the displays of (btoy), (ctoy)] as follows:
+(
+∗↦→−h
+)
+=⇒
+(
+∗↦→−h
+)
+∧
+(
+∗↦→R≤−2h+ϵ
+)
+=⇒
+(
+∗↦→R≤−2h+ϵ
+)
+—t h a ti st os a y ,“∗↦→−h” may be regarded as aspecial case of
+“∗↦→R≤−2h+ϵ”, which, in turn, may be regarded as a“version with
+indeterminacies”of “∗↦→−2h”. One then concludes formally that
+−h∈R≤−2h+ϵ and hence that
+−h≤−2h+ϵ, i.e., h≤ϵ
+— that is to say, thedesired upper bound onh.
+(iii) One fundamental aspect of the theory that renders possible the “reassem-
+bling procedure” discussed in (ii) [cf. the discussion of Step (iv) of the proof of
+Corollary 3.12] is the“juggling of ⊞, ⊠”[cf. the discussion of Remark 1.2.2, (vi)]
+eﬀected by thelog-links, i.e., thevertical arrows of the log-theta-lattice. This
+“juggling of ⊞, ⊠” may be thought of as a sort of combinatorial way of represent-
+ing thearithmetic holomorphic structureassociated to avertical lineof the
+log-theta-lattice. Indeed, atarchimedean primes, this juggling amounts essentially
+to multiplication by±i, which is a well-known method [cf. the notion of an“al-
+most complex structure”!] for representing holomorphic structures in the classical
+theory of diﬀerential manifolds. On the other hand, it is important to recall in
+this context that this “juggling of⊞, ⊠” is precisely what gives rise to theup-
+per semi-compatibility indeterminacy (Ind3) [cf. Proposition 3.5, (ii); Remark
+3.10.1, (i)].
+(iv) In the context of the discussion of (ii), (iii), it is of interest tocompare,
+in the cases of the0- and 1-columns of the log-theta-lattice, the way in which the
+theory of log-Kummer correspondences associated to a vertical column of the
+log-theta-lattice is applied in the proof of Corollary 3.12, especially in Steps (x) and
+(xi). We begin by observing that thevertical column[i.e., 0- or 1-column] under
+consideration may be depicted [“horizontally”!] in the fashion of the diagram of
+=== PDF PAGE 192 ===
+192 SHINICHI MOCHIZUKI
+the third display of Proposition 1.3, (iv)
+•0
+∥
+... →•→•→•→...
+... ↘↓↙ ...
+◦
+—w h e r et h e“•0” in the ﬁrst line of the diagram denotes the portion withvertical
+coordinate0 [i.e., the portion at (0,0) or (1,0)] of the vertical column under consid-
+eration. As discussed in Step (iii) of the proof of Corollary 3.12, since the Θ×μ
+LGP-link
+is fundamentally incompatible with the distinct arithmetic holomorphic
+structures — i.e.,ring structures — that exist in the 0- and 1-columns, one is
+obliged to work with theFrobenius-likeversions of theunit groupand value group
+portions of monoids arising from “•0” in the deﬁnition of the Θ×μ
+LGP-link precisely
+in order to avoid the need to contend, in the deﬁnition of the Θ×μ
+LGP-link, with the
+issue of describing the“structure of the intertwining”[cf. the discussion of
+(ii)] between these unit group and value group portions determined by thedistinct
+arithmetic holomorphic structures— i.e.,ring structures— that exist in the 0- and
+1-columns. On the other hand, one is also obliged to work with the´etale-like
+“◦” versions of various objects since it is precisely thesevertically coric versions
+that allow one toaccess, i.e., by serving ascontainers [cf. the discussion of (ii)]
+for, the other “•’s” in the vertical column under consideration. That is to say,
+although the variousKummer isomorphismsthat relate various portions of the
+Frobenius-like “•0” to the corresponding portions of the ´etale-like “◦”m a ya tﬁ r s t
+give the impression that either “•0”o r“◦” is superﬂuous or unnecessary in the
+theory, in fact
+both “•0”a n d“◦”play anessentialand by no means superﬂuousrole
+in the theory of the vertical columns of the log-theta-lattice.
+This aspect of the theory is essentially the same in the case of both the 0- and the
+1-columns. The log-link compatibilityof the variouslog-volumes that appear
+[cf. the discussion of Step (x) of the proof of Corollary 3.12; Proposition 3.9,
+(iv); the ﬁnal portion of Theorem 3.11, (ii)] is another aspect of the theory that is
+essentially the same in the case of both the 0- and the 1-columns. Also, although the
+discussion of the“non-interference”properties that underlie thelog-Kummer
+correspondences of Theorem 3.11, (ii), (b), (c), was only given expicitly, in eﬀect,
+in the case of the 0-column, i.e., concerning Θ-pilot objects, entirely similar “non-
+interference” properties hold forq-pilot objects. [Indeed, this may be seen, for
+instance, by applying thesame argumentsas the arguments that were applied in
+the case of Θ-pilot objects, or, for instance, byspecializing the non-interference
+properties obtained for Θ-pilot objects to the index “j = 1” as in the discussion of
+“pivotal distributions”in [IUTchI], Example 5.4, (vii).] Thesesimilarities between
+the 0- and 1-columns are summarized in the upper portion of Fig. 3.9 below.
+(v) In the discussion of (iv), we highlighted varioussimilarities between the
+0- and 1-columns of the log-theta-lattice in the context of Steps (x), (xi) of the
+=== PDF PAGE 193 ===
+INTER-UNIVERSAL TEICHM¨ULLER THEORY III 193
+proof of Corollary 3.12. By contrast, onesigniﬁcant diﬀerencebetween the theory
+of log-Kummer correspondences in the 0- and 1-columns is
+the lack of analogues forq-pilot objects of the crucialmultiradiality
+properties summarized in Theorem 3.11, (iii), (c)
+Aspect 0-column/ 1-column/
+of the theory Θ-pilot objects q-pilot objects
+essential role similar similar
+of both “•0”a n d“◦”
+log-link compatibility similar similar
+of log-volumes
+“non-interference”
+properties of similar similar
+log-Kummer
+correspondences
+multiradiality
+properties of hold do not hold
+Θ-/q-pilot objects
+used as tautological
+treatment of mono-analytic documenting device
+log-shells/ containers for logarithmic
+unit groupportions for relationship betw.
+regions ring structures
+resulting (Ind1), absorbed by applying
+indeterminacies (Ind2), holomorphic hulls,
+acting onlog-shells (Ind3) log-volumes
+Fig. 3.9: Similarities and diﬀerences, in the context of the Θ×μ
+LGP-link,
+between the 0- and 1-columns of the log-theta-lattice
+— i.e., in eﬀect, the lack of an analogue for theq-pilot objects of the theory of
+rigidity properties developed in [EtTh] [cf. the discussion of Remark 2.2.2, (i)].
+Another signiﬁcant diﬀerencebetween the theory oflog-Kummer correspondences
+=== PDF PAGE 194 ===
+194 SHINICHI MOCHIZUKI
+in the 0- and 1-columns lies in the way in which the associatedvertically coric holo-
+morphic log-shells [cf. Proposition 1.2, (ix)] are treated in their relationship to the
+unit groupportions of monoids that occur in the various “•’s” of thelog-Kummer
+correspondence. That is to say, in the case of the0-column, these log-shells are
+used as containers [cf. the discussion of (ii)] for the variousregions [i.e., sub-
+sets] arising from these unit group portions via various composites of arrows in the
+log-Kummer correspondence. This approach has theadvantage of admitting anin-
+terpretation— i.e., in terms of subsets ofmono-analytic log-shells—t h a tm a k e s
+sense even relative to thedistinct arithmetic holomorphic structuresthat appear in
+the 1-column of the log-theta-lattice [cf. Remark 3.11.1]. On the other hand, it has
+the drawback that it gives rise to theupper semi-compatibility indeterminacy
+(Ind3) discussed in the ﬁnal portion of Theorem 3.11, (ii). By contrast,
+i nt h ec a s eo ft h e1-column, since the associatedarithmetic holomor-
+phic structure is held ﬁxed and regarded [cf. the discussion of Step
+(xi) of the proof of Corollary 3.12] as thestandard with respect to which
+constructions arising from the 0-column are to becomputed,t h e r ei sno
+need [i.e., in the case of the 1-column] to require that the constructions
+applied admit mono-analytic interpretations.
+That is to say, in the case of the 1-column, the various unit group portions of
+monoids at the various “•’s” simply serve as a means ofdocumenting the “log-
+arithmic”relationship [cf. the deﬁnition of the log-link given in Deﬁnition 1.1,
+(i), (ii)!] between thering structuresin the domain and codomain of thelog-link.
+These ring structures give rise to the local copies of sets of integral elements “O”
+with respect to which the“mod” versions[cf. Example 3.6, (ii)] of categories of
+arithmetic line bundlesare deﬁned at the various “•’s”. Since the objects of these
+categories of arithmetic line bundles arenot equippedwith local trivializations
+at the variousv∈V [cf. the discussion of isomorphism classes of objects of
+Frobenioids in Remark 3.6.2, (i)],
+regions in log-shells may only be related to such categories of arithmetic
+linebundlesattheexpenseofallowingforan indeterminacywithrespect
+to “O×”-multiplesat eachv∈V.
+It is precisely this indeterminacy that necessitates the introduction, in Step (xi) of
+the proof of Corollary 3.12, ofholomorphic hulls, i.e., which have the eﬀect of
+absorbing this indeterminacy [cf. the discussion of Remark 3.9.5, (vii), (viii), (ix),
+(x), for more details]. Finally, in Step (xi) of the proof of Corollary 3.12,
+the indeterminacy in the speciﬁcation of a particular member of the
+collection of ring structures just discussed — i.e., arising from thechoice
+of a particular composite of arrows in the log-Kummer correspondence
+that is used to specify aparticular ring structure among its various
+“logarithmic conjugates” — isabsorbed by passing tolog-volumes
+— i.e., by applying thelog-link compatibility[cf. (iv)] of the various log-volumes
+associated to these ring structures [cf. the discussion of Remark 3.9.5, (vii), (viii),
+(ix), (x), for more details]. Thus, unlike the case of the 0-column, where themono-
+analytic interpretation via regions of mono-analytic log-shells gives rise only to
+upper bounds on log-volumes, the approach just discussed in the case of the 1-
+column — i.e., which makes essential use of thering structuresthat are available
+=== PDF PAGE 195 ===
+INTER-UNIVERSAL TEICHM¨ULLER THEORY III 195
+as a consequence of the fact that thearithmetic holomorphic structureis held
+ﬁxed — gives rise toprecise equalities [i.e., not just inequalities!] concerning
+log-volumes. These diﬀerencesbetween the 0- and 1-columns are summarized in
+the lower portion of Fig. 3.9.
+Remark 3.12.3.
+(i) Let S be a hyperbolic Riemann surface of ﬁnite typeof genus gS with rS
+punctures. WriteχS
+def
+=−(2gS−2+ rS) for theEuler characteristicof S and dμS
+for the K¨ahler metric onS [i.e., the (1,1)-form] determined by thePoincar´e metric
+on the upper half-plane. Recall theanalogy discussed in [IUTchI], Remark 4.3.3,
+between the theory oflog-shells, which plays a key role in the theory developed in
+the present series of papers, and theclassical metric geometry of hyperbolic
+Riemann surfaces. Then, relative to this analogy, theinequality obtained in
+Corollary 3.12 may be regarded as corresponding to the inequality
+χS = −
+∫
+S dμS < 0
+— i.e., in essence, a statement of thehyperbolicity of S — arising from the clas-
+sical Gauss-Bonnet formula, together with thepositivity of dμS. Relative to
+the analogy betweenreal analytic K¨ahler metrics and ordinary Frobenius liftings
+discussed in [pOrd], Introduction,§2 [cf. also the discussion of [pTeich], Introduc-
+tion,§0], the local property constituted by this positivity ofdμS may be thought
+of as corresponding to the [localproperty constituted by the]Kodaira-Spencer iso-
+morphism of an indigenous bundle— i.e., which gives rise to theordinarity of the
+corresponding Frobenius lifting on the ordinary locus — in thep-adic theory. As
+discussed in [AbsTopIII],§I5, these properties of indigenous bundles in thep-adic
+theory may be thought of as corresponding, in the theory oflog-shells,t ot h e“max-
+imal incompatibility”between the variousKummer isomorphismsand thecorically
+constructed data of the Frobenius-picture of Proposition 1.2, (x). On the other
+hand, it is just this “maximal incompatibility” that gives rise to the“upper semi-
+commutativity”discussed in Remark 1.2.2, (iii), i.e., [from the point of view of the
+theory of the present§3] theupper semi-compatibilityindeterminacy (Ind3) of
+Theorem 3.11, (ii), that underlies theinequality of Corollary 3.12 [cf. Step (x) of
+the proof of Corollary 3.12].
+(ii) The“metric aspect”of Corollary 3.12 discussed in (i) is reminiscent of the
+analogy between the theory of the present series of papers andclassical complex
+Teichm¨uller theory [cf. the discussion of [IUTchI], Remark 3.9.3] in the following
+sense:
+Just as classical complex Teichm¨uller theory is concerned with relating
+distinct holomorphic structures in a suﬃcientlycanonical way as tomin-
+imize the resulting conformality distortion,t h ecanonical nature of
+the algorithms discussed in Theorem 3.11 for relatingalien arithmetic
+holomorphic structures [cf. Remark 3.11.1] gives rise to a relatively
+strong estimateof the[log-]volume distortion[cf. Corollary 3.12] re-
+sulting from such a deformation of the arithmetic holomorphic structure.
+=== PDF PAGE 196 ===
+196 SHINICHI MOCHIZUKI
+Remark 3.12.4. In light of the discussion of Remark 3.12.3, it is of interest
+to reconsider the analogy between the theory of the present series of papers and
+the p-adic Teichm¨uller theoryof [pOrd], [pTeich], in the context of Theorem 3.11,
+Corollary 3.12.
+(i) First, we observe that thesplitting monoids at v∈Vbad [cf. Theorem
+3.11, (i), (b); Theorem 3.11, (ii), (b)] may be regarded as analogous to thecanoni-
+cal coordinatesof p-adic Teichm¨uller theory [cf., e.g., [pTeich], Introduction,§0.9]
+that are constructed over theordinary locusof a canonical curve. In particular, it
+is natural to regard thebad primes∈Vbad as corresponding to theordinary
+locus of a canonical curve and thegood primes∈Vgood as corresponding to the
+supersingular locus of a canonical curve. This point of view is reminiscent of the
+discussion of [IUTchII], Remark 4.11.4, (iii).
+(ii) On the other hand, thebi-coric mono-analytic log-shells — i.e., the
+various local “O×μ” — that appear in the tensor packets of Theorem 3.11, (i),
+(a); Theorem 3.11, (ii), (a), may be thought of as corresponding to the[multi-
+plicative!] Teichm¨uller representatives associated to the various Witt rings
+that appear inp-adic Teichm¨uller theory. Within a ﬁxed arithmetic holomorphic
+structure, these mono-analytic log-shells arise from“local holomorphic units”
+— i.e., “O×” — which are subject to theF⋊±
+l -symmetry. These “local holomor-
+phic units” may be thought of as corresponding to thepositive characteristic
+ring structures on [the positive characteristic reductions of] Teichm¨uller repre-
+sentatives. Here, the uniradial, i.e., “non-multiradial”, nature of these “local
+holomorphic units” [cf. the discussion of [IUTchII], Remark 4.7.4, (ii); [IUTchII],
+Figs. 4.1, 4.2] may be regarded as corresponding to themixed characteristic nature
+of Witt rings, i.e., the incompatibility of Teichm¨uller representatives with the
+additive structureof Witt rings.
+(iii) The setF⋇
+l of l⋇ “theta value labels”, which plays an important role in
+the theory of the present series of papers, may be thought of as corresponding to
+the “factor of p”that appears in the“mod p/p2 portion”, i.e., the gap separating
+the “mod p”and “mod p2”portions, of the rings of Witt vectors that occur in the
+p-adic theory. From this point of view, one may think of theprocession-normalized
+volumes obtained by takingaverages over j∈F⋇
+l [cf. Corollary 3.12] as corre-
+sponding to the operation ofdividing byp to relate the “modp/p2 portion” of the
+Witt vectors to the “modp portion” of the Witt vectors [i.e., the characteristicp
+theory]. In this context, themultiradial representationof Theorem 3.11, (i), by
+means of mono-analytic log-shells labeled by elements ofF⋇
+l may be thought of as
+corresponding to thederivativeof thecanonical Frobenius liftingon a canon-
+ical curve in thep-adic theory [cf. the discussion of [AbsTopIII],§I5] in the sense
+that this multiradial representation may be regarded as a sort ofcomparisonof the
+canonical splitting monoidsdiscussed in (i) to the“absolute constants”[cf.
+the discussion of (ii)] constituted by thebi-coric mono-analytic log-shells.T h i s
+“absolute comparison”is precisely what results in the indeterminacies (Ind1),
+(Ind2) of Theorem 3.11, (i).
+(iv) In the context of the discussion of (iii), we note that the set of labelsF⋇
+l
+may, alternatively, be thought of as corresponding to theinﬁnitesimal moduli of
+the positive characteristic curve under consideration in thep-adic theory [cf. the
+=== PDF PAGE 197 ===
+INTER-UNIVERSAL TEICHM¨ULLER THEORY III 197
+discussion of [IUTchII], Remark 4.11.4, (iii), (d)]. That is to say, the“deformation
+dimension”constituted by thehorizontal dimension of the log-theta-lattice in the
+theory of the present series of papers or by the deformations modulo various powers
+of p in thep-adic theory [cf. Remark 1.4.1, (iii); Fig. 1.3] ishighly canonical in
+nature, hence may be thought of as being equipped with a natural isomorphism to
+the “absolute moduli”— i.e., so to speak, the“moduli overF1”—o ft h egiven
+number ﬁeld equipped with an elliptic curve, in the theory of the present series
+of papers, or of thegiven positive characteristic hyperbolic curve equipped with a
+nilpotent ordinary indigenous bundle,i np-adic Teichm¨uller theory.
+Inter-universal Teichm¨uller theory p-adic Teichm¨uller theory
+splitting monoids canonical coordinates
+at v∈Vbad on theordinary locus
+bad primes∈Vbad ordinary locus of a can. curve
+good primes∈Vgood supersing. locus of a can. curve
+mono-analytic log-shells“O×μ” [multiplicative!] Teich. reps.
+uniradial “local hol. unitsO×” pos. char. ring structureson
+subject toF⋊±
+l -symmetry [pos. char. reductions of] Teich. reps.
+set of“theta value labels” factor p in
+F⋇
+l mod p/p2 portion of Witt vectors
+multiradial rep. via F⋇
+l -labeled derivativeof the
+mono-analytic log-shells canonical Frobenius lifting
+[cf. (Ind1), (Ind2), (Ind3)]
+set of“theta value labels”F⋇
+l implicit “absolute moduli/F1”
+inequality arising fromupper inequality arising from interference
+semi-compatibility [cf. (Ind3)] between Frobenius conjugates
+Fig. 3.10: The analogy between inter-universal Teichm¨uller theory
+and p-adic Teichm¨uller theory
+=== PDF PAGE 198 ===
+198 SHINICHI MOCHIZUKI
+(v)Let AbetheringofWittvectorsofaperfectﬁeld k ofpositivecharacteristic
+p; X a smooth, proper hyperbolic curveover A of genusgX which iscanonical in
+the sense of p-adic Teichm¨uller theory; ˆX the p-adic formal scheme associated
+to X; ˆU ⊆ˆX the ordinary locus of ˆX.W r i t eωXk for the canonical bundle of
+Xk
+def
+= X×A k. Then when [cf. the discussion of (iii)] one computes thederivative
+of the canonical Frobenius lifting Φ: ˆU →ˆU on ˆU, one must contend with
+“interference phenomena”betweenthe variouscopiesof some positivecharacteristic
+algebraic geometry set-up — i.e., at a more concrete level, the variousFrobenius
+conjugates“tpn
+”[ w h e r et is a local coordinate onXk] associated to variousn∈N≥1.
+In particular, this derivative only yields [upon dividing byp]a ninclusion [i.e., not
+an isomorphism!] of line bundles
+ωXk ↪→Φ∗ωXk
+— also known as the“[square] Hasse invariant”[cf. [pOrd], Chapter II, Propo-
+sition 2.6; the discussion of “generalities on ordinary Frobenius liftings” given in
+[pOrd], Chapter III,§1]. Thus, at the level of global degrees of line bundles,w e
+obtain aninequality [i.e., not an equality!]
+(1−p)(2gX−2) ≤0
+— which may be thought of as being, in essence, a statement of thehyperbolicity
+of X [cf. the inequality of the display of Remark 3.12.3, (i)]. Since the“Frobenius
+conjugate dimension”[i.e., the “n” that appears in “tpn
+”] in thep-adic theory
+corresponds to thevertical dimensionof the log-theta-lattice in the theory of the
+present series of papers [cf. Remark 1.4.1, (iii); Fig. 1.3], we thus see that the
+inequality of the above display in thep-adic case arises from circumstances that are
+entirely analogous to the circumstances — i.e., theupper semi-compatibility
+indeterminacy (Ind3) of Theorem 3.11, (ii) — that underlie the inequality of
+Corollary 3.12 [cf. Step (x) of the proof of Corollary 3.12; the discussion of Remark
+3.12.3, (i)].
+(vi) The analogies of the above discussion are summarized in Fig. 3.10 above.
+=== PDF PAGE 199 ===
+INTER-UNIVERSAL TEICHM¨ULLER THEORY III 199
+Bibliography
+[Lang] S. Lang,Algebraic number theory, Addison-Wesley Publishing Co. (1970).
+[pOrd] S. Mochizuki, A Theory of Ordinaryp-adic Curves,Publ. Res. Inst. Math. Sci.
+32 (1996), pp. 957-1151.
+[pTeich] S. Mochizuki, Foundations of p-adic Teichm¨uller Theory, AMS/IP Studies
+in Advanced Mathematics11, American Mathematical Society/International
+Press (1999).
+[QuCnf] S. Mochizuki, Conformal and quasiconformal categorical representation of hy-
+perbolic Riemann surfaces,Hiroshima Math. J.36 (2006), pp. 405-441.
+[SemiAnbd] S. Mochizuki, Semi-graphs of Anabelioids, Publ. Res. Inst. Math. Sci. 42
+(2006), pp. 221-322.
+[FrdI] S. Mochizuki, The Geometry of Frobenioids I: The General Theory,Kyushu J.
+Math. 62 (2008), pp. 293-400.
+[FrdII] S. Mochizuki, The Geometry of Frobenioids II: Poly-Frobenioids,Kyushu J.
+Math. 62 (2008), pp. 401-460.
+[EtTh] S. Mochizuki, The´Etale Theta Function and its Frobenioid-theoretic Manifes-
+tations, Publ. Res. Inst. Math. Sci.45 (2009), pp. 227-349.
+[AbsTopIII] S. Mochizuki, Topics in Absolute Anabelian Geometry III: Global Reconstruc-
+tion Algorithms,J. Math. Sci. Univ. Tokyo22 (2015), pp. 939-1156.
+[IUTchI] S. Mochizuki, Inter-universal Teichm¨uller Theory I: Construction of Hodge
+Theaters, RIMS Preprint1756 (August 2012), to appear inPubl. Res. Inst.
+Math. Sci.
+[IUTchII] S. Mochizuki,Inter-universal Teichm¨uller Theory II: Hodge-Arakelov-theoretic
+Evaluation, RIMS Preprint1757 (August 2012), to appear inPubl. Res. Inst.
+Math. Sci.
+[IUTchIV] S. Mochizuki, Inter-universal Teichm¨uller Theory IV: Log-volume Computa-
+tions and Set-theoretic Foundations, RIMS Preprint1759 (August 2012), to
+appear inPubl. Res. Inst. Math. Sci.
+[Royden] H. L. Royden,Real Analysis, Second Edition, The Macmillan Publishing Co.
+(1968).
+Updated versions of preprints are available at the following webpage:
+http://www.kurims.kyoto-u.ac.jp/~motizuki/papers-english.html

@@ -1,0 +1,1518 @@
+\n===== PDF PAGE 156 =====\n156 SHINICHI MOCHIZUKI
+which are compatible with the respective natural isomorphisms between
+“MOD”- and “mod”-subscripted versions [cf. Proposition 3.10, (i)]; here,
+the isomorphisms of the third line of the display induce isomorphisms of
+the global realiﬁed Frobenioidportions
+n,mC⊩
+LGP
+∼
+→C⊩
+LGP(n,◦HT D-Θ±ellNF); n,mC⊩
+lgp
+∼
+→C⊩
+lgp(n,◦HT D-Θ±ellNF)
+of theF⊩-prime-strips n,mF⊩
+LGP, F⊩(n,◦HT D-Θ±ellNF)LGP, n,mF⊩
+lgp,a n d
+F⊩(n,◦HT D-Θ±ellNF)lgp [cf. Propositions 3.7, (iii), (iv), (v); 3.10, (i)].
+Moreover, as one variesm∈Z, the various isomorphisms of (b) and of the ﬁrst
+line in the ﬁrst display of (c) aremutually compatiblewith one another, relative
+to the log-links of the n-th column of the LGP-Gaussian log-theta-lattice under
+consideration, in the sense that the only portions of the domains of these isomor-
+phisms that are possibly related to one another via thelog-links consist ofroots of
+unity in the domains of thelog-links [multiplication by which corresponds, via the
+log-link, to an“addition by zero”indeterminacy, i.e., tono indeterminacy!]
+— cf. Proposition 3.5, (ii), (c); Proposition 3.10, (ii). This mutual compatibility of
+the isomorphisms of the ﬁrst line in the ﬁrst display of (c) implies a corresponding
+mutual compatibilitybetween the isomorphisms of the second and third lines in
+the ﬁrst display of (c) thatinvolve the subscript “MOD”[but not between the
+isomorphisms that involve the subscript “mod”! — cf. Proposition 3.10, (iii); Re-
+mark 3.10.1]. On the other hand, the isomorphisms of (a) are subject to a certain
+“indeterminacy”as follows:
+(Ind3) as one varies m ∈Z, the isomorphisms of (a) are “upper semi-
+compatible”, relative to the log-links of the n-th column of theLGP-
+Gaussian log-theta-lattice under consideration, in a sense that involves
+certain natural inclusions “⊆”at vQ∈Vnon
+Q and certainnatural sur-
+jections “↠”at vQ∈Varc
+Q — cf. Proposition 3.5, (ii), (a), (b), for more
+details.
+Finally, as one variesm∈Z, the isomorphisms of (a) are [precisely!]compatible,
+relative to the log-links of the n-th column of theLGP-Gaussian log-theta-lattice
+under consideration, with the respectivelog-volumes [cf. Proposition 3.9, (iv)].
+(iii) (Θ×μ
+LGP-Link Compatibility)The various Kummer isomorphisms of (ii)
+satisfy compatibility properties with the varioushorizontal arrows— i.e.,Θ×μ
+LGP-
+links — of theLGP-Gaussian log-theta-lattice under consideration as follows:
+(a) The ﬁrst Kummer isomorphism of the ﬁrst display of (ii) induces — by
+applying theF⋊±
+l -symmetry of theΘ±ellNF-Hodge theatern,mHT Θ±ellNF
+—a Kummer isomorphism n,mF⊢×μ
+△
+∼
+→F⊢×μ
+△ (n,◦D⊢
+△) [cf. The-
+orem 1.5, (iii)]. Relative to this Kummer isomorphism, the full poly-
+isomorphism ofF⊢×μ-prime-strips
+F⊢×μ
+△ (n,◦D⊢
+△)
+∼
+→F⊢×μ
+△ (n+1,◦D⊢
+△)
+is compatible with the full poly-isomorphism ofF⊢×μ-prime-strips
+n,mF⊢×μ
+△
+∼
+→n+1,mF⊢×μ
+△\n===== PDF PAGE 157 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 157
+induced [cf. Theorem 1.5, (ii)] by thehorizontal arrows of the LGP-
+Gaussian log-theta-lattice under consideration [cf. Theorem 1.5, (iii)].
+(b) TheF⊩-prime-strips n,mF⊩
+env, F⊩
+env(n,◦D>) [cf. Proposition 2.1, (ii)] that
+appear implicitly in the construction of theF⊩-prime-strips n,mF⊩
+LGP,
+F⊩(n,◦HT D-Θ±ellNF)LGP, n,mF⊩
+lgp, F⊩(n,◦HT D-Θ±ellNF)lgp [cf. (ii), (b),
+(c), above; Proposition 3.4, (ii); Proposition 3.7, (iii), (iv); [IUTchII],
+Corollary 4.6, (iv), (v); [IUTchII], Corollary 4.10, (ii)] admitnatural
+isomorphisms of associatedF⊢×μ-prime-strips n,mF⊢×μ
+△
+∼
+→n,mF⊢×μ
+env ,
+F⊢×μ
+△ (n,◦D⊢
+△)
+∼
+→F⊢×μ
+env (n,◦D>) [cf. Proposition 2.1, (vi)]. Relative to
+these natural isomorphisms and to the Kummer isomorphism discussed in
+(a) above, the full poly-isomorphism ofF⊢×μ-prime-strips
+F⊢×μ
+env (n,◦D>)
+∼
+→F⊢×μ
+env (n+1,◦D>)
+is compatible with the full poly-isomorphism ofF⊢×μ-prime-strips
+n,mF⊢×μ
+△
+∼
+→n+1,mF⊢×μ
+△
+induced [cf. Theorem 1.5, (ii)] by thehorizontal arrows of the LGP-
+Gaussian log-theta-lattice under consideration [cf. Corollary 2.3, (iii)].
+(c) Recall the data “ n,◦R” [cf. Corollary 2.3, (ii)] associated to theD-
+Θ±ellNF-Hodge theatern,◦HT D-Θ±ellNF — data which appearsimplicitly
+in the construction of theF⊩-prime-strips n,mF⊩
+LGP, F⊩(n,◦HT D-Θ±ellNF)LGP,
+n,mF⊩
+lgp, F⊩(n,◦HT D-Θ±ellNF)lgp [cf. (ii), (b), (c), above; Proposition
+3.4, (ii); Proposition 3.7, (iii), (iv); [IUTchII], Corollary 4.6, (iv), (v);
+[IUTchII], Corollary 4.10, (ii)]. This data that arises fromn,◦HT D-Θ±ellNF
+is related to corresponding data that arises from the projective system of
+mono-theta environments associated to the tempered Frobenioids of the
+Θ±ellNF-Hodge theater n,mHT Θ±ellNF at v ∈Vbad via the Kummer
+isomorphisms and poly-isomorphisms of projective systems of
+mono-theta environments discussed in Proposition 2.1, (ii), (iii) [cf.
+also Proposition 2.1, (vi); the second display of Theorem 2.2, (ii)] and
+Theorem 1.5, (iii) [cf. also (a), (b) above], (v). Thealgorithmic con-
+struction of these Kummer isomorphisms and poly-isomorphisms of pro-
+jective systems of mono-theta environments, as well as of the poly-isomor-
+phism
+n,◦R
+∼
+→n+1,◦R
+induced by anypermutation symmetryof the´etale-picture [cf. the ﬁ-
+nal portion of (i) above; Corollary 2.3, (ii); Remark 3.8.2]n,◦HT D-Θ±ellNF
+∼
+→n+1,◦HT D-Θ±ellNF is compatible with the horizontal arrows of
+the LGP-Gaussian log-theta-lattice under consideration, e.g., with the full
+poly-isomorphism ofF⊢×μ-prime-strips
+n,mF⊢×μ
+△
+∼
+→n+1,mF⊢×μ
+△\n===== PDF PAGE 158 =====\n158 SHINICHI MOCHIZUKI
+induced [cf. Theorem 1.5, (ii)] by these horizontal arrows [cf. Corollary
+2.3, (iv)], in the sense that these constructions arestabilized/equivari-
+ant/functorial with respect to arbitrary automomorphisms of the domain
+and codomain of these horizontal arrows of theLGP-Gaussian log-theta-
+lattice. Finally, thealgorithmic constructionof the poly-isomorphisms
+of the ﬁrst display above, the various related Kummer isomorphisms, and
+the variousevaluation maps implicit in the portion of thelog-Kummer
+correspondence discussed in (ii), (b), arecompatible with the hori-
+zontal arrowsof theLGP-Gaussian log-theta-lattice under consideration,
+i.e., up to the indeterminacies(Ind1), (Ind2), (Ind3) described in (i), (ii)
+[cf. also the discussion of Remark 3.11.4 below], in the sense that these
+constructions arestabilized/equivariant/functorialwith respect to ar-
+bitrary automomorphisms of the domain and codomain of these horizontal
+arrows of theLGP-Gaussian log-theta-lattice.
+(d) The algorithmic construction of the Kummer isomorphisms of the
+ﬁrst display of (ii) [cf. also (a), (b) above; the gluing discussed in
+[IUTchII], Corollary 4.6, (iv); the Kummer compatibilities discussed in
+[IUTchII], Corollary 4.8, (iii); the relationship to the notation of [IUTchI],
+Deﬁnition 5.2, (vi), (viii), referred to in [IUTchII], Propositions 4.2, (i),
+and 4.4, (i)], as well as of the poly-isomorphisms between the data
+[{πκ-sol
+1 (n,◦D⊛) ↷M ⊛
+∞ κ(n,◦D⊚)}j
+→ M∞ κv(n,◦Dvj ) ⊆M∞ κ×v(n,◦Dvj )
+]
+v∈V
+∼
+→
+[{πκ-sol
+1 (n+1,◦D⊛) ↷M ⊛
+∞ κ(n+1,◦D⊚)}j
+→ M∞ κv(n+1,◦Dvj
+) ⊆M∞ κ×v(n+1,◦Dvj
+)
+]
+v∈V
+[i.e., of the second line of the ﬁrst display of [IUTchII], Corollary 4.7, (iii)]
+induced by anypermutation symmetryof the´etale-picture [cf. the ﬁ-
+nal portion of (i) above; Corollary 2.3, (ii); Remark 3.8.2]n,◦HT D-Θ±ellNF
+∼
+→n+1,◦HT D-Θ±ellNF are compatible [cf. the discussion of Remark
+2.3.2] with the full poly-isomorphism ofF⊢×μ-prime-strips
+n,mF⊢×μ
+△
+∼
+→n+1,mF⊢×μ
+△
+induced [cf. Theorem 1.5, (ii)] by thehorizontal arrows of the LGP-
+Gaussian log-theta-lattice under consideration, in the sense that these con-
+structions are stabilized/equivariant/functorial with respect to arbi-
+trary automomorphisms of the domain and codomain of these horizon-
+tal arrows of theLGP-Gaussian log-theta-lattice. Finally, the algorith-
+mic construction of the poly-isomorphisms of the ﬁrst display above,
+the various related Kummer isomorphisms, and the variousevaluation
+maps implicit in the portion of thelog-Kummer correspondence dis-
+cussed in (ii), (c), arecompatible with the horizontal arrows of the
+LGP-Gaussian log-theta-lattice under consideration, i.e., up to the inde-
+terminacies (Ind1), (Ind2), (Ind3) described in (i), (ii) [cf. also the dis-
+cussion of Remark 3.11.4 below], in the sense that these constructions\n===== PDF PAGE 159 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 159
+are stabilized/equivariant/functorial with respect to arbitrary auto-
+momorphisms of the domain and codomain of these horizontal arrows of
+the LGP-Gaussian log-theta-lattice.
+Proof. The various assertions of Theorem 3.11 follow immediately from the deﬁ-
+nitions and the references quoted in the statements of these assertions — cf. also
+the various related observations of Remarks 3.11.1, 3.11.2, 3.11.3, 3.11.4 below.⃝
+Remark 3.11.1.
+(i) One way to summarize the content of Theorem 3.11 is as follows:
+Theorem 3.11 gives analgorithm for describing, up to certain relatively
+mild indeterminacies,t h eLGP-monoids [cf. Fig. 3.1] — i.e., in
+essence, thetheta values
+{
+qj2 }
+j=1,...,l⋇
+— which are constructed relative to thescheme/ring structure, i.e.,
+“arithmetic holomorphic structure”, associated toone vertical line
+[i.e., “(n,◦)” for someﬁxed n∈Z] in the LGP-Gaussian log-theta-lattice
+under consideration, in terms of thea priorialien arithmetic holomorphic
+structure ofanother vertical line [i.e., “(n+1,◦)”] in the LGP-Gaussian
+log-theta-lattice under consideration [cf., especially, the ﬁnal portion of
+Theorem 3.11, (i), concerning functoriality and compatibility with the
+permutation symmetriesof the´etale-picture].
+This point of view is consistent with the point of view of the discussion of Remark
+1.5.4; [IUTchII], Remark 3.8.3, (iii).
+(ii) Although the various versions of the Θ-link are deﬁned [cf. Deﬁnition 3.8,
+(ii)] asgluings of
+theF⊩▶×μ-prime-strip whose associated pilot object [cf. [IUTchII], Deﬁ-
+nition 4.9, (viii)] is some sort of Θ-pilot objectin thedomain of the Θ-link
+to
+theF⊩▶×μ-prime-stripwhoseassociatedpilotobjectissomesortof q-pilot
+object in thecodomainof the Θ-link,
+in fact it is not diﬃcult to see that the theory developed in the present series of
+papers remainsessentially unaﬀected
+even if onereplaces this q-pilotF⊩▶×μ-prime-strip in thecodomain of
+the Θ-link by some otherF⊩▶×μ-prime-strip
+such as, for instance, theF⊩▶×μ-prime-strip whose associated pilot object is the
+qλ-pilot object[i.e., the λ-th power of theq-pilot object, for some positive integer
+λ>1] — cf. the discussion of Remark 3.12.1, (ii), below. One way to formulate this
+observation is as follows: The Θ-link compatibilitydescribed in Theorem 3.11, (iii),
+may be interpreted as an assertion to the eﬀect that thefunctorial construction\n===== PDF PAGE 160 =====\n160 SHINICHI MOCHIZUKI
+algorithm for the Θ-pilot object up to certainmild indeterminacies [i.e., (Ind1),
+(Ind2), (Ind3)] that is given in Theorem 3.11 may be regarded as
+an algorithm whose input data is an F⊩▶×μ-prime-strip [i.e., the
+F⊩▶×μ-prime-stripthatappearsinthe codomain of theΘ-link], andwhose
+functorialityiswithrespectto arbitrary isomorphismsoftheF⊩▶×μ-
+prime-strips that appear as input data of the algorithm.
+From the point of view of thegluing given by the Θ-link,t h i sfunctoriality in the
+input datagiven by anF⊩▶×μ-prime-strip may be interpreted in the following way:
+this functoriality allows one to regard thefunctorial construction al-
+gorithm for the Θ-pilot objectup to certainmild indeterminaciesthat is
+given in Theorem 3.11 as an algorithm with respect to which thecodomain
+Θ±ellNF-Hodge theater of the Θ-link [together with the other Θ±ellNF-
+Hodge theaters in the same vertical line of the log-theta-lattice as this
+codomain Θ±ellNF-Hodge theater] — i.e., in eﬀect, theq-pilotF⊩▶×μ-
+prime-strip, equipped with therigidiﬁcation determined by thearith-
+metic holomorphic structureconstitutedbythis vertical lineofΘ±ellNF-
+Hodgetheaters—is “coric”, i.e., “remainsinvariant”/“mayberegarded
+as being heldﬁxed” throughout the execution of the various operations
+of the algorithm.
+This interpretation will play acrucial role in the application of Theorem 3.11 to
+Corollary 3.12 below.
+(iii) On the other hand, the´etale-picture permutation symmetries dis-
+cussed in the ﬁnal portion of Theorem 3.11, (i) [cf. also the references to these
+symmetries in Theorem 3.11, (iii), (c), (d)], may be interpreted as follows: The
+output data of the functorial construction algorithm of Theorem 3.11 con-
+sists of a representation of the data of Theorem 3.11, (i), (b), (c) [cf. also Theorem
+3.11, (iii), (c), (d)], up to certainmild indeterminacieson themono-analytic ´etale-
+like log-shellsof Theorem 3.11, (i), (a), that satisﬁes the followingproperties:
+· (Input prime-strip link (IPL)) This output data is constructed
+in such a way that it islinked/related, via full poly-isomorphisms of
+F⊩▶×μ-prime-strips induced by operations in the algorithm, to the
+input data prime-strip, i.e., the “coric”/“ﬁxed”q-pilot F⊩▶×μ-
+prime-strip, equipped with its rigidifying arithmetic holomorphic
+structure [cf. the discussion of (ii)]. In particular, we note thateach of
+these “intermediate”F⊩▶×μ-prime-strips that appears in the construc-
+tion mayitself be taken to beboth
+the input data of thefunctorial algorithm of Theorem 3.11
+[cf. the discussion of (ii)]
+and
+[by applying the full poly-isomorphisms ofF⊩▶×μ-prime-strips
+that link/relate it to theq-pilotF⊩▶×μ-prime-strip] the input
+data for theKummer theorysurrounding the q-pilot object
+F⊩▶×μ-prime-strip in its rigidifying Θ±ellNF-Hodge theater
+[cf. the discussion of (ii)].\n===== PDF PAGE 161 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 161
+Atamore explicit level, thelinkingisomorphismsof“intermediate”F⊩▶×μ-
+prime-strips are given bycomposing
+· the inverses of theﬁrst two lower horizontal arrowsof the com-
+mutative diagram of Remark 3.10.2, followed by
+· the ﬁrst vertical arrowof this diagram — corresponding to the
+Kummer theoryportion of Theorem 3.11, (iii), (c), (d) — fol-
+lowed by
+· the three upper horizontal arrowsof the diagram — correspond-
+i n gt ot h eevaluation mapportion of Theorem 3.11, (iii), (c),
+(d).
+Here, we observe that theﬁnal evaluation mapp o r t i o no ft h i sc o m p o s i t e
+involves a construction of the Θ-pilot objectup to certain indeterminacies
+[i.e., (Ind1), (Ind2), (Ind3)], which, by applying the discussion of Remark
+2.4.2, (v), (vi), may beinterpreted— providedthat certainsign conditions
+[cf. the discussion of Remark 2.4.2, (iv), (vi)] are satisﬁed, and one takes
+into account the considerations discussed in Remarks 3.9.6 [concerning
+the product formula], 3.9.7 [concerninginverse systems of direct product
+regions] — as a construction of theglobal realiﬁed Frobenioidportion of
+anF⊩▶×μ-prime-strip, together withvarious possibilities[corresponding
+to the indeterminacies] for the“further rigidiﬁcation”determined by the
+pilot object.
+· (Simultaneous holomorphic expressibility (SHE))The construc-
+tion of this output data, as well as the output data itself, is expressed in
+terms that aresimultaneously valid/executable/well-deﬁned relative to
+both
+the arithmetic holomorphic structurethat gives rise to the
+Θ-pilot object in the domain of the Θ-link — i.e., in more
+technical language, in terms of/as afunction of structures in
+the Θ±ellNF-Hodge theater in the domain of the Θ-link —
+and
+the arithmetic holomorphic structurethat gives rise to the
+input data prime-strip[i.e., such as theq-pilotF⊩▶×μ-prime-
+strip, as discussed in (ii)] in thecodomainof the Θ-link — i.e., in
+more technical language, in terms of/as afunction of structures
+in the Θ±ellNF-Hodge theater in the codomain of the Θ-link.
+In passing, we observe that this property “SHE” may be understood, in
+a slightly more concrete way, as corresponding to the fact that thechain
+of (sub)quotients considered in Remark 3.9.5, (viii), (ix), forms aclosed
+loop.
+These twofundamental propertiesof the output data of the algorithm of Theorem
+3.11 will play acentral rolein the application of Theorem 3.11 to Corollary 3.12
+below. In the context of these two fundamental properties, it is interesting to ob-
+serve that, relative to the analogy betweenmultiradiality and crystals/connections
+[cf. [IUTchII], Remark 1.7.1; [IUTchII], Remark 1.9.2, (ii), (iii)],\n===== PDF PAGE 162 =====\n162 SHINICHI MOCHIZUKI
+the distinction betweenabstractF⊩▶×μ-prime-strips and variousspeciﬁc
+realizations of suchF⊩▶×μ-prime-strips [e.g., arising from the structure
+of a Θ±ellNF-Hodge theater]
+may be understood as corresponding to
+the distinction between reduced characteristic p schemes [where p is a
+prime number] andthickenings of such schemes overZp
+in the context ofp-adic crystals.
+(iv) TheSHEproperty discussed in (iii) may be thought of as a sort of“parallel
+transport”mechanism for the Θ-pilot object [cf. the analogy betweenmultiradiality
+and connections, as discussed in [IUTchII], Remark 1.7.1; [IUTchII], Remark 1.9.2,
+(ii)], up to certain mild indeterminacies, from the [arithmetic holomorphic structure
+represented by the Θ±ellNF-Hodge theater in the] domain of the Θ-link to the
+[arithmetic holomorphic structure represented by the Θ±ellNF-Hodge theater in
+the] codomainof the Θ-link. On the other hand, in this context, it is important to
+observe that:
+· (Algorithmic parallel transport (APT)) This parallel transport
+mechanism does not consist of a simple instance of transport of some
+set-theoretic region[such as the region in the tensor packet of log-shells
+determined by the Θ-pilot object in the domain of the Θ-link]via some
+set-theoretic function. Rather, it consists of aconstruction algorithm
+that is simultaneously valid/executable/well-deﬁned with respect
+to the arithmetic holomorphic structures in the domain and codomain of
+the Θ-link [cf. the discussion of (iii)].
+[In this context, it is important to remember that although thisconstruction algo-
+rithm may yield, asoutput,v a r i o u s“possible regions”, such possible regionscannot
+necessarily bedirectly comparedwith various structures in thecodomainof the
+Θ-link. That is to say, suchcomparisonstypically require the application of further
+techniques, as discussed in Remark 3.9.5, (vii).] In particular, if one takes the point
+of view —as will be done in Corollary 3.12 below!— that one is only interested in
+considering the qualitative logical aspects/consequences of the construction
+algorithm of Theorem 3.11, then:
+· (Hidden internal structures (HIS)) One may [and, indeed, it is
+often useful to] regard this construction algorithm of Theorem 3.11 as
+a construction algorithm for producing“some sort of output data”
+satisfying various properties [cf. (iii)] associated to“some sort of input
+data”[cf. (ii)] and forget that this construction algorithm of Theorem
+3.11 hasanything to do withtheta functions[e.g., the theory of [EtTh]]
+or theta values[i.e., the
+{
+qj2
+}
+j=1,...,l⋇
+]!
+That is to say, theta functions/theta values may be regarded asHIS of the con-
+struction algorithm of Theorem 3.11 — somewhat like the internal structure of the
+CPU or operating system of a computer! — i.e., internal structures whose technical
+details are [of course, ofcrucial importance from the point of view of theactual
+functioning of the construction algorithm, but nonetheless]irrelevantor uninterest-
+ing from the point of view of the“end user”, who is only interested in applying the\n===== PDF PAGE 163 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 163
+construction algorithm to certaininput data to obtain certainoutput data. [Here,
+we observe in passing that, relative to this analogy with the internal structure of the
+CPU or operating system of a computer,t h eF⊩▶×μ-prime-strips that occur in the
+Θ-link may be thought of as a sortconnecting cable, i.e., of the sort that is used
+to link distinct computers via theinternet. That is to say, despite the fact that
+such a connecting cable may have avery simple internal structureby comparison to
+the computers that it connects, the connection that it furnishes hashighly nontrivial
+consequences[e.g., as in the case of theinternet!] — cf. the discussion in (iii) of the
+input prime-strip link (IPL)and the analogy withcrystals/connections.] On
+the other hand, we observe that, unlike Corollary 3.12 below, which only concerns
+qualitative logical aspects/consequencesof the construction algorithm of Theorem
+3.11, the explicit computation to be performed in [IUTchIV],§1, of the log-
+volumes that occur in the statement of Corollary 3.12 makesessential useof the
+way in whichtheta valuesoccur in the construction algorithm of Theorem 3.11.
+(v) Thus, in summary, the above discussion yields a slightly diﬀerent, and in
+some sense more detailed, way [by comparison to (i)] to summarize the content
+of the construction algorithm of Theorem 3.11 [cf. also the discussion of Remark
+3.12.2, (ii), below]: The functorial construction algorithm of Theorem 3.11 is an
+algorithm whose
+· input data consists solely of anF⊩▶×μ-prime-strip, regarded up to
+isomorphism [cf. (ii)], and whose
+· output data consists of certain data that islinked/related, via full
+poly-isomorphisms ofF⊩▶×μ-prime-strips induced by operations in the
+algorithm, to theinput data prime-strip, and, moreover, whose con-
+struction algorithm may be expressed in terms that aresimultaneously
+valid/executable/well-deﬁned relative toboth the arithmetic holomorphic
+structure that gives rise to the Θ-pilot objectin thedomain of the Θ-link
+and the arithmetic holomorphic structure that gives rise to the input
+data prime-strip[i.e., such as theq-pilotF⊩▶×μ-prime-strip].
+This construction algorithm of Theorem 3.11 makescrucial useof certainHIS such
+as theta functionsand theta values, but these HIS may beignored, if one is only
+interested in the qualitative logical aspects/consequences of the input and output
+data of the algorithm.
+(vi) In the context of theinput prime-strip link (IPL)and simultaneous
+holomorphic expressibility (SHE)properties discussed in (iii), it is perhaps of
+interest to consider what happens in the case of the verysimple, naive example
+discussed in Remark 2.2.2, (i). That is to say, suppose that one considers the
+“naive version”of the Θ-link given by a correspondence of the form
+q ↦→qλ
+—w h e r eλ>1i sa positive integer—r e l a t i v et oasingle arithmetic holomorphic
+structure, i.e., in eﬀect,ring structure “R”. [Here, we remark that, unlike the
+situation considered in the discussion of (ii), where “qλ”a p p e a r si nt h ecodomain
+of some modiﬁed version of the Θ-link, the “qλ” in the present discussion appears
+in thedomain of some modiﬁed version of the Θ-link.] Then thevery deﬁnition of\n===== PDF PAGE 164 =====\n164 SHINICHI MOCHIZUKI
+this naive versionof the Θ-link yields anexplicit construction algorithmfor “qλ”,
+namely, as the λ-th power of “q”. That is to say, this [essentially tautological!]
+explicit construction algorithm for “qλ” satisﬁes theSHE property considered in
+(iii) in the sense that
+the tautological construction algorithmgiven by taking “theλ-th power
+of q” may be regarded assimultaneously executable relative to both the
+arithmetic holomorphic structure [i.e., in eﬀect, ring structure] that gives
+rise to “q”and the arithmetic holomorphic structure [i.e., in eﬀect, ring
+structure] that gives rise to “qλ”.
+On the other hand, we observe that this sort of [essentially tautological!] SHE
+property is achieved as the cost ofsacriﬁcing the establishment of the analogue of
+the IPL property of (iii), in the sense that
+if one restricts oneself to considering “q”a n d“qλ” inside theﬁxed con-
+tainer constituted by the given arithmetic holomorphic structure
+[i.e., in eﬀect, ring structure “R”] that gives rise to “q”, then the tauto-
+logical construction algorithm considered above doesnot induceany sort
+of identiﬁcation between “q”a n d“qλ”.
+(vii) We maintain the notation of (vi). One may then approach the issue of
+establishing the analogue of the IPL property of (iii) by introducing a formal
+symbol “∗” [corresponding to the abstractF⊩▶×μ-prime-strips that appear in the
+Θ-link] and then considering one of the followingtwo approaches:
+· (Distinct labels)It is essentially a tautology that in order to consider
+both of the assignments∗↦→q and∗↦→qλ simultaneously [i.e., in
+order to establish the analogue of the IPL property of (iii)!], it is necessary
+to introducedistinct labels “†”a n d“‡” for the arithmetic holomorphic
+structures [i.e., in eﬀect, ring structures] that give rise to “q”a n d“qλ”,
+respectively. That is to say, it is a tautology that one may consider the
+assignments
+∗↦→‡qλ, ∗↦→†q
+simultaneously and without introducing anyinconsistencies.O nt h e
+other hand, this approach via the introduction oftautologically distinct
+labels — which may be summarized via the diagram
+∗↦→ ‡qλ∈ ‡R
+∥
+...
+??.
+..
+∗↦→
+†q∈ †R
+IPL: holds
+SHE: ??
+— has thedrawbackthat it is by no means clear, at least in anya priori
+sense, how to establish the analogue of theSHE property of (iii), since it\n===== PDF PAGE 165 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 165
+is by no means clear, at least in anya priorisense, how to “compute” the
+relationship between the “†”a n d“‡” arithmetic holomorphic structures
+[i.e., in eﬀect, ring structures].
+· (Forced identiﬁcation of arithmetic holomorphic structures)Of
+course, one may then attempt to remedy thedrawback that appeared in
+the distinct labels approachby simply arbitrarily identifying the “†”
+and “‡” arithmetic holomorphic structures [i.e., in eﬀect, ring structures],
+that is to say, by simplydeleting/forgetting the distinct labels “†”a n d
+“‡”. This approach — which may be summarized via the diagram
+∗↦→ qλ∈ R
+...
+??...
+∥
+∗↦→ q∈ R
+IPL: ??
+SHE: holds
+— allows one to apply the [tautological!]construction algorithmdiscussed
+in (vi). On the other hand, this approach has thedrawbackthat, in order
+to consider the assignments
+∗↦→qλ, ∗↦→q
+simultaneouslyandconsistently[i.e., in order to establish the analogue
+of the IPL property of (iii)!], one is led [at least in the absence of more
+sophisticated machinery!] to regard “q”a sb e i n gonly well-deﬁned up
+to possible confusion with “qλn
+”, for some indeterminaten∈Z.T h a t
+is to say, in summary, this approach gives rise to a sort of“uninterest-
+ing/trivial multiradial representationof “qλ” via
+“{qλn
+}n∈Z”
+— which [despite being uninteresting/trivial!] does indeed satisfy the
+formal analoguesof theIPL and SHE properties of (iii).
+(viii) We conclude our discussion of thesimple, naive examples discussed in
+(vi) and (vii) by considering therelationship between these simple, naive examples
+and the theory of the present series of papers. We begin by observing that the
+“trivial multiradial representation{qλn
+}n∈Z”discussed in (vii) is, on the one hand,
+of interest, in the context of theIPL and SHE properties of (iii), in that it consti-
+tutes auseful elementary “toy model”for considering thequalitative logical
+aspects of these fundamental properties satisﬁed by themultiradial construction
+algorithm of Theorem 3.11. On the other hand, this “trivial multiradial represen-
+tation” isuseless from the point of view of applications such as the log-volume
+estimatesgiveninCorollary3.12below[cf. thediscussionoftheﬁnalportionof(iv)]\n===== PDF PAGE 166 =====\n166 SHINICHI MOCHIZUKI
+for the following reasons: This“trivial multiradial representation{qλn
+}n∈Z”
+is obtained by
+· allowing for indeterminacies in the value group portion [i.e., “qZ”]
+of the data under consideration,
+· while theunit groupportion [i.e., the “O×μ’s” associated to the local
+ﬁelds that appear] of the data under consideration is heldrigid [i.e., not
+subject to indeterminacies];
+· only working with the multiplicative structure constituted by the
+value groupportion of the rings involved, and
+· ignoring issues related to theadditive structureof the rings involved,
+especially, issues related to theintertwining between the additive and
+multiplicativestructures of these rings [cf. the discussion of Remark 3.12.2,
+(ii), below].
+By contrast, thelog-volume estimatesof Corollary 3.12 below rely, in an essential
+way, on the fact that in themultiradial construction algorithm of Theorem
+3.11:
+· the value group portions of the data under consideration [i.e., the
+F⊩▶-prime-strips associated to theF⊩▶×μ-prime-strips that appear in
+the deﬁnition of the Θ-link] are heldrigid [i.e., are not subject to inde-
+terminacies],
+· while theunit groupportions of the data under consideration [i.e., the
+F⊢×μ-prime-strips associated to theF⊩▶×μ-prime-strips that appear in
+the deﬁnition of the Θ-link] are subject to theindeterminacies (Ind1),
+(Ind2), (Ind3);
+· the multiradial construction algorithm makes use, via thelog-Kummer
+correspondence, of the structure of theintertwining between thead-
+ditive and multiplicative structures of the rings involved [cf. the dis-
+cussion of Remark 3.12.2, (ii), (iii), (iv), (v), below].
+Finally, we observe that the technique of assigningdistinct labels that appears
+in the distinct labels approachdiscussed in (vii) isformalized in the theory of the
+present series of papers by means of the notion ofFrobenius-like structures,
+i.e., at a more concrete level, mathematical objects that, at leasta priori,o n l y
+make sense within the Θ±ellNF-Hodge theater labeled “(n,m)”[where n,m∈Z]o f
+the log-theta-lattice. The problem of relating objects arising from Θ±ellNF-Hodge
+theaters withdistinct labels “(n,m)”is then resolved in the present series of papers
+— not by means of“forced identiﬁcation”[i.e., in the style of the discussion of
+(vii)] of Θ±ellNF-Hodge theaters with distinct labels, but rather — by considering
+the permutation symmetries [i.e., of the sort discussed in the ﬁnal portion of
+Theorem 3.11, (i)] satisﬁed by´etale-like structures. Here, it is perhaps useful
+to recall that thefundamental model for such permutation symmetries is, in the
+notation of [IUTchII], Example 1.8, (i),
+Π −→G ←−Π
+— where the arrows “−→”a n d“←−” denote the poly-morphism given by compos-
+ing the natural surjection Π↠ Π/Δ with the full poly-isomorphism Π/Δ
+∼
+→G,\n===== PDF PAGE 167 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 167
+and we observe that the diagram of this display admits apermutation symmetry
+that switches these two arrows “−→”a n d“←−”.
+Remark 3.11.2.
+(i) In Theorem 3.11, (i), we do not apply theformalism or language developed
+in [IUTchII],§1, for discussing multiradiality. Nevertheless, the approach taken in
+Theorem 3.11, (i) — i.e., by regarding the collection of data (a), (b), (c) up to the
+indeterminacies given by (Ind1), (Ind2) — to constructing“multiradial repre-
+sentations”amounts, in essence, to a special case of thetautological approach
+to constructing multiradial environments discussed in [IUTchII], Example 1.9, (ii).
+That is to say, this tautological approach is applied to thevertically coric con-
+structions of Proposition 3.5, (i); 3.10, (i), which,a priori,a r euniradialin the sense
+that they depend, in an essential way, on thearithmetic holomorphic structure
+constituted by aparticular vertical line — i.e., “(n,◦)” for someﬁxed n∈Z —i n
+the LGP-Gaussian log-theta-lattice under consideration.
+(ii) One important underlying aspect of thetautological approach to multira-
+diality discussed in (i) is the treatment of the variouslabels that occur in the
+multiplicativeand additive combinatorial Teichm¨uller theoryassociated to
+theD-Θ±ellNF-Hodge theatern,◦HT D-Θ±ellNF under consideration [cf. the theory
+of [IUTchI],§4,§6]. The various transitions between types of labels is illustrated
+in Fig. 3.3 below. Here, we recall that:
+(a) the passage from theF⋊±
+l -symmetry to labels∈Fl forms the content
+of the associatedD-Θ±ell-Hodge theater[cf. [IUTchI], Remark 6.6.1];
+(b) the passage from labels∈Fl to labels∈|Fl| forms the content of the
+functorial algorithmof [IUTchI], Proposition 6.7;
+(c) the passage from labels∈|Fl| to±-processions forms the content of
+[IUTchI], Proposition 6.9, (ii);
+(d) the passage from theF⋇
+l -symmetry to labels∈F⋇
+l forms the content
+of the associatedD-ΘNF-Hodge theater[cf. [IUTchI], Remark 4.7.2, (i)];
+(e) the passage from labels∈F⋇
+l to ⋇-processions forms the content of
+[IUTchI], Proposition 4.11, (ii);
+(f) the compatibility between⋇-processions and±-processions, relative
+tothenaturalinclusionof labels F⋇
+l ↪→|Fl|, formsthecontentof[IUTchI],
+Proposition 6.9, (iii).
+Here, we observe in passing that, in order to perform these varioustransitions,i t
+is absolutely necessary to work withall of the labels inFl or|Fl|, i.e., one does
+not have the option of“arbitrarily omitting certain of the labels”[cf. the discussion
+of [IUTchII], Remark 2.6.3; [IUTchII], Remark 3.5.2]. Also, in this context, it
+is important to note that there is a fundamental diﬀerence between thelabels∈
+Fl,|Fl|,F⋇
+l —whichareessentially arithmetic holomorphicinthesensethatthey
+depend, in an essential way, on the various local and globalarithmetic fundamental
+groups involved — and theindex sets of the mono-analytic±-processions\n===== PDF PAGE 168 =====\n168 SHINICHI MOCHIZUKI
+that appear in the multiradial representation of Theorem 3.11, (i). Indeed, these
+index sets are just“naked sets”which are determined, up to isomorphism, by their
+cardinality.I np a r t i c u l a r ,
+the construction of these index sets isindependent of the variousarith-
+metic holomorphic structuresinvolved.
+Indeed, it is precisely this property of these index sets that renders them suitable
+for use in the construction of themultiradial representationsof Theorem 3.11, (i).
+As discussed in [IUTchI], Proposition 6.9, (i), forj∈{0,...,l ⋇}, there are precisely
+j+1 possibilitiesfor the “element labeledj” in the index set of cardinalityj+1;this
+leadstoatotalof( l⋇+1)! =l±! possibilitiesforthe“labelidentiﬁcation”ofelements
+of index sets of capsules appearing in the mono-analytic±-processions of Theorem
+3.11, (i). Finally, in this context, it is of interest to recall that the“rougher approach
+to symmetrization”that arises when one works withmono-analytic processionsis
+[“downward”] compatiblewith the ﬁner arithmetically holomorphic approach to
+symmetrization that arises from theF⋊±
+l -symmetry [cf. [IUTchII], Remark 3.5.3;
+[IUTchII], Remark 4.5.2, (ii); [IUTchII], Remark 4.5.3, (ii)].
+F⋊±
+l -symmetry
+⇓
+F⋇
+l
+-symmetry
+⇓
+labels∈Fl =⇒ labels∈|Fl|
+⇓
+⇐= labels∈F⋇
+l
+⇓
+±-procession ⇐= ⋇-procession
+Fig. 3.3: Transitions from symmetries to labels to processions
+in a Θ±ellNF-Hodge theater
+(iii) Observe that the“Kummer isomorphism of global realiﬁed Frobe-
+nioids”that appears in the theory of [IUTchII],§4 — i.e., more precisely, the
+various versions of the isomorphism of Frobenioids “‡C⊩ ∼
+→D⊩(‡D⊢)” discussed
+in [IUTchII], Corollary 4.6, (ii), (v) — is constructed by considering isomorphisms
+between local value groupsobtained by forming thequotient of the multiplica-
+tive groups associated to the various local ﬁelds that appear by the subgroups of
+local units [cf. [IUTchII], Propositions 4.2, (ii); 4.4, (ii)]. In particular, such
+“Kummer isomorphisms”fail to give rise to a“ log-Kummer correspondence”,
+i.e., they fail to satisfymutual compatibilityproperties of the sort discussed in
+the ﬁnal portion of Theorem 3.11, (ii). Indeed, as discussed in Remark 1.2.3, (i) [cf.
+also [IUTchII], Remark 1.12.2, (iv)], atv∈Vnon, the operation of forming amulti-
+plicative quotient bylocal unitscorresponds, on the opposite side of thelog-link, to\n===== PDF PAGE 169 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 169
+forming an additive quotient by the submodule obtained as thepv-adic logarithm
+of these local units. This is precisely why, in the context of Theorem 3.11, (ii), we
+wish to work with the global non-realiﬁed/realiﬁed Frobenioids “F⊛
+MOD”, “F⊛R
+MOD”
+that arise from copies of “Fmod” which satisfy a “log-Kummer correspondence”, as
+described in the ﬁnal portion of Theorem 3.11, (ii) [cf. the discussion of Remark
+3.10.1]. On the other hand, thepathologies/indeterminacies that arise from work-
+ing with global arithmetic line bundles by means of variouslocal dataat v∈V in
+the context of thelog-link are formalized via the theory of the global Frobenioids
+“F⊛
+mod”, together with the“upper semi-compatibility”of local units discussed
+in the ﬁnal portion of Theorem 3.11, (ii) [cf. also the discussion of Remark 3.10.1].
+(iv) In the context of the discussion ofglobal realiﬁed Frobenioidsgiven in (iii),
+weobservethat, inthecaseoftheglobalrealiﬁedFrobenioids[constructedbymeans
+of “F⊛R
+MOD”!] that appear in theF⊩-prime-strips n,mF⊩
+LGP, F⊩(n,◦HT D-Θ±ellNF)LGP
+[cf. Theorem 3.11, (ii), (c)], the variouslocalization functors that appear [i.e.,
+the various “‡ρv” of [IUTchI], Deﬁnition 5.2, (iv); cf. also the isomorphisms of
+the second display of [IUTchII], Corollary 4.6, (v)] may bereconstructed,i nt h e
+spirit of the discussion of Remark 3.9.2, “by considering theeﬀect of multiplication
+by elements of the[non-realiﬁed] global monoidsunder consideration on thelog-
+volumes of the various local mono-analytic tensor packets that appear”. [We leave
+the routine details to the reader.] This reconstructibility, together with themutual
+incompatibilities observed in (iii) above that arise when one attempts to worksi-
+multaneously with log-shells and with thesplitting monoids of theF⊩-prime-strip
+n,mF⊩
+LGP at v∈Vgood, are the primary reasons for our omission of explicit mention
+of the splitting monoids atv∈Vgood [which in fact appear as part of the data
+“n,◦R” considered in the discussion of Theorem 3.11, (iii), (c)] from the statement
+of Theorem 3.11 [cf. Theorem 3.11, (i), (b); Theorem 3.11, (ii), (b); Theorem 3.11,
+(iii), (c), in the case ofv∈Vbad].
+Remark 3.11.3. Before proceeding, we pause to discuss the relationship between
+the log-Kummer correspondence of Theorem 3.11, (ii), and the Θ×μ
+LGP-link
+compatibility of Theorem 3.11, (iii).
+(i) First, we recall [cf. Remarks 1.4.1, (i); 3.8.2] that the various squares that
+appear in the[LGP-Gaussian] log-theta-latticeare far from being [1-]commutative!
+On the other hand, thebi-coricity ofF⊢×μ-prime-strips and mono-analytic log-
+shells discussed in Theorem 1.5, (iii), (iv), may be intepreted as the statement
+that
+the various squares that appear in the[LGP-Gaussian] log-theta-lattice
+are in fact [1-]commutative with respect to [the portion of the data
+associated to each “•” in the log-theta-lattice that is constituted by] these
+bi-coricF⊢×μ-prime-strips and mono-analytic log-shells.
+(ii) Next, let us observe that in order to relate both theunit and value group
+portions of the domain and codomain of the Θ×μ
+LGP-link corresponding toadjacent
+vertical lines— i.e., (n−1,∗)a n d(n,∗) — of the [LGP-Gaussian] log-theta-lattice
+to one another,
+it is necessary to relate these unit and value group portions to one
+another by means of asingle Θ×μ
+LGP-link, i.e., from (n−1,m)t o(n,m).\n===== PDF PAGE 170 =====\n170 SHINICHI MOCHIZUKI
+That is to say, from the point of view of constructing the various LGP-monoids
+that appear in the multiradial representation of Theorem 3.11, (i), one is tempted
+to work with correspondences betweenvalue groupson adjacent vertical lines that
+lie in avertically once-shiftedposition — i.e., say, at (n−1,m)a n d(n,m)—
+relative to the correspondence betweenunit groupson adjacent vertical lines, i.e.,
+say, at (n−1,m−1) and (n,m−1). On the other hand, such an approachfails,a t
+least from ana prioripoint of view, precisely on account of thenoncommutativity
+discussed in (i). Finally, we observe that in order to relate both unit and value
+groups by means of asingle Θ×μ
+LGP-link,
+it is necessary to avail oneself of the Θ×μ
+LGP-link compatibility properties
+discussed in Theorem 3.11, (iii) — i.e., of the theory of§2 and [IUTchI],
+Example 5.1, (v); [IUTchI], Deﬁnition 5.2, (vi), (viii) — so as toinsulate
+the cyclotomes that appear in theKummer theory surrounding the
+´etale theta function and κ-coric functions from the AutF⊢×μ(−)-
+indeterminacies that act on theF⊢×μ-prime-strips involved as a result
+of the application of the Θ×μ
+LGP-link
+— cf. the discussion of Remarks 2.2.1, 2.3.2.
+(iii) As discussed in (ii) above, a “vertically once-shifted” approach to relating
+units on adjacent vertical linesfailson account of thenoncommutativitydiscussed in
+(i). Thus, one natural approach to treating the units in a “vertically once-shifted”
+fashion — which, we recall, is necessary in order to relate the LGP-monoids on
+adjacent vertical lines to one another! — is to apply thebi-coricity of mono-
+analytic log-shellsdiscussed in (i). On the other hand, to take this approach means
+that one must work in aframework that allows one torelate [cf. the discussion
+of Remark 1.5.4, (i)] the “Frobenius-like” structure constituted by theFrobenioid-
+theoreticunits [i.e., which occur in the domain and codomain of the Θ×μ
+LGP-link] to
+corresponding ´etale-like structuressimultaneously via both
+(a) the usualKummer isomorphisms— i.e., so as to be compatible with
+the application of the compatibility properties of Theorem 3.11, (iii), as
+discussed in (ii) — and
+(b) the composite of the usual Kummer isomorphisms with [a single iterate
+of] the log-link — i.e., so as to be compatible with the bi-coric treatment
+of mono-analytic log-shells [as well as the closely related construction of
+LGP-monoids] proposed above.
+Such a framework may only be realized if one relates Frobenius-like structures to
+´etale-like structures in a fashion that isinvariantwith respect to pre-composition
+with various iterates of thelog-link [cf. the ﬁnal portions of Propositions 3.5, (ii);
+3.10, (ii)]. This is precisely what is achieved by thelog-Kummer correspondences
+of the ﬁnal portion of Theorem 3.11, (ii).
+(iv) The discussion of (i), (ii), (iii) above may be summarized as follows: The
+log-Kummer correspondences of the ﬁnal portion of Theorem 3.11, (ii), allow
+one to
+(a) relate both the unit and thevalue groupportions of the domain and
+codomain of the Θ
+×μ
+LGP-link corresponding toadjacent vertical linesof the
+[LGP-Gaussian] log-theta-lattice to one another, in a fashion that\n===== PDF PAGE 171 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 171
+(b) insulates the cyclotomes/Kummer theory surrounding the ´etale
+theta function and κ-coric functions involved from the AutF⊢×μ(−)-
+indeterminacies that act on theF⊢×μ-prime-strips involved as a result
+oftheapplicationoftheΘ ×μ
+LGP-link[cf. Theorem3.11, (iii)], and, moreover,
+(c) is compatible with thebi-coricity of themono-analytic log-shells
+[cf. Theorem 1.5, (iv)], hence also with the operation of relating the
+LGP-monoids that appear in the multiradial representation of Theorem
+3.11, (i), corresponding toadjacent vertical linesof the [LGP-Gaussian]
+log-theta-lattice to one another.
+These observations will play akey rolein the proof of Corollary 3.12 below.
+Remark 3.11.4. In the context of thecompatibilitydiscussed in the ﬁnal portion
+of Theorem 3.11, (iii), (c), (d), we make the following observations.
+(i) First of all, we observe that consideration of the log-Kummer corre-
+spondence in the context of thecompatibility discussed in the ﬁnal portion of
+Theorem 3.11, (iii), (c), (d), amounts precisely toforgetting the labels of the
+various Frobenius-like “•’s” [cf. the notation of the ﬁnal display of Proposition
+1.3, (iv)], i.e., to identifying data associated to these Frobenius-like “•’s” with
+the corresponding data associated to the´etale-like “◦”. In particular, [cf. the
+discussion of Theorem 3.11, (ii), preceding the statement of (Ind3)]multiplication
+of the data considered in Theorem 3.11, (ii), (b), (c), byroots of unitymust be
+“identiﬁed”with theidentity automorphism. Put another way, this data of Theo-
+rem 3.11, (ii), (b), (c), may only be consideredup to multiplication by roots of
+unity. Thus, for instance, it only makes sense to considerorbits of this data rel-
+ative to multiplication by roots of unity[i.e., as opposed tospeciﬁc elementswithin
+such orbits]. This does not cause any problems in the case of thetheta values
+considered in Theorem 3.11, (ii), (b), precisely because the theory developed so far
+was formulated precisely in such a way as to beinvariant with respect to such
+indeterminacies [i.e., multiplication of the theta values by 2l-th roots of unity —
+cf. the left-hand portionof Fig. 3.4 below]. In the case of thenumber ﬁelds [i.e.,
+copies ofFmod] considered in Theorem 3.11, (ii), (c), the resulting indeterminacies
+do not cause any problems precisely because, in the theory of the present series of
+papers, ultimately one is only interested in theglobal Frobenioids[i.e., copies of
+“F⊛
+MOD”a n d“F⊛
+mod” and their realiﬁcations] associated to these number ﬁelds by
+means of constructions that only involve
+· local data, together with
+· the entire set — i.e., which, unlike speciﬁc elements of this set, is
+stabilized by multiplication by roots of unity of the number ﬁeld [cf. the
+left-hand portionof Fig. 3.5 below] — constituted by thenumber ﬁeld
+under consideration
+[cf. the constructions of Example 3.6, (i), (ii); the discussion of Remark 3.9.2]. In
+this context, we recall from the discussion of Remark 2.3.3, (vi), that the operation
+of forgetting the labels of the variousFrobenius-like “•’s” also gives rise to
+various indeterminacies in thecyclotomic rigidity isomorphismsapplied in
+the log-Kummer correspondence. On the other hand, in the case of the theta
+values considered in Theorem 3.11, (ii), (b), we recall from this discussion of\n===== PDF PAGE 172 =====\n172 SHINICHI MOCHIZUKI
+Remark 2.3.3, (vi), that such indeterminacies are in facttrivial [cf. theright-hand
+portion of Fig. 3.4 below]. In the case of thenumber ﬁelds [i.e., copies ofFmod]
+considered in Theorem 3.11, (ii), (c), we recall from this discussion of Remark
+2.3.3, (vi), that such cyclotomic rigidity isomorphism indeterminacies amount to
+a possible indeterminacy ofmultiplication by±1 on copies of the multiplicative
+group F×
+mod [cf. the right-hand portion of Fig. 3.5 below], i.e., indeterminacies
+which do not cause any problems, again, precisely as a consequence of the fact that
+such indeterminaciesstabilize the entire set[i.e., as opposed tospeciﬁc elements
+of this set] constituted by thenumber ﬁeld under consideration. Finally, in this
+context, we observe [cf. the discussion at the beginning of Remark 2.3.3, (viii)] that,
+in the case of the variouslocal dataat v∈Vnon that appears in Theorem 3.11, (ii),
+(a), and gives rise to theholomorphic log-shells that serve ascontainers for
+the data considered in Theorem 3.11, (ii), (b), (c), the correspondingcyclotomic
+rigidity isomorphism indeterminaciesare in facttrivial. Indeed, thistriviality
+may be understood as a consequence of the fact the following observation: Unlike
+the case with the cyclotomic rigidity isomorphisms that are applied in the context of
+the geometric containers[cf. the discussion of Remark 2.3.3, (i)] that appear in
+the case of the data of Theorem 3.11, (ii), (b), (c), i.e., which give rise to“vicious
+circles”/“loops”consisting of identiﬁcation morphisms that diﬀer from the usual
+natural identiﬁcationby multiplication by elements of thesubmonoid Iord⊆±N≥1
+[cf. the discussion of Remark 2.3.3, (vi)],
+the cyclotomic rigidity isomorphisms that are applied in the context of
+this local data — even when subject to thevarious identiﬁcations aris-
+ing fromforgetting the labelsof the variousFrobenius-like“•’s”! —
+only give rise tonatural isomorphisms between “geometric” cyclo-
+tomes arising from thegeometric fundamental groupand “arithmetic”
+cyclotomes arising from copies of theabsolute Galois groupof the base
+[local] ﬁeld [cf. [AbsTopIII], Corollary 1.10, (c); [AbsTopIII], Proposition
+3.2, (i), (ii); [AbsTopIII], Remark 3.2.1].
+That is to say,no “vicious circles”/“loops”arise since there isnever any confu-
+sion between such “geometric” and “arithmetic” cyclotomes. [A similar phenome-
+non may be observed atv∈Varc with regard to theKummer structuresconsidered
+in [IUTchI], Example 3.4, (i).] Thus, in summary,
+the various indeterminacies that, a priori, might arise in the context
+of the portions of thelog-Kummer correspondencethat appear in the
+ﬁnal portion of Theorem 3.11, (iii), (c), (d), are in fact“invisible”, i.e.,
+they haveno substantive eﬀecton the objects under consideration
+[cf. also the discussion of (ii) below]. This is precisely the sense in which the
+“compatibility”stated in the ﬁnal portion of Theorem 3.11, (iii), (c), (d), is to
+be understood.
+(ii) In the context of the discussion of (i), we make the followingobservation:
+the discussion in (i) ofindeterminacies that, a priori, might arise in
+the context of the portions of thelog-Kummer correspondence that
+appear in the ﬁnal portion of Theorem 3.11, (iii), (c), (d), iscomplete,
+i.e., there areno further possible indeterminaciesthat might appear.\n===== PDF PAGE 173 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 173
+Indeed, this observation is a consequence of the “general nonsense” observation
+[cf., e.g., the discussion of [FrdII], Deﬁnition 2.1, (ii)] that, in general,“Kummer
+isomorphisms”are completely determinedby the following data:
+(a) isomorphismsbetweentherespective cyclotomesunderconsideration;
+(b) the Galois actionon roots of elements of the monoid under considera-
+tion.
+That is to say, thecompatibility of all of the various constructions that appear
+with the actions of the relevantGalois groups[or arithmetic fundamental groups]
+is tautological, so there is no possibility that further indeterminacies might arise
+with respect to the data of (b). On the other hand, the eﬀect of the indeterminacies
+that might arise with respect to the data of (a) was precisely the content of the
+latter portion of the discussion of (i) [i.e., of the discussion of Remark 2.3.3, (vi),
+(viii)].
+(iii) In the context of the discussion of (i), we observe that the“invisible
+indeterminacies”discussed in (i) in the case of the data considered in Theorem
+3.11, (ii), (b), (c), may be thought of as a sort ofanalogue for this data of the
+indeterminacy (Ind3) [cf. the discussion of the ﬁnal portion of Theorem 3.11,
+(ii)] to which the data of Theorem 3.11, (ii), (a), is subject. By contrast, the
+multiradiality and radial/coric decoupling discussed in Remarks 2.3.2, 2.3.3
+[cf. also Theorem 3.11, (iii), (c), (d)] may be understood as asserting precisely
+that the indeterminacies (Ind1), (Ind2) discussed in Theorem 3.11, (i), which
+act, essentially, on the data of Theorem 3.11, (ii), (a), have no eﬀecton the
+geometric containers[cf. the discussion of Remark 2.3.3, (i)] that underlie [i.e.,
+prior to execution of the relevantevaluation operations] the data considered in
+Theorem 3.11, (ii), (b), (c).
+μ2l ↷
+{
+qj2
+}
+j=1,...,l⋇
+↶ {1} (⊆±N≥1)
+Fig. 3.4: Invisible indeterminacies acting ontheta values
+μ(F×
+mod) ↷ F×
+mod ↶ {±1} (⊆±N≥1)
+Fig. 3.5: Invisible indeterminacies acting oncopies ofF×
+mod
+The following result may be thought of as a relativelyconcrete consequenceof
+the somewhat abstract content of Theorem 3.11.
+Corollary 3.12. (Log-volume Estimates for Θ-Pilot Objects) Suppose
+that we are in the situation of Theorem 3.11. Write
+−|log(Θ)|∈R
+⋃
+{+∞}
+for theprocession-normalized mono-analytic log-volume[i.e., where the av-
+erage is taken overj∈F⋇
+l — cf. Remark 3.1.1, (ii), (iii), (iv); Proposition 3.9,
+(i), (ii); Theorem 3.11, (i), (a)] of theholomorphic hull[cf. Remark 3.9.5, (i)]
+of theunion of thepossible imagesof aΘ-pilot object[cf. Deﬁnition 3.8, (i)],\n===== PDF PAGE 174 =====\n174 SHINICHI MOCHIZUKI
+relative to the relevantKummer isomorphisms [cf. Theorem 3.11, (ii)], in the
+multiradial representationof Theorem 3.11, (i), which we regard assubject to
+the indeterminacies (Ind1), (Ind2), (Ind3) described in Theorem 3.11, (i), (ii).
+Write
+−|log(q)|∈R
+for the procession-normalized mono-analytic log-volume of the image of a
+q-pilot object[cf. Deﬁnition 3.8, (i)], relative to the relevantKummer isomor-
+phisms [cf. Theorem 3.11, (ii)], in themultiradial representationof Theorem
+3.11, (i), which we donot regard as subject to the indeterminacies(Ind1), (Ind2),
+(Ind3) described in Theorem 3.11, (i), (ii). Here, we recall the deﬁnition of the
+symbol “△” as the result of identifying thelabels
+“0”a n d“⟨F⋇
+l ⟩”
+[cf. [IUTchII], Corollary 4.10, (i)]. In particular,|log(q)| > 0 is easily computed
+in terms of the various q-parameters of the elliptic curve EF [cf. [IUTchI],
+Deﬁnition 3.1, (b)] atv∈Vbad (̸=∅). Then it holds that−|log(Θ)|∈R,a n d
+−|log(Θ)|≥−|log(q)|
+— i.e.,CΘ≥−1 for any real numberCΘ∈R such that−|log(Θ)|≤CΘ·|log(q)|.
+Proof. We begin by observing that, since|log(q)| > 0, we mayassume without loss
+of generalityin the remainder of the proof that
+−|log(Θ)| < 0
+whenever−|log(Θ)|∈R [i.e., since an inequality−|log(Θ)|≥ 0 would imply
+that−|log(Θ)|≥0 > −|log(q)|]. Now suppose that we are in the situation of
+Theorem 3.11. Forn∈Z,w r i t e
+n,◦U
+def
+=
+{
+n,◦Uj,vQ
+}
+j∈|Fl|,vQ∈VQ
+⊆n,◦UQ def
+=
+{
+n,◦UQ
+j,vQ
+}
+j∈|Fl|,vQ∈VQ
+[where we observe that the “⊆” constitutes a slight abuse of notation] for the
+collection of subsetsn,◦Uj,vQ ⊆n,◦UQ
+j,vQ
+def
+= IQ(S±
+j+1;n,◦D⊢
+vQ) [cf. Theorem 3.11, (i),
+(a)] given by the variousunions,f o rj∈|Fl| and vQ∈VQ,o ft h epossible images
+of a Θ-pilot object [cf. Deﬁnition 3.8, (i)], relative to the relevant Kummer
+isomorphisms [cf. Theorem 3.11, (ii)], in the multiradial representation of
+Theorem 3.11, (i), which we regard assubject to the indeterminacies (Ind1),
+(Ind2), (Ind3) described in Theorem 3.11, (i), (ii);
+n,◦U =
+{
+n,◦Uj,vQ
+}
+j∈|Fl|,vQ∈VQ
+⊆n,◦UQ =
+{
+n,◦UQ
+j,vQ
+}
+j∈|Fl|,vQ∈VQ
+[where we observe that the “⊆” constitutes a slight abuse of notation] for the col-
+lection of subsetsn,◦Uj,vQ ⊆n,◦UQ
+j,vQ =IQ(S±
+j+1;n,◦D⊢
+vQ) [cf. Theorem 3.11, (i), (a)]
+given by the variousholomorphic hulls [cf. Remark 3.9.5, (i)] of the subsets\n===== PDF PAGE 175 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 175
+n,◦Uj,vQ ⊆IQ(S±
+j+1;n,◦D⊢
+vQ), relative to the arithmetic holomorphic structure labeled
+“n,◦”. Here, we observe that one concludes easily from the [easily veriﬁed]com-
+pactnessof the1,◦Uj,vQ [where j∈|Fl|, vQ∈VQ], together with the deﬁnition of the
+log-volume, that the quantity−|log(Θ)| is ﬁnite, hencenegative[by ourassumption
+at the beginning of the present proof!]. In particular, we observe [cf. Remark 2.4.2,
+(iv), (v), (vi); Remark 3.9.6; Remark 3.9.7; the discussion of “IPL” in Remark
+3.11.1, (iii)] that
+we may restrict our attention topossible images of a Θ-pilot object
+thatcorrespondtodata[i.e., collectionsofregions]thatmaybeinterpreted
+as anF⊩▶-prime-strip.
+Now we proceed to review precisely what is achieved by the various portions of
+Theorem 3.11 and, indeed, by the theory developed thus far in the present series of
+papers. This review leads naturally to an interpretation of the theory that gives rise
+to theinequality asserted in the statement of Corollary 3.12. For ease of reference,
+we divide our discussion intosteps, as follows.
+(i) In the following discussion, we concentrate on asingle arrow— i.e., asingle
+Θ×μ
+LGP-link
+0,0HT Θ±ellNF Θ×μ
+LGP
+−→1,0HT Θ±ellNF
+— of the [LGP-Gaussian] log-theta-lattice under consideration. This arrow consists
+of thefull poly-isomorphismofF⊩▶×μ-prime-strips
+0,0F⊩▶×μ
+LGP
+∼
+→1,0F⊩▶×μ
+△
+[cf. Deﬁnition 3.8, (ii)]. This poly-isomorphism may be thought of as consisting of
+a “unit portion”constituted by the associated [full] poly-isomorphism ofF⊢×μ-
+prime-strips
+0,0F⊢×μ
+LGP
+∼
+→1,0F⊢×μ
+△
+anda “value group portion”constitutedbytheassociated[full]poly-isomorphism
+ofF⊩▶-prime-strips
+0,0F⊩▶
+LGP
+∼
+→1,0F⊩▶
+△
+[cf. Deﬁnition 2.4, (iii)]. This value group portion of the Θ×μ
+LGP-link maps Θ-pilot
+objects of 0,0HT Θ±ellNF to q-pilot objectsof 1,0HT Θ±ellNF [cf. Remark 3.8.1].
+(ii) Whereas the units of the Frobenioids that appear in theF⊢×μ-prime-strip
+0,0F⊢×μ
+LGP are subject to AutF⊢×μ(−)-indeterminacies [i.e., “(Ind1), (Ind2)” — cf.
+Theorem 3.11, (iii), (a), (b)], thecyclotomes that appear in the Kummer theory
+surrounding the ´etale theta function and κ-coric functions, i.e., which give
+rise to the “value group portion”0,0F⊩▶
+LGP,a r einsulated from these AutF⊢×μ(−)-
+indeterminacies — cf. Theorem 3.11, (iii), (c), (d); the discussion of Remark
+3.11.3, (iv); Fig. 3.6 below. Here, we recall that in the case of the ´etale theta
+function, this follows from the theory of§2, i.e., in essence, from thecyclotomic
+rigidity of mono-theta environments, as discussed in [EtTh]. On the other
+hand, in the case ofκ-coric functions, this follows from the algorithms discussed in
+[IUTchI], Example 5.1, (v); [IUTchI], Deﬁnition 5.2, (vi), (viii).\n===== PDF PAGE 176 =====\n176 SHINICHI MOCHIZUKI
+Θ-related objects NF-related objects
+require
+mono-analytic local LGP-monoids copies ofFmod
+containers,
+Kummer theory [cf. Proposition [cf. Proposition
+incompatible 3.4, (ii)] 3.7, (i)]
+with (Ind1), (Ind2)
+independent of
+mono-analytic ´etale theta global ∞κ-coric,
+containers, function, local
+Kummer theory mono-theta ∞κ-, ∞κ×-coric
+compatible environments structures
+with (Ind1), (Ind2) [cf. Corollary 2.3] [cf. Remark 2.3.2]
+[cf. Remark 2.3.3]
+Fig. 3.6: Relationship of theta- and number ﬁeld-related objects
+to mono-analytic containers
+(iii) In the following discussion, it will be of crucial importance to relatesi-
+multaneously both theunit and thevalue groupportions of the Θ×μ
+LGP-link(s)
+involved on the 0-column[i.e., the vertical line indexed by 0] of the log-theta-lattice
+under consideration to the corresponding unit and value group portions on the
+1-column [i.e., the vertical line indexed by 1] of the log-theta-lattice under con-
+sideration. On the other hand, if one attempts to relate the unit portions via
+one Θ×μ
+LGP-link [say, from (0,m)t o( 1,m)] and thevalue groupportions via another
+Θ×μ
+LGP-link [say, from (0,m′)t o( 1,m′), form′̸= m], then thenon-commutativity
+of the log-theta-lattice renders it practically impossible to obtain conclusions that
+require one to relate both the unit and the value group portionssimultaneously [cf.
+the discussion of Remark 3.11.3, (i), (ii)]. This is precisely why we concentrate on
+a single Θ×μ
+LGP-link [cf. (i)].
+(iv) The issue discussed in (iii) is relevant in the context of the present dis-
+cussion for the following reason. Ultimately, we wish to apply thebi-coricity of
+the units [cf. Theorem 1.5, (iii), (iv)] in order to compute the 0-column Θ-pilot
+object in terms of the arithmetic holomorphic structure of the 1-column.I no r d e r
+to do this, one must work withunits that arevertically once-shifted[i.e., lie at
+(n,m−1)] relative to the value group structures involved [i.e., which lie at (n,m)]
+— cf. the discussion of Remark 3.11.3, (ii). The solution to the problem of si-
+multaneously accommodating these apparentlycontradictory requirements— i.e.,
+“vertical shift” vs. “impossibility of vertical shift” [cf. (iii)] — is given precisely
+by working, on the 0-column, with structures that areinvariant with respect to\n===== PDF PAGE 177 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 177
+vertical shifts[i.e., “(0,m)↦→(0,m +1)”] of the log-theta-lattice [cf. the discus-
+sion surrounding Remark 1.2.2, (iii), (a)] such asvertically coric structures[i.e.,
+indexed by “(n,◦)”] that are related to the“Frobenius-like”structures which are
+not vertically coric by means of thelog-Kummer correspondences of Theorem
+3.11, (ii). Here, we note that this “solution” may be implemented only at the cost
+of admitting the“indeterminacy”constituted by theupper semi-compatibility
+of (Ind3).
+(v) Thus, we begin our computation of the 0-column Θ-pilot objectin terms of
+the arithmetic holomorphic structure of the 1-column by relating the units on the
+0- and 1-columns by means of theunit portion
+0,0F⊢×μ
+LGP
+∼
+→1,0F⊢×μ
+△
+of the Θ×μ
+LGP-link from (0,0) to (1,0) [cf. (i)] and then applying thebi-coricity of
+the units of Theorem 1.5, (iii), (iv). In particular, themono-analytic log-shell
+interpretation of this bi-coricity given in Theorem 1.5, (iv), will be applied to regard
+these mono-analytic log-shells as“multiradial mono-analytic containers”[cf.
+the discussion of Remark 1.5.2, (i), (ii), (iii)] for the various [local and global] value
+group structures that constitute the Θ-pilot object on the 0-column — cf. Fig.
+3.6 above. [Here, we observe that the parallel treatment of “theta-related”and
+“number ﬁeld-related”objects is reminiscent of the discussion of [IUTchII], Remark
+4.11.2, (iv).] That is to say, we will relate the various Frobenioid-theoretic [i.e.,
+“Frobenius-like” — cf. Remark 1.5.4, (i)]
+· local unitsat v∈V,
+· splitting monoidsat v∈Vbad,a n d
+· global Frobenioids
+indexed by (0,m), for m ∈Z,t ot h evertically coric [i.e., indexed by “(0,◦)”]
+versions of these bi-coric mono-analytic containers by means of thelog-Kummer
+correspondences of Theorem 3.11, (ii), (a), (b), (c) — i.e., byvarying the “Kum-
+mer input index”(0,m) along the 0-column.
+(vi) In the context of (v), it is useful to recall that thelog-Kummer correspon-
+dences of Theorem 3.11, (ii), (b), (c), are obtained precisely as a consequence of
+the splittings, up to roots of unity, of the relevant monoids intounit and value
+group portions constructed by applying theGalois evaluation operations dis-
+cussed in Remarks 2.2.2, (iii) [in the case of Theorem 3.11, (ii), (b)], and 2.3.2 [in
+the case of Theorem 3.11, (ii), (c)]. Moreover, we recall that the Kummer theory
+surrounding the local LGP-monoids of Proposition 3.4, (ii), depends, in an essential
+way, on the theory of [IUTchII],§3 [cf., especially, [IUTchII], Corollaries 3.5, 3.6],
+which, in turn, depends, in an essential way, on the Kummer theory surrounding
+mono-theta environments established in [EtTh]. Thus, for instance, we recall
+that thediscrete rigidityestablished in [EtTh] is applied so as to avoid working,
+in the tempered Frobenioids that occur, with“ ˆZ-divisors/line bundles”[i.e.,
+“ˆZ-completions” ofZ-modules of divisors/line bundles], which arefundamentally
+incompatible with conventional notions of divisors/line bundles, hence, in partic-
+ular, with mono-theta-theoretic cyclotomic rigidity[cf. Remark 2.1.1, (v)]. Also,
+we recall that“isomorphism class compatibility”— i.e., in the terminology of\n===== PDF PAGE 178 =====\n178 SHINICHI MOCHIZUKI
+[EtTh], “compatibility with thetopology of thetempered fundamental group”
+[cf. the discussion at the beginning of Remark 2.1.1] — allows one to apply the
+Kummer theory of mono-theta environments [i.e., the theory of [EtTh]] relative
+to the ring-theoretic basepoints t h a to c c u ro ne i t h e rs i d eo ft h elog-link [cf.
+Remarks 2.1.1, (ii), and 2.3.3, (vii); [IUTchII], Remark 3.6.4, (i)], for instance, in
+the context of the log-Kummer correspondence for the splitting monoids of local
+LGP-monoids, whose construction depends, in an essential way [cf. the theory of
+[IUTchII],§3, especially, [IUTchII], Corollaries 3.5, 3.6], on theconjugate syn-
+chronization arising from theF⋊±
+l -symmetry.T h a ti st os a y ,
+it is precisely by establishing this conjugate synchronization arising from
+the F⋊±
+l -symmetry relative tothese basepointsthat occur on either side
+of the log-link that one is able to conclude the crucialcompatibility of
+this conjugate synchronization with thelog-link [cf. Remark 1.3.2].
+Asimilarobservationmaybemadeconcerningthe MLF-Galois pairapproachtothe
+cyclotomic rigidity isomorphismthat is applied atv∈Vgood ⋂Vnon [cf. [IUTchII],
+Corollary 1.11, (a); [IUTchII], Remark 1.11.1, (i), (a); [IUTchII], Proposition 4.2,
+(i); [AbsTopIII], Proposition 3.2, (iv), as well as Remark 2.3.3, (viii), of the present
+paper], which amounts, in essence, to
+computations involving the Galois cohomology groups ofvarious subquo-
+tients — such as torsion subgroups [i.e., roots of unity] and associated
+value groups — of the [multiplicative] module of nonzero elementsof an
+algebraic closure of the mixed characteristic local ﬁeld involved
+[cf. the proof of [AbsAnab], Proposition 1.2.1, (vii)] — i.e., algorithms that are
+manifestly compatible with thetopology of the proﬁnite groups involved[cf. the
+discussion of Remark 2.3.3, (viii)], in the sense that they do not require one to pass
+to Kummer towers [cf. the discussion of [IUTchII], Remark 3.6.4, (i)], which are
+fundamentally incompatiblewith thering structureof the ﬁelds involved. Here, we
+note in passing that the corresponding property forv∈Varc [cf. [IUTchII], Propo-
+sition 4.4, (i)] holds as a consequence of the interpretation discussed in [IUTchI],
+Remark 3.4.2, ofKummer structuresin terms ofco-holomorphicizations.O n
+the other hand, the approaches to cyclotomic rigidity just discussed forv∈Vbad
+and v∈Vgood diﬀer quite fundamentallyfrom the approach to cyclotomic rigidity
+taken in the case of[global] number ﬁeldsin the algorithms described in [IUTchI],
+Example 5.1, (v); [IUTchI], Deﬁnition 5.2, (vi), (viii), which depend, in an essential
+way, on the property
+Q>0
+⋂ ˆZ× = {1}
+— i.e., which isfundamentally incompatiblewith thetopology of the proﬁnite
+groups involved[cf. the discussion of Remark 2.3.3, (vi), (vii), (viii)] in the sense
+thatitclearlycannotbeobtainedassomesortoflimitofcorrespondingpropertiesof
+(Z/NZ)×! Nevertheless, with regard to uni-/multi-radiality issues, this approach
+to cyclotomic rigidity in the case of the number ﬁelds resembles the theory of
+mono-theta-theoretic cyclotomic rigidity atv∈Vbad in that it admits anatural
+multiradial formulation [cf. Theorem 3.11, (iii), (d); the discussion of Remarks
+2.3.2, 3.11.3], in sharp contrast to the essentiallyuniradial nature of the approach
+to cyclotomic rigidity via MLF-Galois pairs atv∈Vgood ⋂Vnon [cf. the discussion
+of [IUTchII], Remark 1.11.3]. These observations are summarized in Fig. 3.7 below.\n===== PDF PAGE 179 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 179
+Finally, we recall that [one veriﬁes immediately that] the various approaches to
+cyclotomic rigidity just discussed aremutually compatible in the sense that they
+yield the same cyclotomic rigidity isomorphism in any setting in which more than
+one of these approaches may be applied.
+Approach to Uni-/multi- Compatibility with
+cyclotomic radiality F⋊±
+l -symmetry,
+rigidity proﬁnite/tempered topologies,
+ring structures, log-link
+mono-theta multiradial compatible
+environments
+MLF-Galois pairs, uniradial compatible
+via Brauer groups
+number ﬁelds, via multiradial incompatible
+Q>0
+⋂ ˆZ× = {1}
+Fig. 3.7: Three approaches to cyclotomic rigidity
+(vii) In the context of the discussion in the ﬁnal portion of (vi), it is of in-
+terest to recall that the constructions underlying the crucialbi-coricity theory of
+Theorem 1.5, (iii), (iv), depend, in an essential way, on theconjugate synchro-
+nization arising from the F⋊±
+l -symmetry, which allows one to relate the local
+monoids and Galois groups at distinct labels∈|Fl| to one another in a fashion that
+is simultaneously compatibleboth with
+· the vertically coricstructures andKummer theorythat give rise to
+the log-Kummer correspondences of Theorem 3.11, (ii),
+and with
+· the property ofdistinguishing [i.e., not identifying] data indexed by
+distinct labels∈|Fl|
+— cf. the discussion of Remark 1.5.1, (i), (ii). Since, moreover, this crucial conju-
+gate synchronization isfundamentally incompatiblewith the F⋇
+l -symmetry,i ti s
+necessary to work with these two symmetriesseparately, as was done in [IUTchI],
+§4,§5,§6 [cf. [IUTchII], Remark 4.7.6]. Here, it is useful to recall that theF⋇
+l -
+symmetry also plays a crucial role, in that it allows one to“descend toFmod”a tt h e
+level ofabsolute Galois groups[cf. [IUTchII], Remark 4.7.6]. On the other hand,
+both the F⋊±
+l -a n dF⋇
+l -symmetries share the property of being compatible with the
+vertical coricity and relevantKummer isomorphisms of the 0-column — cf.
+the log-Kummer correspondences of Theorem 3.11, (ii), (b) [in the case of the\n===== PDF PAGE 180 =====\n180 SHINICHI MOCHIZUKI
+F⋊±
+l -symmetry], (c) [in the case of theF⋇
+l -symmetry]. Here, we recall that the
+vertically coric versions of both theF⋊±
+l -a n dt h eF⋇
+l -symmetries depend, in an
+essential way, on thearithmetic holomorphic structureof the 0-column, hence
+give rise tomultiradial structures via thetautological approach to constructing
+such structures discussed in Remark 3.11.2, (i), (ii).
+(viii) In the context of (vii), it is useful to recall that in order to construct
+the F⋊±
+l -symmetry, it is necessary to make use ofglobal±-synchronizations of
+various local±-indeterminacies. Since the local tempered fundamental groups at
+v∈Vbad do not extend to a “global tempered fundamental group”, these global±-
+synchronizations give rise toproﬁnite conjugacy indeterminaciesin the verti-
+cally coric construction of the LGP-monoids [i.e., the theta values at torsion points]
+given in [IUTchII],§2, which areresolvedby applying the theory of [IUTchI],§2—
+cf. the discussion of [IUTchI], Remark 6.12.4, (iii); [IUTchII], Remark 4.5.3, (iii);
+[IUTchII], Remark 4.11.2, (iii).
+(ix) In the context of (vii), it is also useful to recall the important role played,
+in the theory of the present series of papers, by the various “copies of Fmod”,
+i.e., more concretely, in the form of the various copies of theglobal Frobenioids
+“F⊛
+MOD”, “F⊛
+mod” and their realiﬁcations. That is to say, thering structure of
+the global ﬁeldFmod allows one to bridge the gap — i.e., furnishes atranslation
+apparatus — between the multiplicative structures constituted by the global
+realiﬁed Frobenioids related via the Θ×μ
+LGP-link and theadditive representations of
+these global Frobenioids that arise from the “mono-analytic containers” furnished
+by the mono-analytic log-shells [cf. (v)]. Here, the precise compatibility of
+the ingredients for “F⊛
+MOD”w i t ht h elog-Kummer correspondence renders “F⊛
+MOD”
+better suited to describing the relation to the Θ×μ
+LGP-link [cf. Remark 3.10.1, (ii)].
+On the other hand, the local portion of “F⊛
+mod” — i.e., which is subject to“upper
+semi-compatibility”[cf. (Ind3)], hence only“approximately compatible”with the
+log-Kummer correspondence — renders it better suited toexplicit estimates of
+global arithmetic degrees, by means oflog-volumes [cf. Remark 3.10.1, (iii)].
+(x) Thus, one may summarize the discussion thus far as follows. The theory of
+“Kummer-detachment”— cf. Remarks 1.5.4, (i); 2.1.1; 3.10.1, (ii), (iii) — fur-
+nished by Theorem 3.11, (ii), (iii), allows one to relate theFrobenioid-theoretic
+[i.e., “Frobenius-like”] structures that appear in the domain [i.e., at (0,0)] of the
+Θ×μ
+LGP-link [cf. (i)] to themultiradial representationdescribed in Theorem 3.11,
+(i), (a), (b), (c), but only at the cost of introducing theindeterminacies
+(Ind1) — which may be thought of as arising from the requirement ofcom-
+patibility with the permutation symmetries of the´etale-picture [cf.
+Theorem 3.11, (i)];
+(Ind2) — which may be thought of as arising from the requirement ofcom-
+patibility with the AutF⊢×μ(−)-indeterminacies that act on the do-
+main/codomain of the Θ×μ
+LGP-link [cf. (ii); Theorem 3.11, (i), (iii)], i.e.,
+with thehorizontal arrowsof the log-theta-lattice;
+(Ind3) — which may be thought of as arising from the requirement ofcompat-
+ibility with the log-Kummer correspondences of Theorem 3.11, (ii),
+i.e., with thevertical arrowsof the log-theta-lattice.\n===== PDF PAGE 181 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 181
+The various indeterminacies (Ind1), (Ind2), (Ind3) to which the multiradial repre-
+sentation is subject may be thought of as data that describes some sort of“formal
+quotient”, like the “ﬁne moduli spaces” that appear in algebraic geometry.
+In this context, theprocession-normalized mono-analytic log-volumes[i.e.,
+where the average is taken overj∈F⋇
+l ] of Theorem 3.11, (i), (a), (c), furnish a
+means of constructing a sort of associated“coarse space”or “inductive limit”
+[of the “inductive system” constituted by this “formal quotient”] — i.e., in the
+sense that [one veriﬁes immediately — cf. Proposition 3.9, (ii) — that] the re-
+sulting log-volumes∈R are invariantwith respect to the indeterminacies (Ind1),
+(Ind2), and have the eﬀect of converting the indeterminacy (Ind3) into anin-
+equality [from above]. Moreover, thelog-link compatibility of the various log-
+volumes that appear [cf. Proposition 3.9, (iv); the ﬁnal portion of Theorem 3.11,
+(ii)] ensures that these log-volumes arecompatiblewith [the portion of the “formal
+quotient”/“inductive system” constituted by] the various arrows [i.e.,Kummer iso-
+morphisms and log-links]o ft h elog-Kummer correspondenceof Theorem 3.11,
+(ii). Here, we note that theaverages overj∈F⋇
+l that appear in the deﬁnition of
+the procession-normalized volumes involved may be thought of as a consequence
+of theF⋇
+l -symmetry acting on the labels of the theta values that give rise to the
+LGP-monoids — cf. also the deﬁnition of the symbol “△” in [IUTchII], Corollary
+4.10, (i), via the identiﬁcation of the symbols “0” and “⟨F⋇
+l ⟩”; the discussion of
+Remark 3.9.3. Also, in this context, it is of interest to observe that the various
+tensor products that appear in the various local mono-analytic tensor packets
+that arise in the multiradial representation of Theorem 3.11, (i), (a), have the ef-
+fect ofidentifyingthe operation of “multiplication by elements ofZ” — and hence
+also the eﬀect onlog-volumes of such multiplication operations! — atdiﬀerent
+labels∈F⋇
+l .
+(xi) For ease of reference, we divide thisstep into substeps, as follows.
+(xi-a) Consider aq-pilot objectat (1,0), which we think of — relative to the
+relevant copy of “F⊛
+mod”—i nt e r m so ft h eholomorphic log-shells constructed
+at (1,0) [cf. the discussion of Remark 3.12.2, (iv), (v), below]. Then the Θ×μ
+LGP-
+link from (0,0) to (1,0) may be interpreted as a sort ofgluing isomorphism
+that relates the arithmetic holomorphic structure — i.e., the “conventional
+ring/scheme-theory”—a t( 1,0) to the arithmetic holomorphic structure at (0,0)
+in such a way that the Θ-pilot object at (0,0) [thought of as an object of the
+relevant global realiﬁed Frobenioid] corresponds to theq-pilot objectat (1,0) [cf.
+(i); the discussion of Remark 3.12.2, (ii), below].
+(xi-b) On the other hand, the multiradial construction algorithm of Theorem
+3.11, which was summarized in the discussion of (x), yields a construction of a
+collection of possibilities of output datacontained in
+(0,◦UQ⊇) 0,◦U
+∼
+→ 1,◦U (⊆1,◦UQ)
+— where the isomorphism “
+∼
+→” arises from thepermutation symmetries dis-
+cussed in the ﬁnal portion of Theorem 3.11, (i) — that satisﬁes theinput prime-
+strip link (IPL)and simultaneous holomorphic expressibility (SHE)prop-
+erties discussed in Remark 3.11.1, (iii), (iv), (v) [cf. also the discussion of“possible\n===== PDF PAGE 182 =====\n182 SHINICHI MOCHIZUKI
+images”at the beginning of the present proof]. Here, with regard to (IPL), we ob-
+serve that theF⊩▶-prime-strip portion of thelink/relationship of this collection
+of possibilities of output data to theinput data (F⊩▶×μ-)prime-strip [cf. Re-
+mark 3.11.1, (ii)] consists precisely of(full poly-)isomorphisms ofF⊩▶-prime-
+strips, while the corresponding link/relationship forF⊢×μ-prime-strips is some-
+what more complicated, as a result of theindeterminacies (Ind1), (Ind2), (Ind3).
+Also, in this context, we observe that, although the multiradial construction algo-
+rithm of Theorem 3.11 in fact involves the Θ-pilot object at (0,0), in the present
+discussion of Step (xi), we shallonly be concernedwith qualitative logical as-
+pects/consequences of this construction algorithm, i.e., with the
+· input prime-strip link (IPL),
+· simultaneous holomorphic expressibility (SHE),a n d
+· algorithmic parallel transport (APT)
+properties discussed in Remark 3.11.1, (iii), (iv), (v). That is to say, we shall
+take the point of view of “temporarily forgetting” — cf. the discussion of
+hidden internal structures (HIS)in Remark 3.11.1, (iv) — the fact that the
+multiradial construction algorithm of Theorem 3.11 in fact involves Θ-pilot objects,
+theta functions/values, mono-theta environments. Alternatively, in the discussion
+tofollow, weshall, roughlyspeaking, thinkofthemultiradialconstructionalgorithm
+of Theorem 3.11 as
+“some”algorithm that transforms a certain type ofinput data into a
+certain type ofoutput dataand, moreover, satisﬁescertain properties
+(IPL) and (SHE).
+(xi-c) Thus, the discussion of the (IPL) and (SHE) properties in (xi-b) may be
+summarized as follows:
+The multiradial construction algorithm of Theorem3.11 yields a collection
+of possibilities of output data in1,◦U (⊆1,◦UQ)t h a ta r elinked/related
+[cf. (IPL)], viaisomorphisms ofF⊩▶-prime-strips, to the representa-
+tion [via thelog-Kummer correspondence in the 1-column] of theq-pilot
+object at (1,0) on1,◦UQ, and, moreover, whose construction may be ex-
+pressed entirely relative to thearithmetic holomorphic structure in
+the 1-column [cf. (SHE)].
+Here, we recall that, in more concrete language, this “arithmetic holomorphic struc-
+ture in the 1-column” amounts, in essence, to thering structure labeled “1,◦”.
+Moreover, by slightly enlarging the collection of possibilities of output data under
+consideration by working with theholomorphic hull 1,◦U (⊇1,◦U), we obtain
+output data that is expressed —not i nt e r m so fr e g i o n sc o n t a i n e di nv a r i o u stensor
+products of local ﬁeldslabeled “1,◦” [i.e., more concretely, various isomorphs of
+“Kv”, forv∈V], but rather — in terms oflocalizations of arithmetic vector
+bundles over certain local ringslabeled “1,◦” [i.e., more concretely, various iso-
+morphs of “OKv”, forv∈V] — cf. the discussion of Remarks 3.9.5, (vii), (Ob1),
+(Ob2), (Ob5); 3.12.2, (v), below. Such an expression in terms of“localizations of
+arithmetic vector bundles”is necessary in order to render the output data in a form
+that iscomparable to the representation of theq-pilot object [i.e., which arises
+from a certainarithmetic line bundle]a t( 1,0) on1,◦UQ.\n===== PDF PAGE 183 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 183
+(xi-d) The discussion of (xi-c) thus yields the following conclusion:
+The multiradial construction algorithmof Theorem 3.11, followed by for-
+mation of theholomorphic hull, yields a collection of possibilities of out-
+put data in1,◦U that arelinked/related [cf. (IPL)], viaisomorphisms
+of F⊩▶-prime-strips, to the representation [via the log-Kummer cor-
+respondence in the 1-column]o ft h eq-pilot object at (1,0) on 1,◦UQ,
+and, moreover, whose construction may be expressed entirely relative to
+localizations of arithmetic vector bundlesover rings that arise in
+the arithmetic holomorphic structurein the 1-column [cf. (SHE)].
+Here, we observe that these “localizations of arithmetic vector bundles” are [unlike
+thearithmetic line bundlethatgivesrisetothe q-pilot object]of rank> 1. Moreover,
+the q-pilot object is deﬁned at the level ofrealiﬁcations of Frobenioids of [global]
+arithmetic line bundles. Thus, it is only by forming [a suitable positive tensor power
+of] the determinant of the localizations of arithmetic vector bundles mentioned in
+the above display [cf. Remark 3.9.5, (vii), (Ob3), (Ob4)] and then applying the
+[suitably normalized, with respect toj∈|Fl|] log-volume to various regions —
+i.e., theregion1,◦U and theregionthat arises from the representation of theq-pilot
+object at (1,0) on1,◦UQ —i n1,◦UQ [cf. Remark 3.9.5, (vii), (Ob3), (Ob4), (Ob6),
+(Ob7), (Ob9)], that we are able to obtaincompletely comparable objects [cf.
+Remarks 3.9.5, (vii), (Ob5), (Ob6), (Ob7), (Ob8), (Ob9); 3.9.5, (viii), (ix)], namely,
+R≤−|log(Θ)|
+def
+={λ∈R| λ≤−|log(Θ)|} ⊆R; −|log(q)|∈R
+—wherewerecallthat, bydeﬁnition, −|log(Θ)|isthe[ negative—cf. thediscussion
+of “possible images”at the beginning of the present proof] log-volume of1,◦U, while
+−|log(q)| is the log-volume of the region that arises from the representation of
+the q-pilot object at (1,0) on 1,◦UQ. In this context, it is useful to recall from
+Proposition 3.9, (iii) [cf. also the discussion of Remarks 3.9.2, 3.9.6], thatglobal
+arithmetic degrees of objects of global realiﬁed Frobenioids may be interpreted
+as log-volumes [cf. also the discussion of Remarks 1.5.2, (iii); 3.10.1, (iv), as
+well as of Remark 3.12.2, (v), below]. Finally, in this context, we observe [cf.
+the ﬁrst display of the present (xi-d)] that it is of crucial importance to apply
+the log-Kummer correspondence in the 1-column [cf. the discussion of log-
+Kummer correspondencesin Remark 3.9.5, (vii), (Ob7), (Ob8); Remark 3.9.5, (viii),
+(sQ4); Remark 3.9.5, (ix); the ﬁnal portion of Remark 3.9.5, (x); the discussion
+of the ﬁnal portion of Remark 3.12.2, (v), below], in order torectify thevertical
+shift/mismatch[cf. thediscussionof(iii), (iv)inthecaseofthe0 -column]between
+the unit portion of 1,0F⊩▶×μ
+△ and thelog-shells arising from [the image via the
+relevant Kummer isomorphisms of] this unit portion, which give rise to thetensor
+packets of log-shellsthat constitute1,◦U.
+(xi-e) Next, let us recall that the relationship, i.e., that arises by applying the
+log-volume to the pilot-object, between the pilot-object log-volume −|log(q)|
+∈R and theinput data (F⊩▶×μ-)prime-strip is precisely the relationshippre-
+scribed/imposed by thearithmetic holomorphic structurein the 1-column,
+i.e., via the representation of the input data (F⊩▶×μ-)prime-strip on1,◦U relative\n===== PDF PAGE 184 =====\n184 SHINICHI MOCHIZUKI
+to this 1-column arithmetic holomorphic structure. That is to say,“expressibil-
+ity relative to the arithmetic holomorphic structure in the1-column”[cf. (SHE)]
+amounts preciselyto
+“expressibility via operations that are valid/executable/well-deﬁned even
+when subject to thecondition that thepilot-object log-volumeasso-
+ciated to the input data (F⊩▶×μ-)prime-strip [which is, of course, linked/
+related, via isomorphisms ofF⊩▶-prime-strips, to the possible output data
+F⊩▶-prime-strips!] be equal to theﬁxed value−|log(q)|∈R”.
+In particular, the discussion of (xi-d) thus yields the following conclusion:
+The multiradial construction algorithmof Theorem 3.11, followed by for-
+mation of theholomorphic hulland application of thelog-volume, yields a
+collection ofpossible log-volumes of pilot-object output data
+R≤−|log(Θ)| ⊆R
+that arelinked/related [cf. (IPL)], viaisomorphisms ofF⊩▶-prime-
+strips,t ot h epilot-object log-volume
+−|log(q)|∈R
+of theinput data (F⊩▶×μ-)prime-strip [cf. (SHE)].
+(xi-f) Thus, we conclude from (xi-e) that
+the construction of the subsetR≤−|log(Θ)| ⊆R of possible pilot-object
+log-volumes of output data issubject to thecondition that this con-
+struction of output data possibilities constitutes, in particular, a construc-
+tion [perhaps only up to some sort of“approximation”, as a result of vari-
+ous indeterminacies]o ft h epilot-object log-volumeof theinput data
+(F⊩▶×μ-)prime-strip,n a m e l y ,−|log(q)|∈R.
+The inclusion−|log(q)|∈R≤−|log(Θ)|, hence also the inequality
+−|log(q)|≤−|log(Θ)|∈R
+— i.e., the conclusion thatCΘ ≥−1 for any CΘ ∈R such that−|log(Θ)|≤
+CΘ·|log(q)| — in the statement of Corollary 3.12, then follows formally.
+(xi-g) Thus, in summary,
+the multiradial construction algorithmof Theorem 3.11, followed by
+formation of theholomorphic hulland application of thelog-volume,
+yields two tautologically equivalent ways to computethe log-volume
+of theq-pilot object at(1,0) — cf. Fig. 3.8 below.\n===== PDF PAGE 185 =====\nINTER-UNIVERSAL TEICHM¨ULLER THEORY III 185
+multiradial
+representation
+at 0-column (0,◦)
+permutation
+symmetry of
+≈
+´etale-picture
+multiradial
+representation
+at 1-column (1,◦)
+Kummer-
+detach-
+ment
+via
+log-
+Kummer
+⇑
+com-
+pati-
+bly
+with
+Θ×μ
+LGP-
+link
+com-
+pari-
+son
+via
+⇓
+hol.
+hull,
+log-
+vol.
+Θ-pilot object in
+Θ±ellNF-Hodge
+theater at (0,0)
+(−)⊩▶-portion,
+(−)⊢×μ-portion
+≈
+of Θ×μ
+LGP-link
+q-pilot object in
+Θ±ellNF-Hodge
+theater at (1,0)
+Fig. 3.8: Two tautologically equivalent ways to compute
+the log-volume of theq-pilot object at (1,0)
+(xi-h) In this context, it is useful to recall that the above argument depends, in
+an essential way [cf. the discussion of (ii), (vi)], on the theory of [EtTh], whichdoes
+not admit any evident generalizationto the case ofN-th tensor powers of Θ-pilot
+objects, forN≥2. That is to say, thelog-volumeof such anN-th tensor power of a
+Θ-pilot object must always be computed as the result ofmultiplying the log-volume
+of the original Θ-pilot object byN — cf. Remark 2.1.1, (iv); [IUTchII], Remark
+3.6.4, (iii), (iv). In particular, although the analogue of the above argument for such
+an N-th tensor power would lead tosharper inequalities than the inequalities
+obtained here, it is diﬃcult to see how to obtain such sharper inequalities via a
+routine generalization of the above argument. In fact, as we shall see in [IUTchIV],
+these sharper inequalities are known to befalse [cf. [IUTchIV], Remark 2.3.2, (ii)].
+(xii) In the context of the argument of (xi), it is useful to observe the important
+role played by theglobal realiﬁed Frobenioids that appear in the Θ×μ
+LGP-link. That
+istosay, sinceultimatelyoneisonlyconcernedwiththecomputationof log-volumes,
+it might appear, at ﬁrst glance, that it is possible to dispense with the use of
+such global Frobenioids and instead work only with the variouslocal Frobenioids,
+for v∈V, that are directly related to the computation of log-volumes. On the
+other hand, observe that since the isomorphism of [local or global!] Frobenioids
+arising from the Θ×μ
+LGP-link only preserves isomorphism classes of objects of
+these Frobenioids [cf. the discussion of Remark 3.6.2, (i)], to work only with local
+Frobenioids means that one must contend with theindeterminacy of not knowing
+whether, for instance, such a local Frobenioid object at somev∈Vnon corresponds
+to a given open submoduleof the log-shell atv or to, say, thepN
+v -multiple of this
+submodule,f o rN∈Z. Put another way, one must contend with the indeterminacy
+arising from the fact that, unlike the case with the global Frobenioids “F⊛
+MOD”,
+“F⊛R
+MOD”, objectsofthevariouslocalFrobenioidsthatariseadmit endomorphisms
