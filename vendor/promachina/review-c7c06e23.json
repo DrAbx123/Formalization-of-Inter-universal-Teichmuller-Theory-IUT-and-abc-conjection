@@ -1,0 +1,34 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "comparedFrom": "581e2b898b8429cbb696f75c4548e732d440650d",
+  "head": "c7c06e23d191037424ba5d1a336a31a8cf73dc78",
+  "sourceCommit": "198de7949dbabbd01904b66eb5366c279ba886af",
+  "checkedAt": "2026-08-04T06:35:00+08:00",
+  "leanFileCount": 190,
+  "newLeanFiles": [
+    {
+      "relativePath": "Iut/Foundations/SourceSelectedFiniteLocalCoveringBoundary.lean",
+      "sha256": "F96A1008FF4D8B281C73EF1BEEB8C6063FA03270F3B408115232E1195520B779",
+      "classification": "interface-only-assembly-with-proved-generic-kernels",
+      "provedContent": [
+        "the bad/good branch follows from the selected/bad/good set partition",
+        "the two category universes are related by an explicit equivalence",
+        "categories, functors, adjunctions, and full faithfulness are derived from the supplied branch data"
+      ],
+      "unresolvedInputs": [
+        "SourceSelectedBadTemperedTowerFamily.stable",
+        "SourceSelectedBadTemperedTowerFamily.andre",
+        "SourceSelectedBadTemperedTowerFamily.tower",
+        "the projection surjectivity and openness stored inside the supplied Andre/tower boundary"
+      ],
+      "decision": "Do not port the selected-place wrapper as proof of IUT I, Example 3.2(i). Port and audit only its independent kernel-orbit and temperoid constructions."
+    }
+  ],
+  "tokenScan": {
+    "sorry": 0,
+    "admit": 0,
+    "topLevelAxiom": 0,
+    "topLevelOpaque": 0,
+    "note": "The absence of tokens does not construct the three realization fields."
+  }
+}

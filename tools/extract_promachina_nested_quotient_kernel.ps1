@@ -4,8 +4,8 @@ param(
 )
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
-$sourceRelative = Join-Path $SourceRoot
-  'Iut/Foundations/SourceBadLocalArithmeticTemperedTower.lean'
+$sourceRelative = Join-Path -Path $SourceRoot `
+  -ChildPath 'Iut/Foundations/SourceBadLocalArithmeticTemperedTower.lean'
 $sourcePath = Join-Path $repoRoot $sourceRelative
 $targetPath = Join-Path $repoRoot $Target
 $expectedSha256 =
@@ -34,6 +34,22 @@ $body = $body.Replace(
 $body = $body.Replace(
   "variable {group : TopologicalGroupCat.{u}}`nvariable (system : SourceNestedNormalQuotientSystem group)",
   "variable {group : Type u} [Group group] [TopologicalSpace group]`n  [IsTopologicalGroup group]`nvariable (system : SourceNestedNormalQuotientSystem group)")
+$oldContinuityProof =
+  "  simpa only [system.transition_mk refines] using`n" +
+  "    (QuotientGroup.continuous_mk : Continuous`n" +
+  "      (QuotientGroup.mk' (system.kernel coarser)))"
+$newContinuityProof =
+  "  rw [show (fun value : group =>`n" +
+  "      system.transition refines`n" +
+  "        (QuotientGroup.mk' (system.kernel finer) value)) =`n" +
+  "      (QuotientGroup.mk : group -> system.Level coarser) by`n" +
+  "    funext value`n" +
+  "    exact system.transition_mk refines value]`n" +
+  "  exact QuotientGroup.continuous_mk"
+if (-not $body.Contains($oldContinuityProof)) {
+  throw 'Continuity proof source block changed.'
+}
+$body = $body.Replace($oldContinuityProof, $newContinuityProof)
 
 if ($body -notmatch 'structure SourceNestedNormalQuotientSystem' -or
     $body -notmatch 'theorem canonicalMap_injective' -or

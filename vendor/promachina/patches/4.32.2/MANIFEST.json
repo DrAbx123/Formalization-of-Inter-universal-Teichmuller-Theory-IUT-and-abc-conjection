@@ -2,9 +2,9 @@
   "repository": "https://github.com/promachina/iut-lean",
   "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
   "targetVersion": "4.32.2",
-  "generatedAt": "2026-08-04T05:53:42.4157836+08:00",
-  "changedFiles": 19,
-  "identicalFiles": 8,
+  "generatedAt": "2026-08-04T06:38:15.4535958+08:00",
+  "changedFiles": 20,
+  "identicalFiles": 11,
   "files": [
     {
       "module": "Iut.Foundations.GaloisComplement",
@@ -61,6 +61,13 @@
       "sourceSha256": "D125C47A728E0FE3E31EFD52EEAEA4BBDDE013751949F471C1E23EC189952809",
       "targetSha256": "73749070BEEA7406EAE89D44F010B3759A4F195005374F39BAEF9975CECE9C25",
       "patch": "vendor/promachina/patches/4.32.2/SourceConnectedAnabelioidSlice.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceConnectedCoveringCategory",
+      "status": "identical",
+      "sourceSha256": "FB22539674CC63BE4EB5975A65DB20F2FEE2914F49765DD9023778A97CA27EDA",
+      "targetSha256": "FB22539674CC63BE4EB5975A65DB20F2FEE2914F49765DD9023778A97CA27EDA",
+      "patch": null
     },
     {
       "module": "Iut.Foundations.SourceContinuousAnabelioid",
@@ -140,6 +147,13 @@
       "patch": null
     },
     {
+      "module": "Iut.Foundations.SourceKernelOrbit",
+      "status": "identical",
+      "sourceSha256": "AA5E8143E9310724E16DFA5F8F3363576CAD1893D056C5EBB5B8C62C51237B61",
+      "targetSha256": "AA5E8143E9310724E16DFA5F8F3363576CAD1893D056C5EBB5B8C62C51237B61",
+      "patch": null
+    },
+    {
       "module": "Iut.Foundations.SourceProfiniteCosetSystem",
       "status": "identical",
       "sourceSha256": "679C0E429947293CF2BEF65EBA3E47E648B0381CA1C0FF10734E97226688A1CD",
@@ -194,6 +208,20 @@
       "sourceSha256": "CAB93633FAB2029F41DC7FA774A6CC046C6524AEB1474027B5433245E8FE2E8B",
       "targetSha256": "33602AB26EBCD24ED058A0FDCE9A06B6599D01C224917E85708294768DBF5E1A",
       "patch": "vendor/promachina/patches/4.32.2/SourceSemiGraphResidualSeparation.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceTemperoid",
+      "status": "identical",
+      "sourceSha256": "8D24B30C707C970EFFBFC0F3D2D1FC1DFA2252E8969CB01B59BEF18B898E498D",
+      "targetSha256": "8D24B30C707C970EFFBFC0F3D2D1FC1DFA2252E8969CB01B59BEF18B898E498D",
+      "patch": null
+    },
+    {
+      "module": "Iut.Foundations.SourceTemperoidQuotient",
+      "status": "patched",
+      "sourceSha256": "333DEC083B20FC3FD159B66A80AAE030606405970C3D6FA17B2E0636D73F552C",
+      "targetSha256": "E323CF5AA3EF8FC0B663AFB78251F41CA6C09CDF0FC44FB0137953368B0BA0CD",
+      "patch": "vendor/promachina/patches/4.32.2/SourceTemperoidQuotient.patch"
     }
   ]
 }

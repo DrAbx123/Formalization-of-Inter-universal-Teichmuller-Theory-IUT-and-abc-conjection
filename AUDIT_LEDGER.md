@@ -156,6 +156,7 @@ The following distinction is enforced in code:
 | `IUTIII/Theorem311/*` | **claim only / interface vocabulary, with a proved generic kernel** | Theorem 3.11 output and Ind1--3 are tracked as obligations, not derived from number-field or elliptic-curve data. `Indeterminacy/QuotientTransport` proves representative-independent transport for arbitrary Setoids, but supplies no IUT-specific carriers or relations. |
 | `IUTIII/Theorem311/Indeterminacy/OrbitTransport` | **proved group-action kernel** | Equivariant maps descend through Mathlib's official `MulAction.orbitRel` quotient, and a three-layer orbit transport has a representative formula. This is the Ind1/Ind2 mechanism, not the IUT-specific Galois/Kummer construction. |
 | `IUTIII/Theorem311/Indeterminacy/UpperSemi` | **proved order kernel** | Set-valued upper-semi correspondences, singleton monotone maps, and composition are proved over standard preorders; this captures the logical direction of Ind3 without supplying the paper's log-Kummer correspondence. |
+| `Iut/Foundations/SourceTemperedDeck*` | **proved tempered-deck kernel / arithmetic realization pending** | The literal deck groups, refinement transitions, locally-surjective universal-tree lifting, finite bounded lift fibers, cofiltered compatible sections, and every raw/literal deck projection are constructed and proved. The chain has no `sorryAx`; it does not construct stable reduction, Andre exactness, an arithmetic tempered tower, IPL/SHE/APT, or the Theorem 3.11 output. |
 | `IUT_SUBTARGETS.md` | **research-target registry** | Separates proved Lean kernels, source-faithful IUT obligations, and external open-problem candidates; no candidate is counted as proved by the current project. |
 | `IUTIII/Corollary312/StepXI/*` | **interface plus one marked `sorry`** | `cor312_of_constructed_stepXI` and the ordered corridor are proved from a supplied contract; `theorem311_produces_stepXI_contract` is the sole `sorryAx` reachable from the production entry point. `HolomorphicHull/Volume` additionally proves finite positive-packet determinant, tensor-product, rescaling, log-volume, and weighted-hull identities using the official `Matrix.det`, `Matrix.det_diagonal`, and `Finset` APIs. It does not construct the paper's holomorphic hull, local/global tensor normalization, or q-pilot objects. |
 | `IUTIII/Corollary312/StepXI/FiniteCertificateBridge` | **interface** | `FiniteStepXILinkEvidence` makes `targetSigned`, IPL/SHE/APT evidence, and both comparison bounds explicit; from those supplied fields, Lean constructs a `StepXIContract` and proves the ordered conclusion. It does not prove any of the supplied source-facing fields. |
@@ -233,13 +234,18 @@ formalization.
 | Refreshed countable-base kernels | **passed with zero output** | Exact `promachina@36ef280d` hunks for finite projection fibers, countable Galois levels, countable deck groups, and countable separators passed in `logs/lean/serial-20260804-054453/summary.json` and `logs/lean/serial-20260804-054422/summary.json`. |
 | Ported foundation axiom sample | **passed** | `logs/lean/axioms-upstream-foundations-20260804-054745/axiom_audit.stdout.log`; all sampled declarations use only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx`. A full `Iut/Foundations` declaration scan reports zero top-level custom `axiom`/`opaque` declarations. |
 | Final ported-foundation closure | **27/27, zero diagnostics** | `logs/lean/serial-20260804-055402/summary.json`; all 27 exit codes are 0 and all 54 stdout/stderr logs are empty after the countable-base port. |
+| Temperoid and nested-quotient kernel closure | **5/5, zero diagnostics** | `logs/lean/serial-20260804-063139/summary.json`; connected finite coverings, kernel orbits, countable temperoids, the kernel-orbit/restriction adjunction, and nested normal quotients all compile, and all 10 stdout/stderr logs are empty. |
+| Expanded public-foundation axiom sample | **passed** | `logs/lean/axioms-upstream-foundations-20260804-063457/axiom_audit.stdout.log`; the new quotient, continuity, connectedness, full-faithfulness, adjunction, and canonical-map injectivity samples use only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx`. |
+| Mathlib 4.32.2 compatibility patch audit | **20/20 reverse checks passed** | `vendor/promachina/patches/4.32.2/MANIFEST.json`; the tracked closure now has 31 files, of which 20 are patched and 11 are byte-identical to the fixed source snapshot. |
+| Tempered deck transition/projection closure | **3/3, zero diagnostics** | `logs/lean/serial-20260804-065656/summary.json`; the deck-group file is byte-identical to `promachina@c7c06e23`, while the transition and projection files contain only recorded Lean 4.32.2 normalization migrations. All six stdout/stderr logs are empty. |
+| Tempered deck axiom sample | **passed** | `logs/lean/axioms-upstream-foundations-20260804-065850/axiom_audit.stdout.log`; ten samples from bounded lifts through the literal tempered projection use only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx`. |
 
 ### Public repositories checked at fixed commits
 
 | repository (commit) | build/scope actually observed | status at the IUT wall |
 |---|---|---|
 | [promachina/iut-lean](https://github.com/promachina/iut-lean) `4953e647` | 128 Lean files. The project has an extensive Stage-1 source-facing layer and its own dependency/audit documents. `AlgorithmicOutput` stores `ipl`, `she`, `apt` as `Prop` fields; downstream `CorollarySchema`/`SourceObligations` prove the ordered comparison once certificates, a common-target bound, hull/measure data, and q-positivity are supplied. | **interface**. The repository README explicitly lists full Frobenioids, holomorphic hulls, determinants, and local-field/Haar compatibility as remaining construction work. A passing downstream theorem is conditional on those records. |
-| [promachina/iut-lean](https://github.com/promachina/iut-lean) `581e2b89` (current HEAD checked 2026-08-04; local production snapshot starts at `0d52e0fd`) | 189 Lean files. Ten commits after the local snapshot add countable-base tempered-cover proofs, bad-local stable-reduction semigraphs, an Andre tempered exact-sequence boundary, an arithmetic tempered-tower wrapper, and source-audit material. Its `lakefile.toml` pins Mathlib `v4.30.0`, whereas this project uses Lean/Mathlib `4.32.2`. | **mixed**. Finite semigraph, finite-fiber/countability, quotient-transition, canonical-map injectivity, deck-projection, and categorical comparison kernels are real constructions. Tame realization, pro-Sigma facts, Andre exactness/completion, stable-log specialization, level exactness, and limit surjectivity/inducing remain structure fields. The exact countable-base hunks through `36ef280d` are ported and audited; the two newest wrappers are reference-only pending generic-kernel extraction. |
+| [promachina/iut-lean](https://github.com/promachina/iut-lean) `c7c06e23` (current HEAD checked 2026-08-04; local production snapshot starts at `0d52e0fd`) | 190 Lean files. Eleven commits after the local snapshot add countable-base tempered-cover proofs, bad-local stable-reduction semigraphs, an Andre tempered exact-sequence boundary, an arithmetic tempered-tower wrapper, a selected finite-place covering wrapper, and source-audit material. Its `lakefile.toml` pins Mathlib `v4.30.0`, whereas this project uses Lean/Mathlib `4.32.2`. | **mixed**. Finite semigraph, finite-fiber/countability, nested quotient, canonical-map injectivity, connected-covering, kernel-orbit, countable-temperoid, adjunction, deck-projection, and categorical comparison kernels are real constructions. Tame realization, pro-Sigma facts, Andre exactness/completion, stable-log specialization, level exactness, limit surjectivity/inducing, and the selected bad-place stable/Andre/tower family remain fields. The reusable generic kernels are now ported and audited; the selected-place wrapper remains `interface-only`. |
 | [Takkun-kohinata/IUT_LEAN](https://github.com/Takkun-kohinata/IUT_LEAN) `9d56c46` (refreshed 2026-08-04; unchanged) | 68 Lean files. `Multiradial/Cor312.lean` proves its stated abstract corridor; `Diophantine/Szpiro.lean` defines the Szpiro-shaped conclusion but leaves its truth as `DiophantineMainTheorem`; `InitialThetaData/Deferred.lean` documents deferred geometric realization; `LogTheta/Indeterminacy.lean` uses an orbit model for Ind3. | **interface/claim only**. The finite/group-theoretic and numerical lemmas are useful, but the real etale-theta, prime-strip, Kummer, and initial-data constructions are not recovered from the original geometry. |
 | [lana-project/iut4-sec1](https://github.com/lana-project/iut4-sec1) `a7551d2` (refreshed 2026-08-04; unchanged) | 26 Lean files. Six Mathlib-only Section-1 targets are exported. The comparator README marks later targets (tensor bijection/norm, second error, exact prime-counting) as not included or conditional. | **proved only for elementary Section 1 fragments**. It intentionally does not verify IUT I--III or Corollary 3.12. |
 | [com-junkawasaki/iut-lean](https://github.com/com-junkawasaki/iut-lean) `ca4c0dd` (refreshed 2026-08-04; unchanged) | 7 Lean files. Genuine `Polynomial.abc`/Mason--Stothers corollary and numerical hyperbolic curve-type facts. | **not IUT formalization**; no prime strips or Corollary 3.12 objects. |
@@ -862,3 +868,43 @@ corridors and diagnostics, not a resolution of the controversy.**
   wrappers are therefore `interface-only`; only the generic group-theoretic
   kernels are extraction candidates. The declaration audit is recorded in
   `vendor/promachina/review-581e2b89.json`.
+- 2026-08-04: refreshed promachina again at `c7c06e23` (190 Lean files) and
+  audited commit `198de794`. Its new selected finite-place covering boundary
+  proves the bad/good set partition and derives categories, functors,
+  adjunctions, and full faithfulness from supplied branch data. The selected
+  bad-place family still stores the stable-reduction, Andre, and arithmetic
+  tower realizations as fields, so the wrapper remains `interface-only`.
+  Declaration-level details are in `vendor/promachina/review-c7c06e23.json`.
+- 2026-08-04: mechanically ported the genuinely constructed lower layer used
+  by that wrapper: connected finite covering categories, kernel orbits,
+  countable temperoids, and the kernel-orbit/restriction adjunction. The first
+  three files are byte-identical to the fixed source snapshot. The fourth has
+  only a Lean 4.32.2 instance-interface migration: two non-inferable `Full`
+  instances became explicit theorems installed locally by `letI`; hypotheses
+  and proof bodies are unchanged. A SHA-guarded extraction also separates the
+  generic nested-normal-quotient system from the conditional arithmetic tower.
+- 2026-08-04: the combined five-module closure is warning-free in
+  `logs/lean/serial-20260804-063139/summary.json` (5/5, ten empty logs). The
+  expanded axiom audit passes without `sorryAx` in
+  `logs/lean/axioms-upstream-foundations-20260804-063457/`; every sampled new
+  declaration uses only `propext`, `Classical.choice`, and `Quot.sound`.
+  Provenance is recorded in `vendor/promachina/selective-ports-c7c06e23.json`;
+  the 31-file compatibility manifest has 20 patched and 11 byte-identical
+  files, and all 20 patches pass reverse application checks.
+- 2026-08-04: ported the literal tempered-deck construction and its two
+  surjectivity layers from `promachina@c7c06e23`. The source proves local
+  universal-tree lifting, finite bounded lift fibers, cofiltered compatible
+  sections, refinement-transition surjectivity, and raw/literal inverse-limit
+  projection surjectivity. The three-module serial run is 3/3 with six empty
+  logs at `logs/lean/serial-20260804-065656/summary.json`. Ten representative
+  declarations have no `sorryAx` and use only `propext`, `Classical.choice`,
+  and `Quot.sound` in
+  `logs/lean/axioms-upstream-foundations-20260804-065850/`. Exact hashes and
+  the two compatibility diffs are recorded in
+  `vendor/promachina/selective-ports-tempered-deck-c7c06e23.json`. This closes
+  a genuine tempered-deck foundation layer, not the stable/Andre/arithmetic
+  realization or any IPL/SHE/APT and log-volume obligation.
+- 2026-08-04: refreshed every public branch after the deck port. Remote
+  `master` remains `c7c06e23`; 24 of 25 non-master branch tips are ancestors
+  of it, and the sole unmerged tip `7a0854b2` has exactly the same Git tree as
+  its parent. No additional mathematical file is available to port.

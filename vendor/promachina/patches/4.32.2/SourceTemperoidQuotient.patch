@@ -1,0 +1,38 @@
+diff --git a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceTemperoidQuotient.lean b/Iut/Foundations/SourceTemperoidQuotient.lean
+index 08eb593..b63f43c 100644
+--- a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceTemperoidQuotient.lean
++++ b/Iut/Foundations/SourceTemperoidQuotient.lean
+@@ -267,8 +267,10 @@ noncomputable def adjunction :
+         ext x
+         rfl }
+ 
++omit [IsTopologicalGroup Pi] [IsTopologicalGroup G] in
++include surjective in
+ /-- Restriction along a surjection is full. -/
+-noncomputable instance restrictionFull :
++theorem restrictionFull :
+     (ContAction.res SourceCountableTypeCat q).Full where
+   map_surjective {X Y} f := by
+     refine ⟨ObjectProperty.homMk
+@@ -354,7 +356,7 @@ instance connectedRestrictionFaithful :
+     apply (ContAction.res SourceCountableTypeCat q).map_injective
+     exact congrArg (fun h => h.hom) equality
+ 
+-noncomputable instance connectedRestrictionFull :
++theorem connectedRestrictionFull :
+     (connectedRestriction q surjective).Full where
+   map_surjective {X Y} f := by
+     letI := restrictionFull q surjective
+@@ -366,8 +368,10 @@ noncomputable instance connectedRestrictionFull :
+ 
+ /-- Restriction on connected temperoids is fully faithful. -/
+ noncomputable def connectedRestrictionFullyFaithful :
+-    (connectedRestriction q surjective).FullyFaithful :=
+-  Functor.FullyFaithful.ofFullyFaithful (connectedRestriction q surjective)
++    (connectedRestriction q surjective).FullyFaithful := by
++  letI := connectedRestrictionFull q surjective
++  exact Functor.FullyFaithful.ofFullyFaithful
++    (connectedRestriction q surjective)
+ 
+ noncomputable def connectedFunctorCompInclusionIso :
+     (sourceConnectedTemperoidAction Pi).ι ⋙ functor q surjective openMap ≅

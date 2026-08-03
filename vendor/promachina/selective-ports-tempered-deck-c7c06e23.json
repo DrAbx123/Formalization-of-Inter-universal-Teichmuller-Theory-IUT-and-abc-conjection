@@ -1,0 +1,38 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "sourceCommit": "c7c06e23d191037424ba5d1a336a31a8cf73dc78",
+  "upstreamMathlib": "v4.30.0",
+  "localMathlib": "v4.32.2",
+  "compileLog": "logs/lean/serial-20260804-065656/summary.json",
+  "axiomLog": "logs/lean/axioms-upstream-foundations-20260804-065850/axiom_audit.stdout.log",
+  "sorryAxFound": false,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "files": [
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedDeckGroup.lean",
+      "status": "direct-proof",
+      "sourceSha256": "A3EFD6D96FAE7818090D0CE5B745BAEC8E0D0AFDBFD12614B7A658D6A002D0F1",
+      "productionSha256": "A3EFD6D96FAE7818090D0CE5B745BAEC8E0D0AFDBFD12614B7A658D6A002D0F1"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedDeckTransitionSurjectivity.lean",
+      "status": "migrated-proof",
+      "sourceSha256": "E1C08C4A458EFC247A941A23A0556DC5F67D445A3AF3B20AA7FDB2921C222EC4",
+      "productionSha256": "97ABDF21B893E9F50094A31918049BE0A28734D521F089BFFEDA987B5FDE8D36",
+      "patch": "vendor/promachina/patches/4.32.2/SourceTemperedDeckTransitionSurjectivity.patch",
+      "migration": "replace three failing simpa normalizations by explicit change/exact steps for Mathlib 4.32.2 naturality expressions; statements, hypotheses, and source equalities are unchanged"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedDeckProjectionSurjectivity.lean",
+      "status": "migrated-proof",
+      "sourceSha256": "DF95242FE7D4DD4D2ADBC70F0D0796A496BA313DEB2FCD72CE636E1214E6EB46",
+      "productionSha256": "CE34D5F8BDE0EBF6A1E13E4104A808102098FE764A8560A643453C9136ADA530",
+      "patch": "vendor/promachina/patches/4.32.2/SourceTemperedDeckProjectionSurjectivity.patch",
+      "migration": "replace two failing simpa normalizations by explicit local-definition unfolding, equivalence cancellation, and change/exact steps; statements, hypotheses, and source equalities are unchanged"
+    }
+  ]
+}

@@ -5,7 +5,8 @@
   "localMathlib": "v4.32.2",
   "targetModule": "Iut.Foundations.SourceSemiGraphResidualSeparation",
   "copiedAt": "2026-08-04T01:19:43.3905685+08:00",
-  "fileCount": 27,
+  "expandedAt": "2026-08-04T06:38:00+08:00",
+  "fileCount": 31,
   "files": [
     {
       "module": "Iut.Foundations.GaloisComplement",
@@ -62,6 +63,13 @@
       "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
       "sourceSha256": "D125C47A728E0FE3E31EFD52EEAEA4BBDDE013751949F471C1E23EC189952809",
       "copiedSha256": "D125C47A728E0FE3E31EFD52EEAEA4BBDDE013751949F471C1E23EC189952809"
+    },
+    {
+      "module": "Iut.Foundations.SourceConnectedCoveringCategory",
+      "relativePath": "Iut/Foundations/SourceConnectedCoveringCategory.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "FB22539674CC63BE4EB5975A65DB20F2FEE2914F49765DD9023778A97CA27EDA",
+      "copiedSha256": "FB22539674CC63BE4EB5975A65DB20F2FEE2914F49765DD9023778A97CA27EDA"
     },
     {
       "module": "Iut.Foundations.SourceContinuousAnabelioid",
@@ -141,6 +149,13 @@
       "copiedSha256": "96D80EA6A54B5BDD9E1179DEE84AA837B4EFA0C0C8EA8AC216BDA09B686AB09B"
     },
     {
+      "module": "Iut.Foundations.SourceKernelOrbit",
+      "relativePath": "Iut/Foundations/SourceKernelOrbit.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "AA5E8143E9310724E16DFA5F8F3363576CAD1893D056C5EBB5B8C62C51237B61",
+      "copiedSha256": "AA5E8143E9310724E16DFA5F8F3363576CAD1893D056C5EBB5B8C62C51237B61"
+    },
+    {
       "module": "Iut.Foundations.SourceProfiniteCosetSystem",
       "relativePath": "Iut/Foundations/SourceProfiniteCosetSystem.lean",
       "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
@@ -195,6 +210,20 @@
       "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
       "sourceSha256": "CAB93633FAB2029F41DC7FA774A6CC046C6524AEB1474027B5433245E8FE2E8B",
       "copiedSha256": "CAB93633FAB2029F41DC7FA774A6CC046C6524AEB1474027B5433245E8FE2E8B"
+    },
+    {
+      "module": "Iut.Foundations.SourceTemperoid",
+      "relativePath": "Iut/Foundations/SourceTemperoid.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "8D24B30C707C970EFFBFC0F3D2D1FC1DFA2252E8969CB01B59BEF18B898E498D",
+      "copiedSha256": "8D24B30C707C970EFFBFC0F3D2D1FC1DFA2252E8969CB01B59BEF18B898E498D"
+    },
+    {
+      "module": "Iut.Foundations.SourceTemperoidQuotient",
+      "relativePath": "Iut/Foundations/SourceTemperoidQuotient.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "333DEC083B20FC3FD159B66A80AAE030606405970C3D6FA17B2E0636D73F552C",
+      "copiedSha256": "333DEC083B20FC3FD159B66A80AAE030606405970C3D6FA17B2E0636D73F552C"
     }
   ]
 }

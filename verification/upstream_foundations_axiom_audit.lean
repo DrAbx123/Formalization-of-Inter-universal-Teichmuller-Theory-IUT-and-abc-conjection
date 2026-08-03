@@ -2,6 +2,12 @@ import Iut.Foundations.SourceGluedAnabelioid
 import Iut.Foundations.SourceGluedGalois
 import Iut.Foundations.SourceAnabelioidSlice
 import Iut.Foundations.SourceSemiGraphResidualSeparation
+import Iut.Foundations.SourceNestedNormalQuotientSystem
+import Iut.Foundations.SourceTemperoidQuotient
+import Iut.Foundations.SourceTemperedDeckProjectionSurjectivity
+import Iut.Foundations.SourceTemperoidOrbitDecomposition
+import Iut.Foundations.SourceTemperoidRestrictionComponentFamily
+import Iut.Foundations.SourceConnectedFiniteEtaleConverse
 
 /-!
   Trust-boundary audit for the imported semi-graph-of-anabelioids foundation.
@@ -44,3 +50,58 @@ import Iut.Foundations.SourceSemiGraphResidualSeparation
 #print axioms Iut.SourceSemiGraphResidualSeparation.separationCover_vertex_countable
 #print axioms Iut.SourceSemiGraphResidualSeparation.separationCover_edge_countable
 #print axioms Iut.SourceSemiGraphResidualSeparation.separationTreeProjection_liftUniversalVertex
+
+/-! Generic quotient and compatible-family inverse-limit kernel extracted from
+`promachina/iut-lean@581e2b89`. -/
+
+#print axioms Iut.SourceNestedNormalQuotientSystem.transition_mk
+#print axioms Iut.SourceNestedNormalQuotientSystem.transition_surjective
+#print axioms Iut.SourceNestedNormalQuotientSystem.transition_continuous
+#print axioms Iut.SourceNestedNormalQuotientSystem.canonicalMap_continuous
+#print axioms Iut.SourceNestedNormalQuotientSystem.canonicalMap_projection
+#print axioms Iut.SourceNestedNormalQuotientSystem.canonicalMap_injective
+
+/-! Connected finite coverings, kernel orbits, countable temperoids, and the
+kernel-orbit/restriction adjunction ported from `promachina/iut-lean`. -/
+
+#print axioms Iut.SourceConnectedCoveringCategory.categoryIsConnected
+#print axioms Iut.SourceConnectedCoveringCategory.connected_iff_pretransitive
+#print axioms Iut.EtaleFundamentalGroup.coverActionEquivalence
+
+#print axioms Iut.SourceKernelOrbit.kernel_fixes
+#print axioms Iut.SourceKernelOrbit.smul_mk
+#print axioms Iut.SourceKernelOrbit.targetContinuous
+
+#print axioms Iut.SourceConnectedTemperoid.connected_iff_nonempty_pretransitive
+#print axioms Iut.SourceConnectedTemperoid.hom_surjective
+#print axioms Iut.SourceConnectedTemperoid.categoryIsConnected
+#print axioms Iut.SourceTemperoidAction.finiteInclusionFullyFaithful
+
+#print axioms Iut.SourceTemperoidKernelQuotient.fiberTargetContinuous
+#print axioms Iut.SourceTemperoidKernelQuotient.homEquiv
+#print axioms Iut.SourceTemperoidKernelQuotient.adjunction
+#print axioms Iut.SourceTemperoidKernelQuotient.restrictionFull
+#print axioms Iut.SourceTemperoidKernelQuotient.connectedRestrictionFullyFaithful
+#print axioms Iut.SourceTemperoidKernelQuotient.connectedAdjunction
+
+#print axioms Iut.CategoryTheory.Functor.eval_section_surjective_of_bounded_lifts
+#print axioms Iut.SourceCombinatorialUniversalCover.UniversalVertex.mapHom_bounded_surjective
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.refinementIncidenceMap_fiber_finite
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.refinementTreeMap_bounded_surjective
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.refinementTreeMap_boundedFiber_finite
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.deckTransition_surjective
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.deckTransition_boundedFiber_finite
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.deckTypeDiagram_eval_section_surjective
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.rawDeckProjection_surjective
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.literalTemperedPresentation_projection_surjective
+
+#print axioms Iut.SourceTemperedGroupPresentation.projectionKernel_fixes_connectedAction
+#print axioms Iut.SourceTemperedGroupPresentation.connectedActionLevelFactorization
+#print axioms Iut.SourceCountableGroupDiagram.connectedActionLevelFactorization
+#print axioms Iut.sourceTemperoidOrbitDecompositionIso
+#print axioms Iut.SourceTemperedGroupPresentation.orbitLevelFactorization
+#print axioms Iut.sourceTemperoidComponentFamilyActionIso
+#print axioms Iut.sourceRestrictedComponentFamilyActionIso
+#print axioms Iut.SourceFiniteEtaleFunctorFactorization.connectedObjectProfiniteInclusion_isOpenEmbedding
+#print axioms Iut.SourceFiniteEtaleFunctorFactorization.connectedFiniteEtaleHom
+#print axioms Iut.SourceFiniteEtaleFunctorFactorization.connectedFiniteEtaleHom_fundamentalGroupHom_eq

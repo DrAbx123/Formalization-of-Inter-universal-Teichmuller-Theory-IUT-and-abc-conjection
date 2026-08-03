@@ -1,0 +1,33 @@
+diff --git a/Iut/Foundations/SourceTemperedDeckProjectionSurjectivity.lean b/Iut/Foundations/SourceTemperedDeckProjectionSurjectivity.lean
+index daea7d7..e9d218d 100644
+--- a/Iut/Foundations/SourceTemperedDeckProjectionSurjectivity.lean
++++ b/Iut/Foundations/SourceTemperedDeckProjectionSurjectivity.lean
+@@ -346,9 +346,11 @@ theorem properMap_fiber_finite
+         Function.SumMapFiber compactMap remainderMap targetSum :=
+     fun sourceNode ↦
+       ⟨(incidenceNodeEquiv source).symm sourceNode.1, by
++        dsimp only [compactMap, remainderMap, targetSum]
+         apply (incidenceNodeEquiv target).injective
+-        simpa [compactMap, remainderMap, targetSum, properMap] using
+-          sourceNode.2⟩
++        rw [(incidenceNodeEquiv target).apply_symm_apply]
++        change properMap source hom proper sourceNode.1 = targetNode
++        exact sourceNode.2⟩
+   exact Finite.of_injective encode (by
+     intro first second equality
+     apply Subtype.ext
+@@ -498,8 +500,12 @@ theorem mapHom_walk_vertices_of_depth_eq {Target : Type u}
+       have finalDepthEq :
+           (liftNeighbor targetGraph (hom root) mappedPrevious
+               (hom next) mappedAdjacent).depth = previousPoint.depth + 1 := by
+-        simpa only [mapHom, mapHomWalk, depth, ReducedWalk.length]
+-          using depth_eq
++        have hdepth := depth_eq
++        change
++          (liftNeighbor targetGraph (hom root) mappedPrevious
++              (hom next) mappedAdjacent).depth = previousPoint.depth + 1
++            at hdepth
++        exact hdepth
+       have mappedPreviousDepthEq :
+           mappedPrevious.depth = previousPoint.depth := by
+         omega

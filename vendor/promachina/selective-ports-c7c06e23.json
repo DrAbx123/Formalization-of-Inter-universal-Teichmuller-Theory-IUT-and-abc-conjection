@@ -1,0 +1,50 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "productionBaseCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+  "refreshedHeadCommit": "c7c06e23d191037424ba5d1a336a31a8cf73dc78",
+  "upstreamMathlib": "v4.30.0",
+  "localMathlib": "v4.32.2",
+  "classification": "three-direct-proofs-two-migrated-proofs",
+  "method": "exact file copies from the fixed worktree, one recorded compatibility patch, and one SHA-guarded source-range extraction",
+  "compileLog": "logs/lean/serial-20260804-063139/summary.json",
+  "axiomLog": "logs/lean/axioms-upstream-foundations-20260804-063457/axiom_audit.stdout.log",
+  "files": [
+    {
+      "relativePath": "Iut/Foundations/SourceConnectedCoveringCategory.lean",
+      "status": "direct-proof",
+      "sourceSha256": "FB22539674CC63BE4EB5975A65DB20F2FEE2914F49765DD9023778A97CA27EDA",
+      "productionSha256": "FB22539674CC63BE4EB5975A65DB20F2FEE2914F49765DD9023778A97CA27EDA"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceKernelOrbit.lean",
+      "status": "direct-proof",
+      "sourceSha256": "AA5E8143E9310724E16DFA5F8F3363576CAD1893D056C5EBB5B8C62C51237B61",
+      "productionSha256": "AA5E8143E9310724E16DFA5F8F3363576CAD1893D056C5EBB5B8C62C51237B61"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperoid.lean",
+      "status": "direct-proof",
+      "sourceSha256": "8D24B30C707C970EFFBFC0F3D2D1FC1DFA2252E8969CB01B59BEF18B898E498D",
+      "productionSha256": "8D24B30C707C970EFFBFC0F3D2D1FC1DFA2252E8969CB01B59BEF18B898E498D"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperoidQuotient.lean",
+      "status": "migrated-proof",
+      "sourceSha256": "333DEC083B20FC3FD159B66A80AAE030606405970C3D6FA17B2E0636D73F552C",
+      "productionSha256": "E323CF5AA3EF8FC0B663AFB78251F41CA6C09CDF0FC44FB0137953368B0BA0CD",
+      "patch": "vendor/promachina/patches/4.32.2/SourceTemperoidQuotient.patch",
+      "migration": "replace non-inferable Full instances by explicit theorems and install them locally; proof bodies and hypotheses are unchanged"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceNestedNormalQuotientSystem.lean",
+      "status": "migrated-proof",
+      "sourceCommit": "581e2b898b8429cbb696f75c4548e732d440650d",
+      "sourcePath": "Iut/Foundations/SourceBadLocalArithmeticTemperedTower.lean",
+      "sourceSha256": "F0702536E68E4EF47BEAF606D6928D63E9BF885ABEF56F6B7E8818BA8997E77B",
+      "sourceLines": ["511-610", "620-645"],
+      "productionSha256": "155A449A34D98E33A55A9CF486E36AA425ED3DE636FF1AFCB77EA6DB795E766F",
+      "extractor": "tools/extract_promachina_nested_quotient_kernel.ps1",
+      "extractorSha256": "233DF60C957DACBF7A7C42BB5455A51C22B18C47BB8DC206AD55FF51EA3DA5D6"
+    }
+  ]
+}
