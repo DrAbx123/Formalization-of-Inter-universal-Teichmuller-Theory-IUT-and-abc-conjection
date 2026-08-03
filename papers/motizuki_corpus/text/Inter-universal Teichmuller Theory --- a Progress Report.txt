@@ -1,0 +1,240 @@
+INTER-UNIVERSAL TEICHM ¨ULLER
+THEOR Y: A PROGRESS REPOR T
+Shinichi Mochizuki (RIMS, Kyoto Univ.)
+http://www.kurims.kyoto-u.ac.jp/~motizuki
+“Travel and Lectures”
+§1. Comparison with Earlier “Teichm¨uller
+Theories”
+§2. The Two Underlying Dimensions of
+Arithmetic Fields
+§3. The Log-Theta-Lattice
+§4. Inter-universality and Anabelian
+Geometry
+§5. Expected Main Results
+
+2
+§1. Comparison w/Earlier “Teich. Theories”
+Classical Complex Teich. Theory:
+Relative to canonical coord. z = x + iy
+(assoc’d to a square diﬀ.) on the Riemann
+surface, Teichm¨uller deformationsgiven by
+z ↦→ ζ= ξ+iη= Kx +iy
+—w h e r e1<K< ∞ is the dilationfactor.
+Key point:o n eholomorphicdimension, but
+twounderlyingrealdimensions,
+of which oneis dilated,
+while the otheris held ﬁxed!
+
+3
+p-adic Teich. Theory:
+· p-adic canon. liftingsof a hyp. curve in
+pos. char. equipped with a nilp. ind. bun.
+· Frobenius liftingsover ord. locus of mod-
+uli stack, tautological curve — cf. Poincar´e
+upperhalf-plane, Weil-Petersson metric/C.
+Analogy between IUTeich andpTeich:
+scheme theory ←→ scheme theory/Fp
+“log” no. ﬁeld←→ p o s .c h a r .h y p .c u r v e
+once-punct’d ell. curve/NF←→ nilp. IB
+log-Θ-lattice←→ p-adic can. + Frob. lift.
+
+4
+§2. Two Underlying Dims. of Arith. Fields
+Addition and Multiplication, Cohom. Dim.:
+Regard ring structureof rings such asZ as
+one-dim. “arith. hol. str.”!
+— which has
+two underlying comb. dims.!
+(Z,+) ↶ (Z,×)
+1-comb. dim. 1-comb. dim.
+—c f .t w oc o h .d i m s .of abs. Gal. gp. of
+· (totally imag.) no. ﬁeldF/Q < ∞
+· p-adic local ﬁeldk/Qp < ∞
+as well as two underlying real dims.of
+· C×
+
+5
+Units and Value Group:
+In case of p-adic local ﬁeld k/Qp < ∞,
+one may also think of these two underlying
+comb. dims. as follows:
+O×
+k ⊆ k× ↠ k×/O×
+k (∼= Z)
+1-comb. dim. 1-comb. dim.
+— cf. complex case:C× = S1 ×R>0
+In IUTeich, we shall
+deform the hol. str. of the NF
+by
+dilating the val. gps.via the theta fn.
+while
+keeping the units undilated
+
+6
+§3. The Log-Theta-Lattice
+Noncomm. (!) Diagram of Hodge Theaters:
+...
+...
+↑⏐
+⏐
+↑⏐
+⏐
+... −→ • −→ • −→ ...
+↑⏐
+⏐
+↑⏐
+⏐
+... −→ • −→ • −→ ...
+↑⏐
+⏐
+↑⏐
+⏐
+... ...
+Analogy between IUTeich andpTeich
+:
+each “HT”•← →scheme theory/Fp↑⏐⏐ = log-link ←→ Frob. in pos. char.
+−→=Θ-link ←→
+(
+pn/pn+1 ⇝ pn+1/pn+2
+)
+
+7
+Thus, 2-dims. of diagram
+←→ 2-cb. dims. ofp-adic loc. ﬂd.
+log-Link:
+At nonarch.v of NFF,r i n gs t r s .on either
+side of log-link related by non-ring. hom.
+logv : k
+×
+→ k
+—w h e r ek is an alg. cl. ofk
+def
+= Fv.
+Key point: log-linkiscompatible withisom.
+Πv
+∼
+→ Πv
+of arith. fund. gps. Πv on either side, with
+natural actionsvia Πv ↠ Gv
+def
+= Gal(k/k);
+also, compatible with global Galois gps.
+At arch.v of F, ∃an analogous theory
+
+8
+Θ-Link:
+Atbad nonarch.v ofNF F,r i n gs t r s .onei-
+thersideofΘ-linkrelatedbynon-ring. hom.
+O×
+k
+∼
+→O ×
+k
+Θ|l-tors =
+{
+qj2
+}
+j=1,... ,(l−1)/2
+↦→ q
+—w h e r ek is an alg. cl. ofk
+def
+= Fv.
+Key point: Θ-link is compatiblewith isom.
+Gv
+∼
+→ Gv
+—w h e r eGv
+def
+= Gal(k/k) — and natural
+actions on O×
+k .
+Atgood nonarch./arch. v ofF, deﬁneanal-
+ogously, using product formula.
+
+9
+Note:r i n gstr. rigid wrt/log-link [cf. Πv!],
+but notwrt/Θ-link [cf.Gv! ˆZ× ↷ O×
+k !]
+Note: “Galois portion” of log-Θ-lattice
+⇝ ´etale-picture — cf. cartes.vs. polar
+coords. forGaussianint.
+∫∞
+0 e−x2
+dx:
+arith. hol.
+str. Πv
+...
+|
+...
+arith.
+hol.
+str.
+Πv
+...
+– mono-
+analytic
+core Gv
+|
+–
+arith.
+hol.
+str.
+Πv
+...
+arith. hol.
+str. Πv
+
+10
+§4. Inter-universality and Anab. Geom.
+Note thatlog-link, Θ-link [i.e., Θ-dilation!]
+incompatible with ringstrs.:
+logv : k
+×
+→ k
+Θ|l-tors =
+{
+qj2
+}
+j=1,... ,(l−1)/2
+↦→ q
+— hence with basepoints arising from
+· scheme-theoretic pts., i.e., ring homs.!
+·Gal. gps.regardedasﬁeld str. automs. !
+Consequence: As one crosseslog-, Θ-links,
+one only knows “Πv”, “Gv” as abstract
+top. gps.! Thus, can only relate the bps.,
+“universes”, ring/scheme theoryindomain,
+codomain of log-, Θ-links by applying
+anabelian geometry!
+
+11
+§5. Expected Main Results
+(work in progress!!)
+Applytheory/ideasoftempered anab. geo. ,
+´Etale Theta Fn., Frobenioids, andTopics in
+Abs. Anab. Geo. IIIto conclude:
+Expected Main Theorem:O n ec a ng i v ea n
+explicit, algorithmicdescription, uptomild
+indeterminacies, of the left-handside of the
+Θ-link—i.e., of“Θ|l-tors”—relativ etothe
+[apriori, “alien”!] ring str.ontheright-hand
+side of the Θ-link.
+Key point:c o r i cnature ofGv ↷ O×
+k !
+— cf. analogy with Gaussian integral: i.e.,
+dfn. of Θ-link, log-Θ-latt. ←→ cart. crds.
+algo. desc. via anab. geo. ←→ pol. crds.
+
+12
+By performing a volume computationcon-
+cerning the outputof the algorithms of the
+Expected Main Theorem, one obtains:
+Expected Corollary: Inequality of Szpiro
+( ⇐⇒ ABC) Conjecture.
+... cf.
+·“Hasse invariant=d(Frob. lift.)”inpTeich
+· Gauss-Bonnet on a Riemann surfaceS
+−
+∫
+S
+(Poincar´e metric) = 4π(1−g)

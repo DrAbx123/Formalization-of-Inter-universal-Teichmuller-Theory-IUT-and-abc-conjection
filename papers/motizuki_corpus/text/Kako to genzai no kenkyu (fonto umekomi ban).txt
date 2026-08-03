@@ -1,0 +1,212 @@
+И஖Ʒഩǈ
+Ơƨ 1992Ɣǒ 2000ǇưƷᅶƷᄂᆮƷɼƳȆȸȞƸഏƷɤƭ
+ƴЎ᫏ƢǔƜƱƕưƖǇƢᲴ
+(a) p ᡶ Te i ch m ¨uller ྸᛯᲴ(1993᳸1996࠰)
+Ƣǔ Koebe᩿ƴ
+Ƣǔ Bers Ʒɟॖ҄Ʒ p ᡶႎƳ᫏˩Ʊᙸǔ
+ƜƱǋưƖŴǇƨ Serre-Tate೅ƷྸᛯƷ
+ӑ୺୺ዴ༿ƱᙸǔƜƱǋưƖǔŵᛇƠƘƸŴ
+A Theory of Ordinary p-adic Curves
+Ǎ
+An Introduction to p-adic T eichm¨uller Theory
+ǛƝӋༀɦƞƍŵų
+(b) p˴Ჴ(1995᳸1996࠰)
+ྸƸŴžэ p ᡶ˳ſᲢᲷ p৑˳ɥஊᨂဃ঺Ƴ˳Ʒᢿ
+ૠ
+܍
+ƢǔƱƍƏǋƷưƋǔŵᛇƠƘƸŴų
+The Local Pro- p Anabelian Geometry of Curves
+ǛƝӋༀɦƞƍŵ
+(c) ౹ό୺ዴƷ Hodge-Arakelov ྸᛯᲴ(1998᳸2000࠰)
+ƜƷྸᛯƷႸ೅ƸŴᙐእૠ˳Ǎ p ᡶ˳ɥưჷǒǕƯƍǔ Hodge ྸᛯƷ᫏˩
+ƠƯ ArakelovྵƢǔƜƱƴƋǔŵ
+ɥƷƋǔᆔƷ᧙ૠᆰ᧓ƱŴ౹ό
+୺ዴƷሁЎໜɥƷ᧙ૠƔǒƳǔᆰ᧓Ʒ᧓ƷŴૠ˳ƷƢǂƯƷእໜƴƓƍƯᚘ᣽
+ƢǔǋƷưƋǔŵƜƷྸᛯƸŴ
+ӞχႎƳǬǦǹᆢЎ ∫ ∞
+−∞
+e−x2
+dx = √
+π
+Ʒžᩉ૝ႎǹǭȸȠᛯ༿ſƱᙸǔƜƱǋưƖǔŵᛇƠƘƸŴų
+A Survey of the Hodge-Arakelov Theory of Elliptic Curves I, II
+ǛƝӋༀɦƞƍŵ
+ૼƨƳ௒ኵǁƷᢊ
+Hodge-Arakelov ྸᛯưƸŴ ૠᛯႎƳ Kodaira-Spencerݧƕನ঺ƞǕǔƳƲŴ
+ABCǛʸǊƔƢǑƏƳ᭽щႎƳ᩿ͨƕƋǔƕŴƦƷǇǇž ABC ʖ
+Ǜΰ
+஌ƢǔƨǊƴƸŴ
+˴ƷǹǭȸȠᛯႎƳ௒ኵǛឬឭƠƨ௒ኵ
+Typeset by AMS-TEX
+1
+
+2
+ᙲưƋǖƏƱƷႺज़ƷɦŴ2000Ɣǒ 2006ƴੑƚƯŴƦƷǑƏƳ௒ኵǛ
+ӨƱƳǔಮŷƳႎǤ
+ȳȕȩƸŴഏƷǑƏƳǋ
+ƷưƋǔᲴų
+Ƣǔ̾ŷƷǹǭȸȠሁưƸƳ
+ƘŴƦǕǒƷǹǭȸȠǛወСƢǔਁᝋႎƳኵӳƤᛯႎȑǿȸȳƳƍƠƸƦƷȑ
+ǿȸȳǛᚡᡓƠƨኵӳƤᛯႎǢȫǴȪǺȠưƋǔŵų
+˴ƷƜƱǛŴᨥᲢInter-universal=IU࠹
+˴ſஜႎƳ̊ƱƠƯഏƷɤƭƕ
+ਫƛǒǕǔᲴ
+˴ƴƓƚǔȢȎǤȉ
+ஜ፭Ჷח
+ǰȩȕሁŴਁᝋႎƳǰȩȕƷನᡯ
+ſŴžǰȩȕſƸŴƍƣǕǋŴſ
+ӳŴ
+ƬƯŴIU˴ƷᲢƢǂƯưƸ
+ƳƍƕᲣ᣻ᙲƳ᩿ͨƷɟƭƸŴų
+˴ſ
+ݣ
+ƢǔƷƸŴ
+˴
+ưƷᢒǢȸ
+˴ᲣưƋǔŵų
+ƜƷ 6᧓ᲢᲷ 2000᳸2006ᲣƷŴ
+˴ſǍ˴
+ǛɼȆȸȞƱƠƨᄂᆮƷˊᘙႎƳ̊ƱƠƯŴഏƷǑƏƳǋƷƕਫƛǒǕǔᲴ
+ȷThe geometry of anabelioids Ტ2001Უ
+ᝋƱƠƯৢƍŴ
+ឋǛᛦǂǔŵཎƴŴpؕ
+˴ǛᡲेƞƤǔǑƏƳ
+ſឋǛ฼ƨƢŵ
+ȷThe absolute anabelian geometry of canonical curves Ტ2001Უ
+p ᡶ Teichm ¨ullerƠƯŴp ᡶ˳ɥƷǋƷƱƠƯИƱƳ
+ྸǛᅆƢŵ
+
+3
+ȷCategorical representation of locally noetherian log schemes Ტ2002Უ
+Ɣǒᐯ໱
+ΨƞǕǔƱƍƏŴ1960ஜႎƳኽௐǛᅆƢŵ
+ȷSemi-graphs of anabelioids Ტ2004Უ
+ӞχႎƳžgraph of groupsᧈዴɥƴƋǔžsemi-graph of anabelioidsݣ
+ƴӒପƞǕǔƜƱǍŴƦǕƴ᧙ᡲƠ
+˴᫘ſƷኽௐǛᚰଢƢǔŵ
+ȷ
+A combinatorial version of the Grothendieck conjecture Ტ2004Უ
+୺ዴƴ˄᨟Ƣǔžsemi-graph of anabelioids ſǛŴǹǭȸȠᛯƕଢᅆႎ
+˴᫘ſƷ
+ྸſǛᅆƢŵ
+ȷConformal and quasiconformal categorical representation of hyperbolic
+Riemann surfaces Ტ2004Უ
+ᛯႎƴᚡᡓƢǔŵƦƷƏƪƷ
+᩿ƴǑǔɟॖ҄ǛЈႆໜƱƠƨǋƷưŴǋƏɟƭƸŴȪȸȞȳ᩿ɥƷ
+ᲣƴǑǔǋƷ
+ưƋǔŵ
+ȷAbsolute anabelian cuspidalizations of proper hyperbolic curves Ტ2005
+Უ
+Ψ
+᧏ƢǔŵƜƷྸᛯǛŴஊᨂ˳Ǎ pဇ
+ƢǔƜƱƴǑƬƯŴಮŷƳசᚐൿʖेǛᚐƘŵ
+ȷThe geometry of F robenioids I, II Ტ2005Უ
+ƷǑƏƳž´etale ኒſನᡯƱŴᲢȭǰȷǹǭȸȠƷྸᛯƴЈƯƘǔᲣȢ
+ȎǤȉƷǑƏƳžF robeniusኒſᛯႎನᡯƕŴƲƷǑƏƴ˺ဇƠƋƍŴǇƨƲƷ
+ǑƏƴ᫏КưƖǔƔǛᄂᆮƢǔŵ
+Ƣǔ Te i ch m ¨uller ྸᛯ
+2006ǇƬƯƖƯŴƦƷྸᛯǛᚡ
+ſƱƸŴɟᚕưᚕƏƱŴ
+ஊள˄ƖƷദ೅ૠƷӑ୺୺ዴ᧏Ƣǔ p ᡶ Teichm ¨uller ྸ
+ᛯƱŴžȑǿȸȳႎƴſ᫏˩ႎƳྸᛯǛŴɟໜ৷Ɩ౹ό୺ዴ˄ƖƷૠ˳Ơ
+᧏Ƣǔų
+ǈƴŴƜƜƴЈƯƘǔᲢૠ˳ɥƷᲣžɟໜ৷Ɩ౹ό୺ዴſ
+᧏ƞǕǔHodge-Arakelov ྸᛯƕԃǇǕƯƍǔŵƜ
+
+4
+ƷྸᛯƷƜƱǛŴžIU T eichm¨uller ྸᛯſᲢᲷžIU TeichſᲣƱԠƿƜƱƴƠƨŵ
+IUTeichᲢᲷ žIU҄ƞǕǔ
+ྸᛯưƋǔƴǋ᧙ǘǒƣŴᛦǂǕƹᛦǂǔǄƲp ᡶ Teichm ¨uller ྸᛯᲢᲷžpTeichſᲣ
+ƱኬƔƍƱƜǖǇưӏƿǋƷưƋǔƜƱ
+ƱƳƘज़ѣǛᙾƑƨǋƷưƋǔŵųų
+2006᳸2008ବƷžIUTeichሯưƋǔᲴ
+ȷThe ´etale theta function and its F robenioid-theoretic manifestations
+Ტ2006Უ
+p৑˳ɥƷᡚ҄Ƣǔ౹ό୺ዴᲢᲷTate curveƢǔȆȸ
+ǿ᧙ૠƴ˄᨟Ƣǔ Kummer ᫏ǛǨǿȸȫȷȆȸǿ᧙ૠƱԠƿŵƜƷǨǿȸȫȷȆȸ
+ǿ᧙ૠǍŴȆȸǿᐯଢ҄ƴ˄᨟Ƣǔ Kummerݣ
+ឋƷɟᢿƸ Frobenioid
+ƷྸᛯƱƷ᧙ᡲưИǊƯॖ፯ǛਤƭǋƷƴƳǔŵǇƨŴƜƷǨǿȸȫȷȆȸǿ᧙ૠ
+ƸŴ
+IUTeich ưƸŴpTeich ƴƓƚǔ೅แႎ F robeniusਤƪɥƛܭ
+ưƋǔŵƜƷ FrobeniusЎƢǔƜƱƴǑƬƯABC ʖ
+ǛЈƢᜭᛯƸŴų
+μ˳Ʒ Wittஊư๖ǒƔƳᆔૠg ୺ዴƷɥƴ Frobenius ਤ
+Ʒഏૠ
+ࡸ
+g ≤ 1
+Əſ
+ƱƍƏӞχႎƳᜭᛯƷ IU ༿ƱǋᚕƑǔŵ
+ȷT opics in absolute anabelian geometry I: generalities Ტ2008Უ
+ƜƷǷȪȸǺᲢᲷI,II,III˴ǛŴžGrothendieck
+ſǛႸ೅ƱƠƨᙻໜưƸƳƘŴž፭ᛯႎƳǢȫǴȪǺȠᲷǽȕȈſ
+Ʒ᧏ႆƴ᠆ឱǛፗƍƨᙻໜưᄂᆮƢǔƱƍƏǋƷưƋǔŵƜƷᇹɟᛯ૨ưƸŴಮŷƳ
+ᬱဏ൞ƴˡƑᎥƍƨசЈ༿ƷኽௐƔ
+ݣp˴ưƸИƱƳǔ GrothendieckƷžHom ༿ſ
+ྸƸ IUTeich ƱƸႺ੗᧙̞ƷƳƍኽௐưƋǔŵ
+ȷT opics in absolute anabelian geometry II: decomposition groups
+Ტ2008Უ
+IUTeichƱƱǋƴŴ IUTeich ƱƸᛯྸႎƴႺ੗᧙̞ƷƳƍ
+ݣp ᡶᢒ
+ᎍƷp ᡶႎƳྸᛯưƸŴ
+ɥᡓƷžF robeniusǛЈƢſႎ
+ƴƸ IUTeich Ʊ᧙̞Ƣǔ᩿ͨƕƋǔŵ
+
+5
+ȷT opics in absolute anabelian geometry III: global reconstruction
+algorithms Ტ2008Უ
+žGrothendieck˴ſᲢᲷ bi-
+anabelian geometry ᲣƱɟዴǛဒƠƨ˴ſᲢᲷ mono-anabelian ge-
+ometry᧏ƢǔŵƜǕƸദƴ
+IUT eich˴
+ǍžIUTeichƴƭƍƯƸŴᛯ૨ƷIntroduc-
+tion ǛƝӋༀɦƞƍŵ
+ƍЈƠƯƓƖƨƍŵƦǋƦǋ Grothendieck ƕஊӸƳ
+žFaltingsſǛ੩՘Ơƨ᣻ᙲƳѣೞƷɟƭƸദƴdio-
+phantus˴ƕ ᲢABC ʖे
+ƞǕǔᲣIUTeichлǛௐƨƢƜƱƸŴɟᙸƠƯGrothen-
+dieckǛɥƛƯſཞ
+ඞǛ౨ᚰƢǔƱŴƦǕǄƲҥኝƳ᧙̞ƴƋǔǘƚưƸƳƍƜƱƕЎƔǔŵ̊ƑƹŴ
+GrothendieckဇƷˁ૾ưƸŴૠ˳ɥƷžǻǯǷȧȳʖेſƴǑƬ
+ƕᜭᛯƷᙲƱƳǔŵ
+ༀႎƴŴžIUTeich ನेſưƸŴᲢૠ˳ɥƷǻǯǷȧȳʖेưƸƳƘᲣ
+ૠ˳Ʊ p ᡶ˳˴Ʒɟᆔư
+ƋǔᲣҥᢒǢȸșȫႎǢȫǴȪǺȠǛ๫ơǔ
+ưƋǔŵ ƜƷžҥᢒǢȸșȫႎǢȫǴȪǺȠſƸŴpTeichƴƓƚǔ MF ∇-object
+Ʒ FrobeniusƢǔǋƷưƋǓŴұƪ p ᡶƷྸᛯƴƓƚǔ
+Witt ࿢Ʒ Te i ch m ¨uller ˊᘙΨǍ pTe i chƷ೅แ୺ዴ
+ƷžIU ႎ᫏˩ཋſƱᙸǔƜƱƕưƖǔŵКƷᚕƍ૾ǛƢǕƹŴƜƷžҥᢒǢȸșȫႎ
+ǢȫǴȪǺȠſ ƸŴ ɟᆔƷ೅แႎਤƪɥƛ ȷ Ўᘷ፯ƠƯƍǔǋƷưƋǔŵ ǇƨŴᲢҥ
+ᝋƕp ᡶƷྸᛯƴƓƚǔ crystalᲢᲷ MF ∇-object
+Ʒɦᢿ crystalƠƯƍǔƱƍƏཞඞƴƸŴHodge-Arakelov ྸᛯƴƓƚǔžૠ
+ᛯႎ Kodaira-SpencerſᲢᲷǬȭǢ፭Ʒ˺ဇƴǑǔᲣǛᡲेƞƤǔǋƷƕƋǔŵ ų
+2008࠰4 உƔǒ IUTeichưƋǔŵƜƷ˺
+ᩃ৭ƴᚕƏƱŴഏƷɤƭƷྸᛯǛᝳǓӳǘƤǔƜƱǛɼ˳ƱƠƨǋƷ
+ưƋǔᲴ
+ȷThe geometry of Frobenioids I, II
+ȷThe ´etale theta function and its Frobenioid-theoretic manifestations
+ȷTopics in absolute anabelian geometry III
+ǈƴŴ2000ǇưᄂᆮƠƯƍƨǹǭȸȠᛯႎƳ Hodge-Arakelov ྸᛯƕǬǦǹ
+ᆢЎ ∫ ∞
+−∞
+e−x2
+dx = √
+π
+Ʒžᩉ૝ႎǹǭȸȠᛯ༿ſƩƱƢǔƱŴIUTeich ƸŴ
+ƜƷႎǬȭǢྸᛯ༿ƳƍƠƸ IU ༿ſ
+
+6
+ƱᙸǔƜƱƕưƖŴǇƨӞχႎƳǬǦǹᆢЎƷᚘምƴЈƯƘǔ೅ſƱࡈ
+೅ſ੭ƸŴᲢIU ༿ưƸᲣƪǐƏƲžThe geometry of Frobenioids I, II ſ
+ưᄂᆮƠƨžF robeniusኒನᡯſƱž´etale ኒನᡯſƠƯ
+ƷƱƜǖʚሯƷᛯ૨ƴЎƚƯ
+ưƋǔŵų
+ȷInter-universal T eichm¨uller theory I: Hodge-Arakelov-theoretic aspects
+Ტ2009Უ
+p ᡶ Teichm ¨uller ྸᛯƴƓƚǔ୺ዴǍ Frobenius ƷŴžmod pnſǇưƷ೅แਤƪɥ
+ƛƢǔ IU ༿Ǜನ঺Ƣǔŵ
+ȷInter-universal T eichm¨uller theory II: limits and bounds Ტ2010ܦ
+Უ
+ɥᚡƷžmod pnƷ n ǛѣƔƠŴpƢǔžIU ႎƳಊ
+ᨂſ Ǜನ঺ƠŴpTeich ƴƓƚǔ F robeniusЎƢǔǋƷǛᚘም
+Ƣǔŵ

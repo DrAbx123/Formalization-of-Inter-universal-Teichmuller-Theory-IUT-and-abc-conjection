@@ -1,0 +1,1441 @@
+REPOR T ON THE CURRENT SITUA TION
+SURROUNDING INTER-UNIVERSAL TEICHM ¨ULLER
+THEOR Y (IUT)
+Shinichi Mochizuki
+(RIMS, Kyoto University)
+October 2025
+Contents
+§1. Journalism/story-telling versus the practice of mathematics 1
+§1.1. Mathematical accountability and the EMSCOP 2
+§1.2. Professional training versus ChatGPT-type “hallucinations” 2
+§1.3. Disregard for fundamental democratic principles 4
+§2. Detailed analysis of mathematical misunderstandings 5
+§2.1. The issue of intrinsic contradictions in the set-up of IUT 6
+§2.2. Issues of identiﬁcation: set-theoretic copies versus universes 9
+§2.3. The issue of set-theoretic paradoxes 14
+§2.4. Relation to recent developments in anabelian geometry 15
+§3. Lean, the EMSCOP, and IUT 20
+§3.1. Social/political dynamics versus mathematical truth 20
+§3.2. The fundamental importance of Lean in the context of IUT 26
+§1. Journalism/story-telling versus the practice of
+mathematics
+In September 2025, J. D. Boyd published an article [Ctv] on his SciSci
+Research website exposing his views concerning the present situation sur-
+rounding inter-universal Teichm¨ uller theory (IUT). This article is a highly
+irresponsible piece of amateur journalism by an individual who lacks pro-
+fessional training in the mathematics relevant to the article and is replete
+with mathematically false and factually incorrect statements (cf. §2
+below for more details), as well as numerous absurd conclusions based on
+such statements. The purpose of the present report is to survey the current
+situation surrounding IUT with an eye to
+· minimizing the entirely unnecessary confusion that could po-
+tentially be caused by this article [Ctv] (cf. the remainder of the
+present §1, as well as §2 below, for more details), as well as to
+· discussing recent progress toward the important goal of Lean-
+style formalization of IUT (cf. §3 below for more details).
+In the following, I will use the notation “p. nXY/8” for references to (the
+September 26, 2025 version of) [Ctv]. Here, n ∈ {1, 2, 3, 4, 5, 6, 7, 8} denotes
+the page “n/8” of [Ctv]; X ∈ {L, C, R} denotes the horizontal position (i.e.,
+Left/Center/Right) on the page; Y ∈ {T, M, B} denotes the vertical position
+1
+
+2 SHINICHI MOCHIZUKI
+(i.e., Top/Middle/Bottom) on the page. Thus, searches for these references
+may yield inaccurate results when applied to other versions of [Ctv]. On
+the other hand, since we include in the present report direct quotations of
+all portions of the text of [Ctv] that are discussed in the present report, the
+present report is entirely self-contained, i.e., may be read without referring
+directly to [Ctv].
+§1.1. Mathematical accountability and the EMSCOP . First, it should
+be noted (cf., e.g., the introductory portion of [Rpt23]) that IUT is a well
+established mathematical theory that currently consists of ﬁve mathematical
+papers published in two internationally recognized mathematical journals
+and, in particular, has passed peer reviews for these journals. There are
+also ﬁve (four published and one unpublished) survey papers on IUT. That
+is to say, IUT is mathematics that is well understood by quite a number of
+professional mathematicians and has been veriﬁed countless times since its
+release in August 2012. In particular, this piece of amateur journalism [Ctv]
+does not have any eﬀect whatsoever on the mathematical validity of IUT .
+Frequently, in discussions of the responses by various people toward IUT,
+I quote the following passage from Article 6 of the section “Responsibilities
+of authors” of the Code of Practice of the European Mathematical Society
+(i.e., the [EMSCOP]), which oversees the publishing company that publishes
+the mathematical journal PRIMS, where the four original IUT papers were
+published:
+Mathematicians should make public claims of potential new
+theorems only when they believe they are able to provide full
+details in a timely manner, to avoid unnecessarily blocking
+an active line of research.
+This passage may be understood as expressing the fundamental importance
+of mathematical accountability when making mathematical assertions in
+public, i.e., the fundamental importance, for the practice of mathematics, of
+avoiding the creation of blackholes with respect to mathematical account-
+ability, where the validity of mathematical assertions becomes a matter of
+social/political dynamics , such as “faith en masse” (cf. the discussion of
+§3.1 below), rather than detailed, rigorous mathematical proofs (cf. the
+discussion surrounding (BlkAcc) in [EssLgc], §1.12).
+It is precisely for this reason that I have been very conservative in the past
+with regard to engagements with journalists and deeply critical of preprints
+such as those discussed in [Rpt24]. That is to say, articles written by jour-
+nalists, as well as preprints such as those discussed in [Rpt24], lie in a realm
+that is fundamentally external to the infrastructural apparatus that exists in
+the ﬁeld of professional mathematics for long-term digestion and examina-
+tion of the details of proofs of mathematical ideas and assertions, namely,
+· internationally recognized mathematical journals with a functional
+peer review system and
+· lectures and workshops on the mathematics involved
+(cf. the discussion surrounding (BlkAcc) in [EssLgc], §1.12).
+§1.2. Professional training versus ChatGPT-type “hallucinations”.
+Typically, journalists reporting on mathematics have no or little professional
+
+IUT REPORT (OCTOBER 2025) 3
+training in the mathematics that they are reporting on. In the case of [Ctv]
+(or, more generally, SciSci Research, which, as I understand, is an organiza-
+tion that consists of a single member), Boyd (according to the information
+that I was given) holds a masters degree in a discipline whose precise rela-
+tionship to the ﬁeld of pure mathematics is not clear; he does not hold a
+doctoral degree and has not published any research papers in an interna-
+tionally recognized mathematical journal in any ﬁeld of mathematics closely
+related to arithmetic geometry (much less IUT). In the case of the preprints
+discussed in [Rpt24], the author is a professional mathematician in a ﬁeld of
+arithmetic geometry that is not directly relevant to the preprints, but has
+not published any research papers in an internationally recognized mathe-
+matical journal in either of the two ﬁelds that are directly relevant to the
+subject matter discussed in the preprints, namely, p-adic Hodge theory and
+IUT-related anabelian geometry, hence cannot be considered a professional
+mathematician in either of these ﬁelds.
+In all of these cases, the fundamental lack of a mathematical accountabil-
+ity apparatus underlying the writing of the articles/preprints involved means
+that their content becomes nothing more than an exercise in story-telling,
+or arbitrary text generation , in the style of the so-called “hallucinations”
+generated by LLM’s such as ChatGPT (cf. the discussion of [Rpt24], §1).
+In this context, I am reminded of the phrase “linguistic trickery” that was
+applied by one mathematician to describe the use of the term “arithmetic
+holomorphic structure” in the preprints discussed in [Rpt24], as well as the
+discussion of the ideas of H.G. Frankfurt in [Fsk] concerning the diﬀerence
+between a person who simply lies while being explicitly aware of the dis-
+crepancy between what he says and the reality of the situation and a person
+who is locked in a behavioral pattern of mass generation of content that is
+completely divorced from reality, but who has little or no explicit awareness
+of this discrepancy between the content generated and the reality of the
+situation. I am also reminded, as a result of my experiences as an editor of
+a mathematical journal, of the numerous manuscripts submitted to journals
+by amateur mathematicians that claim to prove famous conjectures in a few
+pages using elementary techniques.
+In the context of ChatGPT-type “hallucinations”, it is interesting to note
+that it appears that currently research is underway to link LLM’s such as
+ChatGPT to Lean, so that interaction and text generation by the LLM
+can be supported by rigorous mathematical veriﬁcation via Lean. I heard
+about this research in talks by Chinese researchers during a Lean work-
+shop in Tokyo in July 2025, and, as I understand, this sort of technology
+is still in a rather initial stage of development. On the other hand, this
+sort of technological development is exciting in that it potentially (not in
+the immediate future, but perhaps in the not so distant future) opens up
+the possibility of preparing expository reports by LLM’s on mathematics
+formalized in Lean that are not plagued by the inaccuracies of journalists
+who do not have a rigorous understanding of the mathematics involved. It
+also opens up the possibility that in the future, LLM’s linked to Lean can be
+used by professional mathematicians to generate reports such as the present
+report or [Rpt24] to address problematic documents such as [Ctv] or the
+
+4 SHINICHI MOCHIZUKI
+preprints discussed in [Rpt24], thus freeing mathematicians such as myself
+from the burden (or perhaps dramatically reducing the burden) of preparing
+manuscripts such as the present report or [Rpt24] by hand. We refer to §3
+below for a more detailed discussion of Lean-related aspects of IUT.
+§1.3. Disregard for fundamental democratic principles. As dis-
+cussed in [Ctv], p. 1LT/8, the release of the article [Ctv] follows the release
+of another article [Cnv] that surveys the ideas, as well as the history of the
+development of the ideas, underlying IUT. Here, it should be noted that
+I consented to participate in the series of interviews/discussions that lead
+to [Cnv] precisely on the basis of Boyd’s repeated assurances that SciSci
+Research represented a fundamentally new kind of scientiﬁc journalism , one
+that would indeed take a responsible stance with regard to mathematical
+accountability for the mathematical content of the articles. Typically, jour-
+nalists prioritize political or proﬁt-related motives over accountability for
+mathematical accuracy, often as a result of a business model that derives
+proﬁt (e.g., in the form of internet clicks) precisely from sowing the seeds of
+controversy, e.g., by using factually inaccurate content to generate entirely
+unnecessary confusion (cf. the discussion of the internet/mass media as an
+apple of discord in [EssLgc], Example 1.5.2). The highly irresponsible and
+mathematically inaccurate content of [Ctv] thus amounts to an egregious
+breach of trust — i.e., an outright betrayal — relative to the repeated
+assurances that I received from Boyd in the period of time (between fall of
+2023 and fall of 2024) leading up to the interviews of [Cnv]. This content
+also explicitly contradicts Boyd’s assertion in [Ctv], p. 1CT/8, of the purely
+mathematical nature of his intentions in writing [Ctv].
+The views espoused by Boyd in [Ctv], most particularly concerning the
+content of the Scholze-Stix manuscript, are in direct contradiction to the
+views that he expressed on multiple occasions during our interviews (cf.,
+e.g., the discussion of [Ctv], p. 8RB/8), namely, to the eﬀect that that it
+was obvious even to an amateur observer that the main assertions of the
+manuscript were absurd and meaningless. We also discussed the mathemat-
+ical content of the Scholze-Stix manuscript and related mathematical topics
+such as redundant copies in some detail, so there was ample opportunity
+for him to discuss the issues that he raises in [Ctv], but he never did so.
+That is to say, it is entirely inconceivable that the person that I thought I
+knew by the name of “James Douglas Boyd” and interacted with, both elec-
+tronically and in person, between the fall of 2023 and the fall of 2025 could
+have written an article such as [Ctv]. Put another way, the very existence of
+this article [Ctv] implies that the person that I thought I knew by the name
+of “James Douglas Boyd” and interacted with, both electronically and in
+person, between the fall of 2023 and the fall of 2025 was nothing more than
+a cynical work of ﬁction .
+It is diﬃcult for me to recall any time in my career as a mathematician
+when I experienced a comparable level of overt fraud/duplicity/charlatanism
+in a professional situation, and it has left me in a state of deep shock. Typ-
+ically, interaction between professional mathematicians is conducted in a
+candid, forthright fashion, at least with regard to substantive mathematical
+issues. If Boyd feels strongly about the sort of issues that he raises with
+
+IUT REPORT (OCTOBER 2025) 5
+regard to IUT in [Ctv], there is absolutely no reason why he could not have
+resolved them smoothly and essentially painlessly in one-to-one mathemat-
+ical discussions between the two of us. This is typically the way in which
+mathematical issues are resolved between professional mathematicians and
+indeed the way in which numerous mathematical inaccuracies in preliminary
+versions of [Cnv] were resolved between Boyd and myself during the period
+between the fall of 2024 and the summer of 2025.
+In this context, it is important to recall that the Scholze-Stix manuscript
+has not been published in any internationally recognized mathematical
+journal with a functional peer review system. The manuscript does not
+contain any proof — or indeed even any precise statement — of the main
+assertion of the manuscript, namely, that there is some sort of logical rela-
+tionship between the simpliﬁed version of IUT exposed in the manuscript
+and the original theory of [IUTchI, II, III, IV] (cf. [EssLgc], §3, for more
+details). Rather, the manuscript simply states (in a passage that may be
+found in the PDF ﬁle of the manuscript by performing a search for the
+character string “restor”) that the authors are conﬁdent that restoring all
+the details of the original theory would not aﬀect the validity of the conclu-
+sions asserted in the manuscript. As discussed in [Rpt23], Scholze-Stix have
+refused to respond to numerous oﬀers on my part by e-mail to engage in
+further discussions (via e-mail/Zoom or in person) concerning the content
+of their manuscript. As a result,
+(Myst) it remains a complete mystery why — i.e., in the sense of a pre-
+cise mathematical statement supported by a complete mathematical
+proof with full details , in the spirit of the [EMSCOP] passage quoted
+above — Scholze-Stix or indeed anyone else, including Boyd (cf. the
+discussion of §2.1, §3.1 below!), assert(s) the existence of some sort of
+logical relationship between the Scholze-Stix version of IUT and
+the original theory of [IUTchI, II, III, IV].
+During my interaction with Boyd between the fall of 2023 and the fall of
+2025, I repeatedly emphasized the importance of mathematical accountabil-
+ity and the [EMSCOP] passage discussed above, as well as the more general,
+but nonetheless closely related, fundamental democratic principles of
+the rule of law , due process of law , and burden of proof (cf. the discus-
+sion at the beginning of [EssLgc], §1.10; the discussion of [EssLgc], Example
+1.10.1, (v); the discussion surrounding (DngPrc) in [EssLgc], §1.12). In-
+stances of dramatic and egregious ﬂip-ﬂops in position and policy are
+often closely linked to a ﬂagrant disregard for such fundamental demo-
+cratic principles/norms, and indeed this sort of phenomenon appears to be
+increasingly prevalent — i.e., a sinister sort of “new normal” — in the cul-
+ture and governing bodies of certain parts of the world today.
+§2. Detailed analysis of mathematical misunderstandings
+The mathematical misunderstandings of [Ctv] are deeply embedded
+in the fabric of the narrative of [Ctv]. They are so numerous and fun-
+damental that it is a formidable task to categorize and arrange these mis-
+understandings in a form that is readily digestible for analysis. In §2.1,
+§2.2, §2.3, we discuss three categories of misunderstandings, corresponding
+
+6 SHINICHI MOCHIZUKI
+to three distinct (but not entirely unrelated) mathematical issues . In-
+terestingly (perhaps even ironically!), these misunderstandings concern the
+logical structure not only of IUT, but also of the assertions of the Scholze-
+Stix manuscript that is often cited, as well as of various elementary and
+classical aspects of arithmetic geometry and indeed set-theoretic mathemat-
+ics/mathematical reasoning in general. As discussed extensively in §1, these
+misunderstandings stem essentially from Boyd’s short-sighted “hit-and-run ”
+journalistic/story-telling approach to discussing mathematics, an approach
+that is entirely divorced from any sort of functional apparatus for en-
+suring long-term mathematical accountability . Indeed, I was entirely
+unable to detect any evidence whatsoever in [Ctv] to the eﬀect that Boyd has
+either the will, the explicit intention, or the technical capacity to give precise
+statements or complete detailed proofs for any of the mathematically false
+assertions discussed in the remainder of the present §2. Finally, in §2.4,
+we discuss misunderstandings surrounding the developments in anabelian
+geometry related to IUT that were discussed in [Ctv].
+§2.1. The issue of intrinsic contradictions in the set-up of IUT.
+Perhaps the most fundamental misunderstanding of [Ctv] lies in the following
+false assertion :
+(F A1) the Scholze-Stix manuscript shows the existence of a contradiction
+intrinsic to the set-up of the log-theta-lattice of IUT.
+This false assertion (F A1)may be seen in the following passages of [Ctv]:
+· “Although the manuscript does not use the algorithms that Mochizuki
+uses in the papers, it does indeed, taking the setup in which the
+algorithms are applied (i.e., the log-theta-lattice), show that a con-
+tradiction can be derived from this setup due to the inter-universal
+approach that IUT applies to Diophantine inequalities.” ( [Ctv], p.
+1RT/8);
+· “The Scholze-Stix argument shows that if one simply removes the la-
+bels from the beginning (by identifying the various copies of R), and
+then looks at the theta-links, the contradictions become immediately
+manifest.” ( [Ctv], p. 1RB/8);
+· “The answer is that, although the overall setup clearly harbors these
+contradictions, suspended by inter-universality, Mochizuki has ar-
+gued that the papers are misunderstood,” ( [Ctv], p. 2LT/8);
+· “On the other hand, the Scholze-Stix argument is essentially that
+it’s unnecessary to consider such advanced algorithms since if one
+just takes the setup and simpliﬁes it down, one ﬁnds it to contain a
+contradiction-inducing mapping protected by labels which one might
+just as soon remove.” ( [Ctv], p. 2LM/8);
+· “it’s about the fact that the contradiction is there in the lattice
+... with the theta-link, whereas Mochizuki’s algorithms essentially
+promise a way around it. ... it’s about whether mathematicians are
+conﬁdent enough in the basic setup, shown in simpliﬁed terms by
+Scholze-Stix, to even consider the algorithms. ... it would essen-
+tially require the mathematical community to agree to abstain from
+deriving the contradiction from the setup, despite the ease of doing
+
+IUT REPORT (OCTOBER 2025) 7
+so, ... I think they’re unlikely to abstain from deriving the contra-
+diction, since mathematicians can remove labels as they so choose
+... Presenting IUT with the caveat that the setup is sensitive to set-
+theoretic contradiction and one can only perform a key algorithmic
+step under highly speciﬁc circumstances has been unconvincing.”
+([Ctv], p. 2LB/8 ∼ 2CM/8);
+· “One algorithm might avoid those statements, but if one can ﬁnd
+another algorithm that reaches a contradiction, one shows the the-
+ory to be inconsistent. ... if Scholze and Stix have an algorithm that
+reaches a contradiction, then the theory of the lattice is inconsis-
+tent. I think the key issue is that Mochizuki views the algorithms
+as part of the theory, such that other contradictions are mathemat-
+ically extrinsic. Nonetheless, I think most mathematicians view the
+ease with which an immediate contradiction can be derived from the
+setup as a sign to move on.” ( [Ctv], p. 5CM/8 ∼ 5RT/8);
+· “My own outlook is that Lean won’t help in this case, since at is-
+sue is this matter of label-removals and R-identiﬁcations. Lean ad-
+mits distinct type-theoretic universes, which, as Carneiro discusses,
+if viewed in a set-theoretic framework, are indeed Grothendieck uni-
+verses. So, on the one hand, I can imagine one trying to formalize the
+multiradial algorithms using type-theoretic universes with ‘distinct
+labeling’, perhaps put in by hand. The IUT papers symbolically
+label the Hodge theaters, q parameters, and other data (e.g., with †
+or ‡). So, formalizing IUT in a manner consistent with the papers
+would require encoding labels to prevent data from being identiﬁed.
+One could give them labels, perhaps, with irreducible deﬁnitions (or
+something like that), in order to make them resistant to equiva-
+lences. On the other hand, to formalize the Scholze-Stix argument,
+one would make the data readily amenable to identiﬁcation. I don’t
+foresee Lean being good for resolving a dispute such as this. Whether
+or not data is identiﬁed or kept distinct is a coding choice, just as
+it is a symbolic choice in pen-and-paper math. I can imagine both
+sides ﬁnding a way to code up their approach, only to dispute their
+respective approaches.” ( [Ctv], p. 5RM/8 ∼ 5RB/8).
+Before proceeding further, it should be stated categorically that there is
+no contradiction in the set-up of the log-theta-lattice of IUT. The log-
+theta-lattice consists of Hodge-theaters glued together via log-links and
+theta-links. The construction of Hodge-theaters, which is the main topic
+of [IUTchI], is a simple formal procedure, provided that one accepts results
+in anabelian geometry and the theory of Frobenioids that are established in
+earlier papers. In a similar vein, the construction of log-links and theta-links
+follows formally from the fact that the prime-strips that appear in the do-
+main/codomain of the log-link and theta-link are isomorphic, which again
+follows formally from the various deﬁnitions involved.
+If this false assertion (F A1)were true, then it would follow formally that
+(F A1.1) the log-theta-lattice does not exist , hence, in particular, is not well
+deﬁned.
+
+8 SHINICHI MOCHIZUKI
+Here, I should emphasize that never in the period of time from August 2012
+(when the IUT papers [IUTchI, II, III, IV] were released) till the present
+have I seen any assertions by any professional mathematician to the eﬀect
+that (F A1.1) holds. Note that this includes the Scholze-Stix manuscript,
+my discussions with Scholze-Stix and Hoshi in March 2018, and subsequent
+internet/mass media comments by Scholze-Stix.
+In this context, it is also important to note that if the false assertion
+(F A1.1)were true, then it would follow formally (i.e., since the multiradial
+representation for the theta-pilot in IUT logically depends , in an essential
+way, on the existence/well-deﬁned nature of the log-theta-lattice) that
+(F A1.2) the multiradial representation for the theta-pilot in IUT (i.e., the
+algorithm summarized in the statement of [IUTchIII], Theorem 3.11)
+does not exist , hence, in particular, is not well deﬁned .
+Again, I should emphasize that never in the period of time from August 2012
+(when the IUT papers [IUTchI, II, III, IV] were released) till the present
+have I seen any assertions by any professional mathematician to the eﬀect
+that (F A1.2) holds. Note that this includes the Scholze-Stix manuscript,
+my discussions with Scholze-Stix and Hoshi in March 2018, and subsequent
+internet/mass media comments by Scholze-Stix.
+On the contrary, Scholze-Stix repeatedly emphasized — i.e., during the
+March 2018 discussions, as well as in their manuscript — that they do
+not contest the mathematical validity of [IUTchIII], Theorem 3.11 (i.e., the
+algorithm for the multiradial representation for the theta-pilot). Rather,
+their central assertion — both during the March 2018 discussions, as well
+as in the argument involving identifying copies of R in the ﬁnal two pages
+of their manuscript — is the assertion that
+(SSA1) they do not see how to derive any nontrivial diophantine conse-
+quences, i.e., such as height inequalities, from the theory of [IUTchI,
+II, III, IV].
+That is to say,
+(SSA2) the argument involving identifying copies of R in the ﬁnal two pages
+of their manuscript consists of their interpretation/simpliﬁcation of
+the set-up (i.e., involving the log-theta-lattice) and argument of
+[IUTchIII], Corollary 3.12.
+As discussed in (Myst) (cf. also the discussion surrounding (Myst) in §1.3,
+as well as [EssLgc], §3, for more details), there is in fact no logical rela-
+tionship between the Scholze-Stix interpretation/simpliﬁcation referred to
+in (SSA2) and the set-up (i.e., involving the log-theta-lattice) and argument
+of [IUTchIII], Corollary 3.12.
+Finally, we note that formalization via Lean4 of the sort of mathe-
+matics that appears in the construction of Hodge-theaters or the multira-
+dial representation of [IUTchIII], Theorem 3.11, is, at least at a theoretical
+level, an entirely straightforward issue (cf. the discussion of (NoObs)
+in §3.2 below). Of course, it would require a tremendous amount of work,
+perhaps on the order of several years, depending, for instance, on how much
+of the anabelian geometry and theory of Frobenioids of earlier papers one
+is willing to assume as a “blackbox” (cf. the discussion of (BBxFm) in §3.2
+
+IUT REPORT (OCTOBER 2025) 9
+below for more details), but the fundamental point that must be emphasized
+in this context is that the falsiﬁcation (i.e., veriﬁcation of the falsehood)
+of false assertions such as (F A1.1)and (F A1.2)is (at least at a theoretical
+level) precisely the sort of task at which Lean4 excels . That it to say, it is
+entirely inconceivable that, as is asserted in [Ctv], p. 5RM/8 ∼ 5RB/8,
+(F A1.3) Lean4 is fundamentally incapable of conﬁrming the falsity of ( (F A1.1)
+and (F A1.2), hence also of) (F A1).
+In particular, it is entirely absurd to assert, as is done in [Ctv], p. 5CB/8
+∼ 5RT/8, that
+(F A1.4) the falsiﬁcation of (F A1)is a sort of subjective issue whose validity
+depends on the point of view of the mathematician in question.
+Indeed, assertions such as (F A1.3), (F A1.4) directly contradict the funda-
+mental nature of logical reasoning in mathematics. In this context, it is
+also important to note, again as a matter of elementary logic , the following
+Existence Principle :
+(ExPr) the existence of an algorithm (i.e., such as the Scholze-Stix inter-
+pretation/simpliﬁcation of (SSA2)) that is unsuccessful in yielding
+any nontrivial consequences (i.e., such as diophantine inequalities)
+does not, in any way, imply the non-existence/falsehood of an algo-
+rithm (i.e., such as the actual content of [IUTchIII], Theorem 3.11
+and Corollary 3.12) that is successful in yielding nontrivial conse-
+quences.
+§2.2. Issues of identiﬁcation: set-theoretic copies versus universes.
+Another fundamental misunderstanding of [Ctv] lies in the following false
+assertion:
+(F A2) contradictions in IUT are avoided by means of the “extraordinary/no-
+vel” approach of assigning distinct labels to diﬀerent universes .
+This false assertion (F A2)may be seen in the following passages of [Ctv]:
+· “Otherwise-contradictory relations between data imposed by certain
+links are oﬀset by assigning data to diﬀerent universes with distinct
+labels, with this inter-universal setup giving rise to many copies of
+R.” ( [Ctv], p. 1RM/8);
+· “The answer is that, although the overall setup clearly harbors these
+contradictions, suspended by inter-universality, Mochizuki has ar-
+gued that the papers are misunderstood, ...” ( [Ctv], p. 2LT/8);
+· “It’s an extraordinary situation, due to the novelty of using inter-
+universality to suspend contradictions with labels.” ( [Ctv], p. 2LB/8);
+· “amounts to working with diﬀerently labeled data assigned to dif-
+ferent universes and independently manipulating them to behave as
+they would in a contradictory relationship without letting the contra-
+diction occur, unless one removes the labels (the crux of the dispute
+with Scholze-Stix).” ( [Ctv], p. 3CT/8);
+· “I think the answer, in part, is that 1) the theory depends on inter-
+universality, 2) the general necessity of universes is already debated
+in mathematics today, and 3) IUT’s use of universe-based labeling for
+
+10 SHINICHI MOCHIZUKI
+suspending contradictions fails under general label-removal.” ( [Ctv],
+p. 4CB/8);
+· “In IUT, however, universes have a further role: to protect against
+contradictions. Mochizuki even distinguishes his work from the Gro-
+thendieck school in that IUT uses labels for relations that do not re-
+spect the labels (which means contradictions ensue without them).”
+([Ctv], p. 5LM/8).
+This sort of provocative/sensationalist/exoticist/apocalyptic narra-
+tive may make for great entertainment from the point of view of many
+internet users, but has absolutely nothing to do with the rather mundane
+mathematical reality of what is actually done in IUT:
+(LB1) contradictions of the sort that occur in the argument on the ﬁnal
+two pages of the Scholze-Stix manuscript are avoided in IUT not by
+assigning distinct labels to diﬀerent universes (i.e., as in (F A2)), but
+rather by assigning distinct labels to diﬀerent elements/sets ,
+i.e., as is the standard practice when working with any sort of set-
+theoretic object in mathematics.
+That is to say, the distinct labels in question in (LB1) are precisely the
+(entirely set-theoretic!) labels (n, m), where n, m are integers, of the ver-
+tices of the oriented graph underlying the log-theta-lattice (each of which
+corresponds to a distinct Hodge theater). This is an entirely standard set-
+theoretic convention/apparatus that is applied throughout mathematics for
+working with distinct elements/sets. There is absolutely nothing that is
+“extraordinary/novel” about this use of distinct labels.
+Here, we note that it is true that at these distinct labels ( n, m), distinct
+rings/schemes arise, which give rise to distinct Galois categories , hence,
+in particular, to distinct universes . On the other hand, there is abso-
+lutely nothing that is qualitatively diﬀerent, at a foundational level, about
+this situation from the situation that arises classically in SGA1, where set-
+theoretically distinct schemes occur that give rise to distinct Galois cat-
+egories, hence, in particular, to distinct universes. That is to say, at a
+foundational level, the circumstances in IUT that trigger the introduction
+of distinct universes in IUT are precisely identical to the circumstances in
+SGA1 that trigger the introduction of distinct universes in SGA1; moreover,
+these circumstances in both cases are entirely classical and set-theoretic in
+nature, i.e., the use of distinct labels when working with distinct set-theoretic
+objects, such as schemes. Here, we recall for the reader that in any classical
+discussion of schemes that involves, say, two distinct schemes , it is entirely
+standard mathematical practice to use distinct labels , e.g., “ S” and “ T ” for
+the two distinct schemes, rather than, say, the same label “X” for the two
+distinct schemes.
+One fundamental misunderstanding of [Ctv] that is closely related to
+(F A2) — and indeed may be regarded as a sort of “corollary” of (F A2)
+— lies in the following false assertion :
+(F A2.1) IUT suﬀers (as a consequence of (F A2)) from the fundamental defect
+of exhibiting a “vulnerability” or lack of “robustness” when subject
+to arbitrary label-removals.
+
+IUT REPORT (OCTOBER 2025) 11
+This false assertion (F A2.1)may be seen in the following passages of [Ctv]:
+· “The Scholze-Stix argument shows that if one simply removes the la-
+bels from the beginning (by identifying the various copies of R), and
+then looks at the theta-links, the contradictions become immediately
+manifest.” ( [Ctv], p. 1RB/8);
+· “I think they’re unlikely to abstain from deriving the contradiction,
+since mathematicians can remove labels as they so choose ... Present-
+ing IUT with the caveat that the setup is sensitive to set-theoretic
+contradiction and one can only perform a key algorithmic step un-
+der highly speciﬁc circumstances has been unconvincing.” ( [Ctv], p.
+2CT/8 ∼ 2CM/8);
+· “Their algorithm shows that the necessity of inter-universality is
+also a vulnerability in the lattice; it’s not robust against arbitrary
+label-removals.” ( [Ctv], p. 5CT/8).
+In fact, this sort of “vulnerability” assertion (F A2.1)reﬂects a fundamental
+misunderstanding, on the part of [Ctv], of the way in which set-theoretic
+mathematics works (cf. the discussion following (LB1)!). Indeed, this “vul-
+nerability” phenomenon is by no means limited to IUT; rather, it is an
+immediate consequence of the very nature of set theory that
+(LB2) no nontrivial set-theoretic mathematical structure/theory
+(where, in this context, “nontrivial” may be understood as meaning
+that the structure/theory involves at least one set of cardinality ≥ 2)
+is “robust” with respect to “arbitrary label-removals” .
+This phenomenon may be seen in
+· the discussion of the projective line/sphere in [EssLgc], Example
+2.4.7, as well as in
+· the discussion of “∧-/∨-crystals” in [EssLgc], §3.5
+— i.e., examples that are particularly pertinent in light of the interesting
+structural analogies of the situations that arise in these examples with the
+situation that arises in IUT. On the other hand, as discussed above, this
+phenomenon is by no means limited to these examples and indeed appears
+in essentially any discussion of set-theoretic mathematical objects . For in-
+stance, one may witness this phenomenon explicitly in the following very
+elementary example involving the additive structure of the set N of natural
+numbers:
+Example 2.2.1: The eﬀect of arbitrary label-removals on addition
+of natural numbers. Write N† for the quotient set of N obtained by
+identifying the elements 2 ∈ N and 3 ∈ N, i.e., by “removing the distinct
+labels” from the two distinct elements of N constituted by “2” and “3”. Thus,
+if one assumes that addition of natural numbers in N is suﬃciently “robust”
+in the sense that it is unaﬀected by the label-removal that gives rise to N†,
+then one immediately obtains the contradiction 1 + 3 = 3. In fact, of course,
+this “contradiction” does not imply the existence of any intrinsic defect in
+the theory of addition of natural numbers; rather, it simply implies that
+there is no logical relationship between addition in N and the operation
+induced on N† by addition in N, i.e., no logical relationship that allows one to
+
+12 SHINICHI MOCHIZUKI
+deduce statements concerning addition in N from corresponding statements
+concerning the induced operation on N†.
+Before proceeding, we recall that the phenomenon of “distinct labels for
+diﬀerent universes” (cf. (F A2)) appears classically in the theory of
+(DfUv1) the proﬁnite fundamental group associated to a Galois category, de-
+veloped in SGA1, as well as
+(DfUv2) the general nonsense of homological algebra surrounding derived func-
+tors such as cohomology functors
+(cf. the discussion of (AlgCl), (HomRs) in [EssLgc], §3.8). Here, we note
+that in both of these cases, the necessity of passing to a larger universe
+in order to obtain a canonical construction of the object of interest (i.e.,
+proﬁnite fundamental group or cohomology module) is a very substantive
+issue that is classically well understood and by no means “a matter of taste”.
+Moreover, in both of these cases (DfUv1), (DfUv2), identiﬁcation of the
+larger universe with the original universe — i.e., removal of the distinct
+labels for diﬀerent universes (cf. (F A2)) — would result in a contradiction,
+namely, in the form of a clear violation of the axiom of foundation . That
+is to say, the classical theory of, say, ´ etale fundamental groups of schemes
+(which is the main topic of ´ etale homotopy theory!) does not satisfy Boyd’s
+“robustness” criterion, despite the fact that Boyd actively endorses (cf., e.g.,
+the discussion of [Ctv], p. 8CT/8 ∼ 8CM/8) ´ etale homotopy theory as a
+topic of mathematical research that, unlike IUT, he ﬁnds to be “acceptable”.
+Presumably, Boyd would also endorse the use of a very classical tool such
+as cohomology modules in mathematical research as “acceptable”.
+In the case of (DfUv1), this necessity arises from the nonexistence of
+a canonical choice of basepoint , which, in the very classical setting of the
+Galois theory of ﬁelds, corresponds to the nonexistence of a canonical choice
+of algebraic closure of a perfect ﬁeld. Indeed, if one assumes the existence
+of a (functorially) canonical choice of algebraic closure, then, as discussed
+in [EssLgc], Example 3.8.1, it is very easy to derive a contradiction. Here,
+we note that canonical constructions play an important role in the theory of
+the ´ etale fundamental group— hence, in particular, in anabelian geometry
+and ´ etale homotopy theory — for instance, in situations where one wishes
+to consider functorially induced canonical outer actions of groups on ´ etale
+fundamental groups.
+In the case of (DfUv1), the nonexistence of a canonical choice of base-
+point manifests itself concretely in the theory of ´ etale fundamental groups
+developed in SGA1 in the form of inner automorphism indetermina-
+cies. As I have emphasized in countless workshop talks and expository texts
+(cf., e.g., the discussion of [EssLgc], §3.8), as well as in the discussions with
+Boyd that led to [Cnv] (cf. [Ctv], p. 4RT/8),
+(SGAIU) there is absolutely no qualitative diﬀerence , at a foundational
+level, between
+· the use of universes/inter-universality phenomena in the classi-
+cal theory of ´ etale fundamental groupsdeveloped in SGA1 and
+· the use of universes/inter-universality phenomena in IUT;
+
+IUT REPORT (OCTOBER 2025) 13
+the only diﬀerence lies in the particular sorts of set-theoretic objects
+that appear, namely,
+· rings/schemes in the case of SGA1 versus
+· “non-ring-theoretic” abstract topological groups/monoids (i.e.,
+objects which are typically weaker than ring structures and
+hence give rise, in IUT, to more substantial indeterminacies,
+such as (Ind1), (Ind2), than the relatively minor inner auto-
+morphism indetermacies of SGA1) in the case of IUT
+(cf. the discussion of [EssLgc], §3.8, preceding Example 3.8.1, as well
+as the discussion of [EssLgc], §3.8, following Example 3.8.4).
+In the case of (DfUv2), the necessity of passing to a larger universe in
+order to obtain a canonical construction arises from the nonexistence of a
+canonical choice of (injective/projective) resolution for a module. That is
+to say, any sort of attempt to give a canonical construction, e.g., by tak-
+ing the product over “all possible resolutions” in some model of set theory,
+immediately leads to a violation of the axiom of foundation, unless one
+works in a larger universe. This nonexistence of a canonical choice of res-
+olution manifests itself concretely in the “indeterminacies” constituted by
+homotopy equivalences of resolutions, i.e., “indeterminacies” that may be
+factored out precisely by passing to cohomology modules (or, more gener-
+ally, higher derived functors). Moreover, it is interesting to note in passing
+that these two classical examples of inter-universality/indeterminacies (i.e.,
+(DfUv1), (DfUv2)) constitute, when taken together, a classical example of
+two theories that, on the one hand,
+· exhibit qualitatively essentially identical phenomena at the level of
+foundational considerations concerning universes/inter-university, but,
+on the other hand,
+· involve the use of diﬀerent types of set-theoretic objects, as well as
+diﬀerent types of indetermacies
+— i.e., in a fashion that is reminiscent of the above comparison (SGAIU) of
+universes/inter-universality in SGA1 and IUT.
+In the context of (DfUv1), (DfUv2), we observe in passing that if one is
+willing to sacriﬁce the canonicality of the construction, then one can always
+avoid the use of universes by working with small Galois categories (in the
+case of (DfUv1)) or small collections of resolutions (in the case of (DfUv2)),
+where the term “small” is to be understood as being relative to a ﬁxed
+model of ZFC that is ﬁxed throughout the discussion. On the other hand,
+as discussed above, this does not allow one to avoid the substantive “inter-
+universal” phenomenon of indeterminacies, i.e., inner automorphisms (in the
+case of (DfUv1), which, as discussed in [EssLgc], Example 3.8.1, are unavoid-
+able) or homotopy equivalences of resolutions (in the case of (DfUv2)). The
+same phenomenon exists in the case of IUT (cf. the discussion of (SGAIU)
+above):
+(SmCat) by sacriﬁcing canonicality , one can avoid the use of universes by
+working with small categories, but again the unavoidable substan-
+tive aspect of the situation lies in the “inter-universality” of the
+various situations considered, i.e., which manifests itself concretely
+in the various indeterminacies that occur.
+
+14 SHINICHI MOCHIZUKI
+Finally, it is interesting to note that the very substantive classical phe-
+nomena discussed above in the context of (DfUv1), (DfUv2) are faithfully
+reﬂected in Lean4 formalizations . That is to say, I personally found
+it fascinating to learn, during the Lean workshop in Tokyo in July 2025,
+that ﬁrst of all, Lean4 allows for the use of countably nested universes,
+and, moreover, that this apparatus for nested universes is actually applied
+in the recently achieved Lean4 formalizations of the classical constructions
+of (DfUv1), (DfUv2) (cf. also the discussion of (NoObs) in §3.2 below). I
+found this aspect of Lean4 formalization to be particularly impressive on ac-
+count of the fact that these two classical situations (i.e., (DfUv1), (DfUv2))
+are precisely the situations that I have been emphasizing for many years (of
+course, completely independently of any considerations related to Lean4!) in
+the context of explanations (such as the explanation given in [EssLgc], §3.8)
+of the use of universes/inter-universality in IUT.
+§2.3. The issue of set-theoretic paradoxes. The ﬁnal type of fun-
+damental mathematical misunderstanding of [Ctv] that we discuss may be
+summarized in the following false assertion :
+(F A3) Various objects, such as prime-strips and theta-links, that play a
+fundamental role in IUT trigger set-theoretic paradoxes .
+This false assertion (F A3)may be seen in the following passages of [Ctv]:
+· “This alone is an untenable method: an equivalence between qj2
+and q triggers a cascade of set-theoretic paradoxes, which Mochizuki
+calls ‘ ∈-loops’. However, one needs these ‘ ∈-loops’, without contra-
+diction.” ( [Ctv], p. 3LM/8);
+· “Simulating ‘ ∈-loops’ amounts to working with diﬀerently labeled
+data assigned to diﬀerent universes and independently manipulating
+them to behave as they would in a contradictory relationship without
+letting the contradiction occur, unless one removes the labels (the
+crux of the dispute with Scholze-Stix).” ( [Ctv], p. 3CT/8);
+· “So, the theta-link threatens to trigger set-theoretic paradoxes, ...”
+([Ctv], p. 3CM/8);
+· “one responds to the failure of the isogeny method with a simulation
+method (e.g., prime-strips, theta-links); one responds to the set-
+theoretic paradoxes of the simulation method with inter-universality
+(e.g., diﬀerent labels, Hodge theaters); ...” ( [Ctv], p. 3RT/8).
+First of all, it must stated categorically that the use of prime-strips and
+theta-links in IUT does not trigger any set-theoretic paradoxes. Rather,
+the use of prime-strips and theta-links is simply incompatible, in a very ele-
+mentary set-theoretic sense, with the additive portion of the ring structures
+involved, thus obligating one to work with various non-ring-theoretic struc-
+tures such as multiplicative monoids or Galois groups regarded as abstract
+topological groups (cf. the discussion of (SGAIU) in §2.3).
+The “simulation of ‘ ∈-loops’” in IUT does not involve any set-theoretic
+paradoxes whatsoever. It simply refers to phenomena in which there is a
+certain kind of equivalence between the behavior of a certain portion of some
+mathematical object and the behavior of the whole mathematical object, i.e.,
+
+IUT REPORT (OCTOBER 2025) 15
+in a fashion that is reminiscent, at a purely philosophical level, of the relation
+‘a ∈ a’, but does not give rise to any set-theoretic paradoxes in the literal
+sense. Well-known classical examples of this sort of phenomenon include the
+following:
+· the case of a modular curve (i.e., a ﬁnite ´ etale covering of the moduli
+stack of elliptic curves over the rational number ﬁeld) of genus 1,
+i.e., an “elliptic curve” whose set of closed points may be thought of
+as corresponding to the entire set of isomorphism classes of (char-
+acteristic zero) elliptic curves (equipped with some additional data
+such as a level structure);
+· the classical theory of complex functions of a single holomorphic
+variable z = x+iy, which behaves like a single (complex holomorphic)
+dimension as a result of a sort of coupling of the ( a priori distinct
+and independent) two underlying real dimensions corresponding to
+“x” and “ y”.
+§2.4. Relation to recent developments in anabelian geometry . We
+conclude the present §2 by discussing various misunderstandings and mis-
+leading content surrounding the recent developments in anabelian geometry
+related to IUT that were discussed in [Ctv]. These misunderstandings and
+misleading content center around the following main thesis of the discussion
+of [Ctv], p. 6/8 ∼ 8/8:
+(AnMs1) The anabelian content of IUT (cf. Boyd’s use of the term “arithmetic
+Teichm¨ uller theory”) can somehow be separated and isolated from
+the portions/aspects of IUT that relate to the abc inequality , thus
+allowing one (such as Boyd) to take a positive position toward the
+former, while maintaining a negative position toward the latter.
+This point of view (AnMs1) may be seen in the following passages of [Ctv]:
+· “Scholze and Stix don’t give much attention to the anabelian ge-
+ometry in IUT, as they remark in their manuscript that they don’t
+see how absolute anabelian geometry, which they suggest is indeed
+a remarkable development in anabelian geometry, is needed for the
+IUT proof.” ( [Ctv], p. 6LM/8);
+· “p-adic Teichm¨ uller theory had its own book; arithmetic Teichm¨ uller
+theory never got its own treatment. So, the novel anabelian content
+in IUT, in which one might a priori have the most conﬁdence, was
+overshadowed both due to the proof controversy and the fact that the
+IUT papers basically jump straight into building Hodge theaters and
+pursuing the proof without explaining what this new Teichm¨ uller
+theory really is.” ( [Ctv], p. 6CB/8 ∼ 6RT/8);
+· “The other issue, in my view, is that of distinguishing the arithmetic
+Teichm¨ uller theory from the rest of IUT. I still think one should be
+able to distinguish the Teichm¨ uller-theoretic aspects of IUT from
+the abc proof strategy and even the inter-universal setup.” ( [Ctv],
+p. 6RM/8);
+· “The multiradial representation is supposed to be a very general
+result about the multiplicative/additive structure of scheme theory
+
+16 SHINICHI MOCHIZUKI
+that one learns from arithmetic fundamental groups via the study
+of non-scheme-theoretic maps and anabelian reconstructions, but if
+that’s the case, it should be amenable to formulation in a manner
+independent of the setup involving Hodge theaters, prime-strips, and
+the theta-link. Very few people care about it because of the IUT
+baggage. I don’t see why the main result of arithmetic Teichm¨ uller
+theory couldn’t just be formulated in the familiar terminology of
+schemes, non-scheme-theoretic morphisms, arithmetic fundamental
+groups, anabelian reconstruction, and so on, with a short and simple
+paper.” ( [Ctv], p. 6RB/8 ∼ 7LT/8);
+· “... the notion of studying arithmetic fundamental groups under
+non-scheme-theoretic mappings and reconstructions is interesting.
+However, I doubt many will take an interest if it is instantiated as
+the multiradial representation, with is attached to the abc proof
+strategy; there must be ways to explain this research area in rela-
+tively plain arithmetic-geometric language.” ( [Ctv], p. 7LM/8);
+· “Mochizuki has himself said to me that he’s not particularly inter-
+ested in abc. Other mathematicians who have engaged with IUT,
+such as Assistant Professor Emmanuel Lepage (from the Institut de
+Math´ ematiques de Jussieu-Paris Rive Gauche), have, according to
+Mochizuki, also said that they are not interested in abc. Usually,
+only mathematicians indiﬀerent to abc and well-versed in anabelian
+geometry have walked away satisﬁed.” ( [Ctv], p. 7CT/8);
+· “From an anabelian perspective, looking at non-scheme-theoretic
+mappings is intriguing, for one might see how arithmetic fundamen-
+tal groups behave, namely by decoupling arithmetic fundamental
+groups, as groups, from schemes, and ﬁnding new functorial rela-
+tionships. However, one doesn’t need to consider the theta-link or
+Hodge theaters to study this, as evidenced by applications to top-
+ics like GT-construction. It should be generalizable, without the
+IUT baggage; that would make it an arithmetic Teichm¨ uller the-
+ory.” ( [Ctv], p. 8LM/8);
+· “This research area, when viewed in its own right, is so simple and
+curiosity-provoking. As I heard repeatedly that Mochizuki and col-
+leagues aren’t particularly interested in abc, I thought it such a
+shame that the mathematics of most interest to them has been
+swept up in the abc proof controversy, one which I doubt will end
+in Mochizuki’s favor. On the other hand, within the high-trust con-
+ﬁnes of AHGT, which is a very well managed collaborative project,
+I think there’s space being created for setting drama aside and in-
+stead forming connections over the anabelian and ´ etale-homotopic
+core that underlies the arithmetic-Teichm¨ uller-theoretic content that
+one sees implicitly in the IUT papers. I still see these forthcoming
+‘Interface Papers’, whose contents I do not know, as an opportunity
+to spell out the ´ etale-homotopic and anabelian core of arithmetic
+Teichm¨ uller theory, and perhaps really deﬁne it as a theory, distinct
+from absolute anabelian geometry and distinct from IUT.” ( [Ctv],
+p. 8LB/8 ∼ 8CM/8).
+
+IUT REPORT (OCTOBER 2025) 17
+In some sense, the fundamental point that seems to be missed here is that
+(SmMth) the mathematics that gives rise to a proof of the abc inequality in
+IUT is precisely the same mathematics as the mathematics that
+involves the multiradial representation and absolute anabelian ge-
+ometry and is closely related to the theory of GT in combinatorial
+anabelian geometry; that is to say, although it may seem to make
+sense to distinguish the two from a social, political, psychological,
+or rhetorical point of view, when regarded from the point of view of
+the actual mathematics involved, this sort of distinction is math-
+ematically meaningless .
+Here, it is interesting to note that the meaninglessness of this distinction
+(SmMth) is already evident in various assertions that appear explicitly in
+Boyd’s argument. For instance, he speaks of separating, for instance, in a
+“short and simple paper”, the “novel anabelian content in IUT” and the
+multiradial representation of IUT from the “IUT baggage” consisting of
+Hodge theaters, prime-strips, and the theta-link, but it is self-evident from
+the very statement/content of the multiradial representation of IUT (i.e.,.
+[IUTchIII], Theorem 3.11) that this is nothing more than a meaningless self-
+contradiction. Moreover, despite the fact that Boyd speaks of separating
+the multiradial representation of IUT from the “abc proof strategy” and
+the “inter-universal setup”, he also doubts that people will be interested in
+anabelian aspects of non-scheme-theoretic mappings if they are introduced
+via the multiradial representation of IUT on account of the fact that the
+multiradial representation of IUT is “attached to the abc proof strategy”.
+Indeed,
+· the “Teichm¨ uller-theoretic aspects of IUT”,
+· the multiradial representation of IUT,
+· the “abc proof strategy” of IUT,
+· the “inter-universal set-up” of IUT involving distinct copies of Hodge
+theaters, and
+· the anabelian aspects of “non-scheme-theoretic mappings”
+refer to diﬀerent aspects of, or ways of thinking about, precisely the same
+mathematical content .
+In this context, it is also important to note that the aspects that Boyd
+refers to as the “arithmetic Teichm¨ uller-theoretic” aspects of the theory
+of GT in combinatorial anabelian geometry also involve the use of distinct
+copies of rings and inter-universality in a fashion that is entirely similar to
+the way in which these aspects appear in IUT. In particular, it is entirely
+mathematically meaningless , to hold up, as Boyd does, this theory of
+GT as an example of separation of the issues of distinct copies and inter-
+universality from what he refers to as “the ´ etale-homotopic and anabelian
+core of arithmetic Teichm¨ uller theory”. Moreover, it is important to recall
+in this context (cf., e.g., the discussion of [EssLgc], Example 3.5.3, (vi)) that
+the “general nonsense” aspect of either IUT or the combinatorial anabelian
+geometry theory of GT that involves distinct copies of (arithmetic) holomor-
+phic structures is by no means unique to arithmetic theories such as IUT or
+the combinatorial anabelian geometry theory of GT and may also be seen
+in classical complex Teichm¨ uller theory. Indeed, this analogy with distinct
+
+18 SHINICHI MOCHIZUKI
+copies in classical complex Teichm¨ uller theory, as well as the analogy with
+distinct copies in the classical theory of crystals (the discussion of “∧-/∨-
+crystals” in [EssLgc], §3.5), underscores the fact that this aspect of IUT has
+already been amply exposed on countless occasions and for many years now
+in “relatively plain arithmetic-geometric language” .
+Recent developments relating enhanced versions of IUT (that are cur-
+rently under development) to the Section Conjecture (for hyperbolic curves
+over number ﬁelds) in anabelian geomtery are another important topic —
+i.e., alongside the combinatorial anabelian geometry theory of GT referred
+to above — of recent anabelian geometry-related research that is also related
+to IUT. Such recent developments involving the Section Conjecture also (i.e.,
+again alongside the combinatorial anabelian geometry theory of GT referred
+to above) form an important topic of the “interface papers” (which are cur-
+rently under preparation) referred to by Boyd. On the other hand, in this
+context, it must be noted that the application of IUT to the abc inequality
+is literally a special case of the application of (enhanced versions of) IUT
+to the Section Conjecture. In particular, this aspect of these recent develop-
+ments again underscores just how mathematically meaningless it is to
+try to separate anabelian aspects of IUT from aspects of IUT related to the
+abc inequality.
+With regard to the many anabelian geometers, such as Emmanuel Lep-
+age, who have achieved a rigorous mathematical understanding of IUT, it
+is indeed accurate to state that such researchers are primarily interested in
+the anabelian aspects of IUT and are not particularly interested in the abc
+inequality per se , and that this stance in also reﬂected in my own point of
+view regarding IUT. (Incidentally, it should be mentioned that Lepage holds
+the position of “ma ˆ ıtre de conf´ erences”. This position is a tenured position,
+which, in some contexts, may be translated as “assistant professor”, but is
+more commonly translated as “lecturer” or “associate professor”.) On the
+other hand, it is substantially misleading to summarize their involvement
+with a highly ambiguous phrase such as “walked away satisﬁed” . For in-
+stance, this phrase could be taken — especially in the context of the main
+thesis (AnMs1) of the discussion of [Ctv], p. 6/8 ∼ 8/8 — to mean that
+they completely concurred with the fundamental misunderstandings (F A1),
+(F A2), and (F A3)of Boyd, but were nevertheless satisﬁed with the purely
+anabelian content of IUT in a form that, as Boyd advocates, was completely
+separated from the aspects of IUT that relate to the abc inequality.
+In the case of Lepage, the discussion referred to in [Ctv], p. 7CT/8,
+arose in response to a question posed by me concerning why he, unlike
+various other mathematicians, was able to study and achieve a rigorous
+mathematical understanding of IUT. One important portion of his reponse
+was that he was able to do so because his primary interest was (not in the
+abc inequality itself, but rather) in the anabelian geometry aspects of IUT,
+namely, in
+(AnDio1) seeing how such anabelian geometry aspects could give rise to dio-
+phantine consequences such as the abc inequality.
+This point of view is essentially identical to my own and also shared by other
+anabelian geometers who are substantively engaged with the mathematical
+
+IUT REPORT (OCTOBER 2025) 19
+content of IUT. That is to say, his response refers to the psychological mind-
+set that distinguished him from various other mathematicians with regard to
+studying IUT and achieving a rigorous level of mathematical understanding
+that was such that, in response to another question of mine, he conﬁrmed
+that he was unable to see any mathematical reason not to acknowledge the
+mathematical validity of IUT. In particular,
+(AnDio2) at no time has he, or any other anabelian geometer substantively
+engaged with the mathematical content of IUT, ever expressed any
+opinion to me to the eﬀect that it is possible to separate/isolate,
+at the level of mathematical content (e.g., logical dependence), the
+anabelian aspects of IUT from the diophantine aspects of IUT in
+such a way that one could conﬁrm the mathematical validity of the
+former, while denying the mathematical validity of the latter (cf.
+(AnMs1)).
+In this context, it is also interesting to note that the “strategic ambiguity”
+of Boyd’s use of the phrase “walked away satisﬁed” is reminiscent of his
+phrasing to the eﬀect that the mathematical validity of the false assertion
+(F A1)is a sort of subjective issue that depends on the point of view of the
+mathematician in question (cf. (F A1.3), (F A1.4)).
+We conclude the present §2.4 with a discussion of the
+(AnMs2) activities of the CNRS and AHGT and the role of Stix in these and
+related activities.
+In the case of (AnMs2), the problem is not with clear-cut inaccuracies related
+to (AnMs2) that appear in the text of [Ctv] (which I was unable to ﬁnd),
+but rather with the potential for misunderstandings by third parties that
+might arise from the discussion of (AnMs2) in [Ctv].
+First of all, although IUT is one of the topics covered by the AHGT
+network, which is supported by the CNRS, it is just one topic among a large
+variety of topics in arithmetic geometry that are covered by the AHGT.
+Perhaps the most succinct way to summarize this relationship is by observing
+that the relationship of IUT Summit 2025 with AHGT is only mentioned
+in small print at the bottom of the page on the webpages of the website for
+IUT Summit 2025 .
+The involvement of Stix with AHGT activities is mentioned in the text
+of [Ctv], p. 7CB/8 and p. 7RB/8. In this context, we note that Stix was
+listed as an online participant in IUT Summit 2025 . This listing occurred
+as a result of a very brief e-mail exchange in which he expressed an inter-
+est in looking at the videos of talks given in IUT Summit 2025 . In fact,
+the total amount of time of his online participation in IUT Summit 2025
+was, according to the data that we were given, “0 minutes”. During the
+week following IUT Summit 2025 , Stix participated in a workshop given at
+Osaka University, Japan, in honor of Hiroaki Nakamura’s 60-th birthday.
+At this workshop, just as in the case of the Oberwolfach workshop referred
+to in [Ctv], p. 7RB/8, he interacted with many anabelian geometers who
+are substantially involved in activities related to IUT. According to what I
+heard from other participants in both the Osaka University and Oberwol-
+fach workshops, he was quite often in close physical proximity to positive,
+
+20 SHINICHI MOCHIZUKI
+friendly discussions by other mathematicians concerning IUT, but he him-
+self was never involved in discussions concerning IUT . This stance is entirely
+consistent with his position (cf. the discussion of (Myst) in §1.3; [Rpt23])
+of refusing to respond to numerous oﬀers on my part by e-mail to engage in
+further discussions (via e-mail/Zoom or in person) concerning IUT.
+§3. Lean, the EMSCOP, and IUT
+In each of the various cases examined in detail in §2, the false or mislead-
+ing assertions given in [Ctv] exhibit the common tendency of being more
+oriented toward social/political dynamics — e.g., more sensationalist
+and internet click/entertainment-oriented (cf. the discussion in §1.1, §1.3
+of my conservative stance with regard to engagements with journalists) —
+than toward the mathematical truth that underlies the topic under con-
+sideration. In the past, I have responded to such situations by emphasizing
+the importance of mathematical accountability and the passage of the
+[EMSCOP] quoted in §1.1 (cf. also the discussion of §1.3). On the other
+hand, there are practical limits with regard to enforceability and eﬃcacy
+of this sort of “analog” approach. As discussed in [EssLgc], §1.12 (cf. also
+§3.1 below), I also remain substantially skeptical about the practical eﬃcacy
+of Lean-style computer formalization in the context of certain types of so-
+cial/political issues. Nevertheless, I feel strongly about the fundamental
+strategic importance of Lean-style computer formalization in the con-
+text of the situation surrounding IUT (cf. §3.2 below) in the sense that,
+while formalization might not result in any sort of complete and deﬁnitive
+resolution of numerous social/political issues, it nonetheless represents the
+(LbMth) best and perhaps the only technology available (either currently
+or for the foreseeable future) for achieving meaningful progress with
+regard to the fundamental goal of liberating mathematical truth
+from the yoke of social/political dynamics .
+It is precisely for this reason that, in addition to recent important mathemat-
+ical research developments in IUT and related anabelian geometry, the topic
+of Lean-style computer formalization has become an increasingly central
+focus of research activities in the anabelian geometry community at RIMS
+(Kyoto University) in recent years.
+§3.1. Social/political dynamics versus mathematical truth. Al-
+though Lean-style computer formalization seems to represent the best hope
+that is currently available (cf. (LbMth)) for bridging the gap between the so-
+cial/political dynamics surrounding social acceptance of mathemat-
+ical (or, more generally, scientiﬁc) ideas and mathematical truth , it does
+not appear at the present time to constitute any of sort of “magical cure”
+for the complete resolution of social/political issues, especially in situations
+where there are very strong undercurrents of “faith en masse” involved.
+In this context, I am reminded of the (perhaps humorously anachronistic)
+phenomenon of “ﬂat-earthers”, as well as the following stories that I heard
+when I was a graduate student in the late 1980’s to early 1990’s at Princeton
+University:
+
+IUT REPORT (OCTOBER 2025) 21
+· some local government in the United States of America passed a law
+to the eﬀect that, within its local jurisdiction, π (i.e., the length of
+the cirumference of a circle of unit radius) is equal to 3;
+· some survey of the general population of the United States of Amer-
+ica found that a surprising percentage of the population believe that
+one-third is greater than one-half (i.e., “ 1
+3 > 1
+2 ”), that is to say, since
+three is greater than two.
+In either of these two cases, it seems highly unlikely that presenting a Lean-
+style computer formalization of the irrationality of π or of the inequality
+1
+2 > 1
+3 to the people involved would result in a change in the minds or hearts
+of these people.
+In some sense, this phenomenon is closely related to a more fundamental
+and more scientiﬁc issue, namely, the issue discussed in [EssLgc], §1.12 (cf.,
+especially, [EssLgc], Examples 1.10.1, 1.12.1) of the
+(LnGp) potential gap between what is actually veriﬁed by a particular piece
+of Lean code and the human interpretation/intentions that are at-
+tached to the Lean code.
+In fact, this issue in some sense plagues any kind of computer code — or,
+more generally, any kind of technology — i.e., the fundamental issue of
+(TecGp) whether or not the computer code/technology actually does what is
+it is intended/supposed to do .
+In this context, we recall that in [EssLgc], §1.12, the elementary example of
+the Pythagorean theorem, i.e., “ x2 + y2 = z2” (where x ≤ y < z denote the
+lengths of the sides of a right triangle), is discussed in detail (cf. [EssLgc],
+Examples 1.10.1, 1.12.1). The main point of this discussion is that
+(PyGp) it is diﬃcult to see how any sort of Lean-style computer formalization
+of the truth of the Pythagorean theorem, i.e., “ x2 + y2 = z2”, can
+yield any progress of a social/political nature in a situation where
+there are very potent social/political dynamics in force, e.g., in the
+form of a faith en masse , to the eﬀect that the Pythagorean theorem
+states that “ x2 ·y2 = z2”, hence may be veriﬁed, e.g., by a Lean-style
+computer formalization, to be false.
+Of course, the logically appropriate interpretation of the simultaneous truth
+of “ x2 + y2 = z2” and falsity of “ x2 · y2 = z2” is that the mathemati-
+cal validity of “ x2 + y2 = z2” is logically unrelated to (i.e., in the sense
+that this mathematical validity is not equivalent to and, moreover, does
+not imply) the mathematical validity of “ x2 · y2 = z2”, but the point here
+is that, depending on the social/political dynamics in force, this logically
+appropriate interpretation can be suppressed by means of some sort of logi-
+cally/technically absurd narrative , as described in (PyGp).
+In some sense, the false assertions (F A1.3), (F A1.4)of [Ctv] discussed in
+§2.1 amount to a conﬂation of this sort of purely social/political phenomenon
+(i.e., as in (PyGp)) with a substantive mathematical issue . As discussed in
+§2.1, in some sense, the most fundamental mathematical/logical tool that
+can be applied in this sort of situation is the Existence Principle (ExPr)
+discussed at the end of §2.1. On the other hand, it is by no means clear
+
+22 SHINICHI MOCHIZUKI
+whether or not even this Existence Principle has the power to penetrate the
+faith en masse of quite substantial populations of people.
+More generally (i.e., moving beyond the narrative framework of [Ctv]),
+the whole situation surrounding the assertions of Scholze-Stix concerning
+IUT constitutes a sort of textbook example of the phenomenon discussed in
+(PyGp). As discussed in (Myst) (cf. also the discussion surrounding (Myst)
+in §1.3; [Rpt23]),
+(SSGp) repeated encouragements on my part to various mathematicians (i.e.,
+not just to Scholze-Stix, but also to other mathematicians who in-
+voke the assertions of Scholze-Stix), often involving references to
+the [EMSCOP] passage cited in §1.1, to provide full details of the
+precise statement and proof of any sort of assertion of a logical
+relationship between the Scholze-Stix version of IUT (cf. (SSA2))
+and the actual mathematical content of IUT have been met with
+either refusals to respond to e-mails or blind declarations of
+faith in Scholze-Stix, e.g., on the grounds that Scholze-Stix are “top
+mathematicians”.
+Often, in response to such blind declarations of faith , I have posed the fol-
+lowing questions concerning the precise content of the person’s professed
+faith:
+(Fth1) Does your professed faith in Scholze-Stix consist of the belief that a
+precise statement/complete proof as in (SSGp) already exists some-
+where in explicit written form , preferably, in the form of a paper
+published in an internationally recognized mathematical journal with
+a functional peer review system ? If so, can you give me a precise
+reference for this explicit written documentation of a precise state-
+ment/complete proof as in (SSGp)?
+(Fth2) If the answer to the ﬁrst query of (Fth1) is negative, then does your
+professed faith in Scholze-Stix consist of the belief that the assertions
+of Scholze-Stix should be granted — say, in the spirit of absolute
+monarchism and the “divine right of kings” (cf. the discussion
+of the ﬁnal portion of §1.3) — a priviledged status of unconditional
+eternal absolute tautological mathematical validity , i.e., that
+Scholze-Stix should be perennially exempt from any obligation
+whatsoever to provide explicit written documentation as in (Fth1)?
+I have yet to receive a meaningful sincere answer to either of these queries
+(Fth1), (Fth2) from any mathematician who makes a blind declaration of
+faith in the assertions of Scholze-Stix concerning IUT.
+In this context, it should be recalled that the fact that Fermat is gener-
+ally regarded as a “top mathematician ” of his day does not by any means
+— e.g., by any invocation of the “divine right of kings” as in (Fth2)! —
+imply that he did indeed have a rigorous mathematical proof of “Fermat’s
+Last Theorem”. The history of mathematics is in fact replete with similar
+examples that amply demonstrate the folly, as well as the deeply destruc-
+tive eﬀect on the development of mathematics , of social/political dynamics
+that bestow on any mathematician or mathematical assertion a priviledged
+status of perennial exemption from any obligation whatsoever to provide
+
+IUT REPORT (OCTOBER 2025) 23
+precise, explicit written statements and proofs (as in (Fth1) or indeed the
+[EMSCOP] passage cited in §1.1).
+As was emphasized in the e-mails cited in [Rpt23], I ﬁnd it deeply puzzling
+that, in the context of IUT, discussions (such as that of [Ctv], although
+this phenomenon is, of course, by no means limited to [Ctv]!) tend to be
+predicated on the narrative that there are two opposing sides involved.
+That is to say, my understanding of the conceptual core of the discipline
+of professional mathematics (cf. the [EMSCOP] passage cited in §1.1)
+is that
+(CmGl) explicit written documentation of precise statements and complete
+proofs of mathematical assertions — and, hence, by extension, ulti-
+mately, the Lean-style computer formalization of mathematical
+assertions — is the common goal of all professional mathemati-
+cians, that is to say, all professional mathematicians are supposed
+to be ﬁghting on the same side , namely, in the context of IUT, to
+achieve, ultimately, the complete Lean-style computer formalization
+not only of the actual mathematical content of IUT proper (cf. the
+discussion of §3.2 below), but also of all mathematical assertions by
+other mathematicians concerning IUT in as timely and eﬃcient a
+manner as is technically possible.
+In this sense, so long as eﬀorts/progress is being made with regard to the
+Lean-style computer formalization of IUT (cf. the discussion of §3.2 below),
+it is by no means the case that the situation surrounding the assertions of
+Scholze-Stix concerning IUT is “practically frozen ”, as is asserted in [Ctv],
+p. 1CB/8.
+In the context of the phenomenon discussed above in (LnGp), (TecGp),
+(PyGp), (SSGp), despite the apparent possible lack of eﬃcacy of Lean-
+style computer formalization in situations where this sort of phenomenon
+occurs, it is important to emphasize that even in such situations, there
+are nonetheless various ways in which Lean-style computer formalization
+can play a meaningful role in certain social/political contexts . In the
+remainder of the present §3.1, we would like to examine such aspects of
+Lean-style computer formalization in more detail.
+First of all, it should be emphasized that one fundamentally important
+aspect of Lean-style computer formalization is the following:
+(Asp1) Lean-style computer formalization yields a permanent, explicit
+record of the logical structure of the mathematics involved that
+operates completely independently of any human beings , i.e.,
+such as the mathematicians whose work gave rise to the mathematics
+involved; in particular, it continues to operate even after all math-
+ematicians involved in the creation of the mathematics involved are
+deceased, e.g., even at some time in the future when there no longer
+exist any human beings who understand the mathematics involved .
+This aspect (Asp1), combined with the important Existence Principle (ExPr),
+are of fundamental importance for the sustained development of the dis-
+cipline of professional mathematics in the very long-term (i.e., not just
+decades, but centuries, etc.).
+
+24 SHINICHI MOCHIZUKI
+The second fundamentally important aspect of Lean-style computer for-
+malization that we discuss — which is in fact closely related to (Asp1) — is
+the following:
+(Asp2) Lean-style computer formalization yields a sort of ideal, universal
+colleague to address when writing/exposing mathematics; that is
+to say, whereas directing activities in the writing/exposion of math-
+ematics (i.e., such as writing papers, giving talks, etc.) toward other
+colleagues in the traditional way, which is fundamentally predicated
+on the existence of suitable colleagues , i.e., colleagues who have a
+high degree of professional training and mathematical understand-
+ing in the (often, for unavoidable technical reasons, very narrowly
+deﬁned) relevant ﬁeld of expertise , Lean-style computer formaliza-
+tion makes it possible for a mathematician to direct his eﬀorts when
+writing/exposing mathematics toward a goal whose range of eﬃcacy
+transcends any particular mathematical ﬁeld or social group-
+ing in the mathematical community.
+In the future (cf. the discussion in the ﬁnal portion of §1.2), combining
+Lean-style computer formalization with artiﬁcial intelligence technology
+may even make it possible to generate, simply by inputing Lean code into a
+suitable artiﬁcial intelligence device ,
+· expository textbooks,
+· expository video talks , or even
+· ChatGPT-style dialogue software that allows one to discuss and ask
+technical questions
+concerning the mathematics involved.
+In the case of IUT, the original IUT papers [IUTchI, II, III, IV] were
+written with the anabelian geometry community centered around (but
+by no means limited to!) RIMS, i.e., the mathematical community in which
+I had been active since the mid-1990’s, in mind. In particular, it should by
+no means come as a surprise that this community has been able to engage
+with IUT in a mathematically appropriate fashion, i.e., to achieve a rigorous
+level of mathematical understanding of IUT and hence to conﬁrm the math-
+ematical validity of IUT (cf. the discussion surrounding (AnDio1)). Here,
+it should be noted that it is
+(NwExp) entirely standard practice in professional mathematics for research
+papers to be written with a rather narrowly deﬁned circle of
+experts in mind.
+It seems that some analytic number theorists , as well as some arithmetic
+geometers who lie outside the school of anabelian geometry that centers
+around (but is not limited to) RIMS, have taken issue with the fact that
+the original IUT papers [IUTchI, II, III, IV] were written in a way that was
+directed toward this narrowly deﬁned anabelian geometry community, but
+the point that must be kept in mind is that this is entirely standard practice
+(cf. (NwExp)) for a very simple technical reason :
+(TcUnf) it is simply entirely technically unfeasible for every research
+paper in mathematics to serve also as a complete, self-contained text-
+book that contains pedagogical material that encapsulates the level
+
+IUT REPORT (OCTOBER 2025) 25
+of mathematical understanding that is usually obtained via a com-
+plete graduate education and career as a professional mathematician
+in some narrowly deﬁned technical ﬁeld of specialty.
+Note, moreover, that quite intensive attempts over the years since the release
+of the IUT papers in 2012 both on my part and on the part of other mathe-
+maticians engaged with IUT via personal (e-mail/face-to-face) communica-
+tions or workshops on IUT to engage with mathematicians from other ﬁelds
+of number theory or arithmetic geometry concerning the topic of IUT have,
+for the most part, not been successful. Thus, it is precisely for this reason
+that the goal of Lean-style computer formalization constitutes the natural
+(and indeed perhaps the only realistic) “next step” for making meaningful
+progress with regard to the task of exposing/recording the mathematical con-
+tent of IUT (cf. (Asp1), (Asp2), as well as the discussion of §3.2 below).
+The discussion of (Asp2) leads naturally to the discussion of the following
+ﬁnal two aspects of Lean-style computer formalization:
+(Asp3) Once it becomes practical to generate textbooks, video talks, and
+other expository material simply by inputing Lean code (cf. the
+discussion following (Asp2)), one could imagine a fundamental revo-
+lution of the business model underlying the employment prac-
+tices of universities, whereby researchers in mathematics would
+be liberated from (undesired) teaching duties (especially concerning
+uninteresting elementary topics) in return for work devoted to Lean-
+style computer formalization of mathematics in their ﬁeld.
+(Asp4) The mathematical rigor that is essentially guaranteed by mathe-
+matics that has undergone Lean-style computer formalization could
+result in a fundamental revolution of the business model underly-
+ing the hiring/promotion practices of universities, as well as
+in peer review practices of mathematical journals , whereby
+individuals — i.e., even, potentially, “complete amateurs”, who have
+not received a formal education in mathematics — could be hired
+for/promoted to high-ranking positions (such as professor, associate
+professor, etc.) at universities or have their manuscripts published in
+prestigious mathematical journals, not on the basis of traditional cri-
+teria such as educational background, papers published, recommen-
+dations by senior mathematicians, etc. — all of which can be very
+strongly inﬂuenced by social/political dynamics — but rather on
+the basis of Lean code that is submitted to the university or journal
+in question.
+Here, it is important to note that examples of the culture of basing hir-
+ing/promotion practices not on traditional criteria such as educational back-
+ground, papers published, recommendations by senior scholars, etc., but
+rather simply on the computer code or device that an applicant submits
+already exist in the information technology industry .
+When taken as a whole, these last two aspects (Asp3), (Asp4) have the
+potential, in the perhaps not so distant future, of paving the way to funda-
+mentally revolutionizing the way in which mathematics departments
+at universities operate. Another aspect of this revolution may be an increas-
+ing shift to exclusively (or principally) online universities , such as the
+
+26 SHINICHI MOCHIZUKI
+recently established Zen University in Japan. In this context, it is interesting
+to note that the Lean workshop held in July 2025 that was referred to in the
+discussion of §1.2, §2.2 was held at the Zen Mathematics Center (ZMC),
+an international research institute that was established at Zen University
+“with the aim of promoting and developing modern mathematics with a fo-
+cus on arithmetic geometry and the formalization of modern mathematics
+using computer languages” .
+§3.2. The fundamental importance of Lean in the context of IUT.
+As was mentioned at the beginning of the present §3, in addition to re-
+cent important mathematical research developments in IUT and related
+anabelian geometry, the topic of Lean-style computer formalization, espe-
+cially in the context of IUT, has become an increasingly central focus of
+research activities in the anabelian geometry community at RIMS in recent
+years. This state of aﬀairs is reﬂected, for instance, in the Lean workshop
+in July 2025 in Tokyo, which focused on anabelian geometry and computer
+formalization, and in which many members of the RIMS anabelian geome-
+try community (including myself) participated. This state of aﬀairs is also
+reﬂected in plans for a special year, to be held during the Japanese school
+year April 2027 ∼ March 2028 on various aspects of arithmetic geometry, in
+which both the mathematical content of IUT and related anabelian geometry
+and the Lean-style formalization of anabelian geometry are included as im-
+portant topics. This special year includes plans for an IUT workshop in the
+spring of 2028, i.e., a sequel “IUT Summit 2028” to the IUT Summit 2025
+held in March 2025, and it is expected that the Lean-style formalization of
+IUT will also be one of the main topics covered at this workshop.
+I have also been deeply impressed and encouraged by the entirely unan-
+ticipated enthusiasm that has been exhibited in recent years by computer
+scientists deeply involved with the development of Lean who are not mathe-
+maticians, and whose work has no direct connections to arithmetic geometry
+(hence, a fortiori , to IUT!), but who have expressed a keen interest in learn-
+ing more about the situation surrounding IUT and, in particular, investigat-
+ing what can be done with regard to pursuing the goal of Lean-style formal-
+ization of IUT . Such computer scientists, despite being disconnected from
+the mathematical community in a strict professional sense, nevertheless have
+substantial personal interaction with professional mathematicians, and it is
+through such personal connections that this enthusiasm was communicated
+to me. Moreover, as a result of these ties between the Lean-development
+community and the mathematical community, I have been invited to give
+an online talk on the topic of Lean-style formalization of IUT at a workshop
+on formalization that has been scheduled to be held in the spring of 2026 in
+the United Kingdom.
+In this context, we recall that, as discussed in detail in §2.2 (cf., especially,
+(SGAIU)), there is absolutely no qualitative diﬀerence , at a founda-
+tional level, between
+· the use of universes/inter-universality phenomena in the classical
+theory of ´ etale fundamental groupsdeveloped in SGA1 and
+· the use of universes/inter-universality phenomena in IUT.
+
+IUT REPORT (OCTOBER 2025) 27
+It is for this reason that
+(NoObs) the discussion, at the July 2025 Lean workshop in Tokyo, of the
+recent Lean4 formalization of the SGA1 construction of the proﬁ-
+nite fundamental group associated to a Galois category such as the
+Galois category of ﬁnite ´ etale coverings of a connected scheme (cf.
+the discussion of (DfUv1) in the ﬁnal portion of §2.2) convinced me
+that, at least at a theoretical level (i.e., modulo the fact that it would
+require quite a lot of work!), there should be no fundamental ob-
+struction whatsover to the formalization of IUT via Lean 4 .
+In the context of (NoObs), it is important to remember, however, that eﬀorts
+toward the Lean-style formalization of IUT have only just begun in recent
+years, and it will still probably take at least several more years of concerted
+eﬀort before meaningful results, even relative to suitable “blackboxes”, can
+be achieved (cf. the discussion of (LnCom), (MthFm), (BBxFm) below).
+Indeed, it is perhaps useful to recall that, at least according to reports that
+I have received, the Lean-style formalization of Wiles’ work on Fermat’s
+Last Theorem has still, at the time of writing of the present report, not been
+completed.
+In the case of IUT, one particularly important aspect of Lean-style for-
+malization lies in the following essentially self-evident observation :
+(LnIm) When writing and executing Lean code, there is absolutely no need
+to address such issues as the following:
+(LnIm1) the issue of conforming to the tastes, either in writing style
+or in terms of how the theory is developed , of particular senior
+researchers in ﬁelds of number theory/arithmetic geometry that
+are somewhat far removed from the sort of anabelian geometry
+that is applied in IUT;
+(LnIm2) the issue of responding to harsh criticism of the entirely el-
+ementary nature of the essential logical structure underlying
+IUT — as may be seen, for instance, in the ∧(∨)-chain that
+forms the central topic of [EssLgc] — on the grounds that this
+entirely elementary nature of central aspects of IUT is “incon-
+ceivable” for a theory such as IUT that has highly nontrivial
+diophantine consequences and, moreover, “deeply insulting” to
+the intelligence/expertise of certain senior researchers.
+That is to say, the writing and execution of Lean code is inherently
+immune to these sorts of social/political issues that have substan-
+tially obstructed the dissemination of IUT in the past.
+Here, we note that (LnIm1) has, in the past, been particularly pernicious
+in that it has often resulted in mathematicians who attempt to reformu-
+late IUT in a way that conforms to their own personal tastes, only to
+produce a fabricated version of IUT that is logically unrelated to IUT
+in its original form (cf. the discussion of “logically unrelated fabricated ver-
+sions” of IUT in [EssLgc], §1.8, §1.10, §1.11, §1.12) and (unlike IUT in its
+original form) is entirely devoid of any meaningful mathematical content .
+Such logically unrelated fabricated versions often result in a tremendous
+amount of entirely unnecessary confusion concerning IUT. Of course,
+
+28 SHINICHI MOCHIZUKI
+the most central example of this phenomenon may be seen in the Scholze-
+Stix manuscript (cf. (Myst)), but another notable example may be seen in
+the preprints discussed in [Rpt24].
+In the context of (LnIm), it is also interesting to note that,
+(ImApx) relative to the property of immunity to the issues (LnIm1) and
+(LnIm2) discussed in (LnIm), talented young researchers at elite uni-
+versities — such as Emmanuel Lepage at the IMJ-PRG in France
+or Yuichiro Hoshi and Shota Tsujimura at RIMS — who specialize
+in topics in anabelian geometry that are closely related to IUT con-
+stitute a far better approximation to Lean-formalization than
+senior researchers in ﬁelds of number theory/arithmetic geometry
+that are somewhat far removed from the sort of anabelian geometry
+that is applied in IUT.
+Moreover, in this context, it is important to observe that the overwhelming
+heuristic validity of (ImApx) has been conﬁrmed countless times over
+the years since the release of the IUT papers in 2012, despite the quite
+harsh criticism and scornful condescension often heaped on the IUT-related
+activities of such talented young researchers by senior researchers of the sort
+mentioned in (LnIm), (ImApx).
+From a practical point of view, in some sense, the main obstacle to Lean-
+style formalization of IUT lies in the complete nonexistence (at the time
+of writing of the present report) of professional mathematicians who are
+equipped with both
+· a thorough, rigorous mathematical understanding of the mathemati-
+cal content of IUT and
+· professional expertise in writing Lean code .
+Thus,
+(LnCom) the task of communicating the mathematical content of IUT to
+mathematicians (such as arithmetic geometers) with professional ex-
+pertise in writing Lean code is one important area of currently on-
+going eﬀorts with regard to the goal of Lean-style formalization of
+IUT.
+Such eﬀorts, however, tend to be fraught with precisely the same dilem-
+mas (cf. (LnIm1), (LnIm2)) that occur more generally with regard to the
+dissemination of IUT to other mathematicians.
+On the other hand, one can take a somewhat diﬀerent point of view with
+regard to the goal of Lean-style formalization of IUT — a point of view
+that is far less dependent on bridging the communication gap discussed in
+(LnCom) — as follows. This point of view is the point of view that led to
+the exposition of [EssLgc], §3, i.e., in particular, to the ∧(∨)-chain, which
+forms the central topic of [EssLgc]. Here, we recall that this exposition of
+[EssLgc], §3, consists of distilling the essential logical structure of IUT down
+to the following central components :
+· the coricity and symmetry/non-symmetry properties of the log-theta-
+lattice (cf. [EssLgc], §3.1 ∼ §3.4);
+· the formalism of descent (cf. [EssLgc], §3.9);
+
+IUT REPORT (OCTOBER 2025) 29
+· the actual descent procedure surrounding the multiradial represen-
+tation of the theta-pilot (cf. [EssLgc], §3.10, (Stp1) ∼ (Stp3));
+· the adjustment operations surrounding the holomorphic hull (cf.
+[EssLgc], §3.10, (Stp4) ∼ (Stp6));
+· the “ladder argument” consisting of a certain symmetrization proce-
+dure to adjust for the log-shift in the 1-column (cf. [EssLgc], §3.10,
+(Stp7) ∼ (Stp8)).
+The central problem with this exposition of [EssLgc], §3, i.e., from the point
+of view of the goal of Lean-style formalization of IUT, is that the exposition
+in [EssLgc], §3, of these central components still contains quite a bit of non-
+trivial anabelian geometry and, more generally, arithmetic geometry , which
+acts as a sort of barrier from the point of view of mathematicians who lack
+the necessary expertise in anabelian geometry. Thus, to summarize, one can
+take the point of view that
+(MthFm) the essential task that must be completed in order to expedite the
+achievement of the goal of Lean-style formalization of IUT does not
+lie primarily (or in any essential sense) in bridging the communica-
+tion gap discussed in (LnCom), but rather in mathematically re-
+formulating/formalizing the central components discussed above
+in abstract, purely formal/combinatorial language that does
+not contain any mathematical content from anabelian geometry (or
+even arithmetic geometry) — i.e., in the style of the ∧(∨)-chain
+of [EssLgc] or the notion of descent discussed in [EssLgc], §3.9 —
+and hence may be readily understood by essentially any professional
+mathematician or computer scientist who is comfortable with such
+abstract, formal/combinatorial arguments .
+In particular, the mathematical formalization discussed in (MthFm)
+may be regarded as a sort of natural extension of the theory of [EssLgc], §3.
+Alternatively, (cf. the discussion of and following (SymIUT) in [EssLgc],
+§1.12; the discussion of [EssLgc], Example 3.10.2, (i))
+(BBxFm) one may think of the mathematical formalization that is proposed
+in (MthFm) as the task of reorganizing the mathematical content
+of IUT into suitable blackboxes consisting of relatively straightfor-
+ward, classical mathematical content in anabelian geometry (or, more
+generally, arithmetic geometry) in such a way that the remaining
+mathematical content of IUT, i.e., IUT regarded modulo those black-
+boxes, consists solely of abstract, purely formal/combinatorial
+arguments that may be readily understood by essentially any profes-
+sional mathematician or computer scientist who is comfortable with
+such abstract, formal/combinatorial arguments .
+The development of a mathematical formalization of IUT as in (MthFm),
+(BBxFm) is currently one of the central research topics of anabelian
+geometers at RIMS. Also, it is hoped that such a mathematical formalization
+of IUT, once completed, will also serve as a useful learning resource for
+arithmetic geometers studying IUT.
+Here, we note that the sort of reorganization proposed in (BBxFm) in
+some sense goes in precisely the opposite direction to the way in which
+
+30 SHINICHI MOCHIZUKI
+mathematical papers are typically written (cf. (NwExp), (TcUnf)), i.e.,
+for consumption primarily by experts in some narrowly deﬁned ﬁeld of spe-
+cialty. Typically,
+(BBxDD) it is very diﬃcult to write mathematical papers in the way proposed
+in (BBxFm) since the reorganization into blackboxes of the sort
+proposed in (BBxFm) can only come after a suﬃcient amount of time
+has elapsed for the mathematical content under consideration to be
+digested and distilled to the degree that this sort of reorganization
+comes to seem very natural and can be achieved relatively painlessly.
+This last observation (BBxDD) brings to mind the following historical obser-
+vation. The sort of mathematical formalization of IUT proposed in (MthFm),
+(BBxFm), taken together with the development over the years of expositions
+of IUT such as [Alien] and [EssLgc], is, in some sense, reminiscent of the
+development of class ﬁeld theory . That is to say, subsequent to the work
+of Teiji Takagi on global class ﬁeld theory in the early 20th century, the
+theory underwent various reformulations including the reformulation using
+group cohomology by Emil Artin and John Tate, an approach that was also
+applied to further develop local class ﬁeld theory . More recently, in the
+1980’s, J¨ urgen Neukirch was involved in developing yet another approach to
+formulating both local and global class ﬁeld theory that is based on a very
+abstract, formal formulation of class ﬁeld theory and appears to have been
+closely related to his work on anabelian topics such as the Neukirch-Uchida
+Theorem. In this context, it is interesting to observe that, as was pointed
+out by Ivan Fesenko, the local portion of this formulation of class ﬁeld the-
+ory by Neukirch is reminiscent in various respects of the monoid-theoretic
+way in which local class ﬁeld theory is applied in IUT.

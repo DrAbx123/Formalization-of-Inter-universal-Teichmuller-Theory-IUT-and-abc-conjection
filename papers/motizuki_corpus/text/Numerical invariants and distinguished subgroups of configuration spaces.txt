@@ -1,0 +1,2994 @@
+GROUP-THEORETICITY OF NUMERICAL INVARIANTS
+AND DISTINGUISHED SUBGROUPS OF
+CONFIGURATION SPACE GROUPS
+YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+Abstract. Let Σ be a set of prime numbers which is either of car-
+dinality one or equal to the set of all prime numbers. In this paper,
+we prove that various objects that arise from thegeometry of the con-
+ﬁguration space of a hyperbolic curve over an algebraically closed ﬁeld
+of characteristic zero may bereconstructed group-theoreticallyfrom the
+pro-Σfundamental groupof the conﬁguration space. LetX be a hyper-
+bolic curve of type (g, r)o v e raﬁ e l dk of characteristic zero. Thus, X
+is obtained by removing from a proper smooth curve of genusg over k
+a closed subscheme [i.e., the “divisor of cusps”] ofX whose structure
+morphism to Spec(k) is ﬁnite ´etale of degreer;2 g−2+ r> 0. Write Xn
+for the n-th conﬁguration space associated to X, i.e., the complement
+of the various diagonal divisors in the ﬁber product overk of n copies of
+X. Then, whenk is algebraically closed, we show that thetriple (n, g, r)
+and thegeneralized ﬁber subgroups— i.e., the subgroups that arise from
+the various natural morphisms Xn → Xm [m<n ], which we refer to
+as generalized projection morphisms— of the pro-Σfundamental group
+Πn of Xn may be reconstructed group-theoreticallyfrom Πn whenever
+n ≥2. This result generalizes results obtained previously by the ﬁrst
+and third authors and A. Tamagawa to the case ofarbitrary hyperbolic
+curves [i.e., without restrictions on (g, r)]. As an application, in the case
+where (g, r)=( 0 ,3) and n ≥2, we conclude that there exists adirect
+product decomposition
+Out(Πn)=G T Σ × Sn+3
+—w h e r ew ew r i t e“ O u t (−)” for the group of outer automorphisms [i.e.,
+without any auxiliary restrictions!] of the proﬁnite group in parentheses
+and GTΣ (respectively, Sn+3)f o rt h ep r o - ΣGrothendieck-Teichm¨uller
+group(respectively, symmetric group onn+3 letters). This direct prod-
+uct decomposition may be applied to obtain asimpliﬁed purely group-
+theoretic equivalent deﬁnition — i.e., as the centralizer in Out(Πn)o f
+the union of the centers of the open subgroupsof Out(Πn)—o fG TΣ.
+One of the key notions underlying the theory of the present paper is
+the notion of a pro-Σlog-full subgroup— which may be regarded as a
+sort of higher-dimensional analogue of the notion of a pro-Σcuspidal
+inertia subgroup of a surface group—o fΠ
+n. In the ﬁnal section of the
+present paper, we show that, whenX and k satisfy certain conditions
+concerning “weights”, the pro-l log-full subgroups may bereconstructed
+group-theoreticallyfrom the natural outer action of the absolute Galois
+group of k on the geometric pro-l fundamental group ofXn.
+2020 Mathematics Subject Classiﬁcation.Primary 14H30; Secondary 14H10.
+Key words and phrases.anabelian geometry, Grothendieck-Teichm¨uller group, gener-
+alized ﬁber subgroup, log-full subgroup, hyperbolic curve, conﬁguration space.
+1
+
+2 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+Contents
+Introduction 2
+Acknowledgements 8
+0. Notations and conventions 8
+1. Group-theoretic reconstruction of the dimension 11
+2. Group-theoretic reconstruction of the genus, number of cusps,
+and generalized ﬁber subgroups 16
+3. Group-theoretic reconstruction of log-full subgroups 38
+References 53
+Introduction
+Let (g,r) be a pair of nonnegative integers such that 2g −2+ r> 0; k
+an algebraically closed ﬁeld;X a hyperbolic curve of type (g,r)o v e rk, i.e.,
+the open subscheme of a proper smooth curve of genusg overk obtained by
+removing r closed points. In the following discussion, we shall write “Π
+(−)”
+for the [log] ´etale fundamental group of a connected locally noetherian [fs
+log] scheme [for some choice of basepoint]. If the characteristic ofk is zero,
+then ΠX is asurface group[cf. the discussion entitled “Topological Groups”
+in §0]; in particular, ifr> 0, then
+ΠX is afree proﬁnite group of rank2g +r −1.
+Thus, at least in the case ofk of characteristic zero,
+the isomorphism classof the proﬁnite group ΠX is insuﬃcientto
+determine (g,r).
+[Note that, if the characteristic ofk is positive,t h e n
+the isomorphism classof ΠX completely determines(g,r)
+— cf. [Tama], Theorem 0.1.] On the other hand, if, instead of just consider-
+ing the ´etale fundamental group of the given hyperbolic curve, one considers
+the ´etale fundamental groups of the variousconﬁguration spacesassociated
+to the hyperbolic curve, then the following Fact is known [cf. [CbTpI],
+Theorem 1.8; [MT], Corollary 6.3]:
+Fact. Let Σbe a set of prime numbers which is either of cardinality one or
+equal to the set of all prime numbers. For□ ∈{ ◦,•},l e tX
+□ be a hyperbolic
+curve of type(g□,r □) over an algebraically closed ﬁeld of characteristic zero;
+n□ a positive integer; X□
+n□ the n□-th conﬁguration space ofX□; Π□
+n□ the
+maximal pro-Σquotient ofΠX□
+n□
+;
+α:Π◦
+n◦
+∼→ Π•
+n•
+an isomorphism of proﬁnite groups. Suppose that
+{(g◦,r◦),(g•,r•)}∩{(0,3),(1,1)} = ∅.
+Then the following hold:
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 3
+(i) The equality n◦= n• holds. If, moreover, n def= n◦= n• ≥2,t h e n
+(g◦,r◦)=( g•,r•).
+(ii) The isomorphism αinduces a bijection between the set of ﬁber
+subgroups of Π◦
+n and the set ofﬁber subgroupsof Π•
+n.
+Here, we recall that a ﬁber subgroup of Π□
+n is deﬁned to be the kernel of the
+natural [outer] surjection
+Π□
+n ↠ Π□
+m
+—w h e r e1≤m ≤n — induced by a projectionX□
+n → X□
+m obtained by
+forgetting some of the factors. In this paper, we ﬁrst generalize the above
+Fact to include the case ofarbitrary hyperbolic curves[cf. Theorem 2.5 for
+more details]:
+Theorem A. (Group-theoreticity of the dimension, genus, number
+of cusps, and generalized ﬁber subgroups).Let Σbe a set of prime
+numbers which is either of cardinality one or equal to the set of all prime
+numbers. For □ ∈{ ◦,•},l e tX□ be a hyperbolic curve of type(g□,r □) over
+an algebraically closed ﬁeld of characteristic zero;n□ a positive integer;X□
+n□
+the n□-th conﬁguration space ofX□; Π□
+n□ the maximal pro-Σquotient of
+ΠX□
+n□
+;
+α:Π◦
+n◦
+∼→ Π•
+n•
+an isomorphism of proﬁnite groups. Then the following hold:
+(i) The equality n◦= n• holds. Moreover, if n def= n◦= n• ≥2,t h e n
+(g◦,r◦)=( g•,r•).
+(ii) If n ≥2 [cf. (i)], then αinduces a bijection between the set of
+generalized ﬁber subgroupsof Π◦
+n [cf. Deﬁnition 2.1, (ii)]a n d
+the set ofgeneralized ﬁber subgroupsof Π•
+n.
+Here, note that Theorem A, (ii),fails to holdif one uses [“classical”]ﬁber
+subgroups instead ofgeneralized ﬁber subgroups. Indeed, one veriﬁes imme-
+diately [cf. Deﬁnition 2.1, (i); Remark 2.1.1] that the following holds:
+Let n ≥2 be a positive integer;Xn the n-th conﬁguration
+space ofX;Πn
+def=ΠXn. Suppose that (g,r) ∈{(0,3),(1,1)}.
+Thenforany[“classical”]ﬁbersubgroup F ⊆Πn, thereexists
+an automorphism α∈Aut(Πn) — which arises from ank-
+automorphism ∈Autk(Xn)—s u c ht h a tα(F) ⊆Πn is not a
+[“classical”] ﬁber subgroup of Πn.
+We also remark that, in Theorem 2.5, below, we giveexplicit group-theoretic
+algorithms for reconstructing the triple (n,g,r ), as well as the generalized
+ﬁber subgroups of Πn,f r o mΠn.
+Next, weapplyTheoremA,(ii), toprovethefollowingresult[cf. Corollary
+2.6 for more details]. This result may be regarded as ageneralization of
+[CbTpII], Theorem B, (i), to the case ofarbitrary hyperbolic curves.
+Corollary B. (Structure of the group of outer automorphisms of
+a conﬁguration space group).Let Σbe a set of prime numbers which
+
+4 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+is either of cardinality one or equal to the set of all prime numbers;X a
+hyperbolic curve of type(g,r) over an algebraically closed ﬁeld of character-
+istic zero; n ≥2 a positive integer;Xn the n-th conﬁguration space ofX;
+Πn the maximal pro-Σquotient ofΠXn;
+n∗def=
+{
+n+r if (g,r) ∈{(0,3),(1,1)};
+n if (g,r) /∈{(0,3),(1,1)};
+Sn∗ the symmetric group onn∗letters. WriteOut(Πn) for the group of outer
+automorphisms [i.e., without any auxiliary restrictions!] of the proﬁnite
+group Π
+n. Let us regard Sn∗ as a subgroup of Out(Πn) via the natural
+inclusion Sn∗ ↪→ Out(Πn) induced by the natural action ofSn∗ on Xn [cf.
+Remark 2.1.1]. Suppose that(r,n) ̸=( 0,2). Then we have an equality
+Out(Πn)=O u t gF(Πn)× Sn∗
+— where we writeOutgF(Πn) for the group of outer automorphisms ofΠn
+that stabilize arbitrary generalized ﬁber subgroups ofΠn.
+In this context, we remark that, in Corollaries 2.6, (ii); 2.10, (iv), below,
+we giveexplicit group-theoretic algorithmsfor reconstructing the subgroup
+Sn∗ ⊆Out(Πn)f r o mΠn.
+In particular, by restricting Corollary B to the case where (g,r)=( 0,3),
+we obtain the following result [cf. Corollary 2.8 for more details]:
+Corollary C. (Simpliﬁed group-theoretic approach to the pro-
+Σ Grothendieck-Teichm¨uller group). In the notation of Corollary B,
+suppose that (g,r)=( 0 ,3).T h e nOutgF(Πn) may be naturally identiﬁed
+with the pro-Σ Grothendieck-Teichm¨uller group GTΣ [cf. Deﬁnition
+2.7]. In particular, we have an equality
+Out(Πn)=G T Σ× Sn+3.
+Moreover, we have
+Sn+3 = ZOut(Πn)(GTΣ)= Zloc(Out(Πn)),
+GTΣ = ZOut(Πn)(Zloc(Out(Πn)))
+— where we writeZloc(Out(Πn)) for thelocal center of Out(Πn) [cf. the
+discussion entitled “Topological Groups” in§0].
+Before proceeding, it is perhaps of interest to consider the signiﬁcance of
+Corollary C in the broader context of the considerations thatmotivated the
+introduction of theGrothendieck-Teichm¨uller group GT [i.e., GTΣ,i n
+the case where Σ is taken to be the set of all prime numbers]. LetQ be an
+algebraic closureof Q.W r i t eGQ
+def= Gal(Q/Q). Thus, for asuitable choice
+of basepoints, one has anembedding
+GQ ↪→ GT (⊆Out(Πn))
+[cf., e.g., [NodNon], Theorem C]. Indeed, historically, one of themain moti-
+vating reasonsfor the introduction of GT was the point of view that, relative
+to the aboveembedding,
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 5
+GT should serve as a sort ofpurely combinatorially/group-
+theoretically deﬁnedapproximation of GQ.
+That is to say, the conditions used to deﬁne GT were thought of as a sort
+of “ﬁrst approximation”for [still unknown] conditions for describing GQ
+as a subgroup of Out(Πn). Thus, when regarded from this point of view,
+Corollary C may be interpreted as asserting that
+this approach to regarding GT as a“ﬁrst approximation”to
+the goal of describingGQ as a subgroup of Out(Πn)i sfun-
+damentally ﬂawed, in the sense that GT, up to a “trivial
+ﬁnite factor” given by the symmetric groupSn+3, already
+essentially coincides withOut(Πn).
+In fact, GT, when regarded as a“ﬁrst approximation”ofGQ as a subgroup
+of Out(Πn), is also fundamentally ﬂawedin a somewhat deeper, more
+philosophical sense, as follows: The conventional approach to deﬁning GT
+[cf. the discussion of Deﬁnition 2.7 for more details] involves the use of
+(S1) the inertia subgroups⊆Πn associated to the variouslog divisorsof
+Xlog
+n [cf. the discussion entitled “Curves” in§0] and
+(S2) the subgroup Sn+3 ⊆Out(Πn) of Corollaries B, C.
+Here, we note that, at least at ana priorilevel,
+both (S1) and (S2) are data that arise from [characteristic
+zero] scheme theory, i.e., scheme theory overQ.
+That is to say, this state of aﬀairs — i.e., in which GT isdeﬁned within
+Out(Πn) by means of conditions that involve data that arise fromscheme
+theory overQ —i s
+fundamentally philosophically inconsistentwiththegoal
+of giving purely combinatorial/group-theoretic condi-
+tions—i.e., conditionsthatare independent of scheme theory
+over Q — for describingGQ [whose construction isimmedi-
+ate, once one allows the construction to depend in a quite
+essential fashion on scheme theory overQ!] as a subgroup of
+Out(Πn).
+Here, we note that, of course, one can attempt to avoid scheme theory in
+the construction of the data (S1), (S2) by base-changing viasome embedding
+ι: Q ↪→ C and then constructing the data (S1), (S2) via techniques from
+classical topology. On the other hand,
+this yields a deﬁnition of GT thatdepends essentiallyon the
+choice of the embeddingι: Q ↪→ C, i.e., the choice of an
+archimedean valuationof Q.
+In order to eliminate this dependence, one must employ some sort of“an-
+alytic continuation apparatus”to relate the constructions of the data (S1),
+(S2) at diﬀerent archimedean valuations ofQ. The conventional approach to
+resolving this issue is to take the “analytic continuation apparatus” to be the
+“paths”[i.e., between the ´etale fundamental groups associated to diﬀerent
+basepoints] that arise from the theory of [SGA1]. On the other hand,
+such “[SGA1] paths”[i.e., this theory of [SGA1]] are them-
+selves fundamentally dependent on scheme theory over Q,
+
+6 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+hence, in particular, insuﬃcient from the point of view of
+the goal of obtaining a deﬁnition of GT that isindependent
+of scheme theory overQ.
+[Indeed, here it is perhaps useful to recall that the subgroup of Out(Πn)
+determined byGQ is precisely themonodromythat arises from such “[SGA1]
+paths”!] That is to say, the only way toavoid a dependence on scheme theory
+[over Q]i s
+to regard the variousproﬁnite groups that are constructed,
+say, atdistinct archimedean valuationsof Q as mathemati-
+cal objects thattautologically cannot be relatedto one
+another by means of scheme theory [over Q], i.e., that
+can only be relatedto one another asabstract proﬁnite
+groups.
+This sort of“wall that tautologically obstructs scheme theory”is precisely
+the sort of situation that arises in the theory of the log-wall/log-link
+that appears in inter-universal Teichm¨uller theory [cf. [AbsTopIII], §I4;
+[AbsTopIII], Remark 3.7.7; the discussion at the beginning of [Pano],§4].
+Here, we recall that once one takes this point of view of“inter-universal
+analytic continuation”, one can no longer regard the abstract proﬁnite
+group “Πn”a sb e i n g“equipped with auxiliary data of scheme-theoretic ori-
+gin” such as (S1), (S2), i.e., one must regard “Πn”s i m p l ya s“some abstract
+proﬁnite group”. Thus, in the context of the present discussion,
+[the theory surrounding] Corollary C asserts thateven if one
+just regards “Πn”s i m p l ya s“some abstract proﬁnite group”,
+there existpurely combinatorial/group-theoretic algo-
+rithms [i.e., that areentirely free of any dependence on data
+that arises from scheme theory!] for constructing the data
+(S1), (S2), hence also for constructing GT, from theabstract
+proﬁnite groupΠn.
+In our proof of the equality “n◦= n•” stated in Theorem A, (i), we focus
+on a certain special kind of point — called alog-full point [cf. Deﬁnition
+1.1] — of [the underlying scheme of] the log conﬁguration space of a stable
+log curve that gives rise to the given hyperbolic curve [cf. the discussion
+entitled “Curves” in§0]. Roughly speaking, a log-full point is deﬁned to be
+a closed point of the log conﬁguration space at which the log structure is
+the “most concentrated”. For instance, ifX
+log is a stable log curve over an
+algebraically closed ﬁeld equipped with an fs log structure, then the set of
+log-full points ofX
+log coincides with the set ofcusps and nodes of Xlog.I n
+particular, the notion of a log-full point of the log conﬁguration space of a
+stable log curve may be considered as a sort ofhigher-dimensional analogue
+of the notion of a cusp/node.
+In the following discussion, for simplicity, we consider the case ofsmooth
+curves.L e tl be a prime number; Σ a set of prime numbers which is equal
+to either{l} or the set of all prime numbers;k an algebraically closed ﬁeld
+of characteristic /∈Σ;
+X
+log → Spec(k)
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 7
+a stable log curve [i.e., where we regard “Spec(k)” as being equipped with
+the trivial log structure] such that the interior [i.e., the open subscheme of
+points at which the log structure ofXlog is trivial] ofXlog is aﬃne.T h e n
+let us recall that a cusp ofXlog determines [up to conjugation]
+an inertia subgroup ⊆ ΠΣ
+Xlog [noncanonically] isomorphic toˆZΣ
+—w h e r ew ew r i t e(−)Σfor the maximal pro-Σ quotient of a proﬁnite group
+(−).
+In a similar vein, ifn is a positive integer, then a log-full point of then-th
+log conﬁguration spaceXlog
+n of Xlog determines [up to conjugation] what we
+shall refer to [cf. Deﬁnition 3.4] as
+a log-full subgroup ⊆ Πn
+def=ΠΣ
+Xlog
+n
+[noncanonically] isomorphic to (ˆZΣ)⊕n.
+Here, we observe that thedimension “n” appears as therank of a log-full
+subgroup. Thus, a log-full subgroup may be regarded as a sort ofgroup-
+theoretic manifestationof the dimension. In fact, this point of view plays
+an important role in the proof of Theorem 1.6.
+The notion of a log-full subgroup also plays an important role in our
+approach to the following Problem:
+Problem. Can one give a purely group-theoretic algorithm for reconstruct-
+ing from Πn the inertia subgroupsof Πn associated to the variouslog divisors
+of Xlog
+n [cf. the discussion entitled “Curves” in§0]?
+In fact, since [as is easily veriﬁed] each inertia subgroup [∼= ˆZΣ]o fΠn asso-
+ciated to a log divisor ofXlog
+n appears as adirect summandof some log-full
+subgroup [∼= (ˆZΣ)⊕n]o fΠn, it is natural to divide this Problem into steps
+(P1), (P2), as follows:
+(P1): Can one give a purely group-theoretic algorithm for reconstructing
+from Πn the log-full subgroupsof Πn?
+(P2): Can one give a purely group-theoretic algorithm for reconstructing
+from Πn, together with the auxiliary data constituted by the set
+of log-full subgroups of Πn,t h edirect summandsof a given log-full
+subgroup that arise as inertia subgroups associated tolog divisors?
+In the present paper, we prove a result that yields a partial aﬃrmative
+answer to (P1), in the form of asuﬃcient conditionfor the reconstructibil-
+ity of log-full subgroups[cf. Theorem 3.8; Corollary 3.9; Proposition 3.11;
+Corollary 3.12, (ii); Remark 3.12.1; Remark 3.12.2, for more details]:
+Theorem D. (Group-theoretic preservation of log-full subgroups).
+Let l be a prime number;n a positive integer. For □ ∈{ ◦,•},l e tk□ be a
+ﬁeld of characteristic̸= l; Gk□ the absolute Galois group ofk□ [for a suitable
+choice of algebraic closure ofk□]; χk□ : Gk□ → Z×
+l the l-adic cyclotomic
+character associated tok□; Xlog
+□ → Spec(k□) a smooth log curve;(Xlog
+□ )n
+the n-th log conﬁguration space ofXlog
+□ ; Π(Xlog
+□ )n/k□
+the kernel of the natural
+[outer] surjection Π(Xlog
+□ )n
+↠ Gk□; Δ□
+n
+def=Π (l)
+(Xlog
+□ )n/k□
+; Π□
+n the quotient of
+
+8 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+Π(Xlog
+□ )n
+by the kernel of the natural surjectionΠ(Xlog
+□ )n/k□
+↠ Δ□
+n.T h u s ,
+the natural conjugation action ofΠ□
+n on Δ□
+n determines a natural outer
+Galois actionGk□ → Out(Δ□
+n).S e tnmin =3 if (g,r) ̸=( 0,3); nmin =2 if
+(g,r)=( 0,3).S u p p o s eeither that n ≥nmin or that the following conditions
+are satisﬁed:
+(a) k□ is strongly l-cyclotomically full[cf. Deﬁnition 3.1,(iii)].
+(b) Let J ⊆ Δ□
+1 be a characteristic open subgroup. Observe that Π□
+1
+naturally acts onJ by conjugation, hence onJab/edge ⊗Zl Ql [cf. the
+discussion entitled “Topological groups” in§0]. Write ρJ :Π □
+1 →
+AutQl(Jab/edge⊗Zl Ql) for this action ofΠ□
+1 on Jab/edge⊗Zl Ql.T h e n
+there exists a ﬁnite ﬁltration ofΠ□
+1 -stable Ql-subspaces ofJab/edge⊗Zl
+Ql such that, for each subquotient of this ﬁnite ﬁltration, there ex-
+ists an elementg ∈Π□
+1 such that the restriction to this subquotient
+of ρJ(g) is χk□(g)-transverse [cf. Deﬁnition 3.1, (ii)], where, by
+abuse of notation, we writeχk□(−) for the restriction ofχk□(−),a s
+deﬁned above, via the natural [outer] surjectionΠ□
+1 ↠ Gk□.
+Let
+α:Δ◦
+n
+∼→ Δ•
+n
+be anisomorphism of proﬁnite groups that iscompatible with the respec-
+tive natural outer Galois actionsG◦→ Out(Δ◦
+n), G• → Out(Δ•
+n) relative
+to some isomorphism of proﬁnite groupsG◦ ∼→ G•. Then for any log-full
+subgroup A ⊆Δ◦
+n of Δ◦
+n, α(A) ⊆Δ•
+n is alog-full subgroupof Δ•
+n.
+Theorem D may be considered as a sort ofhigher-dimensional analogueof
+the reconstruction ofinertia subgroups of surface groupsgiven in [CmbGC],
+Corollary 2.7, (i). Finally, we remark that acomplete aﬃrmative answerto
+(P2) may be found in [Higashi].
+Acknowledgements
+The authors would like to thankN. Takao and A. Tamagawa for their
+helpful comments concerning the present paper. The ﬁrst author was sup-
+ported by the Inamori Foundation and JSPS KAKENHI Grant Number
+15K04780. The second author was supported by Grant-in-Aid for JSPS
+Fellows Grant Number 16J02375.
+0. Notations and conventions
+Numbers:
+The notationQ will be used to denote the ﬁeld ofrational numbers.T h e
+notation Z will be used to denote the set, group, or ring ofrational integers.
+The notation N will be used to denote the set or additive monoid ofnon-
+negative rational integers. The notation Primes will be used to denote the
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 9
+set of allprime numbers. Let Σ be a nonempty subset ofPrimes.T h e nw e
+shall write
+ˆZΣ
+for thepro-Σcompletion of Z.I f l ∈Primes, then we shall writeZl
+def= ˆZ{l}.
+The notationQl will be used to denote the quotient ﬁeld of the ringZl.F o r
+aﬁ e l dk, we shall denote by ch(k) the characteristic ofk.
+Schemes:
+If S is ascheme,a n ds is a point of theunderlying setof the schemeS,
+then, for simplicity, we shall write
+s ∈S.
+Log Schemes:
+We refer to [KK1], [KK2] for basic facts concerninglog schemesand log
+structures. In this paper, log structures are always considered on the ´etale
+topoi of schemes [or algebraic stacks]. IfXlog is a log scheme, then we shall
+write MX for the sheaf of monoids that deﬁnes the log structure ofXlog, X
+for the underlying scheme ofXlog.I f flog : Xlog → Ylog is a morphism of
+log schemes, then we shall writef : X → Y for the associated underlying
+morphism of schemes; we shall refer to the image ofMX in the cokernel of
+the morphism induced ongroupiﬁcations f∗Mgp
+Y →M gp
+X
+by the morphism
+f∗MY →M X determined byflog as the relative characteristicof flog.I f
+Xlog is a log scheme, then we shall refer to the relative characteristic of
+Xlog → X,w h e r eX is regarded as a log scheme equipped with the trivial
+log structure, as thecharacteristic of Xlog.I f P is aﬁnitely generated free
+abelian group, then we shall write rk(P) for therank of P.
+Let Xlog be a log scheme, andx a geometric point ofX. Then we shall
+denote byI(x,MX)t h ei d e a lo fOX,x generated by the image ofMX,x\O×
+X,x
+via the morphism of monoids MX,x →O X,x induced by the morphism
+MX →O X which deﬁnes the log structure ofXlog.
+If Xlog, Ylog are fs [i.e., ﬁne saturated] log schemes over an fs log scheme
+Zlog, then we shall denote byXlog ×Zlog Ylog the ﬁber productof Xlog and
+Ylog over Zlog in the category of fs log schemes; we shall refer to as the
+interior of Xlog the open subscheme of points at which the log structure of
+Xlog is trivial.
+Curves:
+Let n be a positive integer; (g,r) a pair of nonnegative integers such that
+2g −2+ r> 0; X → S a hyperbolic curve of type(g,r)[ c f .[ M T ] ,§0]; Pn
+the ﬁber product ofn copies ofX overS. Then we shall refer to as then-th
+conﬁguration spaceof X → S the S-scheme
+Xn → S
+representing the open subfunctor
+T ↦→{ (f1,...,f n) ∈Pn(T) | fi ̸= fj if i ̸= j }
+of the functor represented byPn.
+
+10 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+We shall write Mg,r for the moduli stack of r-pointed stable curves of
+genus g overZ [where we assume the marked points to beordered], Mg,r for
+the open substack ofMg,r which parametrizessmooth curves, M
+log
+g,r for the
+log stack obtained by equippingMg,r with the log structure determined by
+the divisor at inﬁnityMg,r\Mg,r,a n dCg,[r] →M g,[r] for the stack-theoretic
+quotient of the morphismMg,r+1 →M g,r [i.e., determined by forgetting the
+(r +1)-th marked point] by the action of the symmetric group onr letters
+on the labels of the [ﬁrstr] marked points. Letk be a ﬁeld. Then we shall
+write (Mg,r)k
+def= Mg,r ×Spec(Z) Spec(k).
+Let Xlog → Slog be a stable log curve of type(g,r) [cf. [CmbGC], §0].
+Then we shall refer to as then-th log conﬁguration spaceof Xlog → Slog the
+Slog-log scheme
+Xlog
+n → Slog
+obtained by pulling back the morphism M
+log
+g,r+n → M
+log
+g,r determined by
+forgetting the last n marked points via the classifying morphismTlog →
+M
+log
+g,r of Xlog ×S T → Tlog def= Slog ×S T for a suitable ﬁnite ´etale coveringT
+of S [i.e., over which thed i v i s o ro fc u s p sof Xlog → Slog becomes split]a n d
+then descending fromT to S. Note that, when the log structure onSlog is
+trivial[i.e., “Slog = S”], in whichcase theinteriorU ofXlog may be regarded
+as a hyperbolic curve overS,t h einterior of then-th log conﬁguration space
+Xlog
+n may be identiﬁed with then-th conﬁguration spaceUn associated toU.
+When Slog is thespectrum of a ﬁeldequipped with thetrivial log structure,
+we shall refer to the divisors of the underlying schemeXn of Xlog
+n that lie in
+the complement of the interior ofXlog
+n as log divisorsof Xlog
+n [or, depending
+on the context of the discussion, ofUn].
+Let Σ be a nonempty subset ofPrimes; Slog an fs log scheme whose under-
+lying scheme is the spectrum of an algebraically closed ﬁeld of characteristic
+/∈Σ;Xlog → Slog a stable log curve. Then the pointed stable curve de-
+termined by the log structure ofXlog deﬁnes asemi-graph of anabelioids of
+pro-ΣPSC-type GXlog [cf. [CmbGC], Deﬁnition 1.1, (i)]. We shall write
+E(Xlog)
+for the set of closed points ofX which correspond to the edges [i.e., “nodes”
+and “cusps”] of the underlying semi-graph ofGXlog.
+Topological Groups:
+Let G be atopological group. Then we shall use the notation
+Aut(G), Out(G)
+introduced in the discussion entitled “Topological groups” in [CbTpI],§0.
+Thus, ifG is atopologically ﬁnitely generated proﬁnite group, then Aut(G)
+and Out(G)a d m i tanatural proﬁnite topology. Here, we recall from [NS],
+Theorem 1.1, that, in fact, ifG is a topologically ﬁnitely generated proﬁnite
+group, then Aut(G)a n dO u t (G) remain unaﬀectedif one replaces G by
+the discrete topological group determined byG. This result [NS], Theorem
+1.1, also implies that, if G is a topologically ﬁnitely generated proﬁnite
+group, then the natural proﬁnite topologies on Aut(G)a n dO u t (G)m a yb e
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 11
+described as the topologies determined by thesubgroups of ﬁnite indexof
+Aut(G)a n dO u t (G).
+Let Σ be a nonempty subset ofPrimes, G a proﬁnite group. Then we
+shall denote byGΣ the maximal pro-Σquotient of G.F o rl ∈Primes,w e
+shall writeG(l) def= G{l}. We shall say thatG is almost pro-l if G admits an
+open pro-l subgroup.
+We shall denote byGab the abelianization of a proﬁnite group G, i.e.,
+the quotient ofG by the closure of the commutator subgroup ofG.I f H
+is a closed subgroup of a proﬁnite group G, then we shall write ZG(H)
+(respectively, CG(H)) for the centralizer (respectively, commensurator)o f
+H in G [cf. the discussion entitled “Topological groups” in [CbTpI],§0].
+We shall say that the closed subgroupH is commensurably terminalin G if
+H = CG(H). We shall write
+Zloc
+G (H) def= lim−→H′⊆H
+ZG(H′) ⊆ G
+—w h e r eH′ ⊆H ranges over the open subgroups ofH. We shall refer to
+Zloc
+G (H)a st h elocal centralizerof H in G; Zloc(G) def= Zloc
+G (G)a st h elocal
+center of G.
+Let Σ be a nonempty subset ofPrimes. For a connected locally noetherian
+scheme X (respectively, fs log schemeXlog; semi-graph of anabelioidsG of
+pro-Σ PSC-type), we shall denote by
+π1(X) (respectively,π1(Xlog); ΠG)
+the ´etale fundamental group of X (respectively, log fundamental group of
+Xlog; PSC-fundamental groupof G [cf. [CmbGC], Deﬁnition 1.1, (ii)]) [for
+some choice of basepoint]. We shall denote by
+Πab/edge
+G
+the quotient of Πab
+G by the closed subgroup generated by the images in Πab
+G
+of the edge-like subgroups [cf. [CmbGC], Deﬁnition 1.1, (ii)] of ΠG [cf.
+[NodNon], Deﬁnition 1.3, (i)].
+If K is a ﬁeld, then we shall writeGK for theabsolute Galois groupof K,
+i.e., π1(Spec(K)).
+Suppose that either Σ ={l} or Σ =Primes. We shall say that a proﬁnite
+group G is a [pro-Σ] surface group (respectively, a [pro-Σ] conﬁguration
+space group)i fG is isomorphic to the maximal pro-Σ quotient of the ´etale
+fundamental group of a hyperbolic curve (respectively, the conﬁguration
+spaceofahyperboliccurve)overanalgebraicallyclosedﬁeldofcharacteristic
+zero.
+1. Group-theoretic reconstruction of the dimension
+In this section, we introduce the notion of alog-full point of an fs log
+scheme [cf. Deﬁnition 1.1]. We then discuss some elementary properties
+of the log-full points of thelog conﬁguration space of a stable log curve[cf.
+Proposition 1.3]. As an application, we give agroup-theoretic characteriza-
+tion of thedimension of a [log] conﬁguration space [cf. Theorem 1.6].
+
+12 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+Deﬁnition 1.1.Let Xlog be an fs log scheme. Then we shall say that a
+point x ∈X is log-full if, for any geometric pointx lying overx, the equality
+dim(OX,x/I(x,MX)) = 0
+[cf. the discussion entitled “Log Schemes” in§0] holds.
+Proposition 1.2. (Properties of closed points of log conﬁguration
+spaces). Let n be a positive integer;Σas u b s e to fPrimes which is either of
+cardinality one or equal toPrimes; k an algebraically closed ﬁeld of charac-
+teristic /∈Σ; S def= Spec(k); Slog an fs log scheme whose underlying scheme
+is S; Xlog a stable log curve overSlog; Xlog
+n the n-th log conﬁguration space
+of Xlog; Xlog
+0
+def= Slog; Xlog
+n → Xlog
+n−1 the projection morphism obtained by
+forgetting the factor labeled n,w h e nn ≥ 2; Xlog
+1 → Xlog
+0 the stable log
+curve Xlog → Slog; Pn the groupiﬁcation of the relative characteristic of
+Xlog
+n → Slog; P0
+def= {0}; xn ∈Xn a closed point;xn−1 the image ofxn in
+Xlog
+n−1; xlog
+n (respectively,xlog
+n−1) the log scheme obtained by restricting the log
+structure ofXlog
+n (respectively,Xlog
+n−1) to the [reduced, artinian] closed sub-
+scheme of Xn (respectively, Xn−1) determined by xn (respectively, xn−1).
+Moreover, we shall write
+(Xlog
+n )xn−1
+def= Xlog
+n ×Xlog
+n−1
+xlog
+n−1 → xlog
+n−1
+for the stable log curve obtained by base-changing Xlog
+n → Xlog
+n−1 via the
+natural inclusionxlog
+n−1 ↪→ Xlog
+n−1; π1(Xlog
+n /Slog) (respectively,π1(xlog
+n /Slog))
+for the kernel of the natural [outer] surjectionπ1(Xlog
+n ) ↠ π1(Slog) (respec-
+tively, π1(xlog
+n ) ↠ π1(Slog)); Δn
+def= π1(Xlog
+n /Slog)Σ; Δxn
+def= π1(xlog
+n /Slog)Σ;
+Πn (respectively, Πxn) for the quotient ofπ1(Xlog
+n ) (respectively, π1(xlog
+n ))
+by the kernel of the natural surjectionπ1(Xlog
+n /Slog) ↠ Δn (respectively,
+π1(xlog
+n /Slog) ↠ Δxn). In particular, we have a commutative diagram of
+[outer] homomorphisms of proﬁnite groups
+1 →→Δxn
+→→
+ιΔ
+xn
+↓↓
+Πxn
+→→
+ιΠ
+xn
+↓↓
+π1(Slog) →→1
+1 →→Δn →→Πn →→π1(Slog) →→1,
+where the horizontal sequences are exact, andιΔ
+xn, ιΠ
+xn are the [outer] homo-
+morphisms induced by the natural inclusionxlog
+n ↪→ Xlog
+n . Then the following
+hold:
+(i) Let us regard, by abuse of notation, xn (respectively, xn−1)a sa
+geometric point ofXn (respectively,Xn−1). Then the followingin-
+equalities hold:
+rk(Pn−1,xn−1) ≤ rk(Pn,xn) ≤ rk(Pn−1,xn−1)+1 .
+Here, in the ﬁrst (respectively, second) inequality, equality holds if
+and only ifxn /∈E((Xlog
+n )xn−1) (respectively,xn ∈E((Xlog
+n )xn−1)).
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 13
+(ii) rk(Pn,xn) ≤n.
+(iii) Δxn
+∼= ˆZΣ(1)⊕rk(Pn,xn). [Here, the “(1)” denotes a “Tate twist”.]
+(iv) The [outer] homomorphism ιΔ
+xn is injective.I n p a r t i c u l a r ,ιΠ
+xn is
+also injective.
+Proof. First, we consider assertion (i). To verify theinequalities, it suﬃces
+to show that
+0 ≤rk(Pn/n−1,xn) ≤1
+—w h e r ew ew r i t ePn/n−1 for thegroupiﬁcation of the relative characteristic
+of Xlog
+n → Xlog
+n−1. But this follows immediately from [KF], Lemma 1.4.
+Here, note that rk(Pn/n−1,xn) = 0 (respectively, rk(Pn/n−1,xn) = 1) holds if
+and only ifxn /∈E((Xlog
+n )xn−1) (respectively,xn ∈E((Xlog
+n )xn−1)) [cf. [KF],
+Lemma 1.6; [KF], Proof of Theorem 1.3]. This completes the proof assertion
+(i). Assertion (ii) is an immediate consequence of assertion (i). Assertion
+(iii) follows from [Hsh], Proposition B.5. Finally, we consider assertion (iv).
+First, we verify the casen = 1. Suppose that x
+1 /∈E(Xlog). Then since
+Δx1
+∼= {1} [cf. assertions (i), (iii)], it follows that ιΔ
+x1 is injective.T h u s ,
+we may assume thatx1 ∈E(Xlog). Then the injectivity ofιΔ
+x1 follows from
+[the evident pro-Σ generalization of] [SemiAn], Proposition 2.5, (i) [cf. also
+[CmbGC], Remark 1.1.3]. This completes the proof of assertion (iv) in the
+case n = 1. Thus, it remains to verify assertion (iv) in the casen ≥2. To
+this end, let us ﬁrst observe that the projection morphismX
+log
+n → Xlog
+n−1
+induces [outer] surjections
+Δn ↠ Δn−1;Δ xn ↠ Δxn−1
+—w h e r e“ Δn−1”, “Δxn−1” are deﬁned in the same manner as “Δn”, “Δxn”,
+respectively. Write
+Δn/n−1
+def=K e r ( Δn ↠ Δn−1); Δxn/xn−1
+def=K e r ( Δxn ↠ Δxn−1).
+Thus, wehaveacommutativediagramof[outer]homomorphismsofproﬁnite
+groups as follows:
+1 →→Δxn/xn−1
+→→
+ιn/n−1
+↓↓
+Δxn
+→→
+ιΔ
+xn
+↓↓
+Δxn−1
+→→
+ιΔ
+xn−1
+↓↓
+1
+1 →→Δn/n−1 →→Δn →→Δn−1 →→1
+— where the horizontal sequences areexact,a n dιΔ
+xn−1 (respectively,ιn/n−1)
+is the [outer] homomorphism induced by the natural inclusionxlog
+n−1 ↪→ Xlog
+n−1
+(respectively, induced by the [outer] homomorphismιΔ
+xn). [Here, we recall
+that the image ofιn/n−1 iscommensurably terminalin Δn/n−1 [cf. [CmbGC],
+Proposition 1.2, (ii)]. This implies that ιn/n−1 is well-deﬁned as an outer
+homomorphism.] On the other hand, since [cf. [MT], Proposition 2.2, (i);
+the discussion of “specialization isomorphisms”in the subsection entitled
+
+14 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+“The Etale Fundamental Group of a Log Scheme” in [CmbCusp],§0] one
+may identifyιn/n−1 with the “ιΔ
+x1” induced by the natural inclusion
+xlog
+n ↪→ (Xlog
+n )xn−1,
+it follows [from the case n =1 ]t h a tιn/n−1 is injective. Therefore, by
+induction on n, we conclude thatιΔ
+xn is injective. This completes the proof
+of assertion (iv). □
+Proposition 1.3. (Properties of the log-full points of a log conﬁg-
+uration space). In the notation of Proposition 1.2, the following hold:
+(i) xn ∈Xn is log-full if and only ifrk(Pn,xn)= n.
+(ii) If xn ∈Xn is log-full,t h e nxn−1 is also alog-full point ofXn−1.
+(iii) If xn ∈Xn is log-full,t h e nΔxn
+∼= ˆZΣ(1)⊕n.
+Proof. First, we verify assertion (i). Fix aclean chart P → k of Slog [cf.,
+e.g., [Hsh], Deﬁnition B.1, (ii)]. Write Tlog for the log scheme whose un-
+derlying scheme is Spec(k[[P]]), and whose log structure is deﬁned by the
+natural inclusionP↪ → k[[P]]; Slog ↪→ Tlog for the [strict] closed immersion
+determined by the maximal ideal ofk[[P]]. Thus, it follows immediately
+from the well-known deformation theory of stable log curves that we may
+assume without loss of generality that there exists astable log curve
+Y
+log → Tlog
+whose base-change viaSlog ↪→ Tlog is isomorphic to [hence may be identiﬁed
+with] Xlog → Slog.W r i t eYlog
+n for then-th log conﬁguration space ofYlog.
+Since Tlog is log regular[cf. [KK2], Deﬁnition 2.1], andYlog
+n → Tlog is log
+smooth, it follows that Ylog
+n is also log regular [cf. [KK2], Theorem 8.2].
+Thus, we obtain anequality
+(∗n)d i m (OYn,xn)=d i m (OYn,xn/I(xn,MYn)) + rk(Qn,xn)
+— where we regardxn as a geometric point ofYn; Qn denotes thegroupiﬁ-
+cation of the characteristicof Ylog
+n [cf. [KK2], Deﬁnition 2.1]. On the other
+hand, it follows from the various deﬁnitions involved that we haveequalities
+dim(OYn,xn)=d i m (OT,x0)+ n, rk(Qn,xn)=d i m (OT,x0)+rk( Pn,xn).
+— where we regardx0 as a geometric point ofT. Combining these equalities
+with (∗n), we obtain anequality
+dim(OYn,xn/I(xn,MYn)) =n−rk(Pn,xn).
+Thus, since dim(OXn,xn/I(xn,MXn)) = dim(OYn,xn/I(xn,MYn)), we con-
+clude thatxn ∈Xn is log-full if and only if rk(Pn,xn)= n. This completes
+theproof of assertion (i). Assertion (ii) followsfrom assertion (i) and the fact
+that rk(P
+n,xn)= n implies rk(Pn−1,xn−1)= n −1 [cf. Proposition 1.2, (i),
+(ii)]. Assertion (iii) follows from assertion (i) and Proposition 1.2, (iii).□
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 15
+Proposition 1.4. (Abelian closed subgroups of a pro- l surface
+group). Let l be a prime number;G ap r o -l surface group. Then every
+nontrivial abelian closed subgroupof G is isomorphic toZl.
+Proof. Let H ⊆G be anontrivial abelian closed subgroupof G. Here, note
+that H is of inﬁnite indexin G. [Indeed, this follows from the fact that every
+open subgroup ofG is also apro-l surface group, hencenonabelian.] Thus,
+it follows from the well-known fact that thel-cohomological dimensionof a
+closed inﬁnite index subgroup of a pro-l surface group is≤1 [cf., e.g., the
+proof of [MT], Theorem 1.5] thatH is afree pro-l group [cf. [RZ], Theorem
+7.7.4]. Since H (̸= {1})i sabelian,w et h u sc o n c l u d et h a tH ∼= Zl. □
+Lemma 1.5. (Upper bound for the rank of free abelian pro- l
+closed subgroups of a pro-l conﬁguration space group). Let l be
+a prime number;n a positive integer;s a positive integer;X a hyperbolic
+curve over an algebraically closed ﬁeld of characteristic̸= l; Xn the n-th
+conﬁguration space ofX; Πn
+def= π1(Xn)(l); H ⊆Πn ac l o s e ds u b g r o u ps u c h
+that H ∼= Z⊕s
+l . Then theinequality
+s ≤n
+holds.
+Proof. Let us prove the inequality by induction onn.W h e nn =1 ,t h e
+inequality follows from Proposition 1.4. Now suppose thatn ≥2, and that
+the induction hypothesisis in force. Write
+p :Πn ↠ Π1
+for the natural [outer] surjection induced by the projection morphismXn →
+X obtained by forgetting the factors with labels̸= n. Then, by Proposition
+1.4, it follows that either
+p(H)= {1} or p(H) ∼= Zl.
+In particular,H′ def= H ∩Ker(p)( ⊆Ker(p)) satisﬁes either
+H′ ∼= Z⊕s
+l or H′ ∼= Z⊕s−1
+l .
+Here, we note that Ker(p) may be identiﬁed with the maximal pro-l quotient
+of the ´etale fundamental group of the (n−1)-st conﬁguration spaceof some
+hyperbolic curve over an algebraically closed ﬁeld of characteristic̸= l [cf.
+[MT], Proposition 2.4, (i)]. Thus, by applying the induction hypothesis, we
+obtain that either
+s ≤n−1o r s−1 ≤n−1,
+which implies thats ≤n, as desired. □
+
+16 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+Theorem 1.6. (Group-theoretic characterization of the dimension
+of a conﬁguration space).Let l be a prime number;n a positive integer;
+X a hyperbolic curve over an algebraically closed ﬁeldk of characteristic̸= l;
+Xn the n-th conﬁguration space ofX; Πn
+def= π1(Xn)(l). Then the following
+equality holds:
+n =m a x{s ∈N |∃ac l o s e ds u b g r o u po fΠn which is isomorphic toZ⊕s
+l }.
+Proof. In light of Lemma 1.5, to verify the assertion, it suﬃces to show the
+following claim:
+There exists a closed subgroupH of Πn such thatH ∼= Z⊕n
+l .
+Thus, we proceed to verify thisclaim. First, we observe that, by applying a
+suitablespecialization isomorphism[cf. thediscussionpreceding[CmbCusp],
+Deﬁnition 2.1, as well as [CbTpI], Remark 5.6.1], one may conclude that
+there exists astable log curveZlog → Slog,w h e r eS is the spectrum of an
+algebraically closed ﬁeld of characteristic̸= l,a n dw ew r i t eZlog
+n for then-th
+log conﬁguration space ofZlog, satisfying the following properties:
+E(Zlog) ̸= ∅, Ker(π1(Zlog
+n ) → π1(Slog))(l) ∼= Πn.
+[Here, we note that, although the algebraically closed ﬁeld “k◦= k”o ft h e
+discussion preceding [CmbCusp], Deﬁnition 2.1, is assumed to be of charac-
+teristic zero, one veriﬁes immediately that, if one restricts one’s attention to
+pro-l fundamental groups, then this discussion generalizes immediately to
+t h ec a s ew h e r e“k
+◦= k” is of characteristic̸= l.] Thus, by applying Proposi-
+tions 1.2, (i); 1.3, (i), it follows that there exists alog-full point zn ∈Zn.I n
+particular, by applying Proposition 1.3, (iii) tozn, we conclude that there
+exists a closed subgroupH of Πn such thatH ∼= Z⊕n
+l . This completes the
+proof of theclaim, hence also of Theorem 1.6. □
+2. Group-theoretic reconstruction of the genus, number of
+cusps, and generalized fiber subgroups
+In this section, we prove that, ifn is a positive integer ≥2, then the
+triple (n,g,r ) may be recoveredgroup-theoreticallyfrom any conﬁguration
+space group that arises from then-th conﬁguration space of a hyperbolic
+curve of type (g,r) over an algebraically closed ﬁeld of characteristic zero
+[cf. Theorem 2.5, (i)]. Moreover, by combining this result with a result of
+Nakamura and Takao [cf. [NT], Theorem D], we generalize [MT], Corollary
+6.3 — by introducing the notion of ageneralized ﬁber subgroup[cf. Deﬁnition
+2.1, (ii)] — to the case ofarbitrary hyperbolic curves[cf. Theorem 2.5, (iii)].
+Deﬁnition 2.1.Let (g,r) be a pair of nonnegative integers such that 2g−
+2+ r> 0; 0 <n
+′ <n positive integers; Σ a set of prime numbers which
+is either of cardinality one or equal to the set of all prime numbers;k an
+algebraically closed ﬁeld of characteristic/∈Σ;X a hyperbolic curve of type
+(g,r)o v e rk.W r i t en′′ def= n−n′; Xn for then-th conﬁguration space ofX;
+Πn
+def= π1(Xn)Σ.
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 17
+(i) We deﬁne ageneralized projection morphism of lengthn′ [or, alter-
+natively, ageneralized projection morphism of co-lengthn′′]
+Xn → Xn′′
+to be a morphism that may be described as follows:
+(a) Suppose that (g,r) ∈{(0,3),(1,1)}. Then it follows imme-
+diately from the deﬁnition of Xn [cf. the discussion entitled
+“Curves” in§0] that the projection morphism Xn+1 → Xn
+to the ﬁrst n factors of Xn+1 determines, in a natural way,
+a(n) [smooth] (n+r)-pointed stable curve of genusg over Xn.
+One veriﬁes immediately that our assumption that ( g,r) ∈
+{(0,3),(1,1)} implies that the [smooth]r-pointed stable curve
+of genusg determined by forgettingany subset of cardinalityn
+of the set ofn+r marked pointsof the (n+r)-pointed stable
+curve of genus g over Xn determined by the projection mor-
+phism Xn+1 → Xn is naturally isomorphic to the [smooth]r-
+pointed stable curve of genusg determined byX. We shall refer
+to the morphism
+Xn → Xn′′
+obtained by forgettingsome subset of cardinalityn′ of the set of
+n+r marked pointsof the (n+r)-pointed stable curve of genus
+g over Xn determined by the projection morphismXn+1 → Xn
+discussed above as ageneralized projection morphism of length
+n′.
+(b) Suppose that (g,r) /∈{(0,3),(1,1)}. Then we shall refer to the
+projection morphism Xn → Xn′′ obtained by forgetting some
+collection ofn′ f a c t o r sa sageneralized projection morphism of
+length n′.
+Note that, in the case where (g,r) /∈{(0,3),(1,1)}, the notion of
+a generalized projection morphism coincides with the notion of a
+projection morphism as deﬁned in [MT], Deﬁnition 2.1, (ii). By
+contrast, in the case where (g,r) ∈{(0,3),(1,1)}, one veriﬁes imme-
+diately that there exist generalized projection morphisms that are
+not projection morphismsin the sense of [MT], Deﬁnition 2.1, (ii).
+(ii) We shall refer to
+Ker(Π
+n ↠ Πn′′)
+—w h e r eΠn ↠ Πn′′ is the natural [outer] surjection induced by
+a generalized projection morphism of lengthn′ —a sa generalized
+ﬁber subgroup ofΠn of length n′ [or, alternatively, as ageneralized
+ﬁber subgroup ofΠn of co-lengthn′′] .N o t et h a t ,i nt h ec a s ew h e r e
+(g,r) /∈{(0,3),(1,1)}, the notion of a generalized ﬁber subgroup of
+Πn coincides with the notion of aﬁber subgroupof Πn as deﬁned in
+[MT], Deﬁnition 2.3, (iii). By contrast, in the case where (g,r) ∈
+{(0,3),(1,1)}, one veriﬁes immediately that there exist generalized
+ﬁber subgroups of Πn that arenot ﬁber subgroupsof Πn in the sense
+of [MT], Deﬁnition 2.3, (iii).
+
+18 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+(iii) We shall refer to a ﬁber subgroup of Πn of co-length one in the sense
+of [MT], Deﬁnition 2.3, (iii), as a co-surface subgroupof Πn.W e
+shall refer to a closed normal subgroupH of Πn such that
+Πn/H is a [pro-Σ] surface group which is not isomorphic
+to a free pro-Σ group of rank two
+as aquasi-co-surface subgroupof Πn.
+(iv) We shall say that an automorphismαof Πn is gF-admissible if, for
+every generalized ﬁber subgroupF of Πn, it holds thatα(F)= F.
+We shall say that an outer automorphism of Πn is gF-admissible if
+it is arises from a gF-admissible automorphism. Write
+OutgF(Πn)
+for the group of gF-admissible outer automorphisms of Πn.
+Remark 2.1.1. In the notation of Deﬁnition 2.1, let
+n∗def=
+{
+n+r if (g,r) ∈{(0,3),(1,1)};
+n if (g,r) /∈{(0,3),(1,1)}.
+Then one veriﬁes immediately that the natural action of thesymmetric
+group on n∗letters
+Sn∗
+on theset of marked points with labels
+∈{n+r −n∗+1,n +r −n∗+2,...,n +r}
+[a set of cardinality n∗]o ft h e(n + r)-pointed stable curve Xn+1 → Xn
+[determined by the projection morphism to the ﬁrstn factors ofXn+1 —c f .
+the discussion of Deﬁnition 2.1, (i); [MT], Remark 2.1.2] induces a natural
+action ofS
+n∗ on Xn [i.e., the base space of this (n+r)-pointed stable curve].
+Moreover, this action induces anaction of Sn∗ on the set ofgeneralized ﬁber
+subgroupsof Πn of co-length n′′, which is easily veriﬁed to betransitive.
+The content of the following Proposition is, in essence, well-known.
+Proposition 2.2. (Abelianization of a conﬁguration space group).
+Let l be a prime number;n ≥2 an integer;k an algebraically closed ﬁeld of
+characteristic ̸= l; X a hyperbolic curve of type(g,r) over k; Xn the n-th
+conﬁguration space ofX; Πn
+def= π1(Xn)(l);
+ϕ:Πab
+n ↠
+n
+  
+Πab
+1 ×···× Πab
+1
+the surjection induced by the natural open immersionXn ↪→
+n
+  
+X ×k ···× k X;
+Πn/1 the kernel of the natural [outer] surjectionΠn ↠ Π1 induced by the
+ﬁrst projectionXn → X. Then the following hold:
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 19
+(i) If g =0 , then the ﬁrst projectionXn → X induces an exact se-
+quence
+1 →→Πab
+n/1
+→→Πab
+n →→Πab
+1 →→1.
+In particular, it follows thatΠab
+n is a ﬁnitely generated freeZl-
+module of rank
+rkZl(Πab
+n )=
+n+r−2∑
+j=r−1
+j = n(r −1)+ n(n−1)
+2 >n (r −1).
+(ii) If g ̸=0 ,t h e nϕis anisomorphism. In particular, it follows that
+Πab
+n is aﬁnitely generated freeZl-module of rank
+rkZl(Πab
+n )=
+{
+n(2g +r −1), if r> 0
+2gn, if r =0 .
+(iii) g ̸=0 if and only if ϕis anisomorphism.
+(iv) ( g,r)=( 1,1) if and only if rkZl(Πab
+n )=2 n [cf. (i), (ii)].
+Proof. First, weconsiderassertion(i). Webeginbyverifyingthe exactnessof
+the sequence of the ﬁrst display in the statement of assertion (i). Write Πab/1
+n
+for the quotient of Πn by the kernel of the natural surjection Πn/1 ↠ Πab
+n/1.
+Thus, we have atautologicalexact sequence
+1 →→Πab
+n/1
+→→Πab/1
+n →→Π1 →→1.
+Next, recall from the well-known structure theory of surface groups that
+Π1 is afreepro-l group. Thus, the exact sequence of the preceding display
+admits asplitting s :Π1 → Πab/1
+n .N o ww eclaim that
+Claim 2.2A: The natural conjugation action of Π1 on Πab
+n/1
+is trivial.
+Note that theexactness of the sequence of the ﬁrst display in the statement
+of assertion (i) followsformally fromClaim 2.2A, together with the existence
+of thesplitting s :Π1 → Πab/1
+n .
+To verifyClaim 2.2A, we reason as follows. LetK be analgebraic closure
+of thefunction ﬁeldK of X.T h u s ,t h egeometric ﬁberZ def= X2×X Spec(K)
+of the ﬁrst projectionX2 → X is ahyperbolic curve of genus0o v e rK.F o r
+simplicity, we assume thatK has been chosen so that Π1 may be regarded
+as aquotient of the Galois group Gal(K/K). Now observe that the (n−1)-st
+conﬁguration spaceZn−1 ofZ may be naturally identiﬁed with thegeometric
+ﬁber Xn ×X Spec(K) of the ﬁrst projectionXn → X, and hence that Πn/1
+m a yb er e g a r d e da st h emaximal pro-l quotient of the ´etale fundamental
+group of Zn−1.S i n c eZ is of genus 0, it follows thatZn−1 embeds as an
+open subvariety of theﬁber productover K of n−1c o p i e so ft h eprojective
+line P1
+K over K.S i n c et h e´etale fundamental group of such a ﬁber product
+is well-known to betrivial, it follows immediately from theZariski-Nagata
+
+20 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+purity theoremthat Πn/1 is topologically normally generatedby theinertia
+subgroups ⊆Πn/1 associated to the variouslog divisors [cf. the discussion
+entitled “Curves” in§0] of Zn−1. Moreover, one veriﬁes immediately that
+each such log divisorDZ arises, by base-changing via the natural morphism
+Spec(K) → X, from somelog divisorDX of Xn [where we regardXn as an
+object over X by means of the ﬁrst projectionXn → X] that corresponds
+to adiscrete valuationv of the function ﬁeld ofXn that induces thetrivial
+valuation of K.
+Next, let us observe that it follows immediately from the well-knownge-
+ometry of moduli stacks of pointed stable curves of genus0t h a tK embeds as
+a subﬁeld of theresidue ﬁeldL of thediscrete valuation ringOv determined
+by v which is algebraically closed in L. [Indeed, the log divisor DX may
+be identiﬁed with asuitable ﬁber product overk of log conﬁguration spaces
+associated to smooth log curves of genus 0 overk. Moreover, the morphism
+from DX to the unique [up to isomorphism]compactiﬁcation of X induced
+by the ﬁrst projectionXn → X is easily seen tocoincidewith the [manifestly
+geometrically connected!] projection morphism that arises from one of the
+projection morphisms associated to one of the log conﬁguration spaces that
+appears in such a ﬁber product overk.]
+Thus, theimage IZ ⊆Πab
+n/1 of any inertia subgroup⊆Πn/1 associated to
+DZ may be thought of as theimage ⊆Πab
+n/1 of themaximal pro-l quotient
+Gv (∼= Zl) of the absolute Galois groupof the quotient ﬁeld of somestrict
+henselization of Ov, whose residue ﬁeld we denote byL. Here, we observe
+thatwemayassumewithoutlossofgeneralitythat L, K,a n dK aresubﬁelds
+of L such that L ∩K = K [so Gal(K/K) may be regarded as a quotient
+of Gal(L/L)]. Since the natural conjugation action of Gal(L/L)o n Gv is
+the action via the cyclotomic character[hence factors through the quotients
+Gal(L/L) ↠ Gal(K/K) ↠ Π1], itfollowsfromthefactthat k isalgebraically
+closed that this natural conjugation action istrivial, hence that thenatural
+conjugation action of Π1 [which we regard as aquotient of Gal(L/L)!] on
+IZ ⊆Πab
+n/1 is trivial. Since [cf. the above discussion] Πab
+n/1 is topologically
+generated by such subgroupsIZ ⊆Πab
+n/1, we thus conclude that thenatural
+conjugation actionof Π1 on Πab
+n/1 [cf. Claim 2.2A] istrivial. This completes
+the proof ofClaim 2.2A.
+The ﬁnal portion of assertion (i) now follows formally, byinduction on
+n,f r o mt h eexactness of the sequence of the ﬁrst display in the statement
+of assertion (i), together with the well-known structure theory of surface
+groups. This completes the proof of assertion (i).
+Next, we consider assertion (ii). First, let us prove that ϕis an iso-
+morphism i nt h ec a s ew h e r en = 2. In this case, we shall denote by Π2/1
+(respectively, M)t h ekernel of the natural [outer] surjection Π2 → Π1 in-
+duced by the ﬁrst projectionX2 → X (respectively, the kernel of ϕ). In
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 21
+particular, we have a commutative diagram as follows:
+1
+↓↓
+1
+↓↓
+J
+↓↓
+α →→M
+↓↓
+Πab
+2/1
+ψ
+↓↓
+→→Πab
+2
+ϕ
+↓↓
+→→Πab
+1 →→1
+1 →→Πab
+1
+↓↓
+β →→Πab
+1 ×Πab
+1
+↓↓
+→→Πab
+1 →→1
+11
+— where the middle and lower horizontal sequences are theexact sequences
+inducedbytheﬁrstprojection X×kX → X; ψisthe surjection,w h o s ekernel
+we denote byJ, induced byϕ; αis thesurjection induced by the morphism
+Πab
+2/1 → Πab
+2 ; βis the injection induced by the morphism Πab
+2/1 → Πab
+2 .T o
+verify thatϕis an isomorphism, it suﬃces to show thatM = {0}. First, let
+us observe that the structure ofJ may be described explicitly by applying
+the well-known structure theory of surface groups. If r = 0, then [since
+J = {0}] it follows immediately thatM = {0}. Thus, it suﬃces to show
+that M = {0} under the assumption thatr> 0. Suppose that M ̸= {0}.
+Then sinceJ ∼= Zl, it holds thatM is afree A-module of rank one,w h e r e
+either
+A = Zl or A = Zl/lmZl for somem> 0.
+Thus, we obtain a commutative diagram as follows:
+1 →→Π2/1
+↓↓
+→→Π2
+↓↓
+→→Π1
+↓↓
+→→1
+1 →→Πab
+2/1 ⊗Zl A →→Πab
+2 ⊗Zl A →→Πab
+1 ⊗Zl A →→1
+— where the vertical arrows are the natural surjections induced by 1∈A;
+thehorizontalsequencesareinducedbytheﬁrstprojection X×kX → X;t h e
+upper horizontal sequence isexact by deﬁnition.N e x t ,l e tu sobserve that it
+follows immediately from the deﬁnition ofA that α⊗A is anisomorphism.
+This observation, together with thesplit injectivityof β:Πab
+1 → Πab
+1 ×Πab
+1 ,
+implies that the lower horizontal sequence of the diagram of the preceding
+display isexact. Thus, it follows immediately that thecomposite
+ρ:Π1 → Aut(Πab
+2/1 ⊗Zl A)
+of the outer representation Π1 → Out(Π2/1) with the natural morphism
+Out(Π2/1) → Aut(Πab
+2/1 ⊗Zl A)i s trivial. On the other hand, we conclude
+from the evident “⊗ZlA version”of [CbTpI], Lemma 1.3, (iv) — which
+follows immediately [cf. the proof of [CbTpI], Lemma 1.3, (iv)] from the
+
+22 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+evident “⊗ZlA version”of [CbTpI], Lemma 1.3, (iii), together with the well-
+known structure theory of surface groups — that
+Ker(ρ) coincides with the kernel of the natural surjection
+[induced by 1∈A]
+Π1 ↠ (Πcpt
+1 )ab ⊗Zl A
+—w h e r ew ew r i t eΠcpt
+1 for the maximal pro-l quotient of the
+´etale fundamental group of the smooth compactiﬁcation of
+X.
+In particular, we obtain that
+(A⊕2g ∼=)( Π cpt
+1 )ab ⊗Zl A = {0}.
+Thus, sinceg ̸= 0, we conclude thatM = {0}, a contradiction. This com-
+pletes the proof thatϕis anisomorphism in the case wheren =2 .
+Next, we consider the case where n ≥ 3. First, we make the follow-
+ing observation, which follows immediately from theZariski-Nagata purity
+theorem:
+Ker(ϕ)= {0} if and only if, for every pair of integers (i,j)
+suchthat1 ≤i<j ≤n, theimage, viathenaturalsurjection
+Πn ↠ Πab
+n ,o ft h einertia subgroupI[i,j] ⊆Πn determined,
+up to Πn-conjugacy, by thediagonal divisorXn correspond-
+i n gt ot h ei-th andj-th factors istrivial.
+Denote by Π[i,j]t h ekernel of the natural [outer] surjection Πn ↠ Πn−2
+determined by the projectionfi,j : Xn → Xn−2 obtained by forgetting the
+factors labeled i, j. In particular, we may identify Π[i,j] with the pro-
+l fundamental group of thesecond conﬁguration spaceZ2 of a hyperbolic
+curve Z of type (g,r + n −2) overk. Here, we note that, relative to this
+identiﬁcation, we may identify theinertia subgroup of Π[i,j] determined,
+up to Πn-conjugacy, by thediagonal divisor of Z ×k Z with I[i,j]. Thus,
+by applying the fact thatϕis an isomorphism in the case where n =2 ,
+together with the aboveobservation, we conclude that the image ofI[i,j] ⊆
+Π[i,j] via the natural surjection Π[i,j] ↠ (Π[i,j])ab is trivial, hence that
+the image of I[i,j] ⊆Πn via the natural surjection Πn ↠ Πab
+n is trivial.
+Therefore, again by the aboveobservation, we obtain that Ker(ϕ)= {0}.
+This completes the proof thatϕis anisomorphism i nt h ec a s eo farbitraryn.
+The ﬁnal portion of assertion (ii) now follows formally from the fact thatϕ
+is anisomorphism, together with the well-known structure theory of surface
+groups. This completes the proof of assertion (ii). Assertion (iii) follows
+from assertions (i), (ii) by consideringranks.
+Finally, we consider assertion (iv). Suppose that (g,r)=( 1 ,1). Then
+since rk
+Zl(Πab
+1 ) = 2, and, moreover,ϕis anisomorphism [cf. assertion (iii)],
+it follows that rkZl(Πab
+n )=2 n. Conversely, suppose that rkZl(Πab
+n )=2 n.
+Then sinceϕis surjective, it follows that
+rkZl(Πab
+1 ×···× Πab
+1 ) ≤2n.
+Thus, since rkZl(Πab
+1 ) ≥2, we have:
+rkZl(Πab
+1 ×···× Πab
+1 )=2 n, rkZl(Πab
+1 )=2 .
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 23
+In particular, the ﬁrst (respectively, second) equality implies that the sur-
+jection ϕis, in fact, anisomorphism, hence thatg ̸= 0 [cf. assertion (iii)]
+(respectively, that either (g,r)=( 0 ,3) or (g,r)=( 1 ,1) holds). There-
+fore, we conclude that (g,r)=( 1,1). This completes the proof of assertion
+(iv). □
+Proposition 2.3. (Properties of quasi-co-surface subgroups). Let
+n ≥2 be an integer;Σa set of prime numbers which is either of cardinality
+one or equal to the set of all prime numbers;X a hyperbolic curve of type
+(g,r) over an algebraically closed ﬁeld of characteristic/∈Σ; Xn the n-th
+conﬁguration space ofX; Πn
+def= π1(Xn)Σ. Then the following hold:
+(i) Every quasi-co-surface subgroup ofΠn contains aco-surface sub-
+group of Πn.
+(ii) It holds that(g,r) /∈{(0,3),(1,1)} if and only if there exists aquasi-
+co-surface subgroupof Πn.
+(iii) Suppose that (g,r) /∈{(0,3),(1,1)}. Then a subgroup of Πn is a
+co-surface subgroupof Πn if and only if it is aminimal quasi-
+co-surface subgroupof Πn.
+Proof. First, we consider assertion (i). LetH be aquasi-co-surface subgroup
+of Πn;
+φ:Π n ↠ G def=Π n/H
+the natural surjection. Then we consider the followingclaim:
+Claim 2.3A:A n ytwo ﬁber subgroupsJ1,J2 ⊆Πn of length
+one [cf. [MT], Deﬁnition 2.3, (iii)] such that φ(J1) ̸= {1},
+φ(J2) ̸= {1} necessarily coincide.
+Indeed, suppose that there existtwo distinctﬁber subgroupsJ1,J2 ⊆Πn of
+length one such thatφ(J1) ̸= {1}, φ(J2) ̸= {1}.T h e ns i n c eφ(J1)a n dφ(J2)
+are topologically ﬁnitely generated closed normal subgroupsof the surface
+group G, it follows from [MT], Theorem 1.5, thatφ(J1)a n dφ(J2)a r eopen
+in G. Next, let us observe that it follows immediately from [MT], Propo-
+sition 2.4, (v), that there exists a closed normal subgroupN ⊆G that is
+topologically normally generated by asingle element such that theimages
+of φ(J1)a n dφ(J2)i nG/N commute. Thus, we conclude thatG/N has an
+abelian open subgroup, hence thatG is nearly abelian[cf. [MT], Deﬁnition
+6.1]. On the other hand, sinceG is a surface group, it follows from [MT],
+Proposition 6.2, thatG is afree pro-Σgroup of rank two— in contradiction
+to the deﬁnition of aquasi-co-surface subgroup[cf. Deﬁnition 2.1, (iii)]. This
+completes the proof ofClaim 2.3A. It follows formally from Claim 2.3A that
+there existn−1 [distinct] ﬁber subgroups of Πn of length one whoseimages
+via φare trivial. Thus, the closed normal subgroup of Πn topologically gen-
+erated by thesen−1 ﬁber subgroups is aco-surface subgroupof Πn that is
+containedin H. This completes the proof of assertion (i).
+Next, we consider the followingclaim:
+
+24 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+Claim 2.3B: Suppose that (g,r) /∈{(0,3),(1,1)}.T h e ne v e r y
+co-surface subgroupof Πn is a quasi-co-surface subgroupof
+Πn.
+Claim 2.3B follows immediately from the various deﬁnitions involved.
+Next, we consider assertion (ii). The necessity portion of assertion (ii)
+follows immediately from Claim 2.3B. Thus, it suﬃces to verify thesuﬃ-
+ciency portion of assertion (ii). Suppose that there exists aquasi-co-surface
+subgroup H of Πn. Then it follows from assertion (i) that there exists a
+co-surface subgroupN ⊆Πn such thatN ⊆H.T h u s ,w eh a v easurjection
+(Πn/N)ab ↠ (Πn/H)ab
+of free ˆZΣ-modules.S i n c er kˆZΣ(Πn/H)ab > 2, we thus conclude that
+rkˆZΣ(Πn/N)ab > 2,
+hence that (g,r) /∈{(0,3),(1,1)}. This completes the proof of thesuﬃciency
+portion of assertion (ii).
+Finally, we consider assertion (iii). LetH be aco-surface subgroupof Πn.
+First, we observe thatH is a quasi-co-surface subgroupof Πn [cf. Claim
+2.3B]. Next, let us verify theminimality of H.L e tN ⊆Πn be a quasi-co-
+surface subgroupsuch thatN ⊆H. Then it follows from assertion (i) that
+there exists aco-surface subgroupK of Πn such thatK ⊆N.S i n c eb o t hK
+and H are co-surface subgroupsof Πn, we conclude thatK = H [cf. [MT],
+Proposition 2.4, (ii)], hence thatN = H. This completes the proof of the
+minimality of H. Conversely, letH be aminimal quasi-co-surface subgroup
+of Πn. Then, by assertion (i), there exists aco-surface subgroupN ⊆Πn
+such that N ⊆H.S i n c eN is quasi-co-surface subgroupof Πn [cf. Claim
+2.3B], we conclude from theminimality of H that N = H.I n p a r t i c u l a r ,
+H is a co-surface subgroupof Πn. This completes the proof of assertion
+(iii). □
+Deﬁnition 2.4.Let n ≥2 be an integer.
+(i) Write
+L(0,3,n) (respectively, L(1,1,n))
+for the graded Lie algebra overQl deﬁned by the generators
+Xij (1 ≤i<j ≤n+3)
+(respectively,X (k)
+1 ,Y (k)
+1 (1 ≤k ≤n))
+[all of which are ofweight 1] and the relations described in [Nk],
+Proposition 4.1.1, in the case where the “n”o floc. cit. is taken to
+be n+3 (respectively, described in [NTU], 2.8.2, in the case where
+the “g”o floc. cit. is taken to be 1, the “n”o floc. cit. is taken to
+be 1, and the “r”o floc. cit. is taken to ben).
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 25
+(ii) For integers 1≤a<b<c<d ≤n+ 3 (respectively, 1≤e<f ≤
+n+1), we denote by
+W(a,b,c,d)
+(0,3,n) (respectively,W (e,f)
+(1,1,n))
+the Ql-vector subspace ofL(0,3,n) generated by the set
+{Xij | 1 ≤i<j ≤n+3 and {i,j} ⊈ {a,b,c,d }}
+(respectively, theQl-vector subspace ofL(1,1,n) generated by the set
+{X(k)
+1 ,Y (k)
+1 | 1 ≤k ≤n+1 and k/∈{e,f }}
+—w h e r eX(n+1)
+1
+def= −∑n
+k=1 X(k)
+1 and Y(n+1)
+1
+def= −∑n
+k=1 Y(k)
+1 ).
+Write
+S(0,3,n)
+def= {W(a,b,c,d)
+(0,3,n) | 1 ≤a<b<c<d ≤n+3}
+(respectively,S (1,1,n)
+def= {W(e,f)
+(1,1,n) | 1 ≤e<f ≤n+1}).
+Theorem 2.5. (Group-theoreticity of the dimension, genus, num-
+ber of cusps, and generalized ﬁber subgroups). Let l be a prime
+number; Σa set of prime numbers which is either equal to{l} or Primes;
+(g,r) a pair of nonnegative integers such that2g−2+ r> 0; X a hyperbolic
+curve of type(g,r) over an algebraically closed ﬁeldk of characteristic/∈Σ;
+n a positive integer;Xn the n-th conﬁguration space ofX;
+Πn
+def= π1(Xn)Σ.
+Then:
+(i) One may reconstruct n group-theoretically from Πn as the maxi-
+mum of the set
+{s ∈N |∃ac l o s e ds u b g r o u po fΠn which is isomorphic toZ⊕s
+l }
+[cf. Theorem 1.6].
+Moreover, ifn ≥2 [cf. (i)], then the following hold:
+(ii) One may determine whether or not it holds that
+(g,r) /∈{(0,3),(1,1)}
+group-theoretically fromΠn by considering whether or not there ex-
+ists aquasi-co-surface subgroupof Πn [cf. Proposition 2.3,(ii)].
+Moreover, one may determine whether or not it holds that
+(g,r)=( 1,1)
+group-theoretically fromΠn by considering whether or not it holds
+that
+rkZl(Π(l)
+n )ab =2 n
+[cf. (i); Proposition 2.2,(iv)].
+
+26 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+(iii) Suppose that(g,r) /∈{(0,3),(1,1)} [cf. (ii)]. Then thegeneralized
+ﬁber subgroupsof Πn of co-length one may be characterized
+group-theoretically as theminimal quasi-co-surface subgroups
+of Πn [cf. Proposition 2.3,(iii)].
+(iv) Suppose that(g,r) ∈{(0,3),(1,1)} [cf. (ii)]. Write
+T(g,r,n)
+for the set of kernels of the natural surjections
+(Π(l)
+n )ab ⊗Zl Ql ↠ (Π(l)
+1 )ab ⊗Zl Ql
+arising from generalized projection morphismsXn → X of co-length
+one. Then one may reconstructT(g,r,n) as the set ofimages of the
+Ql-vector subspacesW ⊆L(g,r,n) [cf. Deﬁnition 2.4, (i)], for W ∈
+S(g,r,n) [cf. Deﬁnition 2.4,(ii)], via the varioussurjections
+L(g,r,n)
+∼→ Gr(Π(l)
+n )⊗Zl Ql ↠ (Π(l)
+n )ab ⊗Zl Ql
+—w h e r eGr(Π(l)
+n ) is the graded Lie algebra overZl associated to the
+lower central seriesof Π(l)
+n ;t h e“∼→” is an isomorphism of graded
+Lie algebras overQl [where we recall that such isomorphismsexist
+—c f .[Nk], Proposition 4.1.1;[NTU], 2.8.2]; the “↠” is the natu-
+ral surjection. In particular, one may reconstruct thegeneralized
+ﬁber subgroupsof Πn of co-length onegroup-theoretically as the
+topologically ﬁnitely generated closed normal subgroupsH
+of Πn satisfying the following conditions:
+(iv-a) Πn/H is elastic [cf. [AbsTopI], Deﬁnition 1.1,(ii)].
+(iv-b) The Ql-vector subspace of(Π(l)
+n )ab⊗Zl Ql generated by the image
+of H via the natural morphismΠn → (Π(l)
+n )ab ⊗Zl Ql coincides
+with some element ofT(g,r,n).
+(v) Let m<n be a positive integer,F a generalized ﬁber subgroup ofΠn
+of co-lengthm.T h e nF may be naturally identiﬁed with
+π1(Zn−m)Σ
+—w h e r eZn−m is the(n−m)-th conﬁguration spaceof a hyper-
+bolic curveZ of type(g,r +m) over an algebraically closed ﬁeld of
+characteristic /∈Σ. Moreover, relative to this identiﬁcation, the gen-
+eralized ﬁber subgroups ofΠn of co-lengthm+1 which are contained
+in F may be identiﬁed with thegeneralized ﬁber subgroupsof
+F ∼= π1(Zn−m)Σ of co-length one [cf. Remark 2.1.1; [MT],R e -
+mark 2.1.2; [MT], Proposition 2.2, (i);[MT], Proposition 2.4, (i),
+(ii)]. In particular, by applying(iii), (iv) inductively, one may recon-
+struct thegeneralized ﬁber subgroupsof Πn [of arbitrary length]
+group-theoretically fromΠn.
+(vi) One may reconstruct(g,r) group-theoretically fromΠn as follows:
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 27
+(vi-a) First, let us observe that, by applying(v), one may reconstruct
+the quotients
+(Πn ↠)Π (l)
+n ↠ Π(l)
+2 ↠ Π(l)
+1
+determined, respectively, by some generalized ﬁber subgroup of
+co-length 2 and some generalized ﬁber subgroup of co-length1
+that contains the generalized ﬁber subgroup of co-length2. Write
+Π(l)
+2/1 for the kernel of the surjectionΠ(l)
+2 ↠ Π(l)
+1 .
+(vi-b) In particular, one may determine whether or not
+r> 0
+by considering whether or notΠ(l)
+1 [cf. (vi-a)]i sfree.
+(vi-c) When r =0 [cf. (vi-b)], one may reconstruct(g,r) as
+g = 1
+2 ·rkZl(Π(l)
+1 )ab,r =0 .
+(vi-d) When r> 0 [cf. (vi-b)], note that, by considering the kernel of
+the natural action
+Π(l)
+1 → Aut((Π(l)
+2/1)ab)
+induced by the surjectionΠ(l)
+2 ↠ Π(l)
+1 appearing in(vi-a),o n e
+may reconstruct
+I def= Ker((Π(l)
+1 )ab ↠ (Π
+(l)
+1 )ab)
+— where we write Π1 for the ´etale fundamental group of the
+smooth compactiﬁcationX of X; the surjection(Π(l)
+1 )ab ↠ (Π
+(l)
+1 )ab
+is the morphism induced by the natural immersionX↪→ X [cf.
+[CbTpI], Lemma 1.3,(iv)]. Thus, one may reconstruct(g,r) as
+g = 1
+2 ·
+{
+rkZl(Π(l)
+1 )ab − rkZlI
+}
+,r =r kZlI +1 .
+Proof. Assertions (i), (ii), (iii), (v), and (vi) follow immediately from the
+various results cited in the statements of these assertions, together with
+the various deﬁnitions involved. Thus, it remains to verify assertion (iv).
+First, we consider the reconstruction of generalized ﬁber subgroups of Π
+n
+of co-length one. It follows from Remark 2.1.1; [MT], Theorem 1.5; [MT],
+Proposition 2.2, (ii); [MT], Proposition 2.4, (i), that every generalized ﬁber
+subgroup of Π
+n of co-length one is atopologically ﬁnitely generatedclosed
+normal subgroup of Πn satisfying conditions (iv-a), (iv-b). Conversely, letH
+be a topologically ﬁnitely generated closed normal subgroup of Πn satisfying
+conditions (iv-a), (iv-b). Then it follows from condition (iv-b) that there
+exists a generalized projection morphismp
+X : Xn → X such that the image
+of H via the composite
+Πn
+pΠ
+↠ Π1
+pab
+→ (Π(l)
+1 )ab ⊗Zl Ql
+— where the ﬁrst arrow is the natural [outer] surjection induced bypX;
+the second arrow is the natural morphism — istrivial.N o ww eclaim that
+pΠ(H)= {1}. Indeed, suppose that pΠ(H) ̸= {1}.T h e ns i n c epΠ(H)i sa
+
+28 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+nontrivial topologically ﬁnitely generated closed normal subgroup of Π1,i t
+follows from [MT], Theorem 1.5, thatpΠ(H)i sopenin Π1. But this implies
+that pab factors through the ﬁnite quotient Π1 ↠ Π1/pΠ(H). Thus, we
+conclude that Im(pab)i sﬁnite — a contradiction. This completes the proof
+of theclaim. In light of theclaim, it holds thatH ⊆Ker(pΠ). Now suppose
+that Ker(pΠ)/H ̸= {1}. Then since Ker(pΠ)/H is a nontrivial topologically
+ﬁnitely generated closed normal subgroup of Πn/H, it follows from condition
+(iv-a) that Πn/Ker(pΠ) ∼→ Π1 is ﬁnite — a contradiction. Thus, we conclude
+that H =K e r (pΠ), hence thatH is a generalized ﬁber subgroup of Πn of
+co-length one, as desired.
+Thus, to complete the veriﬁcation of assertion (iv), it remains to consider
+the reconstruction of the set T(g,r,n). We begin by recalling the explicit
+constructions i nt h ec a s ew h e r e
+•(g,r)=( 0,3): cf. [Nk], (3.1.3); [Nk], Proposition 4.1.1;
+•(g,r)=( 1,1): cf. [NTU], 2.8.2; [NT], 2.4.1, 2.4.2, 3.2; [NT], Proof
+of Theorem (3.1) by using (3.3-6), (4).
+In particular, let us observe that it follows immediately in the case where
+•(g,r)=( 0,3),f r o mt h eexplicit description of the “Aij” in [Nk],
+(3.1.3) [which correspond to the “Xij” in [Nk], Proposition 4.1.1],
+•(g,r)=( 1,1),f r o mt h eexplicit descriptionof the “X(k)
+i ”, “X(k)
+g+i”a t
+the beginning of [NT], 3.2 [which correspond to the “X(k)
+i ”, “Y(k)
+i ”
+of [NTU], 2.8.2] in terms of the “φk” of [NT], 2.4.1, 2.4.2, together
+with the discussion [NT], Proof of Theorem (3.1) by using (3.3-6),
+(4),
+that — relative to the isomorphism of graded Lie algebras overQ
+l
+α(g,r,n) : L(g,r,n)
+∼→ Gr(Π(l)
+n )⊗Zl Ql
+implicit in these explicit descriptions — each subspaceW ∈S(g,r,n) maps
+into some subspace T ∈T(g,r,n). On the other hand, an elementary compu-
+tation of thedimensions of W and T shows that this implies thatW maps
+isomorphically onto T. Moreover, one computes immediately that S(g,r,n)
+and T(g,r,n) are of thesame cardinality.W et h u sc o n c l u d et h a tα(g,r,n) in-
+duces abijection S(g,r,n)
+∼→ T(g,r,n).
+Thus, to complete the proof of assertion (iv), it remains to verify the
+following claim:
+Claim 2.5A:L e t
+β: L(g,r,n)
+∼→ Gr(Π(l)
+n )⊗Zl Ql
+be an isomorphism of graded Lie algebras overQl. Then the
+set of images of theQl-vector subspaces W ⊆L(g,r,n),f o r
+W ∈S(g,r,n), via the composite
+β: L(g,r,n)
+∼→ Gr(Π(l)
+n )⊗Zl Ql ↠ (Π(l)
+n )ab ⊗Zl Ql
+— where the ﬁrst arrow isβ; the second arrow is the natural
+surjection —coincides with T(g,r,n).
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 29
+Let us verify Claim 2.5A. In the following, we writeS□ for the symmetric
+group on □ letters.
+First, suppose that (g,r)=( 0 ,3). In this case, recall that we have an
+isomorphism
+Aut(Gr(Π(l)
+n )⊗Zl Ql) ∼= Q×
+l × Sn+3
+[cf. [NT], Theorem D]. Moreover, the action ofQ×
+l × Sn+3 on Gr(Π(l)
+n )⊗Zl
+Ql is described explicitlyin the discussion preceding the statement of [Nk],
+Lemma 4.1.2 [cf. also [Nk], Proof of Lemma 4.1.2]. It follows immediately
+from this explicit description [cf. also the above discussion ofα
+(g,r,n)]t h a t
+β◦α−1
+(g,r,n) ∈Aut(Gr(Π(l)
+n )⊗Zl Ql) induces apermutation of the subspaces∈
+T(g,r,n). Thus, we conclude that the set of images of theQl-vector subspaces
+W ⊆L(g,r,n),f o rW ∈S(g,r,n), viaβcoincides with T(g,r,n), as desired.
+Next, suppose that (g,r)=( 1 ,1). In this case, recall that we have an
+isomorphism
+Aut(Gr(Π(l)
+n )⊗Zl Ql) ∼= GSp(2,Ql)× Sn+1
+— where we write GSp(2,Ql) for the group of symplectic similitudes of
+Ql × Ql, equipped with the standard symplectic form [cf. [NT], Theorem
+D]. Moreover, it follows immediately from the explicit description of the
+permutation “τ∈Sr+1” in the discussion entitled “(3), (4):” in [NT], Proof
+of Theorem (3.1) by using (3.3-6), thatβ◦α−1
+(g,r,n) ∈Aut(Gr(Π(l)
+n ) ⊗Zl Ql)
+induces a permutation of the subspaces∈T(g,r,n). Thus, we conclude that
+the set of images of theQl-vector subspacesW ⊆L(g,r,n),f o rW ∈S(g,r,n),
+via βcoincides with T(g,r,n), as desired. □
+Corollary 2.6. (Structure of the group of outer automorphisms
+of a conﬁguration space group I). In the notation of Remark 2.1.1,
+Theorem 2.5, suppose thatn ≥2 and (r,n) ̸=( 0,2). Then the following
+hold:
+(i) Every element of Out(Πn) induces a permutation on the set —
+whose cardinality is n∗ —o f generalized ﬁber subgroups of
+Πn of length one. Here, we recall from Theorem 2.5, (v), that
+this set of generalized ﬁber subgroups may be reconstructedgroup-
+theoretically from Πn. Thus, by considering such permutations,
+we obtain the following exact sequence of proﬁnite groups:
+1 −−−−→ OutgF(Πn) −−−−→ Out(Πn) −−−−→ Sn∗ −−−−→ 1.
+Moreover, the injection
+ιn : Sn∗ ↪→ Out(Πn)
+— induced by the natural action ofSn∗ on Xn [cf. Remark 2.1.1] —
+determines a section of the above surjectionOut(Πn) ↠ Sn∗ and
+hence a natural isomorphism
+OutgF(Πn)× Sn∗
+∼→ Out(Πn).
+
+30 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+In the following, we shall use ιn to regard Sn∗ as a subgroup of
+Out(Πn). In particular, we have inclusions
+Sn∗ ⊆ ZOut(Πn)(OutgF(Πn)) ⊆ Zloc(Out(Πn)).
+(ii) Suppose that(g,r) /∈{(0,4),(1,1),(1,2),(2,0)}.T h e n
+Sn∗ = ZOut(Πn)(OutgF(Πn)) = Zloc(Out(Πn))
+— i.e., one may reconstruct the subgroupSn∗ ⊆Out(Πn) [cf. (i)]
+group-theoretically fromΠn as the local center Zloc(Out(Πn)) of
+Out(Πn).
+(iii) If n∗≥3, then we have an equality
+OutgF(Πn)= ZOut(Πn)(Sn∗).
+Proof. First, we consider assertion (i). The fact thatιn determines a section
+of the surjection Out(Πn) ↠ Sn∗ follows immediately from the deﬁnitions.
+Next, let us recall [cf. [CbTpII], Theorem 2.3, (iv)] that [since it follows
+immediately from the deﬁnitions that OutgF(Πn) ⊆OutF(Πn)]
+ιn(Sn) ⊆ ZOut(Πn)(OutF(Πn)) ⊆ ZOut(Πn)(OutgF(Πn)).
+Thus, sincen ≥2, by conjugating thecomposite inclusionof the preceding
+display byarbitrary elementsof Sn∗, we conclude that
+ιn(Sn∗) ⊆ ZOut(Πn)(OutgF(Πn)).
+Now the fact thatιn determines a natural isomorphism OutgF(Πn)× Sn∗
+∼→
+Out(Πn) follows formally.
+Next, we consider assertion (ii). In light of the inclusions of the ﬁnal
+display of the statement of assertion (i), to verify assertion (ii), it suﬃces to
+verify the followingclaim:
+Claim 2.6A:Supposethat( g,r) /∈{(0,4),(1,1),(1,2),(2,0)}.
+Then we have
+Z
+loc(Out(Πn)) ⊆ Sn∗.
+First, we assume that (g,r)=( 0,3). Let L be anumber ﬁeld;
+ρtpd
+L : GL → Out(Πn)
+the natural pro-Σ outer Galois representation associated to then-th conﬁg-
+uration space Tn of T def= P1
+L \{ 0,1,∞}; σ∈Zloc(Out(Πn)). Thus, there
+exists an open subgroup H of Out(Πn) such that σ∈ZOut(Πn)(H). In
+particular, by replacingL by a suitable ﬁnite ﬁeld extension ofL,w em a y
+assume that Im(ρtpd
+L ) ⊆H. Then it follows from [Nk], Theorem A; [IN],
+Theorem C [or, alternatively, from assertion (i); [CbTpII], Theorem A, (i);
+[LocAn], Theorem A], that
+σ∈ZOut(Πn)(Im(ρtpd
+L )) = Sn∗×ZOutgF(Πn)(Im(ρtpd
+L )) = Sn∗.
+This completes the proof of Claim 2.6A in the case where (g,r)=( 0,3).
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 31
+Thus, in the remainder of the proof of Claim 2.6A, we may assume that
+(g,r) /∈{(0,3),(0,4),(1,1),(1,2),(2,0)}.
+Thus, n = n∗,O u tgF(Πn)=O u tF(Πn). Let σ∈Zloc(Out(Πn)). Thus,
+there exists anopen subgroup H of OutF(Πn) such thatσ∈ZOut(Πn)(H).
+Moreover, by assertion (i), we may assume without loss of generality that
+σ∈OutF(Πn). Now weclaim that
+Claim 2.6B: It holds that
+σ∈OutFC(Πn)
+— where we write OutFC(Πn) for the group of FC-admissible
+outer automorphisms of Πn [cf. [CmbCusp], Deﬁnition 1.1,
+(ii)].
+Indeed, since, by assertion (i),H is open in Out(Πn), our assumption that
+σ∈ZOut(Πn)(H) implies that Claim 2.6B follows from [CmbGC], Proposi-
+tion 2.4, (v); [CmbGC], Corollary 2.7, (i).
+Next, let us write
+ρg,r,n :Π(Mg,r)k → OutFC(Πn)
+for the outer representation induced by the [1-]morphism
+(Mg,r+n)k → (Mg,r)k
+obtained by forgetting the lastn marked points. Then since, by assertion
+(i), H is openin Out(Πn), there exists anopensubgroup N of Π(Mg,r)k such
+that σ∈ZOutFC(Πn)(ρg,r,n(N)). Write
+φn :O u tFC(Πn) → OutFC(Π1)
+for the homomorphism induced by the ﬁrst projection Xn → X.T h e n
+it follows from [CbTpI], Theorem D, (i), together with ourassumption on
+(g,r), that
+φn(σ) ∈ZOutFC(Π1)(φn(ρg,r,n(N))) ={1}.
+Thus, since φn is injective [cf. [NodNon], Theorem B], we conclude that
+σ= 1. This completes the proof of assertion (ii).
+Assertion (iii) follows immediately from assertion (i) and the well-known
+fact that, sincen∗≥3, Sn∗ is center-free. □
+Deﬁnition 2.7.In the notation of Corollary 2.6, suppose that (g,r)=
+(0,3). Write
+OutFCS(Πn) ⊆ Out(Πn)
+for the group of FC-admissible outer automorphisms of Πn [cf. [CmbCusp],
+Deﬁnition 1.1, (ii)] that commute with the image ofιn : Sn+3 ↪→ Out(Πn)
+[cf. [CmbCusp], Deﬁnition 1.1, (vi)]. Then [by a slight abuse of the nota-
+tionalconventionsestablishedinthediscussionentitled“TopologicalGroups”
+in §0 concerning the superscript “Σ”] we shall write
+GT
+Σ def=O u tFCS(Π2)
+
+32 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+and refer to GTΣas thepro-ΣGrothendieck-Teichm¨uller group[even though
+it is, in fact, not necessarily a pro-Σ group!]. Note that if Σ =Primes,t h e n
+GTΣmay be identiﬁed with the Grothendieck-Teichm¨uller group as deﬁned
+in more classical works [cf. [CmbCusp], Deﬁnition 1.11, (i); [CmbCusp],
+Remark 1.11.1; [CmbCusp], Corollary 1.12, (ii); [CmbCusp], Corollary 4.2,
+(i); [CmbCusp], Remark 4.2.1].
+Corollary 2.8. (Simpliﬁed group-theoretic approach to the pro-
+Σ Grothendieck-Teichm¨uller group). In the notation of Corollary 2.6,
+suppose that(g,r)=( 0,3). Then the following hold:
+(i) The natural homomorphism OutF(Πn) → OutF(Π2) —w h e r ew e
+write OutF((−)) for the group of F-admissible outer automorphisms
+of (−) [cf. [CmbCusp], Deﬁnition 1.1, (ii)] — induced by the pro-
+jection morphismXn → X2 to the ﬁrst two factors ofXn induces a
+natural isomorphism
+OutgF(Πn) ∼→ GTΣ.
+In particular, we have a natural isomorphism
+GTΣ× Sn+3
+∼→ Out(Πn)
+— where we recall that
+Sn+3 = ZOut(Πn)(OutgF(Πn)) = Zloc(Out(Πn))
+[cf. Remark 2.1.1; Corollary 2.6,(i), (ii)].
+(ii) We have a natural isomorphism
+ZOut(Πn)(Zloc(Out(Πn))) ∼→ GTΣ.
+Proof. First, we consider assertion (i). Let us observe that we have
+OutFCS(Πn)=O u t FC(Πn) ∩ZOut(Πn)(Sn+3)
+=O u tF(Πn) ∩OutgF(Πn)
+=O u tgF(Πn)
+— where we write OutFC(Πn) for the group ofFC-admissibleouter automor-
+phisms of Πn [cf. [CmbCusp], Deﬁnition 1.1, (ii)]; the second equality follows
+by applying Corollary 2.6, (iii), and [CbTpII], Theorem A, (ii). Thus, asser-
+tion (i) follows immediately from [CmbCusp], Corollary 4.2, (ii). Assertion
+(ii) follows from assertion (i) and Corollary 2.6, (ii), (iii). □
+Corollary 2.9. (Structure of the group of outer automorphisms
+of a conﬁguration space group II).Write (C
+g,[r])η→ ηfor the result
+of base-changing thetautological curveCg,[r] →M g,[r] [cf. the discussion
+entitled “Curves” in§0] via somedominant morphismη→M g,[r],w h e r e
+ηis the spectrum of an algebraically closed ﬁeldΩ. Then, in the notation of
+Corollary 2.6, we have inclusions
+Sn∗ ⊆ Zloc(Out(Πn)) ⊆ Sn∗×Gg,r
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 33
+— where we writeGg,r ⊆Out(Πn) for the subgroup determined by the nat-
+ural action of the groupAutη((Cg,[r])η) of automorphisms of(Cg,[r])ηover η
+on then-th conﬁguration space of(Cg,[r])ηover η. Here, we recall that
+Gg,r =
+{
+Z/2Z×Z/2Z if (g,r)=( 0,4);
+Z/2Z if (g,r) ∈{(1,1),(1,2),(2,0)}.
+Proof. The ﬁrst inclusion follows from Corollary 2.6, (i). Thus, it remains to
+verify the second inclusion. Letσ∈Zloc(Out(Πn)). Note that, by replacing
+σby the product ofσwith an element ofSn∗, we may assume, without loss
+of generality, thatσ∈OutgF(Πn) [cf. Corollary 2.6, (i)]. Thus, it follows
+from [CmbGC], Proposition 2.4, (v); [CmbGC], Corollary 2.7, (i), that
+σ∈OutFC(Πn)
+— where we write OutFC(Πn) for the group ofFC-admissibleouter automor-
+phisms of Πn [cf. [CmbCusp], Deﬁnition 1.1, (ii)]. Next, let us recall from
+[NodNon], TheoremB,thatthenaturalmorphismOut FC(Πn) → OutFC(Π1)
+is injective. Thus, it follows from [LocAn], Theorem A, applied to a suit-
+able sub-p-adic subﬁeld of Ω, thatσ∈Gg,r. This completes the proof of
+Corollary 2.9. □
+Corollary 2.10. (Structure of the group of outer automorphisms
+of a conﬁguration space group III).In the notation of Corollary 2.6,
+the following hold:
+(i) Suppose that (g,r) ∈{(0,4),(1,2)} and Σ= {l}.T h e n o n e m a y
+reconstruct the subgroupS2 ⊆Out(Π2) [cf. Corollary 2.6,(i)]g r o u p -
+theoretically fromΠ2 as follows:
+(i-a) First, we note that, by applying Theorem 2.5, (v),o n em a y
+reconstruct thetwo quotients
+p1,p2 :Π2 ↠ Π1
+determined by the two ﬁber subgroups of co-length one. Here, we
+note that in fact, Theorem 2.5,(v), only yields a reconstruction
+of thekernelsof these quotients, i.e., not an “identiﬁcation iso-
+morphism” [cf. the use of thesame notation for the codomains
+of p1, p2] between the codomains ofp1, p2; on the other hand,
+one veriﬁes easily that this abuse of notation [which was made
+for the sake of keeping the notation simple] does not have any
+substantive eﬀect on the argument to follow.
+(i-b) In light of the reconstruction of the quotientsp1,p2 :Π2 ↠
+Π1 in (i-a), one may apply [the group-theoretic reconstruction
+algorithms implicit in the proof of] [CbTpI], Lemma 1.6, to
+reconstruct the set ofconjugacy classes of cuspidal inertia
+subgroups of Π1.
+
+34 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+(i-c) Write Z for the smooth compactiﬁcation ofX; Zlog for the log
+scheme whose underlying scheme isZ, and whose log structure
+is determined by the cusps ofX; Zlog
+2 for the second log con-
+ﬁguration space ofZlog; Zlog
+2 → Zlog for the natural projection
+corresponding top1. Recall that, for everycusp c ∈Z(k),t h e
+log structure onZlog
+2 determines on theﬁber(Z2)c of the mor-
+phism Zlog
+2 → Zlog over c a structure ofpointed stable curve,
+which consists of
+•precisely one irreducible component of genus0 with pre-
+cisely 2 cusps [called the “minor cuspidal component”]Ec
+and
+•precisely one irreducible component of genusg with pre-
+cisely r−1 cusps [called the “major cuspidal component”]
+Fc
+[cf. [CmbCusp], Deﬁnition 1.4, (i)]. Write Π2/1
+def=K e r (p1).
+Thus, Π2/1 may be identiﬁed with the PSC-fundamental group
+of the semi-graph of anabelioids of pro-ΣPSC-type determined
+by the pointed stable curve(Z2)c [cf. [CmbGC], Deﬁnition 1.1,
+(i), (ii)].
+(i-d) In the notation of(i-c),t h everticial subgroups
+ΠEc ⊆ Π2/1 (respectively, ΠFc ⊆ Π2/1)
+associated to Ec (respectively, Fc) [cf. [CmbCusp], Deﬁnition
+1.4, (ii)] may be characterized as follows: Let Ic ⊆ Π1 be a
+cuspidal inertia subgroup associated toc [cf. (i-b)]. Write
+ρc : Ic → Out(Π2/1)
+for the composite of the inclusionIc ↪→ Π1 with the outer rep-
+resentation Π1 → Out(Π2/1) induced byp1; ΠIc
+def=Π2/1
+out
+⋊ Ic
+[cf. the discussion entitled “Topological groups” in[CbTpI], §0].
+Thus, we have a natural exact sequence of proﬁnite groups
+1 −−−−→ Π2/1 −−−−→ ΠIc −−−−→ Ic −−−−→ 1.
+We shall say that a closed subgroupH ⊆Π2/1 is a section-
+centralizerif it may be written in the formZΠIc (s(I)) for some
+section s : Ic → ΠIc of the natural surjectionΠIc ↠ Ic.T h e n
+the verticial subgroupsΠEc ⊆Π2/1 (respectively, ΠFc ⊆Π2/1)
+may be characterized as the maximal section-centralizers
+whose rank — as a free pro-Σgroup — is two (respectively,
+three) [cf. [CbTpII], Corollary 1.7,(ii)].
+(i-e) One may reconstruct the imageJc of Ic ⊆Π1 in Πab
+1 as the
+image ofΠEc ⊆Π2/1 [cf. (i-c), (i-d)] via the surjection
+Π2/1
+p2|Π2/1
+↠ Π1 ↠ Πab
+1
+— where the second arrow is the natural surjection. In partic-
+ular, one may reconstruct theˆZΣ-submodule
+Jc ×Jc ⊆ Πab
+1 ×Πab
+1 .
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 35
+(i-f) One may reconstruct the unique nontrivial element of the sub-
+group S2 ⊆ Out(Π2) as the unique nontrivial element α∈
+Zloc(Out(Π2)) — whose image inAut(Πab
+1 ×Πab
+1 ) [cf. Theorem
+2.5, (v)]w ed e n o t eb yα— such that, for each cuspc ∈Z(k),
+i.e., for each cuspidal inertia subgroupIc ⊆Π1 [cf. (i-b)],
+α(Jc ×Jc)= Jc ×Jc.
+(ii) Suppose that(g,r)=( 1,1) and Σ= {l}. Then one may reconstruct
+the subgroup S2 ⊆ S3 ⊆Out(Π2) [cf. Corollary 2.6, (i)] — i.e.,
+which is well-deﬁned up toconjugation in S3 — group-theoretically
+from Π2 as follows:
+(ii-a) First, we note that, by applying Theorem 2.5, (v),o n em a y
+reconstruct thethree quotients
+p1,p2,p3 :Π2 ↠ Π1
+determined by the three generalized ﬁber subgroups of co-length
+one. Here, we note that in fact, Theorem 2.5,(v),o n l yy i e l d s
+a reconstruction of thekernels of these quotients, i.e., not an
+“identiﬁcation isomorphism” [cf. the use of thesame notation
+for the codomains ofp1, p2, p3] between the codomains ofp1,
+p2, p3; on the other hand, one veriﬁes easily that this abuse of
+notation [which was made for the sake of keeping the notation
+simple] does not have any substantive eﬀect on the argument to
+follow. Write
+p1,p2,p3 :Πab
+2 ↠ Πab
+1
+for the natural surjections induced byp1, p2, p3, respectively.
+(ii-b) Observe thatp3 factors as the composite of the isomorphism
+(p1,p2):Π ab
+2
+∼→ Πab
+1 ×Πab
+1
+[cf. Proposition 2.2,(ii)]w i t hsome surjection
+p− :Πab
+1 ×Πab
+1 ↠ Πab
+1 .
+whose kernel coincides with thediagonal
+δ⊆ Πab
+1 ×Πab
+1 .
+In particular, one may reconstructδas Ker(p−) and hence the
+natural identiﬁcationbetween thecopy of Πab
+1 that appears
+as the codomain ofp1 and thecopy of Πab
+1 that appears as the
+codomain ofp2 as the composite isomorphism
+Πab
+1
+∼← δ ∼→ Πab
+1
+— where the ﬁrst (respectively, second) arrow denotes the arrow
+induced byp1 (respectively,p2).
+
+36 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+(ii-c) One may reconstruct the unique nontrivial element of the sub-
+group S2 ⊆Out(Π2) [which is well-deﬁned up toconjugation
+in S3, i.e., which corresponds topermutation of the projec-
+tions p1, p2, p3] as the unique elementα∈Zloc(Out(Π2)) —
+whose image inAut(Πab
+2 ) ∼→ Aut(Πab
+1 ×Πab
+1 ) we denote byα—
+such that, for any(x,y) ∈Πab
+1 ×Πab
+1 ,
+α((x,y)) = ( y,x).
+(iii) Suppose that(g,r)=( 2,0) [which implies thatn ≥3]a n dΣ= {l}.
+Note that one may reconstruct thequotients
+Πn ↠ Π3 ↠ Π2
+determined by ﬁber subgroups ofΠn of co-length three and two, re-
+spectively [cf. Theorem 2.5, (v)]. In the remainder of the present
+item (iii),w e ﬁxsuch quotients and writeF1 ⊆Π3 for the kernel
+of the surjectionΠ3 ↠ Π2. Then one may reconstruct the subgroup
+S2 ⊆Out(Π2) [cf. Corollary 2.6,(i)] group-theoretically fromΠ3 as
+follows:
+(iii-a) Let F2 ̸= F1 be a ﬁber subgroup ofΠ3 of co-length two; F12
+the unique ﬁber subgroup ofΠ3 of co-length one that contains
+F1 and F2 [cf. Theorem 2.5, (v)]. Here, let us recall thatΠ3
+may be identiﬁed with the maximal pro-l quotient of the ´etale
+fundamental group of the third conﬁguration spaceX3 of X.
+Moreover, relative to this identiﬁcation,F12/F1, F12/F2 may be
+naturally identiﬁed with the maximal pro-l quotient of the ´etale
+fundamental group of a hyperbolic curveX∗of type(2,1) over
+k [i.e., a geometric ﬁber of a projection morphismX2 → X];
+F12 may be naturally identiﬁed with the maximal pro-l quotient
+of the ´etale fundamental group of the second conﬁguration space
+X∗
+2 of X∗. In particular, relative to these identiﬁcations, one
+may reconstruct thequotients
+q1,q2 :Π∗
+2
+def= π1(X∗
+2)(l) ↠ Π∗
+1
+def= π1(X∗)(l)
+corresponding to the quotientsF12 ↠ F12/F2, F12 ↠ F12/F1,
+respectively [i.e., corresponding to the two projection morphisms
+X∗
+2 → X∗]. Here, we note that in fact, Theorem 2.5,(v),o n l y
+yields a reconstruction of thekernels of these quotients, i.e.,
+not an “identiﬁcation isomorphism” [cf. the use of thesame
+notation for the codomains ofq1, q2] between the codomains of
+q1, q2; on the other hand, one veriﬁes easily that this abuse of
+notation [which was made for the sake of keeping the notation
+simple] does not have any substantive eﬀect on the argument to
+follow.
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 37
+(iii-b) In light of the reconstruction of the quotientsq1,q2 :Π∗
+2 ↠ Π∗
+1
+in (iii-a), one may apply [the group-theoretic reconstruction al-
+gorithms implicit in the proof of][CbTpI], Lemma 1.6, to recon-
+struct the conjugacy class of cuspidal inertia subgroups
+of Π∗
+1 associated to the unique cusp ofX∗.
+(iii-c) One may reconstruct theconjugacy class of decomposition
+groups of Π2 associated to thediagonal divisor⊆X×k X as
+the set ofnormalizers in Π2 of the cuspidal inertia subgroups
+of Π∗
+1 [= F12/F1 ⊆Π3/F1 =Π2] associated to the unique cusp
+of X∗[cf. (iii-b)].
+(iii-d) Write F13 for the unique ﬁber subgroup ofΠ3 of co-length one
+that containsF1 but is̸= F12 [cf. Theorem 2.5,(v)];
+p2,p3 :Π2 =Π3/F1 ↠ Π1
+for the quotients determined by the quotientsΠ3/F1 ↠ Π3/F13,
+Π3/F1 ↠ Π3/F12, respectively;
+p2,p3 :Πab
+2 ↠ Πab
+1
+for the natural surjections induced byp2, p3, respectively. Here,
+we note that in fact, Theorem 2.5, (v), only yields a recon-
+struction of thekernels of these quotients, i.e., not an “iden-
+tiﬁcation isomorphism” [cf. the use of thesame notation for
+the codomains ofp2, p3] between the codomains ofp2, p3;o n
+the other hand, one veriﬁes easily that this abuse of notation
+[which was made for the sake of keeping the notation simple]
+does not have any substantive eﬀect on the argument to follow.
+Then one may reconstruct thediagonal
+δ⊆ Π
+ab
+1 ×Πab
+1
+as the image of any decomposition group associated to the diag-
+onal divisor ofX ×k X [cf. (iii-c)] via the surjection
+Π2 ↠ Πab
+2
+(p2,p3)
+↠ Πab
+1 ×Πab
+1
+— where the ﬁrst arrow is the natural surjection. In particular,
+one may reconstruct thenatural identiﬁcationbetween the
+copy of Πab
+1 that appears as the codomain ofp2 and the copy
+of Πab
+1 that appears as the codomain of p3 as the composite
+isomorphism
+Πab
+1
+∼← δ ∼→ Πab
+1
+— where the ﬁrst (respectively, second) arrow denotes the arrow
+induced byp2 (respectively,p3).
+(iii-e) One may reconstruct the unique nontrivial element of the sub-
+group S2 ⊆Out(Π2) as the unique elementα∈Zloc(Out(Π2))
+— whose image inAut(Πab
+1 × Πab
+1 ) [cf. Theorem 2.5, (v)]w e
+denote byα— such that, for any(x,y) ∈Πab
+1 ×Πab
+1 ,
+α((x,y)) = ( y,x).
+
+38 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+(iv) Suppose that(g,r) ∈{(0,4),(1,1),(1,2),(2,0)}.T h e no n em a yr e -
+construct the subgroup Sn∗ ⊆Out(Πn) as the subgroup generated
+by the elementsα∈Zloc(Out(Πn)) for which there exists a general-
+ized ﬁber subgroupF of Π(l)
+n of co-length two [cf. Theorem 2.5,(v)]
+satisfying the following conditions:
+•The outer automorphism ofΠ(l)
+n induced byαpreserves F and
+induces the identity permutation on the set of generalized
+ﬁber subgroups ofΠ(l)
+n contained inF [cf. Theorem 2.5,(v)].
+•The outer automorphism ofΠ(l)
+2 induced byαvia the surjection
+Π(l)
+n ↠ Π(l)
+2 determined by F is contained in S2 ⊆Out(Π(l)
+2 )
+[cf. the descriptions of(i-f), (ii-c), (iii-e)].
+Proof. Assertion (i) (respectively, (ii); (iii)) follows immediately — with the
+exceptionof (i-f) (respectively, (ii-c), (iii-e)) — from the various results cited
+in the statement of assertion (i) (respectively, (ii); (iii)), together with the
+various deﬁnitions involved. On the other hand, assertion (iv), as well as (i-
+f), (ii-c), (iii-e), follow immediately, by considering the varioustranspositions
+in S
+n∗, from Corollary 2.9. □
+3. Group-theoretic reconstruction of log-full subgroups
+Let l be a prime number;n a positive integer; Σ a set of prime numbers
+which is either equal to{l} or Primes;( g,r) a pair of nonnegative integers
+such that 2g −2+ r> 0; k a ﬁeld of characteristic /∈Σ;k an algebraic
+closure ofk; S def= Spec(k); Slog an fs log scheme whose underlying scheme
+is S; Xlog as t a b l el o gc u r v eo ft y p e(g,r)o v e rSlog; Xlog
+n the n-th log con-
+ﬁguration space of Xlog;Δ n the maximal pro-Σ quotient of the kernel of
+the natural [outer] surjectionπ1(Xlog
+n ) ↠ π1(Slog). In this section, we in-
+troduce the notion of apro-Σlog-full subgroup of Δn [cf. Deﬁnition 3.4]
+and show that, when Σ ={l}, and, moreover, Xlog and k satisfy certain
+conditions concerning “weights”, the pro-Σ log-full subgroups may bere-
+constructed group-theoreticallyfrom the natural outer action ofπ1(Slog)o n
+Δn [cf. Theorem 3.8]. We also introduce [cf. Deﬁnition 3.10] and study
+[cf. Corollary 3.12] the notion of a log-full subgroup of smooth typeand
+prove that, in the case where (g,r)=( 1 ,1), log-full subgroups ofsmooth
+type [cf. Deﬁnition 3.10] may be distinguished from log-full subgroups of
+singular type[cf. Deﬁnition 3.10] by means of avery simple group-theoretic
+criterion [cf. Proposition 3.14], which makesessential useof the assumption
+(g,r)=( 1,1).
+Deﬁnition 3.1.In the notation introduced above:
+(i) Write G for the semi-graph of anabelioids of pro-ΣPSC-type [cf.
+[CmbGC], Deﬁnition 1.1, (i)] determined by the stable log curve
+Xlog → Slog.[ T h u s ,Δ1 may be identiﬁed with thePSC-fundamental
+group [cf. [CmbGC], Deﬁnition 1.1, (ii)] ΠG of G.] Write OutFC(−)
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 39
+for the group of FC-admissible outer automorphisms of (−)[ c f .
+[CmbCusp], Deﬁnition 1.1, (ii)],
+χ1 :O u tFC(Δ1) → Z×
+l
+forthe pro-l cyclotomic characterassociatedto“ G⇝Node(G)”[cf. [CbTpI],
+Deﬁnitions 2.8 and 3.8], and
+χn :O u tFC(Δn) → Z×
+l
+for the composite withχ1 of the natural homomorphism OutFC(Δn)
+→ OutFC(Δ1) [cf. [CmbCusp], Proposition 1.2, (iii); [CbTpI], Corol-
+lary 1.9, (i)] induced by any projection morphismXlog
+n → Xlog
+1 of
+co-length one.
+(ii) Let V be a ﬁnite dimensionalQl-vector space, αa Ql-linear auto-
+morphism ofV, β∈Q×
+l . Then we shall say thatαis β-transverseif,
+for every positive integerN and every eigenvalueλ∈Q×
+l of αN,i t
+holds thatλ̸= βN.[ T h u s ,i fαis β-transverse,a n dM is apositive
+integer,t h e nαM is βM-transverse.]
+(iii) We shall say that a ﬁeldK is l-cyclotomically full if the image of
+the l-adic cyclotomic characterχK : GK → Z×
+l associated to K is
+inﬁnite. We shall say that a ﬁeldK is strongly l-cyclotomically full
+if there exists a normal noetherian domainA such that, if we write
+Kprm ⊆K for the algebraic closure inK of theprime ﬁeldof K,t h e n
+Kprm is a subﬁeld of the ﬁeld of fractionsL of A, and, moreover, the
+subset
+{p ∈Spec(A) | ch(k(p)) > 0, and k(p)i sl-cyclotomically full}
+—w h e r ew ew r i t ek(p) for the residue ﬁeld of p — of Spec(A)i s
+Zariski dense in Spec(A).
+Remark 3.1.1. Observe that it follows formally from Deﬁnition 3.1, (iii),
+that any subﬁeld of a stronglyl-cyclotomically full ﬁeld is itself strongly
+l-cyclotomically full.
+Remark 3.1.2. In the notation of Deﬁnition 3.1, (iii), letK′ be a ﬁnitely
+generated ﬁeld extension ofK.T h e ns i n c eKprm ⊆K is a regular extension
+[cf. [Bbk], Chapter V, §17, Proposition 9], we conclude that the natural
+outer homomorphismGK → GKprm is surjective, and thatKprm ⊆K′
+prm is
+a ﬁnite extension.
+Proposition 3.2. (Computation of characters). Set
+m def=
+⎧
+⎪⎨
+⎪⎩
+2n(g +r −1), if g> 0a n dr> 0,
+2ng, if g> 0a n dr =0 ,
+2n(r −1)+ n(n−1), if g =0 .
+Write
+δn :O u tFC(Δn) → Z×
+l
+
+40 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+for the square of the character obtained by forming the composite of the natu-
+ral morphismOutFC(Δn) → Aut(Δab
+n ) with the determinant homomorphism
+Aut(Δab
+n ) → Z×
+l .T h e nδn coincides with them-th powerof χn.
+Proof. This follows immediately from Proposition 2.2, (i), (ii); [CmbGC],
+Proposition 1.3. □
+Proposition 3.3. (Basic properties of [strongly] l-cyclotomically
+full ﬁelds).Let K be a ﬁeld,K′ a ﬁnitely generatedﬁeld extension of
+K. Then the following hold:
+(i) If K is l-cyclotomically full,t h e nch(K) ̸= l.
+(ii) If K is strongly l-cyclotomically full,t h e nK is l-cyclotomically
+full.
+(iii) Suppose that ch(K) > 0.T h e nK is l-cyclotomically full if and
+only ifK is strongly l-cyclotomically full.
+(iv) K is l-cyclotomically fullif and only ifK′ is.
+(v) K is strongly l-cyclotomically fullif and only ifK′ is.
+(vi) Suppose that K is strongly l-cyclotomically full. Write T def=
+P1
+K \{ 0,1,∞}.L e tY be a hyperbolic curve overK that admits a
+ﬁnite ´etale Galois coveringY → T of degreed,w h e r ed is invertible
+in K. Write Z for the [K-]smooth compactiﬁcation ofY,
+ρ: GK → AutQl(H1
+´et(Z ×K K,Ql))
+for the Galois representation on the ﬁrst l-adic ´etale cohomology
+module of Z. Then there exists an elementg ∈GK such that ρ(g)
+is χK(g)-transverse.
+(vii) Suppose thatK is a mixed characteristic, nonarchimedean local ﬁeld,
+i.e., a ﬁnite extension of the ﬁeldQp of p-adic numbers. ThenK is
+l-cyclotomically full,b u tnot strongly l-cyclotomically full.
+(viii) Suppose that K is either the ﬁeld Q of rational numbers or a ﬁ-
+nite ﬁeld of characteristic ̸= l. Then every ﬁnitely generated ﬁeld
+extension ofK is strongly l-cyclotomically full.
+Proof. Assertion (i) follows immediately from the well-known fact that if
+ch(K)= l, then the cyclotomic characterχK : GK → Z×
+l is trivial.N e x t ,w e
+consider assertion (ii). Suppose thatK is strongly l-cyclotomically full.W e
+apply the notation of Deﬁnition 3.1, (iii). Then let us observe that to verify
+that K is l-cyclotomically full, it suﬃces to show thatL is l-cyclotomically
+full [cf. Remark 3.1.2]. Also, we observe that we may assume without loss
+of generality [cf. assertion (i)] thatl is invertible in A.S i n c eA is normal,
+this assumption implies that thel-adic cyclotomic characterχ
+L : GL → Z×
+l
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 41
+associated toL may be thought of as the restriction via the natural [outer]
+surjection GL ↠ π1(Spec(A)) induced by the injectionA↪→ L of thel-adic
+cyclotomic characterχA : π1(Spec(A)) → Z×
+l associated toA. On the other
+hand, since [cf. Deﬁnition 3.1, (iii)] there exists a prime idealp ∈Spec(A)
+such that k(p)i s l-cyclotomically full, we thus conclude that the image of
+χA, hence also ofχL,i sinﬁnite. This completes the proof of assertion (ii).
+Assertion (iii) follows immediately from assertion (ii) and Deﬁnition 3.1,
+(iii). Since the natural outer homomorphismG
+K′ → GK is [well-known to
+be] open, assertion (iv) follows immediately from Deﬁnition 3.1, (iii).
+Assertion (v) in the case where ch(K) > 0 follows immediately from
+assertions (iii) and (iv). Next, we consider assertion (v) in the case where
+ch(K) = 0, andK is strongly l-cyclotomically full [cf. Remark 3.1.1]. We
+apply the notation of Deﬁnition 3.1, (iii). LetL′ be one of the residue ﬁelds
+of the artinian ringL ⊗Kprm K′
+prm [cf. Remark 3.1.2]. Then observe that
+since ch(K)=c h (L)=0 , L′ is aﬁnite separableﬁeld extension ofL.B u t ,
+since A is noetherian, this implies that thenormalization A′ of A in L′ is
+a ﬁnite A-module. Thus, assertion (v) in the case where ch(K) = 0 follows
+immediately from Deﬁnition 3.1, (iii), together with assertion (iv). This
+completes the proof of assertion (v).
+Next, we consider assertion (vi). We apply the notation of Deﬁnition 3.1,
+(iii). Then, sinced is invertible in K, it follows from well-known elementary
+arguments in algebraic geometry [cf., e.g., the proof of [CanLift], Proposition
+2.3, (ii)] that, after possibly replacing K by a ﬁnite extension of K [cf.
+assertion (v)], one maydescend the diagramZ ⊇Y → T of smooth curves
+over K to a diagram Z
+prm ⊇Yprm → Tprm of smooth curves over Kprm.
+In particular, by Remark 3.1.2, we may assume without loss of generality
+that K = Kprm. Moreover, one maybase-change the diagramZ ⊇Y → T
+of smooth curves overK = Kprm to a diagramZL ⊇YL → TL of smooth
+curves over L. Next, we observe that, by possibly replacingA by A[1
+f ]f o r
+a suitable nonzerof ∈A, we may assume without loss of generality that
+this diagramZL ⊇YL → TL of smooth curves overL arises from a diagram
+ZA ⊇ YA → TA of smooth curves over A,a n dt h a td is invertible in A.
+Thus, by restricting to a pointp ∈Spec(A) as in the display of Deﬁnition
+3.1, (iii), we obtain a diagramZp ⊇Yp → Tp of smooth curves overk(p).
+In particular, by replacingK by a ﬁnite extension ofk(p)prm, we conclude
+that we may assume without loss of generality [cf. [SGA1], EXPOS´EX ,
+Corollaire 3.9] that K is an l-cyclotomically full algebraic extension of a
+ﬁnite ﬁeldK0. Moreover, it follows immediately from well-known properties
+of absolute Galois groups of ﬁnite ﬁelds that we may assume without loss
+of generality, after possibly replacing K and K0 by ﬁnite extensions [cf.
+assertion (iv)] ofK and K0, respectively, that the natural [outer] injection
+GK → GK0 induces anisomorphism on maximal pro-l quotients,a n dt h a tρ
+factors through themaximal pro-l quotient of GK. But then assertion (vi)
+follows immediately from the “Riemann hypothesis” for abelian varieties
+over ﬁnite ﬁelds [cf., e.g., [Mumf], p. 206]. This completes the proof of
+assertion (vi).
+Next, we consider assertion (vii). When l ̸= p, the fact that K is l-
+cyclotomically full follows immediately from the fact that theresidue ﬁeld
+
+42 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+of K is ﬁnite [together with well-known facts concerning the structure of
+ﬁnite ﬁelds]. When l = p, the fact thatK is l-cyclotomically full follows
+immediately from well-known facts concerning ramiﬁcation in cyclotomic
+extensions of Qp [cf. also assertion (iv)]. Next, assume that K is strongly
+l-cyclotomically full. Observe that, by assertion (v), from the point of view
+of deriving a contradictionto this assumption, we may always replaceK by
+a ﬁnite extension ofK.L e tE be aTate curveoverK [i.e., a smooth, proper
+curve of genus 1 overK that hasstable, multiplicative reductionover the ring
+of integers ofK]t h a ti sdeﬁned over a number ﬁeld. Thus, by applying the
+theory ofBelyi maps[cf. [Belyi]], we conclude that there exists adense open
+subscheme U ⊆E that admits a ﬁnite ´etale morphismU → T,w h e r eT is as
+in assertion (vi). Note, moreover, that, by possibly replacingK by a ﬁnite
+extension ofK, we may assume without loss of generality that there exists
+a ﬁnite ´etale covering Y → U of hyperbolic curves overK such that the
+composite ﬁnite ´etale morphismY → U → T is Galois. On the other hand,
+the well-known appearance of thecyclotomic characterin the Galois action
+on the Tate module of a Tate curve [cf. [Serre], IV,§A.1.2] implies that this
+ﬁnite ´etale Galois coveringY → T yields acontradiction to the conclusion
+of assertion (vi). This completes the proof of assertion (vii). Finally, since
+ﬁnite ﬁelds of characteristic ̸= l are clearly l-cyclotomically full, assertion
+(viii) follows immediately from assertions (iii), (v) [cf. also Deﬁnition 3.1,
+(iii); Remark 3.1.2]. □
+Deﬁnition 3.4.Let x
+n ∈Xn ×k k be alog-full closed point [cf. Deﬁnition
+1.1]. Then we shall refer to any Δn-conjugate of the image of the natural
+inclusion Δxn ↪→ Δn of Proposition 1.2, (iv), as a [pro-Σ]log-full subgroup
+of Δn associated to xn. We shall refer to an open subgroup of a log-full
+subgroup of Δn associated to xn as a [pro-Σ]quasi-log-full subgroupof Δn
+associated toxn.
+Proposition 3.5. (Projections of log-full subgroups). Let n′′ be
+a positive integer such thatn′′ <n , A a log-full subgroup of Δn. Write
+p :Δn ↠ Δn′′ for the natural [outer] surjection induced by theprojection
+morphism Xlog
+n → Xlog
+n′′ obtained by forgettingn −n′′ of the n factors of
+Xlog
+n .T h e np(A) is alog-full subgroup ofΔn′′.
+Proof. Proposition 3.5 follows immediately from Proposition 1.3, (ii) [cf.
+also thecommutative diagramin the proof of Proposition 1.2]. □
+Remark 3.5.1.Observe that, in Proposition 3.5, the natural [outer] surjec-
+tion p :Δn ↠ Δn′′ may in fact be taken to be the natural [outer] surjection
+induced by a“generalized projection morphism”. That is to say, although
+the notion of a “generalized projection morphism” is only deﬁned in Deﬁni-
+tion 2.1, (i), in the case whereX
+log is smooth, one veriﬁes immediately that
+a similar deﬁnition may be made in the case ofarbitrary Xlog [i.e., as in the
+present §3]. Alternatively, in the notation of Remark 2.1.1, one may observe
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 43
+that, by a similar argument to the argument applied in Remark 2.1.1, the
+symmetric groupon n∗letters Sn∗ acts naturallyon Xlog
+n , hence induces a
+natural outer action ofSn∗ on Δn; thus, in Proposition 3.5, one may take
+the natural [outer] surjectionp :Δn ↠ Δn′′ to be thecompositeof a surjec-
+tion p as in the statement of Proposition 3.5 with the outer automorphism
+of Δn determined by an element ofSn∗.
+Lemma 3.6. (Commensurable terminality). Every log-full subgroup
+of Δn is commensurably terminal in Δn.
+Proof. Let us ﬁrst observe that, to verify Lemma 3.6, we may assume with-
+out loss of generality that k is algebraically closed. Let A be a log-full
+subgroup of Δn. Note that the inclusionA ⊆CΔn(A)i sc l e a r . W ep r o v e
+the inclusionCΔn(A) ⊆A by induction onn. The case wheren = 1 follows
+from [CmbGC], Proposition 1.2, (ii). Next, suppose thatn> 1, and that the
+induction hypothesisis in force. Writep :Δn ↠ Δn−1 for the natural [outer]
+surjection induced by the projection morphismXlog
+n → Xlog
+n−1 obtained by
+forgetting the last factor. Then sincep(A)i sa log-full subgroup of Δn−1 [cf.
+Proposition 3.5], by applying the induction hypothesis, we conclude that
+CΔn−1(p(A)) ⊆p(A). Thus, we obtain that
+p(A) ⊆ p(CΔn(A)) ⊆ CΔn−1(p(A)) ⊆ p(A),
+hence thatp(A)= p(CΔn(A)). Therefore, to verify the inclusionCΔn(A) ⊆
+A, it suﬃces to show that
+Δn/n−1 ∩A =Δ n/n−1 ∩CΔn(A)
+—w h e r ew ew r i t eΔn/n−1
+def=K e r (p). Let xn ∈Xn be alog-full point ofXn
+such thatA =Δxn [cf. Deﬁnition 3.4]. Write xn−1 ∈Xn−1 for the image
+of xn via Xlog
+n → Xlog
+n−1, xlog
+n−1 for the log scheme obtained by restricting the
+log structure ofXlog
+n−1 to the [reduced, artinian] closed subscheme ofXn−1
+determined byxn−1,a n d(Xlog
+n )xn−1
+def= Xlog
+n ×Xlog
+n−1
+xlog
+n−1. Then we observe
+that — by applying [Hsh], Theorem 2, to the completion of the natural
+projection morphism Xlog
+n → Xlog
+n−1 along the natural projection morphism
+(Xlog
+n )xn−1 → xlog
+n−1 —w em a yi d e n t i f yΔn/n−1 with the maximal pro-Σ quo-
+tient of the kernel of the [outer] surjectionπ1((Xlog
+n )xn−1) ↠ π1(xlog
+n−1). Next,
+let us observe that Δn/n−1 ∩A is alog-full subgroup of Δn/n−1 that arises
+from the log-full point of the underlying scheme of (Xlog
+n )xn−1 determined by
+xn [cf. the commutative diagramin the proof of Proposition 1.2]. Thus, it
+follows from the case wheren =1t h a tCΔn/n−1(Δn/n−1 ∩A) ⊆Δn/n−1 ∩A,
+hence that
+Δn/n−1 ∩A ⊆ Δn/n−1 ∩CΔn(A)
+⊆ CΔn/n−1(Δn/n−1 ∩A) ⊆ Δn/n−1 ∩A.
+This completes the proof of the equality Δn/n−1 ∩A =Δ n/n−1 ∩CΔn(A)
+and hence of Lemma 3.6. □
+
+44 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+Lemma 3.7. (Open subgroups of closed subgroups of proﬁnite
+groups via commensurable terminality). For i ∈{1,2,3},l e tGi be
+a proﬁnite group; Hi ⊆ Gi an abelian closed subgroup of Gi; I2 ⊆ G2
+an abelian closed subgroup ofG2. Suppose that H1 is commensurably
+terminal in G1, and that there exists a commutative diagram of proﬁnite
+groups
+1 →→G1 →→G2
+p →→G3 →→1
+1 →→H1 →→
+↑↑
+H2 →→
+↑↑
+H3 →→
+↑↑
+1
+— where the horizontal sequences are exact, and the vertical arrows are
+the natural injections. Suppose, moreover, thatI1
+def= I2 ∩G1 (respectively,
+I3
+def= p(I2))i sa n open subgroup of H1 (respectively, of H3). Then it
+holds thatZloc
+p−1(H3)(H1)= H2.I np a r t i c u l a r ,I2 is anopen subgroup of
+H2.
+Proof. WriteK2
+def= p−1(H3). In particular, it holds thatH1 ⊆H2 ⊆K2.I n
+light of our assumption thatI1 (respectively, I3)i sa nopen subgroupof H1
+(respectively, ofH3), to complete the veriﬁcation of Lemma 3.7, it suﬃces
+to show that
+I2 ⊆Zloc
+K2(H1)= H2.
+First, let us observe that the inclusion H2 ⊆ Zloc
+K2(H1) follows from our
+assumption thatH2 is abelian. On the other hand, sinceH1 is abelian and
+commensurably terminalin G1, the following inclusions hold:
+H1 ⊆ G1 ∩Zloc
+K2(H1)= Zloc
+G1 (H1) ⊆ CG1(H1)= H1.
+Thus, we obtain that H1 = G1 ∩Zloc
+K2(H1). In particular, we obtain a
+commutative diagram of proﬁnite groups
+1 −−−−→ G1 −−−−→ K2 −−−−→ H3 −−−−→ 1↑⏐
+⏐
+↑⏐
+⏐
+↑⏐
+⏐
+1 −−−−→ H
+1 −−−−→ Zloc
+K2(H1) −−−−→ p(Zloc
+K2(H1)) −−−−→ 1
+
+↑⏐
+⏐
+↑⏐
+⏐
+1 −−−−→ H
+1 −−−−→ H2 −−−−→ H3 −−−−→ 1
+— where the horizontal sequences areexact, and the vertical arrows are
+the natural injections. It follows immediately from this commutative dia-
+gram that the inclusionH3 ↪→ p(Zloc
+K2(H1)) is, in fact,bijective, hence that
+Zloc
+K2(H1)= H2. Finally, sinceI1 is openin H1,a n dI2 is abelian, we conclude
+that
+I2 ⊆ Zloc
+K2(H1)= H2.
+This completes the proof of Lemma 3.7. □
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 45
+Theorem 3.8. (Group-theoretic characterization of log-full sub-
+groups). Let l be a prime number; n a positive integer; k a ﬁeld of
+characteristic ̸= l; χk : Gk → Z×
+l the l-adic cyclotomic character associ-
+ated to k; S def= Spec(k); Slog an fs log scheme whose underlying scheme
+is S; Xlog a stable log curve over Slog; G the semi-graph of anabelioids
+of pro-l PSC-type determined by Xlog → Slog [cf. [CmbGC], Deﬁnition
+1.1, (i)]; Xlog
+n the n-th log conﬁguration space of Xlog; G def= π1(Slog);
+π1(Xlog
+n /Slog) the kernel of the natural [outer] surjection π1(Xlog
+n ) ↠ G;
+Δn
+def= π1(Xlog
+n /Slog)(l); Πn the quotient ofπ1(Xlog
+n ) by the kernel of the nat-
+ural surjectionπ1(Xlog
+n /Slog) ↠ Δn. Moreover, suppose that the following
+two conditions are satisﬁed:
+(a) k is strongly l-cyclotomically full.
+(b) Let ΠG′ ⊆ΠG ∼= Δ1 be a characteristic open subgroup. Observe that
+Π1 naturally acts onΠG′ by conjugation, hence onΠab/edge
+G′ ⊗Zl Ql [cf.
+the discussion entitled “Topological groups” in§0]. WriteρG′ :Π1 →
+AutQl(Πab/edge
+G′ ⊗Zl Ql) for this action ofΠ1 on Πab/edge
+G′ ⊗Zl Ql.T h e n
+there exists a ﬁnite ﬁltration ofΠ1-stable Ql-subspaces ofΠab/edge
+G′ ⊗Zl
+Ql such that, for each subquotient of this ﬁnite ﬁltration, there exists
+an element g ∈Π1 such that the restriction to this subquotient of
+ρG′(g) is χk(g)-transverse[cf. Deﬁnition 3.1,(ii)], where, by abuse
+of notation, we writeχk(−) for the restriction ofχk(−), as deﬁned
+above, via the natural [outer] surjectionΠ1 ↠ G ↠ Gk.
+Let A b eac l o s e ds u b g r o u po fΔn.T h e nA is quasi-log-full (respectively,
+log-full)i fa n do n l yi fA satisﬁes the following two conditions:
+(i) The pro-l group A is abelian [hence necessarily free of rank≤n —
+cf. Proposition 1.4; Theorem 1.6; [MT], Proposition 2.2, (i)] and
+free of rank n (respectively, is amaximal free abelian closed
+subgroup of Δn of rank n). [Here, we recall that, by Theorem 1.6,
+n is determined by the isomorphism class of the pro-l group Δn.]
+(ii) There exists a closed subgroupH of Πn such that
+(ii-1) the image ofH via the surjectionΠn ↠ G is anopen subgroup
+of G;
+(ii-2) the conjugation action ofH on Δn preserves A ⊆Δn, and the
+resulting action ofH on A is given by acharacter χH : H →
+Z×
+l ;
+(ii-3) the m-th power of χH [cf. (ii-2)], where we writem for the
+positive integer “m” appearing in the statement of Proposition
+3.2, coincides with the restrictionδn|H of δn [cf. Proposition
+3.2] toH [via the homomorphismH → OutFC(Δn) determined
+by the conjugation action ofH on Δn].
+
+46 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+Here, we note that, in the situation of(ii-3), the deﬁnition ofδn|H is man-
+ifestly group-theoretic, and that agroup-theoretic characterization of
+the integerm may be obtained by applying Theorem 2.5,(i), (vi), together
+with [whenn =1 ] assumption (a); Proposition 3.3,(ii); [CmbGC], Corollary
+2.7, (i).
+Proof. First, we note that it follows from Lemma 3.6 that theequivalence
+A is log-full ⇔ A satisﬁes theresp’dportion of conditions (i) and (ii)
+follows immediately from theequivalence
+A is quasi-log-full ⇔ A satisﬁes thenon-resp’dportion of conditions (i)
+and (ii).
+Thus, in the remainder of the proof of Theorem 3.8, we prove thenon-
+resp’d equivalence. Suppose that A satisﬁes conditions (i), (ii). Then we
+prove thatA is quasi-log-full by induction onn. First, we consider the case
+where n = 1. In this case, sinceA is nontrivial procyclic[cf. condition (i)],
+it follows from assumption (b); condition (ii); Proposition 3.2; [NodNon],
+Lemma 1.6, thatA is contained in alog-full subgroup ⊆Δ
+1, hence thatA
+is quasi-log-full.
+Next, we suppose thatn ≥2, and that theinduction hypothesisis in force.
+Let k be an algebraic closure ofk, S def= Spec(k). In this case, we observe
+that we have an exact sequence of proﬁnite groups
+1 →→Δn/1 →→Δn
+p →→Δ1 →→1
+—w h e r ew ew r i t ep for the [outer] surjection induced by the ﬁrst projection
+Xlog
+n → Xlog and Δn/1
+def=K e r (p). In particular, it follows from Lemma 1.5
+and condition (i) [cf. also Proposition 1.4; [MT], Proposition 2.4, (i)] that
+p(A)i sa free, abelian closed subgroup of Δ1 of rank 1. Moreover, sinceZ×
+l
+admits a torsion-free open subgroup, one veriﬁes immediately, by applying
+Proposition 3.2, that, after possibly replacing H [cf. condition (ii)] by a
+suitable open subgroup ofH, it holds that the image ofH via the natural
+surjection Πn ↠ Π1 induced by the ﬁrst projectionXlog
+n → Xlog satisﬁes
+“condition (ii) for the closed subgroupp(A) ⊆Δ1”. In particular, it follows
+from the case wheren = 1 [which has already been veriﬁed] thatp(A)i s
+quasi-log-full, hence, that there exists alog-full point x ∈X ×S S such that
+p(A) is an open subgroup of a log-full subgroup Δx ⊆Δ1 associated tox.
+Write x ∈X for the image ofx via the natural morphismX ×S S → X,
+Slog
+x for the log scheme obtained by restricting the log structure ofXlog
+to the closed subscheme ofX determined by x. Then, by considering the
+base-change of the ﬁrst projectionXlog
+2 → Xlog via the natural inclusion
+Slog
+x ↪→ Xlog, we obtain a stable log curve
+Xlog
+x
+def= Xlog
+2 ×Xlog Slog
+x → Slog
+x .
+Next, observe that the stable log curveXlog
+x may be obtained by “attach-
+ing” thetripod “P1
+Sx \{ 0,1,∞}”, in a suitable fashion, to the stable log
+curve Xlog ×Slog Slog
+x . Thus, by applying Proposition 3.3, (ii), (v), (vi), to
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 47
+suitable connected ﬁnite ´etale coverings of thetripod, we conclude from as-
+sumptions (a), (b) [cf. also [NodNon], Lemma 1.4; [CmbGC], Remark 1.1.3]
+that “assumptions (a), (b) for the stable log curveXlog
+x ” hold.
+Next, let us observe that the fs log scheme overSlog
+x
+Xlog
+n ×Xlog Slog
+x → Slog
+x
+— where the ﬁber product denotes the base-change of the ﬁrst projection
+Xlog
+n → Xlog via the natural inclusionSlog
+x ↪→ Xlog — may be naturally iden-
+tiﬁed with the (n −1)-st log conﬁguration space(Xx)log
+n−1 of Xlog
+x .O nt h e
+other hand, since thekernel of the natural [outer] surjectionπ1((Xx)log
+n−1) →
+π1(Slog
+x ) may be identiﬁed with the kernel of the natural [outer] surjection
+π1(Xlog
+n ) ↠ π1(Xlog) [cf. [Hsh], Theorem 2, which we think of as being
+applied to thecompletion of the natural projection morphismXlog
+n → Xlog
+along the natural projection morphism (Xx)log
+n−1 → Slog
+x ], we obtain acom-
+mutative diagram
+1 →→Δn/1 →→Πn →→Π1 →→1
+1 →→Δn/1 →→Πx
+n−1 →→
+↑↑
+Gx →→
+↑↑
+1
+—w h e r ew ew r i t eGx def= π1(Slog
+x )a n dΠx
+n−1 for the quotient ofπ1((Xx)log
+n−1)
+by the kernel of the natural surjection Ker(π1(Xlog
+n ) ↠ π1(Xlog)) ↠ Δn/1;
+the horizontal sequences are exact; the middle (respectively, right-hand)
+vertical arrow is the [outer] homomorphism induced by (Xx)log
+n−1 → Xlog
+n
+(respectively, Slog
+x → Xlog).
+Thus, A ∩Δn/1 is a free abelianclosed subgroup of Δn/1 of rank n −1;
+moreover, one veriﬁes immediately, by applying Proposition 3.2, that [since
+Z×
+l admits a torsion-free open subgroup] there exists an open subgroup of
+the closed subgroup of Πx
+n−1 obtained by pulling back H ⊆ Πn via the
+arrow Πx
+n−1 → Πn of the above commutative diagram with respect to which
+“condition (ii) for the closed subgroupA ∩Δn/1 ⊆Δn/1” is satisﬁed. In
+particular, we conclude from theinduction hypothesisthat A∩Δn/1 is quasi-
+log-full, hence that there exists alog-full point y ∈(Xx)n−1 ×Sx S, such that
+A∩Δn/1 is anopen subgroup of a log-full subgroup Δy ⊆Δn/1 associated
+to y.
+Next, let us writez ∈Xn ×S S for the image ofy ∈(Xx)n−1 ×Sx S via
+the morphism
+(Xx)n−1 ×Sx S → (Xn ×S Sx)×Sx S = Xn ×S S
+obtainedbyconsideringthebase-changeofthenaturalmorphism( Xx)n−1 →
+Xn ×S Sx via the natural morphism S → Sx. Here, note that since x
+[∈X ×S S]a n dy [∈(Xx)n−1 ×Sx S]a r elog-full, it follows from Proposition
+1.3, (i), thatz ∈Xn ×S S is log-full. Moreover, one veriﬁes easily that there
+exists a log-full subgroup Δz ⊆Δn — among its various Δn-conjugates —
+
+48 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+associated toz that ﬁts into acommutative diagram
+1 →→Δn/1 →→Δn
+p →→Δ1 →→1
+1 →→Δy →→
+↑↑
+Δz →→
+↑↑
+Δx →→
+↑↑
+1
+— where the horizontal sequences are exact [cf. the exactness discussed
+above of the sequence 1→ Δn/1 → Πn → Π1 → 1; thecommutative diagram
+in the proof of Proposition 1.2], and the vertical arrows are the natural
+injections. Therefore, sincep(A) (respectively,A∩Δn/1)i sa nopen subgroup
+of Δx (respectively, Δy), it follows from Lemmas 3.6, 3.7 [where we take
+the “commutative diagram” to be the commutative diagram of the above
+display and “I2”t ob eA]t h a tA is anopen subgroupof Δz, hence thatA is
+quasi-log-full, as desired.
+Conversely, suppose thatA is quasi-log-full, i.e., thatA is an open sub-
+group of a log-full subgroup Δz ⊆ Δn associated to a log-full point z ∈
+Xn ×S S.T h e n s i n c e Δz ∼= Zl(1)⊕n [cf. Proposition 1.3, (iii)], we con-
+clude thatA satisﬁes condition (i). WriteSlog
+z for the log scheme obtained
+by restricting the log structure ofXlog
+n to the image ofz via the natural
+projection Xn ×S S → Xn, H for the image of the composite
+π1(Slog
+z ) → π1(Xlog
+n ) ↠ Πn
+— where the ﬁrst arrow is the [outer] homomorphism induced by the natural
+morphism Slog
+z → Xlog
+n ; the second arrow is the natural surjection. Then
+one veriﬁes easily [cf. Proposition 3.2] thatH satisﬁes condition (ii). This
+completes the proof of Theorem 3.8. □
+Corollary 3.9. (Group-theoretic preservation of log-full subgroups).
+Let l be a prime number;n a positive integer. For□ ∈{ ◦,•},l e tSlog
+□ be an
+fs log scheme whose underlying scheme is the spectrum of a ﬁeldk□ of char-
+acteristic ̸= l; Xlog
+□ a stable log curve overSlog
+□ ; (Xlog
+□ )n the n-th log conﬁg-
+uration space ofXlog
+□ ; π1((Xlog
+□ )n/Slog
+□ ) the kernel of the natural [outer] sur-
+jection π1((Xlog
+□ )n) ↠ G□ def= π1(Slog
+□ ); Δ□
+n
+def= π1((Xlog
+□ )n/Slog
+□ )(l); Π□
+n the
+quotient of π1((Xlog
+□ )n) by the kernel of the natural surjectionπ1((Xlog
+□ )n/
+Slog
+□ ) ↠ Δ□
+n. Thus, the natural conjugation action ofΠ□
+n on Δ□
+n determines
+a natural outer Galois actionG□ → Out(Δ□
+n). Suppose that, for each
+□ ∈{ ◦,•}, the above collection of data [i.e., with “□’s” omitted] satisﬁes
+assumptions (a), (b) in the statement of Theorem 3.8. Let
+α:Δ◦
+n
+∼→ Δ•
+n
+be anisomorphism of proﬁnite groups that iscompatible with the respec-
+tive natural outer Galois actionsG◦→ Out(Δ◦
+n), G• → Out(Δ•
+n) relative
+to some isomorphism of proﬁnite groupsG◦ ∼→ G•. Then for any quasi-
+log-full (respectively, log-full) subgroupA ⊆Δ◦
+n of Δ◦
+n, α(A) ⊆Δ•
+n is a
+quasi-log-full (respectively,log-full) subgroup ofΔ•
+n.
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 49
+Proof. Corollary 3.9 follows immediately from Theorem 3.8. □
+Finally, in the remainder of the present§3, we introduce [cf. Deﬁnition
+3.10, below] and study [cf. Corollary 3.12, below] the notion of alog-full sub-
+group of smooth typeand show that, at least in the case ofonce-punctured
+elliptic curves, the condition that a log-full subgroup be ofsmooth typead-
+mits asimple group-theoretic characterization[cf. Proposition 3.14, Corol-
+lary 3.15, below].
+Deﬁnition 3.10.Let A ⊆Δn be a log-full subgroup[cf. the discussion at
+the beginning of the present§3; Deﬁnition 3.4] of Δn.F o ri ∈{1,...,n ∗}[cf.
+Remark 2.1.1], writepi :Δn ↠ Δ1 for the natural [outer] surjection induced
+by the generalized projection morphism [cf. Deﬁnition 2.1, (i); Remark
+3.5.1] Xlog
+n → Xlog determined by forgetting the marked points with labels
+∈{1,...,n ∗}\{i}. We shall say thatAis ofsmooth type(respectively,quasi-
+smooth type) if, for everyi ∈{1,...,n ∗} (respectively, everyi ∈{1,...,n }),
+the log-full subgroup [cf. Proposition 3.5; Remark 3.5.1]pi(A) ⊆Δ1 is a
+cuspidal edge-like subgroup[cf. Deﬁnition 3.1, (i); [CmbGC], Deﬁnition 1.1,
+(ii)] of Δ1. We shall refer to a log-full subgroup of Δn which is not of smooth
+type as a log-full subgroup ofsingular type.
+Remark 3.10.1. Observe that it follows immediately from Deﬁnition 3.10
+that if thereexists a log-full subgroup of Δn which is ofquasi-smooth type,
+then r> 0.
+Proposition 3.11. (Alternative characterization of log-full sub-
+groups of smooth type). Fix a clean chart P → k of Slog [cf., e.g.,
+[Hsh], Deﬁnition B.1, (ii)]. Write Tlog for the log scheme whose underly-
+ing scheme isSpec(k[[P]]), and whose log structure is deﬁned by the natural
+inclusion P↪ → k[[P]]; Slog ↪→ Tlog for the [strict] closed immersion de-
+termined by the maximal ideal ofk[[P]].L e tYlog → Tlog be a generically
+smooth stable log curve whose base-change viaSlog ↪→ Tlog is isomorphic to
+[hence may be identiﬁed with]Xlog → Slog; ηa geometric generic point of
+T; A a log-full subgroup ofΔn. Write Z for the hyperbolic curve overηde-
+termined by the interior ofYlog ×Tlog η; Zn for then-th conﬁguration space
+of Z. Here, recall that we have a naturalspecialization isomorphism
+π1(Zn)(l) ∼−→Δ(l)
+n
+[cf. the discussion preceding[CmbCusp], Deﬁnition 2.1, as well as[CbTpI],
+Remark 5.6.1]. Then the following conditions are equivalent:
+(i) A is ofquasi-smooth type.
+(ii) A is ofsmooth type.
+(iii) For eachl ∈Σ, the image ofA in Δ(l)
+n coincides with the image, via
+the above specialization isomorphism, ofsome log-full subgroup
+of π1(Zn)(l).
+
+50 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+Proof. First, we observe that the geometric generic ﬁber overηof then-th
+log conﬁguration spaceYlog
+n → Tlog associated to Ylog → Tlog satisﬁes the
+various assumptions imposed on “Xlog
+n ” at the beginning of the present§3.
+In particular, it makes sense to speak oflog-full subgroupsof π1(Zn)[ w h i c h
+may be naturally identiﬁed withπ1(Ylog
+n ×Tlog η)].
+Next, we observe that since thespecialization isomorphismin the state-
+ment of Proposition 3.11 is manifestly compatible with the variousgener-
+alized projection morphisms of co-length1 [cf. Deﬁnition 2.1, (i); Remark
+3.5.1]and cuspidal inertia subgroupsintheimagesofsuchgeneralizedprojec-
+tion morphisms, the implication (iii) =⇒ (ii) follows immediately by apply-
+ing Proposition 3.5 [in the case where we take “Δn”t ob eπ1(Zn)a n d“n′′”
+to be 1], together with Remark 3.5.1. Moreover, the implication (ii) =⇒ (i)
+is a formal consequence of Deﬁnition 3.10.
+Finally, we consider the implication (i) =⇒ (iii). Suppose that condi-
+tion (i) holds. Then it follows immediately from Deﬁnition 3.10 [cf. also
+[CmbGC], Proposition 1.2, (i)] that the point “xn” in Deﬁnition 3.4 that
+gives rise to A maps, via the variousprojection morphisms Xlog
+n → Xlog
+[of which there are preciselyn — cf. Deﬁnition 2.1, (i)], to acusp of Xlog.
+Thus, the validity of condition (iii) follows immediately from the easily ver-
+iﬁed fact that the deformationYlog
+n → Tlog becomes trivial when restricted
+to the intersection [i.e., ﬁber product] of the inverse images, via theprojec-
+tion morphismsYlog
+n → Ylog, of the reduced closed subscheme ofY [i.e., the
+underlying scheme ofYlog]d e ﬁ n e db yacusp of Ylog [cf. also the deﬁnition
+of thespecialization isomorphismin the statement of Proposition 3.11]. □
+Corollary 3.12. (Preservation of log-full subgroups of smooth
+type by FC-admissible outer automorphisms).Let A ⊆Δn be alog-
+full subgroup of smooth type, σan automorphism ofΔn.S e tnmin =3
+if (g,r) ̸=( 0,3); nmin =2 if (g,r)=( 0,3).T h e n :
+(i) If σis FC-admissible [cf. [CmbCusp], Deﬁnition 1.1, (ii)], then
+σ(A) ⊆Δn is alog-full subgroup of smooth type.
+(ii) If n ≥nmin,t h e nσ(A) ⊆Δn is a log-full subgroup of smooth
+type [i.e., even ifσis not assumed to be FC-admissible!].
+Proof. We begin by observing that, by applying thealternative character-
+ization (ii) ⇐⇒ (iii) of Proposition 3.11, we may assume without loss of
+generality thatXlog is asmooth log curve. Then assertion (i) follows imme-
+diately from the well-known structure ofﬁbers ofXlog
+n → Xlog
+n−1 over log-full
+points[cf. [CbTpI], Lemma 5.4, (i), (ii)] — which allows one to interpretlog-
+full subgroupsof Δn−1 as groups “Dehn(−)” ofproﬁnite Dehn-multi-twists
+[cf. [CbTpI], Proposition 5.6, (ii)] — by applyinginduction on n, together
+with [CbTpI], Theorem 5.14, (iii) [concerning thenormalizer of “Dehn(−)”];
+[CmbGC], Proposition 2.4, (v) [concerning thegraphic fullnessof suchnor-
+malizers]; [CmbGC], Corollary 2.7, (ii) [concerning thegraphicityimplied by
+this graphic fullness]. Finally, assertion (ii) follows formally from assertion
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 51
+(i), together with Remark 3.10.1; Corollary 2.6, (i); [CbTpII], Theorem A,
+(ii). □
+Remark 3.12.1.At ﬁrst glance, it may appear to be unclear whether or not
+Corollary 3.12, (ii), is applicable to situations such as the situation in the
+statement of Theorem D of the Introduction, i.e., situations involvingtwo
+distinct collections of data, labeled by◦and •. In fact, however, Corollary
+3.12, (ii), may be applied to such situations, by considering the following
+argument: The existence of the isomorphismαof Theorem D implies [cf.
+Theorem 2.5, (vi)] that the type “(g,r)” associated to the data labeled by
+□ ∈{ ◦,•}is independent of the choice of□. In particular, it follows from
+the [well-known!] connectedness of the moduli stack of hyperbolic curves of
+type (g,r)t h a tt h e r eexists at least oneisomorphism of proﬁnite groups
+α
+mod :Δ◦
+n
+∼→ Δ•
+n
+[i.e., arising from the classical theory of the ´etale fundamental group!] that
+maps log-full subgroups to log-full subgroups. On the other hand, the given
+isomorphism αdiﬀers fromαmod by composition with anautomorphism α◦
+of Δ◦
+n. Thus, the fact that α◦, hence also α, maps log-full subgroups to
+log-full subgroups follows from adirect applicationof Corollary 3.12, (ii).
+Remark 3.12.2. In some sense, a more“conceptually satisfying” approach
+[i.e., by comparison to the approach discussed in Remark 3.12.1] to seeing
+that Corollary 3.12, (ii), is applicable to situations such as the situation in
+the statement of Theorem D of the Introduction may be obtained simply by
+observing that the variousreconstruction algorithmsof [CbTpI], [CbTpII],
+and [CmbGC] that are applied in the proof of Corollary 3.12, (ii), to show
+the preservation of log-full subgroups by automorphismsare, in fact, entirely
+functorial and group-theoretic in nature [i.e., require asinput dataonly
+the abstract proﬁnite groupΔ
+n]. We leave the routine details to the inter-
+ested reader.
+Lemma 3.13. (Group-theoretic characterization of edge-like sub-
+groups of smooth type for once-punctured elliptic curves).Suppose
+that (g,r)=( 1,1), and thatX is singular.L e tA be an edge-like sub-
+group [cf. Deﬁnition 3.1, (i); [CmbGC], Deﬁnition 1.1, (ii)] — i.e., a
+log-full subgroup —o f Δ1
+∼→ ΠG. Then the following conditions are
+equivalent:
+(i) A is acuspidal edge-like subgroup [cf. Deﬁnition 3.1,(i); [CmbGC],
+Deﬁnition 1.1, (ii)]o fΠG.
+(ii) The image ofA via the natural surjectionΠG ↠ Πab
+G is trivial.
+Proof. Lemma 3.13 follows immediately from the following well-knownfact:
+If A is acuspidal (respectively, nodal) edge-like subgroup of
+ΠG, then the natural surjection ΠG ↠ Πab
+G maps A to {0}
+(respectively, A isomorphically onto its [nonzero] image).
+
+52 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+In the following, we give a brief sketch of a proof of this well-knownfact,f o r
+the convenience of the reader. First, observe that we may assume without
+loss of generality that Σ ={l}.W r i t ep
+G :Π G ↠ Πab
+G for the natural
+surjection. One veriﬁes easily thatpG maps cuspidal edge-like subgroups of
+ΠG to {0} [cf. the specialization isomorphismreviewed in the statement of
+Proposition 3.11; the well-known structure theory of surface groups]. Thus,
+to complete the veriﬁcation of thefact of the above display, it remains to
+considerthecasewhere Aisnodal. Inthiscase, letusverifythat A
+∼→ pG(A).
+Suppose thatpG(A)i sﬁnite, hencetrivial[cf. thespecialization isomorphism
+reviewed in the statement of Proposition 3.11; Proposition 2.2, (ii)]. WriteG
+for the underlying semi-graph ofG.L e tΠv ⊆ΠG be averticial subgroup [cf.
+[CmbGC], Deﬁnition 1.1, (ii)] associated to the unique vertex ofG.T h e ni t
+follows immediately from the well-known structure theory of surface groups
+[i.e., in this case, the maximal pro-l quotient of the ´etale fundamental group
+o ft h ea ﬃ n el i n e ! ] t h a tp
+G(Πv)= {0}. Thus, we conclude that the rank
+two freeZl-module Πab
+G [cf. the specialization isomorphismr e v i e w e di nt h e
+statement of Proposition 3.11; Proposition 2.2, (ii)] is isomorphic to the
+abelianization of the pro-l completion of thetopological fundamental group
+of G, i.e.,Zl [cf. [CmbGC], Remark 1.1.4], a contradiction. □
+Proposition 3.14. (Group-theoretic characterization of log-full
+subgroups of smooth type). Suppose that(g,r)=( 1,1), and thatX is
+singular.L e tA ⊆Δn be a log-full subgroup ofΔn. Then the following
+conditions are equivalent:
+(i) A is ofsmooth type [cf. Deﬁnition 3.10].
+(ii) The image ofA via the natural surjectionΔn ↠ Δab
+n is trivial.
+Proof. Proposition 3.14 follows immediately, in light of Proposition 2.2, (ii),
+from Lemma 3.13. □
+Corollary 3.15. (Group-theoretic preservation of log-full sub-
+groups of smooth type). Let l be a prime number; n a positive inte-
+ger; Σa set of prime numbers which is either equal to{l} or Primes.F o r
+□ ∈{ ◦,•},l e tSlog
+□ be an fs log scheme whose underlying scheme is the spec-
+trum of an algebraically closed ﬁeld of characteristic/∈Σ; Xlog
+□ as t a b l el o g
+curve of type(1,1) over Slog
+□ such thatX□ is singular; (Xlog
+□ )n the n-th log
+conﬁguration space ofXlog
+□ ; Δ□
+n the maximal pro-Σquotient of the kernel
+of the natural [outer] surjectionπ1((Xlog
+□ )n) ↠ π1(Slog
+□ ); α:Δ◦
+n
+∼→ Δ•
+n an
+isomorphism of proﬁnite groups satisfying the following condition:
+a closed subgroupA ⊆Δ◦
+n of Δ◦
+n is log-full if and only if
+α(A) ⊆Δ•
+n is log-full [cf. Deﬁnition 3.4].
+Then a log-full subgroupA ⊆Δ◦
+n of Δ◦
+n is of smooth type (respectively,
+singular type)i fa n do n l yi fα(A) ⊆Δ•
+n is ofsmooth type(respectively,
+singular type) [cf. Deﬁnition 3.10].
+
+NUMERICAL INVARIANTS AND DISTINGUISHED SUBGROUPS 53
+Proof. Corollary 3.15 follows immediately from Proposition 3.14. □
+References
+[Belyi] G. V. Belyi, On Galois extensions of a maximal cyclotomic ﬁeld,Math. USSR-Izv.
+14 (1980), pp. 247-256.
+[Bbk] N. Bourbaki,Algebra II. Chapters 4-7.Translated from the 1981 French edition by
+P. M. Cohn and J. Howie. Reprint of the 1990 English edition. Elements of Mathe-
+matics (Berlin), Springer (2003).
+[Higashi] K. Higashiyama, Reconstruction of inertia groups associated to log divisors from
+a conﬁguration space group equipped with its collection of log-full subgroups,Math.
+J. Okayama Univ.61 (2019), pp. 37-73.
+[Hsh] Y. Hoshi, The Exactness of the Log Homotopy Sequence,Hiroshima Math. J. 39
+(2009), pp. 61-121.
+[NodNon] Y.HoshiandS.Mochizuki, Onthecombinatorialanabeliangeometryofnodally
+nondegenerate outer representations outer representations,Hiroshima Math. J. 41
+(2011), pp. 275-342.
+[CbTpI] Y. Hoshi and S. Mochizuki, Topics surrounding the combinatorial anabelian
+geometry of hyperbolic curves I: Inertia groups and proﬁnite Dehn twists,Galois-
+Teichm¨uller Theory and Arithmetic Geometry, Adv. Stud. Pure Math. 63,M a t h .
+Soc. Japan (2012), pp. 659-811.
+[CbTpII] Y. Hoshi and S. Mochizuki, Topics surrounding the combinatorial anabelian
+geometry of hyperbolic curves II — tripods and combinatorial cuspidalization, Lecture
+Notes in Mathematics 2299, Springer (2022).
+[IN] Y. Ihara and H. Nakamura, Some illustrative examples for anabelian geometry in
+high dimensions,Geometric Galois Actions; 1. Around Grothendieck’s Esquisse d’un
+Programme, London Math. Soc. Lect. Note Ser . 242, Cambridge Univ. Press (1997),
+pp. 127-138.
+[KF] F. Kato, Log Smooth Deformation and Moduli of Log Smooth Curves,Internat. J.
+Math. 11 (2000), pp. 215-232.
+[KK1] K. Kato, Logarithmic Structures of Fontaine-Illusie,Algebraic analysis, geometry,
+and number theory(Baltimore, MD, 1988), Johns Hopkins Univ. Press (1989), pp.
+191-224.
+[KK2] K. Kato, Toric Singularities,A m e r .J .M a t h .116 (1994), pp. 1073-1099.
+[LocAn] S. Mochizuki, The local pro-p anabelian geometry of curves,Invent. Math. 138
+(1999), pp. 319-423.
+[CanLift] S. Mochizuki, The Absolute Anabelian Geometry of Canonical Curves,Kazuya
+Kato’s ﬁftieth birthday, Doc. Math. 2003, Extra Vol. , pp. 609-640.
+[SemiAn] S. Mochizuki, Semi-graphs of anabelioids,Publ. Res. Inst. Math. Sci.42 (2006),
+pp. 221-322.
+[CmbGC] S. Mochizuki, A combinatorial version of the Grothendieck conjecture,Tohoku
+Math J. 59 (2007), pp. 455-479.
+[CmbCusp] S. Mochizuki, On the Combinatorial Cuspidalization of Hyperbolic Curves,
+Osaka J. Math.47 (2010), pp. 651-715.
+[AbsTopI] S. Mochizuki, Topics in Absolute Anabelian Geometry I: Generalities,J. Math.
+Sci. Univ. Tokyo19 (2012), pp. 139-242.
+[Pano] S. Mochizuki, A Panoramic Overview of Inter-universal Teichm¨uller Theory,Alge-
+braic number theory and related topics 2012, RIMS K¯oky¯uroku Bessatsu B51,R e s .
+Inst. Math. Sci. (RIMS), Kyoto (2014), pp. 301-345.
+[AbsTopIII] S. Mochizuki, Topics in Absolute Anabelian Geometry III: Global Recon-
+struction Algorithms,J. Math. Sci. Univ. Tokyo22 (2015), pp. 939-1156.
+
+54 YUICHIRO HOSHI, ARATA MINAMIDE, AND SHINICHI MOCHIZUKI
+[MT] S. Mochizuki and A. Tamagawa, The Algebraic and Anabelian Geometry of Con-
+ﬁguration Spaces, Hokkaido Math. J.37 (2008), pp. 75-131.
+[Mumf] D. Mumford, Abelian Varieties, Oxford Univ. Press (1974).
+[Nk] H. Nakamura, Galois rigidity of pure sphere braid groups and proﬁnite calculus,J.
+Math. Sci. Univ. Tokyo1 (1994), pp. 71-136.
+[NT] H. Nakamura and N. Takao, Galois rigidity of pro-l pure braid groups of algebraic
+curves, Trans. Amer. Math. Soc.350 (1998), pp. 1079-1102.
+[NTU] H. Nakamura, N. Takao, and R. Ueno, Some stability properties of Teichm¨uller
+modular function ﬁelds with pro-l weight structures, Math. Ann. 302 (1995), pp.
+197-213.
+[NS] N. Nikolov and D. Segal, Finite index subgroups in proﬁnite groups,C. R. Math.
+Acad. Sci. Paris337 (2003), pp. 303-308.
+[RZ] L. Ribes and P. Zalesskii,Proﬁnite Groups, Second Edition.Ergebnisse der Mathe-
+matik und ihrer Grenzgebiete. 3. Folge. A Series of Modern Surveys in Mathematics
+40, Springer (2010).
+[Serre] J. -P. Serre,Abelian l-adic Representations and Elliptic Curves,W .A .B e n j a m i n ,
+Inc. (1968).
+[SGA1] A. Grothendieck et al.,Revˆetments ´etales et groupe fondamental, Lecture Notes
+in Mathematics 224, Springer (1971).
+[Tama] A. Tamagawa, On the Fundamental Groups of Curves over Algebraically Closed
+F i e l do fC h a r a c t e r i s t i c> 0, Internat. Math. Res. Notices16 (1999), pp. 853-873.
+(Yuichiro Hoshi) Research Institute for Mathematical Sciences, Kyoto Uni-
+versity, Kyoto 606-8502, JAPAN
+E-mail address: yuichiro@kurims.kyoto-u.ac.jp
+(Arata Minamide)Research Institute for Mathematical Sciences, Kyoto Uni-
+versity, Kyoto 606-8502, JAPAN
+E-mail address: minamide@kurims.kyoto-u.ac.jp
+(Shinichi Mochizuki) Research Institute for Mathematical Sciences, Kyoto
+University, Kyoto 606-8502, JAPAN
+E-mail address: motizuki@kurims.kyoto-u.ac.jp

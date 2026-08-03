@@ -1,0 +1,306 @@
+INTER-UNIVERSAL TEICHM ¨ULLER THEOR Y AS
+AN ANABELIAN GATEW A Y TO DIOPHANTINE
+GEOMETR Y AND ANALYTIC NUMBER THEORY
+Shinichi Mochizuki (RIMS, Kyoto University)
+March 2023
+https://www.kurims.kyoto-u.ac.jp/~motizuki/IUT%20as%20an%20
+Anabelian%20Gateway.pdf
+§1. Overview via a famous quote of Poincar´e
+§2. Galois groups as abstract groups: the example of theN-th power map
+§3. Analogy with the projective line/Riemann sphere
+§4. Brief preview of the Galois-orbit version of IUT
+
+2 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+§1. Overview via a famous quote of Poincar´ e
+(cf. [Alien]; [EssLgc],§1.5; [EssLgc], Examples 2.4.7, 2.4.8, 3.3.2;
+[ClsIUT], §4)
+· In this talk, we give anoverview of various aspects of IUT, many
+of which may be regarded asstriking examplesof the famous
+quote ofPoincar´e to the eﬀect that
+“mathematics is the art of giving the same name to diﬀerent things”.
+— which was apparentlyoriginally motivatedby various mathe-
+matical observations on the part of Poincar´e concerning certain
+remarkable similarities betw’ntransformation group symmetries
+of modular functions such astheta functions, on the one hand,
+and symmetry groupsof thehyperbolic geometryof theupper
+half-plane, on the other — all of which areclosely related to IUT!
+· Here, we note that there arethree waysin which this quote of
+Poincar´e is related toIUT:
+· the original motivationof Poincar´e( m e n t i o n e da b o v e ) ,
+· the key IUT notions ofcoricity/multiradiality(cf. §2, §3),
+· new applicationsof theGalois-orbit version of IUT(cf. §4).
+· One important theme: it is possible to acquire asurvey-level
+understanding of IUT using only a knowledge of such elementary
+topics as
+· the elem. notions ofrings/ﬁelds/groups/monoids (cf. §2),
+· the elem. geom. of theproj. line/Riemann sphere(cf. §3).
+· A more detailed exposition of IUT may be found in
+· the survey texts[Alien], [EssLgc], as well as in
+· the videos/slides available at the following URLs:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/ExpHoriz
+IUT21/WS3/ExpHorizIUT21-InvitationIUT-notes.html
+https://www.kurims.kyoto-u.ac.jp/~motizuki/ExpHoriz
+IUT21/WS4/ExpHorizIUT21-IUTSummit-notes.html
+
+IUT AS AN ANABELIAN GATEW AY 3
+§2. Galois groups as abstract groups: the example of the N -th
+power map
+(cf. [EssLgc], Example 2.4.8; [EssLgc],§3.2, §3.8)
+· Let R be anintegral domain(e.g., Z ⊆Q) equipped with the
+action of agroup G,( Z ∋) N ≥2. For simplicity, assume that
+N =1+ ··· +1 ̸=0 ∈R; R has no nontrivial N-th roots of unity.
+Write R⊿ ⊆R for themultiplicative monoid R\{0}.T h e n
+let us observe that theN-th power mapon R⊿ determines an
+isomorphism of multiplicative monoidsequipped with actions
+by G
+G ↷ R⊿ ∼
+→ (R⊿)N (⊆R⊿) ↶ G
+that doesnot arisefrom aring homomorphism, i.e., it is clearly
+not compatiblewith addition (cf. our assumption onN!).
+· Let †R, ‡R be two distinct copiesof the integral domainR,
+equipped with respective actions bytwo distinct copies†G, ‡G
+of the groupG. We shall use similar notation for objects with
+labels “†”, “‡” to the previously introduced notation. Then
+o n em a yu s et h eisomorphism of multiplicative monoidsarising
+from the N-th power mapdiscussed above toglue together
+†G ↷ †R ⊇(†R⊿)N ∼
+← ‡R⊿ ⊆‡R ↶ ‡G
+the ring †R to thering ‡R along themultiplicative monoid
+(†R×)N ∼
+← ‡R×. This gluing iscompatiblewith the respective
+actions of†G, ‡G relative to the isomorphism†G
+∼
+→ ‡G given by
+forgetting the labels “†”, “‡”, but, since theN-th power map is
+not compatiblewith addition (!), this isomorphism†G
+∼
+→ ‡G may
+be regarded either as an isomorphism of (“coric”, i.e.,invariant
+with respect to theN-th power map)abstract groups(cf. the
+notion of“inter-universality”, as discussed in [EssLgc],§3.2,
+§3.8!) or as an isomorphism of groups equipped with actions on
+certain multiplicative monoids, butnot as an isomorphism of
+(“Galois”—c f .t h einner automorphism indeterminaciesof
+SGA1!) groups equipped with actions onrings/ﬁelds.
+
+4 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+· Theproblemof describing (certain portions of the) ring structure
+of †R in terms of thering structureof ‡R — in a fashion that
+is compatiblewith thegluing and via asingle algorithm that may
+be applied to thecommon (cf. logical AND∧!) glued datato re-
+construct simultaneously(certain portions of) the ring structures
+of both†R and ‡R, up to suitable relatively mildindeterminacies
+(cf. the theory ofcrystals!) — seems (at ﬁrst glance/in general)
+to behopelessly intractable(cf. the case ofZ)!
+One well-known elementary example: whenN = p, working
+modulo p(cf. indeterminacies, analogy withcrystals!), where
+there is acommon ring structurethat iscompatiblewith the
+p-th power map!
+This is precisely what isachieved in IUT(cf. quote ofPoincar´e!)
+by means of themultiradial algorithm for theΘ-pilot via
+· anabelian geometry(cf. the abstract groups†G, ‡G!);
+· the p-adic/complex logarithm, theta functions;
+· Kummer theory, to relateFrob.-/´etale-like versions of objects.
+· Main point:
+Themultiplicative monoidandabstract groupstructures (butnot
+the ring structures!) arecommon (cf. “logical AND∧!”)t o†, ‡.
+On the other hand, once onedeletes the labels “†”, “‡” to secure
+a “common R”, one obtains ameaningless situation, where the
+common glued data may be related via “†”OR “∨”via “‡”t o
+the common R, butnot simultaneouslyto both!
+· When R = Z (or, in fact, more generally, thering of integers
+“OF”o fan u m b e rﬁ e l dF — cf. the multiplicativenorm map
+NF/Q : F → Q), one may consider the“height”
+log(|x|) ∈R
+for 0̸= x ∈Z. Then theN-th power mapof (i), (ii) corresponds,
+after passing toheights,t omultiplying real numbers byN;t h e
+multiradial algorithmcorresponds to saying that the height is
+unaﬀected (up to a mild error term!)by multiplication by N,
+hence that theheight is bounded!
+
+IUT AS AN ANABELIAN GATEW AY 5
+§3. Analogy with the projective line/Riemann sphere
+(cf. [EssLgc], Example 2.4.7; [Alien],§3.1; [EssLgc],§3.5, §3.10)
+· Let k be aﬁeld (in fact, could be taken to be an arbitrary ring),
+R a k-algebra. Denoteunits of a ring by a superscript “×”. Write
+A1 for theaﬃne lineSpec(k[T]) over k,
+Gm for the open subscheme Spec(k[T,T −1]) ofA1 obtained by
+removing the origin.
+Recall thatA1 is equipped with a well-known natural structure
+of ring schemeover k, whileGm is equipped with a well-known
+natural structure of(multiplicative) group schemeover k.M o r e -
+over, we observe that the standard coordinateT on A1 and Gm
+determines natural bijections:
+A1(R)
+∼
+→ R, Gm(R)
+∼
+→ R×
+· Write †A1, ‡A1 for the k-ring schemesgiven bycopies of A1
+equipped withlabels “†”, “‡”. Observe that there exists a
+unique isomorphismof k-ring schemes†A1 ∼
+→ ‡A1;m o r e o v e r ,
+there exists aunique isomorphismof k-group schemes
+(−)−1 : †Gm
+∼
+→ ‡Gm
+that maps†T ↦→ ‡T−1. Note that (−)−1 does not extendto an
+isomorphism †A1 ∼
+→ ‡A1 and is clearlynot compatiblewith the
+k-ring scheme structuresof †A1 (⊇†Gm), ‡A1 (⊇‡Gm).
+
+6 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+· The standard constructionof theprojective lineP1 may be under-
+stood as the result ofgluing †A1 to ‡A1 along the isomorphism
+†A1 ⊇ †Gm
+(−)−1
+−→‡Gm ⊆ ‡A1
+— i.e., at the level ofR-rational points
+†R ⊇ †R× (−)−1
+−→‡R× ⊆ ‡R
+—w h e r e□R
+def
+= □A1(R), □R× def
+= □Gm(R), for □ ∈{ †,‡} (cf.
+the gluing situation discussed in§2, where “(−)−1” corresponds
+to “(−)N”!). Thus,relative to this gluing, we observe that there
+existsa single rational functiononthecopyof“ Gm”thatappears
+in the gluing that issimultaneouslyequal to the rational function
+†T on †A1 AND [cf. “∧”!] to the rational function‡T−1 on ‡A1.
+· Summary:
+The standard construction of theprojective linemay be regarded
+asconsistingofa gluingoftwo ring schemesalongan isomorphism
+of multiplicative group schemesthat isnot compatiblewith the
+ring schemestructures on either side of the gluing.
+Finally, we observe that if, in the gluing under discussion, one
+arbitrarily deletesthedistinct labels“†”, “‡”(e.g., onthegrounds
+that both ring schemes represent “THE” structure sheaf “OX”
+of a k-scheme X!), then the resulting“gluing without labels”
+a m o u n t st oag l u i n go fasingle copyof A1 to itself that maps the
+standard coordinate T on A1 (regarded, say, as a rational func-
+tion onA1)t oT−1. That is to say, such adeletion of labels(even
+when restricted to the (abstractly isomorphic) multiplicative
+monoids †T Z, ‡T Z!) immediately results in acontradiction(i.e.,
+since T ̸= T−1!), unless one passes to some sort ofquotient of
+A1. On the other hand, passing to such a quotient amounts,
+from a foundational/logical point of view, to the introduction of
+some sort ofindeterminacy, i.e., to the consideration of some
+sort ofcollection of possibilities[cf. “∨”!].
+
+IUT AS AN ANABELIAN GATEW AY 7
+· When k = C (i.e., thecomplex number ﬁeld), one may think of
+the projective lineP1 as theRiemann sphere S2 equipped with
+the Fubini-Study metricand of the gluing under discussion as
+the gluing, along theequator E,o ft h enorthern hemisphere H+
+to thesouthern hemisphere H−. Then the discussion above of
+the standard coordinates “†T”, “‡T” translates into the following
+(at ﬁrst glance,self-contradictory!) phenomenon:
+an oriented ﬂowalong theequator — which may be thought
+of physically as a sort ofeast-to-west wind current—a p p e a r s
+simultaneously to be ﬂowing in theclockwise direction, from
+the point of view ofH+ ⊆S2, AND in thecounterclockwise
+direction, from the point of view ofH− ⊆S2.
+In particular, if onearbitrarily deletes the labels“+”, “−”a n d
+identiﬁes H− with H+, then one does indeed literally obtain a
+contradiction. On the other hand, one may relateH− to H+
+(not by such an arbitrary deletion of labels (!), but rather) by
+applying
+the metric/geodesic geometry ofS2 — i.e., by considering
+the geodesic ﬂowalong great circles/lines of longitude—t o
+represent,u pt oarelatively mild distortion,t h ee n t i r e t yo fS2,
+i.e., includingH− ⊆S2,a sas o r to fdeformation/displacement
+of H+ (cf. the point of view ofcartography!).
+It is precisely this metric/geodesic approach that corresponds to
+the anabelian geom.-based multiradial algorithm for theΘ-pilot
+in IUT (cf. the analogy discussed in [Alien],§3.1, (iv), (v), as
+well as in [EssLgc],§3.5, §3.10, betweenmultiradiality and
+connections/parallel transport/crystals!).
+northern hemisphereH+
+——— equator E ———
+southern hemisphereH−
+
+
+8 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+§4. Brief preview of the Galois-orbit version of IUT
+(cf. “Expanding Horizons”videos/slides cited in§1)
+· New applications (work in progress!) of
+Galois-orbit version of IUT (GalOrbIUT):
+· the (local-global)Section Conjecture, i.e., thegeometricity of
+any Galois section (of the arithmetic fundamental group of a
+hyperbolic curve s.t. ...) over a number ﬁeld that is assumed
+to be geometric at every nonarchimedean prime;
+· nonexistence of Siegel zeroes
+of DirichletL-functions associated
+to imaginary quadratic number ﬁelds (i.e., by applying the work
+of Colmez/Granville-Stark/T´afula);
+· numerically strongerversion ofabc/Szpiroinequalities.
+· That is to say, we obtain threea priori diﬀerentapplications to
+· anabelian geometry(local-global Section Conjecture),
+· analytic number theory(nonexistence of Siegel zeroes),
+· Diophantine geometry(abc/Szpiro inequalities)
+—a striking exampleof Poincar´e’s quote, i.e., all three are essen-
+tially thesame mathematical phenomenonof bounding heights,
+i.e., bounding “local denominators”!
+· Here, thelocal-global Section Conjectureapplication is also
+noteworthy in that
+· it exhibits IUT as “anabelian geometryapplied to obtain
+more anabelian geometry!” (less psychologically/intuitively
+surprising than the other two applications!);
+· it istechnically the most diﬃcult/essential(!) of the three, i.e.,
+to the extent that theother twoapplications may be thought
+of, to a substantial extent, as being“inessential by-products”;
+· the historical point of view(cf., e.g., of Grothendieck’s famous
+“letter to Faltings”) suggests (without any proof!)t h a tt h e
+Section Conjecture might imply results in Diophantine geo-
+metry (such as the Mordell Conjecture).
+
+IUT AS AN ANABELIAN GATEW AY 9
+References
+[IUAni1] E. Farcot, I. Fesenko, S. Mochizuki,The Multiradial Representation of
+Inter-universal Teichm¨uller Theory, animation available at the follow-
+ing URL:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/IUT-
+animation-Thm-A-black.wmv
+[IUAni2] E. Farcot, I. Fesenko, S. Mochizuki,Computation of the log-volume of
+the q-pilot via the multiradial representation, animation available at the
+following URL:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/2020-
+01%20Computation%20of%20q-pilot%20(animation).mp4
+[IUTchI] S. Mochizuki, Inter-universal Teichm¨uller Theory I: Construction of
+Hodge Theaters,Publ. Res. Inst. Math. Sci.57 (2021), pp. 3-207.
+[IUTchII] S. Mochizuki, Inter-universal Teichm¨uller Theory II: Hodge-Arakelov-
+theoreticEvaluation, Publ. Res. Inst. Math. Sci.57(2021),pp.209-401.
+[IUTchIII] S. Mochizuki, Inter-universal Teichm¨uller Theory III: Canonical Split-
+tings of the Log-theta-lattice,Publ. Res. Inst. Math. Sci. 57 (2021),
+pp. 403-626.
+[IUTchIV] S. Mochizuki,Inter-universalTeichm¨ullerTheory IV: Log-volumeCom-
+putations and Set-theoretic Foundations,Publ. Res. Inst. Math. Sci.57
+(2021), pp. 627-723.
+[ExpEst] S. Mochizuki, I. Fesenko,Y. Hoshi, A. Minamide, W. Porowski,Explicit
+Estimates in Inter-universal Teichm¨uller Theory, Kodai Math. J. 45
+(2022), pp. 175-236.
+[Pano] S. Mochizuki, A Panoramic Overview of Inter-universal Teichm¨uller
+Theory,Algebraic number theory and related topics 2012, RIMS K¯oky¯u-
+roku Bessatsu B51, Res. Inst. Math. Sci. (RIMS), Kyoto (2014), pp.
+301-345.
+
+10 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+[Alien] S. Mochizuki, The Mathematics of Mutually Alien Copies: from Gauss-
+ian Integrals to Inter-universal Teichm¨uller Theory,Inter-universal Te-
+ichmuller Theory Summit 2016, RIMS K¯oky¯uroku Bessatsu B84, Res.
+Inst. Math. Sci. (RIMS), Kyoto (2021), pp. 23-192; available at the
+following URL:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/Alien%20Copies,%20
+Gaussians,%20and%20Inter-universal%20Teichmuller%20Theory.pdf
+[EssLgc] S.Mochizuki, On the essential logical structure of inter-universal Teich-
+m¨uller theory in terms of logical AND “∧”/logical OR “∨” relations:
+Report on the occasion of the publication of the four main papers on
+inter-universal Teichm¨uller theory, preprint available at the following
+URL:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/Essential%20Logical
+%20Structure%20of%20Inter-universal%20Teichmuller%20Theory.pdf
+[ClsIUT] S. Mochizuki,Classical roots of inter-universal Teichm¨uller theory, lec-
+ture notes for Berkeley Colloquium talk given in November 2020, avail-
+able at the following URL:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/2020-11%20Classical
+%20roots%20of%20IUT.pdf

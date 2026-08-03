@@ -1,0 +1,2282 @@
+REPORT ON DISCUSSIONS, HELD DURING THE
+PERIOD MARCH 15 – 20, 2018, CONCERNING
+INTER-UNIVERSAL TEICHM¨ULLER THEORY (IUTCH)
+Shinichi Mochizuki
+February 2019
+§1. The present document is a report on discussions held during the period March
+15 – 20, 2018, concerninginter-universal Teichm¨uller theory (IUTch). These
+discussions were held in a seminar room on the ﬁfth ﬂoor of Maskawa Hall, Kyoto
+University, according to the following schedule:
+· March 15 (Thurs.): 2PM∼between 5PM and 6PM,
+· March 16 (Fri.): 10AM∼between 5PM and 6PM,
+· March 17 (Sat.): 10AM∼between 5PM and 6PM,
+· March 19 (Mon.): 10AM∼between 5PM and 6PM,
+· March 20 (Tues.): 10AM∼between 5PM and 6PM.
+(On the days when the discussions began at 10AM, there was a lunch break for
+one and a half to two hours.) Participation in these discussions was restricted
+to the following mathematicians (listed in order of age):Peter Scholze, Yuichiro
+Hoshi, Jakob Stix,a n dShinichi Mochizuki. All four mathematicians participated
+in all of the sessions listed above (except for Hoshi, who was absent on March
+16). The existence of these discussions was kept conﬁdential until the conclusion
+of the ﬁnal session. From an organizational point of view, the discussions took the
+form of “negotations” between two “teams”: one team (HM), consisting ofHoshi
+and Mochizuki, played the role of explaining various aspects of IUTch; the other
+team (SS), consisting of Scholze and Stix, played the role of challenging various
+aspects of the explanations of HM. Most of the sessions were conducted in the
+following format: Mochizuki would stand and explain various aspects of IUTch,
+often supplementing oral explanations by writing on whiteboards using markers in
+various colors; the other participants remained seated, for the most part, but would,
+at times, make questions or comments or brieﬂy stand to write on the whiteboards.
+§2. Scholze has, for some time, taken a somewhat negative position concerning
+IUTch, and his position, and indeed the position of SS, remained negative even
+after the March discussions. My own conclusion, and indeed the conclusion of HM,
+after engaging in the March discussions, is as follows:
+The negative position of SS is a consequence of certainfundamental
+misunderstandings (to be explained in more detail in the remainder of
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+the present report — cf. §17 for a brief summary) on the part of SS
+concerning IUTch, and, in particular, doesnot imply the existence of
+any ﬂaws whatsoever in IUTch.
+The essential gist of these misunderstandings — many of which center around
+erroneous attemptsto “simplify”IUTeich — may be summarizedvery roughly
+as follows:
+(Smm) Suppose that A and B are positive real numbers, which aredeﬁned so as
+to satisfy therelation
+−2B = −A
+(which corresponds to the Θ-link). One then proves atheorem
+−2B ≤−2A+1
+(which corresponds to the multiradial representation of [IUTchIII],
+Theorem 3.11). This theorem, together with the abovedeﬁning relation,
+implies abound onA
+−A ≤−2A+1, i.e., A ≤ 1
+(which corresponds to [IUTchIII], Corollary 3.12). From the point of view
+of this (very rough!) summary of IUTch, the misunderstandings of SS
+amount to the assertion that
+the theory remainsessentially unaﬀected even if one takesA = B,
+which implies (in light of the abovedeﬁning relation)t h a tA = B =0 ,
+in contradiction to the initial assumption thatA and B are positive real
+numbers. In fact, however, the essential content (i.e., main results) of
+IUTch fail(s) to hold under the assumption “A = B”; moreover, the
+“contradiction”A = B = 0 is nothing more than a superﬁcial consequence
+of theextraneous assumption“A = B” and, in particular, doesnot imply
+the existence of anyﬂaws whatsoever in IUTch. (We refer to (SSIdEx),
+(ModEll), (HstMod) below for a “slightly less rough” explanation of the
+essential logical structureof an issue that is closely related to theextrane-
+ous assumption“A = B”i nt e r m so f
+· complex structures on real vector spaces
+or, alternatively (and essentially equivalently), in terms of the well-known
+classical theory of
+· moduli of complex elliptic curves.
+Additional comparisons with well-known classical topics such as
+· the invariance of heights of elliptic curves over number ﬁelds
+with respect to isogeny,
+· Grothendieck’s deﬁnition of the notion of a connection,a n d
+· the diﬀerential geometry surroundingSL2(R)
+may be found in§16.)
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 3
+Indeed, in the present context, it is perhaps useful to recall the following well-known
+generalities concerning logical reasoning:
+(GLR1) Given any mathematical argument,i ti sa l w a y se a s yt od e r i v eacon-
+tradiction by arbitrarilyidentifyingmathematical objects that must be
+regarded asdistinct in the situation discussed in the argument. On the
+other hand, this does not,b ya n ym e a n s ,imply the existence of any
+logical ﬂaws in the original mathematical argument!
+(GLR2) Put another way, the correct interpretation of the contradiction
+obtained in (GLR1) is —not the conclusion that theoriginal argument,
+in which thearbitrary identiﬁcationsof (GLR1) were not in force, haslog-
+ical ﬂaws(!), but rather — the conclusion that the contradiction obtained
+in (GLR1) implies that the distinct mathematical objects that were ar-
+bitrarily identiﬁed areindeed distinct, i.e., must be treated (in order, for
+instance, to arrive at an accurate understanding of the original argument!)
+as distinct mathematical objects!
+It is most unfortunate indeed that the March discussions were insuﬃcient from
+the point of view of overcoming these misunderstandings. On the other hand, my
+own experience over the past six years with regard to exposing IUTch to other
+mathematicians is that this sort ofshort period(roughly a week) isnever suﬃcient,
+i.e., that
+substantial progress in understanding IUTch always requires discussions
+over anextended period of time, typically on theorder of months.
+Indeed, the issue of lack of time became especially conspicuous during the afternoon
+of the ﬁnal day of discussions. Typically, short periods of interaction center around
+reacting in real timeand do not leave participants the time toreﬂect deeply on
+various aspects of the mathematics under discussion. This sort ofdeep reﬂection,
+which is absolutely necessary to achieve fundamental progress in understanding,
+can only occur in situations where the participants are aﬀorded the opportunity
+to think at their leisure and forget about any time or deadline factors. (In this
+context, it is perhaps of interest to note that Scholze contacted me in May 2015 by
+e-mail concerning a question he had regarding the non-commutativity of the log-
+theta-lattice in IUTch (i.e., in eﬀect, “(Ind3)”). This contact resulted in a short
+series of e-mail exchanges in May 2015, in which I addressed his (somewhat vaguely
+worded) question as best I could, but this did not satisfy him at the time. On the
+other hand, the March 2018 discussions centered aroundquite diﬀerent issues,s u c h
+as (Ind1,2), as will be described in detail below.)
+§3. On the other hand, it seems that the March discussions may in fact be regarded
+as constituting substantial progress in the following sense. Prior to the March
+discussions, (at least to my knowledge)
+negative positions concerning IUTch were always discussed in highlynon-
+mathematical terms, i.e., by focusing on various aspects of the situation
+that were quite far removed from any sort ofdetailed, well-deﬁned,
+mathematically substantive content.
+
+4 SHINICHI MOCHIZUKI
+That is to say, although it is most regrettable that it was not possible to resolve the
+fundamental misunderstandings of SS during the March discussions, nevertheless,
+the March discussions were highly meaningful in that, to my knowledge,
+they constitute theﬁrst detailed, well-deﬁned, mathematically sub-
+stantivediscussions concerningnegative positionswith regard to IUTch.
+Put another way, as a result of theabsence, during the past six years, of such
+detailed, well-deﬁned, mathematically substantive discussions concerning negative
+positions with regard to IUTch, the highly non-mathematical tone that has
+appeared, up till now, in statements by mathematicians critical of IUTch has had
+the eﬀect of giving the impression that
+any existing criticism of IUTch is entirely devoid of any substan-
+tive mathematical content, i.e., based on entirely non-mathematical
+considerations.
+On the other hand, as I have emphasized on numerous occasions throughout the
+past six years (cf., e.g., [Rpt2014], (7); [QC2016], (4), (5)),
+the only way to make meaningful, substantive progress with regard to dif-
+ferences of opinion concerning IUTch is by means of discussions concern-
+ing detailed, well-deﬁned, mathematically substantive content.
+From this point of view, it seems most desirable that the mathematical content
+discussed in the present report be made available forfurther discussion by all in-
+terested mathematicians(i.e., not just the participants in the March discussions!),
+in the hope that the present report might play the role of serving to stimulate fur-
+ther detailed, well-deﬁned, mathematically substantive dialogue concerning issues
+related to IUTch. In this context, it seems also offundamental importanceto keep
+the followinghistorical point of viewin mind:
+It is only by supplementing negative positions concerning IUTch withde-
+tailed, mathematically substantive, accessible recordsof the math-
+ematical content underlying such negative positions that humanity can
+avoid creating anunfortunate situation— i.e., of the sort that arose con-
+cerning the “proof” asserted byFermat of “Fermat’s Last Theorem”!—
+in which an accurate evaluation of the substantive mathematical content
+underlying such negative positions willremain impossible indeﬁnitely.
+Other historical examples of interest in the present context — i.e., especially from
+the point of view of theexplicit documentation of the fascinating phenomenon
+of transition fromsocial rejection to social acceptance of a scientiﬁc theory
+— include such well-documented cases as the defense byGalileo of the theory of
+heliocentrism(cf., e.g., [Gll]) and the defense byEinstein of the theory ofrelativity
+(cf., e.g., [Rtv]). Again, the following (essentially tautological!) fact cannot be
+overemphasized:
+It is possible for us today to study in detail this fascinating process of
+refutation by Galileo of various denials of the theory ofheliocentrism or
+refutation byEinstein of various denials — e.g., in the form of variousal-
+leged “paradoxes”—o ft h et h e o r yo frelativityprecisely because of the ex-
+istence ofdetailed, explicit, accessible recordsof the logical structure
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 5
+underlying arguments produced by scholars on either side of the debate,
+i.e., both scholars who denied (at times with a surprising degree of hostil-
+ity!) the validity of these theoriesand scholars involved in the refutation
+of these denials.
+Further remarks concerning the involvement of other mathematicians may be found
+in §18 below.
+§4. Before proceeding to our exposition of the mathematical content of the March
+discussions, we pause to list brieﬂy the various topics that seem to have been the
+main themesof the March discussions:
+(T1) the treatment, in IUTch, ofhistories of various operations performed
+on mathematical objects;
+(T2) the treatment, in IUTch, of types of mathematical objects (i.e.,
+“species”, in the sense of [IUTchIV],§3);
+(T3) the “id-version”, i.e., a variant of IUTch obtained by identifying
+various copies(such asFrobenius-likeand ´etale-like versions, as well as
+copies appearing indiﬀerent Hodge theaters) of familiar objects by means
+of the“identity morphism”(cf. the discussion of§2!);
+(T4) opposition by SS to the use ofpoly-morphisms in IUTch
+(T4-1) as a matter of taste,
+(T4-2) on the grounds that the introduction of indeterminacies such as
+(Ind1,2) seemed to SS to belogically unnecessaryor “mean-
+ingless”;
+(T5) opposition by SS to the use oflabels in IUTch to distinguishdistinct
+copies of various familiar objects
+(T5-1) as a matter of taste,
+(T5-2) on the grounds that the use of such labels seemed to SS to be
+logically unnecessaryor “meaningless”;
+(T6) refusal, on the part of SS, to considervarious key ideas and no-
+tions of IUTch such asdistinct arithmetic holomorphic structures(i.e., in
+essence, distinct ring structures);
+(T7) the issue ofsimpliﬁcation;
+(T8) occasional misinterpretation by SSof statements by HM of the form
+(T8-1) as deﬁnitive declarations of (T8-2):
+(T8-1) “you may consider such and such a modiﬁed version of IUTch
+if you wish, but it is by no means clear that the essential content
+of IUTch is valid for such a modiﬁed version”,
+(T8-2) “you may consider such and such a modiﬁed version of IUTch
+if you wish, and, moreover, I aﬃrm that the essential content of
+IUTch is completely valid for such a modiﬁed version”;
+
+6 SHINICHI MOCHIZUKI
+(T9) detailed exposition of the multiradial representation of [IUTchIII],
+Theorem 3.11.
+Of these themes, it seems that (T1) and (T2) are, in some sense, the mostessential
+or fundamental. Then (T3), (T4), (T5) may be understood as being essentially
+“corollaries”of (T1), (T2). Moreover, (T4), (T5) may be understood as particular
+aspects of (T3). By contrast, (T6), (T7), (T8) refer to certainprocedural aspects
+of the March discussions, which, nonetheless, had a substantial inﬂuence on the
+mathematical content of the discussions. Here, it should be mentioned that the
+issue ofsimpliﬁcation mentioned in (T7) refers to the general issue of just what sort
+of simpliﬁcations in the mathematical content under discussion are mathematically
+correct, meaningful, and helpful (from the point of view eliminating details that are
+unnecessary and irrelevant to the central points at issue). Thus,one aspectof this
+general theme (T7) is theerroneous attempts by SS to simplify IUTch(cf. (T3),
+(T4), (T5), (T6)) to such an extent that it leads to meaningless contradictions (as
+summarized in (Smm), (GLR1), (GLR2)). On the other hand, (cf. the discussion
+of §8, §13 below), (T7) also refers to situations where the techniques introduced
+in IUTch actually do yield simpliﬁcations, relative to more naive approaches to
+various situations that arise in IUTch. Finally, (T9) proceeded relatively smoothly,
+in the sense that it consisted essentially of a straightforward exposition of the
+content of the multiradial algorithms of [IUTchIII], Theorem 3.11. That is to say,
+the position of SS with regard to (T9) was that they did not dispute thevalidity
+of these algorithms, but rather thenon-triviality,o r substantive content, of these
+algorithms, on account of their positions with regard to (T1), (T2), (T3), (T4),
+(T5), (T6).
+§5. In some sense, it seems that thelogical starting pointof the diﬀerences in
+point of view between SS and HM (and hence of variousfundamental misunder-
+standings of SS) may be understood as a consequence of the diﬀerence between
+the following two approaches to considering histories of operationsperformed on
+mathematical objects in a given discussion of mathematics (cf. (T1)):
+(H1) The conventional approach to histories of operations: The con-
+ventional approach that is typically taken, with regard to histories of op-
+erations performed on various mathematical objects, consists of regarding
+all of these operations as beingembedded within asingle history.
+•→· · ·
+↗
+•→•→•→ • →· · ·
+↘↘
+... ...
+In this approach,all previously executed operationsare regarded as
+being permanently accessible, regardless of the content of subsequent
+operations.
+(H2) The approach taken in IUTch to histories of operations: By con-
+trast, the approach to treating such histories of operations that is taken
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 7
+throughout IUTch involves the frequent use ofre-initialization opera-
+tions (i.e., “∥”)
+• → ···
+↗
+•→•→• ∥ • →· · ·
+↘↘
+... ...
+— that is to say, situations where oneforgets the previous history of
+some object (such as, for instance, some previously endowedmathemat-
+ical structure on the object) and regards this previous history as being
+inaccessible in subsequent discussions. Such re-initialization operations
+then require the use ofdistinct labels(cf. (T5)) to denote the “versions”
+of an object that ariseprior to and subsequent to the execution of such
+re-initialization operations. Another aspect of central importance in the
+context of such re-initialization operations is theexplicit speciﬁcation
+of thetype of mathematical objects(i.e., “species”, in the terminol-
+ogy of [IUTchIV],§3 — cf. (T2)) that one considers, for instance,prior to
+and subsequent tothe execution of such re-initialization operations (e.g.,
+“groups of automorphisms of some speciﬁed ﬁeld”versus “abstract topo-
+logical groups”).
+§6. The twomain examplesin IUTch (cf.§15 below for a slightly more detailed
+— though still quite brief! — review of certain aspects of IUTch) of the sort of
+re-initialization operation discussed in (H2) occur in the context of thegluing
+operations that arise in the deﬁnition of thelog- and Θ-links:
+(HEx1) The log-link: Here, the gluing operation consists of regarding the
+“Π’s”
+(i.e., in the notation of [IUTchI], Fig. I1.2; [IUTchI], Deﬁnition 3.1, (e),
+(f), “Πv’s”, forv ∈V) on either side of thelog-link as being known only as
+abstract topological groups, i.e., offorgetting the way in which these
+abstract topological groups are conventionally related to ring/scheme the-
+ory, namely, asgroups of ﬁeld automorphisms.
+(HEx2) The Θ-link: Here, the gluing operation consists of portions:
+(HEx2-1) regarding the
+“G’s”
+(i.e., in the notation of [IUTchI], Fig. I1.2; [IUTchI], Deﬁnition
+3.1, (e), “Gv’s”, forv ∈V) on either side of the Θ-link as being
+known only asabstract topological groups, i.e., forgetting
+the way in which these abstract topological groups are conven-
+tionally related to ring/scheme theory, namely, asgroups of ﬁeld
+automorphisms;
+
+8 SHINICHI MOCHIZUKI
+(HEx2-2) regarding the
+“O×μ’s”
+(i.e., in the notation of [IUTchI], Fig. I1.2, “O×μ
+F v
+’s”, forv ∈
+Vnon) on either side of the Θ-link as being known only asab-
+stract topological monoids(that are also equipped with cer-
+tain Gv-actions, as well as certaincollections of submodules,a s
+discussed in [IUTchII], Deﬁnition 4.9, (i), (ii), (iii), (iv), (vi),
+(vii)), i.e.,forgetting the way in which these abstract topolog-
+ical monoids are conventionally related to ring/scheme theory,
+namely, assubquotients of multiplicative groups of certain ﬁelds.
+In this context, we note that there are several diﬀerences between (HEx1) and
+(HEx2-1). Indeed, in the case of the Θ-link, although “G” (cf. (HEx2-1)) isnot
+regarded as a group of ﬁeld automorphisms, it is regarded as a group of auto-
+morphisms of the abstract topological monoid “O×μ”(i.e., equipped with a cer-
+tain collection of submodules — cf. (HEx2-2)). In particular, the Θ-link is con-
+structed by considering the full poly-isomorphism between distinct copies of the
+data “G ↷ O×μ”( w h e r eO×μ is always regarded as being equipped with a certain
+collection of submodules). This full poly-isomorphism gives rise to theindetermi-
+nacies (Ind1,2), which play a central role in IUTch. By contrast, in the case of the
+log-link, the gluing between Frobenius-like data in the codomain and domain (of
+the log-link) involves aspeciﬁc bijection between topological sets (arising, re-
+spectively, frommultiplicative and additive structures in thedomain and codomain
+of thelog-link). That is to say, (unlike the case of the Θ-link) one doesnot perform
+the gluing in thelog-link by considering, say,full poly-isomorphismsbetween topo-
+logical sets. A closely related fact is the fact that these topological setsare never
+used as vertical cores, i.e., as invariants (up to indeterminate isomorphisms of
+topological sets) with respect to thelog-link. Nevertheless, these topological sets
+(regarded up to indeterminate isomorphisms of topological sets) may, in some sense,
+be thought of as appearingimplicitly, in the sense that the point of view in which
+one thinks of the “Π’s” asabstract topological groupsis closely related to the point
+of view in which one thinks of the “Π’s” asgroups of automorphisms of these
+topological sets that appear in the gluing of Frobenius-like data that occurs in
+the case of thelog-link. This state of aﬀairs diﬀers somewhat from the situation
+in the case of the Θ-link, in which theO×μ’s(regarded up to the indeterminacy
+(Ind2)) do indeed play an important role ashorizontal cores, i.e., asinvariants
+with respect to the Θ-link.
+§7. Before proceeding, it is of interest to note, in the context of§5, §6, that the sort
+of re-initialization operations discussed in (H2) — i.e., operations that consist of
+forgetting mathematical structuresin such a way that the forgotten mathematical
+structures cannot (at least in any sort ofa priori,o r general nonsense, sense) be
+recovered— in fact occur in various contexts of mathematics other than IUTch. In-
+deed, the following two“classical” examplesare of particular interest in the context
+of IUTch:
+(HC1) Classical complex Teichm¨uller theory: The fundamental set-up
+of classical complex Teichm¨uller theory consists of considering distinct
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 9
+holomorphic (i.e., Riemann surface) structureson a giventopological (or
+real analytic) surface, i.e., of forgetting the way in which the Riemann
+surface (i.e., holomorphic structure) gives rise to such a topological (or
+real analytic) surface.
+(HC2) Anabelian geometry: The fundamental set-up of anabelian geometry
+consists of considering varioustopological (typically proﬁnite) groupsthat
+arise as various types of arithmetic (i.e., ´etale) fundamental groups of
+schemes or Galois groups of ﬁelds asabstract topological groups, i.e., of
+forgetting the way in which such topological groups arose as arithmetic
+fundamental groups or Galois groups.
+Indeed, it appears thatSS did not dispute the logical feasibility or consistency of
+the approach of (H2)in the context of IUTch. Rather, their main objection to
+the approach of (H2) in the context of IUTch appears to be to the eﬀect that
+they believed this approach of (H2) in the context of IUTch, i.e., in particular,
+in the context of (HEx1), (HEx2-1), (HEx2-2), to beunnecessary/superﬂuous.I n
+particular, it appears that one of thefundamental assertions of SSis to the eﬀect
+that
+(SSInd) the essential content (e.g., multiradial algorithms) of IUTch isentirely
+unaﬀectedeven if theindeterminacies (Ind1,2) (cf. the discussion of
+§6) areeliminated.
+§8. The central reasonfor the introduction, in IUTch, of various types ofindeter-
+minacy lies in the goal (cf. [IUTchIII], Theorem 3.11) of obtainingmultiradial
+algorithms for representing theΘ-pilot object, i.e., algorithms for represent-
+ing the Θ-pilot object that are
+(SW) compatible w i t h—t h a ti st os a y ,invariant, up to suitable indeter-
+minacies, with respect to — the operation ofswitching/interchanging
+corresponding collections of data (e.g., Θ-pilot objects) in thedomain and
+codomain of the Θ-link, in a fashion thatﬁxes the gluing of data that
+constitutes the Θ-link.
+This switching property(SW), i.e.,multiradiality, may also be thought of as a sort of
+symmetry between certain data in thedomain and codomainof the Θ-link. This
+sort of symmetry is achieved precisely by introducing variousindeterminacies —
+i.e., via the operation of“re-initialization”, or “forgetting certain mathematical
+structures”, as discussed in (H2). That is to say,
+(Sym) unlike the very rigid history diagrams discussed in (H1), i.e., where
+one doesnot allow oneself to perform re-initialization operations, history
+diagrams such as those in (H2), i.e., diagrams that include re-initialization
+operations “∥” (which typically give rise to certainindeterminacies!),
+are much more ﬂexible/less rigid, hence have farfewer obstructions
+to admitting symmetries.
+Put another way, the re-initialization operations “∥” in history diagrams such as
+those in (H2) may be visualized asﬂexible/rotary joints — such as those in the
+human skeletonor inrobot arms— whose ﬂexibility renders possible various types
+
+10 SHINICHI MOCHIZUKI
+of symmetry. Perhaps the most fundamental example of this sort of phenomenon
+is the following very classical/elementary example:
+(SWC1) Consider theordered setE = {0,1}, equipped with the ordering “0< 1”.
+Then the operation
+E ↦→ S
+given byforgetting the ordering, i.e., passing fromordered setsto under-
+lying sets, gives rise to an object “S” (i.e., a set of cardinality 2) that
+admits symmetries (i.e., the symmetric group on 2 letters!) that may
+only be considered if onecompletely forgets the orderingon “E”!
+Another observation of fundamental importancein the present context is the follow-
+ing: Although at ﬁrst glance, the introduction ofre-initialization operationsas in
+(H2), together with the resultingindeterminacies, may appear to give rise to math-
+ematical structures that are more complicated (cf. the “issue ofsimpliﬁcation”, i.e.,
+(T7)!) than the mathematical structures that arise in rigid history diagrams of the
+sort discussed in (H1), in fact,
+re-initialization operations — i.e., operations of forgetting mathemat-
+ical structures that obstruct desired symmetries — typically yield
+mathematicalstructuresthatare much simpler/more tractable/more
+likely to admit symmetries, in that they allow one to concentrate on
+structures of interest while carrying aroundmuch less “unnecessary
+baggage”!
+This sort of phenomenon — i.e., achievingsimplicity by forgetting!—m a yb e
+seen innumerous classical/elementary examples, such as the following one:
+(SWC2) Consider the geometry oftopological manifolds, i.e., which involves vari-
+ous continuous maps between topological manifolds. At ﬁrst glance, con-
+sidering topological manifolds equipped with atlases, i.e., equipped with
+systems of local coordinates that yield local embeddings into some Eu-
+clidean space, may appear to be“simpler”mathematical structures (i.e.,
+than topological manifolds that are not equipped with atlases) in that
+they contain speciﬁc data that relates such a topological manifold toEu-
+cidean space, whose geometry is more explicit and easier to graspthan
+the geometry of an arbitrary topological manifold. In fact, however, the
+operation of forgetting atlases, i.e., of regarding topological manifolds as
+not necessarily being equipped with explicit atlases, yields mathemati-
+cal structures that are muchsimpler/more tractable/more likely to
+admit symmetries, especially, for instance, when one considers various
+continuous maps between topological manifolds(which are not necessarily
+compatible with given atlases in the domain and codomain!), than the
+geometries/mathematical structures that arise if oneinsists (e.g., in the
+name of “simplicity”— cf. (T7)!) on considering topological manifolds
+equipped with atlases.
+In the context of IUTch, thetwo main examplesof this general mathematical phe-
+nomenon are the following (cf. also the discussion of§15 below for more details):
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 11
+(SWE1) (Frobenius-like) ring structures surrounding the log-link (cf.
+(HEx1)): The usual “Galois-theoretic”relationship (i.e., via the inter-
+pretation as agroup of ﬁeld automorphisms) with the ring/ﬁeld structures
+in the domains and codomains of thelog-links in asingle vertical lineof
+the log-theta-lattice of the
+“Π’s”
+that appear in such a vertical line is a mathematical structure that isfar
+from beingsymmetric with respect toswitchingoperations between the
+two vertical lines (in the log-theta-lattice) that appear on either side of a
+Θ-link (cf. (LbMn) below). On the other hand, such aswitching sym-
+metry may be achieved precisely byforgetting about these (Frobenius-
+like) ring/ﬁeld structures, i.e., by thinking of the various “Π’s” asab-
+stract topological groups— cf. (HEx1), as well as (EtMn) below.
+(SWE2) (Frobenius-like) ring structures surrounding the Θ-link (cf.
+(HEx2)): In a similar vein, the usual “Galois-theoretic”relationship
+(i.e., via the interpretation as agroup of ﬁeld automorphisms)w i t ht h e
+r i n g / ﬁ e l ds t r u c t u r e si nt h ed o m a i na n dc o d o m a i no faΘ - l i n ko ft h e
+“G’s”
+that appear in the domain and codomain of a Θ-link, as well as the usual
+relationship — i.e., relative to the local and globalvalue groupportions
+of the gluing data that appears in a Θ-link — with the ring/ﬁeld structures
+in the domain and codomain of a Θ-link of the
+“O×μ’s”
+that appear in the domain and codomain of a Θ-link, are mathematical
+structures that arefar from beingsymmetric with respect toswitching
+operations between the domain and codomain of the Θ-link (cf. (LbΘ) be-
+low). On the other hand, such aswitching symmetrymay be achieved
+precisely by forgetting about these (Frobenius-like) ring/ﬁeld structures,
+i.e., by thinking of the various “G’s” asabstract topological groups
+and of the various “O×μ’s” asabstract topological monoids(equipped
+with certain collections of submodules), that is to say, by introducing the
+indeterminacies (Ind1,2) — cf. (HEx2), as well as (VUC), (EtΘ) below.
+§9. The gluing (poly-)isomorphism constituted by the Θ-link may be thought
+of, in essence, as a(n) (poly-)isomorphism between collections of data as follows:
+⎛
+⎜⎜⎝
+G
+↷
+{qj2
+}N ·O ×μ
+⎞
+⎟⎟⎠
+full
+∼
+→
+poly-
+isom.
+⎛
+⎜⎜⎝
+G
+↷
+qN ·O×μ
+⎞
+⎟⎟⎠
+Θ-hol. str. q-hol. str.
+
+12 SHINICHI MOCHIZUKI
+—w h e r et h e“j”i n“{−}”v a r i e sf r o m1t ol⋇ def
+= 1
+2(l−1) (cf. the notation of, e.g.,
+[Alien], §3.3, (vii), as well as the notation of the abovediscussion). Onefundamental
+aspectof IUTch is the following observation:
+(ΘNR) The gluing isomorphism constituted by the Θ-link isnot compatible
+withthe ring structures—i.e., doesnotarisefroma ring homomorphism
+relative to the ring structures — on the algebraic closures of local ﬁelds
+“k’s”
+(i.e., in the notation of the discussion surrounding [IUTchI], Fig. I1.2,
+“Fv’s”, forv ∈V) that lie on either side of the Θ-link. We shall refer
+to these ring structures on either side of the Θ-link by the terms “Θ-
+holomorphic structure”and “ q-holomorphic structure”(and ab-
+breviate the lengthy term “arithmetic holomorphic structure” by “hol.
+str.”). Here, from the point of view of the data in large parentheses “(−)”
+in the ﬁrst display of the present§9, the“ring structures”under consid-
+eration may be thought of as consisting of the following three structures:
+(ΘNR1) the additive structureon (each)k,
+(ΘNR2) the multiplicative structureon (each)k,
+(ΘNR3) the “Galois-theoretic interpretation”of each “G” as a group of
+ﬁeld automorphisms of the corresponding “k”.
+On the other hand, in the present context, it is important to recall that
+(GIUT) the central goal of IUTch is precisely to compute the Θ-hol. str.
+in terms of the q-hol. str. (where we regard these two hol. strs. —
+i.e., ring structures— as being related via the gluing (poly-)isomorphism
+constituted by the Θ-link).
+From the point of view ofimplementing (GIUT) via themultiradial representa-
+tion algorithmsdeveloped in IUTch(i.e., [IUTchIII], Theorem 3.11), the following
+property is ofcentral importance:
+(ΘCR) The Θ-link is deﬁned in such a way as to be compatible with as
+large a portion of thering structureson either side of the Θ-link (i.e.,
+the Θ-,q-hol. strs.) as is possible. These ring structures are necessary
+in order to deﬁne the respective log-links associated to the Θ-,q-hol.
+strs.; the use of theselog-links is anessential portionof themultiradial
+representation algorithms developed in IUTch. Here, the “portion”
+of these ring structures thatis compatible with the Θ-link consists of the
+following two structures:
+(ΘCR1) the subquotients (equipped with certain collections of sub-
+modules) of the multiplicative monoid k
+×
+(i.e., of nonzero
+elements of the ring k) given by the monoids “{qj2
+}N ·O ×μ”,
+“qN ·O×μ”;
+(ΘCR2) the“interpretation”of each “G” as a group ofautomorphisms of
+the monoids considered in (ΘCR1) — an “interpretation” which,
+in this case, just happens to be equivalent to simply thinking of
+each “G”a sa nabstract topological group.
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 13
+Note, moreover, that (ΘCR1), (ΘCR2) areconsistent with the approach
+to switching symmetrization discussed in (SWE2), hence give rise to the
+indeterminacies (Ind1,2).
+Here, it is important to note that, although thesplittings
+{qj2
+}N ·O ×μ ∼
+→{ qj2
+}N ×O ×μ; qN ·O ×μ ∼
+→ qN ×O ×μ
+might, at ﬁrst glance, give the impression that the“value group portions”{qj2
+}N,
+qN and “unit group portions”O×μ are treated (in the gluing (poly-)isomorphism
+that constitutes the Θ-link) asindependent, unrelated objects, in fact this issimply
+not the case.T h a ti st os a y :
+(VUSQ) These splittings exist merely as a consequence of the (simple!)monoid
+structure of the particular monoids involved. The observation ofcentral
+importance, from the point of view of (ΘCR), is that theentire monoid
+“{qj2
+}N ·O×μ” (respectively, “qN ·O×μ”) — i.e., which containsboth the
+“value group portion”and “unit group portion”discussed above
+—i sa subquotient of the single multiplicative monoidk
+×
+(i.e., of
+nonzero elements) that arises from thering k.
+At a somewhat more concrete level, the above discussion may be summarized as
+follows:
+(VUC) In the following, we use left-hand superscripts “0” and “1” to denote,
+respectively, objects in thedomain and codomainof variousmodiﬁed ver-
+sions of theΘ-link:
+(VUC1) Consider the modiﬁed version of theΘ-link
+{0qj2
+}N ·0O×μ ∼
+→ 1qN ·1O×μ
+in which {0qj2
+} ↦→ 1q, and one takes the (poly-)isomorphism
+0O×μ ∼
+→ 1O×μ to be the“identity isomorphism”, i.e., the
+isomorphism arising from some ﬁxed choice of (“rigidifying”) iso-
+morphisms of both sides with some ﬁxed“model” copyof O×μ
+arising from a ﬁxed “model” copyof k. This “identity iso-
+morphism”0O×μ ∼
+→ 1O×μ is thenequivariant with respect to
+some (uniquely determined) isomorphism of topological groups
+0G
+∼
+→ 1G. The rigidifying isomorphisms just mentioned de-
+terimine, by applying the elementary construction reviewed in
+(RLFU) below to the invariants ofiO×μ with respect to various
+open subgroups of iG,f o ri =0 ,1, an “identity isomorphism”
+0k
+∼
+→ 1k. This “identity isomorphism”0k
+∼
+→ 1k is incompat-
+ible with the assignment{0qj2
+}N ↦→ 1q in the sense that, for
+j =2 ,...,l ⋇, this “identity isomorphism”0k
+∼
+→ 1k does not
+map 0k ∋ 0qj2
+↦→ 1q ∈1k.
+(VUC2) The incompatibilitydiscussed in (VUC1) may beeliminated by
+regarding 0qj2
+(for j =1 ,...,l ⋇) as belonging to yet another
+copy “0′
+k”of k that is regarded asnot being related to0k via a
+
+14 SHINICHI MOCHIZUKI
+ﬁeld isomorphism (and, for the sake of “symmetry”, regarding
+1q as belonging toyet another copy “1′
+k”of k that is regarded
+as not being related to1k via a ﬁeld isomorphism) — cf. the dis-
+cussion above of the issue of treating the“value group portions”
+{qj2
+}N, qN and “unit group portions”O×μ as independent, un-
+related objects. This approach to eliminating the incompatibility
+discussed in (VUC1) isnot the approachadopted in IUTch.
+(VUC3) On the other hand, one may alsoeliminate the incompatibil-
+ity discussed in (VUC1) by abandoning the “identity isomor-
+phism”and considering instead the (“full”) poly-isomorphism
+given by the collection ofall isomorphisms of topological monoids
+(equipped with certain collections of submodules)
+{0qj2
+}N ·0O×μ ∼
+→ 1qN ·1O×μ
+that areequivariant with respect to some (uniquely determined)
+isomorphism of topological groups0G
+∼
+→ 1G.T h esigniﬁcance
+of this approach (cf. (VUSQ)!) lies in the fact that it involves
+isomorphisms between a single subquotient {0qj2
+}N · 0O×μ of
+(copies indexed by labelsj of) the topological monoid0k
+×
+and
+a single subquotient 1qN ·1O×μ of the topological monoid1k
+×
+.
+This is the approach that isactually adopted in IUTch.
+Finally, we review a certain elementary construction that was applied in the above
+discussion:
+(RLFU) Reconstruction of p-adic local ﬁelds from groups of units:L e tK
+be a ﬁnite extension of the ﬁeld ofp-adic numbersQp.W r i t eOK ⊆K for
+the ring of integers ofK, O×
+K ⊆OK for the group of units ofOK, O×μ
+K for
+the quotient ofO×
+K by its torsion subgroup,WK
+def
+= O×μ
+K ⊗Q (where the
+tensor product is taken with respect to themultiplicativemodule structure
+on O×μ
+K ), MK
+def
+= p2 ·OK ⊆OK, UK
+def
+=1 + MK ⊆O×
+K. Thus, one veriﬁes
+immediately that the natural composite mapUK ⊆O×
+K ↠ O×μ
+K ↪→ WK
+determines an injection UK ↪→ WK, whose image we denote byVK (so
+we obtain a natural isomorphismγK : UK
+∼
+→ VK). Next, let us observe
+that by considering thenatural surjection UK × UK ↠ MK that maps
+UK × UK ∋ (u,v) ↦→ u −v ∈MK, one may think of theset MK as a
+quotient set of the product setUK × UK, hence also (by applyingγ−1
+K )
+of the product setVK ×VK. In particular, one may think of theadditive
+structureon the moduleMK as a binary operation on some quotient of the
+product setVK ×VK. Moreover, by observing that (u1 −v1)·(u2 −v2)=
+(u1·u2−u1·v2)+(v1·v2−v1·u2), whereu1,v1,u2,v2 ∈UK, one concludes
+that this additive structure onMK (regarded as a quotient ofVK ×VK!),
+together with themultiplicative structureon VK, allows one to reconstruct
+the multiplicative structureon MK (i.e., the multiplicative structure that
+arises by restricting the multiplicative structure onOK to MK ⊆OK).
+Thus, in summary, by thinking ofK as MK ⊗Q, we conclude that:
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 15
+Suppose that we are given an arbitrarytopological group†W,t o -
+gether with anisomorphism of topological groupsα: †W
+∼
+→ WK.
+Then we obtain aconstruction
+(†W,α) ↦→ †K
+of a topological ﬁeld †K that is functorial in the pair (†W,α)
+(i.e., consisting of a topological group and an isomorphism of
+topological groups).
+Indeed, αdetermines
+· a subgroup†V
+def
+= α−1(VK) ⊆†W;
+· a quotient set†M of the product set†V ×†V, together with a
+natural bijection†M
+∼
+→ MK that is compatible with the bijection
+†V ×†V
+∼
+→ VK ×VK determined byα;
+· an additive structure on †M such that the natural bijection
+†M
+∼
+→ MK is compatible with the respective additive structures;
+· a multiplicative structure on †M such that the natural bijec-
+tion †M
+∼
+→ MK is compatible with the respective multiplicative
+structures;
+· a topological ﬁeld structureon †K
+def
+= †M ⊗Q such that the
+natural bijection †M
+∼
+→ MK induces an isomorphism†K
+∼
+→ K
+of topological ﬁelds.
+The functoriality of this construction (†V,α) ↦→ †K is a tautological con-
+sequence of the construction.
+§10. During the afternoon session of the ﬁnal day of the March discussions, SS made
+the following assertion, which may be thought of as a sort ofconcrete realizationof
+their assertion (SSInd):
+(SSId) The multiradial algorithms of IUTch may be applied to relate the Θ-,
+q-hol. strs. that appear in the following“id-version”(cf. (T3)) of the
+Θ-link
+{qj2
+}N
+−−−−−−−−−
+(
+G ↷ O×μ
+)
+“identity”
+∼
+→
+isom. on
+G, O×μ
+qN
+−−−−−−−−−
+(
+G ↷ O×μ
+)
+Θ-hol. str. q-hol. str.
+—w h e r et h e“−−” on either side of the “
+∼
+→ ” are intended as a notational
+device to document the understanding that thering structure that gives
+rise to the (“value group”) monoid “{qj2
+}N” (respectively, “qN”)is to
+be regarded as distinct and unrelated to the ring str. — i.e., the Θ-
+(respectively, q-) hol. str. — that gives rise to the data “G ↷ O×μ”o n
+the same side of the “
+∼
+→ ” (cf. (VUC2)!).
+Here, we observe that one may introduceterminology “†Θ-hol. str.”(respectively,
+“†q-hol. str.”)t od e n o t et h ering structure that gives rise to the (“value group”)
+
+16 SHINICHI MOCHIZUKI
+monoid “{qj2
+}N” (respectively, “qN”).( S Sdeeply objected to discussingand, indeed,
+refused to consider(cf. (T6)) these ring structures, on the grounds that they wished
+to keep the discussion as “simple” (cf. (T7)) as possible — cf. also (T8), the
+discussion of (T7) in §8.) From the point of view of this terminology, the“id-
+version”of the Θ-link discussed in (SSId) may be described via the diagram
+⎛
+⎝
+G
+↷
+{qj2
+}N ·O ×μ
+⎞
+⎠
+†Θ-hol. str.
+−−−−−−−−−
+(
+G ↷ O×μ
+)
+Θ-hol. str.
+“identity”
+∼
+→
+isom. on
+G, O×μ
+⎛
+⎝
+G
+↷
+qN ·O ×μ
+⎞
+⎠
+†q-hol. str.
+−−−−−−−−−
+(
+G ↷ O×μ
+)
+q-hol. str.
+—w h e r et h e“
+∼
+→ ” only relates thevalue group portionsof the†Θ-,†q-hol. strs.,
+i.e., it relates (via the “identity” isomorphism) the “G ↷ O×μ” portions of the
+Θ-,q-hol. strs., but doesnot relate the “G ↷ O×μ” portions of the†Θ-,†q-hol.
+strs. It appears that SS introduced the (mathematical content represented by the)
+“−−’s”
+(SSId1) precisely in order to ensure that the“id-version” of theΘ-link discussed
+in (SSId) satisﬁes theswitching property(SW) (cf. also (VUC2)).
+Moreover, it appears that SS felt justiﬁed in introducing the “−−’s” precisely as a
+consequence of themisunderstanding, on the part of SS, that
+(SSId2) the “value group portions”{qj2
+}N, qN and “unit group portions”O×μ are
+treated (in the gluing (poly-)isomorphism that constitutes the Θ-link) as
+independent, unrelated objects(cf. the discussion immediately preceding
+(VUSQ); the discussion of (VUC)).
+On the other hand, onefundamental propertyof this“id-version”of the Θ-link
+is the following:
+(†ΘCR) The multiradial algorithms of IUTchonly may be appliedto relate the
+value group portion of the†Θ-hol. str. to the value group portion of
+some other hol. str. that islinked to the †Θ-hol. str. via data that
+contains the “G ↷ O×μ” portion of the†Θ-hol. str. (cf. (ΘCR),
+(VUSQ), (VUC)). That is to say, the multiradial algorithms of IUTch
+cannot be applied(cf. (ΘCR), (VUSQ), (VUC)) in such a way that the
+“G ↷ O×μ” that appears in these algorithms may be taken to be the
+rigidiﬁed “G ↷ O×μ” portion of the Θ-,q-hol. strs. of (SSId) (i.e.,
+which isnot subject to the indeterminacies(Ind1,2)!).
+In particular,
+(SSIdFs) the assertion (SSId) isfalse, i.e., in summary, the use of “−−”t oe n s u r e
+that (SW) is satisﬁed (cf. (SSId1))tautologicallygives rise tofundamen-
+tal obstacles to satisfying (ΘCR) (cf. also (VUSQ), (VUC), (SSId2)),
+hence also with respect to implementing (GIUT).
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 17
+In this context, we remark that one way to understand theessential logical struc-
+ture of the problem with the“id-version” of theΘ-link discussed in (SSId) is to
+consider the following elementary example concerningc o m p l e xs t r u c t u r e so nr e a l
+vector spaces:
+(SSIdEx) Write V = R2 (i.e., a copy of two-dimensional Euclidean space),e1
+def
+=
+(1,0) ∈V, e2
+def
+=( 0,1) ∈V, V1
+def
+= R · e1, V2
+def
+= R · e2.L e tt< 1b ea
+positive real number. Consider the following twocomplex structures(i.e.,
+structures as a vector space over the ﬁeld of complex numbersC)o nV:
+· the “U-structure”: i·e1 = e2, i·e2 = −e1;
+· the “W-structure”: i·e1 = t·e2, i·e2 = −t−1 ·e1.
+Thus, theU-, W-structures determine, respectively,complex vector spaces
+U, W whose underlying real vector spaceis V.W r i t eφ: U
+∼
+→ W for the
+isomorphism of real vector spacesarising from the fact that the underlying
+real vector space ofU, W is V.F o ri =1 ,2, writeUi ⊆U, Wi ⊆W for the
+real subspaces determined byVi ⊆V and φi : Ui
+∼
+→ Wi for the restriction
+of φto Ui. In the following, we shall use a subscript “C”t od e n o t et h e
+tensor product overR with C.W r i t e
+ιU : U2
+∼
+→ i·U1 ⊆(U1)C
+for theR-linear morphism that mapse2 ↦→ i·e1,
+ιW : W2
+∼
+→ i·W1 ⊆(W1)C
+for theR-linear morphism that mapst·e2 ↦→ i·e1. Thus, one may think
+of ιU as the restriction toU2 of the uniqueC-linear isomorphism
+ζU : U
+∼
+→ (U1)C
+that restricts to the identity onU1; one may think ofιW as the restriction
+to W2 of the uniqueC-linear isomorphism
+ζW : W
+∼
+→ (W1)C
+that restricts to the identity on W1. Next, let us consider the gluing
+isomorphism of collections of data
+Φ
+def
+=( φ,φ1,φ2,e1 ↦→ e1,e2 ↦→ e2):
+(U,U1,U2,e1 ∈U1,e2 ∈U2)
+∼
+→ (W,W1,W2,e1 ∈W1,e2 ∈W2)
+— where each collection of data consists of theunderlying real vector space
+associated to some complex vector space, together withtwo real subspaces
+oftherealvectorspaceand distinguished elementsofeachofthesubspaces.
+Now suppose that one attempts to
+approach the issue of understanding therelationship between
+the complex structures of U, W by identifying U, W with
+(U1)C, (W1)C via ζU, ζW.
+
+18 SHINICHI MOCHIZUKI
+This approachthen encounters variousfundamental diﬃculties, as follows:
+First of all,
+(̸∼=) the collections of data ( U,U1,U2,e1 ∈U1,e2 ∈U2,ζU)a n d
+(W,W1,W2,e1 ∈W1,e2 ∈W2,ζW) — or, essentially equiva-
+lently, the collections of data (U,U1,U2,e1 ∈U1,e2 ∈U2,ιU)
+and (W,W1,W2,e1 ∈W1,e2 ∈W2,ιW) — (where each collection
+of data consists of theunderlying real vector space associated to
+some complex vector space, together withtwo real subspacesof
+the real vector space,distinguished elementsof each of the sub-
+space, and alinear morphism between real vector spaces)a r enot
+isomorphic.
+(Indeed, (φ1)C ◦ιU ̸= ιW ◦φ2, where we note that theR-linear morphisms
+φ1 andφ2 aredeterminedbytherespectiveimages, viathesemorphisms, of
+the distinguished elements. Also, we recall thatιU = ζU|U2, ιW = ζW|W2.)
+Of course, one canmodify the collections of data that appear in (̸∼=)b y
+regarding, fori =1 ,2, Ui, Wi as independent real vector spaces—w h i c h ,
+to avoid confusion, we shall denote by [Ui], [Wi], respectively — that are
+not equippedwith their respective inclusions intoU, W. It then follows
+tautologically from the deﬁnition of “[−]”that we obtain anisomorphism
+of (ordered) pairs
+[Φ] = ([φ1],[φ2],e1 ↦→ e1,e2 ↦→ e2):
+([U1],[U2],e1 ∈[U1],e2 ∈[U2])
+∼
+→ ([W1],[W2],e1 ∈[W1],e2 ∈[W2])
+— where each pair consists of two real vector spaces,e a c ho fw h i c hi s
+equipped with adistinguished element. On the other hand,
+(Dilat) working with [Φ] and thinking ofU, W as being identiﬁed
+with (U1)C,( W1)C by means ofζU, ζW does not allow one to
+compute thenonzero dilatationof the“quasiconformal map”
+φ: U
+∼
+→ W
+by replacing φby theC-linear (i.e., complex holomorphic!) map
+(φ1)C :( U1)C
+∼
+→ (W1)C
+by means ofζU, ζW, i.e., whosedilatation is zero.
+Relative to the analogy with IUTch:
+· V1 corresponds to theunit group portionof thegluing datathat
+appears in the Θ-link;
+· V2 corresponds to the value group portionof the gluing data
+that appears in the Θ-link;
+· the “U-structure”corresponds to theq-hol. str.;
+· the “W-structure”corresponds to the Θ-hol. str.;
+· the property(̸∼=) corresponds to (VUC1);
+· the gluing isomorphism [Φ] corresponds to thegluing isomor-
+phism that appears in the“id-version” of theΘ-link discussed in
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 19
+(SSId) (cf. (VUC2));
+· the gluing isomorphism Φ corresponds to thegluing isomor-
+phism that appears in the Θ-link (cf. (VUC3));
+· the property(Dilat) corresponds to (SSIdFs).
+In the context of IUTch, it is also perhaps of interest to observe that theessen-
+tial mathematical content of this (very elementary!) example (SSIdEx) may, by
+introducing slightly more sophisticated (but still very classical!) terminology, be
+interpreted in terms of the well-known classical theory ofmoduli of complex elliptic
+curves:
+(ModEll) (Holomorphic moduli of elliptic curves vs. Teichm¨uller moduli
+of elliptic curves): There are two classical approaches to understanding
+the moduli of complex elliptic curves:
+(HolMod) One may start with aﬁxed copy“C”o ft h eﬁeld of complex
+numbers(or, essentially equivalently, with a one-dimensionalC-
+vector space) and think of an elliptic curve overC as aquotient
+of C by a lattice
+C/(Z+Z·τ)
+—w h e r et h e“period”τ∈C is a complex number whose imag-
+inary part Im(τ) > 0. This approach to elliptic curves overC
+allows one to think of elliptic curves overC in terms of holo-
+morphic moduli. Then:
+· From the point of view of the natural interpretation, in terms
+of inﬁnitesimal moduli, of the ﬁrst cohomology module of the
+(trivial!) tangentbundleofanellipticcurveover C, thisapproach
+corresponds to computing this ﬁrst cohomology module via the
+holomorphic de Rham complex.
+· From the point of view of the discussion of (SSIdEx), this ap-
+proach — which centers aroundﬁxing ac o p y“C”o ft h eﬁeld
+of complex numbers! — corresponds to the gluing isomor-
+phism [Φ], i.e., to thinking in terms of the identiﬁcations via the
+C-linear (hence, in particular, holomorphic!) isomorphisms
+(U1)C
+∼
+→ (V1)C
+∼
+→ (W1)C, together with anadditional, auxiliary
+datum “t−1 · i · e1” (which corresponds to takingτ
+def
+= t−1 · i in
+the present discussion).
+· In particular, this approach corresponds to the thegluing iso-
+morphism that appears in the“id-version” of theΘ-link dis-
+cussed in (SSId) (cf. (VUC2)).
+(TchMod) One may start with aﬁxed lattice
+Λ
+def
+= Z⊕Z (⊆ΛR
+def
+= R⊕R)
+and think of an elliptic curve overC as aholomorphic struc-
+ture on this ﬁxed lattice Λ (i.e., on the ﬁxed real vector space
+
+20 SHINICHI MOCHIZUKI
+ΛR). Thus, for instance, the holomorphic structure given by
+i·(1,0) = (0,t) corresponds to taking the “τ” in (HolMod) to be
+t−1 · i.T h i s (non-holomorphic, quasi-conformal/real analytic!)
+approach to elliptic curves overC is the approach taken in clas-
+sical complex Teichm¨uller theory. Then:
+· From the point of view of the natural interpretation, in terms
+of inﬁnitesimal moduli, of the ﬁrst cohomology module of the
+(trivial!) tangentbundleofanellipticcurveover C, thisapproach
+corresponds to computing this ﬁrst cohomology module via the
+Dolbeault complex.
+· From the point of view of the discussion of (SSIdEx), this ap-
+proach — which centers aroundﬁxing the lattice “Λ⊆Λ
+R”!
+— corresponds to the gluing isomorphism Φ, i.e., to thinking
+in terms of the identiﬁcations via theR-linear (i.e., quasicon-
+formal, non-holomorphic!) isomorphisms U
+∼
+→ V
+∼
+→ W be-
+tween the underlying real vector spaces of various complex vector
+spaces.
+· In particular, this approach corresponds to thegluing isomor-
+phism that appears in the Θ-link (cf. (VUC3)).
+Before proceeding, it is perhaps worthwhile to recall that,historically,
+(HstMod) of these two approaches discussed in (ModEll), the “holomorphic ap-
+proach”(HolMod)hasbeenthe “preferred approach”in(scheme-theoretic)
+arithmetic geometry, presumably becauseholomorphic structuresmay
+be related very directly to algebraic/scheme-theoretic structures,
+whereas the central roleplayed in the“quasiconformal approach”(Tch-
+Mod) by consideration of thetwo underlying dimensions of a holo-
+morphic structure did not, prior to the appearance of IUTch (cf. also
+the Introduction to [AbsTopIII]), have any evident analogue in arithmetic
+geometry.
+Finally, in this context, it should be pointed out that SS only arrived at (SSId),
+as formulated above, during the afternoon session of the ﬁnal day of the March
+discussions preciselyas a consequence of the fact that the details of the formulation
+of their “id-version”evolved substantiallyover the course of the March discussions.
+For instance, the introduction of “−−” in (SSId) arose precisely from the discussion
+of(SW),(Sym)(cf. (SSId1)), whichinturnaroseasaconsequenceofthediscussions
+on previous days summarized in§5, §6, §7. This state of aﬀairs suggests that if the
+March discussions had continued further (perhaps after a period of rest, to allow
+the participants to digest the course of the previous discussions), it is quite possible
+that further discussion of (ΘCR) could have resulted in acommon understanding
+(i.e., as summarized in (SSIdFs)) concerning (SSId) (cf. the discussion following
+(GLR2)).
+§11. In the context of the discussion of§10, it is important to remember that:
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 21
+(ΘFrd) The data that appears in the Θ-link containsglobal realiﬁed Frobe-
+nioids, i.e., certain globalized versions of the local value group portions
+“{qj2
+}N”, “qN” whose purpose is to category-theoretically encode the no-
+tion of theglobal arithmetic degreeof an arithmetic line bundle (cf.,
+e.g., [Alien],§3.3, (vii)). In particular, themultiradial representation
+algorithms developed in IUTch (i.e., [IUTchIII], Theorem 3.11), as well
+as theinequalities derived by applying these algorithms, are phenomena
+that areessentially global in nature — i.e.,not just a sort of result of
+summing up essentially local phenomena(cf. the discussion of [IUTchIII],
+Remarks 3.6.2; 3.10.1; 3.12.2, (v)).
+In particular, the compatibility of themultiradial representation algorithmsdevel-
+oped in IUTch (i.e., [IUTchIII], Theorem 3.11) with the correspondence in the
+Θ-link
+{qj2
+}N ∼
+→ qN
+cannot be ascribed solely to purely local indeterminaciessuchas(Ind1 ,2,3).
+For instance:
+(ΘInd) This compatibility cannot be understood as being a consequence of the ex-
+istence of automorphisms appearing in(Ind1,2) that permute the elements
+of “O×μ” determined by local units of the form
+{exp(qj2
+)}, exp(q)
+(where j =1 ,...,l ⋇).
+(Indeed, ingeneral, suchautomorphismsdo not exist!) Thisessentially global nature
+of the logical structure of IUTchhas apparently been a source of misunderstanding
+for some mathematicians. In this context, it is perhaps of interest to recall the fol-
+lowing well-known examples ofnon-isomorphic (but comparable!) mathematical
+structures that have isomorphic underlying structures, but whichcannot be trans-
+formed into one anotherby means of isomorphisms of the underlying structures:
+(UnEx1) Classical complex Teichm¨uller theory: (cf. (HC1)) It is well-known
+and easy to see that there existnon-isomorphic compact Riemann sur-
+faceswhoseassociatedunderlying topological (or real analytic) surfacesare
+isomorphic, but whose respectiveholomorphic structures cannot be trans-
+formedinto one another by conjugating by some isomorphism between the
+associated underlying topological (or real analytic) surfaces.
+(UnEx2) Group structures on a set: It is easy to see (for instance, in the case
+of groups of order four!) that there existnon-isomorphic groups whose
+associated underlying sets are isomorphic (i.e., of the same cardinality),
+but whose respectivegroup structures cannot be transformedinto one an-
+other by conjugating by some isomorphism (i.e., bijective map) between
+the associated underlying sets.
+(UnEx3) Absolute Galois groups of p-adic local ﬁelds:L e tK be a ﬁnite
+extension of the ﬁeld ofp-adic numbersQp, K an algebraic closure ofK,
+GK
+def
+= Gal(K/K). Write K× for multiplicative group of nonzero ele-
+ments ofK, Gab
+K for the abelianization of the proﬁnite groupGK.T h e n
+
+22 SHINICHI MOCHIZUKI
+we recall that thereciprocity mapof local class ﬁeld theoryyields a natural
+embedding K× ↪→ Gab
+K , whose image may be reconstructed via a purely
+group-theoretic algorithmfrom GK (cf., e.g., the discussion at the begin-
+ning of [Alien],§2.12). Thus, by considering theadditive structure (i.e.,
+arising from the additive structure of the ﬁeldK) on the union with{0} of
+the image of this embeddingK× ↪→ Gab
+K , one may think of theﬁeld K as
+an “auxiliary structure[K]”on the proﬁnite groupGK. In particular, one
+may think of the proﬁnite groupGK as anunderlying structureassociated
+to the pair (GK,[K]) (consisting of a topological groupand an additive
+structure, as just described) . Now letL be a ﬁnite extension of the ﬁeld
+of p-adic numbersQp, L an algebraic closure ofL, GL
+def
+= Gal(L/L). We
+use similar notation for objects related toL to the notation introduced
+above for objects related toK. Then recall (cf., [Ymgt], §2, Theorem)
+that there exist cases ofK and L such that
+K is not isomorphic(as a ﬁeld) toL, butGK is isomorphic(as
+a proﬁnite group) toGL.
+Thus, it follows formally that the pairs (GK,[K]) and (GL,[L]) are not
+isomorphic, but their“underlying topological groups”GK and GL are iso-
+morphic. In particular, the pairs (GK,[K]) and (GL,[L]) cannot be trans-
+formedinto one another by conjugating by some isomorphism between the
+underlying proﬁnite groupsGK and GL.
+§12. During the afternoon session of the ﬁnal day of the March discussions, SS
+proceeded to derive from the“id-version”of (SSId) a“contradiction”concerning
+arithmetic degrees (cf. (Smm)). This “contradiction” essentially amounts to the
+following assertion:
+(AD) The correspondence that appears in the Θ-link
+{qj2
+} ↦→ q
+(where j =1 ,...,l ⋇) is, when considered within/relative to a single
+hol. str., i.e., asingle ring/scheme theory, manifestly incompati-
+ble/inconsistent with computingarithmetic degrees, unless one con-
+siders arithmetic degrees up to theindeterminacy given by possible mul-
+tiplication by factors “j2”(wherej =1 ,...,l ⋇)—anindeterminacywhich
+then renders the computationmeaningless.
+Before proceeding further, it should beemphasized that:
+(IUAD) There is absolutely no dispute whatsoever (between SS and HM)
+with respect to the validity of the assertion (AD). Indeed, the point is
+that the situation in (AD) occurs whenever one workswithin a single
+hol. str./ring theory. Moreover, this observation (AD) isby no means
+a new observation, but rather constitutes thestarting point of IUTch.
+It is precisely for this reason (cf. (GLR2)!) that, in IUTch, one must treat
+the hol. strs. in the domain and codomain of the Θ-link asdistinct hol.
+strs. that are related in a nontrivial way that may be only be elucidated
+by means of a nontrivial computation (cf. (GIUT)).
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 23
+Moreover, in the present context, it is offundamental importanceto recall that:
+(ADItw) Computations of arithmetic degrees of global arithmetic line bundles that
+are related to one anothervia theΘ-link depend, in an essential way,o n
+the speciﬁcation of aparticular relationship,o r“intertwining”, between
+the “value group portions”{qj2
+}N, qN and “unit group portions”O×μ of
+the data that appears in the gluing (poly-)isomorphism that constitutes
+the Θ-link. Such“intertwinings”arise from thehol. strs. (i.e., ring struc-
+tures) in the domain and codomain of the Θ-link, but (sincethe Θ-link is
+not a ring homomorphism!) the Θ-linkfails, a priori,t ob ecompatible
+with thedistinct ring structuresin its domain and codomain, hence also
+with arithmetic degree computationsin its domain and codomain.
+When discussing (AD), SS, at times, asserted that:
+(SSAD) The “contradiction” of (AD) occurseven if one does not invoke (SSId),
+i.e., even if one applies the multiradial algorithms of IUTch as stated in
+[IUTchIII] (that is to say, without necessarily invoking the assertion that
+these algorithms may be applied to some sort of“id-version”as in (SSId)).
+On the other hand, it should bestated unequivocallythat:
+(SSADFs) The assertion of (SSAD) isfalse. That is to say, the “contradiction” of
+(AD) only occurswhen one identiﬁes the hol. strs./ring theories in
+the domain and codomain of the Θ-link (cf. (ADItw)).
+Unfortunately, whenever I tried to explain (SSADFs) during the afternoon session
+of the ﬁnal day of the March discussions, for instance, by usingdistinct labelsto
+denote thedistinct hol. strs./ring theoriesin the domain and codomain of the
+Θ-link, SS stubbornlyrefused to allow the use of such distinct labelsin the
+discussion (cf. (T5); (T6); (T8); the discussion of (T6) in§10). On the other hand,
+it should be stated clearly that:
+(SSDLFs) Deleting the labels used in IUTch (i.e., as formulated in [IUTchI],
+[IUTchII], [IUTchIII]) to denote the distinct hol. strs./ring theo-
+ries in the domain and codomain of the Θ-link amounts to identify-
+ing/confusing these distinct hol. strs./ring theories — an operation
+that is alreadystronger than (i.e., “implies, in particular, the content
+of”) the operations discussed in (SSInd) (cf. also the discussion of§5, §6,
+§7) and (SSId), i.e., operations which already lead to situations in which
+the multiradial algorithms areno longer applicable(cf. the discussion
+of §10, especially, (SSIdFs)).
+Here, it is perhaps helpful to recall that thelabels used in IUTch to denotedistinct
+hol. strs./ring theories may be thought of, from the point of view of takinglog-
+volumes of regions in tensor packets of log-shells (i.e., the situation that occurs,
+for instance, in the ﬁnal portion of [IUTchIII], Corollary 3.12), as
+(LbLV) markers that denote whether (a certain suitable “generator” called the
+“pilot object”of) the value group portionof the gluing data in the Θ-
+link is identiﬁed with thelog-volume of “q” (i.e., which corresponds to
+t h ec a s eo ft h eq-hol. str.) or with thelog-volume of “{qj2
+}” (i.e., which
+corresponds to the case of the Θ-hol. str.).
+
+24 SHINICHI MOCHIZUKI
+(For more details, we refer to, for instance, the discussion of “toy models”in
+[IUTchIII], Remark 3.12.2, (ii).) The multiradial algorithms of [IUTchIII], The-
+orem 3.11, then provide analternative way to compute the log-volume of the
+Θ-pilot object in terms of theq-hol. str., up to certain indeterminacies.I n t h i s
+context, it is important to remember that
+(MlLV) unlike thelinear correspondence induced by the Θ-link — i.e., in eﬀect,
+a linear relationshipbetween copies of the topological group of real num-
+bers “R” — between thelog-volume of the Θ-pilot object relative to the
+Θ-hol. str. and thelog-volume of theq-pilot objectrelative to theq-hol.
+str., this computation, via themultiradial algorithmsof IUTch, of the
+log-volume of the Θ-pilot object in terms of theq-hol. str. involves cer-
+tain indeterminacies, which give rise to ahighly non-linearrelationship
+between the log-volume of the Θ-pilot object in theΘ-hol. str. and the
+log-volume of themultiradial representation of theΘ-pilot object.
+This general qualitative phenomenon ofindeterminacies giving rise to a highly
+non-linear relationship between the log-volume of a (“rigid”)r e g i o nnot subjectto
+indeterminacies and the log-volume of anapproximation (say, from above) of the
+(“rigid”) region thatis subjectto indeterminacies may be understood by considering
+the following elementary example:
+(LVEx) Write V = R2 (i.e., a copy of two-dimensional Euclidean space),σ:
+V
+∼
+→V fortheautomorphismof V givenby V ∋ (x,y) ↦→ (−x,y). Denote
+byW the“stack-theoretic quotient”ofV by the groupGofautomorphisms
+of V of order 2 generated by σ. Thus, we have a natural ﬁnite ´etale
+morphism of degree2
+φ: V → W
+of “orbispaces”. Next, let us consider the followingregion of V and its
+“symmetrization”with respect to the action ofG:
+Ra,b
+def
+= {(x,y) ∈V || x|≤ 1, 0 ≤|y|≤ a}
+∪{(x,y) ∈V | 0 ≤x ≤1,a ≤|y|≤ a+b};
+Sa,b
+def
+= Ra,b ∪σ(Ra,b)
+—w h e r ea,b >0 are positive real numbers. Then one computes easily the
+log-volume “μlog(−)” (i.e., the natural logarithm of the volume relative to
+the usual Euclidean measure) of these regions as follows:
+μlog(Sa,b) = log(4a+4b) >μ log(Ra,b) = log(4a+2b).
+In particular, we observe that
+the ratio [μlog(Sa,b): μlog(Ra,b)] (which may be thought of as
+a point of the projective line overR) varies continuously—
+i.e., is far from being constant, as would be the case if the
+relationship between the two log-volumes werelinear —a sa, b
+vary.
+Here, sinceσ(Sa,b)= Sa,b, onemaythinkof Sa,b asbeing “deﬁned overW”
+and hence, at a purely formal level, equipped with a“label”W (which we
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 25
+shalldenotebya subscript “W”). Ontheotherhand, since σ(Ra,b) ̸= Ra,b,
+Ra,b is only “deﬁned over V”, hence, at a purely formal level, may be
+thought of as being equipped with a“label”V (which we shall denote by
+a subscript “V”). Here, as the inclusionRa,b ⊆Sa,b suggests,
+onemaythinkofthe label “V”asdenotingasortof “incomplete
+portion”of thelabel “W”.
+Next, let us consider a real numberλ∈R such that a, b, λsatisfy the
+inequalities
+μlog(Sa,b) > 0 >λ>μ log(Ra,b)
+— which imply, in particular, thatμlog(Sa,b) ̸= λ, and that the positive
+real number 1<ρ
+def
+= μlog(Ra,b)·λ−1 ∈R is well-deﬁned. We shall think
+of λas the log-volume of some region “Rλ”t h a ti s“deﬁned overW”, i.e.,
+at a more concrete level, a region ofV stable under the action ofG. Then,
+relative to the analogy with IUTch — i.e., especially thekey argumentin
+Step (xi) of the proof of [IUTchIII], Corollary 3.12 — we have the following
+correspondences:
+· Ra,b corresponds to the Θ-pilot relative to the Θ-hol. str.;
+· Sa,b corresponds to theholomorphic hull,r e l a t i v et ot h eq-
+hol. str.,o ft h emultiradial representation of the Θ-pilot,
+with “indeterminacies”given by the action of the groupG;
+· Rλcorresponds to theq-pilot;
+· the assignmentμlog(Ra,b)V ↦→ λW = μlog(Rλ)W determines an
+R-linear“gluing isomorphism”RV
+∼
+→RW, i.e., givenby“dividing
+by the factorρ”; this gluing isomorphism corresponds to the Θ-
+link;
+· the chain of relationships of log-volumes
+μlog(Sa,b)W >μlog(Ra,b)V ↦→ λW
+—w h e r et h e“↦→”i st h egluing determined by the assignment
+μlog(Ra,b)V ↦→ λW = μlog(Rλ)W just discussed — corresponds
+tothechainofrelationshipsbetweenlog-volumesintheargument
+of Step (xi) of the proof of [IUTchIII], Corollary 3.12.
+This lastchain of relationships of log-volumesis remarkablein that it may
+be interpreted in the following way:
+the inequality μ
+log(Sa,b)W >μlog(Ra,b)V arises (not from the
+gluing given by dividing/multiplying, i.e., depending on the di-
+rection in which one is going, by a factor ofρ, but rather) from
+the geometry of the regionsRa,b ⊆Sa,b and the deﬁnition of
+W as a “stack-theoretic quotient” ofV by G, but is, neverthe-
+less, entirelylogically consistent— i.e., in the sense that the
+composite inequalityμlog(Sa,b)W >λW does indeed hold in the
+copy “RW”o fR labeled byW —w i t ht h egluing given by di-
+viding/multiplying by a factor ofρ.
+
+26 SHINICHI MOCHIZUKI
+Here, we observe that thislogical consistencyof the gluing (given by di-
+viding/multiplying by a factor of ρ)w i t ht h einequality μlog(Sa,b)W >
+μlog(Ra,b)V depends, in an essential way, on thegeometry of the regions
+Ra,b and Sa,b,a sw e l la st h einequalities satisﬁed by a, b,a n dλ. In par-
+ticular, it is
+no means the case that a similar consistency property
+is satisﬁed by arbitrary regionsof W, V and an arbitrary real
+number λ.
+Finally, we observe that thelabels “V”a n d“W”i nt h echain of relation-
+ships of log-volumesμlog(Sa,b)W >μlog(Ra,b)V ↦→ λW may be interpreted
+in the following way:
+· the V-labeled real numberμlog(Ra,b)V is the log-volume of an
+“incomplete portion” of some “complete object” whose
+log-volume is theW-labeledreal numberμlog(Rλ)W = λW;
+· on the other hand, therelationship of “completion”between
+the V-labeled “incomplete portion”and theW-labeled “complete
+object”may also beestimated from aboveby considering the
+inclusion within the symmetrization(Sa,b)W ⊇(Ra,b)V ,w h i c h ,
+upon passing to log-volumes, yields an inequalityμlog(Sa,b)W >
+μlog(Ra,b)V .
+The situation just described in detail in the present (LVEx) is precisely
+the sort of situation that arises in the argument of Step (xi) of the proof
+of [IUTchIII], Corollary 3.12.
+Another interesting and relatively elementary example of the phenomenon of com-
+puting the“size”of aregionsubject toindeterminacies (cf. the multiradial repre-
+sentation of the Θ-pilot object in IUTch) thatapproximates(say, from above) some
+region of interestthat is“rigid”and not subject to indeterminacies(cf. the Θ-pilot
+relative to the Θ-hol. str. in IUTch) may be seen in thedisplacement estimates
+that appear inBogomolov’s proofof the geometric version of the Szpiro Con-
+jecture (cf. the discussion of (DsInd) below). Finally, in this context, we remark
+that the importance of working withdistinct hol. strs./ring theoriesis discussed in
+detail — and in a fashion directed toward an audience of non-mathematicians —
+in, roughly, the ﬁnal 30 minutes of the video [FKvid].
+§13. One topic to which a substantial amount of time and energy was devoted,
+especially during the ﬁrst few days of the March discussions, was the topic ofpoly-
+morphisms in IUTch (cf. (T4)), i.e., sets (that are not necessarily of cardinality
+1!) of morphisms between two objects. SS (especially, Scholze) weresubstantially
+opposed to the use of poly-morphisms in IUTch. This opposition appeared to be
+based, to a substantial extent, on“taste/aesthetics”(cf. (T4-1)). In this context,
+however, it should be remembered that, although the term “poly-morphism”is
+apparently new, in fact poly-morphisms — i.e., in eﬀect,
+(PMInd) situations in which one wishes to regard morphisms/objects of interest
+up to/modulo some sort ofindeterminacy, the elimination of which is
+not a matter of interest
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 27
+— appear quite frequently in mathematics. Well-known examples include
+(PMEx1) homotopy, or stable homotopy, classes of continuous maps between
+topological spaces;
+(PMEx2) morphisms in derived categories between complexes, i.e., morphisms that
+may be related to morphisms between complexes in the naive sense only
+by considering theclasses of such naive morphisms obtained byinverting
+the quasi-isomorphisms.
+Here, before proceeding, it is perhaps of interest to observe the existence of“trivial
+examples”of poly-morphisms:
+(PMTrv) For i =1 ,2, suppose thatG
+i is a group, and thatHi ⊆Gi is a normal
+subgroup. Then a group homomorphism φ: G1/H1 → G2/H2 between
+the quotient groupsG1/H1, G2/H2 may be regarded as atrivial exam-
+ple of a poly-morphism, i.e., by thinking ofφas the collection of group
+homomorphisms G1 → G2 that liftφ.
+A poly-morphism of the sort discussed in (PMTrv) is“trivial”in the sense that it
+may be expressed as a (single!)morphism (i.e., map!) between quotient sets (i.e.,
+the sets “Gi/Hi”f o ri =1 ,2). By contrast:
+(PMQut) The examples of poly-morphisms that occur in IUTch — such as those
+that arise from the indeterminacies (Ind1,2) — make use of the notion of
+a poly-morphism in a nontrivial way precisely because theycannot be ex-
+pressed assingle mapsbetween quotient sets. (Here, we note that the
+examples (PMEx1) and (PMEx2) are also nontrivial in this sense. For in-
+stance, there is no meaningful sense in which one can deﬁne the“quotient
+set”of a topological space by its group of homotopy self-equivalences.)
+It is precisely this sort of situation that requires the use offormal tech-
+niques — such as in the case ofalgebraic stacks(as opposed to schemes or
+algebraic spaces) ororbifolds (as opposed to topological manifolds) — in
+order to work withquotients in some sort ofabstract or formal sense.
+This is precisely what is obtained in IUTch by the introduction of the
+“formal technique” constituted by the notion of apoly-morphism.
+SS at times justiﬁed their opposition to the“apparently substantively mean-
+ingless”(cf. (T4-2)) use of poly-morphisms by invoking the issue ofsimplicity (cf.
+(T7)), but, as one may see in the well-known examples (PMEx1), (PMEx2), work-
+ing with speciﬁc morphisms in situations where it is much more natural to work
+with classes of morphisms, tends to have the eﬀect of rendering arguments much
+more complicated,o rless tractable(cf. the discussion of§8). Put another way, as
+was discussed in§5, §6, §7, §8, §9, §10 (cf., especially, the discussion of (SSInd),
+(SW), (Sym), (SWE1), (SWE2), (VUC), (SSId), (SSIdFs)):
+(PMEss) The use of poly-morphisms in IUTch — e.g., the introduction of in-
+determinacies such as (Ind1,2) — plays the quitesubstantive role of
+yielding structures that admit certainsymmetries (cf. the discussion of
+§8), which form the basis ofmultiradiality, in a fashion that iscom-
+patible with suitable portions of thering structuresin the domain and
+codomain of the Θ-link (cf. the discussion of§9, §10).
+Further remarks concerning the use of poly-morphisms in IUTch may be found in
+[Alien], §4.1, (iv).
+
+28 SHINICHI MOCHIZUKI
+§14. Another topic to which a substantial amount of time and energy was devoted,
+especially during the ﬁrst few days of the March discussions, was the topic oflabels
+in IUTch (cf. (T5)) to distinguishdistinct copiesof various familiar objects that
+play substantively diﬀerent rolesin the various apparatuses treated in IUTch.
+SS (especially, Scholze) weresubstantially opposed to the use of labels in IUTch.
+This opposition appeared to be based, to a substantial extent, on“taste/aesthetics”
+(cf. (T5-1)). In this context, however, it should be remembered that in fact “labels”
+— i.e., in eﬀect,
+(LbRl) situations in which one wishes to distinguish distinct copies of var-
+ious familiar objects that playsubstantively diﬀerent roleswithin a
+complicated apparatus
+— appear quite frequently in mathematics. Well-known examples include the fol-
+lowing:
+(LbEx1) The substantive signiﬁcance of the use of labels may be seen in the
+following fundamental example: One considers the(“line segment”) graph
+Γseg
+•— •
+given bytwo verticesjoined via asingle edge.W r i t eΓloop for the(“loop”)
+graphobtained from Γseg by identifying thetwo distinct verticesof Γseg —
+i.e., which may be thought of asdistinct labels—t oa single vertex.T h u s ,
+Γseg is structurally diﬀerentfrom Γloop in the sense that Γseg is simply
+connected, while Γloop is not. This diﬀerence gives rise tovery substan-
+tive consequencesin many situations, e.g., situations where some sort of
+“parallel transport”or “analytic continuation”along the loop of
+Γloop gives rise to some sort ofnontrivial monodromy operator.T h i s
+sort of nontrivial monodromy may beresolvedprecisely bydistinguish-
+ing the situations that ariseprior toand subsequent tothe application of
+the monodromy operator, i.e.,by working overΓseg as opposed toΓloop.
+When, moreover, one wishes to distinguish situations that ariseprior to
+and subsequent tomultiple applications of the monodromy operator, it is
+natural to consider theuniversal coveringΓuni
+... •— •— •— •...
+of Γloop, which may be thought of as the result ofconcatenating distinct
+copies ofΓseg labeled by elements∈Z.O n efundamental example of this
+sort of situation, i.e., ofnontrivial monodromy around a loop, is the (angu-
+lar portion of the)logarithm functionin one-variable complex analysis.
+This example is, moreover, reminiscent of the situation surrounding the
+vertical columns oflog-links that appear in thelog-theta-lattice of IUTch
+(cf. (LbLp) below). Alternatively, one may understand
+the incompatibility of the Θ-link (i.e., a horizontal arrow in
+the log-theta-lattice)w i t harithmetic degrees (cf. (AD)) as a
+sort ofnontrivial monodromyaround theloop (i.e., a special
+case of “Γloop”!) that arises as soon as oneidentiﬁes the domain
+and codomain of the Θ-link — an incompatibility, i.e.,“con-
+tradiction”, that is in fact avoided in IUTch (cf. (IUAD))
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 29
+precisely bydistinguishing the (ring structures in the) domain
+and codomain of theΘ-link, i.e., by working with “Γseg”, and
+then applying themultiradial algorithmsof IUTch to obtain
+an alternative way tocompute this nontrivial monodromy
+(cf. (GIUT)).
+(LbEx2) Suppose that A is acommutative domain with unity, f ∈A a nonzero,
+non-unit. Then the localization Af of A with respect to f may be
+constructed as theinductive limitof theinductive system
+...
+f·
+−→ An−1
+f·
+−→ An
+f·
+−→ An+1
+f·
+−→ ...
+given bycopies “An”o fA labeled by elementsn ∈Z and transition mor-
+phisms given by multiplicationf. Here, we observe thatforgetting the
+choice of a“speciﬁc basepoint label0 ∈Z”does not have any substantive
+eﬀect on the construction if one is only interested in theA-module struc-
+ture of Af. If, on the other hand, one is interested in constructing the
+ring structureon Af,t h e ni ti so fcrucial importanceto specify a“spe-
+ciﬁc basepoint label 0 ∈Z”, i.e., a speciﬁc copy for which the unity
+element 1∈A of A serves as theunity element for the newly constructed
+Af. Thus, in summary:
+Omitting the labelsleads toconfusion concerning which copy
+of the unity element 1∈A is to be regarded as theunity element
+for “Af”. Such confusion may, of course, bemisinterpreted as
+an “internal contradiction”in the theory of localizations of
+commutative rings with unity. In fact, however, there isno “in-
+ternal contradiction”in the theory of such localizations; the
+apparent “internal contradiction” is nothing more than a super-
+ﬁcial consequence of theerroneous operation of omitting the
+labels.
+(LbEx3) Consider the polynomial ring A
+def
+= Fp[t] in one variable over the ﬁeld
+of cardinality p, for some prime number p.W r i t eφ: A → A for the
+Frobenius endomorphism, i.e., the ring endomorphism given by sending
+t ↦→ tp. Then theperfection A∞ of A — i.e.,Fp[{t1/pn
+}n≥1]—m a yb e
+constructed as theinductive limitof theinductive system
+...
+φ
+−→ An−1
+φ
+−→ An
+φ
+−→ An+1
+φ
+−→ ...
+given by copies “An”o fA labeled by elements n ∈Z and transition
+morphisms given by (copies of)φ. Here, we observe that, if oneforgets
+the labels n ∈Z, i.e., and just considers the inductive system given by
+a single copy of A and the transition morphism φ: A → A, then one
+computes easily that the resultinginductive limitis isomorphic to adirect
+sum ⊕Fp of p copies ofFp (i.e., and hencenot isomorphicto A∞!). Thus,
+in summary:
+Omitting the labels leads to confusion between mutually
+non-isomorphic inductive limits (i.e., A∞, ⊕Fp). Such confu-
+
+30 SHINICHI MOCHIZUKI
+sion may, of course, bemisinterpreted as an“internal contra-
+diction”in the theory of perfections in positive characteristic.
+In fact, however, there isno “internal contradiction”in the
+theory of perfections in positive characteristic; the apparent “in-
+ternal contradiction” is nothing more than a superﬁcial conse-
+quence of theerroneous operation of omitting the labels.
+For more detailed discussions of phenomena arising from theFrobenius
+morphism in positive characteristicthataremoredirectlyrelatedtoIUTch,
+we refer to (EtFrEx) below, as well as [Alien], Example 2.6.1; the discus-
+sion of [Alien],§2.7.
+(LbEx4) Write λ∈C for theunique positive real root∈C of the equationX3 −
+2=0 , ω
+def
+=e x p (2
+3πi) ∈C, Q ⊆ C for the ﬁeld of rational numbers,
+F1
+def
+= Q(λ) ⊆C, F2
+def
+= Q(ω·λ) ⊆C, K
+def
+= Q(ω,λ) ⊆C.T h u s ,w e
+have a diagram ofﬁeld extensions
+K
+⧸⧹
+F1 F2
+⧹⧸
+Q
+such thatQ = F1 ∩F2, K = F1 ·F2. In particular, one may interpret the
+portion of the above diagram involvingF1, F2, Q as a situation in which
+one hastwo distinct abstract ﬁeldsF1, F2 that areglued together
+(in the category of sets) along the subﬁelds Q ⊆ F1, Q ⊆ F2 (via
+the unique isomorphism between these subﬁelds) — cf. the description
+of the Θ-link at the beginning of§9; (ΘNR). Observe that there exists a
+unique isomorphism of ﬁelds ψ: F1
+∼
+→ F2,w h i c h ,o fc o u r s e ,i snot
+compatible with the respective embeddingsF1 ↪→ K, F2 ↪→ K. Then:
+If one identiﬁes F1 and F2 by means ofψa n dt h e nu s e st h i s
+identiﬁcationto omit the labels“1”, “2”thatareusedtodistin-
+guish the ﬁeldsF1, F2, then it is easy to obtain a“contradiction”
+concerning the structure of the ﬁeldK. Such a “contradiction”
+may, of course, bemisinterpreted as an “internal contradic-
+tion”in the elementary theory of ﬁeld extensions. In fact, how-
+ever, there isno “internal contradiction”in the elementary
+theory of ﬁeld extensions; the apparent “internal contradiction”
+is nothing more than a superﬁcial consequence of theerroneous
+operation of omitting the labels used to distinguish the ﬁelds
+F1, F2.
+(LbEx5) (This example may, roughly speaking, be thought of as a sort of gen-
+eralization of the example discussed in (LbEx1).) Consider the theory of
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 31
+(topological or diﬀerential)manifolds of dimensionn,f o rn a positive in-
+teger. Manifolds (of dimensionn) are, by deﬁnition, collections ofdistinct
+copies— i.e., copies equipped withdistinct labels—o f(n-dimensional)
+Euclidean spaceglued together by means of variousgluing isomorphisms.
+In particular, it is quite possible that the use of numerous distinct
+copies of Euclidean spacein this theory might impress a newcomer to
+this theory (such as a student) as being entirelysuperﬂuous. Such a
+newcomer might feel motivated to attempt to achieve a“dramatic sim-
+pliﬁcation”of this theory byidentifyingthese copies of Euclidean space
+with one another and hence to assert that the geometry ofarbitrary(topo-
+logical or diﬀerential)manifolds (of dimensionn)m a yb e“reduced”to
+the geometry of (n-dimensional) Euclidean space.M o r e o v e r :
+If one identiﬁes these distinct copies of Euclidean space
+that appear in the theory of (topological or diﬀerential) mani-
+folds with one another, then it is easy to obtain a“contradic-
+tion”. Such a “contradiction” may, of course, bemisinterpreted
+as an “internal contradiction”in the theory of (topological
+or diﬀerential) manifolds. In fact, however, there isno “inter-
+nal contradiction”in the theory of (topological or diﬀerential)
+manifolds; the apparent “internal contradiction” is nothing more
+than a superﬁcial consequence of theerroneous operation of
+omitting the labelsused to distinguish the distinct copies of Eu-
+clidean space.
+(LbEx6) In the context of the mathematics discussed in the present report, one
+fundamental example of the use of labelsmay be seen in thevery def-
+inition of the “id-version”of (SSId). Indeed, the “−−” that appears
+in (SSId) is a notational device that documents the understanding that
+the ring structureson opposite sides of the “−−”are to be regarded as
+unrelated, i.e., in eﬀect, equipped withdistinct labels, as in the dis-
+cussion of (VUC2). Here, we recall that this understanding that thering
+structures on opposite sides of the “−−” with distinct labels — say, “⋏”
+and “⋎” — are to be regarded asunrelatedis thecrucial ingredientin the
+approach discussed in (VUC2) to avoiding theincompatibilityproperty —
+i.e., in eﬀect,internal contradiction— inherent in themodiﬁed version
+of theΘ-link discussed in (VUC1). On the other hand,
+in order to apply themultiradial algorithms of IUTch, it is nec-
+essary to identify/confuse these distinct labels “⋏”a n d“⋎”
+[cf. the discussion of (ΘCR), (†ΘCR), (SSIdFs)].
+From apurely “label-theoretic”point of view, in order to obtainconsistent
+deﬁnitions of well-deﬁned mathematical objects that are immune, i.e.,
+remain unaﬀected, by application of these two operations
+• ↦→
+⋏
+−−−
+⋎
+;
+⋏
+−−−
+⋎
+↦→•
+
+32 SHINICHI MOCHIZUKI
+[i.e., of introducing distinct labels for distinct copies “⋏”a n d“⋎”o fa
+single copy “•”a n didentifying/confusing distinct copies “⋏”a n d“⋎”t o
+a single copy “•”], is to
+identify the distinct labels once and for all and work only with
+mathematical objects that areindependent of distinct labels.
+On the other hand, as discussed above, this leads to aninternal contra-
+diction [cf. the discussion of (VUC1)] in the deﬁnition of the id-version
+of (SSId), unless, of course, one regards
+all exponents of “q”as being subject to the indeterminacy
+given by possible multiplication by factors “j2”— an indeter-
+minacy which, as discussed in (AD), then renders all arithmetic
+degree computationsmeaningless.
+SS at times justiﬁed their opposition to the“apparently substantively mean-
+ingless”(cf. (T5-2)) use of “labels” by invoking the issue ofsimplicity (cf. (T7)).
+At other times, SS asserted that the omission of labels could be justiﬁed simply
+by “remembering”the fact that some arrow (corresponding to the“monodromy
+operator”in (LbEx1), “f·” in (LbEx2), “φ” in (LbEx3), “ψ” in (LbEx4), the “glu-
+ing isomorphisms” in (LbEx5), or the “modiﬁed version of the Θ-link” of (VUC1)
+in the case of (LbEx6)) is not compatible with certain structures in its domain
+and codomain. On the other hand, as one may see in the above examples (LbEx1),
+(LbEx2), (LbEx3), (LbEx4), (LbEx5), (LbEx6),omitting the labelsmay, depending
+on thespeciﬁcs of the situation, easily give rise to a“contradiction”(which is in
+fact meaningless!) that doesnot occur if onerespects the labels, i.e., if onerespects
+the distinct roles played by distinct copies.I np a r t i c u l a r ,no matter “how good” a
+particular mathematician’s memory may be,
+(DfLb) relying, in mathematical discussions, on declarations of “remembering”
+that are not accompanied by precise, explicit documentation of the label-
+ing apparatuses that are employedincurs the risk thatdiﬀerent people
+will “remember”diﬀerent labeling apparatuses, which result instruc-
+turally non-equivalent mathematical structures.
+That is to say, as one may see in the above examples (LbEx1), (LbEx2), (LbEx3),
+(LbEx4), (LbEx5), (LbEx6), thesubstantive mathematical contentof a math-
+ematical construction is only completely determined once onemakes completely
+explicit the labeling apparatusthat is adopted in the construction.
+§15. In light of the general considerations concerning the use oflabels discussed
+in §14, it is of interest to review the way in which labels for distinct copies of
+various familiar objects are employed in IUTch in order to construct apparatuses
+that play varioussubstantive rolesin IUTch thatcannot be achieved if the labels
+are deleted.O n efundamental exampleof this phenomenon is
+(LbHT) the bookkeeping apparatus forlabels for evaluation pointswithin a
+single Hodge theater— an apparatus which plays the very substantive
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 33
+role of allowing one tosimulate global multiplicative subspacesand
+canonical generators.
+This phenomenon is discussed in detail in [IUTchI],§I1 (and indeed throughout
+[IUTchI]!). On the other hand, such labels within a single Hodge theater were only
+mentioned very brieﬂy during the March discussions. The “label issues” that were
+discussed in substantial detail during the March discussions concern thelabels
+∈Z×Z that correspond to the “•’s” in thelog-theta-lattice. Here, we begin our
+discussion of these labels by recalling the(highly noncommutative!) diagramthat is
+used to denote theentire log-theta-lattice(i.e., the LHS of the “⊇”), together with
+the portion of the log-theta-lattice (i.e., the RHS of the “⊇”, which consists of the
+vertical arrowsin the 0-a n d1-columns, together with thesingle horizontal arrow
+between the•’s labeled (0,0) and (1,0 ) )t h a ti sactually usedin the main results of
+IUTch:
+... ...
+↑⏐⏐log
+↑⏐⏐log
+...
+Θ
+−→ •
+Θ
+−→ •
+Θ
+−→ ...
+↑⏐⏐log
+↑⏐⏐log
+...
+Θ
+−→ •
+Θ
+−→ •
+Θ
+−→ ...
+↑⏐⏐log
+↑⏐⏐log
+...
+Θ
+−→ •
+Θ
+−→ •
+Θ
+−→ ...
+↑⏐⏐log
+↑⏐⏐log
+...
+...
+⊇
+... ...
+↑⏐⏐log
+↑⏐⏐log
+••
+↑⏐⏐log
+↑⏐⏐log
+•
+Θ
+−→ •
+↑⏐⏐log
+↑⏐⏐log
+••
+↑⏐⏐log
+↑⏐⏐log
+...
+...
+We recall brieﬂy that each•denotes asingle Hodge theater(labeled by an element
+∈Z × Z), which one thinks of as asingle model of the conventional ring/scheme
+theory surrounding the elliptic curve over a number ﬁeld under consideration. One
+then considerstwo types of gluing(denoted by theverticaland horizontal arrowsin
+the diagrams) between certain portions of the Hodge theaters in the domain and
+codomain of each arrow. Thevertical arrowsdenote log-links, while thehorizontal
+arrows denote Θ-links. The following example of the signiﬁcance of the labels
+∈Z × Z for distinct •’s is already immediate from the structure of the above
+diagrams:
+(LbLp) Write
+⃗ΓZ
+for the oriented graph given by the portion of the log-theta-lattice con-
+sisting of thevertical arrowsin the 0-column and the horizontal arrows
+originating from the 0-column.W r i t e
+⃗Γ0
+for the oriented subgraph of⃗ΓZ consisting of thevertical arrowsin the 0-
+column and thesingle horizontal arrowbetween the•’s labeled (0,0) and
+
+34 SHINICHI MOCHIZUKI
+(1,0). Then the operation offorgetting the vertical labelsamounts to
+replacing ⃗Γ0 by the oriented graph
+⃗Γloop
+given by thesingle horizontal arrowof ⃗Γ0, together with anoriented loop
+originating from and terminating at the domain of thissingle horizontal
+arrow. Alternatively, one may think of⃗Γloop as the quotient “⃗ΓZ/Z”o f
+⃗ΓZ by the action ofZ on ⃗ΓZ via vertical translations. On the other hand,
+purely at the level of oriented graphs, itisimmediatethat ⃗ΓZ,⃗Γloop = ⃗ΓZ/Z
+are structurally non-equivalent to ⃗Γ0. For instance, (unlike⃗ΓZ!) ⃗Γ0
+fails to admitvertical symmetries; (unlike⃗Γloop!) ⃗Γ0 (as well as⃗ΓZ)i s
+simply connected (cf. the discussion of (LbEx1)). Thesefundamental
+structural diﬀerencesbetween ⃗Γ0, on the one hand, and ⃗ΓZ, ⃗Γloop,o n
+the other, have verysubstantive consequences in the context of the
+deﬁnition of the Θ-link (i.e., the horizontal arrow of⃗Γ0), which depends,
+in an essential way, onﬁxing the multiplicative structures of the rings
+involved, i.e., isnot invariantwith respect to the“rotations/juggling”
+of the additive and multiplicative structuresthat occur as one executes
+various iterates of thelog-link (cf. the discussion, in the latter portion of
+[Alien], §3.3, (ii), of the importance, in the context of thedeﬁnition of the
+Θ-link,o fdistinguishing the ring structuresin thedomain and codomain
+of the log-link).
+In order to discuss furthersymmetry properties (cf. (SWE1), (SWE2)) of the log-
+theta-lattice, it is useful to apply the notation “Π”, “G”, “O×μ”, “k”, and “k
+×
+”o f
+(SWE1), (SWE2), (ΘNR), (ΘCR). Here, we recall thatk is an algebraically closed
+ﬁeld equipped with a p-adic valuation and a natural action by the topological
+group G, which, in turn, may be regarded as a quotient of the topological group
+Π, and thatk
+×
+⊆k is the multiplicative monoid of nonzero elements ofk.W r i t e
+O× ⊆k for the multiplicative group of units (with respect to the valuation) of
+k.( T h u s ,k, k
+×
+,a n dO× are equipped with natural G-actions, and the object
+“O×μ” may be regarded as the quotient ofO× by its torsion subgroup.) Then
+we observe the following non-symmetry properties of the log-theta-lattice (cf.
+(SWE1), (SWE2)):
+(LbΘ) No horizontal arrow (i.e., Θ-link) of the log-theta-lattice admits a
+symmetry that permutes its domain and codomain.Indeed, this may be
+seen by considering the portion of a•(i.e., a Hodge theater) consisting
+of a single copy ofk. That is to say, such a symmetry would imply the
+existence of a symmetry thatpermutes the domain and codomain of the
+diagram
+k
+×
+∋ qj2
+↦→ q ∈k
+×
+(where j =1 ,...,l ⋇; q and the qj2
+’s are regarded up to multiplication
+by possibly distinct roots of unity), i.e., the existence of a pair of isomor-
+phisms of topological ﬁeldsα: k
+∼
+→ k, β: k
+∼
+→ k such that α(qj2
+)= q,
+β(q)= qj2
+(up to multiplication by possibly distinct roots of unity). One
+veriﬁes immediately thatsuch a pair of isomorphisms does not exist.
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 35
+(Lblog) No vertical arrow(i.e., log-link) of the log-theta-lattice admits asym-
+metry that permutes its domain and codomain.Indeed, this may be seen
+by considering the portion of a•(i.e., a Hodge theater) consisting of a sin-
+gle copy ofk. That is to say, such a symmetry would imply the existence
+of a symmetry thatpermutes the domain and codomain of the diagram
+k ⊇O× log
+−→k
+(where log denotes thep-adic logarithmdeﬁned onO×), i.e., the existence
+of a pair of isomorphisms of topological ﬁeldsα: k
+∼
+→ k, β: k
+∼
+→ k such
+that, if we writeM
+def
+=l o g−1(O×) ⊆O×,t h e nα|M =l o g◦(β|O×)◦(log|M).
+One veriﬁes immediately thatsuch a pair of isomorphisms does not exist.
+(LbMn) Write
+⃗Γmain
+for the oriented graph given by the portion of the log-theta-lattice that is
+actually usedin the main results of IUTch, i.e., the portion consisting of
+the vertical arrowsin the 0-a n d1-columnsand thesingle horizontal arrow
+between the•’s labeled (0,0) and (1,0). Then one veriﬁes immediately (cf.
+(LbΘ), (Lblog)!) that the portion determined by⃗Γmain of the log-theta-
+lattice doesnot admit asymmetry that permutes the0-a n d1-columns.
+It is precisely because of thesenon-symmetry properties (LbΘ), (Lblog), (LbMn)
+that (at least from ana prioripoint of view!)
+it is ofcrucial importanceto specify the labels∈Z×Z when discussing
+variousportions(suchas“ k”, “k
+×
+”, “O×”)ofthe•’s(i.e., Hodgetheaters)
+in the log-theta-lattice.
+The portions of the•’s (i.e., Hodge theaters) that (at least from ana prioripoint
+of view!)depend on the labels∈Z×Z are referred to, in IUTch, asFrobenius-
+like. On the other hand, objects arising from certain Galois groups (such asG)
+or arithmetic fundamental groups (such as Π) are referred to as´etale-like.I fo n e
+restricts oneself to considering isomorphisms between objects, for instance, in
+situations that often arise inanabelian geometry, then there is not so much of a
+diﬀerence betweenFrobenius-likeand ´etale-like versions of various objects. On the
+other hand, when one considers the relationship between objects onopposite sidesof
+the Θ- and log-links,t h e r ei sav e r yfundamental diﬀerencebetween Frobenius-like
+and ´etale-like versions of various objects, namely:
+(EtFr) Whereas Frobenius-like objects on opposite sides of the Θ- and
+log-links are (typically) related to one another by means of some sort of
+relationship that isfar from being anisomorphism (e.g., far from being
+compatible with the respectivering structures!), ´etale-likeobjects on
+opposite sidesof the Θ- and log-links are (typically) related to one another
+by means of anisomorphism.
+Perhaps the most fundamental classical example of this sort of situation is the
+situation that arises in the case of theanabelian geometryof one-dimensional
+function ﬁelds over ﬁnite ﬁelds, in the context of theFrobenius morphism
+
+36 SHINICHI MOCHIZUKI
+in positive characteristic [cf. the discussion of [Alien], §2.6, §2.7, §2.8, for more
+details]:
+(EtFrEx) Consider the ﬁeldF
+def
+= Fp(t) (i.e., a purely transcendental extension of
+t h eﬁ e l do fc a r d i n a l i t yp), for some prime numberp. Then theFrobenius
+morphism φ: F → F, i.e., the ﬁeld homomorphism that mapst ↦→ tp,
+induces anisomorphism
+Aut(F)
+∼
+→ Aut(F)
+between the respectivegroups of ﬁeld automorphisms, despite the fact that
+φis far from being anisomorphism.
+(Indeed, it is precisely this fundamental classical example that gave rise to the
+terminology “Frobenius-like”and “´etale-like”.) Unlike the various Frobenius-like
+objects discussed in (LbΘ), (Lblog), (LbMn), ´etale-like objects admit important
+symmetry properties as follows (cf. (SWE1), (SWE2)):
+(EtΘ) It is atautological consequence of the deﬁnitionsthat the “G’s” in the
+domainandcodomainoftheΘ-link—i.e., whichactonthecopiesof O× ⊆
+k
+×
+⊆k in the domain and codomain of the Θ-link — map isomorphically
+to one another via the Θ-link and, moreover, when regarded asabstract
+topological groups (i.e., which arenot equippedwith any data arising
+from the usual actions ofG on some copy ofO× ⊆k
+×
+⊆k!), may be
+permuted with one another.
+(Etlog)I t i s atautological consequence of the deﬁnitionsthat the “Π’s” in the
+domain and codomain of thelog-link — i.e., which act on the copies of
+O× ⊆k
+×
+⊆k in the domain and codomain of thelog-link — map iso-
+morphically to one another via thelog-link and, moreover, when regarded
+as abstract topological groups (i.e., which arenot equippedwith any
+data arising from the usual actions of Π on some copy ofO× ⊆k
+×
+⊆k!),
+may bepermuted with one another.
+(EtMn) It is atautological consequence of the deﬁnitionsthat the diagram
+Π ↠ G ↞ Π
+— where the Π’s andG are regarded asabstract topological groups
+(which are only known up to isomorphisms of topological groups); the↠,
+↞arethe poly-morphisms(i.e., setsofmorphisms)givenbythecomposites
+of the natural surjection Π↠ G with arbitrary automorphisms of the
+domain and codomain; the Π on the LHS (respectively, RHS) arises from
+the 0- (respectively, 1-)column of⃗Γmain (cf. (LbMn), (Etlog)); theG arises
+from the unique horizontal arrow of⃗Γmain (cf. (LbMn), (EtΘ)) — admits
+a symmetry that permutes the Π’s on the LHS and RHS and ﬁxes the
+unique G of the diagram.
+As discussed in §8, these symmetry properties (EtΘ), (Etlog), (EtMn) are the
+fundamental propertiesthat underlie themultiradial algorithmsof IUTch (i.e.,
+[IUTchIII], Theorem 3.11) and, in particular, play acentral rolein IUTch.
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 37
+§16. One sort ofundercurrent themethat underlies the variousmisunderstandings
+(cf. §2) discussed so far in the present report is
+(DsGl) the deep sense of discomfort that some mathematicians feel with
+regard to thegluing/identiﬁcation given by the value group portion of
+the Θ-link (cf.§9)
+{qj2
+}N ∼
+→ qN
+— a sense of discomfort that is perhaps partially related to the discussion
+surrounding (HstMod).
+One possible approach to overcoming this sense of discomfort is to recall various
+classical examplesof closely related phenomena.
+Perhaps themost fundamentalsuch “classical example” is
+(GlMt) the special case of the property ofinvariance of heights with respect to
+isogeny (established by Faltings) in the case ofglobal multiplicative
+subspaces of modules of torsion points of elliptic curves over number
+ﬁelds, i.e., subspaces thatcoincide, at all nonarchimedean primes of bad
+multiplicative reduction, with the subspace arising from the copy of the
+multiplicative group scheme“Gm” that occurs in theTate uniformization
+(cf. [Alien], §2.3, for more details).
+That is to say, such isogenies arising from global multiplicative subspaces corre-
+spond (say, in the case ofl-torsion points, forl a prime number) locally at nonar-
+chimedean primes of bad reduction to the operation ofraising q-parameters to the
+l-th power
+q ↦→ ql
+(cf. (DsGl)). In this context, it is useful to recall that:
+(DFL) As discussed in [Alien], §2.3, §2.4, §2.5, this example (GlMt) is closely
+related to the technique of takingderivatives of Frobenius liftings,
+which, as discussed in [Alien],§2.6, §2.7, motivated the development of
+t h et e c h n i q u eo fmono-anabelian transport, which plays acentral role
+in IUTch.
+One way to summarize theessential mechanisminvolved here is as follows:
+(DiIsm) On the one hand, theassignment
+q ↦→ ql
+(cf. (DsGl))is, inessence, a“dilation”, i.e., multipliesheights/degrees/log-
+volumes by afactor ofl. On the other hand, this assignmentinduces
+dlog(q) ↦→ l·dlog(q)
+(essentially, since thefactor ofl preceding the “dlog(q)” can typically, for
+various technical reasons, beignored!) an “isometry”. Moreover, since
+the arithmetic line bundle “ω” of invariant diﬀerentials on each of the
+elliptic curves under consideration arises from anample line bundle on
+the moduli stack of elliptic curves, its arithmetic degree (i.e., the height of
+
+38 SHINICHI MOCHIZUKI
+the elliptic curve) issuﬃcient to control the moduli of the elliptic curve(up
+to ﬁnitely many possibilities). It is precisely this“tension”between the
+“dilation”and“isometry”aspectsoftheassignment q ↦→ ql, togetherwith
+the ampleness just mentioned, that gives rise tonontrivial consequences
+concerning the elliptic curves involved.
+Relative to the analogy with the technique ofmono-anabelian transport (and
+hence with IUTch!):
+(MAT1) the assignment “q ↦→ ql” corresponds to thelink involved, i.e., such as
+the Θ-link of IUTch;
+(MAT2) the dilation aspect of this assignment corresponds to the eﬀect of the
+link onFrobenius-likeobjects;
+(MAT3) the isometry aspect of this assignment corresponds to the eﬀect of the
+link on´etale-like objects (cf., e.g., theswitching symmetrydiscussed
+in (EtMn), which plays a crucial role in establishing themultiradial algo-
+rithms of IUTch!);
+(MAT4) the ampleness of “ω”, which may thought of as a sort of manifestation
+of hyperbolicity, corresponds to themono-anabelian properties that
+are applied in the technique of mono-anabelian transport, i.e., properties
+that ensure that the isometry (e.g., ´etale-like) aspect is“suﬃciently rich”
+to capture the objects of interest in their entirety.
+Another fundamental “classical example” is theanalogy between themulti-
+radial representation algorithms developed in IUTch (i.e., [IUTchIII], Theo-
+rem 3.11) and the classical theory ofconnections, which we consider here from
+the point of view ofGrothendieck’s deﬁnition of the notion of a connection, i.e.,
+the point of view that gave rise to the notion of acrystal. A detailed discussion
+of this analogy — which includes a discussion of the analogy between themain
+results of IUTch (i.e., [IUTchIII], Theorem 3.11; [IUTchIII], Corollary 3.12) and
+the classical argumentused to prove thegeometric version of the Szpiro Conjecture
+by considering theKodaira-Spencer morphism— may be found in [Alien],§3.1, (v).
+That is to say,
+(MlCr1) just as the structure of acrystal allows one to relate liftings of an object
+to distinct nilpotent thickeningsof agiven (say, reduced) schemethat
+coincide over the given scheme,
+(MlCr2) the multiradial representation algorithmsdeveloped in IUTch (i.e.,
+[IUTchIII], Theorem 3.11 — cf. also the discussion of [IUTchIII], Remark
+3.11.1) allow one to relate distinct ring-theoretic realizations, i.e., via
+{qj2
+} or q (which correspond todistinct thickenings), of thegluing data
+thatappears intheΘ-link, i.e., “prime-strips”ofacertaintype (whichcor-
+respond to the object associated by a crystal to thegiven reduced scheme,
+i.e., for instance, apositive characteristic scheme).
+Here, we recall (cf. the discussion at the beginning of [Alien],§3.1, (v)) that this
+analogy — which involves a comparison between degrees of ample line bundles (i.e.,
+“heights”) and “0” (i.e., as opposed to some large positive multiple of the “height”)
+— may be thought of as a sort oflimiting versionof a transformation of the form
+q ↦→ qN
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 39
+(cf. (DsGl)) as N → +∞. The analogy between (MlCr1) and (MlCr2) is also of
+interest from ahistorical point of view:
+(MlCrH1) just as the classical scheme-theoretic argument of [Alien],§3.1, (v), which
+presents the Kodaira-Spencer morphism from the point of view of (log)
+crystals and nilpotent thickenings of (log) schemes,only makes sense if
+one considers distinct non-reduced schemes, i.e., distinct thicken-
+ings of a given reduced scheme— notions that wereunfamiliar to many
+algebraic geometers in the 1960’s, who were accustomed only to work-
+ing with more classical notions of “varieties”, e.g., notions that revolve
+around consideringcollections of subrings of some ﬁxed ﬁeld,
+(MlCrH2) the theory surrounding themain resultsof IUTch (i.e., [IUTchIII], The-
+orem 3.11; [IUTchIII], Corollary 3.12)only makes senseif one considers
+distinct copies of ring/scheme theory(cf. (Smm), (GLR2), (IUAD)!)
+glued together along data of the sort that appears in the Θ-link (i.e.,
+“prime-strips”of a certain type) — notions that areunfamiliar to many
+arithmetic geometers today, who are accustomed only to workingwithin
+a ﬁxed copy of scheme theory.
+Yet another fundamental “classical example” may be seen inBogomolov’s
+proof of thegeometric version of the Szpiro Conjecture. We refer to [BogIUT], as
+well as [Alien],§4.3, (iii), for a detailed discussion of the analogy between Bogo-
+molov’s proof and IUTch. One way to understand theessential mathematical
+phenomenon that underlies Bogomolov’s proof is to consider the followingele-
+mentary observation:
+(SLZR)T h eunipotent matrices (1 m
+01
+)
+—w h e r em ranges over the positive integers — areconjugate to one
+another inSL
+2(R), but arenot conjugateto one another inSL2(Z).
+Here, we recall that, from the point of view of the classical geometry of the upper
+half-plane, the unipotent matrix in (SLZR) may be thought of as themonodromy
+operator associatedtothe m-th powerqm ofthe q-parameterq =e x p ( 2πiz)(where
+z denotes the standard complex coordinate on the upper half-plane). Bogomolov’s
+proof centers around a
+(BgCp) comparison between a certain collection of 2× 2 matrices regarded
+as elements of SL2(Z) and the same collection of matrices regarded as
+elements ofSL2(R), i.e., a comparison (cf. (SLZR)!) between
+some ﬁxed/rigid (positive integer) power “qm0”o fq
+and
+an indeterminate power “qm”o fq
+(i.e., wherem ranges over the positive integers) — cf. (DsGl).
+Moreprecisely, Bogomolov’sproofinvolvesliftingsofelementsin SL2(R)(or SL2(Z))
+to thecanonical extension
+1 → Z → SL2(R)∼ → SL2(R) → 1
+
+40 SHINICHI MOCHIZUKI
+(or the restriction SL2(Z)∼ of this extension to SL2(Z) ⊆ SL2(R)). From a
+more scheme-theoretic point of view, the comparison in Bogomolov’s proof may be
+thought of as a comparison between various“realizations of the ﬁrst Chern class”
+of the Hodge bundleω(i.e., arising from the invariant diﬀerentials on the tauto-
+logical elliptic curve) on the moduli stack of elliptic curvesMell (and its canonical
+compactiﬁcation Mell). That is to say:
+(Chrn) The“SL2(Z)∼ side”of the comparison in Bogolomov’s proof corresponds
+to a sort of geometric version of thecomplex holomorphic realiza-
+tion of the ﬁrst Chern class ofω(with compact supports relative to the
+compactiﬁcation Mell ⊆Mell), while the“SL2(R)∼ side”of the compar-
+ison in Bogolomov’s proof corresponds to a sort ofmetric/diﬀerential-
+geometric realizationof the ﬁrst Chern class ofω, via variouscanonical
+metrics arising from the hyperbolic geometry of the upper half-plane.
+At a more concrete level, the comparison — between the point of view of working
+inside SL2(R)∼ and the point of view of working insideSL2(Z)∼ — in Bogomolov’s
+proof centers around consideration of a certainrelation
+[˜α1, ˜β1]·... ·[˜αg, ˜βg]· ˜γ1 ·... · ˜γr =( ˜τ|∡|)2n∡
+(cf. the notation of the discussion of [BogIUT] preceding (B4)) between elements
+∈SL2(Z)∼ ⊆SL2(R)∼.T h i s“linking data”(i.e., consisting of the elements
+that appear in the aboverelation, together with therelation itself) between the
+“SL2(R)∼ side”and “SL2(Z)∼ side”of the comparison in Bogolomov’s proof is
+interesting, relative to the analogy with IUTch, in that the “˜γi’s” (fori =1 ,...,r )
+correspond to thelocal q-parameters of the family of elliptic curves under consid-
+eration, while (the integer power that appears in) “(˜τ|∡|)2n∡
+” corresponds to the
+(global) heightof the family of elliptic curves under consideration. That is to say,
+(LkDt) The local “˜γi’s” (fori =1 ,...,r ) may be understood as corresponding
+to the local value group portion (at, say, bad primes) of the gluing
+data (i.e., “prime-strips”of a certain type) that appears in the Θ-link,
+while the global “(˜τ|∡|)2n∡
+” may be understood as corresponding to the
+global realiﬁed Frobenioid portion(i.e., global value group portion)
+of the gluing data (i.e.,“prime-strips”of a certain type) that appears in
+the Θ-link. (Here, we note in passing that one may also interpret the
+“[˜αj, ˜βj]’s” (forj =1 ,...,g ) in this context as corresponding to thelocal
+unit group portion(at, say,good primes)ofthegluingdata(i.e., “prime-
+strips”of a certain type) that appears in the Θ-link, where we recall that
+this local unit group portion gives rise, vialog-volume computations of log-
+shells,t ot h elog-diﬀerentterm (i.e., an arithmetic analogue of theEuler
+characteristic 2−2g) in the bound for the height of an elliptic curve over
+a number ﬁeld obtained in [IUTchIV], Theorem 1.10.)
+Bogomolov’s proof then proceeds bycomparing
+(Bg1) a certaindisplacement estimate—w h i c hi sinvariant with respect to
+independent SL2(R)∼-conjugation indeterminacies acting on each of the
+linking data elements — that arises from considering the abovelinking
+data in SL2(R)∼ (cf. the discussion preceding [BogIUT], (B5))
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 41
+with
+(Bg2) a certain computation of the heightof the family of elliptic curves
+under consideration in terms of thelocalq-parameters(cf. [BogIUT], (B4),
+together with the discussion immediately preceding [BogIUT], (B4)) that
+arises from considering the abovelinking datain SL2(Z)∼.
+Relative to the analogy with IUTch,
+(BgIUT1) the displacement estimatein Bogomolov’s proof — which arises from
+working with indeterminate powers of q-parameters (cf. the indepen-
+dent SL2(R)∼-conjugation indeterminacies!), relative toSL2(R)∼ — cor-
+responds to themultiradial representationof IUTch (i.e., [IUTchIII],
+Theorem 3.11), while
+(BgIUT2) the computation of the height in terms of local q-parameters in
+Bogomolov’s proof — which arises from working withrigid powers of
+q-parameters, relative to SL2(Z)∼ — corresponds to the argument of
+[IUTchIII], Corollary 3.12.
+Moreover, in this context, it is of interest to observe, relative to the analogy with
+IUTch, that:
+(DsInd) This computation via displacement estimates in Bogomolov’s proof
+furnishes afascinating and relatively elementaryexample of the phenom-
+enon of computing the“size”of aregionsubject toindeterminacies (cf.
+(Bg1), (BgIUT1), i.e., the displacement estimates in Bogomolov’s proof,
+which areinvariant with respect to theindependent SL2(R)∼-conjugation
+indeterminacies acting on each of the linking data elements; the multira-
+dial representation of the Θ-pilot object in IUTch) thatapproximates
+(say, from above) someregion of interestthat is“rigid”and not subject
+to indeterminacies (cf. (Bg2), (BgIUT2), i.e., the linking data in Bogo-
+molov’s proof considered inSL2(Z)∼; the Θ-pilot relative to the Θ-hol.
+str. in IUTch).
+Finally, we observe that the partition of Bogomolov’s proof mentioned above into
+(Bg1)/(BgIUT1) and (Bg2)/(BgIUT2) is of interest not only from the point of view
+of the correspondence with [IUTchIII], Theorem 3.11, and [IUTchIII], Corollary
+3.12, but also from ahistorical point of view. Indeed, (Bg1) (though apparently
+rediscovered by Bogomolov around the year 2000) wasalready known to Milnor in
+the 1950’s, while (Bg2) was, apparently,not known until Bogomolov’s workaround
+the year 2000.
+§17. The fundamental misunderstandings of IUTchdiscussed in the present report
+may be summarized as a failure to understand the following central aspects of
+IUTch:
+(FM1) the signiﬁcance of the operation ofre-initialization of histories (cf.
+(T1), (H2)), the explicit speciﬁcation of types of mathematical
+objects (cf. (T2), (H2)), and the use of poly-morphisms (cf. (T4),
+(PMInd), (PMEss)) in the construction of mathematical structures (e.g.,
+inIUTch)thatadmit switching symmetries(cf. (SW),(Sym), (SWC1),
+
+42 SHINICHI MOCHIZUKI
+(SWC2), (SWE1), (SWE2), (LbΘ), (Lblog), (LbMn), (EtΘ), (Etlog),
+(EtMn));
+(FM2) the signiﬁcance of explicit speciﬁcation of label apparatuses (cf.
+(T3), (T5), (IUAD), (SSDLFs), (LbRl), (LbEx1), (LbEx2), (LbEx3),
+(LbEx4), (LbEx5), (LbEx6), (LbHT), (LbΘ), (Lblog), (LbMn)) to distin-
+guish distinct copiesof various familiar objects that playsubstantively
+diﬀerent roleswithin a complicated mathematical structure;
+(FM3) the signiﬁcance of the requirement that the various data (i.e., value
+group portionand unit group portion) that occurs in thedomain of the
+Θ-link arise from asingle ring str.(cf. (ΘCR), (VUSQ), (VUC)) — a
+requirement that must be satisﬁed in order to apply themultiradial rep-
+resentation algorithms developed in IUTch, i.e., [IUTchIII], Theorem
+3.11 (cf. (T3), (SSInd), (GIUT), (SSId), (†ΘCR), (SSIdFs), (SSADFs)).
+In this context, we observe that the point of view of (FM1), i.e., of“forgetting
+histories”, may, at ﬁrst glance, appear to lie in acontradictory directionto the
+point of view of (FM2), i.e., of“remembering labels”. In fact, however, al-
+though, depending upon the content of varioustechnical goals, it may be necessary
+to “remember”some mathematical structures in some situations and to“forget”
+other mathematical structures in other situations,
+the common threadthat unites (FM1) and (FM2) is the principle that it is
+always of fundamental importance tospecify explicitlywhich structures
+one wishes toremember or forget.
+One way to summarize (FM1), (FM2), (FM3) is as follows:
+(MVEx) Each of (FM1), (FM2), (FM3) centers around the issue of experimenting
+with various modiﬁed versions of IUTch to examine to what extent
+the essential content of IUTch continues to hold in such modiﬁed versions.
+Since, typically, research papers in mathematics (such as, for instance, the papers
+[IUTchI], [IUTchII], [IUTchIII], [IUTchIV]!) donot contain any exercises, experi-
+menting with various modiﬁed versions of a mathematical theory, i.e., such as those
+that appear in (FM1), (FM2), (FM3), is animportant stepin acquiring a deep un-
+derstanding of the theory. From this point of view, the experimental versions of
+IUTch that appear (either explicitly or implicitly!) in (FM1), (FM2), (FM3) may
+be regarded as avaluable pedagogical tool for (both present and future) stu-
+dents of IUTch and, in particular, as an important step forward (cf. the discussion
+of §3) towards the goal of
+completely diagnosing and explicating the logical structure of all misun-
+derstandings concerning IUTch.
+In particular, one might hope (cf. the discussion of§3) that (FM1), (FM2), (FM3)
+may serve to stimulate the further examination and development of such exer-
+cises/experimental versions of IUTch.
+§18. In the context of the present report, it is important to recall that
+(Vrf1) IUTch has been checked, veriﬁed, read and reread,a n dorally exposed
+in detail in seminars in its entiretycountless timessince the release of
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 43
+preprints on IUTch in August 2012 by a collection of mathematicians (not
+including myself) involved in this line of research. (For instance, Fesenko
+estimates, in the most recent updated version of§3.1 of his survey [Fsk],
+that IUTch has been veriﬁed at least 30 times.) This collection of math-
+ematicians has (together with me) also been actively involved in detailed
+discussions and dialogues with mathematicians who have any questions
+concerning IUTch.
+Such discussions have been useful in enhancing the level of understanding of IUTch
+by many mathematicians, as well as in ﬁnding minor inessential inaccuracies, mis-
+prints, etc. in the preprints on IUTch. Such discussions have also served to conﬁrm
+countless times that
+(Vrf2) there isno substantive mathematical reasonwhatsoever to suspect
+the existence of any oversights, i.e., any ﬂaws or incompleteness of
+a mathematically substantive nature, in the numerous veriﬁcations that
+have been conducted so far concerning IUTch.
+In light of this state of aﬀairs, it should not be surprising that my oral explanations,
+over the past few months, to various colleagues involved in (Vrf1), (Vrf2) of the
+misunderstandings summarized in§17 were met with aremarkably unanimous
+response of utter astonishment and evendisbelief (at times accompanied by
+bouts of laughter!) that such manifestly erroneous misunderstandings could have
+occurred. At times, this sort of response put me in the somewhat paradoxical
+positionofhavingto“justify”or“defend”thelineofreasoningofSSthatapparently
+led to such misunderstandings. Put another way,
+(CMA) the ﬂaws in IUTch that are alleged in (SSId), (SSAD) — i.e., which
+correspond to the mostcentral aspects of themisunderstandings sum-
+marized in§17 — are soutterly pronouncedand conspicuous in their
+absurdity that it is very diﬃcult to believe that such ﬂaws could have
+remained undetected by any competent mathematician for even a few min-
+utes, let alone throughout the duration of theintensive veriﬁcation activ-
+ities (cf. (Vrf1), (Vrf2)) by quite a number of talented mathematicians
+that have been carried out over the years since August 2012.
+Careful reﬂection concerning this state of aﬀairs over the months since the March
+discussions has led me to the following conclusion:
+(DfMth) Perhaps the most reasonable explanation for the state of aﬀairs sum-
+marized above in (Vrf1), (Vrf2), (CMA) is that themathematics that SS
+perceive as being referred to by the term “IUTch”is simplysubstantially
+diﬀerentfrom themathematics that HM(as well as other mathematicians
+who have been deeply involved in the various activities concerning IUTch
+described in (Vrf1), (Vrf2))understand by the term “IUTch”(cf. (Smm),
+(GLR2), (T6), (T7), (T8), (SSId), (SSAD), (DfLb)).
+Indeed, at numerous points in the March discussions, I was often tempted to issue
+a response of the following form to various assertions of SS (but typically refrained
+from doing so!):
+Yes! Yes! Of course, I completely agree that the theory that you are
+discussing is completely absurd and meaningless, butthat theory is com-
+pletely diﬀerent from IUTch!
+
+44 SHINICHI MOCHIZUKI
+Nevertheless, the March discussions were productive in the sense that they yielded
+a valuable ﬁrst glimpseat themathematical content of the misunderstandingsthat
+underlie criticism of IUTch (cf. the discussion of§3). In the present report, we
+considered variouspossible causes for these misunderstandings, namely:
+(PCM1) lack of suﬃcient time to reﬂect deeply on the mathematics under
+discussion (cf. the discussion in the ﬁnal portions of§2, §10);
+(PCM2) communication issues and related procedural irregularities (cf.
+(T6), (T7), (T8));
+(PCM3) a deep sense of discomfort,o r unfamiliarity,w i t hnew ways of
+thinking about familiar mathematical objects (cf. the discussion of§16;
+[Rpt2014], (T2); [Fsk],§3.3).
+On the other hand, the March discussions were, unfortunately, by no means
+suﬃcientto yield acomplete elucidationof the logical structure of thecauses
+underlying the misunderstandings summarized in§17.
+Bibliography
+[Rtv] Wikipedia article:Criticism of the theory of relativity, available at:
+https://en.wikipedia.org/wiki/Criticism of the theory of relativity
+[Fsk] I. Fesenko, Arithmetic deformation theory via arithmetic fundamental groups
+and nonarchimedean theta-functions, notes on the work of Shinichi Mochizuki,
+Eur. J. Math.1 (2015), pp. 405-440; updated version available at:
+https://www.maths.nottingham.ac.uk/personal/ibf/notesoniut.pdf
+[Gll] Wikipedia article:Galileo Galilei, available at:
+https://en.wikipedia.org/wiki/Galileo Galilei
+[FKvid] F. Kato, The abc Conjecture and New Mathematics - Prof. Fumiharu Kato,
+Oct 7, 2017 (with English subtitles), video (with English subtitles) available
+at:
+https://www.youtube.com/watch?v=fNS7N04DLAQ&feature=youtu.be
+[IUTchI] S. Mochizuki, Inter-universal Teichm¨uller Theory I: Construction of Hodge
+Theaters, RIMS Preprint1756 (August 2012).
+[IUTchII] S. Mochizuki,Inter-universal Teichm¨uller Theory II: Hodge-Arakelov-theoretic
+Evaluation, RIMS Preprint1757 (August 2012).
+[IUTchIII] S. Mochizuki, Inter-universal Teichm¨uller Theory III: Canonical Splittings of
+the Log-theta-lattice, RIMS Preprint1758 (August 2012).
+[IUTchIV] S. Mochizuki, Inter-universal Teichm¨uller Theory IV: Log-volume Computa-
+tions and Set-theoretic Foundations, RIMS Preprint1759 (August 2012).
+[Rpt2014] S. Mochizuki, On the Veriﬁcation of Inter-universal Teichm¨uller theory: a
+Progress Report (as of December 2014), December 2014, available at:
+
+DISCUSSIONS ON IUTCH (MARCH 15 – 20, 2018) 45
+http://www.kurims.kyoto-u.ac.jp/~motizuki/IUTeich%20Verification
+%20Report%202014-12.pdf
+[QC2016] S. Mochizuki, On Questions and Comments Concerning Inter-universal Te-
+ichmller Theory (IUT), July 2016, available at:
+http://www.kurims.kyoto-u.ac.jp/~motizuki/Questions%20and%20
+Comments%20on%20IUT.pdf
+[Alien] S. Mochizuki,The Mathematics of Mutually Alien Copies: from Gaussian Inte-
+grals to Inter-universal Teichm¨uller Theory, RIMS Preprint1854 (July 2016).
+[BogIUT] S. Mochizuki, Bogomolov’s proof of the geometric version of the Szpiro Con-
+jecture from the point of view of inter-universal Teichm¨uller theory,Res. Math.
+Sci. 3 (2016), 3:6.
+[Ymgt] S. Yamagata, A counterexample for the local analogy of a theorem by Iwasawa
+and Uchida,Proc. Japan Acad.52 (1976), pp. 276-278.
+Updated versions of preprints are available at the following webpage:
+http://www.kurims.kyoto-u.ac.jp/~motizuki/papers-english.html

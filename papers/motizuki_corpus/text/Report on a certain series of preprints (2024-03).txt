@@ -1,0 +1,507 @@
+REPORT ON THE RECENT SERIES
+OF PREPRINTS BY K. JOSHI
+Shinichi Mochizuki
+March 2024
+Contents:
+§1. General Overview
+§2. Local tilts and global arithmetic inequalities
+§3. Further discussion
+Section 1: General Overview
+Over the past few years, K. Joshi has released a series of preprints, culminating
+in the following two recently released preprints:
+[CnstIII] K. Joshi,Construction of Arithmetic Teichmuller Spaces III: A ‘Rosetta Stone’
+and a proof of Mochizuki’s Corollary 3.12(January 25, 2024 version), preprint.
+[CnstIV] K. Joshi,Construction of Arithmetic Teichmuller Spaces IV: Proof of the abc-
+conjecture(March 10, 2024 version), preprint.
+Sincethisseriesofpreprintscontainsnumerousassertionsconcerning inter-universal
+Teichm¨uller theory, a theory exposed in the surveys [Alien], [EssLgc] [cf. also the
+original papers [IUTchI-IV], [ExpEst]], I have been requested by various people to
+make public my understanding concerning the content of this series of preprints.
+In a word, myshort answerto such requests may be summarized as follows:
+(ShtAns) although Joshi, in this series of preprints, makes references to and often
+uses certain portions of the terminology and notation of inter-universal
+Teichm¨uller theory, it is conspicuously obvious to any reader of these
+preprints who is equipped with a solid, rigorous understanding of the ac-
+tual mathematical content of inter-universal Teichm¨uller theory that the
+author of this series of preprints isprofoundly ignorant of the actual
+mathematical content of inter-universal Teichm¨uller theory, and, in par-
+ticular, that this series of preprints doesnot contain, at least from the
+point of view of the mathematics surrounding inter-universal Teichm¨uller
+theory, any meaningful mathematical content whatsoever.
+To my knowledge,
+(NotPb) none of these preprints has been published in an internationally recognized
+mathematical journal.
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+Nevertheless, in accordance with thespirit of [i.e., as opposed to the strictly inter-
+preted ethical duties implied by] the passage [namely, Article (6.)] of the subsec-
+tion entitled “Responsibilities of authors” of the Code of Practice of the European
+Mathematical Society [cf. [EMSCOP]] that I often quote — i.e.,
+Mathematicians should not make public claims of potential new theorems
+or the resolution of particular mathematical problems unless they are able
+to provide full details in a timely manner.
+— it should be recalled that
+(WrEx) it is of fundamental importanceto the sound development of the ﬁeld
+of mathematics, especially from ahistorical point of view, to producede-
+tailed, explicit, mathematically substantive,a n dreadily accessi-
+ble written expositions of thelogical structure underlying publicly
+articulated mathematical assertions,
+i.e., as opposed to resorting to justiﬁcations of such mathematical assertions via
+invocations of suchmathematically meaningless — and indeedlargely psychologi-
+cally/socially/politically based— notions as the notion of“common sense”[cf. the
+discussion of [EssLgc],§1.3, §1.5, §1.8]. The present report may be understood as
+a written exposition in the spirit of (WrEx).
+In this context, it should be recalled [cf., e.g., [Rpt2023]] that the original
+papers on inter-universal Teichm¨uller theory, i.e., [IUTchI-IV], as well as a sequel
+[ExpEst] to these original papers, were published a number of years ago in lead-
+ing international journals. Moreover, there is by now a quite substantial body of
+mathematicians who are not only thoroughly familiar with the original theory [i.e.,
+of [IUTchI-IV]], but have also been quite actively engaged for a number of years
+now in research on further enhanced versions of inter-universal Teichm¨uller theory.
+Over the past few years, and especially over the past few months, I consulted with
+many of these researchers concerning the issue of what would be the optimal way
+to respond to Joshi’s series of preprints. The present report may be understood,
+to a substantial extent, as the product of these consultations. The reactions that I
+met with during these consultations may be summarized as follows:
+(Reac1) First of all, there was anentirely unanimous consensusthat Joshi’s
+series of preprints wasobviously mathematically meaningless,a n d
+that it was obvious that he did not have any idea what he was talking
+about.
+(Reac2) In light of the blatant obviousness underlying (Reac1), many consultees
+were not interested in investing the time and eﬀort necessary to discuss
+Joshi’s series of preprints in detailand indeedstrongly encouraged me to
+simply ignorethem as well.
+(Reac3) On the other hand, in response to (Reac2), I emphasized [cf. the above
+discussion surrounding (WrEx)] the importance of producingdetailed, ex-
+plicit, mathematically substantive, and readily accessible written exposi-
+tions of themathematical contentunderlying the unanimous reaction
+of researchers of the inter-universal Teichm¨uller theory community [cf.
+(Reac1)].
+
+REPORT ON JOSHI PREPRINT SERIES 3
+(Reac4) In the context of (Reac3), I would also emphasize another important as-
+pect of (Reac3), namely, that the“exercise”of making the mathematical
+content mentioned in (Reac3)explicit, in accordance with (WrEx), should
+be understood as a valuable pedagogical tool, both for seasoned re-
+searchers and novices in inter-universal Teichm¨uller theory, for deepening
+one’s understanding of the mathematics involved [cf. the discussion of
+[EssLgc], §1.6, §1.7, §1.8, §1.10, §3.1].
+Finally, in the context of the theme of“computers and inter-universal Te-
+ichm¨uller theory”discussed in [EssLgc],§1.12, I should mention that I could not
+help but notice the followingstimulating interconnectionsbetween this theme of
+“computers and inter-universal Teichm¨uller theory” and Joshi’s series of preprints:
+(AI1) When browsing through Joshi’s series of preprints, i.e., whose content
+consists of a sort ofrough concatenation of various “fragments”of inter-
+universal Teichm¨uller theory that is nonethelessdevoid of any substantive
+mathematical understanding [cf. (ShtAns)], I could not help but be re-
+minded of the so-called“hallucinations”produced by artiﬁcial intelli-
+gence algorithms, such as ChatGPT, i.e., which are synthesized precisely
+by means of variousmechanically searched contextual concatenationsthat
+are entirely devoid of any genuine “human” understanding of the actual
+content of the text involved.
+(AI2) The observation of (AI1) suggests that in the future, it is quite possible
+that the production, or indeedmass production(!), of similar“pseudo-
+mathematical texts”by articial intelligence algorithms may become
+more widespread and, in particular,pose a substantial threatto the sound
+development of the ﬁeld of mathematics by sewing the seeds ofentirely un-
+necessary confusionintheworldwidemathematicalcommunityconcerning
+established mathematical theories.
+(AI3) On the other hand, it is also quite possible that in the future, the“exer-
+cise”of producing suitable written expositions in response [cf. (Reac4)] —
+which can often require aquite substantial investment of time and eﬀortof
+the sort that many researchers in the ﬁeld, who are quite busy with their
+own research projects, are simply not willing to make [cf. (Reac2)] —
+could be performed, as least partially, viaartiﬁcial intelligence algorithms
+for theautomated parsing of texts, so that researchers would not need
+to invest the time and eﬀort necessary to do this themselves. Indeed, one
+important aspect of thevaluable pedagogicalnature of the“exercise”
+of producing suitable written expositions in response to manuscripts such
+as [CnstIII], [CnstIV] [cf. (Reac4)] lies precisely in the fact this sort of
+“exercise” may be thought of as a sort ofinitial, preparatory step, relative
+to theultimate goal of designing such automated text parsing algorithms.
+(AI4) In the context of the issue of substantial investments of time and ef-
+fort [cf. (Reac2), (AI3)], I should also mention that I wassaddened,a s
+I browsed through Joshi’s series of preprints, to contemplate the quite
+considerable investment of time and eﬀort that Joshi must have put, pre-
+sumably without any signiﬁcant use of artiﬁcial intelligence algorithms,
+into writing this series of preprints.
+
+4 SHINICHI MOCHIZUKI
+In the context of (AI4), it is also interesting to note that during the past few years
+during which Joshi wrote this series of preprints,
+(TmEﬀ) quite a number of mathematicians were able to study and achieve a
+genuine mathematical understanding of inter-universal Teichm¨uller theory
+in the usual, conventional way [often with the help of [Alien], [EssLgc]],
+while expending surely no more than atiny fraction of the time and eﬀort
+that Joshi must have put into writing this series of preprints during the
+same time period.
+Section 2: Local tilts and global arithmetic inequalities
+Joshi’s central assertion concerning the mathematical validity of inter-universal
+Teichm¨uller theory [cf. [CnstIII], §1] consists of reaﬃrming the assertions of the
+RCS,o r“redundant copies school”, concerning the essential logical structure
+of inter-universal Teichm¨uller theory. In particular, Joshi denies the mathemat-
+ical validity of inter-universal Teichm¨uller theory on the basis of the assertions
+of the RCS. The confusion surrounding these assertions of the RCS is explained
+in detail throughout [EssLgc], especially in [EssLgc],§3. Joshi does not, in [Cn-
+stIII], [CnstIV], add any new essentially new content to the assertions of the RCS.
+As discussed throughout [EssLgc], these assertions of the RCS amount to a very
+elementary and meaningless misunderstanding that corresponds, in a very
+precise fashion, to any one of the following well-known elementary examples:
+(RC-Ex1) the “contradiction T = T−1”concerning the standard coordinate on
+the projective line that arises if onearbitrarily identiﬁesthe two copies of
+the aﬃne line that appear in the usual gluing construction of theprojec-
+tive line, or, alternatively, the northern and southern hemispheres on the
+Riemann sphere[cf. the discussion of [EssLgc], Example 2.4.7, for more
+details];
+(RC-Ex2) the “contradiction”to the eﬀect that the multiplicative map given by
+raising to theN-th power, forN an integer ≥2, on an integral domain
+of characteristic zero, is aring homomorphismif onearbitrarily identiﬁes
+the domain and codomain of this multiplicative map [cf. the discussion of
+[EssLgc], Example 2.4.8, for more details];
+(RC-Ex3) the “contradiction”— i.e., to the eﬀect that anon-holomorphic Te-
+ichm¨uller map is holomorphic — that arises fromarbitrarily identifying
+the two copies of thecomplex plane[regarded, say, as a Riemann surface]
+obtained by considering the distinct holomorphic structures on a single
+copy of the Euclidean plane that arise fromnontrivial Teichm¨uller defor-
+mations — i.e., of the form
+Λ: C ∋ x+iy ↦→ λ·x+iy ∈C,
+for some real numberλ> 1 — as in [EssLgc], Example 3.3.1 [cf. also
+[EssLgc], Example 3.5.2, (iii)].
+In this context, it is perhapssomewhat ironicto observe that thevery deﬁni-
+tion of the notion of atilt, which plays a fundamental role in [CnstIII], [CnstIV],
+
+REPORT ON JOSHI PREPRINT SERIES 5
+becomes invalid/self-contradictory if one applies theRCS approach of arbi-
+trarily identifying isomorphic objects in some nontrivial system to thedistinctly
+labeled copiesof “Ok” that appear in the inverse limit
+Ok♭ = lim←− Ok
+used to deﬁne thetilt. Indeed, this approach which would imply that the above
+inverse limit is in fact given by the set
+{x ∈Ok | xp = x}
+— i.e., a set that ismanifestly completely diﬀerentfrom the set “Ok♭” obtained by
+taking the inverse limit as in the deﬁnition of the tilt [in the conventional way!]
+with thedistinct labels intact[cf. the discussion of [EssLgc], Example 3.5.3, (v), for
+more details, e.g., concerning the notation]. When viewed relative to the analogy
+constituted by the present discussion of applying theRCS approachto the deﬁnition
+of a tilt, Joshi’s series of preprints may be understood as
+(EpEx) a sort of epic exercise in mental gymnasticsdevoted to showing that a
+theory based on the“RCS approach-motivated deﬁnition”of a tilt
+by some sort of inverse limit of the form
+lim←− Okn
+—w h e r et h e{kn}n∈N is a collection ofp-adic ﬁelds indexed by the non-
+negative integers such that, for distinct nonnegative integersn, m,t h e
+topological ﬁeldskn and km are non-isomorphic — in factsatisﬁes essen-
+tially the same properties as the properties asserted in the theory of
+tilts relative to the conventional deﬁnition of “Ok♭”.
+Of course, it will be immediately obvious to any mathematician who has agenuine
+mathematical understanding of the conventional theory of tilts that such an epic
+exercise is nothing more than acompletely meaningless exercise in futility,
+and that it would be much moremeaningful and productive [cf. (TmEﬀ)] for the
+author of suchaseries of preprintstodevotehis time and energy toreexaminingwhy
+he arrived at the[patently erroneous!] conclusionthat theRCS approach— i.e., to
+the eﬀect thatarbitrarily identifying isomorphic objects in some nontrivial
+system has no substantive mathematical/logical eﬀecton the mathematics
+involved — isvalid in the ﬁrst place.
+Of the examples (RC-Ex1), (RC-Ex2), (RC-Ex3) cited above, (RC-Ex3) is
+especially closely related to the point of view taken in [CnstIII],§1. Indeed, in [Cn-
+stIII], §1, refers to the assertions of the RCS as the issue of showing the“plurality
+of arithmetic holomorphic structures”in inter-universal Teichm¨uller theory.
+Relative to this terminology, the central assertions of [CnstIII] may be summarized
+as follows:
+(Js1) The “plurality of arithmetic holomorphic structures”in inter-universal
+Teichm¨uller theory isnot provenin [IUTchI-IV].
+(Js2) As a consequence of (Js1), the proofs of the main results of [IUTchI-IV],
+such as [IUTchIII], Corollary 3.12, areincorrect.
+
+6 SHINICHI MOCHIZUKI
+(Js3) A correct proofof [IUTchIII], Corollary 3.12, is given in [CnstIII] by
+applying thep-adic theory of tilts/untilts/Fontaine-Fargues curves.
+In a word,all three of these main assertions (Js1), (Js2), (Js3) aremathemati-
+cally false, as we explain in substantial detail in the discussion below.
+First of all, with regard to (Js1), there is a confusion in the use of the phrase
+“plurality of arithmetic holomorphic structures”, especially, in the context of the
+analogy with Teichm¨uller deformations of Riemann surfaces, relative to thetwo
+related [but by no means equivalent!] issuesof
+(Js1-1) whether or not the domain and codomain Riemann surfaces in a Te-
+ichm¨uller deformationare required to benon-isomorphic;
+(Js1-2) whether or not, when considering holomorphic isomorphisms between
+the domain and codomain Riemann surfaces as in (Js1-1), one imposes a
+certain compatibility condition, namely, that one requires such a holo-
+morphic isomorphism toinduce the same map on underlying topological
+surfaces as the Teichm¨uller deformation under consideration.
+That is to say, even in the case of the most classical and fundamental type of
+Teichm¨uller deformation discussed in (RC-Ex3), thenon-isomorphicity condition
+of (Js1-1) isnot satisﬁed. Nevertheless, because in this context, one typically only
+considers holomorphic isomorphisms that are subject to thecompatibilitycondition
+of (Js1-2), one conventionally regards, in classical complex Teichm¨uller theory, the
+various holomorphic structures arising from Teichm¨uller deformations as in (RC-
+Ex3)as distinct, hence, inparticular, asconstitutinga“plurality”ofholomorphic
+structures.
+As explained in detail in [EssLgc], Example 3.5.3, (vi) [cf., especially, the
+discussion of (RCRS1), (RCRS2), (RCRS3), (RCΘ1), (RCΘ2), (RCΘ3)], there is
+a very precise correspondencebetween this situation for Riemann surfaces and the
+situation surrounding thedomain and codomain [Θ±ellNF-]Hodge theatersof the Θ-
+link in inter-universal Teichm¨uller theory. That is to say, relative to the analogous
+compatibility condition [cf. (Js1-2)], the “plurality”of arithmetic holomorphic
+structures isvalid in inter-universal Teichm¨uller theory and indeed is animmediate
+consequence of the deﬁnition of a ring[i.e., in essence, the property observed in
+eﬀect in (RC-Ex2) that the multiplicative map given by raising to theN-th power,
+for N an integer ≥2, on an integral domain of characteristic zero, isnot a ring
+homomorphism] — cf. the discussion surrounding [EssLgc], Example 3.5.3, (vi),
+(RCRS1), (RCRS2), (RCΘ1), (RCΘ2).
+Moreover, byconsideringtilts, onecanindeedconstructasituation[cf. [EssLgc],
+Example 3.5.3, (vi), (RCRS3), (RCΘ3)] that isroughly reminiscent of the situation
+surrounding the domain and codomain of the Θ-link in inter-universal Teichm¨uller
+theory [cf. [EssLgc], Example 3.5.3, (iv), (TltSim)], and which, moreover, satis-
+ﬁes thenon-isomorphicity condition of (Js1-1), but which is, however,completely
+useless from the point of constructing a theory that is structurally similar to
+inter-universal Teichm¨uller theory, on account of thenumerous and quite fun-
+damental structural diﬀerencesbetween this tilt-based construction and the
+corresponding constructions in inter-universal Teichm¨uller theory [cf. [EssLgc], Ex-
+ample 3.5.3, (iv), (vii), (TltDf1), (TltDf2), (TltDf3), (TltDf4), (TltDf5), (TltDf6),
+(TltDf7)].
+
+REPORT ON JOSHI PREPRINT SERIES 7
+With regard to (Js2), we observe [cf. [EssLgc], Example 3.5.3, (vi), (RCΘlg)]
+that the“plurality”of arithmetic holomorphic structures discussed above [i.e., rela-
+tive to acompatibilitycondition analogous to the condition of (Js1-2)], which isvalid
+in inter-universal Teichm¨uller theory and indeed is animmediate consequence of the
+deﬁnition of a ring, is in factnever logically appliedin the development or proofs
+of the main results [such as, for instance, [IUTchIII], Theorem 3.11, or [IUTchIII],
+Corollary 3.12] of inter-universal Teichm¨uller theory. That is to say, even if one
+takes the position that one does not know whether or not the“plurality”of arith-
+metic holomorphic structures inthis sense holds, there isno eﬀect whatsoever on
+the essential logical structure of the development or proofs of the main results[such
+as, for instance, [IUTchIII], Theorem 3.11, or [IUTchIII], Corollary 3.12] of inter-
+universal Teichm¨uller theory. Put another way, the only eﬀect of taking such a
+position is that it implies that there is a possibility that the theory involves a sort
+of “overkill”, i.e., that one is possibly doing more than is in fact necessary in order
+to prove the desired results.
+Next, we consider (Js3). Tracing back through theproofs of the main resultsof
+[CnstIII], [CnstIV], starting with theﬁnal conclusion concerning the ABC/Szpiro
+inequality in [CnstIV], Theorem 7.2.1, one ﬁnds the followingchain of main impli-
+cations:
+[CnstIV], Theorem 7.2.1 ⇐= [CnstIV], Theorem 7.1.1
+⇐= [CnstIV], Theorem 6.1.1
+⇐= [CnstIV], Theorem 6.10.1
+⇐= [CnstIII], Corollary 9.11.1.1
+⇐= [CnstIII], Theorem 9.11.1
+[where we note that it is not clear whether or not the number “9.11...” assigned by
+the author to these key results in [CnstIII] waspurely coincidentalor a consequence
+of some sort ofsense of rhetoric or humorthat lies beyond my understanding].
+In a word, thecentral and quite fundamental problemwith the proof of [Cn-
+stIII], Theorem 9.11.1, which in fact underliesall of the main results of [CnstIII],
+[CnstIV] lies in the fact that
+(LcGlIq) the argument given to prove [CnstIII], Theorem 9.11.1 [which is in fact
+entirely similar to the argument used in the ﬁnal portion of the proof of
+[CnstIII], Theorem 7.3.1, or the proof of [CnstIII], Theorem 9.9.1] reduces
+the proof of aglobal inequalityto the veriﬁcation oflocal inequalities
+[i.e., at each prime of a number ﬁeld], which are thensummed over in
+order to obtain the global inequality.
+Here, we recall that it is well-known — and indeed can be easily veriﬁed by consid-
+ering abc triplesof the form (1,pn,1+pn), forp a prime number andn an arbitrarily
+large positive integer — that
+(EssGlIq) any essentially global inequality — i.e., such as theABC/Szpiro
+inequalitiesor [IUTchIII], Corollary 3.12 — cannever be obtained in this
+way, i.e., as a result ofsumming up local inequalities at each prime of a
+number ﬁeld.
+
+8 SHINICHI MOCHIZUKI
+Indeed, it follows immediately from the computations in the proofs of [IUTchIV],
+Theorem 1.10 [which are summarized in Step (viii) of this proof]; [IUTchIV], Corol-
+lary 2.2, (ii), as well as the corresponding portions of the proofs of [ExpEst], The-
+orem 5.1; [ExpEst], Corollary 5.2, that if
+· one collects the various terms in the log-volumes that appear in theglobal
+inequality of [IUTchIII], Corollary 3.12, and then multiplies by a suitable
+positive real number, and, moreover,
+· one restricts one’s attention, for simplicity, to abc triples/elliptic curves
+deﬁned over a number ﬁeld which is aquadratic imaginary ﬁeld,
+then the local portion of this global log-volume inequality at a nonarchimedean
+valuation v of residue characteristicpv of the number ﬁeld under consideration at
+which the elliptic curve under consideration has bad multiplicative reduction is of
+the form
+α·log(qv) ≤ β
+—w h e r ew ew r i t eqv for theq-parameter of the elliptic curve under consideration at
+v and log(qv) for the unique positive rational numberλsuch thatpλ
+v/qv is apv-adic
+unit; α∈A for some compact subsetA of the set of positive real numbers that is
+independentof the moduli of the elliptic curve under consideration;β∈B for some
+compact subsetB of the set of real numbers that isindependent of the moduli of
+the elliptic curve under consideration. In particular, if one considersabc triplesof
+the form (1,pn,1+ pn) at a nonarchimedean valuationv such that pv = p,t h e n
+α·log(qv) is bounded below by a positive real multipleγ·n of n [where the positive
+real numberγis independent of n], hence→ +∞ as n → +∞,t h u scontradicting
+the inequality of the above display.
+More generally, at least as far as I could see, theonly nontrivial “global” objects
+that appear in the theory developed in [CnstIII], [CnstIV] consist ofcollections of
+local objects, i.e., one object at each prime of a number ﬁeld. Put another way,
+(EssGl) no essentially global phenomenaappear anywhere in the theory of
+[CnstIII], [CnstIV].
+In this context, we recall that, by contrast, theessentially global nature of
+the arithmetic line bundlestreated in [IUTchI-IV] may be seen in the subtle corre-
+spondence betweenadditiveand multiplicativerepresentations of arithmetic line
+bundles, which involves, in an essential way, theglobal ring structureof a num-
+ber ﬁeld and, in particular, the way in which the relations arising from this global
+ring structure necessarily involveall of the primes of the number ﬁeld [cf. [Ab-
+sTopIII], Remark 5.10.2, (iv); [IUTchII], Remark 4.11.2, (iii); [IUTchIII], Remark
+3.6.2, (i)]. This correspondence between additive and multiplicative structures is
+closely related, in inter-universal Teichm¨uller theory, to thedelicate interplaybe-
+tween Frobenius-like and ´etale-like structures, which is in turn closely related
+to the variouscoricity, symmetry,a n dcommutativity properties surrounding
+the log-theta-lattice, all of which play afundamental role in the essential logical
+structure of inter-universal Teichm¨uller theory [cf. the discussion of [EssLgc],§3.1,
+§3.2, §3.3, §3.4; [EssLgc], Example 3.2.2].
+Here, we note that although the terms“Frobenius-like”and “´etale-like”appear
+in [CnstIII], §8.4, the discussion involving these terms in [CnstIII], §8.4, never
+
+REPORT ON JOSHI PREPRINT SERIES 9
+mentions these fundamentalcoricity, symmetry,a n dcommutativityproperties and,
+inparticular, bespeaksthe apparently quite profound ignorance, onthepartofJoshi,
+of thefundamental rolethat such properties play in theessential logical structureof
+inter-universal Teichm¨uller theory, especially in the proof of [IUTchIII], Corollary
+3.12 [cf. the discussion of [EssLgc], §3.10, §3.11]. Indeed, these properties are
+entirely irrelevant to the argument given in the proof of [CnstIII], Theorem 9.11.1.
+Finally, in passing, we noteyet another fundamental problemwith the state-
+ment [i.e., thechain of inequalitiesin the ﬁrst display of the statement] and proof
+of [CnstIII], Theorem 9.11.1:
+(HllVl) the inequality concerning the volume of the region obtainedafter pass-
+ing to the hull is obtained as a consequence of astronger inequality
+concerning the volume of the region that arisesbefore passing to the hull.
+Here, the issue of ﬁnding adirect contradiction to such a stronger inequality is
+somewhat subtle and, at the time of writing, at least to my knowledge, strictly
+speaking, inconclusive. On the other hand, from the point of view of theessential
+logical structureof the argument in [IUTchIII] that is actually used to prove the
+inequality of [IUTchIII], Corollary 3.12, we recall that this inequalitycannot be
+concluded until one completes theclosed loop that is obtained by, in particular,
+passing to the hull [cf. the discussion of [EssLgc], §3.10, (Stp4), (Stp5), (Stp6),
+(Stp7), (Stp8)]. Moreover, if one is willing to ignorecertain technicalitiesat the
+archimedean primesand thenonarchimedean primesthat divide the rational prime
+2, then astronger inequalityas in (HllVl)contradictsthe existence of certain well-
+known types ofsequences of abc triplesdue toMasser and others [cf. the discussion
+of [IUTchIV], Remark 1.10.5, (ii)].
+That is to say, astronger inequalityas in (HllVl) would imply that, in Step
+(v) of the proof of [IUTchIV], Theorem 1.10, one could apply theﬁrst displayed in-
+equality, of [IUTchIV], Proposition 1.4, (iii) — i.e., rather than thesecond displayed
+inequality, of [IUTchIV], Proposition 1.4, (iii), as is actually done — which would
+mean that one couldreplacethe terms that arelinear inl in the inequalities of the
+ﬁnal display in the statement of [IUTchIV], Theorem 1.10, by terms that arelinear
+in log(l). Combining this strengthening of the inequalities of [IUTchIV], Theorem
+1.10, with a suitably modiﬁed version of the estimates of [IUTchIV], Corollary 2.2,
+(ii), would yield a contradiction to certain well-known types ofsequences of abc
+triples due toMasser and others, that is to say, if one is willing to ignorecertain
+technicalities at the archimedean primesand the nonarchimedean primesthat di-
+vide the rational prime 2. Here, we note in passing that these technicalities at
+the nonarchimedean primesthat divide the rational prime 2 were in fact resolved
+in [ExpEst], and that it isstrongly expectedthat the remaining technicalities at
+the archimedean primeswill be resolved in an enhanced version of inter-universal
+Teichm¨uller theory that is currently under development.
+Thus, in summary, although, strictly speaking, the existence of suchtechnical-
+ities means that, at a completely rigorous level, thestronger inequalityof (HllVl)
+does notinfactyieldanimmediatecontradiction, itisnevertheless strongly expected,
+especially in light of work in progress on various enhanced versions of inter-universal
+Teichm¨uller theory, that such technicalities areinessential and can be overcome,
+i.e., which would imply that thestronger inequalityof (HllVl) does indeed imply a
+numerical contradictionin an entirely rigorous sense.
+
+10 SHINICHI MOCHIZUKI
+Section 3: Further discussion
+The discussion of§2 may be understood as an exposition of my understanding,
+a tt h et i m eo fw r i t i n g ,o ft h emathematical contentunderlying thegeneral overview
+given in §1. On the other hand, since my understanding of thep-adic theory of
+tilts/untilts/Fontaine-Fargues curves[which lies beyond my range of specialty] is
+quite limited and superﬁcial, I would certainly be open to further discussions con-
+cerning this theory, in the context of the mathematical content exposed in§2, with
+experts in the ﬁeld. More generally, I would like to take this opportunity to state
+explicitly that I would beopen to— and indeed, in many [though not necessarily
+all!] cases, welcome — the possibility of conductingfurther discussionsconcern-
+ing the content of the present report with mathematicians who belong to at least
+one of the followingcategories:
+(MthCat1) mathematicians who are experts ininter-universal Teichm¨uller the-
+ory or related anabelian geometry, in the sense that they havepub-
+lished paper(s) proving nontrivial result(s)in these ﬁelds ininternationally
+recognized mathematical journal(s);
+(MthCat2) mathematicianswhoareexpertsinthe p-adic theorysurroundingtilts/
+untilts/Fontaine-Fargues curves, again in the sense that they have
+published paper(s) proving nontrivial result(s)in these ﬁelds ininterna-
+tionally recognized mathematical journal(s);
+(MthCat3) senior mathematicians inarithmetic geometry, with the rank offull
+professor at aworld-class center of research, who may not belong to
+(MthCat1) or (MthCat2), but who are nonetheless widely recognized as
+leading researchersin their ﬁeld of specialty.
+Here, it should be noted that Joshi does not belong to any of these categories.
+Indeed, the fact that he does not belong to (MthCat1) or (MthCat2) is closely
+related to the numerous issues discussed in the present report. Moreover, since
+the technical coreof Joshi’s series of preprints revolves around thep-adic theory
+of tilts/untilts/Fontaine-Fargues curves[cf. (MthCat2), i.e., a class of mathemati-
+cians to which neither Joshi nor I belong!], it seems essentially self-evident that the
+next natural step, with regard to the possibility of pursuingfurther discussionscon-
+cerning the mathematical content of Joshi’s series of preprints, must involve some
+sort ofinteraction between (MthCat2) mathematicians and myself [or perhaps other
+(MthCat1) mathematicians]. As a result, over the past few months, I have made
+quite substantial eﬀortsto contact (MthCat2) mathematicians who were aware of
+Joshi’s series of preprints to obtain information from them concerning their under-
+standing of the mathematical content of this series of preprints. The only responses,
+however, that I was able to extract from such (MthCat2) mathematicians were to
+the eﬀect that
+(MC2Rsp) it was obvious from their point of view, i.e., from the point of view of
+the theory surroundingtilts/untilts/Fontaine-Fargues curves, that Joshi’s
+series of preprints did not contain any meaningful mathematical
+content, and that, since they were busy with their own research projects,
+they were simply not interested in spending any more time or eﬀort ex-
+amining/discussing Joshi’s series of preprints.
+
+REPORT ON JOSHI PREPRINT SERIES 11
+Interestingly enough, themathematical contentthat was pointed out by (MthCat2)
+mathematiciansasjustiﬁcationfortheevaluationof(MC2Rsp)was essentially iden-
+ticalto the mathematical content discussed above in (EssGlIq), (EssGl) [i.e., which
+arose independently from my own investigations, as well as, againindependently,
+from the investigations of other (MthCat1) mathematicians], namely, the observa-
+tion that
+(MC2EssGl) the theory developed in Joshi’s series of preprints essentially only con-
+cerns “global data”that consistssolely of collections of local data,w h e r e
+the “local data” wasnot particularly novel, but rather based on essen-
+tially known mathematical constructions, i.e., in short that there wasno
+meaningful essentially global contentto the theory.
+Finally, it should be noted that previous [and indeed quite substantial] attempts,
+both on my part and on the part of other (MthCat1) mathematicians, to engage
+in discussions with Joshi for the purpose of explaining aspects of inter-universal
+Teichm¨uller theory concerning which he appeared to be confusedfailed to result in
+a productive dialogue.
+Bibliography
+[EMSCOP] European Mathematical Society,Code of Practice, approved by the EMS Ex-
+ecutive Committee (October 2012), available at the following URL:
+https://euromathsoc.org/code-of-practice
+[AbsTopIII] S. Mochizuki, Topics in Absolute Anabelian Geometry III: Global Reconstruc-
+tion Algorithms,J. Math. Sci. Univ. Tokyo22 (2015), pp. 939-1156.
+[IUTchI] S. Mochizuki, Inter-universal Teichm¨uller Theory I: Construction of Hodge
+Theaters, Publ. Res. Inst. Math. Sci.57 (2021), pp. 3-207.
+[IUTchII] S. Mochizuki, Inter-universal Teichm¨uller Theory II: Hodge-Arakelov-theoretic
+Evaluation, Publ. Res. Inst. Math. Sci.57 (2021), pp. 209-401.
+[IUTchIII] S. Mochizuki, Inter-universal Teichm¨uller Theory III: Canonical Splittings of
+the Log-theta-lattice,Publ. Res. Inst. Math. Sci.57 (2021), pp. 403-626.
+[IUTchIV] S. Mochizuki, Inter-universal Teichm¨uller Theory IV: Log-volume Computa-
+tions and Set-theoretic Foundations,Publ. Res. Inst. Math. Sci.57 (2021), pp.
+627-723.
+[ExpEst] S. Mochizuki, I. Fesenko, Y. Hoshi, A. Minamide, W. Porowski, Explicit Es-
+timates in Inter-universal Teichm¨uller Theory,Kodai Math. J.45 (2022), pp.
+175-236.
+[Rpt2023] S.Mochizuki, Brief Report on the Current Situation Surrounding Inter-universal
+Teichm¨ller Theory (IUT), available at the following URL:
+http://www.kurims.kyoto-u.ac.jp/~motizuki/2023-08%20Brief
+%20report%20on%20the%20current%20situation%20surrounding
+%20inter-universal%20Teichmuller%20theory%20(IUT).pdf
+[Alien] S. Mochizuki, The Mathematics of Mutually Alien Copies: from Gaussian
+Integrals to Inter-universal Teichm¨uller Theory, Inter-universal Teichmuller
+
+12 SHINICHI MOCHIZUKI
+Theory Summit 2016, RIMS K¯oky¯uroku Bessatsu B84, Res. Inst. Math. Sci.
+(RIMS), Kyoto (2021), pp. 23-192.
+[EssLgc] S. Mochizuki, On the essential logical structure of inter-universal Teichm¨uller
+theory in terms of logical AND “∧”/logical OR “∨” relations: Report on the oc-
+casion of the publication of the four main papers on inter-universal Teichm¨uller
+theory, RIMS Preprint 1968 (November 2022); updated version available at the
+following URL:
+http://www.kurims.kyoto-u.ac.jp/~motizuki/Essential%20Logical
+%20Structure%20of%20Inter-universal%20Teichmuller%20Theory.pdf

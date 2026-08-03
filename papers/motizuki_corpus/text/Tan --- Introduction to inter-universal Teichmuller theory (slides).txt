@@ -1,0 +1,1730 @@
+Introduction to Inter-universal Teichm¨ uller theory
+Fucheng Tan
+RIMS, Kyoto University
+2018
+1
+
+Reading IUT
+To my limited experiences, the following seem to be an option for people who wish to get to
+know IUT without spending too much time on all the details.
+▶ Regard the anabelian results and the general theory of Frobenioids as blackbox.
+▶ Proceed to read Sections 1, 2 of [EtTh], which is the basis of IUT.
+▶ Read [IUT-I] and [IUT-II] (brieﬂy), so as to know the basic deﬁnitions.
+▶ Read [IUT-III] carefully. To make sense of the various deﬁnitions/constructions in the
+second half of [IUT-III], one needs all the previous deﬁnitions/results.
+▶ The results in [IUT-IV] were in fact discovered ﬁrst. Section 1 of [IUT-IV] allows one to
+see the construction in [IUT-III] in a rather concrete way, hence can be read together
+with [IUT-III], or even before.
+S. Mochizuki, The ´ etale theta function and its Frobenioid-theoretic manifestations.
+S. Mochizuki, Inter-universal Teichm¨ uller Theory I, II, III, IV.
+2
+
+p-adic numbers
+Look at a prime number p.
+▶ Any x ∈ Q can be written as x = pn · a
+b (p ∤ ab).
+▶ Set |x|p = p−n (|0|p := 0). This deﬁnes a metric on Q.
+▶ Product formula: ∏
+c∈{primes,∞}
+|x|c = 1, ∀x ∈ Q×.
+▶ Qp:=completion of ( Q, | · |p).
+Qp =
+
+
+x =
+∞∑
+i≫−∞
+ai pi , ai ∈ {0, 1, · · · , p − 1}
+
+
+
+Zp =
+{
+x =
+∞∑
+i=0
+ai pi , ai ∈ {0, 1, · · · , p − 1}
+}
+Alternatively,
+Zp = lim← −Z/pn = {(an) | an ∈ Z/pn, am ≡ an(pn), ∀m ≥ n}
+Qp = ( pN)−1Zp
+Fp = Zp/p = Z/p
+▶ Any x ∈ Qp has the form
+x = pr · u, with r ∈ Q, u ∈ Z×
+p .
+▶ (p) ⊂ Zp has a divided power structure:
+pn
+n! ∈ (p).
+3
+
+Fields vs Galois groups
+▶ Number ﬁeld F := ﬁnite ext. of Q. (Fix a separable closure F .) GF := Gal(F /F ).
+▶ p-adic local ﬁeld K := ﬁnite ext. of Qp. GK := Gal(K /K ).
+▶ If K = Fv is a non-arch. completion of F , take GK ⊂ GF (up to conjugation!).
+▶
+(Neukirch-Uchida) For two number ﬁelds F1, F2,
+Isomﬁeld(F1, F2) ≃ Out(GF1, GF2) := Isomtop. gp. (GF1, GF2)/Inn(GF2).
+▶
+(Mochizuki) Let K1, K2 be two p-adic local ﬁelds.
+IsomQp(K1, K2) ∼− →OutFil(GK1, GK2)
+where Fil on GKi is given by the higher ramiﬁcation groups.
+(Not used in IUT.)
+▶
+(Uchida) For two function ﬁelds F1, F2 over ﬁnite ﬁelds,
+Isomﬁeld(F1, F2) ≃ Out(GF1, GF2).
+▶ The non-isomorphic Frobenii on function ﬁelds/curves induce isomorphisms on
+Galois/´ etale fundamental groups.⇝
+Frobenius-like vs ´ etale like objects.
+4
+
+Some theorems in anabelian geometry
+▶ sub-p-adic ﬁeld =ﬁeld ↪→ ﬁnitely generated extension of Qp.
+▶ Let K be a sub- p-adic ﬁeld and XK , YK two hyperbolic curves over K .
+(Mochizuki)
+IsomK (XK , YK ) ∼− →Isomouter
+Gk (ΠXK , ΠYK ).
+▶ X =proper smooth connected curve over Q.
+▶ A Belyi map is a dominant map of Q-schemes φ : X → P1
+Q which is unramiﬁed over the
+tripod P1\{0, 1, ∞}. The preimage φ−1(P1\{0, 1, ∞}) is called an Belyi open of X .
+▶ (Belyi) There exists at least one Belyi open for X .
+▶ (Mochizuki) Belyi opens of X form a basis of the Zariski topology of X .
+▶ A hyperbolic orbicurve is of strictly Belyi type if it is deﬁned over a number ﬁeld and
+is isogenous to a hyperbolic curve of genus 0.
+(Mochizuki) Let X be a hyperbolic orbicurve over a number ﬁeld or a p-adic local ﬁeld
+which is of strictly Belyi type.
+Starting from the ´ etale/tempered fundamental group (as an abstract top. gp.), one
+can construct in a “group-theoretic” manner the function ﬁeld and cusps of X .
+The two constructions are compatible with respect to the embeddings of the number
+ﬁeld in its nonarchmedean completions.
+5
+
+Comparison isomorphisms over local ﬁelds
+▶ X = smooth scheme of ﬁnite type over a ﬁeld K ↪→ C.
+H i
+dR(X /K ) ⊗K C ∼− →H i(X an
+C , Q) ⊗Q C.
+Theorem (Tusji, Faltings, Beilinson).
+For X a variety over a p-adic ﬁeld K , ∃ isomorphism compatible with Galois action, ﬁltration,
+Frobenius, and monodromy:
+H i(XK ,´ et, Qp) ⊗Qp Bst ≃ H i
+log-cris(X0/OK0) ⊗K0 Bst.
+Theorem (Faltings-Andreatta-Iovita, T.-Tong). Assume K is absolutely unramiﬁed over
+Qp. Let X be a proper smooth formal scheme over OK , and X = XK . Let L be a lisse
+Zp-sheaf on X´ etand E a ﬁltered convergent F -isocrystal on X0/OK . If they are associated,
+then ∃ natural isomorphism compatible with Galois action, ﬁltration, and Frobenius action:
+H i(XK ,´ et, L) ⊗Zp Bcris ≃ H i
+cris(X0/OK , E) ⊗K Bcris.
+(Faltings, T.-Tong: The analogue for proper smooth morphisms of smooth formal schemes
+over OK holds.)
+The local systems in blue and base ﬁelds in red provide some intuition into the theme
+Frobenius-like vs ´ etale like objects.
+IUT is in some sense a global simulation of the comparison isomorphism.
+6
+
+Overview of Inter-universal Teichm¨ uller theory
+One starts with a “suitable” pair of elliptic curve EF over a number ﬁeld F and a prime
+number ℓ, and studies it via (the fundamental groups of) certain hyperbolic curves
+surrounding theta function.
+There are two kinds of symmetry associated to a ﬁxed quotient
+EF [ℓ] ↠ Fℓ,
+which give natural labels on cusps of certain hyperbolic curves. The additive symmetry is
+naturally a subquotient of some geometric fundamental group and assures that the conjugacy
+of local Galois groups on various values of theta function (at these cusps) are synchronized.
+This set of theta values at each bad place v (modulo torsion) has the form
+{qj2
+v
+}j=1,··· ,ℓ−1
+2
+, q
+v
+= q
+1
+2ℓ
+v , qv = q-parameter of E at this place .
+The multiplicative symmetry is a subquotient of the absolute Galois group of Fmod (the ﬁeld
+of moduli of E ) and assures that the Kummer-theoretic reconstruction of Fmod is compatible
+with the natural labels on the cusps.
+These theta values and the number ﬁeld Fmod will determine the Θ -pilot object PΘ. The
+main construction of IUT is the multiradial representation UΘ of PΘ, an orbit under the
+indeterminacies (Ind1, 2, 3) , which (roughly) concern the automorphisms of local Galois
+groups; automorphisms of local unit groups; change of additive structures of local rings.
+The multiradial representation UΘ is in particular compatible with the Θ -link, which, at a
+bad place v, may be regarded as an abstract isomorphism
+(
+{qj2
+v
+}
+)N
+· O×µ
+F v
+≃ qN
+v
+· O×µ
+F v
+, (O×µ = O×/torsion).
+As a consequence the so-called holomorphic hull UΘ ⊃ UΘ has arithmetic degree bigger
+than that determined by q-parameters. This leads to a proof of Vojta conjecture.
+7
+
+▶ For i ∈ I in a ﬁnite index set, ki /Qp a ﬁnite extension with ramiﬁcation index ei.
+▶ In IUT, K = F (EF [ℓ]) , ki = Kwi , i ∈ I = {0, · · · , j}, j ∈ {1, · · · , ℓ−1
+2 }:
+I IQ = ⊗i∈I (⊕some v|pKv )i ≃ ⊕(⊗wi|p,i∈I Kwi ), (UΘ)p ⊂
+∏
+j
+I IQ.
+▶ Ri = Oki , di the valuation of any generator of the diﬀerent ideal.
+RI = ⊗Zp Ri , log(R×
+I ) = ⊗Zp log(R×
+i ), dI =
+∑
+i∈I
+di .
+pai Ri ⊂ log(R×
+i ) ⊂ p−bi Ri , ai = ⌈ei /(p − 2)⌉
+ei
+, bi = ⌊log(pei /(p − 1))
+log p ⌋ − 1
+ei
+.
+▶ Common container of domain/codomain of the p-adic log, called log-shell:
+I = 1
+p log(O×
+Kv ).
+▶ Estimate (Ind1,2,3) simultaneously (‹RI normalization of RI in the ring of fractions):
+For any automorphism
+φ : log(R×
+I )Q
+∼− →log(R×
+I )Q with log( R×
+I ) ∼− →log(R×
+I ),
+⋃
+φ
+φ
+Ä
+pλ · ‹RI
+ä
+⊂ p⌊λ−dI−aI⌋ logp(R×
+I )) ⊂ p⌊λ−dI−aI⌋−bI ‹RI , λ = vp(qj2
+v
+).
+▶ p⌊λ−dI−aI⌋−bI ‹RI ⇝ upper bound for the j-component of log-volume µlog((UΘ)p).
+[IUT3, Cor. 3.12]: The compatibility between the construction of multiradial
+representation and the Θ-link ⇝
+∑
+p
+µlog((UΘ)p) ≥ deg. of arith. l.b. determined by q-parameters of EF .
+8
+
+Tempered fundamental groups
+k a ﬁnite extension of Qp, X a stable log orbicurve over Spf Ok, with special ﬁber singular
+and split, and generic ﬁber X a smooth log (orbi)curve.
+▶ {Xi }i∈N a coﬁnal system of ﬁnite ´ etale (pointed) covers of X .
+▶ X∞
+i the topological universal cover of X an
+i .
+▶ Gal(X∞
+i /X ) consists of the (compatible) pairs ( u, f ) with
+u ∈ Aut(X∞
+i ), f ∈ Gal(Xi /X ).
+▶ Πtp
+X := lim← −Gal(X∞
+i /X ), each component endowed with discrete topology.
+▶ Finite topological covers of X an
+i are algebraizable ⇝
+ˆΠtp
+X
+∼− →ΠX = π´ et
+1 (X ).
+▶ For an elliptic curve E /k with bad reduction (hence the Tate uniformization)
+πtp
+1 (E ) = lim← −N
+Gal(Gan
+m /E ) ≃ lim← −N
+(Z × µN),
+transition maps induced by multiplication by N. Short exact sequence
+1 → ˆZ(1) → πtp
+1 (E ) → Z → 1.
+▶ The association to Xi ∈ Covf´ et(X ) (for every i) of the category of topological covers of
+X an
+i , ⇝ a category of tempered covers of X
+Btp(X ).
+9
+
+Galois categories
+▶ For a connected noetherian (generically scheme-like) algebraic stack X , the category of
+ﬁnite ´ etale coverings ofX (morphisms over X ):
+B(X ).
+▶ The category of ﬁnite sets equipped with continuous Π X -action:
+B(ΠX ) ( ≃ B(X )).
+▶ For a topological group Π, the category of countable discrete sets equipped with a
+continuous Π-action:
+Btp(Π).
+If Π is tempered (i.e. can be written as an inverse limit of surjections of countable
+discrete topological groups and the topology admits a countable basis), one can
+reconstruct Π (category-theorectically) from Btp(Π). For a temperoid, i.e. a category
+C ≃ B tp(Π), denote the resulting topological group by
+π1(C).
+▶ A morphism C → C′ of temperoids is an isomorphism class of functors C′ → C preserving
+ﬁnite limits and countable colimits. Thus
+Hom
+Ä
+Btp(Π), Btp(Π′)
+ä
+≃ Homout
+cont(Π, Π′).
+10
+
+Once-punctured elliptic curves and Tate uniformization
+▶ k = ﬁnite extension of Qp. X = stable log curve of type (1 , 1) over Spf Ok, with special
+ﬁber is singular and split and generic ﬁber X a smooth log curve.
+▶
+1 → ∆tp
+X → Πtp
+X → Gk → 1.
+1 → ˆZ(1) → ∆ell
+X = ∆X
+[∆X , ∆X ] → ˆZ → 1,
+1 → ∆Θ(≃ ˆZ(1)) → ∆Θ
+X = ∆X
+[∆X , [∆X , ∆X ]] → ∆ell
+X → 1,
+where ∆ Θ := Im(∧2∆ell
+X ↪→ ∆Θ
+X ).
+▶ Induce
+1 → ˆZ(1) → (∆tp
+X )ell → Z → 1.
+1 → ∆Θ → (∆tp
+X )Θ → (∆tp
+X )ell → 1.
+▶ The universal cover of the dual graph of the special ﬁber of X ⇝
+Πtp
+X ↠ Z,
+thus a formal scheme Y over X (generic ﬁber Y ) whose special ﬁber is a chain of copies
+of P1, labeled by Z, joined at 0 , ∞.
+▶ qX ∈ O k the q-parameter of the elliptic curve associated to X . ( Y an = Gm,k \{qZ
+X }.)
+▶ Form kN = k(ζN , q1/N
+X ), N ≥ 1. The restriction to GKN of any cuspidal decomposition
+group of Π tp
+Y ⇝ Galois cover
+YN → Y .
+(1 → (∆tp
+Y )ell/N → Gal(YN /Y ) → Gal(kN /k) → 1.)
+▶ Normalization YN → Y of Y in YN.
+Pic(YN) ≃ ZGal(Y /X ) ≃ ZZ.
+The (isomorphism class of) line bundle determined by 1 Gal(Y /X ) is denoted by LN.
+11
+
+The ´ etale theta class
+▶ Divisor of cusps of Y ⇝ section s1 ∈ Γ(Y, L1) (well-deﬁned up to ·O×
+k ).
+▶ (With suitable base ﬁeld extension)
+(i) There exists an N-th root sN of s1 on some Galois cover of YN.
+(ii) sN ⇝ a unique action Π tp
+X ↷ LN compatible with sN.
+▶ DN = eﬀective divisor on ¨YN := Y2N supported on the special ﬁber and is equal to, at
+the irr. component- j, the zero locus of qj2/2N
+X . ∃τN ∈ Γ( ¨YN , ¨LN), whose zero locus is
+equal to DN. ⇝ Πtp
+¨Y -action on ¨LN preserving τN.
+▶ Two Galois actions diﬀer by µN-multiples. N varies ⇝
+O×
+k2 · ¨ηΘ ⊂ H1(Πtp
+¨Y , ˆZ(1)) ≃ H1(Πtp
+¨Y , ∆Θ).
+▶ U ⊂ Y the open subscheme obtained by removing the node at irr. component-0 of
+special ﬁber, ¨U = U ×Y ¨Y. U ≃ “Gm ⇝ coordinate ¨U ∈ Γ(¨U, O×
+¨U ).
+▶ Meromorphic function on ¨Y
+¨Θ = ¨Θ( ¨U) =
+∑
+n∈Z
+(−1)nq
+1
+2 (n2+n)
+X ¨U2n+1,
+(
+¨Θ(qj/2
+X ¨U) = (−1)j q−j2/2
+X ¨U−2j ¨Θ( ¨U)
+)
+,
+with zeros of multiplicity one and exactly the cusps, and divisor of poles = D1.
+(Thus, O×
+k2 · ¨ηΘ coincides with the Kummer classes associated to O×
+k2 · ¨Θ.)
+▶ From now on, suppose k = k2 and that X is not k-arithmetic. ⇝
+Constant multiple rigidity: The pullback via section determined by a 4-torsion point gives
+±¨ηΘ,Z ⊂ H1(Πtp
+¨Y , ∆Θ)
+which corresponds to ¨Θ
+¨Θ(√−1).
+12
+
+Some covers and quotients of once-punctured elliptic curves
+▶ k char. 0 ﬁeld, X a smooth log curve of type (1 , 1) over k, not k-arithmetic.
+▶ The “theta quotient”
+∆Θ
+X ≃
+Ö
+1 ˆZ(1) ˆZ(1) ≃ ∆Θ
+1 ˆZ
+1
+è
+▶ ℓ ≥ 3 a prime number. The ℓ-th power map yields the quotient exact sequence
+1 → ∆Θ,ℓ(≃ µℓ) → ∆Θ
+X ,ℓ → ∆ell
+X ,ℓ → 1.
+▶ Let x0 denote the cusp of X . Consider
+1 →→ ∆Θ,ℓ →→ Dx0,ℓ := Im(Dx0 ↪→ ΠΘ
+X ↠ ΠΘ
+X ,ℓ) →→ Gk →→ 1.
+A quotient ∆ ell
+X ,ℓ ↠ Q (≃ Z/ℓZ) whose restriction to Dx0,ℓ is trivial ⇝ Galois cover
+X Q− →X .
+∆Θ
+X ≃
+Ö
+1 ˆZ(1) ˆZ(1)
+1 ℓˆZ
+1
+è
+.
+▶ ιX the inversion of X (relative to the origin x0), ιX the inversion of X relative to some
+cusp of X lying over x0, acting by +1 on ∆ Θ,ℓ and −1 on ∆ ell
+X ,ℓ:
+1 → ∆Θ,ℓ(≃ µℓ) → ∆Θ
+X ,ℓ → ∆ell
+X ,ℓ(≃ Z/ℓZ) → 1.
+▶ ⇝ splitting sι : ∆ell
+X ,ℓ → ∆Θ
+X ,ℓ(⊂ ΠΘ
+X ,ℓ), hence Dx0,ℓ ≃ ΠΘ
+X ,ℓ/Im(sι) over Gk. In
+particular, any splitting of Dx0,ℓ ↠ Gk determines a cover X
+µℓ
+− →X ,
+∆Θ
+X ≃
+Ö
+1 ˆZ(1) ℓˆZ(1)
+1 ℓˆZ
+1
+è
+.
+13
+
+ℓ-th roots of ´ etale theta function
+▶
+Πtp
+X ⇝ Πtp
+C , Πtp
+X , Πtp
+Y , Πtp
+¨Y , Πtp
+X , Πtp
+C .
+Πtp
+X ⇝ Πtp
+C , Πtp
+X , Πtp
+Y , Πtp
+¨Y .
+▶ Assumptions: (1) The quotient ∆ Θ
+X ,ℓ ↠ Q in the deﬁnition of X is compatible with the
+natural quotient Π tp
+X ↠ Gal(Y /X ) ≃ Z. (2) The choice of splitting of Dx0,ℓ → Gk is
+compatible with the ±1-structure on the ”k×-torsor at x0 determined by ¨ηΘ,Z.
+▶ Always keep in mind (over local or global ﬁelds):
+¨Y
+µℓ →→
+µ2
+↓↓
+¨Y
+µ2
+↓↓
+Y
+µℓ →→
+ℓZ
+↓↓
+Y
+Z
+↘↘MMMMMMMMMMMMMM
+ℓZ
+↓↓
+X
+µℓ →→ X
+Q →→
+ιX
+↓↓
+X
+ιX
+↓↓
+C
+deg ℓ →→ C
+▶ µℓ-covers X → X ↔ “ℓ-th root of the ´ etale theta function”:
+¨ηΘ,ℓZ×µ2 ⊂ H1(Πtp
+¨Y , ℓ∆Θ).
+▶ Labels of cusps (false for X ):
+Cusp(∗)/ Autk(∗) ≃ Fℓ/{±1}, ∗ = X , C .
+In the following, we shall often use X in the local case and C in the global case.
+14
+
+Initial Θ-data
+1. F = number ﬁeld ∋ √−1.
+2. XF = EF \{oEF } once-punctured elliptic curve which admits stable reduction at all
+nonarchimedean places V(F )non of F . Suppose EF [6] is rational over F .
+CF = stack-theoretic quotient of XF by its unique F -involution.
+Fmod = ﬁeld of moduli of XF , with the set of valuations Vmod.
+Vbad
+mod ⊂ Vmod a nonempty set of nonarchimedean places of Fmod away from 2, where
+XF has bad multiplicative reductions at Vbad = Vbad
+mod ×Vmod V(F ).
+Assume F /Fmod is Galois of degree prime to ℓ (see below).
+3. ℓ ≥ 5 a prime number away from Vbad
+mod and the orders of the q-parameters of EF .
+Suppose further
+GF → Aut(EF [ℓ]) ≃ GL2(Fℓ)
+has image containing SL2(Fℓ). The kernel determines a number ﬁeld K .
+4. A chosen section
+Vmod
+∼− →V ⊂ V(K )
+such that at v ∈ Vbad the cover X v → Xv is compatible with Tate uniformization. Write
+Πv := Πtp
+X v
+.
+5. ϵ is a cusp of C K arising from an element of the quotient (in the deﬁnition of C K )
+EK [ℓ] ↠ Q
+such that at v ∈ Vbad the corresponding cusp ϵv of C v arises from the canonical
+generator “±1” under Tate uniformization.
+15
+
+Preliminaries on Frobenioids
+▶ Given a commutative fs (ﬁne and saturated) monoid Φ, an abelian group B and a
+morphism of monoids div : B → Φgp, ⇝ a category
+C = C(Φ, B, div)
+with Ob(C ) = Ob(Φ) and a morphism c → c′ in C a pair ( φ, b) ∈ Φ × B such that
+c + φ = c′ + div(b).
+▶ Consider the presheaf of commutative fs monoids Φ, presheaf of abelian groups B and a
+morphism div : B → Φgp over a category D. The resulting ﬁbered category:
+C = C(Φ, B, div) → D .
+An object Ob(C) consists of a pair ( d, φ) with d ∈ Ob(D) and φ ∈ Φ(d), and a
+morphism (d, φ) → (d′, φ′) consists of α : d → d′ and φ → α∗φ′.
+▶ C → D above (thus a monoidal structure ⊗) ⇝ Frobenioid:
+F = F(Φ, B, div)
+in which the objects are objects of C and a morphism f → f′ is a pair ( n, β) with
+n ∈ Z≥1 and β : f⊗n → f′ a morphism in C.
+▶ The base functor is denoted by F → D , f ↦→ f .
+O⊿(f ) := EndCf (f ) = Φ(f ) ×Φgp(f ) B(f ), O×(f ) := AutCf (f ).
+▶ (p-adic Frobenioids) Π ↷ O⊿ as a Frobenioid associated to
+(Φ, B, div) = (O⊿/O×, (O⊿)gp, ord : (O⊿)gp → (O⊿/O×)gp).
+That is, for L/k a ﬁnite extension ∈ D = B(Gk), Φ(L) = O⊿
+L/O×
+L ≃ Z≥0, B(L) = L×,
+div = ord : L× → Z. Of course, in this case O⊿(L) = O⊿
+L, O×(L) = O×
+L .
+16
+
+▶ Let F be a number ﬁeld and ˜F /F a Galois extension with Galois group G . Let L be a
+ﬁnite extension of F inside ˜F , regarded as an object of D = B(G ). Deﬁne
+Φ(L) = ⊕v∈V(L)O⊿
+Lv /O×
+Lv , B(L) = L×, div : L → Φ(L)gp,
+where at an archimedean place O⊿
+Lv /O×
+Lv := R≥0. ⇝ Frobenioid
+F = F(F /F ) − → D= B(G ).
+We may then regard an object in FL as an arithmetic line bundle on Spec OL.
+▶ X proper normal variety over a ﬁeld k, ‹K /K a Galois extension of the function ﬁeld
+K = KX of X with Galois group G , L/K a ﬁnite extension. Let DK be a set of Q-Cartier
+prime divisors on X and DL the set of prime divisors on X [L] (the normalization of X in
+L) mapping into DK , which are all assumed Q-Cartier. Deﬁne a Frobenioid
+F = F(X , ‹K , DK ) → D = B(G ) :
+▶ Φ(L) = monoid of eﬀective Cartier divisors on X [L] with support in DL;
+▶ B(L) = group of rational functions b on X [L] so that each prime divisor where b has a
+zero/pole belongs to DL;
+▶ div : B(L) → Φ(L)gp the natural homomorphism.
+17
+
+Tempered Frobenioids
+k a ﬁnite extension of Qp, X a stable log orbicurve over Spf Ok with special ﬁber singular
+and split and generic ﬁber X is a smooth log (orbi)curve.
+▶ Consideration of tempered covers of X ⇝ presheaf of momnoids/groups on
+DX = Btp(X ) and natural homomorphism (image denoted by Φ birat):
+Φ0, B0, div : B0 → Φgp
+0 , ⇝
+tempered Frobenioid (ﬁbered category)
+F0 → D X .
+▶ Suppose X is of type (1 , 1). Considering the full subcategory of DX of tempered
+coverings unramiﬁed over the cusps and the generic points of irr. components of special
+ﬁber and modifying the monoid Φ 0 above accordingly ⇝ tempered Frobenioid
+F → D = Btp(X ).
+18
+
+Frobenioids at bad places
+▶ Base categories
+Dv := Btp(ΠX v
+), D⊢
+v := B(GKv ) ⊂ D v .
+Natural functor left adjoint to the inclusion above
+Dv − → D⊢
+v .
+▶ F v ⇝ (up to µ2ℓ × ℓZ-indeterminacy) the reciprocal of ℓ-th root of theta function
+Θv ∈ K×
+¨Y v
+.
+▶ Constant meromorphic functions F v ⇝ the base-ﬁeld-theoretic hull given by :
+Cv ⊂ F v .
+▶ The theta value
+Θv (
+»
+−qv ) = q
+1
+2ℓ
+v =: q
+v
+, up to µ2ℓ-multiples,
+determines a constant section (over Dv ) of the divisor monoid Φ Cv of Cv , denoted by
+N · logΦ(q
+v
+) ⊂ ΦCv ,
+thus a pv -adic Frobenioid and a µ2ℓ-orbit of splittings, i.e. a split Frobenioids:
+F⊢
+v := (C⊢
+v , τ⊢
+v ).
+19
+
+Prime-strips
+▶ Holomorphic/mono-analytic F-prime-strip
+F = {Fv =†Cv }v∈V, F⊢ = {F⊢
+v }v∈V.
+▶ Realiﬁcation of the Frobenioid associated to ( Fmod, the trivial extension):
+C⊩
+mod :
+at each v ∈ Vmod,
+ΦC⊩
+mod,v
+≃ ord(O⊿
+Fmod,v )pf ⊗ R≥0 (≃ R≥0).
+The restriction functor C⊩
+mod → (C⊢
+v )rlf induces (for v |v)
+ρv : ΦC⊩
+mod,v
+∼− →Φrlf
+C⊢v
+, log⊢
+mod(pv ) ↦→ logΦ(pv )
+[Kv : Fmod,v ] .
+▶ Global realiﬁed mono-analytic Frobenioid-prime-strip
+F⊩ = F⊩
+mod :=
+Ä
+C⊩
+mod, Prime(C⊩
+mod) ≃ V, F⊢ = {F⊢
+v }v∈V, {ρv }v∈V
+ä
+.
+⇝ a well-deﬁned degree map on F⊩, invariant under automorphisms.
+▶
+HT Θ :=
+(
+{F v }v∈V, F⊩
+mod
+)
+.
+20
+
+Base ﬁelds via κ-coric rational functions
+▶
+D⊚ := B(C K ).
+F (D⊚) := F
+×
+(D⊚) ∪ {0} ≃ F .
+▶ The (unique) model CFmod over Fmod of CF ⇝
+(π1(D⊚) ⊂) π1(D⊛) ≃ ΠCFmod
+, D⊛ := B(π1(D⊛)).
+F×
+mod(D⊚) ≃ F×
+mod, Fmod(D⊚) ≃ Fmod.
+▶ (κ-coric functions) Let L = Fmod. (Note |CL| ≃ A1
+L.) For the curve determined by
+some ﬁnite extension of the function ﬁeld KC , a closed point is called critical if it maps
+to the 2-torsion points of EF . A critical point not mapping to the cusp of CL is called
+strictly critical.
+(i) A rational function f ∈ KC is κ-coric if
+▶ if f /∈ L, then it has exactly 1 pole and ≥ 2 (distinct) zeros,
+▶ the divisor of zeros and poles of f is deﬁned over a number ﬁeld and avoids the critical
+points, and
+▶ f restricts to roots of unity at strictly critical points of |CL|cpt.
+(ii)∞κ-coric if f n is κ-coric for some n ∈ Z>0.
+(iii)∞κ×-coric if c · f is∞κ-coric for some c ∈ L
+×
+.
+▶ π1(D⊚) ⇝ a proﬁnite group
+(GKCFmod
+) ≃ πrat
+1 (D⊛)(↠ π1(D⊛)),
+pseudo-monoids of κ-,∞κ- and ∞κ×-rational functions:
+M⊛
+κ (D⊚), M⊛
+∞κ(D⊚), M⊛
+∞κ×(D⊚).
+21
+
+Cyclotomic rigidity of global and local κ-coric structures
+▶ Now the assignment
+Ob(D⊛) ∋ H ↦→ monoid of arithmetic divisors on F (D⊚)H
+⇝ Frobenioid over D⊛:
+F ⊛(D⊚).
+▶ For†F ⊛ ≃ F ⊛(D⊚) a category with base D⊛, deﬁne
+†F ⊛
+mod :=†F ⊛|terminal objects of D⊛.
+Note
+†F ⊛R
+mod ≃ C ⊩
+mod.
+▶ Look at an isomorph
+πrat
+1 (†D⊛) ↷†M⊛
+∞κ×.
+▶
+µ´ et(π1(†D⊚)) := Hom(H2(∆Z , ˆZ), ˆZ)
+for Z the canonical compactiﬁcation of some hyperbolic curve of genus ≥ 2 ﬁnite ´ etale
+over X K appearing in the Belyi cuspidalization of X K .
+▶
+µFr((−)) = Hom(Q/Z, (−)×).
+22
+
+▶ The consideration of divisors of zeros and poles of κ-coric functions and the fact
+Q>0 ∩ ˆZ× = {1},
+⇝
+∃! isomorphism of cyclotomes
+µ´ et(π1(†D⊚)) ∼− →µFr(†M⊛
+∞κ×)
+making the following diagram commute:
+M⊛
+∞κ×(†D⊚)
+≃
+↓↓
+↘ ↙ →→ lim− →H H1(H, µ´ et(π1(†D⊚)))
+≃
+↓↓
+†M⊛
+∞κ×
+↘ ↙ →→ lim− →H H1(H, µFr(†M⊛
+∞κ×))
+▶ We conclude that †F ⊛ carries natural structures of ∞κ×,∞κ-, κ-rational functions
+πrat
+1 (†D⊛) ↷†M⊛
+∞κ×, †M⊛
+∞κ, †M⊛
+κ := (†M⊛
+∞κ)πrat
+1 (†D⊛).
+(Under the additional requirement of compatiblility with local integral submonoids , one
+has the analogue for F .)
+▶ In the local case, the p-adic Frobenioid Fv carries the analogous structures (via the
+curve Cv , v ∈ Vmod).
+23
+
+Local label classes of cusps
+▶ For each v ∈ Vnon, Dv ≃ B tp(X v ). (At each v ∈ Varc...)
+Prime-strips:
+D := {Dv }v∈V,
+D⊢ := {D⊢
+v }v∈V.
+▶ A label class of cusps of Dv is the set of cusps of Dv over a (single) cusp of
+Dv ≃ B tp(ΠC v ) arising from a nonzero element of the quotient Q ≃ Fℓ.
+▶ At a bad place v, the action of Aut Kv (X v ) on the set of cusps of X v factors through its
+quotient {±1}.
+▶ At each v ∈ V, the action of F×
+ℓ ↷ Q equips the set LabCusp(Dv ) with an F⋇
+ℓ -torsor
+structure, where
+F⋇
+ℓ := (Fℓ\{0})/{±1}, |F⋇
+ℓ | = ℓ⋇ := ℓ − 1
+2 .
+▶
+LabCusp(†Dv ) ∼− →LabCusp(†Dw ),
+⇝ LabCusp(†D).
+24
+
+Global label classes of cusps of arithmetic nature
+▶ The existence of the model CFmod ⇝
+Gal(K /Fmod) − →GL2(Fℓ)/{±1},
+Aut(C K ) ∼− →
+®Ç
+∗ ∗
+0 ∗
+å´
+/{±1}
+⋂
+Im(Gal(K /Fmod)),
+Autϵ(C K ) ∼− →
+®Ç
+∗ ∗
+0 ±1
+å´
+/{±1}
+⋂
+Im(Gal(K /Fmod)),
+Aut(C K )/ Autϵ(C K ) ≃ Aut(D⊚)/ Autϵ(D⊚) ∼− →F⋇
+ℓ .
+▶ For v ∈ Vbad, the consideration of the covers X v → C v → C K yields morphisms
+φNF
+•,v : Dv → D ⊚.
+▶ Set:
+φNF
+v = {β ◦ φNF
+•,v ◦ α}α∈Aut(Dv ), β ∈Autϵ(D⊚),
+φNF
+j : Dj = {(Dv )j }v∈V → D ⊚,
+F⋇
+ℓ -equivariant : φNF
+⋇ = {φNF
+j } : D⋇ = {Dj }j∈F⋇
+ℓ
+→ D ⊚.
+25
+
+Evaluation points at bad places
+▶ Let µ− ∈ X v (Kv ) be the unique 2-torsion point whose closure intersects irr.
+component-0 (of the special ﬁber of (any) given stable model) of X v . Deﬁne the
+evaluation points of X v (Kv ) as µ−-translations of the cusps.
+▶ This way, the value of the function Θ v at an evaluation point of ¨Y v with label j ∈ |Fℓ|
+lies in the µ2ℓ-orbit of qj2
+v
+.
+▶ For any j ∈ F⋇
+ℓ and v ∈ Vbad, we have the poly-morphism
+φΘ
+v j
+: (Dv )j
+∼− → Btp(Πv ) → B(Gv ) → B tp(Πv ) ∼− → D>,v
+with the middle arrows induced by the evaluation section labeled by j and the natural
+surjection Π v ↠ Gv .
+▶ To encode the symmetry (involving all possible trivializations of the F⋇
+ℓ -torsor
+LabCusp(Dv )):
+HTD-ΘNF = (D⊚ φNF
+⋇
+← −DJ
+φΘ
+⋇
+− →D>).
+▶ ∃[ϵ] ∈ LabCusp(D⊚) s.t. under the canonical bijection LabCusp(D>) ∼− →F⋇
+ℓ ,
+φ(−)
+j ([ϵ]) = φ(−)
+1 (j · [ϵ]) ↦→ j.
+⇝Synchronized labelling:
+LabCusp(D⊚)
+φNF
+j
+− →LabCusp(Dj)
+φΘ
+j
+− →LabCusp(D>)
+can.∼− →F⋇
+ℓ
+φΘ
+⋇ : DJ → D> determines (uniquely) ψΘ
+⋇ : FJ − →F>.
+▶ (Assume the prime-strip F> associated to HT Θ (via the F v ) has base D>.)
+HT ΘNF = (F ⊛ L99 F ⊚ ψNF
+⋇
+← −FJ
+ψΘ
+⋇
+− →F> 99K HT Θ).
+26
+
+±-label classes of cusps of geometric nature
+▶ An F±
+ℓ -torsor is a set T ≃ Fℓ, where F⋊±
+ℓ := Fℓ ⋊ {±1} acts on Fℓ by z ↦→ ±z + λ for
+λ ∈ Fℓ.
+▶ A ±-label class of cusps of Dv is the set of cusps of Dv lying over a single cusp of (the
+temperoid of) X v .
+▶ There are two canonical elements in LabCusp±(Dv ), corresponding to the zero cusp
+and the canonical generator of Q. ⇝
+¶
+LabCusp±(Dv )\{0-cusp}
+©
+/{±1} ∼− →LabCusp(Dv ) ( ∼− →F⋇
+ℓ ).
+▶ Now the global situation.
+D⊚± := B(X K ).
+Homomorphism (adapted to the quotient Q):
+Aut(D⊚±) ∼− →Aut(X K ) → GL2(Fℓ) → GL2(Fℓ)/{±1}.
+Aut±(D⊚±) := ker
+Ä
+Aut(D⊚±) ↠ F⋇
+ℓ
+ä
+,
+(∆CK /∆X K ≃) Aut K (X K ) ∼− →Aut±(D⊚±)/ Autcsp(D⊚±)
+ϵ
+∼− →F⋊±
+ℓ .
+▶ ⇝ isomorphism of F±
+ℓ -torsors
+LabCusp±(D⊚±) ≃ Fℓ.
+▶ The non-interference with local Galois groups of the following action
+∆CK /∆X K ↷ LabCusp±(D⊚±) ≃ LabCusp±(†Dv t ), ∀t ∈ Fℓ
+⇝ the conjugate synchronization for theta values on various cusps.
+27
+
+The Hodge theater
+We use †(−) to indicate the group/category-theoretic nature of the constructions.
+▶ Recall
+†HTD-ΘNF = ( †D⊚
+†φNF
+⋇
+← −†DJ
+†φΘ
+⋇
+− →†D>),
+†HT ΘNF = ( †F ⊛ L99†F ⊚
+†ψNF
+⋇
+← −†FJ
+†ψΘ
+⋇
+− →†F> 99K†HT Θ),
+▶ Similarly, we encode the additive symmetry
+†HTD-Θ±ell
+= ( †D⊚±
+†φΘell
+±
+← −†DT
+†φΘ±
+±
+− →†D≻),
+†HT Θ±ell
+= ( †D⊚±
+†ψΘell
+±
+← −†FT
+†ψΘ±
+±
+− →†F≻).
+▶ T = Fℓ. Write |T | = T /{±1}, T ⋇ := |T |\{0}. Glue
+(†φΘ±
+± :†DT →†D≻) → (†φΘ
+⋇ :†DT ⋇ →†D>)
+†DT |T\{0} ↦→ †DT ⋇,
+†D0,†D≻ ↦→ †D>.
+⇝ the Frobenius-like/´ etale like Hodge-theaters
+†HT , †HTD.
+▶ Such a gluing is unique.
+28
+
+Mono-theta environments
+▶ Let N be a positive integer.
+▶ Take (a cocycle of) the reduction mod N of one class in ¨ηΘ,ℓZ×µ2 ⊂ H1(Πtp
+¨Y , ℓ∆Θ) and
+subtract it from the tautological section
+stau
+¨Y : Πtp
+¨Y → Πtp
+¨Y [µN] ↪→ Πtp
+Y [µN] = Πtp
+Y ×Gk (µN ⋊ Gk)
+This yields a homomorphism
+sΘ
+¨Y : Πtp
+¨Y → Πtp
+Y [µN].
+▶ Modifying a cocycle above by coboundaries ↔ replacing sΘ
+¨Y by its µN-conjugates.
+▶ A mod N Mono-theta environment
+MΘ = {Π, DΠ, sΠ} :
+(i) a topological group Π ≃ Πtp
+Y [µN];
+(ii) a subgroup DΠ ⊂ Out(Π) such that DΠ ≃ D Y ⊂ Out(Πtp
+Y [µN]), generated by the images
+of K×, Gal(Y /X ) via the natural outer actions;
+(iii) a collection of subgroups sΘ
+Π ⊂ Π, isomorphic to the µN-conjugacy class of sΘ
+¨Y (Πtp
+¨Y ).
+▶ Can recover
+Πtp
+X = Aut(Πtp
+Y [µN]) ×Out(Πtp
+Y [µN]) DY .
+29
+
+Rigidities of mono-theta environments
+The data (ii, iii) in MΘ has the use of rigidifying data (i), which give rise to a unique
+isomorphism of cyclotomes identifying the Frobenius-like and ´ etale-like theta classs.
+▶ (Cyclotomic rigidity) MΘ ⇝ isomorphs of splittings sΘ
+¨Y , stau
+¨Y . Their diﬀerence
+(g ↦→ sΘ(g)/stau(g)) yields
+(ℓ∆Θ)(MΘ)/N =: µ´ et
+N (MΘ) ∼− →µFr
+N (MΘ) := ker
+Ä
+(ℓ∆Θ[µN])(MΘ) ↠ (ℓ∆Θ)(MΘ)
+ä
+▶ (Discrete rigidity) Any projective system
+· · · → MΘ
+N′
+γN′,N
+− →MΘ
+N → · · ·
+is isomorphic to the projective system · · · → MΘ
+N′(Y )
+γN′,N
+− →MΘ
+N(Y ) → · · · .
+▶ (Compatibility between CRI and labels on cusps ) The action on cusp labels
+ΠC (MΘ)/ΠX (MΘ) ≃ ∆C (MΘ)/∆X (MΘ) ≃ F⋊±
+ℓ
+is compatible with CRI: µ´ et
+N (MΘ) ∼− →µFr
+N (MΘ) (∀N ∈ Z≥1).
+30
+
+Frobenioid-theoretic ´ etale theta class and mono-theta environments
+▶ For A ∈ Ob(F0) and f ∈ O×(Abirat), :::::::assume :f:::::::admits:::an:::::N-th:::::root :::on :::::some:::::::::tempered
+:::::cover ::of:::X , and look at a pair of linear base-isomorphisms (called a fraction-pair)
+s•, s• : A → B, s.t. s• · s−1
+• = f
+and their divisors have disjoint supports. Assume A is Frobenius-trivial (i.e. A equipped
+with the trivial line bundle). There are commutative diagrams in F0:
+AN
+↓↓
+s•
+N →→ BN
+↓↓
+AN
+↓↓
+(sN)• →→ BN
+↓↓
+A s•
+→→ B A
+s• →→ B
+with (s•
+N , (sN)•) a fraction-pair for a function fN ∈ O×(Abirat
+N ) so that ( fN)N = f |AN .
+▶ Assume that A ∈ Ob(DX ) corresponds to an open normal subgroup H of Πtp
+X ,
+HA :=
+Ä
+Πtp
+X ↠ AutDX (A
+ä
+(H),
+HA :=
+Ä
+AutDX (A)/O×(A) ↪→ AutDX (A)
+ä−1
+(HA).
+Similarly we deﬁne HAN , HBN .
+▶ ∃ two actions HBN ↷ BN:
+(s•
+N)gp, (sN)gp
+• : HBN → AutF0(BN),
+such that s•
+N (resp. ( sN)•) is HBN -equivariant for ( s•
+N)gp (resp. ( sN)gp
+• ). The diﬀerence
+(s•
+N)gp
+(sN)gp
+•
+then determines a Kummer class
+ηf ∈ H1(HBN , µN(BN)).
+31
+
+▶ Suppose X is of type (1 , 1). Recall the tempered Frobenioid
+F → D = Btp(X ).
+▶ For theta functions, take
+A = ( ¨Y , O), (s•
+N , (sN)•) = (sℓN , τℓN).
+⇝ (modulo N) Kummer class ¨ηΘ of an ℓ-th root of theta function.
+▶ The Kummer class of theta function ⇝ cyclotomic rigidity isomorphism :
+(ℓ∆Θ)S ⊗ Z/N ≃ µN(S), ∀S ∈ Ob(F).
+▶ One can check that ( s•
+N)gp, (sN)gp
+• factors through
+EN := (s•
+N)gp
+Å
+Im(Πtp
+Y ↪→ Πtp
+X ↠ AutD(B N))
+ã
+· µN(B) ⊂ AutF (BN).
+▶ Natural outer action
+ℓZ ≃ Πtp
+X /Πtp
+Y → Out(EN)
+given by conjugation via Π tp
+X ↠ AutD(B N)
+(s•
+N)gp
+− → AutF (BN).
+▶ Natural isomorphism of topological groups
+EN ×Im(Πtp
+Y ) Πtp
+Y =: EΠ
+N ≃ Πtp
+Y [µN].
+▶ EΠ
+N, the subgroup of Out( EΠ
+N) generated by ℓZ and k×, the µN-conjugacy classes of
+(sN)•(Πtp
+¨Y ), and varying N ⇝ mono-theta environment MΘ(F).
+▶ In particular, the previous rigidities hold for MΘ(F).
+32
+
+Splittings of integer rings via theta values
+▶ Take an inversion ιX of X and let ιX be the unique inversion of X over k above ιX .
+Then ιX lifts to an inversion ι ¨Y of ¨Y .
+The res. to decom. gp. Dµ− ⊂ Πtp
+¨Y of (µ−) ¨Y of ´ etale theta function lies inµ2ℓ.
+▶ Let Π ≃ Πtp
+X be a top. group. The µℓ-multiples of the reciprocal of ¨ηΘ,ℓZ×µ2(Π):
+θ(Π) ⊂ H1(Πtp
+¨Y (Π), µ´ et(Π)).
+Elements whose certain positive integral power (up to torsion) lies in θ(Π):
+∞θ(Π) ⊂ lim− →H
+H1(Πtp
+¨Y (Π)|H , µ´ et(Π)).
+▶ Let (ι, D) ≃ (ι ¨Y , Dµ−) be isomorph via Π. Restriction to D yields splittings
+(O× ·∞θι(Π))/Oµ ≃ O×µ(Π) × (∞θι(Π)/Oµ)
+Mono-theta analogue:
+(O× ·∞θι
+env(MΘ(Π)))/Oµ ≃ O×µ(MΘ(Π)) × (∞θι
+env(MΘ(Π))/Oµ).
+33
+
+Conjugate synchronization of theta values
+▶ Γ▶
+X ⊂ ΓX the unique connected subgraph which is a tree, stabilized by ιX , and contains
+all vertices of Γ X .
+Γ•
+X ↔ exactly one vertex of Γ X .
+▶ Decomposition groups associated to subgraphs: Π • ⊂ Π▶ ⊂ Πtp
+X =: Π.
+▶ Look at t ∈ LabCusp±(Π) and Π•t ⊂ Π▶. For □ = •t, ▶, write
+Π¨□ = Π□ ∩ Πtp
+¨Y , ∆¨□ = ∆ ∩ Π¨□.
+▶ Given a projective system MΘ, have subgroups Π ¨▶(MΘ) ⊂ Π▶(MΘ) ⊂ Π(MΘ)
+corresponding to Π ¨▶ ⊂ Π▶ ⊂ Π.
+Let X a hyperbolic curve over a p-adic local ﬁeld k which admits stable
+reduction over Ok. A decomposition/inertia group of Π X is contained in Π tp
+X iﬀ
+it is a decomposition/inertia group in Π tp
+X .
+▶ Let It be a cuspidal ineria of ∆ •t. Suppose γ′ ∈ ∆X ,•t, γ ∈ “∆X and set δ = γγ′ ∈ “∆X .
+Well-deﬁned decomposition group of µ−-translation of the cusp giving rise to I δ
+t :
+D δ
+t,µ− ⊂ Πδ
+¨▶ = Πγ
+¨▶,
+compatible with the conjugacy of ∆C /∆X ≃ F⋊±
+ℓ .
+▶ Get rid of dependence on ι ¨Y = ι: The restriction to D δ
+t,µ− yields µ2ℓ, µ-orbits of
+elements
+(θenv)|t|((MΘ
+¨▶)γ) ⊂∞(θenv)|t|((MΘ
+¨▶)γ) ↪→ lim− →H
+H1(G ((MΘ
+¨▶)γ)|H , µFr((MΘ
+¨▶)γ)).
+▶ (Canonical splittings) The restriction to D δ
+0,µ− induces splittings
+(O× ·∞θι
+env((MΘ
+¨▶)γ))/µ →→ O×µ((MΘ
+¨▶)γ) × (∞θι
+env((MΘ
+¨▶)γ)/µ).
+34
+
+Theta monoids
+▶ (Constant Monoids ≃ O ⊿
+F v
+) MΘ := MΘ(F v ).
+Ψcns(MΘ)v = O⊿(Gv (MΘ)) ⊂ lim− →H
+H1(Π ¨Y (MΘ)|H , µFr(MΘ)),
+Ψcns(Dv ) = O⊿(Gv (D⊢
+v )),
+Ψcns(Fv ) = O⊿
+Cv (AΘ
+∞), AΘ
+∞ a universal covering pro-object of Dv .
+▶ Kummer map
+κ : Ψcns(Fv ) ∼− →Ψcns(MΘ) ≃ Ψcns(Dv )
+▶
+Ψenv(MΘ)v =
+¶
+Ψι
+env(MΘ)v := Ψcns(MΘ)×
+v · θι
+env(MΘ)N©
+ι ,
+ΨFenv,v =
+ß
+ΨF Θv ,α := O×
+CΘv
+(AΘ
+∞) · (Θα
+v )N|AΘ∞
+™
+α∈Πv
+,
+▶ Matching the image of α under Π v ↠ ℓZ and ι ∈ ℓZ:
+κ : (∞)ΨFenv,v
+∼− →(∞)Ψenv(MΘ).
+35
+
+Indeterminacies and multiradiality
+▶ For an isomorph ( G ↷ O×µ) ≃ (Gv ↷ O×µ
+K v
+),
+Ism(G ) ( ⊂ AutG (O×µ)) :
+G -equiv. automorphisms preserving Im((O×)H → O×µ) for any open subgroup H ⊂ G .
+▶ An Ism-orbit of O×µ ≃ O×µ
+K v
+is called a ×µ-Kummer structure on (G ↷ O×µ).
+▶ (The analogue for the constant monoids Ψ cns(−) fails.)
+(Multiradiality of split theta monoids )
+Consider the full-poly-isomorphism MΘ(Πv ) ≃ MΘ(F v ). The construction in Π v of
+(∞)Ψenv(MΘ(Πv )) ≃ (∞)ΨFenv,v
+is compatible with arbitrary automorphisms of the pair G (MΘ) ↷ Ψ×µ
+Fenv,v
+(≃ Gv ↷ O×µ
+F v
+).
+▶ More concretely, this is the data
+(Π, G , µ´ et(Π), MΘ(Π)) − →(G ↷ O×µ(G )),
+where µ´ et(Π) → O×µ(G ) is the zero map.
+36
+
+Gaussian monoids
+▶ Recall: the action of (∆ Cv /∆X v )(MΘ) ≃ F⋊±
+ℓ on Π X v (MΘ) induces isomorphisms
+among
+Gv (MΘ
+¨▶)t ↷ Ψcns(MΘ)t, t ∈ Fℓ.
+The subscript △ indicates the identiﬁcation of 0 with the diagonal of F⋇
+ℓ .
+▶
+Ψgau(MΘ)v =
+¶
+Ψξ(MΘ)v := Ψ×
+cns(MΘ) · ξN©
+ξ∈
+∏
+|t|∈F⋇
+ℓ
+(θenv)|t|(MΘ
+¨▶) .
+▶ The restriction θι(Πv ¨▶) ∼− →θ|t|(Πv ¨▶) induces evaluation isomorphism
+Ψenv(MΘ)v
+∼− →Ψgau(MΘ)v .
+Intuitively, this is (modulo µ2ℓ) Θ v ↦→ {qj2
+v
+}j∈F⋇
+ℓ
+.
+▶ ΨFgau :=
+ß
+ΨFξ(F v ) = Im
+Å
+Ψξ(MΘ)v ↪→ ∏
+|t|∈F⋇
+ℓ
+Ψcns(MΘ)|t|
+∼− →∏
+|t| Ψcns(Fv )
+ã™
+ξ
+.
+▶ Global realiﬁed prime-strips (with Frobenioids C⊩
+env
+∼− → C⊩
+gau ≃ C ⊩
+mod):
+F⊩
+env =
+Ä
+C⊩
+env, Prime(C⊩
+env) ∼− →V, F⊢
+env := F⊢(ΨFenv), {ρv }
+ä
+, F⊩
+gau = · · · .
+▶ F⊢ = {F⊢
+v }v∈V ⇝ split Frobenioids/prime-strips equipped with ×µ-Kummer structures:
+F⊢▶×µ = {F⊢▶×µ
+v }v∈V, F⊩▶×µ
+env , F⊩▶×µ
+gau .
+▶ Recall the localization functors F ⊛
+mod → F and thus (via C⊩(F) ∼− → F⊛R
+mod) the inclusion
+(with additive symmetry on the left and multiplicative symmetry on the right):
+C⊩
+gau ↪→
+∏
+j∈F⋇
+ℓ
+F ⊛R
+mod,j .
+37
+
+Deﬁnition of log-links
+Log-links concern the multiplication action of theta values on the additive module :
+{qj2
+v
+}j=1,··· ,ℓ−1
+2
+↷ 1
+pv
+log(O×
+Fv ).
+▶ Recall prime-strips:
+F = {Fv := Cv }, D = {Dv ≃ B tp(ΠX v
+)}, D⊢ = {D⊢
+v ≃ B(GKv )}.
+▶ Consider the ( Galois equivariant) log-operation (with codomain group-theoretic in the
+unit group):
+Ψcns(Fv )× log
+− →(Ψcns(Fv )×)pf =: log(Fv ) ( ≃ F v ).
+⇝ monoid/Frobenioid:
+Ψlog(Fv ) (≃ O ⊿
+F v
+), log(Fv ) ( ≃ F v ).
+▶ (i) A log-link on F-prime-strips is deﬁned to be a poly-isomorphism log(‡F) ∼− →†F:
+(ii) A full log-link between Hodge theaters is the collection of log-links on
+F-prime-strips F>, F≻, FJ , FT which ::::lifts ::all:::::::::::::isomorphisms:::on::::the:::::bases:
+log : 0HT → 1HT .
+▶ A log-link (with O = OF v ) can be regarded as a transition map between 0O and 1O.
+φ01 : 0O ⊃ 0O× ↠ (0O×)pf ≃ 0F v
+full iso.− → 1F v ⊃ 1O.
+(The full poly-isomorphism is given by automorphisms of Π.)
+▶ The Kummer isomorphisms κ : Ψcns(F) ∼− →Ψcns(D) are incompatible with log-links.
+38
+
+Additive and multiplicative global Frobenioids
+▶ An object of F ⊛
+mod is of the form J = {Jv }v∈V with Jv ⊂ Kv a fractional ideal at v in
+V, almost all of which are the integer rings. Obviously, F ⊛
+mod ≃ F ⊛
+mod.
+▶ F×
+mod-torsor and a trivialization at each v ⇝ Frobenioid
+F ⊛
+MOD (≃ F ⊛
+mod).
+▶ In the proof of the ﬁnal inequality, we start with (the realiﬁcation of) F ⊛
+MOD (as part of
+the domain of Θ-link), and have part of the output (i.e. the mutiradial representation)
+in the product of copies of F ⊛
+mod.
+▶
+log(FvQ) = ⊕v|vQlog(Fv ), log(FVQ) =
+∏
+vQ∈VQ
+log(FvQ).
+We embed the number ﬁeld Fmod into it.
+▶ To construct the additive version F ⊛
+mod, we need the number ﬁeld Fmod AND the
+additive modules Ψ log(Fv )
+⋃{0} ≃ O ⊿
+F v
+.
+▶ A nonzero element in the number ﬁeld which is integral at all local places has to be a
+root of unity (and that log sends roots of unity to 0 ∈ Fmod) ⇝
+(Log-Kummer compatibility for number ﬁeld )
+The number ﬁeld Fmod (as an entire set) is invariant under the log-links.
+39
+
+Log-shells, log-volumes and global degrees
+▶
+I(Fv ) = 1
+2pv
+log
+Ä
+(Ψcns(Fv )×)Gv
+ä
+⊂ log(Fv ),
+I(Dv ) = I(Fv (D)),
+I(F⊢×µ
+v ) = · · · ,
+I(D⊢
+v ) = I(Gv ) = 1
+2pv
+log(O×
+Kv (Gv )).
+▶ For (∗) = F , F⊢×µ, D, D⊢, deﬁne the (tensor-packets of) log-shells.
+I(i(∗)vQ) = ⊕v|vQI(i(∗)v ), ∀i ∈ I ,
+I(I (∗)vQ) = ⊗i∈I I(i(∗)vQ),
+I(I ,j(∗)v ) = I(j(∗)v ) ⊗ I(I\j(∗)vQ),
+I Q((−)(∗)VQ) =
+∏
+vQ∈VQ
+I Q((−)(∗)vQ).
+▶ On an arbitrary compact open subset of a ﬁnite extension of Qp, there is a well-deﬁned
+volume µ(−). The log-volume (normalized so that multiplication by p induces − log(p)):
+µlog(−) := log(µ(−)).
+For an object J = {Jv }v∈V of F ⊛
+mod, regarded as an element in I Q(I FVQ), we take the
+sum µlog
+I ,VQ(J ) of the log-volumes of the Jv as v varies.
+▶ µlog
+I ,VQ(J ) is invariant by multiplication by non-zero elements of the number ﬁeld, and is
+equal to the degree of the arithmetic line bundle corresponding to J .
+▶ The log-volumes on the log-shells are invariant under the log-links.
+40
+
+Logarithmic Gaussian Procession monoids
+▶ A procession in a category is a diagram
+P1 ↪→ P2 ↪→ · · · ↪→ Pn
+with Pj a j-capsule of objects and ↪→ the collection of all capsule-full poly-morphisms.
+▶ Given a full log-link log : m−1HT → mHT ,
+mΨFLGP,v := Im
+Ö
+ΨFgau(mFv ) ↪→
+∏
+j∈F⋇
+ℓ
+(ΨmFv )j →
+∏
+j∈F⋇
+ℓ
+log(m−1Fv )j
+è
+,
+mΨD
+FLGP,v := Im
+Ö
+Ψenv(mDv ) ↪→
+∏
+j∈F⋇
+ℓ
+Ψcns(mDv )j →
+∏
+j∈F⋇
+ℓ
+log(m−1Fv (Dv ))j
+è
+,
+so that they are compatible with the processions on the m−1Fj and the mFj.
+▶ In more concrete terms, this is
+I(S1Dv ) ↪→
+Å
+q1
+v
+↷ I(S2,1Dv )
+ã
+↪→
+Å
+q22
+v
+↷ I(S3,2Dv )
+ã
+↪→ · · · ↪→
+Å
+q(ℓ⋇)2
+v
+↷ I(Sℓ⋇+1,ℓ⋇
+Dv )
+ã
+.
+(The ﬁrst component I(S1Dv ) = I(Dv ) is considered as coric data.)
+▶ Consider the splitting monoid Ψ ⊥
+FLGP,v of the monoid ΨFLGP,v given by the split
+Frobenioid F⊢
+v , i.e. the value group portion corresponding to {qj2
+v
+}j∈F⋇
+ℓ
+.
+▶ Fact Ψ⊥
+FLGP,v ∩ Ψ×
+FLGP,v = µ2ℓ ⇝
+(Log-Kummer compatibility for theta values )
+Ψ⊥
+FLGP,v (deﬁned up to torsion, hence) is invariant under log-links.
+41
+
+Rigidifying the theta values
+The coric data (top. gp. ↷ top. monoid)
+Gv ↷ O×µ
+F v
+is compatible with theta functions/values because of the cyclotomic rigidity isomorphisms.
+▶
+C⊩
+LGP = Im(C⊩
+gau(HT Θ) ↪→
+∏
+j
+F ⊛R
+mod,j
+∼− →
+∏
+j
+F ⊛R
+MOD,j).
+F⊩
+LGP =
+Ä
+C⊩
+LGP, Prime(†C⊩
+LGP) ∼− →V, F⊢
+LGP := F⊢(ΨFLGP), {ρv }
+ä
+.
+▶ A Θ-pilot object PΘ is an element in the the product of Frobenioid associated to Fmod
+PΘ ∈
+∏
+j∈F⋇
+ℓ
+(F ⊛
+MOD)j
+determined by any collection of generators of the monoids Ψ ⊥
+FLGP,v for v ∈ Vbad.
+Intuitively, this is, at each v ∈ Vbad, the data
+Å
+{qj2
+v
+}j∈F⋇
+ℓ
+ãN
+· O×µ
+F v
+.
+▶ PΘ gives rise to a generator of the global realiﬁed prime-strip:
+P ⊩▶×µ
+Θ ∈ F⊩▶×µ
+LGP .
+42
+
+´Etale-like multiradial representation
+The column •HTD = {mHTD}m∈Z linked by the full poly-isomorphism (induced by
+log-link). It carries processions. (The log-volume on a procession is normalized by taking
+elementary average.)
+▶ •HTD ⇝ the following data •RLGP:
+(a) The topological modules carrying the procession-normalized log-volume map
+I(Sj+1,j(•D⊢
+v )) ⊂ I Q(Sj+1,j(•D⊢
+v )).
+(b) The number ﬁeld embedded into the product of local ﬁelds
+•M
+⊛D
+mod,j ⊂ I Q(Sj+1(•D⊢
+VQ)), j ∈ F⋇
+ℓ .
+(c) For each v ∈ Vbad, the splitting monoid + action on the log-shells by multiplication:
+•Ψ⊥D
+FLGP,v ⊂
+∏
+j∈F⋇
+ℓ
+I(Sj+1,j(•D⊢
+v )).
+▶ (Ind2) is the actions of Ism(Gv ) on each component of I Q(Sj+1,j(•D⊢
+v )), for every v.
+(Ind1) is the automorphisms Aut( Prc(•D⊢
+T )).
+(Ind3) refers to the following inclusion, called log-Kummer upper semi-compatibility:
+(Ind1,2 ↷) I(Sj+1,j (•D⊢
+v )) ⊃
+⋃
+n∈{0,1},m∈Z
+Km ◦ φn
+mm+1(mΨcns(Fv )Gv ).
+(RHS is invariant under log-links, hence carries obvious actions given by
+(Ind1,2)!)
+43
+
+Frobenius-like multiradial representation
+▶ (Multiradial representation of theta values ) Let PΘ be a Θ-pilot object.
+UΘ :=
+⋃
+Ind1,2
+( ⋃
+Ind3
+Km(PΘ)
+)
+⊂
+∏
+j∈F⋇
+ℓ
+I Q(Sj+1(•D△,VQ)),
+i.e. the union of the translations by the actions of Aut( Prc(•D⊢
+T )) and the Ism-action
+(for each v ∈ V) on each direct summand of the j + 1 factors of
+I Q(Sj+1,j(•Dv )) ≃ I Q(Sj+1,j(•D⊢
+v ))
+of the set Km(PΘ), equipped with their actions on the tensor-packets of log-shells.
+▶ More concretely, at a bad place v,
+(UΘ)v =
+⋃
+j∈F⋇
+ℓ
+⋃
+n∈{0,1},m∈Z
+Km ◦ φn
+mm+1(qj2
+v
+· mOv ).
+Theorem (Multiradiality).
+The construction of multiradial representation UΘ of Θ-pilot objects is
+invariant under arbitrary automorphism of the abstract prime-strip F⊩▶×µ.
+44
+
+The Θ-link, an automorphism of the abstract prime-strip F⊩▶×µ
+▶ Test object: A q-pilot object is an element in the global realiﬁed Frobenioid
+Pq ∈ C ⊩
+△
+determined by any collection of generators (up to torsion) of the splitting monoids of
+F⊢
+△,v for v ∈ Vbad.
+▶ Pq gives rise to a generator of the global realiﬁed prime-strip:
+P ⊩▶×µ
+q ∈ F⊩▶×µ
+△ .
+▶ Θ-link=the full poly-isomorphism
+ΘLGP :‡F⊩▶×µ
+LGP
+∼− →†F⊩▶×µ
+△ .
+At v ∈ Vbad, this (intuitively) is the identiﬁcation of P ⊩▶×µ
+Θ with P ⊩▶×µ
+q :
+Å
+{qj2
+v
+}j∈F⋇
+ℓ
+ãN
+· O×µ
+F v
+↔ qN
+v
+· O×µ
+F v
+.
+Caution: Pq is not equipped with local trivializations at each v, while PΘ is (because of
+the canonical splitting of the integer rings given by theta values).
+45
+
+Statement of the main theorem
+At each vQ, deﬁne the holomorphic hull of (UΘ)vQ as the smallest subset of I Q((−)FvQ)
+containing ( UΘ)vQ, which is of the form
+(UΘ)vQ = λ · O(−)FvQ
+with λ ∈ I Q((−)FvQ), which is non-zero in each direct summand of the decomposition of
+I Q((−)FvQ) into direct sum of local ﬁelds.
+Theorem.Let Pq ∈ C ⊩
+△ be a q-pilot object. Let
+UΘ ⊂
+∏
+j∈F⋇
+ℓ
+I Q(Sj+1(•D△,VQ))
+be the holomorphic hull of the multiradial representation UΘ of a Θ-pilot object PΘ.
+Then
+µlog(Θ) > µlog(q).
+46
+
+Explanation to the proof of the ineqaulity
+(1) First consider the 0-column of Hodge theaters 0,•HT .
+0µ(0UΘ) ≥ 0µ(κ(0,0PΘ)) = 0µ(0,0PΘ).
+(2) Now regard the domain and codomain of Θ LGP : 0,0F⊩▶×µ
+LGP
+∼− →1,0F⊩▶×µ
+△ as associated to
+the Hodge theaters 0,0HT and 1,0HT , respectively. (Keep in mind that the use of the
+ΘLGP-link implicitly requires that we regard both sides as abstract prime-strips.) We then
+have the association of log-volumes
+α : 0R≥0
+∼− →1R≥0, 0µ(0,0PΘ) ↦→ 1,0 deg(1,0Pq) (= µlog(q)).
+(3) Let 1,0PΘ ∈ 1,0C⊩
+LGP be a Θ-pilot object. Set
+1UΘ =
+⋃
+Ind1, 2, 3
+κ(1,0PΘ).
+(4) 1UΘ is by deﬁnition the holomorphic hull of 0UΘ, Then
+(1µ(1UΘ) <) 1µ(1UΘ) = 1,0 deg(1UΘ) (= µlog(Θ)).
+(5) By Multiradiality Theorem, the construction of 0UΘ is compatible with Θ LGP, hence has
+no interference with the holomorphic structure of 1,0HT . Then, the assignment
+µ0(0UΘ) ↦→ µ1(1UΘ).
+is compatible the map α. Assembling what’s above, one gets
+1,0 deg(1UΘ) > 1,0 deg(1,0Pq),
+i.e. µlog(Θ) > µlog(q).
+47
+
+Let us summarize the proof by drawing a picture.
+Write
+i,•HT = {· · · i,−1HT
+log
+→ i,0HT · · · } .
+Caution: The labels on R below are for illustration purpose only.
+∄ relations among these copies of R in general.
+1,0HT ↘ ↙ →→
+↓↓
+1,•HT
+1µ
+↓↓
+0,•HT
+0µ
+↓↓
+0,0HT
+↓↓
+↗ ↖←← 1,0HT
+↓↓
+1,0F⊩▶×µ
+△
+1,0deg
+↓↓
+≃
+↘↘
+0,0F⊩▶×µ
+LGP
+0µ
+↓↓
+ΘLGP →→ 1,0F⊩▶×µ
+△
+1,0deg
+↓↓
+1R≥0
+→→TTTTTTTTTTTTTTTTTTTTT 1R≥0
+h←←
+↘↘HHHHHHHHH
+0R≥0
+↓↓
+γ←← 0R≥0
+κlog
+←←
+↙↙tttttttttt
+α →→ 1R≥0
+←←iiiiiiiiiiiiiiiiiiiiiiii
+R⊢
+≥0
+Here the arrow κlog represents the operation 0,0PΘ ↦→ 0UΘ, the arrow γ denotes the operation
+0UΘ ↦→ 1UΘ, R⊢
+≥0 denotes the codomain of the log-volume map µ⊢ on the mono-analytic
+log-shells, and the arrow h : 1UΘ ↦→ 1UΘ denotes the operation of taking holomorphic hull.
+48

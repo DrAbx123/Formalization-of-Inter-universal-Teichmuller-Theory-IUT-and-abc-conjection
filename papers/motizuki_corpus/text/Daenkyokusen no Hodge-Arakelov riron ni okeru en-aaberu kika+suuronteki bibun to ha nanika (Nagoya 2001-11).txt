@@ -1,0 +1,161 @@
+౹ό୺ዴƷHodge-Arakelov˴
+Ჴஓஉ ૼɟ
+ૠྸᚐௌᄂᆮ৑Უ
+ᨼɶᜒ፯Ʒಒᙲ
+Ჴ
+Grothendieck፯ƞǕŴƔƭ
+ƴӒପƞǕǔư
+ſ
+ˊИ᪽ŴDiophantusƷɦŴGrothendieck ƴǑƬƯ੩కƞ
+ƸŴƦƷȫȸȄƸŴƦǕˌЭƴˊૠႎૢૠᛯƷᚇໜƔǒႆᙸƞǕƯƍƨNeukirch-
+˴ưƸૼƠƍኽௐƕ
+ǒǕ
+([3], [4]) Ŵ Grothendieckႎƴ
+ᚐൿƞǕƨŵ
+˴Ʒsurveyܭ
+ྸ፭ƱƠƯৢƏƷưƸƳƘŴஇᡈƴƳƬƯଢǒƔƴƳƬƨŴ౹ό୺ዴƷHodge-Arakelov ྸᛯ
+˴ƷૼƠƍᚐ᣷ƴ
+ИƷGrothendieckưǋƋƬƨŴDiophantusƕ᧏ƚƯ
+ǘǕǔŵ
+ʖͳჷᜤƱƠƯƸŴHartshorne [1]˴ƷჷᜤƷ˂ŴMilne [2] ƳƲƴ୿ƍƯ
+ƋǔŴ´etale site Ǎ topos, ´etaleƢǔŵ
+ǷȩȐǹ
+ƋǓᲣ
+˴λᧉŵ
+Ტ້ᲣHodge-Arakelov ྸᛯλᧉŵ
+Ტ൦Უbasepoint, core, commensurator Ʒᛅŵ
+ᲢஙᲣuniverse, ӷ஖҄ŵ
+૨ྂ
+Ჴ
+[1] R. Hartshorne, Algebraic Geometry, Graduate Texts in Math. 52, Springer (1997).
+[2] J. S. Milne, ´Etale Cohomology, Princeton Mathematical Series 33, Princeton Univer-
+sity Press (1980).
+[3] A. Tamagawa, The Grothendieck Conjecture for Aﬃne Curves,Compositio Math. 109
+(1997), pp. 135-194.
+[4] S. Mochizuki, The Local Pro-p Anabelian Geometry of Curves, Invent. Math. 138
+(1999), pp. 319-423.
+
+ЎƱƸ˴ƔᲹ
+ᜒ๫ᎍᲴஓஉ ૼɟ
+ૠྸᚐௌᄂᆮ৑Უ
+ǢȖǹȈȩǯȈ
+Ჴ
+ಮ˳ſŴƭǇǓŴКƷžbaseſƷ
+ಮ˳ƴparametrizeಮ˳
+᣽ƸŴƦƷžKodaira-SpencerſưƋǔŵƜƷ
+ЎſŴƭǇǓŴbaseಮ˳ƔǒŴﬁberಮ˳ƷȢǸȥȩ
+ЎưƋǔŵKodaira-Spencer˴ႎƳ૨ᏦƴƓƍƯǋƱƯǋஊ
+ဇƳᢊφưƋǔƕŴཎƴ᧙ૠ˳ɥƷDiophantusᙲɧӧഎƳ
+ưƋǔŵ
+ɟ૾Ŵૠ˳ƷǑƏƳૠᛯႎƳbaseಮ˳ƷଈſƱ
+ӳƴƸŴᲢஇᡈǇưᲣKodaira-Spencer
+ƷᢘЏƳ᫏˩ƕƳƔƬƨƨǊƴŴ᧙ૠ˳ɥƷDiophantusྸƷ
+ૠᛯႎƳ᫏˩ƕᚰଢưƖƳƔƬƨŵ
+ஜᜒ๫ưƸŴஇᡈƴƳƬƯႆᙸƞǕƨૠᛯႎƳKodaira-SpencerƱƦƷԗᡀƷᛅ᫆Ŵ୼
+ƴ Diophantus˴ƱƷ᧙̞ƴƭƍƯᚐᛟƢǔŵ
+[1] S. Mochizuki, The Local Pro-p Anabelian Geometry of Curves, Invent. Math. 138
+(1999), pp. 319-423.
+[2] S. Mochizuki, The Hodge-Arakelov Theory of Elliptic Curves: Global Discretization of
+Local Hodge Theories, RIMS Preprint Nos. 1255, 1256 (October 1999), available as
+.ps ﬁle at:
+http://www.kurims.kyoto-u.ac.jp/∼ kenkyubu/paper/all.html
+
+ᙲኖ
+ૠྸᚐௌᄂᆮ৑Უ
+ᲫᲫஉ
+1. ǿǤȈȫᲴ౹ό୺ዴƷHodge-Arakelov˴
+2. ૙ᅹ୿Ჴ ƳƠ
+3. Ӌᎋ୿Ტ૨ྂᲣᲴ
+[1] M. Asada, The faithfulness of the monodromy representations associated with certain
+families of algebraic curves, Journ. Pure Appl. Algebra 159 (2001), pp. 123-147.
+[2] J. W. S. Cassels and A. Fr¨ohlich (editors), Algebraic number theory, Proceedings of
+the instructional conference held at the University of Sussex, Brighton, September
+1-17, 1965, Academic Press (1986).
+[3] P. Deligne and D. Mumford, The Irreducibility of the Moduli Space of Curves of
+Given Genus, IHES Publ. Math. 36 (1969), pp. 75-109.
+[4] A. Grothendieck, Letter to G. Faltings (June 1983) in Lochak, L. Schneps,Geometric
+Galois Actions; 1. Around Grothendieck’s Esquisse d’un Programme, London Math.
+Soc. Lect. Note Ser. 242, Cambridge Univ. Press (1997).
+[5] M. Matsumoto, Galois representations on proﬁnite braid groups on curves, J. Reine
+Angew. Math. 474 (1996), pp. 169-219.
+[6] S. Mochizuki, The Hodge-Arakelov Theory of Elliptic Curves: Global Discretization of
+Local Hodge Theories, RIMS Preprint Nos. 1255, 1256 (October 1999).
+[7] S. Mochizuki, The Galois-Theoretic Kodaira-Spencer Morphism of an Elliptic Curve,
+RIMS Preprint No. 1287 (July 2000).
+[8] S. Mochizuki, The Hodge-Arakelov Theory of Elliptic Curves in Positive Characteris-
+tic, RIMS Preprint No. 1298 (October 2000).
+[9] S. Mochizuki, Correspondences on Hyperbolic Curves, Journ. Pure Appl. Algebra131
+(1998), pp. 227-244.
+[10] S. Mochizuki, A Version of the Grothendieck Conjecture for p-adic Local Fields, The
+International Journal of Math. 8 (1997), pp. 499-506.
+[11] S. Mochizuki, The Proﬁnite Grothendieck Conjecture for Closed Hyperbolic Curves
+over Number Fields, J. Math. Sci., Univ. Tokyo 3 (1996), pp. 571-627.
+[12] S. Mochizuki, The Local Pro-p Anabelian Geometry of Curves, Invent. Math. 138
+(1999), pp. 319-423.
+[13] H. Nakamura, A. Tamagawa, and S. Mochizuki, The Grothendieck Conjecture on the
+Fundamental Groups of Algebraic Curves, Sugaku Expositions 14 (2001), pp. 31-53.
+[14] J. Neukirch, A. Schmidt, K. Wingberg,Cohomology of number ﬁelds, Grundlehren der
+Mathematischen Wissenschaften 323, Springer-Verlag (2000).
+[15] J.-P. Serre, Local Class Field Theoryin Algebraic Number Theory , ed. J.W.S. Cassels
+and A. Fr¨ohlich, Academic Press (1967).
+1
+
+[16] J.-P. Serre, Trees, Springer-Verlag (1980).
+[17] J.-P. Serre (with the collaboration of Willem Kuyk and John Labute), Abelian l-adic
+Representations and Elliptic Curves, Addison-Wesley Publishing Company (1989).
+[18] Revˆetement ´etales et groupe fondamental,S ´eminaire de G´eometrie Alg´ebrique du Bois
+Marie 1960-1961 (SGA1), dirig´e par A. Grothendieck, augment´ed ed e u xe x p o s ´es de
+M. Raynaud, Lecture Notes in Mathematics 224, Springer-Verlag (1971).
+[19] A. Tamagawa, The Grothendieck Conjecture for Aﬃne Curves,Compositio Math. 109
+(1997), pp. 135-194.
+4. ᜒ፯ƷʖͳჷᜤᲴ[Hh]ƷǹǭȸȠᛯƱŴ[Mn] ሁƴᚐᛟƠƯƋǔǨǿȸȫȷǵǤȈǍˊ
+ᄽŵ
+[Hh] R. Hartshorne, Algebraic Geometry, Graduate Texts in Math. 52, Springer-Verlag
+(1977).
+[Mn] J. S. Milne, ´Etale Cohomology, Princeton Mathematical Series 33, Princeton Univer-
+sity Press (1980).
+5.Ჴ
+Grothendieck፯ƞǕŴƔƭ
+ƴӒପƞǕǔư
+ſ
+ˊИ᪽Ŵ
+GrothendieckƸŴƦƷȫȸȄƸƦǕˌЭƴ
+ˊૠႎૢૠᛯƷᚇໜƔǒႆᙸƞǕƯƍƨNeukirch-࠰
+ǒǕ (Ӌᎋ૨ྂƷ [12], [19] ǛӋ
+ༀ)Ŵ GrothendieckႎƴᚐൿƞǕƨŵ
+˴Ʒsurveyܭ
+ྸ፭ƱƠƯৢƏƷưƸƳƘŴஇᡈƴƳƬƯଢǒƔƴƳƬƨŴ౹ό୺ዴƷHodge-Arakelov ྸᛯ
+˴ƷૼƠƍᚐ᣷ƴ
+ИƷGrothendieckưǋƋƬƨŴDiophantusƕ᧏ƚƯ
+ǘǕǔŵ
+I˴λᧉ
+§1.ஜ፭ƱƸ˴ƔᲹ
+§2. Grothendieck Ʒ anabelianܖ
+§3.ྸ
+§4.ࣱ
+IIᲴ Hodge-Arakelov ྸᛯλᧉ
+§1.ྸ
+§2. ໯ᨂᢒໜưƷཞඞ
+§3. ദ೅ૠႎ৖ඥƴǑǔᚰଢ
+IIIᲴ basepoint, core, commensurator Ʒᛅ
+§1. anabelioid ƱƍƏǋƷ
+§2. core
+§3. ദЩನᡯ
+2
+
+§4.ࣱ
+§5. global multiplicative subspace ǁƷȊǤȸȴƳǢȗȭȸȁ
+IVᲴ universe, ӷ஖҄
+§1.λ
+§2. Ҟ౹ό orbicurveࣱ
+§3.ࣱ
+§4.ח
+§5. ɼኽௐ
+6.ဃƴπ᧏ᲣᲴ
+ƴஊॖ፯ƳឋբǍਦ
+ɨƠƨƜƱƸŴҮᝋႎưƠƨŵ
+7.ဃƴ᩼π᧏ᲣᲴ
+ƳƍᲢǇƨƸƻǐƬ
+ƱƠƯɟʴǋƍƳƍᲣǑƏưŴƦƷǑƏƳཞඞɦưƸŴɟᡵ᧓Ʒᨼɶᜒ፯ƩƚưưƖǔƜƱƴ
+ƍǇƠƨŵ
+3

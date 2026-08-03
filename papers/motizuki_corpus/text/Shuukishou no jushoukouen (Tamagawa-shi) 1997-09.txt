@@ -1,0 +1,622 @@
+ஜ፭ƴ᧙Ƣǔ
+Grothendieck ʖेƴƭƍƯ
+ྸᲣ
+ૠྸᄂᲣ
+ૠྸᄂᲣ
+1. Introduction
+1.1.ஜ፭ǁƷ
+ٳGalois ˺ဇ
+1.2.ஜ፭
+2. Grothendieck ʖे
+3. ɶ஭ƷˁʙƷኰʼ
+4.ƷˁʙƷኰʼ
+5. ஓஉƷˁʙƷኰʼ
+1
+
+1. Introduction
+Grothendieck ʖे
+KᲴஊྸૠ˳Q ɥஊᨂဃ঺Ƴ˳
+ӑ୺ႎ
+ˊૠ୺ዴ/K ↦→ஜ፭
++ٳGalois ˺ဇ
+·||·
+ஜ፭
+[ᝋ][ᝋ]
+←−−−−−−−−
+ܭ
+ΨᲣ
+2
+
+1.1.ஜ፭ǁƷ
+ٳGalois ˺ဇ
+ஜ፭
+Xಮ˳/C
+ಮ˳ƱƠƯƷˮႻƴǑǓˮႻᆰ᧓Უ
+x ∈ Xໜ
+⇝ஜ፭ πtop
+1 (X,x )
+∥
+πtop
+1 (X)
+X Ʒᘮᙴμ˳ǛወСᲴ
+(f : Y → X) ↦→ f − 1(x)
+⑂⑂
+(ᘮᙴ/X)
+∼
+→
+(
+πtop
+1 (X,x )- ˺ဇ
+˄Ɩᨼӳ
+)
+∪∪(
+ஊᨂഏ
+ᘮᙴ/X
+)
+∼
+→
+(
+πtop
+1 (X,x )- ˺ဇ
+˄Ɩஊᨂᨼӳ
+)
+3
+
+proﬁniteͳ҄
+π1(X)
+def
+= πtop
+1 (X)ˆ
+ƜƜưŴ፭ΓƠƯ
+Γˆ
+def
+= lim←−(Γ ƷƢǂƯƷஊᨂՠ)
+ᲢǳȳȑǯȈμɧᡲኽˮႻ፭Უ
+ݧΓ → ΓˆưƋǓŴ
+(
+Γ- ˺ဇ
+˄Ɩஊᨂᨼӳ
+)
+=
+(
+Γˆ- ᡲዓ˺ဇ
+˄Ɩஊᨂᨼӳ
+)
+ཎƴ
+(
+ஊᨂഏ
+ᘮᙴ/X
+)
+∼
+→
+(
+π1(X)- ᡲዓ˺ဇ
+˄Ɩஊᨂᨼӳ
+)
+4
+
+Galois ˺ဇ
+X ƕ K(⊂ C)ӳ
+Aut(C/K) ↷ X
+ƩƕŴXಮ˳ƱƠƯƷˮႻƴ᧙ƠƯ
+ᡲዓưƳƍƷư
+Aut(C/K) ↷ πtop
+1 (X)
+ƖឪƜƞǕƳƍ
+Riemannྸ
+X ƷஊᨂഏᘮᙴƸžˊૠႎſi.e.
+∀ f : Y → X ஊᨂഏᘮᙴ
+∃1 Yಮ˳Ʒನᡯ
+s.t. fݧ
+5
+
+σ ∈ Aut(C/K)Ơ
+σ(f : Y → X)=( fσ : Y σ → Xσ = X)
+፯ƢǔƜƱƴǑǓ
+Aut(C/K) ↷ (ஊᨂഏᘮᙴ/X)
+∥(
+π1(X)- ᡲዓ˺ဇ
+˄Ɩஊᨂᨼӳ
+)
+⇝ Aut(C/K) ↷ π1(X)
+ദᄩƴƸŴ
+π1(X,x )
+σ
+∼
+→ π1(X,σ(x)) ≃
+ࣱܭ
+π1(X,x )
+6
+
+ƠƨƕƬƯ
+Aut(C/K) → Out(π1(X))
+∥
+Aut(π1(X))/ Inn(π1(X))
+ƜǕƸ
+Aut(C/K) ↠ Gal(K)
+def
+=G a l (
+K/K)
+Ǜኺဌ
+ᲢRiemannྸưӲஊᨂഏᘮᙴƴ
+Ƹ
+K፯
+ƞǕǔᲣ
+7
+
+1.2.ஜ፭
+KᲴ˓ॖƷ˳
+Xಮ˳/K
+ﬁnite ´etale ᘮᙴ
+X፯
+8
+
+̊ X = A1
+K −{ 0} =S p e c (K[T,T − 1])
+̊ 1 A1
+K −{ 0}→ A1
+K −{ 0} = X
+K[S, S− 1] ← K[T,T − 1]
+K = K
+SN ← /barshortT
+̊ 2 A1
+K −{ 0}→ A1
+K −{ 0} = X
+K[S, S− 1] ← K[T,T − 1]
+K = K
+aSN ← /barshortT
+(a ∈ K×)
+̊ 3 A1
+K′ −{ 0}→ A1
+K −{ 0} = X
+K′[T,T − 1] ← K[T,T − 1]
+K′ ⊃ K
+T ← /barshortT
+ᲢK′Ჴ KᲣ
+̊ 4 ƜǕǒƷฆӳ
+9
+
+ஜ፭
+π1(X)Ჴ proﬁnite ˮႻ፭ s.t.
+(
+ﬁnite ´etale
+ᘮᙴ/X
+)
+∼
+→
+(
+π1(X)- ᡲዓ˺ဇ
+˄Ɩஊᨂᨼӳ
+)
+X ƕ᩼ཎီƳǒƹ
+Gal(K(X)) ↠ π1(X)
+ཎƴ
+Gal(K)= π1(Spec(K))
+10
+
+ஜႎᲢX → Spec(K)Ƣ
+ǔ ﬁber homotopy ЗᲣ
+1 → π1(X
+K) → π1(X)
+prX
+→ Gal(K) → 1
+π1(X)ஜ፭
+π1(X
+K)ஜ፭
+⇝ ρX :G a l (K) → Out(π1(X
+K))
+ද 1 K ⊂ C Ʒ଺Ƹπ1(X
+K)= π1(XC) ư
+ρX Ƹ 1.1 ƷᘙྵƱɟᐲ
+ද 2 π1(X
+K)ƕᐯଢƳǒƹ
+(π1(X), prX) ↭ (π1(X
+K),ρX)
+11
+
+pro-lஜ፭ᲢlᲴእૠᲣ
+(pro-l ፭) = lim←−(ஊᨂl - ፭)
+ΠᲴ proﬁnite ፭
+⇝ ΠlᲴ Πٻpro-l ՠ
+def
+= lim←−(Π ƷƢǂƯƷˮૠl ǂƖஊᨂՠ)
+π(l)
+1 (X
+K)
+def
+= π1(X
+K)l
+π(l)
+1 (X)
+def
+=
+π1(X)/ Ker(π1(X
+K) → π(l)
+1 (X
+K))
+1 → π(l)
+1 (X
+K) → π(l)
+1 (X)
+pr(l)
+X
+→ Gal(K) → 1
+ρ(l)
+X :G a l (K) → Out(π(l)
+1 (X
+K))
+12
+
+2. Grothendieck ʖे
+ʖे
+KᲴ Q ɥஊᨂဃ঺Ƴ˳
+CᲴӑ୺ႎˊૠ୺ዴ/K
+SᲴ smoothಮ˳/K
+ƜƷ଺Ŵ
+Homdom
+K (S, C)
+∼
+→ Hom extopen
+Gal(K)(π1(S),π1(C))
+C∗Ჴ C ƷǳȳȑǯȈ҄, gᲴ C∗ Ʒᆔૠ
+Σ= C∗ − C, ν = ♯(Σ(
+K))
+CᲴӑ୺ႎ ⇐⇒ χ(C)
+def
+=2 − 2g − ν< 0
+13
+
+⎛
+⎜⎝
+S → C Ჴ dominantݧ
+⟳
+↘↙
+Spec(K)
+⎞
+⎟⎠
+↓≀
+⎛
+⎜⎝
+π1(S) → π1(C)׹
+⟳
+↘↙
+Gal(K)
+⎞
+⎟⎠
+modulo Inn(π1(C
+K))
+14
+
+ॖԛ
+žKஜ፭
+ΨƞǕǔſ
+Ტᙸ૾Უ
+(1) S = C′ Ტӑ୺ႎˊૠ୺ዴᲣ
+(
+ӑ୺ႎˊૠ
+୺ዴ/K
+)dom
+π1
+→
+(
+proﬁnite ፭
+/ Gal(K)
+)open
+ext
+Ϊ฼ŵ
+ཎƴ
+ƳK ɥƷӑ୺ႎˊૠ
+ſ
+(2)ᡀ = C Ʒ S - ஊྸໜᨼӳ
+15
+
+ද
+(i)ಮ˳ƷTate ʖेᲢFaltings Ʒ
+ྸᲣƱ᫏˩
+HomK(A′,A ) ⊗ Z ˆZ
+∼
+→ HomGal(K)(π1(A′
+K),π1(A
+K))
+(ii)ಮ˳ǁƷɟᑍ҄ᲢசᚐൿᲣ
+ʖेžanabelianஜ
+ΨƞǕǔſ
+“anabelian” ƱƸᲹ
+፯ŵžabelianஜ፭ƴǑƬ
+ಮ˳ſ
+̊Ჴӑ୺ႎ୺ዴƷsuccessive ﬁbration
+ӑ୺ႎ୺ዴƷȢǸȥȩǤᆰ᧓
+16
+
+(iii) Section ʖेᲢசᚐൿᲣ
+ቇҥƷƨǊCႎᲢ ⇐⇒ C = C∗Უ
+ʖे
+HomK(S, C)
+∼
+→ Hom extGal(K)(π1(S),π1(C))
+ཎƴ S = Spec(K) ƱƢǕƹ
+C(K)
+∼
+→{ prC : π1(C) → Gal(K)
+ƷᡲዓŴ፭ᛯႎsections}ext
+ᲢΣ ̸= ∅Ʒ଺Ƹ̲ദᙲ“tangential sections”Უ
+17
+
+3. ɶ஭Ʒˁʙ
+KᲴ Q ɥஊᨂဃ঺Ƴ˳
+CᲴ g =0 Ტν ≥ 3Უ
+ቇҥƷƨǊ
+C = P1
+K − Σ, P1(K) ⊃ Σ ⊃{ 0, 1, ∞}
+ྸᲢAnderson - ˙ҾᲣ
+ρ(l)
+C :G a l (K) → Out(π(l)
+1 (C
+K))
+ƢǔK ƷᲢ໯ᨂഏ Galoisٻ
+˳ K(l)
+C ƸŴΣ ƔǒžᙐൔſƱžl ʈఌſǛጮ
+ǓᡉƠƯဃơǔžૠſǛK ƴชьƠƨ˳
+̊ Q(l)
+P1
+Q−{ 0,1,2,∞} ̸= Q(l)
+P1
+Q−{ 0,1,3,∞} (l ̸=3 )
+૾ᤆᲴΣإ
+ǛਤƬƨK˳ǛCஜ፭Ɣ
+ǒ፭ᛯႎƴЏǓЈƤƳƍƔᲹ
+18
+
+CᲴӑ୺ႎ୺ዴᲢgᲴɟᑍᲣ, x ∈ Σ
+⇝ π1(C) ⊃ Dx
+ᲢЎᚐ፭Უ
+⊃ Ix
+፭Უ
+≃ ˆZ
+1→ Ix → Dx → Gal(κ(x))→ 1
+∩∩ ∩ open
+1→ π1(C
+K)→ π1(C)
+prC
+→ Gal(K) → 1
+Ǉƨ Dx = Nπ1(C)(Ix)
+ᙀ᫆ (˄ƚ)
+ᢿЎ፭J ⊂ π1(C
+K)Ơ
+J = Ix(∃x ∈ Σ) ⇐⇒
+ž∀H ⊂
+open
+π1(C
+K)ƠƯJ ∩ H ƕ Hab
+Ʒ ‘όЎႎᢿЎ’ٻ
+Riemann-WeilƷவˑƸ፭ᛯႎ
+19
+
+C = P1
+K −{ 0, 1, ∞ ,λ} Ტλ ∈ K −{ 0, 1}Უ
+Ტν> 4 Ʒ଺Ƹᙀ᫆Ǜ̅ƬƯν =4ბᲣ
+Step1
+ π1(C) ⇝ K(ζn,λ
+1
+n )( n ∈ N)
+0, ∞ƢǔP1
+K(ζn) Ʒ n ഏ
+ᘮᙴƴƓƚǔ1,λ Ʒ ﬁbers Ʒй˷˳Ʒ
+ӳ঺˳ǛᎋƑŴƦƷǑƏƳᘮᙴμƯǛឥƬƯ
+ƦƷσᡫᢿЎǛӕǔᲢᙀ᫆ƴǑǓž፭ᛯႎſᲣ
+Step2
+ {K(ζn,λ
+1
+n )}n∈N ⇝ ⟨λ⟩
+Kummerࣱ
+Step3
+P1
+K −{ 0, 1, ∞ ,λ} ⇝ ⟨λ⟩
+|≀
+P1
+K −{ 0, 1, ∞ , 1 − λ}⇝ ⟨1 − λ⟩
+|≀
+P1
+K −{ 0, 1, ∞ , λ
+λ− 1 } ⇝ ⟨ λ
+λ− 1 ⟩
+⎫
+⎪⎪⎪⎬
+⎪⎪
+⎪
+⎭
+⇝ λ
+20
+
+pro-l ᫏˩
+AutK(C)
+∼
+→ Aut extGal(K)(π(l)
+1 (C))
+ƱƳǔ̊ǛɨƑƨ
+৖ඥᲴpro-l ϙ΂᫏፭Ტ⊂ Out(π(l)
+1 (C
+K))Უ
+Ʒ weight ﬁltration ǛဇƍƯpro-lٳGalois
+ᘙྵƴƓƚǔGalois ΂Ǜᚡᡓ
+ӳƴǋᄂᆮ
+നƱσӷᲣ
+21
+
+4.Ʒˁʙ
+Grothendieck ʖे/ ஊᨂ˳
+kᲴஊᨂ˳
+CᲴӑ୺ႎ୺ዴ/k, ν> 0
+Ტν =0 ƸசᚐൿᲣ
+ྸᲢϋဋᲣ
+k(C) Ƹ Gal(k(C))ΨƞǕǔ
+ᚰଢƷ૾ᤆᲴ
+Step1 C∗ƢǔЎᚐ፭Ʒ፭ᛯႎ
+˄ƚ
+Step2 ʈඥ፭k(C)×Ψ
+Step3 k(C)= k(C)× ∪{ 0} ƷɥƷьඥನᡯ
+Ψ
+22
+
+Step1
+ቇҥƷƨǊx ∈ C
+{1}
+∥
+αx
+/arrowaxisleft/axisshort/axisshort
+1→ Ix → Dx
+∼
+→ Gal(κ(x))→ 1
+∩∩∩ open
+1→ π1(C
+K)→ π1(C)
+prC
+→ Gal(k) → 1
+x ∈ C(k) Ƴǒƹ
+αx :G a l (k) → π1(C), prC ◦αx =i dGal(k)
+23
+
+ᡞƴ
+α :G a l (k) → π1(C), prC ◦α =i dGal(k)
+ƠƯ
+α = αx(∃x ∈ C(k))
+⇐⇒ α(Gal(k))ƢǔC ƷᲢpro -Უ
+ᘮᙴƕk - ஊྸໜǛਤƭ
+⇐⇒ α(Gal(k)) ⊂∀ H ⊂
+open
+π1(C)
+HƢǔᘮᙴƕk - ஊྸໜǛਤƭ
+LefschetzƷவˑƸ፭ᛯႎ
+Step2
+ k(C)Ჴ
+k(C)× =A r t i nϙ΂Ʒఋ
+Step3
+ ဦ
+24
+
+πtame
+1 / ஊᨂ˳Ʒ Grothendieck ʖे
+⇓
+π1/ ஊᨂဃ঺˳/Q Ʒ Grothendieck ʖे
+ஜ፭ƴƭƍƯ
+CᲴ୺ዴ/ ೅ૠ0 Ʒˊૠ᧍˳
+=⇒ π1(C) Ƹ (g,ν) ƷǈưൿǇǔ
+ྸ
+୺ዴ C/
+Fp,g =0 ƷᲢǹǭȸȠƱƠƯƷᲣ
+᫏Ƹπ1(C)ƞǕǔ
+ᲢgᲴɟᑍƸசᚐൿᲣ
+25
+
+5. ஓஉƷˁʙ
+Grothendieck ʖे/p ᡶ˳
+ኽௐ
+KᲴ Qp ɥஊᨂဃ঺Ƴ˳ƷᢿЎ˳
+̊ KᲴ Q ɥஊᨂဃ঺
+KᲴ Qp ɥஊᨂဃ঺
+K = ∪
+[K′ :Q]≤N
+K′
+26
+
+ྸᲫ
+CᲴӑ୺ႎˊૠ୺ዴ/K
+SᲴ smoothಮ˳/K
+ƜƷ଺Ŵ
+Homdom
+K (S, C)
+∼
+→ Hom extopen
+Gal(K)(π1(S),π1(C))
+∼
+→ Hom extopen
+Gal(K)(π(p)
+1 (S),π (p)
+1 (C))
+ྸᲬ
+L, Mಮ˳/K Ʒ᧙ૠ˳
+ƜƷ଺Ŵ
+HomK(M,L )
+∼
+→ Hom extopen
+Gal(K)(Gal(L), Gal(M))
+27
+
+ද
+(i)ಮ˳ƷTate ʖेƸp ᡶ˳ɥ
+ưƸ঺ᇌƠƳƍŵ
+(ii) K ƕ QྸᲬƷIsom
+༿Ƹ Popྸ
+ᚰଢᲴp ᡶ Hodgeဇ
+Ტ[K : Qp] < ∞ Უ
+28
+
+Grothendieck ʖे
+ൔ᠋←→Უ
+ž᧙ૠſႎ
+ˮႻႎ
+´etale ႎ
+Galois ᘙྵႎ
+p ᡶ Hodge ྸᛯ
+pƠƯ
+de Rham
+(crystalline)
+cohomology
+ൔ᠋←→ p ᡶ ´etale
+cohomology
+Ўь፭ႎ
+ž᧙ૠſႎ
+ˮႻႎ
+´etale ႎ
+Galois ᘙྵႎ
+29
+
+ቇҥƷƨǊC = C∗, non-hyperelliptic
+π(p)
+1 (C
+K)ab ≃ Tp(J
+K)
+ᲢJᲴ C Ʒ Jacobiಮ˳Უ
+⇝ Hodge-Tate ЎᚐᲢCp =(
+ K)ˆ ᲣᲴ
+π(p)
+1 (C
+K)ab ⊗
+Zp
+Cp ≃
+{Γ(C, Ω1
+C/K )⊗
+K
+Cp}⊕{ H1(C, OC)⊗
+K
+Cp(1)}
+ǏƑƴ
+(π(p)
+1 (C
+K)ab ⊗
+Zp
+Cp)Gal(K)
+=Γ (C, Ω1
+C/K )= Kω1 ⊕···⊕ Kωg
+⇝ canonical embeddingᲴ C↪ → Pg− 1
+K
+30
+
+ΨƷƨǊƷKeyᲴ
+LᲴ K ǛԃǉpͳƳᩉ૝˄͌˳Ŵй˷˳
+Ƹ Kૠˊૠ᧙ૠ˳
+ƜƷ଺ŴɨƑǒǕƨ
+Gal(L) →
+Gal(K)
+π1(C)
+˴ႎƔƲƏƔŴi.e.
+Spec(L) →
+Spec(K)
+C
+ܭ
+Ტmod pN ༿ p ᡶ Hodge ྸᛯǛC ƷӲᘮᙴ
+ƴᢘဇŴƳƲᲣ
+ྸᲬᲴ
+M/Kኛඥ
+→ბ
+31

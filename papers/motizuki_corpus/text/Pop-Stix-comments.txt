@@ -1,0 +1,192 @@
+COMMENTS ON THE MAIN THEOREM OF POP-STIX
+Shinichi Mochizuki
+Updated November 15, 2010
+Let k be a ﬁnite extension ofQp, k an algebraic closure ofk,a n dX a proper
+hyperbolic curve over k.W r i t eΠX for the ´etale fundamental group of X [relative
+to some basepoint], Πtp
+X for the tempered fundamental group of X [relative to some
+basepoint], and
+ΠX ↠ Gk
+def
+= Gal(k/k), Πtp
+X ↠ Gk
+for the natural projections. Also, we writeK for the function ﬁeld ofX and Ok
+for the ring of integers ofk. Then:
+(1) During the conference on Galois-Teichm¨uller theory held at RIMS, Kyoto Uni-
+versity, in October 2010, it was suggested by Yves Andr´e that the Main Theorem
+of [PS] should imply the following assertion:
+(A1) Every section of ΠX ↠ Gk arises, up to ΠX-conjugacy, from a section
+of Πtp
+X ↠ Gk.
+We refer to (7) below for a more detailed formulation. One consequence of this
+assertion (A1) is the following assertion:
+(A2) The “Proﬁnite p-adic Section Conjecture” for hyperbolic curves may
+be reduced to the “Temperedp-adic Section Conjecture” for hyperbolic
+curves.
+As far as I can see, (A1) and (A2) may be veriﬁed immediately.
+(2) In light of the discussion of (1), it is natural to ask the question (cf. also the
+discussion of (8) below):
+(Q1) If one starts with a sections : Gk → Πtp
+X of Πtp
+X
+↠ Gk, then does the
+Main Theorem of [PS] tell you anythingnew concerning the sections?
+In this context, we observe that, evenwithout applying the theory of [PS] , it follows
+immediately from [Semi], Theorem 5.4, (i) — cf. also the discussion of [Semi],
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+Example 5.6; [Semi], Remark 6.9.1 — that the sections determines a system of
+vertices
+... ⇝ vi+1 ⇝ vi ⇝ ...
+of any coﬁnal system of ﬁnite ´etale connected Galois coverings ofX with stable
+reduction
+... → Xi+1 → Xi → ...
+of X — i.e., eachvi is an irreducible component of the special ﬁber of the stable
+model of Xi that is ﬁxed by the natural action of the image Im(s) of the section
+s. Here, i ranges over the positive integers, and, after possibly passing to a coﬁnal
+subsystem, the notation “⇝” may be interpreted as the statement that one of the
+following two [mutually exclusive] conditions holds:
+(C1) For each positive integeri, the irreducible componentvi+1 maps quasi-
+ﬁnitely to the irreducible componentvi.
+(C2) For each positive integer i, the irreducible componentvi+1 maps to a
+closed point xi of the irreducible componentvi.
+In the case of (C1), thevi determine a discrete valuation of K that containsOk,
+but notk. In the case of (C2), thevi determine a system ofclosed points
+... ↦→ xi+1 ↦→ xi ↦→ ...
+and hence a corresponding inductive system of normal local rings
+... ↪ → Ri ↪→ Ri+1 ↪→ ...
+— each of which containsOk, but not k — whose unionR∞ is, consequently, a
+normal local ring that is not necessarily noetherian. That is to say, in either of the
+two cases (C1), (C2):
+(A3) One obtains anormal local ring R ⊆K that containsOk, but notk,s u c h
+that the sections : Gk → Πtp
+X is contained in [one of the Πtp
+X
+-conjugates
+of] the decomposition group associated toR.
+The statement of (A3) is reminiscent of the Main Theorem of [PS] in the sense
+that, like the Main Theorem of [PS], the conclusion (A3) may be thought of as a
+reduction of the Section Conjecture to an essentially local problem . On the other
+hand,
+(Q2) it is not clear, in the case of (C2), whether or not the normal local ring
+R that is obtained in (A3) is necessarily avaluation ring.
+Perhaps a deﬁnitive answer to (Q2) would require results along the lines of Tam-
+agawa’s “resolution of nonsingularities” (cf. [Tama]). It would be interesting,
+however, if one could give a deﬁnitive answer to (Q2) via an elementary argument.
+Although I have not studied the proof of the Main Theorem of [PS] in detail, at
+least at a naive level, it is diﬃcult to believe that one must apply [Tama] in order
+to give an aﬃrmative answer to (Q2): Indeed, at least at a naive level, it it diﬃcult
+
+COMMENTS ON THE MAIN THEOREM OF POP-STIX 3
+to believe that the essential consequence of [Tama] in the present context should
+be any stronger than the existence of a system of vertices{vi}i as above.
+(3) Thus, in summary, the theory of [Semi] already implies the statement (A3)
+concerning sections s : Gk → Πtp
+X of the tempered fundamental group. From this
+point of view:
+(A4) In the tempered case, the Main Theorem of [PS] may be regarded as a
+strengthening of (A3) to the eﬀect that the ringR of (A3) may be taken
+to be avaluation ring (that may possibly containk).
+That is to say, (A4) may be thought of as being at least a partial answer to (Q1).
+(4) Another consequence of [Semi], Theorem 5.4, (i), and [Semi], Lemma 5.5, is the
+conclusion that, after possibly passing to a coﬁnal subsystem,one of the following
+holds:
+(U1) The system of vertices{vi}i obtained in (3) is “essentially”unique.
+(U2) There exists an “essentially”unique system of edges {ei}i — i.e., eachei
+is a node of the special ﬁber of the stable model ofXi such thatei+1 ↦→ ei
+—t h a ta r eﬁxed by the natural action of Im(s).
+Here, the term “essentially” is used in the evident sense; we leave the routine task
+of giving a precise formulation to the reader. In particular, in the case that (U1)
+holds, one concludes that the system of vertices{vi}i coincides with the system of
+vertices determined by anyvaluation obtained as in the Main Theorem of [PS].
+(5) In fact, unlike the case with [PS], by combining the analysis of verticial decom-
+position groups given in [NodNon], Proposition 3.9, (i), with a similar argument
+to the argument used (in [Semi]) to prove [Semi], Theorem 5.4, (i), one concludes
+that the consequence (A3) obtained above from [Semi], Theorem 5.4, (i), continues
+to hold if one takesk to be anarbitrary complete discrete valuation ﬁeld of mixed
+characteristic. (Here, we note in passing that one veriﬁes easily — by considering
+the pro-p Kummer map — that, for any suchk, the resulting absolute Galois group
+Gk continues to be center-free, hence slim.) In this situation, the analysis of ver-
+ticial decomposition groups given in [NodNon], Proposition 3.9, (i), also yields the
+following version of “uniqueness”:
+(U3) For each i, any two possibilities for the vertexvi either coincide,a r e
+adjacent,o r admit a common adjacent vertex .
+Here, we note that (U3) is weaker that the version of “uniqueness” involving (U1),
+(U2) [cf. (4)] precisely because one does not have an analogue of [Semi], Lemma
+5.5, in the case of more generalk.
+(6)Inasimilarvein, unlikethecasewith[PS],theconsequences(A3), (U3)obtained
+above continue to hold, even in the more general setting discussed in (5), if, for Σ
+
+4 SHINICHI MOCHIZUKI
+a set of primes that contains a primel ̸= p, one replaces ΠX by the geometrically
+pro-Σquotient
+ΠX ↠ Π(Σ)
+X
+of ΠX and Πtp
+X by the “Σ-tempered fundamental group”
+Πtp,(Σ)
+X ⊆Π(Σ)
+X
+given by the image of Πtp
+X in Π(Σ)
+X .
+(7) In the notation of (6), we observe that another important consequence of [Semi],
+Theorem 5.4, (i), in the present context is the following:
+(A5) The natural map
+Sect(Πtp,(Σ)
+X /Gk) → Sect(Π(Σ)
+X /Gk)
+— i.e., from Πtp,(Σ)
+X -conjugacy classes of sections of Πtp,(Σ)
+X → Gk to Π(Σ)
+X -
+conjugacy classes of sections of Π(Σ)
+X → Gk —i s injective.
+In particular, we obtain the following consequence of the Main Theorem of [PS] (cf.
+(A1)):
+(A6) If Σ is the set of all primes, andk is a ﬁnite extension ofQp, then the
+natural map
+Sect(Πtp
+X/Gk) → Sect(ΠX/Gk)
+is bijective.
+A proof of (A5) may be sketched as follows. Consider two sectionss,t :Πtp,(Σ)
+X →
+Gk such thatsγ= t for someγ∈Π(Σ)
+X (where the superscript “γ” denotes conju-
+gation byγ). Then, by applying (A3), we conclude that the sectionss, t give rise,
+respectively, to systems{vi}i, {wi}i of vertices, which (cf. (U3); [NodNon], Propo-
+sition 3.9, (i)) are, in some appropriate sense,“essentially unique” .I np a r t i c u l a r ,
+we obtain that, for eachi, the verticeswi and γ(vi)e i t h e rcoincide,a r eadjacent,
+or admit a common adjacent vertex . But this implies that the systems{vi} and
+{γ(vi)} correspond to the same “tempered basepoint”, i.e., thatγ∈Πtp,(Σ)
+X ,s o s
+and t are Πtp,(Σ)
+X -conjugate, as desired.
+(8)OnereasonwhyIwasinterestedin, forinstance, the pSC(i.e., the“(proﬁnite/pro-
+Σ)p-adic Section Conjecture for hyperbolic curves”) was because I was able to show
+in [AbsTopII], Corollary 2.9, that
+pSC =⇒ abs pGC
+— i.e., that thepSC implies the “absolute (proﬁnite/pro-Σ)p-adic version of the
+Grothendieck Conjecture” (cf. [AbsTopII], Corollary 2.9, for more details). On the
+other hand, from the point of view of verifying the abspGC, results such as (A2)
+
+COMMENTS ON THE MAIN THEOREM OF POP-STIX 5
+or (A6) arenot so interesting , since one already knows (cf., e.g., [Semi], Theorem
+6.6) that the absoluteproﬁnite p-adic version of the Grothendieck Conjecture may
+be reduced to the absolutetemperedp-adic version of the Grothendieck Conjecture.
+It is precisely this state of aﬀairs that prompted me, upon hearing of (A2), to pose
+the question (Q1).
+Bibliography
+[NodNon] Y. Hoshi, S. Mochizuki, On the Combinatorial Anabelian Geometry of Nodally
+Nondegenerate Outer Representations, to appear inHiroshima Math. J.
+[Semi] S. Mochizuki, Semi-graphs of Anabelioids, Publ. Res. Inst. Math. Sci. 42
+(2006), pp. 221-322.
+[AbsTopII] S.Mochizuki, Topics in Absolute Anabelian Geometry II: Decomposition Groups,
+RIMS Preprint 1625 (March 2008).
+[PS] F. Pop and J. Stix,Arithmetic in the fundamental group of a p- a d i cc u r v e—
+On the p-adic section conjecture for curves , preprint, Philadelphia-Heidelberg-
+Cambridge, August 2010.
+[Tama] A. Tamagawa, Resolution of nonsingularities of families of curves,Publ. Res.
+Inst. Math. Sci. 40 (2004), pp. 1291-1336.

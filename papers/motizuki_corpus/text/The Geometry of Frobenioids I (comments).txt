@@ -1,0 +1,228 @@
+COMMENTS ON “THE GEOMETR Y OF FROBENIOIDS I”
+Shinichi Mochizuki
+January 2024
+(1.) In Deﬁnition A.1 of the Appendix: The phrase “isomorphism classesof mor-
+phisms” in line 4 should read “isomorphism classes of 1-morphisms”. The phrase
+“coarsiﬁcationof C” in line 5 should read “coarsiﬁcationof D”.
+(2.) The hypothesis that the Frobenioids under consideration be of“unit-proﬁnite
+type”in Proposition 5.6 — hence also in Corollary 5.7, (iii) — may beremoved.
+Indeed, if, in the notation of the proof of Proposition 5.6, one writesφ′
+p = cp ·φp,
+where cp ∈O×(A), forp ∈Primes, then one has
+c2 ·c2
+p ·φ2 ·φp = c2 ·φ2 ·cp ·φp = φ′
+2 ·φ′
+p = φ′
+p ·φ′
+2
+= cp ·φp ·c2 ·φ2 = cp ·cp
+2 ·φp ·φ2 = cp ·cp
+2 ·φ2 ·φp
+—s o c2 · c2
+p = cp · cp
+2, i.e., cp = cp−1
+2 , for p ∈Primes. Thus, φ′
+p = c−1
+2 · φp · c2,
+so by takingu
+def
+= c−1
+2 , one mayeliminate the ﬁnal two paragraphsof the proof of
+Proposition 5.6.
+(3.) In the second to last sentence of Deﬁnition 1.1, (ii),
+Φpf”
+should read as follows:
+“Φpf”
+(4.) The phrase “IfM is aQ-monoprime monoid” toward the end of the discussion
+entitled “Numbers” in§0 should read “IfM is a Q-o r R-monoprime monoid”.
+(5.) In the proof of Theorem 3.4, (iv), the phrase “αarises as the endomorphism
+of A” should read “βarises as the endomorphism ofB”; also, in the same sentence,
+the notation “(Pi)A” should read “(Pi)B”.
+(6.) The phrase “in whichα, βare primary with zero divisor inp;” immediately
+following the ﬁnal display of the proof of Theorem 4.9 should read “in whichα, β
+are primary;”.
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+(7.) In the proof of Theorem 3.4, (i), the phrase “for eachA ∈Ob(Cistr) that”
+should read “for eachA ∈Ob(Cistr
+1 ), that”.
+(8.) In the proof of Theorem 4.2, (i), the phrase “[cf. also Theorem 3.4, (ii)]”
+should read “[cf. also Theorem 3.4, (ii), (iii)]”.
+(9.) InthefourthparagraphoftheproofofTheorem5.1, thenotation“ ψ: B′ → C”
+should read “ψ′ : B′ → C”.
+(10.) In the ﬁrst display of the proof of Theorem 5.2, (iv), the notation “(B →
+A,A → C)” should read “(B → A,B → C)”.
+(11.) In Example 6.1, the phrase “may be identiﬁed with thegroup of Cartier
+divisors on V[L], and” should read “may be identiﬁed with thegroup of Cartier
+divisors on V[L] with support inDL, and”.
+(12.) In the proof of Lemma 6.5, (ii), the phrase “Indeed, since the ...” should read
+“Indeed, suppose that there existλ1,λ2 ∈Q>0 as in the statement of assertion (ii).
+Then since the ...”
+(13.) In the discussion of§0 entitled “Numbers” the phrase “Also, we shall refer
+to ...” should read “Here, we regard the elements of the set{Z, Q, R} as being
+equipped with the orderingZ < Q < R. Also, we shall refer to ...”.
+(14.) In §I4, the phrase “that as appear as” should read “that appear as”.
+(15.) In the second paragraph of the proof of Theorem 4.9, the phrase “this subset
+maps the subset” should read “this isomorphism maps the subset”.
+(16.) In the discussion following the ﬁrst display of the statement of Theorem 3.4,
+(iii), the notation “ΨN
+≥1” should read “ΨN≥1”.
+(17.) In the ﬁrst paragraph of the proof of Theorem 3.4, (iv), the phrase “existence
+of a a” should read “existence of a”.
+(18.) In Example 6.1 and the statement of Theorem 6.2, the phrase “[possibly
+subvarieties of codimension≥1]” (which is logically correct, but misleading) should
+be deleted.
+(19.) In the second sentence following the display of Remark 3.1.2, the “Z≥0”i st o
+beunderstoodastheimageof Z≥0 in Fviathenaturalinclusion Z≥0
+∼
+→ Z≥0×{1} ↪→
+F = Z≥0 × N≥1 (cf. the ﬁnal portion of Deﬁnition 1.1, (iii)) into the ﬁrst factor of
+the product determined by 1∈N≥1.
+
+COMMENTS ON “THE GEOMETRY OF FROBENIOIDS I” 3
+(20.) In the statement of Theorem 5.2, (i), (b), the phrase “projection to D to φ”
+should read “projection to D of φ”.
+(21.) In the statement of Proposition 1.6, (v), (vi), the phrase “A object” should
+read “An object”.
+(22.) In the statement of Corollary 4.11, (iii), the phrase “ΨBase of (i)” should read
+“ΨBase of (ii)”.
+(23.) In the second sentence of the proof of Theorem 5.1, the notation “ψ: B′ →
+C′” should read “ψ′ : B′ → C′”.
+(24.) In the explanation immediately following the ﬁrst display of the statement
+of Theorem 5.2, (i), the notation “A
+def
+=( AD,α),” should be inserted immediately
+following the word “set”.
+(25.) In the statement of Theorem 5.2, (i), the notation “Φ(Base(φ))” (2 instances)
+should read “Φ(Base(φ))gp”.
+(26.) In the statement of Proposition 1.9, (v), the phrase “restriction toC” should
+read “restriction to “Cistr”.
+(27.) The ﬁrst sentence of the statement of Theorem 5.2, (iv), should read as
+follows:
+Suppose thatC is of isotropic and model type; Φ=Φ; B is the rational
+function monoid on D associated to the FrobenioidC [cf. Proposition
+4.4, (ii)];DivB : B → Φgp is the natural homomorphismO×(−) → Φgp =
+Φgp [cf. Proposition 4.4, (iii)].
+(28.) In§0, condition (b)of the deﬁnition of a categoryof FSMFF-typeshould read
+as follows:
+for everyA ∈Ob(C), there exists a natural numberN such that for every
+composite
+φn ◦φn−1 ◦···◦φ2 ◦φ1
+of some morphismφ1 whose domain is equal toA with FSMI-morphisms
+φ2,...,φ n, it holds thatn ≤N.
+The statement of Proposition 1.14, (iii), should read as follows:
+
+4 SHINICHI MOCHIZUKI
+Suppose that φis irreducible. Then φis a non-pre-step if and only
+if the following condition holds: Ifφis an FSM-morphism, then there
+exists anN ∈N≥1 such that for every equality of composites inC
+αn ◦αn−1 ◦... ◦α2 ◦α1 = ψ◦φ
+— where α1 and ψare irreducible morphisms,n ∈N≥1, and α2,...,α n
+are FSMI-morphisms [cf. §0] — it holds thatn ≤N.
+The proof of Proposition 1.14, (iii), should read as follows:
+Next, we consider assertion (iii). By assertion (i), it suﬃces to show
+that assertion (iii) holds for each of the three types of morphisms “(a),
+(b), (c)” discussed in assertion (i). Ifφis an irreducible pre-step[hence
+also, by assertion (ii), an FSM-morphism], then it follows immediately
+— by takingψto be a prime-Frobenius morphism ofincreasingly large
+Frobenius degree [cf. assertion (i); Deﬁnition 1.3, (iii), (d); Proposition
+1.4, (i); Proposition 1.10, (ii)] — that the condition in the statement of
+assertion (iii) isfalse [as desired]. On the other hand, ifφis a non-pre-
+step, then it is an isometry. Now if the condition in the statement of
+assertion (iii) isfalse, thenφis anFSM-morphism, and, moreover, there
+exist equalities
+α
+n ◦αn−1 ◦... ◦α2 ◦α1 = ψ◦φ
+where α1 and ψare irreducible morphisms,n ∈N≥1 is arbitrarily large,
+and α2,...,α n are FSMI-morphisms. Next, observe that since φis an
+isometry, it follows from the fact thatψis irreducible [cf. also assertion
+(i); Deﬁnition 1.1, (ii), (b); Remark 1.1.1; Proposition 1.11, (vi)] that
+Div(ψ◦φ) is either zero or irreducible; since, moreover, deg
+Fr(ψ◦φ) always
+divides a product of two prime numbers [cf. assertion (i); the irreducibility
+of φ, ψ], it thus follows that inany factorization of ψ◦φby irreducible
+morphisms, all butthree[i.e., corresponding totwo possible prime factors
+of the Frobenius degree, plusone possible irreducible factor of the zero
+divisor] of the factorizing irreducible morphisms arepull-back morphisms
+[cf. assertion (i)]. On the other hand, this implies that factorizations of
+arbitrarily large length determinechains of morphisms, all but the ﬁrst
+of which are FSMI-morphisms[cf. assertion (i); Proposition 1.11, (vi)],
+originating from the projection toD of the domain ofφwhich are also of
+arbitrarily large length, in contradiction to condition (b) of the deﬁnition of
+a “category of FSMFF-type” in§0. This completes the proof of assertion
+(iii).
+The above modiﬁcations to the deﬁnition of the term “category of FSMFF-type”
+and to the statement and proof of Proposition 1.14, (iii), haveno eﬀecton the
+remainder of the present paper or on subsequent papers, except thatminor formal
+changes are necessary in the proof of [FrdII], Proposition 3.4, (viii).
+(29.) The following modiﬁcations concerning thebirationalization of a Frobenioid
+should be made to§4:
+
+COMMENTS ON “THE GEOMETRY OF FROBENIOIDS I” 5
+(i) The statement of Proposition 4.4, (ii), should read as follows:
+The functor Cbirat → F0D of (i) determines a structure ofpre-
+F robenioid of group-like type on Cbirat. Moreover, the func-
+tor C→C birat is faithful. In particular, for every A ∈Ob(C)
+with image Abirat in Cbirat, the functor C→C birat determines
+an injection of groups O⊿(A)gp ↪→O ×(Abirat). Suppose, fur-
+ther, that C is of birationally F robenius-normalized type
+[cf. Deﬁnition 4.5, (i), below]. Then the pre-FrobenioidCbirat
+is a F robenioid; we shall refer to the functor “O×(−)”o nD
+associated to the FrobenioidCbirat [cf. Proposition 2.2, (ii), (iii)]
+as the rational function monoid of the FrobenioidC.
+(ii) The ﬁnal paragraph of the proof of Proposition 4.4 should read as follows:
+In the context of assertion (ii), we observe that it is immedi-
+ate from the deﬁnitions [and thetotal epimorphicity of C] that
+the functor C→C birat is faithful and determines an injection
+O⊿(A)gp ↪→O ×(Abirat), forA ∈Ob(C). In light of the“dictio-
+nary”provided by assertion (iv) [cf. also Proposition 1.4, (iv);
+the equivalence of categories of Proposition 1.9, (ii)], it is now a
+routine exercise to check, wheneverC is of birationally Frobenius-
+normalized type[cf. Deﬁnition 4.5, (i), below], thatC
+birat is, in
+fact, a Frobenioid of group-like type. [Here, in the context of
+the veriﬁcation of Deﬁnition 1.3, (iii), (c), we observe that the
+natural functorC
+birat → (Cistr)birat is faithful [cf. Deﬁnition 1.3,
+(iii), (d); Deﬁnition 1.3, (v), (a); Proposition 1.9, (v); thetotal
+epimorphicity of C], that every object of (Cistr)birat is Frobenius-
+trivial [cf. Deﬁnition 1.3, (i), (a), (b); Proposition 1.4, (i)], and
+that any group G such (α· β)2 = α2 · β2 for all α,β∈G is
+abelian.] This completes the proof of assertion (ii). Now asser-
+tion (iii) follows immediately from the existence of the functor
+C
+birat → FΦgp of assertion (i) [cf. also Proposition 1.5, (ii)]; here,
+we note that the computation of thekernel of the surjection of
+assertion (iii) follows from Deﬁnition 1.3, (vi).
+(iii) In Proposition 4.8, (ii): the phrase “of perfect and isotropic type”
+should read “of perfect, isotropic, and birationally Frobenius-nor-
+malized type”.
+(iv) In Proposition 4.8, (iv): the phrase “ pre-model type” should read
+“model type”.
+(v) The portion preceding the display of the ﬁrst sentence in the proof
+of Corollary 4.11, (ii), should read as follows: “First, we observe that,
+by assertion (i), we may assume without loss of generality thatC is of
+
+6 SHINICHI MOCHIZUKI
+unit-trivial, hence also [cf. Proposition 4.4, (iii)] birationally Frobenius-
+normalized type; moreover, we have a 1-commutative diagram”.
+The above modiﬁcations haveno eﬀecton the remainder of the present paper or
+on subsequent papers, except thatminor formal changesare necessary in [FrdII],
+Deﬁnition 5.3, (v); [FrdII], Proposition 5.4; the statement and proof of [FrdII],
+Theorem 5.5, (iv).
+(30.) In Deﬁnition 1.1, (i), the condition “of characteristic type” is automatic and
+hence may be omitted.
+(31.) In the ﬁrst full sentence immediately following the ﬁrst display in the proof
+of Proposition 1.9, (ii), “α′ : D → A′” should read “α′ : C → A′”.
+(32.) In the proof of Proposition 1.11, (iv), the phrase “assertion (iii) follows from
+the fact” should read “assertion (iv) follows from the fact”.
+(33.) In the proof of Proposition 1.11, (vii), it may be observed that in the case
+where ϵ is linear, the assertion under consideration in fact follows formally from
+Proposition 1.11, (v).
+(34.) In the statement of Proposition 2.1, (iii), “Ψ”i sa nequivalence of cate-
+gories” should read “Ψ”i sa nequivalence of categories for arbitraryd ≥1”.
+Bibliography
+[FrdII] S. Mochizuki, The Geometry of Frobenioids II: Poly-Frobenioids,Kyushu J.
+Math. 62 (2008), pp. 401-460.

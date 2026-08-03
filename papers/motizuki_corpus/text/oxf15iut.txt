@@ -1,0 +1,57 @@
+Oxford Workshop on IUT Theory of Shinichi 
+Mochizuki,  December 7-11 2015
+Funded by Clay Math 
+Institute and Symmetries 
+and Correspondences
+Online workshop 
+proceedings, with additional 
+information
+Scientiﬁc report on the 
+workshop
+Animations illustrating IUT
+The images on this page are 
+taken from the animations 
+Organisers: Ivan Fesenko, Minhyong Kim, Kobi Kremnitzer  
+Finding the speakers, arranging talks, scientiﬁc program of the workshop: Ivan Fesenko
+The work (currently being refereed) of SHINICHI MOCHIZUKI on inter-universal Teichmüller 
+theory, IUT, also known as arithmetic deformation theory, and its application to famous conjectures 
+in diophantine geometry became publicly available in August 2012. This theory, developed over 20 
+years, introduces a vast collection of novel ideas, methods and objects. Aspects of the theory extend 
+arithmetic geometry to a non-scheme-theoretic setting and, more generally, have the potential to 
+open new fundamental areas of mathematics. 
+The main objective of this ﬁrst international workshop on IUT is to assist mathematicians in their 
+study of the theory. The workshop will present, via talks of mathematicians from several countries, 
+key principles, concepts, objects and proofs of the theory of Mochizuki and study its relations with 
+existing theories in different areas. 
+Shinichi Mochizuki will answer questions during skype sessions of the workshop. He also responds 
+directly to emailed questions. 
+Invited speakers:  
+Oren Ben-Bassat, Weronika Czerniawska, Yuichiro Hoshi, Ariyan Javanpeykar, Kiran Kedlaya,  
+Robert Kucharczyk, Ulf Kühn, Lars Kuehne, Emmanuel Lepage, Chung Pang Mok, Jakob Stix, 
+Tamás Szamuely, Fucheng Tan, Go Yamashita, Shou-Wu Zhang 
+
+
+Participants:  
+Julio Andrade (Univ. Oxford), Federico Bambozzi (Univ. Regensburg), Alexander Beilinson (Univ. 
+Chicago), Oren Ben-Bassat (Univ. Haifa), Brian Birch (Univ. Oxford), Martin Bridson (Univ. 
+Oxford), Olivia Caramello (Univ. Paris 7), Brian Conrad (Stanford Univ.), Weronika Czerniawska 
+(Univ. Nottingham), Ishai Dan-Cohen (Univ. Duisburg-Essen), Jamshid Derakhshan (Univ. 
+Oxford), Taylor Dupuy (Univ. California Los Angeles), Gerd Faltings (MPIM, Bonn), Ivan Fesenko 
+(Univ. Nottingham), Gerhard Frey (Univ. Duisburg-Essen), Adam Gal (Univ. Oxford), Lena Gal 
+(Univ. Oxford), Dorian Goldfeld (Columbia Univ.), Nigel Hitchin (Univ. Oxford), Yuichiro Hoshi 
+(RIMS, Kyoto Univ.), Alexander Ivanov (Techn. Univ. München), Artur Jackson (Purdue Univ.), 
+Ariyan Javanpeykar (Univ. Mainz), Kiran Kedlaya (Univ. California San Diego), Minhyong Kim 
+(Univ. Oxford), Kobi Kremnitzer (Univ. Oxford), Robert Kucharczyk (ETH, Zurich), Ulf Kühn 
+(Univ. Hamburg), Lars Kuehne (MPIM, Bonn), Laurent Lafforgue (IHES, Bures-sur-Yvette), 
+Emmanuel Lepage (Univ. Paris 7), Junghwan Lim (Univ. Oxford), Angus Macintyre (Univ. 
+Oxford), Nils Matthes (Univ. Hamburg), Chung Pang Mok (Morningside Center Mathematics 
+Beijing and Purdue Univ.), Alexander Cruz Morales (MPIM, Bonn), Sergey Olbezin (Univ. 
+Nottingham), Alexander G. Oldenziel (Utrecht Univ.), Thomas Oliver (Univ. Bristol), Florian Pop 
+(Univ. Pennsylvania at Philadelphia), Damian Rossler (Univ. Oxford), Thomas Scanlon (Univ. 
+California Berkeley), Francisco Simkievich (Univ. Oxford), Jakob Stix (Univ. Frankfurt), Tamás 
+Szamuely (Rényi Inst. Math., Budapest), Fucheng Tan (Shanghai Cent. Math. Sc. & Shanghai Jiao 
+Tong Univ.), Dinesh Thakur (Rochester Univ.), Ulrike Tillmann (Univ. Oxford), Wester van Urk 
+(Univ. Nottingham), Felipe V oloch (Univ. Texas Austin), Matthew Waller (Univ. Nottingham), 
+Andrew Wiles (Univ. Oxford), Bora Yalkinoglu (Univ. Strasbourg), Go Yamashita (RIMS, Kyoto 
+Univ.), Fernando Garcia Yamauti (Univ. Sao Paulo), Shou-Wu Zhang (Princeton Univ.), Boris 
+Zilber (Univ. Oxford)

@@ -1,0 +1,1451 @@
+ARITHMETIC ELLIPTIC CURVES
+IN GENERAL POSITION
+Shinichi Mochizuki
+February 2009
+/BT/CQ/D7/D8/D6/CP /CR/D8/BA We combine various well-known techniques from the theory of heights,
+the theory of “noncritical Belyi maps”, and classical analytic number theory to con-
+clude that the “ABC Conjecture”, or, equivalently, the so-called “Eﬀective Mordell
+Conjecture”,h o l d sf o r arbitrary rational points of the projective line minus three
+points if and only if it holds for rational points which are in “suﬃciently general po-
+sition”in the sense that the following properties are satisﬁed: (a) the rational point
+under consideration is bounded away from the three points at inﬁnity at a given ﬁnite
+set of primes; (b) the Galois action on the l-power torsion points of the corresponding
+elliptic curve determines a surjection onto GL2(/CI
+l), for some prime number l which
+is roughly of the order of the sum of the height of the elliptic curve and the logarithm
+of the discriminant of the minimal ﬁeld of deﬁnition of the elliptic curve, but does
+not divide the conductor of the elliptic curve, the rational primes that are absolutely
+ramiﬁed in the minimal ﬁeld of deﬁnition of the elliptic curve, or the local heights
+[i.e., the orders of the q-parameter at primes of [bad] multiplicative reduction] of the
+elliptic curve.
+Introduction
+In the classical intersection theory of subvarieties, or cycles, on algebraic vari-
+eties, various versions of the“moving lemma” allow one to replace a given cycle by
+another cycle which is equivalent, from the point of view of intersection theory, to
+the given cycle, but is supported on subvarieties which are in a“more convenient”
+position — i.e., typically, a “more general” position, which is free of inessential,
+exceptional pathologies — within the ambient variety.
+In the present paper, after reviewing, partly for the purpose of establishing
+notation and terminology, the general theory of heights in §1, we proceed in §2t o
+apply the theory of “noncritical Belyi maps” of [Mzk1], together with a technique
+developed by Elkies [cf. [Elkies]; [vF]] — which, in fact, may be traced back to the
+work of Moret-Bailly and Szpiro [cf. the discussion at the top of [Elkies], p. 106]
+— for relating Belyi maps to the ABC Conjecture, to show that the ABC, Eﬀective
+Mordell, and Vojta Conjectures for arbitrary rational points of hyperbolic curves
+over number ﬁelds are equivalent to the ABC Conjecture for rational points over a
+number ﬁeld of the projective line minus three points which lie in some “compactly
+bounded subset”of the set of all rational points [cf. Theorem 2.1]. Here, “compactly
+bounded” means that at some ﬁnite collection S of primes of the number ﬁeld that
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+includes the archimedean primes, the rational points lie in some given compact
+subset of the set of rational points of the projective line minus three points over
+the completion of the number ﬁeld at the given prime [cf. Example 1.3, (ii)]. Such
+compactly bounded subsets of the set of rational points are of interest since the
+height of a rational point that lies in such a compactly bounded subset may be
+computed, up to a bounded discrepancy, by considering thedistance of the rational
+point from the divisor at inﬁnity solely at the primes that do not lie over primes of
+S.
+Thus, in summary, we use the noncritical Belyi maps of [Mzk1] to “move the
+rational points over number ﬁelds of interest away from the divisor at inﬁnity at
+the primes lying over [typically archimedean!] primes of S”. This use of Belyi
+maps is interesting in that it is reminiscent of the use of Belyi maps in the technique
+of “Belyi cuspidalization” [cf. [Mzk2], §2, §3; [Mzk3], §2; [Mzk4], §3]. That is to
+say, in the technique of Belyi cuspidalization, “critical” [i.e., more precisely, “not
+necessarily noncritical”!] Belyi maps are used to “move rational points closer to
+the divisor at inﬁnity at nonarchimedean primes” [cf., especially, the theory of
+[Mzk2], §3].
+Theorem 2.1
+ Belyi cuspidalization
+uses noncritical Belyi maps
+ uses critical Belyi maps
+moves rational points of
+ moves rational points of
+interest away from
+ interest closer to
+divisor at inﬁnity
+ divisor at inﬁnity
+of interest primarily at
+ of interest at
+archimedean primes
+ nonarchimedean primes
+of a number ﬁeld
+ of a number ﬁeld
+In particular, the use of Belyi maps in Theorem 2.1 of the present paper proceeds,
+so to speak, in the “opposite direction”to their use in the theory of Belyi cuspidal-
+ization.
+Finally, in §3, §4, we examine another example of the notion of being “arith-
+metically in general position”, namely, the phenomenon of “full Galois actions” —
+i.e., Galois actions whose images are equal to either SL2(Zl)o r GL2(Zl) — on the
+l-power torsion points of an elliptic curve over a number ﬁeld for some prime num-
+ber l. More precisely, we combine the techniques of [Serre], [Falt] relatingisogenies
+and heights of elliptic curves over number ﬁelds [cf. §3] with some classical analytic
+number theory involving theprime number theorem[cf. §4] to show [cf. Corollaries
+4.3, 4.4] that if one considers elliptic curves over number ﬁelds of bounded degree
+which are either “degenerating”[i.e., admit at least one prime of potentially multi-
+plicative reduction] or “compactly bounded away from inﬁnity” [cf. Theorem 2.1],
+then, with ﬁnitely many possible exceptions, one obtains a “full Galois action” for
+some prime number l which is roughly of the order of the sum of the height of the
+elliptic curve and logarithm of the discriminant of the minimal ﬁeld of deﬁnition
+of the elliptic curve and, moreover, is prime to various numbers that are, in some
+
+ARITHMETIC ELLIPTIC CUR VES IN GENERAL POSITION 3
+sense, characteristic to the elliptic curve, such as theconductor of the elliptic curve,
+the rational primes that are absolutely ramiﬁed in the minimal ﬁeld of deﬁnition of
+the elliptic curve, and thelocal heights[i.e., the orders of theq-parameter at primes
+of multiplicative reduction] of the elliptic curve.
+Section 1: Generalities on Heights
+In the present §1, we review, partly for the purpose of establishing notation
+and terminology, various well-known facts concerning arithmetic line bundles and
+heights.
+Let X be a normal scheme which is proper and ﬂat over Spec(Z)[ w h e r eZ
+denotes the ring of rational integers]. Write XQ
+def
+= X ×Z Q for the generic ﬁber of
+X; Xarc for the compact normal complex analytic space determined by X.T h u s ,
+the underlying topological space of Xarc may be identiﬁed with the set of complex
+points X(C), equipped with the topology induced by the topology of C. Note,
+moreover, that the complex conjugation automorphism ιC of C induces a complex
+conjugation automorphism ιX of Xarc which is compatible with ιC.
+Deﬁnition 1.1.
+(i) We shall refer to as an arithmetic line bundle
+ L =( L, |−| L)o n X any
+pair consisting of a line bundle L on X and a hermitian metric |−| L on the line
+bundle Larc determined by L on Xarc that is compatible [in the evident sense] with
+the complex conjugation automorphism ιX.I f
+ L =( L, |−| L),
+ M =( M, |−| M)
+are arithmetic line bundles on X,t h e na morphism
+ L→
+ M is deﬁned to be a
+morphism of line bundles L→M such that locally on Xarc, sections of L with
+|−| L ≤ 1 map to sections of M with |−| M ≤ 1. We deﬁne the set Γ(
+ L)o f global
+sections of
+ L =( L, |−| L) over X to be the set of morphisms
+ OX →
+ L,w h e r ew e
+write
+ OX for the trivial line bundleOX equipped with the trivial hermitian metric.
+There is an evident notion of tensor product of arithmetic line bundles on X.T h e
+isomorphism classes of arithmetic line bundles on X, together with the operation
+of tensor product, thus determine a group APic(X).
+(ii) Let φ : Y → X be a morphism of normal, Z-proper, Z-ﬂat schemes. Then
+there is an evident notion of pull-back of arithmetic line bundles by φ.I f
+ L is an
+arithmetic line bundle onX, then we shall denote its pull-back toY by the notation
+φ∗
+L or, when there is no fear of confusion,
+ L|Y .
+Let F be a number ﬁeld [i.e., a ﬁnite extension of the rational number ﬁeld Q],
+whose ring of integers we denote by OF , and whose set of valuations we denote by
+V(F). Thus, V(F) decomposes as a disjoint union V(F)= V(F)non ⋃ V(F)arc of
+nonarchimedean and archimedean valuations. If v ∈ V(F), then we shall write Fv
+for the completion of F at v and |−| v : Fv → R for the real-valued valuation map
+determined by v.I f v ∈ V(F)non, then we shall write ord v(−): Fv → Z for the
+order deﬁned by v and qv for the cardinality of the residue ﬁeld of Fv.
+
+4 SHINICHI MOCHIZUKI
+An arithmetic divisor on F is deﬁned to be a ﬁnite formal sum
+∑
+v∈V(F)
+cv · v
+—w h e r ecv ∈ Z if v ∈ V(F)non and cv ∈ R if v ∈ V(F)arc [cf. [Szp], §1.1]. Here, if
+all of the cv are ≥ 0, then we shall say that the arithmetic divisor iseﬀective.T h u s ,
+the arithmetic divisors on F naturally form a group ADiv(F). If f ∈ F, then the
+assignment
+f ↦→ ADiv(f)
+def
+=
+∑
+v∈V(F)non
+ordv(f) · v −
+∑
+v∈V(F)arc
+[Fv : R] · log(|f |v) · v
+[where log denotes the natural logarithm] determines an element∈ ADiv(F), which
+we shall refer to as the principal arithmetic divisor associated to f.T h u s , t h e
+principal arithmetic divisors determine a subgroup APrc(F) ⊆ ADiv(F). Moreover,
+as is well-known, there is a natural isomorphism
+ADiv(F)/APrc(F)
+∼
+→ APic(Spec(OF ))
+— cf. [Szp], Proposition 1.1. In particular, the degree map
+degF :A D i v (F)/APrc(F) → R
+deﬁned by sending
+V(F)non ∋ v ↦→ log(qv); V(F)arc ∋ v ↦→ 1
+[cf. [Szp], §1.1] determines a homomorphism APic(Spec(OF )) → R, which we shall
+also denote by deg F . When there is no fear of confusion, we shall also regard
+[by abuse of notation] deg F as a map deﬁned on ADiv( F). Note that if we set
+deg
+F
+def
+= 1
+[F:Q] · degF , then for any ﬁnite extension K of F, it follows that
+deg
+K(
+L|Spec(OK))=d e g
+F (
+L)
+for any arithmetic line bundle
+ L on Spec(OF ). In particular, if
+ Q is an algebraic
+closure of Q, then for any
+x ∈ X(
+Q)=
+⋃
+Q⊇F, [F:Q]<∞
+X(F)
+and any arithmetic line bundle
+ M on X, it makes sense to deﬁne
+ht
+M(x)
+def
+=d e g
+F (x∗
+F
+ M) ∈ R
+—w h e r exF :S p e c (OF ) → X is any morphism that gives rise to x.
+
+ARITHMETIC ELLIPTIC CUR VES IN GENERAL POSITION 5
+Deﬁnition 1.2.
+(i) We shall refer to the function
+ht
+M : X(
+Q) → R
+as the height function associated to the arithmetic line bundle
+ M.
+(ii) Fix a subset F⊆ X(
+Q). If α, β: F→ R are functions, then we shall write
+α ≲F β (respectively, α ≳F β; α ≈F β)
+if there exists a [“constant”] C ∈ R such that β(x) − α(x) ≤ C (respectively,
+α(x) − β(x) ≤ C; |α(x) − β(x)|≤ C) for all x ∈F ; we shall omit the subscript F
+when there is no fear of confusion. [Thus, α ≈ β if and only if α ≲ β and α ≳ β.]
+The relation “ ≈” clearly deﬁnes an equivalence relation on the set of functions
+F→ R; we shall refer to an equivalence class relative to this equivalence relation
+as a(n) [F-]BD-class [i.e., “bounded discrepancy class”]. The BD-class of α will
+be denoted by [α]F,o rs i m p l y[α], when there is no fear of confusion. Finally, we
+observe that it makes sense to apply the notation “ ≳”, “≲”, “≈” to BD-classes.
+Example 1.3. Various Natural Subsets of the Set of Points. In the
+notation of the above discussion, we consider various natural examples of subsets
+“ F⊆ X(
+Q)” as in Deﬁnition 1.2, (ii).
+(i) If d ∈ N ⋃{∞} , then we shall denote by
+X(
+Q)≤d ⊆ X(
+Q)
+the union of the subsets X(F) ⊆ X(
+Q)a s F ranges over the number ﬁelds such
+that [F : Q] ≤ d [so X(
+Q)≤∞ = X(
+Q)];
+X(
+Q)=d def
+= X(
+Q)≤d\X(
+Q)≤d−1 ⊆ X(
+Q)
+[cf. the discussion in Deﬁnition 1.5, (i), below of “minimal ﬁelds of deﬁnition” ].
+More generally, if E⊆ X(
+Q) is any subset, then we shall writeE≤d def
+= E ⋂ X(
+Q)≤d,
+E=d def
+= E ⋂ X(
+Q)=d.I f E⊆ X(
+Q) is a subset such that each E≤d [where d ranges
+over the positive integers] is ﬁnite, then we shall say that E is Galois-ﬁnite .
+(ii) Let us refer to a compact subset of a topological space which is equal
+to the closure of its interior as a compact domain.L e t V ⊆ V(Q)b ea ﬁnite
+subset that contains V(Q)arc.F o r e a c hv ∈ V arc def
+= V ⋂ V(Q)arc (respectively,
+v ∈ V non def
+= V ⋂ V(Q)non), let
+Kv ⊆ Xarc (respectively, Kv ⊆ X(
+Qv))
+be a nonempty ιX-stable compact domain (respectively, a nonempty Gal(
+Qv/Qv)-
+stable subset whose intersection with each X(K) ⊆ X(
+Qv), for K ⊆
+ Qv a ﬁnite
+
+6 SHINICHI MOCHIZUKI
+extension of Qv,i sa compact domain in X(K)) such that Kv ̸= Xarc (respectively,
+Kv ̸= X(
+Qv)). Then let us write
+KV ⊆ X(
+Q)
+for the subset of points x ∈ X(F) ⊆ X(
+Q), where [F : Q] < ∞ , such that for each
+v ∈ V arc (respectively, v ∈ V non), the set of [ F : Q] points of Xarc (respectively,
+X(Qv)) determined by x is contained in Kv. We shall refer to a subset X(
+Q)
+obtained [i.e., as a “KV ”] in this fashion as acompactly bounded subset,t o V as the
+support of the compactly bounded subset, and to the “Kv”a st h ebounding domains
+of the compactly bounded subset. Note that by applying well-knownapproximation
+results in elementary number theory, it follows immediately [cf. the deﬁnition given
+above of the term “compact domain”!] that the bounding domains of a compactly
+bounded subset of X(
+Q), hence also the support of a compactly bounded subset of
+X(
+Q), are completely determined by the compactly bounded subset itself.
+Proposition 1.4. (Basic Properties of Heights) In the notation of the above
+discussion, let
+ L =( L, |−| L),
+ M =( M, |−| M) be arithmetic line bundles on
+X. Write LQ
+def
+= L|XQ , MQ
+def
+= M|XQ .T h e n :
+(i) We have
+ht
+L⊗
+M(x)=h t
+ L(x)+h t
+M(x)
+for x ∈ X(
+Q).
+(ii) If some positive tensor power of the line bundle LQ on XQ is generated
+by global sections [for instance, if the line bundle LQ is ample], then
+ht
+L ≳ 0
+[i.e., where “ ≳” denotes “≳X(
+Q)”].
+(iii) The BD-class of ht
+L depends only on the isomorphism class of the
+line bundle LQ on XQ. In particular, it makes sense to write[htL] or [htLQ ] for the
+BD-class [ht
+L] of ht
+L.
+(iv) Let d be a positive integer, C ∈ R. Suppose further that the line bundle
+LQ is ample on XQ. Then the set of points x ∈ X(
+Q)≤d [cf. Example 1.3, (i)]
+such that ht
+L(x) ≤ C is ﬁnite .
+Proof. Assertion (i) follows immediately from the deﬁnitions. Next, we consider
+assertion (ii). To verify assertion (ii), it suﬃces to show that if s ∈ Γ(XQ, LQ), and
+we write F⊆ X(
+Q) for the subset of points at whichs is nonzero,t h e nh t
+L ≳F 0.
+Now observe that if
+ M is an arithmetic line bundle that arises [by pull-back to X]
+from an arithmetic line bundle on Spec(Z), then
+ht
+L⊗
+ M ≈X(
+Q) ht
+L
+
+ARITHMETIC ELLIPTIC CUR VES IN GENERAL POSITION 7
+[cf. assertion (i)]. Moreover, for a suitable choice of
+ M arising from an arithmetic
+line bundle on Spec(Z), the sections determines a sectiont of LQ ⊗M Q that extends
+to a section of L⊗M over X such that |t|L⊗M ≤ 1o n Xarc [where we recall that
+Xarc is compact!]. Thus, by replacing
+ L by
+ L⊗
+ M and s by t, we may assume that
+s determines a section of L over X and that |s|L ≤ 1o n Xarc. Now the fact that
+ht
+L(x) ≥ 0 for all x ∈F is immediate from the deﬁnitions. This completes the
+proof of assertion (ii). Next, to verify assertion (iii), it suﬃces to apply assertions
+(i), (ii) to the arithmetic line bundle
+ L⊗
+ M
+−1
+in the situation where LQ ∼= MQ.
+Finally, we consider assertion (iv). A proof of this well-known fact may, es-
+sentially, be found in [Silv1] [cf. [Silv1], Theorem 2.1]. From the point of view
+of the present discussion, an argument may be given as follows: First, we observe
+that [some positive tensor power of] the ample line bundleLQ yields an embedding
+ϵQ : XQ ⊆ PQ,w h e r eP = Pn
+Z is a projective space over Z.N e x t ,b yb l o w i n gu pX
+in an appropriate fashion, we conclude that there exists a normal, Z-proper, Z-ﬂat
+scheme Y , together with morphisms φ : Y → X, ψ : Y → P such that φQ is an
+isomorphism, and ψQ = ϵQ ◦φQ. Thus, to verify assertion (iv) for the pair ( X,
+ L),
+it suﬃces to verify assertion (iv) for the pair ( Y,φ ∗
+L), which, by assertion (iii), is
+equivalent to assertion (iv) for the pair (Y,ψ ∗
+LP ), where we write
+ LP for the line
+bundle OP (1) equipped with the standard Fubini-Study metric. But assertion (iv)
+for the pair ( Y,ψ ∗
+LP ) follows from assertion (iv) for the pair ( P,
+ LP ). Thus, we
+may assume that (X,
+ L)=( P,
+ LP ).
+Next, observe that since any ﬁnite set of points of a ﬁber of P → Spec(Z)i s
+contained in the complement of a hypersurface, it follows immediately that, for any
+positive integer e ≤ d, the product P × ... × P of e copies of P [over Z]a d m i t sa
+[necessarily normal, Z-proper, and Z-ﬂat] quotient Q by the action of the symmetric
+group on e letters, and that some positive tensor power of the tensor product of
+the pull-backs of
+LP by the various projections P × ... × P → P descends to an
+arithmetic line bundle
+ LQ =( LQ, |−| LQ )o n Q such that (LQ)Q is ample on QQ.
+Since each point xP ∈ P(F)f o rF such that [F : Q]= e determines [by considering
+the various Q-conjugates of xP ]ap o i n txQ ∈ Q(Q) [which, in turn, determines
+xP , up to a ﬁnite number of possibilities], we thus conclude [by varying e]t h a ti t
+suﬃces to verify that the set of points of y ∈ Q(Q) such that ht
+LQ
+(y) ≤ C is ﬁnite.
+Moreover, by embeddingQ via (LQ)Q into some projective space Z = Pm
+Z as in the
+argument of the preceding paragraph, we thus conclude that it suﬃces to verify
+that the set of points of z ∈ Z(Q) such that ht
+ LZ
+(z) ≤ C is ﬁnite, where
+ LZ is
+given by OZ(1) equipped the standard Fubini-Study metric.
+Next, let us observe that [as is easily veriﬁed] there exists a unique arithmetic
+line bundle
+ LS on S
+def
+=S p e c (Z), up to isomorphism, of degree [i.e., “deg Q”] C;
+moreover, any arithmetic line bundle on S of degree ≤ C embeds into
+ LS.I n
+particular, by applying such an embedding, we conclude that given any point z ∈
+Z(Q)= Z(S) such that ht
+ LZ
+(z) ≤ C,t h em + 1 standard generating sections of
+LZ restrict, via the morphism S → Z determined by z, to sections ∈ Γ(
+LS). Since
+[as is easily veriﬁed] Γ(
+ LS)i sa ﬁnite set , it thus follows that there is only a ﬁnite
+number of possibilitiesfor the projective coordinates ofz. This completes the proof
+of assertion (iv). ⃝
+
+8 SHINICHI MOCHIZUKI
+Remark 1.4.1. Observe that it follows immediately from the deﬁnitions, together
+with Proposition 1.4, (iii), that the theory of“BD-classes of height functionsht
+L(−)
+on X(
+Q)”in fact depends only on the scheme XQ. In particular, this theory may
+be applied to any normal, projective scheme Y over Q [i.e., by regarding Y as the
+“ XQ” determined by some Z-ﬂat, Z-projective model “ X”o f Y that arises from a
+projective embedding of Y ].
+Deﬁnition 1.5.
+(i) Note if x ∈ X(F) ⊆ X(
+Q), where [F : Q] < ∞ , then by considering the
+scheme-theoretic image of the corresponding morphism Spec(F) → X, one obtains
+a well-deﬁned minimal ﬁeld of deﬁnition Fmin ⊆ F of x. In particular, it makes
+sense to say that F “is a minimal ﬁeld of deﬁnition of x”[i.e., that F = Fmin].
+(ii) Let E ⊆ Z be an eﬀective Cartier divisorcontained in the regular locus of
+a normal noetherian scheme Z. Then observe that the closed subscheme Ered ⊆ Z
+is also an eﬀective Cartier divisor. We shall say that E is reducedif E = Ered.
+(iii) Let x ∈ X(F) ⊆ X(
+Q), where F is a minimal ﬁeld of deﬁnition of x.T h e n
+the diﬀerent idealof F determines an eﬀective arithmetic divisor
+δx ∈ ADiv(F)
+which is supported in V(F)non. In particular, the assignment
+X(
+Q) ∋ x ↦→ log-diﬀX(x)
+def
+=d e g
+F (δx) ∈ R
+determines a well-deﬁned log-diﬀerent functionlog-diﬀX on X(
+Q).
+(iv) Fix an eﬀective Cartier divisor D ⊆ X;w r i t eUX
+def
+= X\D.L e t x ∈
+UX(F) ⊆ UX(
+Q), where F is a minimal ﬁeld of deﬁnition of x [regarded as a point
+of X(
+Q)]. Then the morphism Spec( OF ) → X determined by x [where we recall
+that X is proper!] allows one to pull-back the divisorD to Spec(OF ) so as to obtain
+an eﬀective divisor Dx on Spec(OF ). Note that Dx,( Dx)red may also be regarded
+as arithmetic divisors ∈ ADiv(F) that are supported in V(F)non. We shall refer to
+fD
+x
+def
+=( Dx)red ∈ ADiv(F)
+as the conductor of x. Thus, the assignment
+X(
+Q) ∋ x ↦→ log-condD(x)
+def
+=d e g
+F (fD
+x ) ∈ R
+determines a well-deﬁned log-conductor function log-condD on UX(
+Q) ⊆ X(
+Q).
+Remark 1.5.1. In the spirit of Remark 1.4.1, we observe that the log-diﬀerent
+function log-diﬀX on X(
+Q) [cf. Deﬁnition 1.5, (iii)] depends only on the scheme
+XQ. On the other hand, although the log-conductor function log-condD on UX(
+Q)
+
+ARITHMETIC ELLIPTIC CUR VES IN GENERAL POSITION 9
+[cf. Deﬁnition 1.5, (iv)] may depend on the pair of Z-schemes (X, D), one veriﬁes
+immediately that the BD-class of log-condD on UX(
+Q) depends only on the pair
+of Q-schemes (XQ,D Q). Indeed, this follows immediately from the observation
+that if ( X′,D ′) is another pair [i.e., consisting of an eﬀective Cartier divisor D′
+in a normal, Z-proper, Z-ﬂat scheme X′], then any isomorphism X′
+Q
+∼
+→ XQ that
+induces an isomorphism D′
+Q
+∼
+→ DQ extends,f o rs o m eﬁnite set of prime numbers
+Σ, to an isomorphism X′ ×Z Z[Σ−1]
+∼
+→ X ×Z Z[Σ−1] that induces an isomorphism
+D′ ×Z Z[Σ−1]
+∼
+→ D ×Z Z[Σ−1]—w h e r ew ew r i t eZ[Σ−1]
+def
+= Z[{p−1}p∈Σ].
+Proposition 1.6. (Conductor Bounded by the Height) Let D ⊆ X be an
+eﬀective Cartier divisor,
+ L =( L, |−| L) an arithmetic line bundle on X such
+that L = OX(D). Write U
+def
+= X\D, htD
+def
+=h t
+L [cf. Proposition 1.4, (iii)]. Then
+log-condD ≲ htD
+on U(
+Q).
+Proof. Write s ∈ Γ(X, L) for the section determined by the tautological inclu-
+sion OX ↪→O X (D). Then the asserted inequality log-cond D ≲ ht
+L follows, for
+the contributions at the nonarchimedean primes, from the deﬁnition of log-cond D
+[i.e., involving “( −)red”] in Deﬁnition 1.5, (iv), and, for the contributions at the
+archimedean primes, from the fact that the continuous function |s|L on the com-
+pact topological space Xarc is bounded. ⃝
+Proposition 1.7. (Conductors and Log Diﬀerents) Let
+φ : Y → Z
+be a generically ﬁnite morphism of normal, Z-proper, Z-ﬂat schemes of dimension
+two. [Thus, the induced morphism on generic ﬁbers φQ : YQ → ZQ is a ﬁnite
+[possibly] ramiﬁed covering of smooth, proper curves over ﬁnite extensions
+of Q.] Let e be a positive integer;
+D ⊆ Y ; E ⊆ Z
+eﬀective, Z-ﬂat Cartier divisors such that the generic ﬁbers DQ, EQ satisfy the
+following conditions: (a) DQ, EQ are reduced;( b )DQ = φ−1
+Q (EQ)red;( c )i fw e
+write UY
+def
+= Y \D, UZ
+def
+= Z\E,t h e nφQ restricts to a ﬁnite ´etale morphism
+(UY )Q → (UZ)Q;( d )t h eramiﬁcation index of φQ at each point of DQ divides
+e.T h e n :
+(i) If we restrict functions on Z(
+Q), UZ(
+Q) to UY (
+Q) via φ,t h e n
+log-condE − log-condD ≲ log-diﬀY − log-diﬀZ ≲
+(
+1 − 1
+e
+)
+· log-condE
+
+10 SHINICHI MOCHIZUKI
+on UY (
+Q).
+(ii) Suppose that the ramiﬁcation index of φQ at each point of DQ is equal
+to e. Then the sheaves of diﬀerentials “ω(−)”o nYQ, ZQ satisfy the relation
+deg(ωYQ )=d e g (ωYQ (DQ)) − deg(OYQ (DQ))
+=d e g (ωZQ (EQ)|YQ )
+{
+1 − deg(OZQ (EQ))
+e · deg(ωZQ (EQ))
+}
+— where we use the notation “ deg(−)” to denote the degree of a line bundle onYQ
+or ZQ.
+Proof. First, we consider assertion (i). We begin by observing that there exists a
+ﬁnite set of prime numbers Σ such that the restriction of Y → Z to the spectrum
+of Z[Σ−1]
+def
+= Z[{p−1}p∈Σ]i sa ﬁnite tamely ramiﬁed morphism of smooth, proper
+families of curves over ﬁnite ´etale coverings of Spec( Z[Σ−1]). In particular, the
+“prime-to-Σ portion”of the inequality “log-cond E − log-condD = log-diﬀ Y −
+log-diﬀZ ≤ (1 − e−1) · log-condE” [i.e., with “=” and “ ≤”, not “ ≲”!] follows
+immediately from the elementary theory of diﬀerents. Note that the “portion over
+Σ”of log-condE, log-condD is ≈ 0 [cf. Remark 1.5.1], while [again by the elementary
+theory of diﬀerents] the “portion over Σ” of log-diﬀY − log-diﬀZ is ≥ 0 [i.e., with
+“ ≥”, not “ ≳”!]. Thus, to complete the proof of assertion (i), it suﬃces to show
+that the “portion over Σ”of the quantity log-diﬀY − log-diﬀZ is bounded in UY (
+Q).
+Moreover, by working locally, we reduce immediately to the following elementary
+claim:
+Fix a prime numberp and a positive integerd. Then there exists a positive
+integer n such that for anyﬁnite Galois extension L/K of ﬁnite extensions
+of Qp with [L : K] ≤ d,t h ediﬀerent idealof L/K contains pn ·O L [where
+we write OL for the ring of integers of L].
+To verify this claim, we reason as follows: By separating the extension L[ζ]/K,
+where ζ is a primitive p-th root of unity, into a composite of wildly ramiﬁed and
+tamely ramiﬁed extensions [and observing that if we restrict to tamely ramiﬁed
+L/K, then it suﬃces to take n = 1], we reduce immediately to the case of wildly
+ramiﬁed L/K such that K contains a primitive p-th root of unity ζ.M o r e o v e r ,
+since Gal(L/K) is a [necessarily solvable!] p-group of order ≤ d, it suﬃces to
+consider the case where [ L : K]= p.S i n c eζ ∈ K, it follows immediately from
+elementary Kummer theory that L = K(λ)f o rs o m eλ ∈ L such that κ
+def
+= λp ∈ K.
+Moreover, by multiplying κ by an element of ( K×)p, we may assume that κ is
+a unit multiple of πa
+K,w h e r eπK is a uniformizer of K and a is a nonnegative
+integer <p . In particular, it follows that κ ∈O K, but κ/∈ pp ·O K, hence that
+OL ⊇ λ·OL ⊇ p ·OL. On the other hand, since in this case, we have an inclusion of
+OK-algebras OK[X]/(Xp − κ) ↪→O L, one computes easily that the diﬀerent ideal
+of L/K contains p · λp−1 ·O L ⊇ p1+(p−1) ·O L = pp ·O L. This completes the proof
+of the claim, and hence of assertion (i). Assertion (ii) follows immediately from the
+Riemann-Hurwitz formula for ramiﬁed coverings of smooth, proper curves. ⃝
+
+ARITHMETIC ELLIPTIC CUR VES IN GENERAL POSITION 11
+Section 2: Bounds on Heights
+In the present§2, we discuss ourﬁrst main result [cf. Theorem 2.1], to the eﬀect
+that the so-called Eﬀective Mordell or ABC Conjectures are equivalent to the ABC
+Conjecture for rational points [over number ﬁelds of bounded degree] contained in
+aﬁ x e dcompactly bounded subset of the set of all rational points [cf. Example 1.3,
+(ii)]. The technique used in Corollary 2.1 goes back to work of Elkies [cf. [Elkies];
+[vF]] and Moret-Bailly and Szpiro [cf. the discussion at the top of [Elkies], p. 106],
+except that instead of using “arbitrary” Belyi maps, we usenoncritical Belyi maps,
+as discussed in [Mzk1].
+Theorem 2.1. (Compactly Bounded Subsets and the ABC Conjecture)
+Let Σ be a ﬁnite set of prime numbers. Then in the terminology of §1 [cf., espe-
+cially, Deﬁnitions 1.2, 1.5; Example 1.3; Remarks 1.4.1, 1.5.1], the following two
+statements are equivalent:
+(i) (Eﬀective Mordell/ABC/Vojta Conjecture)Let X be a smooth, proper,
+geometrically connected curve over a number ﬁeld; D ⊆ X a reduced divisor;
+UX
+def
+= X\D; d a positive integer; ϵ ∈ R>0 a positive real number. Write ωX
+for the canonical sheaf onX. Suppose that UX is a hyperbolic curve — i.e., that
+the degree of the line bundleωX(D) is positive. Then the inequality of BD-classes
+of functions
+htωX(D) ≲ (1 +ϵ)(log-diﬀX + log-condD)
+holds on UX(
+Q)≤d.
+(ii) (ABC Conjecture forΣ-Supported Compactly Bounded Subsets)
+Let P
+def
+= P1
+Q be the projective line over Q; C ⊆ P the divisor consisting of the
+three points “ 0”, “1”, and “ ∞ ”; UP
+def
+= P \C; d a positive integer; ϵ ∈ R>0 a
+positive real number; KV ⊆ UP (
+Q) a compactly bounded subset [i.e., regarded
+as a subset of P(
+Q) — cf. Example 1.3, (ii)] whose support contains Σ. Write
+ωP for the canonical sheaf on P. Then the inequality of BD-classes of functions
+htωP (C) ≲ (1 +ϵ)(log-diﬀP + log-condC)
+holds on KV
+⋂ UP (
+Q)≤d.
+Proof. The fact that (i) =⇒ (ii) is immediate from the deﬁnitions. Thus, it suﬃces
+to verify that (ii) =⇒ (i). Let X, D, UX, d, ϵ be as in (i). Now it follows immediately
+from the well-known structure of ´etale fundamental groups of hyperbolic curves over
+algebraically closed ﬁelds of characteristic zero that for any positive integere,t h e r e
+exists a connected ﬁnite ´etale Galois coveringUY → UX, such that if we writeY for
+the normalization of X in UY and E
+def
+=( D ×X Y )red ⊆ Y ,t h e nY is a hyperbolic
+curve, and, moreover,Y → X is ramiﬁed at each point ofE with ramiﬁcation index
+equal to e. Here, we think of e as a ﬁxed number that will be chosen below.
+
+12 SHINICHI MOCHIZUKI
+Write d′ def
+= d · deg(Y/X ). Then I claim that to complete the proof of the
+implication “(ii) =⇒ (i)”, it suﬃces to verify the inequality
+htωY ≲ (1 +ϵ′) · log-diﬀY
+on UY (
+Q)≤d′
+for arbitrary ϵ′ ∈ R>0. Indeed, suppose that this inequality is satisﬁed
+for some ϵ′ ∈ R>0 such that (1+ϵ′)2 ≤ 1+ ϵ. Then by choosing appropriate normal,
+Z-proper, Z-ﬂat models for Y , X, we may apply Proposition 1.7, (i), to conclude
+that log-diﬀY ≲ log-diﬀX + log-condD on UY (
+Q)≤d′
+; moreover, by Proposition
+1.7, (ii), it follows that by choosing e to be suﬃciently large, we may assume that
+deg(ωX(D)|Y )=d e g (ωY (E)) ≤ (1+ ϵ′) ·deg(ωY ). But, by Proposition 1.4, (i), (ii),
+(iii), this implies that htωX(D) ≲ (1 +ϵ′) · htωY on UY (
+Q)≤d′
+. Thus, we conclude
+that
+htωX(D) ≲ (1 +ϵ′) · htωY ≲ (1 +ϵ′)2 · log-diﬀY
+≲ (1 +ϵ′)2(log-diﬀX + log-condD)
+≲ (1 +ϵ)(log-diﬀX + log-condD)
+on UY (
+Q)≤d′
+. Since every point of UX(
+Q)≤d clearly lifts to a point of UY (
+Q)≤d′
+,
+this completes the veriﬁcation of the claim.
+Thus, in summary, to complete the proof of Theorem 2.1, it suﬃces to verify
+that (ii) implies (i) for data X, D, UX, d, ϵ as in (i) such that D = ∅. To this end,
+let us suppose that the inequality
+htωX ≲ (1 +ϵ) · log-diﬀX
+is false on X(
+Q)=d.L e t V ⊆ V(Q) be a ﬁnite subset that contains V(Q)arc and
+[the subset of V (Q)non determined by] Σ. Then it follows immediately from the
+compactness of the set of rational points ofX over any ﬁnite extension of Qv for v ∈
+V that there exists a subset Ξ⊆ X(
+Q)=d, together with a(n) [unordered]d-tuple of
+points Ξv of X(
+Qv)f o re a c hv ∈ V , such that the inequality htωX ≲ (1+ϵ)·log-diﬀX
+is false on Ξ, and, moreover, the [unordered]d-tuples of Q-conjugates of points ∈ Ξ
+converge, as [unordered] d-tuples of points ofX(
+Qv), to Ξv. Moreover, by the main
+result of [Mzk1] [cf. [Mzk1], Theorem 2.5], there exists a “noncritical Belyi map”
+φ : X → P
+which is unramiﬁed over UP , and, moreover, “noncritical” at the points of each
+Ξv [i.e., maps the points of each Ξ v into UP (
+Qv)]. In particular, [after possibly
+eliminating ﬁnitely many elements from Ξ] it follows that there exists a compactly
+bounded subsetKV ⊆ UP (
+Q) [i.e., whose bounding domains are the unions of Galois-
+conjugates of images via φ of suﬃciently small compact neighborhoodsof the points
+of Ξv in X(
+Qv), for v ∈ V ] such that φ(Ξ) ⊆K V .
+Now set E
+def
+= φ−1(C)red ⊆ X [so φ∗ωP (C) ∼= ωX(E)]. Let ϵ′ ∈ R>0 be such
+that the inequality
+1+ ϵ′ ≤ (1 +ϵ) ·
+(
+1 − ϵ′ · deg(E)/deg(ωX)
+)
+
+ARITHMETIC ELLIPTIC CUR VES IN GENERAL POSITION 13
+is satisﬁed. Then by (ii), it follows that ht ωP (C) ≲ (1 +ϵ′)(log-diﬀP + log-condC)
+on φ(Ξ). On the other hand, by choosing appropriate normal, Z-proper, Z-ﬂat
+models for P, X, we may apply Proposition 1.7, (i) [where we take “ e”t ob e1 ] ,
+to conclude that log-diﬀP + log-condC ≲ log-diﬀX + log-condE on Ξ. Also, we
+recall from Proposition 1.6 that log-cond E ≲ htE
+def
+=h t OX(E) on Ξ. Thus, by
+Proposition 1.4, (i), (iii), we compute to ﬁnd that
+htωX ≈ htωX(E) − htE ≈ htωP (C) − htE
+≲ (1 +ϵ′)(log-diﬀP + log-condC) − htE
+≲ (1 +ϵ′)(log-diﬀX + log-condE) − htE
+≲ (1 +ϵ′)(log-diﬀX +h tE) − htE ≈ (1 +ϵ′) · log-diﬀX + ϵ′ · htE
+≈ (1 +ϵ′) · log-diﬀX + ϵ′ · (deg(E)/deg(ωX)) · htωX
+on Ξ, i.e., that htωX ≲ (1+ ϵ) ·log-diﬀX on Ξ — in contradiction to our hypothesis
+on Ξ. This completes the proof of Theorem 2.1. ⃝
+Section 3: Full Special Linear Galois Actions on Torsion Points
+In the present §3, we give various conditions on a prime l that ensure that the
+image of the Galois representationon the l-power torsion points of an elliptic curve
+over a number ﬁeld is “rather large”[cf. Theorem 3.8]. In particular, we show that
+if one considers elliptic curves over number ﬁelds of bounded degree that have at
+least one [nonarchimedean] prime ofpotentially [bad] multiplicative reduction, then,
+if one excludes ﬁnitely many exceptional elliptic curves, it holds thatfor any prime
+number l of the order of the height of the elliptic curve, the image of the associated
+Galois representation in GL2(Zl) contains SL2(Zl). Here, the condition of having
+at least one prime of potentially multiplicative reduction holds automatically,w i t h
+ﬁnitely many exceptions, if one restricts oneself to elliptic curves arising from points
+of the moduli stack of elliptic curves that are contained in somecompactly bounded
+subset of the set of all points. In particular, for such a prime number l, the elliptic
+curve will not have any rational torsion points of order l. Thus, this result may
+be regarded as a sort of “poor man’s uniform boundedness conjecture” — now
+Merel’s theorem [cf. [Merel]] – although, in fact, it is not strictly implied by Merel’s
+theorem. Alternatively, it may be regarded as an eﬀective version of a theorem of
+Serre [cf. [Serre], Chapter IV, Theorem 3.2]. The proof is similar to that of Faltings’
+proof of the Tate Conjecture [cf. [Falt]], only technically much simpler. That is
+to say, the main technique is essentially the standard one, going back to Tate, for
+proving “Tate conjecture-type results”.
+We begin by reviewing various well-known facts concerning the structure of
+SL
+2(Fl), SL2(Zl), for l ap r i m en u m b e r≥ 5.
+Lemma 3.1. (The Structure of SL2) Let l ≥ 5 be a prime number. Then:
+
+14 SHINICHI MOCHIZUKI
+(i) Let G ⊆ SL2(Fl) be the subgroup generated by the matrices α
+def
+=
+(11
+01
+)
+,
+β
+def
+=
+(10
+11
+)
+.T h e nG = SL2(Fl).
+(ii) The ﬁnite group SL2(Fl) has no nontrivial abelian quotients.
+(iii) Let H ⊆ GL2(Fl) be a subgroup that contains the matrix α
+def
+=
+(11
+01
+)
+,a s
+well as at least one matrix that is not upper triangular. Then SL2(Fl) ⊆ H.
+(iv) LetJ ⊆ GL2(Zl) be a closed subgroup whose imageHJ in GL2(Fl) contains
+the matrix α
+def
+=
+(11
+01
+)
+, as well as a matrix which is not upper triangular. Then
+SL2(Zl) ⊆ J.
+Proof. First, we consider assertion (i). Note that if μ, λ∈ Fl,t h e nβμ · αλ [where
+we observe that this expression makes sense since both αl and βl are equal to the
+identity matrix] takes the vectorv
+def
+=
+(0
+1
+)
+to
+( λ
+μ·λ+1
+)
+. Thus, if we letγ
+def
+=
+(01
+10
+)
+,t h e n
+for any λ ∈ F×
+l , there exists agλ ∈ G such that λ·γ·v =
+(λ
+0
+)
+= gλ ·v.I np a r t i c u l a r ,
+we have λ · g1 · v = λ · γ · v = gλ · v,s o λ · v ∈ G · v. Thus, in summary, we have
+proven that (Fl × Fl) −{
+(0
+0
+)
+}⊆ G · v. Now let us prove that an arbitrary element
+δ ∈ SL2(Fl) is contained in G. By the conclusion of the above argument, we may
+assume that δ· v = v. But this implies that δ is a lower triangular matrix all of
+whose diagonal entries are equal to 1. Thus, δ is a power of β, hence contained in
+G, as desired. This completes the proof of assertion (i).
+Next, we consider assertion (ii). Let λ ∈ F×
+l be such that λ2 ̸= 1. [Note that
+such a λ exists since l ≥ 5.] Let ϵ
+def
+=
+(λ 0
+0 λ− 1
+)
+.T h e n ϵ · α · ϵ−1 · α−1 = αλ2 −1.
+Thus, α (and, similarly, β) is contained in the commutator subgroup ofSL2(Fl), so
+assertion (ii) follows from assertion (i). This completes the proof of assertion (ii).
+Next, we consider assertion (iii). Note that α generates an l-Sylow subgroup
+S of GL2(Fl), and that the number of l-Sylow subgroups of GL2(Fl) is precisely
+l + 1. Since the normalizer of S in GL2(Fl) is the set of upper triangular matrices,
+and we have assumed that H contains at least one non-upper triangular matrix,
+it follows that the number nH of l-Sylow subgroups of H is ≥ 2. On the other
+hand, by the general theory of Sylow subgroups, it follows thatnH is congruent to
+1 modulo l.S i n c e2≤ nH ≤ l + 1, we thus obtain that nH = l +1 . I np a r t i c u l a r ,
+in the notation of assertion (i), we conclude that α, β∈ H. Thus, by assertion (i),
+we have SL2(Fl) ⊆ H, as desired. This completes the proof of assertion (iii).
+Finally, we consider assertion (iv). By assertion (iii), we have that SL2(Fl) ⊆
+HJ.L e t J′ ⊆ SL2(Zl) be the closure of the commutator subgroup of J. Thus, by
+assertion (ii), J′ surjects onto SL2(Fl). Now by [Serre], Chapter IV, §3.4, Lemma
+3, this implies that SL2(Zl)= J′ ⊆ J, as desired. This completes the proof of
+assertion (iv). ⃝
+Next, we consider the local theory at nonarchimedean primes.L e t K be a
+ﬁnite extension of Qp [where p is a prime number] with residue ﬁeld k, maximal
+ideal mK ⊆O K,a n dvaluation map vK : K× → Z [which we normalize so that vK
+
+ARITHMETIC ELLIPTIC CUR VES IN GENERAL POSITION 15
+is surjective];
+ K an algebraic closure of K; GK
+def
+= Gal(
+ K/K); E → Spec(OK)a
+one-dimensional semi-abelian scheme over OK such that the generic ﬁber EK of E
+is proper, while the special ﬁber Ek of E is isomorphic to (Gm)k, the multiplicative
+group over k.
+Let l be a prime number [possibly equal to p]; write
+Ml(E)
+def
+= Hom(Z/l · Z,E (
+K))
+for the “mod l”T a t em o d u l eof EK.T h u s ,Ml(E) is [noncanonically!] isomorphic
+as an Fl-module to Fl × Fl, and, moreover, is equipped with a continuous action by
+GK [induced by the natural action of GK on
+ K]. Also, it is well-known [cf., e.g.,
+[FC], Chapter III, Corollary 7.3] that Ml(E) ﬁts into a natural exact sequence of
+GK-modules
+0 → Fl(1) → Ml(E) → Fl → 0
+— where the “(1)” is a Tate twist, and “ Fl” is equipped with the trivial Galois
+action. Moreover, the extension class associated to this exact sequence is precisely
+that obtained by extracting an l-th root of the Tate parameter qE ∈ mK.T h e
+Tate parameter is an element of mK that is naturally associated to E and has the
+property that the subscheme OK/(qE) is equal to the pull-back via the classifying
+morphism Spec(OK) →
+ Mell —w h e r ew ew r i t e
+Mell for the moduli stack of one-
+dimensional semi-abelian varieties over Z — of the divisor at inﬁnity ∞ M ⊆
+ Mell.
+Thus, the above exact sequence splits if and only ifqE has an l-th root in K. Note
+that in order for this to happen, it is necessary that vK(qE)b e divisible by l.I n
+particular, we have the following well-known result.
+Lemma 3.2. (Local Rank One Subgroups of l-Torsion)
+(i) Let
+N ⊆ Ml(E)
+be a one-dimensionalFl-subspace which isstabilized by GK.T h e neither vK(qE) ∈
+l · Z, or N is equal to the submodule Fl(1) ⊆ Ml(E) of the above exact sequence.
+(ii) The submodule Fl(1) ⊆ Ml(E) of the above exact sequence deﬁnes a ﬁnite,
+ﬂat subgroup scheme μ l ⊆ E over OK, whose quotient we denote by E′ def
+= E/μ l.
+[Thus, E′ → Spec(OK) is a one-dimensional semi-abelian scheme over OK whose
+generic ﬁber is proper, and whose special ﬁber is isomorphic to (Gm)k.] The Tate
+parameter qE′ of E′ satisﬁes the relation qE′ = ql
+E; in particular, we have
+deg∞ (E′)= l · deg∞ (E)
+— where we write deg∞ (E)
+def
+= log(#(OK/(qE))) ∈ R.
+Deﬁnition 3.3. We shall refer to the positive integervK(qE) ∈ Z>0 as the local
+height of E [or EK].
+
+16 SHINICHI MOCHIZUKI
+Remark 3.3.1. Note that even ifEK only haspotentially multiplicative reduction,
+one may deﬁne the local height ofEK as the element ∈ Q computed by dividing the
+local height of EK ×K L for some ﬁnite extension L of K over which EK has mul-
+tiplicative reduction by the ramiﬁcation index of L/K [so one veriﬁes immediately
+that this deﬁnition is independent of the choice of L].
+Next, let F ⊆
+ Q be a number ﬁeld , E → Spec(OF )a one-dimensional semi-
+abelian variety whose generic ﬁber EF is proper. Also, for simplicity, we assume
+that F is totally imaginary.T h u s ,EF is an elliptic curve over F.L e tu sw r i t eωE
+for the ﬁnite, ﬂat OF -module of rank one consisting of the invariant diﬀerentials
+on E.I f v ∈ V(F)arc, then we get a natural metric on ( ωE)v
+def
+=( ωE) ⊗F Fv by
+integration: if α ∈ (ωE)v,t h e n
+|α|2 def
+=
+∫
+Ev
+α ∧
+ α
+—w h e r eEv
+def
+= E ×F Fv,a n d
+α is the complex conjugate of α. Thus, by equipping
+ωE with this metric at the archimedean places of F, we obtain an arithmetic line
+bundle
+ ωE on Spec(OF ). Let us write
+htFalt(E)
+def
+=d e g
+F (
+ωE) ∈ R
+for the so-called Faltings height of the elliptic curve E.
+Next, let us observe that E → Spec(OF ) deﬁnes a classifying morphism
+φ :S p e c (OF ) →
+ Mell
+—w h e r ew ew r i t e
+Mell for the moduli stack of one-dimensional semi-abelian vari-
+eties over Z. As is well-known, this stack has a “divisor at inﬁnity” ∞ M ⊆
+ Mell,
+whose complement Mell ⊆
+ Mell is the moduli stack of elliptic curves over Z.S e t
+deg
+∞ (E)
+def
+=d e g
+F (∞ E) ∈ R
+—w h e r ew ew r i t e∞ E
+def
+= φ−1(∞ M) ⊆ Spec(OF ).
+Although the algebraic stack
+ Mell is not a scheme, it is nevertheless normal,
+Z-proper, and Z-ﬂat. Thus, one veriﬁes immediately that the theory of §1 extends
+immediately to the case of
+ Mell; in particular, one may consider functions on
+subsets of
+ Mell(
+Q), BD-classes of such functions,a n dheight functions on
+ Mell(
+Q)
+associated to arithmetic line bundles on
+ Mell.W r i t e
+ht∞
+for the BD-class of height functions determined by the line bundle O
+Mell
+(∞ M).
+Also, we observe that if we write [ E] ∈M ell(
+Q) for the isomorphism class deter-
+mined byE, then we may regard [E] ↦→ htFalt([E])
+def
+=h tFalt(E), [E] ↦→ deg
+∞ ([E])
+def
+=
+deg
+∞ (E)a s functions on Mell(
+Q). Now we have the following well-known result.
+
+ARITHMETIC ELLIPTIC CUR VES IN GENERAL POSITION 17
+Proposition 3.4. (Faltings Heights and the Divisor at Inﬁnity) For any
+ϵ ∈ R>0, we have
+deg
+∞ ≲ ht∞ ≲ 12(1 +ϵ) · htFalt ≲ (1 +ϵ) · ht∞
+on Mell(
+Q). In particular, if C ∈ R, then the set of points [E] ∈M ell(
+Q)≤d such
+that htFalt([E]) ≤ C is ﬁnite .
+Proof. The ﬁrst “ ≲” follows immediately from the deﬁnitions [cf. the proof of
+Proposition 1.6]. The remaining “ ≲’s” follows from [Silv2], Proposition 2.1 [cf. also
+the discussion in the proof of [FC], Chapter V, Proposition 4.5, of the logarithmic
+singularities at inﬁnity of the metric deﬁned on “
+ ωE”, as one allows “ E” to vary
+in Mell(
+Q); the proof of [Silv1], Proposition 8.2]. Finally, the ﬁniteness assertion
+follows immediately from the inequalities already shown, together with Proposition
+1.4, (iv). ⃝
+Lemma 3.5. (Global Rank One Subgroups of l-Torsion) Let ϵ ∈ R>0; l
+a prime number; HF ⊆ EF a subgroup scheme such thatHF ×F
+ Q is isomorphic
+to the constant group scheme determined by Z/l · Z. We shall call such a subgroup
+scheme HF l-cyclic. Write (EH)F
+def
+= EF /HF .[ T h u s ,(EH)F is isogenous to
+EF , hence has semi-stable reduction at all the ﬁnite primes of F and extends
+to a one-dimensional semi-abelian scheme EH → Spec(OF ).] Suppose further that
+l is prime to the local heights of E at all of its primes of [bad] multiplicative
+reduction [a condition that is satisﬁed, for instance, if l is > these local heights].
+Then we have
+1
+12(1 +ϵ) l · deg
+∞ (E) ≤ htFalt(E) + 2 log(l)+ C
+for some constant C ∈ R which [may depend on ϵ but] is independent of E, F,
+HF ,a n dl.
+Proof. Note that the assumption on l implies, by Lemma 3.2, (i), that at all the
+primes of multiplicative reduction,HF corresponds to the subspaceFl(1) of Lemma
+3.2, (i). Thus, at primes of multiplicative reduction,EH may be identiﬁed with the
+elliptic curve “E′” of Lemma 3.2, (ii). In particular, it follows that deg
+∞ (EH)= l ·
+deg
+∞ (E). On the other hand, the degreel covering morphismEF → (EH)F extends
+[cf., e.g., [FC], Chapter I, Proposition 2.7] to a morphismE → EH.T h u s ,w eh a v e
+a natural inclusion ωEH ⊆ ωE whose cokernel is annihilated by l. Moreover, since
+integrating a (1, 1)-form overEv diﬀers from integrating over (EH)v by a factor ofl,
+we conclude that htFalt(EH)=d e g
+(
+ωEH ) ≤ deg
+(
+ωE)+2·log(l)=h t Falt(E)+2·log(l).
+Thus, Lemma 3.5 follows from Proposition 3.4. ⃝
+Before continuing, we observe the following result.
+Lemma 3.6. (An Elementary Estimate) Let ϵ ∈ R>0. Then there exists a
+constant C0 ∈ R>0 such that for all x, y ∈ R such that y ≥ 1 and x ≥ C0y1+ϵ,i t
+holds that x ≥ y · log(x).
+
+18 SHINICHI MOCHIZUKI
+Proof. This follows immediately from the well-known elementary fact thatx1/(1+ϵ)·
+log(x)/x = log(x) · x−ϵ/(1+ϵ) → 0a s x →∞ . ⃝
+Lemma 3.7. (Finite Exceptional Sets) Let KV ⊆M ell(
+Q) be a com-
+pactly bounded subset, ϵ ∈ R>0. Then there exists a constant C ∈ R>0 and a
+Galois-ﬁnite [cf. Example 1.3, (i)] subset Exc ⊆M ell(
+Q) that satisfy the following
+property:
+Let EL be an elliptic curve over a number ﬁeld L with semi-stable reduc-
+tion at all the ﬁnite primes of L; d
+def
+=[ L : Q]; [EL] ∈M ell(
+Q) the point determined
+by EL; l a prime number. Consider the following two conditions on the above
+data:
+(a) l ≥ 100d · (htFalt([EL]) +C · dϵ),a n dEL has at least one prime of [bad]
+multiplicative reduction;
+(b) [EL] ∈K V ,a n d l is prime to the local heights of EL at all of its
+primes of multiplicative reduction.
+Then if (a) is satisﬁed, then l is > the local heights of EL at all the primes of
+multiplicative reduction. If (b) is satisﬁed, and[EL] ̸∈ Exc,t h e nEL has at leastone
+prime of multiplicative reduction. If either (a) or (b) is satisﬁed, and, moreover,
+EL admits an l-cyclic subgroup scheme HL ⊆ EL,t h e n[EL] ∈ Exc.
+Proof. First, observe that if v is any local height of EL,t h e nd · deg
+∞ ([EL]) ≥
+v ·log(2). Next, let us observe that by Proposition 3.4, for an appropriate choice of
+C, we may assume that htFalt([EL]) +C · dϵ ≥ htFalt([EL]) +C ≥ 1
+14 · deg
+∞ ([EL])
+[i.e., where we take “12(1 + ϵ)” to be 14]. Thus, condition (a) implies that
+l ≥ 100d
+14 · deg
+∞ ([EL]) ≥
+( 100 · log(2)
+14
+)
+· v>v
+— i.e., that l is > the local heightsof EL at all the primes of multiplicative reduction.
+On the other hand, if condition (b) is satisﬁed, and, moreover EL has no primes
+of multiplicative reduction [so deg
+ ∞ ([EL]) = 0], then the fact that [ EL] ∈K V
+implies that ht∞ ([EL]) is bounded [independently of L, EL, l], so, by Proposition
+1.4, (iv), [EL] belongs to some [ﬁxed] ﬁnite exceptional set Excd [which we think of
+as Exc ⋂ Mell(
+Q)≤d], as desired.
+For the remainder of the present proof, let us assume that either (a) or (b) is
+satisﬁed [so l is prime to the local heights of EL], and that EL admits an l-cyclic
+subgroup scheme HL ⊆ EL. Thus, by Lemma 3.5, we conclude that
+l
+14 · deg
+∞ ([EL]) ≤ htFalt([EL]) + 2· log(l)+ C′ († )
+for some constant C′ ∈ R [i.e., “ C”] as in Lemma 3.5.
+
+ARITHMETIC ELLIPTIC CUR VES IN GENERAL POSITION 19
+Now suppose that condition (a) is satisﬁed. Let C0 be as in Lemma 3.6. Then
+let us observe that if we choose C suﬃciently large [cf. Proposition 3.4] that the
+inequality of condition (a) implies thatl ≥ C0( 56d
+log(2) )1+ϵ, then by Lemma 3.6 [where
+we take “ x”t ob e l,a n d“ y”t ob e 56d
+log(2)], we conclude that l ≥ 56d·log(l)
+log(2) , hence
+that
+l
+14 · deg
+∞ ([EL]) ≤ htFalt([EL]) + l · log(2)
+28d + C′ (‡ )
+[i.e., by substituting into ( † )]. Now since EL has at least one prime of bad re-
+duction, it follows that log(2) ≤ d · deg
+∞ ([EL]). Thus, substituting into ( ‡ ),
+we obtain that l·log(2)
+28d ≤ htFalt([EL]) + C′. On the other hand, log(2)
+28 ≥ 2
+100 ,
+and, by assumption, l ≥ 100d · htFalt([EL]), so, by substituting, we obtain that
+2h tFalt([EL]) ≤ htFalt([EL]) +C′, i.e., that htFalt([EL]) ≤ C′. But this implies, by
+Proposition 3.4, that [EL] belongs to some [ﬁxed] ﬁnite exceptional set Excd [which
+we think of as Exc ⋂ Mell(
+Q)≤d], as desired.
+Now suppose thatcondition (b)is satisﬁed. Recall that by deﬁnition, ht∞ ([EL])
+may be computed as the sum of deg
+∞ ([EL]) and anarchimedean termwhich, in the
+present situation, is bounded,s i n c e[EL] ∈K V . In particular, by modifying C′ —
+in a fashion that depends on KV ! — and applying Proposition 3.4, we may assume
+that deg
+∞ ([EL]) ≥ ht∞ ([EL]) − C′ ≥ 7 · htFalt([EL]) − 2C′. Thus, by substituting
+into († ) [and perhaps modifying C′ again], we obtain that
+l
+2 · htFalt([EL]) ≤ l
+14 · deg
+∞ ([EL]) +l · C′ ≤ htFalt([EL]) + 3l · C′
+— i.e., [since we may assume that C was chosen so thatl ≥ 5] that l ·htFalt([EL]) ≤
+2(l − 2)htFalt([EL]) ≤ 12l ·C′,s oh tFalt([EL]) ≤ 12 ·C′. Thus, again we conclude by
+Proposition 3.4 that [EL] belongs to some [ﬁxed] ﬁnite exceptional set Excd [which
+we think of as Exc ⋂ Mell(
+Q)≤d], as desired. ⃝
+Theorem 3.8. (Full Special Linear Galois Actions) Let
+ Q be an algebraic
+closure of Q, KV ⊆M ell(
+Q) a compactly bounded subset [cf. Example 1.3,
+(ii)], ϵ ∈ R>0. Then there exist a constant C ∈ R>0 and a Galois-ﬁnite [cf.
+Example 1.3, (i)] subset Exc ⊆M ell(
+Q) that satisfy the following property:
+Let EL be an elliptic curve over a number ﬁeld L ⊆
+ Q such that the isomor-
+phism class [EL] ∈M ell(
+Q) of EL does not belong to Exc; d
+def
+=[ L : Q]; l a prime
+number such that [at least] one of the following two conditions is satisﬁed:
+(a) l ≥ 23040 · 100d · (htFalt([EL]) +C · dϵ),a n dEL has at least one prime
+of potentially multiplicative reduction;
+(b) [EL] ∈K V ,a n d l is prime to the local heights of EL at all of its
+primes of potentially multiplicative reduction [cf. Remark 3.3.1], as well
+as to the number 2 · 3 · 5=3 0 .
+Then the image of the Galois representation Gal(
+Q/L) → GL2(Zl) associated to
+EL contains SL2(Zl).
+
+20 SHINICHI MOCHIZUKI
+Proof. First, let us observe that for an EL as in the statement of Theorem 3.8,
+there exists a Galois extension L′ of L of degree that divides d0
+def
+=( 32 − 1)(32 −
+3)(52 − 1)(52 − 5) = 23040 [i.e., the order ofGL2(F3)×GL2(F5)], so as to render the
+3- and 5-torsion points of EL rational over L′ [which has the eﬀect of eliminating
+automorphisms of elliptic curves in all characteristics], we may assume thatEL′
+def
+=
+EL ×L L′ has semi-stable reduction at all of the ﬁnite primes of L. [Here, we note
+that passing to such a Galois extension ofL only aﬀects the prime decomposition of
+the local heights via the primes that divided0,o fw h i c ht h e r ea r eo n l yﬁnitely many,
+namely, 2, 3, and 5.] Next, let us observe that for asuitable choice of C ∈ R>0 and
+Exc ⊆M ell(
+Q), if EL and l satisfy condition (a) (respectively, (b)) of the statement
+of Theorem 3.8, then EL′ and l satisfy condition (a) (respectively, (b)) of Lemma
+3.7 [perhaps for a diﬀerent “ C”]. Thus, [cf. the portion of Lemma 3.7 that asserts
+that “ l is > the local heights”] for EL, l as in the statement of Theorem 3.8, the
+local height of EL′ at a ﬁnite prime of L′ of multiplicative reduction is not divisible
+by l. Note, moreover, that at least one such ﬁnite prime exists [cf. the content
+of condition (a); Lemma 3.7 in the case of condition (b)]. Thus, it follows from
+the discussion of the local theory preceding Lemma 3.2 that the image of Galois
+in GL2(Fl) contains the element “ α” of Lemma 3.1, (iv), i.e.,
+(11
+01
+)
+. On the other
+hand, by the portion of Lemma 3.7 concerningl-cyclic subgroup schemes, it follows
+that the image of Galois inGL2(Fl) contains at least one matrix which isnot upper
+triangular. Thus, we conclude from Lemma 3.1, (iv), that the image of Galois in
+GL2(Zl) contains SL2(Zl), as desired. ⃝
+Section 4: Primes of Prescribed Size
+In the present §4, we combine the full Galois action result given in Theo-
+rem 3.8 with some classical analytic number theory to give versions of Theorem
+3.8 [cf. Corollaries 4.3, 4.4] that assert the existence of bounded prime numbers l
+satisfying various properties, such as the property of being distinct from various
+prime numbers that are, in some sense, “characteristic” to the elliptic curve under
+consideration.
+We begin by reviewing the following result inclassical analytic number theory.
+Lemma 4.1. (The Existence of Primes of Prescribed Size) Write
+R′
+>0 ⊆ R>0 for the complement in R>0 of the set of prime numbers;
+θ(x)
+def
+=
+∑
+p<x
+log(p)
+— where the sum is over prime numbers p<x —f o r x ∈ R′
+>0.L e t M be a
+positive integer; ϵ, xϵ,C ϵ ∈ R>0 such that 0 <ϵ< 1
+4, ϵ · xϵ >C ϵ, and, moreover,
+we have:
+(i) 5
+4 · x + Cϵ >θ(x), for all x ∈ R′
+>0; θ(x) > (1 − ϵ)x, for all x ∈ R′
+>0 such
+that x ≥ xϵ;
+
+ARITHMETIC ELLIPTIC CUR VES IN GENERAL POSITION 21
+(ii) M · log(x) ≤ ϵ · x, for all x ∈ R>0 such that x ≥ xϵ.
+Also, let us write
+xA
+def
+=
+∑
+p∈A
+log(p)
+for any ﬁnite set of prime numbers A. Then for any nonnegative h ∈ R and
+any ﬁnite set of prime numbers A such that xA >x ϵ, there exist M distinct
+prime numbers p1,...,p M such that pj ̸∈A ,a n dh ≤ pj ≤ (1 + 6ϵ) · xA +8 h,
+for j =1 ,...,M .
+Proof. Indeed, write δ
+def
+=6 ϵ, yA
+def
+=( 1 + δ) · xA +8 h, and suppose that the
+conclusion of Lemma 4.1 is false. Then it follows that there exists an oﬀending
+ﬁnite set of primes A such that xA >x ϵ, and, moreover, all prime numbers p such
+that h ≤ p ≤ yA belong — with M − 1 possible exceptions — to A.B u t t h e n i t
+follows from the deﬁnitions that xA ≥− (M − 1) · log(yA) − θ((1 +δ)h)+ θ(yA) ≥
+−M · log(yA) − θ((1 +δ)h)+ θ(yA). Thus, we compute:
+xA ≥− M · log(yA) − θ((1 +δ)h)+ θ(yA)
+≥− ϵ · yA − 5(1 +δ)h/4 − Cϵ +( 1 − ϵ) · yA
+=( 1 − 2ϵ) · yA − 5(1 +δ)h/4 − Cϵ
+=( 1+ δ− 2ϵ − 2δ· ϵ) · xA +8 ( 1− 2ϵ)h − 5(1 +δ)h/4 − Cϵ
+≥ (1 +δ/2 − 2ϵ) · xA +4 h − 5(1 +δ)h/4 − Cϵ
+≥ xA +( ϵ · xA − Cϵ)+( 4h − 5(1 +δ)h/4)
+—a contradiction,s i n c eϵ ·xA >ϵ ·xϵ >C ϵ,5 ( 1+δ)/4 < 4. Note that here we may
+assume without loss of generality thatyA, (1+ δ)h ∈ R′
+>0, for instance by replacing
+δ, h by real numbers slightly greater than the given δ, h — which does not aﬀect
+the above argument in any substantive way. ⃝
+Remark 4.1.1. The issue of ﬁnding ϵ, xϵ, Cϵ which satisfy condition (ii) of
+Lemma 4.1 is entirely elementary. On the other hand, with regard to condition
+(i), the fact that θ(x)/x → 1a s x →∞ is a well-known consequence of the prime
+number theorem of classical analytic number theory — cf., e.g., [Edw], p. 76.
+Lemma 4.2. (Some Elementary Estimates) Let n be a positive integer;
+p1,...,p n prime numbers; h1,...,h n positive integers. Then we have
+∑n
+j=1 log(pj) ≤ h
+∑n
+j=1 log(hj) ≤ ∑n
+j=1 log(hj +1 ) ≤ 3h/2
+—w h e r eh
+def
+= ∑n
+j=1 hj · log(pj).
+Proof. Indeed, the ﬁrst and second inequalities are immediate; the third inequality
+follows from the easily veriﬁed fact that log(H +1) ≤ (3H/2)·log(2) for any positive
+integer H. ⃝
+
+22 SHINICHI MOCHIZUKI
+Corollary 4.3. (Full Galois Actions for Degenerating Elliptic Curves)
+Let
+ Q an algebraic closure of Q; ϵ ∈ R>0. Then there exists a constant C ∈ R>0
+and a Galois-ﬁnite [cf. Example 1.3, (i)] subset Exc ⊆M ell(
+Q) which satisfy the
+following property:
+Let EL be anelliptic curveover a number ﬁeld L ⊆
+ Q,w h e r eL is a minimal
+ﬁeld of deﬁnition of the point [EL] ∈M ell(
+Q),a n d[EL] ̸∈ Exc; S a ﬁnite set
+of prime numbers . Suppose that EL has at least one prime of potentially
+multiplicative reduction. Write d
+def
+=[ L : Q]; xS
+def
+= ∑
+p∈S log(p). Then there
+exist prime numbers l◦,l • ̸∈S which satisfy the following conditions:
+(a) l◦, l• are prime to the primes of potentially multiplicative reduc-
+tion,a sw e l la st ot h elocal heights,o f EL. Moreover, l• is prime to
+the primes of Q that ramify in L,a sw e l la st ot h eramiﬁcation indices
+of primes of Q in L.
+(b) The image of the Galois representation Gal(
+Q/L) → GL2(Zl◦) associ-
+ated to EL contains SL2(Zl◦). The Galois representation Gal(
+Q/L) →
+GL2(Zl•) associated to EL is surjective.
+(c) The inequalities
+l◦ ≤ 23040 · 900d · htFalt([EL]) + 2xS + C · d1+ϵ
+l• ≤ 23040 · 900d · htFalt([EL]) + 6d · log-diﬀ
+Mell
+([EL])) + 2xS + C · d1+ϵ
+hold.
+Proof. First, let us observe that if EL is as in the statement of Corollary 4.3,
+and l is any prime number that is unramiﬁed in L, then the image of the Galois
+representation Gal(
+Q/L) → GL2(Zl) associated toEL contains SL2(Zl)i fa n do n l y
+if the Galois representation Gal(
+Q/L) → GL2(Zl)i ssurjective. [Indeed, this follows
+immediately from the well-known fact that the ﬁeld extension Q(ζl∞ )/Q obtained
+by adjoining the l-th power roots of unity to Q is totally ramiﬁed over the prime l,
+hence linearly disjoint from the extension L/Q.] Thus, by applying Theorem 3.8 —
+relative to condition (a) of Theorem 3.8 — we conclude that to complete the proof
+of Corollary 4.3, it suﬃces to show the existence of prime numbersl◦, l• that satisfy
+the conditions (a), (c), and, moreover, are ≥ 23040 · 100d · (htFalt([EL]) +C′ · dϵ),
+where C′ ∈ R>0 is a constant [i.e., the “C” of Theorem 3.8].
+Now let us writeS◦ for the union of S, the primes of Q that lie under primes of
+potentially multiplicative reductionof EL, and the primes that appear in the prime
+decomposition of the local heightsof EL;w r i t eS• for the union of S◦, the primes of
+Q that ramify in L, and the primes that divide the ramiﬁcation indices of primes
+of Q in L. Thus, [in the notation of Lemma 4.1] we conclude from Lemma 4.2 and
+Proposition 3.4 that
+xS◦ ≤ xS +( 1+3 /2) · 23040d · deg
+∞ ([EL])
+≤ xS +3 · 12 · 23040d · htFalt([EL]) +d · C′′
+
+ARITHMETIC ELLIPTIC CUR VES IN GENERAL POSITION 23
+— where we take the “1 + ϵ” of Proposition 3.4 to be 6 /5; C′′ arises from the
+constant implicit in the inequalities of BD-classes in Proposition 3.4; the “ h”o f
+Lemma 4.2 corresponds to 23040 d · deg
+∞ ([EL]) [cf. the meaning of “ d0 = 23040”
+in the proof of Theorem 3.8]. In a similar vein, since [as is easily veriﬁed, by
+considering the trace of an extension of number ﬁelds] the primes appearing in the
+arithmetic divisor that gives rise to “log-diﬀ
+ Mell
+” [cf. Deﬁnition 1.5, (iii)] appear
+with multiplicity ≥ one less than the ramiﬁcation indices of L/Q, we conclude
+that xS• ≤ xS +3 · 12 · 23040d · htFalt([EL]) + 3d · log-diﬀ
+Mell
+([EL])) + d · C′′.
+Now we apply Lemma 4.1 by taking “ M”t ob e1 ,“ 1+6 ϵ”t ob e2 ,“ h”t ob e
+23040 · 100d · (htFalt([EL]) + C′ · dϵ), and “ A”t ob e S◦ or S• [and applying the
+estimate 2 · 3 · 12 + 8· 100 ≤ 100 + 800 = 900]; here, we observe that by enlarging
+S [and possibly increasing the “ C” of condition (c)], we may always assume that
+xϵ ≤ xS (≤ xS◦ ≤ xS◦). Thus, the existence of l◦, l• as desired follows immediately
+from Lemma 4.1 [cf. also Remark 4.1.1]. ⃝
+Corollary 4.4. (Full Galois Actions for Compactly Bounded Subsets)
+Let
+ Q an algebraic closure of Q; KV ⊆M ell(
+Q) a compactly bounded subset
+[cf. Example 1.3, (ii)]. Then there exists aconstant C ∈ R>0 and a Galois-ﬁnite
+[cf. Example 1.3, (i)] subset Exc ⊆M ell(
+Q) which satisfy the following property:
+Let EL be anelliptic curveover a number ﬁeld L ⊆
+ Q,w h e r eL is a minimal
+ﬁeld of deﬁnition of the point [EL] ∈M ell(
+Q), [EL] ∈K V ,a n d[EL] ̸∈ Exc; S
+a ﬁnite set of prime numbers . Write d
+def
+=[ L : Q]; xS
+def
+= ∑
+p∈S log(p).T h e n
+there exist prime numbers l◦,l • ̸∈S which satisfy the following conditions:
+(a) l◦, l• are prime to the primes of potentially multiplicative reduc-
+tion,a sw e l la st ot h elocal heights,o f EL. Moreover, l• is prime to
+the primes of Q that ramify in L,a sw e l la st ot h eramiﬁcation indices
+of primes of Q in L.
+(b) The image of the Galois representation Gal(
+Q/L) → GL2(Zl◦) associ-
+ated to EL contains SL2(Zl◦). The Galois representation Gal(
+Q/L) →
+GL2(Zl•) associated to EL is surjective.
+(c) The inequalities
+l◦ ≤ 23040 · 100d · htFalt([EL]) + 2xS + C · d
+l• ≤ 23040 · 100d · htFalt([EL]) + 6d · log-diﬀ
+Mell
+([EL])) + 2xS + C · d
+hold.
+Proof. The proof is entirely similar to [but slightly easier than] the proof of
+Corollary 4.3, except that instead of applying condition (a) of Theorem 3.8, we
+apply condition (b) of Theorem 3.8. Also, when applying Lemma 4.1, we take “h”
+to be 0. ⃝
+
+24 SHINICHI MOCHIZUKI
+Remark 4.4.1. Typically, in computations of arithmetic degrees,s u c ha sheights
+[i.e., “htFalt(−)”, etc.], the terms that appear in a sum that computes the arithmetic
+degree are not terms that are “polynomial in l”, but rather terms that are linear
+in log(l). Thus, in the context of Corollaries 4.3, 4.4, if l is equal to l◦ or l•,t h e n
+log(l)i s of the order of
+log(htFalt(−)) + (1 +ϵ)log(d)
+or
+log(htFalt(−)) + log(log-diﬀ
+Mell
+(−)) + (1 +ϵ)log(d)
+— hence asymptotically bounded by
+ϵ · (htFalt(−)+ d)
+or
+ϵ · (htFalt(−) + log-diﬀ
+Mell
+(−)+ d)
+—f o r ϵ> 0.
+Remark 4.4.2. Let UP ⊆ P be as in Theorem 2.1, (ii). Thus, by regardingUP as
+the “λ-line”[i.e., regarding the standard coordinate onP as the “λ”i nt h eLegendre
+form “ y2 = x(x − 1)(x − λ)” of the Weierstrass equation deﬁning an elliptic curve],
+one obtains a natural ﬁnite ´etale [classifying] morphism UP →M ell ×Z Q.T h e n
+one veriﬁes immediately that [relative to the elliptic curves obtained from points
+∈ UP (
+Q) via this classifying morphism] one obtains a result entirely similar to
+Corollary 4.4 by replacing “Mell ⊆
+ Mell”b yUP ⊆ P. In particular, in the context
+of Theorem 2.1, (ii), one may always assume the existence of prime numbers l◦, l•
+as in [this UP ⊆ P version of] Corollary 4.4.
+References
+[Edw] H. M. Edwards, Riemann’s Zeta Function, Academic Press (1974).
+[Elkies] N. D. Elkies, ABC implies Mordell, Internat. Math. Res. Notices7 (1991), pp.
+99-109.
+[vF] M. van Frankenhuysen, The ABC Conjecture Implies Vojta’s Height Inequality
+for Curves, Journal of Number Theory 95 (2002), pp. 289-302.
+[Falt] G. Faltings, Endlichkeitss¨atze f¨ur abelsche Variet¨aten ¨uber Zahlk¨orpern, In-
+vent. Math. 73 (1983), pp. 349-366.
+[FC] G. Faltings and C.-L. Chai,Degenerations of Abelian Varieties, Springer (1990).
+[Merel] L. Merel, Bornes pour la torsion des courbes elliptiques sur les corps de nom-
+bres, Invent. Math. 124 (1996), pp. 437-449.
+
+ARITHMETIC ELLIPTIC CUR VES IN GENERAL POSITION 25
+[Mzk1] S. Mochizuki, Noncritical Belyi Maps, Math. J. Okayama Univ.46 (2004), pp.
+105-113.
+[Mzk2] S. Mochizuki, Galois Sections in Absolute Anabelian Geometry,Nagoya Math.
+J. 179 (2005), pp. 17-45.
+[Mzk3] S. Mochizuki, Absolute anabelian cuspidalizations of proper hyperbolic curves,
+J. Math. Kyoto Univ. 47 (2007), pp. 451-539.
+[Mzk4] S. Mochizuki, Topics in Absolute Anabelian Geometry II: Decomposition Groups,
+RIMS Preprint 1625 (March 2008).
+[Serre] J.-P. Serre, Abelian l-adic Representations and Elliptic Curves, Benjamin (1968).
+[Silv1] J.H. Silverman, The Theory of Height Functions in Arithmetic Geometry,e d .
+by G. Cornell and J.H. Silverman, Springer (1986).
+[Silv2] J.H. Silverman, Heights and Elliptic Curves inArithmetic Geometry,e d .b yG .
+Cornell and J.H. Silverman, Springer (1986).
+[Szp] L. Szpiro, Degr´es, intersections, hauteurs in Ast´erisque 127 (1985), pp. 11-28.

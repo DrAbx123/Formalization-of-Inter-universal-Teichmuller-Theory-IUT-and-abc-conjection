@@ -1,0 +1,1736 @@
+ON THE ESSENTIAL LOGICAL
+STRUCTURE OF INTER-UNIVERSAL
+TEICHM¨ULLER THEORY I, II, III, IV, V
+Shinichi Mochizuki (RIMS, Kyoto University)
+September 2021
+http://www.kurims.kyoto-u.ac.jp/~motizuki
+“Travel and Lectures”
+Parts I, II, III: Origins of IUT([IUTchIII] ⇝ [IUTchII] ⇝ [IUTchI]!)
+§1. Isogs. of ell. curves and global multipl. subspaces/canon. generators
+§2. Gluings via Teichm¨uller dilations, inter-universality, and logical∧/∨
+§3. Symmetries/nonsymmetries and coricities of the log-theta-lattice
+§4. Frobenius-like vs. ´etale-like strs. and Kummer-detachment indets.
+§5. Conjugate synchronization and the str. of (Θ±ellNF-)Hodge theaters
+§6. Multiradial representation and holomorphic hull
+Parts IV, V: Technical and logical subtleties of IUT([EssLgc], §3)
+§7. RCS-redundancy, Frobenius-like/´etale-like strs., and Θ-/log-links
+§8. Chains of gluings/logical∧relations
+§9. Poly-morphisms, descent to underlying strs., and inter-universality
+§10. Closed loops via multiradial representations and holomorphic hulls
+
+2 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+§1. Isogenies of elliptic curves and global multiplicative
+subspaces/canonical generators
+(cf. [Alien], §2.3, §2.4; [ClsIUT],§1; [EssLgc],§3.2)
+· A special case of Faltings’isogeny invariance of the heightfor
+elliptic curves
+Key assumption:
+∃global multiplicative subspace(GMS)
+· First key point of proof:
+(invalidfor isogenies bynon-GMS subspaces!!)
+q ↦→ ql (at primes of bad multiplicative reduction)
+... cf. positive characteristic Frobenius morphism!
+... ⇝ “Gaussian” valuesof theta functionsin IUT
+... ⇝ need not onlyGMS, but also
+... global canonical generators (GCG)(cf. §5)!
+· Second key point of proof:
+dlog(q)= dq
+q ↦→ l·dlog(q)
+... yields common (cf. ∧!) container (cf. ampleness of ωE!)
+for both elliptic curves!
+... ⇝ log-link, anabelian geometryin IUT
+· One way to summarize IUT:
+to generalize the above approach tobounding heights
+via theta functions+ anabelian geometry
+to the case ofarbitrary elliptic curves
+by somehow“simulating” GMS + GCG!
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 3
+§2. Gluings via Teichm¨uller dilations, inter-universality, and
+logical ∧/∨
+(cf. [Alien], §2.11; [Alien],§3.3, (ii), (vi), (vii); [Alien],§3.11, (iv);
+[EssLgc], Examples 2.4.5, 2.4.7, 3.1.1; [EssLgc],§3.3, §3.4, §3.8
+§3.11; [ClsIUT],§3)
+· Naive approachto generalizingFrobenius aspect“ql ≈q”o f§1
+— i.e., a situation in which, at the level ofarithmetic line
+bundles, one may act as if there exists a“Frobenius
+automorphism of the number ﬁeld”q ↦→ ql that preserves
+arithmetic degrees, whileat the same time multiplying them
+by l (!):
+for N ≥2 an integer,p ap r i m en u m b e r ,glue via “∗”
+(cf. [Alien], §3.11, (iv); [EssLgc], Example 3.1.1; [EssLgc],§3.4):
+†Z ∋ †pN ←: ∗:→ ‡p ∈‡Z ... so ( ∗↦→ †pN ∈†Z) ∧(∗↦→ ‡p ∈‡Z)
+... not compatiblewith ring structures!!
+... but compatible with multiplicative structures,
+actions ofGalois groupsas abstract groups!!
+... AND “∧”depends ondistinct labels!!
+... ultimately, we want todelete labels (cf. §1!), but doing sonaively
+yields — if one is to avoid giving rise to acontradiction “pN = p”! —
+a meaningless OR “∨” indeterminacy!!
+(∗↦→ pN ∈Z) ∨(∗↦→ p ∈Z) ⇐⇒ ∗ ↦→ ?? ∈{p,pN}⊆ Z
+(cf. “contradiction”asserted by
+“redundant copies school (RCS)”!)
+... in IUT, we would like todelete the labelsin a somewhat more
+“constructive” (!)way!
+
+4 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+· In IUT, we considergluing via Θ-link,f o rl ap r i m en u m b e r
+(cf. [Alien], §2.11; [Alien],§3.3, (ii), (vii); [EssLgc],§3.4, §3.8):
+(Θ±ellNF-)
+Hodge theater,
+i.e., another model of
+conventional scheme
+theory surrounding
+given elliptic curveE
+non-scheme-
+———————
+theoretic
+Θ-link
+(Θ±ellNF-)
+Hodge theater,
+i.e., model of
+conventional scheme
+theory surrounding
+given elliptic curveE
+loc. unit gps.: Gv ↷ O×μ
+˜v ↦→ Gv ↷ O×μ
+˜v
+loc. val. gps.:
+(
+{qj2
+v
+}j=1,...,l⋇
+) N
+↦→
+(
+q
+v
+def
+= q
+1
+2lv
+) N
+glob. val. gps.: corresponding global realiﬁed Frobenioids
+(s.t. product formula holds!)
+... where l ≥5ap r i m en u m b e r ;l⋇ def
+= l−1
+2 ;
+E (= EF) is an elliptic curve over a number ﬁeldF s.t. ... ;
+E[l] ⊆E subgroup scheme ofl-torsion points;K
+def
+= F(E[l]);
+jE is thej-invariant of E,s oFmod
+def
+= Q(jE) ⊆F;
+V ⊆V(K) collection of valuations ofK s.t. ... ;
+qv denotes localq-parameter ofE at (nonarch.) v ∈V;
+Gv denotes the (local) absolute Galois group ofKv regarded
+“inter-universally”as anabstract top. group,
+i.e., not as a (“Galois”!) group ofﬁeld automorphisms
+(cf. incompatibility with ring structure!);
+O×
+˜v : units of the ring of integersO˜v of analgebraic closure
+K˜v of the completionKv of K at v;
+O×μ
+˜v
+def
+= O×
+˜v /tors + “integral str.”{Im((O×
+˜v )H)}open H⊆Gv
+... note
+two arithmetic/combinatorial dimensions of ring
+= one dilated dimension+ another undilated dimension
+... cf. cohomological dimensionof absolute Galois groups
+of number ﬁeldsand mixed characteristic local ﬁelds,
+topological dimensionof C×!
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 5
+· Concrete example of gluing
+(cf. [EssLgc], Example 2.4.7):
+the projective line as agluing of
+ring schemesalong amultiplicative group scheme
+... cf. assertions of theRCS!
+· Concrete example of gluing
+(cf. [EssLgc], Example 3.3.1; [ClsIUT],§3; [Alien],§2.11):
+classical complex Teichm¨uller deformations
+of holomorphic structure
+... cf. two combinatorial/arithmetic dimensions of a ring!!
+... cf. assertions of theRCS!
+· In IUT, we consider not just Θ-link, but also thelog-link,
+which is deﬁned, roughly speaking, by considering the
+pv-adic logarithmat eachv
+(cf. [Alien], §3.3, (ii), (vi), Fig. 3.6; [EssLgc],§3.3, (InfH);
+[EssLgc], §3.11, (ΘORInd), (logORInd), (Di/NDi)), where
+we writepv for the residue characteristic of (nonarch.)v:
+apply same principleas above oflabel deletion via
+“saturation with all possibilities on either side of the link”
+... but for Θ-link, this yieldsmeaningless (ΘORInd)!!
+... instead, consider “saturation” (logORInd) for log-link,
+i.e., but constructinginvariantsfor log-link
+... where we recall that
+log : nondilated unit groups ⇄ dilated value groups
+... i.e., forinvariants,“ nondilated ⇐⇒dilated”... cf. proof of§1!!
+
+6 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+· The entirelog-theta-lattice and the“inﬁnite H”portion
+that isactually used:
+...
+...
+↑⏐⏐log
+↑⏐⏐log
+...
+Θ
+−→ •
+Θ
+−→ •
+Θ
+−→ ...
+↑⏐⏐log
+↑⏐⏐log
+...
+Θ
+−→ •
+Θ
+−→ •
+Θ
+−→ ...
+↑⏐⏐log
+↑⏐⏐log
+...
+Θ
+−→ •
+Θ
+−→ •
+Θ
+−→ ...
+↑⏐⏐log
+↑⏐⏐log
+... ...
+⊇
+..
+.
+..
+.
+∨
+↑⏐
+⏐
+log ∨
+↑⏐
+⏐
+log
+••
+∨
+↑⏐
+⏐
+log ∨
+↑⏐
+⏐
+log
+•
+Θ
+−→
+∧
+•
+∨
+↑⏐⏐log ∨
+↑⏐⏐log
+••
+∨
+↑⏐
+⏐
+log ∨
+↑⏐
+⏐
+log
+... ...
+(
+i.e., not
+Θ
+−→
+∨
+!
+)
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 7
+§3. Symmetries/nonsymmetries and coricities of the
+log-theta-lattice
+(cf. [Alien], §2.7, §2.8, §2.10, §3.2; [Alien],§3.3, (ii), (vi), (vii);
+[Alien], §3.6, (i); [EssLgc],§3.2, §3.3; [IUAni2])
+· Fundamental Question:
+So how do we constructlog-link invariants?
+· Fundamental Observations:
+Θ-link (i.e., “qN ←: q”f o rs o m eN ≥2) and
+log-link (i.e., “p-adic logarithm”f o rs o m ep)
+clearly satisfy the following:
+(1) Θ-link, log-link are not compatiblewith
+the ring structuresin theirdomains/codomains;
+(2) Θ-link, log-link are not symmetricwith respect
+to switching their domains/codomains;
+(3) log-link ◦Θ-link ̸=Θ-link ◦log-link;
+(4) log-link ◦Θ-link ̸=Θ-link
+· Frobenius-likeobjects: objects whose deﬁnitiondepends,
+a priori,o nt h ecoordinate“(n,m) ∈Z×Z”o ft h e
+(Θ±ellNF-)Hodge theaterat which they are deﬁned
+(e.g., rings, monoids,e t c .t h a td onot map isomorphically
+via Θ-link, log-link)
+· ´Etale-like objects: arise fromarithmetic (´etale) fund. groups
+regarded asabstract topological gps.... cf. inter-universality!
+=⇒ mono-anabelian absolute anabelian geometrymay
+be applied (cf.ampleness of ωE in §1!)
+e.g.: inside each(Θ±ellNF-)Hodge theater“•”, at eachv,
+∃ac o p yo ft h earithmetic/tempered fundamental group
+Πv ↠ Gv
+of a certain ﬁnite ´etale covering of the once-punctured
+elliptic curveXv
+def
+= Ev \{origin} (where Ev
+def
+= E×F Kv)
+
+8 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+· ´Etale-like objects satisfy crucialcoricity
+(i.e., “common —c f .∧! — to the domain/codomain”)
+· each log-linkinducesindeterminate(cf. inter-universality!)
+isomorphisms
+Πv
+∼
+→ Πv
+— cf. the evidentGalois-equivariance of the (power se-
+ries deﬁning the)p-adic logarithm! — between copies in
+domain/codomain of thelog-link
+· eachΘ-linkinducesindeterminate(cf. inter-universality!)
+isomorphisms
+Gv
+∼
+→ Gv
+— i.e., “(Ind1)” — between copies in domain/codomain
+of the Θ-link
+(so abstract top. gps.Πv, Gv are coric for log-, Θ-links!) and
+symmetry properties:
+... ...
+↑⏐
+⏐
+log
+↑
+⏐
+⏐
+log
+•
+Θ
+−→ •
+Πv ↠ Gv ↞ Πv
+... symmetric w.r.t.
+dom./codom.
+of Θ-link!⟲
+Aut(Gv)↑⏐
+⏐
+log
+↑
+⏐
+⏐
+log
+... ...
+· Thus, in summary,
+with regard to the desiredsymmetry and coricity properties:
+Frobenius-like FALSE FALSE
+´etale-like TRUE TRUE
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 9
+§4. Frobenius-like vs. ´etale-like structures and
+Kummer-detachment indeterminacies
+(cf. [Alien], Examples 2.12.1, 2.12.3, 2.13.1; [Alien],§3.4;
+[Alien], §3.6, (ii), (iv); [Alien],§3.7, (i), (ii))
+· Kummer theoryyields isoms. between corresponding objects:
+Frobenius-like objects
+∼
+→ (mono-anabelian) ´etale-like objects
+... but gives rise toKummer-detachment indeterminacies,
+i.e., one must pay some sort of pricefor passing from
+Frobenius-like objectsthat donot satisfy coricity/symmetry properties
+to ´etale-like objectsthat do satisfy coricity/symmetry properties
+· In IUT, there arethree typesof Kummer theory:
+(a) for local units O×
+˜v : classical Kummer theory vialo-
+cal class ﬁeld theory (LCFT)/Brauer groups (cf.
+[Alien], Example 2.12.1);
+(b) for local theta values{qj2
+v
+}j=1,...,l⋇: Kummer the-
+ory via theta functions and Galois evaluation at l-
+torsion points(cf. [Alien], §3.4, (iii), (iv));
+(c) for global ﬁeld of moduliFmod: Kummer theory via
+“κ-coric” algebraic rational functions (essentially,
+non-linear polynomials w.r.t. some “point at inﬁnity”)
+and Galois evaluationat points deﬁned overnumber
+ﬁelds (cf. [Alien], Example 2.13.1; [Alien],§3.4, (ii))
+· In general,“Kummer theory”proceeds by:
+⎛
+⎜⎜⎜⎜
+⎜⎝
+extracting
+n-th roots,
+for n ∈Z
+>0,o f
+some element
+f ∈a multipl.
+monoid M
+⎞
+⎟⎟⎟⎟
+⎟⎠
+⇝
+⎛
+⎜⎜⎜⎜
+⎜⎝
+Kummer classκ
+f
+∈H1
+(
+some “Gal. group”Π,μn(M)
+)
+⎞
+⎟⎟⎟⎟
+⎟⎠
+... where μ
+n(M) denotesn-torsion — i.e.,roots of unity!—o f M;
+⇝ “ˆZ version” by taking lim←−n
+
+10 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+· Main Substantive Issue: eliminatingpotential ˆZ×-indeterminacy
+fromtheconventional cyclotomic rigidity isomorphism (CRI)
+(ˆZ ∼=) μˆZ(M)
+∼
+→ μˆZ(Π) ( ∼= ˆZ)
+arising from scheme theory (cf. [Alien],§3.4, (i), (ii), (iii), (iv))
+... note that this is avery substantive issue! indeed,
+indeterminate ˆZ×-multiples/powers of divs., line bdls.,
+rational/merom. fns., elts. of number ﬁelds/local ﬁelds
+completely destroyany notion ofpositivity/inequalities
+(recall that−1 lies in the closure of the natural numbers inˆZ!)
+for arithmetic degrees/heights;
+moreover, inter-universality— i.e., the property of“not being
+anchored to/rigidiﬁed by any particular ring/scheme theory”
+— means that theO×μ
+˜v in the Θ-link (cf. §2) is subject to
+an unavoidable ˆZ×-indeterminacy “(Ind2)”
+ˆZ× ↷ O×μ
+˜v
+... we shall refer to thecompatibility/incompatibility — i.e.,
+the functorial equivariance/nonfunctoriality— of a given
+Kummer theory with the“inter-universality indeterminacies”(Ind1),
+(Ind2) as themultiradiality/uniradialityof the Kummer theory;
+thus, themultiradiality of the Kummer theory may be understood
+as a sort of“splitting/decoupling”of the Kummer theory from
+the unit groupO×μ
+˜v
+· Another Substantive Issue for Cyclotomic Rigidity Isomorphisms:
+compatibility with theproﬁnite/tempered topology, i.e.,
+the property of admittingﬁnitely truncated versions
+(Z/nZ ∼=) μn(M)
+∼
+→ μn(Π) ( ∼= Z/nZ)
+... this will be important (cf. [Alien],§3.6, (ii)) sincering strs.
+— which are necessary in order to deﬁne thepower seriesfor the
+p-adic logarithm(cf. log-link!) — only exist at“ﬁnite n”, i.e.,
+inﬁnite “multiplicative Kummer towerslim←−n
+” destroy additive strs.!
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 11
+· In the case of thethree types(a), (b), (c) ofKummer theorythat
+are actually usedin IUT (cf., especially, [Alien], Fig. 3.10;
+[Alien], §3.4, (v)):
+(a) this approach to constructing CRI’s is manifestlycom-
+patible with the proﬁnite topology , but is unira-
+dial since it depends in an essential way on theexten-
+sion of Galois modules 1 →O ×
+˜v → K× → Q → 1,
+henceis fundamentally incompatiblewithindeterminacies
+ˆZ× ↷ O×
+˜v ↠ O×μ
+˜v (cf. [Alien], §3.4, (i));
+(b) it follows from the theory of the ´etale theta func-
+tion — in particular, the symmetries oftheta groups,
+together with thecanonical splittingsarising from re-
+striction to 2- (or, alternatively, 6-) torsion points — that
+this approach to constructing CRI’s is bothcompatible
+with theproﬁnite/tempered topology and multira-
+dial (cf. [Alien], §3.4, (iii), (iv));
+(c) it follows from elementary considerations concerning
+“κ-coric” algebraic rational functionsthat this ap-
+proachtoconstructingCRI’sis multiradial, butincom-
+patible with the proﬁnite topology (cf. [Alien], Ex-
+ample 2.13.1; [Alien],§3.4, (ii))
+· The indeterminacies ˆZ× ↷ O×
+˜v ↠ O×μ
+˜v of (a) mean that the
+theta valuesand elts. ∈Fmod obtained byGalois evaluation
+(
+Kummer class of some
+sort of function
+)
+|
+|decomposition group of a point
+in (b), (c) areonly meaningful— i.e.,can only be protectedfrom
+the ˆZ×-indeterminacies — if they are considered, by applying the
+“non-interference”(up to roots of unity) of the monoids of (a)
+with those of (b) and (c), in terms of their actions onlog-shells
+{qj2
+v
+}j=1,...,l⋇ ↷↶ F×
+mod
+Iv
+def
+= 1
+2pv
+logpv(O×μ
+v )
+... whose deﬁnition requires one to apply thepv-adic logarithm, i.e.,
+the log-link vertically shiftedby −1, relative to the coordin. “(n,m)”
+of the (Θ±ellNF-)Hodge theater that gave rise to thetheta values
+and elements ∈Fmod under consideration (cf. [Alien],§3.7, (i)).
+
+12 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+· Here, we recall that only themultiplicative monoidO×μ
+v —
+i.e., not the ring structures, log-link,e t c . !—i saccessible, via
+the common data(cf. “∧!”) in the gluing of the Θ-link,t o
+the opposite side(i.e., domain/codomain) of the Θ-link!
+Thus, to overcome thevertical log-shift discussed above, it is
+necessary to constructinvariantsw.r.t. the log-link (cf. §2!).
+Here, we recall that´etale-like structures“◦”—s u c ha s“ Πv”
+— are indeedlog-link-invariant, but the diagram — called the
+log-Kummer correspondence — arising from thevertical
+column (written horizontally, for convenience) in thedomain
+of the Θ-link
+...
+log
+−→ •
+log
+−→ •
+log
+−→ •
+log
+−→ ...
+... ↘↓↙ ...
+◦
+— where the vertical/diagonal arrows in the diagram are
+Kummer isomorphisms—i snot commutative!
+On the other hand, it isupper semi-commutative(!), i.e.,
+all composites ofKummer and log-link morphisms onO×
+v
+O×
+v ↪→O v ↪→I v ←↩ logpv(O×μ
+v )
+have images contained in thelog-shell Iv (cf. [Alien], Example
+2.12.3, (iv)). Thisvery roughvariant of “commutativity” may be
+thought of as a type ofindeterminacy, which is called “(Ind3)”.
+It is (Ind3) that gives rise, ultimately, to theupper boundin the
+height inequalitiesthat are obtained in IUT (cf. [Alien],
+Example 2.12.3, (iv); [Alien],§3.6, (iv); [Alien],§3.7, (i), (ii)).
+· T h u s ,i ns u m m a r y ,w eh a v et w oKummer-indeterminacies,
+namely,
+(Ind2), (Ind3).
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 13
+§5. Conjugate synchronization and the structure of (Θ±ellNF-)
+Hodge theaters
+(cf. [Alien], §3.3, (ii), (iv), (v); [Alien],§3.4, (ii), (iii); [Alien],§3.6, (i),
+(ii), (iii); [AbsTopIII],§1; [EssLgc],§3.3; [EssLgc], Examples 3.3.2, 3.8.2;
+[ClsIUT], §3, §4; [IUTchI], Fig. I1.2)
+· Fundamental Question:
+So how do we“simulate” GMS + GCG?
+· In a word, we consider certainﬁnite ´etale coveringsover K =
+F(E[l]) of thehyperbolic orbicurves
+X
+def
+= E \{origin},C
+def
+= X//{±1}
+determined by somerank one quotientE[l]K ↠ Q:
+XK → XK
+def
+= X ×F K. . . determined byE[l]K ↠ Q
+CK → CK
+def
+= C ×F K. . . by takingCK
+def
+= XK//{±1}
+... where “//” denotes the“stack-theoretic quotient”
+and restrict to“local analytic sections”of Spec(K) → Spec(F)
+— called“prime-strips”(of which there arevarious types,a s
+summarized in [IUTchI], Fig. I1.2), which may be thought of as a
+sort ofmonoid- or Galois-theoreticversion of the classical notion of
+ad`eles/id`eles — determined by various Gal(K/F)-orbits of thesub-
+set/section
+V(K) ⊇V
+∼
+→ Vmod
+where thequotient E[l]K ↠ Q is indeed the“multipl. subspace”,
+or where somegenerator, up to±1,o fQ is indeed the“canonical
+generator”.
+Working with such prime-strips means that many conventional ob-
+jects associated to number ﬁelds — such asabsolute global Galois
+groups or prime decomposition trees—m u c hb eabandoned!
+Indeed, this was precisely theoriginal motivation(around 2005 -
+2006) for the development of thep-adic absolute mono-anabelian
+geometry of [AbsTopIII],§1 [cf. [Alien],§3.3, (iv)]!
+
+14 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+K
+·−·−·− ... −·−·−· = V
+·−·−·− ... −·−·−· ⊆ V(K)\V
+...
+·−·−·− ... −·−·−· ⊆ V(K)\V
+·−·−·− ... −·−·−· ⊆ V(K)\V
+↶ Gal(K/F)
+↪→ GL2(Fl)
+⏐⏐↓
+Fmod ·−·−·− ... −·−·−· = V(Fmod)
+· The hyperbolic orbicurvesXK, CK admit symmetries
+F⋊±
+l
+def
+= Fl ⋊{±1} ↪→ AutK(XK) ⊆Aut(XK)
+... additive/geometric!
+Aut(CK) ↪→ Gal(K/F) ↠ F⋇
+l
+def
+= Fl/{±1}
+... multiplicative/arithmetic!
+obtained by considering the respective actions on cusps ofXK, CK
+that arise from elements of thequotient E[l]K ↠ Q [cf. [Alien], §3.3,
+(v); [Alien],§3.6, (i)]. At the level ofarithmetic fundamental groups,
+these symmetries may be thought of asﬁnite groups of outer
+automorphisms of
+ΠXK
+, ΠCK
+— where we note that since, as is well-known, both thegeometric
+fundamental groupΔXK
+and theglobal absolute Galois group
+GK are slim and donot admit ﬁnite subgroups of order> 2, these
+ﬁnite groups of outer automorphismsdo not lift to ﬁnite groups of
+(non-outer) automorphisms(cf. [EssLgc], Example 3.8.2)!
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 15
+Here, we note that since it is ofcrucial importanceto ﬁx the quotient
+E[l]K ↠ Q, we want tostart fromCK and descend, via themultiplic.
+F⋇
+l -symmetries,t oCFmod (where CFmod ×Fmod F = C), not the other
+way around, which would obligate us considerall Galois, hence, in
+particular, all SL2(Fl)-conjugates of Q. Note that this is precisely the
+reverse (!) order to proceed from the point of view ofclassical Galois
+theory (cf. [Alien], §3.6, (iii); [EssLgc], Example 3.8.2).
+In particular, the“strictly outer”nature of themultiplicative/arith-
+metic F⋇
+l -symmetries means that various copies of the absolute
+local Galois groups “Gv” (for, say, nonarch.v ∈V) in the prime-strips
+that are permuted by these symmetries can only be identiﬁed with one
+another up to indeterminate inner automorphisms, i.e., there is
+no way to synchronize these conjugate indeterminacies(cf. [Alien], §3.6,
+(iii); [EssLgc], Example 3.8.2).
+On the other hand, the “G
+v ↷ O×μ
+˜v ” that appears in thegluing data
+for the Θ-link (cf. §2) must beindependent of the “j ∈F⋇
+l ”( c f .t h e
+“qj2
+”o f§2, where we think of this “j” as the smallest integer lifting
+j ∈F⋇
+l ). That is to say, we need a“conjugate synchronized”Gv in
+order to construct the Θ-link, i.e., ultimately, in order toexpress the
+LHS of theΘ-link in terms of the RHS!! This is done by applying the
+additive/geometric F⋊±
+l -symmetries (cf. [Alien], §3.6, (ii); [EssLgc],
+Example 3.8.2).
+Moreover, theseadditive/geometric F⋊±
+l -symmetries are compatible,
+relative to thelog-link,w i t ht h ecrucial local CRI’s (a), (b)(but not
+(c)!) of §4, preciselybecause these local CRI’s (a), (b) arecompatible
+with the proﬁnite/tempered topology, which means that they may be
+computed at aﬁnite truncated level,w h e r et h ering structure,
+hence also thepower seriesfor thep-adic logarithm,i swell-deﬁned
+(cf. [Alien], §3.6, (ii)).
+Here, we recall that thiscrucial propertyof compatibility with the pro-
+ﬁnite/tempered topologyin the case of (b), as opposed to (c), may be
+understood as a consequence of the fact that theorders of thezeroes/
+poles at cuspsof thetheta functionare all equal to 1! Moreover,
+this phenomenon may in turn be understood as a consequence of the
+symmetries of theta groups, or, alternatively, as a consequence of
+the quadratic form/ﬁrst Chern class“□
+2” in the exponent of the
+classical series representation of the theta function(cf. [Alien], §3.4,
+(iii), as well as the discussion below).
+
+16 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+By contrast, in the case of (c), the orders of the zeroes/poles at cusps
+of thealgebraic rational functionsthat are used diﬀer from one
+another by much more arbitrary elements ofQ× (cf. [Alien], §3.4, (ii))!
+[−l⋇ < ... < −1 < 0
+< 1 <. . .<l ⋇
+][ 1 <. . .
+<l ⋇
+]
+⇑⇒ glue! ⇐⇑
+{±1}
+↷
+( −l⋇ < ... < −1 < 0
+< 1 <. . .<l ⋇
+)( 1 <. . .
+<l ⋇
+)
+⇓⇓
+±→±
+↑
+F⋊±
+l
+↷ ↓
+±←±
+⋇ → ⋇
+↑
+F⋇
+l
+↷ ↓
+⋇ ← ⋇
+... additive, geometric ... multiplicative,
+symmetries arithmetic symmetries
+· The properties oftheta functionsin IUT discussed above are
+particularly remarkablewhen viewed from the point of view of the
+analogy with theJacobi identityfor thetheta functionon the
+upper half-plane(cf. [EssLgc], Example 3.3.2; [ClsIUT],§4). Indeed,
+on the one hand, thequadratic form/ﬁrst Chern class“□2”
+in the exponent of theclassical series representation of the theta
+function (on the imaginary axis of the upper half-plane)
+θ(t)
+def
+=
++∞∑
+n=−∞
+e−πn2t
+gives rise to thetheta group symmetriesthat underlie the
+rigidity propertiesof theta functions that play acentral
+role in IUT from the point of view of the ultimate goal in IUT of
+expressing the LHS of theΘ- l i n ki nt e r m so ft h eR H S
+— i.e.,expressing the“Θ-pilot”on the LHS of theΘ-link in terms
+of the“ q-pilot”on the RHS of theΘ-link.
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 17
+On the other hand, thissame quadratic formin the exponent of
+the classical series representation of the theta function — which in
+fact appears as “t· □2”, i.e., with a factort,w h e r et denotes the
+standard coordinate on the imaginary axis of the upper half-plane
+— also underlies the well-knownFourier transform invariance
+of theGaussian distribution,u pt oas o r to f“rescaling”
+t· □
+2 ↦→ t−1 · □2.
+It is precisely this rescaling that gives rise to theJacobi identity.
+This state of aﬀairs isremarkable (cf. [ClsIUT], §3, §4) in that the
+transformation t ↦→ t−1 corresponds to the linear fractional transfor-
+mation given by the matrix
+(0 −1
+10
+)
+, which, from the point of view of
+the analogy between the“inﬁnite H”discussed at the end of§2
+and the well-knownbijection
+C×\GL+
+2 (R)/C× ∼
+→ [0,1)
+(λ0
+01
+)
+↦→ λ−1
+λ+1
+(where λ∈R≥1), may be understood as follows:
+(λ0
+01
+)
+←→ Θ-link ... cf. “not Θ-link-invariants”!
+(0 −1
+10
+)
+←→ log-link ... cf. “log-link-invariants”!
+(cf. [Alien], §3.3, (ii); [EssLgc],§3.3, (InfH), Example 3.3.2).
+· Concluding Question:
+So why do we need to“simulate” GMS + GCG?
+... in order to secure thel-torsion pointsat which one conducts
+the Galois evaluationof the (reciprocal of thel- t hr o o to ft h e )
+´etale theta function, i.e., theKummer classof thep-adic theta
+function (cf. the discussion of the Θ-link in §2; §4, (b))
+Θ|l-torsion points = {qj2
+}j=1,...,l⋇
+... cf. the classical series representation of the theta functionon the
+(imag. axis of the) upper half-plane — i.e., in essence, “q = e2πi(it)”!
+θ(t)
+def
+=
++∞∑
+n=−∞
+e−πn2t =
++∞∑
+n=−∞
+q
+1
+2n2
+
+18 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+§6. Multiradial representation and holomorphic hull
+(cf. [Alien], §3.6, (iv), (v); [Alien],§3.7, (i), (ii); [EssLgc],§3.6, §3.10,
+§3.11; [ClsIUT],§2; [IUAni1])
+· Fundamental Theme:
+To express/describethe Θ-pilot on the LHS of the Θ-link in
+terms of the RHSof the Θ-link, while keeping the Θ-link itself
+ﬁxed (!)
+· Forinstance, thelabels“ j”in“{qj2
+}j=1,...,l⋇”dependonthecom-
+plicated bookkeeping system for these essen’lycuspidal labels
+(i.e., labels of cuspidal inertia groups in thegeometric fundamental
+groups Δv
+def
+=K e r ( Πv ↠ Gv)) furnished (cf.§5) by the structure of
+the (Θ±ellNF-)Hodge theater on the LHS,w h i c hi snot accessible
+from the point of view of the RHS. Thus, it is necessary to express
+these labels in a way thatis accessible from the RHS, i.e., by means
+of processions of capsules of prime-strips “/”
+/↪ → // ↪ → /// ↪ → ... ↪ → / ... /
+(i.e., successive inclusions ofunorderedcollections of prime-strips of
+incrementally increasing cardinality) — which still yieldsymmetries
+between the prime-strips at diﬀerent labels without“label-crushing”,
+i.e., identiﬁcations between distinct labels (cf. [Alien],§3.6, (v)). We
+then consider theactions of (b), (c) (cf.§4) ontensor-packets of
+the log-shells arising from the data of (a) (cf.§4) inside each capsule:
+{q
+j2
+v
+}j=1,...,l⋇ ↷↶ (F×
+mod)jIv ⊗ ... ⊗I v
+—w h e r et h e“tensor-packet”is a tensor product ofj +1 copies ofIv.
+· In fact, the various monoids, Galois groups, etc. that appear in
+the data (a), (b), (c) of§4—s u c ha sIv, {qj2
+v
+}j=1,...,l⋇,( F×
+mod)J —
+come infour types(cf. [Alien], §3.6, (iv); [Alien],§3.7, (i)):
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 19
+holomorphic Frobenius-like “(n,m)”: monoids etc. on which
+Πv ↷ acts, and whose construction involves thering structure
+associated to the(Θ±ellNF-)Hodge theater at (n,m) ∈Z×Z;
+holomorphic ´etale-like “(n,◦)”: similar data to (n,m), but
+reconstructed from Πv, henceindependent of “m”;
+mono-analytic Frobenius-like “(n,m)⊢”: monoids, etc., on
+which Gv ↷ acts; used in thegluing data— called an
+F⊩▶×μ-prime-strip — that appears in the Θ-link;
+mono-analytic ´etale-like “(n,◦)⊢”: similar data to (n,m)⊢,
+but reconstructed fromGv, henceindependent of “m” (and
+in fact also of “n”).
+· Thus, insummary, thelog-Kummercorrespondenceyieldsactions
+of the monoids of (b), (c) (cf.§4) on tensor-packets of log-shells
+arising from the data of (a) (cf.§4) up to the indeterminacy (Ind3)
+{qj2
+v
+}j=1,...,l⋇ ↷↶ (F×
+mod)JIv ⊗ ... ⊗I v
+· ﬁrst,a tt h el e v e lo fo b j e c t so f( 0,◦);
+· then by“descent”(i.e., the observation that reconstructions from
+certain input datamay in fact be conducted, up to natural isom.,
+from less/weaker input data) up to indeterminacies (Ind1) at the
+l e v e lo fo b j e c t so f( 0,◦)⊢;
+· then again by“descent”up to indeterminacies (Ind2) at the level
+of objects of (0,0)⊢ ∼
+→ (1,0)⊢ (via the Θ-link).
+(0,0)
+(Ind3)
+⇝ (0,◦)
+(Ind1)
+⇝ (0,◦)⊢ (Ind2)
+⇝ (0,0)⊢
+Θ-link
+∼
+→ (1,0)⊢
+(This last step involving (Ind2) plays the role ofﬁxing the vertical
+coordinate, so that (Ind1), (Ind2) arenot mixedwith (Ind3) —
+cf. the discussion of “C×\GL+
+2 (R)/C×”a tt h ee n do f§5!)
+
+20 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+This is themultiradial representation of theΘ-pilot on the
+LHS of the Θ-link in terms of the RHS (cf. [Alien],§3.7, (i); [EssLgc],
+§3.10, §3.11). This multiradial representation plays the important
+role ofexhibiting the (value group portion of the) Θ-pilot at (0,0)
+(i.e., which appears in the Θ-link!) asone of the possibilities
+within acontainer arising from theRHS of the Θ-link (cf. the
+“inﬁnite H”at the end of§2; [EssLgc],§3.6, §3.10).
+Next, by applying the operation of forming theholomorphic hull
+(i.e., “Ov-module generated by”) to the variousoutput regionsof the
+multiradial representation, we obtain a module over the localOv’s
+on the RHS of the Θ-link. Then taking a suitableroot of “det(−)”
+of this module yields anarithmetic line bundlein thesame
+categoryas the category that gives rise to theq-pilot on the RHS
+of the Θ-link —except for avertical log-shiftby 1 in the 1-column
+(cf. the construction oflog-shells from the “O×μ
+˜v ’s” that appear in
+the gluing dataof the Θ-link!) — cf. [EssLgc],§3.10.
+Thus, bysymmetrizing (i.e., with respect to vertical shifts in the
+1-column) the procedure described thus far, we obtain aclosed loop,
+i.e.,
+1-
+column
+1-
+column
+... ...
+••
+↑⏐
+⏐
+log ↗
+↑⏐
+⏐
+log
+••
+↑⏐
+⏐
+log ↗
+↑⏐
+⏐
+log
+••
+↑⏐
+⏐
+log ↗
+↑⏐
+⏐
+log
+••
+... ...
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 21
+a situation in which thedistinct labels on either side of the Θ-link
+(cf. the discussion at the beginning of§2!) may beeliminated,u pt o
+suitable indeterminacies(i.e., (Ind1), (Ind2), (Ind3); the holomorphic
+hull). In particular, by performing an entirely elementarylog-volume
+computation, one obtains anontrivial height inequality.T h i s
+completes the proof of themain theoremsof IUT (cf. [Alien],§3.7, (ii);
+[EssLgc], §3.10, §3.11).
+Here, it is important to note that although the term “closed loop” at
+ﬁrst might seem to suggest issues of“diagram commutativity”or
+“log-volume compatibility”— i.e., issues of
+“How does one conclude a relationship between theoutput
+data and theinput data of theclosed loop?”
+— in fact, such issuessimply do not existin this situation! That is
+to say, theessential logical structureof the situation
+A∧B = A∧(B1 ∨B2 ∨... )
+=⇒ A∧(B1 ∨B2 ∨... ∨B′
+1 ∨B′
+2 ∨... )
+=⇒ A∧(B1 ∨B2 ∨... ∨B′
+1 ∨B′
+2 ∨... ∨B′′
+1 ∨B′′
+2 ∨... )
+...
+proceeds byﬁxing the logical AND “∧”relation satisﬁed by the
+Θ-link and then adding variouslogical OR “∨” indeterminacies,
+as illustrated in the following diagram (cf. [EssLgc],§3.10):
+• ==
+∧
+=== •
+⇝ ( ∨• =) =
+∧
+=== •
+⇝ ( ∨∨• == )
+∧
+=== •
+⇝ ( ∨∨∨• ==
+∧
+=) = = •
+⇝ ( ∨∨∨∨• ==
+∧
+== )= •
+⇝ ( ∨∨∨∨∨• ==
+∧
+== = ) •
+⇝ ( ∨∨∨∨∨∨• ==
+∧
+=== • )
+
+22 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+§7. RCS-redundancy, Frobenius-like/´etale-like strs., and
+Θ-/log-links
+(cf. [Alien],§3.3, (ii); [EssLgc], Example 2.4.7; [EssLgc],§3.1, §3.2, §3.3,
+§3.4, §3.8, §3.11)
+· RCS (“redundant copies school”) model of IUT
+(i.e., “RCS-IUT” — cf. [EssLgc],§3.1):
+This model ignores the variouscrucial intertwinings of two dims.
+in IUT (such asaddition/multiplication, local unit groups/value groups,
+Θ-link/log-link,e t c . ) .
+Instead one works relative to asingle rigidiﬁed ring structureby
+implementing, as described below, various“RCS-identiﬁcations”of
+“RCS-redundant”copies of objects — i.e., on the grounds that such
+RCS-identiﬁcations may be implementedwithout aﬀecting the essential
+logical structure of the theory:
+(RC-Fr´Et) theFrobenius-likeand ´etale-like versions of objects in
+IUT areidentiﬁed;
+(RC-log)t h e(Θ±ellNF-)Hodge theaters on opposite sides of the
+log-link in IUT areidentiﬁed;
+(RC-Θ) the(Θ±ellNF-)Hodge theaters on opposite sides of the
+Θ-link in IUT areidentiﬁed.
+T h u s ,l o c a l l y ,i f
+Ok is thering of integersof analgebraic closurek of Qp,
+k ⊆k is aﬁnite subextensionof Qp,
+q ∈Ok is anonzero nonunit,
+G
+def
+= Gal(k/k), and
+Π(↠ G)i st h e´etale fundamental group of somehyperbolic curve
+(say, of strictly Belyi type) overk,
+then we obtain the following situation:
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 23
+RCS-Θ-link:
+(k ⊇)( qN)N ∼
+→ qN (⊆k)
+... where the copies of “k”, “k”, and “G ↷ O×
+k ” on opposite
+sides areidentiﬁed (and in factN =1 2,22,..., (l⋇)2, but we
+think ofN as some ﬁxed integer≥2);
+RCS-log-link:
+(k ⊇) O×
+k
+logp
+−→ k
+... where the copies of “k”, “k”, and “Π↷ O×
+k ” on opposite
+sides areidentiﬁed.
+Then theRCS-Θ-link identiﬁes
+(0 ̸=) N ·ord(q)=o r d (qN)
+with ord(q)( w h e r eo r d:k× → Z is the valuation), which yields (since
+N ̸=1 )a “contradiction”!
+· Elementary observation: (cf. [EssLgc], Example 3.1.1)
+Let †R, ‡R be (not necessarily distinct!) copies ofR.L e t0<x ,y ∈R;
+write †x, ‡x, †y, ‡y for the corresponding elements of†R, ‡R. If these
+two copies†R, ‡R of R are distinct,w em a yg l u e†R to ‡R along
+†R ⊇{†x}
+∼
+→{ ‡y}⊆ ‡R
+without anyconsequencesor contradictions. On the other hand, if†R
+and ‡R are thesame copy ofR, then to assert that†R is glued to‡R
+along
+†R ⊇{†x}
+∼
+→{ ‡y}⊆ ‡R
+implies that we have acontradiction, unlessx = y.
+
+24 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+· Note that theRCS-identiﬁcation (RC-Θ) discussed above may
+be regarded as analogous to identifying the twodistinct copies of
+the ring schemeA1 that occur in the conventional gluing of these
+two distinct copies along thegroup schemeGm to obtainP1.T h a t
+is to say, the RCS-assertion of some sort oflogical equivalence
+IUT ⇐⇒ RCS-IUT
+amounts to an assertion of an equivalence
+“P1” ⇐⇒
+( “A1 regarded up to some sort of
+identiﬁcation of the standard coord.
+T with its inverseT−1”
+)
+(cf. [EssLgc], Example 2.4.7) — i.e., which isabsurd!
+· Fundamental Problem with RCS-IUT:
+(cf. [EssLgc], §3.2, §3.4, §3.8, §3.11)
+There doesnot existany single “neutral” ring structurewith
+a single element “∗” such that
+(∗= qN) ∧ (∗= q)
+Of course, there exists asingle “neutral” ring structurewith a single
+element “∗” such that
+(∗= qN) ∨ (∗= q)
+— but this requires one to contend, in RCS-IUT, with a fundamental
+(drastic!) indeterminacy (ΘORInd) that renders the entire theory
+(i.e., RCS-IUT, not IUT!)meaningless!
+That is to say, theessential logical structureof IUT depends, in a very
+fundamental way, on the cruciallogical AND “∧”property of the
+Θ-link, i.e., that theabstract F⊩▶×μ-prime-strip in the Θ-link,
+r e g a r d e du pt oisomorphism,i ssimultaneously the Θ-pilot on the LHS
+of the Θ-linkAND the q-pilot on the RHS of the Θ-link.
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 25
+This is possible precisely because therealiﬁed Frobenioidsand multi-
+plicative monoids with abstract group actionsthat constitute these
+Θ-/q-pilot F⊩▶×μ-prime-strips areisomorphic — i.e., unlike the
+“ﬁeld plus distinguished element” pairs
+(k,qN)a n d( k,q),
+which arenot isomorphic!
+( ... cf. the situation withP1: there doesnot exista single ring
+scheme A1 with a single rational function “∗” such that
+(∗= T−1) ∧ (∗= T).
+There only exists asingle ring schemeA1 with a single rational func-
+tion “∗” such that (∗= T−1) ∨ (∗= T).)
+Here, we note that theRCS-identiﬁcations of
+G on opposite sides of the RCS-Θ-link or
+Π on opposite sides of the RCS-log-link or
+— which arise fromGalois-equivariance properties with respect to
+the single “neutral” ring structurediscussed above, i.e., which is
+subject to the (drastic!)(ΘORInd) indeterminacies— yieldfalse
+symmetry/coricity (such as the symmetry of “Π↠ G ↞ Π”)
+properties, i.e.,false versions of the symm./cor. props. discussed in§3.
+Indeed, the variousGalois-rigidiﬁcations — i.e., embeddings of the
+abstract topological groups involved into the group of automorphisms
+of some ﬁeld —t h a tunderlie these Galois-equivariance or false
+symmetry/coricity propertiesare unrelated to the Galois-rigidiﬁcations
+that underlie the corresponding symmetry/coricity properties of§3.
+That is to say, setting up a situation in which these symm./cor. props.
+of §3 do indeed hold is the whole point of“inter-universality”, i.e.,
+working withabstract groups, abstract monoids,e t c . !
+· Finally, we observe that (cf. [Alien],§3.3, (ii); [EssLgc],§3.3)
+the very deﬁnition of the log-link,Θ-link (cf. §2;
+log : nondilated unit groups ⇄ dilated value groups!)
+=⇒ the falsity of (RC-log):
+
+26 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+Indeed, there isno natural wayto relate thetwo Θ-links (i.e.,
+the two horizontal arrowsbelow) that emanate from thedomain
+and codomainof the log-link (i.e., theleft-hand vertical arrow)
+•
+Θ
+−→ •
+↑⏐⏐log
+...
+??...•
+Θ
+−→ •
+— that is to say, there isno natural candidatefor “??” (i.e., such
+as, for instance, anisomorphism or the log-link between the two
+bullets “•”o nt h eright-hand sideof the diagram) that makes the
+diagram commute. Indeed, it is an easy exercise to show that
+neither of these candidates for “??” yields a commutative diagram.
+· Analogy with classical complex Teichm¨uller theory:
+(cf. [EssLgc], Example 3.3.1)
+Let λ∈R>1. Recall the mostfundamental deformation of complex
+structure in classical complex Teichm¨uller theory
+Λ: C → C
+C ∋ z = x+iy ↦→ ζ= ξ+iη
+def
+= x+λ·iy ∈ C
+—w h e r ex,y ∈R.L e tn ≥2 be an integer,ωa primitive n-th root
+of unity.W r i t e(ω∈) μn ⊆C for the group ofn-th roots of unity.
+Then observe that
+if n ≥3, then there doesnot exist ω′ ∈μn such that
+Λ(ω·z)= ω′ ·Λ(z) for allz ∈C.
+(Indeed, thisobservation follows immediately from the fact that if
+n ≥3, thenω̸∈R.) That is to say, in words,
+Λi snot compatiblewith multiplication byμn unless n =2
+(in which caseω= −1).
+This incompatibilitywith “indeterminacies”arising from multipli-
+cation byμn,f o rn ≥3, may be understood as one fundamental rea-
+son for thespecial roleplayed bysquare diﬀerentials(i.e., as op-
+posed ton-th power diﬀerentials, forn ≥3) in classical complex
+Teichm¨uller theory.
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 27
+§8. Chains of gluings/logical∧relations
+(cf. [EssLgc], §3.5, §3.6, §3.11; [ClsIUT],§2)
+· Fundamental Question:
+Why is thelogical AND “∧”relation of the Θ-link so
+fundamental in IUT?
+· Consider, for instance, theclassical theory ofcrystals
+(cf. [ClsIUT], §2; [EssLgc],§3.5, (CrAND), (CrOR), (CrRCS)):
+The “crystals”that appear in the conventional theory of crystals may
+be thought of as“∧-crystals”. Alternatively, one could consider the
+(in factmeaningless!) theory of“∨-crystals”. One veriﬁes easily that
+this theory of“∨-crystals”is in fact essentially equivalent to the the-
+ory obtained by replacing the variousthickenings of diagonalsthat
+appear in the conventional theory of crystals by the “(−)red” of these
+thickenings, i.e., by thediagonals themselves! Finally, we observe
+that consideration of“∨-crystals”corresponds to theindeterminacy
+(ΘORInd) that appears in RCS-IUT, i.e.:
+IUT ←→ “∧-crystals”
+RCS-IUT ←→ “∨-crystals”
+· Frequently Asked Question:
+In IUT, one starts with the fundamentallogical AND “∧”rela-
+tion of the Θ-link, which holds precisely because of thedistinct
+labels on thedomain/codomainof the Θ-link. Then what is the
+the minimal amount ofindeterminacy that one must intro-
+duce in order todelete the distinct labelswithout invalidating
+the fundamentallogical AND “∧”relation?
+In short, the answer (cf.§6!) is that one needs(Ind1), (Ind2),
+(Ind3), together with the operation of forming theholomorphic
+hull. In some sense, the most fundamental of these indeterminacies is
+(Ind3),
+which in fact in some sense“subsumes”the other indeterminacies
+— at least“to highest order”, i.e., in theheight inequalitiesthat
+are ultimately obtained (cf. [EssLgc],§3.5, (CnfInd1+2), (CnfInd3);
+[EssLgc], §3.11, (Ind3>1+2)).
+
+28 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+Recall from§4 that (Ind3) is an inevitable consequence of thenon-
+commutativity of the log-Kummer correspondence
+...
+log
+−→ •
+log
+−→ •
+log
+−→ •
+log
+−→ ...
+... ↘↓↙ ...
+◦
+(cf. also the discussion of thefalsity of (RC-log), (RC-Fr´Et) in§7!).
+On the other hand, observe that since automorphisms of the (topo-
+logical module constituted by the)log-shell I
+v always preservethe
+submodule
+pn ·Iv
+(where n ≥0 is an integer) — i.e., even if they donot necessarily
+preserve Ov ⊆Iv or positive powers of themaximal ideal mv ⊆Ov!
+— it follows immediately that
+(Ind1) (or,a fortiori,t h e“ Πv version” of (Ind1) — cf. the
+discussion of (Ind1) in§3) and
+(Ind2)
+(both of which induce automorphisms ofIv)c a nnever account for
+any sort of“confusion”(cf. the deﬁnition of the Θ-link) between
+“q(l⋇)2
+v
+”a n d“q
+v
+”
+(cf. [EssLgc], §3.5, (CnfInd1+2), (CnfInd3); [EssLgc], Example 3.5.1;
+[EssLgc], §3.11, (Ind3>1+2))! This is acommon misunderstanding!
+· Now let us return to theFundamental Questionposed above.
+We begin our discussion by observing (cf. [EssLgc],§3.6) that
+(∧-Chn) the logical structure of IUT proceeds byobserving a
+chain of AND relations“∧”(not ac h a i no finter-
+mediate inequalities!—c f .[ E s s L g c ] ,§3.6, (Syp3)).
+That is to say, one starts with thelogical AND “∧”relation of the
+Θ-link. Thislogical AND “∧”relation ispreservedwhen one passes to
+the multiradial representation of theΘ-pilot as a consequence
+of the following fact:
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 29
+(∧-Input) theinput datafor this multiradial algorithm consists
+solely of anabstract F⊩▶×μ-prime-strip;m o r e o v e r ,
+this multiradial algorithm isfunctorial with respect to
+arbitrary isomorphisms betweenF⊩▶×μ-prime-strips.
+Indeed, at a more technical level, we make thefundamental observa-
+tion that this multiradial algorithm proceeds bysuccessive applica-
+tion, in one form or another, of the following principle of“extension
+of indeterminacies”:
+(ExtInd) IfA, B,a n dC are propositions, then it holds (that
+B =⇒ B ∨C and hence) that
+A∧B =⇒ A∧(B ∨C).
+(cf. the ﬁnal portion of§6!). Applications of (ExtInd) may be further
+subclassiﬁed into the followingtwo types:
+(ExtInd1) (“set-theoretic”) operations that consist of simply adding
+more possibilites/indeterminacies (which corresponds
+to passing fromB to B ∨C) within someﬁxed container;
+(ExtInd2) (“stack-theoretic”) operations in which oneidentiﬁes (i.e.,
+“crushes together”, by passing fromB to B ∨C) objects
+with distinct labels, at the cost of passing to a situation
+in which the object is regarded as being only knownup
+to isomorphism
+(cf. the discussion of§9b e l o w ) .
+At this point, we recall from§6 that theultimate goalof various appli-
+tions of (ExtInd) in the algorithms that constitute themultiradial
+representation of theΘ-pilot is to
+exhibit the (value group portion of the) Θ-pilot at (0,0) (i.e.,
+which appears in the Θ-link!) asone of the possibilitieswithin
+a container arising from theRHS of the Θ-link
+(cf. the situation surroundingrational functionson P1, as discussed in
+[EssLgc], Example 2.4.7, (ii)!).
+In particular, any problems in understanding theessential logical str.
+of IUT (i.e., the argument of§6) may bediagnosed/analyzedby asking
+the followingdiagnostic question:
+
+30 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+(∧-Dgns) precisely wherein the ﬁnite sequence of steps that
+appear is theﬁrst step at which the person feels that
+the preservation of thecrucial AND relator“∧”i s
+no longer clear?
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 31
+§9. Poly-morphisms, descent to underlying strs., and inter-
+universality
+(cf. [EssLgc], Example 3.1.1;§3.7, §3.8, §3.9, §3.11)
+· In IUT, one often considerspoly-morphisms, i.e., sets of mor-
+phisms between objects — such asfull poly-isomorphisms (the
+set of all isomorphisms between two objects) — as a tool to keep
+track explicitly ofall possibilities that appear. Roughly speaking,
+consideration offull poly-isomorphismscorresponds to the usual
+notion of“considering objects up to isomorphism”.F r o mt h ep o i n t
+of view ofchains of∧’s and∨’s
+A∧B = A∧(B1 ∨B2 ∨... )
+=⇒ A∧(B1 ∨B2 ∨... ∨B′
+1 ∨B′
+2 ∨... )
+=⇒ A∧(B1 ∨B2 ∨... ∨B′
+1 ∨B′
+2 ∨... ∨B′′
+1 ∨B′′
+2 ∨... )
+...
+discussed in§6, consideration of poly-morphisms corresponds to
+adding to thecollection of possibilities, i.e., to thecollection of∨’s
+that appear (cf.“set-theoretic” (ExtInd1)!) — cf. [EssLgc],§3.7.
+· One fundamental aspect of IUT lies in the use of numerousfunc-
+torial algorithmsthat consist of the construction
+input data ⇝ output data
+of certainoutput dataassociated to giveninput data. Often it is
+natural to regard the“input data”as “original data”and to re-
+gard the“output data”as “underlying data”:
+input data ⇝ output data
+|| ||
+original data underlying data
+One important example of this sort of situation in IUT involves
+the notion of“ q-/Θ-intertwinings”on anF⊩▶×μ-prime-strip
+(cf. [EssLgc], §3.9):
+
+32 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+original data (“equipped with an intertwining”):
+the q-pilot F⊩▶×μ-prime-strip (in the case of the “q-intertwining”)
+or the Θ-pilot F⊩▶×μ-prime-strip (in the case of the “Θ-intertwin-
+ing”), equipped with theauxiliary dataof how thisq-/Θ-pilotF⊩▶×μ-
+prime-strip is constructed from some(Θ±ellNF-)Hodge theater;
+underlying data:
+the abstract F⊩▶×μ-prime-strip associated to the aboveoriginal data,
+i.e., obtained byforgetting the auxiliary data.
+· In general, in any sort of situation involvingoriginal/underlying
+data, it is natural to consider the issue ofdescent to (a functorial
+algorithm in) theunderlying dataof afunctorial algorithmin
+the original data:w es a yt h a t
+a functorial algorithmΦi nt h eoriginal datadescends to a
+functorial algorithmΨi nt h eunderlying dataif there exists
+a functorial isomorphism
+Φ
+∼
+→ Ψ|original data
+between Φ and therestriction of Ψ, i.e., relative to the given
+construction original data ⇝ underlying data.
+That is to say, roughly speaking, to say that the functorial algorithm
+Φ in the original datadescends to theunderlying datameans, in es-
+sence, that although the construction constituted by Φ depends,a
+priori,o nt h e“ﬁner”original data, in fact, up tonatural isomor-
+phism (cf. “stack-theoretic” (ExtInd2)!), the functorial algorithm only
+depends on“coarser”underlying data.
+· One elementary example ofdescentis the following (cf. [EssLgc],
+Example 3.9.1):
+Let X be ascheme, T a topological space.W r i t e
+·| X| for theunderlying topological spaceof X,
+· Open(X) for the category ofopen subschemesof X and open
+immersions over X,
+· Open(T) for the category ofopen subsetsof T and open
+immersions over T.
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 33
+Then thefunctorial algorithm
+X ↦→ Open(X)
+— deﬁned, say, on the category of schemes and morphisms of schemes
+— descends, relative to the constructionX ⇝ |X|,t ot h efunctorial
+algorithm
+T ↦→ Open(T)
+— deﬁned, say, on the category of topological spaces and continuous
+maps of topological spaces. That is to say, there is anatural functor-
+ial isomorphism
+Open(X)
+∼
+→ Open(|X|)
+(i.e., more precisely, following the conventions employed in IUT, a
+natural functorial isomorphism class of equivalences of categories).
+· Inter-universalityinIUT—cf. the abstract topological groups/mon-
+oids (as opposed toGalois groups/multiplicative monoids of rings!)
+that appear in the Θ-link, as discussed in§2, §3, §4, §7—a r i s e sf r o m
+the fact that the structurescommon (cf. “∧”!) to both sides of the
+Θ-link are weaker than ring structures. On the other hand, despite
+this “ring str. vs. weaker than ring str.”diﬀerence, at apurely foun-
+dational level, the resulting indeterminacies (i.e., (Ind1), (Ind2)) are
+in factcompletely qualitatively similarto theinner automorphism
+indeterminacies in [SGA1] (cf. [EssLgc],§3.8).
+In this context, it is useful to recall the elementary fact that these
+inner automorphism indeterminacies areunavoidable (cf. [EssLgc],
+Example 3.8.1 (i)!):
+Let
+k be aperfect ﬁeld;
+k an algebraic closureof k;
+N ⊆Gk
+def
+= Gal(k/k)a normal open subgroupof Gk;
+σ∈Gk such that the automorphismισ: N
+∼
+→ N of N given
+by conjugating by σis not inner.
+(One veriﬁes immediately that, for instance, ifk is anumber ﬁeldor
+a mixed-characteristic local ﬁeld, then suchN, σdo indeed exist.)
+
+34 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+Write
+kN ⊆k for the subﬁeld ofN-invariants ofk,
+GkN
+def
+= N ⊆Gk.
+Then observe that if one assumes that thefunctoriality of the´etale
+fundamental groupholds even in theabsence of inner automorphism
+indeterminacies, then thecommutative diagram of natural morphisms
+of schemes
+Spec(kN)
+σ
+−→ Spec(kN)
+↘↙
+Spec(k)
+induces acommutative diagram of proﬁnite groups
+GkN
+ισ
+−→ GkN
+↘↙
+Gk
+— which (since the natural inclusionN = GkN ↪→ Gk is injective!)
+implies thatισis theidentity automorphism,i ncontradictionto our
+assumption concerningσ!
+· Asaconsequenceofthe inter-universalityconsiderationsdiscussed
+above (e.g., the need to work withabstract topological groups!), one
+must consider variousreconstruction algorithmsin IUT. Since
+reconstruction of an object isnever “set-theoretically on the nose”,
+but rather alwaysup to (a necessarily indeterminate!) isomorphism
+— whence the use offull poly-isomorphisms! — such reconstruction
+algorithms necessarily lead to(ExtInd2) indeterminacies.A tﬁ r s t
+glance, this phenomenon may seem rather strange, but in fact, at a
+purely foundational level, this phenomenon iscompletely qualitatively
+similar to the indeterminacies that appear in suchclassical construc
+tions as
+· the notion of analgebraic closureof a ﬁeld,
+· projective/inductive limits,o r
+· cohomology modules (i.e., which arise as subquotients of“some”
+indeterminate resolution)
+— cf. [EssLgc],§3.8, §3.9, §3.11.
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 35
+· As a result of such(ExtInd2) indeterminacies, one does not
+obtain anynontrivial consequences/inequalities(cf. the “Elemen-
+tary Observation” of§7; [EssLgc], Example 3.1.1; [EssLgc],§3.8,
+§3.9) at“stack-theoretic” intermediate steps, i.e., even if one applies
+the log-volume!
+In order to obtainnontrivial consequences/inequalities(cf. the “Ele-
+ementary Observation” of§7; [EssLgc], Example 3.1.1; [EssLgc],§3.8,
+§3.9), it is necessary to obtain a“set-theoretic” closed loop, i.e.,
+by
+· applying themultiradial representation of theΘ-pilot,w h i c h
+gives rise to the indeterminacies(Ind1), (Ind2), (Ind3);
+· forming theholomorphic hull,
+· symmetrizing with respect tovertical log-shifts in the 1-column;
+· and, ﬁnally, applying thelog-volume
+— as described in§6.
+Πv ↠ Gv ↞ Πv
+↷ ⟲
+Aut(Gv) ↷
+⎛
+⎜⎜⎜
+⎜
+⎜⎜⎜
+⎜
+⎜⎝
+some portion of
+the Frobenius-like
+local data at
+v
+of the
+(Θ±ellNF-)
+Hodge theater
+in thedomain
+of the Θ-link
+⎞
+⎟⎟⎟
+⎟
+⎟⎟⎟
+⎟
+⎟⎠
+⎛
+⎜⎜⎜
+⎜
+⎜⎜⎜
+⎜
+⎜⎝
+some portion of
+the Frobenius-like
+local data at
+v
+of the
+(Θ±ellNF-)
+Hodge theater
+in thecodomain
+of the Θ-link
+⎞
+⎟⎟⎟
+⎟
+⎟⎟⎟
+⎟
+⎟⎠
+
+36 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+§10. Closed loops via multiradial representations and holomorphic
+hulls
+(cf. [EssLgc], Example 2.4.6, (iii); [EssLgc],§3.10, §3.11; [ClsIUT],§2)
+· We begin by observing that byeliminating superﬂuous overlaps
+from thechain of∧’s and∨’sthat constitutes theessential logical
+structure of IUT (cf.§6) and replacing the variouslogical OR “∨’s”
+by logical XOR “˙∨’s”,w em a yt h i n ko ft h i sessential logical str.
+of IUT as consisting of achain of∧’s and ˙∨’s:
+A∧B = A∧(B1 ˙∨B2 ˙∨... )
+=⇒ A∧(B1 ˙∨B2 ˙∨... ˙∨B′
+1 ˙∨B′
+2 ˙∨... )
+=⇒ A∧(B1 ˙∨B2 ˙∨... ˙∨B′
+1 ˙∨B′
+2 ˙∨... ˙∨B′′
+1 ˙∨B′′
+2 ˙∨... )
+...
+Recall that from the point of view of thearithmetic of theﬁeld F2,
+∧← → multiplication
+˙∨← → addition
+while from the point of view of thearithmetic of thetruncated ring
+of Witt vectorsF2 ×F2 (i.e., Z/4Z),
+∧← → multiplication of Teichm¨uller reps. ofF2
+(∧, ˙∨) ←→ carry-addition on Teichm¨uller reps. ofF2
+(cf. [EssLgc], Example 2.4.6, (iii)). That is to say,carry-addition —
+which may thought of as a sort of
+“∧stacked on top of an˙∨”
+—i sremarkably reminiscentof theessential logical structure of
+IUT, as well as of the fact that IUT itself is a theory concerning the
+explication of how the two “combinatorial dimensions” of a ring are
+mutually intertwined, i.e., how themultiplicative structure of a ring is
+“stacked on top of” the additive structure of a ring! In the case of the
+chain of∧’s and ˙∨’sthat constitutes theessential logical structure
+of IUT, we observe that:
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 37
+∧← →
+⎛
+⎜⎝
+multiplicative Θ-link;
+data common to the
+domain/codomainof the
+Θ-link
+⎞
+⎟⎠
+˙∨← →
+⎛
+⎜⎝
+additive log-shells
+arising from thelog-link;
+mutually exclusive distinct
+possibilities
+⎞
+⎟⎠
+Finally, relative to the analogy between IUT and crystals, it is also of
+interest to observe that:
+∧← →
+(
+crystals
+= “∧-crystals”
+)
+˙∨← →
+( mutually exclusive
+pull-backs of the
+Hodge ﬁltration
+)
+— where we recall that it is precisely the“intertwining between these
+∧/ ˙∨aspects”that gives rise to theKodaira-Spencer morphism
+(cf. [EssLgc], (∧(˙∨)-Chn); [ClsIUT],§2).
+· We conclude by reviewing once again the discussion of§6, this
+time taking into account the various subtleties discussed in§7,
+§8, §9( c f .a l s o[ E s s L g c ] ,§3.10, §3.11).
+We begin by recalling that thelog-Kummer correspondence
+...
+log
+−→ •
+log
+−→ •
+log
+−→ •
+log
+−→ ...
+... ↘↓↙ ...
+◦
+—w h i c hjuggles the dilated and nondilated underlying arith-
+m e t i cd i m e n s i o n so ft h er i n g si n v o l v e d( c f .§2)
+log : nondilated unit groups ⇄ dilated value groups
+
+38 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+yields, by applying variousdescent operations
+(0,0)
+(Ind3)
+⇝ (0,◦)
+(Ind1)
+⇝ (0,◦)⊢ (Ind2)
+⇝ (0,0)⊢
+Θ-link
+∼
+→ (1,0)⊢
+(where we recall that the last step involving (Ind2) plays the role of
+ﬁxing the vertical coordinate, so that (Ind1), (Ind2) arenot mixed
+with (Ind3) — cf. the discussion of “C×\GL+
+2 (R)/C×”a tt h ee n do f
+§5!), themultiradial representation of theΘ-pilot,u pt ot h e
+indeterminacies (Ind1), (Ind2), (Ind3).
+Then forming theholomorphic hulland symmetrizing with respect
+to vertical log-shifts in the 1-column
+1-
+column
+1-
+column
+... ...
+••
+↑⏐
+⏐
+log ↗
+↑⏐
+⏐
+log
+••
+↑⏐
+⏐
+log ↗
+↑⏐
+⏐
+log
+••
+↑⏐
+⏐
+log ↗
+↑⏐
+⏐
+log
+••
+... ...
+yields aclosed loop, to which we may apply thelog-volume to obtain
+“set-theoretic” consequences/inequalities(cf. the “Elementary
+Observation” of§7; [EssLgc], Example 3.1.1; [EssLgc],§3.8, §3.9).
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 39
+Here, we recall that the repeated introduction of“stack-theoretic”
+(ExtInd2) indeterminacies
+Πv ↠ Gv ↞ Πv
+↷ ⟲
+Aut(Gv) ↷
+⎛
+⎜⎜⎜⎜
+⎜
+⎜⎜⎜
+⎜⎝
+some portion of
+the Frobenius-like
+local data at
+v
+of the
+(Θ±ellNF-)
+Hodge theater
+in thedomain
+of the Θ-link
+⎞
+⎟⎟⎟⎟
+⎟
+⎟⎟⎟
+⎟⎠
+⎛
+⎜⎜⎜⎜
+⎜
+⎜⎜⎜
+⎜⎝
+some portion of
+the Frobenius-like
+local data at
+v
+of the
+(Θ±ellNF-)
+Hodge theater
+in thecodomain
+of the Θ-link
+⎞
+⎟⎟⎟⎟
+⎟
+⎟⎟⎟
+⎟⎠
+— especially in the context of variousreconstruction algorithms—
+allows us to achieve thecentral goalof exhibiting t h e( v a l u eg r o u p
+p o r t i o no ft h e )Θ-pilot at (0,0) (i.e., which appears in the Θ-link!)
+as one of the possibilitieswithin acontainer arising from the
+RHS of the Θ-link. Moreover, theessential logical structure
+A∧B = A∧(B
+1 ∨B2 ∨... )
+=⇒ A∧(B1 ∨B2 ∨... ∨B′
+1 ∨B′
+2 ∨... )
+=⇒ A∧(B1 ∨B2 ∨... ∨B′
+1 ∨B′
+2 ∨... ∨B′′
+1 ∨B′′
+2 ∨... )
+...
+underlying theclosed loop referred to above means that there areno
+issues of“diagram commutativity”or “log-vol. compatibility”
+to contend with:
+
+40 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+• ==
+∧
+=== •
+⇝ ( ∨• =) =
+∧
+=== •
+⇝ ( ∨∨• == )
+∧
+=== •
+⇝ ( ∨∨∨• ==
+∧
+=) = = •
+⇝ ( ∨∨∨∨• ==
+∧
+== )= •
+⇝ ( ∨∨∨∨∨• ==
+∧
+== = ) •
+⇝ ( ∨∨∨∨∨∨• ==
+∧
+=== • )
+
+ESSENTIAL LOGICAL STRUCTURE OF IUT I, II, III, IV, V 41
+References
+[IUAni1] E. Farcot, I. Fesenko, S. Mochizuki,The Multiradial Representation of
+Inter-universal Teichm¨uller Theory, animation available at the follow-
+ing webpage:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/IUT-
+animation-Thm-A-black.wmv
+[IUAni2] E. Farcot, I. Fesenko, S. Mochizuki,Computation of the log-volume of
+the q-pilot via the multiradial representation, animation available at the
+following webpage:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/2020-
+01%20Computation%20of%20q-pilot%20(animation).mp4
+[AbsTopIII] S. Mochizuki, Topics in Absolute Anabelian Geometry III: Global Re-
+construction Algorithms,J. Math. Sci. Univ. Tokyo22 (2015), pp. 939-
+1156.
+[IUTchI] S. Mochizuki, Inter-universal Teichm¨uller Theory I: Construction of
+Hodge Theaters,Publ. Res. Inst. Math. Sci.57 (2021), pp. 3-207.
+[IUTchII] S. Mochizuki, Inter-universal Teichm¨uller Theory II: Hodge-Arakelov-
+theoreticEvaluation, Publ. Res. Inst. Math. Sci.57(2021),pp.209-401.
+[IUTchIII] S. Mochizuki, Inter-universal Teichm¨uller Theory III: Canonical Split-
+tings of the Log-theta-lattice,Publ. Res. Inst. Math. Sci.57 (2021),
+pp. 403-626.
+[IUTchIV] S. Mochizuki,Inter-universalTeichm¨ullerTheory IV: Log-volumeCom-
+putations and Set-theoretic Foundations,Publ. Res. Inst. Math. Sci.57
+(2021), pp. 627-723.
+[Pano] S. Mochizuki, A Panoramic Overview of Inter-universal Teichm¨uller
+Theory,Algebraic number theory and related topics 2012, RIMS K¯oky¯u-
+roku Bessatsu B51, Res. Inst. Math. Sci. (RIMS), Kyoto (2014), pp.
+301-345.
+
+42 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+[Alien] S. Mochizuki, The Mathematics of Mutually Alien Copies: from Gauss-
+ian Integrals to Inter-universal Teichm¨uller Theory,Inter-universal Te-
+ichmuller Theory Summit 2016, RIMS K¯oky¯uroku Bessatsu B84, Res.
+Inst. Math. Sci. (RIMS), Kyoto (2021), pp. 23-192.
+[EssLgc] S. Mochizuki, On the essential logical structure of inter-universal Te-
+ichm¨uller theory in terms of logical AND “∧”/logical OR “∨” relations:
+Report on the occasion of the publication of the four main papers on
+inter-universal Teichm¨uller theory, preprint available at the following
+webpage:
+http://www.kurims.kyoto-u.ac.jp/~motizuki/papers-
+english.html
+[ClsIUT] S. Mochizuki,Classical roots of inter-universal Teichm¨uller theory, lec-
+ture notes for Berkeley Colloquium talk given in November 2011, avail-
+able at the following webpage:
+http://www.kurims.kyoto-u.ac.jp/~motizuki/travel-
+english.html

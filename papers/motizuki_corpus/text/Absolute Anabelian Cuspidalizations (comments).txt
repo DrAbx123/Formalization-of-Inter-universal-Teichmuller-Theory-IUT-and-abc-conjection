@@ -1,0 +1,87 @@
+COMMENTS ON “ABSOLUTE ANABELIAN
+CUSPIDALIZA TIONS OF PROPER HYPERBOLIC CUR VES”
+Shinichi Mochizuki
+February 2014
+(1.) The argument given in Remark 1.18.2 [i.e., Remark 10 in the LaTeX Version],
+(iii), is somewhat sketchy and a bit misleading. This argument should read as
+follows:
+(iii) Nevertheless, as was pointed out to the author byA. Tamagawa,e v e n
+if X, Y are not necessarily Σ-separated, it is still possible to conclude, essentially
+from the arguments of [Tama], Corollary 2.10, Proposition 3.8, that:
+Any Frobenius-preservingisomorphism αis quasi-point-theoretic.
+Indeed, it suﬃces to give a“group-theoretic” characterization of the quasi-sections
+D ⊆ΠX which are decomposition groups of points∈Xcl. Suppose, for simplicity,
+that X is proper.W r i t e
+˜X → X
+for the pro-ﬁnite ´etale covering corresponding to ΠX.I f E ⊆ ΠX is a closed
+subgroup whose image inGkX is open, then let us writekE for the ﬁnite extension
+ﬁeld ofkX determined by this image. IfJ ⊆ΠX is an open subgroup, then let us
+write XJ → X for the covering determined byJ and JΔ
+def
+= J ⋂ΔX.I f J ⊆ΠX
+is an open subgroup such thatJΔ is a characteristic subgroup of ΔX,t h e nw e
+shall say thatJ is geometrically characteristic.N o wl e tJ ⊆ΠX be a geometrically
+characteristic open subgroup . Let us refer to as a descent-group for J any open
+subgroup H ⊆ΠX such that J ⊆H, JΔ = HΔ. Thus, a descent-group H for
+J may be thought of as an intermediate covering XJ → XH → X such that
+XH ×kH kJ ∼= XJ.W r i t e
+XJ(kJ)ﬂd-def⊆XJ(kJ)
+for the subset ofkJ-valued points ofXJ that donot arise from points∈XH(kH)f o r
+any descent-groupH ̸= J for J — i.e., thekJ-valued points whoseﬁeld of deﬁnition
+is kJ with respect to all possible “descended forms” of XJ.T h u s ,i f˜x is a closed
+point of ˜X that maps to x ∈XJ(kJ), and we writeD˜x ⊆ΠX for the stabilizer
+in ΠX [i.e., “decomposition group”] of˜x,t h e ni ti satautology that x maps to a
+point ∈XHx(kHx)f o rHx
+def
+= D˜x ·JΔ (⊇J)[ s oHx forms a descent-group for J]; in
+particular, it follows immediately that:
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+x ∈XJ(kJ)ﬂd-def ⇐⇒ D˜x ⊆J ⇐⇒ Hx = J.
+Now it follows immediately from this characterization of “ﬂd-def” that ifJ1 ⊆J2 ⊆
+ΠX are geometrically characteristic open subgroups such thatkJ1 = kJ2, then the
+natural mapXJ1(kJ1) → XJ2(kJ2) induces a mapXJ1(kJ1)ﬂd-def→ XJ2(kJ2)ﬂd-def.
+Moreover, these considerations allow one to conclude [cf. the theory of [Tama]]
+that:
+A quasi-sectionD ⊆ΠX is a decomposition group of a point∈Xcl if and
+and only if, for every geometrically characteristic open subgroupJ ⊆ΠX
+such thatD ·JΔ = J, it holds thatXJ(kJ)ﬂd-def̸= ∅.
+Thus, to render this characterization of decomposition groups“group-theoretic”,i t
+suﬃces to give a “group-theoretic” criterion for the condition thatXJ(kJ)ﬂd-def̸= ∅.
+In [Tama], the Lefschetz trace formula is applied to compute the cardinality of
+XJ(kJ). On the other hand, if we use the notation “|−|” to denote the cardinality
+of a ﬁnite set, then one veriﬁes immediately that
+|XJ(kJ)| =
+∑
+H
+|XH(kH)ﬂd-def|
+—w h e r eH ⊇J ranges over thedescent-groups for J. In particular, by applying
+induction on [ΠX : J], one concludes immediately from the above formula that
+|XJ(kJ)ﬂd-def| may be computed from the|XH(kH)|,a sH ranges over thedescent-
+groups for J [while |XH(kH)| may be computed, as in [Tama], from theLefschetz
+trace formula]. This yields the desired “group-theoretic” characterization of the
+decomposition groups of ΠX.
+(2.) In the proof of Theorem 1.16, (iii) [i.e., Theorem 1.1, (iii), in the LaTeX
+version], the phrase “Z′
+X → X, Z′
+Y → Y are diagonal coverings” that appears at
+the beginning of this proof should read “Z′
+X → X ×X, Z′
+Y → Y ×Y are diagonal
+coverings”.
+(3.) In the proof of Proposition 2.2, (i), it is asserted that one has a “natural isomor-
+phism H1(k,Δab
+X )
+∼
+→ J(k)∧ (⊇J(k))”. In fact, however, at least from ana priori
+point of view, one only has anatural injection (J(k) ⊆) J(k)∧ ↪→ H1(k,Δab
+X ).
+This does not have any eﬀect on the proof, however, since the proof only requires
+the use of this natural injection.
+(4.) In the proof of Proposition 1.6, (i), the phrase “fact thatG†
+k acts faithfully on
+MX via the cyclotomic character” should read “fact that the image in Aut(MX)o f
+the action ofG†
+k on MX via the cyclotomic character is inﬁnite”.

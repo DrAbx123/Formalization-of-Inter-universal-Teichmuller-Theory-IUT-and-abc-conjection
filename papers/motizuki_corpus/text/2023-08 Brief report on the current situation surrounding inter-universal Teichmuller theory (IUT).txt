@@ -1,0 +1,136 @@
+Brief Report on the Current Situation 
+Surrounding Inter-universal Teichmüller Theory (IUT) 
+ 
+Shinichi Mochizuki 
+August 2023 
+ 
+ 
+ 
+Despite 
+ 
+ - the publication in 2021 of the four main papers  [IUTchI], [IUTchII], [IUTchIII], 
+[IUTchIV] on inter-universal Teichmüller theory (IUT) in a special volume of Publ. RIMS  
+edited by a special editorial board consisting of such internationally renowned 
+mathematicians as M. Kashiwara, A. Tamagawa, S. Mukai, H. Nakajima, and T. 
+Mochizuki; 
+ - the subsequent publication of the sequel [ExpEst] on explicit estimates in IUT in the Kodai 
+Math. J. in 2022; 
+ - the release of detailed surveys (cf. [Alien], [EssLgc]) concerning IUT;  
+ - numerous workshops/talks/videos (cf. WS3, WS4) on IUT conducted/produced during the 
+period 2012 – 2023; 
+ - a pronounced shift in recent years  in the focus of activities of many researchers involved 
+with IUT from activities devoted to disseminating the original version of IUT to activities 
+centered around the development of various 
+new versions/applications of IUT, many of 
+which are closely related to the Section Conjecture in anabelian geometry, 
+ 
+fundamental misunderstandings  and entirely unnecessary confusion  concerning IUT 
+continue to persist in certain sectors of the mathematical community.  This includes   
+profoundly factually inaccurate assertions to the effect that "the experts agree that the theory 
+is mathematically incorrect".  On the other hand, countless attempts by the author of IUT, 
+as well as other mathematicians involved with IUT, over the past decade --- cf., e.g., e-mails 
+sent on June 30, 2022, and December 30, 2022, neither of which received any response! ---  
+to pin down  
+
+ 
+- precisely who these "experts" are and/or 
+ - precisely what the mathematical content is that these "experts" assert to be "mathematically 
+incorrect" 
+ 
+have only been met with stubborn refusals to respond  to such queries.  Here, it is worth 
+noting that this situation constitutes a very serious violation of article (6.) of the subsection 
+entitled "Responsibilities of authors" of the Code of Practice of the European Mathematical 
+Society (cf. EMSCOP): 
+ 
+           Mathematicians should not make public claims of potential new  
+           theorems or the resolution of particular mathematical problems  
+           unless they are able to provide full details in a timely manner.  
+ 
+This confusion has also manifested itself in a sort of bizarre schizophrenia on the part of many 
+senior, high-ranking members of the mathematical community.  That is to say,  
+ 
+ - whereas some senior, high -ranking members of the European mathematical community 
+have maintained for years, both in oral communications to the author of IUT, as well as in 
+numerous internet posts, that the incorrect mathematical content referred to abov e    
+revolves around the issue of 
+"redundant copies" (as discussed in detail in [EssLgc]), other 
+senior, high-ranking members of the European mathematical community have asserted 
+strongly that they could not believe that this issue of "redundant copies" could be the    
+focal point of objections to the mathematical validity of IUT, on the grounds that they 
+could not believe that fellow senior, high-ranking members of the European mathematical 
+community could be confused about such an elementary mathematical issue; 
+ - whereas some senior, high -ranking members of the European mathematical community 
+have maintained for years, both in oral communications to mathematicians involved with 
+IUT and in written form (cf., e.g., the Zentralblatt review of the IUT papers!) , that "the 
+experts agree that the theory is mathematically incorrect", one (very) senior, high-ranking 
+member of the European mathematical  community ha s asserted categorically (in a 
+personal oral communication) that neither he nor his colleagues take such assertions (of a 
+mathematical gap in IUT) seriously! 
+ 
+In light of the circumstances just described, one central aspect of dissemination activities 
+concerning IUT over the past decade has consisted of stimulating the worldwide mathematical 
+
+community to strongly encourage mathematicians to 
+ 
+ (*) bear explicit responsibility  for any assertion that denies the essential mathematical 
+validity of IUT by expressing any such assertion --- not in an informal manner, via rough 
+oral communications, internet posts, or nonrigorously formulated arguments, but rather 
+--- in the form of a precisely formulated mathematical paper  with complete, rigorous 
+proofs that is written in such a fashion that it is suitable for publication in a well -
+established mathematical journal. 
+ 
+This goal (*) may be understood as the goal of achieving compliance with the passage of the 
+EMSCOP quoted above.  Alternatively, this goal (*) may  be understood as the goal of 
+addressing, in a fundamental and definitive  fashion, the entirely unnecessary confusion and 
+schizophrenia discussed above, by putting assertions of the sort referred to in (*) in a form 
+that is well-defined and can hence be subject, via conventional scholarly  activities (i.e., 
+workshops/seminars, further research, etc.), to the scrutiny of the mathematical community, 
+not only in the present, but also for decades (or even centuries!) to come (cf. the discussion 
+of the historical significance of explicit written documentation of mathematical arguments in 
+[EssLgc], §1.5). 
+ 
+Perhaps the IUT Challenger Prize  announced by Mr. Nobuo Kawakami in July 2023 can 
+further stimulate the worldwide mathematical community to realize the importance, for the 
+entire field of mathematics, of conducting oneself in a fashion consistent with (*). 
+ 
+In some sense, the model of the many of the dissemination activities referred to above may be 
+understood as the discussions between Emmanuel Lepage (a maître de conférences at  
+Sorbonne University in France) and the author of IUT during the years 2017 - 2021. At the 
+outset of these discussions (in the summer of 2017), Lepage took a deeply skeptical position 
+with regard to the mathematical validity of IUT.  On the other hand, it was precisely as a 
+result of his sincere efforts during the period 2017 - 2021 to respond to repeated requests by 
+the author of IUT to make his objections to the mathematical validity of  IUT precise and 
+explicit that Lepage was finally able to realize  and acknowledge explicitly that his objections 
+to IUT were purely psychological, that he had misunderstood IUT, and that he no longer had 
+any mathematical reasons not to acknowledge the mathematical validity of  IUT.  These 
+discussions with Lepage formed the basis of a substantial portion of the discussion given in 
+the latter portion of [EssLgc], §3.  Thus, in summary, one may  think of the goal of the 
+dissemination activities referred to above as the goal of 
+
+ 
+ (**) performing a massive global search for professional mathematicians who assert that they 
+have mathematical reasons not to acknowledge the mathematical validity of IUT, in the 
+hope that stimulating such mathematicians to perform the "exercise" of documenting 
+these mathematical reasons in a precise and explicit fashion can trigger a comparably 
+dramatic evolution of understanding  for such mathematicians to the evolution of 
+understanding experienced by Lepage during discussions with the author of IUT in 
+2017 - 2021. 
+       
+Finally, we note that, in this context, it is of fundamental importance to distinguish between 
+ 
+ - mathematicians who do not acknowledge the mathematical validity of  I UT for 
+nonmathematical (such as social/political/psychological) reasons and 
+ - mathematicians who do not acknowledge the mathematical validity of  IUT for 
+mathematical reasons. 
+ 
+Indeed, one way to understand the goal of the dissemination activities referred to above is as 
+the goal of issuing 
+ 
+ (***) a clear and unequivocal message to the worldwide mathematical community that the 
+denial of the mathematical validity of a  mathematical theory published in a well -
+established mathematical journal for nonmathematical reasons is entirely unacceptable 
+(cf., e.g., the passage of the EMSCOP quoted above!), and that the         
+fundamental importance, from the point of view of the sound development of the entire 
+field of pure mathematics, of providing mathematical reasons for any such denial of the 
+mathematical validity of a mathematical theory transcends the specific case of         
+IUT and indeed cuts to the very core of what it means to practice pure mathematics. 

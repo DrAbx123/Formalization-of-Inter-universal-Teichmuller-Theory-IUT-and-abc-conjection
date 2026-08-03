@@ -1,0 +1,3624 @@
+THE GEOMETR Y OF FROBENIOIDS II:
+POL Y-FROBENIOIDS
+Shinichi Mochizuki
+June 2008
+/BT/CQ/D7/D8/D6/CP /CR/D8/BA We develop the theory of Frobenioids associated to nonarchimedean
+[mixed-characteristic] and archimedean local ﬁelds . In particular, we show that the
+resulting Frobenioids satisfy the properties necessary to apply the main results of
+the general theory of Frobenioids . Moreover, we show that the reciprocity map in the
+nonarchimedean case, as well as a certain archimedean analogue of this reciprocity
+map, admit natural Frobenioid-theoretic translations, which are, moreover, purely
+category-theoretic, to a substantial extent [i.e., except for the extent to which this
+category-theoreticity is obstructed by certain “Frobenius endomorphisms” of the rel-
+evant Frobenioids]. Finally, we show that certain Frobenioids which naturally encode
+the global arithmetic of a number ﬁeld may be “grafted” [i.e., glued] onto the Frobe-
+nioids associated to nonarchimedean and archimedean primes of the number ﬁeld
+to obtain “poly-Frobenioids”. These poly-Frobenioids encode, in a purely category-
+theoretic fashion, most of the important aspects of the classical framework of the
+arithmetic geometry of number ﬁelds.
+Introduction
+§0. Notations and Conventions
+§1. Nonarchimedean Primes
+§2. The Kummer and Reciprocity Maps
+§3. Archimedean Primes
+§4. Angloids as Base Categories
+§5. Poly-Frobenioids
+Appendix: Categorical Representation of Topological Spaces
+Index
+Introduction
+In the present paper, we continue to develop the theory of Frobenioids,a l o n g
+the lines of [Mzk5]. By comparison with the theory of [Mzk5], however, here we
+introduce the following two new themes:
+2000 Mathematical Subject Classiﬁcation: Primary 14A99; Secondary 11G99.
+Keywords and Phrases: categories; Galois categories; Frobenius; monoids; log schemes;
+local ﬁelds; reciprocity map.
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+(A) the localizationof the global arithmetic Frobenioids associated to number
+ﬁelds in [Mzk5], Example 6.3;
+(B) the intertwining of the “´etale-like” and “Frobenius-like” portions of the
+structure of the local Frobenioids introduced in the course of (A).
+Both of these themes may be regarded as “special cases” of the more general theme,
+discussed in [Mzk5], §I2, of translating — via Frobenioids — into category-theoretic
+language the familiar scheme-theoretic framework ofarithmetic geometry over num-
+ber ﬁelds.
+The ﬁrst theme (A) is also motivated by the ultimate goal of the author, dis-
+cussed in [Mzk5], §I3, of developing a sort of “arithmetic Teichm¨uller theory for
+number ﬁelds”. That is to say, if one thinks of Teichm¨ uller theory as a sort of
+“surgery operation”on the [“global”] objects under consideration, then it is natural
+to require that these “global objects” be“dissectible into local objects”, so that one
+is free to perform such “local dissections” in the course of a “surgery operation”.
+[Indeed, here it may be helpful to recall that the classical theory of deformations
+of proper curvesproceeds precisely by “dissecting” a proper curve into “local aﬃne
+opens” whose deformation theory is “trivial” and then studying how these local
+aﬃne opens may be glued together in a fashion that deforms the original tauto-
+logical gluing. Alternatively, in classical complex Teichm¨uller theory, Teichm¨uller
+deformations of a Riemann surface are obtained by locally integrating the square
+root of a given [global] square diﬀerential so as to obtainlocal holomorphic coordi-
+nates, which one then proceeds to deform in a linear, real analytic fashion.]
+With regard to the second theme (B), it is interesting to observe that this
+theme runs, in some sense, in the opposite direction to the theme discussed in
+[Mzk5], §I4, of distinguishing or separating out from one another the “´etale-like”
+and “Frobenius-like” portions of the structure of a Frobenioid. That is to say, the
+content of this theme (B) is that, for certain special types of Frobenioids [i.e., that
+arise in the localization theory of (A)], although the “´ etale-like” and “Frobenius-
+like” portions of the Frobenioid are distinguishable or separable from one another,
+they are, nonetheless,intertwined in a fairly essential way. In the case of thenonar-
+chimedean local Frobenioids that arise in (A), this intertwining may be observed by
+considering Frobenioid-theoretic versions of theKummer and reciprocitymaps that
+occur in the classical theory of nonarchimedean [mixed-characteristic] local ﬁelds.
+In the case of thearchimedeanlocal Frobenioids that arise in (A), this intertwining
+may be observed by considering certain “circles” — i.e., copies of S1 — that occur
+[under suitable conditions] in the base category and units of the Frobenioid.
+In §1, we observe that by applying the theory of [Mzk5], it is an “easy exercise”
+to deﬁne Frobenioids associated to p-adic local ﬁelds — which we refer to as p-adic
+Frobenioids [cf. Example 1.1] — and to show that these Frobenioids satisfy the
+properties necessary to apply the main results of the theory of [Mzk5][cf. Theorem
+1.2, (i); Example 1.4, (iii)]. We also observe that the theory oftemperoids in [Mzk2]
+furnishes [cf. Example 1.3] an example of a natural base category for these Frobe-
+nioids — especially, for instance, if one is interested in the arithmetic of hyperbolic
+curves [cf. Remark 5.6.2] — and discuss how base categories of Frobenioids at lo-
+calizations of a number ﬁeld may be modiﬁed slightly so as to reﬂect the geometry
+
+THE GEOMETRY OF FROBENIOIDS II 3
+of such localizations [cf. Example 1.4, Proposition 1.5]. One important aspect of
+the arithmetic of nonarchimedean [mixed-characteristic] local ﬁelds is the existence
+of natural Kummer and reciprocitymaps [cf. the discussion of theme (B) above]. In
+§2 [cf. especially Theorem 2.4], we observe that the Frobenioid-theoretic versions
+of these maps are “category-theoretic”to a substantial extent, but not completely
+[cf. Remark 2.4.2] — a situation that reﬂects the existence of certain “Frobenius
+[self-]equivalences”in the case of Frobenioids.
+In §3, we take up the study of Frobenioids associated to archimedean local ﬁelds
+— which we refer to as archimedean Frobenioids[cf. Example 3.3]. Again, by ap-
+plying the general framework of [Mzk5], it is a relatively easy matter to deﬁne such
+Frobenioids. Unlike the nonarchimedean case, however, the archimedean case ex-
+hibits an additional “layer of complexity” — namely, the existence ofnon-isotropic
+objects and non-co-angular morphisms, which reﬂect the “category-theoretic as-
+pects” of the geometry of the circle S1 ⊆ C× [cf. Lemma 3.2; the Appendix].
+Indeed, it is precisely the example of archimedean Frobenioids that motivated both
+the terminology [e.g., “isotropic”, “co-angular”] and the results of this portion of
+the general theory of Frobenioids in [Mzk5]. After showing that the archimedean
+Frobenioids just deﬁned satisfy the properties necessary to apply the main results
+of the theory of [Mzk5] [cf. Theorem 3.6, (i), (ii); Remark 4.2.1], we proceed in §4
+to discuss the base categories — which we refer to as angloids [cf. Example 3.3]
+— obtained by “appending an extra copy of the circle to a given base category”
+[cf. Proposition 4.1; Corollary 4.2]. This theory of angloids — in particular, the
+natural homeomorphisms that one obtains between the “circle in the base angloid”
+and the “circle in the group of units of the Frobenioid” — may, in some sense, be
+regarded as an archimedean analogue of the theory of the reciprocity map in the
+nonarchimedean case [cf. the discussion of theme (B) above; Remark 4.2.1]. Fi-
+nally, we discuss [the “non-circular portion” of] typical base categories that occur
+in the archimedean context — namely, temperoids [cf. Example 4.4] and categories
+naturally associated to hyperbolic Riemann surfaces[cf. Example 4.3].
+In §5, we take up the issue of “grafting” [i.e., gluing] the local Frobenioids
+introduced in §1, §3 onto the global Frobenioids of [Mzk5], Example 6.3. We begin
+by discussing this sort of “grafting operation” for categories in substantial general-
+ity, and show, in particular, that, under suitable conditions, one may dissect such
+a grafted category into its local and global components [cf. Proposition 5.2, (iv)].
+Next, we consider categories — which we refer to as poly-Frobenioids— obtained
+by grafting Frobenioids. By combining various generalities on “grafting” with the
+extensive theory of [Mzk5], we obtain the result that “most natural aspects” of the
+theory of poly-Frobenioids arecategory-theoretic[i.e., preserved by arbitrary equiv-
+alences of categories between poly-Frobenioids satisfying certain conditions — cf.
+Theorem 5.5]. Finally, we discuss in some detail the poly-Frobenioidsobtained by
+considering the localizations of number ﬁelds at nonarchimedean and archimedean
+primes [cf. Example 5.6]. This example is, in some sense, representative of the
+entire theory constituted by [Mzk5] and the present paper . In addition, it shows
+[cf. Remark 5.6.1] that the theory of poly-Frobenioids is strictly more generalthan
+the theory of Frobenioids [i.e., that “poly-Frobenioids are not just Frobenioids of a
+certain special type in disguise”].
+
+4 SHINICHI MOCHIZUKI
+Acknowledgements:
+I would like to thankAkio Tamagawa, Makoto Matsumoto, Kazuhiro Fujiwara,
+and Seidai Yasudafor various useful comments. Also, I would like to thankYuichiro
+Taguchi for inviting me to speak at Kyushu University during the Summer of 2003
+on a preliminary version of the theory discussed in this paper.
+
+THE GEOMETRY OF FROBENIOIDS II 5
+Section 0: Notations and Conventions
+In addition to the“Notations and Conventions”of [Mzk5], §0, we shall employ
+the following “Notations and Conventions” in the present paper:
+Categories:
+If C is a category,a n d {φi : Ai → A}i∈I is a collection of arrows in C all of
+which have codomain equal to A and nonempty [i.e., non-initial] domains, then we
+shall say that this collection strongly (respectively, weakly) dissects A if, for every
+pair of distinct elements i, j ∈ I, C fails to contain a pair of arrows ψi : B → Ai,
+ψj : B → Aj (respectively, pair of arrows ψi : B → Ai, ψj : B → Aj such that
+φi◦ψi = φj ◦ψj), whereB is a nonempty object ofC. We shall say that an objectA ∈
+Ob(C)i s strongly dissectible (respectively, weakly dissectible) if it admits a strongly
+(respectively, weakly) dissecting pair of arrows. IfA is not weakly (respectively, not
+strongly) dissectible, then we shall say that it isstrongly indissectible (respectively,
+weakly indissectible). Thus, if A is strongly dissectible (respectively, indissectible),
+then it is weakly dissectible (respectively, indissectible). If every object of C is
+strongly dissectible (respectively, weakly dissectible; strongly indissectible; weakly
+indissectible), then we shall say thatC is of strongly dissectible(respectively, weakly
+dissectible; strongly indissectible; weakly indissectible) type.
+Observe that by considering appropriatepre-steps and pull-back morphisms as
+in [Mzk5], Deﬁnition 1.3, (i), (b), (c), it follows immediately that [the underlying
+category of] any Frobenioid over a base category of weakly indissectible (respec-
+tively, strongly dissectible; weakly dissectible) type is itself of weakly indissectible
+(respectively, strongly dissectible; weakly dissectible) type.
+Let Φ : C→D be a functor between categories C, D. Then we shall say that Φ
+is arrow-wise essentially surjective if it is surjective on abstract equivalence classes
+[cf. [Mzk5], §0] of arrows. If, for every object B ∈ Ob(D), there exists an object
+A ∈ Ob(C), together with a morphism Φ( A) → B in D, then we shall say that Φ
+is relatively initial. If, for every object A ∈ Ob(C), the object Φ( A
+)i s non-initial,
+then we shall say that Φ is totally non-initial.
+Let C be a category.I f φ : A → B is a morphism of C,w r i t e
+Cφ
+for the category whose objects are factorizations
+A
+α
+−→ C
+β
+−→ B
+of φ, and whose morphisms
+{A
+α1
+−→ C1
+β1
+−→ B}− → { A
+α2
+−→ C2
+β2
+−→ B}
+are morphisms ψ : C1 → C2 of C such that ψ ◦α1 = α2, β2 ◦ψ = β1. Also, we shall
+write
+C↣ ⊆C
+
+6 SHINICHI MOCHIZUKI
+for the subcategory ofmonomorphisms of C. We shall say that a morphismφ : A ↣
+B of C↣ [i.e., a monomorphism of C]i s totally ordered if the category of factoriza-
+tions C↣
+φ of φ is equivalent to a category of the form Order( E) [cf. [Mzk5], §0],
+where E is a totally ordered set [so E may be recovered as the set of isomorphism
+classes of C↣
+φ , with the order relation determined by the arrows of C↣
+φ ]. If, in this
+situation, E satisﬁes the property that for any a, b ∈ E such that a<b , there exists
+a c ∈ E such that a<c<b , then we shall say that φ is continuously ordered.W e
+shall say that a morphism ofC↣ [i.e., a monomorphism ofC]i s quasi-totally ordered
+(respectively, quasi-continuously ordered) if it is an isomorphism or factors as a ﬁ-
+nite composite of totally ordered (respectively, continuously ordered) morphisms.
+If every totally ordered morphism (respectively, continuously ordered morphism)
+of C is an isomorphism, then we shall say that C is of strictly partially ordered
+(respectively, discontinuously ordered) type. If every morphism of C is totally or-
+dered (respectively, quasi-totally ordered; continuously ordered; quasi-continuously
+ordered), then we shall say that C is of totally ordered (respectively, quasi-totally
+ordered; continuously ordered; quasi-continuously ordered) type.
+Let C, D, E be categories;Φ: C→E ,Ψ: D→E functors. Then we shall refer
+to as the category obtained by grafting D onto C [via Φ, Ψ] the category
+C⊣ E D
+whose objects are objects of C or objects of D, and whose morphisms are deﬁned as
+follows: The morphisms B → A,w h e r eA, B ∈ Ob(C) (respectively,A, B ∈ Ob(D)),
+are simply the morphisms B → A in C (respectively, D); such morphisms will be
+referred to ashomogeneous. The morphisms B → A,w h e r eA ∈ Ob(C), B ∈ Ob(D),
+are the morphisms Ψ( B) → Φ(A)i n E; such morphisms will be referred to as
+heterogeneous.I f A ∈ Ob(C), B ∈ Ob(D), then there are no morphisms A → B.
+Composition of morphisms is deﬁned in the evident fashion. This completes the
+deﬁnition of C⊣ E D. Thus, there are natural full embeddings
+C ↪→C⊣ E D; D ↪→C⊣ E D
+— so we may regard C, D as full subcategories of C⊣ E D.
+Let I be a set. For each i ∈ I,l e tCi be a category. Then we shall write
+∐
+i∈I
+Ci
+for the category whose objects are objects of one of the Ci, and whose morphisms
+A → B are the morphisms ofCi whenever A, B ∈ Ob(Ci) [so there are no morphisms
+A → B whenever A ∈ Ob(Ci), B ∈ Ob(Cj), i ̸= j]. Thus, we have a natural functor
+∐
+i∈I
+Ci →
+∏
+i∈I
+C⊤
+i
+[where “ ⊤” is as in [Mzk5],§0] given by sending an objectA ∈ Ob(Ci) to the object
+of the product category on the right whose component labeled i is A, and whose
+other components are initial objects of the categories Cj,f o rj ̸= i.
+
+THE GEOMETRY OF FROBENIOIDS II 7
+Section 1: Nonarchimedean Primes
+In the present §1, we deﬁne and study the basic properties of certain Frobe-
+nioids naturally associated to nonarchimedean [mixed-characteristic] local ﬁelds.
+Let p ∈ Primes be a prime number [cf. [Mzk5], §0]; write
+D0
+for the full subcategory of connected objects of the Galois category of ﬁnite ´etale
+coverings of Spec(Qp) [cf. [Mzk5], §0]. Thus, D0 is a connected, totally epimorphic
+category, which is of FSM-, hence also of FSMFF-type [cf. [Mzk5], §0].
+Example 1.1. p-adic F robenioids.
+(i) If Spec(K) ∈ Ob(D0) [i.e.,K is a ﬁnite extension ofQp], then writeOK ⊆ K
+for the ring of integers of K, O×
+K ⊆O K for the group of units, and O⊿
+K ⊆O K for
+the multiplicative monoid of nonzero elements. Also, we shall use the following
+notation:
+ord(O⊿
+K)
+def
+= O⊿
+K/O×
+K ⊆ ord(K×)
+def
+= K×/O×
+K
+Thus, the assignment
+Ob(D0) ∋ Spec(K) ↦→ ord(O⊿
+K)rlf (∼= R≥0) ∈ Ob(Mon)
+[where Mon is as in [Mzk5], §0; the superscript “rlf” is discussed in [Mzk5], Def-
+inition 2.4, (i)] determines a monoid Φ0 on D0 [cf. [Mzk5], Deﬁnition 1.1, (ii)],
+which is easily veriﬁed to be non-dilating [cf. [Mzk5], Deﬁnition 1.1, (i), (ii)] and
+perf-factorial [cf. [Mzk5], Deﬁnition 2.4, (i)]; the assignment
+Ob(D0) ∋ Spec(K) ↦→ K× ∈ Ob(Mon)
+determines a group-like [cf. [Mzk5], Deﬁnition 1.1, (i), (ii)] monoid B0 on D0 to-
+gether with a natural homomorphism of monoids
+B0 → Φgp
+0
+[i.e., by considering the natural surjection K× ↠ ord(K×)]. Thus, by [Mzk5],
+Theorem 5.2, (ii), this data determines a [model] Frobenioid
+C0
+which is easily veriﬁed to be of rationally standard type [cf. [Mzk5], Theorem 5.2,
+(iii)] over aslim base category D0 [cf. [Mzk1], Theorem 1.1.1, (ii); [Mzk5], Theorem
+6.2, (iv); [Mzk5], Theorem 6.4, (i)]. If Λ is a monoid type [cf. [Mzk5], §0], then we
+deﬁne the notation CΛ
+0 as follows:
+CZ
+0
+def
+= C0; CQ
+0
+def
+= Cpf
+0 ; CR
+0
+def
+= Crlf
+0
+
+8 SHINICHI MOCHIZUKI
+[cf. [Mzk5], Propositions 3.2, 5.3]. Thus, CQ
+0 (respectively, CR
+0 ) is the model Frobe-
+nioid associated to the data
+ΦQ
+0
+def
+=Φ 0; BQ
+0
+def
+= Bpf
+0 → Φgp
+0
+(respectively, ΦR
+0
+def
+=Φ 0; BR
+0
+def
+= R · Φbirat
+0 ↪→ Φgp
+0 )
+[cf. [Mzk5], Proposition 5.5, (iv)]. Note that the monoid Φ Λ
+0 is isomorphic to the
+constant monoid determined by R≥0 ∈ Ob(Mon)o n D0; in particular, the Frobe-
+nioid CR
+0 may be naturally identiﬁed with the elementary Frobenioiddetermined by
+this constant monoid. Also, we observe in passing that an object of C0 lying over
+Spec(K) ∈ Ob(D0) may be thought of as ametrized line bundle on Spec(K) [i.e., a
+K×-torsor V equipped with a “metric”, i.e., a choice of an element
+μV ∈ ord(V )rlf
+where we write ord( V )
+def
+= V/ O×
+K (∼= Z), and the superscript “rlf” denotes the
+result of changing the structure group of the ord( K×)-torsor ord(V ) via the ho-
+momorphism ord(K×) → ord(K×) ⊗Z R] — cf. [Mzk5], Theorem 5.2, (i). Then a
+morphism in C0 from a metrized line bundle (V,μ V ) lying over Spec(K) ∈ Ob(D0)
+to a metrized line bundle (W, μW ) lying over Spec(L) ∈ Ob(D0) consists of the fol-
+lowing data: (a) a morphism Spec( K) → Spec(L)i n D0; (b) an element d ∈ N≥1;
+(c) an isomorphism of K×-torsors V ⊗d ∼
+→ W |K [where the “ d-th tensor power”
+and “restriction from L to K” are deﬁned in the evident way] that is “integral”
+with respect to the metrics μV ⊗d , μW |K induced on V ⊗d, W |K by μV , μW ,r e -
+spectively [i.e., in the sense that μV ⊗d ∈ ord(V ⊗d)rlf maps to an element in the
+ord(O⊿
+K)rlf-orbit of μW |K ∈ ord(W |K)rlf].
+(ii) Let D be a connected, totally epimorphic category, D→D 0 a functor.L e t
+Φ ⊆ ΦΛ
+0 |D (= Φ0|D)
+be a monoprime [cf. [Mzk5], §0; the convention of [Mzk5], Deﬁnition 1.1, (ii)]
+subfunctor in monoidssuch that the image of the resulting homomorphism of group-
+like monoids on D
+B
+def
+= BΛ
+0 |D ×(ΦΛ
+0 )gp|D Φgp → Φgp
+determines a subfunctor in nonzero monoids of Φgp [i.e., for every A ∈ Ob(D), the
+homomorphism B(A) → Φgp(A) is nonzero]. We shall refer to as ap-adic Frobenioid
+the Frobenioid
+C
+that arises as the model Frobenioidassociated to this data Φ, B → Φgp [cf. [Mzk5],
+Theorem 5.2, (ii)]. If it holds that
+Φ(K) ⊆ Λ · ord(Q×
+p )( ⊆ ord(K×) ⊗Z R =( o r d (O⊿
+K)rlf)gp)
+(respectively, ord( K×) ⊆ Φ(K)( ⊆ ord(K×) ⊗Z R =( o r d (O⊿
+K)rlf)gp))
+
+THE GEOMETRY OF FROBENIOIDS II 9
+for every Spec( K) ∈ Ob(D0), then we shall say that Φ is absolutely primitive
+(respectively, ﬁeldwise saturated).
+Theorem 1.2. (Basic Properties of p-adic F robenioids) In the notation
+and terminology of Example 1.1:
+(i) If Λ= Z (respectively, Λ= R), then C is of unit-proﬁnite (respectively,
+unit-trivial) type. For arbitraryΛ, the FrobenioidC is of isotropic, model, Aut-
+ample, Autsub-ample, End-ample,a n dquasi-F robenius-trivialtype, but not
+of group-like type. If D is of FSMFF-type,t h e nC is of rationally standard
+type.
+(ii) Let A ∈ Ob(C); AD
+def
+= Base( A) ∈ Ob(D). Write A0 ∈ Ob(D0) for the
+image of AD in D0. Then the natural action ofAutC(A) on O⊿(A), O×(A) factors
+through AutD0 (A0). If, moreover, Λ ∈{ Z, Q}, then this factorization determines a
+faithful action of the image of AutC(A) in AutD0 (A0) on O⊿(A), O×(A).
+(iii) If D admits a terminal object ,t h e nC admits a pseudo-terminal ob-
+ject.
+(iv) If D is slim,a n dΛ ∈{ Z, R},t h e nC is also slim.
+(v) Suppose that Φ is absolutely primitive.T h e nC is of base-trivial type.
+Moreover, the element p ∈ Q×
+p determines a characteristic splitting [cf. [Mzk5],
+Deﬁnition 2.3] on C.
+Proof. First, we consider assertion (i). In light of the deﬁnition of C as a model
+Frobenioid, it follows from [Mzk5], Theorem 5.2, (ii), thatC is ofisotropic and model
+type. Since, for AD ∈ Ob(D), the monoid EndD(AD)a c t strivially on Φ(AD), it fol-
+lows immediately from the construction of a model Frobenioid [cf. [Mzk5], Theorem
+5.2, (i)] that C is of Aut-ample,A u tsub-ample, and End-ample type. Consideration
+of the kernel of the homomorphism of group-like monoids on D
+B → Φgp
+reveals that if, moreover, Λ = Z (respectively, Λ = R), then C is of unit-proﬁnite
+(respectively, unit-trivial) type; since the image monoids of this homomorphism
+are assumed to be nonzero,a n dΦi s monoprime [cf. Example 1.1, (ii)], it follows
+immediately that C is of quasi-Frobenius-trivialand [strictly] rational type, but not
+of group-like type. Thus, it follows immediately from [Mzk5], Theorem 5.2, (iii),
+that if D is ofFSMFF-type,t h e nC is ofrationally standardtype. This completes the
+proof of assertion (i). Assertions (ii), (iii) follow immediately from the construction
+of a model Frobenioid [cf. Example 1.1, (i), (ii); [Mzk5], Theorem 5.2, (i)]. Assertion
+(iv) follows formally from [Mzk5], Proposition 1.13, (iii) [since, by assertion (i) of the
+present Theorem 1.2, “condition (b)” ofloc. cit. is always satisﬁed by objects of C].
+Finally, assertion (v) follows by observing that if Φ isabsolutely primitive, then the
+homomorphism B → Φgp considered above is surjective. Thus, it follows formally
+
+10 SHINICHI MOCHIZUKI
+from the computation of isomorphism classes ofC given in [Mzk5], Theorem 5.1, (i),
+that C is of base-trivial type; moreover, it is immediate that the image ofp ∈ Q×
+p in
+K× [for Spec(K) ∈ Ob(D0)] determines a characteristic splitting. This completes
+the proof of Theorem 1.2. ⃝
+Remark 1.2.1. We observe in passing that if Φ is absolutely primitive,t h e nb y
+Theorem 1.2, (i), (v), it follows that C admits unit-linear Frobenius functorsas in
+[Mzk5], Proposition 2.5, (iii) [where one takes the “Λ” of loc. cit. to be Z], and
+unit-wise Frobenius functorsas in [Mzk5], Corollary 2.6. If, moreover, Λ = Z,t h e n
+C admits unit-wise Frobenius functorsas in [Mzk5], Proposition 2.9, (ii).
+Remark 1.2.2. Consider the functors “ O⊿(−)”, “O×(−)” on D determined by
+C [cf. [Mzk5], Proposition 2.2, (ii), (iii)]. Let
+uD :( O b (D) ∋) AD ↦→ uAD ∈O ×(AD)
+be a “section” of the functor “ O×(−)” [i.e., every arrow φ : AD → BD of D
+maps uBD ↦→ uAD ]. Suppose that Φ is absolutely primitive,a n dt h a tΛ= Z [so
+O⊿(AD)char = O⊿(AD)/O×(AD) ∼= Z≥0]. Then if τ is a characteristic splitting
+on C, then it follows immediately that uD determines a new characteristic splitting
+“ uD · τ”, by taking
+(uD · τ)(AD)
+def
+=( uAD · η)Z≥0 ⊆O ⊿(AD)
+for η ∈ τ(AD) ⊆O ⊿(AD) a generator of τ(AD). Moreover, one obtains a unique
+automorphism U of the data
+(Φ, B → Φgp)
+which is the identity on “ O×(−)” [regarded as a subfunctor ofB] and Φ, but which
+maps τ [where we regard “ O⊿(−)” as a subfunctor of B such that B = O⊿(−)gp]
+to uD · τ.T h u s ,U induces a self-equivalence
+Ψ U : C
+∼
+→C
+of the model Frobenioid C. In particular, Ψ U exhibits an example of a situation
+where p ∈ Q×
+p is mapped to some p · u ∈ Q×
+p ,w h e r eu ∈ Z×
+p — a situation which,
+of course, never arises in conventional scheme theory [cf. the various Frobenius
+functors discussed in Remark 1.2.1; [Mzk5], Introduction].
+Example 1.3. Connected Quasi-temperoids.
+(i) If Π is a topological group, then we shall write
+Btemp(Π)
+for the category whose objects are countable [i.e., of cardinality ≤ the cardinality of
+the set of natural numbers], discrete sets equipped with a continuous Π-action and
+
+THE GEOMETRY OF FROBENIOIDS II 11
+whose morphisms are morphisms of Π-sets [cf. [Mzk2], §3]. If Π may be written as
+an inverse limit of an inverse system of surjections of countable discrete topological
+groups, then we shall say that Π is tempered [cf. [Mzk2], Deﬁnition 3.1, (i)]. Thus,
+if Π is proﬁnite, then it is tempered, and there is a natural equivalence of categories
+Btemp(Π)0 ∼
+→B (Π)0 [where the superscript “0” is as in [Mzk5],§0]. If ZΠ(H)= {1}
+for every open subgroup H ⊆ Π, then we shall say that Π is temp-slim [cf. [Mzk2],
+Deﬁnition 3.4, (ii)]. Any category equivalent to a category of the formBtemp(Π) for
+some tempered topological group Π will be referred to as aconnected temperoid[cf.
+[Mzk2], Deﬁnition 3.1, (ii)]. We recall that if Π is a tempered topological group, then
+Πi s temp-slim if and only if the category B
+temp(Π) is slim [cf. [Mzk2], Corollary
+3.3, Remark 3.4.1)]. In a similar vein, if Π is residually ﬁnite ,t h e nBtemp(Π)0 is
+Frobenius-slim[cf. [Mzk5], Remark 3.1.2]. If Π ◦ ⊆ Πi sa n open subgroup,t h e nw e
+shall write
+Btemp(Π, Π◦) ⊆B temp(Π)
+for the full subcategory of objects that admit a morphism to the object Π/Π◦ [i.e.,
+the set of cosets Π/Π◦ equipped with its natural Π-action from the left] ofBtemp(Π).
+Note that there is a natural equivalence of categories Btemp(Π◦)
+∼
+→B temp(Π)Π/Π◦;
+in particular, we obtain natural functors Btemp(Π◦) →B temp(Π), Btemp(Π◦)0 →
+Btemp(Π)0.A connected quasi-temperoidis a category that is equivalent to a cat-
+egory of the form Btemp(Π, Π◦), where Π is a tempered topological group, and
+Π◦ ⊆ Π is an open subgroup [cf. [Mzk2], Deﬁnition A.1, (i)]. One veriﬁes im-
+mediately that if E is a connected quasi-temperoid, then the category E0 (⊆E )i s
+connected, totally epimorphic,o f strongly indissectible type [cf. §0], and of FSM-
+type [indeed, every monomorphism of E0 is an isomorphism], hence, in particular,
+of FSMFF-type [cf. [Mzk5], §0].
+(ii) Let φ :Π 1 → Π2 be an open homomorphism of tempered topological groups
+[i.e., φ is a continuous homomorphism, φ(Π1) is an open subgroup of Π 2,a n d φ
+induces an isomorphism of topological groups Π1/Ker(φ)
+∼
+→ φ(Π1)]. Then observe
+that φ induces a natural functor
+φ∗ : Btemp(Π1)0 →B temp(Π2)0
+by composing the functor Btemp(φ(Π1))0 →B temp(Π2)0 of (i) with the functor
+Btemp(Π1)0 →B temp(φ(Π1))0 obtained by mapping a Π 1-set E to the φ(Π1)-set
+E′ def
+= E/Ker(φ) given by taking the set of Ker(φ)-orbits of E.W h e nφ is surjective,
+one veriﬁes immediately that the functor φ∗ is left adjoint to the pull-back functor
+Btemp(Π2)0 →B temp(Π1)0 [i.e., obtained by composing the Π 2-action on a Π 2-set
+F2 with φ so as to obtain a Π1-set F1].
+(iii) Let F = Qp or R; ˜F an algebraic closure of F. Then by (i), (ii), any
+open homomorphism Π → Q from a tempered topological groupΠ, equipped with
+an open subgroup Π ◦ ⊆ Π, to a quotient GF ↠ Q of the absolute Galois group
+GF
+def
+= Gal( ˜F/F )o f F determines a functor
+Btemp(Π, Π◦)0 ↪→B temp(Π)0 →B temp(Q)0 ↪→B temp(GF )0
+
+12 SHINICHI MOCHIZUKI
+[where the middle arrow “ → ” is a functor as in (ii)] between connected, totally
+epimorphic categories of FSM-type. In particular, when F = Qp, if we set D
+def
+=
+Btemp(Π, Π◦)0, then we obtain a functor D→D 0 = Btemp(GQp )0 [cf. Example 1.1,
+(ii)] which satisﬁes the hypotheses of Theorem 1.2, (i). That is to say, in this case,
+the main results of the theory of [Mzk5] may be applied to thep-adic Frobenioidsof
+Example 1.1, (ii).
+Example 1.4. Localizations of Number Fields.
+(i) Often it is of interest to relate ﬁnite extensions of a local ﬁeld to ﬁnite
+extensions of number ﬁelds . This may be achieved as follows: Let ˜F be a Galois
+extension of a number ﬁeld F; v a [not necessarily nonarchimedean!] valuation of F.
+Write Fv for the completion ofF at v, ˜Fv for the Galois extension ofFv determined
+by ˜F/F , Dv ⊆ Gal( ˜F/F ) for the decomposition group of v in Gal( ˜F/F )[ w h i c hi s
+well-deﬁned up to conjugation],
+Q0
+for the full subcategory of the Galois category of ﬁnite ´etale coverings of Spec(F)
+determined by objects of the form Spec( F ′) → Spec(F), where F ′ ⊆ ˜F is a ﬁnite
+ﬁeld extension of F,a n d
+P0
+for the full subcategory of connected objects of the Galois category of ﬁnite ´etale
+coverings of Spec( Fv) determined by objects of the form Spec( F ′) → Spec(Fv),
+where F ′ ⊆ ˜Fv is a ﬁnite ﬁeld extension of Fv. Thus, restriction to Spec( Fv)
+determines a natural functor
+ρ: Q0 →P ⊥
+0
+[where the superscript “ ⊥” is as in [Mzk5], §0; thus, P⊥
+0 is naturally equivalent
+to the full subcategory of the Galois category of ﬁnite ´etale coverings of Spec(Fv)
+consisting of objects whose connected components form objects of P0]. Write
+E0
+for the category whose objects are triples
+(P,Q,ι : P → ρ(Q))
+—w h e r eP ∈ Ob(P0), Q ∈ Ob(Q0), and ιis an isomorphism in P⊥
+0 of P onto a
+connected component of ρ(Q)—a n dw h o s emorphisms
+(P,Q,ι : P → ρ(Q)) → (P ′,Q ′,ι′ : P ′ → ρ(Q′))
+are pairs of morphismsP → P ′, Q → Q′ in P0, Q0, respectively, that are compatible
+with ι, ι′.T h u s ,E0 may be thought of as the category of “connected ﬁnite ´etale
+coverings of Spec(Fv) equipped with a localization morphism [that satisﬁes certain
+
+THE GEOMETRY OF FROBENIOIDS II 13
+properties] to a connected ﬁnite ´etale covering of Spec(F) determined by a ﬁnite
+subextension of the extension ˜F/F ”.
+(ii) One veriﬁes immediately that the category E0 is connected and totally
+epimorphic. Also, we have natural functors E0 →P 0, E0 →Q 0. One veriﬁes
+immediately that E0 →P 0 is faithful and arrow-wise essentially surjective [cf. §0],
+and that if E0 ∈ Ob(E0) projects to an object P0 ∈ Ob(P0), then the functor
+E0 →P 0 induces a bijection AutE0 (E0)
+∼
+→ AutP0 (P0). Note that ﬁnite extensions
+F1 ⊆ F2 ⊆ ˜F of F, together with a valuationv2 of F2 lying over a valuationv1 of F1
+which, in turn, lies overv such that the local extension (F2)v2 /(F1)v1 is trivial yield
+examples of FSM-morphisms of E0 which are not isomorphisms. Conversely, one
+veriﬁes immediately that every FSM-morphism of E0 which is not an isomorphism
+arises in this way. Thus, the category E0 is not [in general] of FSM-type.O n t h e
+other hand, one veriﬁes immediately that E0 is of FSMFF-type.
+(iii) Suppose that v is nonarchimedean and lies over a rational prime p.T h e n
+one has an evident natural functor P0 →D 0. Moreover, by applying Proposition
+1.5, (ii), (iii), below, given a connected, totally epimorphic categoryP and a functor
+P→P 0,o n eo b t a i n saconnected, totally epimorphic category E
+def
+= P× P0 E0
+equipped with a functor E→P 0 →D 0 — cf. the category “ D”, the functor
+“ D→D 0” of Example 1.1, (ii). If, moreover, P is of FSM-type [cf., e.g., Example
+1.3, (i)], then E is of FSMFF-type [cf. Proposition 1.5, (viii)], hence, in particular,
+satisﬁes the hypotheses of Theorem 1.2, (i). That is to say, in this case, the main
+results of the theory of [Mzk5] may be applied to thep-adic Frobenioidsof Example
+1.1, (ii). Also, we observe that if P is Frobenius-slimor slim [cf., e.g., Example 1.3,
+(i)], then so is E [cf. Proposition 1.5, (iv)]; if P is of strongly indissectible type [cf.,
+e.g., Example 1.3, (i)], then so is E [cf. Proposition 1.5, (vii)].
+Proposition 1.5. (Localizations of Number Fields) Let P0, E0 be as in
+Example 1.4; P a category; P→P 0 a functor. Denote by
+E
+def
+= P× P0 E0
+the categorical ﬁber product [cf. [Mzk5], §0]. [Thus, we have 1-compatible
+natural projection functorsE→ P , E→E 0, E→P 0.] We shall refer to a morphism
+of E that projects to an an isomorphism of P as a P-isomorphism.T h e n :
+(i) The natural projection functor E→P is faithful and arrow-wise es-
+sentially surjective . Moreover, if E1,E2 ∈ Ob(E) project to P1,P2 ∈ Ob(P),
+respectively, then the functor E→P induces a bijection
+lim−→E3 → E1
+HomE(E3,E2)
+∼
+→ HomP(P1,P2)
+where the inductive limit is over P-isomorphisms E3 → E1. That is to say, “ P
+may be reconstructed from E by inverting the P-isomorphisms”.
+(ii) P is connected if and only if E is.
+
+14 SHINICHI MOCHIZUKI
+(iii) P is totally epimorphic if and only if E is.
+(iv) If E ∈ Ob(E) projects to an object P ∈ Ob(P), then we have natural
+bijections
+Aut(PP →P )
+∼
+→ Aut(EE →P ); Aut( EE →E )
+∼
+→ Aut(EE →P )
+[induced by composition with the natural functorsE→P , EE →P P ]. In particular,
+P is slim if and only if E is; P is F robenius-slimif and only if E is.
+(v) LetφE ∈ Arr(E); denote byφP ∈ Arr(P) the projection ofφE to P.T h e nφE
+is a monomorphism (respectively, ﬁber-wise surjective ;a n FSM-morphism)
+if and only if φP is.
+(vi) Suppose thatP is of FSM-type. Then a morphism ofE is a P-isomorphism
+if and only if it is an FSM-morphism.
+(vii) Let AE ∈ Ob(E); denote by AP ∈ Ob(P) the projection of AE to P.
+Then AP is weakly dissectible (respectively, weakly indissectible ; strongly
+dissectible; strongly indissectible) [cf. §0] if and only if AE is.
+(viii) Suppose that P is of FSM-type and totally epimorphic .T h e nE is
+of FSMFF-type.
+(ix) Let φE, φP be as in (v). Suppose, moreover, that Dv is a ﬁnite group
+which is either trivial or ofprime order [which is always the case, if, for instance,
+v is archimedean]. Then if φP admits a factorization φP = αP ◦βP in P,
+then there exist morphisms αE, βE of E lifting αP, βP, respectively, such that
+φE = αE ◦βE in E. In particular, if φE is totally ordered [cf. §0] (respectively,
+either irreducible or an isomorphism), then so is φP.
+Proof. First, we consider assertion (i). The faithfulness and arrow-wise essential
+surjectivity of E→P follow immediately from the corresponding properties of
+E0 →P 0 [cf. Example 1.4, (ii)]. The bijection of assertion (i) follows immediately
+from the deﬁnitions and the easily veriﬁed observation that such a bijection exists
+when P→P 0 is the identity functor on P0. Next, we consider assertion (ii).
+Since E→P is essentially surjective [cf. assertion (i)], it is immediate that the
+connectedness of E implies that ofP. On the other hand, note that whenP is aone-
+morphism category, the connectedness of E follows immediately from the bijection
+of assertion (i). If P is an arbitrary connected category [equipped with a functor
+P→P 0], then the connectedness of E follows immediately from the arrow-wise
+essential surjectivity of E→P [cf. assertion (i)] by considering the “ﬁbers” of the
+functor E→P [which correspond to the case whereP is a one-morphism category].
+Assertion (iii) follows immediately from the deﬁnitions, the total epimorphicity of
+E0 and P0,a n dt h ebijection of assertion (i). Assertion (iv) follows immediately
+from the bijection of assertion (i) and the bijection “Aut E0 (E0)
+∼
+→ AutP0 (P0)”
+observed in Example 1.4, (ii). Assertions (v), (vii) follow from the faithfulness of
+E→P [cf. assertion (i)], together with the bijection of assertion (i), by a routine
+
+THE GEOMETRY OF FROBENIOIDS II 15
+veriﬁcation. Assertion (vi) follows formally from assertion (v). This completes the
+proof of assertions (i), (ii), (iii), (iv), (v), (vi), (vii).
+Next, we consider assertion (viii). Since P is totally epimorphic, it follows that
+if a composite of two morphismsα, β of P is an isomorphism, then bothα and β are
+isomorphisms [cf. the discussion of [Mzk5], §0]; a similar statement holds for P0.
+Thus, by applying the equivalence of assertion (vi) both to the original P and to
+the case where P→P 0 is the identity functor onP0, we conclude that a morphism
+of E is an FSMI-morphism if and only if it is a P-isomorphism that projects to an
+FSMI-morphism of E0. Thus, the fact that E is of FSMFF-type follows formally
+from the fact that E0 is of FSMFF-type [cf. Example 1.4, (ii)]. This completes the
+proof of assertion (viii).
+Finally, we observe that the portion of assertion (ix) concerningfactorizations
+follows immediately from the fact that the assumption onDv implies that ifαP0 ◦βP0
+is any composite morphism of P0, then either αP0 or βP0 is an isomorphism. The
+portion of assertion (ix) concerning irreducibility then follows formally; the portion
+of assertion (ix) concerning totally ordered morphisms follows from the portion of
+assertion (ix) concerning factorizations, together with the portion of assertion (v)
+concerning monomorphisms [cf. §0]. ⃝
+
+16 SHINICHI MOCHIZUKI
+Section 2: The Kummer and Reciprocity Maps
+The purpose of the present§2 is to consider classicalKummer theory,a sw e l la s
+the reciprocity mapof classical local class ﬁeld theory, in the context of the“p-adic
+Frobenioids”of §1.
+We begin with the following general deﬁnition.
+Deﬁnition 2.1. Let C be a Frobenioid[whose Frobenioid structure is given by a
+functor C→ FΦ, where Φ is a divisorial monoid on a connected, totally epimorphic
+category D]; A ∈ Ob(C); AD
+def
+= Base(A) ∈ Ob(D); N ∈ N≥1.
+(i) Write
+μ N (A) ⊆O ×(A)
+for the subgroup of elements of O×(A) that are annihilated by N.[ T h u s ,i fC is as
+in Example 1.1, with Λ = Z,t h e nμ N (A) is isomorphic to a subgroup of Z/NZ.]
+We shall refer to μ N (A)a st h ecyclotomic portion of O×(A) [or O⊿(A)]o fo r d e r
+N.W r i t e
+AutC/D(A)
+def
+= Im(AutC(A)) ⊆ AutD(AD)
+for the image of AutC(A)i nA u tD(AD). [Thus, since O⊿(A)i s abelian [cf. [Mzk5],
+Remark 1.3.1], the natural action of AutC(A)o n O⊿(A) factors through AutC/D(A).]
+Then we observe that the submonoid μ N (A) ⊆O ×(A) ⊆O ⊿(A)i s stabilized by
+the natural action of AutC/D(A)o n O⊿(A). We shall say that A is μ N-saturated if
+the abstract group μ N (A) is isomorphic to Z/NZ.
+(ii) Suppose that A is μ N -saturated. Let HA ⊆ AutC/D(A) be a subgroup;
+f ∈O ⊿(A)HA
+[where the superscriptHA denotes the subset of elements ﬁxed by the action ofHA]
+an element that admits an N-th root g ∈O ⊿(A) — i.e., gN = f.T h e n s i n c e t h e
+action of HA on the monoid O⊿(A)ﬁ x e sf, it follows that HA stabilizes the subset
+μ N (A) · g ⊆O ⊿(A) [i.e., the subset of N-th roots of f — cf. [Mzk5], Deﬁnition
+1.3, (vi)], hence determines a cohomology class
+κf ∈ H1(HA, μ N(A))
+which is easily veriﬁed to be independent of the choice ofg, and which we shall refer
+to as theKummer class off. Here, we note thatHA acts trivially on the cohomology
+module H1(HA, μ N(A)). The assignment f ↦→ κf determines a homomorphism
+(O⊿(A) ⊇) O⊿(A)HA
+⋂
+O⊿(A)N → H1(HA, μ N(A))
+which we shall refer to as the Kummer map.
+
+THE GEOMETRY OF FROBENIOIDS II 17
+Now we return to our discussion of the p-adic Frobenioids C of Example 1.1.
+Let us assume that Λ = Z; D is any category
+Btemp(Π, Π◦)0
+as in Example 1.3, (iii), where Π → Q, GQp ↠ Q [i.e., we take “ F”o f loc. cit.
+to be Qp], Π ◦ ⊆ Πa r ea si n loc. cit. , and we assume further that the surjection
+GQp ↠ Q is an isomorphism.W r i t eG
+def
+=I m ( Π )⊆ Q; G◦ def
+=I m ( Π◦) ⊆ Q;
+E
+def
+= Btemp(G, G◦)0; K for the ﬁnite extension of Qp determined by the open
+subgroup G ⊆ Q.T h u s ,w eh a v eanatural functor
+D = Btemp(Π, Π◦)0 →E = Btemp(G, G◦)0
+[cf. Example 1.3, (ii), (iii)].
+Deﬁnition 2.2. Let H ⊆ G be a normal open subgroup; N ∈ N≥1; A ∈ Ob(C).
+Write AD
+def
+= Base(A) ∈ Ob(D); AE ∈ Ob(E) for the projection of A to E.
+(i) Note that the natural action by conjugation of Aut C(A)o n O×(A)( ⊆
+AutC(A)) factors through the quotient
+AutC(A) ↠ GA
+def
+=A u tC(A)/(Ker(AutC(A) → AutE(AE)))
+induced by the functor C→E . Moreover, the functor C→E induces a natural
+inclusion GA ↪→ AutE(AE), which is an isomorphism if, for instance, AD is Galois
+[where we recall that C is Aut-ample — cf. Theorem 1.2, (i)]. If AD is Galois, then
+we have a natural surjective outer homomorphism
+G ↠ AutE(AE)
+∼
+→ GA
+which thus determines a surjective outer homomorphism
+H ↠ HA
+def
+=I m (H)( ⊆ GA)
+— which, in light of the fact thatH is normal in G, is well-deﬁned, up tocomposition
+with conjugation by an element of G, despite the fact that the homomorphism
+G ↠ GA is only determined up to composition with an inner automorphism.
+(ii) We shall say that A is (N,H )-saturated if the following conditions are
+satisﬁed: (a) A is μ N -saturated; (b) AD is Galois; (c) the natural surjective homo-
+morphism H ↠ HA induces isomorphisms on ﬁrst cohomology modules
+H1(HA, μ N (A))
+∼
+→ H1(H, μ N(A)); H1(HA, Z/NZ)
+∼
+→ H1(H, Z/NZ)
+and a surjection on second cohomology modulesH2(HA, μ N (A)) ↠ H2(H, μ N(A))
+[conditions which are unaﬀected by composition with conjugation by an element of
+G]. In this situation, we shall write
+FN (A)
+def
+= H2(HA, μ N(A))/Ker(H2(HA, μ N(A)) ↠ H2(H, μ N(A)))
+
+18 SHINICHI MOCHIZUKI
+—s o FN (A) ∼= H2(H, μ N(A)) ∼= Z/NZ [cf., e.g., [NSW], Chapter 7, Theorem
+7.2.6].
+(iii) Deﬁne
+O□(−)
+def
+= O⊿(−)
+if Φ is ﬁeldwise saturated [cf. Example 1.1, (ii)], and
+O□(−)
+def
+= O×(−)
+if Φ is not ﬁeldwise saturated [e.g., if Φ is absolutely primitive].
+Remark 2.2.1. Thus, it follows immediately from the deﬁnitions, together with
+the ﬁniteness of the cohomology modules H1(H, μ N(A)), H2(H, μ N(A)) [cf., e.g.,
+[NSW], Chapter 7, Theorem 7.2.6], that given an A′ ∈ Ob(C), it follows that, for
+any N, H as in Deﬁnition 2.2, there exists a pull-back morphism A′′ → A′ in C such
+that A′′ is (N,H )-saturated.
+In the notation of Deﬁnition 2.2, suppose that A is (N,H )-saturated.W r i t e
+AE =S p e c (L)[ s oL is a ﬁnite extension of K]. Note that HA acts naturally on L,
+O□(A). Moreover, we have a natural isomorphism
+(O□(A) ⊇ ) O□(A)H ∼
+→O □(LH)
+[where the superscript “H’s” denote the submonoids/subﬁelds of elements on which
+HA acts trivially]. Observe that, in light of the deﬁnition of the notation “ O□(−)”
+in Deﬁnition 2.2, (iii), the [ﬁrst cohomology module portion of the] Galois-theoretic
+condition of Deﬁnition 2.2, (ii), (c), implies [upon translation into “extension ﬁeld-
+theoretic language”] that any element
+f ∈O □(A)H
+admits an N-th root g ∈O □(A) — i.e., gN = f.T h u s , t h eKummer map [cf.
+Deﬁnition 2.1, (ii)] is deﬁned on all of O□(A)H.
+Next, let us recall that, by the well-known duality theory of nonarchimedean
+[mixed-characteristic] local ﬁelds [cf., e.g., [NSW], Chapter 7, Theorem 7.2.6], the
+cup product on group cohomology determines an isomorphism
+H1(H, μ N(A))
+∼
+→ Hab ⊗ H2(H, μ N(A))
+hence [in light of the condition of Deﬁnition 2.2, (ii), (c)] an isomorphism [induced
+by the cup product on group cohomology]
+H1(HA, μ N(A))
+∼
+→ Hab
+A ⊗ FN (A)
+which isindependent of the choice of the homomorphismH ↠ HA among its various
+G-conjugates and compatible with the natural actions ofGA/HA on its domain and
+codomain. Write ηf ∈ Hab
+A ⊗ FN (A) for the image of κf via this last isomorphism.
+
+THE GEOMETRY OF FROBENIOIDS II 19
+Deﬁnition 2.3. The assignments f ↦→ κf , f ↦→ ηf determine homomorphisms
+O□(A)H → H1(HA, μ N(A)); O□(A)H → Hab
+A ⊗ FN (A)
+which we shall refer to as the Kummer and reciprocity maps [associated to the
+(N,H )-saturated object A], respectively.
+Theorem 2.4. (Category-theoreticity of the Kummer and Reciprocity
+Maps) For i =1 , 2,l e t pi ∈ Primes; Ci a pi-adic F robenioid [cf. Example
+1.1, (ii)] whose monoid type [i.e., the “ Λ” of Example 1.1] is Z, whose deﬁning
+divisor monoid [i.e., the “ Φ” of Example 1.1] we denote by Φi, whose deﬁning
+rational function monoid [i.e., the “ B” of Example 1.1] we denote by Bi,a n d
+whose base category Di satisﬁes
+Di = Btemp(Πi, Π◦
+i )0
+[cf. Example 1.3, (iii)], where Πi → Qi
+def
+= GQpi
+is an open homomorphism of
+temp-slim tempered topological groups [cf. [Mzk1], Theorem 1.1.1, (ii)],Π◦
+i ⊆ Πi
+is an open subgroup,Gi
+def
+=I m ( Πi) ⊆ Qi; G◦
+i
+def
+=I m ( Π◦
+i ) ⊆ Qi; Ei
+def
+= Btemp(Gi,G ◦
+i )0.
+[Thus, we have a natural functorDi →E i.] Suppose further that we have been given
+open normal subgroups H1 ⊆ G1, H2 ⊆ G2, together with an equivalence of
+categories
+Ψ: C1
+∼
+→C 2
+— which [cf. Theorem 1.2, (i); Example 1.3, (i); [Mzk5], Theorem 3.4, (v)] neces-
+sarily induces a 1-compatible equivalence of categories ΨBase : D1
+∼
+→D 2,h e n c e
+an outer isomorphism of topological groups
+Π1
+∼
+→ Π2
+[cf. [Mzk2], Proposition 3.2; [Mzk2], Theorem A.4] that lies over an outer iso-
+morphism of topological groups
+G1
+∼
+→ G2
+[cf. Theorem 1.2, (ii)]. Assume that this isomorphism G1
+∼
+→ G2 maps H1 onto
+H2. Then [relative to the notation introduced in Deﬁnition 2.2]:
+(i) Φ1 is ﬁeldwise saturated if and only if Φ2 is. Moreover, p1 = p2; Ψ
+maps (N,H 1)-saturated objects to (N,H 2)-saturated objects and inducesisomor-
+phisms of monoids/modules
+O□(A1)H1 ∼
+→O □(A2)H2 ;( H1)A1
+∼
+→ (H2)A2 ;( G1)A1
+∼
+→ (G2)A2
+H1((H1)A1 , μ N(A1))
+∼
+→ H1((H2)A2 , μ N(A2)); FN (A1)
+∼
+→ FN (A2)
+[where Ψ(A1)= A2;f o r i =1 , 2, Ai ∈ Ob(Ci) is (N,H i)-saturated] which are
+compatible with the respective Kummer and reciprocity maps
+O□(Ai)Hi → H1((Hi)Ai , μ N (Ai)); O□(Ai)Hi → (Hi)ab
+Ai ⊗ FN (Ai)
+
+20 SHINICHI MOCHIZUKI
+[where i =1 , 2] as well as with the various natural actions of (G1)A1 /(H1)A1 ,
+(G2)A2 /(H2)A2 .
+(ii) If theΦi are ﬁeldwise saturated, then the isomorphismFN (A1)
+∼
+→ FN (A2)
+of (i) is compatible with the natural isomorphisms
+FN (Ai)
+∼
+→ Z/NZ
+[cf., e.g., [NSW], Chapter 7, Theorem 7.2.6].
+Proof. First, we consider assertion (i). We begin by observing the [easily veriﬁed]
+fact that Φi is ﬁeldwise saturated if and only if the following two conditions hold:
+(a) The inductive limit monoid
+lim−→ Φi(B)
+[where B ranges over the objects of Di]i s divisible.
+(b) For every pull-back morphism φ : B → C of Ci that projects to a Galois
+covering φD : BD → CD of Di, the injection O⊿(C) ↪→O ⊿(B) induced
+by φ [cf. [Mzk5], Proposition 1.11, (iv)] determines a bijection
+O⊿(C)
+∼
+→O ⊿(B)Gal(B/C)
+[where the superscript “Gal(B/C)” denotes the submonoid of Gal(B/C)-
+invariants; Gal(B/C)
+def
+= Gal(BD/CD)].
+Moreover, since Ci is a Frobenioid ofrationally standard type [cf. Theorem 1.2, (i);
+Example 1.3, (i)] over a slim base category [cf. Example 1.3, (i)], it follows from
+[Mzk5], Corollaries 4.10; 4.11, (ii), (iii), that Ψ induces a 1 -compatible equivalence
+of categories Ψ Base : D1
+∼
+→D 2,a sw e l la s compatible isomorphisms of functors
+Φ1
+∼
+→ Φ2, B1
+∼
+→ B2 — where we regard “ O⊿(−)” as a subfunctor of Bi [such that
+Bi is the groupiﬁcation of “O⊿(−)”] which ispreservedby the isomorphismB1
+∼
+→ B2
+— hence that these conditions (a), (b) are preserved by Ψ. Thus, Φ 1 is ﬁeldwise
+saturated if and only if Φ 2 is. The fact that p1 = p2 follows from the existence
+of the isomorphism G1
+∼
+→ G2 [cf. [Mzk1], Proposition 1.2.1, (i)]. The remainder
+of assertion (i) follows immediately from the fact [just observed] that Ψ preserves
+“ O⊿(−)”, together with the “manifestly group-/category-theoretic” construction
+given above of the Kummer and reciprocity maps. This completes the proof of
+assertion (i).
+Next, we consider assertion (ii). For i =1 , 2, write Ki for the ﬁnite extension
+of Qp [where p
+def
+= p1 = p2] determined by the open subgroup Gi ⊆ Qi,
+ Ki for the
+algebraic closure of Ki used to deﬁne the Galois group Qi [so Gi = Gal(
+Ki/Ki)].
+Then since Φ i is ﬁeldwise saturated, it follows — by varying the objects Ai [that
+correspond via Ψ] and reconstructing themultiplicative groupassociated to the ﬁeld
+
+THE GEOMETRY OF FROBENIOIDS II 21
+determined by the image of Ai in B(Gi,G ◦
+i ) as the groupiﬁcation of the monoid
+O⊿(Ai)= O□(Ai) — that Ψ induces a pair of compatible isomorphisms
+G1
+∼
+→ G2;
+ K
+×
+1
+∼
+→
+ K
+×
+2
+— where this pair is well-deﬁned up to composition with automorphisms of the pair
+(G2,
+ K
+×
+2 ) induced by elements of G2.F o r i =1 , 2, denote by μ (
+K
+×
+i ) ⊆
+ K
+×
+i the
+torsion subgroup of
+ K
+×
+i .
+Now let us recall [cf. the theory of the Brauer group of a nonarchimedean
+[mixed-characteristic] local ﬁeld, as exposed, for instance, in [Serre], §1; [Mzk1], the
+proof of Proposition 1.2.1, (vii)] that the natural isomorphism
+H2(Gi, μ (
+K
+×
+i ))
+∼
+→ Q/Z
+may be constructed as the composite of the natural isomorphism
+H2(Gi, μ (
+K
+×
+i ))
+∼
+→ H2(Gi,
+ K
+×
+i )
+[induced by the natural inclusion μ (
+K
+×
+i ) ↪→
+ K
+×
+i ] with the inverse of the natural
+isomorphism
+H2(Gunr
+i , (Kunr
+i )×)
+∼
+→ H2(Gi,
+ K
+×
+i )
+[induced by the inclusion (Kunr
+i )× ↪→
+ K
+×
+i —w h e r eKunr
+i ⊆
+ Ki denotes the max-
+imal unramiﬁed extension of Ki; Gunr
+i
+def
+= Gal(Kunr
+i /Ki)], followed by the natural
+isomorphism
+H2(Gunr
+i , (Kunr
+i )×)
+∼
+→ H2(Gunr
+i , Z)
+∼
+→ H2(ˆZ, Z)= Q/Z
+[where the ﬁrst arrow is induced by the valuation map ( Kunr
+i )× → Z; the isomor-
+phism Gunr
+i
+∼
+→ ˆZ is induced by the Frobenius element]. Since the isomorphism
+G1
+∼
+→ G2 is automatically compatiblewith the quotientsGi ↠ Gunr
+i ,a sw e l la sw i t h
+the Frobenius elements ∈ Gunr
+i [cf., e.g., [Mzk1], Proposition 1.2.1, (ii), (iv)], we
+thus conclude that the natural isomorphisms
+H2(Gi, μ (
+K
+×
+i ))
+∼
+→ Q/Z
+are compatible with the isomorphism
+H2(G1, μ (
+K
+×
+1 ))
+∼
+→ H2(G2, μ (
+K
+×
+2 ))
+induced by Ψ. Since, moreover, the natural isomorphisms
+FN (Ai)
+∼
+→ Z/NZ
+in question are easily veriﬁed to be “isomorphisms induced on subquotients” by
+the natural isomorphisms H2(Gi, μ (
+K
+×
+i ))
+∼
+→ Q/Z [cf., e.g., [NSW], Chapter 7,
+
+22 SHINICHI MOCHIZUKI
+Corollary 7.1.4], it thus follows that the natural isomorphisms FN (Ai)
+∼
+→ Z/NZ
+are compatible with the isomorphism FN (A1)
+∼
+→ FN (A2) induced by Ψ, as desired.
+This completes the proof of assertion (ii). ⃝
+Remark 2.4.1. By allowing N ∈ N≥1 to vary, it is a routine exercise to show
+that:
+One obtains aproﬁnite version of Theorem 2.4, (i), so long as one allows for
+a( Gi)Ai /(Hi)Ai -indeterminacy [where i =1 , 2] in the resulting proﬁnite
+Kummer and reciprocity maps.
+Indeed, when one allows N — hence also the objects Ai,w h e r ei =1 , 2—t ov a r y ,
+one must exercise care with respect to thecoeﬃcients “ μ N (Ai)”, as one allowsAi to
+vary. The fact that the coeﬃcients then vary does not cause a problem — so long as
+one allows for a (G
+i)Ai /(Hi)Ai -indeterminacy — since [cf. the discussion preceding
+Deﬁnition 2.3] (Hi)Ai acts trivially on H1((Hi)Ai , μ N (Ai)); FN (Ai). [Here, we note
+that we implicitly used the [well-known — cf., e.g., [Mzk1], Proposition 1.2.1, (vii)]
+fact that (Gi)Ai acts trivially on FN (Ai) in the proof of Theorem 2.4, (ii).]
+Remark 2.4.2. Note [relative to Theorem 2.4, (ii)] that if the Φi are not ﬁeldwise
+saturated, then the natural isomorphisms
+FN (Ai)
+∼
+→ Z/NZ
+are not, in general, compatible with the isomorphismFN (A1)
+∼
+→ FN (A2) induced by
+Ψ. Indeed, when the Φ i are absolutely primitive [cf. Remark 1.2.1], an example of
+such a Ψ is provided by the unit-wise Frobenius functorof [Mzk5], Proposition 2.9,
+(ii), which acts on FN (Ai) [relative to the natural isomorphisms FN (Ai)
+∼
+→ Z/NZ]
+by “raising to the ζ-th power” [cf. “the compatibility with the reciprocity map”
+asserted in Theorem 2.4, (i); [Mzk5], Proposition 2.9, (ii), (a), (c)].
+
+THE GEOMETRY OF FROBENIOIDS II 23
+Section 3: Archimedean Primes
+In the present §3, we deﬁne and study the basic properties of certain Frobe-
+nioids naturally associated to archimedean local ﬁelds. In particular, we construct
+our ﬁrst example [i.e., among the various examples presented thus far in [Mzk5]
+and the present paper] of a Frobenioid which is not of isotropic type. In fact, it is
+this example that motivated the theory [developed in [Mzk5]] of Frobenioids that
+are not necessarily of isotropic type; in particular, this example is also the source
+of the terminology “isotropic” and “co-angular” in the theory of [Mzk5].
+Write
+D0
+for thesubcategory of connected objects of the Galois categoryof ﬁnite ´etale coverings
+of Spec(R) [cf. [Mzk5], §0]. Thus, D0 is a connected, totally epimorphic category,
+which is of FSM-, hence also of FSMFF-type [cf. [Mzk5], §0].
+We begin by introducing some terminology.
+Deﬁnition 3.1.
+(i) An archimedean local ﬁeld is deﬁned to be a topological ﬁeld that is iso-
+morphic [as a topological ﬁeld] to either the [topological] ﬁeld of real numbers R
+— in which case we shall refer to the archimedean local ﬁeld as being real —o r
+the [topological] ﬁeld of complex numbers C — in which case we shall refer to the
+archimedean local ﬁeld as being complex. Recall that the topological ﬁeld R has no
+nontrivial automorphisms, while the unique nontrivial automorphism of the topo-
+logical ﬁeld C is given bycomplex conjugation.I f K, L are archimedean local ﬁelds,
+then any inclusion of topological rings
+ι: K↪ → L
+is either an isomorphism or satisﬁes the property that there exist isomorphisms of
+topological ﬁelds αK : K
+∼
+→ R, αL : L
+∼
+→ C such that αL ◦ι◦α−1
+K : R ↪→ C is the
+natural inclusion.
+(ii) If K is an archimedean local ﬁeld, then we shall denote by
+O×
+K ⊆ K×
+and refer to as the group of units of K the topological subgroup of K× of elements
+of norm 1; let us write
+S1 def
+= O×
+C ⊆ C×;o r d ( K×)
+def
+= K×/O×
+K
+and observe that the usual absolute value |−| on K determines a natural isomor-
+phism ord(K×)
+∼
+→ R>0. Also, note that we have a canonical decomposition
+O×
+K × ord(K×)
+∼
+→ K×
+
+24 SHINICHI MOCHIZUKI
+[i.e., given by mapping a pair ( z,λ), where z ∈O ×
+K, λ ∈ R>0 ∼= ord(K×), to
+z · λ ∈ K×].
+(iii) Let K be an archimedean local ﬁeld. Then we shall refer to as an angular
+region
+A ⊆ K×
+any subset A of the formB ×C [i.e., relative to the canonical decomposition of (ii)],
+where B ⊆O ×
+K is an open subset whose intersection with each connected component
+of O×
+K is [nonempty and] connected [which implies that B = O×
+K whenever K is
+real], and C ⊆ ord(K×) ∼= R>0 is an interval of the form (0 ,λ], where λ ∈ R>0.
+In this situation, we shall refer to λ as the tip of the angular region A and to the
+subset
+∂A
+def
+= {a ∈ A || a| = λ}⊆ A
+as the boundary of A [so ∂A maps bijectively via the projection K× →O ×
+K to B];
+if B = O×
+K, then we shall refer to the angular region A as isotropic.I f A′ ⊆ K× is
+another angular region, then we shall refer toA, A′ as co-angular if the projections
+of A, A′ to O×
+K coincide. We shall refer to a subset ofK as an angular regionif it is
+the union with the subset{0} of an angular region ofK×. Note that if V is anyone-
+dimensional vector space over K, then it makes sense to speak of angular regions,
+tips of angular regions ( ∈ ord(V )
+def
+= V ×/O×
+K,w h e r eV × def
+= V \{0}), boundaries
+of angular regions, isotropic angular regions, and co-angular angular regions of V ,
+V ×. Also, if, for i =1 , 2, Ai ⊆ Vi is an angular region of a one-dimensional vector
+space Vi over K, then one veriﬁes immediately that the subset
+A1 ⊗K A2
+def
+= {a1 ⊗K a2 | a1 ∈ A1,a 2 ∈ A2}⊆ V1 ⊗K V2
+is an angular region of V1 ⊗K V2.
+(iv) If
+ι: K↪ → L
+is an inclusion of archimedean local ﬁelds, and AK ⊆ VK is an angular region of a
+one-dimensional vector space VK over K, then the pair (VK, AK) determines a pair
+(VK, AK)|L
+def
+=( VL, AL)
+where VL
+def
+= VK ⊗K L,a n dAL ⊆ VL is the angular region of VL deﬁned as follows:
+If ιis an isomorphism, then we takeAL ⊆ VL to be the image ofAK via the natural
+bijection VK
+∼
+→ VL.I f ιis not an isomorphism, then we take AL ⊆ VL to be the
+[necessarily isotropic] angular region of VL given by the O×
+L -orbit of the image of
+AK via the natural inclusion VK ↪→ VL.
+(v) If F is a category equipped with a functor F→D 0, then we shall write
+F[R] (respectively, F[C]) for the full subcategory of real (respectively, complex)
+objects — i.e., objects that project to an object of D0 determined by a real (re-
+spectively, complex) archimedean local ﬁeld. If F = F[R] (respectively, F = F[C]),
+
+THE GEOMETRY OF FROBENIOIDS II 25
+then we shall say thatF is real (respectively, complex). If, for every A ∈ Ob(F[R]),
+there exists a morphism B → A in F,w h e r eB ∈ Ob(F[C]), together with an au-
+tomorphism of β ∈ AutFA (B) that projects to the unique nontrivial automorphism
+of D0, then we shall say that F is complexiﬁable.I f F is connected, and, moreover,
+the categories F[R], F[C] are either empty or connected, then we shall say that F
+is RC-connected. Suppose that F is totally epimorphic. Then we shall say that an
+object A ∈ Ob(F)i sa n RC-anchor if A determines an anchor [cf. [Mzk5], §0] of
+F[C]. We shall say that an object A ∈ Ob(F)i sa n RC-subanchor if there exists
+a morphism A → B in F,w h e r eB is an RC-anchor. We shall say that an object
+A ∈ Ob(F)i sa n RC-iso-subanchor if there exist an RC-subanchor B ∈ Ob(F), a
+subgroup G ⊆ AutF (B), and a morphism B → A in F which is a mono-minimal
+categorical quotient in F [cf. [Mzk5], §0] of B by G. If every object of [the totally
+epimorphic category] F is an RC-iso-subanchor, then we shall say that F is of
+RC-iso-subanchor type. We shall say that [the totally epimorphic category] F is of
+RC-standard typeif F is: (a) RC-connected; (b) complexiﬁable; (c) of FSMFF-type;
+(d) of RC-iso-subanchor type.
+Before proceeding, we note the following elementary result concerning the ge-
+ometry of the circle S1:
+Lemma 3.2. (Connected Open Subsets of the Circle) Let A, B ⊆ S1
+be [nonempty] connected open subsets such that A ⊆ B. We shall refer to a
+connected open subsetC ⊆ B that contains A as an (A, B)-subset.I f n ∈ Z, write
+φn : S1 → S1 for the map given by S1 ∋ z ↦→ zn.
+(i) A = B if and only if every (A, B)-subset C is, in fact, equal to A.I n
+particular, A = S1 if and only if every (A, S1)-subset C is, in fact, equal to A.
+(ii) There exists a w ∈ S1 such that the translated open subset w · A satisﬁes
+φ−1(w ·A)= w ·A [i.e., w ·A is invariant with respect tocomplex conjugation].
+For n a positive integer, there exists a [nonempty] connected open subset A′ ⊆ A
+such that φ−1(A′)= w · A′,w h e r ewn =1 ,i fa n do n l yi fφn(A) ⋂ {1, −1} ̸= ∅.
+(iii) The complement S1\A is of cardinality ≤ 1 if and only if there does
+not exist an (A, S1)-subset A′ such that A′ ̸= A, S1.
+(iv) Suppose that for some 0 ̸= n ∈ Z, φn(A) ⊆ A. Then either A = S1 or
+|n| =1 . Moreover, [in either of these cases] φn(A)= A.
+(v) There exists a ﬁnite subset E ⊆ Z such that for any n ∈ Z\E,a n da n y
+(A, S1)-subset A′, the restriction of φn to A′ is surjective,b u tnot injective.I n
+particular, for n ∈ Z\E, φn(A)= φn(B)= S1.
+(vi) Suppose that A ̸= B. Consider the following conditions on A, B:
+(a) For any two (A, B)-subsets A1,A2, it holds that either A1 ⊆ A2 or
+A2 ⊆ A1.
+
+26 SHINICHI MOCHIZUKI
+(b) For any two (A, B)-subsets A1,A2 such that A1 ⊆ A2, A1 ̸= A2,t h e r e
+exists an (A1,A2)-subset A3 such that A3 ̸= A1,A2.
+(c) The complement B\A is connected.
+(d) If B = S1,t h e nB\A is of cardinality ≤ 1.
+(e) B ̸= S1.
+Then condition (a) holds if and only if both conditions (c) and (d) hold; both
+conditions (a) and (b) hold if and only if both conditions (c) and (e) hold. If the
+pair (A, B) satisﬁes conditions (a) and (b), then we shall say that the pair (A, B)
+is continuously ordered.
+(vii) Suppose that A ̸= B, B ̸= S1. Then there exists an (A, B)-subset C such
+that the pairs (A, C); (C,B ) are continuously ordered.
+(viii) Suppose thatB\A is of cardinality > 1. Then there exist (A, B)-subsets
+A1, A2 such that B = A1
+⋃ A2, A1 ̸= S1, A2 ̸= S1.
+(ix) Suppose that A ̸= B, and that there does not exist a connected open subset
+D ⊆ B such that A ⋂D = ∅.T h e nB = S1,a n dB\A is of cardinality ≤ 1.
+(x) If A ̸= S1,t h e nA is not homeomorphic to S1.
+(xi) Every automorphism of the topological group S1 is equal to either φ1
+or φ−1.
+(xii) Write
+Homeo(S1); Trans( S1) ⊆ Homeo(S1); Reﬂ( S1) ⊆ Homeo(S1)
+for the group of self-homeomorphisms of S1, the subgroup [naturally isomorphic
+to S1] determined by thetranslations by elements ofS1, and the subgroup generated
+by Trans(S1), φ−1, respectively. ThenReﬂ( S1) ∼= S1⋊(Z/2Z); Trans(S1) ⊆ Reﬂ( S1)
+is equal to the subgroup of inﬁnitely divisible elements; the normalizer in
+Homeo(S1) of either Trans(S1) or Reﬂ( S1) is equal to Reﬂ( S1);t h e centralizer
+in Homeo(S1) of Trans(S1) is equal to Trans(S1).
+Proof. Assertions (i), (ii), (iii), (vi), (vii), (viii) are immediate from the well-
+known structure of S1 [and, in the case of assertion (vii), the equivalence, given
+in assertion (vi), of conditions (a) and (b) with conditions (c) and (e)]. To verify
+assertion (iv), note that, relative to the standard metric on the tangent bundle of
+S1 [i.e., the metric induced by the standard euclidean metric on C via the natural
+inclusion S1 ↪→ C], |dφn| = |n|≥ 1 — i.e., “ φn multiplies lengths by |n|”. Suppose
+that A ̸= S1, |n|≥ 2 > 1. Then |dφn| > 1, so it follows that the length of φn(A)i s
+strictly greater than the length of A, in contradiction to the inclusion φn(A) ⊆ A.
+Thus, either A = S1 or |n| = 1. The fact that φn(A)= A then follows immediately.
+This completes the proof of assertion (iv). Assertion (v) follows by taking E to be
+
+THE GEOMETRY OF FROBENIOIDS II 27
+the [manifestly ﬁnite] set of n such that |n| times the length of A fails to exceed
+[i.e., is ≤] the length ofS1. To verify assertion (ix), observe that our assumption on
+(A, B) implies that there does not exist an (A, B)-subset C such that (A, C), (C,B )
+are continuously ordered; thus, by assertion (vii), it follows thatB = S1, and [again
+by our assumption on (A, B)] that B\A is of cardinality ≤ 1. Assertion (x) follows,
+for instance, by observing that the fundamental group of S1 is nontrivial,w h e r e a s
+the fundamental group of A ̸= S1 is trivial. Assertion (xi) follows, for instance,
+by thinking of S1 as a quotient R/Z and applying the easily veriﬁed fact that
+every automorphism of the [additive] topological groupR is given by multiplication
+by a nonzero element of R. As for assertion (xii), the isomorphism Reﬂ( S1) ∼=
+S1 ⋊ (Z/2Z), as well as the characterization of the subgroup Trans(S1) ⊆ Reﬂ( S1),
+are immediate from the deﬁnitions. In light of this characterization, it follows that
+the normalizer of Reﬂ(S1) in Homeo(S1)i s contained in the normalizer of Trans(S1)
+in Homeo(S1). Since the topology of Trans( S1)( ∼= S1) may be recovered from the
+action of Trans( S1)o nt h e topological space S1, it follows immediately that any
+element of the normalizer of Trans(S1) in Homeo(S1) determines, by conjugation,
+an automorphism of the topological groupTrans(S1) ∼= S1, hence, by assertion (xi),
+lies in the subgroup of Homeo( S1) generated by Reﬂ( S1)a n dt h ecentralizer of
+Trans(S1) in Homeo(S1). Thus, to complete the proof of assertion (xii), it suﬃces
+to show that this centralizer is equal to Trans(S1), or, equivalently [since Trans(S1)
+acts transitively on S1], that every element α of this centralizer that ﬁxes 1 ∈ S1
+is equal to the identity. But this follows by considering, for an arbitrary z ∈ S1,
+the corresponding translation τz ∈ Trans(S1), which yields the desired relation
+z = τz(1) = τz(α(1)) = α(τz(1)) = α(z). ⃝
+Example 3.3. Archimedean F robenioids, Angular F robenioids, and
+Angloids.
+(i) Now we deﬁne a category
+C0
+as follows: The objects of C0 are triples (Spec( K),V K, AK), where Spec( K) ∈
+Ob(D0); VK is a one-dimensional K-vector space; and AK ⊆ VK is an angular
+region. We shall say that the object (Spec( K),V K, AK)i s naively isotropic if AK
+is isotropic. The morphisms of C0
+φ :( S p e c (L),V L, AL) → (Spec(K),V K, AK)
+consist of data as follows:
+(a) a morphism Base( φ):S p e c (L) → Spec(K)o f D0;
+(b) an element deg Fr(φ)
+def
+= d ∈ N≥1;
+(c) an isomorphism of L-vector spaces V ⊗d
+L
+∼
+→ VK |L that maps A⊗d
+L into
+AK |L.
+
+28 SHINICHI MOCHIZUKI
+One veriﬁes immediately that this category C0 is connectedand totally epimorphic.
+If, whenever L is complex, the image Im( A⊗d
+L ) ⊆ VK |L is co-angular with AK |L,
+then we shall say that φ is naively co-angular.[ T h u s ,i fL is real, then φ is always
+naively co-angular.] Also, we shall write Div( φ)
+def
+= log( λ) ∈ R≥0, for the largest
+λ ∈ R>0 such that λ · Im(A⊗d
+L ) ⊆ AK |L. If we denote by
+Φ0 : D0 → Mon
+the functor determined by the assignment
+(Ob(D0) ∋)S p e c (K) ↦→ ord(K) ∼= R>0 ∼= R≥0
+[where the isomorphism R>0
+∼
+→ R≥0 is given by the natural logarithm], then
+the triple “(Base( −), Div(−), degFr(−))” determines a pre-Frobenioid structure[cf.
+[Mzk5], Deﬁnition 1.1, (iv)]
+C0 → FΦ0
+on C0. Similarly, if D is any connected, totally epimorphic category, and D→D 0 is
+a functor, then by setting
+C
+def
+= C0 ×D0 D;Φ
+def
+=Φ 0|D
+we obtain a pre-Frobenioid structure
+C→ FΦ
+on C.
+(ii) By Lemma 3.2, (i), it follows immediately that an object of C is isotropic
+[in the sense of [Mzk5], Deﬁnition 1.2, (iv)] if and only if it is naively isotropic,
+and that a morphism of C is co-angular [in the sense of [Mzk5], Deﬁnition 1.2, (iii)]
+if and only if it is naively co-angular. Also, we note that, by Lemma 3.2, (iv),
+every endomorphism of a non-isotropic object of C is linear and co-angular;e v e r y
+endomorphism of an isotropic object of C is co-angular. Moreover, the following
+conditions on an object ofC are equivalent: (a) the object isisotropic; (b) the object
+is Frobenius-trivial; (c) the object is Frobenius-ample. Also, we observe that every
+object of C is metrically trivial. Now a routine veriﬁcation reveals that C satisﬁes
+the conditions of [Mzk5], Deﬁnition 1.3, hence that C is a Frobenioid.M o r e o v e r ,b y
+Lemma 3.2, (v), it follows thatC is of Frobenius-isotropictype, so it makes sense to
+speak of the perfection Cpf of C [cf. [Mzk5], Deﬁnition 3.1, (iii)]. If Λ is a monoid
+type, then we deﬁne CΛ as follows:
+CZ def
+= C; CQ def
+= Cpf; CR def
+= Crlf
+[cf. [Mzk5], Proposition 5.3]. We shall refer to a Frobenioid CΛ as an archimedean
+Frobenioid.
+(iii) Write
+A0 ⊆C 0; A⊆C
+
+THE GEOMETRY OF FROBENIOIDS II 29
+for the respective subcategories determined by the isometries.T h u s , w e h a v e a
+natural equivalence of categories A
+∼
+→A 0 ×D0 D. Moreover, a routine veriﬁcation
+reveals that A satisﬁes the conditions of [Mzk5], Deﬁnition 1.3, hence that A is a
+Frobenioidover the base category D, which is, in fact, of group-like type. Also, we
+observe that the isotropic objects of A are precisely the isotropic objects of C,a n d
+that the co-angular morphisms of A are precisely the co-angular isometries of C.
+We shall refer to A as an angular Frobenioid.W r i t e
+N
+def
+= Alin ⊆A ; N0
+def
+= Alin
+0 ⊆A 0
+[i.e., the respective subcategories determined by thelinear morphisms — cf. [Mzk5],
+Deﬁnition 1.2, (iv)]. We shall refer to a category N as a non-rigidiﬁed angloid
+[over the base category D]. Note that there is a natural equivalence of categories
+N
+∼
+→N 0 ×D0 D.
+(iv) Observe that all real objects of N0 are isomorphic. Thus, it makes sense
+to deﬁne
+R0
+def
+=( N0)A; R
+def
+= R0 ×D0 D
+for A ∈ Ob(N0[R]). We shall refer to a category R as a rigidiﬁed angloid [over the
+base category D]. If D is RC-connected, then one veriﬁes immediately that CΛ, A,
+N, R are RC-connected [hence, in particular, connected] and totally epimorphic.
+Although N, R are not equipped with [pre-]Frobenioid structures, we shall often
+apply “Frobenioid-theoretic terminology”to objects and morphisms of N, R;s u c h
+terminology is to be interpreted as referring to the images of the objects and mor-
+phisms in question in C via the natural functors N→ C , R→C ; also, we shall
+apply the notation “ O⊿(−)”, “O×(−)” to objects of N, R to denote the monoids
+of base-identity endomorphisms [i.e., as objects of N, R], automorphisms [i.e., as
+objects of N, R], respectively.
+(v) Note that if F is one of the categories A, N, R, then any morphism of
+F that is obtained as the isotropic hull of an object of F whose angular region is
+determined by thecomplement in S1 of a single element of S1 is an FSMI-morphism
+of F [cf. Lemma 3.2, (iii)]. We shall refer to such a morphism as a slit morphism
+of F. Note that the existence of slit morphisms implies that F is not of FSM-type.
+Remark 3.3.1. Note that it follows immediately from the simple, explicit struc-
+ture of the categories C0, A0, N0, R0 introduced in Example 3.3 that in any of
+the categories C, A, N,o r R,a base-isomorphism between complex objects is a
+monomorphism if and only if it induces aninjection on underlying angular regions.
+Proposition 3.4. (FSM-Morphisms) In the notation and terminology of
+Example 3.3, let F be one of the following categories: A, N, R.I f F = A (re-
+spectively, F = N; F = R), then set F0 = A0 (respectively, F0 = N0; F0 = R0).
+Then:
+(i) Fiberwise-surjective morphisms of F project to ﬁberwise-surjective
+morphisms of D.
+
+30 SHINICHI MOCHIZUKI
+(ii) Let φ : A → B be a monomorphism of F such that [at least] one of the
+following two conditions is satisﬁed [cf. Remark 3.4.1 below]: (a) φ projects to an
+isomorphism of D0;( b )φ admits a factorization A → A′ → B as a composite of a
+morphism of Frobenius typeA → A′ and a linear morphism A′ → B such that any
+isotropic hull A′ → A′′ of A′ is either an isomorphism or a slit morphism [cf.
+Example 3.3, (v)]. Then φ projects to a monomorphism φD of D.
+(iii) FSM-morphisms of F project to FSM-morphisms of D.
+(iv) Suppose that D is complexiﬁable.T h e na n yFSM-morphism (respec-
+tively, FSMI-morphism)o f F that projects to an isomorphism of D projects to
+an FSM-morphism (respectively, FSMI-morphism) of F0.
+(v) Any morphism of F that projects to an irreducible morphism (respectively,
+isomorphism; irreducible morphism) of D, to an isomorphism (respectively, irre-
+ducible morphism; irreducible morphism) of F0, and to a(n) isomorphism (respec-
+tively, isomorphism; non-isomorphism) of D0 is an irreducible morphism of F.
+(vi) If φ is a morphism of F such that φD
+def
+= Base( φ) admits a factoriza-
+tion φD = αD ◦βD in D, then there exist morphisms α, β of F lifting αD, βD,
+respectively, such that φ = α ◦β in F.I np a r t i c u l a r ,irreducible morphisms of F
+project to either isomorphisms or irreducible morphisms ofD; FSMI-morphisms
+of F project to either isomorphisms or FSMI-morphisms of D.
+(vii) Let φ be a morphism of F that projects to a pull-back morphism of F0
+and to an FSM-morphism (respectively, FSMI-morphism)o f D.T h e nφ is an
+FSM-morphism (respectively, FSMI-morphism)o f F.
+(viii) Suppose that D is complexiﬁable, RC-connected, and of FSMFF-type.
+Then F is complexiﬁable, RC-connected [hence, in particular, connected],to-
+tally epimorphic ,a n dof FSMFF-type .
+Proof. Assertion (i) follows immediately from the observation that if A ∈ Ob(F)
+projects to an object AD ∈ Ob(D), then any morphism BD → AD in D lifts to
+a morphism B → A of F,f o rs o m eB ∈ Ob(F). To verify assertion (ii), let
+αD,βD : CD → AD
+def
+= Base(A) be morphisms of F such that φD ◦αD = φD ◦βD,
+where φD
+def
+= Base( φ). Then to complete the proof of assertion (ii), it suﬃces to
+show that αD = βD.W r i t eφ0 : A0 → B0 for the projection of φ to F0 and
+αD0 ,βD0 : CD0 → AD0 , φD0 : AD0 → BD0 for the respective projections of α, β, φ
+to D0 [so φD0 ◦αD0 = φD0 ◦βD0 ]. Now I claim that there exist linear isometries
+α0,β0 : C0 → A0 that lift αD0 , βD0 , respectively, and, moreover, satisfy the relation
+φ0 ◦α0 = φ0 ◦β0. Indeed, this follows immediately if αD0 = βD0 [which is the
+case whenever condition (a) is satisﬁed, i.e., whenever φD0 is an isomorphism], by
+taking α0 = β0 to be a pull-back morphism. On the other hand, if αD0 ̸= βD0 , but
+condition (b) is satisﬁed, then it follows from [the latter portion of] Lemma 3.2, (ii),
+that there exist α0, β0 as desired, where α0 is related to β0 by an automorphism
+of C0 that lies over thecomplex conjugation automorphism of CD0 . This completes
+
+THE GEOMETRY OF FROBENIOIDS II 31
+the proof of the claim. Thus, by applying the natural equivalence of categories
+F
+∼
+→F 0 ×D0 D, we conclude that there exist linear isometries α, β: C → A that
+simultaneously lift α0, β0 and αD, βD, respectively, and, moreover, satisfy the
+relation φ ◦α = φ ◦β.S i n c eφ is a monomorphism of F, we thus conclude that
+α = β, hence that αD = βD, as desired. This completes the proof of assertion
+(ii). Assertion (iii) follows immediately from assertions (i), (ii), together with the
+observation that if φ is a ﬁberwise-surjective morphism of F that does not satisfy
+condition (a) of assertion (ii), then the ﬁberwise-surjectivity ofφ implies [cf. Lemma
+3.2, (ix)] that φ necessarily satisﬁes condition (b) of assertion (ii).
+Next, we consider assertion (iv). Let φ : A → B be an FSM-morphism of F
+that projects to an isomorphism of D. Thus, the projection φ0 : A0 → B0 of φ to
+F0 projects to an isomorphism φD0 of D0.N o ws i n c eD is complexiﬁable, it follows
+immediately that one can lift arbitrary pairs of morphisms α0,β0 : C0 → A0 of F0
+such that φ0 ◦α0 = φ0 ◦β0 [which, since φD0 is an isomorphism, implies that the
+respective projections αD0 , βD0 of α0, β0 to D0 coincide] to morphismsα, β: C → A
+of F such that φ ◦α = φ ◦β, hence that α = β [since φ is a monomorphism], so
+α0 = β0, i.e., φ0 is a monomorphism. Similarly, [since D is complexiﬁable]a n y
+morphism γ0 : C0 → B0 of F0 lifts to a morphism γ : C → B of F;t h u s ,t h e
+ﬁberwise-surjectivity of φ implies that of φ0.I f φ is irreducible, then it follows
+immediately from the fact that φ projects to an isomorphism of D that φ0 is also
+irreducible. This completes the proof of assertion (iv).
+Assertion (v) follows immediately from the fact that since F0, D are total
+epimorphic, if a composite morphism α ◦β of F0 or D is an isomorphism, then
+so are α, β. Assertion (vi) follows immediately from the fact that if αD0 ◦βD0 is
+any composite morphism of D0, then either αD0 or βD0 is an isomorphism [cf. also
+assertion (iii)].
+Next, we consider assertion (vii). Since every non-isomorphism of D0 [hence
+also every pull-back morphism of F0 which is not an isomorphism — cf. [Mzk5],
+Proposition 1.7, (v), for pull-back morphisms] isirreducible, it follows from assertion
+(v) that it suﬃces to show that φ is an FSM-morphism.S i n c eφ : A → B projects
+to a pull-back morphism φ0 : A0 → B0 of F0, it follows that given any morphism
+ψ0 : C0 → B0, it holds that any factorization ψD0 = φD0 ◦ζD0 [for some morphism
+ζD0 : CD0 → AD0 of D0], where φD0 : AD0 → BD0 , ψD0 : CD0 → BD0 are the
+respective projections of φ0, ψ0 to D0, lifts to a factorization ψ0 = φ0 ◦ζ0 for some
+ζ0 : C0 → A0 [cf. the deﬁnition of a “pull-back morphism” in [Mzk5], Deﬁnition
+1.2, (ii)]. Thus, [cf. also the observation made in the proof of assertion (i) that if
+E ∈ Ob(F) projects to an object E
+D ∈ Ob(D), then any morphism FD → ED in D
+lifts to a morphism F → E of F]t h eﬁberwise-surjectivity of φ follows immediately
+from that of the projection φD of φ to D. To show that φ is a monomorphism,
+let α, β : C → A be morphisms of F such that φ ◦α = φ ◦β.S i n c eφD is a
+monomorphism, it follows that the respective projections αD, βD of α, β to D
+coincide, hence that the respective projections αD0 , βD0 of α, β to D0 coincide.
+Thus, again by the deﬁnition of a “pull-back morphism” [cf. [Mzk5], Deﬁnition
+1.2, (ii)], we conclude that the respective projections α0, β0 of α, β to F0 coincide,
+hence that α = β, as desired. This completes the proof of assertion (vii).
+
+32 SHINICHI MOCHIZUKI
+Finally, we consider assertion (viii). It is immediate from the deﬁnition of F
+that F is complexiﬁable, RC-connected[hence, in particular, connected] and totally
+epimorphic.
+Next, I claim that F0 is of FSMFF-type. Indeed, let φ : A → B be an FSM-
+morphism of F0. Then by assertion (iii), it follows thatφprojects to anisomorphism
+of D0. Suppose that A, B are real.N o wi fF0 = N0 or F0 = R0, then one concludes
+immediately that φ is an LB-invertible pre-step, hence anisomorphism [cf. [Mzk5],
+Proposition 1.4, (iii)]. If F0 = A0, then there exists a complex isotropic object C
+of F0 and a linear morphism C → A; thus, the existence of torsion elements in
+O×(C)o f arbitrary order when F0 = A0 implies [since φ is a monomorphism]t h a t
+the LB-invertible base-isomorphism [cf. the deﬁnition of F0!] φ is linear, hence
+an isomorphism. In particular, it follows that every FSMI-morphism of F0 has
+complex domain and codomain.
+Now suppose that A, B are complex. Then observe that if the isometric base-
+isomorphism φ is linear, then it is an isometric pre-step, hence [cf. the ﬁberwise-
+surjectivity of φ; Lemma 3.2, (ix); Example 3.3, (v)] either an isomorphism or a
+slit morphism. Moreover, even if φ is not linear, by Lemma 3.2, (iv) [which may be
+interpreted as asserting that “angular regions never shrink”], (v), there exists an
+integer N such that given any composite
+φn ◦φn−1 ◦... ◦φ2 ◦φ1
+of [not necessarily FSMI-!] morphisms φ1,...,φ n such that the domain of φ1 is
+equal to A, it holds that the cardinality of the set of j [where j =1 ,...,n ]s u c h
+that φj is an FSMI-morphism [which implies that φj is a monomorphism which is
+a base-isomorphism between complex objects — cf. Remark 3.3.1] and non-linear
+is ≤ N. In this situation, any linear FSMI-morphism φj [where j =1 ,...,n ]i s
+necessarily a slit morphism [as observed above] — which implies that the codomain
+of φj is isotropic,s on o φj′ ,w h e r ej′ >j , can be a slit morphism; we thus conclude
+that the cardinality of the set of j ∈{ 1,...,n } such that φj is an FSMI-morphism
+is ≤ N +1 .
+Next, observe that [by [Mzk5], Proposition 1.7, (ii), applied to the Frobenioid
+A0] φ admits afactorization φ = α◦β,w h e r eβ is amorphism of Frobenius type,a n d
+α is anisometric pre-step[hence, in particular, amonomorphism — cf., e.g., [Mzk5],
+Deﬁnition 1.3, (v), (a)]. Since φ is ﬁberwise-surjective, it follows formally that α is
+an FSM-morphism, hence that α is either a slit morphism [hence, in particular, an
+FSMI-morphism — cf. Example 3.3, (v)] or an isomorphism. On the other hand,
+β may be written as a composite β = βb ◦... ◦β1 of prime-Frobenius morphisms
+β1,...,β b. Since each of the βj [where j =1 ,...,b ]i s co-angular,a n dφ [hence
+also β]i sa monomorphism, it follows immediately by induction on j that each of
+the βj [where j =1 ,...,b ]i sa monomorphism [i.e., more concretely: induces an
+injection on underlying angular regions — cf. Remark 3.3.1], hence [by a formal
+argument, since φ is ﬁberwise-surjective,a n dα is a monomorphism] that each of
+the βj is an FSM-morphism. Moreover, since βj is a prime-Frobenius morphism,i t
+follows immediately from the fact thatβj induces a bijection on underlying angular
+regions that βj is irreducible, hence an FSMI-morphism. Thus, we conclude that φ
+
+THE GEOMETRY OF FROBENIOIDS II 33
+factors as a composite of ﬁnitely many FSMI-morphisms. This completes the proof
+of the claim that F0 is of FSMFF-type.
+To prove that F is of FSMFF-type, we reason as follows: First, since FSMI-
+morphisms of F project to either isomorphisms or FSMI-morphisms of D [cf. as-
+sertion (vi)], and D is of FSMFF-type, it follows that for every A ∈ Ob(F), there
+exists an integer N such that given any composite
+φn ◦φn−1 ◦... ◦φ2 ◦φ1
+of FSMI-morphisms φ1,...,φ n such that the domain of φ1 is equal to A,i th o l d s
+that the cardinality of the set of j [where j =1 ,...,n ] such that φj fails to project
+to an isomorphism of D is ≤ N.I f φj projects to an isomorphism of D,t h e nb y
+assertion (iv), it follows that φj projects to an FSMI-morphism of F0. Thus, by
+our discussion ofcomposites of [not necessarily FSMI-!] morphismsin F0, it follows
+that there exists an N ′ [depending only on A!] such that the cardinality of the set
+of j ∈{ 1,...,n } for which φj projects to an isomorphism of D is ≤ N ′.B u tt h i s
+implies that n ≤ N + N ′.
+Next, let φ be an arbitrary FSM-morphism of F. Observe that [by [Mzk5],
+Deﬁnition 1.3, (iv), (a), applied to the Frobenioid A0] the projection φ0 of φ to
+F0 admits a factorization φ0 = α0 ◦β0,w h e r eα0 is a pull-back morphism,a n d
+β0 is a base-isomorphism. Since the projection of β0 to D0 is an isomorphism, it
+thus follows that there exists a factorization φ = α ◦β in F,w h e r eα, β lift α0,
+β0 respectively, and βD
+def
+= Base( β) ∈ Arr(D)i sa n isomorphism.S i n c eφD
+def
+=
+Base(φ) ∈ Arr(D)i sa n FSM-morphism [cf. assertion (iii)], it thus follows that
+αD
+def
+= Base( α)= φD ◦β−1
+D ∈ Arr(D)i sa n FSM-morphism, hence [by assertion
+(vii)] that α is an FSM-morphism. Moreover, since α is a monomorphism, it follows
+formally from the fact that φ is an FSM-morphism that β is an FSM-morphism,
+hence [by assertion (iv), since βD is an isomorphism]t h a tβ0 is an FSM-morphism
+of F0. Thus, by factoring β0 as a composite of FSMI-morphisms of F0 [since we
+have already shown that F0 is of FSMFF-type], we conclude that we may write
+β = βb ◦... ◦β1,w h e r et h eβj [for j =1 ,...,b ] are morphisms of F that project
+to FSMI-morphisms of F0 and to isomorphisms of D. Now it follows formally
+that the βj are monomorphisms, hence [again by a formal argument, since β is an
+FSM-morphism] that the βj are FSM-morphisms, hence [cf. assertion (v)] FSMI-
+morphisms. Moreover, by factoring αD as a composite of FSMI-morphisms of
+D [since D is, by assumption, of FSMFF-type] and applying assertion (vii), we
+conclude that α, β, hence also φ admits a factorization as a composite of FSMI-
+morphisms of F. This completes the proof of assertion (viii). ⃝
+Remark 3.4.1. Note that there exist monomorphisms of G that do not sat-
+isfy either of the conditions of Proposition 3.4, (ii), and which fail to project to
+monomorphisms of D. Indeed, by using angular regions whose projections to S1
+fail to intersect {1, −1} [cf. Lemma 3.2, (ii)], one may construct examples of lin-
+ear monomorphisms φ : A → B of G0,w h e r eA is complex,a n dB is real [so the
+projection of φ to D0 is not a monomorphism].
+
+34 SHINICHI MOCHIZUKI
+Proposition 3.5. (Iso-subanchors) In the notation and terminology of Exam-
+ple 3.3, let F be one of the categories C, A; G one of the categories N, R; H one
+of the categories F, G.I f F = C (respectively, F = A; G = N; G = R; H = F;
+H = G), then set F0 = C0 (respectively, F0 = A0; G0 = N0; G0 = R0; H0 = F0;
+H0 = G0). Suppose further that D is of RC-iso-subanchor type. Then:
+(i) Let A ∈ Ob(H); suppose that BD → AD
+def
+= Base( A) is a mono-minimal
+categorical quotient of BD by a group GD ⊆ AutD(BD) in D. Then there exists a
+pull-back morphism B → A that lifts BD → AD and a group G ⊆ AutH(B) that
+maps isomorphically to GD such that B → A is a mono-minimal categorical
+quotient of B by G in H.
+(ii) The FrobenioidF is quasi-isotropic, i.e., an object ofF is non-isotropic
+if and only if it is an iso-subanchor of F.
+(iii) G is of RC-iso-subanchor type.
+(iv) F is not of RC-iso-subanchor type.
+Proof. First, we consider assertion (i). By [Mzk5], Deﬁnition 1.3, (i), (c), there
+exists a pull-back morphism B → A of H that lifts BD → AD.W r i t eB0 → A0,
+BD0 → AD0 for the respective projections of B → A to H0, D0. Now observe that
+it follows immediately from the simple, explicit structure of H0 [cf. Example 3.3,
+(i), (ii), (iii), (iv)] that the natural surjection
+Aut(H0)A0
+(B0) → Aut(D0)AD0
+(BD0 )
+splits, hence that there exists a group G ⊆ AutHA (B) that maps isomorphically to
+GD.S i n c eBD → AD is a categorical quotient of BD by GD in D, it follows again
+from the simple, explicit structure of H0 [cf. Example 3.3, (i), (ii), (iii), (iv)] that
+B → A is a categorical quotient of B by G in H.I f B ↣ B′ is a monomorphism
+that violates the mono-minimality of B → A, then it follows from the fact that
+B → A is a pull-back morphism, hence, in particular, an isometry,t h a tB ↣ B′
+is an isometry [which implies that even if H = C, the arrow B ↣ B′ lies in A],
+hence, by Proposition 3.4, (ii), that the projection BD → B′
+D of B ↣ B′ to D
+is a monomorphism that violates the mono-minimality of BD → AD. [Here, we
+observe that ifB ↣ B′ fails to project to an isomorphism ofD0 [i.e., fails to satisfy
+condition (a) of Proposition 3.4, (ii)], then the pull-back morphism B → A also
+fails to project to an isomorphism of D0; but this implies that B is isotropic,s o
+the morphism B ↣ B′ necessarily satisﬁes condition (b) of Proposition 3.4, (ii).]
+Thus, we conclude that BD ↣ B′
+D is an isomorphism. In particular, the pull-back
+morphism B → A admits a factorization B ↣ B′ → A,w h e r eB ↣ B′ is a base-
+isomorphism which [cf. [Mzk5], Proposition 1.7, (v)] is also a pull-back morphism.
+But this implies [cf. [Mzk5], Remark 1.2.1] that B ↣ B′ is an isomorphism, hence
+that B → A is mono-minimal, as desired. This completes the proof of assertion (i).
+Next, we consider assertion (ii). By [Mzk5], Remark 3.1.1, it suﬃces to
+show that every non-isotropic [hence necessarily complex!] A ∈ Ob(F)i sa n iso-
+subanchor of F.S i n c eAD
+def
+= Base(A) ∈ Ob(D[C]) is an RC-iso-subanchor of D,i t
+
+THE GEOMETRY OF FROBENIOIDS II 35
+follows that there exists a mono-minimal categorical quotient [in D] BD → AD of
+BD by a group GD ⊆ AutD(BD), where BD is an RC-subanchor of D. Thus, by
+assertion (i), we obtain apull-back morphism B → A of F that lifts BD → AD and
+which is a mono-minimal categorical quotient of B by some group G ⊆ AutF (B).
+Here, we note that since A is non-isotropic, it follows [cf. [Mzk5], Deﬁnition 1.3,
+(vii), (b)] that B is non-isotropic.S i n c eBD is an RC-subanchor of D, it follows
+that there exists a morphism BD → CD in D[C], where CD is an anchor of D[C];
+note, moreover, that since every morphism ofD0[C]i sa n isomorphism, we may as-
+sume that this morphism BD → CD is the projection to D of a pull-back morphism
+B → C of F [so C is non-isotropic]. Thus, to show that A is an iso-subanchor of
+F, it suﬃces to show that C is an anchor of F.
+Thus, let φ : C → C′ be an irreducible morphism of F.S i n c eφ is irreducible,
+it follows [cf. the factorizations of [Mzk5], Deﬁnition 1.3, (iv), (v)] that φ is either
+a pull-back morphism,a n isometric pre-step,a co-angular pre-step with irreducible
+zero divisor,o ra prime-Frobenius morphism.S i n c eR≥0 has no irreducible ele-
+ments [cf. [Mzk5], §0], it follows that φ is not a co-angular pre-step. If φ is a
+pull-back morphism or a prime-Frobenius morphism [hence a non-pre-step —c f .
+[Mzk5], Remark 1.2.1!], then since C is non-isotropic, it follows [by considering the
+factorization of φ through an isotropic hull of C, together with the irreducibility
+of φ]t h a tC′ is non-isotropic, hence, in particular, complex. Thus, the ﬁniteness
+of the collection of isomorphism classes of C F arising from [irreducible] φ which
+are pull-back morphisms (respectively, prime-Frobenius morphisms) then follows
+immediately from the fact thatCD is an anchor of D[C] (respectively, from Lemma
+3.2, (v)). Finally, [again since C is non-isotropic!] the ﬁniteness of the collection of
+isomorphism classes ofC F arising from [irreducible]φ which are isometric pre-steps
+follows formally from Lemma 3.2, (iii), (vii). This completes the proof of assertion
+(ii).
+Next, we consider assertion (iii). Just as in the case of assertion (ii), we may
+apply assertion (i) to conclude that to complete the proof of assertion (iii), it suﬃces
+to show that any C ∈ Ob(G[C]) such that CD
+def
+= Base(C) ∈ Ob(D[C]) is an anchor
+of D[C] is itself ananchor of G[C]. Thus, let φ : C → C′ be an irreduciblemorphism
+of G[C]. Just as in the argument used to prove assertion (ii), since φ is irreducible,
+it follows [cf. the factorizations of [Mzk5], Deﬁnition 1.3, (iv), (v)] that φ is either
+a pull-back morphism or an isometric pre-step [since all morphisms of G are linear
+isometries]. Now [cf. the argument used to prove assertion (ii)] the ﬁniteness of
+the collection of isomorphism classes of C F arising from [irreducible] φ which are
+pull-back morphisms (respectively, isometric pre-steps) follows formally from the
+fact that CD is an anchor of D[C] (respectively, from Lemma 3.2, (iii), (vii)). This
+completes the proof of assertion (iii).
+Finally, we consider assertion (iv). Suppose that F is of RC-iso-subanchor
+type. Then it follows formally that F admits a complex object, hence, in partic-
+ular, a complex isotropic object A ∈ Ob(F). Since A is an RC-iso-subanchor,i t
+follows immediately, by takingisotropic hulls [cf. the argument of [Mzk5], Remark
+3.1.1], that F admits a complex isotropic RC-subanchorB, hence [cf. [Mzk5], Def-
+inition 1.3, (vii), (b)] that F admits a complex isotropic RC-anchor C, i.e., that
+
+36 SHINICHI MOCHIZUKI
+F[C]a d m i t sacomplex isotropic anchor C. But this contradicts the existence of
+prime-Frobenius morphisms, of arbitrary prime degree, with domain equal toC [cf.
+[Mzk5], Proposition 1.10, (iv)]. This completes the proof of assertion (iv). ⃝
+Remark 3.5.1. In the context of Proposition 3.5, we observe that it is important
+to consider not just anchors, but also subanchors since, for instance in the case of
+the base categories associated to connected temperoids[cf. Example 1.3], it is not
+diﬃcult to construct examples of base categories that appear naturally in arithmetic
+geometry and which have objects that are subanchors, but not anchors. [Indeed,
+this phenomenon occurs in the case of the temperoid associated to a tempered
+group [such as a nonabelian discrete ﬁnitely generated free group] which admits a
+topological subquotient isomorphic to an inﬁnite direct sum
+⨁
+Z/pZ
+of copies ofZ/pZ, equipped with the discrete topology.] Moreover, it is important to
+consider not just anchors and subanchors, but alsoRC-anchors and RC-subanchors
+— i.e., in short, complex anchors and subanchors— since the arguments applied in
+the proof of Proposition 3.5 require one to work withnon-isotropic [hence complex]
+objects that map to anchors of the base category. Thus, one is obliged to work with
+RC-iso-subanchors in order to accommodate real objects.
+Our main result concerning the Frobenioidsof Example 3.3 is the following:
+Theorem 3.6. (Basic Properties of Archimedean, Angular F robenioids)
+In the notation and terminology of Example 3.3, let F be one of the following
+Frobenioids: CΛ, A [where, when F = A,w et a k eΛ= Z]. Also, denote by Φ∡ the
+restriction Φ∡
+0 |D to D of the functor Φ∡
+0 : D0 → Mon determined by the assignment
+(Ob(D0) ∋)S p e c (K) ↦→O ×
+K
+and by Φﬂd the functor D→ Mon given by (Ob(D) ∋ D) ↦→ Φgp(D) × Φ∡(D) [so
+projecting to the two factors of the product monoid yields natural transformations
+Φﬂd → Φ∡, Φﬂd → Φgp]. If Λ= Z (respectively, Λ= Q; Λ= R), then write
+(Φﬂd)Λ def
+=Φ ﬂd (respectively, (Φﬂd)Λ def
+=( Φﬂd)pf; (Φﬂd)Λ def
+=Φ gp). Then:
+(i) The Frobenioid (CΛ)istr is of isotropic, base-trivial,a n d model type,
+with rational function monoid naturally isomorphic to (Φﬂd)Λ;t h e canonical
+decomposition of Deﬁnition 3.1, (ii), determines a characteristic splitting [cf.
+[Mzk5], Deﬁnition 2.3] on CΛ.I f Λ ≥ Q,t h e n(CΛ)istr = CΛ. For arbitrary Λ,t h e r e
+is a natural equivalence of categories(CΛ)un-tr ∼
+→C R, compatible with the Frobenioid
+structures; moreover, the Frobenioid CΛ is of Aut-ample, Autsub-ample, End-
+ample,a n dmetrically trivial type, but not of group-like type. If, moreover, D
+is of FSMFF- and RC-iso-subanchor type, then CΛ is of rationally standard
+type.
+
+THE GEOMETRY OF FROBENIOIDS II 37
+(ii) The Frobenioid Aistr is of base-trivial and model type, with rational
+function monoid naturally isomorphic toΦ∡. The FrobenioidA is of Aut-ample,
+Autsub-ample, End-ample, group-like,a n dmetrically trivial type. If, more-
+over, D is of FSMFF- and RC-iso-subanchor type, then A is of standard [but
+not of rationally standard] type.
+(iii) Every morphism φ : B → A of C factors uniquely as a composite
+φ = β◦α,w h e r eα is an isometry [hence belongs to A], and β ∈O ⊿(A) ⊆ Φﬂd(A)
+belongs to the submonoid Φgp(A) ×{1}⊆ Φﬂd(A) [cf. the characteristic splitting of
+(i)]. Moreover, the assignment φ ↦→ α determines an “isometrization functor”
+C→A
+which, together with the isotropiﬁcation functors C→C istr, A→A istr [cf.
+[Mzk5], Proposition 1.9, (v)], determines an equivalence of categories
+C
+∼
+→A × Aistr Cistr
+that is 1-compatible with the natural functors to FΦ on both sides.
+(iv) Let A ∈ Ob(F); AD
+def
+= Base( A) ∈ Ob(D). Write A0 ∈ Ob(D0) for the
+image of AD in D0. Then the natural action ofAutF (A) on O⊿(A), O×(A) factors
+through AutD0 (A0). If, moreover, Λ ∈{ Z, Q}, then this factorization determines a
+faithful action of the image of AutF (A) in AutD0 (A0) on O⊿(A), O×(A).
+(v) Let A ∈ Ob(F). Then the group O×(A) is trivial if and only if one of
+the following holds: (a) Λ= Z and A is complex non-isotropic ;( b )Λ= Q and
+A is real;( c )Λ= R. The group O×(A) is nontrivial and torsion free [and in
+fact isomorphic to S1 ⊗Z Q]i fa n do n l yi fΛ= Q and A is complex. The group
+O×(A) is of order two if and only if Λ= Z and A is real. The group O×(A) has
+inﬁnitely many torsion elements [and is in fact isomorphic to S1]i fa n do n l y
+if Λ= Z and A is complex isotropic .
+(vi) If D admits a pseudo-terminal object ,t h e nF admits a pseudo-
+terminal object.
+(vii) Suppose that Λ= Z.L e tA ∈ Ob(F) be complex. Then the assignment
+that maps an isometric pre-step
+B → A
+of F to the image of the boundary∂AB of the angular regionAB of B in the bound-
+ary ∂AA of the angular regionAA of A determines an equivalence of categories
+—w h i c hi sfunctorial [cf. [Mzk5], Proposition 1.9, (ii), (iii)] in A —
+Fimtr-pre
+A
+∼
+→ Open0(∂AA)
+—w h e r eFimtr-pre ⊆F denotes the full subcategory determined by the arrows which
+are isometric pre-steps [cf. [Mzk5], Proposition 1.9]; Fimtr-pre
+A
+def
+=( Fimtr-pre)A;
+
+38 SHINICHI MOCHIZUKI
+Open0(∂AV ) is the category of connected open subsets of∂AV [cf. the Appendix]. In
+particular, [cf. Theorem A.2, (vi)] the topological space ∂AA may be recovered
+functorially from the categoryFimtr-pre
+A . Finally, if A is isotropic, then the action
+of O×(A) on ∂AA determines on ∂AA a structure of torsor over this group.
+(viii) If Λ= Z,t h e nF[C] is of weakly dissectible type [cf. §0].
+(ix) Suppose that D is of strongly indissectible type. If D is not complexiﬁ-
+able, then we assume further thatΛ ̸= Z.T h e nFistr is of strongly indissectible
+type.
+(x) If D is slim,a n dΛ ∈{ Z, R},t h e nF is also slim.
+Proof. First, we consider assertion (i). By [the earlier portion of] Lemma 3.2, (ii),
+it is immediate from the construction ofCΛ that CΛ is of Aut-ample,A u tsub-ample,
+and End-ample type. Also, it is immediate from the construction of CΛ that CΛ is
+of metrically trivial, [strictly] rational,a n dbirationally Frobenius-normalizedtype,
+but not of group-like type, and from the construction of (CΛ)istr that (CΛ)istr is of
+base-trivial and isotropic type. Since D0 admits a terminal object, it thus follows
+from [Mzk5], Proposition 2.9, (i), that ( CΛ
+0 )istr, hence also ( CΛ)istr [which may be
+constructed as a categorical ﬁber product ( CΛ
+0 )istr ×D0 D], is of model type. More-
+over, it is immediate from the construction of ( CΛ)istr that the rational function
+monoid of (CΛ)istr is naturally isomorphic to (Φﬂd)Λ [cf. also the canonical decom-
+position of Deﬁnition 3.1, (ii)]; in a similar vein, it is immediate from the deﬁnitions
+that the canonical decompositionof Deﬁnition 3.1, (ii), determines a characteristic
+splitting on CΛ. The fact that if Λ ≥ Q,t h e n(CΛ)istr = CΛ is immediate from the
+deﬁnitions. The existence of a natural equivalence of categories ( CΛ)un-tr ∼
+→C R,
+compatible with the Frobenioid structures, follows immediately from the construc-
+tion of CΛ. Also, it is immediate from the construction of CR that every object
+of (( CΛ)un-tr)birat =( CR)birat is Frobenius-compact. Thus, if, moreover, D is of
+FSMFF- and RC-iso-subanchor type, then, [since Φ is manifestly non-dilating]t o
+complete the proof of assertion (i), it suﬃces to observe that by Proposition 3.5,
+(ii), C is of quasi-isotropic type. This completes the proof of assertion (i).
+Next, we consider assertion (ii). The fact that the Frobenioid A is of Aut -
+ample,A u tsub-ample, End-ample, group-like,a n dmetrically trivial type, as well as
+the fact that the FrobenioidAistr is ofbase-trivial and model type, together with the
+description of the rational function monoid of the Frobenioid Aistr, follow immedi-
+ately from the corresponding facts for C, Cistr proven in assertion (i) [together with
+the construction of A, Aistr]. If, moreover, D is of FSMFF- and RC-iso-subanchor
+type [which implies, in particular, that D admits complex objects], then one ver-
+iﬁes immediately that the complex isotropic objects of A are Frobenius-compact;
+moreover, the quasi-isotropicity of A follows from Proposition 3.5, (ii), while the
+Frobenius-isotropicity,a n dFrobenius-normalizednessof A follows immediately from
+the corresponding properties forC [together with the construction ofA, C]; thus, we
+conclude that A is of standard type. On the other hand, since, as is easily veriﬁed,
+(Aun-tr)birat is of unit-trivial type, it follows that A is not of rationally standard
+type. This completes the proof of assertion (ii).
+
+THE GEOMETRY OF FROBENIOIDS II 39
+Next, we consider assertion (iii). The existence and uniqueness of the fac-
+torization asserted in the statement of assertion (iii) follows immediately from the
+construction of C; also, it is immediate that this factorization yields an“isometriza-
+tion functor” C→A . The resulting functor
+C
+∼
+→A × Aistr Cistr
+is then manifestly essentially surjective and 1-compatible with the natural functors
+to FΦ on both sides. Now the fully faithfulness of this functor is immediate from
+the factorization just discussed, together with the 1-compatibility with the natural
+functors to FΦ on both sides. This completes the proof of assertion (iii).
+Assertions (iv), (v), (vi) follow immediately from the deﬁnitions. Assertion
+(vii) follows immediately from the deﬁnitions and Theorem A.2, (vi), of the Ap-
+pendix [since S
+1 is clearly sober and locally connected]. Assertion (viii) follows by
+considering disjoint angular regions. Assertion (ix) follows, in light of the strong
+indissectibility assumption on D, by reducing [cf. our assumption concerning the
+case when D is not complexiﬁable ] to the easily veriﬁed fact that the categories
+(CΛ
+0 )istr[R][ w h e nΛ̸= Z],( CΛ
+0 )istr[C] [for arbitrary Λ] are of strongly indissectible
+type. Assertion (x) follows formally from [Mzk5], Proposition 1.13, (iii) [since, by
+assertions (v), (vii) of the present Theorem 3.6, either “condition (a)” or “condition
+(b)” ofloc. cit. is always satisﬁed by objects of F]. ⃝
+Remark 3.6.1. Note that thetopologyof O×(A)( ∼= S1), forcomplex isotropicA ∈
+Ob(C), may be recovered from the category-theoretic structure of C [cf. Theorem
+3.6, (vii)] precisely because of the existence of the non-isotropic objects. This
+is the principal reason for the inclusion of non-isotropic objects in the theory of
+Frobenioids.
+
+40 SHINICHI MOCHIZUKI
+Section 4: Angloids as Base Categories
+In the present §4, we show [cf. Corollary 4.2, (v); Remark 4.2.1] that the cat-
+egories called “angloids”, which were constructed in Example 3.3, (iii), (iv), satisfy
+those properties required of a base category of an archimedean or angular Frobe-
+nioid [cf. Theorem 3.6, (i), (ii)], in order for the main results of the general theory
+of Frobenioids developed in [Mzk5] to apply. In addition, we study various other
+basic properties of angloids, certain of which may be regarded [cf. Remark 4.2.1] as
+a sort ofarchimedean analogueof the category-theoreticity of the[nonarchimedean]
+local reciprocity map, as discussed in Theorem 2.4, (i), (ii). Finally, we discuss the
+main motivating examples [cf. Examples 4.3, 4.4] from arithmetic geometry of the
+theory developed thus far for archimedean primes.
+Proposition 4.1. (Basic Properties of Angloids) In the notation and ter-
+minology of Example 3.3, let G be one of the following categories N, R;i f G = N
+(respectively, G = R), then write G0
+def
+= N0 (respectively, G0
+def
+= R0). Then:
+(i) Let A ∈ Ob(G) be complex. Then the assignment that maps a base-
+isomorphism [or, equivalently, an isometric pre-step — cf. the deﬁnition of G
+in Example 3.3, (iii), (iv)]
+B → A
+of G to the image of the boundary∂AB of the angular regionAB of B in the boundary
+∂AA of the angular region AA of A determines an equivalence of categories —
+which is functorial [cf. [Mzk5], Proposition 1.9, (ii), (iii)] in A —
+Gimtr-pre
+A
+∼
+→ Open0(∂AA)
+—w h e r eGimtr-pre ⊆G denotes the full subcategory determined by the arrows which
+are isometric pre-steps [cf. [Mzk5], Proposition 1.9]; Gimtr-pre
+A
+def
+=( Gimtr-pre)A;
+Open0(∂AV ) is the category of connected open subsets of ∂AV [cf. the Appen-
+dix]. In particular, [cf. Theorem A.2, (vi)] the topological space ∂AA may be
+recovered functorially from the category Gimtr-pre
+A . Finally, if A is isotropic,
+and G = N, then the action of O×(A) on ∂AA determines on ∂AA a structure of
+torsor over this group.
+(ii) A morphism of G with real domain or codomain is an isomorphism if
+and only if it is a base-isomorphism.
+(iii) Suppose that D is of discontinuously ordered type. Then every con-
+tinuously ordered [cf. §0] morphism of G is a base-isomorphism [i.e., an
+isometric pre-step — cf. the deﬁnition of G in Example 3.3, (iii), (iv)].
+(iv) Suppose that D is of discontinuously ordered type. Then a morphism
+φ : A → B of G is a base-isomorphism [or, equivalently, an isometric pre-step
+— cf. the deﬁnition of G in Example 3.3, (iii), (iv)] if and only if there exists a
+morphism ψ : C → A of G and quasi-continuously ordered [cf. §0] morphisms
+
+THE GEOMETRY OF FROBENIOIDS II 41
+C → C1, C → C2 of G such that the object of C G constituted by the composite
+arrow φ ◦ψ : C → B is an inductive limit of the diagram
+C2 ←− C −→ C1
+in C G.
+(v) If D is of strongly dissectible type, then so is G.I f D is of weakly
+indissectible type, then so is G.
+Proof. Assertion (i) follows immediately from the deﬁnitions and Theorem A.2,
+(vi), of the Appendix [cf. the proof of Theorem 3.6, (vii)]. Assertion (ii) follows
+immediately from the deﬁnition of G in Example 3.3, (iii), (iv).
+Next, we consider assertion (iii). Let φ : A → B be a continuously ordered
+[hence, in particular, totally ordered] morphism of G; φD
+def
+=B a s e (φ) ∈ Arr(D). Let
+φ = β ◦α be a factorization of φ,w h e r eα, β are monomorphisms which are not
+isomorphisms. Thus, α, β are continuously ordered [hence, in particular, totally
+ordered]. Then I claim that neither of the projections α0, β0 of α, β to G0 is
+an isomorphism. Indeed, suppose that the projection γ0 of γ ∈{ α, β} to G0 is
+an isomorphism. Then one veriﬁes immediately that the natural projection functor
+determines an equivalence of categoriesG↣
+γ
+∼
+→D ↣
+γD [where we writeγD
+def
+= Base(γ)].
+Since γ is continuously ordered, we thus conclude that γD is continuously ordered.
+On the other hand, since D is of discontinuously ordered type, this implies that
+γD is an isomorphism, hence that γ is an isomorphism, a contradiction. This
+completes the proof of the claim. Since every morphism between real objects of G0
+is an isomorphism [cf. assertion (ii)], we thus conclude that the codomain of α is
+complex.
+Next, I claim that α is a base-isomorphism. Indeed, suppose that αD
+def
+=
+Base(α)i s not an isomorphism. Since α0 is not an isomorphism, it thus follows
+that by lifting αD to a morphism of G that projects to an isomorphism of G0 and
+lifting α0 to a morphism of G that projects to an isomorphism of D, we thus obtain
+two factorizations of α, i.e., two objects of G↣
+α , neither of which “dominates” the
+other [cf. the fact that D, G0 are totally epimorphic!] — a contradiction [since α
+is totally ordered]. This completes the proof of the claim. Thus, in summary, α
+is an isometric pre-step. More concretely, the morphism α may be thought of as
+an “enlargement of the angular region that deﬁnes A”. In particular, by taking
+the union of the angular regions that arise from such enlargements, one obtains a
+factorization φ = β∞ ◦α∞ ,w h e r eα∞ : A → A∞ is an isometric pre-step [hence,
+in particular, a base-isomorphism], such that every α appearing in a factorization
+φ = β ◦α as above determines a factorization α∞ = α′ ◦α.
+Next, I claim that β∞ is an isomorphism. Indeed, suppose that β∞ is not
+an isomorphism. Now if β∞ is a monomorphism,t h e nα∞ , β∞ determine an
+object of G↣
+φ which [by the deﬁnition of α∞ ; our assumption that β∞ is not an
+isomorphism] contradictsthe fact thatφ is continuously ordered. Thus, we conclude
+that β∞ : A∞ → B is not a monomorphism, i.e., that there existdistinct morphisms
+
+42 SHINICHI MOCHIZUKI
+γ′,γ′′ : C → A∞ in G such that β∞ ◦γ′ = β∞ ◦γ′′. On the other hand, by the
+deﬁnition of α∞ in terms of angular regions, it follows immediately that there exists
+a factorization φ = β ◦α,w h e r ew ew r i t eα : A → E, β : E → B, that forms an
+object of G↣
+φ , together with morphisms δ : D → C and ϵ′,ϵ ′′ : D → E of G such
+that γ′ ◦δ= ζ◦ϵ′, γ′′ ◦δ= ζ◦ϵ′′,w h e r eζ: E → A∞ is the morphism arising from the
+deﬁnition of α∞ [so β∞ ◦ζ= β], and δis an isometric pre-step. Thus, we conclude
+that β∞ ◦ζ◦ϵ′ = β∞ ◦γ′ ◦δ= β∞ ◦γ′′ ◦δ= β∞ ◦ζ◦ϵ′′, i.e., that β ◦ϵ′ = β ◦ϵ′′.
+But since β is a monomorphism, this implies thatϵ′ = ϵ′′, hence that γ′ ◦δ= γ′′ ◦δ,
+i.e., [since δ is an epimorphism!] that γ′ = γ′′ — a contradiction. This completes
+the proof of the claim.S i n c eφ = β∞ ◦α∞ ,a n dα∞ is a base-isomorphism,w et h u s
+conclude that φ is also a base-isomorphism, as desired. This completes the proof of
+assertion (iii).
+Next, we consider assertion (iv). To verify the suﬃciency of the condition in
+the statement of assertion (iv), observe that by assertion (iii), the morphismsC →
+C1, C → C2 are base-isomorphisms [i.e., isometric pre-steps]; thus, any isotropic
+hull C → C′ of C factors through C → B [cf. [Mzk5], Proposition 1.9, (vii)],
+which, by the total epimorphicity of D, implies that C → B, hence also A → B,
+is a base-isomorphism, as desired. Next, we consider necessity.I n t h e real case,
+this necessity follows immediately from assertion (ii). In the complex case,t h e
+necessity in question follows from Lemma 3.2, (viii) [which we apply to construct
+the morphisms C → C1, C → C2 for an appropriate isometric pre-step C → A]
+and Lemma 3.2, (vii) [which we apply to show that these morphisms C → C1,
+C → C2 are quasi-continuously ordered isometric pre-steps]. [Here, we note that
+“continuously ordered pairs”in the context of Lemma 3.2 give rise to“continuously
+ordered isometric pre-steps”.] This completes the proof of assertion (iv).
+Finally, we observe that assertion (v) follows by considering appropriate iso-
+metric pre-stepsand pull-back morphismsto relate “dissections in G” to “dissections
+in D” [cf. the discussion of §0]. ⃝
+Corollary 4.2. (Category-theoreticity of F actors of Angloids) For i =
+1, 2,l e t Di be a connected, totally epimorphic category of discontinuously
+ordered type, equipped with a functor Di →D 0, with respect to which Di is com-
+plexiﬁable; Gi one of the categories Ni
+def
+= N0 ×D0 Di, Ri
+def
+= R0 ×D0 Di [cf.
+Example 3.3, (iii), (iv)];
+Ψ: G1
+∼
+→G 2
+an equivalence of categories .I f Gi = Ni (respectively, Gi = Ri), then set
+Gi,0
+def
+= N0 (respectively, Gi,0
+def
+= R0). Then:
+(i) If G1,0 = N0 (respectively, G1,0 = R0), then G2,0 = N0 (respectively, G2,0 =
+R0). In particular, it makes sense to write G0
+def
+= G1,0 = G2,0.
+(ii) The category of G0 is slim.I f G0 = N0 (respectively, G0 = R0), then there
+is a natural outer isomorphism between the group of isomorphism classes of self-
+equivalences of the category G0 and the group of translations and reﬂections
+
+THE GEOMETRY OF FROBENIOIDS II 43
+Reﬂ( S1) of Lemma 3.2, (xii) (respectively, the group ofself-homeomorphisms of
+S1 that commute with the complex conjugation automorphism ι: S1 ∼
+→ S1).
+(iii) Suppose that Di is RC-connected. Then there exists a 1-unique 1-
+commutative diagram
+G1
+Ψ
+−→ G 2
+⏐⏐↓
+⏐⏐↓
+G0
+Ψ0
+−→ G 0
+— where the vertical arrows are the natural functors; the horizontal arrows are
+equivalences of categories.
+(iv) If D1, D2 are F robenius-slim,t h e ns oa r eG1, G2. Suppose that D1,
+D2 are slim.T h e nG1, G2 are slim, and there exists a 1-unique 1-commutative
+diagram
+G1
+Ψ
+−→ G 2
+⏐⏐↓
+⏐⏐↓
+D1
+ΨBase
+−→ D 2
+— where the vertical arrows are the natural functors; the horizontal arrows are
+equivalences of categories; both composite functors arerigid.
+(v) If [for i =1 , 2] Di is of RC-standard type, then so is Gi.I np a r t i c u l a r ,
+in this case, Gi satisﬁes all of the hypotheses on “ D” in Theorem 3.6, (i), (ii).
+Proof. First, we observe that Ψ preserves base-isomorphisms [cf. Proposition
+4.1, (iv)]. Since the complex objects of Gi are precisely the objects that appear
+as domains or codomains of base-isomorphisms which are not isomorphisms [cf.
+Proposition 4.1, (i), (ii)], it thus follows that Ψ preserves real and complex objects.
+For i =1 , 2, suppose that Ai ∈ Ob(Gi)i s complex,a n dt h a tA2 =Ψ (A1). [Here, we
+note that since Di is complexiﬁable, it follows that suchA1, A2 always exist.] Then
+Ψ induces a homeomorphism
+∂AA1
+∼
+→ ∂AA2
+[cf. Proposition 4.1, (i); Theorem A.2, (vi)], which is functorial in A1, A2.I n
+particular, it follows [cf. Lemma 3.2, (x)] that Ψ preserves isotropic objects and
+isotropic hulls.
+Next, we consider assertion (i). Observe [cf. Theorem 3.6, (v)] that O×(Ai)=
+{1} if and only if either of the following conditions holds: (a)Gi = Ri;( b )Gi = Ni,
+and Ai is non-isotropic. Moreover, one veriﬁes immediately that there exist non-
+isotropic Ai such that the natural homomorphism Aut Gi (Ai) → AutDi (Base(Ai))
+
+44 SHINICHI MOCHIZUKI
+[whose kernel is equal to O×(Ai)] is surjective [cf. the Aut -ampleness of Theo-
+rem 3.6, (ii)]. In particular, we conclude that Gi = Ri if and only if there exist
+non-isotropic Ai such that if Ai → Aistr
+i is an isotropic hull, then the natural ho-
+momorphism AutGi (Ai) → AutGi (Aistr
+i ) [induced by the deﬁning property of the
+isotropic hull] is an isomorphism. This completes the proof of assertion (i).
+Next, we consider assertion (ii). First, let us observe that the existence of the
+functorial homeomorphism ∂AA1
+∼
+→ ∂AA2 discussed above [when Di
+def
+= D0] implies
+that G0 is slim. Now let us consider this functorial homeomorphism for complex
+isotropic Ai. Note that since all complex isotropic objects of G0 are isomorphic, we
+may assume [for the remainder of the proof of the present assertion (ii)], without
+loss of generality, thatA1 = A2.W r i t eI ⊆ Homeo(S1) for the image in Homeo(S1)
+[cf. Lemma 3.2, (xii)] of AutG0 (Ai). Observe that this image is given [for a suitable
+identiﬁcation of ∂AAi with S1] by the subgroup Reﬂ( S1) [cf. Lemma 3.2, (xii)],
+in the case G0 = N0, and by the subgroup [of order 2] generated by ιin the case
+G0 = R0. In particular, the subset of I consisting of elements that reverse the
+orientation of S1 — i.e., of elements that determine the structure of real objects of
+G0 as categorical quotientsof complex isotropic objects—i s preservedby conjugation
+by arbitrary elements of the normalizer of I in Homeo(S1) [cf. Lemma 3.2, (xii)].
+Thus, by thinking of the functorial homeomorphism ∂AA1
+∼
+→ ∂AA2 as an element
+of Homeo(S1), we conclude that the isomorphism classes of self-equivalences of G0
+may be identiﬁed with the normalizer of I in Homeo(S1) [which may be computed
+when G0 = N0 by applying Lemma 3.2, (xii)]. This completes the proof of assertion
+(ii).
+Next, we consider assertion (iii). First, let us observe that sinceDi is complex-
+iﬁable , it follows that we may choose Ai to be [complex] isotropic and such that
+the natural homomorphism Aut Gi (Ai) → AutDi (Base(Ai)) is surjective [a condi-
+tion that may be phrased in “category-theoretic” terms as the condition that Ai
+admit an automorphism [in Gi]t h a treverses the orientation of ∂AAi ]. Let Bi be
+a complex isotropic object of Gi; write Aut∂(Bi) for the group of automorphisms
+of ∂ABi induced by automorphisms of Bi [in Gi]. Since Di is RC-connected,w e
+obtain a homeomorphism ∂(Ai,B i): ∂AAi
+∼
+→ ∂ABi by applying [Mzk5], Proposi-
+tion 1.9, (ii), (iii), to various morphisms of Gi[C]t o “connect” Ai to Bi.M o r e o v e r ,
+by projecting to G0, one veriﬁes immediately that the Aut ∂(Ai)-orbit —w h i c hw e
+denote by ∂[Ai,B i] — of this homeomorphism ∂(Ai,B i) depends only on Bi [i.e.,
+not on the choice of morphisms used to “connect” Ai to Bi]. In a similar vein, by
+projecting to G0, one veriﬁes immediately that conjugation by any homeomorphism
+∈ ∂[Ai,B i]m a p sA u t∂(Bi)i n t oA u t∂(Ai). Next, let us observe that the functori-
+ality of the functorial homeomorphism ∂AA1
+∼
+→ ∂AA2 implies that this functorial
+homeomorphism is compatible with the ∂[Ai,B i]’s and induces an isomorphism
+Aut∂(A1)
+∼
+→ Aut∂(A2). In particular, by applying the complexiﬁability of Di in
+the case of real objects of Gi, we conclude as in the proof of assertion (ii) that this
+functorial homeomorphism ∂AA1
+∼
+→ ∂AA2 determines a 1 -unique 1-commutative
+diagram as in the statement of assertion (iii).
+Next, we consider assertion (iv). First, let us observe that the portion of
+assertion (iv) concerning the Frobenius-slimness and slimness of G1, G2 follows
+
+THE GEOMETRY OF FROBENIOIDS II 45
+immediately from Proposition 4.1, (i) [cf. the use of condition (a) in the proof
+of [Mzk5], Proposition 1.13, (iii)], together with the assumption that D1, D2 are
+Frobenius-slim or slim; similarly, the rigidity of the composite functors in the dia-
+gram appearing in the statement of assertion (iv) [if such a diagram exists] follows
+immediately from the slimness of D1, D2 [cf. [Mzk5], Proposition 1.13, (i)]. Now
+assume that D1, D2 are slim. Next, let us observe that the functor
+Gi →G istr
+i
+[where Gistr
+i ⊆G i is the full subcategory determined by theisotropic objects] induced
+by theisotropiﬁcation functor of [Mzk5], Proposition 1.9, (v), may be reconstructed,
+up to isomorphism, as the left adjoint to the natural inclusion functor Gistr
+i ↪→G i
+[cf. the analogous fact for Frobenioids, discussed in [Mzk5], Proposition 1.9, (v)].
+Moreover, one veriﬁes immediately that the natural projection functor Gistr
+i →D i
+is full and essentially surjective,a n dt h a ti fA, B ∈ Ob(Gistr
+i ), then
+HomDi (Base(A), Base(B))
+may be reconstructed as the quotient of Hom Gistr
+i
+(A, B) = Hom Gi (A, B)b yt h e
+natural action of O×(A) [cf. the analogous fact for Frobenioids, i.e., thefaithfulness
+discussed in [Mzk5], Proposition 3.3, (iv)]. Since we have already seen that Ψ
+preserves isotropic objects [hence, in particular, the subcategory Gistr
+i ⊆G i], to
+complete the proof of assertion (iv), it suﬃces to show that Ψ preserves “ O×(−)”.
+Let A ∈ Ob(Gistr
+i ). Then the projection functor Gi →D i induces anequivalence
+of categories
+(Gi)istr
+A
+∼
+→ (Di)Base(A)
+— cf. [Mzk5], Deﬁnition 1.3, (i), (c); the fact [cf. [Mzk5], Proposition 1.4, (ii)] that
+a morphism of a Frobenioid isLB-invertible and linear if and only if it is apull-back
+morphism. Thus, since Di is slim, the group
+Aut((Gi)istr
+A →D i) ∼= Aut((Di)Base(A) →D i)
+is trivial. In particular, [composition with the projection functor Gi →D i reveals
+that] any
+α ∈ Aut((Gi)istr
+A →G i)
+consists of base-identity automorphisms, i.e., that by considering the automorphism
+of A determined by α,w eo b t a i nanatural isomorphism
+O×(A)
+∼
+→ Aut((Gi)istr
+A →G i)
+[cf. the analogue of this argument for Frobenioids given in the proof of [Mzk5],
+Corollary 4.11, (i)]. In particular, we conclude that Ψ preserves “ O×(−)”, as
+desired. This completes the proof of assertion (iv).
+Finally, we observe that assertion (v) follows formally from Proposition 3.4,
+(viii); 3.5, (iii). ⃝
+
+46 SHINICHI MOCHIZUKI
+Remark 4.2.1.
+(i) Thus, by Corollary 4.2, (v), if D is any category of discontinuously ordered
+type, equipped with a functor D→D 0 such that D is RC-standard type, then the
+resulting categories N, R form “suitable base categories”, from the point of view of
+Theorem 3.6, (i), (ii). That is to say:
+The main results of the theory of [Mzk5] may be applied to archimedean
+or angloid Frobenioids over the base categoriesN, R.
+Moreover, in the case ofN,i fA is a complex isotropic object of such anarchimedean
+or angloid Frobenioid that projects to a complex isotropic object AN of the base
+category N, then one obtains natural category-theoretic isomorphismsof the topo-
+logical group structureof the “S1” [i.e., the “O×(−)”] ofA with the “S1”o fAN via
+Theorem 3.6, (vii); Proposition 4.1, (i); Corollary 4.2, (ii), (iii). Furthermore:
+Such category-theoretic isomorphisms between the “Frobenioid-theoretic”
+and “base category-theoretic”copies of “S1” may be regarded as anarchimedean
+analogue of the category-theoreticity of the [nonarchimedean] local reci-
+procity map, as discussed in Theorem 2.4, (i), (ii).
+Indeed, this sort of “archimedean analogue of the local reciprocity map” constituted
+one of themain goalsof the author in the development of the [technically somewhat
+cumbersome — cf., especially, Propositions 3.4, 3.5] theory of §3.
+(ii) It is perhaps of interest to note that in the “archimedean analogue of the
+category-theoreticity of the local reciprocity map” discussed in (i), if one forgets
+the vast collection of terminology and “general nonsense” developed so far in the
+theory of §3 and the present §4, then the main “substantive ingredients” of the
+theory appear to be the following:
+(a) the reconstruction of S1 from the associated category of open connected
+subsets Open0(S1) [cf. the theory of the Appendix];
+(b) the fact that Reﬂ( S1) is equal to its own normalizer in Homeo(S1)[ c f .
+Lemma 3.2, (xii)].
+Here, we recall that (a) was applied in the proof of Theorem 3.6, (vii), and Propo-
+sition 4.1, (i), while (b) was applied in the proof of Corollary 4.2, (ii).
+(iii) Write GK for the absolute Galois group of a nonarchimedean [mixed-
+characteristic] local ﬁeld K. Then relative to the point of view discussed in (i),
+in which G0 [especially N0] plays the role of a sort of archimedean version of GK,
+the slimness of G0 [cf. Corollary 4.2, (ii)] may be thought of as a sort ofarchimedean
+analogue of the slimness of GK [cf., e.g. [Mzk1], Theorem 1.1.1, (ii)]. In a similar
+vein, the “category-theoreticity of the projection to G0”given in Corollary 4.2, (iii),
+may be thought of as a sort of archimedean version of the group-theoreticity of the
+projection to GK given in [Mzk1], Lemma 1.3.8.
+
+THE GEOMETRY OF FROBENIOIDS II 47
+Finally, we discuss some examples from arithmetic geometry at archimedean
+primes of categories “ D” which satisfy the hypotheses of Corollary 4.2, (v).
+Example 4.3. Categories Associated to Hyperbolic Riemann Surfaces.
+(i) In the notation and terminology of [Mzk3], §2: Let ( X∗,φ∗)b ea n RC-
+Teichm¨uller pair [roughly speaking: a hyperbolic Riemann surface considered up to
+complex conjugation and equipped with a nonzerosquare diﬀerential]; π1(X∗) → Π
+[where π1(X∗) is the topological fundamental group of X∗]a dense morphism of
+tempered topological groupssuch that Π is “totally ramiﬁed at inﬁnity” and “stack-
+resolving”; □ ∈{ P, R, S}. Then associated to this data, one may deﬁne [cf. [Mzk3],
+the discussion preceding Proposition 2.2] a category
+D
+def
+= Loc□
+Π (X∗,φ∗)
+of parallelogram, rectangle, or square localizations [depending on the choice of □]
+of (X∗,φ∗). Roughly speaking, this category consists of two [mutually exclusive]
+types of objects: (a) complete objects, which are coverings of the hyperbolic Rie-
+mann surface in question [as prescribed by Π]; (b) parallelogram objects, which are
+[pre-compact] parallelograms, rectangles, or squares [depending on the choice of
+□] on the [universal covering of the noncritical locus of the] Riemann surface in
+question, relative to the natural parameters [in the sense of Teichm¨ uller theory]
+determined by the given square diﬀerential. The main result proven concerning
+this category D in [Mzk3] is that if □ = R, S (respectively, □ = P), then one
+may reconstruct the given Riemann surface, together with its conformal structure
+(respectively, quasiconformal structure) — up to possible confusion with the corre-
+sponding complex conjugate structures — in an entirely category-theoreticfashion
+from the category D [cf. [Mzk3], Theorem 2.3]. It is immediate from the deﬁnition
+of D that D is equipped with a natural functor D→D
+0 [that maps “objects of
+complex type” of D [cf. [Mzk3], Proposition 1.5, (i)] to complex objects of D0 and
+“objects of real type” of D [cf. [Mzk3], Proposition 1.5, (ii)] to real objects of D0].
+(ii) Here, we wish to observe that:
+D [equipped with the natural functor D→D 0]i sa slim category of
+RC-standard, FSM-,a n d strictly partially ordered [hence, a fortiori, of
+discontinuously ordered] type [cf. Remark 4.2.1].
+Indeed, D is slim [cf. [Mzk3], Theorem 2.3, (i)], totally epimorphic [cf. [Mzk3],
+Proposition 2.2, (v)], RC-connected [cf. the deﬁnition of D in loc. cit.], and com-
+plexiﬁable [cf. our assumption that Π is “stack-resolving”]. Since the complete ob-
+jects of D that arise from ﬁnite Galois coverings of X∗ of complex type [where we
+note that such objects always exist, by our assumption that Π is “stack-resolving”]
+form RC-anchors of D, it follows immediately from the deﬁnition of D in loc. cit.
+that D is of RC-iso-subanchor type. Next, let us observe that it follows immediately
+from the description ofmonomorphisms of D given in [Mzk3], Proposition 2.2, (ix),
+
+48 SHINICHI MOCHIZUKI
+that D is of FSM- [hence, a fortiori, of FSMFF-] type. Since, moreover, any par-
+allelogram P1 [of type “ □”] contained in [a compact subset of] a parallelogram P2
+[of type “ □”] of the Euclidean plane admits“intermediary parallelograms”[of type
+“ □”] P3 [i.e., P1 ⊆ P3 ⊆ P2, P3 ̸= P1,P2]i n two dimensions [hence, in particular,
+intermediary P3, P4 [of type “ □”] neither of which is contained in the other], it
+follows from the description of monomorphisms of D given in [Mzk3], Proposition
+2.2, (ix), that D is of strictly partially ordered type.
+(iii) Now, suppose that, in the notation of Example 1.4, we take “ v”t ob e
+an archimedean valuation. We shall refer to the Galois extension ˜F/F as amply
+quadratic if there exist totally complex extensions F1 ⊆ ˜F of F such that [F1 : F] ≤
+2. Relative to the notation D→D 0 of (i), observe that we have a natural functor
+P0 →D 0; set P
+def
+= D× D0 P0, E
+def
+= P× P0 E0.T h u s ,E may be identiﬁed with
+D× D0 E0, and we note that, so long as ˜F/F is amply quadratic,e v e ni fP0 →D 0
+fails to be an equivalence of categories, the diﬀerence betweenD and P amounts, in
+eﬀect, to forming “D” as above, but with the original “X∗” replaced by the result
+of “tensoring X∗ over R with C”. [Put another way, the assumption that ˜F/F is
+amply quadratic allows one to rule the case where every object in the image of P0
+in D0 is real.] Then:
+Suppose that ˜F/F is amply quadratic.T h e nE [equipped with the natural
+functor E→ D 0]i sa slim category of RC-standard and discontinuously
+ordered type [cf. Remark 4.2.1].
+Indeed, the slimness of E follows immediately from the slimness of D [cf. (ii)
+above] and Proposition 1.5, (iv); the total epimorphicity of E follows immediately
+from the total epimorphicity of D [cf. (ii) above] and Proposition 1.5, (iii); the
+RC-connectedness follows immediately from the RC-connectedness of D [cf. (ii)
+above] and Proposition 1.5, (ii); thecomplexiﬁability of E follows immediately from
+the complexiﬁability of D [cf. (ii) above] and our assumption that ˜F/F is amply
+quadratic; the fact that E is of FSMFF-type follows from the fact that D is totally
+epimorphic and of FSM-type [cf. (ii) above], and Proposition 1.5, (viii); the fact
+that E is ofRC-iso-subanchor type follows from the corresponding fact forD [cf. (ii)
+above] and our assumption that ˜F/F is amply quadratic. Finally, by Proposition
+1.5, (ix), it follows that totally ordered morphisms of E project to totally ordered
+morphisms of D, which are isomorphisms [since D is of strictly partially ordered
+type — cf. (ii) above]; thus, it follows immediately from the “discrete structure”
+of E0 that E is of discontinuously orderedtype, as desired.
+(iv) Finally, we observe that by considering parallelogram objects whose im-
+ages in X∗[C]a r esuﬃciently small and disjoint, it follows immediately that the
+categories D, E are of strongly dissectible type [cf. Proposition 1.5, (vii)].
+Remark 4.3.1. Note that, by contrast to the categories of Riemann surfaces dis-
+cussed in Example 4.3, the categories of Riemann surfaces “ LocΠ(X∗)” of [Mzk3],
+
+THE GEOMETRY OF FROBENIOIDS II 49
+§1 — which are intended to embody the upper half-plane uniformizationof a hyper-
+bolic Riemann surface — fail to be of FSMFF-type. Indeed, if D is the open unit
+disc in the complex plane, and V ⊆ D, U ⊆ V are connected open subsets,t h e n
+the inclusion U↪ → V determines a monomomorphism of this category “LocΠ(X∗)”.
+Thus, if, for instance, U is the complement of a(n) [inﬁnite] compact line segment
+in D,t h e nU↪ → D determines an FSM-morphism [which is not an isomorphism]
+such that monomorphism factorizations of this morphism correspond to connected
+open subsets W ⊆ D containing U. In particular, it follows immediately that this
+morphism U↪ → D fails to factor as a composite of ﬁnitely many FSMI-morphisms.
+Also, we observe that ifU is thecomplement of an inﬁnite discrete subsetof D,t h e n
+“ﬁlling in successive points of the complement D\U”[ c f .t h eslit morphisms of Ex-
+ample 3.3, (v)] yields aninﬁnite sequence of FSMI-morphismsU → U1 → U2 → ... .
+Thus, in summary, the category “LocΠ(X∗)” does not satisfyeither of the two con-
+ditions in the deﬁnition of a “category of FSMFF-type” [cf. [Mzk5], §0]. Moreover,
+we observe that if, for instance, X∗ is non-compact, then its upper half-plane uni-
+formization constitutes a morphism from an “object which is not of ﬁnite type” [in
+the terminology of [Mzk3], §1] to an “object of ﬁnite type” which does not have
+pre-compact image. Thus, it does not appear that this situation may be remedied
+by imposing a simple “pre-compact image condition” of the sort that occurs in the
+deﬁnition of the categories of Example 4.3 [cf. [Mzk3], §2].
+Example 4.4. Archimedean Quasi-temperoids.
+(i) Let
+D
+def
+= Btemp(Π, Π◦)0
+be any category as in Example 1.3, (iii), where Π → Q, GR ↠ Q [i.e., we take
+“ F”o f loc. cit. to be R], Π ◦ ⊆ Πa r ea si n loc. cit. , and we assume further
+that the surjection GR ↠ Q is an isomorphism.T h u s , w e h a v e anatural functor
+D = Btemp(Π, Π◦)0 →D 0 [cf. Example 1.3, (ii), (iii)].
+(ii) Now we observe that:
+D [equipped with the natural functor D→D 0] is a category of RC-
+standard, FSM-,a n dstrictly partially ordered[hence, a fortiori, of discon-
+tinuously ordered] type [cf. Remark 4.2.1]. If, moreover, Π is temp-slim,
+then D is slim.
+Indeed, this follows via the a similar [but somewhat easier] argument to the argu-
+ment applied in Example 4.3, (ii) [cf. also Example 1.3, (i)].
+(iii) Now, suppose that, in the notation of Example 1.4, we take “ v”t ob e
+an archimedean valuation. Observe that we have a natural functor P0 →D 0.S e t
+P
+def
+= D× D0 P0; E
+def
+= P× P0 E0
+∼
+→D × D0 E0 [cf. Example 4.3, (iii)], and we note
+that, so long as ˜F/F is amply quadratic,e v e ni fP0 →D 0 fails to be an equivalence
+of categories, the diﬀerence betweenD and P amounts, in eﬀect, to forming “D”a s
+above, but with the original “Π”, “Π◦” replaced by the kernel of the given morphism
+Π → Q ∼= GR and its intersection with Π◦, respectively. Then:
+
+50 SHINICHI MOCHIZUKI
+If ˜F/F is amply quadratic,t h e nE [equipped with the natural functor
+E→ D 0] is a category of RC-standard and discontinuously ordered type
+[cf. Remark 4.2.1]. If, moreover, Π is temp-slim,t h e nE is slim.
+Indeed, this follows via the a similar [but somewhat easier] argument to the argu-
+ment applied in Example 4.3, (iii).
+(iv) Finally, we observe that the categories D, E are of strongly indissectible
+type [cf. Example 1.3, (i); Proposition 1.5, (vii)].
+
+THE GEOMETRY OF FROBENIOIDS II 51
+Section 5: Poly-F robenioids
+In the present §5, we develop the “general nonsense” necessary to construct
+categories obtained by “gluing together” various Frobenioids in a certain fashion.
+We shall refer to the categories obtained in this way as poly-Frobenioids.T h i s
+“gluing problem” is motivated by the goal of “gluing together” the Frobenioids
+of [Mzk5], Example 6.3 [which embody the global arithmetic of number ﬁelds ]t o
+the p-adic and archimedean Frobenioids of Examples 1.1, 3.3 [which embody the
+arithmetic of local ﬁelds ] in a fashion that reﬂects, at the level of category theory,
+the way in which localizations of number ﬁelds are typically treated in arithmetic
+geometry.
+Deﬁnition 5.1.
+(i) We shall refer to as a collection of grafting data any collection of data
+A
+def
+=
+(
+A⊚, {Aι}ι∈I, {A
+ι}ι∈I, {ζι : A⊚ →A
+ ⊤
+ι }ι∈I, {ηι : Aι →A
+ ι}ι∈I
+)
+where I is a set; the A⊚, Aι, A
+ι are connected, totally epimorphic categories;“ ⊤”
+is as in [Mzk5], §0; the arrows ζι are functors, which we shall refer to as global
+contact functors; the functors ηι, which we shall refer to as local contact functors,
+are relatively initial [cf. §0]. We shall refer to A⊚ as the global component of A
+and to the Aι as the local componentsof A.T h egrafted categoryassociated to A is
+deﬁned to be the category
+G
+def
+= A⊚ ⊣(
+/C9
+ι∈I A
+⊤
+ι
+)
+( ∐
+ι∈I
+Aι
+)
+where “ ⊣” is deﬁned relative to the functors
+A⊚ → ∏
+ι∈I A
+⊤
+ι
+∐
+ι∈I Aι → ∏
+ι∈I A⊤
+ι → ∏
+ι∈I A
+⊤
+ι
+[cf. §0]; the arrow in the ﬁrst line is the functor determined by the ζι’s; the ﬁrst
+arrow in the second line is the natural functor [cf. §0]; the second arrow in the
+second line is the functor determined by the ηι’s. Thus, [cf. §0] we may think of
+the global component,a sw e l la st h elocal components,o f A as full subcategories of
+G. An object or arrow that belongs to the global component (respectively, a local
+component ι∈ I)o f G will be referred to asglobal (respectively, [ι-]local). Denote by
+G⊚ ⊆G (respectively, Gι ⊆G [for ι∈ I]; G... ⊆G ) the full subcategory determined
+by the global (respectively,ι-local; local) objects. A morphism of G from an ι-local
+object to a global object will be referred to as ι-heterogeneous.
+(ii) We shall say thatA is of uniformly dissectible typeif the following conditions
+are satisﬁed: (a) there exist at least 2 elements ι∈ I for which ζι is totally non-
+initial [cf. §0]; (b) for each ι ∈ I, Aι is either of weakly indissectible type or
+
+52 SHINICHI MOCHIZUKI
+of strongly dissectible type; (c) there exists an ι ∈ I such that Aι is of weakly
+indissectible type, and ζι is totally non-initial. If, for ι∈ I, ηι is an equivalence
+of categories, then we shall say that A is of ι-tactile type;i f A is of ι-tactile type
+for all ι∈ I, then we shall say that A is of totally tactile type. A morphism of G
+whose domain is [ ι-]local [for some ι ∈ I], whose codomain is global, and which
+is minimal-adjoint [cf. [Mzk5], §0] to the morphisms with local codomain, will be
+referred to as [ι-]pre-tactile. A morphism A → B of G whose domain is [ι-]local [for
+some ι∈ I], whose codomain is global, and which corresponds [cf. the deﬁnition
+of G] to an isomorphism of ηι(A) onto a connected component of ζι(B), will be
+referred to as [ι-]tactile.I fa ( n )[ι-]heterogeneous morphism φ : A → B of G factors
+as a composite A → A′ → B,w h e r eA′ → B is [ι-]tactile, then we shall refer to this
+factorization as a(n) [ι-]tactile factorization of φ. If, for some ι∈ I, {Aj → B}j∈J
+forms a collection of ι-tactile morphisms of G that corresponds [cf. the deﬁnition of
+G] to an isomorphism ∐
+j∈J ηι(Aj)
+∼
+→ ζι(B), then we shall refer to the collection
+of morphisms {Aj → B}j∈J as a complete [ι-]tactile collection [for B].
+(iii) If
+A′ def
+=
+(
+A′
+⊚, {A′
+ι′ }ι′ ∈I′ , {A
+′
+ι′ }ι′ ∈I′ , {ζ′
+ι′ : A′
+⊚ →A
+ ′
+ι′ }ι′ ∈I′ , {η′
+ι′ : A′
+ι′ →A
+ ′
+ι′ }ι′ ∈I′
+)
+is another collection of grafting data, then we shall refer to as an equivalence of
+collections of grafting data
+Ψ: A
+∼
+→ A′
+a bijection ΨI : I
+∼
+→ I′, together with equivalences of categories
+Ψ ⊚ : A⊚
+∼
+→A ′
+⊚
+and
+Ψι : Aι
+∼
+→A ′
+ι′ ;Ψ
+ ι : A
+ι
+∼
+→A
+ ′
+ι′
+for ι∈ I, ι′ def
+=Ψ I(ι), which are 1-compatible with the various functors ζι, ζ′
+ι′ , ηι,
+η′
+ι′ . [Thus, the equivalences of collections of grafting data A
+∼
+→ A′, together with
+isomorphisms [in the evident sense] between such equivalences, form acategory.] If
+G′ is the grafted category associated to A′, then it is immediate that Ψ determines
+an equivalence of categories G
+∼
+→G ′.
+Remark 5.1.1. Since the local components of G are assumed to be connected
+[cf. Deﬁnition 5.1, (i)], it follows immediately that the Gι are precisely the con-
+nected components[cf. [Mzk5], §0] of the category G..., and that the category G... is
+naturally equivalent to the coproduct [cf. §0] of the categories Gι.
+Remark 5.1.2. Let ι∈ I. Then the following assertions follow immediately from
+the deﬁnitions and the total epimorphicity assumption in Deﬁnition 5.1, (i): Every
+ι-tactile morphism of G is ι-pre-tactile. Suppose further that A is of ι-tactile type.
+Then any two ι-tactile factorizations of an ι-heterogeneousmorphism φ : A → B of
+G determine isomorphic objects of the category of factorizations Gφ [cf. §0]; every
+
+THE GEOMETRY OF FROBENIOIDS II 53
+global object B of G admits a complete ι-tactile collection;i f {Aj → B}j∈J is any
+collection of ι-tactile morphisms of G, then this collection is a complete ι-tactile
+collection for B if and only if every ι-heterogeneous morphism C → B factors
+through precisely one of the Aj → B; ﬁnally, a morphism of G is ι-tactile if and
+only if it is ι-pre-tactile.
+Proposition 5.2. (Dissection of Grafted Categories) Let A, A′ be collec-
+tions of grafting data of uniformly dissectible type, whose associated cate-
+gories we denote by G, G′, respectively. Then:
+(i) The global objects of G are strongly dissectible .
+(ii) Let ι ∈ I. Suppose that Aι is of weakly indissectible (respectively,
+strongly dissectible ) type. Then the ι-local objects of G are weakly indis-
+sectible (respectively, strongly dissectible).
+(iii) An object of G is global if and only if it is a strongly dissectible
+object that appears as the codomain of a morphism whose domain is weakly in-
+dissectible.
+(iv) Every equivalence of categories Ξ: G
+∼
+→G ′ induces an equivalence
+of categories G⊚
+∼
+→G ′
+⊚,a bijection ΞI : I
+∼
+→ I′,a n d ,f o re a c hI ∋ ι↦→ ι′ ∈ I′,
+an equivalence of categories Gι
+∼
+→G ′
+ι′ .I n p a r t i c u l a r ,Ξ preserves global and
+local objects.
+(v) Suppose that A, A′ are of totally tactile type. Then there is a natural
+equivalence of categories between the category of equivalences A
+∼
+→ A′ and the
+category of equivalences G
+∼
+→G ′.
+Proof. To verify assertion (i), let A ∈ Ob(A⊚). Since [cf. Deﬁnition 5.1, (ii), (a);
+Deﬁnition 5.1, (i)] there exist distinct ι1,ι2 ∈ I such that [for j =1 , 2] ζιj is totally
+non-initial,a n dηιj is relatively initial, it follows that there exists [for j =1 , 2] a
+morphism Aj → A,w h e r eAj ∈ Ob(G)i sιj-local. On the other hand, since no object
+of G admits a morphism to both A1 and A2, it follows that A1 → A, A2 → A form
+a strongly dissecting pair of arrows, as desired. Assertion (ii) follows immediately
+from the deﬁnitions [together with the fact that the domain of any morphism of G
+whose codomain is ι-local is itself ι-local]. Assertion (iii) follows immediately from
+assertions (i), (ii) [cf. also Deﬁnition 5.1, (ii), (b)], together with the existence [cf.
+Deﬁnition 5.1, (ii), (c); Deﬁnition 5.1, (i)] of an ι ∈ I such that Aι is of weakly
+indissectible type, ζι is totally non-initial ,a n d ηι is relatively initial. Assertion
+(iv) follows immediately from assertion (iii), Remark 5.1.1. Finally, assertion (v)
+follows immediately from assertion (iv), by considering complete tactile collections
+of morphisms [cf. Remark 5.1.2]. ⃝
+Observe that our discussion so far has nothing to do with Frobenioids [at least
+in an explicit sense]. We now return to discussing Frobenioids.
+
+54 SHINICHI MOCHIZUKI
+Deﬁnition 5.3. For i =1 , 2, let Ci be a Frobenioidover a base category Di,w i t h
+perf-factorial divisor monoid Φi. Note that Φ i extends naturally to a functor Φ ⊤
+i
+on D⊤
+i by assigning to a coproduct of objects {Aj }j∈J of Di the direct sum of the
+monoids Φi(Aj).
+(i) Suppose that C1 is of isotropic type. Then we shall refer to a functor
+Ψ: C1 →C ⊤
+2
+as GC-admissible [i.e., “global contact-admissible”] if the following conditions are
+satisﬁed: (a) there exists a functor Ψ Base : D1 →D ⊤
+2 which is 1-compatible with
+Ψ, [relative to the natural projection functors Ci →D i,f o ri =1 , 2]; (b) Ψ maps an
+arrow ofFrobenius degreed ∈ N≥1 of C1 to an arrow ofC⊤
+2 each of whose component
+arrows [∈ Arr(C2)] is of Frobenius degreed; (c) there exists a natural transformation
+ΨΦ :Φ 1 → Φ⊤
+2 |C1 that is compatible with Ψ relative to the functors Ci → FΦi [for
+i =1 , 2] that deﬁne the Frobenioid structures of the Ci [in other words: Ψ Φ is
+compatible with Ψ relative to the operation of taking the zero divisor]; (d) every
+component object ∈ Ob(C2) of an object in the image of Ψ is isotropic.
+(ii) We shall refer to a functor
+Ψ: C1 →C 2
+as LC-admissible [i.e., “local contact-admissible”] if there exists a subfunctor of
+group-like monoids
+Φcnst ⊆ (Φrlf
+1 )birat
+[where “rlf” is as in [Mzk5], Deﬁnition 2.4, (i); cf. also [Mzk5], Proposition 5.3] on
+D1 of “constant realiﬁed rational functions” such that the following conditions are
+satisﬁed: (a) there exists an equivalence of categoriesΨBase : D1
+∼
+→D 2 which is 1-
+compatible with Ψ [relative to thenatural projection functorsCi →D i,f o ri =1 , 2];
+(b) Ψ is compatible with Frobenius degrees; (c) the natural inclusion Φ 1 ↪→ Φrlf
+1
+factors as a composite of inclusions
+Φ1 ↪→ Φ2|D1 ↪→ Φrlf
+1
+of functors of monoids on D1 that are compatible with Ψ relative to the functors
+Ci → FΦi [for i =1 , 2] that deﬁne the Frobenioid structures of theCi [in other words:
+relative to the operation of taking the zero divisor]; (d) applying the operation of
+“groupiﬁcation” to the monoids of (c) induces inclusions
+Φbirat
+1 ↪→ Φbirat
+2 |D1 ↪→ (Φrlf
+1 )birat = R · Φbirat
+1
+[where we recall that Φbirat
+i ⊆ Φgp
+i ,f o ri =1 , 2 — cf. [Mzk5], Proposition 4.4, (iii)]
+of functors of monoids on D1; (e) the image of the inclusion Φbirat
+2 |D1 ↪→ (Φrlf
+1 )birat
+of (d) is equal to the subfunctor of [group-like] monoids Φbirat
+1 +Φ cnst ⊆ (Φrlf
+1 )birat;
+(f) the functor Φcnst is “constant”on D1 in the sense that Φcnst maps every arrow of
+D1 to an isomorphism; (g) Ψ preserves isotropic objectsand co-angular morphisms.
+We shall say that Ψ isLC-unit-admissible if Ψ is LC-admissible, and, moreover, the
+
+THE GEOMETRY OF FROBENIOIDS II 55
+following condition is satisﬁed: (h) if A2 =Ψ (A1) ∈ Ob(C2), where A1 ∈ Ob(C1),
+then the induced homomorphism of abelian groups O×(A1) →O ×(A2) induces a
+surjection on perfections O×(A1)pf ↠ O×(A2)pf.
+(iii) We shall refer to as a collection of Frobenioid-theoretic grafting dataany
+collection of grafting data
+C
+def
+=
+(
+C⊚, {Cι}ι∈I, {C
+ι}ι∈I, {ζι : C⊚ →C
+ ⊤
+ι }ι∈I, {ηι : Cι →C
+ ι}ι∈I
+)
+such that the following conditions are satisﬁed: (a) the categories C⊚, Cι, C
+ι [for
+ι ∈ I] are equipped with Frobenioid structures, the base categories of which we
+denote by D⊚, Dι, D
+ι, respectively, and the divisor monoids of which we denote
+by Φ⊚,Φ ι,Φ
+ ι, respectively; (b) the divisor monoids Φ ⊚,Φ ι,Φ
+ ι [for ι∈ I] are all
+perf-factorial;( c )t h eglobal contact functorsζι [for ι∈ I]a r eGC-admissible [which
+implies, in particular, that C⊚ is of isotropic type]; (d) the local contact functorsηι
+[for ι∈ I]a r eLC-admissible. A category obtained as the grafted category associated
+to such data C will be referred to as a poly-Frobenioid C. If all of the ηι [for ι∈ I]
+are LC-unit-admissible, then we shall say thatC or C is of LC-unit-admissible type.
+Observe that C determines a collection of base-category grafting dataD,w h i c hi so f
+totally tactile type [cf. (ii), (a)]; the associated grafted category D will be referred
+to as the poly-base category of the poly-Frobenioid C. [Here, we observe that, by
+a [harmless!] abuse of notation, “ C⊚” denotes both the category “ A⊚”a n dt h e
+category “ G⊚” of Deﬁnition 5.1, (i); a similar remark holds for “ D⊚”, “Cι”, “Dι”,
+where ι∈ I.] Thus, we have a natural projection functor C→D .I f P is a property
+of Frobenioids(respectively, base categories of Frobenioids), then we shall say that
+C or C (respectively, D or D) satisﬁes this property P if the Frobenioids C⊚, Cι, C
+ι
+[for ι∈ I] (respectively, the base categories D⊚, Dι, D
+ι [for ι∈ I]) all satisfy this
+property P. [In particular, one must be careful to distinguish between the assertion
+that “ D satisﬁes P as an abstract category” and the assertion that “D satisﬁes P as
+a poly-base categoryof a poly-Frobenioid”.]
+(iv) Let φ : A → B be a morphism of the poly-Frobenioid C. We shall denote
+the projection of φ to D by Base(φ). Observe that by conditions (i), (b), and (ii),
+(b), above, it makes sense to speak of the Frobenius degreedegFr(φ) ∈ N≥1 of φ;i f
+degFr(φ) = 1, then we shall say thatφis linear. If, for ι∈ I, φis ι-local (respectively,
+ι-heterogeneous), then it makes sense to speak of the zero divisor Div(φ) ∈ Φι(A)
+(respectively, Div(φ) ∈ Φ
+ι(A)); if φ is global, then it makes sense to speak of the
+zero divisor Div(φ) ∈ Φ⊚(A). We shall say that φ satisﬁes a property P of arrows
+of Frobenioids if φ is homogeneous, and, moreover, satisﬁes the property P when
+regarded as an arrow of one of the local or global component Frobenioids of C;a
+similar convention will be applied to objects of C. We shall say that φ is base-[ι-
+]tactile if it projects to a(n) [ι-]tactile morphism of D [for ι∈ I]. We shall say thatφ
+is birationally [ι-]tactile [i.e., “base-linear-tactile”] if it is linear and base-[ι-]tactile
+[for ι∈ I], with isotropic domain. We shall say that φ is base-[ι-]pre-tactile if φ is
+[ι-]heterogeneous, and, moreover, for every factorization A → A′ → B of φ,w h e r e
+A′ is [ι-]local, it holds that A → A′ is a base-isomorphism [for ι∈ I]. We shall
+say that φ is birationally [ι-]pre-tactile if φ is [ι-]heterogeneous, and, moreover, for
+
+56 SHINICHI MOCHIZUKI
+every factorization A → A′ → B of φ,w h e r eA′ is [ι-]local, it holds that A → A′ is
+a co-angular pre-step [for ι∈ I]. If φ factors as a composite A → A′ → B,w h e r e
+A′ → B is base-[ι-]tactile (respectively, birationally [ι-]tactile) [for someι∈ I], then
+we shall refer to this factorization as a base-[ι-]tactile (respectively, birationally [ι-
+]tactile) factorization of φ. If, for some ι∈ I, {Aj → B}j∈J forms a collection of
+birationally ι-tactile morphisms of C that projects to a complete ι-tactile collection
+of Base(B), then we shall refer to the collection of morphisms {Aj → B}j∈J as a
+complete birationally [ι-]tactile collection [for B].
+(v) A routine check reveals [cf. Remarks 5.3.1, 5.3.3, below; [Mzk5], Deﬁni-
+tion 2.4, (i); [Mzk5], Proposition 3.2, (ii), (iii); [Mzk5], Proposition 4.4, (iv)] that
+applying the operations
+“pf”, “un-tr”, “rlf”, “birat”, or “istr”
+[where “pf” is deﬁned whenever C is of Frobenius-isotropic type] to each of the
+Frobenioids C⊚, Cι, C
+ι [for ι ∈ I] yields a new collection of Frobenioid-theoretic
+grafting data “ Cpf”, “ Cun-tr”, “ Crlf”, “ Cbirat”, or “ Cistr”, whose associated poly-
+Frobenioids “ Cpf”, “ Cun-tr”, “ Crlf”, “ Cbirat”, or “ Cistr” we shall refer to as the
+perfection, unit-trivialization, realiﬁcation, birationalization,o r isotropiﬁcation of
+the poly-Frobenioid C. Observe, moreover, that each of the operations “un-tr”,
+“rlf”, “istr” preserves the property of being of LC-unit-admissible type; if C is of
+Frobenius-normalizedtype, then the operation “pf” preserves the property of being
+of LC-unit-admissible type [cf. [Mzk5], Proposition 5.5, (i)].
+(vi) If C is of uniformly dissectible, LC-unit-admissible,a n dstandard [cf. the
+convention concerning “P” in (iii) above] type, then we shall say that C or C is of
+poly-standard type.I f C is of uniformly dissectible, LC-unit-admissible,a n dratio-
+nally standard [cf. the convention concerning “P” in (iii) above] type, then we shall
+say that C or C is of poly-rationally standard type. If each of the Frobenioids C⊚,
+Cι, C
+ι [for ι∈ I] contains a non-group-like object, then we shall say that C or C is
+of poly-non-group-like type.
+Remark 5.3.1. Observe that if a morphism φ of the domain Frobenioid of a
+GC-admissible functor Ψ is a morphism of Frobenius type (respectively, pre-step;
+pull-back morphism; linear morphism; isometry; base-isomorphism; base-identity
+endomorphism), then so is each of the component arrows of Ψ( φ) [cf. Deﬁnition
+5.3, (i); [Mzk5], Deﬁnition 1.3, (vii), (b); [Mzk5], Proposition 1.4, (ii)].
+Remark 5.3.2. We observe in passing that, in the notation of Deﬁnition 5.3, (i),
+the functor Ψ : C1 →C ⊤
+2 that maps every object of C1 to the initial object of C⊤
+2 is
+a GC-admissible functor which is not totally non-initial. In particular, Deﬁnition
+5.3, (iii), does not rule out the possibility that some [but, at least in the case of
+data of uniformly dissectible type, not all — cf. Deﬁnition 5.1, (ii), (a), (c)] of the
+global contact functors that appear in a collection of Frobenioid-theoretic grafting
+data are functors of this form [i.e., functors that map every object to the initial
+object].
+
+THE GEOMETRY OF FROBENIOIDS II 57
+Remark 5.3.3. Observe that [in the notation of Deﬁnition 5.3, (ii)] any LC-
+admissible functor Ψ : C1 →C 2 induces an equivalence of categories Crlf
+1
+∼
+→C rlf
+2 be-
+tween the associatedrealiﬁcations. Indeed, this follows immediately from Deﬁnition
+5.3, (ii), (a), (c), (d) [cf. also the deﬁnition of the “realiﬁcation” in [Mzk5], Propo-
+sition 5.3]. In particular, [cf. also Deﬁnition 5.3, (ii), (g); [Mzk5], Proposition 1.4,
+(ii)] Ψ preservesmorphisms of Frobenius type, pre-steps, pull-back morphisms, linear
+morphisms, isometries, isotropic hulls, co-angular morphisms, base-isomorphisms,
+and base-identity endomorphisms.
+Remark 5.3.4. It is immediate from the deﬁnitions that “birationally pre-
+tactile”implies “base-pre-tactile”,t h a t“birationally tactile” implies “base-tactile”,
+that “birationally tactile” implies “birationally pre-tactile”,a n dt h a t“base-tactile”
+implies “base-pre-tactile” [cf. Remark 5.1.2].
+Proposition 5.4. (Birationally T actile F actorizations) In the notation of
+Deﬁnition 5.3, (iii), suppose that thepoly-F robenioidC is of LC-unit-admissible,
+F robenius-normalized,a n dperfect type. Let φ : A → B be anι-heterogeneous
+morphism, where ι∈ I,o f C, whose image in the birationalization [cf. Deﬁnition
+5.3, (v)] Cbirat of C we denote by φbirat : Abirat → Bbirat.T h e n :
+(i) φbirat admits a tactile factorization .
+(ii) φbirat is tactile if and only if it is pre-tactile.
+(iii) There exists a co-angular pre-step ψ : C → A such that φ ◦ψ admits a
+birationally tactile factorization .
+(iv) There exists a co-angular pre-step ψ : C → A such that φ ◦ψ is base-
+tactile (respectively, birationally tactile)i fa n do n l yi fφ◦ψ is base-pre-tactile
+(respectively, birationally pre-tactile ).
+Proof. First, we consider assertion (i). Since every connected component of an
+object in the essential image of the global contact functor labeled ιis isotropic
+[cf. Deﬁnition 5.3, (i), (d)], it follows that φbirat factors through any isotropic
+hull of Abirat; thus, we may assume without loss of generality that A, Abirat [cf.
+[Mzk5], Proposition 4.4, (iv)] areisotropic. Also, by factoringφthrough a morphism
+of Frobenius type with domain A [cf. [Mzk5], Deﬁnition 1.3, (ii), (iv)], we may
+assume without loss of generality that φ is linear. Since the isomorphism class of
+an isotropic [hence Frobenius-trivial— cf. [Mzk5], Proposition 1.10, (vi)] object of
+C
+birat
+ι is determined by the isomorphism class of its projection to Dι [cf. [Mzk5],
+Theorem 5.1, (iii)], and D is of totally tactile type, it follows that there exists an
+object D ∈ Ob(Cistr
+ι ) such that the morphism ηι(A)birat → ζι(B)birat determined
+by φ admits a factorization
+ηι(A)birat α
+−→ ηι(D)birat δ
+−→ ζι(B)birat
+[where δdetermines a tactile morphism of Cbirat; we use the superscript “birat” to
+denote the images of objects or arrows of Frobenioids or poly-Frobenioids in their
+
+58 SHINICHI MOCHIZUKI
+respective birationalizations]. Since A, Abirat, hence also ηι(A)birat [cf. Deﬁnition
+5.3, (ii), (g)], are isotropic, it follows that the ﬁrst arrow α : ηι(A)birat → ηι(D)birat
+of this factorization is linear, co-angular, and [cf. the deﬁnition of “birat”!] iso-
+metric. It thus follows that α is a pull-back morphism [cf. [Mzk5], Proposition
+1.4, (ii)], hence [cf. [Mzk5], Deﬁnition 1.3, (i), (c); the deﬁnition of a “pull-back
+morphism” in [Mzk5], Deﬁnition 1.2, (ii)] that this arrow diﬀers from the image in
+C
+birat
+ι of a pull-back morphism β : Abirat → Dbirat in Cbirat
+ι by composition with a
+unit of C
+birat
+ι , i.e., an element u ∈O ×(ηι(A)birat)[ s oα = ηι(β) ◦u]. Moreover, if
+we apply the isomorphism “Φbirat
+2 |D1
+∼
+→ Φbirat
+1 +Φ cnst (⊆ (Φrlf
+1 )birat)” of Deﬁnition
+5.3, (ii), (e), it follows that we may write u = u1 · ucnst,w h e r eu1 = ηι(v1)f o r
+some v1 ∈O ×(Abirat), and the image of ucnst ∈O ×(ηι(A)birat)i n( Φ rlf
+1 )birat lies
+in Φcnst; by applying Deﬁnition 5.3, (ii), (f), (h) [cf. also our assumption that the
+poly-Frobenioid C is of LC-unit-admissible, Frobenius-normalized,a n dperfect type;
+[Mzk5], Proposition 5.5, (i)], it follows that we may write
+ucnst = vcnst|ηι(A)birat · ηbirat
+ι (wcnst)
+where vcnst ∈O ×(ηι(D)birat), wcnst ∈O ×(Abirat). Thus, by replacing α by v−1
+cnst ◦α
+and β by β ◦wcnst ◦v1, we conclude that we may assume that α = ηbirat
+ι (β). Then
+β, δdetermine a tactile factorization of φbirat, as desired. This completes the proof
+of assertion (i).
+Now assertion (ii) follows immediately from the existence of tactile factoriza-
+tions [cf. assertion (i)] and the total epimorphicity of C
+birat
+ι [cf. Remark 5.1.2].
+Assertion (iii) follows immediately from assertion (i); the deﬁnition of the “bira-
+tionalization”[cf. [Mzk5], Proposition 4.4, (i)]; [Mzk5], Proposition 1.11, (vii); and
+the inclusions “Φ 1 ↪→ Φ2|D1 ↪→ Φrlf
+1 ” of Deﬁnition 5.3, (ii), (c) [which imply that
+pre-steps of the underlined local components may be dominated by pre-steps of the
+non-underlined local components]. Finally, assertion (iv) follows immediately from
+assertion (iii) and the total epimorphicity of Dι [cf. also Remark 5.3.4; [Mzk5],
+Proposition 1.9, (iv); the derivation of assertion (ii) from assertion (i)]. ⃝
+Theorem 5.5. (Category-theoreticity of Poly-F robenioids) For i =1 , 2,
+let Ci be a poly-F robenioidof poly-standard type;
+Ψ: C1
+∼
+→C 2
+an equivalence of categories .T h e n :
+(i) Ψ preserves global and local objects and induces acompatible bijection
+I1
+∼
+→ I2 between the sets I1, I2 of local components of C1, C2. Moreover, C1 is of
+poly-non-group-like type if and only if C2 is.
+(ii) Ψ preserves the full subcategories Cistr
+i ⊆C i.
+(iii) Let □ ∈{ pf, un-tr, rlf, birat}.I f □ = un-tr, then we assume further that
+the poly-base category Di is F robenius-slim.I f □ =r l f, then we assume further
+that Ci is of poly-rationally standard type, and that the poly-base category Di
+
+THE GEOMETRY OF FROBENIOIDS II 59
+is slim.I f □ ̸=b i r a t, then we assume further that Ci is of poly-non-group-like
+type. Then there exists a 1-unique 1-commutative diagram
+C1
+Ψ
+−→ C 2
+⏐⏐
+↓
+⏐⏐
+↓
+C
+□
+1
+Ψ □
+−→ C □
+2
+[where the vertical arrows are the natural functors; the horizontal arrows are equiv-
+alences of categories].
+(iv) Suppose that the poly-base category Di is slim, and that Ci is of poly-
+non-group-like type. Then there exists a 1-unique 1-commutative diagram
+C1
+Ψ
+−→ C 2
+⏐⏐↓
+⏐⏐↓
+D1
+ΨBase
+−→ D 2
+[where the vertical arrows are the natural functors; the horizontal arrows are equiv-
+alences of categories].
+(v) Suppose that Ci is of poly-rationally standard and poly-non-group-
+like type, and that the poly-base category Di is slim.T h e nΨ induces isomor-
+phisms between the divisor monoids of corresponding [cf. (i)] local or global
+components of C1, C2. Moreover, these isomorphisms are compatible with the lo-
+cal and global contact functors that determine the poly-Frobenioid structures of
+C1, C2 [a statement that makes sense in light of the inclusions “ Φ2|D1 ↪→ Φrlf
+1 ”o f
+Deﬁnition 5.3, (ii), (c)].
+Proof. Assertion (i) follows formally from Proposition 5.2, (iv), and [Mzk5], The-
+orem 3.4, (ii). In light of assertion (i), assertion (ii) follows from [Mzk5], Theorem
+3.4, (i). Next, let us observe that Cpf
+i may be constructed from Ci by considering
+appropriate inductive limits involving pairs of morphisms of Frobenius type, just as
+in the case of Frobenioids [cf. [Mzk5], Deﬁnition 3.1, (ii), (iii)]. Since, whenever
+□ ̸= birat [so Ci is of poly-non-group-like type], Ψ preserves pairs of morphisms
+of Frobenius type of the same Frobenius degree[cf. assertion (i); [Mzk5], Theorem
+3.4, (iii)], we thus conclude that assertion (iii) holds when □ = pf. In a similar
+vein, it follows from the inclusions “Φ2|D1 ↪→ Φrlf
+1 ” of Deﬁnition 5.3, (ii), (c) [which
+imply that pre-steps of theunderlined local components may be dominated by pre-
+steps of the non-underlined local components], that Cbirat
+i may be constructed from
+Ci by “inverting the co-angular pre-steps”, just as in the case of Frobenioids [cf.
+[Mzk5], Proposition 4.4, (i)]. Since Ψ preserves co-angular pre-steps [cf. assertion
+(i); [Mzk5], Theorem 3.4, (ii); [Mzk5], Corollary 4.10], we thus conclude that asser-
+tion (iii) holds when □ = birat. Thus, in the following, we assume that □ ̸=b i r a t
+[so Ci is of poly-non-group-like type].
+
+60 SHINICHI MOCHIZUKI
+Next, observe that by [Mzk5], Proposition 5.5, (iii), it follows that Cpf
+i is of
+standard type [i.e., each of its local and global component Frobenioids is of standard
+type]. Thus, by “applying the last two arguments in succession”, it follows that we
+obtain a 1-unique 1-commutative diagram
+C1
+Ψ
+−→ C 2
+⏐⏐
+↓
+⏐⏐
+↓
+(C
+pf
+1 )birat Ψ □
+−→ (Cpf
+2 )birat
+[where the vertical arrows are the natural functors; the horizontal arrows are equiv-
+alences of categories]. [Note that here, it is not clear that theuniform dissectibility
+— hence, a fortiori, the property of being ofpoly-standard type — of Ci implies that
+of Cpf
+i ! Thus, one cannot apply to “Cpf
+i ” the portion of Theorem 5.5 already proven
+for “ Ci”. Nevertheless, this does not cause any problems since uniform dissectibil-
+ity is only used to “dissect” the poly-Frobenioid in question; thus, the necessary
+“dissection” of Cpf
+i follows immediately from the dissection already discussed ofCi.]
+Next, let us observe that since, for A ∈ Ob(Ci) with image Apf ∈ Ob(Cpf
+i ),
+we have a natural isomorphism O×(A)pf ∼
+→O ×(Apf) [cf. [Mzk5], Proposition 5.5,
+(i)], it follows that theLC-unit-admissibility of Ci implies that of Cpf
+i [cf. Deﬁnition
+5.3, (v)]. Thus, Cpf
+i is of standard, perfect [cf. [Mzk5], Proposition 3.2, (iii)], and
+LC-unit-admissible type. In particular, we may apply Proposition 5.4 toCpf
+i .T h u s ,
+it follows that global objects of ( Cpf
+i )birat admit complete tactile collections [cf.
+Proposition 5.4, (i)], which are, moreover, preserved by Ψ [cf. Proposition 5.4, (ii);
+the fact that, in light of assertion (i), the deﬁnition of “pre-tactile” is manifestly
+category-theoretic]. [Here, we note in passing that if one wishes to restrict oneself
+to operating in Cpf
+i , then instead of working with complete tactile collections in
+(Cpf
+i )birat, one can instead work with complete birationally tactile collections in Cpf
+i
+— cf. Proposition 5.4, (iii), (iv).]
+Now let us consider assertion (iv). Since the poly-base category Di is assumed
+to be slim, it follows from [Mzk5], Theorem 3.4, (v) [cf. also assertion (i); our
+assumption that Ci is of poly-non-group-like type], that Ψ induces equivalences of
+categories between the various local and global components of Di which are com-
+patible with the equivalences of categories induced by Ψ between the various local
+and global components of Ci. Moreover, by considering complete tactile collections
+in (Cpf
+i )birat, it follows immediately that these equivalences of categories between
+the various local and global components of Di are compatible with the local and
+global contact functors of Di. Thus, we obtain a 1-unique 1-commutative diagram
+as in assertion (iv).
+Next, we consider unit-trivializations [i.e., the case “ □ = un-tr”]. By the
+Frobenius-slimness assumption, it follows from [Mzk5], Theorem 3.4, (iv), that Ψ
+induces equivalences of categories between the various local and global components
+of Cun-tr
+i which are compatible with the equivalences of categories induced by Ψ
+between the various local and global components of Ci. Thus, to obtain a diagram
+
+THE GEOMETRY OF FROBENIOIDS II 61
+as in assertion (iii), it suﬃces to show that Ψ preserves unit-equivalent pairs of co-
+objective heterogeneous morphisms of Cistr
+i [i.e., pairs that map to the same arrow
+in Cun-tr
+i ]. By the faithfulness portion of [Mzk5], Proposition 3.3, (iv) [applied to
+the underlined local componentsof the Ci!], it follows that it suﬃces to show that Ψ
+maps a unit-equivalent pair of heterogeneous morphisms φ1,ψ1 : A → B of C1 to a
+pair of morphismsφ2
+def
+=Ψ ( φ1), ψ2
+def
+=Ψ ( ψ1)o f C2 such that degFr(φ2)=d e gFr(ψ2),
+Div(φ2)=D i v (ψ2), Base(φ2) = Base(ψ2).
+To do this, it suﬃces to show that “degFr(−)”, “Div(−)”, and “Base(−)” may
+be “computed” entirely in terms of homogeneous morphisms [whose behavior with
+respect to Ψ and the operation of taking the unit-trivialization is already well-
+understood]. Thus, it suﬃces to observe that the following fact: The Frobenius
+degree may be computed by considering the existence of factorizations A → A′ →
+B,w h e r eA → A′ is a [necessarily homogeneous!] morphism of Frobenius type
+[cf. [Mzk5], Deﬁnition 1.3, (iv), (a)]. The property of metric equivalence [i.e.,
+“Div(φ2) = Div( ψ2)”] of a pair of linear co-objective morphisms A → B may
+be described [cf. the inclusions “Φ 2|D1 ↪→ Φrlf
+1 ” of Deﬁnition 5.3, (ii), (c)] by
+projecting these morphisms to morphisms Apf → Bpf of Cpf
+i and considering the
+condition that one of these morphismsApf → Bpf factors through an arbitrary given
+co-angular pre-step Apf → (A′)pf [cf. [Mzk5], Deﬁnition 1.3, (iii), (d); [Mzk5],
+Deﬁnition 1.3, (iv), (a)] if and only if the other does. [Here, we use the fact
+that Ψ pf preserves co-angular pre-steps of Cpf
+i — cf. [Mzk5], Theorem 3.4, (ii).]
+Finally, the property of base-equivalence [i.e., “Base( φ2) = Base( ψ2)”] of a pair
+of linear, metrically equivalent, co-objective morphisms A → B may be described
+by projecting these morphisms to morphisms Apf → Bpf of Cpf
+i and considering
+the condition [cf. [Mzk5], Deﬁnition 1.3, (iii), (c); [Mzk5], Deﬁnition 1.3, (iv), (a);
+[Mzk5], Deﬁnition 1.3, (vi)] that these morphisms may be obtained from one another
+by composition with a [manifestly homogeneous!] element ∈O ×(Apf) ∼= O×(A)pf.
+[Note that here, we must apply theLC-unit-admissibility of Ci.] This completes the
+proof of assertion (iii) in the case “ □ = un-tr”.
+Next, we consider divisor monoids [i.e., assertion (v)]. By [Mzk5], Corollary
+4.11, (iii), it follows that Ψ induces isomorphisms between the divisor monoids of
+corresponding local or global components ofC1, C2. The asserted compatibility then
+follows by considering global co-angular pre-steps Bpf → Cpf of Cpf
+i [cf. [Mzk5],
+Deﬁnition 1.3, (iii), (d)], together with birationally tactile morphisms Apf → Bpf
+[whose existence follows from the fact that Di is of totally tactile type; [Mzk5],
+Deﬁnition 1.3, (i), (b); the inclusions “Φ 2|D1 ↪→ Φrlf
+1 ” of Deﬁnition 5.3, (ii), (c)],
+which allow one to compute the image of Div( Bpf → Cpf) in [the value of the
+appropriate divisor monoid at] Apf as the diﬀerence
+Div(Apf → Bpf → Cpf) − Div(Apf → Bpf)
+— where we note that each of the terms in this diﬀerence may be computed as
+the supremum of the Div( Apf → (A′)pf), where Apf → (A′)pf) is a [necessarily
+homogeneous!] co-angular pre-step through which the heterogeneous morphism in
+question [i.e., Apf → Bpf → Cpf or Apf → Bpf] factors. This completes the proof
+of assertion (v). Finally, assertion (iii) in the case □ = rlf follows by applying
+
+62 SHINICHI MOCHIZUKI
+[Mzk5], Corollary 5.4, to the various local and global components of Ci, in light of
+the compatibility of assertion (v). ⃝
+We are now ready to discuss the main motivating example of the theory of
+[Mzk5] and the present paper, an example to which most of the main results of
+this theory may be applied. The example arises, in eﬀect, by “grafting” the global
+example of [Mzk5], Example 6.3, onto the local examples of Examples 1.1, 3.3, of
+the present paper.
+Example 5.6. Poly-F robenioids Associated to Number Fields.
+(i) Let ˜F/F be a Galois extension of a number ﬁeld F;w r i t eG⊚
+def
+= Gal( ˜F/F ),
+V(F) for the set of valuations on F [where we identify complex archimedean val-
+uations with their complex conjugates —cf. [Mzk5], Example 6.3]. For v ∈ V(F),
+write Fv for the completion of F at v, ˜Fv for the Galois extension ofFv determined
+by ˜F, Dv
+def
+= Gal( ˜Fv/Fv) ⊆ G⊚ [so Dv is well-deﬁned up to conjugation in G⊚].
+Also, we assume that we have been given monoid types
+Λ⊚; {Λv }v∈V(F); {Λ
+v }v∈V(F)
+satisfying Λ
+v ≥ Λ⊚,Λ
+ v ≥ Λv, for all v ∈ V(F). Note that [if we take the “ ˜F/F ”,
+“ v” of Example 1.4 to be the “ ˜F/F ”, “ v” of the present discussion, then] the
+category “ P0” of Example 1.4 may be identiﬁed with the category Pv
+def
+= B(Dv)0.
+Thus, the functor “E0 →P 0” of Example 1.4 determines a functor which we denote
+by Ev →P v.
+(ii) Let
+Π⊚ ↠ G⊚
+be a surjection of residually ﬁnite tempered groups. Then the category
+D⊚
+def
+= B(Π⊚)0
+is connected, totally epimorphic, Frobenius-slim,a n do f FSM- and strongly indis-
+sectible [hence, in particular, weakly indissectible] type — cf. Example 1.3, (i).
+Thus, if “ C
+/CT
+F/ F” is as in [Mzk5], Example 6.3, then
+CZ
+⊚
+def
+= C⊚
+def
+= C
+/CT
+F/ F ×B(G⊚) D⊚; CQ
+⊚
+def
+= Cpf
+⊚ ; CR
+⊚
+def
+= Crlf
+⊚
+determines a Frobenioid CΛ⊚
+⊚ which is of rationally standard type over a Frobenius-
+slim base category [cf. [Mzk5], Theorem 6.4, (i), for the case Π ⊚ = G⊚; the case
+of arbitrary Π⊚ is entirely similar]. If, moreover, Π⊚ is temp-slim,t h e nD⊚ is slim
+[cf. Example 1.3, (i)].
+
+THE GEOMETRY OF FROBENIOIDS II 63
+(iii) Let v ∈ V(F)b e nonarchimedean; ˜Kv/Fv a Galois extension containing
+˜Fv; Gv
+def
+= Gal( ˜Kv/Fv). Thus, we have a natural surjection Gv ↠ Dv ⊆ G⊚.
+Suppose further that we have been given a commutative diagram
+Πv ↠ Gv
+⏐⏐↓
+⏐⏐↓
+Π⊚ ↠ G⊚
+of residually ﬁnite tempered groups [where the lower horizontal surjection and the
+vertical homomorphism on the right are the morphisms that were given previously].
+Let
+Dv
+be one of the categories B(Πv)0, B(Πv)0 ×Pv Ev [where the functor B(Πv)0 →P v
+is the functor determined by the surjection Π v ↠ Gv ↠ Dv — cf. Example 1.3,
+(ii)]. Then the category Dv is connected, totally epimorphic, Frobenius-slim,a n do f
+FSMFF- and strongly indissectible [hence, in particular, weakly indissectible] type
+[cf. Example 1.3, (i); Example 1.4, (iii)]. If, moreover, Π v is temp-slim,t h e nDv is
+slim [cf. Example 1.3, (i); Example 1.4, (iii)]. Write
+CΛv
+v ; C
+Λ
+v
+v
+for the respective categories “ C” of Example 1.1, (ii), obtained by taking the “ D”
+of loc. cit. to be Dv, the “Λ” of loc. cit. to be Λv,Λ
+ v,a n dt h e“ Φ ”o floc. cit. to
+be functors Φv, Φ
+v : Dv → Mon as in loc. cit. such that the following conditions
+are satsﬁed:
+(a) Φ v ⊆ Φ
+v;
+(b) the resulting functors Φbirat
+v ,Φ
+ birat
+v satisfy Φ
+birat
+v
+=Φ birat
+v +Φcnst
+v
+for some
+group-like functor Dv → Mon which is constant [i.e., maps all arrows of
+Dv to isomorphisms of Mon];
+(c) Φ
+ v is ﬁeldwise saturated [cf. Example 1.1, (ii)] and supported by Λ
+v [cf.
+[Mzk5], Deﬁnition 2.4, (ii)].
+Thus, CΛv
+v , C
+Λ
+v
+v are Frobenioidswhich are ofrationally standardtype over aFrobenius-
+slim base category [cf. Theorem 1.2, (i)]; the underlying category of CΛv
+v , C
+Λ
+v
+v is
+of weakly indissectible type [cf. the discussion of §0]. Moreover, [since Λ
+ v ≥ Λ⊚,
+Λ
+v ≥ Λv, for allv ∈ V(F)] it follows immediately from the deﬁnitions [by restricting
+arithmetic divisors on number ﬁelds to divisors on their localizations and nonzero
+elements of number ﬁelds to elements of their completions] that we obtainfunctors
+CΛ⊚
+⊚ → (C
+Λ
+v
+v )⊤; CΛv
+v →C
+ Λ
+v
+v
+the ﬁrst of which is GC-admissible and 1-compatible with the natural localization
+functor D⊚ →D ⊤
+v [arising from the homomorphism “Π v → Π⊚” — cf. the “pull-
+back functor” of Example 1.3, (ii)], and the second of which is LC-unit-admissible
+
+64 SHINICHI MOCHIZUKI
+[cf. [Mzk5], Proposition 5.5, (i)]; also, we note that the “restriction of arithmetic di-
+visors” portion of the ﬁrst of these functors is possible precisely because of condition
+(c).
+(iv) Let v ∈ V(F)b e archimedean; ˜Kv/Fv a Galois extension containing ˜Fv
+such that ˜Kv is complex; Gv
+def
+= Gal( ˜Kv/Fv). Thus, we have a natural surjection
+Gv ↠ Dv ⊆ G⊚. Suppose further that we have been given a commutative diagram
+Πv ↠ Gv
+⏐⏐
+↓
+⏐⏐
+↓
+Π
+⊚ ↠ G⊚
+of residually ﬁnite tempered groups [where the lower horizontal surjection and the
+vertical homomorphism on the right are the morphisms that were given previously].
+Let
+Dv
+be one of the following categories:
+(a) B(Πv)0, B(Πv)0 ×Pv Ev [where the functor B(Πv)0 →P v is the functor
+determined by the surjection Πv ↠ Gv ↠ Dv — cf. Example 1.3, (ii)];
+(b) one of the categories of hyperbolic Riemann surfaces “ D”o r“ E”o f
+Example 4.3, (i), (ii), (iii), where the tempered group “Π” of loc. cit. is
+equal to Πv [in a fashion compatible with the surjection Πv ↠ Gv];
+(c) a nonrigidiﬁed or rigidifed angloid [i.e., “ N”, “R”] over a base category
+as in (a) above [cf. Remark 4.2.1];
+(d) a nonrigidiﬁed or rigidifed angloid [i.e., “ N”, “R”] over a base category
+as in (b) above [cf. Remark 4.2.1].
+If Dv is taken to be one of the categories that involves Ev, then let us assume
+further that the extension ˜F/F is amply quadratic [cf. Example 4.3, (iii)]. Then
+[cf. Example 1.3, (i); Proposition 1.5, (iv); Proposition 4.1, (v); Corollary 4.2,
+(iv), (v); Example 4.3, (ii), (iii), (iv); Example 4.4, (ii), (iii), (iv)] the category Dv
+is Frobenius-slim and of RC-standard [hence, in particular, connected, totally epi-
+morphic,a n do fFSMFF-type] and either strongly dissectible or weakly indissectible
+type; moreover, in cases (b), (d), Dv is always slim, while in cases (a), (c), Dv is
+slim whenever Πv is temp-slim.W r i t e
+CΛv
+v ; C
+Λ
+v
+v
+for the respective categories “CΛ” of Example 3.3, (ii), obtained by taking the “D”
+of loc. cit. to be Dv and the “Λ” of loc. cit. to be Λ v,Λ
+ v.T h u s ,CΛv
+v , C
+Λ
+v
+v
+are Frobenioids which are of rationally standard type over a Frobenius-slim base
+category [cf. Theorem 3.6, (i)]; the underlying category of CΛv
+v , C
+Λ
+v
+v is of either
+strongly dissectible or weakly indissectible type [cf. the discussion of §0]. Moreover,
+
+THE GEOMETRY OF FROBENIOIDS II 65
+[since Λ
+ v ≥ Λ⊚,Λ
+ v ≥ Λv, for all v ∈ V(F)] it follows immediately from the
+deﬁnitions [by restricting arithmetic divisors on number ﬁelds to divisors on their
+localizations and nonzero elements of number ﬁelds to elements of their completions]
+that we obtain functors
+CΛ⊚
+⊚ → (C
+Λ
+v
+v )⊤; CΛv
+v →C
+ Λ
+v
+v
+the ﬁrst of which is GC-admissible and 1-compatible with the natural localization
+functor D⊚ →D ⊤
+v [arising from the homomorphism “Π v → Π⊚” — cf. the “pull-
+back functor” of Example 1.3, (ii)], and the second of which is LC-unit-admissible
+[cf. [Mzk5], Proposition 5.5, (i)].
+(v) Thus, the data
+C
+def
+=
+(
+CΛ⊚
+⊚ , {CΛv
+v }v∈V(F), {C
+Λ
+v
+v }v∈V(F), {CΛ⊚
+⊚ → (C
+Λ
+v
+v )⊤}v∈V(F), {CΛv
+v →C
+ Λ
+v
+v }v∈V(F)
+)
+determines a poly-Frobenioid C of poly-rationally standard and poly-non-group-like
+type over a Frobenius-slim poly-base categoryD. In particular, all but the portion
+requiring “slimness” of Theorem 5.5 applies to C; the conditions on the data of the
+present Example 5.6 necessary for the poly-base category to beslim are as discussed
+above.
+Remark 5.6.1. Observe that unlike the case with Frobenioids, poly-Frobenioids
+are not necessarily totally epimorphic! In a similar vein [cf. the use of theinjectivity
+condition of [Mzk5], Deﬁnition 1.1, (ii), (a), in the proof of the total epimorphicity
+portion of [Mzk5], Proposition 1.5], we observe that [again, unlike the case with
+Frobenioids] the map induced by a heterogeneous morphism between the values
+of the divisor monoids at the domain and codomain is not necessarily injective!
+Indeed, these phenomena occur, for instance, if one considers the poly-Frobenioids
+of Example 5.6, when Λ
+⊚ = R.
+Remark 5.6.2. Just as in the case of archimedean v, it is natural to consider
+Π⊚,Π v [for nonarchimedean v] arising from the arithmetic fundamental group of
+a hyperbolic curve. One may then apply to such Π ⊚,Π v various results from the
+absolute anabelian geometry of hyperbolic curves[cf., e.g., [Mzk4]].
+Remark 5.6.3. One veriﬁes immediately that, when considering equivalences
+of categories between poly-Frobenioids of the sort discussed in Example 5.6, (v),
+the induced equivalences of categories between the respective global components
+determine a “degree” ∈ R>0, as in [Mzk5], Theorem 6.4, (ii). Moreover, just as
+in [Mzk5], Theorem 6.4, (iii), this degree is ∈ Q>0 [even if Λ⊚ = R!] whenever it
+holds that the Λv ≤ Q for all v ∈ V(F). Similarly, just as in [Mzk5], Theorem 6.4,
+(iv), this degree = 1 [even if Λ ⊚ = R!] whenever it holds that the Λ v = Z for all
+v ∈ V(F).
+
+66 SHINICHI MOCHIZUKI
+Appendix: Categorical Representation of T opological Spaces
+In this Appendix, we discuss certain classical results concerning how a topo-
+logical spacemay be represented by means of a category.
+Let X be a topological space. Then we shall write
+Subset(X)
+for the category whose objects are the subsets of X [including X, the empty set],
+and whose morphisms are the inclusions of subsets of X.W r i t e
+Open(X) ⊆ Subset(X); Closed( X) ⊆ Subset(X)
+for the full subcategories determined by the open and closed subsets, respectively.
+Also, we shall denote by
+Open0(X) ⊆ Open(X)
+the full subcategory determined by the [nonempty] connected open subsetsand by
+Shv(X)
+the category of sheaves [valued in sets, relative to some universe ﬁxed throughout
+the discussion] on X.
+Deﬁnition A.1.
+(i) We shall say thatX is locally connectedif, for every open subsetU ⊆ X and
+every point x ∈ U, there exists a connected open subset V ⊆ U such that x ∈ V .
+We shall say that X is sober if, for every irreducible closed subset F ⊆ X,t h e r e
+exists a unique point x ∈ F such that F is equal to the closure of the set {x} in X
+[cf. [John], p. 230].
+(ii) We shall refer to a collection {Ai}i∈I of distinct objects of Open0(X)a sa
+collection of disjoint objectsif, for any pair of distinct elementsi, j of I, there does
+not exist an object C ∈ Ob(Open0(X)) that admits a morphism in Open 0(X)t o
+both Ai and Aj.
+(iii) Denote by
+Disjt(Open0(X))
+the category deﬁned as follows: An object of this category is a collection of disjoint
+objects {Ui}i∈I [where I is a [possibly empty] set]. A morphism of this category
+{Ui}i∈I →{ Vj }j∈J
+consists of a function f : I → J and a collection of morphisms [in Open 0(X)]
+Ui → Vf(i) [where i ranges over the elements ofI]. Thus, by assigning to an object
+of Open0(X) the collection of objects of Open0(X) consisting of this single object,
+
+THE GEOMETRY OF FROBENIOIDS II 67
+and to a collection {Ui}i∈I the object of Open(X) constituted by the union of the
+connected open sets determined by the Ui, we obtain natural functors
+Open0(X) → Disjt(Open0(X)); Disjt(Open 0(X)) → Open(X)
+the ﬁrst of which is easily veriﬁed to be fully faithful.
+Remark A.1.1. Thus, if X is locally connected, then one veriﬁes immediately
+that, relative to the notation of Deﬁnition A.1, (ii), theAi are disjoint if and only if
+the open subsets ofX to which theAi correspond are pair-wise mutually “disjoint”
+in the usual sense.
+Theorem A.2. (Categorical Representation of T opological Spaces) Let
+X, Y be topological spaces .T h e n :
+(i) The categoryOpen(X) is equivalent to theopposite category to Closed(X).
+(ii) The categories Subset(X), Open(X), Open0(X), Closed(X) are slim.
+(iii) By assigning to an object of Open(X) the sheaf on Open(X) represented
+by the given object, we obtain a natural functor
+Open(X) → Shv(X)
+which is fully faithful .
+(iv) Suppose that X, Y are sober. Then passing to the induced equivalence
+on the categories “ Open(−)” determines a bijection between the equivalences of
+categories
+Open(X)
+∼
+→ Open(Y )
+[considered up to isomorphism] and the homeomorphisms X
+∼
+→ Y .
+(v) Suppose that X is locally connected . Then the natural functor
+Disjt(Open0(X)) → Open(X)
+is an equivalence of categories .
+(vi) Suppose that X, Y are sober and locally connected . Then passing
+to the induced equivalence on the categories “ Open0(−)” determines a bijection
+between the equivalences of categories
+Open0(X)
+∼
+→ Open0(Y )
+[considered up to isomorphism] and the homeomorphisms X
+∼
+→ Y .
+Proof. The equivalence of assertion (i) is obtained by associating to an open set of
+X the closed set of X given by its complement. Assertion (ii) follows immediately
+
+68 SHINICHI MOCHIZUKI
+from the fact that, by deﬁnition, the categories in question haveno nontrivial auto-
+morphisms. Assertion (iii) follows immediately from the deﬁnitions and “Yoneda’s
+Lemma”. To verify assertion (iv), we recall [cf. [John], Theorem 7.24] that pass-
+ing to the induced equivalence on the categories “Shv( −)” determines a bijection
+between the equivalences of categories
+Shv(X)
+∼
+→ Shv(Y )
+[considered up to isomorphism] and the homeomorphismsX
+∼
+→ Y . Note, moreover,
+that an open V of X is a union of opens {Uα }α∈I of X if and only if V forms [i.e.,
+in Open(X)] an inductive limit [a purely category-theoretic notion!] of the system
+constituted by the Uα. Thus, to complete the proof of assertion (iv), it suﬃces, in
+light of the natural embedding of assertion (iii), to observe that Shv( X)m a yb e
+reconstructed[by the deﬁnition of a “sheaf”!] directly from the category Open(X),
+in a fashion that is compatible with the natural embedding of assertion (iii). This
+completes the proof of assertion (iv).
+Next, we consider assertion (v). First, I claim that every open V of X is a
+disjoint union of connected opens of X. Indeed, consider the equivalence relation
+on objects of Open0(V ) generated by the pre-equivalence relation that two distinct
+objects A, B of Open0(V ) are “pre-equivalent” if the pair of objects A, B fails to
+form a collection of disjoint objects of Open 0(V ) [i.e., the connected opens corre-
+sponding to A, B intersect]. Denote by I the set of equivalence classes of objects of
+Open0(V ), relative to this equivalence relation. Fori ∈ I,w r i t eUi ∈ Ob(Open(X))
+for the union of the connected opens that lie in the class i. Then it follows imme-
+diately from the deﬁnitions that Ui is a connected open, hence forms an object of
+Open0(X). Since, moreover, X is locally connected, it follows that the union of Ui
+[as i ranges over the elements of I]i se q u a lt oV . This completes the proof of the
+claim. Now assertion (v) follows formally.
+Finally, we observe that assertion (vi) follows immediately from assertions (iv),
+(v), together with the easily veriﬁed observation that the category Disjt(Open0(−))
+may be reconstructed directly from the category Open 0(−), in a fashion that is
+compatible with the natural embedding Open0(X) ↪→ Disjt(Open0(X)). ⃝
+Remark A.2.1. Note that neither of the two conditions of “soberness” and
+“local connectedness” implies the other. Indeed, suppose that the underlying set
+of X is countably inﬁnite , and that the proper [i.e., ̸= X] closed subsets of X are
+precisely the ﬁnite subsets of X. [Consider, for instance, the Zariski topology on
+the set of closed points of the aﬃne lineover a countable algebraically closed ﬁeld.]
+Then observe that X is irreducible, and that any nonempty open subset Y ⊆ X is
+homeomorphic to X, hence, in particular, irreducible. Since irreducible topological
+spaces are connected, it thus follows thatX is locally connected. On the other hand,
+since X is irreducible, but clearlyfails to admit a generic point, it follows thatX is
+not sober. In the “opposite direction”, any inﬁnite “proﬁnite set” [i.e., a projective
+limit of ﬁnite sets — e.g., the underlying topological space of a proﬁnite group]i s
+Hausdorﬀ, hence sober, but satisﬁes the property that every open subset is totally
+disconnected, hence fails to be locally connected.
+
+THE GEOMETRY OF FROBENIOIDS II 69
+Index
+absolute anabelian geometry of hyperbolic curves, 5.6.2
+absolutely primitive, 1.1, (ii)
+(A, B)-subset, 3.2
+amply quadratic, 4.3, (iii)
+angloid (non-rigidiﬁed, rigidiﬁed), 3.3, (iii), (iv)
+angular Frobenioid, 3.3, (iii)
+angular region, 3.1, (iii)
+archimedean Frobenioid, 3.3, (ii)
+archimedean local ﬁeld (real, complex), 3.1, (i)
+arrow-wise essentially surjective, §0
+base-pre-tactile, 5.3, (iv)
+base-tactile, 5.3, (iv)
+birationalization of a poly-Frobenioid, 5.3, (v)
+birationally pre-tactile, 5.3, (iv)
+birationally tactile, 5.3, (iv)
+boundary, 3.1, (iii)
+canonical decomposition, 3.1, (ii)
+categories associated to hyperbolic Riemann surfaces, 4.3
+category of factorizations, §0
+co-angular, 3.1, (iii)
+collection of base-category grafting data, 5.3, (iii)
+collection of disjoint objects, A.1, (i)
+collection of Frobenioid-theoretic grafting data, 5.3, (iii)
+collection of grafting data, 5.1, (i)
+complete birationally tactile collection, 5.3, (iv)
+complete objects, 4.3, (i)
+complete tactile collection, 5.1, (ii)
+complexiﬁable, 3.1, (v)
+complex object, 3.1, (v)
+constant, 5.3, (ii)
+continuously ordered, §0; 3.2, (vi)
+coproduct category, §0
+cyclotomic portion, 2.1, (i)
+discontinuously ordered, §0
+equivalence of collections of grafting data, 5.1, (iii)
+ﬁeldwise saturated, 1.1, (ii)
+GC-admissible, 5.3, (i)
+global component, 5.1, (i)
+global contact functor, 5.1, (i)
+global morphism/object, 5.1, (i)
+grafted category, 5.1, (i)
+
+70 SHINICHI MOCHIZUKI
+grafting, §0
+group of units, 3.1, (ii)
+heterogeneous, §0; 5.1, (i)
+homogeneous, §0
+integral, 1.1, (i)
+isotropic, 3.1, (iii)
+isotropiﬁcation of a poly-Frobenioid, 5.3, (v)
+Kummer class, 2.1, (ii)
+Kummer map, 2.1, (ii); 2.3
+LC-admissible, 5.3, (ii)
+LC-unit-admissible, 5.3, (ii); 5.3, (iii)
+local component, 5.1, (i)
+local contact functor, 5.1, (i)
+locally connected, A.1, (i)
+local morphism/object, 5.1, (i)
+metric, 1.1, (i)
+μ N -saturated, 2.1, (i)
+naively co-angular, 3.3, (i)
+naively isotropic, 3.3, (i)
+(N,H )-saturated, 2.2, (ii)
+p-adic Frobenioid, 1.1, (ii)
+parallelogram objects, 4.3, (i)
+perfection of a poly-Frobenioid, 5.3, (v)
+P-isomorphism, 1.5
+poly-base category, 5.3, (iii)
+poly-Frobenioid, 5.3, (iii)
+poly-rationally standard, 5.3, (vi)
+poly-standard, 5.3, (vi)
+pre-tactile, 5.1, (ii)
+quasi-continuously ordered, §0
+quasi-temperoid, 1.3, (i)
+quasi-totally ordered, §0
+RC-anchor, 3.1, (v)
+RC-connected, 3.1, (v)
+RC-iso-subanchor, 3.1, (v)
+RC-standard, 3.1, (v)
+RC-subanchor, 3.1, (v)
+realiﬁcation of a poly-Frobenioid, 5.3, (v)
+real object, 3.1, (v)
+reciprocity map, 2.3
+slit morphism, 3.3, (v)
+sober, A.1, (i)
+
+THE GEOMETRY OF FROBENIOIDS II 71
+strictly partially ordered, §0
+strongly (in)dissectible, §0
+tactile, 5.1, (ii)
+tempered topological group, 1.3, (i)
+temperoid, 1.3, (i)
+temp-slim, 1.3, (i)
+tip, 3.1, (iii)
+totally ordered, §0
+totally tactile, 5.1, (ii)
+uniformly dissectible, 5.1, (ii)
+unit-trivialization of a poly-Frobenioid, 5.3, (v)
+weakly (in)dissectible, §0
+
+72 SHINICHI MOCHIZUKI
+Bibliography
+[John] P. T. Johnstone, P. T,Topos theory, London Mathematical Society Monographs
+10, Academic Press (1977).
+[Mzk1] S. Mochizuki, The Absolute Anabelian Geometry of Hyperbolic Curves,Galois
+Theory and Modular Forms, Kluwer Academic Publishers (2003), pp. 77-122.
+[Mzk2] S. Mochizuki, Semi-graphs of Anabelioids, Publ. Res. Inst. Math. Sci. 42
+(2006), pp. 221-322.
+[Mzk3] S. Mochizuki, Conformal and Quasiconformal Categorical Representation of
+Hyperbolic Riemann Surfaces, Hiroshima Math. J. 36 (2006), pp. 405-441.
+[Mzk4] S. Mochizuki, Absolute anabelian cuspidalizations of proper hyperbolic curves,
+J. Math. Kyoto Univ. 47 (2007), pp. 451-539.
+[Mzk5] S. Mochizuki, The Geometry of Frobenioids I: The General Theory , RIMS
+Preprint 1529 (February 2006).
+[NSW] J. Neukirch, A. Schmidt, K. Wingberg,Cohomology of number ﬁelds, Grundlehren
+der Mathematischen Wissenschaften 323, Springer-Verlag (2000).
+[Serre] J.-P. Serre, Local Class Field Theory in Algebraic Number Theory, ed. J.W.S.
+Cassels and A. Fr¨ohlich, Academic Press (1967).

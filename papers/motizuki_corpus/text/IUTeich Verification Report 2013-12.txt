@@ -1,0 +1,219 @@
+ON THE VERIFICA TION OF INTER-UNIVERSAL
+TEICHM ¨ULLER THEOR Y: A PROGRESS
+REPOR T (AS OF DECEMBER 2013)
+Shinichi Mochizuki(RIMS, Kyoto University, Professor)
+ɹNearly a year and four months have elapsed since I released my series of papers
+on inter-universal Teichm¨uller theory (IUTeich) in August 2012. In the following,
+I would like to report on various developments that have come to pass during this
+time with regard to the veriﬁcation of IUTeich.
+(1) At the end of August 2012, I released my series of four papers concerning
+IUTeich and submitted them to a mathematical journal. I have no intention of
+disclosing the name of the journal or other information related to this journal
+submission. The papers were released in order to make it possible forspecialists
+to study and assess the validity of IUTeich; they werenever intended as an an-
+nouncement to the general public. Moreover, I never envisaged that these papers
+might elicitreactionsconsisting ofnon-mathematical contentfrom non-specialists.
+Ih a v eno intentionof respondingto such non-mathematical reactions.
+(2) As of the time of writing, I have giventwo talkson IUTeich atKyoto University
+—i n
+October 2010 (i.e., a one-hour “preview” talk) and
+December 2012 (one hour)
+—a n done talkon IUTeich at theUniversity of Tokyo—i n
+June 2013 (one and a half hours).
+The slides for these talks are available on my web site (on the page entitled “Travel
+and Lectures”). It is likely that I will again give at least one talk at some academic
+institution in Japan in 2014. The various talks that I have given so far cover
+essentially the same content; this content is exposed in more detail in the survey
+[Pano]. This survey is available on the page of my web site entitled “Papers” and
+is scheduled to appear in the proceedings for the workshop at which my December
+2012 talk was delivered.
+
+2 ON THE VERIFICATION OF INTER-UNIVERSAL TEICHM ¨ULLER THEORY
+(3) I have been conducting aseminar devoted to thedetailed examinationof IUTe-
+ich withGo Yamashita(Research Fellow at Toyota Central Research and Devel-
+opment Laboratories; Project Lecturer at the Center for Research Interaction in
+Mathematical Sciences of RIMS, Kyoto University)
+once a month (for 2 days≈ 12 hours), since October 2012.
+More precisely, during the period
+October ∼ December of 2012,
+Yamashita studied the “preparatory papers” (i.e., [HASurI], [HASurII], [Semi-
+Anbd], [FrdI], [FrdII], [EtTh], [AbsTopIII], [GenEll], etc.) and discussed their
+contents with me in our seminar. During the periods
+January ∼ March 2013 and
+April ∼ September 2013,
+he then proceeded toread throughthe entire “theory proper”constituted by the
+fourpapers[IUTchI],[IUTchII],[IUTchIII],[IUTchIV]atotalof two times.D u r i n g
+this period of roughly a year, I received from Yamashita, in writing (by e-mail),
+numerousdetailed technical comments(roughly several hundred during this period
+of a little over a year!) that exceed, by a substantial margin, the scope of a typical
+referee’s report for a mathematical journal. After discussing these comments in our
+seminar, I proceeded to correct the relevant papers and post the corrected versions
+on the page of my web site entitled “Papers”. Also, around April 2013, Yamashita
+prepared an “FAQ”, which I posted on my web site, to answer questions posed
+by other researchers with whom he had occasion to interact at workshops and so
+on. As a result of these two readings of the four papers, Yamashita acquired a
+thorough understanding of the theory and, in particular, veriﬁed the correctness
+of the theory, although, in his words, this veriﬁcation constituted, for him, only a
+“single check”of the theory.
+(4) Yamashita then proceeded to carry out, in his words, a“double check”of
+IUTeich. This “double check” consisted of a seminar that was conducted
+once a month (for 2∼ 3d a y s≈16 ∼ 24 hours), May∼ November 2013,
+for the following three participants:
+Akio Tamagawa(RIMS, Kyoto University, Professor)
+Yuichiro Hoshi(RIMS, Kyoto University, Lecturer)
+Makoto Matsumoto(Hiroshima University, Professor).
+The seminar was conducted without my participation, in order to provide Yama-
+
+ON THE VERIFICATION OF INTER-UNIVERSAL TEICHM ¨ULLER THEORY 3
+shita with an opportunity to explain the theory in his own words and thereby
+verify his understanding of the theory. Yamashita’s presentation of the theory in
+this seminar consisted of literally wading through — from the most elementary
+portion of the “preparatory papers” to the ﬁnal portion of the “theory proper” —
+each Deﬁnition, Proposition, Theorem, etc. in the order written in these papers
+— an approach that required quite a substantial amount of eﬀort on the part of
+both the lecturer and the participants. When, either during the seminar or in the
+course of preparing for it, technical comments or questions arose (roughly 10∼ 30
+a month, on average), Yamashita and I discussed and resolved them the following
+month in our monthly seminar. Toward the end of the (“double check”) seminar,
+one participant made a remark to the eﬀect that, although it seemed likely that
+it would take some time for him to digest the theory, he felt that he had more
+or less reached an understanding of the general outline of the theory. Moreover,
+the participants agreed that, from their present point of view, i.e., after having
+seen Yamashita’s presentation of the theory, the content of the lectures and survey
+discussed in (2) now seemed to be quite “appropriate”.
+(5) Subsequent to the successful conclusion of the “double check” of (4), Yamashita
+has started writing a detailedsurvey of IUTeich, i.e., which, in his words, will
+constitute a “triple check”of the theory. He expects the survey to be about
+200 ∼ 300 pages in length. Moreover, although his plans are not yet deﬁnite, he
+is considering, at the request of Associate Professor Yuichiro Taguchi of Kyushu
+University, giving a (several week long) intensive course on IUTeich at Kyushu
+University, at some date subsequent to April 2014.
+(6) Mohamed Sa¨ ıdi(University of Exeter (UK), Associate Professor) visited RIMS,
+Kyoto University, as a Visiting Professor, for
+the three month period of July∼ September 2013
+during which I conducted aseminar with him devoted to thedetailed examination
+of IUTeich from various points of view. This seminar consisted of
+roughly 10 meetings (≈ 24 hours in all).
+He also met with Yamashita a few times to discuss IUTeich. During a period
+of a little over half a year prior to his visit, Sa¨ ıdi apparently ﬁnished reading
+the “preparatory papers”, as well as roughly half of the “theory proper”. Upon
+arrivingin Japan, he then ﬁnished readingthe “theory proper”. Duringhis visit, in
+order to verify his understanding of the theory, he then proceeded to read through
+the entire four papers of the “theory proper” once again. These two readings of
+the “theory proper” were supplemented by the seminars that I conducted with
+
+4 ON THE VERIFICATION OF INTER-UNIVERSAL TEICHM ¨ULLER THEORY
+him, roughly once a week during his visit, in which we discussed the content of
+the papers in quite substantial detail. During these seminars, he provided me with
+numerousdetailed technical comments(roughly a hundred during the three months
+of his visit!) that exceed, by a substantial margin, the scope of a typical referee’s
+report for a mathematical journal. Just as in the case of Yamashita, after dis-
+cussing these comments in our seminar, I proceeded to correct the relevant papers
+and post the corrected versions on the page of my web site entitled “Papers”. In
+conclusion, Sa¨ıdi stated to me, as well as, apparently, to at least one “third-party”
+researcher outside Japan, that he believed the theory to be correct.
+(7) Although both Yamashita and Sa¨ıdi are researchers in the ﬁeld of arithmetic
+geometry, they nonetheless come from substantially diﬀerent mathematical back-
+grounds, as may be veriﬁed by a brief look at their previous papers and other
+work. One important attribute that they share, however, is theirproven track
+record as referees, i.e., their wealth of experience in refereeing for mathematical
+journals and, in particular, being in a position to judge the suitability of submitted
+manuscripts for publication in such journals. On the other hand, in the case of
+IUTeich, in light of both theimportance of the theoryand thenovelty of the ideas
+that constitute the theory, it is desirable that the veriﬁcation process be conducted
+with theutmost caution. In particular, the issue of whether or not one should re-
+gard the veriﬁcation of IUTeich as being, for all practical purposes, complete, i.e.,
+as a result of the activities of Yamashita and Sa¨ıdi, is by no means clear, and any
+sort of “ﬁnal conclusion” on this topic must be regarded as a matter that lies be-
+yond the scope of the present report. Nevertheless, such caveats notwithstanding,
+it seems to me that the degree of meticulousness and attention to detail exhibited
+in the veriﬁcation activities summarized above in (3), (4), (6) — which, as noted
+above, exceed, by a substantial margin, the scope of a typical referee’s report for
+a mathematical journal — together with the wealth of refereeing experience of
+Yamashita and Sa¨ıdi (i.e., as discussed above) should be regarded as lendingquite
+substantial weight to the extremely positive evaluationthat I received from both
+of them in the course of these activities.
+(8) One further important “by-product” of the veriﬁcation activities of Yamashita
+and Sa¨ıdi concerning IUTeich is the fact that their experiences demonstrated, in
+eﬀect, in a very explicit fashion, that, despite the quite substantial diﬀerences in
+their mathematical backgrounds,
+it is quitepossible to achieve areasonably rigorous understandingof the
+theory within a period ofa little less than half a year.
+Since there apparently exist researchers whose attempts to study IUTeich have not
+
+ON THE VERIFICATION OF INTER-UNIVERSAL TEICHM ¨ULLER THEORY 5
+proceeded so smoothly, I asked Yamashita and Sa¨ıdi on numerous occasions if they
+had any “advice” for such researchers. Despite numerous discussions concerning
+thistopic, theonly“advice”thatIwasabletoelicitfromthemconsistedofremarks
+to the eﬀect that
+if one proceeds to study carefully step by step, starting from the “prepara-
+tory papers”, there is no reason that one should encounter any insur-
+mountable diﬃculties.
+On the other hand, the potential reader should keep the following point in mind:
+ɾAlthough variouslimited portionsof IUTeich exhibit similarities to exist-
+ing mathematical theories such as complex orp-adic Teichm¨uller theory
+and the functional equation of the classical theta function, any attempt to
+study IUTeich under the expectation that theessential thrustof IUTeich
+will proceed via a similar pattern of argument to existing mathematical
+theories is likely to end in failure.
+BothYamashitaandSa¨ıdivoicedsimilaropinionsconcerningthispoint. Moreover,
+over the past few years, I have frequently emphasized the following two points:
+ɾAlthough many individuals appear to be interested mainly in the nu-
+merical aspects of the inequality of the ABC Conjecture, in fact it is
+more natural to regard thetheory that constitutesIUTeich as the main
+object of interest. That is to say, theinequality of the ABC Conjecture
+is best understood as simply being one barometer of the depth of the
+mathematical content of the theory.
+ɾTypically, a one-hour lecture — or, indeed, even a week-long exposition
+of the theory — will be far from suﬃcient for most researchers to arrive
+at a suﬃciently motivating appreciation of the essential framework that
+underlies the theory. In particular, based on my past experiences, I
+harbor substantial doubts that such short-term promotion activities can
+lead to meaningful results. On the other hand, although the precise
+amount of time necessary to arrive at a reasonable understanding of the
+theory will no doubt vary from individual to individual, at least in the
+case of researchers familiar with conventional arithmetic geometry, the
+amount of time necessary should, as remarked above, be a matter of
+months — i.e., roughlyhalf a yearor so —not a matter of years!
+One aspect of my interaction with Sa¨ıdi that left a particularly strong impres-
+sion on me was the fact that he voiced opinions similar in content to these last
+two points as “independent observations”, i.e., without even the slightest bit of
+prompting on my part!
+
+6 ON THE VERIFICATION OF INTER-UNIVERSAL TEICHM ¨ULLER THEORY
+(9) Finally, I would like to take this opportunity to express my deep gratitude to
+Yamashita and Sa¨ıdi, as well as the participants of (4), for their exceptional and
+zealous contributions to the goal of verifying IUTeich.
+
+ON THE VERIFICATION OF INTER-UNIVERSAL TEICHM ¨ULLER THEORY 7
+Bibliography
+[HASurI] S. Mochizuki, A Survey of the Hodge-Arakelov Theory of Elliptic Curves I,
+Arithmetic Fundamental Groups and Noncommutative Algebra, Proceedings
+of Symposia in Pure Mathematics 70, American Mathematical Society (2002),
+pp. 533-569.
+[HASurII] S. Mochizuki, A Survey of the Hodge-Arakelov Theory of Elliptic Curves II,
+Algebraic Geometry 2000, Azumino, Adv. Stud. Pure Math. 36, Math. Soc.
+Japan (2002), pp. 81-114.
+[SemiAnbd] S. Mochizuki, Semi-graphs of Anabelioids, Publ. Res. Inst. Math. Sci. 42
+(2006), pp. 221-322.
+[FrdI] S. Mochizuki, The Geometry of Frobenioids I: The General Theory,Kyushu
+J. Math. 62 (2008), pp. 293-400.
+[FrdII] S. Mochizuki, The Geometry of Frobenioids II: Poly-Frobenioids,Kyushu J.
+Math. 62 (2008), pp. 401-460.
+[EtTh] S. Mochizuki, The´Etale Theta Function and its Frobenioid-theoretic Mani-
+festations, Publ. Res. Inst. Math. Sci.45 (2009), pp. 227-349.
+[AbsTopIII] S. Mochizuki,Topics in Absolute Anabelian Geometry III: Global Reconstruc-
+tion Algorithms, RIMS Preprint1626 (March 2008).
+[GenEll] S.Mochizuki,ArithmeticEllipticCurvesinGeneralPosition, Math. J. Okayama
+Univ. 52 (2010), pp. 1-28.
+[IUTchI] S. Mochizuki, Inter-universal Teichm¨uller Theory I: Construction of Hodge
+Theaters, RIMS Preprint1756 (August 2012).
+[IUTchII] S.Mochizuki, Inter-universal Teichm¨uller Theory II: Hodge-Arakelov-theoretic
+Evaluation, RIMS Preprint1757 (August 2012).
+[IUTchIII] S. Mochizuki,Inter-universal Teichm¨uller Theory III: Canonical Splittings of
+the Log-theta-lattice, RIMS Preprint1758 (August 2012).
+[IUTchIV] S. Mochizuki,Inter-universal Teichm¨uller Theory IV: Log-volume Computa-
+tions and Set-theoretic Foundations, RIMS Preprint1759 (August 2012).
+[Pano] S. Mochizuki, A Panoramic Overview of Inter-universal Teichm¨uller The-
+ory, RIMS Preprint 1774 (February 2013), to appear inRIMS K¯oky¯uroku
+Bessatsu.

@@ -1,0 +1,583 @@
+ȬǯȁȣȸȷȎȸȈᲴ
+ࠝp ᡶ୺ዴƷྸᛯƴƭƍƯ
+Ტஓஉ ૼɟᲣ
+ႸഏᲴ
+I. ᙐእૠ˳ɥƷӞχႎƳྸᛯ
+II.ࠝ(hyperbolically ordinary)l o c u sɥƷ೅แႎƳFrobenius ਤƪɥƛ
+III. Frobenius ਤƪɥƛƱK¨ahler ᚘ᣽Ʒ᧙̞
+IV.ឋ
+V.ࣱ
+૨ྂ
+IᲨᙐእૠ˳ɥƷӞχႎƳྸᛯᲴ
+(A.) Riemann ᩿Ʒɟॖ҄ᲴXƷRiemann ᩿ưŴg ƸᆔૠŴr Ƹ৷ƚƯƍǔໜƷૠ
+ƱƢǔŵƦƏƍƏX Ƹˊૠ୺ዴƱƠƯǋਵƑǔƜƱƕưƖǔƕŴᚐௌႎƴᎋƑǔƱŴX Ʒ୍
+ᢄႎᘮᙴᆰ᧓ ˜X → X ƕஊǓŴǋƠŴX ƕӑ୺ႎ(⇐⇒ 2g − 2+ r ≥ 1) ưƋǕƹŴK¨obe Ʒ
+ྸᲴ
+˜X ∼= H
+ᲢƜƜưŴHƴᚐ
+ƢǔƜƱƴǑƬƯŴƦƷp ᡶ༿ǛႆᙸƢǔƜƱƴƋƬƨŵ
+(B.) X׹˜X ∼= H ǛǋƬƱˊૠႎƳᚕᓶƴᎇᚪƠƨƍŵ
+ƦƷᇹɟഩƱƠƯŴഏƷǑƏƳನ঺ƕЈஹǔᲴH ⊆ P1
+C ƳƷưŴ P1
+C
+ɥƷஊྸ᧙ૠǛHࡽ
+Ǜ̅ƬƯXƞƳ᧏ᨼӳU ⊆ ˜X ƴСᨂƢǔ
+ƱŴXǒǕǔŵദᄩƴƍƏƱŴS⊆O X
+ǒǕƨƜƱƴƳǔŵƜǕǛXႎನᡯſ(canonical projective
+structure) ƱƍƏŵ
+ޖS⊆O Xႎನᡯ
+S, S′ ⊆O X ƕɨƑǒǕƨ଺Ŵf ∈S ,z ∈S ′ ǛӕƬƯŴf = f(z) Ʊ୿ƘƱŴ
+(dSchf(z)) · (dz)⊗2
+ᲢƜƜưŴdSch ƸИሁႎᙐእᚐௌưƓᬘ௨ǈƷSchwarzЎƸS, S′ ƴƠƔ
+ƤƣŴS Ʊ S′ƬƯŴXႎನᡯƷ
+1
+
+᫏ƸH1(X, ω2
+X)( =0i f2 g − 2+ r ≥ 1)ႎನᡯƷȢǸȥȩ
+ǤƸH0(X, ω2
+X) ɥƷtorsor ƴƳǔŵ
+(C.)ஊள(indigenous bundle)ƴ᣻ᙲƳϐᚐ᣷Ʒ
+׹˜X ∼= H Ʒɲᡀƴǋπ1(X)ưƋǔŵ
+ƬƯŴπ1(X) → PSL 2(R) Ƴǔ೅แႎƳmonodromy፯ƞǕŴ ˜X × P1
+C Ǜ π1(X)
+Ʒ˺ဇưлǔƱŴP → X Ƴǔ X ɥƷ P1-bundleǒǕǔŵƦƠƯŴπ1(X) Ʒ P1
+C ǁƷ˺
+ဇƕ ˜XૠưƋǔƜƱƔǒŴƦƷP1-bundle ƴ੗ዓ ∇PŴ
+˜X → ˜X × H↪ → ˜X × P1
+C Ǜ π1(X) Ʒ˺ဇưлǔƜƱƴǑƬƯŴૺ᩿σ : X → PǒǕ
+ǔŵƜƷૺ᩿Ǜ∇PЎƢǔƱŴ∇P (σ): τX → τσ
+def
+= σ∗τP/X ƳǔKodaira-Spencer ϙ΂
+ݧ˜X → P1
+CưƋǔƜƱƔǒŴ∇P (σ)ưƋǔƜƱƕЎ
+ƔǔŵƜƷȇȸǿ(P → X, ∇P ,σ : P → X) Ǜ XஊளſƱԠƿŵ
+ǋƬƱɟᑍƴŴžƜƷǑƏƳȇȸǿſ(P → X, ∇P ,σ) ᲢƭǇǓŴσ Ʒ Kodaira-Spencer
+ƱƳǔǑƏƳ੗ዓ˄ƖƷP1-bundleஊளſ(indigenous bundle)ܱ
+ƸŴ(Hodge section ƱԠƹǕǔ) σƢǕƹŴɟॖႎƳƷưŴˌɦσǛႾဦ
+ƢǔŵᲣ᣻ᙲƳƜƱƸŴᲢSerre Ʒ GAGAƸˊૠႎ
+ᲢᲛᲣƳƷưƋǔŵɟ૾ŴX᫏ᲣƱXႎನᡯƕӷ͌ưƋǔƜƱ
+ƬƯŴXஊளƷȢǸȥȩǤᆰ᧓ƸH0(X, ω2
+X) ɥƷ
+torsorӳǛᎋƑǕƹŴ
+Sg,r →
+ Mg,r
+ᲢƜƜưŴ
+Mg,r Ƹ C୺ዴƷmoduli stackᲣƳǔΩ
+Mg,r/C፯
+ƞǕƨᲣtorsor ƴƳǔŵƜƷtorsor Ǜ Schwarz torsor፯ƢǔǳțȢȭǸȸ
+᫏
+ηg,r ∈ H1(
+Mg,r, Ω
+Mg,r /C)
+Ǜ Schwarz class ƱƍƏŵ
+ஊளƕ Schwarz torsorᚐௌႎᲢưƠƔƳƍᲣૺ᩿ sH :
+Mg,r →
+ Sg,r፯ƢǔƜƱƴൢ˄ƜƏŵ
+Remark: π : P → X ƕ P1-bundle ƳǒƹŴAd(P)
+def
+= π∗τP/X ᲢτP/X Ƹ P Ʒ X ɥƷ rel-
+ative tangent bundle ᲣƸҞҥኝLie ࿢ƱƠƯƷನᡯǛਤƭŴX ɥƷ rank 3 ƷșǯȈȫளƴ
+ƬƯŴƲƏƠƯǋP1-bundleƳ૾ƸŴAd(P) ǛৢƏƜƱƴǑƬƯŴș
+ǯȈȫளƷɭမƴသǇǔƜƱƕưƖǔŵ
+(D.)ƭƔƷ೅แႎƳK¨ahler ᚘ᣽ƷኰʼᲴ sH Ƹμ໱ദЩưƸƳƍƷưŴ
+∂sH ǛӕǔƱŴ
+Ω
+log
+Mg,r/C ⊗ Ω
+Mg,r /C ƷŴ
+ Mg,rᚐௌႎƳ᩼ᐯଢƳૺ᩿ μWPǒǕǔŵƦƷμWP Ǜ
+ƸŴμWP Ƹ
+ Mg,r ɥƷ K¨ahler ᚘ᣽ᲢᲷWeil-Petersson ᚘ
+ᚐௌႎƳK¨ahler ᚘ᣽ƷɟᑍᛯƱƠ
+ƯŴƦƏƍƏK¨ahlerǒǕǔŵƜƷ
+ӳƴƸŴMg,r Ʒ୍ᢄႎᘮᙴᆰ᧓
+Mg,r →M g,r ᲢᲷTeichm¨uller ᆰ᧓ᲣƷɥưŴƜƷᚘ᣽
+μWPໜ[X] ∈M g,r(C)ƠƯŴ
+2
+
+Mg,r ↪→ H0(X, ω2
+X)c
+ᲢƜƜưŴɥ˄ƖƷ“ c”ᆰ᧓ǛॖԛƢǔᲣƳǔaﬃneǊᡂǈŴұƪ
+Teichm¨ullerǒǕǔŵƜƷɟॖ҄ǛžBersǊᡂǈſƱƍƏŵ
+፯Ʒˁ૾ƕஊǔŵH ɥƷPoincar´e ᚘ᣽
+dx ∧dy
+y2
+ᚐௌႎư K¨ahlerᲣǛ ˜XƖ৏ƠƯŴX ƴƓƱƢƱŴX ɥƷ೅แႎƳᚘ᣽
+μXǒǕŴƦƷμX೅ƕ S⊆O X೅ƴƳ
+ǔŵƭǇǓŴƜƷᚘ᣽μXஊளƳƲƱɳƿŴX Ʒɟॖ҄ӷ
+ƷǋƏɟƭƷ୿ƖᘙƠ૾ƱᙸǔƜƱƕưƖǔŵƦƠƯŴμX፯Ƣǔ᩿ᆢᙲእǛvX Ʊ୿
+ƘƱŴ
+θ,ψ ∈ H0(X, ω2
+X) ↦→
+∫
+X
+θ·
+ ψ
+vX
+∈ C
+ƕ Mg,rૠ̿ǛᨊƍƯᲣƪǐƏƲμWP ƱɟᐲƠ
+Ưƍǔŵ
+(E.) C ɥƷྸᛯƷǇƱǊᲴ ˜X ∼= HƴӞχႎƳ ᲫᲳɭኔႎƳǋƷƔǒЈ
+ſƳ೅แႎƳદ˺ǛƢǔƜƱƴǑǓŴ
+Sg,r →
+ Mg,r Ŵ sH Ŵ μWP Ŵ μX
+׍
+μƴˊૠႎƳƷưŴ
+Z፯ƢǔƜƱƕưƖŴƦƏƢǕƹŴSchwarz tor-
+sor Ǎ ηg,r ǋ Z፯ƢǔƜƱƕưƖǔᲴ
+(
+Sg,r)Z → (
+Mg,r)Z
+፼ƠƯƖƨC ɥƷྸᛯǛɟᚕưǇƱǊǔƱƠƨǒ
+(*) (ηg,r)Zƴ᩼ᐯଢƳᲣǳțȢȭǸȸ᫏ǛŴsHƢ
+ǔƜƱƴǑƬƯŴ໯ᨂእໜƴƓƍƯŴૠᛯႎƴᚐෞƠƨŵ
+ƱƍƑǑƏŵƦƏƢǔƱŴˌɦƷp ᡶႎƳྸᛯƸŴ˴ƴ᧙ƢǔྸᛯƳƷƔƱƍƏƱŴƪǐƏƲ
+ƜƷ(ηg,r)Z ƷஊᨂእໜƴƓƚǔૠᛯႎᚐෞ(arithmetic resolution) ƱƍƑǑƏŵ
+IIࠝ(hyperbolically ordinary)l o c u sɥƷ೅แႎƳFrobenius
+ਤƪɥƛᲴ
+(A.)፯ƢǔcrystalᲴ SlogͳƳp ᡶႎnoetherian ﬁne formal log scheme ưŴ
+flog : Xlog → Slog Ƹ Slog ɥƷstable log-curve ƱƢǔŵ Ტ “ log”ჷƳƍ૾ƸŴҥƴ໯
+ᙻƢǕƹǑƍŵᲣ ƦƏƍƏXlogஊள(P → X, ∇P ) ǛᎋƑƨƍƷƩƕŴǇƣŴƦƏƍ
+3
+
+ஊளƕCrys(Xlog
+Fp /Slog) ƱƍƏcrystalline site ɥƷᲢP1-bundleƴ̖ǛӕǔᲣcrys-
+tal ǛƳƠƯƍǔƜƱƴൢ˄ƜƏŵˌɦŴcrystal Ʒ૾ǛॖԛƠƯƍǔ଺ưǋŴ(P, ∇P ) Ʊ୿Ƙ
+ƜƱƴƢǔŵ
+˴ư crystal ǛᎋƑƨƍƔƱƍƏƱŴFrobeniusƖ৏ƠǛᎋƑƨƍƔǒưƋǔŵ
+̊ƑƹŴǋƠŴFrobenius ਤƪɥƛ
+Φlog
+S : Slog → Slog
+ᲢƭǇǓŴmod p reduction ǛӕǔƱFrobeniusŵ̊ƑƹŴǋƠSμ˳Ʒ
+Witt ࿢Ʒ Spec ưƋǕƹŴΦlog
+SǇǔŵᲣƕɨƑǒǕǔƱŴ(P, ∇P )
+ǛŴΦlog
+S ưǋƬƯǇƣƸCrys((Xlog
+Fp )F /Slog)ႎFrobeniusݧ
+Φlog
+X/S : Xlog
+Fp → (Xlog
+Fp )F
+Ɩ৏ƢƱŴΦlog
+S
+ƢǔᲢCrys(Xlog
+Fp
+/Slog) ɥƷᲣૼƠ
+ƍ crystal Φ∗(P, ∇P )ǒǕǔŵ ƜƷcrystal Φ∗(P, ∇P ) Ǜ (P, ∇P ) ƷžᲢΦlog
+S ƴ᧙ƢǔᲣ
+naive Ƴ FrobeniusƖ৏ƠſƱƍƏŵ
+(B.) ϐദᙹ҄ (renormalized) FrobeniusƸŴ(A.) Ʒ naive Ƴ Frobeniusࡽ
+፯ƠƴƘƍžϐദᙹ҄FrobeniusƠƨƍƷ
+Ʃŵ ƳƥƔƱƍƏƱŴྸဌƸഏƷᡫǓưƋǔŵƪǐƏƲCஊளƕஊǔ
+ɶưŴཎКƳŴ೅แႎƳǋƷǛᎋƑǔƜƱƴǑƬƯŴsHǒǕƨǑƏƴŴp ᡶ
+ஊளǛᙸƭƚƨƍŵ ƠƔƠŴƦǕǛᙸƭƚǔƨǊƴƸŴ
+ƳƜƱƴŴ CӳƱᢌƬƯŴ୺ዴƷžཋ
+ྸႎƳſɟॖ҄ƸƳƍƷưŴƲǜƳவˑƴƢǕƹƍƍƔƸൿƠƯଢǒƔưƸƳƍŵ ƦƜưŴ
+ɟƭƷ৖ੑƔǓƱƳǔƷƸŴCӳƴƸŴmonodromy ƕ PGL2 Ʒ R− ஊྸໜƴλƬƯƍ
+ƨƷƩƔǒŴƦǕǛჇ˩ƯŴpӳƴƸŴmonodromy ƕ PGL2 Ʒ Zp− ஊྸໜƴλǔ
+ƱƍƏவˑǛᛢƢǔƜƱƕưƖǔŵ ƠƔƠŴmonodromyǒ
+ǕƳƍƷưŴǇƩŴƦƷžmonodromy ƕ PGL2 Ʒ Zp− ஊྸໜƴλǔſƱƍƏவˑǛŴmon-
+odromyƷவ
+ˑƸᐯ໱ƴഏƷǑƏƴƳǔᲴ
+(*)ஊள(P, ∇P ) ƕ˴ǒƔƷॖԛưFrobeniusưƋƬ
+ƯǄƠƍŵ
+ƨƩŴƜƏƸƍƬƯǋŴբ᫆ƷFrobenius፯Ʒˁ૾ƸǇƩƸƬƖǓƠƳƍŵ
+ƦƜưŴ৖ஜƱƳǔƷƸŴഏƷφ˳̊ưƋǔŵSlog = Spec(Zp) ưŴXlog =
+ M
+log
+1,0 Ტƭ
+ǇǓŴ౹ό୺ዴƷmoduli stackᲣưŴ(P, ∇P ) Ƹ୍ᢄႎƳ౹ό୺ዴƷɟഏde Rham cohomol-
+ogy፯ƢǔP1-bundle ƱƢǔŵ ᲢƜƜưŴ ∇P Ƹ Gauss-Manin ੗ዓƴǑǔǋƷưŴ
+Hodge section Ƹ de Rham cohomology Ʒ Hodge ﬁltration ƴǑǔsection ƱƳǔŵᲣ ƜƏ
+፯ƢǔƱŴ(P, ∇P )ஊளƴƳǔƜƱƸƢƙЎƔǔƠŴƠƔǋ໯ᨂእໜưƸŴᲢI. Ʒ (C.)
+ஊள
+ឋƱƍƑƹŴƦƷᐯ໱ƳFrobenius ˺ဇƕƋǔŵ ƭǇǓŴ Φ∗(P, ∇P )
+ƳƘƱǋQp Ʊ tensor ƢǕƹŴ(P, ∇P )ƴƳǓŴZpǔƨǊƴƸŴ
+Φ∗(P, ∇P ) Ʒૢನᡯ (integral structure) ǛŴ Hodge sectionƠᛦૢƢǕƹǑƍŵ
+4
+
+ƦƷŴžnaive FrobeniusŴHodge section Ǜ̅ƬƯૢನᡯǛᛦૢƢǔſ
+ƱƍƏદ˺ƸŴʻ Ʒ Xlog Ǎ (P, ∇P )፯ƢǔƜƱƕưƖŴƦƷદ
+ǒǕǔૼƠƍcrystal Ǜžϐദᙹ҄FrobeniusƖ৏Ơſ
+F∗(P, ∇P )
+ƱƍƏŵ ƱƜǖƕŴXlog =
+ M
+log
+1,0ӳƴƸŴ(P, ∇P ) ǁƷFrobeniusᨥƴ
+(P, ∇P ) ∼= F∗(P, ∇P )
+ஊள(P, ∇P ) ƸžFrobeniusſƳ
+ƷưƋǔŵ
+(C.) ೅ૠ pஊளƷp− ୺ྙᲴ ƜƜ (C.) ưƸŴSlog ƕ೅ૠp Ʒ schemeƠǑ
+ஊள(P, ∇P ) Ʒ p− ୺ྙǛӕǔƜƱƕưƖǔŵp− ୺ྙ P Ƹ
+f∗(Ad(P) ⊗OX Φ∗
+XωXlog/Slog )
+ᲢƜƜưŴΦlog
+X : Xlog → Xlog Ƹ XlogႎFrobeniusᲣƷᲢSlogႎƳ੗ዓƴ᧙Ơ
+ƯᲣhorizontal Ƴ section ƴƳǔŵ ƱƜǖƕŴᲢ(B.) ƷॖԛưᲣFrobeniusஊளƷИ
+ஊளƷmod p reduction ƳǒƹŴp−ᩐƴƳǔŵ
+ᩐſƱƸƲƏƍƏƜƱƔƱƍƏƱŴKillingࡸ࢟
+<−, − >: Ad(P) ⊗OX Ad(P) →O X
+ƕஊƬƯŴƦǕǛP ƴ଀ƢƜƱƴǑƬƯžPſ
+< P, P > ∈ Γ(S, f∗ω2
+Xlog/Slog )
+ƕᩐƴƳǔ
+ƜƱǛॖԛƢǔŵ
+λƠƯƓƜƏŵp−ஊளƷƜƱ
+ஊளſ(admissible indigenous bundle ) ƱԠǅƏŵ p−׍
+ஊளſ(nilpotent indigenous bundle ) ƱԠǅƏŵFrobeniusƳ Zp
+ஊளƷmod p reductionତƴᚰଢưƖǔ
+ƔǒŴ
+(*)ஊளſƩƚ
+ƳƷưƋǔŵ
+λƠǑƏŵ ǇƣŴΦ∗Ωlog
+Mg,r /Fp
+ƱƍƏ
+ Mg,r ɥƷ rank 3g −3+ r
+˴ႎƳſșǯȈȫளǛ
+Qg,r →
+ Mg,r Ʊ୿ƜƏŵ ƢǔƱŴ೅ૠp
+ஊளƷp−ǛӕǔƜƱƴǑƬƯŴ
+Vg,r :
+ Sg,r →
+ Qg,r
+Ƴǔ
+ Mg,rஊளƷVerschiebungſƱƍƏŵ
+ Qg,r Ʒ zero sec-
+tion ǛŴƜƷVerschiebungƖ৏ƤƹŴ
+ Ng,r ⊆
+ Mg,rǒǕǔŵ
+5
+
+፯ƔǒଢǒƔƳǑƏƴŴ
+Ng,r୺ዴƷmoduli
+stackſƳƷưƋǔŵ
+ྸᲴ
+ Vg,rưŴƦƷഏૠƸp3g−3+rƬƯŴ
+Ng,r →
+ Mg,r ǋƦƏưƋǔŵ
+ཎƴŴ
+ Ng,r Ƹ Fp ɥ proper ƳƷưƋǔŵ
+ɟ૾Ŵ
+ N
+adm
+g,r ⊆
+ Ng,rஊளƷlocus፯ƢǔƱŴ
+N
+adm
+g,r
+Ƹ
+ Mg,r ƷɶƷ᧏ᢿЎ
+፯ƕஊǔᲴ
+፯Ჴ
+ N
+ord
+g,r ⊆
+ Ng,r ǛŴ
+ Mg,r ɥ´etale ƳໜƔǒƳǔ
+Ng,r Ʒ᧏ᢿЎǹǿȃ
+፯ƢǔŵӍŴ
+N
+ord
+g,r ƴ parametrizeᩐᲣ
+ஊளſ(ordinary nilpotent indigenous bundle) ƱԠƿŵ
+ƢǔƱŴ
+ԡ᫆Ჴ
+ N
+adm
+g,r ƸƪǐƏƲŴ Fp ɥ๖ǒƔƳໜƔǒƳǔ
+Ng,r Ʒ᧏ᢿЎǹǿȃ
+ƬƯŴཎƴŴ
+N
+ord
+g,r ⊆
+ N
+adm
+g,r
+ŵ
+ƴŴ
+ Ng,rឋƴƭƍƯᛅƦƏŵ
+Ng,rƣ Fp˴ႎƴᡲኽưƸ
+ƋǔƕŴɟᑍƴƸᘮኖưƸƳƍŵᲢƨƩƠŴ(g,r )=( 1 , 1) Ǎ (g,r )=( 0 , 4)ӳƴƸŴᘮ
+ƬƯŴ Fp ɥ generic ƴ smoothנ܍
+ƢǔŵƦǕǒƷଏኖ঺ЎƴƭƍƯǋŴƍǖǜƳƜƱƕჷǒǕƯƍǔƕŴƜƜưƸŴ଺᧓Ʒ᧙̞
+ưŴᚑǕƳƍƜƱƴƢǔŵ
+(D.)ࠝlocusႎƳɟᡲƷኽௐ
+ƸŴ(C.) Ʒ (
+N
+ord
+g,r )Fp Ǜ Zp፯ƞǕƨ೅แႎƳFrobenius ਤƪɥ
+ƛƴ᧙ƢǔǋƷưƋǔŵ ǇƣŴ(
+N
+ord
+g,r )Fp → (
+Mg,r)Fp ƕ´etale ưƋǔƨǊŴZpƳᲢӷ
+ǛᨊƍƯᲣɟॖႎƳ´etale Ƴਤƪɥƛ
+(
+N
+ord
+g,r )Zp → (
+Mg,r)Zp
+ƢǔƜƱƴൢ˄ƜƏŵᚡӭǛቇҥƴƢǔƨǊŴˌɦSlog def
+=(
+ N
+ord
+g,r )Zp ƱƠǑƏŵ ƦƠ
+ƯŴ(
+Mg,r)ZpႎƳ୺ዴǛXlog → Slog Ʊ୿ƜƏŵ ƦƏƢǔƱŴǇ
+ྸƕஊǔᲴ
+ྸᲴ SlogƢǔᲴ(a.) Frobenius
+ਤƪɥƛ Φlog
+S : Slog → Slog;( b . ) ᲢΦlog
+S ƴ᧙ƠƯᲣFrobenius٭
+Ƴ Xlogஊள (P, ∇P )ŵƠƔǋŴΦlog
+S Ʊ (P, ∇P ) ƱƍƏʚኵƸŴ
+žFrobeniusǇǔŵ
+ƷƨǊƴ୿ƍƯƓƘƱŴƜƜưŴFrobeniusƱƸŴҥƴF∗(P, ∇P ) ∼= (P, ∇P ) ƱƍƏ
+ॖԛưƋǔŵ ᲢƜƜưŴ F∗ ƕ Φlog
+SǕƳƍǑƏƴƠǑƏŵᲣ ƦƠ
+ƯŴ(Xlog)ord
+Fp ⊆ Xlog
+Fp
+ǛŴ PFp Ʒ Hodge sectionᩐƳp−፯ƞǕǔsection ƕ
+፯ƠŴ(Xlog)ord ⊆ Xlog ǛŴƦƷmod p Ʒ᧏ᢿЎᨼӳ
+6
+
+፯ƞǕǔpᝋƱƢǔƱŴƦƷ(Xlog)ord ƷɥưǋŴ೅แႎƳFrobenius ਤ
+ƪɥƛƕൿǇǔŵ
+ྸᲴ(P, ∇P ) Ʒ Hodge section ǛѣƔƞƳƍǑƏƳɟॖႎƳΦlog
+S ɥƷ
+Frobenius ਤƪɥƛ Φlog
+X :( Xlog)ord → (Xlog)ordƢǔŵ
+ƴŴƜƷʚƭƷ೅แႎƳFrobenius ਤƪɥƛƸŴᲢ୺ዴXlog ƷᲣžlog admissible Ƴᘮ
+ᙴſǍ
+ Mg,rမǁƷСᨂƱɲᇌƢǔŵ
+IIIᲨ Frobenius ਤƪɥƛƱK¨ahler ᚘ᣽Ʒ᧙̞Ჴ
+(A.)೅ᲴЭƴǋƾǕƨǑƏƴŴǋƠM ƕᲢ๖ǒƔƳᲣᙐ
+ಮ˳ưŴμM ƕ MᚐௌႎƳǱȸȩȸᚘ᣽ƳǒƹŴμM ǛᆢЎƢǔƜƱƴǑǓŴM
+ƷӲໜe ∈ MλƠ
+ǑƏᲴ
+Mc: Mಮ˳ ᲢƭǇǓŴദЩ᧙ૠƱӒദЩ᧙ૠǛλǕஆƑ
+ǔᲣŵ
+Me: M Ǜ eಮ˳Ʒᑻ
+(germ)ŵ
+N: Mc × M Ǜ (e, e)ಮ
+˳Ʒᑻ (germ)ŵ
+Ωhol:Ω M Ǜ NǒǕǔN ɥƷșǯȈȫளŵ
+Ωant:Ω Mc Ǜ NǒǕǔN ɥƷșǯȈȫளŵ
+ƦƠƯŴΩant Ʒ sectionЎƢǔƜƱƴǑƬƯŴഏƷǑƏƳde Rham
+complexǒǕǔᲴ
+0 −→ Ωant dhol
+−→ Ωant ⊗ON Ωhol dhol
+−→ Ωant ⊗ON (∧2Ωhol)
+dhol
+−→ ...
+ƢǔƱŴμM Ƹ MᚐௌႎƳ(1,1)-form ƳƷưŴɥƷኒЗƷɤဪႸƷ᪮ƷദЩᲢᲛᲣƳ
+section μ፯ƠŴƠƔǋŴdholƬƯŴ μ Ǜ Poincar´e Lemma Ǜ̅ƬƯ
+ᆢЎƢǔƜƱƕưƖŴdholα = μ ƱƳǔǑƏƳα Ǜ൭ǊǔƜƱƕưƖǔŵ ƦƠƯŴƜƷα Ǜ
+e × Me ⊆ N ƴСᨂƢǔƱŴ
+β : Me → ΩMc,e =Ω c
+M,e
+፯ƠƯƍǔƜƱ
+ݧβưƋǔƜƱƕƢƙЈǔŵ ұƪŴMe Ǜ Ωc
+M,e ƱƍƏaﬃne ᆰ᧓
+৑ႎƴɟॖ҄ưƖƨƜƱƴƳǔŵ
+(B.)ࠝFrobenius೅ᲴpૠƷእૠŴk Ǜ᧍˳ŴA ǛƦ
+Ʒ Witt ࿢ W(k)Ŵ S Ǜ AႎഏΨd Ʒ formal scheme ƱƢǔŵᲢѸᛯŴlog ༿
+7
+
+ǋஊǔŵᲣ ୼ƴŴA Ʒ Frobenius Ǜ ΦA : A → A Ʊ୿Ƙŵ S Ʒ Frobenius ਤƪɥƛΦ: S →
+Sݧ
+ΩΦ
+def
+= 1
+pdΦ:Φ ∗ΩS/A → ΩS/A
+ƱƳǔ଺ŴΦſ(ordinary) ƱƍƏŵ
+z ∈ S(k) Ǜ S Ʒ k− ஊྸໜƱƠŴRz Ǜ S Ʒ zͳ҄ƱƢǔŵ Ƣǔ
+ƱŴRz Ƹ A[[t1,...,t d]]ƴƳǔŵ ɥƷ Frobenius ˺ဇ ΩΦ Ʒ
+᣽ǛӕǔƱŴrank d ƷᐯဌƳZp- ь፭ Ωetឋƕ঺ǓᇌƭᲴ
+(1) Ωet ⊆ ΩS/A׹Ωet ⊗Zp Rz ∼= ΩS/A ⊗OS Rz
+Ƣǔŵ
+(2) ˓ॖƷ ω ∈ ΩetƠƯ qω
+def
+= Q(ω) ƱƓƚƹŴΦ−1(qω)= qp
+ω ƱƳǔǑ
+׹Q :Ω et → R×
+zƠŴɟॖႎưƋǔŵ ƭǇǓŴƍƍ
+ƔƑǕƹŴƜǕǒƷҥΨqω ƕ Frobenius ਤƪɥƛΦᚌ҄ſƠƯƍ
+ǔŵ
+(3) dqω/qω = ωƬƯŴΩetࡁؕω1,...,ω d ǛӕǔƱŴqω1 ,...,q ωd ƨ
+ƪƸSz
+def
+= Spf (Rz) ƷᲢGd
+m ƴǑǔᲣžΦࡽ
+ƖឪƜƢŵ
+(4) ᳵƢǂƯƷqω =1 ᳷ƱƍƏவˑưɟॖႎƴൿǇǔSz Ʒ A− ஊྸໜƸz ∈
+S(k) Ʒž೅แႎƳਤƪɥƛſƴƳǔŵ
+፯ƞǕǔƱƍƏໜƴƓƍƯŴFrobenius ਤƪɥƛƱ
+ƕஊǔŵ
+(C.)ӳᲴII. Ʒ (D.)ྸƷFrobeniusƸŴ
+ƬƯŴཎƴ
+Mg,r৑ႎɟॖ
+፯ƠƯƍǔŵ ƭǇǓŴ
+ƜǕǒƷFrobenius ਤƪɥƛƴǑǔɟॖ҄ǛŴμX Ǎ μWP ƴǑǔᙐእᚐௌ
+ႎƳɟॖ҄Ʒp ᡶ༿ƱǈƳƠƨƍŵ
+୼ƴŴpஊள˄ƖƷᲣ೅ૠp Ʒ୺ዴƷž೅แႎƳਤƪɥƛſƱ
+ஊள(P, ∇P ) ǛŴƦƏƍƏ೅แႎƳ୺
+ዴ X → Spec(A) ƴСᨂƢǔƱŴ
+π1(XK) → PGL2(Zp)
+ᲢƜƜưŴK Ƹ A Ʒՠ˳ᲣƳǔ೅แႎƳcrystallineǒǕǔŵ ƜǕǋŴ C ɥƷɟॖ
+ƴǑǔPSL 2(R) ǁƷ೅แႎƳᘙྵƱ᫏˩ႎƳǋƷưƋǔŵ
+(D.) ౹ό୺ዴƷSerre-TateӳƠƔৢƬƯƍƳƔƬƨƚ
+ƲŴg =1 ,r =0ஜႎ
+ӳƴƋǒǘǕǔྸᛯƱ
+౹ό୺ዴƷSerre-Tate ྸᛯưƋǔŵ̊ƑƹŴ೅แႎƳȑȩȡȸǿqω
+8
+
+ƸƪǐƏƲ Serre-Tate ȑȩȡȸǿƴƳǓŴ೅แႎƳਤƪɥƛǋSerre-Tate ྸᛯƷƦǕƱƪǐ
+ƏƲɟᐲƢǔƷưƋǔŵ
+IVឋᲴ
+(A.)ႎƳᏑ୎ᲴSlog =(
+ M
+log
+g,r)Zp ƱƠŴ D→ SƱƠƯƋǒǘǕǔ੗
+ዓ˄ƖƷ P1-bundle Ǜ parametrize ƢǔȢǸȥȩǤᆰ᧓ᲢᲷSႎ formal schemeᲣ
+ƱƢǔŵƦƏƍƏ੗ዓ˄ƖƷP1-bundle ƕ crystalႎformal
+scheme D→ S ƴᐯ໱ƳžGauss-Maninſ੗ዓ ∇D ƕλǔƜƱƕЎƔǔŵᲢƭǇǓŴ(D, ∇D)
+ǛŴ୍ᢄႎƳ୺ዴƷ˴ǒƔƷ ᩼ǢȸșȫƳ de Rham cohomologyƑƹƍƍŵᲣ୼ƴŴ
+Sg,r ⊆Dƕ Hodge ﬁltration ƴƔǘǔžHodge subspace ſƷǑƏƳǋƷǛ
+ƴŴᲢnaive Ɣ renormalizedƠƳƍƕᲣFrobenius ƴǑ
+Ɩ৏ƠǛᎋƑǔƜƱƴǑƬƯŴ(D, ∇D) ƴ˴ǒƔƷFrobenius ˺ဇƕλǔƱᙸǔƜƱǋư
+Ɩǔŵ ұƪŴ Faltings Ǎ FontaineחMF ∇ܭࣖ
+ႎșǯȈȫᆰ᧓ᲢƭǇǓŴș
+ႎformal schemeſƴ̖Ǜӕǔŵ
+ᝋƕൿƠƯMF ∇ ƴλƬƯƍǔǘƚưƸƳƍƕŴ
+ႎƴƸŴMF ∇ᝋƱ˩ƨǑƏƳǋƷưƋǔŵ ƱƜ
+ǖƕŴǋƠ MF ∇ᝋƩƬƨǒŴFrobenius᣽ǛƱǔƜƱƴǑǓŴπ1(Slog
+Qp ) Ʒ
+crystalline፯ƠƯƍǔƸƣƩŵ ƋǔƍƸŴƍƍƔƑǕƹŴ Slog
+Qp
+Ʒஊᨂ´etale ᘮᙴƷ
+፯ƢǔŵƩƔǒŴƏǇƘƍƚƹŴ(D, ∇D) Ʒ Frobenius᣽ǛƱǔƜƱƴǑƬƯŴ
+(D, ∇D) ƴ᨟ˤƢǔSlog
+Qp
+Ʒஊᨂ´etaleƳƕǒŴƦƏƸƍƔ
+Ƴƍŵ ɟ૾Ŵ (
+N
+ord
+g,r )Zp → Slog፯ƞǕƯƍǔ೅แႎƳFrobenius ਤƪɥƛǛƱǔ
+ƜƱƴǑǓŴ೅ૠ0 ưƸ´etale ƱƳǔǑƏƳŴSlogǒǕƯƍ
+ǔƕŴ(
+N
+ord
+g,r )Zp → Slog ƕஊᨂưƸƳƍƨǊƴŴƦƷኒƷᘮᙴǋஊᨂƴƸƳǒƳƍŵ
+ƭǇǓŴ(D, ∇D) ƴ᨟ˤƢǔ žᘮᙴƷኒſ Ǜನ঺ƢǔɥưƸŴƋǔॖԛưƸŴƓʝƍ
+dual ưƋǔžproperſƱž´etaleឋƷϋŴʻǇưƸŴž´etaleſƷ૾Ǜ
+ƠƯŴžproperƬƯŴƜƷ(IV.) ưƸŴ
+ʻǇưƷྸᛯƕஊƠƯƍǔžproperឋƴƭƍƯᛟଢƠƨƍŵ ƋǔॖԛưƸŴ
+ſᲣƱƍƏopenƳ
+ƘƱǋ Zp˴ƳǔžproperſǋஊƢǔǘƚƕƳƍƕŴƪǐƬƱᭃƘǂƖƜƱƴŴ
+ž´etaleӳƱӷಮŴZp ưƳƘŴ QpƳƜƱ
+ྸᛯǋ˴ǒƔƷॖԛưƷžproperſǛƪǌǜƱஊƠƯƍǔƷƩŵ
+(B.)Ʒ᧙̞Ჴ ଺᧓Ʒ᧙̞ưኬƔƍƜƱƴƸ˷ǓᇌƪλǓƨƘƳƍƕŴኽௐ
+ƩƚǛᡓǂǔƱഏƷǑƏƴƳǔᲴ
+ྸᲴ
+ N
+adm
+g,r Ǎ
+ N
+ord
+g,r
+ƸǢȕǣȳƳǹǿȃǯưƋǔŵ ᲢžǢȕǣȳƳǹ
+ǿȃǯſƱƸŴƦƷcoarse moduli ƕǢȕǣȳưƋǔƜƱǛॖԛƢǔŵᲣ
+Ɣ
+ƴ᧙ƢǔኽௐƕЈǔƷƩŵ ƦƠƯŴƦƷƔƳǓႺ੗ƳCorollary ƱƠƯŴ
+ഏƷǑƏƳǋƷƕƋǔᲴ
+9
+
+ኒᲴ p ƕ g Ǎ rƖƚǕƹŴ(
+Mg,r)Fp˴ႎƴᡲኽƴ
+Ƴǔŵ
+ƭǋƷᲢTeichm¨uller ྸᛯ
+Ǎ Hurwitz schemeƷКᚰƷ᩿ႉǈƸƲƜƴƋǔ
+ƔƱƍƏƱŴ
+ྸᛯᲷTeichm¨uller Ǎ Bers Ʒ C ɥƷྸᛯƷp ᡶ༿ſ
+ƴƳǔƜƱƴƋǔƱƍƑǑƏŵ
+(C.)ᲴᚡӭᲴ
+R: ͌፭ƕ p-divisible ƱƳǔǑƏƳ೅ૠp Ʒ˄͌࿢ŵ ƦƷՠ˳Ǜ KR Ʊ୿
+Ƙŵ
+Z
+def
+= Spf (W(R)) ᲢƜƜưŴSpf Ƹ p ᡶႎƳˮႻƴ᧙ƠƯƱǔᲣŵ
+Zη
+def
+= Spf (W(KR))ŵ
+T g,r:ኒ
+... (
+N
+ord
+g,r )Zp → (
+N
+ord
+g,r )Zp → (
+N
+ord
+g,r )Zp → (
+Mg,r)Zp
+Ƹ μᢿ ೅แႎƳFrobeniusࢨݧ
+ಊᨂŵ
+ݧ
+T g,r →
+ Mg,r ƸഏƷǑƏƳ˄͌ႎவˑǛ฼ƨƠƯƍǔŵ
+ྸᲴ Z− Ǎ Zη−ݧ
+Tg,r(Z) →T g,r(Zη) ×Mg,r(Zη ) Mg,r(Z)
+ưƋǔŵᲢlog ༿ǋஊǓŵᲣ
+ݧ
+T g,r →
+ Mg,r ƕžproperſưƋǓŴұƪŴƨƩƷ´etale Ƴ
+ſưƋǔƷǈƳǒƣŴžᘮᙴſƬǆƍǋƷưƋǔƜƱƕƍƑǔŵ ƋǔƍƸŴ˂Ʒᚕƍ૾Ǜ
+ƢǕƹŴbaseƳFrobeniusஊளƕᡚ҄Ơ
+ƳFrobeniusஊளưƋǔŵ
+(D.) Teichm¨ullerƍЈƠƯǈǕƹŴӞχႎTeichm¨uller ྸᛯưǋŴ
+ႎƳኽௐƸTeichm¨ullerƳǜƩƚƲŴƦǕǛᚰଢƢǔƨǊƴƸŴ
+ᩃ৭ƴƍƏƱŴƜǜƳ˺৆ƕဇƍǒǕǔᲴTeichm¨uller ϙ΂Ʒžᆰ᧓ſƔǒ
+Mg,r ǁƷᐯ໱
+Ʒϙ΂ξƕஊƬƯŴƦƷϙ΂ξưƋǔƜƱǛƍƍƨƍƕŴƦǕǛƍƏƨǊƴƸŴξƷ
+΂ƕ open Ɣƭ closed ưƋǔƜƱǛƍƑƹǑƍŵopen ưƋǔƜƱǛƍƏƨǊƴƸŴξƕ´etale
+ưƋǔƜƱǛᚰଢƠŴclosedӳ
+ƴƸŴTeichm¨ullerឋᲣƕ฼ƨƞǕǔƜƱǛᚰଢƢǔŵ ƦƠƯŴƦƷᚰଢƷиင
+ཋƱƠƯŴ
+Mg,r ƳƍƠƸ Mg,rǋЈǔŵ ƩƔǒŴʻƷӞχႎTeichm¨uller ྸᛯƷ੨
+ϙƔǒᎋƑǔƱŴpǛμᢿᅆƠƨƜƱƴƳǔŵ
+10
+
+VᲴ
+Ƣ
+ǔྸᛯƨƪƕƲƏ᧙̞ƠƋƬƯƍǔƴƭƍƯƸ˴ǋƍƬƯƍƳƍŵᲢƦƷྸဌƸҥƴŴᅶƷᄂ
+ᆮƕǇƩƦƜǇưᡶǜưƍƳƍƜƱƴƋǔƩƚƩƕŵᲣƠƔƠŴƲƷእໜǛӕƬƯǋŴʻǇư
+ࡸ࢟
+ƍƨƍŵ
+ƷƱƜǖŴǇƩŴǖƘƳʖेƢǒ ᇌƯƯƍƳƍƷưŴ˴ǋ᩼ᐯଢƳƜƱƕƍƑƳ
+ƍŵ
+ႎƳʖेſƸưƖǔŵ
+ஊྸૠ˳ƷƋǔእໜ
+v᧏ƢǔƱƍƏƜƱƸŴ
+Mg,r ƴ v− ᡶႎƳ
+ႎƳᚇໜǛƱǔƱŴƦƷɟॖ҄ྸᛯ
+ƸŴᲢZ ɥƷᲣ
+ Mg,rƠƯŴv ƱƍƏእໜƴƓƍƯŴZ Ɣǒž̨ƴƍƏſF1 ᲢᲷ Z Ʒɶ
+ૠ˳ſᲣǁƷdescent dataƬƯŴǋ
+ƠƦǕƧǕƷእໜưನ঺Ơƨ descent dataǓӳƬƯƍƞƑƢǕƹŴZ ɥƷ
+ Mg,r Ǜ
+ǇǔƝƱ F1ႎƴᛦǂƯƍƖƨ
+ƍŵ
+૨ྂ
+[1] Gardiner, F., Teichm¨uller Theory and Quadratic Diﬀerentials, John Wiley and Sons
+(1987).
+[2] Lehto, O.,Univalent Functions and Teichm¨uller Spaces, Graduate Texts in Mathematics
+109, Springer (1987).
+[3] Faltings, G.,Crystalline Cohomology and p-adic Galois Representations, JAMI Confer-
+ence, Johns Hopkins Univ. Press, pp. 25-79 (1990).
+[4] Mochizuki, S., A Theory of Ordinary p-adic Curves, manuscript.
+[5] Mochizuki, S., The Generalized Ordinary Geometry of p-adic Hyperbolic Curves,i n
+preparation.
+11

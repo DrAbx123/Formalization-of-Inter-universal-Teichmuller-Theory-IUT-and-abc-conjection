@@ -1,0 +1,58 @@
+INTER-UNIVERSAL TEICHM ¨ULLER THEOR Y: A PROGRESS REPOR T
+Shinichi Mochizuki
+October 2010
+The analogy between number ﬁelds and function ﬁelds of curves (e.g., hyperbolic curves)
+over ﬁnite ﬁelds is quite classical. In the present talk, we survey work in progress concerning
+a theory developed by the lecturer during the last decade — in the spirit of this analogy —
+whose goal is to construct an analogue for number ﬁelds “equipped with an elliptic curve” of the
+p-adic T eichm¨uller theory developed by the lecturer during the early 1990’s for hyperbolic
+curves over a ﬁnite ﬁeld “equipped with a nilpotent ordinary indigenous bundle” .F r o m a n e v e n
+more classical point of view, one may think of this theory as a sort of analogue for number ﬁelds
+of classical complex Teichm¨uller theory, in which canonical deformations of the holomorphic
+structure of a hyperbolic Riemann surface of ﬁnite type are constructed by dilating one of the
+two underlying real dimensions of the Riemann surface, while leaving the other dimension ﬁxed
+(i.e., “undeformed”).
+In the case of number ﬁelds equipped with an elliptic curve, one thinks of the ring struc-
+ture of the number ﬁeld as a sort of “arithmetic holomorphic structure”. One then constructs
+canonical deformations of this arithmetic holomorphic structure — i.e., analogues of the canon-
+ical liftings of p-adic Teichm¨uller theory — by applying the general theory of Frobenioids, as
+well as the theory of the Frobenioid-theoretic theta function (developed in earlier papers by the
+lecturer). At a more concrete level, if one thinks of the ring structure (i.e., “arithmetic holo-
+morphic structure”) of the given number ﬁeld as consisting of “two underlying combinatorial
+dimensions” corresponding to addition and multiplication, then working with Frobenioids
+corresponds, roughly speaking, to performing operations with the multiplicative monoids in-
+volved (i.e., multiplicative portions of the rings involved) — in a fashion motivated by the theory
+of log structures; in particular, such operations are not necessarily compatible with the additive
+portions of the ring structures involved. Alternatively, if one thinks of the ring structure (i.e.,
+“arithmetic holomorphic structure”) of the various local ﬁelds that arise as localizations of the
+given number ﬁeld as consisting of “two underlying combinatorial dimensions” corresponding
+to the group of units and the value group, then one may think of these canonical deformations
+of the arithmetic holomorphic structure as deformations in which the value groups are (canon-
+ically!) dilated — by means of the theta function — while the units are left undeformed.
+Typeset by AMS-TEX
+
+2 SHINICHI MOCHIZUKI
+Since such “arithmetic Teichm¨uller dilations” are manifestly incompatible with the ring struc-
+ture of the given number ﬁeld, it follows that they are not compatible, in general, with various
+classical scheme-theoretic constructions performed over the number ﬁeld which depend on this
+ring structure. In particular, these arithmetic Teichm¨ uller dilations fail to be compatible with
+the various basepoints of arithmetic fundamental groups involved (e.g., Galois groups) which
+are deﬁned by considering scheme-theoretic geometric points. The resulting incompatibility
+of (conventional scheme-theoretic) basepoints on either side of the “arithmetic Teichm¨ uller
+dilation” gives rise to numerous indeterminacies; these indeterminacies lead naturally to the
+introduction of tools from anabelian geometry. It is this fundamental aspect of the theory that
+is referred to by the term “inter-universal”.
+The (expected) main theorem of inter-universal Teichm¨uller theory consists of a fairly ex-
+plicit computation, up to certain relatively mild indetermacies, of the “arithmetic Teichm¨ uller
+deformations of a number ﬁeld equipped with an elliptic curve” discussed above by applying
+various results obtained in previous papers by the lecturer concerning local and global absolute
+anabelian geometry, tempered anabelian geometry, and the ´ etale theta function. This passage
+from the F robenioid-theoretic deﬁnition of the arithmetic deformations involved to a more
+explicit Galois-theoretic description may be thought of as a sort of global arithmetic ana-
+logue of the classical computation of the Gaussian integral (i.e.,
+∫
+∞
+−∞ e−x2
+dx) by means of the
+passage from cartesian to polar coordinates. Inequalities of interest in diophantine geometry
+may then be obtained as (expected) corollaries of this (expected) main theorem.

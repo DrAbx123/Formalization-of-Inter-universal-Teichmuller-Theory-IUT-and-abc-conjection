@@ -1,0 +1,729 @@
+An Introduction to p-adic Teichm¨uller Theory
+ஓஉ ૼɟ
+1 The Stack of Nilcurves
+1.1˴ƔǒƷ motivation
+ஜራƴƭƍƯƸ [Ord], Intro ǛӋༀŵ
+X Ǜ C ɥƷ hyperbolic curve (smooth, proper, connected, genus g minus
+r points 2g − 2+ r ≥ 0)ŴXஜ፭π1(X) ƕ
+୍ᢄᘮᙴ ˜X ƴ˺ဇƢǔŵ
+Koebeྸ ˜X ∼= H := {z ∈ C|Im(z) > 0}
+Remark 1.1. Mumford-Schottky ɟॖ҄ƱƸᢌƏŵ
+բ᫆ᲴƜǕƷ p ᡶ᫏˩
+ ƕǄƠƍŵ
+pྸƷˊૠႎƳᢿЎǛӕǓЈƢŵ
+π1(X) → PSL2(R) → PGL2(C)
+ƔǒᲢPSL2(R) Ƹ H፭μ˳ƱǈƳƤǔᲣ
+( ˜X× P1
+C)/π1(X) → ˜X/π1(X)
+ǔŵƜƷˊૠ҄Ǜ
+P → X
+ƱƢǔŵ
+H ∼= ˜X ↪→ ˜X× P1
+C
+ǑǓ section σ : X → P Ʊ੗ዓ ∇PǇǓŴ
+࠯ݱSpencer morphism ∇P (σ): τX
+∼
+→ σ∗τP/X
+ƱƳǔŵƜƷǑƏƳ (P, ∇P )ஊளᲢindigenous bundleᲦ᳃᲼Უ
+Ʊ
+ƍƏŵ᳃᲼μ˳Ƹ H0(X,ω ⊗2
+X ) ɥƷ torsor ƴƳƬƯƍǔᲢr =0 ƷƱƖᲣᲴ
+¯Sg,r → ¯Mg,r
+1
+
+Ƹ Ωlog
+¯Mg,r
+-torsorŵƜƜưŴ¯Sg,r, ¯Mg,r ƸƦǕƧǕ stable curve+IB, type(g,r )
+stable curve Ʒ moduli ᆰ᧓ŵKoebe Ʒɟॖ҄Ɣǒ೅แႎᲢcanonicalܱ
+ǇǔᲴ
+(¯Sg,r)C →→
+( ¯Mg,r)C
+sH
+←←
+ƜǕƷ p ᡶ᫏˩ƕǄƠƍ
+1.2ឋ
+ᛇƠƘƸ [Ord], Ch.I, §1,2 ǛӋༀŵ
+1.2.1፯
+f : X → S Ǜ proper, smooth, genus g curve ƷଈƱƢǔᲢቇҥƷƨǊ
+r =0 )ŵ
+Deﬁnition 1.2. (P π→ X, ∇P )ஊளᲢ᳃᲼ᲣưƋǔƱƸŴ੗ዓ˄Ɩ P1-
+ȐȳȉȫưƋƬƯŴƋǔЏૺ σ : X → PƠƯ ∇P (σ): τX → σ∗τP/X
+ưƋǔƜƱǛƍƏŵ
+Remark 1.3. ƭǇǓ local ƴƸɟॖ҄ƴƳƬƯƍǔƱƍƏƜƱŵ
+1.2.2 Filtration & de Rham cohomology
+A =A d (P)= π∗τP/X ƱƓƘŵƜǕƸXޅ
+৑ႎƴ sl2Ƴ Lieࡸ׋
+π∗(τP/X ) i →→→→
+σ∗τP/X ∼= τX
+Ker i
+j →→→→
+↗↘
+↑↑
+(Iσ/I2
+σ) ⊗ τP/X ∼= OX
+Kerj
+∼= →→
+↗↘
+↑↑
+(I2
+σ/I3
+σ) ⊗ τP/X ∼= ωX
+Ɣǒ A Ʒ ﬁltrationƞǕǔᲴ
+(F −1/F0)(A)= τX, (F0/F1)(A)= OX, (F1/F2)(A)= ωX.
+ƠƨƕƬƯŴR.fDR,∗(A, ∇ A) ƴ ﬁltrationƞǕǔŵ
+2
+
+Proposition 1.4. i ̸=1 ƷƱƖŴ
+RifDR,∗(A, ∇ A)=0 .
+i =1μኒЗƕƋǔ:
+0 → f∗ω⊗2
+X → R1fDR,∗(A, ∇ A) → R1f∗τX → 0.
+Ტ(P, ∇P )ŴX ƷКƷ
+ᲣǛᚘǔŵᇹʚ᪮Ɣǒᇹɤ᪮ǁƷϙ΂Ƹ curve࢟٭
+ưƋƬƯ (P, ∇P )ƞƤǔŵ
+1.2.3 F ormal uniformization
+ϙ΂Ƹ ∇PᆢЎƴǑǔᲵσ፯Ƣǔ
+ƱƖƴྵǕǔ section ŵ
+π∗
+1P
+∼= →→
+↘↘↑↑↑↑↑↑↑↑↑ π∗
+2P
+↙↙←←←←←←←←←
+↘↘↗↗↗↗↗↗↗↗↗
+X
+PD
+×S X
+π∗
+1 σ
+↖↖
+π1
+↙↙←←←←←←←←← π2
+↘↘↑↑↑↑↑↑↑↑↑ P
+↙↙↙↙↙↙↙↙↙↙↙
+XX
+D Ǜ π2 ƴǑǔ O Ʒ push-forwardƕư
+ƖǔᲴ
+X
+σ
+→→↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+d
+↓↓
+Spec D →→↖↖↖↖↖↖↖
+↘↘↑↑↑↑↑↑↑↑↑ P
+↙↙↙↙↙↙↙↙↙↙
+X
+ƜƜư d Ƹ diagonal X↪ → X
+PD
+×S Xɟॖ҄ƕ
+ǒǕǔᲴ
+ˆOPD@σ
+P
+ξ
+∼→ D.
+ưƋǔƜƱƸŴ
+Iσ/I2
+σ →→
+ID/I2
+D
+σ∗ωP/X
+∼= →→
+ωX
+3
+
+࠯ݱSpencer Ɣǒŵ
+Corollary 1.5.
+P ∼= P(ID/I[3]
+D )
+ƭǇǓŴ᳃᲼Ƹ ∇P ưൿǇǔŵ
+Proof.
+P ∼= P(Iσ/I[3]
+σ )( P1-bundle Ʒ tautology)
+∼= P(ID/I[3]
+D ) (formal uniformization ǑǓ)
+Corollary 1.6.
+{ ᳃᲼μ˳ } =( f∗ω⊗2
+X )-torsor
+Proof.
+0 →→
+I[2]
+D /I[3]
+D
+→→
+ID/I[3]
+D
+→→
+ID/I[2]
+D
+→→
+0
+ω⊗2
+X
+∼=
+↑↑
+ωX
+∼=
+↑↑
+∇P , ∇ ′
+P ǛʚƭƷ੗ዓƱƢǔƱŴ∇P −∇ ′
+P
+∈ F0(Ad(ID/I[3]
+D ))⊗ωX ŵ∇P , ∇ ′
+P
+Ǜ˄᨟Ƣǔ ξƕ idƸ ∈ F1(Ad(ID/I[3]
+D )) ⊗
+ωX = ω⊗2
+X ŵ
+1.3 ദ೅ૠưƷྸᛯ
+ᛇƠƘƸ [Ord], Ch.II, §2 ǛӋༀŵ
+1.3.1 Motivation
+Mell Ǜ౹ό୺ዴƷ Zp ɥƷ stackŴE
+f
+→ Mell Ǜ tautological ౹ό୺ዴŴ
+E = R1fDR,∗OE ƱƢǔŵE Ƹ Mell ɥƷȩȳǯᲬƷșǯȈȫளư∇ E Ǜ Gauss-
+Manin ੗ዓƱƢǔŵƜƜư P = P, ∇P = P(∇E) ƱƓƘƱ (P, ∇P ) Ƹ᳃᲼ƴ
+ƳǔᲢC ɥưǋ ೅แႎ᳃᲼
+ ƴƳǔᲣŵɟ૾Ŵp ᡶႎƴƸŴFrobenius Ʒ˺ဇƕ
+ƋǔŵƜƜưƸƠƔƠ naive Ƴ Frobenius ưƸҗЎưƳƍƨǊ renormalized
+Frobenius F∗ ǛဇƍǔᲢᛇƠƘƸ Main Theorem II ǛӋༀᲣŵ
+Frobenius invariance F∗(E, ∇ E) ∼= (E, ∇ E) F∗(P, ∇P ) ∼= (P, ∇P )
+4
+
+ƖƳȒȳȈƕ
+ǒǕǔᲴ
+(E, ∇ E) Ʒ p-curvature
+ Ƹ square nilpotent
+Remark 1.7. p-curvature ƱƸ Ad(E) ⊗ Φ∗
+Mell ωMell ƷΨưŴδ ƕ derivation
+Ƴǒ δǛ ∇δp − (∇δ)p ƴƏƭƢŵ
+1.3.2 Nilcurves Ʒ stack
+Nilcurve Ʒstack
+ Ng,r ƱƸhyperbolic curveƱ᳃᲼ƷኵưƋƬƯp-curvature
+ƕ square nilpotent ƴƳǔᢿЎƱƢǔᲴ
+Ng,r
+↘↙ →→
+↘↘↑↑↑↑↑↑↑↑↑ (
+Sg,r)Fp
+↓↓
+(
+Mg,r)Fp
+Theorem 1.8 (Main Theorem I).
+¯Ng,r → ( ¯Mg,r)Fp
+Ƹ ﬁnite, ﬂat, local complete intersection, degree=p3g−3+rŵ
+ƭǇǓŴup to isogeny ưƸƜǕƕ೅แႎƳ section ƱƳƬƯƍǔŵ
+1.3.3ྸƷᚰଢ
+(a)
+(¯Sg,r)Fp
+V →→
+↘↘↑↑↑↑↑↑↑↑↑↑
+¯Qg,r = V(Φ∗Ωlog
+¯Mg,r
+)
+←←←←←←←←←←←←←
+( ¯Mg,r)Fp
+૲ǊƷϙ΂ƸƲƪǒǋ (3g − 3+ r)-dim relative aﬃne space ŵV Ƹ᳃᲼ɥƷ
+Verschiebung(፯Უŵ¯C
+f
+→ ¯Mg,r Ǜ universal curve ƱƢǔŵ
+(P, ∇P ) ↦→− det(p-curvature ∈ Ad(P) ⊗ Φ∗
+XωX/S)
+= 1
+2Tr(p-curvature2) ∈ f∗Φ∗
+Xω⊗2
+X/S Ɣƭ X/S-horizontal
+⇒∈ Φ∗
+S(f∗ω⊗2
+X/S)
+⇒
+ Ng,r = V−1(0)
+5
+
+ྸǛᅆƢƴƸŴXi ƨƪǛ ( ¯Mg,r)Fp ɥƷ relative aﬃne೅Ʊ
+ƢǔƱƖŴ
+V : Xi ↦→ Xp
+i +( d e g<p ) i =1 ,..., 3g − 3+ r
+ƭǇǓŴdeg ≤ pݧΦ∗Ω → SpΩ ưƋǔƜƱǛƍƑƹǑ
+ƍŵƦǕƴƸ
+1
+2Tr(p-curvature2) ǛᚘምƢǕƹǑƍ
+(b)
+(P, ∇P ) Ǜ᳃᲼ƱƢǔƱ P ƸƍƭǋӷơƩƔǒ
+∇P = ∇ + θ
+∇ƞǕƨǋƷưŴθ ∈ F1(Ad(P)) ƕѣƘᢿЎƱưƖǔŵ ƭǇǓŴ1
+2Tr({(∇+
+θ)p}2) Ǜ θƷ᧙ૠƱƠƯᚘምƠŴdeg ≤ pŴɼᙲ᪮ƕɥƷǑƏưƋǔŴƜƱ
+ǛᅆƤƹǑƍŵ
+(c)
+ǇƣƸŴ(∇ + θ)p ǛᎋƑǔŵθ2 =0
+ Ǜ̅ƏƱŴθƍ᪮Ƹ
+θ∇θ...θ ∇θƱ ∇θ∇ ... ∇θ∇
+ЭᎍƸʚʈƠƨǒŴ0 ƴƳǔƷư
+1
+2Tr{(∇ + θ)p}2 = 1
+2Tr(θ∇θ...θ ∇θ∇θ...θ ∇)+( d e gθ <p )
+ǑǓ degθ ≤ p.
+(d)
+θ2 =0 ƴදॖƢǔƱ
+θ∇θ∇θ...θ ∇θ∇ =[ θ,∇]p−1θ△
+ƱƜǖƕŴ[θ,∇] Ƹ OX-linear ƔƭŴ∈ F0(Ad(P))ŵƠƨƕƬƯŴ[θ,∇]p−1θ
+ǋ OX-linear Ɣƭ ∈ F1(Ad(P))ŵƠƔǋŴ∇ Ʒ F −1/F0 ᢿЎƸ OX-linearŵ
+࠯ݱSpencer ϙ΂ƕ id ưƋǔƜƱǛ̅ƏƱŴ
+1
+2Tr(... ) = (abs.const)θp +( d e gθ ≤ p)
+Ƹ abs.const ƷᚘምŵƜǕƸ node Ǎ marked point ƷȢȎȉȭ
+ȟȸǛᚘምƢǕƹǑƍᲴ(M = ȢȎȉȭȟȸ˺ဇእ)
+(t d
+dt Ǜ˺ဇƞƤǔƱ)p-curvature =Mp − M = M((det M)
+p−1
+2 − 1)
+⇒ 1
+2Tr (p-curvature2)= −det(M)((detM)
+p−1
+2 − 1)2
+⇒ degθ =d e gdet M = p
+6
+
+2 Canonical p-adic Liftings
+2.1 Ordinary nilcurves Ʒ canonical liftings
+ᛇƠƘƸ [Ord], Ch.II, §3; Ch.III ǛӋༀŵ
+Ng,r ⊇ (
+N
+ord
+g,r )Fp = { ¯Mg,r ɥ ´etale locus} ̸= ∅
+ǛᎋƑǔŵƜǕǛ ordinary nilcurves ƱǑƿŵJacobian ƕ ordinary ƱƸᢌ
+Əŵ“ordinary”፯ǛɨƑǑƏŵX → S,( P, ∇P ) Ǜ Fp ɥƷ
+nilcurve ƱƠŴΦ ư Frobenius ǛᘙƢŵ
+p-curvature ∈ Ad(P) ⊗ Φ∗
+XωX/S
+⇒ Φ∗
+XτX/S → Ad(P)
+⇒ Φ∗
+XτX/S → Ad(P) → (F −1/F0)(Ad(P)) = τX/S
+ǔᲴ
+Φ∗
+SR1f∗τX/S
+Φ∗
+X
+→ R1f∗Φ∗
+XτX/S → R1f∗τX/S(= ΘMg,r |S).
+Theorem 2.1.
+(X → S, (P, ∇P )) ordinary ⇔ Φ∗
+SR1f∗τX/S ⋍ R1f∗τX/S
+Proof. ဦŵƩƚƲ
+´etale ⇔ Ng,r Ʒ tangent space ⋍ Mg,r Ʒ tangent space
+ƍƨƩƚǔƸƣŵ
+2.1.1 ordinary nilcurve Ʒ canonical lifting
+XFp → SFp ⊆ S =S p e c (W(R)),R :perfect/Fp, P := (P, ∇P )Fp Ǜ೅ૠ p
+Ʒ ordinary nilpotent ᳃᲼ƱƢǔŵƜǕǛ (XZp , PZp ) ƴ canonical ƴਤƪɥ
+ƛƨƍŵ
+Theorem 2.2 (Main Theorem II). ɦᚡƷவˑǛ฼ƨƢ unique Ƴ
+(XZp , PZp ) ƕƋǔŵ
+வˑ: F∗PZp ⋍ PZp
+Remark 2.3. PZp Ǜ Crys(XFp /S) ɥƷ P1-bundle Ʒ crystal ƱƢǔŵP =
+P(E) ƷƱƖŴF1(E) ⊆ E ƱƍƏ rank 1፯ƴЈƯƘ
+ǔ σ ǑǓൿǇǔŵΦX Ǜ Frobenius ƱƢǔƱƖŴ
+Φ∗
+X(E, ∇ E) ⊗ Fp ⊇ Φ∗
+XF1(E) ⊗ Fp.
+7
+
+renormalized Frobenius ƴǑǔ pull-back F∗(E, ∇ E) Ǜ Φ∗
+X(E, ∇ E) Ʒ section
+ưƋƬƯŴmod p ƠƨƱƖƴ Φ∗
+XF1(E) ⊗ Fp፯ƢǔŵƜǕƸ
+rank 2 șǯȈȫளƷ crystal ƴƳǔŵF∗(P, ∇ P)҄ƱƢǔŵ
+ƍЈƢŵᇹɟ᪮ƸF2Ŵᇹɤ᪮Ƹ F −1/F0 ưƋƬƨŵ
+0 → f∗ω⊗2
+X/S → R1fDR,∗Ad(P) → R1f∗τX/S → 0
+Proof.ưᎋƑǔŵɦƷӲᘙƸPZp ǛᘙƢŵƢǂƯƕOK ƴƳǕƹᚰଢƕ
+ኳǘǔŵ
+(1) mod p ƴƭƍƯƸǘƔƬƯƍǔŵ
+F2
+ F −1/F0
+OK
+ OK
+ mod p
+?
+ ?
+ mod p2
+?
+ ?
+ mod p3
+Lemma 2.4. F∗ ƢǔƱ
+F −1/F0
+ ∼→ p−1 ·
+ F −1/F0
+F2
+ → p2 ·
+ F2
+Remark 2.5. ᚰଢƴƭƍƯƸ [Ord], Ch.III, Lemmas 2.5, 2.6 ǛӋༀŵ
+(2) Lemma ǑǓ p ·
+ F −1/F0
+ mod p2ƞǕǔƷưŴ
+F2
+ F −1/F0
+OK
+ OK
+ mod p
+?
+ OK
+ mod p2
+?
+ ?
+ mod p3
+ƭǇǓŴXZ/p2 ƕൿǇƬƨŵ
+(3) F −1/F0 mod p3ƞǕǔᲴ
+F2
+ F −1/F0
+OK
+ OK
+ mod p
+?
+ OK
+ mod p2
+?
+ OK
+ mod p3
+?
+ ?
+ mod p4
+ƭǇǓŴჇɥƷ OK Ɣǒ OK ƱƳǔŵ
+(4) Lemma ǑǓ (F∗P)Z/p2 Ƹ F2 mod p2 ƴǑǒƳƍƷưவˑǑǓƜǕǋ
+8
+
+ൿǇǔŵ
+F2
+ F −1/F0
+OK
+ OK
+ mod p
+OK
+ OK
+ mod p2
+?
+ OK
+ mod p3
+?
+ ?
+ mod p4
+ƜǕƸ (2) ƱӷơǑƏƳཞඞƴƳƬƯƍǔƷư৖᪯ǛጮǓᡉƤƹǑƍŵ
+2.2 moduliӳ
+ᛇƠƘƸ [Ord], Ch.III ǛӋༀŵ
+(
+N
+ord
+g,r )Fp
+´et→ (
+Mg,r)Fp Ƹ ´etale ƳƷư unique Ƴ p-adic Ƴਤƪɥƛ N :=
+(
+N
+ord
+g,r )Zp
+´et→ (
+Mg,r)Zp ƕƋǔŵέǄƲƷ §1 ƷᜭᛯưŴSFp := NPF
+Fp
+ƱƠƯƓ
+ƘƱŴ
+XZp → S = W(NPF
+Fp )
+⇒ S → (
+Mg,r)Zp s.t. N ǛኺဌƢǔ
+⇒ S → N
+ǔŵ
+Lemma 2.6. ∃! Frobenius lifting ΦN : N → N such that
+S −−−−→ N
+↑⏐⏐ΦS
+↑⏐⏐ΦN
+S −−−−→ N
+Corollary 2.7. ∃!(ΦN, (P, ∇P )) such that F∗(P, △P ) ∼= (P, ∇P ).
+Remark 2.8. ᇹᲫᇘ §1 Ʒ sH Ʒ᫏˩ưƋǔ p-adic formal stack ᧓Ʒϙ΂ƕ
+ǒǕǔᲴ
+(
+Sg,rˆ)Zp
+↓↓
+N
+↗↗↙↙↙↙↙ →→
+(
+Mg,rˆ)Zp
+Remark 2.9. CӳᲢBers ɟॖ҄ᲣƱӷಮŴΦN Ƹ N೅Ǜ
+ɨƑǔᲛᲢSerre-Tate Ʊ᫏˩ႎƳƕǒ Torelli ƴ᧙ƠƯ compatible ưƸƳƍᲣŵ
+Remark 2.10. ΦN ƷǑƏƳ Ordinary Frobenius liftingᚐௌႎǱȸȩȸ
+ᚘ᣽Ʒ p ᡶ᫏˩ưƋǔŵ
+9
+
+p-adic
+ C
+hyperbolic curves
+ p-adic Teichm¨uller
+ Weil-Petersson metric
+abelian varieties
+ Serre-Tate
+ Siegel upper half-plane metric
+2.3 Galois ᘙྵ
+ᛇƠƘƸ [Ord], Ch. IV, V ǛӋༀŵ
+2.3.1 k perfect, char p ƷƱƖ
+X → S =S p e c (W(k)); (P, ∇P ) Ǜ canonical lifting ƱƢǔŵP ɥƴƸ
+Hodge ﬁltration Ŵconnection ∇P ŴFrobenius action F∗(P, ∇P ) ∼= (P, ∇P )
+ƕλǔƷưŴFaltings Ʒ MF∇ (X) Ʒ object ƴƳǔŵFaltings ƷྸᛯǛᢘဇ
+ƢǔƱ canonical Ƴ crystalline Galois representation ƕưƖǔᲴ
+ρX : π1(XQp ) → PGL2(Zp)
+ .
+Remark 2.11. ᇹᲫᇘ § 1 CӳƷ π1(XC) → PSL2(R) ǛӋༀŵ
+2.3.2 moduli ƷƱƖ
+S = W(NPF
+Fp ) ƱƠƨƱƖŴӷಮƴ Galois representationܱ
+ƞƍ base
+፯ƞǕƯƍǔŵN∞ := lim←−(··· → N
+ΦN
+→ N
+ΦN
+→
+···
+ΦN
+→ N) ƱƢǔƱŴFaltings ƷྸᛯǑǓŴ
+ρXN∞ : π1(XN∞ ⊗ Qp) → PGL2(Zp)
+Remark 2.12.
+(N∞ ˆ)= W(NFp )
+N∞ Ƹ formal ƳǋƷŵƜǕǛᐯ໱ƴƋǔǋƷưᚐ᣷Ơƨƍŵ
+M =( Mg,r)Qp , X → M universal curve ƱƢǔŵOuter hom ǛᎋƑǔᲴ
+1 → π1(X¯η) → π1(X) → π1(M) → 1
+⇒ π1(M) acts onRep(π1(X¯η), PGL2(Zp))
+π1 ƷɟᑍᛯǑǓ໯ᨂഏᘮᙴ
+ R → M
+ ƕưƖǔŵʻŴMZp Ǜ p-adic formal
+stack ƱᙸƯ R ϋƷ normalization
+ ǛƱǔƱŴRZp → MZp ƕưƖŴρXN∞ Ǒ
+ǓഏƷኒƕưƖǔŵ
+10
+
+Corollary 2.13. p-adic open immersion
+N∞ ↪→ RZp
+ƕưƖǔŵ
+Remark 2.14.ӳƸ Katz-Mazur ǛӋༀŵ
+2.3.3 Crystalline induction
+N∞ → N Ƹ Zp(1)3g−3+r-covering ƳƷư ρXN∞ : π1(XN∞ ⊗ Qp) →
+PGL2(Zp) ǛᲢᘙྵᛯƷॖԛưᲣinduction ƢǔƱ
+ρXN : π1(XN ⊗ Qp) → PGL2(ƖƳ࿢)
+ƸŴƜǕǋ “crystalline”ŵƭǇǓŴ
+MF∇ →→
+Galois representation
+Crystalline induction →→
+↗↗
+representation Ʒ induction
+↗↗
+Crystalline induction ǛƢǔƱŴρXNƖƳᲣMF∇ -object ƕ
+˺Ǖǔŵ
+3 Irreducibility of Moduli
+3.1 Admissible locus Ʒ aﬃneࣱ
+ᛇƠƘƸ [Ord], Ch.II, §2; [Fnd], Ch.III, §2 ǛӋༀŵ
+X
+f
+→ S/Fp genus g curve Ʒଈ Ჵ(P, ∇P ) nilpotent ᳃᲼ƱƢǔŵp-curvature
+Ƹ Ad(P) → Φ∗ωX/S ưɨƑǒǕǔŵ
+Deﬁnition 3.1. Nilcurve ƕ admissible
+ ƱƸŴp-curvatureưƋǔƜ
+ƱŵAdmissible locus Ƹ open substack ƴƳǔᲴ
+N
+adm
+g,r ⊆
+ Ng,r.
+ʻŴ
+R1fDR,∗(Ad(P)) −−−−→ R1fDR,∗(Φ∗ωX/S)
+⏐⏐
+↓
+Φ
+∗
+Sf∗(ω⊗2
+X/S)
+Ƹ Cartier operatorᲣŵ
+Lemma 3.2.ݧ⇔ Ad(P) → Φ∗ωX/Sݧ
+11
+
+Proof. Riemann-RochƏ ŵ̊ƑƹŴ⇒ ƸᩐໜƕஊƬƨǒŴӳ
+ưƳƍŵ
+Corollary 3.3.
+ Ng,r ∋ νƠƯŴ
+N
+adm
+g,r ∋ ν ⇔ Ng,r smooth over Fp at ν
+Proof.፯ǑǓŴ
+ᲢCorᡀᲣ⇔ᲢLem ƷӫᡀᲣ
+⇔ᲢLemᡀᲣ⇔ᲢCor ƷӫᡀᲣ
+Remark 3.4.ƬƯŴordinary(=´etale locus) Ƹ admissibleྸƩ
+ƸŴgeneric admissible Ƹ ordinaryŵ
+ྸǛᅆƢŵ
+Theorem 3.5.
+ Ng,r ⊇
+ N
+adm
+g,r Ƹ (quasi-)aﬃne ŵ
+Proof. (P, ∇P ) Ǜ nilpotent admissible ᳃᲼ƱƢǔƱƖŴHasse invariantƷ᫏
+˩ hX ƕƋǔᲴωX/S = F1(Ad(P) ↪→ Ad(P) ↠ Φ∗
+XωX/S ŵ{hX ̸=0 }
+open
+⊆ X
+Ǜ curve Ʒ ordinary locus ƱƍƍŴΣ: = {h
+1
+2
+X =0 }
+closed
+⊆ X Ǜ curve Ʒ
+supersingular locus ƱƍƏŵƜƷƱƖŴΣ → S Ƹ (ﬁnite)´etale ưƋǔŵᚰଢ
+Ƹ classicalӳƷ Igusa’s thm Ʊӷಮŵ
+Ad(P) ↠ Φ∗
+XωX/S Ƹ square nilpotent ưƋǔƜƱǑǓŴ“conjugate ﬁltra-
+tion”ƕưƖǔᲴ
+Ad(P) i →→→→
+Φ∗
+XωX/S
+(
+0 ∗
+00
+)
+Ker i
+j →→→→
+↑↑
+OX
+(
+∗ 0
+0 −∗
+)
+Ker j
+∼= →→
+↑↑
+Φ∗
+XτX/S
+(
+00
+∗ 0
+)
+Σ ɥưƸŴωX/S ⊆ Ad(P) ƕ nilpotent ǑǓ ωX/S|Σ → OX |Σ ƸǼȭƴ
+ƳǔŵǑƬƯ ωX/S |Σ → Φ∗
+XτX/S |Σ = τ⊗p
+X/S |ΣǔƕŴƜǕƸ classical Ƴ
+supersingular elliptic curve ƷƱƖƱӷಮŴ ᐱǔ৑nonzero Ƴ Γ(Σ,τ⊗(p+1)
+X/S |Σ)
+ƷΨǛɨƑǔŵƱƜǖƕŴΣ → S Ƹ ﬁnite ´etale Ɣƭ ωX/S|Σ Ƹ ample
+ŴǑƬ
+ྸƕᅆƞǕƨŵ
+12
+
+3.2 Dormant locus Ʒ smoothࣱ
+ᛇƠƘƸ [Fnd], Ch.II, Ch.III, §1 ǛӋༀŵ
+X
+f
+→ S/Fp genus g curve Ʒଈ Ჵ(P, ∇P ) nilpotent ᳃᲼ƱƢǔŵp-curvature
+Ƹ Ad(P) → Φ∗ωX/S ưɨƑǒǕǔ (horizontal)ŵ
+Deﬁnition 3.6. Nilcurve ƕ dormant
+ ƱƸŴp-curvature≡ 0ŵDormant locus
+Ǜ
+ Ng[∞ ] ưᘙƢŵ
+Ng[∞ ]
+closed
+⊆
+ Ng ưƋǔŵ
+DormantƢǔƱŴp-curvature ƷɟᑍᛯǑǓŴഏƷǑƏƳP1-bundle
+ƢǔᲴ
+P →→
+↓↓
+Q
+↓↓
+X ΦX/S
+→→
+XF
+Ɣƭ {P Ʒ horizontal sections }={Q Ʒ sections}.ƬƯŴS = V (I) ⊆
+T,I 2 =0 ƱƢǔƱŴX → S Ʒਤƪɥƛ XT → TƠƯŴXF
+T Ƹਤƪɥ
+ƛƴǑǒƳƍᲢƳƥƳǒŴIp =0 ǑǓ OT
+()p
+→ OT Ƹ OS ǛኺဌƢǔƔǒᲣŵ
+Q → XF ƷѨ৖Ƴਤƪɥƛ QT → XF
+TƠƯŴPT := (Φ∗
+XT /T QT ) → XT
+Ƹ੗ዓ ∇PT ƭƖ P1-bundle ƱƳǓŴƠƔǋ Crys(X/T) ɥƷ crystal ƱƠƯ
+XT ƴǑǒƳƍ
+ ŵɟ૾ŴP → X࢟٭ 
+ưƋǔƔǒŴR1fDR,∗(Ad(P)) →
+R1f∗(τX/S)ưƋǔƜƱǑǓ Ŵ(PT → XT , ∇PT ) ƕ XT ɥƷ᳃᲼ƱƳ
+ǔǑƏƳ XT → T ƕ unique࢟٭
+QT → XF
+T ƔǒЈႆƠƨǘƚƩƠŴRiemann-Roch ǑǓŴ
+H0(XF , Ad(Q)) = 0 bundle Ʒ autom.
+H1(XF , Ad(Q)) = (rank 3g − 3)Ʒ moduli
+H2(XF , Ad(Q)) = 0Ʒ obstruction
+ǑƬƯŴ
+Theorem 3.7.
+ Ng[∞ ] Ƹ smooth ư dim
+ Ng[∞ ]=d i m
+Ng =3 g − 3ŵ
+Remark 3.8. Admissible locus(cf. §1, Cor) Ǜ Ng[0] ưᘙƢŵ0 Ʊ ∞ Ʒ᧓ƴ
+ɶ᧓ႎƳ Ng[d](spiked locus) ǋஊǓŴNg =
+∞∐
+d=0
+Ng[d]ݲ
+ƠᩊƠƘƳǔƕŴNg[d] Ƹμᢿ smoothŵ
+3.3 p-adic Teichm¨uller theory ƴǑǔ moduliࣱ
+Theorem 3.9. p ≫ g Ƴǒ (Mg)Fp Ƹଏኖŵ
+13
+
+Remark 3.10. C ɥƷ Teichm¨uller theoryဇƷɟƭƸǇƞ
+ưƋǔŵ
+Proof. gኛඥŵž˓ॖƷ connected component I ⊆ (Mg)Fp Ƹ
+proper
+ ƴƳǒƳƍŵſǛᅆƤƹҗЎᲢboundary Ƹ˯ƍ g Ʒ Mg ư୿ƚǔᲣŵ
+I proper ƱƢǔŵNg|I → I ǛᎋƑǔŵNg|I Ʒ generic point ηƠ dη :=
+(η ∈ Ng[dη] ƱƳǔǋƷᲣ ƱƓƘŵdηƱƳǔǑƏƳηǛƱƬƯƖƯƦƷ
+closure
+ J :=
+ {η}⊆ Ng|I ǛᎋƑǔŵ
+Claim 1
+ J Ƹ proper, smooth, ⊆ N[dη].
+Proof. ProperƏŵ ƋǔdƠŴν ∈ J ∩Ng[d] ƱƢǔ
+ƱŴν ƕ η Ʒ specialization ưƋǔƜƱǑǓŴd ≥ dηŵNg[d] ƕ smooth ưƋ
+ǔƜƱƱŴdηưƋǔƜƱǑǓd = dηŴǑƬƯν ∈ J ∩Ng[dη] ⊆ Ng[dη]
+ƬƯŴJ
+closed
+⊆ N[dη]ŵӫᡀƸ smooth ưഏΨƸ 3g − 3ŴǇƨŴJ ƷഏΨ
+ǋ 3g − 3 ƳƷư J ǋᐱǔƱƜǖ smoothŵ
+Claim 2
+ dη ̸=0
+Proof. dη =0 ƱƢǔƱŴTheorem 3.5 ǑǓ Ng[0] Ƹ quasi-aﬃne ƩƬƨƔǒŴ
+ƦƷ closed subset J ǋ quasi-aﬃne ŵɟ૾ŴJ Ƹ proper ƩƬƨƔǒŴquasi-
+aﬃne ưǋƋǔƱƢǔƱŴFp ɥ ﬁnite ƴƳǓŴdimJ =3 g −3 ̸=0 ƴჳႽŵ
+ƬƯŴCorollary 3.3 ǑǓŴNg Ƹ η ưƸ reduced ưƳƍ (reduced ƱƢǔ
+ƱŴJ Ʒ general ƳໜưƸŴNg Ƹ Fp ɥ smoothŵƦƷǑƏƳໜƸ Ng[0]ޓ
+Ƣǔ)Ʒ j Ƹ ﬁnite, ﬂat, deg<p 3g−3ŵ
+Ng|I
+ﬁn, ﬂat, deg= p3g−3
+→→
+I
+J↗↘
+↑↑
+j
+→→←←←←←←←←←←←←←←←←←←←←
+ɟ૾Ŵ(Sg)ZP → (Mg)ZP Ƹ Mg ɥƷƋǔample line bundle L ƴλǔ connec-
+tion Ʒ torsorŵǑƬƯŴccrys
+1 (L) Ƹϙ΂
+H2
+crys((Mg)ZP ) → H2
+crys((Sg)ZP )
+ƴǑǓF2 ⊆ H2
+crys((Sg)ZP ) ƴᡛǒǕǔŵ ƍǇŴp ≫ g, L ample ǑǓŴc1(L)3g−3|I ∈
+Z∗
+p ƱƠƯǋǑƍŵ
+ccrys
+1 (L)3g−3|J =d e g (J/I)(ccrys
+1 (L)3g−3|I)
+ᡀƸ F6g−6H6g−6
+crys (J/Zp)= p3g−3H6g−6
+crys (J/Zp)= p3g−3Zp ƷΨưƋǔƔ
+ǒŴp3g−3|deg(J/I) ƱƳǔƕŴƜǕƸ deg(J/I) <p 3g−3 ƴჳႽƢǔŵ
+14
+
+Ӌᎋ૨ྂ
+[Ord] S. Mochizuki. A theory of ordinary p-adic curves. Publ. Res. Inst.
+Math. Sci., Vol. 32, No. 6, pp. 957-1152, 1996.
+[Fnd] S. Mochizuki. Foundations of p-adic Teichm¨uller Theory. AMS/IP
+Studies in Advanced Mathematics 11, 1999.
+TEX ᡈᕲ ୓
+15

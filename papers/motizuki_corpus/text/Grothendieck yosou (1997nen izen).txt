@@ -1,0 +1,301 @@
+Lecture NotesᲴ
+The Local Pro-p Grothendieck Conjecture
+ૠྸᄂᲣ
+IྸƷኰʼᲴ
+Theorem : Let p be a prime number. Let K be a ﬁnite extension of Qp.L e t XK →
+Spec(K) and X′
+K → Spec(K) be smooth, proper, geometrically connected curves over
+K of genus ≥ 2.L e t Δ (p)
+X (respectively, Δ (p)
+X′ ) be the pro- p completion of the geometric
+fundamental group of XK (respectively, X′
+K ). Then the natural map
+IsomK(XK,X ′
+K) → Outρ(Δ (p)
+X , Δ (p)
+X′ )
+deﬁned by “looking at the induced morphism on fundamental groups” is bijective.
+ᡀƷ IsomK(XK,X ′
+K) ƸŴXK Ʊ X′
+K Ʒ KƢǂƯƔǒƳǔᨼӳŵ ɟ૾Ŵ
+ӫᡀƷOut(Δ (p)
+X , Δ (p)
+X′ ) ƸŴδ :Δ (p)
+X
+∼= Δ (p)
+X′ Ƴǔ Δ (p)
+X Ʊ Δ (p)
+X′ƨƪƷ
+ᲢδƱƷӳ঺ǛŴδǒǕǔᲣӷ͌᫏ƷᨼӳưŴɦ
+˄ƖƷρƸŴžKݣGaloisᢿ˺ဇƱɲᇌƢǔǑƏƳǋƷſǛॖԛƢǔŵ
+Remarks:
+(1.)žGrothendieck ʖेſƱƍƏŵƲǜ
+˴ႎƳᘮᙴǛᎋƑǔ
+ࡸ
+Ʒ̞ૠǁƷKݣGalois ፭ᲢˌɦŴΓK Ʊ୿ƘᲣƷ˺ဇƔǒŴᘮᙴǁƷ ΓKƖ
+ஜ፭ƷиஊᨂᲢǇƨƸŴиpͳ҄ǁƷ
+ΓK Ʒ˺ဇƕưƖǔŵ ƦƜưŴ G.C. ᲢᲷGrothendieck ConjectureƠƯƍǔƷƸŴ
+ͳ҄ᲥƦƜǁƷGa-
+loisΨưƖǔŴƱƍƏƜƱưƢŵ
+(2.) XK Ǎ X′
+K ƕ properưƳƍƱƍƚƳƍᲣư
+ƋƬƯǋƍƍversion Ǎ᧙ૠ˳version ǋஊǔŵ
+(3.)ƞǜƕᚰଢƠƨૠ˳ɥƷиஊᨂǢȕǣȳG.C. ᲢᲷGrothendieck ConjectureᲣƱൔ
+ӳŴǢȕǣȳƔǒproper ƴᘍƚƨƱƔŴƋǔƍƸŴиஊᨂƔǒиp ƴᘍƚƨƱƍƬƨ
+1
+
+৑˳ƴᘍƚƨſƱƍƏƜƱƷ
+ƳƘƱǋ೅ૠᲪư
+ƸŴƜƏƍƏG.C.ႎƳჇƴžૠᛯႎſƳྵᝋưƸƳƘŴ
+৑ႎƳpƏŵ ưŴƦǕǛᇌᚰƢǔƔƷǑƏƴŴˌɦኰʼ
+Ƣǔ p ᡶႎƳǢȗȭȸȁưᚰଢƢǔƱŴproper Ǎи pƞǜƷኽௐƱൔǂƯᲣ
+ឋƸƝƘᐯ໱ƴЈƯƘǔŵ
+(4.) G.C.ಮ˳ƷTate ʖेƷžᢒǢȸșȫ༿ſƱ
+ǑƘƍǘǕƨƕŴTateႎƳኽௐư
+ƠƯŴᲢᲭᲣưǋਦઇƠƨǑƏƴŴG.C. Ƹ pƱƠƯਵƑƨ૾ƕǑ
+Ǔᐯ໱ưƋǔŵ
+(5.) ૠ˳ɥƷG.C.৑˳ɥƷG.C.ǛᇢႎƴᅆƢǋƷƱƠƯŴ
+᫏ƴƸŴǋƱǋƱӧ
+ƠƔƳƍƠŴƠƔǋŴǋƠƦƷ୺ዴƷTate ь፭ǛჷƬƯƍǕƹŴᲢFaltings Ʒஊ
+ޅ
+ƕƋǔƠŴƠƔǋŴ̊ƑŴƦƷ
+TateƕƋǔƷưƢŵ
+IIᲨ p ᡶ HodgeΨƢǔᲴ
+L Ƹ (K Ǜԃǉ)p ᡶ˳ᲢᲷฆ೅ૠưpͳƳᩉ૝ႎ˄͌࿢OL Ʒՠ˳ᲣƱƠŴƦƷй˷
+˳ kL ƕŴK Ʒй˷˳ kƢǔŵXK˴ႎ
+ஜ፭ƸƦǕƧǕ ΠX Ŵ Δ X ƱƠŴΔ X Ʒ pro-pͳ҄Ǜ Δ (p)
+X Ʊ୿ƘŵƞǒƴŴΠX ǛŴ
+Δ X → Δ (p)
+X Ʒ kernel ưлƬƨǋƷǛΠ(p)
+XK
+ݧφ : Spec(L) → XK ƴ
+׹αφ :Γ L → Π(p)
+XK
+ƞ
+ƤǔƜƱƕưƖǔŵ ƦƏƍƏφ׹ΓL → Π(p)
+XK
+˴ႎſƱԠƿŵ
+ƜƜưŴFaltings Ʒ p ᡶ Hodge፼ƠǇ
+ჷƳƘƯǋ८ƯǔƜƱƸƋǓǇƤǜŵǇƣŴƦƷྸᛯƴǑǔƱŴഏƷǑƏƳ
+ƕƋǔᲴ
+H1(ΓL/K,
+ L
+∧
+(1)) ∼= ΩL ⊗K
+ K
+∧
+ᲢƨƩƠŴΓL/K = Ker(ΓL → ΓK)Ŵ “(1)” Ƹ Tate twist ưŴ “ ∼=”ƸFalt-
+ings ƷƍƏ“almost isomorphism” ƳƷưƢŵᲣ ƦƠƯŴ୺ዴXK ǛŴƦƷȤǳȓǢȳJX Ʒ
+ǊᡂǈŴSpec(L) → XK ↪→ JX Ƴǔӳ঺ǛƱǔƜƱƕưƖǔŵƱƜǖƕŴp ᡶ Hodge
+ኽƷɟƭƱƠƯŴJXƸ Kݲ
+ƳƘƱǋŴ঻ŷƕჷǓƨƍƜƱƴ᧙ƠƯƸᲣƋƨƔǋGg
+mưƋǔƔƷǑƏƴਰᑈƏƷư
+ƢŵƠƨƕƬƯŴƦƷGg
+m೅ti ᲢƜƜưŴi =1 ,...,g ᲣǛƱƬƯŴSpec(L) →
+JXƕЈஹǔᲴ
+( ? ∈ H1(ΓL/K,
+ L
+∧
+(1))
+{φ∗dti
+ti
+}
+)
+←−
+( t
+1
+p∞
+i ƴǑǔ Zp(1) − torsorƨƪ
+dti
+ti
+Ўƨƪ
+)
+2
+
+ƜƜưŴɥƷᘍƸžπ1ſưŴɦƷᘍƸŴƦƷπ1ႎƳ
+ſƳƷưƢŵ ƱƜǖƕŴ p ᡶ HodgeƱƍƏƷƸŴɥƷᘍƷžπ1 ႎƳऴ
+ſƕᲢCpᢿЎǛƱƬƨǓƢǔƜƱƴ
+ƬƯŴཎƴŴɥƷᘍǛჷƬƯƍǕƹŴɦƷ
+ᘍǋჷƬƯƍǔƜƱƴƳǔƷưŴƭǇǓŴφݧ
+H0(XK, ΩXK/K) → ΩL ⊗K
+ K
+∧
+ƳƘƱǋ ǋƠXK ƕ nonhyperelliptic Ƴǒ
+ᲢƱƜǖƕŴXKƳᘮᙴǁƍƘƜƱƴǑƬƯŴৢƬƯƍǔ୺ዴƕnonhyperelliptic ưƋ
+ƠƯǋǑƍᲣŴφ ∈ XK(L) ƱƍƏໜƷ
+XK → P
+def
+= P(H0(XK, ΩXK/K))
+ǊᡂǈƴǑǔP ƴƓƚǔ΂ǛჷƬƯƍǔƜƱƴƳǔŵƱƜǖƕŴφ : Spec(L) →
+XK ƕǋƠ᩼ᡚ҄ƳǒƹŴdominant ƴƳǔƷưŴƦǕưXK ǛŴPಮ˳ƱƠƯ
+ΨưƖƨƜƱƴƳǔŵ
+ƭǇǓŴƜǕǇư˴ƕưƖƨƔƱƍƏƱŴαφƠƔ̅ǘƣƴŴ
+XKྸƷᚰଢǛ
+(∗)geo׹ΓL → Π(p)
+XK
+˄ƚǒǕǔƔſ
+ბƢǔƜƱƕưƖƨƷưƢŵ
+IIIᲨஊྸዴளƔǒஊྸໜǇưᲴ
+ƸਁᝋႎƳᲢΓK׹α :Γ L → Π(p)
+XK
+ǛᎋƑǇƠǐƏŵα
+ݧΠ(p)
+XL
+→ ΓL ᲢƜƜưŴ XL
+def
+= XK ⊗K LᲣƷ section αL :Γ L → Π(p)
+XL
+፯ƠŴ
+Im(αL) ⊆ Π(p)
+XL
+Ƴǔ᧍ƳᢿЎ፭ƸXL Ʒ໯ᨂഏ´etale ᘮᙴ Y ∞
+L → XL፯ƢǔŵƦƠƯŴ
+ƦƷ໯ᨂഏᘮᙴǛŴƋǔஊᨂഏᘮᙴY n
+L → XL (ƨƩƠŴn Ƹ᩼᝟ƷૢૠǛƸƠǔᲣƷኒƷᡞ
+ಊᨂƱƠƯ୿ƘƜƱƕưƖǔŵƱƜǖƕŴИሁႎGalois ྸᛯƔǒƢƙЎƔǔǑƏƴŴα˴
+ႎưƋǔƷƱŴY ∞
+L (L) ƕᆰưƳƍƷƱƕӷ͌ƳƷưŴᙲƸŴžY ∞
+L (L) ̸= ∅ſƷ፭ᛯႎΪЎவ
+ˑǛᙸƭƚǔƜƱưƋǔŵƠƔƠŴƜǕƸǈǔƔǒƴƸƪǐƬƱᩊƠᢅƗǔƷưŴˌɦᲢIV.Უ
+ưƸŴ
+(∗)rat ž∃ p ƱእƳૢૠ m s.t. Picm
+Y n
+L
+(L) ̸= ∅ſ ᲢƨƩƠŴ Picm
+Y n
+L
+(L) Ƹ
+Y n
+L ɥƷഏૠm Ʒ line bundle ƨƪƔǒƳǔᨼӳưƋǔŵᲣ
+ᙲΪЎவˑǛ੩ᅆƢǔƕŴƜƜ(III.) ưƸŴƳƥ(∗)rat ƔǒžY ∞
+L (L) ̸= ∅Ə
+ƔƴƭƍƯᛟଢƢǔŵ
+ƦǕưƸŴᲢƢǂƯƷn ≥ 0ƠƯᲣ (∗)ratƠǑƏŵƦƏƢǔƱŴ
+Y n
+L ɥƷŴഏૠƕp ƱእƳ very ample Ƴ line bundle L ǛƱǔƜƱƕưƖǔŵƠƔƠŴL ƕ
+very ample ƳƷưŴ L = OY n
+L
+(D) ᲢƨƩƠŴD ⊆ Y n
+L Ƹ L ɥ´etaleᲣƱ୿ƘƜƱƕ
+ưƖǔŵƱƜǖƕŴD Ƹ L ɥ´etaleƭƔƷSpec(Li) ᲢƨƩƠŴLi Ƹ L Ʒஊᨂഏਘ
+3
+
+ᲣƷႺԧƱƠƯ୿ƘƜƱƕưƖǔŵƠƔǋŴL Ʒഏૠƕ p ƱእƳƨǊŴLiƳƘ
+ƱǋƲǕƔƻƱƭŴƨƱƑƹŴL1 ƷŴ L ɥƷഏૠƕp ƱእưƋǔƜƱƴƳǔŵƠƔƠŴƦƏ
+ƢǔƱŴL1 Ƹ L Ʒ tameƴƳǔƷưŴұƪ
+(∗)tm žY n
+L (Ltm) ̸= ∅ſ
+ᲢƨƩƠŴLtm Ƹ LٻtameᲣƕЈǔŵ
+ƦǕưƸŴyn ∈ Y n
+L (Ltm) ƨƪǛŴtame ƳஊྸໜƷᲢn ƴ᧙ƠƯƷᲣЗƱƠǑƏŵ ƞƬ
+ƖŴp ᡶ Hodge፼ƠƨƱƖŴƦƷQpƸŴmod p N ༿ǋ
+ƋǔƷưŴƦǕǛᢘဇƢǕƹŴyn ƨƪƷ P ƴƓƚǔ΂ƕᲢα ƩƚưൿǇǔᲣ(Ltm)∧- ஊྸໜ
+λ∞ ∈ P((Ltm)∧) ƴ p ᡶႎƴӓளƢǔƜƱƕЎƔǔŵƦƠƯŴʻƷᜭᛯƸŴP ƱƍƏŴXK
+ᆰ᧓ƩƚưƸƳƘŴ˓ॖƷY n
+LЎƷᆰ᧓ƴ
+ƳƘƱǋn ≥ 2 ƳǒƹᲣY n
+L Ƹ non-
+hyperellipticƬƯŴ˓ॖƷn0 ≥ 2Ơ
+ƯŴyn ƨƪᲢƨƩƠŴ n ≥ n0ᲣƷ Y n0
+L ƴƓƚǔ΂ƕŴᲢα ưɟॖႎƴൿǇǔᲣ(Ltm)∧- ஊ
+ྸໜ ∈ Y n
+L ((Ltm)∧) ƴ p ᡶႎƴӓளƢǔƜƱƕЎƔǔŵ
+ƭǇǓŴyn ƨƪƸᲢƍƬƯǈǕƹᲣαǇǔy∞ ∈ Y ∞
+L ((Ltm)∧) ƴӓளƢǔ
+ƷƩŵ ƦƠƯŴ Gal(Ltm/L) ƕ Y ∞
+L ((Ltm)∧) ƴᐯ໱ƴ˺ဇƠƯƍǔƠŴᲢƞƬƖƷᜭᛯƔǒ
+ǘƔǔǑƏƴᲣy∞ ƕ Y ∞
+L ƷɟॖႎƳ(Ltm)∧- ஊྸໜƳƷưŴy∞ƸL፯ƞǕƯƍ
+ǔŴƱƍƏኽᛯƴƳǔŵ ұƪŴভకƩƬƨ
+(∗)rat =⇒ žY ∞
+L (L) ̸= ∅ſᲢ⇐⇒ žα˴ႎưƋǔſᲣ
+ƕᅆƞǕƨƜƱƴƳǔŵ
+IVǯȩǤȆȪǪȳᲴ
+ƋƱƸŴ(∗)ratƭƔ
+ᢤƢǔƨǊŴL = KŴ Y n
+L = XKƠǑƏŵ
+ᲢƭǇǓŴƍƍƔƑǕƹŴቇҥƷƨǊƴŴY n
+L ưƸƳƘŴXK ƴƭƍƯᎋƑǑƏŵᲣ ƢǔƱŴ
+(∗)rat ƸഏƷǑƏƴƳǔᲴ
+(∗)rat ž∃p ƱእƳૢૠm such that Picm
+X(K) ̸= ∅ſ
+ƍƣǕƸChern ᫏ƴƭƍƯᎋƑƨƍƷưŴǇƣƸHX
+def
+= H2(XK, Zp(1)) Ტ“ H2” Ƹ ´etale
+cohomologyᲣƷನᡯǛᄩᛐƠƯƓƜƏŵ Leray-Serre ǹȚǯȈȫኒЗǛᢘဇƢǔƱŴHX ƴ
+F ∗(−) Ƴǔᐯ໱Ƴﬁltration ƕλǓŴƳƓŴJX
+def
+= H1(X
+K, Zp(1)) ᲢƭǇǓŴȤǳȓǢȳƷ
+p ᡶ Tate ь፭ᲣƱፗƘƱŴﬁltration ƷᢿЎՠƸഏƷǑƏƴƳǔᲴ
+F 2/F 1 ⊆ H2(X
+K, Zp(1)) ∼= Zp; F 1/F 0 = H1(K, JX); F 0 = H2(K, Zp(1))
+4
+
+ഏƴŴKummer exact sequence Ɣǒ carith
+1 : Pic(XK)= H1(XK, Gm) →H X Ƴǔᡲኽแӷ
+ᲢᲷૠᛯႎChern ᫏ϙ΂ᲣƕưƖƯŴˌɦưƸŴഏૠƕ2g − 2 ưлǓЏǕǔline bundle ƨ
+ƪᲢᲷˌɦŴPic (2g− 2)Z
+X (K) Ʊ୿ƘᲣƷcarith
+1ΨƠƨƍŵ
+ǇƣƸŴ೅แ᫏ᲢƭǇǓŴωXK /K Ʒ carith
+1 )ΨƠƨƍŵ(ƸŴദᄩƴƍ
+ƏƱŴ Zp · carith
+1 (ωXK/K)ΨưƖƳƍƕŴƦǕưǋΪЎưƋǔŵᲣƠƔƠŴ
+H4(XK ×K XK, Zp(2)) → H4(XK, Zp(2)) ∼= Zp
+ƱƍƏdiagonalƖ৏Ơϙ΂Ʒdual ᲢƜƜưŴXK ×K XK ƷžૠᛯႎPoincar´eD u -
+alityſǛ̅ƬƯƍǔƕᲣǛƱǔƱŴZp ↪→ H2(XK ×K XK, Zp(1)) Ƴǔϙ΂ƕưƖƯŴƦǕǛ
+ƞǒƴdiagonalƖ৏ƢƱŴZp ↪→H X ƕưƖǔƕŴᲢǑƘჷǒǕƯƍǔǑƏƴᲣƦƷϙ
+΂Ʒ΂ƸZp · carith
+1 (ωXK/K) ƳƷưƋǔŵ
+ഏƴŴഏૠᲪƷline bundle ƴƭƍƯᎋƑƨƍƷƩƕŴǇƣŴmod F0 ưƸŴJX(K) ᲢƜ
+ƜưŴJX ƱƸ X ƷȤǳȓǢȳᲣƷΨηƠƯŴ ƦƷΨƕƲƷƘǒƍ pưлǓЏǕǔ
+ƔǛᎋƑǔƜƱƴǑƬƯŴ
+ˆcarith
+1 (η) ∈H X/F 0(HX)
+Ƴǔžmod F 0 Ʒ ChernƞƤǔƜƱƕưƖǔŵƠƔǋŴ[1] ƴЈƯƍǔžǑƘჷǒ
+ſƱƠƯŴ
+ˆcarith
+1 (JX(K)) = Ker(H1(K, JX) → H1(K, JX ⊗Zp BDR))
+ƕஊǔŵ ƱƜǖƕŴᲢJX ƕ Picard҄ƠƔᘙྵƠƯƍƳƍƨǊ
+ƴᲣJX(K) ƷΨηƣƠǋline bundle ƔǒƖƯƍǔƱƸᨂǒƳƍƕŴηƳ̿ΨM ·
+ηǛƱǕƹŴϵ
+def
+= M · ηƕ line bundleƠƯǋǑƍƠŴϵ = ˆcarith
+1 (L) ᲢƜ
+ƜưŴ L Ƹ line bundle ᲣƱƳǔƱƖŴƋǔtrick ƴǑƬƯŴcarith
+1 (L)Ψư
+Ɩǔŵ ұƪŴ
+HPi c def
+= Q · carith
+1 (Pic (2g− 2)Z
+X (K))∧ ⊆H X ⊗Z Q
+ᲢƜƜưŴ“ ∧”ƸƍƭǋƷǑƏƴŴpΨưƖƯƍǔƜƱƴ
+ƬƯŴഏƷŴኝƴ፭ᛯႎƳவˑǛᎋƑǔƜƱƕưƖǔᲴ
+(∗)pic ž∃η ∈H X such that the image of η in H2(X
+K, Zp(1)) generates
+H2(X
+K, Zp(1)), and, moreover, the image of η in HX ⊗ Q is contained
+in HPi c.ſ
+ƦƏƢǔƱŴǋƠவˑ(∗)pic ƕ঺ᇌƢǕƹŴ
+M · η= pb(a · η)= carith
+1 (L)
+5
+
+ƱƳǔǑƏƳᲢᩐưƳƍᲣp ᡶૢૠM = a · pb (ƜƜưŴa ∈ Zp
+×ᲣƱŴX ɥƷline bundle
+LƢǔŵ ƱƜǖƕŴƦƏƠƯƓƘƱŴKummer sequence፯ƔǒƢƙЈǔǑƏƴŴ
+L = M⊗pb
+Ƴǔline bundle MƠƯŴM ƷഏૠƸZp
+× ƴλǔƷưŴp ƱእƴƳǔŵ
+ƭǇǓŴ(∗)pic ưǋƬƯŴ(∗)ratྸƷ
+঺Ƣǔŵ
+૨ྂ
+[1] Bloch, S. and Kato, K., L-Functions and Tamagawa Numbers in The Grothendieck
+Festschrift, Volume I, Birkh¨auser (1990), pp. 333-400.
+[2] Faltings, G., p-adic Hodge Theory, Journal of the Amer. Math. Soc. 1, No. 1, pp.
+255-299 (1988).
+[3] Mochizuki, S., The Local Pro-p Grothendieck Conjecture for Hyperbolic Curves, RIMS
+Preprint 1045.
+[4] Tamagawa, A., The Grothendieck Conjecture for Aﬃne Curves,p r e p r i n t .
+6

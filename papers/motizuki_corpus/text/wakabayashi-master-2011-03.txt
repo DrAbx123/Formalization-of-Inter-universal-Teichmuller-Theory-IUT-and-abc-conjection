@@ -1,0 +1,3015 @@
+ON THE CUSPIDALIZATION PROBLEM FOR HYPERBOLIC
+CUR VES OVER FINITE FIELDS
+YASUHIRO WAKABAYASHI
+Abstract. In this paper, we study some group-theoretic constructions as-
+sociated to arithmetic fundamental groups of hyperbolic curves over ﬁnite
+ﬁelds. One of the main results of this paper asserts that any Frobenius-
+preserving isomorphism between the geometrically pro-l fundamental groups
+of hyperbolic curves with one given point removed induces an isomorphism
+between the geometrically pro-l fundamental groups of the hyperbolic curves
+obtained by removing other points. Finally, we apply this result to obtain
+results concerning certain cuspidalization problems for fundamental groups
+of (not necessarily proper) hyperbolic curves over ﬁnite ﬁelds.
+Contents
+Introduction 1
+Notations and Conventions 5
+1. Fundamental groups of (log) conﬁguration spaces 7
+2. Switching morphism on conﬁguration spaces 13
+3. The proof of Theorem A 21
+4. Cuspidalization Problems for hyperbolic curves 30
+References 35
+Introduction
+In the present paper, we consider the following problem:
+Problem.
+Suppose that we are given a hyperbolic curve over a ﬁnite ﬁeld in which l is
+invertible. Then, given the geometrically pro- l fundamental group of the curve
+obtained by removing a speciﬁc point from this hyperbolic curve, is it possible
+to reconstruct the geometrically pro-l fundamental groups of the curves obtained
+by removing other points which vary “continuously” in a suitable sense?
+1
+
+2 Yasuhiro Wakabayashi
+x
+‘varying x’
+group-
+theoretic
+reconstruction!
+We shall formulate the above problem mathematically.
+Let l be a prime number, X a hyperbolic curve over a ﬁnite ﬁeld K in which l
+is invertible. For n a positive integer, we denote by Xn the n-th conﬁguration
+space associated to X (hence, X1 = X), and write Π Xn for the geometrically
+pro-l fundamental group of X. Here, the ﬁber of X2 → X over a K-rational
+point x ∈ X may be naturally identiﬁed withX \{x}, so we may regardX2 → X
+as a continuous family of cuspidalizations of X. Therefore, the above problem
+can be formulated as follows (where Y denotes a hyperbolic curve over a ﬁnite
+ﬁeld L in which l is also invertible, and we use similar notations for Y to the
+notations used for X):
+Theorem A.
+Let
+α :Π X\{x}
+∼
+−→ ΠY \{y}
+be a Frobenius-preserving isomorphism [cf. Deﬁnition 3.5] which maps the de-
+composition group Dx of x (well-deﬁned up to ΠX\{x}-conjugacy) onto the de-
+composition groupDy of y (well-deﬁned up to ΠY \{y}-conjugacy). Here, we shall
+denote by α :Π X
+∼
+→ ΠY (resp., Dx, Dy) the isomorphism (resp., the decomposi-
+tion group of x in ΠX, the decomposition group ofy in ΠY ) obtained by passing
+to the quotients ΠX\{x} ↠ ΠX, ΠY \{y} ↠ ΠY .
+Then there exists a unique isomorphism
+α2 :Π X2
+∼
+−→ ΠY2
+which is compatible with the natural switching automorphisms up to an inner
+automorphism and ﬁts into a commutative diagram
+ΠX2
+α2
+−−−→ ΠY2
+⏐⏐↓
+⏐⏐↓
+ΠX
+α
+−−−→ ΠY
+that induces α by restricting α2 to the inverse images (via the vertical arrows)
+of Dx and Dy.
+In particular, if x′ (resp., y′)i sa K-rational point ofX (resp., an L-rational
+point of Y ), and we assume that the decomposition groups of x′, y′ correspond
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 3
+via α, then we have an isomorphism
+α′ :Π X\{x′}
+∼
+−→ ΠY \{y′}
+such that α and α′ induce the same isomorphism ΠX
+∼
+→ ΠY .
+In Section 1, we recall the notion of the (log) conﬁguration space associ-
+ated to a hyperbolic curve and review group-theoretic properties of the various
+fundamental groups associated to such spaces. In particular, the splitting de-
+termined by the Frobenius action on the pro-l ´etale fundamental group Δ
+Xn of
+Xn ⊗K K gives rise to an explicit description of the graded Lie algebra obtained
+by considering the weight ﬁltration on Δ Xn (cf. Deﬁnition 1.6). This explicit
+description will play an essential role in the proof of Theorem A.
+In Section 2, we discuss a certain speciﬁc choice (among composites with in-
+ner automorphisms) of the morphism between geometrically pro-l fundamental
+groups obtained by switching the two ordered marked points parametrized by
+the second conﬁguration space. This choice will play a key role in the proof of
+Theorem A.
+Section 3 is devoted to proving Theorem A. Roughly speaking, starting from
+a given geometrically pro- l fundamental group Π
+X\{x}, we reconstruct group-
+theoretically a suitable topological group, i.e., Π Lie
+X2 (cf. Deﬁnition 3.1), which
+contains the geometrically pro-l fundamental group of the second conﬁguration
+space, by using the explicit description of graded Lie algebra studied in Section
+1. Next, we reconstruct the automorphism on Π
+Lie
+X2 induced by the speciﬁc
+choice of the switching morphism studied in Section 2. Finally, we verify that
+ΠX2 can be generated, as a subgroup of Π Lie
+X2 , by the given fundamental group
+ΠX\{x} and the image of this fundamental group via the speciﬁc choice of the
+switiching morphism studied in Section 2; this allows us to reconstruct ΠX2 as
+a subgroup of ΠLie
+X2 .
+In Section 4, as an application of (a slightly generalized version of) Theorem
+A, we give a group-theoretic construction of the cuspidalization of an aﬃne
+hyperbolic curve X over a ﬁnite ﬁeld at a point “inﬁnitesimally close” to the
+cusp x. That is to say, we give a construction, starting from the geometrically
+pro-l fundamental group ΠX of X, of the geometrically pro-l fundamental group
+ΠXlog
+x
+of the log scheme obtained by gluing X to a tripod (i.e., the projective
+line minus three points) at a cusp x of X:
+Theorem B.
+Let X (resp., Y ) be an aﬃne hyperbolic curve over a ﬁnite ﬁeld K (resp., L),
+x a K-rational point of X \ X (resp., y an L-rational point of Y \ Y ). Let
+α :Π X
+∼
+−→ ΠY
+be a Frobenius-preserving isomorphism such that the decomposition groups ofx
+and y (which are well-deﬁned up to conjugacy) correspond via α. Then there
+
+4 Yasuhiro Wakabayashi
+exists a unique isomorphism
+˜α :Π Xlog
+x
+∼
+−→ ΠY log
+y
+well-deﬁned up to composition with an inner automorphism which maps the
+decomposition group (well-deﬁned up to conjugacy) of ˜x in X
+log
+x to that of ˜y in
+Y
+log
+y , and induces α by passing to the quotients ΠXlog
+x
+↠ ΠX, ΠY log
+y
+↠ ΠY .
+x
+group-
+theoretic
+reconstruction! x
+Finally, we consider the cuspidalization problem for (geometrically pro-l) fun-
+damental groups of conﬁguration spaces of (not necessarily proper) hyperbolic
+curves over ﬁnite ﬁelds (cf. Theorem 4.4):
+Theorem C.
+Let X (resp., Y ) be a hyperbolic curve over a ﬁnite ﬁeld K (resp., L). Let
+α
+1 :Π X
+∼
+−→ ΠY
+be a Frobenius-preserving isomorphism. Then for any n ∈ Z≥ 0, there exists a
+unique isomorphism
+αn :Π Xn
+∼
+−→ ΠYn
+well-deﬁned up to composition with an inner automorphism, which is compatible
+with the natural respective outer actions of the symmetric group onn letters and
+makes the diagram
+ΠXn+1
+αn+1
+−−−→ ΠYn+1
+pi
+⏐⏐↓
+⏐⏐↓pi
+ΠXn
+αn
+−−−→ ΠYn
+(i =1 , ··· ,n +1 ) commute.
+This statement is already proved in [11] for the case where n =2a n d X is
+proper, and in [4] for the case wheren ≥ 3a n dX is proper. On the other hand,
+by combining results obtained in this paper with the result obtained in [11], we
+obtain a shorter proof of the statement for n ≥ 3 which includes, for the ﬁrst
+time, the aﬃne case.
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 5
+Acknowledgement
+The author would like to express his sincere gratitude to Professors Shinichi
+Mochizuki and Yuichiro Hoshi for their warm encouragements, suggestions, and
+many helpful advices.
+Notations and Conventions
+Numbers:
+We shall denote by Q the ﬁeld of rational numbers,b y Z the ring of rational
+integers,a n db y N ⊆ Z
+(
+resp., Z
+≥ a ⊆ Z
+)
+the additive submonoid of integers
+n ≥ 0
+(
+resp., the subset of integers n ≥ a for a ∈ Z
+)
+.I f l is a prime number,
+then Zl
+(
+resp., Ql
+)
+denotes the l-adic completion of Z
+(
+resp., Q
+)
+.
+Topological Groups:
+For an arbitrary Hausdorﬀ topological group G, the notation
+Gab
+will be used to denote the abelianization of G, i.e., the quotient of G by the
+closed subgroup of G topologically generated by the commutators of G.
+If G is a center-free, then we have a natural exact sequence
+1 −→ G −→ Aut(G) −→ Out(G) −→ 1
+— where Aut( G) denotes the group of automorphisms of the topological group
+G; the injective (sinceG is center-free) homomorphismG → Aut(G) is obtained
+by lettingG act onG by inner automorphisms; Out(G) is deﬁned so as to render
+the sequence exact. If the proﬁnite group G is topologically ﬁnitely generated,
+then the groups Aut(G), Out(G) are naturally endowed with a proﬁnite topol-
+ogy, and the above sequence may be regarded as an exact sequence of proﬁnite
+groups.
+If J → Out(G) is a homomorphism of groups, then we shall write
+G
+out
+⋊ J := Aut(G) ×Out(G) J
+for the “outer semi-direct product ofJ with G”. Thus, we have a natural exact
+sequence
+1 −→ G −→ G
+out
+⋊ J −→ J −→ 1.
+It is veriﬁed (cf. [4], Lemma 4.10) that if an automorphismφof G
+out
+⋊ J preserves
+the subgroup G ⊆ G
+out
+⋊ J and induces the identity morphism on G and the
+quotient J, then φ is the identity morphism of G
+out
+⋊ J.
+Log schemes:
+Basic references for the notion of log scheme are [7] and [6]. In this paper,
+log structures are always considered on the ´etale sites of schemes. For a log
+
+6 Yasuhiro Wakabayashi
+scheme Xlog, we shall denote by X (resp., MX) the underlying scheme of Xlog
+(resp., the sheaf of monoids deﬁning the log structure of Xlog). Let Xlog and
+Y log be log schemes, andflog : Xlog → Y log a morphism of log schemes. Then we
+shall refer to the quotient of MX by the image of the morphismf ∗MY →M X
+induced by flog as the relative characteristic sheaf of flog. Moreover, we shall
+refer to the relative characteristic sheaf of the morphism Xlog → X (where, by
+abuse of notation, we writeX for the log scheme obtained by equippingX with
+the trivial log structure) induced by the natural inclusion O∗ ↪→M X as the
+characteristic sheaf of Xlog.
+We shall say that a log schemeXlog is fs if MX is a sheaf of integral monoids,
+and locally for the ´etale topology, has a chart modeled on a ﬁnitely generated
+and saturated monoid. If Xlog is fs, then, for n a nonnegative integer, we shall
+refer to as the n-interior of Xlog the open subset of X on which the associated
+sheaf of groupiﬁcations of characteristic sheaf of Xlog is of rank ≤ n.T h u s ,t h e
+0-interior of Xlog is often referred to simply as the interior of Xlog.
+Curves:
+Let f : X → S be a morphism of schemes. Then we shall say that f is
+a family of curves of type (g,r) if it factors X↪ → X → S as the composite
+of an open immersion X↪ → X whose image is the complement X \ D of a
+relative divisor D ⊆ X which is ﬁnite ´etale over S of relative degree r, and a
+morphism X → S which is proper, smooth, and geometrically connected, and
+whose geometric ﬁbers are one-dimensional of genus g. We shall refer to X as
+the compactiﬁcation of X.
+We shall say that f is a family of hyperbolic curves (resp.,tripod) if f is
+a family of curves of type ( g,r ) such that ( g,r ) satisﬁes 2 g − 2+ r> 0
+(resp., (g,r )=( 0 , 3) and the relative divisor D is split over S).
+We shall denote by
+Mg,[r]+s
+the moduli stack ofr+s-pointed stable curves of genusg for whichs sections are
+equipped with an ordering. This moduli stack may be obtained as the quotient
+of the moduli stack of ordered (r+s)-pointed stable curves of genusg (cf. [8] for
+an exposition of the theory of such curves) by a suitable symmetric group action
+on r letters. We shall denote by
+M
+log
+g,[r]+s the log stack obtained by equipping
+Mg,[r]+s with the log structure associated to the divisor with normal crossings
+which parametrizes singular curves.
+Fundamental Groups:
+A basic reference for the notion ofKummer ´etale covering is [6]. For a locally
+Noetherian, connected scheme X (resp., a locally Noetherian, connected, fs log
+scheme Xlog) equipped with a geometric point x → X (resp., log geometric
+point ˜xlog → Xlog), we shall denote by π1(X, x) (resp., π1(Xlog, ˜xlog)) the ´etale
+fundamental group of X (resp., logarithmic fundamental group of Xlog). Since
+one knows that the ´etale and logarithmic fundamental groups are determined
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 7
+up to inner automorphisms independently of the choice of basepoint, we shall
+omit the basepoint, and write π1(X) (resp., π1(Xlog)) .
+For a scheme X (resp., fs log scheme Xlog) which is geometrically connected
+and of ﬁnite type over a ﬁeld K in which a prime number l is invertible, we
+shall refer to the quotient Π X of π1(X) (resp., the quotient Π Xlog of π1(Xlog))
+by the closed normal subgroup obtained as the kernel of the natural projection
+from π1(X ⊗K K) (resp., π1(Xlog ⊗K K)) (where K is a separable closure of
+K) to its maximal pro- l quotient Δ X (resp., Δ Xlog )a st h egeometrically pro-l
+´etale fundamental group of X (resp., geometrically pro-l logarithmic fundamen-
+tal group of Xlog). Thus, (if we write GK for the Galois group of a separable
+closure of K over K, then) we have a natural exct sequence
+1 −→ ΔX −→ ΠX −→ GK −→ 1
+(resp., 1 −→ ΔXlog −→ ΠXlog −→ GK −→ 1).
+Note that if the log structure of Xlog is trivial, then we have natural isomor-
+phisms ΔX ∼= ΔXlog , ΠX ∼= ΠXlog .
+If K is ﬁnite, then write G†
+K ⊆ GK for the maximal pro-l subgroup of GK (so
+G†
+K
+∼= Zl). Also, we shall use the notation
+Π† := Π ×GK G†
+K ⊆ Π
+— where Π denotes either the geometrically pro- l ´etale or logarithmic funda-
+mental group of X —a st h e restricted pro-l ´etale or logarithmic fundamental
+group of X.
+1. Fundamental groups of (log) configuration spaces
+The purpose of this section is to recall the notion of the (log) conﬁguration
+space associated to a curve and review group-theoretic properties of the various
+fundamental groups associated to such spaces.
+Let l be a prime number, K aﬁ e l di nw h i c hl is invertible,
+K a separable
+closure of K — where we shall denote by GK the Galois group of K over K —
+and X a hyperbolic curve over K of type (g,r ).
+Deﬁnition 1.1.
+(i) For n ∈ Z≥ 1, Write X×n for the ﬁber product of n copies of X over
+K. We shall denote by
+Xn
+(
+⊆ X×n)
+
+8 Yasuhiro Wakabayashi
+the n-th conﬁguration space associated toX, i.e., the scheme which rep-
+resents the open subfunctor
+S ↦→
+{
+(f1, ··· ,fn) ∈ X×n(S)
+⏐⏐ fi ̸= fj if i ̸= j
+}
+of the functor represented by X×n.
+( i i ) L e tu sd e n o t eb yX
+log
+n the n-th log conﬁguration space associated to X
+(cf. [14]), i.e.,
+X
+log
+n := SpecK ×Mlog
+g,[r]
+M
+log
+g,[r]+n
+— where the (1-)morphism Spec K → M
+log
+g,[r] is the classifying mor-
+phism determined by the curve X → Spec K, and the (1-)morphism
+M
+log
+g,[r]+n → M
+log
+g,[r] is obtained by forgetting the orderedn marked points
+of the tautological family of curves over M
+log
+g,[r]+n. In the following, for
+simplicity, we shall write X
+log
+for X
+log
+1 .
+Proposition 1.2.
+(i) The 0-interior (cf. §0) of the log scheme X
+log
+n is naturally isomorphic
+to the n-th conﬁguration space Xn associated to X.
+(ii) The log schemeX
+log
+n is log regular and its underlying scheme is connected
+and regular.
+(iii) The projection plog
+k : X
+log
+n → X
+log
+n− 1
+, induced from the (1-)morphism
+M
+log
+g,[r]+n → M
+log
+g,[r]+n− 1 obtained by forgetting the k-th (k =1 , ··· ,n)
+ordered points of the tautological family of curves over M
+log
+g,[r]+n,i sl o g
+smooth(cf. §0) and its underlying morphism of schemes is the natural
+projection pk : Xn ↠ Xn− 1 obtained by forgetting the k-th factor, and
+hence, is ﬂat, geometrically connected, and geometrically reduced.
+Proof. See, for example, [4], Proposition 2.2. □
+Deﬁnition 1.3.
+We shall denote (cf. § 0) by
+ΠXn (resp., ΔXn )
+the geometrically pro-l ´etale fundamental group of Xn (resp., Xn ⊗K K), and
+ΠXlog
+n
+(resp.,ΠXlog×n )
+the geometrically pro-l log fundamental group of X
+log
+n (resp., the ﬁber product
+X
+log×n
+of n copies of X
+log
+over K). Moreover, we shall denote (cf. § 0) by
+Π†
+Xn , Δ †
+Xn (∼= ΔXn ), Π†
+Xlog
+n
+, Π†
+Xlog×n
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 9
+respective restricted pro-l fundamental groups. If we write
+ik :Δ k
+Xn/n−1 ↪→ ΔXn
+for the kernel of the surjection pΔ
+k :Δ Xn ↠ ΔXn−1 ,w h e r epΔ
+k denotes the
+morphism induced by the projection pk : Xn ↠ Xn− 1 obtained by forgetting
+the k-th factor, then we have exact sequences
+1 −→ ΔXn −→ Π(− )
+Xn −→ G(− )
+K −→ 1
+1 −→ Δk
+Xn/n−1
+ik
+−→ ΔXn
+pk
+−→ ΔXn−1 −→ 1
+1 −→ Δk
+Xn/n−1
+ik
+−→ Π(− )
+Xn
+pk
+−→ Π(− )
+Xn−1 −→ 1
+— where the symbol (−) denotes either the presence or absence of “† ”, and when
+there is no fear of confusion, we shall write “ ik ”, “ pk” (by abuse of notation)
+for the morphisms induced by ik, pk, respectively.
+Also, we have a square diagram
+Π(− )
+Xn−1
+pk
+←−−− Π(− )
+Xn −−−→
+n
+  
+Π(− )
+X ×G(−)
+K
+···× G( )
+K
+Π(− )
+X
+⏐⏐
+↓
+⏐⏐
+↓
+⏐⏐
+↓
+Π
+(− )
+Xlog
+n−1
+plog
+k
+←−−− Π(− )
+Xlog
+n
+−−−→ Π(− )
+Xlog×n
+— which can be made commutative without conjugate-indeterminacy by choos-
+ing compatible base points — arising from a natural commutative diagram
+Xn− 1
+pk
+←−−− Xn −−−→ Xn×
+⏐⏐
+↓
+⏐⏐
+↓
+⏐⏐
+↓
+X
+log
+n
+plog
+k
+←−−− X
+log
+n −−−→ X
+log×n
+.
+Then, it follows from Proposition 1.2 (i), (ii) together with the log purity the-
+orem (cf. [6], [9]) that the two vertical homomorphisms are isomorphisms. In the
+following, we shall identify Π(− )
+Xn with Π(− )
+Xlog
+n
+,Π (− )
+Xlog×n with
+n
+  
+Π(− )
+X ×G(−)
+K
+···× G( )
+K
+Π(− )
+X
+and the surjection pk :Π Xn → ΠXn−1 with the surjection pk :Π (− )
+Xlog
+n
+→ Π(− )
+Xlog
+n−1
+by means of these speciﬁc isomorphisms.
+Proposition 1.4.
+(i) Δ k
+Xn/n−1 may be naturally identiﬁed with the maximal pro- l quotient of
+the ´etale fundamental group of a geometric ﬁber of the projection mor-
+phism pk : Xn → Xn− 1.
+(ii) The images of the ik :Δ k
+Xn/n−1 → ΔXn, where k =1 , ··· ,n, generate
+ΔXn.
+
+10 Yasuhiro Wakabayashi
+(iii) The proﬁnite groups ΔXn, Δk
+Xn/n−1, Π†
+Xn, Π†
+X×n are slim (i.e., every open
+subgroup of each proﬁnite group is center-free).
+Proof. Assertion (i) follows from [14], Proposition 2.2, or [18], Proposition 2.3.
+Assertions (ii) and (iii) follow from induction on n, together with the exact
+sequence
+1 −→ Δn
+Xn/n−1
+in
+−→ ΔXn
+pn
+−→ ΔXn−1 −→ 1
+displayed in Deﬁnition 1.3. Indeed, with regard to (ii), Δk
+Xn/n−1 maps to Δk
+Xn−1/n−2
+(for k =1 , ··· n − 1) via pn :Δ Xn → ΔXn−1 , and it is veriﬁed that this map
+Δk
+Xn/n−1 → Δk
+Xn−1/n−2 is surjective by regarding it as the morphism induced by
+an open immersion between the hyperbolic curves that arise as geometric ﬁbers
+of the projection morphisms involved. With regard to (iii), the slimness of Δ X
+is well-known (cf., e.g., [10], Lemma 1.3.10); the slimness of Π†
+X follows from the
+fact that the character ofG†
+K arising from the determinant of Δab
+X coincides with
+some positive power of the cyclotomic character; the other statements follow
+from the fact that an extension of slim proﬁnite groups is itself slim. □
+Next, we recall from [11],§ 3, the theory of the weight ﬁltration of fundamen-
+tal groups and the associated graded Lie algebra.
+Deﬁnition 1.5.
+Let l be a prime number; G, H, A topologically ﬁnitely generated pro- l
+groups; φ : H ↠ A a (continuous) surjective homomorphism. Suppose further
+that A is abelian, and that G is an l-adic Lie group.
+(i) We shall refer to as the central ﬁltration {H(n)}
+n≥ 1 on H with respect
+to the homorphism φ the ﬁltration deﬁned as follows:
+H(1) := H
+H(2) := Ker(φ)
+H(m): =
+⟨
+[H(m1),H (m2)]
+⏐⏐ m1 + m2 = m
+⟩
+for m ≥ 3
+—w h e r e⟨Ni | i ∈ I⟩ is the group topologically generated by the Ni’s.
+In the following, for a, b, n∈ Z such that 1 ≤ a ≤ b, n ≥ 1, we shall
+write
+H(a/b): = H(a)/H(b)
+Gr(H): =
+⨁
+m≥ 1
+H(m/m +1 )
+Gr(H)(a/b): =
+⨁
+b>m≥ a
+H(m/m +1 )
+GrQl (H): =G r (H) ⊗ Zl Ql
+GrQl (a/b): =G r (H)(a/b) ⊗ Zl Ql
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 11
+H(a/∞ ) := lim←−
+b>a
+H(a/b) .
+(ii) We shall denote by Lie( G) the Lie algebra over Ql determined by
+the l-adic Lie group G. We shall say that G is nilpotent if there exists a
+positive integerm such that if we denote by{G(n)} the central ﬁltration
+with respect to the natural surjectionG ↠ Gab (cf. (i)), thenG(m)={1}.
+If G is nilpotent, then Lie(G) is a nilpotent Lie algebra over Ql, hence
+determines a connected, unipotent linear algebraic group Lin(G), which
+we shall refer to as the linear algebraic group associated to G. In this
+situation, there exists a natural (continuous) homomorphism (with open
+image)
+G −→ Lin(G)(Q
+l)
+(from G to the l-adic Lie group determined by the Ql-valued points of
+Lin(G)) which is uniquely determined (since Lin( G) is connected and
+unipotent) by the condition that it induce the identity morphism on the
+associated Lie algebras.
+In the situation of (i), if 1 ≤ a ∈ Z, then we shall write
+Lie(H(a/∞ )) := lim←−
+b>a
+Lie(H(a/b))
+Lin(H(a/∞ )) := lim←−
+b>a
+Lin(H(a/b))
+— where we note that each H(a/b) is a nilpotent l-adic Lie group.
+Deﬁnition 1.6.
+For n ∈ Z≥ 1, we shall denote by
+{ΔXn (m)}
+the central ﬁltration of ΔXn with respect to the natural surjection ΔXn ↠ Δab
+X×n
+(where X denotes the smooth compactiﬁcation of X (cf. § 0)), and refer to it
+as the weight ﬁltration on ΔXn .
+Proposition 1.7.
+If we equip Δk
+Xn/n−1 with the central ﬁltration induced from the identiﬁca-
+tion given by Proposition 1.4 (i) and its weight ﬁltration, then the sequence of
+morphisms of graded Lie algebras
+1 −→ Gr(Δk
+Xn/n−1 )
+ik
+−→ Gr(ΔXn )
+pk
+−→ Gr(ΔXn−1 ) −→ 1
+induced by the second displayed exact sequence of Deﬁnition 1.3 is exact.
+Proof. See [4], Proposition 4.1. □
+
+12 Yasuhiro Wakabayashi
+Next, let us ﬁx a section σ : GK → ΠXn of the surjection ΠXn ↠ GK induced
+by the structure morphism of Xn. This section σ determines natural conjugate
+actions of GK on ΔXn , hence also on
+GrQl (ΔXn )(a/b)
+LieXn (a/b): =L i e ( ΔXn (a/b))
+LinXn (a/b) := Lin(ΔXn (a/b))(Ql)
+for a, b ∈ Z such that 1 ≤ a ≤ b.
+Proposition 1.8.
+Let us assume that K is a ﬁnite ﬁeld whose cardinality we denote by qK, and
+write Fr ∈ GK for the Frobenius element of GK. Then:
+(i) The eigenvalues of the action of Fr on LieXn (a/a +1 ) are algebraic
+numbers all of whose complex absolute values are equal to qa/2
+K (i.e.,
+weight a).
+(ii) There is a unique GK-equivariant isomorphism of Lie algebras
+LieXn (a/b)
+∼
+→ GrQl (ΔXn )(a/b)
+which induces the identity isomorphism
+LieXn (c/c +1 )
+∼
+→ GrQl (ΔXn )(c/c +1 )
+for all c ∈ Z≥ 1 such that a ≤ c<b .
+Proof. Assertion (i) follows from the “Riemann hypothesis for abelian varieties
+over ﬁnite ﬁelds” (cf., e.g., [15], p. 206). Assertion (ii) follows formally from
+assertion (i) by considering the eigenspaces with respect to the action of Fr. □
+The following proposition is a special case of a result proven previously
+(cf. [17]). For simplicity, we discuss only the case used in the proofs of the
+present paper.
+Proposition 1.9.
+For n =1 , 2, the graded Lie algebra Gr(Δ
+Xn ) has the following presentation.
+(i) The case n =1 (i.e., Xn = X):
+generators (1 ≤ j ≤ r, 1 ≤ i ≤ g)
+•1 ζj ∈ ΔX(2/3)
+•2 αi,β i ∈ ΔX(1/2)
+relation
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 13
+•1
+∑r
+j=1 ζj + ∑g
+i=1[αi,βi]=0
+— where ζj (j =1 , 2, ··· ,r ) topologically generates the inertia subgroup
+in ΔX (well-deﬁned up to conjugacy) associated to thej-th cusp [relative
+to some ordering of the cusps of X ×K K].
+(ii) The case n =2 :
+generators (1 ≤ j ≤ r, 1 ≤ i ≤ g, k =1 , 2)
+•1 ζ ∈ ΔX2 (2/3)
+•2 ζk
+j ∈ Δk
+X2/1 (2/3)
+•3 αk
+i ,β k
+i ∈ Δk
+X2/1 (1/2)
+relations (1 ≤ j, j′ ≤ r, j ̸= j′, 1 ≤ i, i′ ≤ g, i ̸= i′, {k,k ′} =
+{1, 2})
+•1 ζ+ ∑r
+j=1 ζk
+j + ∑g
+i=1[αk
+i ,βk
+i ]=0
+•2 [αk
+i ,ζk′
+j ]=[ βk
+i ,ζk′
+j ]=[ ζk
+j ,ζk′
+j′ ]=0
+•3 [αk
+i ,αk′
+i′ ]=[ αk
+i ,βk′
+i′ ]=[ βk
+i ,βk′
+i′ ]=0
+•4 [α1
+i ,α2
+i ]=[ β1
+i ,β2
+i ]=0
+•5 [α1
+i ,β2
+i ]= ζ
+— where ζ topologically generates the image in ΔX2 (2/3) of the inertia
+subgroup inΔX2 (well-deﬁned up to conjugacy) associated to the diagonal
+divisor of X ×K X, and ζk
+j generates the image in Δk
+X2/1 (2/3) of the
+inertia subgroup in Δk
+X2/1 asssociated to the j-th cusp [relative to some
+ordering of the cusps of X ×K K] of the k-th factor of X2.
+2. Switching morphism on configuration spaces
+We continue to use the notation of Section 1. In this section, we consider
+various automorphisms induced by the automorphism of X
+log
+2 determined by
+switching the two factors ofX. The group-theoretic uniqueness of such induced
+switching morphisms between fundamental groups (Proposition 2.5) plays a key
+role in the proof of Theorem A.
+
+14 Yasuhiro Wakabayashi
+We denote by
+Dlog
+the log scheme obtained by equipping the diagonal divisor X ⊆ X2 (which is
+the restriction of the (1-)morphism Mg,[r]+1 → Mg,[r]+2 obtained by gluing the
+tautological family of curves over M
+log
+g,[r]+1 to a trivial family of tripods along
+the ﬁnal ordered marked section) with the log structure pulled back from X
+log
+2 .
+T h u s ,i fw ew r i t ed : Dlog → X
+log
+2 for the natural diagonal embedding, then it
+follows immediately from the deﬁnitions that p1 ◦d = p2 ◦d : Dlog → X
+log
+is
+a morphism of type N (cf. [2]), i.e., the underlying morphism of schemes is an
+isomorphism, and the relative characteristic sheaf (cf. § 0 ) is locally constant
+with stalk isomorphic to N.
+Observe that the (1-)automorphism on M
+log
+g,[r]+2 over M
+log
+g,[r] given by switch-
+ing the two ordered marked points of the tautological family of curves over
+M
+log
+g,[r]+2 induces automorphisms s, s,a n d sD, which ﬁt into a commutative
+diagram as follows:
+Dlog d
+−−−→ X
+log
+2
+p=(p1,p2)
+−−−−−→ X
+log
+×K X
+log
+s
+⏐⏐
+↓
+s
+⏐
+⏐
+↓
+s
+⏐
+⏐
+↓
+D
+log d
+−−−→ X
+log
+2
+p=(p1,p2)
+−−−−−→ X
+log
+×K X
+log
+.
+(∗)X
+Lemma 2.1.
+In the notation of the above situation,
+(i) s is the morphism determined by switching the two factors.
+(ii) s is the identity morphism on the underlying scheme; on the sheaf of
+monoids deﬁning the log structure of Dlog, for any ´etale local section θ
+of MD such that “θ=0 ”deﬁnes the diagonal divisor X ⊆ X2,
+s(θ)= −θ.
+Proof. Recall that X2 is obtained by blowing-upX ×K X along the intersection
+of the diagonal divisor and the pull-backs of the cusps via p1,p2 : X2 → X.
+Thus, one veriﬁes easily that assertions (i) and (ii) follow immediately from the
+fact that the ring homomorphism corresponding to
+s in an aﬃne neighborhood
+of any diagonal point may be expressed as
+A ⊗K A −→ A ⊗K A
+∑
+j
+aj ⊗ a′
+j ↦→
+∑
+j
+a′
+j ⊗ aj ,
+hence mapsθto −θfor any local sectionθsuch that “θ= 0” deﬁnes the diagonal
+divisor X ⊆ X ×K X. □
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 15
+Remark 2.1.1.
+Lemma 2.1 (ii) can be interpreted as the assertion that the automorphism
+induced by s on the sheaf of monoids MD deﬁning the log structure of Dlog
+X
+may be expressed, relative to the ´etale local splitting of MD ↠ MD/O∗
+X ∼= N
+corresponding to θ,a s
+N ⊕O ∗
+X
+∼
+−→ N ⊕O ∗
+X
+(m, v) ↦−→ (m, (−1)mv) .
+The above diagram (∗)X induces a diagram of proﬁnite groups as follows:
+ΠDlog
+[dΠ]
+−−−→ ΠX2
+[pΠ]
+−−−→ ΠX ×GK ΠX
+[sΠ]
+⏐⏐
+↓
+≀ [sΠ]
+⏐⏐
+↓
+≀ [sΠ]
+⏐⏐
+↓
+≀
+ΠDlog
+[dΠ]
+−−−→ ΠX2
+[pΠ]
+−−−→ ΠX ×GK ΠX .
+(∗)Π
+Note that the arrows in the diagram (∗)Π are only deﬁned (i.e., in the absence
+of appropriate choices of basepoints of respective log schemes) up to conjugacy.
+Next, we observe that since the subgroups of the conjugacy class of subgroups
+determined by the image of [ dΠ] may be naturally regarded as decomposition
+groups associated to the diagonal divisor of X2,a n ychoice of a speciﬁc homo-
+morphism dΠ :Π Dlog → ΠXlog
+2
+(i.e., among its various conjugates) determines a
+speciﬁc decomposition group
+DX ⊆ ΠXlog
+2
+— where we write dΠ : DX ↪→ ΠXlog
+2
+for the natural inclusion — associated
+to the diagonal divisor (i.e., among its various Π Xlog
+2
+-conjugates), as well as a
+speciﬁc inertia subgroup
+IX ⊆ ΠXlog
+2
+associated the diagonal divisor (i.e., among its various ΠXlog
+2
+-conjugates). Here,
+we recall that IX is canonically isomorphic to Zl(1).
+Deﬁnition 2.2.
+Let xlog → X
+log
+be a strict morphism (cf. [6], 1.2) such that the underlying
+scheme of xlog is equal to Spec(K). We shall write
+X
+log
+x := X
+log
+2
+×Xlog xlog,
+˜xlog := Dlog ×Xlog xlog,
+G(− )
+Klog := Π(− )
+xlog
+— where the morphism X
+log
+2 → X
+log
+(resp., Dlog → X
+log
+) in the ﬁber product
+deﬁning X
+log
+x (resp., ˜xlog)i s p1 (resp., p1 ◦d = p2 ◦d), and the symbol “( −)”
+denotes either the presence or absence of “ † ” — and refer to X
+log
+x (resp., ˜xlog)
+
+16 Yasuhiro Wakabayashi
+as the cuspidalization of X at x (resp., diagonal cusp of X
+log
+x ). We note that
+both the log structure of xlog and the underlying scheme of X
+log
+x depend on the
+choice of x ∈ X:
+(1) The Case x ∈ X:
+In this case, x = xlog, i.e., the log structure of xlog is trivial. As we
+discussed in Section 1, the underlying scheme of X
+log
+x is naturally iso-
+morphic to X; this isomorphism maps ˜x to x and the interior of X
+log
+x
+onto X \{ x}.
+(2) The Case x ∈ X \ X:
+In this case, the log structure of xlog has a chart modeled on N, which
+determines a local uniformizer of X at x. The scheme Xx consists of
+precisely two irreducible components, one of which maps to the point
+x ∈ X (resp., maps isomorphically to X)v i a X
+log
+x
+p2◦i1
+−→ X
+log
+;d e n o t e
+this irreducible component by PK (resp., X, via a slight abuse of no-
+tation). Thus, X, PK are joined at a single node νx. Let us refer to
+X (resp., PK, νx)a st h e major cuspidal component (resp., the minor
+cuspidal component,t h enexus)a t x, and denote by X
+log′
+, P
+log
+K , νlog
+x the
+log schemes obtained by equipping X, PK, νx with the respective log
+structures pulled back fromX
+log
+x (cf. [13], Deﬁnition 1.4). Note that the
+1-interior of X
+log′
+(resp., P
+log
+K ) is isomorphic to X (resp., is a tripod).
+⋆
+⋆x
+Cuspidalization
+at x ∈ X(K)
+νlog
+x
+Case (1) Case (2)
+˜x
+X
+X
+log
+x X
+log′ P
+log
+K
+cusps
+(the two thick arrows in the picture do not represent morphisms of log schemes)
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 17
+In the following, we ﬁx choices of speciﬁc [i.e., in the sense that they are not
+subject to conjugacy indeterminacy!] homomorphisms
+iΠ
+1 :Π Xlog
+x
+−→ ΠX2 ,p Π
+1 :Π X2 −→ ΠX
+induced by the morphisms of log schemes i1 : X
+log
+x → X
+log
+2
+,p1 : X
+log
+2
+→ X
+log
+and a choice of a speciﬁc decomposition group
+D˜x ⊆ ΠXlog
+x
+associated to ˜xlog of X
+log
+x among the various conjugates of this subgroup. Write
+γ : D˜x ↪→ ΠXlog
+x
+for the natural inclusion. These choices determine a homomorphism of proﬁnite
+groups
+fX :Π Xlog
+x
+−→ GKlog ,
+arising from the structure morphism X
+log
+x → xlog, by taking fX := iΠ
+1 ◦pΠ
+1 :
+ΠXlog
+x
+→ GKlog
+(
+:= Im(ΠXlog
+x
+iΠ
+1 ◦pΠ
+1
+→ ΠX)
+)
+, as well as a proﬁnite group
+I˜x := Ker(D˜x
+γ
+↪→ ΠXlog
+x
+f
+→ GKlog )
+— where we note that I˜x is naturally isomorphic to Zl(1) (i.e., a Tate twist of
+Zl).
+Lemma 2.3.
+(i) The subgroup D˜x(
+γ
+↪→ ΠXlog
+x
+) is the normalizer of I˜x in ΠXlog
+x
+.
+(ii) For any choice of a speciﬁc decomposition group dΠ : DX ↪→ ΠX2 (i.e.,
+among its various conjugates) associated to the diagonal divisor ofX2 ,
+the subgroup DX of ΠX2 coincides with the normalizer of IX in ΠX2.
+Proof. Note that we have commutative diagrams
+I˜x −−−→ D˜x
+iΠ
+1 ◦γ|I˜x
+⏐⏐↓ iΠ
+1 ◦γ
+⏐⏐↓
+Δ1
+X2/1
+i1
+−−−→ ΠX2
+1 −−−→ IX −−−→ DX
+pΠ
+1 ◦dΠ
+−−−→ ΠX −−−→ 1
+dΠ |IX
+⏐⏐
+↓
+dΠ
+⏐
+⏐
+↓
+id
+⏐
+⏐
+↓
+1 −−−→ Δ
+1
+X2/1
+i1
+−−−→ ΠX2
+pΠ
+1
+−−−→ ΠX −−−→ 1,
+— where the two horizontal sequences in the second diagram are exact, and both
+the ﬁrst displayed diagram and the left-hand square in the second diagram are
+cartesian. Next, let us recall the well-known fact (cf., e.g., [16], (2.3.1)) that
+I
+˜x and IX coincide with their respective normalizers in Δ 1
+X2/1 . Thus, assertion
+
+18 Yasuhiro Wakabayashi
+(ii) follows immediately from the surjectivity of pΠ
+1 ◦dΠ. On the other hand,
+assertion (i) follows immediately from the observation that the images ofD˜x and
+ΠXlog
+x
+via pΠ
+1 ◦iΠ
+1 coincide. This observation is a consequence of the geometry of
+the corresponding morphisms of log schemes, which implies that these images
+coincide with a decomposition group ⊆ ΠX associated to the point x. □
+Lemma 2.4.
+Under the determination discussed pr eceding Lemma 2.3, we can uniquely
+take a pair of speciﬁc homomorphisms
+dΠ : DX −→ ΠX2 ,p Π
+2 :Π X2 −→ ΠX
+among the various conjugates of these subgroups, obtained by morphisms between
+log schemes d : Dlog → X
+log
+2 , p2 : X
+log
+2 → X, satisfying the following conditions:
+(1) The image of the inertia subgroup IX (via dΠ) coincides with the image
+of I˜x via iΠ
+1 .
+(2) DX maps (via (pΠ
+1 ,pΠ
+2
+) ◦dΠ : DX → ΠX ×GK ΠX) onto the image of the
+diagonal embedding ΠX ↪→ ΠX ×GK ΠX.
+Proof. Since DX is the normalizer of IX in ΠXlog
+2
+by Lemma 2.3, it is enough to
+take DX as the normalizer ofI˜x in ΠXlog
+2
+,a n dt a k epΠ
+2 so as to pΠ
+1 ◦dΠ = pΠ
+2 ◦dΠ.
+Uniqueness follows from the requred two conditions. □
+Now, before we continue the discussion, we shall give comments for Proposi-
+tion 2.5.
+(1) Recall that the natural surjection D˜x ↠ GK (since GK is abelian, this
+map is uniquely determined without the discussion of base points) has
+a section. Indeed, ﬁxing a choice of such a section is equivalent to
+extracting roots of any local uniformizers of the divisors Xx ⊆ X2 and
+D ⊆ X2 at ˜x.
+(2) We shall consider the restriction map H1(GK, Zl(1)) → H1(G†
+K, Zl(1))
+of cohomology groups induced by the natural inclusion G†
+K ↪→ GK.
+Since G†
+K is the maximal pro- l subgroup of GK and I˜x is isomorphic
+to Zl(1) as GK-module, H1(GK, Zl(1)) is isomorphic to H1(G†
+K, Zl(1))
+and is isomorphic to the maximal pro-l completion (K×)∧ of the multi-
+plicative group K× of K.T h e r e f o r e ,i fw ed e n o t eb yZ1(G†
+K,I ˜x) (resp.,
+Z1(GK,I ˜x)) the set of (continuous) 1-cocycle maps of G†
+K (resp., GK)
+with coeﬃcients in I˜x, then we can refer to any element of Z1(G†
+K,I ˜x)
+(resp., Z1(GK,I ˜x)) belonging to the inverse image of a ∈ (K×)∧ ∼=
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 19
+H1(G†
+K,I ˜x) (resp., ∼= H1(G†
+K,I ˜x) via the natural surjection as a (con-
+tinuous) 1-cocycle map representing the Kummer classa
+Proposition 2.5.
+Following the discussions and results in this section until now, we shall ﬁx a
+choice of a section
+σ : GK −→ D˜x
+(hence also a choice of an induced morphismσ† : G†
+K −→ D†
+˜x) of the surjection
+D˜x → GK.
+Then, for any 1-cocycle map
+δ: G†
+K → I˜x
+representing the Kummer class−1 ∈ (K×)∧, there exists a unique triple(s†
+δ,s †
+δ
+, s†
+δ
+)
+of vertical automorphisms in the following diagram
+D†
+X
+d†
+−−−→ Π†
+X2
+p†
+−−−→ Π†
+X ×G†
+K
+Π†
+X
+s†
+δ
+⏐⏐↓ s†
+δ
+⏐⏐↓ s†
+δ
+⏐⏐↓
+D†
+X
+d†
+−−−→ Π†
+X2
+p†
+−−−→ Π†
+X ×G†
+K
+Π†
+X
+(∗)†
+— where p† :Π †
+X2 → Π†
+X ×G†
+K
+Π†
+X (resp., d† : D†
+X → Π†
+X2) denotes the morphism
+induced by pΠ
+1 ,pΠ
+2
+(resp., dΠ) determined in the preceding disucussions — which
+makes (∗)† commute and satisﬁes the following two conditions:
+(1) s†
+δ :Π †
+X ×G†
+K
+Π†
+X
+∼
+−→ Π†
+X ×G†
+K
+Π†
+X is the morphism obtained by switching
+the two factors.
+(2) The continuous function from G†
+K to Π†
+Xlog
+2
+deﬁned by
+g ↦→ (s†
+δ ◦σ† )(g) · σ† (g)− 1
+is valued in I˜x ⊆ Π†
+X2 and coincides with δ.
+Proof. We begin by proving the existence portion. By the surjectivity ofp† ,w e
+can take s†
+δ,s†
+δ
+such that the right-hand square of the diagram ( ∗)† commutes
+and the condition (1) is satisﬁed. If we take arbitrary s†
+δ ∈ Aut(D†
+X)f r o mt h e
+conjugacy class, commutativity of the rectangle in (∗)† up to conjugacy implies
+that there exists λ ∈ Π†
+X ×G†
+K
+Π†
+X such that s†
+δ ◦(p† ◦d† ) = Inn(λ) ◦(p† ◦i† ) ◦s†
+δ
+(where Inn(λ) denotes the inner automorphism obtained by conjugating by λ).
+As obtained in Lemma 2.4, p† ◦d† maps D†
+X onto the diagonal subgroup of
+Π†
+X ×G†
+K
+Π†
+X, hence Inn(λ) preserves the diagonal subgroup. Since Π†
+X is center-
+free (by Lemma 1.4 (iii)), it is veriﬁed that λ lies in the diagonal. By taking a
+lifting ˜λ ∈ D†
+X of λ and replacing s†
+δ by Inn(˜λ− 1) ◦s†
+δ, we can make the rectangle
+in (∗)† commute in the strict sense. Next, we observe thats†
+δ◦d† = Inn(μ)◦d† ◦s†
+δ
+
+20 Yasuhiro Wakabayashi
+for some μ ∈ Π†
+X2 . By the commutativity of the rectangle in ( ∗)† , μ projects
+via p† into the center of Π †
+X ×G†
+K
+Π†
+X (hence, to the unit element). Therefore,
+replacing s†
+δ by Inn(μ− 1) ◦s†
+δ, we can make (∗)† commute.
+Thus, we obtain an automorphism of an exact sequence
+1 −−−→ IX −−−→ D†
+X
+p†
+1◦d† =p†
+2◦d†
+−−−−−−−→ Π†
+X −−−→ 1
+id
+⏐⏐
+↓
+≀ s†
+δ
+⏐⏐
+↓
+≀ id
+⏐⏐
+↓
+≀
+1 −−−→ IX −−−→ D†
+X
+p†
+1◦d† =p†
+2◦d†
+−−−−−−−→ Π†
+X −−−→ 1
+which consists of the identity morphisms of Π †
+X and IX.L e t M ⊆ Q be the
+monoid of positive rational numbers with denominators of l-power, and N the
+global sections of the sheaf of monoids deﬁning the log structure on a universal
+geometrically pro-l k´et covering of D
+log ×Xlog xlog. Then, N forms a direct
+product splitting N ∼= M⊕ M⊕ K
+×
+, where (cf. the discussion (1) preceding this
+proposition) the ﬁrst (resp., second) factor of direct product is due to extracting
+roots of a local uniformizer of the divisor Xx ⊆ X2 (resp., D ⊆ X2)a t˜x inside
+of a choice of σ. Then the automorphism s†
+δ of D†
+X may be characterized by
+the choice of a projective system {(−1)
+1
+lm }m∈Z≥0 of l-power roots of −1 (well-
+deﬁned up to multiplications by projective systems of l- p o w e rr o o t so f1 )i na
+way that the automorphism of N ∼= M ⊕ M ⊕ (K
+×
+) is expressed as
+( a1
+lm1
+, a2
+lm2
+,k ) ↦→ ( a1
+lm1
+, a2
+lm2
+, (−1)
+a2
+lm2 · k)
+(cf. Lemma 2.1 (ii))). We observe that for any element g of G†
+K, the auto-
+morphism of N corresponding to σ† (g) (resp., (s† ◦σ†
+X)(g)) ∈ Π†
+X2 is expressed
+as
+( a1
+lm1
+, a2
+lm2
+,k ) ↦→ ( a1
+lm1
+, a2
+lm2
+,g (k))
+(
+resp., ( a1
+lm1
+, a2
+lm2
+,k ) ↦→ ( a1
+lm1
+, a2
+lm2
+, g((−1)
+a2
+lm2 )
+(−1)
+a2
+lm2
+· g(k))
+)
+Thus, (s† ◦σ†
+X)(g) · σ†
+X(g)− 1 is valued in IX (∼= I˜x by Lemma 2.3) and the
+1-cocycle g ↦→ (s† ◦σ†
+X)(g) ·σ†
+X(g)− 1 represents, by deﬁnition, the Kummer class
+−1 ∈ (K×)∧ ∼= H1(G†
+K, Zl(1)). Therefore, after modiﬁcations of s†
+δ, s†
+δ by some
+IX-inner automorphisms, condition (2) is satisﬁed. This completes the existence
+assertion.
+Next we prove the uniqueness portion. If we take two triples ( s†
+1,s †
+1
+,s†
+1
+),
+(s†
+2,s †
+2
+,s†
+2
+) so as to satisfy conditions (1) and (2), then s†
+1 ◦(s†
+2)− 1 = Inn(η) ∈
+Aut(Π†
+X2 )f o rs o m eη ∈ Π†
+X2 and we see that Inn( η) preserves the subgroup
+D†
+X ⊆ Π†
+X2 . Since D†
+X is normally terminal in Π †
+X
+2 , it is veriﬁed that η is in
+Π†
+Dlog
+X
+. Moreover, from condition (1) and the fact that Π †
+X is center-free, η lies
+in Ker
+(
+D†
+X
+p† ◦d†
+→ Π†
+X ×G†
+K
+Π†
+X
+)
+, i.e., η ∈ IX. On the other hand, as the section
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 21
+σ† acts on IX via the cyclotomic character, which is a faithful action, condition
+(2) implies that η is the unit element, i.e., that s†
+1 = s†
+2, hence ( s†
+1,s †
+1
+,s†
+1
+)=
+(s†
+2,s †
+2
+,s†
+2
+). □
+Remark 2.5.1.
+In the case l ̸=2 , −1 coincides with the unit element 1 in ( K×)∧. Then, in
+the statement of Proposition 2.5, by taking a 1-cocycle map δto be trivial, we
+may obtain s†
+δ satisfying s†
+δ ◦σ† = σ† .
+3. The proof of Theorem A
+We begin with a review of the notation and the setup. Letl be a prime number,
+K a ﬁnite ﬁeld in which l is invertible, and K a separable closure of K.W e
+shall denote by GK the Galois group of K over K. Next, let X be a hyperbolic
+curve over K of type (g,r ), xlog a strict K-rational log point of X
+log
+:= X
+log
+1 ,
+and write X
+log
+x := X
+log
+2
+×Xlog xlog,˜xlog := Dlog ×Xlog
+1
+xlog, GKlog := Π xlog .I n
+addition, we assume that we have ﬁxed choices of speciﬁc homomorphisms
+iΠ
+1 :Π Xlog
+x
+−→ ΠX2 ,p Π
+1 :Π X2 −→ ΠX
+(they determine a structure morphism fX :Π Xlog
+x
+→ GKlog by taking fX = iΠ
+1 ◦
+pΠ
+1 :Π Xlog
+x
+→ GKlog
+(
+:= Im(ΠXlog
+x
+iΠ
+1 ◦pΠ
+1
+→ ΠX)
+)
+), within in the respective conjugacy
+classes determined by these homomorphisms, a choice of speciﬁc decomposition
+group D˜x ⊆ ΠXlog
+x
+associated to ˜x, where we write
+γx : D˜x −→ ΠXlog
+x
+for the natural inclusion, and a choice of a section
+σX : GK −→ D˜x
+of the composite surjection D˜x
+γx
+→ ΠXlog
+x
+fX
+→ GKlog → GK.
+Deﬁnition 3.1.
+(i) The section σX determines, by composing with the morphism D˜x
+γx
+→
+ΠXlog
+x
+(resp., D˜x
+iΠ
+1 ◦γx
+−→ ΠX2 , D˜x
+pΠ ◦iΠ
+1 ◦γx
+−→ ΠX×2 ), a natural conjugate GK-
+action on Δ1
+X2/1
+∼= Ker(ΠXlog
+x
+fX
+↠ GKlog ) (resp., on ΔX2 ,o nΔ X×2 ), hence
+also on
+Gr1
+X2/1 := GrQl (Δ1
+X2/1 ),
+(
+resp., GrX2 := GrQl (ΔX2 ), GrX×2 := GrQl (ΔX×2 )
+)
+,
+
+22 Yasuhiro Wakabayashi
+Lie1
+X2/1 := Lie(Δ1
+X2/1 (1/∞ )),
+(
+resp., LieX2 := Lie(ΔX2 (1/∞ )), LieX×2 := Lie(ΔX×2 (1/∞ ))
+)
+,
+Lin1
+X2/1 := Lin(Δ1
+X2/1 (1/∞ ))(Ql).
+(
+resp., LinX2 := Lin(ΔX2 (1/∞ ))(Ql), LinX×2 := Lin(ΔX×2 (1/∞ ))(Ql)
+)
+.
+In the following, we regard these objects as to be equipped with the
+GK-actions in this sense. From the discussion in Deﬁnition 1.5 (ii), we
+have the following commutative diagram consisting of GK-equivariant
+morphisms
+Δ1
+X2/1
+i1
+−−−→ ΔX2
+p
+−−−→ ΔX×2
+⏐⏐↓
+⏐⏐↓
+⏐⏐↓
+Lin1
+X2/1
+iLin
+1
+−−−→ LinX2
+pLin
+−−−→ LinX×n
+and topological groups equipped with the additional GK-action struc-
+tures
+ΔLie
+X2 := ΔX×2 ×LinX×2 LinX2 , ΠLie
+X2 := ΔLie
+X
+2 ⋊ GK
+as well as GK-equivariant homomorphisms of topological groups
+IntΔ
+X :Δ X2 → ΔLie
+X2 , IntΠ
+X :Π X2 → ΠLie
+X2 .
+(ii) We shall ﬁx a 1-cocycle map δX : GK → I˜x := Ker(D˜x ↠ GKlog )r e p r e -
+senting the Kummer class −1 (cf. the discussion preceding Proposition
+2.5). Then, taking a product
+σδX : GK −→ D˜x; g ↦→ δX(g) · σX(g)
+— which is a homomorphism of topological groups — gives a new section
+of the surjective homomorphism D˜x ↠ GK. In a similar way to (i), the
+section σδX determines a natural conjugate GK-action on
+˘Gr
+1
+X2/1 := GrQl (Δ1
+X2/1 ),
+(
+resp., ˘GrX2 := GrQl (ΔX2 ), ˘GrX×2 := GrQl (ΔX×2 )
+)
+,
+˘Lie
+1
+X2/1 := Lie(Δ1
+X2/1 (1/∞ )),
+(
+resp., ˘LieX2 := Lie(ΔX2 (1/∞ )), ˘LieX×2 := Lie(ΔX×2 (1/∞ ))
+)
+,
+˘Lin
+1
+X2/1 := Lin(Δ1
+X2/1 (1/∞ ))(Ql).
+(
+resp., ˘LinX2 := Lin(ΔX2 (1/∞ ))(Ql), ˘LinX×2 := Lin(ΔX×2 (1/∞ ))(Ql)
+)
+.
+— where, in the following, we regard these objects as to be equipped with
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 23
+the GK-actions in this sense — as well as topological groups equipped
+with the additional GK-action structures
+˘ΔLie
+X2 := ΔX×2 × ˘LinX×2
+˘LinX2 , ˘ΠLie
+X2 := ˘ΔLie
+X2 ⋊ GK
+Next, by taking account of δX and the setup of iΠ
+1 , pΠ
+1 , γx, σX ﬁxed
+above, we may take an automorphismsΠ
+δX :Π X2
+∼
+→ ΠX2 , arising from the
+switching morphism sX : X
+log
+2 → X
+log
+2
+inducing a uniquely determined
+morphism s†
+δX :Π †
+X2 → Π†
+X2 obtained in Section 2, and obtain GK-
+equivariant homomorphisms of topological groups
+sΔLie
+δX :Δ Lie
+X2
+∼
+−→ ˘ΔLie
+X2 ,s ΠLie
+δX :Π Lie
+X
+2
+∼
+−→ ˘ΠLie
+X2
+induced by sΠ
+δX .
+Lemma 3.2.
+The GK-action induced by σδX deﬁned in Deﬁnition 3.1 (ii) on ΔX2 (hence
+also on ˘GrX2, ˘LieX2, ˘LinX2 and ˘ΔLie
+X2 ) coincides with the action deﬁned in a way
+that
+GK −→ Aut(ΔX2 );g ↦→ Inn(sΠ
+δX ◦iΠ
+1 ◦γx ◦σX(g)).
+Proof. It follows immediately from the deﬁnition of GK-action induced by σδX .
+□
+Lemma 3.3.
+IntΔ
+X and IntΠ
+X are injective.
+Proof. It is enough to verify that ΔX2 → LinX2 is injective. But it follows from
+the discussion in Deﬁnition 1.5 (ii) and the fact that ⋂
+m≥ 1 ΔX(m) = 1 (cf. [17],
+Corollary 2.6). □
+Deﬁnition 3.4.
+(i) Let us ﬁx a choice of each inertia subgroup Ij ⊆ Δ1
+X2/1
+∼= Ker(ΠXlog
+x
+fX
+↠
+GKlog )( j =1 , 2, ··· ,r ) associated to the j-th cusp (relative to some
+ordering of the cusps of X ×K K) among the various Δ 1
+X2/1 -conjugates
+of these subgroups. Then, we have a canonical isomorphisms
+ηj : I˜x
+∼
+−→ Ij (j =1 , 2, ··· ,r )
+For n =1 , 2 we shall denote byVn the completion with respect to the
+ﬁltration topology of the free Lie algebra generated by
+V n := I˜x ⊕
+( r⨁
+j=1
+Ij ⊕ Δab
+X
+)⊕ n
+
+24 Yasuhiro Wakabayashi
+equipped with a natural grading (hence also a ﬁltration) by takingI˜x,I j
+to be of weight 2, Δab
+X to be of weight 1.
+(ii) If X has genus ≥ 1, then we shall write
+MX := HomZl (H2(ΔX, Zl), Zl) .
+Note that MX is canonically isomorphic toI˜x as a GK-module. The cup
+product on the group cohomology of Δ X
+2⋀
+H1(ΔX,M X) −→ H2(ΔX,M X ⊗ Zl MX)
+determines an isomophism
+Hom(Δab
+X ,M X)
+∼
+−→ Δab
+X ,
+hence compositions of natural homomorphisms
+φ : I˜x
+∼
+−→ MX −→
+2⋀
+Δab
+X ,ψ :
+2⋀
+Δab
+X −→ MX
+∼
+−→ I˜x
+(iii) If X has genus ≥ 1 (resp., genus = 0), then we deﬁne Ln
+X to be the
+quotient of Vn by the relations determined by the images of the following
+morphisms:
+(1) When n =1 ,
+•1 I˜x −→ V 1(2/3) ; m ↦→ (idI˜x + ∑ηj + φ)(m)
+(
+resp., •1 I˜x −→ V 1(2/3) ; m ↦→ (idI˜x + ∑ηj)(m)
+)
+.
+(2) When n =2( 1 ≤ i ≤ g, 1 ≤ j ≤ r, {k,k ′} = {1, 2}),
+•1 I˜x −→ V 2(2/3) ; m ↦→ m + ik(∑ηj + φ)(m)
+•2 I˜x ⊗ Zl Δab
+X −→ V 2(3/4) ;m ⊗ a ↦→ [ik ◦ηj(m),i k′ (a)]
+•3
+⋀2 Δab
+X −→ V 2(2/3) ;a ∧ a′ ↦→ [ik(a),i k′ (a′)]
+•4,5
+⋀2 Δab
+X −→ V 2(2/3) ;a ∧ a′ ↦→ ik(a) ∧ ik′ (a′) − ψ(a ∧ a′)
+(
+resp., •1 I˜x −→ V 2(2/3) ; m ↦→ m + ik(∑ηj)(m)
+)
+—w h e r e“ [, ]” denotes the Lie bracket, and for k =1 , 2, ik :( ⨁Ij ⊕⋀2 Δab
+X ) ↪→ (⨁Ij ⊕ ⋀2 Δab
+X )⊕ 2 denotes the inclusion into thek-th factor.
+(iv) If we consider a GK-action on Vn as that taking the natural action on
+each direct summand in Vn, then the ideal generated by the relations
+deﬁned in (iii) is invariant under this action. Hence, we may equip the
+graded Lie algebra
+L
+1
+X (resp., L2
+X)
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 25
+with the additional GK-action structure and have a GK-equivariant ho-
+momorphism
+iL
+1 : L1
+X −→ L 2
+X
+of graded Lie algebras given by
+I˜x ⊕
+( r⨁
+j=1
+Ij ⊕ Δab
+X
+)
+−→ I˜x ⊕
+( r⨁
+j=1
+Ij ⊕ Δab
+X
+)⊕ 2
+(a, b) ↦→ (a, i1(b))
+and a GK-equivariant isomorphism
+sL
+X : L2
+X
+∼
+−→ L 2
+X
+of graded Lie algebras given by
+I˜x ⊕
+( r⨁
+j=1
+Ij ⊕ Δab
+X
+)⊕ 2
+−→ I˜x ⊕
+( r⨁
+j=1
+Ij ⊕ Δab
+X
+)⊕ 2
+(a, b1,b2) ↦→ (a, b2,b1)
+Lemma 3.5.
+Let h1
+Gr : L1
+X → Gr1
+X2/1, ˘h1
+Gr : L1
+X → ˘Gr
+1
+X2/1 be homomorphisms of graded
+Lie algebra given by the natural inclusions Δab
+X ↪→ GrQl (Δ1
+X2/1 )(1/2), I˜x ↪→
+GrQl (Δ1
+X2/1 )(2/3) and Ij ↪→ GrQl (Δ1
+X2/1 )(2/3).
+Then h1
+Gr and ˘h1
+Gr are GK-equivariant isomorphisms of graded Lie algebras.
+Proof. It is enough to verify the assertion in the case wherex is cusp of X.B u t
+since Δ PX is trivial, it follows that the natural inclusion Π Xlog′ ↪→ ΠXlog
+x
+(well-
+deﬁned up to inner automorphisms) induces a GK-equivarinant isomorphism
+Δab
+X
+∼
+→ Δab
+Xx
+. This completes the proof by Proposition 1.9 (i). □
+Lemma 3.6.
+Let
+iLie
+1 :L i e1
+X2/1 −→ LieX2 ,i Lie
+2 : ˘Lie
+1
+X2/1 −→ ˘LieX2 ,s Lie
+δX :L i eX2
+∼
+−→ ˘LieX2
+be the GK-equivariant homomorphisms of graded Lie algebras induced by iΠ
+1 :
+ΠXlog
+x
+→ ΠX2, iΠ
+1 :Π Xlog
+x
+→ ΠX2 and sΠ
+δX :Π X2
+∼
+→ ΠX2 respectively.
+Then there exist GK-equivariant isomorphisms of graded Lie algebras
+h1
+X : L1
+X
+∼
+−→ Lie1
+X2/1 , ˘h1
+X : L1
+X
+∼
+−→ ˘Lie
+1
+X2/1
+h2
+X : L2
+X
+∼
+−→ LieX2 , ˘h2
+X : L2
+X
+∼
+−→ ˘LieX2
+
+26 Yasuhiro Wakabayashi
+which ﬁt into the following commutative diagrams consisting of GK-equivariant
+mophisms
+L1
+X
+iL
+1
+−−−→L 2
+X
+h1
+X
+⏐⏐↓≀ h2
+X
+⏐⏐↓≀
+Lie1
+X2/1
+iLie
+1
+−−−→ LieX2
+L1
+X
+iL
+1
+−−−→L 2
+X
+˘h1
+X
+⏐⏐↓≀ ˘h2
+X
+⏐⏐↓≀
+˘Lie
+1
+X2/1
+˘iLie
+1
+−−−→ ˘LieX2
+L2
+X
+sL
+δX
+−−−→L 2
+X
+h2
+X
+⏐⏐↓≀ ˘h2
+X
+⏐⏐↓≀
+LieX2
+sLie
+δX
+−−−→ ˘LieX2 .
+Proof. Let h2 : L2
+X → GrQl (ΔX2 ) be the homomorphism given by
+I˜x ⊕
+( r⨁
+j=1
+Ij ⊕ Δab
+X
+)⊕ 2
+−→ GrQl (ΔX2 )
+(a, b1,b2) ↦→ iGr
+1 ◦h1
+Gr(a + b1)+ sGr
+δX ◦iGr
+1 ◦h1
+Gr(b2).
+It is veriﬁed that h2 is an isomorphism of graded Lie algebras by Proposition
+1.9 (ii) and GK-equivariant when we regard it as a map h2
+Gr : L2
+X → GrX2 as
+well as ˘h2
+Gr : L2
+X → ˘GrX2 . I fw ed e n o t eiGr
+1 :G r1
+X2/1 → GrX2 , ˘iGr
+1 : ˘Gr
+1
+X2/1 →
+˘GrX2 , sGr
+δX :G rX2
+∼
+→ ˘GrX2 be the GK-equivariant homomorphisms of graded Lie
+algebras induced by iΠ
+1 :Π Xlog
+x
+→ ΠX2 , iΠ
+1 :Π Xlog
+x
+→ ΠX2 and sΠ
+δX :Π X2
+∼
+→ ΠX2
+respectively, then we have the followingGK-equivariant commutative diagram
+L1
+X
+iL
+1
+−−−→L 2
+X
+h1
+Gr
+⏐⏐↓≀ h2
+Gr
+⏐⏐↓≀
+Gr1
+X2/1
+iGr
+1
+−−−→ GrX2
+L1
+X
+iL
+1
+−−−→L 2
+X
+˘h1
+Gr
+⏐⏐
+↓
+≀ ˘h2
+Gr
+⏐⏐
+↓
+≀
+˘Gr
+1
+X2/1
+˘iGr
+1
+−−−→ ˘GrX2
+L2
+X
+sL
+δX
+−−−→L 2
+X
+h2
+Gr
+⏐⏐
+↓
+≀ ˘h2
+Gr
+⏐⏐
+↓
+≀
+GrX2
+sGr
+δX
+−−−→ ˘GrX2 .
+On the other hand, by taking account of the compatibility of GK-actions (cf.
+Lemma 3.2) together with Proposition 1.8, we have the followingGK-equivariant
+commutative diagram
+Gr1
+X2/1
+iGr
+1
+−−−→ GrX2
+⏐⏐↓≀
+⏐⏐↓≀
+Lie1
+X2/1
+iLie
+1
+−−−→ LieX2
+˘Gr
+1
+X2/1
+˘iGr
+1
+−−−→ ˘GrX2
+⏐⏐↓≀
+⏐⏐↓≀
+˘Lie
+1
+X2/1
+˘iLie
+1
+−−−→ ˘LieX2
+GrX2
+sGr
+δX
+−−−→ ˘GrX2 .⏐⏐↓≀
+⏐⏐↓≀
+LieX2
+sLie
+δX
+−−−→ ˘LieX2 .
+By composing the vertical arrows in these commutative diagrams, we obtain
+the required isomorphisms. □
+Now, let L be a ﬁnite ﬁeld of cardinality prime to l, Y a hyperbolic curve over
+L of type (g′,r ′), ylog a strict L-rational log point of Y
+log
+:= Y
+log
+1 ; we shall use
+similar notation for objects obtained from Y (e.g., Y2, Y
+log
+y ,Π Y2 ,Π Y log
+y
+, GLlog ,
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 27
+etc.) to the notation used for objects obtained from X. Moreover, we shall ﬁx
+a choice of homomorphisms
+iΠ
+1 :Π Y log
+y
+−→ ΠY2 ,p Π
+1 :Π Y2 −→ ΠY
+arising from the morphisms Y
+log
+y
+i1
+→ Y2, Y2
+p1
+→ Y within in the respective conju-
+gacy classes determined by these homomorphisms.
+Deﬁnition 3.7.
+Let β be an isomorphism of proﬁnite groups Π Xlog
+x
+∼
+→ ΠY log
+y
+or Π X
+∼
+→
+ΠY . Then the natural quotient Π Xlog
+x
+↠ GK (resp., Π Y log
+x
+↠ GL, ΠX ↠
+GK, ΠY ↠ GL) arising from the structure morphism X
+log
+x → Spec(K) (resp.,
+Y
+log
+y → Spec(L),X → Spec(K),Y → Spec(L)) may be characterized group-
+theoretically (cf. [19], Proposition 3.3) as the (unique) maximal (ˆZ-)free abelian
+quotient of ΠXlog
+x
+(resp., ΠY log
+y
+,Π X,Π Y ). Therefore β induces an isomorphism
+β0 : GK
+∼
+→ GL.
+Now we shall say thatβ is Frobenius-preservingif the isomorphismβ0 : GK
+∼
+→
+GL obtained as above preserves the Frobenius elements.
+In the following, suppose further that we have given a Frobenius-preserving
+isomorphism α :Π Xlog
+x
+∼
+→ ΠY log
+y
+that maps D˜x(
+γx
+↪→ ΠXlog
+x
+) onto a speciﬁc decom-
+position groupD˜y of ˜y. Then we may take a sectionσY : GL → D˜y of the natural
+surjection D˜y ↠ GL and a 1-cocycle map δY : GL → I˜y := Ker(D˜y ↠ GLlog )o f
+GL with coeﬃcients in I˜y so as to be compatible with σX, δX via isomorphisms
+α and α0 : GK
+∼
+→ GL induced by α. By applying the preceding discussion and
+results in Section 2 to Y , we obtain objects ΠLie
+Y2 ,I n tΠ
+Y , sΠLie
+δY ,e t c .
+Proposition 3.8.
+In the notation of the above situation, there exist a GK-equivariant iso-
+morphism αΔLie
+2 :Δ Lie
+X2
+∼
+→ ΔLie
+Y2 such that it is also GK-equivariant when we
+r e g a r di ta sam a p˘ΔLie
+X2
+∼
+→ ˘ΔLie
+Y2 and that if we denote by αΠLie
+2 :Π Lie
+X2
+∼
+→ ΠLie
+Y2 ,
+˘αΠLie
+2 : ˘ΠLie
+X2
+∼
+→ ˘ΠLie
+Y2 the semi-direct products of αΔLie
+2 in these two ways, then
+these morphisms make the following diagrams commute
+ΠXlog
+x
+IntΠ
+X ◦iΠ
+1
+−−−−→ ΠLie
+X2 −−−→ ΠX×2
+α
+⏐⏐
+↓
+≀ αΠLie
+2
+⏐⏐
+↓
+≀ α×α
+⏐⏐
+↓
+≀
+ΠY log
+y
+IntΠ
+Y ◦iΠ
+1
+−−−−→ ΠLie
+Y2 −−−→ ΠY ×2
+ΠLie
+X2
+sΠLie
+δX
+−−−→ ˘ΠLie
+X2
+αΠLie
+2
+⏐⏐↓ ˘αΠLie
+2
+⏐⏐↓
+ΠLie
+Y2
+sΠLie
+δY
+−−−→ ˘ΠLie
+Y2 .
+Proof. Since α is assumed to be Frobenius-preserving, it follows from [10],
+Lemma 1.3.9 and [12], Corollary 2.8 that ( g,r )=( g′,r ′)a n dt h a tα induces
+
+28 Yasuhiro Wakabayashi
+an isomorphism αcpt :Δ ab
+X
+∼
+→ Δab
+Y and a bijective correspondence between the
+respective sets of cusps ofX
+log
+x , Y
+log
+y
+as well as isomorphisms of the decompsition
+(inertia) groups of cusps corresponding via this bijection. By using these isomor-
+phisms (together with constructions of L1
+X, L2
+X, L1
+Y , L2
+Y ), Lemma 3.6 induces
+GK-equivariant isomorphisms αLie :L i e1
+X2/1
+∼= Lie1
+Y2/1 ,˘αLie : ˘Lie
+1
+X2/1
+∼= ˘Lie
+1
+Y2/1 ,
+αLie
+2 :L i eX2
+∼= LieY2 and ˘αLie
+2 : ˘LieX2
+∼= ˘LieY2 such that αLie =˘αLie (by com-
+patibility of GK-actions induced by as a morphism of underlying graded Lie
+algebras and that these maps which make the following diagram commute in
+the sense of G
+K-equivariant
+Lie1
+X2/1
+iLie
+1
+−−−→ LieX2
+sLie
+δX
+−−−→ ˘LieX2
+˘iLie
+1
+←−−− ˘Lie
+1
+X2/1
+αlie
+⏐⏐
+↓
+≀ αLie
+2
+⏐⏐
+↓
+≀ ˘αLie
+2
+⏐⏐
+↓
+≀ ˘αlie
+⏐⏐
+↓
+≀
+Lie1
+Y2/1
+iLie
+1
+−−−→ LieY2
+sLie
+δY
+−−−→ ˘LieY2
+˘iLie
+1
+←−−− ˘Lie
+1
+Y2/1.
+Since σX, σδX have been taken to be compatible with σY , σδY via α respec-
+tively, we have αLie =˘αLie, iLie
+1 = ˘iLie
+1 ) as morphisms of underlying graded Lie
+algebras. On the other hand, LieX2 (resp., ˘LieX2 ) is, as a Lie algebra, generated
+b yt h ei m a g e so fL i e1
+X2/1
+iLie
+1
+→ LieX2 (resp., ˘Lie
+1
+X2/1
+˘iLie
+1
+→ ˘LieX2 ) and the composition
+Lie1
+X2/1
+iLie
+1
+→ LieX2
+sLie
+δX
+→ ˘LieX2 =L i eX2 (resp., ˘Lie
+1
+X2/1
+˘iLie
+1
+→ ˘LieX2 =L i eX2
+sLie
+δX
+→ ˘LieX2 ),
+hence we haveαLie
+2 =˘αLie
+2 . Therefore, it follows from the functoriality of Lin(−)
+that this diagram induces the required diagram.
+□
+One of main results of this paper, i.e., Theorem A, is as follows:
+Theorem 3.9.
+Let X (resp., Y ) be a hyperbolic curve over a ﬁnite ﬁeld K (resp., L), x a
+K-rational point of X (resp., y an L-rational point of Y ), X2 (resp., Y2) the
+second conﬁguration space associated to X (resp., Y ), X
+log
+x (resp., Y
+log
+y
+) the
+cuspidalization of X at x (resp., of Y at y) [cf. Deﬁnition 2.2], D˜x
+γx
+↪→ ΠXlog
+x
+(resp., D˜y
+γy
+↪→ ΠY log
+y
+) the decomposition group of the diagonal cusp ˜xlog (resp.,
+˜ylog).
+Let
+α :Π Xlog
+x
+∼
+−→ ΠY log
+y
+be a Frobenius-preserving isomorphism [cf. Deﬁnition 3.5] which mapsD˜x onto
+D˜y. Here, we shall denote α :Π X
+∼
+→ ΠY , (resp., Dx
+γx
+↪→ ΠX, Dy
+γy
+↪→ ΠY ) by the
+isomorphism (resp., the decomposition group of x, the decomposition group of
+y) obtained by passing to the quotients ΠXlog
+x
+↠ ΠX, ΠY log
+y
+↠ ΠY .
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 29
+Then there exists a unique isomorphism
+α2 :Π X2
+∼
+−→ ΠY2
+which is compatible with the natural switching automorphisms [cf. the discussion
+following Remark 2.1.1] up to an inner automorphism and ﬁts into the following
+commutative square
+ΠX2
+α2
+−−−→ ΠY2
+⏐⏐↓
+⏐⏐↓
+ΠX
+α
+−−−→ ΠY
+(∗∗)
+which induce α by restricting α2 to the inverse images (via the vertical arrows)
+of Dx and Dy.
+Proof. Let us take sΠ
+δX , sΠ
+δY , αΠLie
+2 , and ˘αΠLie
+2 as we obtained up to now. If we
+identify (sΠ
+X ◦iΠ
+1 )(Δ1
+X2/1 ) with iΠ
+2 (Δ2
+X2/1 ) via the inclusion IntΠ
+X :Π X2 ↪→ ΠLie
+X2 ,
+then it follows from Proposition 1.4 (ii) that iΠ
+1 (ΠXlog
+x
+) and (sΠ
+δX ◦iΠ
+1 )(Δ1
+X2/1 ))
+generate ΠX2 (similarly, ΠY2 is generated by iΠ
+1 (ΠY log
+y
+) and (sΠ
+δY ◦iΠ
+1 )(Δ1
+Y2/1 )) ).
+Therefore, since the diagram
+ΠXlog
+x
+iΠ
+1
+−−−→ ΠLie
+X2
+sΠ
+δX
+−−−→ ΠLie
+X2
+α
+⏐⏐
+↓
+αΠLie
+2
+⏐⏐
+↓
+˘αΠLie
+2
+⏐⏐
+↓
+Π
+Y log
+y
+iΠ
+1
+−−−→ ΠLie
+Y2
+sΠ
+δY
+−−−→ ΠLie
+Y2
+commute, αΠ
+2 maps ΠX2 onto ΠY2 . Thus, the restriction α2 of αΠ
+2 to ΠX2 makes
+the diagram (∗∗) commutes.
+Next we consider the uniqueness. Let us take two maps β, β′ :Π X2
+∼
+→ ΠY2
+both of which make the diagram ( ∗∗) commutes. Then β− 1 ◦β′ induces an
+automorphism of the exact sequence
+1 −→ Δ1
+X2/1
+iΠ
+1
+−→ ΠX2
+pΠ
+1
+−→ ΠX −→ 1
+which consisits of the identities of Δ1
+X2/1 and ΠX. This implies that β− 1 ◦β′ is
+the identity morphism (cf. § 0). □
+Corollary 3.10.
+Let X (resp., Y ) be a hyperbolic curve over a ﬁnite ﬁeld K (resp., L), x, x′
+K-rational points of X (resp., y,y ′ L-rational points of Y ). Let
+α :Π Xlog
+x
+−→ ΠY log
+y
+be a Frobenius-preserving isomorphism such thatα (resp., the isomorphism α :
+ΠX
+∼
+→ ΠY induced by passing to the quotients ΠXlog
+x
+↠ ΠX, ΠY log
+y
+↠ ΠY ) maps
+
+30 Yasuhiro Wakabayashi
+the decomposition group of the diagonal cusp ˜x (resp., x′) to the decomposition
+group of the diagonal cusp ˜y (resp., y′) up to conjugation.
+Then there exists a unique Frobenius-preserving isomorphism
+α′ :Π Xlog
+x′
+−→ ΠY log
+y′
+well-deﬁned up to an inner automorphism which induces α by passing to the
+quotients and maps the decomposition group of the diagonal cusp ˜x′ to the de-
+composition group of the diagonal cusp ˜y′ up to conjugation.
+Proof. The existence assertion follows from Theorem 3.8 and the fact that if
+Dx′ ⊆ ΠX, Dy′ ⊆ ΠY denote the decomposition groups of x′, y′ respectively,
+then we have ΠXlog
+x′
+∼= Dx′ ×ΠX ΠX2 ,Π Y log
+y′
+∼= Dy′ ×ΠY ΠY2 .
+We consider the uniqueness assertion. Let us take two isomorphisms ˙α′, ¨α′ :
+ΠXlog
+x′
+∼
+→ ΠY log
+y′
+which induce α :Π X
+∼
+→ ΠY by passing to the quotients. and
+write β := ( ˙α′)− 1 ◦ ¨α′ ∈ Aut(ΠXlog
+x′
+) which yields, from the existence assertion,
+β2 ∈ Aut(ΠX2 ) reducing to the identity morphism of Π X×2 by passing to the
+natural quotient ΠX2 ↠ ΠX×2 . Then β2 deﬁne an element [ β2]o fO u tFC(ΔX2 )
+and [β2] reduce to the unit element in Out(Δ X) by the deﬁnitions of ˙α′,¨α′.
+But OutFC(ΔY2 ) → Out(ΔY ) is injective (cf. [5] for the deﬁnition and results
+concerning to “OutFC” ) ,s ow eh a v e[β2] = 1. This completes the proof. □
+Remark 3.10.1.
+Any Frobenius-preserving isomorphism is quasi-point-theoretic (cf. [19], Corol-
+lary 2.10, Proposition 3.8 and [12], Corollary 2.8), i.e., induces a bijection be-
+tween the set of decomposition groups of the points of X, Y . Therefore, in the
+statement of Corollary 3.10, a closed point y′ of Y which corresponds to x′ via
+α necessarily exists (but this choice is not unique).
+4. Cuspidalization Problems for hyperbolic curves
+In this last section, we apply of Theorem 3.9 to obtain group-theoretical con-
+structions of the cuspidalization of a hyperbolic curve at a point inﬁnitesimally
+close to a cusp (cf. Theorem 4.3), as well as of arithmetic fundamental groups
+of conﬁguration spaces (cf. Theorem 4.4).
+We maintain the notation of Section 3; moreover, until the end of Theorem
+4.3, we shall assume that both X and Y are aﬃne (i.e., r, r′ > 0), and x, y are
+split cusps of X, Y , respectively, i.e., x ∈ X(K) \ X(K), y ∈ Y (L) \ Y (L). As
+discussed in Deﬁnition 2.2, we obtain the major and minor cuspidal components
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 31
+X
+log′
+, P
+log
+X at x, together with the nexusνlog
+x at x as strict log closed subschemes
+of X
+log
+x (cf. [6], 1.2), which determine subgroups well-deﬁned up to conjugacy,
+ΠXlog′ , ΠP
+log
+X
+, Πνlog
+x
+⊆ ΠXlog
+x
+— which we shall refer to, respectively, as major verticial, minor verticial,a n d
+nexus subgroup (cf. [17], Deﬁnition 1.4).
+Lemma 4.1.
+The composition of morphismsX
+log′
+→ X
+log
+x (resp., P
+log
+X → X
+log
+x ) and X
+log
+x
+→
+X
+log
+×K xlog (resp., X
+log
+x → P
+log
+X ×K xlog) induces an isomorphism
+ΠXlog′
+∼
+−→ ΠX ×GK GKlog
+(
+resp., ΠP
+log
+X
+∼
+−→ ΠPX ×GK GKlog
+)
+.
+In particular, the major verticial subgroups may be thought of as deﬁning sec-
+tions of the projection ΠXlog
+x
+↠ ΠX ×GK GKlog .
+Proof. We shall only consider thenon-resp’d portion due to a similar argument.
+We recall that the category of k´et coverings has the ´etale descent property and
+invariance for restriction from an henselian trait to its closed point (cf. [6]).
+Since X
+log′
+→ X
+log
+×K xlog is an isomorphism on X \{ x}, it is enough to
+see isomorphicity of the morphism between the log inertia groups of νlog
+x and
+xlog ×K xlog, i.e., Ker(Πνlog
+x
+↠ GK) and Ker(Πxlog ×Kxlog ↠ GK) (cf. [6], 4.7 for
+the terminology “log inertia subgroup”). If we ﬁx a chart, modeled on N,o f
+xlog (i.e., roots of a local uniformizer at x in X), then we may give xlog ×K xlog
+(resp., νlog
+x )ac h a r to ft h ef o r mN ⊕ N, where the ﬁrst factor of direct sum
+is that pulled back from the ground log scheme xlog and the second factor is
+that pulled back from xlog as an exact closed subscheme of X
+log
+(resp., via
+p2 ◦i1 : X
+log
+x → X
+log
+). By using these splittings, we may express a chart of the
+homomorphism of monoids induced by the morphism νlog
+x → xlog ×K xlog as
+N ⊕ N −→ N ⊕ N
+(a, b) ↦→ (a, a+ b)
+Then, by applying the functor Hom(( )gp, Zl(1)) to this morphism of monoids,
+it is veriﬁed that the induced morphism of log inertia groups between νlog
+x and
+xlog ×K xlog is an isomorphism. □
+Lemma 4.2.
+(i) Suppose that we ﬁx a choice of a nexus subgroupΠνlog
+x
+⊆ ΠXlog
+x
+among
+its various ΠXlog
+x
+-conjugates. Then there exists a unique pair of inclu-
+sions
+ΠXlog′ ⊆ ΠXlog
+x
+, ΠP
+log
+X
+⊆ ΠXlog
+x
+
+32 Yasuhiro Wakabayashi
+(among their various ΠXlog
+x
+-conjugates) both of which contain Πνlog
+x
+⊆
+ΠXlog
+x
+.
+(ii) The compatible inclusions Πνlog
+x
+⊆ ΠXlog′ ⊆ ΠXlog
+x
+, Πνlog
+x
+⊆ ΠP
+log
+X
+⊆
+ΠXlog
+x
+obtained in (i) make a commutative square
+Πνlog
+x
+−−−→ ΠP
+log
+X⏐⏐↓
+⏐⏐↓
+ΠXlog′ −−−→ ΠXlog
+x
+which is co-cartesian in the category of extensions of GKlog by pro-l
+groups.
+Proof. We consider assertion (i). If we ﬁx a universal (geometrically pro- l)k ´et
+covering Ulog → X
+log
+x , then the ﬁxed inclusion Π νlog
+x
+⊆ ΠXlog
+x
+corresponds, by
+deﬁnition, to a log geometric point ˜νlog
+x of Ulog over νlog
+x . Therefore it is enough
+to take Π Xlog′ ⊆ ΠXlog
+x
+,Π P
+log
+X
+⊆ ΠXlog
+x
+as those of corresponding to unique
+irreducible components of Ulog over X
+log′
+, P
+log
+X which contain ˜νx. Assertion (ii)
+follows from the construction of colimit and the “ van Kampen Theorem”i n
+algebraic topology. □
+Now we consider Theorem B. Once we shall consider, for simplicity of the
+proof, a slightly weaker statement with respect to the case where the types
+(g,r ) of the hyperbolic curves satisfy that (g,r )=( 0 , 3) as stated below. But by
+giving directly a proof of Theorem 4.4, which contain the statement of Theorem
+B, we also can conclude the same statement as the case (g.r) ̸=( 0, 3).
+Theorem 4.3.
+Let X, Y be aﬃne hyperbolic curves over a ﬁnite ﬁeld K, L, respectively, of
+type (g,r ) ̸=( 0, 3) (resp., of type(g,r )=( 0 , 3)), x a K-rational point of
+X \X,
+y an L-rational point of Y \ Y .L e t
+α :Π X
+∼
+−→ ΠY
+(resp., α′ :Π X×KK′
+∼
+−→ ΠY ×LL′ )
+be a Frobenius-preserving isomorphism such that the decomposition groups ofx
+and y (which are well-deﬁned up to conjugacy) correspond via α (resp., where
+K′, L′ are the unique extensions of K, L whose degrees of extensions are two).
+Then there exists a unique isomorphism
+˜α :Π Xlog
+x
+∼
+−→ ΠY log
+y
+(resp., ˜α′ :Π Xlog
+x
+×GK GK′
+∼
+−→ ΠY log
+y
+×GL GL′ )
+well-deﬁned up to composition with an inner automorphism which maps the
+decomposition group (well-deﬁned up to conjugacy) of ˜x in X
+log
+x to that of ˜y
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 33
+in Y
+log
+y and induces α (resp., α′) by passing to the quotients ΠXlog
+x
+↠ ΠX,
+ΠY log
+y
+↠ ΠY (resp., ΠXlog
+x
+×GK GK′ ↠ ΠX×KK′, ΠY log
+y
+×GL GL′ ↠ ΠY ×LL′).
+Proof. The proof of uniqueness is similar to that of Corollary 3.8.
+Now we consider the existence assertion. In the case (g,r )=( 0 , 3), X ×K K′
+is isomorphic to a tripod. Let D′
+x
+ι
+↪→ ΠX×KK′ be a natural inclusion of a speciﬁc
+decomposition groupD′
+x of x in ΠX×KK′ and κX : D′
+x×GK′ ΠX×KK′ ↪→ ΠXlog
+x
+×GK
+GK′ (resp., κP :Π X×KK′ ×GK′ D′
+x ↪→ ΠXlog
+x
+×GK GK′ ) the injective morphism
+induced by the isomorphism, obtained in Lemma 4.1, with respect to the major
+(resp., minor) verticial subgroup. If we ﬁx an identiﬁcation D′
+x ∼= Zl(1) ⋊ GK,
+then the automorphismκ of (Zl(1) ×Zl(1))⋊GK′ given by (s1,s2,t ) ↦→ (s1,s1 −
+s2,t ) coincides with (κP)− 1 ◦κX |D′x×GK′ D′x : D′
+x ×GK′ D′
+x
+∼
+→ D′
+x ×GK′ D′
+x. Hence
+the square
+D′
+x ×GK′ D′
+x −−−→ ΠX×KK′ ×GK′ D′
+x⏐⏐↓ κP
+⏐⏐↓
+D′
+x ×GK′ ΠX×KK′
+κX
+−−−→ ΠXlog
+x
+×GK GK′
+— where the left hand vertical arrow is the natural inclusion and the upper
+horizontal arrow is the composition of κ and the natural inclusion — is co-
+cartesian in the category of extensions of D′
+x by pro-l groups by Lemma 4.2.
+Therefore, by comparing this diagram to that of Y , the proof is completed.
+I nt h ec a s e(g,r ) ̸=( 0, 3), by considering the number of topological generators
+of proﬁnite groups, we take an open subgroup Π ˙Z ⊆ ΠX such that the corre-
+sponding ´etale covering ˙Z of X satisﬁes the following condition: ˙Z is also ´etale
+over x in their (smooth) compactiﬁcation, and have at least two split points
+z,z ′ over x (where we shall choose z so that a suitable choice of decomposition
+group Dz ⊆ Π ˙Z of z coincides with Dx). Let Z be the partial compactiﬁcation
+of ˙Z at z′, Z
+log
+z the cuspidalization of Z at z. Moreover, let Z
+log′
+, P
+log
+Z , νlog
+z be
+the major, minor cuspidal component and the nexus ofZ
+log
+z at z. Then we have
+a sequence of inclusions
+Πνlog
+z
+−→ ΠPZ ×GK Dz
+∼
+−→ ΠPX ×GK Dx (⋆)
+and a commutative diagram
+ΠX ×GK Dx ←−−− Π ˙Z ×GK Dz −−−→ ΠZ ×GK Dz ←−−− ΠZlog′
+⏐⏐↓
+⏐⏐↓
+⏐⏐↓
+⏐⏐↓
+ΠX ←−−− Π ˙Z −−−→ ΠZ ←−−− ΠZlog
+z
+— where the upper sequence induces a sequence of morphisms, by restricting
+to subgroups,
+ΠX ×GK Dx ←− Dz ×GK Dz
+∼
+−→ Dz ×GK Dz
+∼
+←− Πνlog
+z
+(⋆⋆).
+
+34 Yasuhiro Wakabayashi
+Hence, combining ( ⋆)w i t h(⋆⋆) yields the lower horizontal sequence of the
+commutative diagram
+ΠXlog′ ←−−− Πνlog
+x
+−−−→ ΠP
+log
+X⏐⏐↓≀
+⏐⏐↓≀
+⏐⏐↓≀
+ΠX ×GK Dx ←−−− Πνlog
+z
+−−−→ ΠPX ×GK Dx
+Therefore, the colimit of the following diagram
+ΠX ×GK Dx ←− Πνlog
+z
+−→ ΠPX ×GK Dx
+in the category of extensions of Dx by pro-l groups coincides (by Lemma 4.2)
+with ΠXlog
+x
+. Therefore, by comparing this diagram to that of Y , the proof is
+completed. □
+Finally, we consider Theorem C, i.e., the cuspidalization problem for geo-
+metrically pro-l fundamental groups of conﬁguration spaces of (not necessarily
+proper) hyperbolic curves over ﬁnite ﬁelds:
+Theorem 4.4. (cf. [11], Theorem 3.10, [4], Theorem 4.1)
+Let X (resp., Y ) be a hyperbolic curve over a ﬁnite ﬁeld K (resp., L). Let
+α1 :Π X
+∼
+−→ ΠY
+be a Frobenius-preserving isomorphism. Then for any n ∈ Z≥ 0, there exists a
+unique isomorphism
+αn :Π Xn
+∼
+−→ ΠYn
+well-deﬁned up to composition with an inner automorphism, which is compatible
+with the natural respective outer actions of the symmetric group onn letters and
+makes the diagram
+ΠXn+1
+αn+1
+−−−→ ΠYn+1
+pΠ
+i
+⏐⏐↓
+⏐⏐↓pΠ
+i
+ΠXn
+αn
+−−−→ ΠYn
+(i =1 , ··· ,n +1 ) commute.
+Proof. If n =2a n d X is proper, it follows from [11], Theorem 3.1. We shall
+consider the case where n =2a n d X is aﬃne. It follows from Theorem 3.8
+and Proposition 4.3 that α1 induces an isomorphism α0 : GK ∼= GL and α′
+2 :
+ΠX2 ×GK GK′ ∼= ΠY2 ×GL GL′ —w h e r eGK′ ⊆ GK (resp., GL′ ⊆ GL) denotes
+an open subgroup corresponding to some ﬁnite extension K′ of K (resp., L′
+of L) — as well as an isomorphism αΔ
+2 :Δ X2
+∼= ΔY2 . N o wl e tu sd e n o t eb y
+τX : GK → Out(ΔX2 ) (resp., τY : GL → Out(ΔY2 )) the morphism obtained
+naturally by lifting elements of GK (resp., GL) via the surjection Π X2 ↠ GK
+(resp., ΠY2 ↠ GL). Then αΔ
+2 , α0 construct two morphisms
+τY ◦α0, [αΔ
+2 ] ◦τX : GK −→ Out(ΔY2 )
+
+On the cuspidalization problem for hyperbolic curves over ﬁnite ﬁelds 35
+— where [ αΔ
+2 ] denotes the isomorphism Out(Δ X2 )
+∼
+→ Out(ΔY2 ) that sends
+each element g ∈ Aut(ΔX2 )t o αΔ
+2 ◦g ◦(αΔ
+2 )− 1 ∈ Aut(ΔY2 ) — which coincide
+after composing with the natural homomorphism Out(Δ Y2 ) → Out(ΔY )b y
+deﬁnitions of α0, αΔ
+2 . On the other hand, the images of τY ◦α0 and [αΔ
+2 ] ◦
+τX lie in OutFC(ΔY2 ) and OutFC(ΔY2 ) → Out(ΔY ) is injective (cf. [5] for the
+deﬁnition and results concerning to “OutFC”), soτY ◦α0 =[ αΔ
+2 ] ◦τX. Therefore,
+since ΠX2
+∼= ΔX2
+out
+⋊ GK (resp., ΠY2
+∼= ΔY2
+out
+⋊ GL), we have an isomorphism
+ΠX2
+∼= ΠY2 , which satisﬁes the required uniqueness and compatibility from the
+construction. This completes the assertion in the case where n =2a n d X is
+aﬃne.
+The assertion of the case n ≥ 3 follows from a very similar argument as the
+above discussion. Indeed, we can apply an inductive argument on n together
+with the natural extension
+1 −→ Δ(X\{x})n−1 −→ ΠXn −→ ΠX −→ 1
+(hence ΠXn
+∼= Δ(X\{x})n−1
+out
+⋊ ΠX) for an arbitrary K-rational point x ∈ X,a n d
+t h ef a c tt h a tO u tFC(Δ(X\{x})n−1 ) → OutFC(Δ(X\{x})n−2 ) is injective. □
+The following corollary follows immediately from Theorem 4.4, together with
+the fact that any Frobenius-preserving isomorphism between hyperbolic curves
+over ﬁnite ﬁelds preserves the set of decomposition groups of closed points (as
+stated Remark 3.10.1).
+Corollary 4.5. (cf. [4], Corollary 4.1)
+Let X (resp., Y ) be a hyperbolic curve over a ﬁnite ﬁeld K (resp., L), and
+n ∈ Z
+≥ 0.L e t
+α :Π X
+∼
+−→ ΠY
+be a Frobenius-preserving isomorphism, and{x1, ··· ,x n} an ordered set of dis-
+tinct K-rational points of X. Then there exists a ordered set {y1, ··· ,y n} of
+distinct L-rational points of Y and uniquely exists an isomorphism
+˜α :Π X\{x1,··· ,xn}
+∼
+−→ ΠY \{y1,··· ,yn}
+well-deﬁned up to composition with an inner automorphism, which inducesα by
+passing to quotients ΠX\{x1,··· ,xn} ↠ ΠX, ΠY \{y1,··· ,yn} ↠ ΠY .
+References
+[1] A. Grothendieck et al.,Revˆetements ´etale et groupe fondamental,Lecture Notes in Math.,
+224, Springer, Berlin, 1971.
+[2] Y. Hoshi, The exactness of the log homotopy sequence, Hiroshima Math. J. 39 (2009),
+p. 61-121.
+[3] Y. Hoshi, On the fundamental groups of log conﬁguration schemes, M a t h .J .O k a y a m a
+Univ. 51 (2009), p.1-26.
+[4] Y. Hoshi, Absolute anabelian cuspidalizations of conﬁguration spaces of proper hyper-
+bolic curves over ﬁnite ﬁelds, Publ. RIMS, Kyoto Univ. 45 (2009), p. 661-744.
+
+36 Yasuhiro Wakabayashi
+[5] Y. Hoshi and S. Mochizuki, On the combinatorial anabelian geometry of nodally nonde-
+genarate outer representations, to appear in Hiroshima Math. J
+[6] L. Illusie, An Overview of the Work of K. Fujiwara, K. Kato and C. Nakamura on
+Logarithmic Etale Cohomology, in Cohomologies p-adiques et applications arithmetiques
+(2), Asterisque 279 (2002), p. 271-322.
+[7] K. Kato, Logarithmic structures of Fontaine-Illusie, inAlgebraic analysis, geometry, and
+number theory (Baltimore, MD, 1988), p. 191-224, Johns Hopkins Univ. Press, Baltimore,
+MD, 1989.
+[8] F. F. Knudsen, The projectivity of the moduli space of stable curves. 2. The stacksMg,r,
+Math. Scand. 52 (1983), p. 161-199.
+[9] S. Mochizuki, Extending Families of Curves over Log Regular Schemes, J. reine angew.
+Math. 511 (1999), p. 319-423.
+[10] S. Mochizuki, The absolute anabelian geometry of hyperbolic curves, in Galois theory
+and modular forms, p. 77-122, Dev. Math., 2, Kluwer Acad. Publ., Boston. MA, 2004.
+[11] S. Mochizuki, Absolute anabelian cuspidalizations of proper hyperbolic curves, J. Math.
+Kyoto Univ. 47 (2007), p. 451-539.
+[12] S. Mochizuki, A combinatorial version of the Grothendieck conjecture, Tohoku Math J.
+59 (2007), p. 455-479.
+[13] S. Mochizuki, On the combinatorial cuspidalization of hyperbolic curves, Osaka J Math.
+47, (2010), p. 651-715.
+[14] S. Mochizuki and A. Tamagawa, The algebraic and anabelian geometry of conﬁguration
+spaces, Hokkaido Math. J. 37 (2008), p. 75-131.
+[15] D. Mumford, Abelian varieties,Tata Institute of Fundamental Reserch Studies in Mathe-
+matics, No.5 Published for the Tata Institute of Fundamental Reserch, Bombay; Oxford
+University Press, London, 1970.
+[16] H. Nakamura, Galois rigidity of the ´etale fundamental groups of punctured projective
+lines, J. Reine Angew. Math. 411 (1990), p. 205-216.
+[17] H. Nakamura, N. Takao and R. Ueno, Some stability properties of Teichmuller modular
+function ﬁelds with pro- l weight structures, Math. Ann. 302 (1995), p.197-213.
+[18] J. Stix, A monodromy criterion for extending curves, Int. Math. Res. Not. 2005.
+[19] A. Tamagawa, The Grothendieck conjecture for aﬃne curves, Compositio Math. 109
+(1997), p. 135-194.

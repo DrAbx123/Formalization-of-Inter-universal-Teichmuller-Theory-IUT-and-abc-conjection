@@ -1,0 +1,3832 @@
+Geometric Version of the Grothendieck
+Conjecture for Universal Curves over Hurwitz
+Stacks
+Shota Tsujimura
+May 7, 2018
+Abstract
+In this paper, we prove a certain geometric version of the Grothendieck
+Conjecture for tautological curves over Hurwitz stacks. This result gen-
+eralizes a similar result obtained by Hoshi and Mochizuki in the case of
+tautological curves over moduli stacks of pointed smooth curves. In the
+process of studying this version of the Grothendieck Conjecture, we also
+examine various fundamental geometric properties of “proﬁled log Hur-
+witz stacks”, i.e., log algebraic stacks that parametrize Hurwitz coverings
+for which the marked points are equipped with a certain ordering deter-
+mined by combinatorial data which we refer to as a “proﬁle”.
+Contents
+Introduction 1
+Notations and Conventions 5
+1 Basic properties of proﬁled log Hurwitz stacks 7
+2 Hurwitz-type log conﬁguration spaces 19
+3 T riviality of certain outomorphisms 30
+4 The proof of Theorem A 40
+References 68
+Introduction
+In [CbTpI], the theory of proﬁnite Dehn twists was developed and applied to
+prove the following “geometric version of the Grothendieck Conjecture for tau-
+tological curves over moduli stacks of pointed smooth curves”.
+1
+
+Theorem M. (cf. [CbTpI], Theorem D) Let (g,r) be a pair of nonnegative
+integers such that 2g −2+ r> 0; Σa nonempty set of prime numbers; k
+an algebraically closed ﬁeld of characteristic zero. WriteMg,r for the moduli
+stack of r-pointed smooth curves of genusg whose r marked points are equipped
+with an ordering; Cg,r →M g,r for the tautological curve over Mg,r [cf.
+the discussion entitled “Curves” in Notations and Conventions];(Mg,r)k
+def
+=
+Mg,r ×Z k [cf. the discussion entitled “Curves” in Notations and Conventions];
+(Cg,r)k
+def
+= Cg,r ×Z k [cf. the discussion entitled “Curves” in Notations and
+Conventions]; ΠMg,r
+def
+= π1((Mg,r)k) for the ´etale fundamental group of the
+moduli stack (Mg,r)k; Πg,r for the maximal pro-Σquotient of the kernelNg,r
+of the natural surjection π1((Cg,r)k) ↠ π1((Mg,r)k)=Π Mg,r ; ΠCg,r for the
+quotient of the ´etale fundamental groupπ1((Cg,r)k) of (Cg,r)k by the kernel of
+the natural surjectionNg,r ↠ Πg,r; OutC(Πg,r) for the group of outomorphisms
+[cf. the discussion entitled “Topological groups” in Notations and Conventions]
+of Π
+g,r which induce bijections on the set of cuspidal inertia subgroups ofΠg,r.
+Thus, we have a natural sequence of proﬁnite groups
+1 −→Πg,r −→ΠCg,r −→ΠMg,r −→1
+which determines an outer representation
+ρg,r :ΠMg,r −→Out(Πg,r)
+Then the following hold:
+(i) Let H ⊆ΠMg,r be an open subgroup ofΠMg,r . Suppose that one of the
+following two conditions satisﬁed:
+(a) 2g −2+ r> 1, i.e.,(g,r) /∈{(0,3),(1,1)}
+(b) (g,r)=( 1,1),2 ∈Σ,andH =ΠMg,r .
+Then the composite of natural homomorphisms
+Aut(Mg,r)k((Cg,r)k) −→AutΠMg,r (ΠCg,r )/Inn(Πg,r)
+∼
+−→ZOut(Πg,r)(Im(ρg,r)) ⊆ZOut(Πg,r)(ρg,r(H))
+[cf. the discussion entitled “Topological groups” in Notations and Con-
+ventions] determines anisomorphism
+Aut(Mg,r)k((Cg,r)k)
+∼
+−→ZOutC(Πg,r)(ρg,r(H)).
+Here, we recall thatAut(Mg,r)k((Cg,r)k) is isomorphic to
+⎧
+⎪⎨
+⎪⎩
+Z/2Z×Z/2Z if (g,r)=( 0,4);
+Z/2Z if (g,r) ∈{(1,1),(1,2),(2,0)};
+{1} if (g,r) /∈{(0,4),(1,1),(1,2),(2,0)}.
+2
+
+(ii) Let H ⊆OutC(Πg,r) be a closed subgroup ofOutC(Πg,r) that contains an
+open subgroup ofIm(ρg,r) ⊆Out(Πg,r). Suppose that
+2g −2+ r> 1, i.e.,(g,r) /∈{(0,3),(1,1)}.
+Then H is almost slim [cf. the discussion entitled “Topological groups”
+in Notations and Conventions]. If, moreover,
+2g −2+ r> 2, i.e.,(g,r) /∈{(0,3),(0,4),(1,1),(1,2),(2,0)},
+then H is slim [cf. the discussion entitled “Topological groups” in Nota-
+tions and Conventions].
+Roughly speaking, this result was obtained in [CbTpI] as a consequence of
+the following two steps.
+(1) The r> 0 case is reduced to the Grothendieck Conjecture for conﬁgura-
+tion spaces and then proved by applying the combinatorial Grothendieck
+Conjecture [i.e., the graphicity of outomorphisms of surface groups sat-
+isfying certain combinatorial conditions [cf. [NodNon], Theorem A]] and
+elementary topological and graph-theoretic considerations.
+(2) The r = 0 case is reduced to the r> 0 case by using the theory of
+clutching morphisms [cf. [Knud]] and the theory of proﬁnite Dehn twists
+[cf. [CbTpI]].
+Inthepresentpaper, weproveaversionofTheoremMfortautologicalcurves
+over (log) Hurwitz stacks [cf. [CbTpI], Remark 6.14.1]. In order to carry out
+steps (1) and (2) in the case of tautological curves over (log) Hurwitz stacks, it
+is necessary to overcome certain diﬃculties, as follows:
+(1
+Hur) It is necessary to prove a version of the Grothendieck Conjecture for con-
+ﬁguration spaces that applies to certain more combinatorially complicated
+spaces that arise from (log) Hurwitz stacks. This is done by applying sim-
+ilar techniques to the techniques applied in (1), but these techniques must
+be applied to spaces that are much more combinatorially complicated than
+conﬁguration spaces.
+(2
+Hur) Unlike the situation in (2), where one may consider arbitrary deforma-
+tions and degenerations of pointed stable curves, it is necessary to restrict
+oneself to deformations and degenerations that are compatible with the
+covering under consideration. This diﬃculty is overcome by applying sim-
+ilar techniques to the techniques applied in (2), but, just as in the case of
+(1
+Hur), the situation in which these techniques must be applied is consid-
+erably more combinatorially complicated than the situation considered in
+(2).
+3
+
+This paper is organized as follows. In§1, after recalling the deﬁnitions of
+Hurwitz stacks, we deﬁne proﬁled (log) Hurwitz stacks and examine various
+fundamental geometric properties of proﬁled (log) Hurwitz stacks such as ir-
+reducibility. We also prove the existence of certain natural homotopy exact
+sequences related to these proﬁled (log) Hurwitz stacks that will be of use later
+in the paper. In §2, we deﬁne Hurwitz-type log conﬁguration spaces and dis-
+cuss various objects related to these spaces. In§3, we prove a key result [cf.
+Proposition 3.1] which asserts that outomorphisms of surface groups that satisfy
+certain relatively weak conditions are in fact trivial. In§4, after discussing the
+existence of certain suitable degenerations of simple coverings, i.e., the cover-
+ings parametrized by Hurwitz stacks, we prove the main result by applying the
+theory of proﬁnite Dehn twists, together with the results obtained in previous
+sections.
+Our main result is the following.
+Theorem A. Let Σbe a nonempty set of prime numbers;k an algebraically
+closed ﬁeld of characteristic zero;(g,d,r ) a triple of nonnegative integers such
+that
+d ≥2 ∧(g,r) /∈{(0,0),(1,0)}∧ (g,d,r ) /∈{(0,2,1),(0,3,1)}
+(⇒ 2g −2+ dr >1 ∧2g +2d+r −5 ≥1).
+Write (H
+g,d,r)k for ther-proﬁled Hurwitz stack of type(g,d) over k [cf. Deﬁ-
+nition 1.8; Deﬁnition 1.13, (ii)], wheredim(Hg,d,r)k =2 g−2+2d+r−3=2 g+
+2d+r−5 ≥1 [cf. Corollary 1.9];(Cg,d,r)k → (Hg,d,r)k for the restriction of the
+tautological curve over (Mg,dr)k to (Hg,d,r)k via the natural (1-)morphism
+(Hg,d,r)k → (Mg,dr)k [cf. Proposition 1.10, (iii)]; ΠHg,d,r
+def
+= π1((Hg,d,r)k)
+for the ´etale fundamental group of the proﬁled Hurwitz stack(Hg,d,r)k; Πg,d,r
+for the maximal pro-Σquotient of the kernel Ng,d,r of the natural surjection
+π1((Cg,d,r)k) ↠ π1((Hg,d,r)k)=Π Hg,d,r ; ΠCg,d,r for the quotient of the ´etale
+fundamental group π1((Cg,d,r)k) of (Cg,d,r)k by the kernel of the natural sur-
+jection Ng,d,r ↠ Πg,d,r; OutC(Πg,d,r) for the group of outomorphisms [cf. the
+discussion entitled “Topological groups” in Notations and Conventions] ofΠg,d,r
+which induce bijections on the set of cuspidal inertia subgroups ofΠg,d,r.T h u s ,
+we have a natural sequence of proﬁnite groups
+1 −→Πg,d,r −→ΠCg,d,r −→ΠHg,d,r −→1
+which determines an outer representation
+ρg,d,r :ΠHg,d,r −→Out(Πg,d,r)
+Then the following hold:
+(i) Let H ⊆ΠHg,d,r be an open subgroup ofΠHg,d,r . Then the composite of
+natural homomorphisms
+Aut(Hg,d,r)k((Cg,d,r)k) −→AutΠHg,d,r
+(ΠCg,d,r )/Inn(Πg,d,r)
+∼
+−→ZOut(Πg,d,r)(Im(ρg,d,r)) ⊆ZOut(Πg,d,r)(ρg,d,r(H))
+4
+
+[cf. the discussion entitled “Topological groups” in Notations and Con-
+ventions] determines anisomorphism
+Aut(Hg,d,r)k((Cg,d,r)k)
+∼
+−→ZOutC(Πg,d,r)(ρg,d,r(H)).
+Moreover, Aut(Hg,d,r)k((Cg,d,r)k) is isomorphic to
+⎧
+⎪⎨
+⎪⎩
+Z/2Z×Z/2Z if (g,d,r ) ∈{(0,2,2),(0,4,1)};
+Z/2Z if (g,d,r ) ∈{(g,2,r) | (g,r) ̸=( 0,2)}∪{(2,d, 0)};
+{1} if (g,d,r ) /∈{(0,4,1),(g,2,r),(2,d, 0)}.
+(ii) Let H ⊆OutC(Πg,d,r) b eac l o s e ds u b g r o u po fOutC(Πg,d,r) that contains
+an open subgroup ofIm(ρg,d,r) ⊆Out(Πg,d,r).T h e nH is almost slim
+[cf. the discussion entitled “Topological groups” in Notations and Con-
+ventions]. If, moreover,
+(g,d,r ) /∈{(0,4,1),(g,2,r),(2,d, 0)},
+then H is slim [cf. the discussion entitled “Topological groups” in Nota-
+tions and Conventions].
+Notations and Conventions
+In this paper, we follow the notations and conventions of [CbTpI].
+Sets : If S is a set, then we shall denote byS# the cardinalityof S.
+Numbers : The notation Primes will be used to denote the set of prime
+numbers. The notation N will be used to denote the set or [additive] monoid
+of nonnegative rational integers. The notationZ will be used to denote the set,
+group, or ring of rational integers.
+T opological groups : Let G be a topological group and P a property of
+topological groups [e.g., “abelian” or “pro-Σ” for some Σ⊆Primes]. Then we
+shall say thatG is almost P if there exists an open subgroup ofG that is P.
+Let G be a topological group andH ⊆G a closed subgroup ofG. Then we shall
+denote by ZG(H) (respectively, NG(H);CG(H)) the centralizer (respectively,
+normalizer; commensurator)o fH ⊆G, i.e.,
+ZG(H)
+def
+= {g ∈G | ghg−1 = h for anyh ∈H},
+(respectively, NG(H)
+def
+= {g ∈G | g ·H ·g−1 = H}
+CG(H)
+def
+= {g ∈G | H ∩g ·H ·g−1 is of ﬁnite index inH and g ·H ·g−1}).
+We shall refer toZ(G)= ZG(G) as the center ofG. It is immediate from the
+deﬁnitions that
+5
+
+ZG(H) ⊆NG(H) ⊆CG(H); H ⊆NG(H).
+We shall say that the closed subgroupH is commensurably terminal inG if
+H = CG(H). We shall say thatG is slim if ZG(U)= {1} for any open subgroup
+U of G.
+Let G be a topological group. Then we shall write Aut(G)f o rt h eg r o u p
+of [continuous] automorphisms ofG, Inn(G) ⊆Aut(G) for the group of inner
+automorphisms of G,a n dO u t (G)
+def
+=A u t (G)/Inn(G). We shall refer to an
+element of Out(G)a sa noutomorphism of G. Now suppose thatG is center-free
+[i.e., ZG(G)= {1}]. Then we have an exact sequence of groups
+1 −→G (
+∼
+→ Inn(G)) −→Aut(G) −→Out(G) −→1.
+If J is a group, andρ: J → Out(G) is a homomorphism, then we shall denote
+by
+G
+out
+⋊ J
+the group obtained by pulling back the above exact sequence of proﬁnite groups
+via ρ.T h u s ,w eh a v eanatural exact sequenceof groups
+1 −→G −→G
+out
+⋊ J −→J −→1
+Suppose further that G is proﬁnite and topologically ﬁnitely generated.T h e n
+one veriﬁes immediately that the topology ofG admits a basis ofcharacteristic
+open subgroups, which thus induces aproﬁnite topologyon the groups Aut(G)
+and Out(G) with respect to which the above exact sequence relating Aut(G)
+and Out(G) determines an exact sequence ofproﬁnite groups.I n p a r t i c u l a r ,
+one veriﬁes easily that if, moreover, J is proﬁnite and ρ: J → Out(G)i s
+continuous, then the above exact sequence involvingG
+out
+⋊ J determines an exact
+sequence of proﬁnite groups.L e t G,J be proﬁnite groups. Suppose that G
+is center-free and topologically ﬁnitely generated.L e t ρ: J → Out(G)b ea
+continuous homomorphism. Write AutJ(G
+out
+⋊ J) for the group of [continuous]
+automorphisms ofG
+out
+⋊J that preserve and induce the identity automorphism on
+the quotientJ. Then one veriﬁes immediately that the operation of restricting
+to G determines anisomorphism of proﬁnite groups
+AutJ(G
+out
+⋊ J)/Inn(G)
+∼
+→ ZOut(G)(Im(ρ)).
+Log schemes : For basic notions concerning log schemes, see [KK1], [KK2].
+When ascheme appears in a diagram of log schemes, the scheme is to be under-
+stood as the log scheme obtained by equipping the scheme with thetrivial log
+structure.I f Xlog is a log scheme, then we shall refer to the largest open sub-
+scheme of the underlying scheme ofXlog over which the log structure is trivial
+as theinterior of Xlog. Fiber products of fs log schemes are to be understood
+as ﬁber products taken in the category of fs log schemes. Note that in general,
+the underlying scheme of the ﬁber product of fs log schemes isnot naturally
+6
+
+isomorphic to the ﬁber product of the underlying schemes of the given fs log
+schemes. However, if a morphismXlog → Ylog between two fs log schemesXlog
+and Ylog is strict [i.e., the pull-back of the log structure ofYlog is naturally
+isomorphic to the log structure ofXlog], then for any morphismZlog → Ylog
+between two fs log schemesZlog and Ylog, the underlying scheme of the ﬁber
+product Xlog ×Y log Zlog is naturally isomorphic toX ×Y Z.
+Curves : We shall use the terms “hyperbolic curve”, “cusp”, “stable log curve”,
+and “smooth log curve” as they are deﬁned in [CmbGC]. If (g,r)i sap a i ro f
+nonnegative integers such that 2g−2+ r> 0, then we shall denote byMg,r the
+moduli stack ofr-pointed stable curves of genusg overZ whose r marked points
+are equipped with an ordering,b y Mg,r ⊆ Mg,r the open substack of Mg,r
+parameterizing smooth curves,b y M
+log
+g,r the log stack obtained by equipping
+Mg,r with the log structure associated to the divisor with normal crossings
+Mg,r \M g,r ⊆Mg,r,b yCg,r → Mg,r the tautological curveover Mg,r ,a n d
+by Dg,r ⊆Cg,r the correspondingtautological divisorof marked pointsof Cg,r →
+Mg,r. Then the divisor given by the union ofDg,r with the inverse image inCg,r
+of the divisorMg,r \Mg,r ⊆Mg,r determines a log structure onCg,r; denote
+the resulting log stack byC
+log
+g,r. Thus, we obtain a (1-)morphism of log stacks
+C
+log
+g,r → M
+log
+g,r
+. We shall denote by Cg,r ⊆Cg,r the interior ofC
+log
+g,r.T h u s , w e
+obtain a (1-)morphism of stacksCg,r →M g,r.L e tS be a scheme. We shall
+append a subscript “S”t oMg,r, Mg,r, M
+log
+g,r, Cg,r, Cg,r,a n dC
+log
+g,r to denote the
+result of base-changing toS.
+Let n be a positive integer andXlog as t a b l el o gc u r v eo ft y p e(g,r)o v e ra
+log schemeSlog. Then we shall refer to the log scheme obtained by pulling back
+the (1-)morphism M
+log
+g,r+n → M
+log
+g,r given by forgetting the lastn points via
+the classifying (1-)morphismSlog → M
+log
+g,r of Xlog as then-th log conﬁguration
+spaceof Xlog.
+1 Basic properties of proﬁled log Hurwitz stacks
+In this section, after reviewing the basic theory of Hurwitz stacks in Deﬁnitions
+1.1, 1.2, 1.3, 1.4; Theorem 1.5; Lemma 1.6 [cf. [Ful],§6, and [GCH]], we de-
+ﬁne “proﬁled”versions — i.e., versions equipped with various orderings of the
+marked points — of the notion of a simple admissible covering [cf. Deﬁnition
+1.7] and of (log) Hurwitz stacks [cf. Deﬁnition 1.8]. After deﬁning proﬁled (log)
+Hurwitz stacks, we examine various fundamental geometric properties of these
+stacks in Proposition 1.10 and prove the existence of certain natural homotopy
+exact sequences related to these stacks in Proposition 1.14.
+Deﬁnition 1.1. (cf. [GCH], §1.3) Let (g,d) be a pair of nonnegative integers
+such that 2g −2+2 d ≥3a n dd ≥2. For any schemeS over SpecZ[
+1
+d!], write
+7
+
+Hord
+g,d(S) for the following groupoid [i.e., a category in which every morphism is
+invertible]:
+•Objects: an object is a collection of arrows
+(π: C → P;σ1,...,σ 2g−2+2d : S → P)
+in the category ofS-schemes such that the following properties hold: there
+exists an isomorphism of S-schemes P
+∼
+→ P1
+S; the structure morphism
+C → S is a smooth, geometrically connected, proper family of curves of
+genus g; πis [necessarily ﬁnite] ﬂat of degreed with simple ramiﬁcation
+[i.e., the discriminant divisor ofπis ´etale over the baseS] exactly at the
+[necessarily mutually disjoint] sectionsσ1,...,σ 2g−2+2d : S → P.
+•Morphisms: amorphismbetweentwoobjects( π: C → P;σ1,...,σ 2g−2+2d)
+and (π′ : C′ → P′;σ′
+1,...,σ ′
+2g−2+2d) is a pair of isomorphismsα: C
+∼
+→ C′
+and β: P
+∼
+→ P′ such thatβ◦π= π′ ◦α.
+We shall refer to the resulting stack as theordered Hurwitz stackHord
+g,d of type
+(g,d) [cf. Remark 1.1.1 below]. Note that there is a natural action of the
+symmetric group on2g −2+2 d letters on Hord
+g,d. We shall refer to thestack-
+theoretic quotientof the ordered Hurwitz stackHord
+g,d of type (g,d)b yt h i sa c t i o n
+of the symmetric group on 2g−2+2 d letters as theHurwitz stackHg,d of type
+(g,d).
+Remark 1.1.1. When d ≥3, the stack Hord
+g,d is representable by a scheme [cf.
+Theorem 1.5 below; [Ful], Theorem 6.3; [GCH],§1.3; [GCH], §3.22]. Here, we
+remarkthata slight oversightinthestatementoftheTheoremof[GCH], §3.22, is
+correctedin Theorem 1.5 below: That is to say, in the statement of the Theorem
+of [GCH],§3.22, the deﬁnition of themorphisms of the stack under consideration
+are only explicitly deﬁned in the case where the domain and codomain of the
+morphism areidentical; in fact, however, morphisms must be deﬁned in the case
+where the domain and codomain of the morphism arenot necessarily identical,
+i.e., as is done in the statement of Theorem 1.5 given below [where one considers
+morphisms betweenprimed and un-primed collections of data].
+Next, we recall the notion of admissible coverings introduced in [HM], [GCH]
+for constructing a compactiﬁed version of the Hurwitz stack.
+Deﬁnition 1.2. (cf. [GCH], §3.4) Let (g,q,r ) be a triple of nonnegative inte-
+gers.
+(i) Let S
+q denote the symmetric group onq l e t t e r s . N o t et h a tw eh a v ea
+natural action of Sq on M
+log
+g,q+r given by permuting the ﬁrstq marked
+points. We shall denote byM
+log
+g,[q]+r the (log) stack theoretic quotient of
+M
+log
+g,q+r by Sq.I f r =0 ,w es i m p l yw r i t eM
+log
+g,[q]. Note that the universal
+8
+
+stable log curveC
+log
+g,q+r → M
+log
+g,q+r descends to a stable log curveC
+log
+g,[q]+r →
+M
+log
+g,[q]+r.
+(ii) Let Slog be a ﬁne log scheme. A morphism between log stacksSlog →
+M
+log
+g,[q]+r will be referred to as thedata for a([q]+ r)-pointed stable log
+curve of genusg.L e tClog → Slog be the pull-back of the universal stable
+log curveC
+log
+g,[q]+r → M
+log
+g,[q]+r via such a morphism. By a slight abuse of
+terminology, we shall refer to such a stable log curveClog → Slog as a
+([q]+ r)-pointed stable log curve of genusg. If we forget the log structures
+of such a stable log curve, the resulting (f : C → S;μf ⊆ C)( w h e r e
+μf ⊆C is the divisor of marked points) will be referred to as a ([q]+ r)-
+pointed stable curve of genusg,o r ,w h e nr =0 ,s i m p l ya sa[q]-pointed
+stable curve of genusg. When the integersq and g are leftunspeciﬁed,a
+[q]-pointed stable curve of genusg will be referred to as asymmetrically
+pointed stable curve [overS].
+Deﬁnition 1.3. (cf. [GCH], §3.9) Let d be a positive integer; S a scheme;
+(f : C → S;μf ⊆C)a n d(h : D → S;μh ⊆D) symmetrically pointed stable
+curves overS. A ﬁnite morphismπ: C → D overS will be called anadmissible
+covering [of degreed] if it satisﬁes the following conditions:
+•Each ﬁber ofh : D → S admits a dense open subset over whichπis ﬁnite
+ﬂat of degreed.
+•We have inclusions of eﬀective relative (with respect to the morphismf)
+divisors μf ⊆π−1(μh) ⊆d·μf on C.
+•The morphism f is smooth at c ∈C if and only if the morphismh is
+smooth atπ(c).
+•The morphismπis ´etale, except
+– over μh, where it is tamely ramiﬁed;
+– atnodesofthegeometricﬁbersover S:i fsisageometricpointof S,λ
+is a node ofCs,a n dν= π(λ), then there exista ∈msh
+S,s, x,y ∈msh
+C,λ,
+and u,v ∈msh
+D,νsuch thatx,y (respectively, u,v) generate msh
+f−1(s),λ
+(respectively, msh
+h−1(s),ν), and xy = a, uv = ae, u = xe, v = ye (for
+some natural numbere such thate ∈(Osh
+S,s)×).
+Here, “msh” denotes the maximal ideal of the strict henselization “Osh”
+at the speciﬁed geometric point of the local ring in question.
+An admissible coveringπ: C → D over S will be called asimple admissible
+covering if the discriminant divisor ofπis ´etale overS in some neighborhood of
+μh.
+9
+
+Deﬁnition 1.4. Let (g,d) be a pair of nonnegative integers such that 2g−2+
+2d ≥3a n dd ≥2. For any scheme S over Spec Z[1
+d!], write Hg,d(S) for the
+following groupoid [i.e., a category in which every morphism is invertible]:
+•Objects: an object is asimple admissible coveringπ: C → D of degree
+d from a [(d−1)(2g −2+2 d)]-pointed stable curve (f : C → S;μf ⊆C)
+of genusg t oa[ 2g −2+2 d]-pointed stable curve (h : D → S;μh ⊆D)o f
+genus 0.
+•Morphisms: a morphism between two objectsπ: C → D and π′ : C′ → D′
+is a pair of isomorphismsα: C
+∼
+→ C′ and β: D
+∼
+→ D′ that are compatible
+with the respective divisors of marked points such thatβ◦π= π′ ◦α.
+We shall refer to the resulting stack as thecompactiﬁed Hurwitz stackHg,d of
+type (g,d).
+Remark1.4.1. Oneveriﬁesimmediatelythatthe Hurwitz stackHg,d ofDeﬁnition
+1.1 may be regarded as anopen substackof thecompactiﬁed Hurwitz stackHg,d
+of Deﬁnition 1.4, namely, the substack over which the pointed stable curves that
+appear in Deﬁnition 1.4 aresmooth over S.
+Remark 1.4.2. The stack Hg,d is geometrically irreducible over Z[1
+d!][ c f . t h e
+assertion concerning “HUSb,d” in [GCH],§2.9]. Here, we note that whereas in
+[GCH], §2.9, one works overZ[1
+b!], where b =2 g −2+2 d [cf. [GCH], §1.3],
+in the present discussion, we work overZ[1
+d!]. On the other hand, one veriﬁes
+immediately that the asserted geometric irreducibility may be extended to the
+situation of the present discussion.
+One of the main results of [GCH] is the following.
+Theorem 1.5. (cf. [GCH], §3.22, §3.23, and§3.27) Let(g,d,r ) be nonnegative
+integers such that2g −2+2 d + r ≥3 and d ≥2. Write
+Ag,d,r for the stack
+over Z[1
+d!] deﬁned as follows: if S is a scheme, then we take the objects of
+Ag,d,r(S) to be the simple admissible coveringsπ: C → D of degreed from a
+[(d−1)(2g−2+2d)+dr]-pointed stable curve(f : C → S;μf ⊆C) of genusg to
+a [2g−2+2 d+r]-pointed stable curve(h : D → S;μh ⊆D) of genus0;w et a k e
+the morphisms ofAg,d,r(S) between two objectsπ: C → D and π′ : C′ → D′ to
+be the pairs ofS-isomorphisms α: C → C′ and β: D → D′ that are compatible
+with the respective divisors of marked points such thatπ′◦α= β◦π.T h e nAg,d,r
+is a separated algebraic stack of ﬁnite type overZ[1
+d!]. Moreover,Ag,d,r may be
+equipped with a natural log structure; denote the resulting log stack byA
+log
+g,d,r.
+Finally, there is a natural morphism of log stacksA
+log
+g,d,r → (M
+log
+0,[2g−2+2d+r])Z[ 1
+d!]
+(given by mapping(C;D;π) ↦→ D) overZ[1
+d!] which is log ´etale, quasi-ﬁnite, and
+proper.
+10
+
+Remark 1.5.1. One veriﬁes immediately that, whenr = 0, the stackAg,d,0 may
+be naturally identiﬁed with the stackHg,d of Deﬁnition 1.4.
+Remark1.5.2. WriteAg,d,r ⊆Ag,d,r for the open substack over which the curves
+C and D of Theorem 1.5 aresmooth. Then a routine explicit computation of
+the completion ofAg,d,r along a pointed valued in an algebraically closed ﬁeld
+shows that thenormalization ˜Ag,d,r ofAg,d,r containsAg,d,r as an open substack
+whose complement in˜Ag,d,r, equipped with the reduced induced stack structure,
+is a relative divisor with normal crossings overZ[1
+d!], hence determines a log
+structure on ˜Ag,d,r. Finally, ˜Ag,d,r is proper, smooth overZ[1
+d!], and ˜Alog
+g,d,r is
+log smooth over Z[1
+d!] [hence, in particular, log regular] and log ´etale, quasi-
+ﬁnite, and proper over (M
+log
+0,[2g−2+2d+r])Z[ 1
+d!] [cf. [GCH], §3.23].
+Lemma 1.6. Let (g,q,d,s,t ) be nonnegative integers such that d ≥ 2; π:
+C → D a simple admissible covering of degreed from a[s]-pointed stable curve
+(f : C → S;μf ⊆C) of genusg to a[t]-pointed stable curve(h : D → S;μh ⊆D)
+of genus q. Suppose that S is connected. Then, if σf : S → μf is a section
+(where we note that such sections always exist ´etale locally on S), then the
+ramiﬁcation index of the restriction ofπto each of the ﬁbers of f along σf
+is constant on S. Moreover, if πis unramiﬁed (respectively, ramiﬁed) over
+as e c t i o nσh : S → μh, then the underlying topological space ofπ−1(S) is the
+disjoint union of the images, on underlying topological spaces, ofd (respectively,
+(d−1)) distinct sectionsS → μf.
+Proof. Lemma 1.6 follows immediately from Deﬁnition 1.3.
+Next, we introduce the notions ofproﬁled simple admissible coveringsand
+proﬁled Hurwitz stacks.
+Deﬁnition 1.7. Let (g,d,r ) be a triple of nonnegative integers such that 2g−
+2+2 d+r ≥3a n dd ≥2; π: C → D a simple admissible covering of degreed
+from a ([(d−1)(2g −2+2 d)] +dr)-pointed stable curve (f : C → S;μf ⊆C)
+of genusg t oa( [ 2g −2+2 d]+ r)-pointed stable curve (h : D → S;μh ⊆D)
+of genus 0 [cf. Deﬁnition 1.2, Deﬁnition 1.3]. Then the morphismπ: C → D,
+equipped with these partial orderings on the marked points, will be called an
+r-proﬁled simple admissible covering, if these partial orderings on the marked
+points satisfy the following conditions [cf. Lemma 1.6]:
+•The divisorμ
+h consists, ´etale locally onS,o f2g−2+2d unordered sections
+over which πramiﬁes and r ordered sections σ1,...,σ r over which πis
+unramiﬁed.
+•The divisorμf consists, ´etale locally onS,o f(d−1)(2g−2+2d) unordered
+sections over the sections of μh over which πramiﬁes and dr ordered
+sections over the sectionsσ1,...,σ r such that the sections overσk (1 ≤
+k ≤r) are indexed by the natural numbers between (k −1)d+1 and kd.
+11
+
+When C and D are smooth, we shall, on occasion, omit the word“admissible”
+from this terminology“r-proﬁled simple admissible covering”.
+Deﬁnition 1.8. Let (g,d,r ) be a triple of nonnegative integers such that 2g−
+2+2 d+r ≥3a n dd ≥2. For any schemeS over SpecZ[1
+d!], writeHg,d,r(S)f o r
+the following groupoid [i.e., a category in which every morphism is invertible]:
+•Objects: an object is anr-proﬁled simple admissible coveringπ: C → D
+of degreed from a ([(d−1)(2g −2+2 d)]+ dr)-pointed stable curve (f :
+C → S;μf ⊆C)o fg e n u sg t oa( [ 2g −2+2 d]+ r)-pointed stable curve
+(h : D → S;μh ⊆D)o fg e n u s0 .
+•Morphisms: a morphism between two objectsπ: C → D and π′ : C′ → D′
+is a pair of isomorphismsα: C
+∼
+→ C′ and β: D
+∼
+→ D′ that are compatible
+with respective divisors of marked points such thatβ◦π= π′ ◦α.
+We shall denote byHg,d,r ⊆Hg,d,r the open substack where the curvesC and
+D of the proﬁled simple admissible coveringπ: C → D are smooth. We shall
+refer toHg,d,r as ther-proﬁled Hurwitz stack of type(g,d).
+Remark 1.8.1. When r = 0, the stackHg,d,0 may be identiﬁed with the stack
+Hg,d of Deﬁnition 1.4.
+Corollary 1.9. Let(g,d,r ) be nonnegative integers such that2g−2+2d+r ≥3,
+d ≥2. Then there exists a natural (1-)morphism Hg,d,r → Ag,d,r which is ﬁnite
+´etale and surjective. In particular, the relative dimension ofHg,d,r over Z[1
+d!] is
+equal to2g −2+2 d+r −3=2 g +2d+r −5.
+Proof. One veriﬁes immediately from Theorem 1.5 and Deﬁnition 1.8 that the
+only diﬀerence between the data parametrized by the stackHg,d,r and the data
+parametrized by the stack Ag,d,r lies in the various partial orderings on the
+marked points. Thus, it follows immediately [cf. Lemma 1.6] that one has a
+natural (1-)morphism Hg,d,r → Ag,d,r that is ﬁnite ´etale and surjective. The
+ﬁnal assertion concerning the relative dimension now follows immediately from
+the ﬁnal portion of Theorem 1.5. This completes the proof.
+The pull-back of the canonical log structure onAg,d,r [cf. Theorem 1.5] via
+the ﬁnite ´etale covering
+Hg,d,r −→Ag,d,r
+of Corollary 1.9 determines a canonical log structure onHg,d,r.D e n o t e t h e
+resulting log stack — which we shall refer to as ther-proﬁled log Hurwitz stack
+of type(g,d)—b yH
+log
+g,d,r. Oneveriﬁesimmediatelythat Hg,d,r maybeidentiﬁed
+with the interior ofH
+log
+g,d,r.
+12
+
+Proposition 1.10. Let (g,d,r ) be nonnegative integers such that2g−2+2 d+
+r ≥3, d ≥2.
+(i) The normalization ˜Hg,d,r of Hg,d,r is proper, smooth overZ[1
+d!]. Moreover,
+Hg,d,r may be regarded as an open substack of˜Hg,d,r [cf. Remark 1.5.2],
+whose complement [in ˜Hg,d,r], equipped with the reduced induced stack
+structure, is a divisor with normal crossings.
+(ii) The divisor with normal crossings of (i) determines a log structure on
+˜Hg,d,r. Moreover, the resulting log stack ˜Hlog
+g,d,r is log smooth overZ[1
+d!],
+hence, in particular, log regular.
+(iii) There exists a natural (1-)morphism
+φ
+log
+g,d,r : H
+log
+g,d,r+1 −→H
+log
+g,d,r
+obtained by forgetting the ﬁnald sections (respectively, ﬁnal section) of the
+domain curve (respectively, codomain curve) of the covering. Now suppose
+further that2g −2+ dr ≥1. Then there exists a natural (1-)morphism
+ψ
+log
+g,d,r : H
+log
+g,d,r −→M
+log
+g,dr
+,
+determined by the domain curve of the covering, equipped with itsdr or-
+dered marked points. Moreover, we have a (1-)commutative diagram
+H
+log
+g,d,r+1
+ψ
+log
+g,d,r+1
+−−−−−→ M
+log
+g,d(r+1)
+φ
+log
+g,d,r
+⏐⏐↓
+⏐⏐↓
+H
+log
+g,d,r
+ψ
+log
+g,d,r
+−−−−→ M
+log
+g,dr,
+where the right-hand vertical arrow is the morphism obtained by forgetting
+the ﬁnal d sections.
+(iv) The (1-)morphism ˜φlog
+g,d,r : ˜Hlog
+g,d,r+1 → ˜Hlog
+g,d,r induced by the (1-)morphism
+φ
+log
+g,d,r of (iii) is proper, log smooth, representable.
+(v) The algebraic stacksHg,d,r, H
+log
+g,d,r,a n d˜Hlog
+g,d,r are geometrically irreducible
+over Z[1
+d!].
+(vi) The (1-)morphism ˜φlog
+g,d,r : ˜Hlog
+g,d,r+1 → ˜Hlog
+g,d,r of (iv) is a stable log curve,
+hence, in particular, has geometrically reduced, geometrically connected
+ﬁbers.
+Proof. Since the (1-)morphism
+Hg,d,r → Ag,d,r is ﬁnite ´etale [cf. Corollary 1.9],
+assertions (i) and (ii) follow from the corresponding assertions forAg,d,r [cf.
+Remark 1.5.2].
+13
+
+Next, we consider assertion (iii). It follows immediately from the well-known
+uniqueness of thecontractionmorphism that arises by forgetting a marked point
+of a pointed stable curve [cf. [Knud], Proposition 2.1] that anr-proﬁled sim-
+ple admissible covering of degree d induces [up to canonical isomorphism] a
+morphism from the curve constructed by contracting the ﬁnald sections of the
+domain curve of the covering to the curve constructed by contracting the ﬁ-
+nal section of the codomain curve of the covering. Assertion (iii) now follows
+immediately.
+Next, we consider assertion (iv). Consider the following (1-)commutative
+diagram
+˜H
+log
+g,d,r+1 −−−−→ M
+log
+0,[2g−2+2d]+r+1
+˜φlog
+g,d,r
+⏐⏐↓
+⏐⏐↓
+˜Hlog
+g,d,r −−−−→ M
+log
+0,[2g−2+2d]+r,
+where the horizontal arrows are the composites of the normalization morphisms
+with the (1-)morphisms obtained by sending (π: C → D) ↦→ D,a n dt h e
+right-hand vertical arrow is the log smooth morphism obtained by forgetting
+the ﬁnal section. Next, recall that it follows from Theorem 1.5, Remark 1.5.2,
+and Corollary 1.9 that the horizontal arrows of the above diagram are log ´etale.
+Since these horizontal arrows are log ´etale, and the right-hand vertical arrow
+of the diagram is log smooth [cf. the geometric properties of this morphism
+discussed in [Knud]], it then follows formally that the morphism˜φ
+log
+g,d,r is log
+smooth. The properness of ˜φlog
+g,d,r follows immediately from the properness of
+˜Hlog
+g,d,r and ˜Hlog
+g,d,r+1 over Z[1
+d!] [cf. Proposition 1.10, (i)].
+Next, we consider the representability portion of assertion (iv). Consider
+the following (1-)commutative diagram
+˜Hlog
+g,d,r+1 −−−−→ M
+log
+g,[(d−1)(2g−2+2d)]+d(r+1) ×M
+log
+0,[2g−2+2d]+r+1
+˜φlog
+g,d,r
+⏐⏐↓
+⏐⏐↓
+˜Hlog
+g,d,r −−−−→ M
+log
+g,[(d−1)(2g−2+2d)]+dr ×M
+log
+0,[2g−2+2d]+r,
+where the horizontal arrows are the composites of the normalization morphisms
+with the (1-)morphisms obtained by sending (π: C → D) ↦→ (C,D), and the
+right-hand vertical arrow is the morphism obtained by forgetting the ﬁnald
+sections on the left-hand factor and the ﬁnal section on the right-hand factor.
+Note that the representability of the right-hand vertical arrow is well-known [cf.
+[Knud]], and the representability of the horizontal arrows follow immediately
+from the various constructions involved [cf. [GCH], the proof of Theorem in
+§3.22]. Since the horizontal arrows are representable, and the right-hand vertical
+arrowofthediagramisrepresentable, itthenfollowsformallythatthemorphism
+˜φ
+log
+g,d,r is representable.
+Next, we consider assertion (v). SinceHg,d,r determines a dense open sub-
+stack ofH
+log
+g,d,r and ˜Hlog
+g,d,r on every geometric ﬁber overZ[1
+d!] [cf. Remark 1.5.2],
+14
+
+it suﬃces to show thatHg,d,r is geometrically irreducible overZ[1
+d!]. Observe
+that when r = 0, the desired geometric irreducibility follows from Remarks
+1.4.2 and 1.8.1; when g =0 , d =2 ,a n dr = 1, the desired geometric irre-
+ducibility follows immediately by noting thatH0,2,1 is isomorphic to a stack
+theoretic quotient of SpecZ[1
+d!]. Now write φg,d,r : Hg,d,r+1 →H g,d,r for the
+(1-)morphism induced by restricting˜φlog
+g,d,r to Hg,d,r+1. Observe that it follows
+from assertion (iv) thatφg,d,r is representable and smooth, hence open. More-
+over, it follows from Lemma 1.12 below thatφg,d,r is geometrically irreducible.
+Thus, we conclude the desired geometric irreducibility forHg,d,r+1 by applying
+induction on r, together with Lemma 1.11, applied to the various morphisms
+obtained by base-changingφg,d,r to irreducibleHg,d,r-schemes whose structure
+(1-)morphism toHg,d,r is ´etale.
+Next, we consider assertion (vi). First, we prove that the geometric ﬁbers
+of the [proper, by Proposition 1.10, (iv)] (1-)morphism ˜φlog
+g,d,r are connected.
+Since ˜Hg,d,r+1 is normal, it follows from well-known properties of the Stein
+factorization that it suﬃces to verify that the geometric generic ﬁber of [the
+underlying (1-)morphism on algebraic stacks associated to]˜φlog
+g,d,r is connected.
+On the other hand, since the (1-)morphism φg,d,r discussed in the proof of
+assertion (v) is open and geometrically irreducible, this connectedness follows
+from the irreducibility of˜Hlog
+g,d,r and ˜Hlog
+g,d,r+1 [cf. Proposition 1.10, (v)], together
+with the fact thatHg,d,r+1 is an open dense substack of˜Hlog
+g,d,r+1 [cf. Remark
+1.5.2]. This completes the veriﬁcation of the geometric connectedness of˜φlog
+g,d,r.
+In light of this geometric connectedness, it follows immediately from the explicit
+computation of the local structure of˜φ
+log
+g,d,r discussed in Remark 1.5.2, Corollary
+1.9, that ˜φlog
+g,d,r is alog curvein the sense of [FK], Deﬁnition 1.2.
+Thus, it follows from [FK], Deﬁnition 1.12; [FK], Theorem 4.5, that to verify
+that ˜φlog
+g,d,r is a stable log curve, it suﬃces to verify that the sheaf of relative
+logarithmic diﬀerentials of˜φlog
+g,d,r is relatively ample, i.e., with respect to˜φlog
+g,d,r.
+To this end, let us recall the (1-)commutative diagram of the ﬁrst display in the
+proof of assertion (iv). Observe that it follows from Theorem 1.5, Remark 1.5.2,
+and Corollary 1.9, that the horizontal arrows of this diagram are log´etale, quasi-
+ﬁnite, andproper. Thus, sinceboththeright-handverticalarrowofthisdiagram
+and ˜φ
+log
+g,d,r are representable [cf. Proposition 1.10, (iv)], it follows formally that
+the (1-)morphism ˜Hlog
+g,d,r+1 → ˜Hlog
+g,d,r ×M
+log
+0,[2g−2+2d]+r
+M
+log
+0,[2g−2+2d]+r+1 induced
+by the (1-)commutative diagram of the ﬁrst display in the proof of assertion
+(iv) is ﬁnite, log ´etale. In particular, the desired relative ampleness of the sheaf
+of relative logarithmic diﬀerentials of˜φlog
+g,d,r : ˜Hlog
+g,d,r+1 → ˜Hlog
+g,d,r follows formally
+from the [well-known!] relative ampleness of the sheaf of relative logarithmic
+diﬀerentials of the stable log curveM
+log
+0,[2g−2+2d]+r+1 → M
+log
+0,[2g−2+2d]+r.
+This completes the proof of Proposition 1.10.
+15
+
+Lemma 1.11. Let X and Y be topological spaces;f : X → Y a continuous
+map satisfying the following conditions:
+(i) Y is an irreducible topological space.
+(ii) f is an open map.
+(iii) For anyy ∈Y, f−1(y) ⊆X is an irreducible topological space.
+Then X is an irreducible topological space.
+Proof. Suppose that X is not irreducible. Then there exist non-empty open
+subsets U1 and U2 of X such thatU1 ∩U2 is empty. Since, by conditions (i) and
+(ii), f(U1)a n df(U2) are non-empty open subsets with non-empty intersection,
+we conclude that there exists an elementy ∈f(U1) ∩f(U2) ⊆Y such that
+f−1(y) ⊆X is not irreducible. But this contradicts condition (iii).
+Lemma 1.12. Let k be an algebraically closed ﬁeld;x :S p e ck →H g,d,r a
+geometric point ofHg,d,r corresponding to a proﬁled simple coveringC → P1
+k
+of degreed from a([(d−1)(2g −2+2 d)]+ dr)-pointed smooth curve(f : C →
+Spec k;μf ⊆C) of genus g to a ([2g −2+2 d]+ r)-pointed projective line(h :
+P1
+k → Spec k;μh ⊆P1
+k). Then the geometric ﬁber ofφg,d,r : Hg,d,r+1 →H g,d,r
+over x :S p e ck →H g,d,r is isomorphic to
+Z
+def
+=
+{
+(C \μf)×(P1
+k\μh) (C \μf)×···× (P1
+k\μh) (C \μf)
+}
+\ΔZ,
+where the ﬁber product is the ﬁber product ofd copies of the morphismC\μf →
+P1
+k \μh,a n dΔZ denotes the union of the various diagonals associated to pairs
+of factors in the ﬁber product. Moreover,Z is the Galois closure of the covering
+C \μf → P1
+k \μh, hence, in particular, irreducible.
+Proof. The ﬁrst assertion follows immediately from the various deﬁnitions in-
+volved. To verify the ﬁnal assertion, it suﬃces to verify that the Galois group of
+the Galois closure of the coveringC\μ
+f → P1
+k\μh is isomorphic to the symmet-
+ric group ond letters Sd. On the other hand, this follows immediately from the
+well-known elementary fact that any subgroup ofSd that acts transitively on
+the set{1,...,d } and, moreover, is generated by transpositions is in fact equal
+to Sd.
+Deﬁnition 1.13. Let (g,d,r ) be nonnegative integers such that 2g−2+dr ≥1,
+d ≥2 [conditions which imply, as is easily veriﬁed, that 2g−2+2 d+r−2 ≥1];
+k an algebraically closed ﬁeld of characteristic zero.
+16
+
+(i) We shall denote by
+ug,d,r : Cg,d,r →H g,d,r (respectively, ˜ulog
+g,d,r : ˜Clog
+g,d,r → ˜Hlog
+g,d,r)
+thepull-backofthetautologicalcurve Cg,dr →M g,dr (respectively,C
+log
+g,dr →
+M
+log
+g,dr) viaψg,d,r : Hg,d,r →M g,dr (respectively, ˜ψlog
+g,d,r : ˜Hlog
+g,d,r → M
+log
+g,dr),
+where we writeψg,d,r and ˜ψlog
+g,d,r for the morphisms induced byψ
+log
+g,d,r [cf.
+Proposition 1.10, (iii)]. We shall refer toCg,d,r (respectively, ˜Clog
+g,d,r)a st h e
+tautological curveover Hg,d,r (respectively, ˜Hlog
+g,d,r).
+(ii) We shall append a subscript “k”t oHg,d,r, Hg,d,r, H
+log
+g,d,r, ˜Hlog
+g,d,r, Cg,d,r,
+and ˜Clog
+g,d,r, as well as to (1-)morphisms between these log stacks, to denote
+the result of base-changing tok.
+Proposition 1.14. Let (g,d,r ) be nonnegative integers such that2g−2+2 d+
+r ≥3, d ≥2; k an algebraically closed ﬁeld of characteristic zero.
+(i) Suppose further that2g−2+dr ≥1. Then the tautological curve(˜ulog
+g,d,r)k :
+( ˜Clog
+g,d,r)k → ( ˜Hlog
+g,d,r)k is a proper, log smooth (1-)morphism between log
+regular log stacks [cf. Deﬁnition 1.13, (i), (ii)].
+(ii) Suppose further that2g −2+ dr ≥1.L e ts (respectively,slog) be a strict
+geometric point of(Hg,d,r)k (respectively,( ˜Hlog
+g,d,r)k). For suitable choices
+of basepoints, write
+ΠCs
+def
+= π1((Cg,d,r)k ×(Hg,d,r)k s)
+(respectively,ΠCslog
+def
+= π1(( ˜Clog
+g,d,r)k ×( ˜Hlog
+g,d,r)k
+slog));
+ΠHg,d,r
+def
+= π1((Hg,d,r)k) (respectively,Π˜Hlog
+g,d,r
+def
+= π1(( ˜Hlog
+g,d,r)k));
+ΠCg,d,r
+def
+= π1((Cg,d,r)k) (respectively,Π˜Clog
+g,d,r
+def
+= π1(( ˜Clog
+g,d,r)k))
+[cf. Deﬁnition 1.13, (i), (ii)]. Then, for suitable choices of basepoints, we
+have a natural commutative diagram of proﬁnite groups
+1 −−−−→ ΠCs −−−−→ ΠCg,d,r −−−−→ ΠHg,d,r −−−−→ 1
+≀
+⏐⏐
+↓
+≀
+⏐
+⏐
+↓
+≀
+⏐
+⏐
+↓
+1 −−−−→ Π
+Cslog −−−−→ Π˜Clog
+g,d,r
+−−−−→ Π˜Hlog
+g,d,r
+−−−−→ 1,
+where the vertical arrows are isomorphisms, and the horizontal sequences
+are exact.
+17
+
+(iii) In the notation of assertion (ii), write
+ΠHs
+def
+= π1((Hg,d,r+1)k ×(Hg,d,r)k s)
+(respectively,ΠHslog
+def
+= π1(( ˜Hlog
+g,d,r+1)k ×( ˜Hlog
+g,d,r)k
+slog)).
+Then, for suitable choices of basepoints, we have a natural commutative
+diagram of proﬁnite groups
+1 −−−−→ ΠHs −−−−→ ΠHg,d,r+1 −−−−→ ΠHg,d,r −−−−→ 1
+≀
+⏐⏐
+↓
+≀
+⏐
+⏐
+↓
+≀
+⏐
+⏐
+↓
+1 −−−−→ Π
+Hslog −−−−→ Π˜Hlog
+g,d,r+1
+−−−−→ Π˜Hlog
+g,d,r
+−−−−→ 1,
+where the vertical arrows are isomorphisms, and the horizontal sequences
+are exact.
+Proof. Assertion (i) follows immediately from the fact that log smoothness and
+properness are stable under base change, together with the fact that a log
+smooth scheme over a log regular scheme is log regular [cf. [KK2], Theorem
+8.2].
+Next, we consider assertions (ii) and (iii). First, we observe that the well-
+known functoriality of the ´etale fundamental group functor gives rise to natural
+commutative diagrams of fundamental groups as in the displays of assertions (ii)
+and (iii). Next, we observe that, in light of the log regularity portion of assertion
+(i), the fact that the vertical arrows of the diagrams of assertions (ii) and (iii)
+are isomorphisms follows immediately from the log purity theorem [cf., e.g.,
+[ExtFam], Theorem B]. Next, we observe that it follows from assertion (i) and
+Proposition 1.10, (vi), that the (1-)morphisms (˜u
+log
+g,d,r)k :( ˜Clog
+g,d,r)k → ( ˜Hlog
+g,d,r)k
+and (˜φlog
+g,d,r)k :( ˜Hlog
+g,d,r+1)k → ( ˜Hlog
+g,d,r)k arestable log curves. Thus, the exactness
+of the horizontal sequences of the diagrams of assertions (ii) and (iii) follows
+immediately from the fact that these horizontal sequences may be identiﬁed
+with suitable pull-backs of an analogous [exact!] sequence in the universal case,
+i.e., the sequence in the ﬁrst display of Theorem M, for suitable “(g,r)”.
+This completes the proof of Proposition 1.14.
+Remark 1.14.1. Let m> 0 be a positive integer. Then, by applying Proposition
+1.14, (ii), (iii), successively, we obtain, for suitable choices of basepoints, natural
+commutative diagrams of proﬁnite groups, as follows:
+(1succ)I fw ew r i t eΠHg,d,r+m → ΠHg,d,r and Π˜Hlog
+g,d,r+m
+→ Π˜Hlog
+g,d,r
+for the arrows
+induced by the compositesφg,d,r ◦φg,d,r+1 ◦···◦φg,d,r+m−1 : Hg,d,r+m →
+Hg,d,r and ˜φlog
+g,d,r ◦˜φlog
+g,d,r+1 ◦···◦ ˜φlog
+g,d,r+m−1 : ˜Hlog
+g,d,r+m → ˜Hlog
+g,d,r,a n d
+ΠHm,s and ΠHm,slog for the ´etale fundamental groups of geometric ﬁbers
+18
+
+of these composites, then we obtain a commutative diagram of proﬁnite
+groups
+1 −−−−→ ΠHm,s −−−−→ ΠHg,d,r+m −−−−→ ΠHg,d,r −−−−→ 1
+≀
+⏐⏐
+↓
+≀
+⏐
+⏐
+↓
+≀
+⏐
+⏐
+↓
+1 −−−−→ Π
+Hm,slog −−−−→ Π˜Hlog
+g,d,r+m
+−−−−→ Π˜Hlog
+g,d,r
+−−−−→ 1,
+where the vertical arrows are isomorphisms, and the horizontal sequences
+are exact.
+(2succ) First, we observe that since m ≥ 1, [one veriﬁes easily that] it holds
+that 2g −2+ d(r + m) ≥ 1. If we write Π Cg,d,r+m → ΠHg,d,r and
+Π˜Clog
+g,d,r+m
+→ Π˜Hlog
+g,d,r
+for the arrows induced by the composites φg,d,r ◦
+φg,d,r+1◦···◦φg,d,r+m−1◦ug,d,r+m : Cg,d,r+m →H g,d,r and ˜φlog
+g,d,r◦˜φlog
+g,d,r+1◦
+···◦ ˜φlog
+g,d,r+m−1 ◦˜ulog
+g,d,r+m : ˜Clog
+g,d,r+m → ˜Hlog
+g,d,r,a n dΠCm,s and ΠCm,slog for
+the ´etale fundamental groups of geometric ﬁbers of these composites, then
+we obtain a commutative diagram of proﬁnite groups
+1 −−−−→ ΠCm,s −−−−→ ΠCg,d,r+m −−−−→ ΠHg,d,r −−−−→ 1
+≀
+⏐⏐↓ ≀
+⏐⏐↓ ≀
+⏐⏐↓
+1 −−−−→ ΠCm,slog −−−−→ Π˜Clog
+g,d,r+m
+−−−−→ Π˜Hlog
+g,d,r
+−−−−→ 1,
+where the vertical arrows are isomorphisms, and the horizontal sequences
+are exact.
+2 Hurwitz-type log conﬁguration spaces
+In this section, after deﬁning Hurwitz-type log conﬁguration spaces in Deﬁnition
+2.2, we examine ﬁrst properties of various objects related to these spaces [cf.
+Lemmas 2.3, 2.5, 2.7] that will be of use when we study thecentralizer of the
+image of certaingeometric monodromy groupsin §3a n d§4. After examining
+these ﬁrst properties, we recall [cf. Proposition 2.8, Corollary 2.9, and Proposi-
+tion 2.10] the existence of simple coverings that satisfy certain conditions; such
+existence results will be of use in the proof of Theorem 4.6. We also discuss
+[cf. Lemma 2.11] the existence of degenerations of simple coverings that satisfy
+certain conditions; this existence result will be of use in the proof of Proposition
+3.1.
+In this section, we shall apply, without further explanation, the theory and
+notational conventions concerningsemi-graphs of anabelioids of PSC-typethat
+are applied in [CbTpI],§6.
+19
+
+Deﬁnition 2.1. (cf. [CmbCsp], Deﬁnition 1.1, (ii); [CbTpI], Deﬁnition 6.1) Let
+Σ be a nonempty set of prime numbers and Π the maximal pro-Σ quotient of
+the ´etale fundamental group of a hyperbolic curve over an algebraically closed
+ﬁeld of characteristic zero [i.e., a pro-Σ surface group — cf. [MT], Deﬁnition
+1.2]. Then we shall write
+Out
+C(Π)
+for the group of outomorphisms of Π which induce bijections on the set of
+cuspidal inertia subgroups of Π. We shall refer to an element of OutC(Π) as a
+C-admissible outomorphism of Π.
+Deﬁnition 2.2. Let (g,d,r,m ) be nonnegative integers such that 2g−2+2 d+
+r ≥3, d ≥2, and m> 0; Slog an fs log scheme overZ[1
+d!]. We shall refer
+t oam o r p h i s mπlog : Clog → Dlog obtained by pulling back a (1-)morphism
+Slog → H
+log
+g,d —whichweshallrefertoastheassociated classifying (1-)morphism
+—a sa simple log admissible covering of degree d [cf. Deﬁnition 1.4]. We
+shall refer to a morphismπlog : Clog → Dlog obtained by pulling back a (1-
+)morphism Slog → H
+log
+g,d,r — which we shall refer to as the associatedclassifying
+(1-)morphism —a sa nr-proﬁled simple log admissible covering of degreed [cf.
+Deﬁnition 1.8]. Let πlog : Clog → Dlog be an r-proﬁled simple log admissible
+covering of degreed from a stable log curveflog : Clog → Slog of genusg to a
+stable log curvehlog : Dlog → Slog of genus 0. Then we shall refer to as the
+m-th Hurwitz-type log conﬁguration spaceof πlog : Clog → Dlog the log scheme
+[over Slog]
+Clog
+m
+def
+= Slog × ˜Hlog
+g,d,r
+˜Hlog
+g,d,r+m,
+where Slog → ˜Hlog
+g,d,r is the (1-)morphism determined [sinceSlog is assumed to be
+an fs log scheme] by the classifying morphism associated to ther-proﬁled simple
+log admissible covering under consideration, and the (1-)morphism ˜Hlog
+g,d,r+m
+→ ˜Hlog
+g,d,r is given by forgetting the ﬁnal dm sections (respectively, ﬁnal m
+sections) of the domain curve (respectively, codomain curve) of the covering.
+Lemma 2.3. (cf. [CbTpI], Lemma 6.2) Let(g,d,r,m ) be nonnegative integers
+such that2g−2+2d+r ≥3, d ≥2, m> 0; ΣF ⊆Primes a nonempty set of prime
+numbers; k an algebraically closed ﬁeld of characteristic zero;Slog def
+=( S p e ck)log
+the log scheme obtained by equippingSpec k with the log structure given by the
+fs chart N → k that maps 1 → 0; πlog : Clog → Dlog an r-proﬁled simple log
+admissible covering of degreed from a stable log curveflog : Clog → Slog of
+genus g to a stable log curvehlog : Dlog → Slog of genus0. Write
+Clog
+m
+20
+
+for the m-th Hurwitz-type log conﬁguration space of ther-proﬁled simple log
+admissible covering πlog : Clog → Dlog [cf. Deﬁnition 2.2]; ΠB for the kernel
+of the natural [outer] surjectionπ1(Clog
+m ) → π1(Slog); Π∗
+T f o rt h ek e r n e lo ft h e
+natural [outer] surjectionπ1(Clog
+m × ˜Hlog
+g,d,r+m
+˜Clog
+g,d,r+m) ↠ π1(Slog) [cf. Deﬁnition
+1.13, (i)];Π∗
+F for the kernel of the natural [outer] surjectionΠ∗
+T ↠ ΠB induced
+by the projectionClog
+m × ˜Hlog
+g,d,r+m
+˜Clog
+g,d,r+m → Clog
+m ; ΠF for the the maximal pro-ΣF
+quotient ofΠ∗
+F; ΠT for the quotient ofΠ∗
+T by the kernel of the natural surjection
+Π∗
+F ↠ ΠF. Thus, we have a natural exact sequence of proﬁnite groups
+1 −→ΠF −→ΠT −→ΠB −→1,
+which determines an outer representation
+ρm :ΠB −→Out(ΠF).
+Then the following hold:
+(i) The isomorphism class of the exact sequence of proﬁnite groups
+1 −→ΠF −→ΠT −→ΠB −→1
+depends only on (g,d,r,m ) and the set ΣF, i.e., if 1 → Π•
+F → Π•
+T →
+Π•
+B → 1 is the exact sequence “1 → ΠF → ΠT → ΠB → 1” associated,
+with respect to the same(g,d,r,m ) and ΣF, to anotherr-proﬁled simple
+log admissible covering of degreed from a stable log curve of genusg to
+a stable log curve of genus0, then there exists a commutative diagram of
+proﬁnite groups
+1 −−−−→ ΠF −−−−→ ΠT −−−−→ ΠB −−−−→ 1
+≀
+⏐⏐↓ ≀
+⏐⏐↓ ≀
+⏐⏐↓
+1 −−−−→ Π•
+F −−−−→ Π•
+T −−−−→ Π•
+B −−−−→ 1,
+where the vertical arrows are isomorphisms which may be chosen to arise
+scheme-theoretically [i.e., via specialization and generization], hence, in
+particular, to be compatible with the respective cuspidal subgroups ofΠ
+F
+and Π•
+F [cf. Lemma 2.3, (ii)], as well as with the orderings on the ordered
+cusps [cf. Deﬁnition 1.7] of the ﬁbers of ˜Clog
+g,d,r+m → ˜Hlog
+g,d,r+m under
+consideration..
+(ii) ΠF is the maximal pro-ΣF quotient of the ´etale fundamental group of a
+hyperbolic curve over an algebraically closed ﬁeld of characteristic zero
+[i.e., a pro-Σ
+F surface group — cf. [MT], Deﬁnition 1.2].
+(iii) The outer representationρm :ΠB → Out(ΠF) factors through the closed
+subgroup OutC(ΠF) ⊆Out(ΠF) [cf. Deﬁnition 2.1].
+21
+
+Proof. Assertion (i) follows immediately by considering a suitable specialization
+isomorphism, i.e., by varying the basepoint “slog”in the exact sequences of
+Proposition 1.14, (ii) [where we take “r”t ob er + m and recall the easily
+veriﬁed fact that, sincem ≥1, it holds that 2g −2+ d(r + m) ≥1]; Remark
+1.14.1, (1succ). Assertion (ii) follows immediately from assertion (i) and the
+various deﬁnitions involved. Assertion (iii) follows immediately from the various
+deﬁnitions involved.
+Deﬁnition 2.4. (cf. [CbTpI], Deﬁnition 6.3) We apply the notational conven-
+tions of Lemma 2.3 in the case where
+m =1 ,2g −2+ dr ≥1.
+Let x ∈C1(k)b ea k-valued point of the underlying scheme C1 of Clog
+1 =
+Slog × ˜Hlog
+g,d,r
+˜Hlog
+g,d,r+1 [cf. Deﬁnition 2.2]. Write
+Clog
+∗
+def
+= Slog × ˜Hlog
+g,d,r
+˜Clog
+g,d,r
+for the stable log curve [cf. Proposition 1.10, (vi)] determined by the (1-
+)morphism ˜ulog
+g,d,r : ˜Clog
+g,d,r → ˜Hlog
+g,d,r of Deﬁnition 1.13, (i), and the (1-)morphism
+Slog → ˜Hlog
+g,d,r determined [since Slog is an fs log scheme] by the classifying
+(1-)morphism Slog → H
+log
+g,d,r of the r-proﬁled simple log admissible covering
+πlog : Clog → Dlog;
+Clog
+x
+def
+= xlog × ˜Hlog
+g,d,r+1
+˜Clog
+g,d,r+1
+for the stable log curve [cf. Proposition 1.10, (vi)] over xlog def
+= x ×C1 Clog
+1
+determined by the (1-)morphism ˜ulog
+g,d,r+1 : ˜Clog
+g,d,r+1 → ˜Hlog
+g,d,r+1 of Deﬁnition
+1.13, (i). Thus, we have natural contraction morphisms
+Clog
+x → Clog
+∗ ← Clog
+of stable log curves overSlog.
+(i) We shall denote by
+G∗
+the semi-graph of anabelioids of pro-Primes PSC-type determined by the
+stable log curveClog
+∗ ;b y
+Gx
+the semi-graph of anabelioids of pro-ΣF PSC-type determined by the sta-
+ble log curve Clog
+x ;b yΠ G∗,Π Gx the [pro-Primes,p r o - ΣF] fundamen-
+tal groups of G∗, Gx, respectively. Thus, we have a natural Im(ρ1)( ⊆
+Out(ΠF))-torsor of outer isomorphisms
+22
+
+ΠF
+∼
+−→ΠGx.
+Let us ﬁx an isomorphism ΠF
+∼
+→ ΠGx that belongs to this collection of
+isomorphisms.
+(ii) Let 1 ≤i ≤d be an integer. Then let us observe that the (dr + i)-th
+tautological section Mg,d(r+1) ↪→ Mg,d(r+1)+1 of the tautological curve
+Mg,d(r+1)+1 → Mg,d(r+1) determines, by pull-back via the composite of
+natural (1-)morphisms
+Clog
+1 → ˜Hlog
+g,d,r+1
+˜ψlog
+g,d,r+1
+→ M
+log
+g,d(r+1)
+[cf. Proposition 1.10, (iii); the fact that 2g −2+ d(r +1) ≥1], a section
+of the underlying morphism of schemes of the natural projection mor-
+phism Clog
+1 × ˜Hlog
+g,d,r+1
+˜Clog
+g,d,r+1
+∼
+→ Clog
+1 ×M
+log
+g,d(r+1)
+M
+log
+g,d(r+1)+1 → Clog
+1 [cf.
+Deﬁnition 1.13, (i)]. Write
+Di
+for the image in the underlying scheme of
+Clog
+1 × ˜Hlog
+g,d,r+1
+˜Clog
+g,d,r+1
+∼
+→ Clog
+1 ×M
+log
+g,d(r+1)
+M
+log
+g,d(r+1)+1
+of this section. Write
+pri : C1 −→C∗
+for the composite of natural (1-)morphisms
+C1
+∼
+→ S × ˜Hg,d,r
+˜Hg,d,r+1 → S ×Mg,dr
+Mg,d(r+1) → C∗,
+where S, C∗are the underlying schemes ofSlog, Clog
+∗ [cf. Proposition 1.10,
+(vi)]; the ﬁnal morphism is the morphism determined by the (dr + i)-th
+marked point of the tautological pointed stable curve parametrized by
+Mg,d(r+1). One veriﬁes easily that pri : C1 −→C∗is surjective.
+(iii) Denote by
+cF
+Di,x ∈Cusp(Gx)
+the cusp of Gx [i.e., the cusp of the geometric ﬁber of Clog
+1 × ˜Hlog
+g,d,r+1
+˜Clog
+g,d,r+1 → Clog
+1 over xlog] determined by the divisorDi [which lies inside
+the underlying scheme ofClog
+1 × ˜Hlog
+g,d,r+1
+˜Clog
+g,d,r+1] of (ii). Forv ∈Vert(G∗)
+(respectively, c ∈Cusp(G∗)), denote by
+23
+
+vF
+x ∈Vert(Gx) (respectively,cF
+x ∈Cusp(Gx))
+the vertex (respectively, cusp) ofGx that corresponds naturally to v ∈
+Vert(G∗) (respectively, c ∈Cusp(G∗)) [cf. the notational conventions of
+[NodNon], Deﬁnition 1.1, (i)].
+(iv) Let y ∈C∗(k)b ea k-valued point ofC∗.L e te ∈Edge(G∗), v ∈Vert(G∗),
+S ⊆ VCN(G∗), and z ∈VCN(G∗) [cf. the notational conventions of
+[NodNon], Deﬁnition 1.1, (i), (iii)]. Then we shall say that y lies on e
+if the image ofy is the cusp or node corresponding toe ∈Edge(G∗). We
+shall say thaty lies onv if y does not lie on any edge ofG∗, and, moreover,
+the image ofy is contained in the irreducible component corresponding to
+v ∈Vert(G∗). We shall write y ↷ S if y lies on somes ∈S.W e s h a l l
+write y ↷ z if y ↷ {z}.
+Lemma 2.5. (cf. [CbTpI], Lemma 6.4) In the notation of Deﬁnition 2.4, let
+x,x′ ∈C1(k) be k-valued points ofC1. Then the following hold:
+(i) The isomorphism ΠGx
+∼
+→ ΠGx′ obtained by forming the composite of the
+isomorphisms ΠGx
+∼
+← ΠF
+∼
+→ ΠGx′ [cf. Deﬁnition 2.4, (i)] is group-
+theoretically cuspidal [cf. [CmbGC], Deﬁnition 1.4, (iv)].
+(ii) The injectionCusp(G∗) ↪→ Cusp(Gx) given by mappingc ↦→ cF
+x determines
+a bijection
+Cusp(G∗)
+∼
+→ Cusp(Gx)\{cF
+Di,x (1 ≤i ≤d)}
+[cf. Deﬁnition 2.4, (iii)]. Moreover, if we regardCusp(G∗) as a subset of
+each of the setsCusp(Gx), Cusp(Gx′) by means of the above injections, then
+the bijectionCusp(Gx)
+∼
+→ Cusp(Gx′) determined by the group-theoretically
+cuspidal isomorphism ΠGx
+∼
+→ ΠGx′ of (i) maps cF
+Di,x ↦→ cF
+Di,x′ (1 ≤i ≤
+d) and induces the identity automorphism on Cusp(G∗).T h u s , i n t h e
+remainder of this paper, we shall omit the subscript “x” from the notation
+“cF
+x”a n d“cF
+Di,x”.
+(iii) Suppose that the log curveClog is irreducible. [Thus, we have a natural
+isomorphism C
+∼
+→ C∗.] Then the injection Vert(G∗) ↪→ Vert(Gx) given
+by mapping v ↦→ vF
+x [cf. Deﬁnition 2.4, (iii)] is bijective if and only if
+xi
+def
+=p ri(x) ↷ Vert(G∗)( 1≤i ≤d) [cf. Deﬁnition 2.4, (ii),(iv)], and the
+xi (1 ≤i ≤d) are distinct elements ofC∗(k)
+∼
+← C(k).
+(iv) Suppose that Clog is a smooth log curve. [Thus, we have a natural iso-
+morphism C
+∼
+→ C∗.] Let (i,j) be integers satisfying 1 ≤ i<j ≤ d.
+Write v ∈Vert(G∗) for the unique element of Vert(G∗). Suppose that
+pri(x)=p rj(x) ∈C∗(k).T h e nGx satisﬁes the following conditions:
+24
+
+•The complement of the image of Vert(G∗) in Vert(Gx) is a set of
+cardinality one whose unique element
+vF
+new,x ∈Vert(Gx)\Vert(G∗)
+is of type(0,3). Moreover, C(vF
+new,x)= {cF
+Di,cF
+D
+j } [cf. Lemma 2.5,
+(ii)].
+•N(vF
+x) = Node(Gx)= N(vF
+new,x) is a set of cardinality one.
+•C(vF
+x)\C (v)= {cF
+Dk(k ̸= i,j)}.
+(v) Suppose that Clog is a smooth log curve. [Thus, we have a natural iso-
+morphism C
+∼
+→ C∗.] Let l be an integer satisfying 1 ≤ l ≤ r. Write
+v ∈Vert(G∗) for the unique element of Vert(G∗). Suppose that xi
+def
+=
+pri(x) ↷ Cusp(G∗) for some i ∈{ 1,...,d } [or, equivalently, for all
+i ∈{1,...,d }], and πlog(xi) [cf. Lemma 2.3] is the l-th cusp of Dlog.
+Then Gx satisﬁes the following conditions:
+•The complement of the image of Vert(G∗) in Vert(Gx) is a set of
+cardinality d, each of whose elements is of type(0,3).L e tj be an
+integer satisfying1 ≤j ≤d. If we write
+vF
+new,j,x ∈Vert(Gx)\Vert(G∗)
+for the unique element ofVert(Gx) \ Vert(G∗) that abuts tocF
+Dj [cf.
+Lemma 2.5, (ii)], thenC(vF
+new,j,x)= {cF
+l,j,cF
+Dj }, where we writecl,j
+for the((l−1)d+j)-th cusp ofG∗[cf. Deﬁnition 2.4, (iii)].
+•Let j be an integer satisfying 1 ≤ j ≤ d. N(vF
+new,j,x) is a set of
+cardinality one. If we write
+eF
+j ∈N(vF
+new,j,x)
+for the unique element of N(vF
+new,j,x),t h e nN(vF
+x) = Node(Gx)=
+{eF
+1,eF
+2
+,...,e F
+d}.
+•C(vF
+x)# = d(r −1).
+Proof. Assertion (i) follows immediately from the fact that the cuspidal sub-
+groups in question arise from divisors of the underlying scheme ofClog
+1 × ˜Hlog
+g,d,r+1
+˜Clog
+g,d,r+1. Assertions (ii), (iii), (iv), and (v) follow immediately from the various
+deﬁnitions involved. This completes the proof.
+Deﬁnition 2.6. (cf. [CbTpI], Deﬁnition 6.5) In the notation of Deﬁnition 2.4:
+(i) Write
+CuspF(G∗)
+def
+= Cusp(G∗)⊔{cF
+Di (1 ≤i ≤d)}
+25
+
+[cf. Deﬁnition 2.4, (iii); Lemma 2.5, (ii)].
+(ii) Let α∈OutC(ΠF) be a C-admissible outomorphism of ΠF [cf. Deﬁnition
+2.1; Lemma 2.3, (ii)]. Then it follows immediately from Lemma 2.5, (i),
+(ii), that the automorphism of Cusp
+F(G∗) [cf. Deﬁnition 2.6, (i)] obtained
+by conjugating the natural action ofαon Cusp(Gx) by the natural bijec-
+tion CuspF(G∗)
+∼
+→ Cusp(Gx) implicit in Lemma 2.5, (ii), does not depend
+on the choice of x. We shall refer to this automorphism of CuspF(G∗)
+as the automorphism of CuspF(G∗) determined by α.T h u s , w e h a v e a
+natural homomorphism OutC(ΠF) → Aut(CuspF(G∗)).
+(iii) For c ∈CuspF(G∗) [cf. Deﬁnition 2.6, (i)], we shall refer to a closed
+subgroup of ΠF obtained as the image — via the ﬁxed isomorphism ΠGx
+∼
+←
+ΠF of Deﬁnition 2.4, (i) — of a cuspidal subgroup of ΠGx associated to
+the cusp ofGx corresponding toc ∈CuspF(G∗) as a cuspidal subgroup of
+ΠF associated to c ∈CuspF(G∗). Note that it follows immediately from
+Lemma 2.5, (ii), that the ΠF-conjugacy class of a cuspidal subgroup of ΠF
+associated to c ∈CuspF(G∗) depends only onc ∈CuspF(G∗), i.e., does
+not depend on the choice ofx or on the choices of isomorphisms made in
+Deﬁnition 2.4, (i).
+Lemma 2.7. (cf. [CbTpI], Lemma 6.7) In the notation of Deﬁnition 2.4, let
+H ⊆ΠB be an open subgroup ofΠB, ˜αan automorphism ofΠT|H
+def
+=ΠT ×ΠB H
+over H [i.e., an automorphism that preserves and induces the identity automor-
+phism on the quotient ΠT|H ↠ H], αF ∈Out(ΠF) the outomorphism of ΠF
+determined by the restriction˜α|ΠF of ˜αto ΠF ⊆ΠT|H, ΠcF
+Di
+⊆ΠF (1 ≤i ≤d)
+a cuspidal subgroup ofΠF associated to cF
+Di ∈CuspF(G∗) [cf. Deﬁnition 2.6,
+(i), (iii)], andNd ⊆ΠF the normal closed subgroup ofΠF topologically normally
+generated by theΠcF
+Di
+,w h e r ei =1 ,...,d . Then the following hold:
+(i) Suppose that, for eachi =1 ,...,d , ˜αpreserves the ΠF-conjugacy class
+of ΠcF
+Di
+⊆ΠF. Then the outomorphism of ΠF/Nd induced by ˜αis the
+identity outomorphism. If, moreover, αF is C-admissible [cf. Deﬁnition
+2.1; Lemma 2.3, (ii)], then the automorphism ofCuspF(G∗) induced by
+αF [cf. Deﬁnition 2.6, (ii)] is the identity automorphism.
+(ii) Suppose thatαF is C-admissible, and thatClog is a smooth log curve. Then
+it holds thatαF ∈Aut(Gx)( ⊆Out(ΠGx)
+∼
+← Out(ΠF)). If, moreover, for
+each i =1 ,...,d , ˜αpreserves theΠF-conjugacy class ofΠcF
+Di
+⊆ΠF,t h e n
+αF ∈Aut|grph|(Gx) ⊆Aut(Gx).
+Proof. First, we verify assertion (i). By replacing ˜αby a suitable ΠF-conjugate,
+we may assume that ˜αpreserves ΠcF
+1
+⊆ΠF. Since the decomposition group
+D ⊆ΠT|H of ΠT|H associated to the divisorD1 of Clog
+1 × ˜Hlog
+g,d,r+1
+˜Clog
+g,d,r+1 [cf.
+26
+
+Deﬁnition 2.4, (ii)] is equal toNΠT|H (ΠcF
+1
+) [cf. [CmbGC], Proposition 1.2, (i),
+(ii)], ˜αpreserves the subgroupD ⊆ΠT|H.W r i t e
+prF :ΠT ↠ ΠF/Nd
+for the surjection induced by the projection to the ﬁber component, i.e., the
+composite
+Clog
+1 × ˜Hlog
+g,d,r+1
+˜Clog
+g,d,r+1 → Clog
+1 × ˜Hlog
+g,d,r
+˜Clog
+g,d,r → Slog × ˜Hlog
+g,d,r
+˜Clog
+g,d,r = Clog
+∗
+[cf. the contraction morphismClog
+x → Clog
+∗ discussed at the beginning of Def-
+inition 2.4]. Note that the restriction of prF to ΠF is the natural surjection
+ΠF ↠ ΠF/Nd. Since the morphism pr1 : C1 −→C∗is surjective [cf. Deﬁnition
+2.4, (ii)], andNΠT(ΠcF
+1
+) may be interpreted as the decomposition group asso-
+ciated toD1, it follows immediately that the restriction of prF to NΠT(ΠcF
+1
+)i s
+open. Now we have a commutative diagram
+1 −−−−→ ΠcF
+1
+−−−−→ NΠT(ΠcF
+1
+) −−−−→ NΠT(ΠcF
+1
+)/ΠcF
+1
+−−−−→ 1
+⏐⏐
+↓
+⏐⏐
+↓
+≀
+⏐
+⏐
+↓
+1 −−−−→ Π
+F −−−−→ ΠT −−−−→ ΠB −−−−→ 1
+⏐⏐
+↓
+prF
+⏐
+⏐
+↓
+Π
+F/Nd ΠF/Nd,
+where the arrows ΠcF
+1
+→ ΠF and NΠT(ΠcF
+1
+) → ΠT are the natural inclusions;
+the arrow ΠF → ΠF/Nd is the natural surjection; [one veriﬁes immediately that]
+the composite NΠT(ΠcF
+1
+) → ΠT
+prF
+→ ΠF/Nd factors through the natural surjec-
+tion NΠT(ΠcF
+1
+) ↠ NΠT(ΠcF
+1
+)/ΠcF
+1
+. Since the restriction of prF to NΠT(ΠcF
+1
+)
+is open, and ˜αis an automorphism of ΠT|H over H, we thus conclude that ˜α
+induces the identity automorphism on some normal open subgroupJ ⊆ΠF/Nd
+of ΠF/Nd.S i n c e2g −2+ dr ≥1 [cf. Deﬁnition 2.4], ΠF/Nd is slim [cf., e.g.,
+[MT], Proposition 1.4], hence induces an injection ΠF/Nd ↪→ Aut(J). The func-
+toriality of this injection thus implies that ˜αinduces the identity automorphism
+on ΠF/Nd. The latter part of assertion (i) follows immediately from the for-
+mer part of assertion (i), together with the uniqueness of the cusp associated
+to a given cuspidal inertia subgroup [cf. [CmbGC], Proposition 1.2, (i)]. This
+completes the proof of assertion (i).
+Next, we prove assertion (ii). Since ˜αis an automorphism of Π
+T|H over H,
+it holds thatαF ∈ZOut(ΠF)(ρ1(H)) ⊆Out(ΠF). Next, observe that each of the
+stable log curvesClog
+1 , Clog
+x over Slog admits at least one cusp. Thus, the fact
+that αF ∈Aut(Gx) follows immediately by applying Theorem A of [NodNon] —
+or, alternatively, [CmbGC], Corollary 2.7, (iii) [cf. the fact thatClog is a smooth
+log curve; [NodNon], Remark 2.4.2] — to any cuspidal inertia group ofH.N o w
+suppose, moreover, that ˜αpreserves the ΠF-conjugacy class of ΠcF
+Di
+⊆ΠF for
+each i =1 ,...,d . Then it follows from assertion (i) thatαF ∈Aut(Gx)ﬁ x e st h e
+27
+
+cusps ofGx.S i n c eClog is a smooth log curve, it follows that for any vertexv ∈
+Vert(Gx)\Vert(G∗)o fV e r t (Gx), there exists an integeri ∈{1,...,d } satisfying
+cF
+Di ∈C(v) [cf. Lemma 2.5, (iii), (iv), (v)]. In particular, we conclude from the
+detailed descriptions of Lemma 2.5, (iv), (v), thatαF ﬁxes the vertices ofGx,a s
+well as the branches of nodes ofGx.T h u s ,αF ∈Aut|grph|(Gx) ⊆Aut(Gx). This
+completes the proof of assertion (ii).
+The following result, which is a variant of [Ful], Proposition 8.1, asserts the
+existence of coverings that satisfy certain conditions. The proof is similar to
+[Ful], Proposition 8.1.
+Proposition 2.8. Let E be a smooth projective curve of genusg over an alge-
+braically closed ﬁeldk of characteristic zero such thatg ≤1; (i,d) nonnegative
+integers such that0 ≤i ≤d −1 ≥g; x1,...,x i,xi+1 i +1 distinct points on
+E. Then there exists a ﬁnite morphismf : E → P1
+k of degreed satisfying the
+following conditions:
+•x1,...,x i,xi+1 lie over a single pointy of P1
+k, and the ramiﬁcation index
+at xi+1 is d−i [which implies that the ramiﬁcation index atx1,...,x i is
+1,a n df−1(y)= {x1,...,x i,xi+1}].
+•f has at most simple ramiﬁcation except possibly overy.
+Proof. Since the assertion in the case whered = 1 is immediate, we may as-
+sume without loss of generality thatd ≥2. Write S for the d-fold symmetric
+product of E, ξ∈S(k) for the point determined by the collection of points
+{x1,...,x i+1}, where we take the multiplicity ofx1,...,x i+1 to be 1 and the
+multiplicity ofxi+1 to bed−i.W h e nd ≥3, deﬁne morphisms
+α1 : Ed−2 −→S, α2 : Ed−2 −→S
+by the formulas
+α1(P1,P2,...,P d−2)=2 P1 +2P2 +··· +Pd−2
+α2(P1,P2,...,P d−2)=3 P1 +P2 +··· +Pd−2.
+Write T
+def
+=I m (α1) ∪Im(α2)w h e nd ≥3a n dT
+def
+= ∅when d = 2. Note that
+dim T ≤d−2. Write
+φ: S −→Picd(E)
+for the morphism obtained by assigning to a collection ofd points of E the
+line bundle onE determined by the divisor given by the sum of thed points,
+M
+def
+= φ(ξ). For anyL∈Picd(E), writeSL
+def
+= φ−1(L), TL
+def
+= φ−1(L)∩T.T h u s ,
+SL may be naturally identiﬁed with the projective space associated to the dual
+of the k-vector spaceH0(E,L). Since d −1 ≥1 > 0 ≥2g −2, the Riemann-
+Roch theorem thus implies that dimSL = d−g,a n dLP
+def
+= H0(E,L(−P)) ⊊
+H0(E,L) for anyP ∈E(k)a n dL∈ Picd(E). Next, let us observe that when
+d ≥3, the compositesT◦α1 and T◦α2 are surjective. Thus, since dimT ≤d−2,
+28
+
+and dim Picd(E)= g ≤1, we conclude that dimTL ≤d−g −2, i.e.,TL is of
+codimension ≥2i nSL. In particular, there exists a line in the projective space
+SM that containsξ∈SM(k) ⊆S(k) and avoidsTM \(TM ∩{ξ}) ⊆SM. Such
+a line determines a morphismf : E → P1
+k as desired.
+Corollary 2.9. Let (g,d) be nonnegative integers such thatg ≤1, d ≥g +1,
+and 2g + d ≥3; k an algebraically closed ﬁeld of characteristic zero. Then,
+(ψg,d,1)k :( Hg,d,1)k → (Mg,d)k [cf. Deﬁnition 1.13, (i), (ii)] is surjective.
+Proof. This follows immediately from Proposition 2.8, where we take “i”t ob e
+d−1, together with the various deﬁnitions involved.
+Proposition 2.10. Let (g,d) be nonnegative integers such that d ≥ g
+2 +1 ,
+g ≥2; k an algebraically closed ﬁeld of characteristic zero. Then the image
+of (ψg,d,0)k :( Hg,d,0)k → (Mg,0)k [cf. Deﬁnition 1.13, (i), (ii)] is dense in
+(Mg,0)k.
+Proof. Since (Hg,d,0)k is dense in (˜Hlog
+g,d,0)k, it suﬃces to show that the image of
+( ˜ψlog
+g,d,0)k :( ˜Hlog
+g,d,0)k → (M
+log
+g,0)k [cf. Deﬁnition 1.13, (i), (ii)] is dense in (M
+log
+g,0)k.
+Let C be a proper smooth curve of genusg over k.S i n c ed ≥g
+2 +1, it follows
+from [ACGH], Chapter VII, Theorem 2.3, that there exists a ﬁnite morphism
+π: C → P
+1
+k of degree d′ ≤d. By constructing from πa similar degenerate
+covering to the covering illustrated in [GCH], Pictorial Appendix, Species 3B∗
+[which corresponds to the case whered′ = d−1; cf. also Remark 2.10.1 below],
+we obtain a degenerate coveringπ′ : C′ → D′ of degreed, where the contraction
+[obtained by forgetting the ramiﬁcation points] ofC′ is isomorphic toC,a n dt h e
+genus ofD′ is equal to zero. When the coveringπ′ : C′ → D′ is not simple, by
+constructing fromπ′ similar degenerate coverings to the coverings illustrated in
+[GCH], Pictorial Appendix, Species 1, 2, we obtain a degenerate simple covering
+π
+′′ : C′′ → D′′ of degree d, where the contraction [obtained by forgetting the
+ramiﬁcation points] ofC′′ is isomorphic toC, and the genus ofD′′ is equal to
+zero. This completes the proof.
+Remark 2.10.1. Here, we take the opportunity to point out a minor error in
+the illustration of [GCH], Pictorial Appendix, Species 3B∗: The lowermost
+irreducible component on the right-hand side of the domain curve of the covering
+[i.e., the irreducible component marked by the phrase “one copy ofP1”] should
+be deleted.
+Lemma 2.11. In the notation of Deﬁnition 2.4 in the case where
+d ≥g +1, g ≥2, r =0 ,
+29
+
+and we take the simple log admissible covering
+πlog : Clog −→Dlog
+to be the log admissible covering of degreed obtained by gluing together along
+the respective points “y” two copies of the covering constructed in Proposition
+2.8, where we take “i”t ob eg and “g”t ob e0.[ T h u s ,Clog is of genusg; Dlog
+is of genus 0.] Write Vert(G∗)= {w,w′}. Then, for any g-tuple of integers
+i1,...,i g such that 1 ≤ i1 < ··· <i g ≤ d, there exists a point x ∈C1(k)
+whose associated semi-graph of anabelioidsGx [cf. Deﬁnition 2.4, (i)] satisﬁes
+the following conditions:
+•Vert(Gx)= {wF
+x,w′F
+x ,vF
+1 ,vF
+2 ,...,v F
+g+1};
+•Node(Gx)= {eF
+1,eF
+2
+,...,e F
+g+1
+,e′F
+1 ,e′F
+2 ,...,e ′F
+g+1};
+•N(wF
+x)= {eF
+1,eF
+2
+,...,e F
+g+1
+}, N(w′F
+x )= {e′F
+1 ,e′F
+2 ,...,e ′F
+g+1},a n dC(wF
+x)# =
+C(w′F
+x )# =0 ;
+•for t =1 ,...,g +1, N(vF
+t )= {eF
+t ,e′F
+t };f o rt =1 ,...,g , C(vF
+t )= {cF
+Dit
+}
+[cf. Lemma 2.5, (ii)];
+•C(vF
+g+1)= {cF
+Dj1
+,...,c F
+Djd−g
+},w h e r e1 ≤j1 < ··· <j d−g ≤d are thed−g
+integers such that{1,··· ,d} = {i1,...,i g}∪{j1,...,j d−g};
+•for t =1 ,...,g , vF
+t is of type(0,3); vF
+g+1 is of type(0,d −g +2).
+Proof. By takingx ∈C1(k) to be a point that corresponds to a 1-proﬁled simple
+admissible covering such that the section “σ1” of Deﬁnition 1.7 corresponds
+to the point “y” that appears in the deﬁnition ofπlog : Clog → Dlog,o n e
+veriﬁes immediately that one may choosex so that the required conditions are
+satisﬁed.
+3 Triviality of certain outomorphisms
+In this section, our goal is to prove the following Proposition 3.1.
+Proposition 3.1. In the notation of Deﬁnition 2.4, fori =1 ,...,d ,l e tΠcF
+Di
+⊆
+ΠF be a cuspidal subgroup ofΠF associated tocF
+Di ∈CuspF(G∗) [cf. Deﬁnition
+2.6, (i), (iii)], H ⊆ΠB an open subgroup ofΠB,a n dα∈ZOutC(ΠF)(ρ1(H)).
+Suppose that, for each i =1 ,...,d , αpreserves the ΠF-conjugacy class of
+ΠcF
+Di
+⊆ ΠF.W h e nr =0 [so g ≥ 2], suppose that d ≥ g +1 , and that
+α∈Aut|{wF}|(G1,2,...,g) [cf. Deﬁnition 3.3, (iii)], relative to some ﬁxed iso-
+morphism between the respective exact sequences “1 → Π•
+F → Π•
+T → Π•
+B → 1”
+of the sort that appears in the discussion at the beginning of Deﬁnition 3.3.
+Then αis the identity outomorphism.
+30
+
+Before proving Proposition 3.1, we discuss certain preparatory aspects of the
+situation under consideration in Deﬁnition 3.2, Deﬁnition 3.3, Lemma 3.4, and
+Lemma 3.5.
+Deﬁnition 3.2. In the notation of Proposition 3.1, letN
+s ⊆ΠF (1 ≤s ≤
+d) be the normal closed subgroup of ΠF topologically normally generated by
+{ΠcF
+Di
+(d−s+1 ≤i ≤d)}, αs ∈OutC(ΠF/Ns) an outomorphism of ΠF/Ns in-
+duced byα∈ZOutC(ΠF)(ρ1(H)). WriteN0 = {1}⊆ ΠF for the trivial subgroup
+of ΠF and α0
+def
+= α. Note that it follows immediately from Lemma 2.5, (i), that
+Ns (⊆ΠF ⊆ΠT)i sn o r m a li nΠT [cf. Lemma 2.3].
+Deﬁnition 3.3. In the following, we shall consider, relative toﬁxed numerical
+data g, d, r,v a r i o u snew choicesof the data “πlog : Clog → Dlog”, “x ∈C1(k)”
+considered in Deﬁnition 2.4. The objects “1 → Π•
+F → Π•
+T → Π•
+B → 1” [cf.
+Lemma 2.3, (i)] that arise from thesenew choiceswill then be thought as being
+related to the objects 1→ ΠF → ΠT → ΠB → 1 that arise from the original
+given data of Deﬁnition 2.4 [i.e., the data considered, e.g., in Proposition 3.1]
+by means of the vertical isomorphisms discussed in Lemma 2.3, (i).
+(i) Suppose that Clog, x ∈C1(k), and i,j are as in Lemma 2.5, (iv). Lets
+be an integer satisfying 0≤s ≤d−j. Then we shall write
+Gi,j
+for the resulting semi-graph of anabelioids of pro-ΣF PSC-type “Gx”o f
+Deﬁnition 2.4, (i);
+Gi,j,s
+def
+=( Gi,j)•{cF
+Dm(d−s+1≤m≤d)}
+[cf. [CbTpI], Deﬁnition 2.4];
+vF
+i,j,s, vF
+new,i,j,s (̸= vF
+i,j,s)
+[cf. the assumption that 0≤s ≤d−j] for the vertices ofGi,j,s determined
+by the verticesvF
+x, vF
+new,x [cf. Lemma 2.5, (iv)] ofGi,j.
+(ii) Suppose thatClog, x ∈C1(k), andl,j are as in Lemma 2.5, (v). Lets be
+an integer satisfying 0≤s ≤d−j. Then we shall write
+Gl
+for the resulting semi-graph of anabelioids of pro-ΣF PSC-type “Gx”o f
+Deﬁnition 2.4, (i);
+31
+
+Gl,s
+def
+=( Gl)•{cF
+Dm(d−s+1≤m≤d)}
+[cf. [CbTpI], Deﬁnition 2.4];
+vl,s, vl,j,s (̸= vl,s), el,j,s, cl,j,s
+[cf. the assumption that 0 ≤s ≤d −j] for the vertices, closed edges,
+and cusps ofGl,s determined by the vertices, closed edges, and cuspsvF
+x,
+vF
+new,j,x, eF
+j ,a n dcF
+l,j [cf. Lemma 2.5, (v)] ofGl.
+(iii) Assume thatd ≥g +1, g ≥2, r = 0. Suppose thatClog, x ∈C1(k), and
+it (1 ≤t ≤g) are as in Lemma 2.11. Suppose further thatit = t (1 ≤t ≤
+g). Then we shall write
+G1,2,...,g
+for the resulting semi-graph of anabelioids of pro-ΣF PSC-type “Gx”o f
+Deﬁnition 2.4, (i). In the remainder of the present§3, we shall omit the
+subscript “x” from the notationwF
+x, w′F
+x [cf. Lemma 2.11].
+Lemma 3.4. In the notation of Deﬁnition 2.6, Deﬁnition 3.2, and Deﬁnition
+3.3, (i), the following hold:
+(i) Fix i, j. Then there exists a collection of “scheme-theoretic” [in the sense
+discussed in Lemma 2.3, (i)] outer isomorphisms
+{
+ΠF/Ns
+∼
+→ ΠGi,j,s
+}
+s=0,...,d−j
+that satisﬁes the following conditions for eachs ∈{0,...,d −j −1}:
+•(Commutativity) We have a natural commutative diagram
+ΠF/Ns
+∼
+−−−−→ ΠGi,j,s
+⏐⏐
+↓
+⏐⏐
+↓
+Π
+F/Ns+1
+∼
+−−−−→ ΠGi,j,s+1,
+where the vertical arrows are the natural outer surjections.
+•(Injectivity for cuspidal subgroups) Lett be an integer satisfying1 ≤
+t ≤d−s−1. Then the composite
+ΠcF
+Dt
+→ ΠGi,j,s
+∼
+← ΠF/Ns ↠ ΠF/Ns+1
+[where the ﬁrst and third arrows are the natural outer homomor-
+phisms] is injective.
+32
+
+•(Injectivity for non-new verticial subgroups) Suppose thatj = d−s.
+The composite
+ΠvF
+i,j,s
+→ ΠGi,j,s
+∼
+← ΠF/Ns ↠ ΠF/Ns+1
+[where the ﬁrst and third arrows are the natural outer homomor-
+phisms] is injective.
+•(Injectivity for new verticial subgroups) Letj be an integer satisfying
+i<j ≤d−s−1. Then the composite
+ΠvF
+new,i,j,s
+→ ΠGi,j,s
+∼
+← ΠF/Ns ↠ ΠF/Ns+1
+[where the ﬁrst and third arrows are the natural outer homomor-
+phisms] is injective.
+(ii) The images of the abovecomposites are commensurably terminal.
+Proof. Assertion (i) follows immediately from the various deﬁnitions involved.
+Assertion (ii) follows immediately from assertion (i), together with [CmbGC],
+Proposition 1.2, (ii).
+Lemma 3.5. In the notation of Deﬁnition 2.6, Deﬁnition 3.2, and Deﬁnition
+3.3, (ii), the following hold:
+(i) Fix l. Then there exists a collection of “scheme-theoretic” [in the sense
+discussed in Lemma 2.3, (i)] outer isomorphisms
+{
+ΠF/Ns
+∼
+→ ΠGl,s
+}
+s=0,...,d
+that satisﬁes the following conditions for eachs ∈{0,...,d −1}:
+•(Commutativity) We have a natural commutative diagram
+ΠF/Ns
+∼
+−−−−→ ΠGl,s
+⏐⏐↓
+⏐⏐↓
+ΠF/Ns+1
+∼
+−−−−→ ΠGl,s+1,
+where the vertical arrows are the natural outer surjections.
+•(Injectivity for cuspidal subgroups) Letj be an integer satisfying1 ≤
+j ≤d−s−1. Then the composites
+ΠcF
+Dj
+→ ΠGl,s
+∼
+← ΠF/Ns ↠ ΠF/Ns+1
+Πcl,j,s → ΠGl,s
+∼
+← ΠF/Ns ↠ ΠF/Ns+1
+[where the ﬁrst and third arrows of each line of the display are the
+natural outer homomorphisms] are injective.
+33
+
+•(Injectivity for verticial subgroups) Letj be an integer satisfying1 ≤
+j ≤d−s−1. Then the composites
+Πvl,s → ΠGl,s
+∼
+← ΠF/Ns ↠ ΠF/Ns+1
+Πvl,j,s → ΠGl,s
+∼
+← ΠF/Ns ↠ ΠF/Ns+1
+[where the ﬁrst and third arrows of each line of the display are the
+natural outer homomorphisms] are injective.
+(ii) The images of the abovecomposites are commensurably terminal.
+Proof. Assertion (i) follows immediately from the various deﬁnitions involved.
+Assertion (ii) follows immediately from assertion (i), together with [CmbGC],
+Proposition 1.2, (ii).
+Proof of Proposition 3.1.By Lemma 2.7, (i),αd ∈OutC(ΠF/Nd) [cf. Deﬁnition
+3.2] is the identity outomorphism of ΠF/Nd. Next, we verify the following
+assertion:
+Claim 3.1.A: The outomorphismαd−1 ∈OutC(ΠF/Nd−1) [cf. Deﬁ-
+nition 3.2] of ΠF/Nd−1 is trivial.
+By Lemma 2.3, (i), it suﬃces to verify Claim 3.1.A under the further assumption
+that Clog is asmooth log curve.S i n c eNd−1 is normal in ΠT [cf. Deﬁnition 3.2],
+we have a commutative diagram
+1 −−−−→ ΠF −−−−→ ΠT −−−−→ ΠB −−−−→ 1
+⏐⏐↓
+⏐⏐↓
+
+1 −−−−→ ΠF/Nd−1 −−−−→ ΠT/Nd−1 −−−−→ ΠB −−−−→ 1,
+where the left and middle vertical arrows are the natural outer surjections.
+Write
+•Mram ⊆ P1
+k(k) for the branch set of the simple coveringπ: C → P1
+k
+associated to ther-proﬁled simple log admissible coveringπlog : Clog →
+(P1
+k)log;
+•Munr
+def
+= {zi ∈P1
+k(k)( 1 ≤i ≤r)} for the set of ordered marked points;
+M
+def
+= Mram ∪Munr; VC
+def
+= C \ π−1(Munr); UC
+def
+= C \ π−1(M)( ⊆VC);
+UP
+def
+= P1
+k \M;
+•B
+def
+=( UC ×UP UC ×···× UP UC)\ΔB, where the ﬁber product is the ﬁber
+product ofd copies of the morphismUC → UP,a n dΔB denotes the union
+of the various diagonals associated to pairs of factors in the ﬁber product
+[cf. Lemma 1.12];
+34
+
+•T′ def
+=( B×kVC)\ΔT′, T′′ def
+=( UC ×kVC)\ΔT′′, T′′′ def
+=( VC ×kVC)\ΔT′′′,
+where ΔT′ (respectively, ΔT′′,ΔT′′′) is the graph divisor determined by
+the composite of the ﬁrst projection pr1 : B → UC with the natural
+inclusion UC ↪→ VC (respectively, the natural inclusionUC ↪→ VC,t h e
+identity morphismVC → VC);
+•F′ forageometricﬁberoftheﬁrstprojection T′ → B,a n dK
+def
+=K e r (π1(F′)
+→ πΣF
+1 (F′)); thus, F′ may be regarded as a geometric ﬁber of either of
+the ﬁrst projectionsT′′ → UC and T′′′ → VC.
+Then we have a commutative diagram
+1 −−−−→ πΣF
+1 (F′) −−−−→ π1(T′)/K −−−−→ π1(B) −−−−→ 1
+
+
+⏐⏐
+↓
+f1
+⏐
+⏐
+↓
+f2
+1 −−−−→ πΣF
+1 (F′) −−−−→ π1(T′′)/K −−−−→ π1(UC) −−−−→ 1
+
+⏐⏐↓f3
+⏐⏐↓f4
+1 −−−−→ πΣF
+1 (F′) −−−−→ π1(T′′′)/K −−−−→ π1(VC) −−−−→ 1,
+where f1 is the morphism induced by pr1 ×id :T′ =( B ×k VC)\ΔT′ → T′′ =
+(UC ×k VC)\ΔT′′; f2 is the morphism induced by pr1 : B → UC; f3, f4 are the
+morphisms induced by the natural inclusions. Since pr1 : B → UC is ﬁnite´etale,
+and ΔT′ =( p r1 ×id)−1(ΔT′′), the morphism pr1 ×id :T′ =( B×k VC)\ΔT′ →
+T′′ =( UC×kVC)\ΔT′′ is ﬁnite´etale. Thus,f1, f2 are open injections, andf3, f4
+are surjections. Sincef4◦f2 :ΠB
+∼
+← π1(B) → π1(VC) [cf. Proposition 1.10, (vi);
+Lemma 1.12; [ExtFam], Theorem B] is an open homomorphism, the triviality
+of the outomorphismα
+d−1 ∈OutC(ΠF/Nd−1) follows from the “Grothendieck
+Conjecture for conﬁguration spaces” [cf. [CbTpI], Theorem 6.12, (i)], together
+with thehyperbolicityof V
+C [cf. the condition 2g−2+dr ≥1 in the ﬁrst display
+of Deﬁnition 2.4] and our assumption that, for eachi =1 ,...,d , αpreserves the
+ΠF-conjugacy class of ΠcF
+Di
+⊆ΠF. This completes the proof of Claim 3.1.A.
+Next, we verify the following assertion:
+Claim 3.1.B: Lets be an integer such that 0≤s ≤d−3. Suppose
+that the outomorphismαs+1 ∈OutC(ΠF/Ns+1) is the identity outo-
+morphism of ΠF/Ns+1. Then the outomorphismαs ∈OutC(ΠF/Ns)
+is the identity outomorphism of ΠF/Ns [cf. Deﬁnition 3.2].
+Since 2≤d−s−1 ≤d−1, it makes sense to consider semi-graphs of an-
+abelioids of pro-ΣF PSC-type G1,d−s−1,s and Gd−s−1,d−s,s as in Deﬁnition 3.3,
+(i), and to ﬁx isomorphisms ΠG1,d−s−1,s
+∼
+← ΠF/Ns
+∼
+→ ΠGd−s−1,d−s,s that deter-
+mine outer isomorphisms as in the collections of outer isomorphisms discussed
+in Lemma 3.4, (i). Since N
+s is normal in ΠT [cf. Deﬁnition 3.2], we have a
+35
+
+commutative diagram
+1 −−−−→ ΠF −−−−→ ΠT −−−−→ ΠB −−−−→ 1
+⏐⏐↓
+⏐⏐↓
+
+1 −−−−→ ΠF/Ns −−−−→ ΠT/Ns −−−−→ ΠB −−−−→ 1,
+where the vertical arrows are the natural surjections. Write ρ1,s :Π B →
+OutC(ΠF/Ns) for the outer representation induced by the lower exact sequence
+of the above commutative diagram. Sinceα0 = α∈ZOutC(ΠF)(ρ1(H)) [cf. Def-
+inition 3.2], we obtain thatαs ∈ZOutC(ΠF/Ns)(ρ1,s(H)). Write (ΠT/Ns)|H
+def
+=
+(ΠT/Ns)×ΠB H.L e t
+˜αs ∈AutH((ΠT/Ns)|H)
+[cf. the discussion entitled “Topological groups” in Notations and Conventions]
+be a lifting of
+αs ∈ZOutC(ΠF/Ns)(ρ1,s(H)) ⊆ZOut(ΠF/Ns)(ρ1,s(H))
+∼
+← AutH((ΠT/Ns)|H)/Inn(ΠF/Ns),
+where the ﬁnal isomorphism follows from the center-freeness of ΠF/Ns [cf. the
+inequality 2g −2+ dr ≥ 1 in the ﬁrst display of Deﬁnition 2.4; the discus-
+sion entitled “Topological groups” in Notations and Conventions]. Since the
+image Π
+cF
+D1,s+1
+of ΠcF
+D1
+in ΠF/Ns+1 is commensurably terminal in ΠF/Ns+1 [cf.
+Lemma 3.4, (ii)], by replacing ˜αs by the composite of ˜αs with a suitable inner
+automorphism of ΠF/Ns, we may assume that the automorphism of ΠF/Ns+1
+induced by ˜αs is the identity automorphism, and that ˜αs preserves the image
+ΠcF
+D1,s
+⊆ΠF/Ns of ΠcF
+D1
+in ΠF/Ns. Next, let us ﬁx verticial subgroups
+ΠcF
+D1,s
+⊆ΠvF
+new,1,d−s−1,s
+⊆ΠG1,d−s−1,s
+∼
+← ΠF/Ns,
+ΠcF
+D1,s
+⊆ΠvF
+d−s−1,d−s,s
+⊆ΠGd−s−1,d−s,s
+∼
+← ΠF/Ns
+containing ΠcF
+D1,s
+[cf. the notation introduced in Deﬁnition 3.3, (i)]. By Lemma
+2.7, (ii) [where we take “αF”t ob eα]; [CmbGC], Proposition 1.5, (ii), ˜αs pre-
+serves ΠvF
+new,1,d−s−1,s
+,ΠvF
+d−s−1,d−s,s
+. Since the composites
+ΠvF
+new,1,d−s−1,s
+↪→ ΠG1,d−s−1,s
+∼
+← ΠF/Ns ↠ ΠF/Ns+1
+ΠvF
+d−s−1,d−s,s
+↪→ ΠGd−s−1,d−s,s
+∼
+← ΠF/Ns ↠ ΠF/Ns+1
+are injective [cf. Lemma 3.4, (i)], it suﬃces to show that the images in ΠF/Ns
+of ΠvF
+new,1,d−s−1,s
+and ΠvF
+d−s−1,d−s,s
+generate ΠF/Ns. However, this follows im-
+mediately from the van Kampen theorem [cf. [CmbCsp], Lemma 1.13, applied
+to a suitable neighborhood of the cusps labeled 1,d −s −1, and d −s in a
+36
+
+“topological surface representation” of ΠF/Ns, where we take the cusp “a”t o
+be the cusp labeled 1, the cusp “b” to be the cusp labeledd −s −1, and the
+cusp “c” to be the boundary of the neighborhood]. This completes the proof of
+Claim 3.1.B.
+Next, we verify the following assertion:
+Claim3.1.C:When r ≥1, theoutomorphismαd−2 ∈OutC(ΠF/Nd−2)
+is the identity outomorphism of ΠF/Nd−2 [cf. Deﬁnition 3.2].
+We consider semi-graphs of anabelioids of pro-ΣF PSC-type G1,2,d−2 and G1,d−2
+as in Deﬁnition 3.3, (i), (ii), and ﬁx isomorphisms ΠG1,2,d−2
+∼
+← ΠF/Nd−2
+∼
+→
+ΠG1,d−2 that determine outer isomorphisms as in the collections of outer iso-
+morphisms discussed in Lemmas 3.4, (i); 3.5, (i). SinceNd−2 is normal in ΠT
+[cf. Deﬁnition 3.2], we have a commutative diagram
+1 −−−−→ ΠF −−−−→ ΠT −−−−→ ΠB −−−−→ 1
+⏐⏐↓
+⏐⏐↓
+
+1 −−−−→ ΠF/Nd−2 −−−−→ ΠT/Nd−2 −−−−→ ΠB −−−−→ 1,
+where the vertical arrows are the natural surjections. Write ρ1,d−2 :ΠB →
+OutC(ΠF/Nd−2) for the outer representation induced by the lower exact se-
+quence of the above commutative diagram. Sinceα0 = α∈ZOutC(ΠF)(ρ1(H))
+[cf. Deﬁnition 3.2], we obtain thatαd−2 ∈ZOutC(ΠF/Nd−2)(ρ1,d−2(H)). Write
+(ΠT/Nd−2)|H
+def
+=( ΠT/Nd−2)×ΠB H.L e t
+˜αd−2 ∈AutH((ΠT/Nd−2)|H)
+[cf. the discussion entitled “Topological groups” in Notations and Conventions]
+be a lifting of
+αd−2 ∈ZOutC(ΠF/Nd−2)(ρ1,d−2(H)) ⊆ZOut(ΠF/Nd−2)(ρ1,d−2(H))
+∼
+← AutH((ΠT/Nd−2)|H)/Inn(ΠF/Nd−2),
+where the ﬁnal isomorphism follows from the center-freeness of ΠF/Nd−2 [cf. the
+inequality 2g −2+ dr ≥1 in the ﬁrst display of Deﬁnition 2.4; the discussion
+entitled “Topological groups” in Notations and Conventions]. Fix a cuspidal
+subgroup Π
+c1,1,d−2 ⊆ΠG1,d−2 associated toc1,1,d−2 [cf. Deﬁnition 3.3, (ii)]. Since
+the image of Πc1,1,d−2 in ΠF/Nd−1 is commensurably terminal in ΠF/Nd−1 [cf.
+Lemma 3.5, (ii)], it follows from Claim 3.1.A that, by replacing ˜αd−2 by the
+composite of ˜αd−2 with a suitable inner automorphism of ΠF/Nd−2,w em a y
+assume that the automorphism of ΠF/Nd−1 induced by ˜αd−2 is the identity
+automorphism, and that ˜αd−2 preserves Πc1,1,d−2 ⊆ΠF/Nd−2.W r i t eΠc1,1,2,d−2
+for the image of the composite Πc1,1,d−2 ⊆ΠG1,d−2
+∼
+← ΠF/Nd−2
+∼
+→ ΠG1,2,d−2.
+Next, let us ﬁx verticial subgroups
+Πc1,1,2,d−2 ⊆ΠvF
+1,2,d−2
+⊆ΠG1,2,d−2
+∼
+← ΠF/Nd−2,
+37
+
+Πc1,1,d−2 ⊆Πv1,1,d−2 ⊆ΠG1,d−2
+∼
+← ΠF/Nd−2
+[cf. the notation introduced in Deﬁnition 3.3, (i), (ii)] containing Πc1,1,2,d−2,
+Πc1,1,d−2, respectively. By Lemma 2.7, (ii) [where we take “ αF”t ob eα];
+[CmbGC], Proposition 1.5, (ii), ˜αd−2 preserves ΠvF
+1,2,d−2
+,Πv1,1,d−2.S i n c e t h e
+composites
+ΠvF
+1,2,d−2
+↪→ ΠG1,2,d−2
+∼
+← ΠF/Nd−2 ↠ ΠF/Nd−1
+Πv1,1,d−2 ↪→ ΠG1,d−2
+∼
+← ΠF/Nd−2 ↠ ΠF/Nd−1
+are injective [cf. Lemmas 3.4, (i); 3.5, (i)], it suﬃces to show that the images
+in ΠF/Nd−2 of ΠvF
+1,2,d−2
+and Πv1,1,d−2 generate ΠF/Nd−2. However, this follows
+immediatelyfromthevanKampentheorem[cf. [CmbCsp], Lemma 1.13, applied
+to a suitable neighborhood of the cusps labeled (1,1) [i.e., the label of the cusp
+c1,1,d−2], 1, and 2 in a “topological surface representation” of ΠF/Nd−2,w h e r e
+we take the cusp “a” to be the cusp labeled (1,1), the cusp “b” to be the cusp
+labeled 1, and the cusp “c” to be the boundary of the neighborhood]. This
+completes the proof of Claim 3.1.C and hence the proof of Proposition 3.1 when
+r ≥1.
+Next, we verify the following assertion:
+Claim3.1.D:When r =0[ s og ≥2], andd ≥g+1, theoutomorphism
+α= α0 ∈OutC(ΠF/N0) is the identity outomorphism of ΠF/N0
+∼
+←
+ΠF [cf. Deﬁnition 3.2].
+Here, we consider the semi-graph of anabelioids of pro-ΣF PSC-type
+(G1,2,...,g)•
+def
+=( G1,2,...,g)•{cF
+Di(g+2≤i≤d)}
+[cf. Deﬁnition 3.3, (iii); [CbTpI], Deﬁnition 2.4]. Observe that the maximal
+subgraphs [cf. [SemiAn], §1], hence also the respective sets of vertices and
+nodes, of the underlying semi-graphs ofG1,2,...,g and (G1,2,...,g)• may be nat-
+urally identiﬁed with one another. In the following, we ﬁx an isomorphism
+ΠG1,2,...,g
+∼
+← ΠF as in the statement of Proposition 3.1, which induces an iso-
+morphism Π(G1,2,...,g)•
+∼
+← ΠF/Nd−g−1. Recall from Lemma 2.11 that, relative to
+this natural identiﬁcation,( G1,2,...,g)• satisﬁes the following conditions:
+•Vert((G1,2,...,g)•)= {wF,w′F,vF
+1 ,vF
+2 ,...,v F
+g+1};
+•Node((G1,2,...,g)•)= {eF
+1,eF
+2
+,...,e F
+g+1
+,e′F
+1 ,e′F
+2 ,...,e ′F
+g+1};
+•N(wF)= {eF
+1,eF
+2
+,...,e F
+g+1
+},N(w′F)= {e′F
+1 ,e′F
+2 ,...,e ′F
+g+1},a n dC(wF)# =
+C(w′F)# =0 ;
+•for t =1 ,...,g +1, N(vF
+t )= {eF
+t ,e′F
+t },a n dC(vF
+t )= {cF
+Dt};
+•for t =1 ,...,g +1, vF
+t is of type (0,3).
+38
+
+By the assumptions imposed in the statement of Proposition 3.1, it holds that
+α∈Aut|grph|(G1,2,...,g) ⊆Out(ΠG1,2,...,g)
+∼
+← Out(ΠF), hence that
+αd−g−1 ∈Aut|grph|((G1,2,...,g)•) ⊆Out(Π(G1,2,...,g)•)
+∼
+← Out(ΠF/Nd−g−1).
+Fort =1 ,...,g +1,write Nt,d−1 ⊆ΠF/Nd−g−1 for the normal closed subgroup
+of ΠF/Nd−g−1 topologically normally generated by the ΠcF
+Di
+,w h e r ei ranges
+o v e rt h ee l e m e n t so f{1,...,g +1 }\{ t}. Thus, we observe that, by possibly
+permuting the labels 1,...,d for the cuspscF
+Di, it follows from Claim 3.1.A that
+αd−g−1 induces the identity outomorphism of (ΠF/Nd−g−1)/Nt,d−1.
+Thus, sinceg+1 ≥2, byapplyinganalogousinjectivitypropertiesconcerning
+verticial subgroups to the properties discussed in Lemmas 3.4, (i); 3.5, (i), we
+conclude that
+αd−g−1 ∈
+⋂
+1≤t≤g+1
+Im
+{
+Dehn((G1,2,...,g)•⇝{et,e′
+t}) → Dehn((G1,2,...,g)•)
+}
+⊆Dehn((G1,2,...,g)•) ⊆OutC(Π(G1,2,...,g)•)
+[cf. Deﬁnition 3.3, (iii); [CbTpI], Deﬁnitions 2.4, 2.8, 4.4]. On the other hand,
+[again sinceg +1 ≥2] it follows from [CbTpI], Theorem 4.8, (ii), (iv), that
+⋂
+1≤t≤g+1
+Im
+{
+Dehn((G1,2,...,g)•⇝{et,e′
+t}) → Dehn((G1,2,...,g)•)
+}
+= {1}.
+Thus, we conclude thatαd−g−1 ∈OutC(ΠF/Nd−g−1) is the identity outomor-
+phism of ΠF/Nd−g−1.S i n c ed −g −1 ≤d −2, Claim 3.1.B thus implies that
+α0 = α∈OutC(ΠF) is the identity outomorphism of ΠF. This completes the
+proof of Claim 3.1.D and hence the proof of Proposition 3.1.
+Finally, in the following Proposition 3.6, we observe that in fact, any element
+α∈ZOutC(ΠF)(ρ1(H)) [cf. Proposition 3.1] preserves the ΠF-conjugacy class of
+ΠcF
+Di
+⊆ΠF,f o re a c hi =1 ,...,d , in almost all cases under consideration.
+Proposition 3.6. In the notation of Deﬁnition 2.4, fori =1 ,...,d ,l e tΠcF
+Di
+⊆
+ΠF be a cuspidal subgroup ofΠF associated tocF
+Di ∈CuspF(G∗) [cf. Deﬁnition
+2.6, (i), (iii)], H ⊆ΠB an open subgroup ofΠB,a n dα∈ZOutC(ΠF)(ρ1(H)).
+Then when d ≥3 (respectively, d =2 ), α∈ZOutC(ΠF)(ρ1(H)) preserves the
+ΠF-conjugacy class ofΠcF
+Di
+⊆ΠF for eachi =1 ,...,d (respectively, preserves
+the ΠF-conjugacy class of ΠcF
+Di
+⊆ΠF for i =1 ,2, up to permutation by the
+“hyperelliptic involution”, i.e., the outomorphism ofΠF of order2 induced by the
+unique nontrivial covering transformation of the coveringπlog : Clog −→Dlog).
+39
+
+Proof. By Lemma 2.7, (ii), α∈Aut(Gi,j) for 1 ≤i<j ≤d [cf. Deﬁnition
+3.3, (i)]. Since 2g −2+ dr ≥1 [cf. Deﬁnition 2.4], vF
+new,i,j,0 is of type (0,3),
+while vF
+i,j,0 is not of type (0,3) [cf. Lemma 2.5, (iv); Deﬁnition 3.3, (i)]. Thus,
+αinduces the identity automorphism of Vert(Gi,j) and, in particular, preserves
+the subset{cF
+Di,cF
+D
+j }⊆ CuspF(G∗) [cf. Deﬁnition 2.6, (ii)].
+Thus, when d ≥3, we obtain the desired conclusion by varyingi, j and
+applying the well-known elementary fact that any automorphism of a set of
+cardinality d ≥3 that stabilizes every subset of cardinality 2 is necessarily the
+identity automorphism. When d = 2, the desired conclusion follows from the
+fact that the “hyperelliptic involution” permutescF
+D1 and cF
+D2.
+4 The proof of Theorem A
+In this section, our goal is to prove Theorem A [cf. Theorem 4.6]. After dis-
+cussing the existence of degenerations of simple coverings that satisfy certain
+conditions in Lemmas 4.1, 4.2, 4.3, 4.4, and 4.5, we prove Theorem 4.6.
+In Lemmas 4.1, 4.2, 4.3, 4.4, and 4.5, let Σ⊆Primes be a nonempty set of
+prime numbers;k an algebraically closed ﬁeld of characteristic zero. Ifπ: C →
+D is anr-proﬁled simple admissible covering of degreed from a ([(d−1)(2g −
+2+2 d)] +dr)-pointed stable curve (f : C → Spec k;μ
+f ⊆C)o fg e n u sg to a
+([2g −2+2 d]+ r)-pointed stable curve (h : D → Spec k;μh ⊆D)o fg e n u s0
+[cf. Deﬁnition 1.7], then we shall write
+GC (respectively, GD)
+for the semi-graph of anabelioids of pro-Σ PSC-type determined byC (respec-
+tively,D).
+Lemma 4.1. Let (t,m,d ) be a triple of integers satisfying one of the following
+two conditions (i), (ii):
+(i) t ≥3, 0 ≤m ≤d−1, d ≥4;
+(ii) t =2 , 0 ≤m ≤d−2, d ≥4.
+Then there exists a0-proﬁled simple admissible coveringπ: C → D of degree
+d over k from a symmetrically pointed stable curve(f : C → Spec k;μf ⊆C)
+[cf. Deﬁnition 1.2, (ii)] to a symmetrically pointed stable curve (h : D →
+Spec k;μh ⊆D) satisfying the following conditions:
+•π: C → D is ramiﬁed (i.e., fails to be unramiﬁed) over each point ofμh;
+•π: C → D is unramiﬁed over each node ofD;
+•Vert(GC)= {v1,v2,...,v m+1,w1,w2,...,w t};
+40
+
+•Node(GC)= {e1,e2,...,e td};
+•N(v1)= {e1,e2,...,e d−m,ed+1,...,e 2d−m,...,e (t−1)d+1,...,e td−m};
+•N(vi)= {el | l ≡d−m+i−1( m o dd)} for i =2 ,...,m +1;
+•N(wj)= {e(j−1)d+1,··· ,ejd} for j =1 ,...,t ;
+•v1 is of type(0,(d−m)t+2(d−m−1)2) [where the “(d−m)t” corresponds
+to the cardinality ofN(v1)];
+•for i =2 ,...,m +1 (respectively,j =1 ,...,t ), vi (respectively,wj)i so f
+type (0,t +2 (d−m−1)) (respectively,(0,d +2 (d−1)2)) [where the “t”
+(respectively, “d”) corresponds to the cardinality ofN(vi) (respectively,
+N(wj))];
+•Vert(GD)= {v′,w′
+1,w′
+2,...,w ′
+t};
+•Node(GD)= {e′
+1,e′
+2
+,...,e ′
+t};
+•N(v′)= {e′
+1,e′
+2
+,...,e ′
+t};
+•N(w′
+j)= {e′
+j} (1 ≤j ≤t);
+•v′ is of type(0,t+2(d−m−1)) [where the “t” corresponds to the cardinality
+of N(v′)];
+•for j =1 ,...,t , w′
+j is of type(0,1+2 d−2) [where the “1” corresponds to
+the cardinality ofN(w′
+j)];
+•for i =1 ,...,m +1 (respectively, j =1 ,...,t ), vi (respectively, wj)l i e s
+over v′ (respectively,w′
+j).
+Proof. The desired simple admissible covering may be constructed by gluing
+together suitable simple coverings of smooth curves [cf. [Ful], Proposition 8.1] at
+unramiﬁed points of the coverings. Note that the numerical conditions imposed
+on (t,m,d ) imply, in particular, that the resulting “symmetrically pointed curve
+D” is indeedstable.
+Remark 4.1.1. In the situation considered in Lemma 4.1, the genus ofC is equal
+to
+td−(m+t+1)+1= t(d−1)−m.
+In particular, every integerg satisfying g ≥d occurs as the genus of someC,
+i.e., for a suitable choice of (t,m). We use these coverings in the proof of Claim
+4.6.D [cf. the proof of Theorem 4.6, (ii)].
+Lemma 4.2. There exist simple admissible coverings satisfying various condi-
+tions as follows:
+41
+
+(i) Let t be an integer satisfyingt ≥2. Then there exists a0-proﬁled simple
+admissible covering π: C → D of degree3 over k from a symmetrically
+pointed stable curve(f : C → Spec k;μf ⊆C) [cf. Deﬁnition 1.2, (ii)] to
+a symmetrically pointed stable curve(h : D → Spec k;μh ⊆D) satisfying
+the following conditions:
+•π: C → D is ramiﬁed (i.e., fails to be unramiﬁed) over each point of
+μh;
+•π: C → D is unramiﬁed over each node ofD;
+•Vert(GC)= {v1,w1,w2,...,w t};
+•Node(GC)= {e1,e2,...,e 3t};
+•N(v1) = Node(GC);
+•N(wj)= {e3j−2,e3j−1,e3j} for j =1 ,...,t ;
+•v1 is of type(0,3t+8) [where the “3t” corresponds to the cardinality
+of N(v1)];
+•for j =1 ,...,t , wj is of type(1,3+12) [where the “3” corresponds
+to the cardinality ofN(wj)];
+•Vert(GD)= {v′,w′
+1,w′
+2,...,w ′
+t};
+•Node(GD)= {e′
+1,e′
+2
+,...,e ′
+t};
+•N(v′)= {e′
+1,e′
+2
+,...,e ′
+t};
+•N(w′
+j)= {e′
+j} for j =1 ,...,t ;
+•v′ is of type(0,t +4) [where the “t” corresponds to the cardinality of
+N(v′)];
+•for j =1 ,...,t , w′
+j is of type(0,1+6) [where the “1” corresponds to
+the cardinality ofN(w′
+j)];
+•v1 lies overv′,a n dwj lies overw′
+j for j =1 ,...,t .
+(ii) Let t be an integer satisfyingt ≥3. Then there exists a0-proﬁled simple
+admissible covering π: C → D of degree3 over k from a symmetrically
+pointed stable curve(f : C → Spec k;μf ⊆C) [cf. Deﬁnition 1.2, (ii)] to
+a symmetrically pointed stable curve(h : D → Spec k;μh ⊆D) satisfying
+the following conditions
+•π: C → D is ramiﬁed (i.e., fails to be unramiﬁed) over each point of
+μh;
+•π: C → D is unramiﬁed over each node ofD;
+•Vert(GC)= {v1,v2,v3,w1,w2,...,w t};
+•Node(GC)= {e1,e2,...,e 3t};
+•N(v1)= {e1,e4,...,e 3t−2};
+•N(v2)= {e2,e5,...,e 3t−1};
+42
+
+•N(v3)= {e3,e6,...,e 3t};
+•N(wj)= {e3j−2,e3j−1,e3j} for j =1 ,...,t ;
+•for i =1 ,2,3, vi is of type(0,t) [where the “t” corresponds to the
+cardinality ofN(vi)];
+•for j =1 ,...,t , wj is of type(1,3+12) [where the “3” corresponds
+to the cardinality ofN(wj)];
+•Vert(GD)= {v′,w′
+1,w′
+2,...,w ′
+t};
+•Node(GD)= {e′
+1,e′
+2,...,e ′
+t};
+•N(v′)= {e′
+1,e′
+2
+,...,e ′
+t};
+•N(w′
+j)= {e′
+j} for j =1 ,...,t ;
+•v′ is of type (0,t) [where the “t” corresponds to the cardinality of
+N(v′)];
+•for j =1 ,...,t , w′
+j is of type(0,1+6) [where the “1” corresponds to
+the cardinality ofN(w′
+j)];
+•for i =1 ,2,3 (respectively, j =1 ,...,t ), vi (respectively, wj)l i e s
+over v′ (respectively,w′
+j).
+(iii) Let t be an integer satisfyingt ≥2. Then there exists a0-proﬁled simple
+admissible covering π: C → D of degree3 over k from a symmetrically
+pointed stable curve(f : C → Spec k;μf ⊆C) [cf. Deﬁnition 1.2, (ii)] to
+a symmetrically pointed stable curve(h : D → Spec k;μh ⊆D) satisfying
+the following conditions:
+•π: C → D is ramiﬁed (i.e., fails to be unramiﬁed) over each point of
+μh;
+•π: C → D is unramiﬁed over each node ofD;
+•Vert(GC)= {v1,v2,w1,w2,...,w t};
+•Node(GC)= {e1,e2,...,e 3t};
+•N(v1)= {e1,e2,e4,e5,...,e 3t−2,e3t−1};
+•N(v2)= {e3,e6,...,e 3t};
+•N(wj)= {e3j−2,e3j−1,e3j} for j =1 ,...,t ;
+•v1 (respectively, v2)i so ft y p e(0,2t +2 ) (respectively, (0,t +2 ))
+[where the “2t” (respectively, “t”) corresponds to the cardinality of
+N(v1) (respectively,N(v2))];
+•for j =1 ,...,t , wj is of type(1,3+12) [where the “3” corresponds
+to the cardinality ofN(wj)];
+•Vert(GD)= {v′,w′
+1,w′
+2,...,w ′
+t};
+•Node(GD)= {e′
+1,e′
+2
+,...,e ′
+t};
+•N(v′)= {e′
+1,e′
+2
+,...,e ′
+t};
+•N(w′
+j)= {e′
+j} for j =1 ,...,t ;
+43
+
+•v′ is of type(0,t +2) [where the “t” corresponds to the cardinality of
+N(v′)];
+•for j =1 ,...,t , w′
+j is of type(0,1+6) [where the “1” corresponds to
+the cardinality ofN(w′
+j)];
+•for i =1 ,2 (respectively,j =1 ,...,t ), vi (respectively,wj) lies over
+v′ (respectively,w′
+j).
+Proof. The desired simple admissible covering may be constructed by gluing
+together suitable simple coverings of smooth curves [cf. [Ful], Proposition 8.1] at
+unramiﬁed points of the coverings. Note that the numerical conditions imposed
+on t imply, in particular, that the resulting “symmetrically pointed curveD”i s
+indeed stable.
+Remark 4.2.1. We observe that, as “C” varies over the various curves “C”
+constructed in the situations considered in Lemma 4.2, (i), (ii), (iii), every
+integer g satisfying g ≥5 occurs as the genus of someC, i.e., for a suitable
+choice oft:
+(i) In the situation considered in Lemma 4.2, (i), the genus ofC is equal to
+t+3t−(t+1)+1=3 t (t ≥2).
+We use these coverings in the proof of Claim 4.6.E.3 [cf. the proof of
+Theorem 4.6, (ii)].
+(ii) In the situation considered in Lemma 4.2, (ii), the genus ofC is equal to
+t+3t−(t+3)+1=3 t−2( t ≥3).
+We use these coverings in the proof of Claim 4.6.E.4 [cf. the proof of
+Theorem 4.6, (ii)].
+(iii) In the situation considered in Lemma 4.2, (iii), the genus ofC is equal to
+t+3t−(t+2)+1=3 t−1( t ≥2).
+We use these coverings in the proof of Claim 4.6.E.5 [cf. the proof of
+Theorem 4.6, (ii)].
+Lemma 4.3. There exists a simple0-proﬁled admissible coveringπ: C → D of
+degree3 over k from a symmetrically pointed stable curve(f : C → Spec k;μf ⊆
+C) of genus 5 [cf. Deﬁnition 1.2, (ii)] to a symmetrically pointed stable curve
+(h : D → Spec k;μh ⊆D) of genus0 satisfying the following conditions:
+•π: C → D is ramiﬁed (i.e., fails to be unramiﬁed) over each point ofμh;
+44
+
+•π: C → D is unramiﬁed over each node ofD;
+•Vert(GC)= {v1,w1,w2};
+•Node(GC)= {e1,e2,...,e 6};
+•N(v1) = Node(GC);
+•N(w1)= {e1,e2,e3};
+•N(w2)= {e4,e5,e6};
+•v1 (respectively,w1, w2)i so ft y p e(0,6+8) (respectively,(1,3+12), (0,3+
+8)) [where the “6” (respectively, “3”, “3”) corresponds to the cardinality
+of N(v1) (respectively,N(w1), N(w2))];
+•Vert(GD)= {v′,w′
+1,w′
+2};
+•Node(GD)= {e′
+1,e′
+2
+};
+•N(v′) = Node(GD);
+•N(w′
+j)= {e′
+j} for j =1 ,2;
+•v′ (respectively,w′
+1, w′
+2)i so ft y p e(0,2+4) (respectively,(0,1+6) , (0,1+
+4)) [where the “2” (respectively, “1”, “1”) corresponds to the cardinality
+of N(v′) (respectively,N(w′
+1), N(w′
+2))];
+•v1 lies overv′,a n dwj lies overw′
+j for j =1 ,2.
+Proof. The desired simple admissible covering may be constructed by gluing
+together suitable simple coverings of smooth curves [cf. [Ful], Proposition 8.1]
+at unramiﬁed points of the coverings.
+Remark 4.3.1. In the proof of Claim 4.6.E.2 [cf. the proof of Theorem 4.6,
+(ii)], we use the covering constructed in Lemma 4.3 instead of the covering
+constructed in Lemma 4.2, (iii), for a technical reason.
+Lemma 4.4. There exists a1-proﬁled simple admissible coveringπ: C → D of
+degree3 over k from a([24]+3) -pointed (respectively,([20]+3) -pointed) stable
+curve (f : C → Spec k;μ
+f ⊆C) of genus 4 (respectively, 3)t oa ([12] + 1)-
+pointed (respectively,([10]+1) -pointed) stable curve(h : D → Spec k;μh ⊆D)
+of genus0 satisfying the following conditions:
+•π: C → D is ramiﬁed (i.e., fails to be unramiﬁed) over each unordered
+point ofμh;
+•π: C → D is unramiﬁed over each node ofD;
+•Vert(GC)= {v1,v2,v3,w1,w2};
+45
+
+•Node(GC)= {e1,e2,...,e 6};
+•N(v1)= {e1,e4};
+•N(v2)= {e2,e5};
+•N(v3)= {e3,e6};
+•N(w1)= {e1,e2,e3};
+•N(w2)= {e4,e5,e6};
+•vi is of type (0,2+1 ) for i =1 ,2,3 [where the “2” corresponds to the
+cardinality ofN(vi);t h e“1” corresponds to the cardinality of the set of
+the ordered marked points onvi];
+•w1 is of type(1,3 + 12)[where the “3” corresponds to the cardinality of
+N(w1)];
+•w2 is of type(1,3+12) (respectively,(0,3+8)) [where the “3” corresponds
+to the cardinality ofN(w2)];
+•Vert(GD)= {v′,w′
+1,w′
+2};
+•Node(GD)= {e′
+1,e′
+2
+};
+•N(v′) = Node(GD);
+•N(w′
+j)= {e′
+j} for j =1 ,2;
+•v′ is of type (0,2+1 ) [where the “2” corresponds to the cardinality of
+N(v′);t h e“1” corresponds to the cardinality of the set of the ordered
+marked points onv′];
+•w′
+1 is of type (0,1+6 ) [where the “1” corresponds to the cardinality of
+N(w′
+1)];
+•w′
+2 is of type(0,1+6) (respectively,(0,1+4) ) [where the “1” corresponds
+to the cardinality ofN(w′
+2)];
+•vi lies overv′ for i =1 ,2,3,a n dwj lies overw′
+j for j =1 ,2.
+Proof. The desired 1-proﬁled simple admissible covering may be constructed by
+gluing together suitable simple coverings of smooth curves [cf. [Ful], Proposition
+8.1] at unramiﬁed points of the coverings.
+Remark 4.4.1. We use these coverings in the proof of Claim 4.6.E.1 [cf. the
+proof of Theorem 4.6, (ii)].
+46
+
+Lemma 4.5. Let t be an integer satisfyingt ≥3. Then there exists a0-proﬁled
+simple admissible coveringπ: C → D of degree2 over k from a symmetrically
+pointed stable curve(f : C → Spec k;μf ⊆C) [cf. Deﬁnition 1.2, (ii)] to a
+symmetrically pointed stable curve(h : D → Spec k;μh ⊆D) satisfying the
+following conditions:
+•π: C → D is ramiﬁed (i.e., fails to be unramiﬁed) over each point ofμh;
+•π: C → D is unramiﬁed over each node ofD;
+•Vert(GC)= {v1,v2,w1,w2,...,w t};
+•Node(GC)= {e1,e2,...,e 2t};
+•N(v1)= {e1,e3,...,e 2t−1};
+•N(v2)= {e2,e4,...,e 2t};
+•N(wj)= {e2j−1,e2j} for j =1 ,...,t ;
+•for i =1 ,2 (respectively, j =1 ,...,t ), vi (respectively, wj)i so ft y p e
+(0,t) (respectively,(0,2+2) ) [where the “t” (respectively, the ﬁrst “2”o f
+“2+2 ”) corresponds to the cardinality ofN(vi) (respectively,N(wj))];
+•Vert(GD)= {v′,w′
+1,w′
+2,...,w ′
+t};
+•Node(GD)= {e′
+1,e′
+2
+,...,e ′
+t};
+•N(v′) = Node(GD);
+•N(w′
+j)= {e′
+j} for j =1 ,...,t ;
+•v′ is of type(0,t) [where the “t” corresponds to the cardinality ofN(v′)];
+•w′
+j is of type(0,1+2 ) for j =1 ,...,t [where the “1” corresponds to the
+cardinality ofN(w′
+j)];
+•for i =1 ,2 (respectively, j =1 ,...,t ), vi (respectively, wj)l i e so v e rv′
+(respectively,w′
+j).
+Proof. The desired simple admissible covering may be constructed by gluing
+together suitable simple coverings of smooth curves [cf. [Ful], Proposition 8.1] at
+unramiﬁed points of the coverings. Note that the numerical conditions imposed
+on t imply, in particular, that the resulting “symmetrically pointed curveD”i s
+indeed stable.
+Remark 4.5.1. In the situation considered in Lemma 4.4, the genus ofC is equal
+to
+2t−(t+2)+1= t−1.
+47
+
+We use these coverings in the proof of Claim 4.6.F [cf. the proof of Theorem
+4.6, (ii)].
+Theorem 4.6. Let Σbe a nonempty set of prime numbers;k an algebraically
+closed ﬁeld of characteristic zero;(g,d,r ) a triple of nonnegative integers such
+that
+d ≥2 ∧(g,r) /∈{(0,0),(1,0)}∧ (g,d,r ) /∈{(0,2,1),(0,3,1)}
+(⇒ 2g −2+ dr >1 ∧2g +2d+r −5 ≥1).
+Write (Hg,d,r)k for ther-proﬁled Hurwitz stack of type(g,d) over k [cf. Deﬁ-
+nition 1.8; Deﬁnition 1.13, (ii)], wheredim(Hg,d,r)k =2 g−2+2d+r−3=2 g+
+2d+r−5 ≥1 [cf. Corollary 1.9];(Cg,d,r)k → (Hg,d,r)k for the restriction of the
+tautological curve over (Mg,dr)k to (Hg,d,r)k via the natural (1-)morphism
+(Hg,d,r)k → (Mg,dr)k [cf. Proposition 1.10, (iii)]; ΠHg,d,r
+def
+= π1((Hg,d,r)k)
+for the ´etale fundamental group of the proﬁled Hurwitz stack(Hg,d,r)k; Πg,d,r
+for the maximal pro-Σquotient of the kernel Ng,d,r of the natural surjection
+π1((Cg,d,r)k) ↠ π1((Hg,d,r)k)=Π Hg,d,r ; ΠCg,d,r for the quotient of the ´etale
+fundamental group π1((Cg,d,r)k) of (Cg,d,r)k by the kernel of the natural sur-
+jection Ng,d,r ↠ Πg,d,r; OutC(Πg,d,r) for the group of outomorphisms [cf. the
+discussion entitled “Topological groups” in Notations and Conventions] ofΠg,d,r
+which induce bijections on the set of cuspidal inertia subgroups ofΠg,d,r.T h u s ,
+we have a natural sequence of proﬁnite groups
+1 −→Πg,d,r −→ΠCg,d,r −→ΠHg,d,r −→1
+which determines an outer representation
+ρg,d,r :ΠHg,d,r −→Out(Πg,d,r)
+Then the following hold:
+(i) The proﬁnite groupΠg,d,r is the maximal pro-Σquotient of the ´etale fun-
+damental group of a hyperbolic curve over an algebraically closed ﬁeld of
+characteristic zero [i.e., a pro-Σsurface group — cf. [MT], Deﬁnition
+1.2] and is naturally isomorphic to the proﬁnite group “Π
+g,r” of [CbTpI],
+Theorem D, in the case where one takes the “(g,r)”o fl o c . c i t . t ob e
+(g,dr) [in the notation of the present discussion].
+(ii) Let H ⊆ΠHg,d,r be an open subgroup ofΠHg,d,r . Then the composite of
+natural homomorphisms
+Aut(Hg,d,r)k((Cg,d,r)k) −→AutΠHg,d,r
+(ΠCg,d,r )/Inn(Πg,d,r)
+∼
+−→ZOut(Πg,d,r)(Im(ρg,d,r)) ⊆ZOut(Πg,d,r)(ρg,d,r(H))
+[cf. the discussion entitled “Topological groups” in Notations and Con-
+ventions] determines anisomorphism
+48
+
+Aut(Hg,d,r)k((Cg,d,r)k)
+∼
+−→ZOutC(Πg,d,r)(ρg,d,r(H)).
+Moreover, Aut(Hg,d,r)k((Cg,d,r)k) is isomorphic to
+⎧
+⎪⎨
+⎪⎩
+Z/2Z×Z/2Z if (g,d,r ) ∈{(0,2,2),(0,4,1)};
+Z/2Z if (g,d,r ) ∈{(g,2,r) | (g,r) ̸=( 0,2)}∪{(2,d, 0)};
+{1} if (g,d,r ) /∈{(0,4,1),(g,2,r),(2,d, 0)}.
+(iii) Let H ⊆OutC(Πg,d,r) be a closed subgroup ofOutC(Πg,d,r) that contains
+an open subgroup ofIm(ρg,d,r) ⊆Out(Πg,d,r).T h e nH is almost slim
+[cf. the discussion entitled “Topological groups” in Notations and Con-
+ventions]. If, moreover,
+(g,d,r ) /∈{(0,4,1),(g,2,r),(2,d, 0)},
+then H is slim [cf. the discussion entitled “Topological groups” in Nota-
+tions and Conventions].
+Proof. Assertion (i) follows immediately from Proposition 1.14, (ii), together
+with the various deﬁnitions involved.
+Next, we verify assertion (ii). First, we verify the following assertion:
+Claim 4.6.A: The composite homomorphism
+Aut
+(Hg,d,r)k((Cg,d,r)k) −→ZOut(Πg,d,r)(ρg,d,r(H)) =ZOut(Πg,dr)(ρg,d,r(H))
+[cf. Theorem 4.6, (i)] is injective.
+Thisfollowsimmediatelyfromthewell-knownfactthatanynon-trivialautomor-
+phism of a hyperbolic curve over an algebraically closed ﬁeld of characteristic
+/∈Σ induces a non-trivial outomorphism of the maximal pro-Σ quotient of the
+´etale fundamental group of the hyperbolic curve [cf., e.g., [LocAn], the proof of
+Theorem 14.1]. This completes the proof of Claim 4.6.A.
+Note that it follows immediately from the various deﬁnitions involved that
+the composite homomorphism Aut(Hg,d,r)k((Cg,d,r)k) → ZOut(Πg,dr)(ρg,d,r(H))
+factors throughZOutC(Πg,dr)(ρg,d,r(H)), hence determines an injection
+Aut(Hg,d,r)k((Cg,d,r)k) ↪→ ZOutC(Πg,dr)(ρg,d,r(H)).
+In the remainder of the proof, for eachx ∈ ˜Hg,d,r(k) [cf. Proposition 1.10,
+(i)], write
+Gx
+for the semi-graph of anabelioids of pro-Σ PSC-type associated to the geometric
+ﬁber of ˜Clog
+g,d,r → ˜Hlog
+g,d,r [cf. Deﬁnition 1.13, (i)] over xlog def
+= x × ˜Hg,d,r
+˜Hlog
+g,d,r.
+T h u s ,w eh a v ean a t u r a lI m (ρg,d,r)-torsor of outer isomorphisms Πg,dr
+∼
+→ ΠGx.
+Let us ﬁx an isomorphism Πg,dr
+∼
+→ ΠGx that belongs to this collection of iso-
+morphisms.
+Next, we verify the following assertion:
+49
+
+Claim 4.6.B: Suppose that
+{
+r> 1 ∧2g −2+ d(r −1) ≥1
+}
+∨
+{
+r =1 ∧2g −2 ≥1 ∧d>g
+}
+⇔
+r> 0 ∧{r =1 ⇒ d>g }∧ (g,r) /∈{(0,1),(1,1)}∧ (g,d,r ) ̸=( 0,2,2).
+Then the injection
+Aut(Hg,d,r)k((Cg,d,r)k) ↪→ ZOutC(Πg,dr)(ρg,d,r(H))
+is surjective. Moreover, the description of Aut(Hg,d,r)k((Cg,d,r)k)i n
+the statement of Theorem 4.6, (ii), holds.
+Indeed, since 2g +2d+r −5 ≥1, it makes sense to deﬁneN to be the kernel
+of the surjection ΠHg,d,r ↠ ΠHg,d,r−1 [cf. Proposition 1.14, (iii)] determined
+by the (1-)morphismφg,d,r−1 :( Hg,d,r)k → (Hg,d,r−1)k [cf. Proposition 1.10,
+(iii)] obtained by forgetting the ﬁnald sections (respectively, ﬁnal section) of
+the domain curve (respectively, codomain curve). Then it follows immediately
+from the various deﬁnitions involved that there exists a commutative diagram
+of proﬁnite groups
+1 −−−−→ Π
+g,dr −−−−→ E −−−−→ N −−−−→ 1
+≀
+⏐⏐
+↓
+≀
+⏐
+⏐
+↓
+≀
+⏐
+⏐
+↓
+1 −−−−→ Π
+F −−−−→ ΠT −−−−→ ΠB −−−−→ 1,
+where the upper sequence is the exact sequence obtained by pulling back the
+exact sequence
+1 −→Πg,dr −→ΠCg,d,r −→ΠHg,d,r −→1
+[cf. Proposition 1.14, (ii)] by the natural inclusion N↪ → ΠHg,d,r ;t h el o w e r
+sequence is the exact sequence “1 → ΠF → ΠT → ΠB → 1” obtained by
+applying the procedure given in the statement of Lemma 2.3 in the case where
+ΣF = Σ andm = 1 to an (r−1)-proﬁled simple log admissible covering of degree
+d whose domain is a stable log curve of genusg over (Spec k)log;t h ev e r t i c a l
+arrows are isomorphisms.
+Let α∈ZOutC(Πg,dr)(ρg,d,r(H)) be an outomorphism of Πg,dr.T h u s ,αnatu-
+rally determines an element ofZOutC(Πg,dr)(ρg,d,r(H∩N))
+∼
+→ ZOutC(ΠF)(ρ1(H∩
+N)), whereρ1 is as in Lemma 2.3.
+Next, we claim the following:
+Claim4.6.B.1: When r−1 = 0, thecondition“α∈Aut|{wF}|(G1,2,...,g)”
+in Proposition 3.1 is satisﬁed.
+Let x ∈C1(k) ⊆ ˜Hg,d,1(k) be as in Deﬁnition 3.3, (iii), soGx may be identiﬁed
+with “G1,2,...,g”. Next, let us consider the composite
+π1(xlog) −→π1(( ˜Hlog
+g,d,1)k)
+∼
+←−ΠHg,d,1
+ρg,d,1
+−→Out(Πg,d),
+50
+
+where the ﬁrst arrow is the natural outer homomorphism; the second arrow is
+the outer isomorphism obtained by applying the log purity theorem to the nat-
+ural (1-)morphism (H
+g,d,1)k ↪→ ( ˜Hlog
+g,d,1)k [cf. Proposition 1.10, (ii); [ExtFam],
+Theorem B]. This composite factors throughπ1(xlog) → Dehn(Gx) [cf. [CbTpI],
+Deﬁnition 4.4; [CbTpI], Lemma 5.4, (iii)]. By considering the log structure
+of ( ˜Hlog
+g,d,1)k [cf. Theorem 1.5; Corollary 1.9; Proposition 1.10, (ii); [GCH],
+§3.23], we conclude that the image of this arrowπ1(xlog) → Dehn(Gx) con-
+tains a positive deﬁnite element [cf. [CbTpI], Lemma 5.4, (ii); [CbTpI], Def-
+inition 5.8, (iii)], hence is IPSC-ample [cf. [CbTpI], Deﬁnition 5.13]. Thus,
+it follows from [CbTpI], Lemma 5.12, (i); [CbTpI], Theorem 5.14, (i), that
+α∈Z
+OutC(Πg,d)(ρg,d,1(H)) is graphic. Next, let us observe that it follows im-
+mediately from the description of the log structure of (˜Hlog
+g,d,1)k given in [GCH],
+§3.23 [cf. also Theorem 1.5; Corollary 1.9; Proposition 1.10, (ii); Lemma 2.11],
+that the deformations parametrized by (˜Hlog
+g,d,1)k of nodes∈N(wF)a r eindepen-
+dent of the deformations parametrized by (˜Hlog
+g,d,1)k of nodes ∈N(w′F). Thus,
+the fact thatα∈ZOutC(Πg,d)(ρg,d,1(H)) implies [cf. [CbTpI], Lemma 5.4, (ii)]
+that αdetermines an element of Aut(Gx) that preserveswF. This completes the
+proof of Claim 4.6.B.1.
+Thus, by Propositions 3.1 and 3.6, the elements ofZOutC(ΠF)(ρ1(H ∩N))
+are geometric, henceα∈ZOutC(Πg,dr)(ρg,d,r(H)) is geometric [i.e., in this case,
+is trivial or arises from the hyperelliptic involution]. This completes the proof
+of Claim 4.6.B.
+Next, we verify the following assertion:
+Claim 4.6.C: Suppose that
+{r =0 ⇒ d ≥
+g
+2 +1}∨ (g,r) ∈{(0,1),(1,1)}∨ (g,d,r )=( 0,2,2).
+Then the injection Aut(Hg,d,r)k((Cg,d,r)k) ↪→ ZOutC(Πg,dr)(ρg,d,r(H))
+is surjective. Moreover, the description of Aut(Hg,d,r)k((Cg,d,r)k)i n
+the statement of Theorem 4.6, (ii), holds.
+Since the image of the arrowψg,d,r :( Hg,d,r)k −→(Mg,dr)k [cf. Deﬁnition
+1.13, (i)] is dense in this case [cf. Corollary 2.9; Proposition 2.10; the well-
+known, elementary structure of double coverings of the projective line overk],
+the image of the arrow Π
+(Hg,d,r)k → Π(Mg,dr)k is open. Thus, the assertion
+follows immediately from the corresponding “Grothendieck Conjecture” for the
+universal curve over (Mg,dr)k [cf. Theorem M, (i)]. This completes the proof
+of Claim 4.6.C.
+Next, we verify the following assertion:
+Claim 4.6.D: Suppose that
+r =0 ,d ≥4 (respectively,r =1 ,d ≥4).
+Then the injection Aut(Hg,d,r)k((Cg,d,r)k) ↪→ ZOutC(Πg,dr)(ρg,d,r(H))
+is surjective. Moreover, the description of Aut(Hg,d,r)k((Cg,d,r)k)i n
+the statement of Theorem 4.6, (ii), holds.
+51
+
+By Claim 4.6.C (respectively, Claim 4.6.B), we may assume thatg ≥2d−1 ≥
+7 (respectively, g ≥ d ≥ 4). Thus, it suﬃces to show that the centralizer
+ZOutC(Πg,dr)(ρg,d,r(H)) is trivial. Next, let us observe that by considering the
+covering obtained by applying Lemma 4.1 in the case where
+t
+def
+= ⌈ g
+d−1⌉ (⇒ t ≥3 (respectively,t ≥2)),m
+def
+= t(d−1)−g,
+one may verify easily that there exists ak-valued pointx ∈ ˜Hg,d,0(k)[ s oGx has
+no cusps!] (respectively,x ∈ ˜Hg,d,1(k)[ s oGx has preciselyd cusps]) satisfying
+the following conditions:
+•Vert(Gx)= {v1,v2,...,v m+1,w1,w2,...,w t};
+•Node(Gx)= {e1,e2,...,e td};
+•N(v1)= {e1,e2,...,e d−m,ed+1,...,e 2d−m,...,e (t−1)d+1,...,e td−m};
+•N(vi)= {el | l ≡d−m+i−1( m o dd)} for i =2 ,...,m +1;
+•N(wj)= {e(j−1)d+1,··· ,ejd} for j =1 ,...,t ;
+•v1 is of type (0,(d−m)t) (respectively, (0,(d−m)(t+1)));
+•for i =2 ,...,m +1, vi is of type (0,t) (respectively, (0,t +1));
+•for j =1 ,...,t , wj is of type (0,d).
+Thus, let us ﬁx x ∈ ˜Hg,d,0(k) (respectively, x ∈ ˜Hg,d,1(k)) satisfying the
+above conditions.
+Let α∈ZOutC(Πg,0)(ρg,d,0(H)) (respectively,α∈ZOutC(Πg,d)(ρg,d,1(H))) be
+an outomorphism of Πg,0 (respectively, Πg,d). Suppose, moreover, that, relative
+to the isomorphism Πg,0
+∼
+→ ΠGx (respectively, Πg,d
+∼
+→ ΠGx) ﬁxed above [cf.
+the discussion immediately preceding Claim 4.6.B],α∈ZOutC(Πg,0)(ρg,d,0(H))
+(respectively, α∈ZOutC(Πg,d)(ρg,d,1(H))) determines an element of Aut(Gx)
+that preserves wj for each j =1 ,...,t [cf. Claim 4.6.D.2]. For j =1 ,...,t ,
+write
+(Gx)j
+def
+=( Gx)⇝{e(j−1)d+1,e(j−1)d+2,...,ejd}
+[cf. [CbTpI], Deﬁnition 2.8]; αj for the image ofαvia the natural inclusion
+Aut|W|(Gx) ↪→ Aut((Gx)j) [cf. [CbTpI], Deﬁnition 2.6, (i); [CbTpI], Proposition
+2.9, (ii)], where we writeW
+def
+= {w1,w2,...,w t}.
+Next, we claim the following:
+Claim 4.6.D.1: αj ∈Dehn((Gx)j).
+Note that one may verify easily that there exists ak-valued pointyj ∈ ˜Hg,d,0(k)
+(respectively, yj ∈ ˜Hg,d,1(k)) such thatGyj may be identiﬁed with (Gx)j.
+By gluing together
+52
+
+•a( t−1)-proﬁled (respectively,t-proﬁled) simple covering of degreed from
+a smooth curve of genusd−1−m [corresponding tov1,v2,...,v m+1,wj]
+to a smooth curve of genus 0
+and
+•a no r d e r e dc o l l e c t i o no f(t−1) 1-proﬁled simple coverings of degreed from
+smooth curves of genus 0 [corresponding towj′,f o rj′ ∈{1,2,...,t }\{ j}]
+to smooth curves of genus 0
+at unramiﬁed marked points of
+•the domain curves [i.e., for eachp =1 ,...,t −1a n dq =1 ,...,d ,w eg l u e
+the ((p −1)d + q)-th marked point of the domain curve of the (t −1)-
+proﬁled (respectively,t-proﬁled) simple covering to theq-th marked point
+of the domain curve of thep- t hm e m b e ro ft h eo r d e r e dc o l l e c t i o no f(t−1)
+1-proﬁled simple coverings]
+and
+•the codomain curves [i.e., for eachp =1 ,...,t −1, we glue thep-th marked
+point of the codomain curve of the (t−1)-proﬁled (respectively,t-proﬁled)
+simple covering to the marked point of the codomain curve of thep-th
+member of the ordered collection of (t−1) 1-proﬁled simple coverings],
+we obtain a clutching morphism [cf. [Knud], Deﬁnition 3.6]
+Hd−1−m,d,t−1 ×H0,d,1 ×···×H 0,d,1 −→Hg,d,0
+(respectively, Hd−1−m,d,t ×H0,d,1 ×···×H 0,d,1 −→Hg,d,1),
+where the number of factors in the above product ist. Since the image of
+this clutching morphism is contained in the normal locus ofHg,d,0 (respectively,
+Hg,d,1)[cf. Theorem1.5; Corollary1.9; [GCH], §3.23], wethusobtainaclutching
+morphism
+Hd−1−m,d,t−1 ×H0,d,1 ×···×H 0,d,1 −→ ˜Hg,d,0
+(respectively, Hd−1−m,d,t ×H0,d,1 ×···×H 0,d,1 −→ ˜Hg,d,1).
+Note thatyj ∈ ˜Hg,d,0(k) (respectively,yj ∈ ˜Hg,d,1(k)) is contained in the image
+of the above clutching morphism, and that
+αj ∈ZOutC(ΠGyj )(ρg,d,0(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+)
+(respectively, αj ∈ZOutC(ΠGyj )(ρg,d,1(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Πd−1−m,(t−1)d)(ρd−1−m,d,t−1(H†))
+(respectively, ZOutC(Πd−1−m,td)(ρd−1−m,d,t(H†))),
+53
+
+whereH† ⊆ΠHd−1−m,d,t−1 (respectively,H† ⊆ΠHd−1−m,d,t) is an open subgroup
+of ΠHd−1−m,d,t−1 (respectively, ΠHd−1−m,d,t). Sinced ≥4a n dt ≥3 (respectively,
+t ≥2), thiselementistrivialbyClaim4.6.B.Inparticular, αj ∈Aut|grph|(Gyj ) ⊆
+Aut(Gyj ) = Aut((Gx)j). On the other hand,
+αj ∈ZOutC(ΠGyj )(ρg,d,0(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+)
+(respectively, αj ∈ZOutC(ΠGyj )(ρg,d,1(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π0,d)(ρ0,d,1(H‡))
+for each component of the above productH0,d,1 ×···×H 0,d,1,w h e r eH‡ ⊆
+ΠH0,d,1 is an open subgroup of ΠH0,d,1.S i n c eαj ∈Aut|grph|(Gyj ), these elements
+preserve each Π0,d-conjugacy class of cuspidal subgroups of Π0,d. Thus, since
+d ≥4, these elements are trivial by Claim 4.6.C. This completes the proof of
+Claim 4.6.D.1.
+Thus, by varyingj, we conclude from Claim 4.6.D.1 and [CbTpI], Theorem
+4.8, (ii), (iv), thatαis trivial. Hence it remains to verify the following:
+Claim 4.6.D.2: αdetermines an element of Aut(Gx) that preserves
+wj for eachj =1 ,...,t .
+The proof of Claim 4.6.D.2 is similar to the proof of Claim 4.6.B.1, i.e., it suf-
+ﬁces to observe that, forj ̸= j′, the deformations parametrized by (˜Hlog
+g,d,0)k
+(respectively, ( ˜Hlog
+g,d,1)k)o fn o d e s∈N (wj)a r eindependent of the deforma-
+tions parametrized by (˜Hlog
+g,d,0)k (respectively, (˜Hlog
+g,d,1)k)o fn o d e s∈N(wj′)[ c f .
+Lemma 4.1]. This completes the proof of Claim 4.6.D.2, hence also the proof of
+Claim 4.6.D.
+Next, we verify the following assertion:
+Claim 4.6.E: Suppose that
+r =0 ,d = 3 (respectively,r =1 ,d =3 ) .
+Then the injection Aut
+(Hg,d,r)k((Cg,d,r)k) ↪→ ZOutC(Πg,dr)(ρg,d,r(H))
+is surjective. Moreover, the description of Aut(Hg,d,r)k((Cg,d,r)k)i n
+the statement of Theorem 4.6, (ii), holds.
+Since we are operating under the assumption that (g,d,r ) ̸=( 0,3,1), it follows
+from Claim 4.6.C (respectively, Claims 4.6.B, 4.6.C) that we may assume that
+g ≥ 5 (respectively, g ≥ 3). Thus, it suﬃces to show that the centralizer
+ZOutC(Πg,dr)(ρg,d,r(H)) is trivial.
+Claim 4.6.E.1: Wheng = 4 (respectively,g =3 ) ,r = 1, Claim 4.6.E
+holds. [Note that in the statement and proof of the present Claim
+4.6.1, the non-resp’d case corresponds to the caseg =4 ,r = 1, while
+54
+
+the resp’d case corresponds to the caseg =3 ,r = 1. This partition
+into non-resp’d and resp’d casesdiﬀersfrom the partition into non-
+resp’d and resp’d cases that is adopted in the statement of Claim
+4.6.E, as well as in the statements and proofs of Claims 4.6.E.2,
+4.6.E.3, 4.6.E.4, 4.6.E.5, i.e., where the non-resp’d case corresponds
+to the case r = 0, while the resp’d case corresponds to the case
+r =1 . ]
+Let us ﬁrst observe that by considering the covering obtained by applying
+Lemma4.4, onemayverifyeasilythatthereexistsa k-valuedpoint x ∈ ˜H
+g,3,1(k)
+[so Gx has 3 cusps] satisfying the following conditions:
+•Vert(Gx)= {v1,v2,v3,w1,w2};
+•Node(Gx)= {e1,e2,...,e 6};
+•N(v1)= {e1,e4};
+•N(v2)= {e2,e5};
+•N(v3)= {e3,e6};
+•N(w1)= {e1,e2,e3};
+•N(w2)= {e4,e5,e6};
+•vi is of type (0,3) fori =1 ,2,3;
+•w1 is of type (1,3);
+•w2 is of type (1,3) (respectively, (0,3)).
+Thus, let us ﬁx x ∈ ˜H4,3,1(k) (respectively, x ∈ ˜H3,3,1(k)) satisfying the
+above conditions.
+Let α∈ZOutC(Π4,3)(ρ4,3,1(H)) (respectively,α∈ZOutC(Π3,3)(ρ3,3,1(H))) be
+an outomorphism of Π4,3 (respectively, Π3,3). Suppose, moreover, that, relative
+to the isomorphism Π4,3
+∼
+→ ΠGx (respectively, Π3,3
+∼
+→ ΠGx) ﬁxed above [cf.
+the discussion immediately preceding Claim 4.6.B],α∈ZOutC(Π4,3)(ρ4,3,1(H))
+(respectively,α∈ZOutC(Π3,3)(ρ3,3,1(H)))determinesanelementofAut( Gx)that
+preserves wj for eachj =1 ,2 [cf. Claim 4.6.E.1.3]. Forj =1 ,2, write
+(Gx)j
+def
+=( Gx)⇝{e3j−2,e3j−1,...,e3j}
+[cf. [CbTpI], Deﬁnition 2.8]; αj for the image ofαvia the natural inclusion
+Aut|W|(Gx) ↪→ Aut((Gx)j) [cf. [CbTpI], Deﬁnition 2.6, (i); [CbTpI], Proposition
+2.9, (ii)], where we writeW
+def
+= {w1,w2}.
+Next, we claim the following:
+Claim 4.6.E.1.1: α2 ∈Dehn((Gx)2).
+55
+
+Note that one may verify easily that there exists ak-valued pointy2 ∈ ˜H4,3,1(k)
+(respectively, y2 ∈ ˜H3,3,1(k)) such thatGy2 may be identiﬁed with (Gx)2.
+By gluing together simple coverings at unramiﬁed marked points as in the
+proof of Claim 4.6.D.1, we obtain a clutching morphism [cf. [Knud], Deﬁnition
+3.6]
+H
+1,3,2 ×H1,3,1 −→H4,3,1
+(respectively, H0,3,2 ×H1,3,1 −→H3,3,1),
+where the ﬁrst factor in the product corresponds to the irreducible component
+of (Gx)2 that arises fromv1, v2, v3,a n dw2; the second factor corresponds to
+w1. Since the image of this clutching morphism is contained in the normal locus
+of H4,3,1 (respectively, H3,3,1) [cf. Theorem 1.5; Corollary 1.9; [GCH],§3.23],
+we thus obtain a clutching morphism
+H1,3,2 ×H1,3,1 −→ ˜H4,3,1
+(respectively, H0,3,2 ×H1,3,1 −→ ˜H3,3,1).
+Note thaty2 ∈ ˜H4,3,1(k) (respectively,y2 ∈ ˜H3,3,1(k)) is contained in the image
+of the above clutching morphism, and that
+α2 ∈ZOutC(ΠGy2 )(ρ4,3,1(H))∩Aut((Gx)2) ⊆OutC(ΠGy2 )
+(respectively, α2 ∈ZOutC(ΠGy2 )(ρ3,3,1(H))∩Aut((Gx)2) ⊆OutC(ΠGy2 ))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π1,6)(ρ1,3,2(H†))
+(respectively, ZOutC(Π0,6)(ρ0,3,2(H†))),
+where H† ⊆ΠH1,3,2 (respectively,H† ⊆ΠH0,3,2) is an open subgroup of ΠH1,3,2
+(respectively, ΠH0,3,2). This element is trivial by Claim 4.6.B. In particular,
+α2 ∈Aut|grph|(Gy2) ⊆Aut(Gy2) = Aut((Gx)2). On the other hand,
+α2 ∈ZOutC(ΠGy2 )(ρ4,3,1(H))∩Aut((Gx)2) ⊆OutC(ΠGy2
+)
+(respectively, α2 ∈ZOutC(ΠGy2 )(ρ3,3,1(H))∩Aut((Gx)2) ⊆OutC(ΠGy2 ))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π1,3)(ρ1,3,1(H‡)),
+where H‡ ⊆ΠH1,3,1 is an open subgroup of ΠH1,3,1. This element is trivial by
+Claim 4.6.C. This completes the proof of Claim 4.6.E.1.1.
+Next, we claim the following:
+Claim 4.6.E.1.2: The image ofα∈Aut|W|(Gx) by the natural mor-
+phism Aut|W|(Gx) → Aut(Gx|H) is trivial, whereH denotes the sub-
+semi-graph of Gx determined by the set of vertices{v1,v2,v3,w1}
+[cf. [CbTpI], Deﬁnition 2.2, (i)].
+56
+
+Note that one may verify easily that there exists ak-valued pointy1 ∈ ˜H4,3,1(k)
+(respectively, y1 ∈ ˜H3,3,1(k)) such thatGy1 may be identiﬁed with (Gx)1.
+By gluing together simple coverings at unramiﬁed marked points as in the
+proof of Claim 4.6.D.1, we obtain a clutching morphism [cf. [Knud], Deﬁnition
+3.6]
+H
+1,3,2 ×H1,3,1 −→H4,3,1
+(respectively, H1,3,2 ×H0,3,1 −→H3,3,1),
+where the ﬁrst factor in the product corresponds to the irreducible component
+of (Gx)1 that arises fromv1, v2, v3,a n dw1; the second factor corresponds to
+w2. Since the image of this clutching morphism is contained in the normal locus
+of H4,3,1 (respectively, H3,3,1) [cf. Theorem 1.5; Corollary 1.9; [GCH],§3.23],
+we thus obtain a clutching morphism
+H1,3,2 ×H1,3,1 −→ ˜H4,3,1
+(respectively, H1,3,2 ×H0,3,1 −→ ˜H3,3,1).
+Note thaty1 ∈ ˜H4,3,1(k) (respectively,y1 ∈ ˜H3,3,1(k)) is contained in the image
+of the above clutching morphism, and that
+α1 ∈ZOutC(ΠGy1 )(ρ4,3,1(H))∩Aut((Gx)1) ⊆OutC(ΠGy1 )
+(respectively, α1 ∈ZOutC(ΠGy1 )(ρ3,3,1(H))∩Aut((Gx)1) ⊆OutC(ΠGy1
+))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π1,6)(ρ1,3,2(H†)),
+where H† ⊆ΠH1,3,2 is an open subgroup of ΠH1,3,2. This element is trivial by
+Claim 4.6.B. This completes the proof of Claim 4.6.E.1.2.
+Thus, we conclude from Claim 4.6.E.1.1, Claim 4.6.E.1.2, and [CbTpI], The-
+orem 4.8, (ii), (iv), thatαis trivial. Hence it remains to verify the following:
+Claim 4.6.E.1.3:αdetermines an element of Aut(Gx) that preserves
+wj for eachj =1 ,2.
+The proof of Claim 4.6.E.1.3 is similar to the proof of Claim 4.6.D.2. This
+completes the proof of Claim 4.6.E.1.
+Claim 4.6.E.2: Wheng = 5, Claim 4.6.E holds.
+Let us ﬁrst observe that by considering the covering obtained by applying
+Lemma4.3, onemayverifyeasilythatthereexistsa k-valuedpoint x ∈ ˜H5,3,0(k)
+[so Gx has no cusps!] (respectively,x ∈ ˜H5,3,1(k)[ s oGx has 3 cusps]) satisfying
+the following conditions:
+•Vert(Gx)= {v1,w1,w2};
+•Node(Gx)= {e1,e2,...,e 6};
+57
+
+•N(v1) = Node(Gx);
+•N(w1)= {e1,e2,e3};
+•N(w2)= {e4,e5,e6};
+•v1 is of type (0,6) (respectively, (0,9));
+•w1 is of type (1,3);
+•w2 is of type (0,3).
+Thus, let us ﬁx x ∈ ˜H5,3,0(k) (respectively, x ∈ ˜H5,3,1(k)) satisfying the
+above conditions.
+Let α∈ZOutC(Π5,0)(ρ5,3,0(H)) (respectively,α∈ZOutC(Π5,3)(ρ5,3,1(H))) be
+an outomorphism of Π5,0 (respectively, Π5,3). Suppose, moreover, that, relative
+to the isomorphism Π5,0
+∼
+→ ΠGx (respectively, Π5,3
+∼
+→ ΠGx) ﬁxed above [cf.
+the discussion immediately preceding Claim 4.6.B],α∈ZOutC(Π5,0)(ρ5,3,0(H))
+(respectively,α∈ZOutC(Π5,3)(ρ5,3,1(H)))determinesanelementofAut( Gx)that
+preserves wj for eachj =1 ,2 [cf. Claim 4.6.E.2.3]. Forj =1 ,2, write
+(Gx)j
+def
+=( Gx)⇝{e3j−2,e3j−1,...,e3j}
+[cf. [CbTpI], Deﬁnition 2.8]; αj for the image ofαvia the natural inclusion
+Aut|W|(Gx) ↪→ Aut((Gx)j) [cf. [CbTpI], Deﬁnition 2.6, (i); [CbTpI], Proposition
+2.9, (ii)], where we writeW
+def
+= {w1,w2}.
+Next, we claim the following:
+Claim 4.6.E.2.1: α2 ∈Dehn((Gx)2).
+Note that one may verify easily that there exists ak-valued pointy2 ∈ ˜H5,3,0(k)
+(respectively, y2 ∈ ˜H5,3,1(k)) such thatGy2 may be identiﬁed with (Gx)2.
+By gluing together simple coverings at unramiﬁed marked points as in the
+proof of Claim 4.6.D.1, we obtain a clutching morphism [cf. [Knud], Deﬁnition
+3.6]
+H2,3,1 ×H1,3,1 −→H5,3,0
+(respectively, H2,3,2 ×H1,3,1 −→H5,3,1),
+where the ﬁrst factor in the product corresponds to the irreducible component
+of (Gx)2 that arises from v1, w2; the second factor corresponds tow1.S i n c e
+the image of this clutching morphism is contained in the normal locus ofH5,3,0
+(respectively, H5,3,1) [cf. Theorem 1.5; Corollary 1.9; [GCH], §3.23], we thus
+obtain a clutching morphism
+H2,3,1 ×H1,3,1 −→ ˜H5,3,0
+(respectively, H2,3,2 ×H1,3,1 −→ ˜H5,3,1).
+58
+
+Note thaty2 ∈ ˜H5,3,0(k) (respectively,y2 ∈ ˜H5,3,1(k)) is contained in the image
+of the above clutching morphism, and that
+α2 ∈ZOutC(ΠGy2 )(ρ5,3,0(H))∩Aut((Gx)2) ⊆OutC(ΠGy2
+)
+(respectively, α2 ∈ZOutC(ΠGy2 )(ρ5,3,1(H))∩Aut((Gx)2) ⊆OutC(ΠGy2 ))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π2,3)(ρ2,3,1(H†))
+(respectively, ZOutC(Π2,6)(ρ2,3,2(H†))),
+where H† ⊆ΠH2,3,1 (respectively,H† ⊆ΠH2,3,2) is an open subgroup of ΠH2,3,1
+(respectively, ΠH2,3,2). This element is trivial by Claim 4.6.B. In particular,
+α2 ∈Aut|grph|(Gy2) ⊆Aut(Gy2) = Aut((Gx)2). On the other hand,
+α2 ∈ZOutC(ΠGy2 )(ρ5,3,0(H))∩Aut((Gx)2) ⊆OutC(ΠGy2 )
+(respectively, α2 ∈ZOutC(ΠGy2 )(ρ5,3,1(H))∩Aut((Gx)2) ⊆OutC(ΠGy2
+))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π1,3)(ρ1,3,1(H‡)),
+where H‡ ⊆ΠH1,3,1 is an open subgroup of ΠH1,3,1. This element is trivial by
+Claim 4.6.C. This completes the proof of Claim 4.6.E.2.1.
+Next, we claim the following:
+Claim 4.6.E.2.2: The image ofα∈Aut|W|(Gx) by the natural mor-
+phism Aut|W|(Gx) → Aut(Gx|H) is trivial, where H denotes the
+sub-semi-graph ofGx determined by the set of vertices{v1,w1} [cf.
+[CbTpI], Deﬁnition 2.2, (i)].
+Note that one may verify easily that there exists ak-valued pointy1 ∈ ˜H5,3,0(k)
+(respectively, y1 ∈ ˜H5,3,1(k)) such thatGy1 may be identiﬁed with (Gx)1.
+By gluing together simple coverings at unramiﬁed marked points as in the
+proof of Claim 4.6.D.1, we obtain a clutching morphism [cf. [Knud], Deﬁnition
+3.6]
+H
+3,3,1 ×H0,3,1 −→H5,3,0
+(respectively, H3,3,2 ×H0,3,1 −→H5,3,1),
+where the ﬁrst factor in the product corresponds to the irreducible component
+of (Gx)1 that arises from v1, w1; the second factor corresponds tow2.S i n c e
+the image of this clutching morphism is contained in the normal locus ofH5,3,0
+(respectively, H5,3,1) [cf. Theorem 1.5; Corollary 1.9; [GCH], §3.23], we thus
+obtain a clutching morphism
+H3,3,1 ×H0,3,1 −→ ˜H5,3,0
+(respectively, H3,3,2 ×H0,3,1 −→ ˜H5,3,1).
+59
+
+Note thaty1 ∈ ˜H5,3,0(k) (respectively,y1 ∈ ˜H5,3,1(k)) is contained in the image
+of the above clutching morphism, and that
+α1 ∈ZOutC(ΠGy1 )(ρ5,3,0(H))∩Aut((Gx)1) ⊆OutC(ΠGy1 )
+(respectively, α1 ∈ZOutC(ΠGy1 )(ρ5,3,1(H))∩Aut((Gx)1) ⊆OutC(ΠGy1 ))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π3,3)(ρ3,3,1(H†))
+(respectively, ZOutC(Π3,6)(ρ3,3,2(H†))),
+where H† ⊆ΠH3,3,1 (respectively,H† ⊆ΠH3,3,2) is an open subgroup of ΠH3,3,1
+(respectively, ΠH3,3,2). This element is trivial by Claim 4.6.E.1 (respectively,
+Claim 4.6.B). This completes the proof of Claim 4.6.E.2.2.
+Thus, we conclude from Claim 4.6.E.2.1, Claim 4.6.E.2.2, and [CbTpI], The-
+orem 4.8, (ii), (iv), thatαis trivial. Hence it remains to verify the following:
+Claim 4.6.E.2.3:αdetermines an element of Aut(Gx) that preserves
+wj for eachj =1 ,2.
+The proof of Claim 4.6.E.2.3 is similar to the proof of Claim 4.6.D.2. This
+completes the proof of Claim 4.6.E.2.
+Claim 4.6.E.3: Wheng ≡0 (mod 3), Claim 4.6.E holds.
+Let us ﬁrst observe that by Claim 4.6.E.1, we may assume thatg ≥5. By
+considering the covering obtained by applying Lemma 4.2, (i), in the case where
+t
+def
+= g
+3 ≥2,
+one may verify easily that there exists ak-valued point x ∈ ˜Hg,3,0(k)[ s oGx
+has no cusps!] (respectively, x ∈ ˜Hg,3,1(k)[ s oGx has 3 cusps]) satisfying the
+following conditions:
+•Vert(Gx)= {v1,w1,w2,...,w t};
+•Node(Gx)= {e1,e2,...,e 3t};
+•N(v1) = Node(Gx);
+•N(wj)= {e3j−2,e3j−1,e3j} for j =1 ,...,t ;
+•v1 is of type (0,3t) (respectively, (0,3t+3));
+•for j =1 ,...,t , wj is of type (1,3).
+Thus, let us ﬁx x ∈ ˜Hg,3,0(k) (respectively, x ∈ ˜Hg,3,1(k)) satisfying the
+above conditions.
+Let α∈ZOutC(Πg,0)(ρg,3,0(H)) (respectively,α∈ZOutC(Πg,3)(ρg,3,1(H))) be
+an outomorphism of Πg,0 (respectively, Πg,3). Suppose, moreover, that, relative
+60
+
+to the isomorphism Πg,0
+∼
+→ ΠGx (respectively, Πg,3
+∼
+→ ΠGx) ﬁxed above [cf.
+the discussion immediately preceding Claim 4.6.B],α∈ZOutC(Πg,0)(ρg,3,0(H))
+(respectively, α∈ZOutC(Πg,3)(ρg,3,1(H))) determines an element of Aut(Gx)
+that preserves wj for each j =1 ,...,t [cf. Claim 4.6.E.3.2]. For j =1 ,...,t ,
+write
+(Gx)j
+def
+=( Gx)⇝{e3j−2,e3j−1,...,e3j}
+[cf. [CbTpI], Deﬁnition 2.8]; αj for the image ofαvia the natural inclusion
+Aut|W|(Gx) ↪→ Aut((Gx)j) [cf. [CbTpI], Deﬁnition 2.6, (i); [CbTpI], Proposition
+2.9, (ii)], where we writeW
+def
+= {w1,w2,...,w t}.
+Next, we claim the following:
+Claim 4.6.E.3.1: αj ∈Dehn((Gx)j).
+Note that one may verify easily that there exists ak-valued pointyj ∈ ˜Hg,3,0(k)
+(respectively, yj ∈ ˜Hg,3,1(k)) such thatGyj may be identiﬁed with (Gx)j.
+By gluing together simple coverings at unramiﬁed marked points as in the
+proof of Claim 4.6.D.1, we obtain a clutching morphism [cf. [Knud], Deﬁnition
+3.6]
+H
+3,3,t−1 ×H1,3,1 ×···×H 1,3,1 −→Hg,3,0
+(respectively, H3,3,t ×H1,3,1 ×···×H 1,3,1 −→Hg,3,1),
+where the number of factors in the above product ist; the ﬁrst factor in the
+product corresponds to the irreducible component of (Gx)j that arises from
+v1 and wj; the factors other than the ﬁrst factor correspond towj′,f o rj′ ∈
+{1,2,...,t }\{ j}. Since the image of this clutching morphism is contained in
+the normal locus ofHg,3,0 (respectively,Hg,3,1) [cf. Theorem 1.5; Corollary 1.9;
+[GCH], §3.23], we thus obtain a clutching morphism
+H3,3,t−1 ×H1,3,1 ×···×H 1,3,1 −→ ˜Hg,3,0
+(respectively, H3,3,t ×H1,3,1 ×···×H 1,3,1 −→ ˜Hg,3,1).
+Note thatyj ∈ ˜Hg,3,0(k) (respectively,yj ∈ ˜Hg,3,1(k)) is contained in the image
+of the above clutching morphism, and that
+αj ∈ZOutC(ΠGyj )(ρg,3,0(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+)
+(respectively, αj ∈ZOutC(ΠGyj )(ρg,3,1(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π3,3(t−1))(ρ3,3,t−1(H†))
+(respectively, ZOutC(Π3,3t)(ρ3,3,t(H†))),
+where H† ⊆ ΠH3,3,t−1 (respectively, H† ⊆ ΠH3,3,t) is an open subgroup of
+ΠH3,3,t−1 (respectively, ΠH3,3,t). Since t ≥2, this element is trivial by Claim
+61
+
+4.6.B and Claim 4.6.E.1. In particular, αj ∈Aut|grph|(Gyj ) ⊆ Aut(Gyj )=
+Aut((Gx)j). On the other hand,
+αj ∈ZOutC(ΠGyj )(ρg,3,0(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+)
+(respectively, αj ∈ZOutC(ΠGyj )(ρg,3,1(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π1,3)(ρ1,3,1(H‡))
+foreachcomponentoftheaboveproduct H1,3,1×···×H 1,3,1,w h e r eH‡ ⊆ΠH1,3,1
+is an open subgroup of ΠH1,3,1. These elements are trivial by Claim 4.6.C. This
+completes the proof of Claim 4.6.E.3.1.
+Thus, by varyingj, we conclude from Claim 4.6.E.3.1 and [CbTpI], Theorem
+4.8, (ii), (iv), thatαis trivial. Hence it remains to verify the following:
+Claim 4.6.E.3.2:αdetermines an element of Aut(Gx) that preserves
+wj for eachj =1 ,...,t .
+The proof of Claim 4.6.E.3.2 is similar to the proof of Claim 4.6.D.2. This
+completes the proof of Claim 4.6.E.3.
+Claim 4.6.E.4: Wheng ≡1 (mod 3), Claim 4.6.E holds.
+Let us ﬁrst observe that by Claim 4.6.E.1, we may assume thatg ≥5. By
+considering the covering obtained by applying Lemma 4.2, (ii), in the case where
+t
+def
+= g+2
+3 ≥3,
+one may verify easily that there exists ak-valued point x ∈ ˜Hg,3,0(k)[ s oGx
+has no cusps!] (respectively, x ∈ ˜Hg,3,1(k)[ s oGx has 3 cusps]) satisfying the
+following conditions:
+•Vert(Gx)= {v1,v2,v3,w1,w2,...,w t};
+•Node(Gx)= {e1,e2,...,e 3t};
+•N(v1)= {e1,e4,...,e 3t−2};
+•N(v2)= {e2,e5,...,e 3t−1};
+•N(v3)= {e3,e6,...,e 3t};
+•N(wj)= {e3j−2,e3j−1,e3j} for j =1 ,...,t ;
+•for i =1 ,2,3, vi is of type (0,t) (respectively, (0,t +1));
+•for j =1 ,...,t , wj is of type (1,3).
+62
+
+Thus, let us ﬁx x ∈ ˜Hg,3,0(k) (respectively, x ∈ ˜Hg,3,1(k)) satisfying the
+above conditions.
+Let α∈ZOutC(Πg,0)(ρg,3,0(H)) (respectively,α∈ZOutC(Πg,3)(ρg,3,1(H))) be
+an outomorphism of Πg,0 (respectively, Πg,3). Suppose, moreover, that, relative
+to the isomorphism Πg,0
+∼
+→ ΠGx (respectively, Πg,3
+∼
+→ ΠGx) ﬁxed above [cf.
+the discussion immediately preceding Claim 4.6.B],α∈ZOutC(Πg,0)(ρg,3,0(H))
+(respectively, α∈ZOutC(Πg,3)(ρg,3,1(H))) determines an element of Aut(Gx)
+that preserves wj for each j =1 ,...,t [cf. Claim 4.6.E.4.2]. For j =1 ,...,t ,
+write
+(Gx)j
+def
+=( Gx)⇝{e3j−2,e3j−1,...,e3j}
+[cf. [CbTpI], Deﬁnition 2.8]; αj for the image ofαvia the natural inclusion
+Aut|W|(Gx) ↪→ Aut((Gx)j) [cf. [CbTpI], Deﬁnition 2.6, (i); [CbTpI], Proposition
+2.9, (ii)], where we writeW
+def
+= {w1,w2,...,w t}.
+Next, we claim the following:
+Claim 4.6.E.4.1: αj ∈Dehn((Gx)j).
+Note that one may verify easily that there exists ak-valued pointyj ∈ ˜Hg,3,0(k)
+(respectively, yj ∈ ˜Hg,3,1(k)) such thatGyj may be identiﬁed with (Gx)j.
+By gluing together simple coverings at unramiﬁed marked points as in the
+proof of Claim 4.6.D.1, we obtain a clutching morphism [cf. [Knud], Deﬁnition
+3.6]
+H1,3,t−1 ×H1,3,1 ×···×H 1,3,1 −→Hg,3,0
+(respectively, H1,3,t ×H1,3,1 ×···×H 1,3,1 −→Hg,3,1),
+where the number of factors in the above product ist; the ﬁrst factor in the
+product corresponds to the irreducible component of (Gx)j that arises fromv1,
+v2, v3,a n dwj; the factors other than the ﬁrst factor correspond towj′,f o r
+j′ ∈{1,2,...,t }\{ j}. Since the image of this clutching morphism is contained
+in the normal locus ofHg,3,0 (respectively, Hg,3,1) [cf. Theorem 1.5; Corollary
+1.9; [GCH],§3.23], we thus obtain a clutching morphism
+H1,3,t−1 ×H1,3,1 ×···×H 1,3,1 −→ ˜Hg,3,0
+(respectively, H1,3,t ×H1,3,1 ×···×H 1,3,1 −→ ˜Hg,3,1).
+Note thatyj ∈ ˜Hg,3,0(k) (respectively,yj ∈ ˜Hg,3,1(k)) is contained in the image
+of the above clutching morphism, and that
+αj ∈ZOutC(ΠGyj )(ρg,3,0(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+)
+(respectively, αj ∈ZOutC(ΠGyj )(ρg,3,1(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π1,3(t−1))(ρ1,3,t−1(H†))
+(respectively, ZOutC(Π1,3t)(ρ1,3,t(H†))),
+63
+
+where H† ⊆ ΠH1,3,t−1 (respectively, H† ⊆ ΠH1,3,t) is an open subgroup of
+ΠH1,3,t−1 (respectively, ΠH1,3,t). Since t ≥3, this element is trivial by Claim
+4.6.B. In particular, αj ∈Aut|grph|(Gyj ) ⊆ Aut(Gyj ) = Aut((Gx)j). On the
+other hand,
+αj ∈ZOutC(ΠGyj )(ρg,3,0(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+)
+(respectively, αj ∈ZOutC(ΠGyj )(ρg,3,1(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π1,3)(ρ1,3,1(H‡))
+foreachcomponentoftheaboveproduct H1,3,1×···×H 1,3,1,w h e r eH‡ ⊆ΠH1,3,1
+is an open subgroup of ΠH1,3,1. These elements are trivial by Claim 4.6.C. This
+completes the proof of Claim 4.6.E.4.1.
+Thus, by varyingj, we conclude from Claim 4.6.E.4.1 and [CbTpI], Theorem
+4.8, (ii), (iv), thatαis trivial. Hence it remains to verify the following:
+Claim 4.6.E.4.2:αdetermines an element of Aut(Gx) that preserves
+wj for eachj =1 ,...,t .
+The proof of Claim 4.6.E.4.2 is similar to the proof of Claim 4.6.D.2. This
+completes the proof of Claim 4.6.E.4.
+Claim 4.6.E.5: Wheng ≡2 (mod 3), Claim 4.6.E holds.
+Let us ﬁrst observe that by Claim 4.6.E.2, we may assume thatg ≥8. By
+considering the covering obtained by applying Lemma 4.2, (iii), in the case
+where
+t
+def
+= g+1
+3 ≥3,
+one may verify easily that there exists ak-valued point x ∈ ˜Hg,3,0(k)[ s oGx
+has no cusps!] (respectively, x ∈ ˜Hg,3,1(k)[ s oGx has 3 cusps]) satisfying the
+following conditions:
+•Vert(Gx)= {v1,v2,w1,w2,...,w t};
+•Node(Gx)= {e1,e2,...,e 3t};
+•N(v1)= {e1,e2,e4,e5,...,e 3t−2,e3t−1};
+•N(v2)= {e3,e6,...,e 3t};
+•N(wj)= {e3j−2,e3j−1,e3j} for j =1 ,...,t ;
+•v1 is of type (0,2t) (respectively, (0,2t+2));
+•v2 is of type (0,t) (respectively, (0,t +1));
+64
+
+•for j =1 ,...,t , wj is of type (1,3).
+Thus, let us ﬁx x ∈ ˜Hg,3,0(k) (respectively, x ∈ ˜Hg,3,1(k)) satisfying the
+above conditions.
+Let α∈ZOutC(Πg,0)(ρg,3,0(H)) (respectively,α∈ZOutC(Πg,3)(ρg,3,1(H))) be
+an outomorphism of Πg,0 (respectively, Πg,3). Suppose, moreover, that, relative
+to the isomorphism Πg,0
+∼
+→ ΠGx (respectively, Πg,3
+∼
+→ ΠGx) ﬁxed above [cf.
+the discussion immediately preceding Claim 4.6.B],α∈ZOutC(Πg,0)(ρg,3,0(H))
+(respectively, α∈ZOutC(Πg,3)(ρg,3,1(H))) determines an element of Aut(Gx)
+that preserves wj for each j =1 ,...,t [cf. Claim 4.6.E.5.2]. For j =1 ,...,t ,
+write
+(Gx)j
+def
+=( Gx)⇝{e3j−2,e3j−1,...,e3j}
+[cf. [CbTpI], Deﬁnition 2.8]; αj for the image ofαvia the natural inclusion
+Aut|W|(Gx) ↪→ Aut((Gx)j) [cf. [CbTpI], Deﬁnition 2.6, (i); [CbTpI], Proposition
+2.9, (ii)], where we writeW
+def
+= {w1,w2,...,w t}.
+Next, we claim the following:
+Claim 4.6.E.5.1: αj ∈Dehn((Gx)j).
+Note that one may verify easily that there exists ak-valued pointyj ∈ ˜Hg,3,0(k)
+(respectively, yj ∈ ˜Hg,3,1(k)) such thatGyj may be identiﬁed with (Gx)j.
+By gluing together simple coverings at unramiﬁed marked points as in the
+proof of Claim 4.6.D.1, we obtain a clutching morphism [cf. [Knud], Deﬁnition
+3.6]
+H
+2,3,t−1 ×H1,3,1 ×···×H 1,3,1 −→Hg,3,0
+(respectively, H2,3,t ×H1,3,1 ×···×H 1,3,1 −→Hg,3,1),
+where the number of factors in the above product ist; the ﬁrst factor in the
+product corresponds to the irreducible component of (Gx)j that arises from
+v1, v2,a n dwj; the factors other than the ﬁrst factor correspond towj′,f o r
+j′ ∈{1,2,...,t }\{ j}. Since the image of this clutching morphism is contained
+in the normal locus ofHg,3,0 (respectively, Hg,3,1) [cf. Theorem 1.5; Corollary
+1.9; [GCH],§3.23], we thus obtain a clutching morphism
+H2,3,t−1 ×H1,3,1 ×···×H 1,3,1 −→ ˜Hg,3,0
+(respectively, H2,3,t ×H1,3,1 ×···×H 1,3,1 −→ ˜Hg,3,1).
+Note thatyj ∈ ˜Hg,3,0(k) (respectively,yj ∈ ˜Hg,3,1(k)) is contained in the image
+of the above clutching morphism, and that
+αj ∈ZOutC(ΠGyj )(ρg,3,0(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+)
+(respectively, αj ∈ZOutC(ΠGyj )(ρg,3,1(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π2,3(t−1))(ρ2,3,t−1(H†))
+(respectively, ZOutC(Π2,3t)(ρ2,3,t(H†))),
+65
+
+where H† ⊆ ΠH2,3,t−1 (respectively, H† ⊆ ΠH2,3,t) is an open subgroup of
+ΠH2,3,t−1 (respectively, ΠH2,3,t). Since t ≥3, this element is trivial by Claim
+4.6.B. In particular, αj ∈Aut|grph|(Gyj ) ⊆ Aut(Gyj ) = Aut((Gx)j). On the
+other hand,
+αj ∈ZOutC(ΠGyj )(ρg,3,0(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+)
+(respectively, αj ∈ZOutC(ΠGyj )(ρg,3,1(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+))
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π1,3)(ρ1,3,1(H‡))
+foreachcomponentoftheaboveproduct H1,3,1×···×H 1,3,1,w h e r eH‡ ⊆ΠH1,3,1
+is an open subgroup of ΠH1,3,1. These elements are trivial by Claim 4.6.C. This
+completes the proof of Claim 4.6.E.5.1.
+Thus, by varyingj, we conclude from Claim 4.6.E.5.1 and [CbTpI], Theorem
+4.8, (ii), (iv), thatαis trivial. Hence it remains to verify the following:
+Claim 4.6.E.5.2:αdetermines an element of Aut(Gx) that preserves
+wj for eachj =1 ,...,t .
+The proof of Claim 4.6.E.5.2 is similar to the proof of Claim 4.6.D.2. This
+completes the proof of Claim 4.6.E.5.
+Next, we verify the following assertion:
+Claim 4.6.F: Suppose that
+r =0 ,d = 2 (respectively,r =1 ,d =2 ) .
+Then the injection Aut(Hg,d,r)k((Cg,d,r)k) ↪→ ZOutC(Πg,dr)(ρg,d,r(H))
+is surjective. Moreover, the description of Aut(Hg,d,r)k((Cg,d,r)k)i n
+the statement of Theorem 4.6, (ii), holds.
+By Claim 4.6.C, we may assume thatg ≥3 (respectively,g ≥2). Since the hy-
+perelliptic involution determines a nontrivial element of Aut(Hg,2,r)k((Cg,2,r)k),
+it suﬃces to show that the cardinality of the centralizerZOutC(Πg,2r)(ρg,2,r(H))
+is equal to 2. Next, let us observe that by considering the covering obtained by
+applying Lemma 4.5 in the case where
+t
+def
+= g +1,
+one may verify easily that there exists ak-valued point x ∈ ˜Hg,2,0(k)[ s oGx
+has no cusps!] (respectively, x ∈ ˜Hg,2,1(k)[ s oGx has 2 cusps]) satisfying the
+following conditions:
+•Vert(Gx)= {v1,v2} [the hyperelliptic involution permutesv1, v2];
+•Node(Gx)= {e1,e2,...,e t} [the hyperelliptic involution permutes the
+branches of eachej,f o rj =1 ,...,t ];
+66
+
+•N(v1)= N(v2) = Node(Gx);
+•for i =1 ,2, vi is of type (0,t) (respectively, (0,t +1)).
+Thus, let us ﬁx x ∈ ˜Hg,2,0(k) (respectively, x ∈ ˜Hg,2,1(k)) satisfying the
+above conditions.
+Let α∈ZOutC(Πg,0)(ρg,2,0(H)) (respectively,α∈ZOutC(Πg,2)(ρg,2,1(H))) be
+an outomorphism of Πg,0 (respectively, Πg,2). Suppose, moreover, that, relative
+to the isomorphism Πg,0
+∼
+→ ΠGx (respectively, Πg,2
+∼
+→ ΠGx) ﬁxed above [cf. the
+discussion immediately preceding Claim 4.6.B],α∈ZOutC(Πg,0)(ρg,2,0(H)) (re-
+spectively, α∈ZOutC(Πg,2)(ρg,2,1(H))) determines an element of Aut|grph|(Gx)
+[cf. Claim 4.6.F.2]. Forj =1 ,...,t ,w r i t e
+(Gx)j
+def
+=( Gx)⇝{ej}
+[cf. [CbTpI], Deﬁnition 2.8]; αj for the image ofαvia the natural inclusion
+Aut|E|(Gx) ↪→ Aut((Gx)j) [cf. [CbTpI], Deﬁnition 2.6, (i); [CbTpI], Proposition
+2.9, (ii)], where we writeE
+def
+= {e1,e2,...,e t}.
+Next, we claim the following:
+Claim 4.6.F.1: αj ∈Dehn((Gx)j).
+Note that one may verify easily that there exists ak-valued pointyj ∈ ˜Hg,2,0(k)
+(respectively, yj ∈ ˜Hg,2,1(k)) such thatGyj corresponds to (Gx)j.
+By gluing together simple coverings at unramiﬁed marked points as in the
+proof of Claim 4.6.D.1, we obtain a clutching morphism
+H0,2,t−1 ×H0,2,1 ×···×H 0,2,1 −→Hg,2,0
+(respectively, H0,2,t ×H0,2,1 ×···×H 0,2,1 −→Hg,2,1),
+where the number of factors in the above product ist; the ﬁrst factor in the
+product corresponds to the irreducible component of (Gx)j that arises from
+v1, v2,a n dej; the factors other than the ﬁrst factor correspond to ej′,f o r
+j′ ∈{1,2,...,t }\{ j}. Since the image of this clutching morphism is contained
+in the normal locus ofHg,2,0 (respectively, Hg,2,1) [cf. Theorem 1.5; Corollary
+1.9; [GCH],§3.23], we thus obtain a clutching morphism
+H0,2,t−1 ×H0,2,1 ×···×H 0,2,1 −→ ˜Hg,2,0
+(respectively, H0,2,t ×H0,2,1 ×···×H 0,2,1 −→ ˜Hg,2,1).
+Note thatyj ∈ ˜Hg,2,0(k) (respectively,yj ∈ ˜Hg,2,1(k)) is contained in the image
+of the above clutching morphism, and that
+αj ∈ZOutC(ΠGyj )(ρg,2,0(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+)
+(respectively, αj ∈ZOutC(ΠGyj )(ρg,2,1(H))∩Aut((Gx)j) ⊆OutC(ΠGyj
+))
+67
+
+naturally determines, by considering the above clutching morphism, an element
+of
+ZOutC(Π0,2(t−1))(ρ0,2,t−1(H†))
+(respectively, ZOutC(Π0,2t)(ρ0,2,t(H†))),
+where H† ⊆ ΠH0,2,t−1 (respectively, H† ⊆ ΠH0,2,t) is an open subgroup of
+ΠH0,2,t−1 (respectively, ΠH0,2,t). Since, byassumption,α∈ZOutC(Πg,0)(ρg,2,0(H))
+(respectively,α∈ZOutC(Πg,2)(ρg,2,1(H)))determinesanelementofAut |grph|(Gx),
+and t ≥4 (respectively,t ≥3), this element is trivial by Claim 4.6.B. This com-
+pletes the proof of Claim 4.6.F.1.
+T h u s ,b yv a r y i n gj, we conclude from Claim 4.6.F.1 and [CbTpI], Theorem
+4.8, (ii), (iv), thatαis trivial. Hence it remains to verify the following:
+Claim 4.6.F.2: αdetermines an element of Aut(Gx) that preserves
+ej for eachj =1 ,...,t . In particular, by taking the composite with
+the hyperelliptic involution if necessary,α∈ZOutC(Πg,0)(ρg,2,0(H))
+(respectively, α∈ZOutC(Πg,2)(ρg,2,1(H))) determines an element of
+Aut|grph|(Gx).
+The proof of Claim 4.6.F.2 is similar to the proof of Claim 4.6.D.2. This com-
+pletes the proof of Claim 4.6.F.
+Thus, in summary, we have proven assertion (ii) in the following cases:
+r ≥2 (Claim 4.6.B, Claim 4.6.C),
+r ≤1,d ≥4 (Claim 4.6.D),
+r ≤1,d = 3 (Claim 4.6.E),
+r ≤1,d = 2 (Claim 4.6.F).
+Since these cases cover all of the possibilities forr and d, this completes the
+proof of assertion (ii).
+Assertion (iii) follows immediately from assertion (ii). This completes the
+proof of Theorem 4.6.
+Acknowledgements
+The author would like to thank Professor Yuichiro Hoshi and Professor Shinichi
+Mochizuki for introducing me to the ﬁeld of combinatorial anabelian geometry
+and for many helpful discussions, as well as for their warm encouragement.
+References
+[ACGH] E. Arbarello, M. Cornalba, P. Griﬃths and J. Harris,Geometry of
+Algebraic Curves I, Grundlehren der mathematischen Wissenschaften 267,
+Springer-Verlag, 1985.
+[DM] P. Deligne and D. Mumford, The irreducibility of the space of curves of
+a given genus,IHES Publ. Math.36 (1969), pp. 75-109.
+68
+
+[Ful] W. Fulton, Hurwitz Schemes and the Irreducibility of Moduli of Algebraic
+Curves, Annals of Math.90 (1969), pp. 542-575.
+[SGA1] A. Grothendieck and M. Raynaud,Revˆetements ´Etales et Groupe Fon-
+damental (SGA1), Lecture Notes in Math. 224 (1971), Springer-Verlag.
+[HM] J. Harris and D. Mumford, On the Kodaira Dimension of the Moduli
+Space of Curves,Inv. Math. 67, pp. 23-86.
+[Hsh] Y. Hoshi, The exactness of the log homotopy sequence,Hiroshima Math.
+J. 39 (2009), pp. 61-121.
+[CbTpI] Y. Hoshi and S. Mochizuki, Topics surrounding the combinatorial an-
+abelian geometry of hyperbolic curves I: Inertia groups and proﬁnite Dehn
+twists, Galois-Teichm¨uller Theory and Arithmetic Geometry, Adv. Stud.
+Pure Math. 63, Math. Soc. Japan , 2012, pp. 659-811.
+[NodNon] Y. HoshiandS. Mochizuki, On thecombinatorialanabelian geometry
+of nodally nondegenerate outer representations, Hiroshima Math. J. 41
+(2011), pp. 275-342.
+[FK] F. Kato, Log smooth deformation and moduli of log smooth curves,In-
+ternat. J. Math.11 (2000), pp. 215-232.
+[KK1] K. Kato, Logarithmic Structures of Fontaine-Illusie,Proceedings of the
+First JAMI Conference, Johns-Hopkins University Press, 1990, pp. 191-
+224.
+[KK2] K. Kato, Toric Singularities,Amer. J. Math.116 (1994), pp. 1073-1099.
+[Knud] F. F. Knudsen, The Projectivity of the Moduli Space of Stable Curves,
+II: The StacksM
+g,n, Math. Scand. 52 (1983), pp. 161-199.
+[GCH] S. Mochizuki, The Geometry of the Compactiﬁcation of the Hurwitz
+Scheme, Publ. Res. Inst. Math. Sci.31 (1995), pp. 355-441.
+[ExtFam] S. Mochizuki, Extending families of curves over log regular schemes,
+J. Reine Angew. Math.511 (1999), pp. 43-71.
+[LocAn] S. Mochizuki, The local pro-p anabelian geometry of curves,Invent.
+Math. 138 (1999), pp. 319-423.
+[SemiAn] S. Mochizuki, Semi-graphs of anabelioids,Publ. Res. Inst. Math. Sci.
+42 (2006), pp. 221-322.
+[CmbGC] S. Mochizuki, A combinatorial version of the Grothendieck Conjec-
+ture, Tohoku Math. J.59 (2007), pp. 455-479.
+[CmbCsp] S. Mochizuki, On the combinatorial Cuspidalization of Hyperbolic
+Curves, Osaka J. Math.47 (2010), pp. 651-715.
+[MT] S. Mochizuki and A. Tamagawa, The Algebraic and Anabelian Geometry
+of Conﬁguration Spaces,Hokkaido Math. J.37 (2008), pp. 75-131.
+69

@@ -1,0 +1,1401 @@
+ARITHMETIC DEFORMATION THEORY VIA
+ARITHMETIC FUNDAMENTAL GROUPS AND NONARCHIMEDEAN THETA-FUNCTIONS,
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI
+IV AN FESENKO
+ABSTRACT . These notes survey the main ideas, concepts and objects of the work by Shinichi Mochizuki on inter-
+universal Teichmüller theory [31], which might also be called arithmetic deformation theory , and its application
+to diophantine geometry. They provide an external perspective which complements the review texts [32] and
+[33]. Some important developments which preceded [31] are presented in the ﬁrst section. Several key aspects
+of arithmetic deformation theory are discussed in the second section. Its main theorem gives an inequality–bound
+on the size of volume deformation associated to a certain log-theta-lattice. The application to several fundamental
+conjectures in number theory follows from a further direct computation of the right hand side of the inequality. The
+third section considers additional related topics, including practical hints on how to study the theory.
+This text was published in Europ. J. Math. (2015) 1:405–440.
+CONTENTS
+Foreword 2
+1. The origins 2
+1.1. From class ﬁeld theory to reconstructing number ﬁelds to coverings of P1 minus three points 2
+1.2. A development in diophantine geometry 3
+1.3. Conjectural inequalities for the same property 4
+1.4. A question posed to a student by his thesis advisor 6
+1.5. On anabelian geometry 6
+2. On arithmetic deformation theory 8
+2.1. Texts related to IUT 8
+2.2. Initial data 9
+2.3. A brief outline of the proof and a list of some of the main concepts 10
+2.4. Mono-anabelian geometry and multiradiality 12
+2.5. Nonarchimedean theta-functions 13
+2.6. Generalised Kummer theory 14
+2.7. The theta-link and two types of symmetry 15
+2.8. Nonarchimedean logarithm, log-link, log-theta-lattice, log-shell 17
+2.9. Rigidities and indeterminacies 18
+2.10. The role of global data 19
+2.11. The main theorem of IUT 20
+2.12. The application of IUT 21
+2.13. More theorems, objects and concepts of IUT 22
+2.14. Analogies and relations between IUT and other theories 22
+3. Studying IUT and related aspects 24
+3.1. On the veriﬁcation of IUT (updated in July 2017) 24
+1
+
+2 IV AN FESENKO
+3.2. Entrances to the study of IUT (updated in July 2017) 25
+3.3. The work of Shinichi Mochizuki 26
+3.4. Related issues 26
+References 27
+Foreword. The aim of these notes is to present, in a relatively simple and general form, the key ideas, concepts
+and objects of the work of Shinichi Mochizuki on inter-universal Teichmüller theory (IUT), to as many potential
+readers as possible. The presentation is based on my ongoing experience in studying IUT. This text is expected
+to help its readers to gain a general overview of the theory and a certain orientation in it, as well as to see
+various links between it and existing theories.
+Reading these notes cannot replace or substitute a serious study of IUT. There are probably two main options
+available at the time of writing of this text to learn about the essence of IUT. The ﬁrst is to dedicate a signiﬁcant
+amount of time to studying the theory patiently and gradually reaching its main parts. I refer to section 3 for
+my recommendation on how to study the original texts of arithmetic deformation theory, which is another name
+(due to the author of the present text) for the theory. The second option is to read the review texts [32] and [33]
+and introductions of papers, etc. My experience and the experience of several other mathematicians show that
+the early review texts that were written by the author of the theory prior to 2015 could be hard to follow, and
+reading them before a serious study of IUT may be not the best way, while reading them after some preliminary
+study or in the middle of it can be more useful.
+In view of the declared aim of this text and the natural limitation on its size, it is inevitable that several
+important mathematical objects and notions in section 2 are introduced in a vague form. One of such objects is
+a so-called theta-link: a very large part of [31]-I-III deﬁnes the theta-link and develops its enhanced versions.1
+1. T HE ORIGINS
+1.1. From class ﬁeld theory to reconstructing number ﬁelds to coverings of P1 minus three points.
+Abelian class ﬁeld theoryfor one-dimensional global and local ﬁelds, in particular for number ﬁelds and their
+completions, has played a central role in number theory and stimulated many further developments. Inverse
+Galois theory, several versions of the Langlands programme, anabelian geometry, (abelian) higher class ﬁeld
+theory and higher adelic geometry and analysis, and, to some extent, the arithmetic of abelian varieties over
+global ﬁelds and their completions are among them.
+Inverse Galois theory studies how to realise ﬁnite or inﬁnite compact topological groups as Galois groups of
+various ﬁelds including extensions of number ﬁelds and their completions, see e.g. [21]. For abelian groups
+and local and global ﬁelds, the answer follows from class ﬁeld theory. A theorem of Shafarevich states that
+every soluble group can be realised as a Galois group over a global ﬁeld, see e.g. §6 Ch.IX of [40].
+Let Kalg be an algebraic closure of a number ﬁeld K. The Galois group GK = G(Kalg/K) is called the
+absolute Galois group of K.
+The Neukirch–Ikeda–Uchida theorem(proved by the end of 1970s; the proof used global class ﬁeld theory)
+asserts, see e.g. §2 Ch.XII of [40], the following:
+1 An appreciation of the general qualitative aspects of the theta-link may be obtained by studying the simplest version of the theta-
+link. This version is discussed in §I1 of [31]-I, while technical details concerning the construction of this version may be found in
+approximately 30 pages of §3 of [31]-I.
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 3
+For two number ﬁeldsK1,K2 and any isomorphism of topological groups ψ : GK1
+∼− →GK2 there
+is a unique ﬁeld isomorphismσ : Kalg
+2
+∼− →Kalg
+1 such that σ (K2) = K1 and ψ(g)(a) = σ−1(gσ (a))
+for all a∈ Kalg
+2 , g∈ GK1. In particular, the homomorphism GQ→ Aut(GQ), g↦→ (h↦→ ghg−1),
+is an isomorphism and every automorphism of GQ is inner.
+The next theorem was included as Th. 4 in [3] in 1980, as part of Belyi’s study of aspects of inverse Galois
+theory:
+An irreducible smooth projective algebraic curve C deﬁned over a ﬁeld of characteristic zero
+can be deﬁned over an algebraic closure Qalg of the ﬁeld of rational numbers Q if and only if
+there is a covering C−→P1 which ramiﬁes over no more than three points ofP1.
+This theorem2 plays a key role in the study of Galois groups, including algebraic and geometric fundamental
+groups of curves over number ﬁelds and local ﬁelds. 3 Coverings of the type which appears in this theorem
+are often called Belyi maps. Various versions of Belyi maps are used in arithmetic deformation theory and its
+application to diophantine geometry.
+1.2. A development in diophantine geometry. In 1983 Faltings proved the Mordell conjecture, a fundamen-
+tal ﬁniteness property in diophantine geometry [8], [2]. TheFaltings–Mordell theoremasserts that
+A curveC of genus > 1 deﬁned over an algebraic number ﬁeldK has only ﬁnitely many rational
+points over K.
+Several other proofs followed. 4 V ojta found interesting links with Nevanlinna theory in complex analysis
+which led to one of his proofs. For textbook expositions of simpliﬁed proofs see [15] and [6].
+The same year Grothendieck wrote a letter [13] to Faltings, which proposed elements ofanabelian geometry.
+With hindsight, one of the issues raised in it was a generalisation of the Neukirch–Ikeda–Uchida theorem 5 to
+anabelian geometric objects such as hyperbolic curves over number ﬁelds and possible applications of anabelian
+geometry to provide new proofs and stronger versions, as well as a better understanding, of such results in
+diophantine geometry as the Faltings–Mordell theorem, cf. 1.5.
+2 The ﬁrst version of [3] and Belyi’s seminar talk in Moscow dealt with an elliptic curve, which was enough for its subsequent
+application, see 1.5. After reading the ﬁrst version of [3], Bogomolov noticed that the original proof of the theorem in it works for
+arbitrary curves. He told Belyi how important this extended version is and urged him to include the extended version in the paper. Belyi
+was reluctant to include the extended version, on the grounds that over ﬁnite ﬁelds every irreducible smooth projective algebraic curve
+may be exhibited as a covering of the projective line with at most one ramiﬁcation point. Bogomolov then talked with Shafarevich, who
+immediately appreciated the value of the extended version and insisted that the author include it in [3]. Bogomolov further developed
+the theory of Belyi maps, in particular, in relation to the use of coloured Riemann surfaces and delivered numerous talks on these further
+developments. Several years later this theory appeared, independently, in Grothendieck’s text [12].
+3 Grothendieck wrote about the “only if” part: “never, without a doubt, was such a deep and disconcerting result proved in so few
+lines!”[12].
+4 Here we are in the best possible situation when a conjecture stated over an arbitrary algebraic number ﬁeld and is established
+over an arbitrary algebraic number ﬁeld, and the methods of the proofs do not depend on the speciﬁc features of the number ﬁeld under
+consideration. This is not so in the case of the arithmetic Langlands correspondence, even for elliptic curves over number ﬁelds. In the
+history of class ﬁeld theory, the initial period of developing special theories that work only over small number ﬁelds was followed by
+a phase of general functorial class ﬁeld theory over arbitrary global and local ﬁelds. The general theory was eventually clariﬁed and
+simpliﬁed, see [39], and it became easier than those initial theories. We are yet to witness a similar phase which involves a general
+functorial theory that works over arbitrary number ﬁelds in the case of the Langlands programme and hence, in particular, yields another
+proof of the Wiles–Fermat theorem via the automorphic properties of elliptic curves over any number ﬁeld.
+5 it appears that Grothendieck was not aware of this theorem
+
+4 IV AN FESENKO
+1.3. Conjectural inequalities for the same property. There are several closely related conjectures, proposed
+in the period from 1978 to 1987, which extend further the property stated in the Mordell conjecture:
+(a) the effective Mordell conjecture — a conjectural extension of the Faltings–Mordell theorem which involves
+an effective bound on the height of rational points of the curveC over the number ﬁeldK in the Faltings theorem
+in terms of data associated to C and K,
+(b) the Szpiro conjecture, see below,
+(c) the Masser–Oesterlé conjecture, a.k.a. the abc conjecture (whose statement over Q is well known 6, and
+which has an extension to arbitrary algebraic number ﬁelds, see Conj. 14.4.12 of [6]),
+(d) the Frey conjecture, see Conj. F.3.2(b) of [15],
+(e) the Vojta conjectureon hyperbolic curves, see below,
+(f) arithmetic Bogomolov–Miyaoka–Yau conjectures(there are several versions).
+The Szpiro conjecture was stated several years before 7 the work of Faltings, who learned much about the
+subject related to his proof from Szpiro. Using the Frey curve 8, it is not difﬁcult to show that (c) and (d) are
+equivalent and that they imply (b), see e.g. see sect. F3 of [15] and references therein. Using Belyi maps as in
+1.1, one can show the equivalence of (c) and (a). For the equivalence of (c) and (e) see e.g. Th. 14.4.16 of [6]
+and [47]. For implications (e)⇒ (f) see [48].
+Over the complex numbers the property analogous to the Szpiro conjecture is very interesting. For a smooth
+projective surface equipped with a structure of non-split minimal elliptic surface ﬁbred over a smooth projective
+connected complex curve of genus g, such that the ﬁbration admits a global section, and, moreover, every
+singular ﬁbre of the ﬁbration is of typeIn, i.e. its components are projective lines which intersect transversally
+and form an n-gon, this property states that the sum of the number of components of singular ﬁbres does
+not exceed 6 times the sum of the number of singular ﬁbres and of 2 g− 2. The property has several proofs,
+of which the ﬁrst was given by Szpiro. Shioda deduced the statement in two pages of computations from
+arguments already known to Kodaira. These two proofs of the geometric version of the inequality use the
+cotangent bundle and the Kodaira–Spencer map. A (full) arithmetic version of the Kodaira–Spencer map could
+be quite useful for giving a proof of the arithmetic Szpiro conjecture. However, such an arithmetic version of
+the Kodaira–Spencer map is not yet known.
+Among several other proofs of this property, a proof by Bogomolov uses monodromy actions and the hy-
+perbolic geometry of the upper half-plane and does not use the cotangent bundle, see sect. 5.3 of [1]. His
+proof makes essential use of the fact that the n-gons determined by the singular ﬁbres may be equipped with a
+common orientation, like windmills revolving in synchrony in the presence of wind. Synchronisation of data
+plays an important role in arithmetic deformation theory as well, cf. 2.10. To develop an arithmetic analogue
+of the geometric proof of Bogomolov to apply to proving the arithmetic Szpiro conjecture, one needs a kind of
+arithmetic analogue of the hyperbolic geometry of the upper half-plane, and this is in some sense achieved by
+IUT, see 2.10.
+The conjectural (arithmetic) Szpiro inequality states in particular that if K is a number ﬁeld, then for every
+ε > 0 there is a real c (depending on K and ε) such that for every elliptic curve EK over the number ﬁeld K
+6 For every ε > 0 there is a constant such that for all non-zero integersa,b,c such that (a,b,c) = 1 the equality a +b +c = 0 implies
+max(log|a|,log|b|,log|c|) ⩽ constant + (1 + ε) ∑p|abc log p where p runs through all positive primes dividingabc. While the statement
+of the abc conjecture does not reveal immediately any underlying geometric structure, the other conjectures are more geometrical. For
+an entertaining presentation of aspects of the abc conjecture and related properties, see e.g. [49].
+7 In 1978 Szpiro talked about it with several mathematicians. He made the conjecture public at a meeting of the German Math.
+Society (DMV) in 1982 where Frey, Oesterlé and Masser were present.
+8 y2 = x(x + a)(x− b) where a,b,a + b are non-zero coprime integers
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 5
+with split multiplicative reduction at every bad reduction valuation, so all singular ﬁbres of its minimal regular
+proper model E−→Spec OK are of type In, the weighted sum of the numbers nv of components of singular
+ﬁbres satisﬁes
+∑nv log|k(v)| ⩽ c + (6 + ε)∑log|k(v)|,
+where v runs through the nonarchimedean valuations 9 of K corresponding to singular ﬁbres, and k(v) denotes
+the ﬁnite residue ﬁeld ofK at v.10 For the curveEK as above, the quantity exp(∑nv log|k(v)|) coincides with the
+absolute norm N(DiscEK ) of the so-called minimal discriminant of EK, and exp(∑log|k(v)|) coincides with the
+absolute norm N(CondEK ) of the conductor of EK.11 Using these notational conventions, the Szpiro conjecture
+states that if K is a number ﬁeld, then for everyε > 0 there is a real c′ > 0 (depending on K and ε) such that for
+every elliptic curve EK over K the inequality
+N(DiscEK ) ⩽ c′N(CondEK )6+ε
+holds, see e.g. 10.6 of Ch.IV of [44].12
+The Vojta conjecture, as discussed in this text, deals with a smooth proper geometrically connected curve C
+over a number ﬁeldK and a reduced effective divisor D on C such that the line bundle ωC(D), associated with
+the sum of the divisor D and a canonical divisor of C, is of positive degree (i.e. C\ D is a hyperbolic curve,
+see 1.5). It asserts the following: for every positive integer n and positive real number ε there is a constant c
+(depending on C,D,n, ε but not on K) such that the inequality
+htωC(D)(x) ⩽ c + (1 + ε)(log-diffC(x) +log-condD(x))
+holds for all x∈ (C\ D)(K′), for all number ﬁelds K′ of degree ⩽ n. To deﬁne the terms, let C be a regular
+proper model of C over Spec(OK). For a point x∈ C(Qalg) denote by F a minimal subﬁeld ofQalg over which
+x is deﬁned. Letsx : Spec(OF )−→C be the section uniquely determined by x. Then the height of x associated
+to a line bundle B on C can be explicitly deﬁned in several equivalent ways (up to a bounded function on
+C(Qalg)), for instance, by using the canonical height on some projective space into which C is embedded, or
+as deg(s∗
+xB), where B is an extension to C of B viewed as an arithmetic line bundle on C, cf. sect. 1 of
+[29] or part B of [15]. Deﬁne log-condD(x) = deg((s∗
+xD)red), where D denotes the closure in C of D, and red
+stands for the reduced part. Deﬁne the log-different (also called the normalised log-absolute-discriminant) as
+log-diffC(x) = deg(δF/Q) =|F : Q|−1 deg(DF/Q) where δF/Q and DF/Q are the different and discriminant of
+F/Q, and the normalised degree deg is deﬁned in 2.2.13 This conjecture is equivalent to Conj. 2.3 for curves in
+[47] or Conj. 14.4.10 in [6].
+Using the Belyi map, one reduces the V ojta conjecture forC,D,K as above to the case ofC = P1 over Q and
+D = [0] + [1] + [∞].14
+9 by abuse of some of the established terminology, valuations in this text include nonarchimedean and archimedean ones
+10 the notation|J| stands for the cardinality of the set J
+11 there are two different objects in this text (and in this subsection) whose names involve the word “discriminant”: the minimal
+discriminant DiscEK of an elliptic curve EK over a number ﬁeldK and the (absolute) discriminant DK/Q of a number ﬁeldK
+12 Szpiro proved that over Q this inequality implies the abc conjecture over Q with constant 6/5 instead of constant 1 in it, see e.g.
+p.498 of [15].
+13 for a ﬁeld extensionR/S the notation|R : S| stands for its degree
+14 Viewing P1 as the λ-line in the Legendre representationy2 = x(x−1)(x−λ ) of an elliptic curveEλ yields a classifying morphism
+from P1\{ 0,1, ∞} to the natural compactiﬁcation Mell⊗ Q of the moduli stack of elliptic curves over Z tensored with Q. The height
+htωC(D)(λ ) on the LHS of the V ojta conjecture forC = P1 and D = [0] + [1] + [∞], is closely related to 1
+6 times the LHS of the inequality
+of the Szpiro conjecture for Eλ , since the degree of the pull-back to P1 of the divisor at inﬁnity of the natural compactiﬁcation of
+Mell⊗ Q is 6 times 1 = the degree of ωC(D), see [29].
+
+6 IV AN FESENKO
+Note the difference between the V ojta conjecture and the Szpiro conjecture in relation to allowing the alge-
+braic number ﬁeld to vary; this partially explains the occurrence of the term involving log-diffC on the RHS of
+the inequality of the former conjecture. One can formulate a stronger version of the Szpiro conjecture in which
+K varies.15 The Frey conjecture, the Szpiro conjecture and the stronger Szpiro conjecture are problems in arith-
+metic of elliptic curves over number ﬁelds. There are three basic methods to work on fundamental problems in
+arithmetic of elliptic curves: (i) the more traditional use of Galois groups generated by certain torsion points of
+the elliptic curve EK and associated Galois representations, in particular, this is how the Wiles–Fermat theorem
+was proved, (ii) the method of IUT which involves the arithmetic fundamental group of hyperbolic curves over
+number ﬁelds related to the elliptic curve EK, among several ingredients, (iii) higher adelic method uses the
+abelian part of the absolute Galois group of the function ﬁeld of the elliptic curve EK, two-dimensional class
+ﬁeld theory, higher adeles and higher zeta integrals, [9] and 2.14.
+There are also so-called explicit stronger versions of the abc conjecture, which easily imply the Wiles–Fermat
+theorem, see e.g. [49], and which are not dealt with in [31]. For a discussion of the relationship between [31]
+and solutions to the Fermat equation see the ﬁnal paragraph of 2.12.
+1.4. A question posed to a student by his thesis advisor. In January 1991 Shinichi Mochizuki, at that time a
+third year PhD student in Princeton, 21 years old, was asked by Faltings (his thesis advisor) to try to prove the
+effective form of the Mordell conjecture.16
+Not surprisingly, he was not able to prove it during his PhD years. As we know, he took the request of his
+supervisor very seriously. In hindsight, it is astounding that almost all his papers are related to the ultimate goal
+of establishing the conjectures of 1.3. These efforts over the long term culminated twenty years later in [31]-IV ,
+where (a), (c), (d), (e) and hence (b) and (f) of 1.3 are established as one application of his inter-universal
+Teichmüller theory [31]-I-III.17
+His earlier Hodge–Arakelov theory [23], where a certain weak arithmetic version of the Kodaira–Spencer
+map is studied, was already an innovative step forward. That work shows that Galois groups may in some sense
+be regarded as arithmetic tangent bundles.
+1.5. On anabelian geometry. Algebraic (or étale) fundamental groups in general and anabelian geometry
+in particular are less familiar to number theorists than class ﬁeld theory or parts of diophantine geometry.
+On the other hand, geometers may feel more at home in this context. For an introduction to many relevant
+issues starting with algebraic fundamental groups and leading to discussions of several key results in anabelian
+geometry see Ch.4 of [45]. See also [42] for a survey of several directions in anabelian geometry before 2010,
+including discussions of some results by Mochizuki which are prerequisites for arithmetic deformation theory.
+The fact that the author of this text is not directly working in anabelian geometry can be encouraging for
+many readers of this text who would typically share this quality.
+For any geometrically integral (quasi-compact) schemeX over a perfect ﬁeldK, the following exact sequence
+is fundamental
+1→ πgeom
+1 (X)→ π1(X)→ π1(Spec(K)) = GK→ 1.
+15 For every ε > 0 there is a constant c′ such that the following inequality holds N(DiscEK ) ⩽ c′N(CondEK )6+ε|DK/Q|6+ε for all
+elliptic curves EK over number ﬁeldsK. This stronger version is equivalent to the V ojta conjecture, as we shall see when we meet it in
+2.12, and it shows up in Abstract, the ﬁnal sentence of §1 and Corollary 4.2 of [33], and on p.17 of [32].
+16 Neither the word “anabelian” nor the Grothendieck letter [13] was mentioned. The author of IUT heard about anabelian geometry
+for the ﬁrst time from Takayuki Oda in Kyoto in the summer of 1992.
+17 The four parts of [31] were ready by August 2011 and put on hold for one year. They were posted on the author’s webpage in
+August 2012 and submitted to a mathematical journal.
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 7
+Here π1(X) is the algebraic fundamental groupof X, πgeom
+1 (X) = π1(X×K Kalg), Kalg is an algebraic closure of
+K, see e.g. Prop.5.6.1 of [45]. Suppressed dependence of the fundamental groups on basepoints actually means
+that objects are often well-deﬁned only up to conjugation by elements ofπ1(X). Algebraic fundamental groups
+of schemes over number ﬁelds (or ﬁelds closely related to number ﬁelds, such as local ﬁelds or ﬁnite ﬁelds) are
+also called arithmetic fundamental groups.
+If C is a complex irreducible smooth projective curve minus a ﬁnite collection of its points, then π1(C) is
+isomorphic to the proﬁnite completion of the topological fundamental group of the Riemann surface associated
+to C.
+If C is the result of base-changing a curve over a ﬁeldK to the ﬁeld of complex numbers, then the analogue
+for such a curve overK of the displayed sequence (associated toX) discussed in the previous paragraph induces
+a homomorphism from GK to the quotient group Out(πgeom
+1 (C)) of the automorphism group of πgeom
+1 (C) by its
+normal subgroup of inner automorphisms. Belyi proved, using the theorem discussed in 1.1 for elliptic curves,
+that this map gives an embedding of the absolute Galois group GQ of Q into the Out group of the pro-ﬁnite
+completion of a free group with two generators [3]. For readers with background outside number theory I recall
+that, unlike the case with absolute Galois groups of local ﬁelds, we still know relatively little about GQ; hence
+the Belyi result is of great value.
+Recall that a hyperbolic curve C over a ﬁeld K of characteristic zero is a smooth projective geometrically
+connected curve of genus g minus r points such that the Euler characteristic 2− 2g− r is negative. Examples
+include a projective line minus three points or an elliptic curve minus one point. The algebraic fundamental
+group of a hyperbolic curve is nonabelian.
+Anabelian geometry “yoga” for so-called anabelian schemes of ﬁnite type over a ground ﬁeld K (such as a
+number ﬁeld, a ﬁeld ﬁnitely generated over its prime subﬁeld, etc.) states that an anabelian schemeX can be re-
+covered from the topological groupπ1(X) and the surjective homomorphism of topological groupsπ1(X)→ GK
+(up to purely inseparable covers and Frobenius twists in positive characteristic). Thus, the algebraic fundamen-
+tal groups of anabelian schemes are rigid.18
+In [13], Grothendieck proposed the following questions:
+(a) Are hyperbolic curves over number ﬁelds or ﬁnitely generated ﬁelds anabelian?
+(b) A point x in X(K), i.e. a morphism Spec(K)−→X, determines, in a functorial way, a con-
+tinuous section GK→ π1(X) (well-deﬁned up to composition with an inner automorphism) of
+the surjective map π1(X)→ GK. The section conjecture asks if, for a geometrically connected
+smooth projective curve X over K, of genus > 1, the map from rational points X(K) to the set
+of conjugacy classes of sections is surjective (injectivity was already known). There is also the
+question of whether or not the section conjecture could be of use in deriving ﬁniteness results
+in diophantine geometry.
+The Neukirch–Ikeda–Uchida theorem is a birational version of (a) in the lowest dimension. A similar recov-
+ery property for ﬁelds ﬁnitely generated overQ was proved by Pop. Later Mochizuki proved a similar recovery
+property for a subﬁeld of a ﬁeld ﬁnitely generated overQp. Many more results are known over other types of
+ground ﬁelds, for a survey see e.g. [42].
+18 Compare with the following strong rigidity theorem (Mostow–Prasad–Gromov rigidity theorem) for hyperbolic manifolds: the
+isometry class of a ﬁnite-volume hyperbolic manifold of dimension ⩾ 3 is determined by its topological fundamental group, see e.g.
+[11]. Recall that in étale topology open subschemes of spectra of rings of integers of number ﬁelds are, up to 2-torsion, of ( l-adic)
+cohomological dimension 3, see e.g. Th. 3.1 Ch. II of [22].
+
+8 IV AN FESENKO
+With respect to (a), important contributions were made by Nakamura and Tamagawa. Then Mochizuki
+proved that hyperbolic curves over ﬁnitely generated ﬁelds of characteristic zero are indeed anabelian. More-
+over, using nonarchimedean Hodge–Tate theory (also called p-adic Hodge theory), Mochizuki proved that a
+hyperbolic curve X over a subﬁeld K of a ﬁeld ﬁnitely generated overQp can be recovered functorially from
+the canonical projection π1(X)→ GK.
+The section conjecture in part (b) has not been established. A geometric pro- p-version of the section con-
+jecture fails, see [16] and its introduction for more results. A combinatorial version of the section conjecture is
+established in [18]. It is unclear to what extent the section conjecture may be useful in diophantine geometry,
+but [19] proposes a method which may lead to such applications of the section conjecture.
+Arithmetic deformation theory, though related to the results in anabelian geometry reviewed above, uses and
+applies a different set of concepts: mono-anabelian geometry, the nonarchimedean theta-function, categories
+related to monoid-theoretic structures, deconstruction and reconstruction of ring structures.
+2. O N ARITHMETIC DEFORMATION THEORY
+The task of presenting arithmetic deformation theory on several pages or in several hours is an interesting
+challenge.19
+In these notes I attempt to simplify as much as is sensible and to use as little new terminology as is feasible
+(and to indicate relations with the original terminology of IUT when I use different terminology). As explained
+in the foreword, I will have to be vague when talking about some of the central concepts and objects of the
+theory. Some more technical sentences have been moved to the footnotes.
+2.1. Texts related to IUT. Inter-universal Teichmüller theory20 has many prerequisites and offers many inno-
+vations.
+∗ Absolute mono-anabelian geometry, developed in [30], is an entralling new theory in its own right. It
+enhances anabelian geometry and brings it to a new level. It plays a pivotal role in IUT.
+∗ The theory of the nonarchimedean theta-function, cf. [28] and a review in §1 of [31]-II, is of similar
+central importance in IUT.
+∗ Categorical geometry papers discuss the theory of categories associated to monoid-theoretic struc-
+tures21, such as frobenioids22 [27], as well as the theory of anabelioids [24], [26].23
+∗ [31]-I-III introduce and study several versions of the theta-link. The key main theorem of the ﬁrst three
+parts of IUT is stated in Cor. 3.12 of [31]-III.
+19 In view of the overwhelming novelty of the theory, it is hardly possible to give an efﬁcacious presentation during a standard talk.
+20 The reason for this name is well explained in the Introduction of [31]-I, as well as in the review papers [32] and [33].
+21 The term “monoid-theoretic” in this text corresponds to the term “frobenius-like” in [31]. In IUT, the underlying abstract
+topological groups associated to étale fundamental groups are often referred to as étale-like structures, see [27]-I, [30]-III. Étale-like
+structures are functorial, rigid and invariant with respect to the links in IUT, while frobenius-like structures are used to construct the
+links. The situation which serves as a sort of fundamental model for the terms frobenius-like and étale-like is the invariance of the étale
+site with respect to the Frobenius morphism in positive characteristic, see Example 3.6 of [31]-IV . Relations between these two types of
+structures are crucial. Such relations are presented further in these notes without using the terminology of frobenius-like and étale-like.
+22 The theory of frobenioids is motivated by the need to develop a geometry built up solely from Galois theory and monoid-theoretic
+structures in which a kind of Frobenius morphism on number ﬁelds, which does not exist in the usual sense, can be constructed. The
+availability of such Frobenius morphisms in the theory of frobenioids leads to various analogies between IUT and p-adic Teichmüller
+theory. For two examples of frobenioids see 2.10.
+23 These papers contain much more material than is necessary for the purposes of IUT. If one understands the philosophy that
+underlies these papers, it is possible to skip long technical proofs.
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 9
+∗ Strengthened versions of notion of a Belyi map obtained in [25] are applied in [29] to prove a new
+interesting equivalent form of the V ojta conjecture, which is studied in [31]-IV .
+∗ A straightforward computation of the objects that appear in the main theorem of [31]-I-III is sum-
+marised in Th. 1.10 of [31]-IV . In Cor. 2.2 of [31]-IV , one makes a choice of a certain prime numberl
+which appears in this computation. This leads to the application to the new form of the V ojta conjecture
+and hence to the conjectures in 1.3 over any number ﬁeld.
+See 3.2 for a suggestion of possible entries into the theory.
+2.2. Initial data. There are several equivalent ways to deﬁne a normalised degree deg. I will use adeles.
+Recall that there is a canonical surjective homomorphism from the group A×
+k of ideles of a number ﬁeld k to
+the group Div k of complete (i.e. involving archimedean data) divisors associated to k. This group Div k may
+be described as the direct sum of value groups associated to the nonarchimedean and archimedean valuations
+of k. Thus, such a value group is isomorphic to Z if the valuation is nonarchimedean and to R if the valuation
+is archimedean. Similarly, there are canonical surjective homomorphisms from A×
+k to the group of complete
+divisor classes associated to k, to the group of isomorphism classes of complete line bundles on Spec (Ok) and
+to the group Ik of fractional ideals of k. For a number ﬁeld k and an idele α∈ A×
+k deﬁne its (non-normalised)
+degree degk as−log|α|, where|α| is the canonical module associated to the adelic ring as a locally compact
+ring by the standard formula|α| = µ(αA)/µ(A), and A is any measurable subset of Ak of non-zero measure
+with respect to any nontrivial translation invariant measure µ on the underlying additive group of Ak. Then
+degk(α) = degQ(Nk/Qα), and the degree of the diagonal image of an element of k× in A×
+k is 0.
+Due to the minus sign in the deﬁnition of degk, it is minus the non-normalised degree which can be viewed
+as the log-volume of αA, where A is, say, the product of the closed balls of radius 1 with centre at 0 for all
+completions of k, and µ is normalised to give A log-volume 0.
+Write lim−→A×
+k for the inductive limit, with respect to the inclusions induced by ﬁeld embeddings, of the
+groups of ideles of all ﬁnite extensions k of Q in a ﬁxed algebraic closure Qalg. For β∈ lim−→A×
+k , deﬁne its
+normalised degree deg(β ) as|k : Q|−1 degk(β ), where k is any algebraic number ﬁeld such thatβ corresponds
+to an element of A×
+k . One veriﬁes immediately that this deﬁnition does not depend onk. Finally, for an element
+γ of the perfection of lim−→A×
+k deﬁne its normalised degree deg(γ) as n−1 deg(γ n), where n ⩾ 1 is any integer
+such that γ n∈ lim−→A×
+k . Given a fractional ideal in Ik, a complete divisor in Divk, a complete divisor class, or a
+line bundle, the normalised degree of any of its lifts to the group of ideles does not depend on the choice of lift
+(since the local components of such lifts are completely determined up to unit multiples). Denote this degree
+by the same notation deg.
+Let F be a number ﬁeld containing the ﬁeld of deﬁnition of an elliptic curve E. Assume that the 6-torsion
+points of EF are rational overF and that F contains a 4th primitive rooti of unity. Assume that at each placev of
+F the curve EF has either good or multiplicative reduction (in fact, there is a weaker assumption needed in IUT:
+good reduction or split multiplicative over the maximal unramiﬁed extension). For example, if all 15-torsion
+points of EF are F-rational, then the classical results imply that this property holds. If EF has multiplicative
+reduction, it has split multiplicative reduction over a ﬁnite unramiﬁed extensionL of Fv of degree 1 or 2. The
+Tate curve L×/⟨qv⟩, where qv∈ F×
+v is the q-parameter of EL and EFv and⟨qv⟩ is the cyclic group generated by
+qv, is isomorphic to EF (L),⟨qv⟩↦→ the origin of EF, see Ch.V of [44] and §5 Ch.II of [43].
+One works with the hyperbolic curve XF = EF\{ 0} over F and the hyperbolic orbicurve CF = XF /±1 over
+F obtained by forming the stack-theoretic quotient of XF by the unique F-involution−1 of XF.
+
+10 IV AN FESENKO
+If k is a ﬁeld extension ofF, then denote Ek = EF×F k, Xk = XF×F k, Ck = CF×F k.24
+Deﬁne an idele qEF∈ A×
+F : its components at archimedean and good reduction valuations are taken to be
+1. Its component at any place v where EF has bad (hence multiplicative) reduction is any q∈ OFv such that
+qOL = qvOL where L is the ﬁnite unramiﬁed extension ofFv of degree 1 or 2 such thatEL has split multiplicative
+reduction and qv is the q-parameter of the Tate elliptic curve EL(L) = L×/⟨qv⟩. If EF has split multiplicative
+reduction at v, the number nv of components of the reduction ofEF at v is exactly the value of the surjective dis-
+crete valuation v: F×
+v → Z at qv. Thus, for elliptic curves with good or split multiplicative reduction degF (qEF )
+is the LHS of the inequality of the Szpiro conjecture in 1.3. In general, for an arbitrary elliptic curve E over F
+in order to deﬁne thev-component of qEF at a potentially multiplicative reduction place v one goes locally to a
+ﬁnite extensionL of the completion Fv of F such that the curveE×Fv L over L has split multiplicative reduction,
+computes the local component as above and takes a root (not canonically deﬁned in general, but the log takes
+care of it) of degree|L : Fv| of it.
+The ultimate goal of the theory is to give a suitable bound from above on deg(qEF ).
+2.3. A brief outline of the proof and a list of some of the main concepts. Conventional scheme-theoretic
+geometry is insufﬁcient for the purposes of arithmetic deformation theory. This is one of the reasons why it
+was not developed earlier. IUT goes beyond standard arithmetic geometry. Still, it remains quite geometric
+and categorical. In its application to the conjectures of 1.3 it does not need to use more from analytic number
+theory than the prime number theorem.
+Fix a prime integer l > 3 which is relatively prime to the bad reduction valuations of EF, as well as to the
+value nv of the local surjective discrete valuation of the q-parameter qv for each bad reduction valuation v.
+In 2.12, l will be chosen to be relatively large, so in IUT one often views Z/lZ as a kind of approximation
+to Z, see §1.3 of [23] for more on this.25
+Assume that the extensionK of F generated by thel-torsion points ofEF has Galois group overF isomorphic
+to a subgroup of GL2(Z/lZ) which contains SL2(Z/lZ).26
+Due to various reasons motivated by Hodge–Arakelov theory, cf. §1 of [32], §1 of [33], it makes a lot of
+sense to look at the monoid-theoretic maps deﬁned, for bad reduction valuations v, on the submonoid of the
+multiplicative group F×
+v generated by units and qv as follows:
+qv↦−→qm2
+v , u↦−→u for all u∈ O×
+Fv,
+where OFv is the ring of integers of Fv, m is a ﬁxed integer such that 1⩽ m ⩽ (l− 1)/2.
+The element qm2
+v will be viewed as a special value of a certain nonarchimedean theta-function.
+Choose a 2 lth root q of q. We are now led to the study of a monoid-theoretic map which forms part of a
+so-called theta-link, and which at bad reduction valuations can be viewed as the assignment
+q↦−→
+{
+Θ
+(√
+−qm)
+= qm2}
+1⩽m⩽(l−1)/2.
+24 For bad reduction valuations one also works with an inﬁniteZ-(tempered) covering Yv of a model XFv of XFv which corresponds
+to the kernel of the natural surjection from the tempered fundamental group to Z associated to the universal graph-covering of the dual
+graph of the special ﬁbre ofXFv. The special ﬁbre of Yv is an inﬁnite chain of copies ofP1 joined at 0 and ∞.
+25 When the prime number l is chosen in Cor. 2.2 of [31]-IV , some of these conditions onl may be slightly weakened, by treating
+certain bad reduction valuations of EF as if they are good reduction valuations.
+26 One also assumes that CK is a terminal object in the category whose objects are generically scheme-like algebraic stacks Z that
+admit a ﬁnite étale morphism toCK, and whose morphisms are ﬁnite étale morphisms of stacks Z1−→Z2 deﬁned overK (that do not
+necessarily lie overCK), this assumption implies thatCF has a unique model over the ﬁeldFmod deﬁned in 2.6, c.f. Rk 3.1.7(i) of [31]-I.
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 11
+This map is not scheme-theoretic. Its application may be viewed as a deconstruction of the ring structure.27 To
+reconstruct the ring structure, one uses generalised Kummer theory (cf. 2.6), two types of symmetry (cf. 2.7),
+rigidities (cf. 2.9) and splittings (cf. 2.7), all of which are closely related to the theta-link (cf. 2.7).
+In order to reconstruct portions of the ring structure related to the theta-link, it is necessary to make use of
+(archimedean and nonarchimedean) logarithms, in the form of a so-called log-link, cf. 2.8. The theory of the
+log-link also involves the mono-anabelian geometry, cf. 2.4, developed in [30]-III. Moreover, one must make
+use of inﬁnitely many log-links.
+Various copies of the theta-link will form horizontal arrows between two vertical lines formed by the log-
+links of a log-theta-lattice.
+The main theorem of IUT is a bound on log-volumes of the form
+−deg(qE) ⩽−deg(ΘE),
+which is subject to the condition that the term on the RHS, which by deﬁnition is the log-volume of the union
+of possible images of theta-data after applying the theta-link, subject to certain indeterminacies, is not equal
+to +∞. This bound has a lot of meaning from the point of view of IUT: it is a bound on deformation size of
+theta-data with respect to the indeterminacies associated to the theta- and log-links. Such a bound is obtained
+in the ﬁnal portion of the ﬁrst three parts of [31] as the main theorem of IUT in [31]-III. Note the minus sign
+on the LHS of this bound in comparison to the goal stated at the end of the previous subsection.
+A further relatively straightforward computation in [31]-IV of the RHS of this inequality, which follows
+essentially from its deﬁnition in [31]-III, will show that
+−deg(ΘE) ⩽ a(l)− b(l)deg(qE)
+with real numbers a(l),b(l) > 1 depending on l > 3. Hence, combining this with the previous bound, one
+obtains a bound deg(qE) ⩽ a(l)(b(l)− 1)−1, see 2.12.
+Then a suitable choice of the prime number l will lead to a bound on deg(qE) of the right form which, after
+a bit more work, implies the diophantine inequalities (a)–(e) of 1.3.
+The notation−deg( ) in this text corresponds to the notation−|log( )| in [31]-III-IV .
+Thus, the following list of some of the main concepts and methods of IUT which will be discussed in the
+following subsections comes very naturally. For a continuation of the list see 2.13.
+⋄ Mono-anabelian geometry uses hyperbolic curves, which in IUT will always be related to a ﬁxed, given
+elliptic curve, to recover the ring structure of number ﬁelds and their completions, [30]-III. Mono-
+anabelian geometry plays an important role in the construction of multiradial algorithms in [31]-II-III.
+⋄ One chooses a prime number l and works with the ring Z/lZ, which can also be viewed as an approxi-
+mation to the ringZ, and with thel-torsion points of the elliptic curve. There are two types of symmetry
+associated to the choice of l, which play a key role in IUT, cf. [31]-I-III.
+⋄ The nonarchimedean theta-function and its values at torsion points, generalised Kummer (and log-
+Kummer) theory and the two types of symmetry are used in the construction of the central object of
+IUT, the theta-link, and closely related to associated rigidities and synchronisations, cf. [28], [31]-I-III.
+⋄ One has to involve the nonarchimedean logarithm map as well, in the form of the log-link, cf. [31]-III.
+⋄ Application of the theta-link and log-link deconstructs the ring structures, in the sense that it treats
+the underlying additive and multiplicative structures of the rings involved as separate monoid-theoretic
+27 This map will be discussed further in 2.7.
+
+12 IV AN FESENKO
+structures. The ring structures are reconstructed via a series of algorithms by using deep results from
+anabelian geometry and generalised Kummer theory and working with the log-theta-lattice, cf. [30]-III
+and [31]-I-III.
+⋄ Bounding the size of the deformation arising from the theta-link by taking into account three associated
+indeterminacies, and then making a further (easier) computation of the RHS of the bound, which is
+ultimately applied for a suitable choice of the prime number l, leads to a bound of the type needed for
+the conjectured inequalities in diophantine geometry.
+2.4. Mono-anabelian geometry and multiradiality. A more powerful version of anabelian geometry is de-
+veloped in [30]. It is called absolute mono-anabelian geometry. The classical approach to anabelian geometry
+centers around a comparison between two geometric anabelian objects via their algebraic fundamental groups.
+Mono-anabelian geometry centers around the task of establishingtopological group-theoretic algorithmswhich
+require only the following input datum: a topological group which just happens to be isomorphic to the alge-
+braic fundamental group of a scheme (satisfying certain conditions). Mono-anabelian geometry algorithmically
+recovers the ring structure of an object or a priori scheme-theoretic construction, operation, property from the
+topological group structure of a group of symmetries such as the Galois group or algebraic fundamental group.
+For example, compare the statement of the Neukirch–Ikeda–Uchida theorem in 1.1 with the theorem proved
+by Mochizuki, cf. Th. 1.9 of [30]-III,
+The number ﬁeld F can be reconstructed via an algorithmic procedure from the arithmetic
+fundamental group π1(XF ) (which surjects onto the absolute Galois group GF).
+Unlike the case with the Neukirch–Ikeda–Uchida theorem, the mono-anabelian algorithms of Th. 1.9 of [30]-
+III are functorial with respect to change of the base ﬁeld and compatible with localisation. 28 These properties
+are crucial for applications in IUT.
+Working with hyperbolic curves over number ﬁelds adds a geometric dimension. Certain aspects of IUT
+relate the two ring-theoretic dimensions of the function ﬁeld of such a hyperbolic curve (one of which is arith-
+metic, the other geometric) to the two combinatorial dimensions (constituted by the additive and multiplicative
+structures) of a ring.29
+In IUT, one works with hyperbolic (orbi)curves such as Xk, Ck, as well as related objects, see 2.2, over
+number ﬁeldsk and their completions. The arithmetic fundamental groups of such geometric objects are used
+to reconstruct the ring structure of the base ﬁeld, by applying the theory of [30]-III.30
+When working with fundamental groups, the issue of basepoints has to be carefully addressed. The existence
+of different basepoints in the domain and range of the theta-link and log-link implies that one must consider
+two different universes associated to two distinct ring theories which in general cannot be related by means of a
+ring homomorphism, cf. §I3 of [31]-I. This inter-universal aspect gives rise to the name of IUT. The main type
+of mathematical object which makes sense simultaneously in both the universes is a topological group.
+28 for more on mono-anabelian reconstruction for number ﬁelds see a recent preprint [17]
+29 see Rk 2.3.3 (ii) of [31]-III for more details
+30 In this context, observe that for local ﬁelds, unlike number ﬁelds, there is a description of the associated absolute Galois group (in
+odd residue characteristic) given by the Yakovlev–Jannsen–Wingberg theorem, see e.g. §5 Ch.VII of [40]. However, unlike the number
+ﬁeld case, to recover an isomorphism of local ﬁelds from an isomorphism of topological groups between the respective absolute Galois
+groups without using hyperbolic curves, one needs to know in addition that this isomorphism is compatible with the respective upper
+ramiﬁcation group ﬁltrations. This is a theorem proved independently by Mochizuki and Abrashkin, see e.g. 8.3 of Ch.IV of [10] and
+the references therein. The proof by Mochizuki is very short and uses p-adic Hodge theory. For more details see §3 of [30]-I.
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 13
+IUT applies mono-anabelian reconstruction algorithms to arithmetic fundamental groups that appear in one
+universe in order to obtain descriptions of objects constructed from such arithmetic fundamental groups that
+make sense in another universe. [31] uses the terminology of a wheel and spokes.
+One can think of reconstruction algorithms as functorial algorithms from a radial category to the centre
+(core) category, say, as a wheel with a centre (core) and spokes, that satisﬁes the property that descriptions of
+objects which arise on one spoke make sense from the point of view of another spoke. The principal example
+of this sort of situation arises by considering the data in the domain and codomain of the theta-link. Using the
+same analogy, an algorithm is calledmultiradial if it expresses objects constructed from a given spoke in terms
+of objects that make sense from the point of view of other spokes. Multiradial algorithms are compatible with
+simultaneous execution at multiple spokes, which is important for IUT.
+To obtain multiradial algorithms, it is sometimes necessary to allow for some sort of indeterminacy in the
+descriptions that appear in the algorithms of the objects constructed from the given spoke. See 2.9 for three
+indeterminacies which play a key role in the computation of volume deformation, and whose effects result in
+the ε term in the conjectures of 1.3.
+For more examples of multiradiality see §2 of [33] and the Introduction and Examples 1.8-1.9 of [31]-II.
+2.5. Nonarchimedean theta-functions. Let L be a local ﬁeld of characteristic zero with ﬁnite residue ﬁeld.
+Denote by CL the completion of an algebraic closure of L. A holomorphic function on C×
+L deﬁned over L is
+a function C×
+L→ CL which is represented by an everywhere convergent element of L( (X) ). A meromorphic
+function on C×
+L deﬁned overL is an element of the ﬁeld of fractions of the ring of holomorphic functions on
+C×
+L deﬁned overL.
+Let q∈ L be a non-zero element of the maximal ideal of the ring of integers of L (this q will eventually be
+taken to be the q-parameter qv of the Tate curveEF (Fv)≃ F×
+v /⟨qv⟩, where L = Fv, for bad reduction primesv of
+E, see Ch.5 of [44]). An elliptic function with period q on L is a meromorphic function on C×
+L deﬁned overL
+and invariant with respect to the mapu↦→ qu, so it yields a function onC×
+L /⟨q⟩. A theta-function on C×
+L deﬁned
+over L, of type aum, a∈ C×
+L , m∈ Z, is a holomorphic function onC×
+L deﬁned overL which satisﬁes a functional
+equation f (u) = aum f (qu). Every elliptic function can be written as the quotient of two theta-functions of the
+same type, see pp.14-15 of [46].
+The following choice of nonarchimedean theta-function of type−u is convenient, p.15 of [46], in view of
+the location of its zeros and poles
+θ (u) = ∑
+n∈Z
+(−1)nqn(n−1)/2un = (1− u) ∏
+n⩾1
+(
+(1− qn)(1− qnu)(1− qnu−1)
+)
+, u∈ C×
+L ,
+where the last equality follows from the Jacobi triple product formula.
+It is easy to see that if aν∈ L×, mν∈ Z and ∑n
+ν=1 mν = 0, then the function ∏n
+ν=1 θ (aνu)mν is of type
+∏n
+ν=1 amν
+ν ∈ L×. This property, which is used in Tate’s formula for the local height pairing (cf. p. 338 of [2]),
+yields an interesting relationship between the multiplicative properties of the nonarchimedean theta-function
+and the underlying multiplicative structure of a local ﬁeld. In this sense, it is reminiscent of the theta-link,
+which plays a central role in IUT.
+Just as in the classical complex theory, elliptic functions onL with period q can be expressed in terms of θ, a
+property which highlights the central role of nonarchimedean theta-functions in the theory of functions on the
+Tate curve. For more information see §2 Ch.I and §5 Ch.II of [43] and p. 306-307 of [38].
+The nonarchimedean theta-function is of course related to the complex theta-function
+θ (z, τ) = ∑
+n∈Z
+exp(πin2τ + 2πinz), z, τ∈ C, ℑm(τ) > 0,
+
+14 IV AN FESENKO
+which is equal to ∑n∈Z qn2/2un = θ (−q1/2u), u∈ C, via the change of variables q = exp(2πiτ),u = exp(2πiz).
+The theta-function
+¨Θ(u) =−u−1θ (u2) = ∑
+n∈Z
+(−1)nqn(n+1)/2u2n+1
+in Prop. 1.4 of [28] where u equals ¨U deﬁned there and q equals qX deﬁned there, is of type q2u4. Moreover
+¨Θ(q1/2u) =−q−1/2u−2 ¨Θ(u). The function ¨Θ(u) extends to a meromorphic function31 and satisﬁes the follow-
+ing unusual property among meromorphic functions: its divisor of poles is contained in the special ﬁbre, while
+its divisor of zeroes does not contain any irreducible component of the special ﬁbre.
+We still assume thatl > 3 as in 2.3 andF contains i as in 2.2. Example 3.2 (ii) of [31]-I introduces a function
+Θ(u) = Θv(u) =
+(¨Θ(i)/ ¨Θ(u)
+)1/l ,
+which is well-deﬁned up to multiplication by roots of unity of order dividing 2 l (with q equal to qv deﬁned
+there).
+One further assumes that the residue characteristic of the local ﬁeld L is odd. The functional equation for θ
+implies that
+qm2/2 ¨Θ
+(
+i
+√
+qm)
+= ¨Θ(i).
+Choose a 2lth root q of q. Then
+qm2
+= Θ
+(√
+−qm)
+up to multiplication by roots of unity of order dividing 2l.
+These special values of the theta-function for 1⩽ m ⩽ (l−1)/2, i.e. the values at points separated by periods
+qm/2 from the point±i, are very distinguished from several points of view. 32 They are of central importance
+for IUT.
+2.6. Generalised Kummer theory. For an open subgroup H of a Galois or arithmetic fundamental group
+acting on an abelian group M, Kummer theory deals with the natural homomorphism
+MH−→H1(H,Hom(Q/Z,M))
+obtained by considering the divisibility of elements of the abelian group M. Injectivity of the Kummer map,
+when available, is very useful.
+Kummer theory (more precisely, truncated Kummer theory) of the line bundles associated to nonarchimedean
+theta-functions is developed in [28]. Note that the naive theory of theta functions is not sufﬁcient for the
+purposes of IUT, for more details and interesting discussions of aspects of the étale theta function see recently
+added Rk 2.3.4 of [31]-III.
+Kummer theory provides a bridge between monoid-theoretic structures and arithmetic fundamental group
+structures associated to the theta-function and theta-values (see [28], Fig. I.1 of [31]-II), as well as to a number
+ﬁeld and its completions (see Example 5.1 of [31]-I, where the mono-anabelian geometry of [30]-III is applied
+to reconstruct a number ﬁeld and its completions from the arithmetic fundamental groups of hyperbolic orbi-
+curves that arise as ﬁnite étale coverings ofCF).33 One important aspect of the Kummer theory applied in IUT is
+the issue of cyclotomic rigidity, i.e. of establishing algorithms for reconstructing natural isomorphisms between
+31 on a certain ﬁnite covering ¨Yv of the covering Yv discussed in footnote 24
+32 see Rk 2.5.1 of [31]-II and Rk 2.2.2 of [31]-III for more on this
+33 Using the terminology of IUT, Kummer theory relates certain étale-like structures with certain frobenius-like structures, see also
+footnote 21.
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 15
+cyclotomes that arise from the geometric fundamental group and cyclotomes that arise from monoid-theoretic
+data (see Def. 1.1 (ii) of [31]-II in the theta-function case, Example 5.1 of [31]-I in the number ﬁeld case).
+Denote by Fmod the ﬁeld of moduli of the curve EF. Assume that F is Galois over Fmod. Choose subsets
+VF ,VK of valuations of F,K such that the inclusion of ﬁeldsFmod⊂ F⊂ K induces a bijection between VK,VF,
+and the set Vmod of all valuations of Fmod.34 For a valuation v of Fmod denote by Kv the completion of K with
+respect to the element of VK corresponding to v.
+This data determines, up to K-isomorphism, a ﬁnite étale coveringCK−→CK of degree l which satisﬁes the
+following property: the natural covering EK−→EK determined by multiplication by l factors as a composite
+EK−→EK−→EK, where the covering EK−→EK is the covering determined by the base-changed covering
+X K := CK×CF XF−→XK and corresponds to a quotient isomorphic to Z/lZ of the l-torsion submodule of
+EK(K) that restricts at bad reduction valuations of VK of odd residue degree to the quotient arising from cov-
+erings of the dual graph of the special ﬁbre. In addition, at bad reduction valuations v∈ VK of odd residue
+degree one considers a natural ﬁnite étale covering X v−→X K×K Kv of degree l by extracting lth roots of the
+theta-function. These coverings play an important role in the generalised Kummer theory employed in IUT.
+2.7. The theta-link and two types of symmetry. The setting up of several versions of the theta-link is tech-
+nical, and a large part of the three papers [31]-I-III is dedicated to it, see also the foreword. 35 In the following,
+I discuss aspects of IUT that are related to various versions of the theta-link.
+At bad reduction valuations of EF of odd residue characteristic, a simpliﬁed version of the theta-link, cf.
+[31]-I, uses the theta-function and revolves around a certain morphism of local monoid-theoretic structures
+q↦−→Θ,
+while the main version of the theta-link dealt with in this text, cf. [31]-II-III, uses the theta-values and revolves
+around a certain morphism of local monoid-theoretic structures
+q↦−→
+{
+Θ
+(√
+−qm)
+= qm2}
+1⩽m⩽(l−1)/2.
+with the identity map on units (in an algebraic closure of Fv) or units modulo roots of unity, acted upon by the
+absolute Galois group of Fv. One then extends these local theta-links to other valuations (actually valuations in
+the set VK, see 2.6), in such a way as to satisfy the product formula.
+For bad reduction valuations of odd residue characteristic, the latter version of the theta-link amounts to an
+arithmetic deformation of the local structure of the local ﬁeld associated to the valuation, sending units of the
+ring of integers via the identity map to the units and sendingqn to qm2n, n ⩾ 1, where the integerm runs between
+1 and (l− 1)/2. This monoid-theoretic morphism is not compatible with the ring structure, i.e. the theta-link is
+not scheme-theoretic.
+The monoid-theoretic structures that appear in this theta-link consist of two local structures
+◦ units modulo torsion O×
+L /Tor(O×
+L ) and
+◦ theta-values such as Θ
+(√−qm)
+= qm2
+, which are well-deﬁned up to multiplication by roots of order
+dividing 2l,
+and one global structure, namely,
+34 It is assumed that the set of bad reduction valuations in VK of odd residue degree is nonempty. There are further technical
+conditions that must be imposed on VK; these conditions are discussed in detail in Def. 3.1 of [31]-I (where VK corresponds to V).
+35 Each theta-link consists of the collection of all isomorphisms between certain data associated to the respective theatres of type 1
+in the domain and codomain of the theta-link, see footnote 37. The main distinctive feature of each of the two types of theta-link
+discussed in this subsection is represented by the monoid-theoretic map in the corresponding display.
+
+16 IV AN FESENKO
+◦ the global realiﬁed frobenioid36 associated to the number ﬁeld in the product of all the local data.
+Monoid-theoretic structures are of essential importance in IUT, since they allow one to construct various
+gluing isomorphisms. The use of Galois and arithmetic fundamental groups gives rise to canonical splittings of
+objects arising from such gluing isomorphisms by applying various tautological Galois-equivariance properties
+of such gluing isomorphisms.
+The computation of the theta-link can be viewed as a sort of passage from monoid-theoretic data to such
+canonical splittings involving arithmetic fundamental groups, by applying generalised Kummer theory, together
+with various multiradial algorithms which make essential use of mono-anabelian geometry.
+Two types of symmetry are closely related to the setting up of the theta-link and, very importantly, of a
+central object in IUT not discussed in these notes, namely, a ( theta-number ﬁeld-Hodge-) theatre.37 They are
+denoted F⋊±
+l = Fl ⋊{±1} and F⋇
+l = F×
+l /{±1} where Fl≃ Z/lZ arises from the l-torsion points of E, cf.
+[31]-I-III. Elements of of Fl (in the case of F⋊±
+l ) or F⋇
+l (in the case of F⋇
+l ) are called labels.
+The F⋊±
+l -symmetry arises from the action of πgeom
+1 and is closely related to the Kummer theory surrounding
+the theta-values. There is a natural isomorphism AutK(X K)∼− →F⋊±
+l , cf. Def. 6.1(v) of [31]-I.
+This symmetry is
+◦ of an essentially geometric nature, i.e. corresponds to the geometric portion of the arithmetic funda-
+mental groups involved
+◦ additive z↦→± z + a, a∈ Fl
+◦ compatible with and applied to establish conjugate synchronisation (i.e. permuting copies of local
+absolute Galois groups associated to distinct labels without inducing conjugacy indeterminacies)
+◦ compatible with the nonarchimedean logarithm and the (closely related) construction of the log-shell
+◦ of a somewhat non-multiradial nature38.
+The F⋇
+l -symmetry arises from the action of the absolute Galois group of certain number ﬁelds and is closely
+related to the Kummer theory surrounding these number ﬁelds. The group F⋇
+l is isomorphic to a subquotient
+of Aut(CK) induced via the natural inclusion Aut (CK) ↪→ Aut(K) (cf. Rk 2.6.1 of [28]) by a subquotient of
+Gal(K/F), see also Example 4.3 of [31]-I.
+This symmetry is
+◦ of an essentially arithmetic nature, i.e. it corresponds to the global arithmetic portion of the arithmetic
+fundamental groups involved
+◦ multiplicative (by deﬁnition)
+◦ used in label bookkeeping to separate the label 0 from the nonzero labels
+◦ closely related to the operation of descending fromK to the ﬁeld of deﬁnitionFmod of EF (cf. Rk 6.12.6
+(iii), (iv) of [31]-I).
+36 see footnote 22
+37 There is a theatre of type 1, denoted H T Θ±ell NF in [31]-I, which is a certain system of categories obtained by gluing together
+various types of frobenioids (cf. [27] and see also footnote 22 and 2.10), taking into account theta-data and number ﬁeld-data. To
+every theatre of type 1 one associates a theatre of type 2, denoted H T D-Θ±ell NF in [31]-I, which is a certain system of categories
+obtained by gluing together various types of of base categories. Many of these base categories are isomorphic to full subcategories of
+ﬁnite étale covers of appropriate hyperbolic curves. Each theatre consists of two portions, corresponding to the two types of symmetry
+discussed in this subsection; these two portions are glued together in a fashion that is compatible with the gluing of labels discussed
+in this subsection. For complete deﬁnitions see §3-§6 of [31]-I. Each lattice point of the log-theta-lattice discussed in the following
+subsection denotes a theatre of type 1.
+38 This additive symmetry is, unlike the multiplicative symmetry, non-multiradial at an a priori level. On the other hand, ultimately
+it is nevertheless used in various multiradial algorithms, cf. the discussion of Rk 3.11.2 (ii) in [31]-III.
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 17
+◦ of an essentially multiradial nature.
+Each type of symmetry includes a global portion.39
+The various labels associated to the two types of symmetry are glued together in the following way: ±a∈
+{−(l− 1)/2, . . . ,−1,0,1, . . . ,(l− 1)/2} is identiﬁed witha∈{ 1, . . . ,(l− 1)/2}.40
+The issue of basepoints of fundamental groups is closely related to the importance of synchronising conju-
+gacy indeterminacies of local Galois groups. Conjugate synchronisation is a speciﬁc system of isomorphisms,
+free from conjugacy indeterminacies, between local absolute Galois groups (as topological groups) at the l-
+torsion points of the elliptic curve where the values of the nonarchimedean theta-function are computed.
+Once one has established conjugate synchronisation, Kummer theory is applied to a collection of several
+special values of the theta-function, by considering the action of a single Galois group that acts simultaneously
+on the Nth roots of all of them in a fashion compatible with the Kummer theory of the ground ﬁeld.
+In IUT it is necessary to isolate the two types of symmetry from each other in order to establish conjugate
+synchronisation using the F⋊±
+l -symmetry (note that conjugation by elements of absolute Galois groups of
+number ﬁelds is incompatible with this objective), and in order to work with global base ﬁelds from an anabelian
+point of view using the F⋇
+l -symmetry.
+Conjugate synchronisation yields isomorphisms of monoids associated to different labels inFl, diagonal sub-
+monoids inside the product of the monoids associated to the various labels inFl and in F⋇
+l and an isomorphism
+between the monoid associated to the label 0∈ Fl and the diagonal submonoid in the latter product.
+2.8. Nonarchimedean logarithm, log-link, log-theta-lattice, log-shell. The nonarchimedean logarithm map
+log: O×
+L−→L
+is deﬁned on units of the ring of integers of a local ﬁeldL as the map which sends 1− α↦→− ∑n⩾1 αn/n for α
+in the maximal ideal of OL, and which sends multiplicative representatives of the ﬁnite residue ﬁeld inOL to 0.
+The logarithm is compatible with arbitrary automorphisms, such as Galois automorphisms, of the topological
+ﬁeldL.
+The theta-link requires the use of logarithms, since the logarithm transforms multiplication into addition
+(and thus allows one to reconstruct certain additive structures from certain multiplicative structures). In other
+words, there is no natural action of the theta-values on the multiplicative monoid of units modulo torsion, but
+there is a natural action of the theta-values on the logarithmic image of this multiplicative monoid.
+The multiplicative structures on either side of the theta-link are related by means of the value group portions;
+the additive structures on either side of the theta-link are related by means of the unit group portions, shifted
+once via the log-link, in order to transform the multiplicative structure of these unit group portions into an
+additive structure.
+Locally the log-link can be thought of as associating to the multiplicative monoid O\{ 0} of non-zero ele-
+ments of the ring of integers O of CL (see 2.5) acted upon by an arithmetic fundamental group the copy of this
+multiplicative monoid that arises from the copy of the ringO whose underlying additive module is a submodule
+of log(O×)⊗ Q.
+39 The global F⋊±
+l -symmetry of XK only extends to a±1-symmetry of the local coverings Xv, while the global F⋇
+l -symmetry of
+CK only extends to the identity-symmetry of the local coverings Xv deﬁned in 2.6.
+40 for more on this see Rk 3.11.2 (ii) of [31]-III
+
+18 IV AN FESENKO
+Thus, one obtains a two-dimensional lattice, which is referred to as the log-theta-lattice, each of whose
+upward-pointing vertical arrows corresponds to an application of the log-link, and each of whose rightward-
+pointing horizontal arrows (n,m)→ (n + 1,m) corresponds to an application of a certain theta-link whose
+construction depends, in an essential way, on the log-link (n,m− 1)→ (n,m). The main results of IUT require
+the use of just two inﬁnite neighbouring vertical lines of arrows of the lattice, i.e. corresponding to the lattice
+points (n,m), where n equals 0 or 1, together with the horizontal arrow between the lattice points (0,0) and
+(1,0).
+One of the main aims of [31] is the study of mathematical structures associated with the log-theta-lattice.
+The theta-link involves two distinct ring/scheme theories, two theatres (see footnote 37) in the domain
+and codomain of the theta-link, with their multiplicative structures related via nonarchimedean theta values
+(monoids that appear in the domain of the theta-link and in its codomain are subject to quite different Kummer
+theories). The task to understand how much their additive structures differ from each other is accomplished
+via the use of Kummer correspondence and mono-anabelian reconstruction algorithms. It is a highly interest-
+ing question if the concept of the theta-link and its realisation may have more applications, with appropriate
+modiﬁcations, elsewhere in arithmetic geometry.
+The log-link does not commute with the theta-link. This non-commutativity difﬁculty is resolved in IUT via
+the use of log-shells and applications of the log-Kummer correspondence. A log-shell is a very useful common
+structure for the log-links in one vertical line. Its nonarchimedean part is a slightly adjusted form of the image
+of the local units via the nonarchimedean logarithm. Namely, by deﬁnition it is the compact subgroup
+(p∗)−1 log(O×
+L )
+where p∗ = p if p is odd and 2∗ = 4, see [30]-III, [31]-III for more details. The log-shell associated to a complex
+archimedean ﬁeld is the closed ball of radiusπ.
+Relevant Kummer isomorphisms are not compatible with the log-link at the level of elements; however, the
+log-shell contains the images of the Kummer isomorphisms associated to both the domain and the codomain of
+the log-link, cf. [30]-III, [31]-III.
+2.9. Rigidities and indeterminacies. [28] establishes several rigidity properties of the theta-function, which
+can be interpreted as multiradiality properties in the context of IUT. The following rigidities, which may be
+formulated in terms of suitable algorithms, are very useful in IUT:
+◦ (discrete rigidity) one can work with Z-powers instead ofˆZ-powers of q;
+◦ (constant multiple rigidity) the monoid generated byO×
+L and non-negative powers ofΘ has a canonical
+splitting (up to multiplication by 2lth roots of unity) via evaluation at a 2-torsion point;
+◦ (cyclotomic rigidity) an isomorphism between two copies of ˆZ endowed with Galois actions, one of
+which arises from the roots of unity of the base ﬁeld, the other of which is a certain subquotient of a
+fundamental group.
+Note that in IUT, the copies of ˆZ (or quotients of ˆZ) which appear in discussions of cyclotomic rigidity are
+referred to as cyclotomes. For more see the Introduction of [31]-II and Rks 2.1.1, 2.3.3 of [31]-III.
+When relating monoid-theoretic structures with Galois structures via generalised Kummer maps and the use
+of the theta-function, one must contend with three associated indeterminacies which can be viewed as effects
+of arithmetic deformation:
+◦ (Ind1) is closely related to the action of Aut(GL) and arises from the requirement of compatibility with
+the permutation symmetries of the Galois and arithmetic fundamental groups associated with vertical
+lines of the log-theta-lattice;
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 19
+◦ (Ind2) is closely related to the action of a certain compact group41, which includesˆZ×, on log(O×
+L ) and
+arises from the requirement of compatibility with the horizontal theta-link;
+◦ (Ind3) arises from a certain (upper semi-)compatibility of the Kummer isomorphism with the log-links
+associated to a single vertical line of the log-theta-lattice.42
+2.10. The role of global data. Global data is used
+◦ for synchronizing±-indeterminacies associated to special ﬁbres43
+◦ in the product formula for monoids
+◦ to conclude that global elements integral everywhere are roots of unity, hence belong to the kernel of
+log
+◦ when one applies the prime number theorem in [31]-IV
+◦ when one reconstructs, via mono-anabelian algorithms applied to the arithmetic fundamental groups of
+hyperbolic curves over number ﬁelds, the global and local ring structures and the ring homomorphism
+from the ring of global elements to the adelic ring.
+Compare the ﬁrst item with the Bogomolov proof44 of the Szpiro inequality over C discussed in 1.3.45
+It is a good time to give two examples of categories related to structures used in IUT. These two examples
+may be thought of as isomorphic monoid-theoretic structures (which, nevertheless, are deﬁned slightly dif-
+ferently) arising from the number ﬁeld Fmod (together with the set of valuations VK discussed above) that are
+associated to the collection of complete arithmetic line bundles or, alternatively, to the ideles, equipped with
+the action of the non-zero global elements. These categories are deﬁned as follows (see Example 3.6 of [31]-III
+for more details):
+(i) rational function torsion version: an object of this category is an F×
+mod-torsor T equipped with a collection
+of trivialisations tv, for each v∈ VK, of the torsor Tv associated to T by changing the structure group via the
+natural map F×
+mod−→K×
+v /O×
+Kv determined by v; an elementary morphism between {T,tv} and{T′,t′
+v} is an
+isomorphism T−→T′ of F×
+mod-torsors which maps the trivialisation tv to an element of the OKv\{ 0}-orbit of
+t′
+v; a morphism is given by an integer n > 0 and an elementary morphism from the nth tensor power of the ﬁrst
+object to the second object;
+(ii) local fractional ideal version : an object of this category is a collection of closed balls centred at 0 in the
+completions of K at the valuations of VK such that all but ﬁnitely many of these closed balls coincide with the
+respective local rings of integers; an elementary morphism between two such objects is given by multiplication
+by an element of F×
+mod which maps the local closed balls of the ﬁrst object into the local closed balls of the
+second object; a morphism is an integer n > 0 and an elementary morphism from the nth tensor power of the
+ﬁrst object to the second object.
+These two categories are examples of frobenioids [27], see also footnotes 22 and 37. They are quite different
+from each other from the point of view of multiradiality issues. It is the second category which is subject to
+41 the group of GL-isometries of the units of the ring of integers of an algebraic closure of L modulo roots of unity
+42 This compatibility may be thought of as a weakened version of the usual notion of commutativity of a diagram of morphisms:
+instead of considering compatibility at the level of individual elements of objects of the diagram, one considers compatibility of
+inclusions of certain subsets of these objects.
+43 see Rk 6.12.4 (iii) of [31]-I
+44 Relative to the analogy with p-adic Teichmuller theory, see 2.14 and the references therein, IUT corresponds to considering the
+derivative of the canonical Frobenius lifting, which, in turn, corresponds, relative to the analogy with the classical complex case, to the
+hyperbolic geometry of the upper half-plane used in the Bogomolov proof. See also Rk 2.3.4 of [31]-IV and [36] for more on this.
+45 When working on IUT, its author was not familiar with the Bogomolov proof.
+
+20 IV AN FESENKO
+distortion when Kummer theory is applied in the context of the log-links. This distortion is closely related to
+the upper semi-compatibility mentioned in (Ind3) above, as well as to the fact that the second category, unlike
+the ﬁrst, is well suited to making explicit estimates.
+A natural isomorphism between the two monoid-theoretic structures is applied to relate
+◦ the multiplicative structure of Fmod to the additive structure of Fmod,
+◦ the multiplicative structure ofFmod to the quotient monoidO×/(roots of unity) equipped with the action
+of the local absolute Galois group,
+◦ the monoid generated by the formal collection{ qm2
+}1⩽m⩽(l−1)/2 of theta-values to the quotient monoid
+O×/(roots of unity) equipped with the action of the local absolute Galois group.
+2.11. The main theorem of IUT. Deﬁne an idele qE∈ lim−→A×
+k : its components at the nonarchimedean ele-
+ments of VF of odd residue characteristic 46 where EF has bad reduction are equal to qEF deﬁned in 2.2; its
+components at the other valuations of F are taken to be 1.
+Consider any idele cond E∈ AF whose components at the nonarchimedean elements of VF of odd residue
+characteristic where EF has bad reduction are (arbitrary) prime elements of the completion ofF at v, and whose
+components at the other valuations of F are equal to 1. The degree deg (condE) is well-deﬁned and does not
+depend on the choice of prime elements. Compare degF (condE) with log of N(CondEF ) discussed in 1.3.
+The main theorem47 for a certain sufﬁciently large class of elliptic curves E over F is stated in Cor. 3.12 of
+[31]-III:
+−deg(qE) ⩽−deg(ΘE),
+if the RHS is not +∞. Here−deg(ΘE) is by deﬁnition the maximum log-volume of deformations for the theta-
+data, i.e. the maximum of log-volumes of all images with respect to the indeterminacies (Ind1), (Ind2), (Ind3),
+where one takes the average over m ranging from 1 to (l− 1)/2 as a consequence of the F⋇
+l -symmetry.
+The log-volume on the LHS, i.e., the negative degree−deg(qE), is computed in two equivalent ways, using
+the log-theta-lattice and its data at (1,0) and (0,0), see Fig.I.8 of [31]-III. This is achieved in steps (x), (xi) of
+the proof of Cor. 3.12 of [31]-III, the second of which takes into account the indeterminacies (Ind1), (Ind2),
+(Ind3) and produces the bound.
+One can view this bound as a consequence of a certain hyperbolicity of a number ﬁeld equipped with an
+elliptic curve.
+One of the main themes of [31] is the issue of deconstructing and reconstructing the two underlying dimen-
+sions of a number ﬁeld. Examples of deconstructing include
+◦ splittings of various local monoids into unit and value group portions, see §I3 of [30]-III
+◦ separating the Z/lZ arising from the l-torsion points of the elliptic curve into the additive F⋊±
+l -
+symmetry and the multiplicative F⋇
+l -symmetry, cf. 2.7
+◦ separating the ring structures of global number ﬁelds into their respective underlying additive structures,
+which may be related directly to log-shells, and their respective underlying multiplicative structures,
+which may be related directly to monoid-theoretic structures.
+The reconstruction procedure uses multiradial algorithms involving log-shells andexhibits the extent to which
+the two dismantled combinatorial dimensions cannot be separated from one another by describing the inter-
+twining structure between the two dimensions prior to their separation. This procedure allows one to estimate
+46 the main reason for this restriction comes from the use of theta-functions, see Rk 1.10.6 of [31]-IV
+47 −deg(qE ) equals−2l|log(q)|, while−deg(ΘE ) equals−2l|log(Θ)| in [31]-III
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 21
+the value group portions of various monoids of arithmetic interest in terms of their unit group portions and
+underlies the proof of the inequality in the main theorem.48
+While local class ﬁeld theory is used in IUT, global class ﬁeld theory is not. It is crucial for IUT to use the
+full Galois and arithmetic fundamental groups.49
+2.12. The application of IUT. In [31]-IV a further (rather straightforward) computation of−deg(ΘE) is made
+in Th. 1.10 of [31]-IV (assuming, in addition, that the 15-torsion points ofEF are deﬁned overF). It shows that
+−deg(ΘE) ⩽ a(l)− b(l)deg(qE)
+where a(l) > 1 depends on l,|Fmod : Q|, deg(condE) +deg(δF/Q), while b(l) > 1 is a function of l which does
+not depend on EF and F.50
+In the proof one uses the previous theory and the important fact that all the indeterminacies (Ind1), (Ind2),
+(Ind3) have their range inside the log-shell. Modulo this, the computation of−deg(ΘE) in Th. 1.10 of [31]-IV
+is essentially completely local, and the local computations are only nontrivial at the nonarchimedean places;
+the only global aspect of the computation consists of a certain density computation involving the prime number
+theorem.
+Thus, together with the main theorem of IUT, this gives the bound deg (qE) ⩽ a(l)(b(l)− 1)−1. In precise
+terms,
+1
+6 deg(qE) ⩽
+(
+1 + 245|Fmod : Q|
+l
+)(
+deg(condE) +deg(δF/Q)
+)
++ 2143352|Fmod : Q|l + c◦,
+where c◦ > 0 comes from the prime number theorem (over Q) and does not depend on E and F, δF/Q is the
+(absolute) different of F.
+These computations in the proof of Th. 1.10 of [31]-IV were already essentially known to Mochizuki around
+the year 2000, and an appropriate framework to justify them is provided by IUT, cf. Rk 1.10.1 of [31]-IV .
+Cor. 2.2 of [31]-IV deals with elliptic curves E over any number ﬁeld F using Th. 1.10 of [31]-IV . The
+Legendre equation gives the natural classifying morphism fromUX = the projective line of the algebraic closure
+of Q minus 0,1, ∞ to the moduli space of elliptic curves over number ﬁelds. For certain compactly bounded
+subsets K of UX containing the place "2" it proves that for every ε∈ (0,1] there is a positive real number Cε
+such that for all elliptic curves over a number ﬁeld F coming from points of K outside a certain ﬁnite subset
+the inequality
+1
+6 deg(qEF ) ⩽ (1 + ε)
+(
+deg(condE) +deg(δF/Q)
+)
++Cε .
+holds. The proof involves a reduction to speciﬁc elliptic curves of Th. 1.10 and choosing the prime l above in
+the interval (
+√
+deg(qE),5c∗
+√
+deg(qE)log(c∗ deg(qE))) where c∗ = 213335|Fmod : Q|. Note that here the ε-term
+in the Szpiro inequality is given an essentially non-archimedean interpretation, modulo various global data and
+an application of the archimedean estimate given by the prime number theorem.
+Using a generalisation of the Belyi map obtained in [25], the V ojta conjecture in 1.3 over any number ﬁeld
+is proved in [29] to be equivalent to the V ojta conjecture on compactly bounded subsets ofP1(Qalg) for P1 over
+48 for more on this one can read Rk 3.12.2 of [31]-III
+49 Compare with the situation in Bogomolov’s birational anabelian geometry program for higher dimensional varieties over an
+algebraic closure of ﬁnite ﬁeld where the use ofG/[G, [G,G]] is enough, cf. [5].
+50 Cor. 3.12 of [31]-III supplies the double inequality −deg(qE ) ⩽−deg(ΘE ) ⩽ CΘ deg(qE ), provided−deg(ΘE ) is ﬁnite. The
+constant CΘ is explicitly computed in Th. 1.10 of [31]-IV . Substituting its value gives the displayed inequality.
+
+22 IV AN FESENKO
+Q minus three points 0,1, ∞.51 The use of noncritical Belyi maps in §2 of [31]-IV involves, via the application
+of [29], the product formula.
+Using all this, ﬁnally, one deduces the Vojta conjecture (e) of 1.3 (and therefore the conjectures (a), (b), (c)
+(d) of 1.3 as well), which correspond to Cor. 2.3 of [31]-IV , from Cor. 2.2 of [31]-IV .
+Among potential developments and further applications of IUT I will mention one which is asked about by
+many mathematicians. It is well known that the abc inequality implies that there exists a positive integer n0
+such that the Fermat equation with exponent n does not have positive integer solutions for any n ⩾ n0. In order
+to make n0 explicit and hence ideally derive a very different alternative proof of the Wiles–Fermat theorem, one
+needs to make explicit the constants in the proof of Cor. 2.2 of [31]-IV and to explicitly compute the noncritical
+Belyi maps which show up in [29]. The latter is currently out of reach. Alternatively, one can try to work
+with the Frey curve and the Szpiro inequality. Here the main problem is that over Q one needs bounds on the
+numbers nv (see 2.2) associated to all the valuations v of the number ﬁeld Q except at most one (so that one
+can apply the product formula). However, at the present time, the bounds on these numbers nv that one obtains
+from IUT (i.e., from Th. 1.10 of [31]-IV) are not available fortwo valuations of Q, namely, the prime 2 and the
+archimedean valuation.
+2.13. More theorems, objects and concepts of IUT. Some mathematicians are interested in seeing statements
+of a large number of theorems in survey texts. As far as IUT and these notes are concerned, this wish is difﬁcult
+to satisfy, since many central theorems of IUT are of an algorithmic nature, and their statements occupy a lot
+of space. For example, statements of key theorems in the introductions of IUT papers, i.e. Th. A in [31]-I, Th.
+A and B in [31]-II and Th. A in [31]-III, occupy 60 lines on average.
+My recommendation to readers of these notes who are interested in seeing more theorems is to read the
+introductions of [28], [30]-III, [31]-I-III, which contain detailed statements of the main theorems and related
+deﬁnitions.
+The description of IUT in the previous subsections is a quite simpliﬁed one. In particular, I have not written
+much about the categorical geometric framework developed in IUT and related papers, which underlies the
+proof of the main theorem of IUT.
+Further concepts and methods used in IUT and not discussed above include
+⋄ the concept and theory of frobenioids, cf. [27] I-II (see footnotes 22 and 37, and the examples in 2.10)
+⋄ the concept of arithmetical holomorphy immune to the logarithm, cf. [30]-III
+⋄ the concept of a global multiplicative subspace, cf. [31]-I
+⋄ Θ±ellNF-Hodge-theatres, cf. [31]-I (see footnote 37)
+⋄ proﬁnite conjugacy and tempered conjugacy, cf. [26], [31]-I
+⋄ Belyi cuspidalisation, elliptic cuspidalisation, cf. [30].
+2.14. Analogies and relations between IUT and other theories. There are many analogies between IUT and
+p-adic Teichmüller theory (and some analogies with complex Teichmüller theory) which are well described in
+[32], [33] and in §I4 of [31]-I.
+51 See also footnote 14. This reduction allows one to care relatively less about the archimedean data. I think that one can say,
+to some extent, that in IUT, instead of dealing with the archimedean data aspects of the Szpiro conjectured inequality, by using, say,
+analytic number theory, which is typically non-scheme-theoretic, one, in effect, moves the centre of activity to the nonarchimedean
+data, by applying the product formula; the resulting theory is necessarily non-scheme-theoretic.
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 23
+There are certain analogies between IUT and p-adic Hodge theory (which is applied in the proofs of mono-
+anabelian geometry). For example, the local and global functoriality of absolute anabelian algorithms cor-
+responds to some degree to compatible local isomorphisms between Galois cohomology modules in p-adic
+Hodge theory, see e.g. Fig.4.2 of [33]. The main ingredients of a frobenioid [27] are reminiscent of the theory
+of the ring Bcrys in p-adic Hodge theory.
+Hodge–Arakelov theory [23] is not formally used in [31], but some of its ideas and expectations motivate key
+concepts and objects of [31]; for more on this see [32], [33]. IUT can be viewed as a mathematical justiﬁcation
+and background for the realisation of a key idea from [23] concerning a possible approach to establishing the
+V ojta conjecture, see 2.12.
+A number of aspects of the theory of [8] can be viewed as abelian ancestors of certain aspects of IUT, see
+Rk 2.3.3 of [31]-IV .
+Relations with class ﬁeld theory, inverse Galois theory and anabelian geometry have already been discussed.
+The following relations and analogies between IUT and other theories are not used in [31].
+IUT works with elliptic curves and related hyperbolic curves over number ﬁelds, and it is crucial that they
+are treated as two-dimensional objects. Of course, elliptic curves over number ﬁelds can be studied by many
+methods. In particular, two-dimensional class ﬁeld theory and adelic geometry and analysis also treat them
+as two-dimensional objects, cf. [9]. The latter theory studies the zeta function of a surface, geometric or
+arithmetic. It provides an efﬁcient tool to study three fundamental problems concerning elliptic curves over
+number ﬁelds, which are different from the arithmetic conjectures addressed by IUT. While IUT works with
+the full Galois and arithmetic fundamental groups, [9] is a commutative theory that is closely connected to
+abelian Galois groups of two-dimensional ﬁelds. Similarly to the two types of symmetry in IUT, geometric-
+additive and arithmetic-multiplicative, see 2.7, there are two types of symmetry, one additive for geometric
+two-dimensional adeles and another symmetry is used for a computation of a two-dimensional zeta integral
+on multiplicative analytic two-dimensional adeles on surfaces. These two types of adelic symmetry play a
+fundamental role in [9]. The analytic adelic structure is highly non-scheme-theoretical. In fact, a version if
+the morphism of local monoid-theoretic structures mentioned at the beginning of 2.7 already showed up in ﬁrst
+papers of two-dimensional adelic analysis in 2001.
+There are other analogies between Hodge–Arakelov theory of [23] and [9] which led me in May 2012 to
+the study of the former. The nonarchimedean theta-functions are related to the complex theta-function θ (z, τ),
+as mentioned in 2.5. The Green function for a proper regular model E of an elliptic curve over a number
+ﬁeld is closely related with−log|θ (z, τ)|. On the other hand, the real variable function θ (0,ix) in x has an
+adelic interpretation as the integral over Q of the eigenfunction⊗char Zp(x)⊗ exp(−x2/2) of an adelic Fourier
+transform with eigenvalue 1 (char is the characteristic function); while the Fourier transform, which in this case
+is called the Mellin transform, ofθ (0,ix)−1 is the completed zeta function. Generalisations of these properties
+play a crucial role in two-dimensional adelic analysis and geometry on E ; there is a two-dimensional analogue
+of char Zp on each singular ﬁbre that takes into account the number of components in the singular ﬁbre, and
+the zeta integral computation gives a two-dimensional formula for the norm of the minimal discriminant and
+conductor of the elliptic curve, [9]. The texts [32], [33], [53] and papers of IUT present certain analogies
+between IUT and the computation of the classical Gaussian integral, and similar analogies exist also between
+the computation of the Gaussian integral and the computation of the zeta integral in the Iwasawa–Tate theory,
+the Langlands program and in two-dimensional adelic analysis and geometry [9].
+At the moment we know little about relations between IUT and nonabelian representation-theoretic aspects
+of the Langlands programme. I expect that more links between the two theories will eventually be found, and,
+
+24 IV AN FESENKO
+in particular, that the two-dimensional adelic theory of [9] and its nonabelian extensions can serve as a bridge
+between them.
+The algorithmic feature of many theorems of IUT is an interesting aspect. See also 3.2 for the need for a
+new language to possibly better describe the objects, concepts and results of IUT.
+Section 3 of [31]-IV deals with the language of species, naturally associated to IUT. The material of this
+section has a certain afﬁnity with model theory; for a textbook on the latter see e.g. [41]. In applications
+of model theory one observes or establishes the same model-theoretic-geometric pattern, typically for stable
+theories, between a theory T and a distinct theory T′; this common type thus allows one to verify difﬁcult
+results concerning T′ by means of some relatively easy veriﬁcation concerning T , i.e., to transfer aspects of
+T to T′. The existing applications of model theory, at least when one deals with formal (ﬁrst-order) theories,
+do not involve situations where T = T′.52 IUT studies the case where T = T′; this corresponds to the two
+equivalent ways for computing−deg(qE) mentioned in 2.11, see also Fig. I.8 of [31]-III. In this respect, IUT
+is an interesting object of study from the point of view of model theory.
+The use of Galois groups and arithmetic fundamental groups makes IUT very distinct from any other ongoing
+work on such fundamental issues in mathematics as geometry over F1, a nontrivial product with itself of an
+enhanced version of Spec(Z), analytic geometry over Z, etc., and the possible applications of such notions to
+the deepest open problems. For two analogies between aspects of IUT and geometry over F1, see Rk 5.10.2
+(iii) of [30]-III and Rk 3.12.4 (iii) of [31]-III. Even though it is too early to say, it is natural to expect many
+connections between IUT and such ongoing work.
+There are several well known conjectural approaches to deep properties of arithmetic objects where one
+wishes to have an arithmetic analogue of a theory which works well in the geometric setting. IUT provides
+such an arithmetic analogue in the special circumstances related to the arithmetic conjectures of 1.3. A very
+interesting question is whether some of the mechanisms of IUT could be generalised and extended in order to
+help to produce new instances of such arithmetic analogues of geometric theories.
+One may ask about possible illustrations for arithmetic deformation theory. In my personal opinion, this
+one53 is interesting from the point of view of depicting such important aspects of IUT as symmetry, synchro-
+nisation, discrete approximation and the role of the number 6. 54 You can also watch the animation illustrating
+IUT, a link to it is included at pages of two IUT workshops.
+3. S TUDYING IUT AND RELATED ASPECTS
+3.1. On the veriﬁcation of IUT (updated in July 2017). Updated versions and the history of changes of
+papers related to IUT are available on Sh. Mochizuki’s homepage. Some of the changes apply available
+resources of IUT in a stronger form, in particular addressing analytic number theory remarks made in the
+autumn of 2012 by Dimitrov and Venkatesh.
+52 More generally, in some applications of model theory, e.g. to generalised integration theories, one proves that the same pattern
+holds for ﬁelds of any characteristic
+53 The illustration of https://www.maths.nottingham.ac.uk/personal/ibf/graphene-lattice.pptx was presented
+during a talk of L. Eaves at the Opening Event of the new Molecular Beam Epitaxy Facility for the growth of graphene and boron
+nitride layers, University of Nottingham, January 2015.
+54 In IUT, the two combinatorial dimensions of a ring, which are often related to two ring-theoretic dimensions (one of which is
+geometric, the other arithmetic), play a central role. These two dimensions are reminiscent of the two parameters (one of which is
+related to electricity, the other to magnetism) which are employed in a subtle fashion in the study of graphene to establish a certain
+important synchronisation for hexagonal lattices.
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 25
+During the period July 2005 – March 2011 Sh. Mochizuki and F. Kato had a RIMS seminar on IUT. The
+changes in the papers of IUT and the prerequisites take also into account earlier hundreds of comments from
+G. Yamashita, over a hundred comments from M. Saïdi and several dozens of comments from Yu. Hoshi.55 See
+[34] and [35] for more details on the early stage of the study of IUT. Since December 2014, further comments
+arrived from the author of this text, E. Lepage, F. Tan and some of participants of workshops on IUT. None of
+the changes in IUT has been of a major character.
+There are two issues. One is an issue of veriﬁcation of absence of logical problems in the texts of IUT. As of
+the time of writing of this text, [31]-I-III and the prerequisites have been checked by mathematicians different
+from the author 12 times, and [31]-IV has been checked 7 times.56 By July 2017 the number of veriﬁcations of
+the IUT papers has perhaps reached 30 times or more. Two reports on the veriﬁcation of IUT, [34] and [35],
+present vast efforts on the early stage of veriﬁcation of IUT and include many more details. The second issue
+is of digestion of the theory, its potential simpliﬁcation and its further developments. This will take more time,
+since IUT goes substantially outside the realm of conventional arithmetic geometry.
+Numerous activities have been organised at RIMS and elsewhere; participants of cycles of lectures included
+many mathematicians. A two week workshop on IUT and its developments was held at RIMS in March 2015.
+A CMI workshop on IUT was held in December 2015 in Oxford, and an international conference on IUT and
+further developments was organised at RIMS in Kyoto in July 2016, [52], [54].
+As with every genuinely breakthrough theory, whatever is the previous experience of a mathematician, she
+or he is a student with regard to IUT, and the only way to gain a knowledge of it is to work with its texts. See the
+foreword of this paper, and the next subsection for some advice on how to study and an estimate of associated
+time investment.
+3.2. Entrances to the study of IUT (updated in July 2017). The number of pages to read and the complexity
+of this fascinating theory are vast. This may be partially related to the absence of a new language best suited to
+describing the novel mathematics of IUT.
+Initially I found even the review papers [32] and [33] and introductions of IUT papers difﬁcult to understand.
+The situation improved after a list of the main ideas and methods of IUT revealed the central place of [30]-III
+and [28]. Reading [30]-III was very useful for my study. Following this single paper helped me to gradually
+see and appreciate the need for approximately half of the new mathematical concepts and structures in IUT.
+Prior to the RIMS workshop on IUT, a very readable survey by the author of the theory was released [53].
+I will describe possible entries to the theory.
+For classical anabelian geometry, if needed, ﬁrst read Ch.4 of [45] and [13] and also have a look at [42].
+The following papers and theories can be read prior to the study of IUT:
+55 Three months prior to my planned visit to RIMS in September 2012, I arranged a meeting with Sh. Mochizuki on September 15
+to discuss his theory [23]. After learning about the IUT papers from A. Tamagawa on August 30, I informed various mathematicians
+about it, their list included G. Yamashita (one of postdocs in Nottingham in 2008–2010) who asked me to tell him about IUT after my
+scheduled meeting with Sh. Mochizuki. The next day after receiving my email he contacted Sh. Mochizuki to express his interest to
+study IUT. After my meeting on September 15 with the author of IUT I told about its content to G. Yamashita and supported his interest
+to study the theory.
+56 Recall these famous words of G. Hardy: “I have myself always thought of a mathematician as in the ﬁrst instance an observer, a
+man who gazes at a distant range of mountains and notes down his observations ... If he wishes someone else to see it, he points to it ...
+When his pupil also sees it, the proof is ﬁnished”, p. 598 of vol. 7 of [14].
+
+26 IV AN FESENKO
+◦ the Bogomolov proof of the geometric version of the Szpiro inequality (see 1.3 and footnote 44), which
+involves geometric considerations that are substantially reminiscent of the geometry that underlies the
+Hodge theatres of [31]-I, cf. sect. 5.3 of [1], [4], [50], see also footnote 44
+◦ the classical theory of the functional equation of the theta-function, as discussed, for instance in §1.7.5
+of [7], which was one important motivation for the development of the theory of [31]-II-III, see also
+[37] for more on the archimedean theta-function
+◦ the classical theory of moduli of ordinary elliptic curves in positive characteristic and the related struc-
+ture of the Hecke correspondence (i.e. Tp) in positive characteristic, which is also substantially remi-
+niscent of the geometry that underlies the Hodge theatres of [31]-I.
+For IUT: ﬁrst read §1–2 of [30]-III (and any previous relevant papers) and [28], and then the papers of [31],
+consulting [27] when necessary, as well as [25] and [29], which are used in [31]-IV .
+Category theorists and algebraists may prefer to start with a reading of [27] and [24].
+Online materials of the Oxford and RIMS workshops on IUT, [52], [54], and the forthcoming volume of
+proceedings of the latter are other useful sources for the study of IUT. If you can read Japanese, there are two
+surveys of IUT by Yu. Hoshi, [51]. For a very elementary and general presentation of IUT and its place see
+[55].
+3.3. The work of Shinichi Mochizuki. The mathematical vision and perseverance of the author of IUT during
+20 years of work on it is most admirable and is a sample to follow.
+A valuable addition to this is his investment of time and effort in answering questions about his work and
+explaining and discussing its parts, via email communication or skype talks and during numerous meetings and
+seminars at RIMS.
+This theory is so radically different from anything that came before it that it is natural to ask whether it
+will induce a paradigm shift, and also how it may change the way one can approach mathematical research.
+The reconstruction algorithm-theoretic approach of [31]-I-III, as well as of [30]-III, [28], contains elements
+that are radically different from the usual approach to proving theorems, and hence from the usual approach to
+writing mathematical papers. To some degree, IUT may be thought of as a sort of meta-structure which acts on
+appropriate parts of conventional scheme-theoretic arithmetic geometry. In doing so, it allows one to explicate,
+with relative ease, phenomena (such as the V ojta conjecture) that seemed inaccessible via existing mathematical
+theories.
+Knowing what one can achieve if one works persistently on a long-term goal provides one with an optimistic
+hope that other difﬁcult challenges might be solved as the result of long-term resolute innovative work.
+3.4. Related issues. It is clear how crucial long-term work is for real breakthroughs in mathematics. Questions
+arise such as how to increase the number of researchers able to work for a long time on fundamental problems
+so sedulously and successfully and what should be the amount of support to this strategically important type of
+research work.
+An opinion of R. Langlands on current trends about supporting long-term fundamental research work can be
+heard during the 52nd minute of his video lecture [20].
+Some roots of the decline of support to long-term fundamental work, such as the shortsighted race to higher
+number of publications and higher citation index, which often results in pressure to produce short-term work
+that consists essentially of minor improvements to known results, originate from causes external to the mathe-
+matical community. To do well in their academic career, young researchers are very often pushed to go along
+this path which typically implies a very narrow specialisation. The latter leads to the emphasis on technical
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 27
+perfection as opposite to innovation and on presentation rather than substance of work. Following this path
+eventually makes it more difﬁcult to think in broader terms, to learn new concepts, to develop in new direc-
+tions. Lack of inventiveness, more widely spread imitation, very pragmatic attitudes to what and when to study
+in mathematics, lack of genuine enthusiasm to study new theories, fear to stand alone in scientiﬁc endeavour,
+fear to look too far away are associated issues. Some roots, such as the unnecessarily strong emphasis on
+concrete applications57, originate from within the mathematical community.
+There is an issue about attitudes of number theorists towards the study of IUT and their unusually sluggish
+response. Reasons for this are related to the topics discussed in the third paragraph of 3.3 and in the previous
+paragraph. It seems that the number theory community is suffering from the problems listed there even more
+than other mathematical communities.
+Acknowledgements. I am most grateful to Shinichi Mochizuki for many interesting and often fascinating dis-
+cussions and for his answers to my numerous questions, as well as for his valuable comments and remarks on
+preliminary drafts of this text. I am thankful to Akio Tamagawa for supporting my visits to RIMS in September
+2012 and December 2014. I am thankful to Go Yamashita for answering my questions on IUT prior to my
+second visit to RIMS, as well as to him and Yuichiro Hoshi for answering my specialised questions during my
+visit. I am very grateful to Fedor Bogomolov for highly interesting discussions on his related work. Work on
+this text was partially supported by University of Nottingham and EPSRC programme grant EP/M024830.
+REFERENCES
+[1] J. A MOROS , F. B OGOMOLOV , L. K ATZARKOV , T. PANTEV , Symplectic Lefschetz ﬁbrations with arbitrary fundamental groups,
+J. Diff. Geometry 54(2000) 489–545, available from http://arxiv.org/abs/math/9810042
+[2] Arithmetic geometry, G. Cornell, J.H. Silverman (eds.), Springer 1986.
+[3] G. V. B ELYI, On Galois extensions of a maximal cyclotomic ﬁeld,Izv. Akad. Nauk SSSR Ser. Mat.43:2 (1979), 269–276; English
+transl. in Math. USSR- Izv. 14 (1980), 247–256.
+[4] F. B OGOMOLOV , L. K ATZARKOV , T. P ANTEV , Hyperelliptic Szpiro inequalities, J. Diff. Geometry 61(2002) 51–80, available
+from http://arxiv.org/abs/math/0106212
+[5] F. B OGOMOLOV , Y U. T SCHINKEL , Galois theory and projective geometry, Comm. Pure and Applied Math. , 66, no. 9, 1335–
+1359, (2013); available from http://www.math.nyu.edu/~tschinke/papers/yuri/11cpam/cpam10.pdf
+[6] E. B OMBIERI , W. G UBLER , Heights in diophantine geometry, CUP 2006.
+[7] H. D YM, H.P. M CKEAN , Fourier series and integrals, Academic Press 1972.
+[8] G. F ALTINGS , Endlichkeitssätze für Abelschen Varietäten über Zahlkörpern, Invent. Math. 73(1983), 349–366.
+[9] I. F ESENKO , Adelic approach to the zeta function of arithmetic schemes in dimension two, Moscow Math. J. 8 (2008), 273–317,
+available from https://www.maths.nottingham.ac.uk/personal/ibf/ada.pdf
+[10] I.B. F ESENKO , S.V. V OSTOKOV , Local ﬁelds and their extensions, 2nd extended ed., AMS 2002, available fromhttps://www.
+maths.nottingham.ac.uk/personal/ibf/book/book.html
+[11] M. G ROMOV, Hyperbolic manifolds (according to Thurston and Jorgensen), In Bourbaki Seminar, V ol. 1979/80, Lecture Notes
+Math. 842, Springer 1981, pp. 40–53.
+[12] A. G ROTHENDIECK , Esquisse d’un programme, 1983, in P. Lochak, L. Schneps, Geometric Galois actions 1,LMS Lect. Note Ser.
+242, CUP 1997, available from http://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/EsquisseFr.
+pdf; English transl. is available from http://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/
+EsquisseEng.pdf
+[13] A. G ROTHENDIECK , anabelian letter to G. Faltings, June 1983, in P. Lochak, L. Schneps, Geometric Galois ac-
+tions 1, LMS Lect. Note Ser. 242, CUP 1997, available from http://webusers.imj-prg.fr/~leila.schneps/
+grothendieckcircle/Letters/GanF.pdf; English transl. is available from http://webusers.imj-prg.fr/~leila.
+schneps/grothendieckcircle/Letters/GtoF.pdf
+[14] G. H ARDY, Collected papers, OUP, 1966–1979.
+57 recall the very topical words of Grothendieck in this respect on p.1 of [13]
+
+28 IV AN FESENKO
+[15] M. H INDRY, J. S ILVERMAN , Diophantine geometry: an introduction, Springer 2000.
+[16] Y U. H OSHI , Existence of nongeometric pro- p Galois sections of hyperbolic curves, Publ. RIMS 46 (2010), 829–848, available
+from http://www.kurims.kyoto-u.ac.jp/~yuichiro/existence_of_nongeometric_pro-p_galois_sections.pdf
+[17] Y U. HOSHI , Mono-anabelian reconstruction of number ﬁelds,RIMS preprint 1819 (2015), available fromhttp://www.kurims.
+kyoto-u.ac.jp/~yuichiro/rims1819.pdf
+[18] Y U. H OSHI , S H. M OCHIZUKI , Topics surrounding the combinatorial anabelian geometry of hyperbolic curves IV: discrete-
+ness and sections, RIMS Preprint 1788, September 2013, available from http://www.kurims.kyoto-u.ac.jp/~motizuki/
+Combinatorial%20Anabelian%20Topics%20IV.pdf
+[19] M. K IM, A remark on fundamental groups and effective diophantine methods for hyperbolic curves, in Number theory, analy-
+sis and geometry – in memory of S.Lang, Springer 2010, available from http://people.maths.ox.ac.uk/kimm/papers/
+effective.pdf
+[20] R. L ANGLANDS , Problems in the theory of automorphic forms: 45 years later, video lectures at Nottingham–Oxford confer-
+ence on symmetries and correspondences, July 2014, Oxford Univ., available fromhttps://www.maths.nottingham.ac.uk/
+personal/ibf/files/S&C-schedule.html
+[21] G. M ALLE , B.H. M ATZAT, Inverse Galois theory, Springer 1999.
+[22] J. M ILNE , Arithmetic duality theorems, 2nd revised ed., BookSurge, 2004 and 2006, available fromhttp://www.jmilne.org/
+math/Books/ADTnot.pdf
+[23] S H. M OCHIZUKI , A survey of the Hodge–Arakelov theory of elliptic curves I, in Proc. of Symp. Pure Math. 70, AMS (2002),
+533–569; II, in Algebraic Geometry 2000, Azumino, Adv. Stud. Pure Math. 36, Math. Soc. Japan (2002), 81–114, available with
+comments from http://www.kurims.kyoto-u.ac.jp/~motizuki/papers-english.html
+[24] S H. M OCHIZUKI , The geometry of anabelioids, Publ. Res. Inst. Math. Sci. 40 (2004), 819–881, available with comments from
+http://www.kurims.kyoto-u.ac.jp/~motizuki/papers-english.html
+[25] S H. M OCHIZUKI , Noncritical Belyi maps, Math. J. Okayama Univ. 46 (2004), 105–113, available with comments from http:
+//www.kurims.kyoto-u.ac.jp/~motizuki/papers-english.html
+[26] S H. M OCHIZUKI , Semi-graphs of anabelioids, Publ. Res. Inst. Math. Sci. 42 (2006), 221–322, available with comments from
+http://www.kurims.kyoto-u.ac.jp/~motizuki/papers-english.html
+[27] S H. MOCHIZUKI , The geometry of frobenioids I: The General theory,Kyushu J. Math. 62 (2008), 293–400; II: Poly-Frobenioids,
+Kyushu J. Math. 62 (2008), 401–460, available with comments from http://www.kurims.kyoto-u.ac.jp/~motizuki/
+papers-english.html
+[28] S H. M OCHIZUKI , The étale theta function and its frobenioid-theoretic manifestations, Publ. Res. Inst. Math. Sci. 45 (2009),
+227–349, available with comments from http://www.kurims.kyoto-u.ac.jp/~motizuki/papers-english.html
+[29] S H. M OCHIZUKI , Arithmetic elliptic curves in general position, Math. J. Okayama Univ. 52 (2010),1–28, available with com-
+ments from http://www.kurims.kyoto-u.ac.jp/~motizuki/papers-english.html
+[30] S H. MOCHIZUKI , Topics in absolute anabelian geometry I: Generalities,J. Math. Sci. Univ. Tokyo19 (2012), 139–242; II: Decom-
+position groups and endomorphisms,J. Math. Sci. Univ. Tokyo20 (2013), 171–269; III: Global reconstruction algorithms, J. Math.
+Sci. Univ. Tokyo 22 (2015), 939–1156, available with comments from http://www.kurims.kyoto-u.ac.jp/~motizuki/
+papers-english.html
+[31] S H. M OCHIZUKI , Inter-universal Teichmüller theory I: Constructions of Hodge theaters, preprint 2012–2017, II: Hodge-
+Arakelov-theoretic evaluation, preprint 2012–2017; III: Canonical splittings of the log-theta-lattice, preprint 2012–2017; IV:
+Log-volume computations and set-theoretic foundations, preprint 2012–2017, available from http://www.kurims.kyoto-u.
+ac.jp/~motizuki/papers-english.html
+[32] S H. M OCHIZUKI , Invitation to inter-universal Teichmüller theory (lecture note version), available from http:
+//www.kurims.kyoto-u.ac.jp/~motizuki/Invitation%20to%20Inter-universal%20Teichmuller%20Theory%
+20(Lecture%20Note%20Version).pdf
+[33] S H. M OCHIZUKI , A panoramic overview of inter-universal Teichmüller theory, in Algebraic number theory and related topics
+2012, RIMS Kokyuroku Bessatsu B51, RIMS, Kyoto (2014), 301–345, available fromhttp://www.kurims.kyoto-u.ac.jp/
+~motizuki/Panoramic%20Overview%20of%20Inter-universal%20Teichmuller%20Theory.pdf
+[34] S H. M OCHIZUKI , On the veriﬁcation of inter-universal Teichmüller theory: a progress report (as of December 2013), available
+from http://www.kurims.kyoto-u.ac.jp/~motizuki/IUTeich%20Verification%20Report%202013-12.pdf
+[35] S H. M OCHIZUKI , On the veriﬁcation of inter-universal Teichmüller theory: a progress report (as of December 2014), available
+from http://www.kurims.kyoto-u.ac.jp/~motizuki/IUTeich%20Verification%20Report%202014-12.pdf
+
+NOTES ON THE WORK OF SHINICHI MOCHIZUKI ON ARITHMETIC DEFORMATION THEORY 29
+[36] S H. M OCHIZUKI , Bogomolov’s proof of the geometric version of the Szpiro conjecture from the point of view of
+inter-universal Teichmüller theory, available from http://www.kurims.kyoto-u.ac.jp/~motizuki/Bogomolov%20from%
+20the%20Point%20of%20View%20of%20Inter-universal%20Teichmuller%20Theory.pdf
+[37] D. M UMFORD , Tata lectures on theta, V ols. I–II and III, Birkhäuser, 1983 and 1991.
+[38] D. M UMFORD , An analytic construction of degenerating abelian varieties over complete rings, appendix to G. Faltings, C.-L.
+Chai, Degenerations of abelian varieties, Springer 1990.
+[39] J. N EUKIRCH , Algebraic number theory, Springer 1999, available fromhttp://www.mathi.uni-heidelberg.de/~schmidt/
+NSW2e/index.html and the list of corrections available from http://www.mathi.uni-heidelberg.de/~schmidt/NSW2e/
+errata-nsw2e.pdf
+[40] J. N EUKIRCH , A. S CHMIDT , K. W INGBERG , Cohomology of number ﬁelds, corr. 2nd ed., Springer 2008, available fromhttp:
+//www.mathi.uni-heidelberg.de/~schmidt/NSW2e/index.html and the list of corrections available from http://www.
+mathi.uni-heidelberg.de/~schmidt/NSW2e/errata-nsw2e.pdf
+[41] B. P OIZAT, A course in model theory, Springer 2000 (translated into English from the original French edition published by the
+author in 1985).
+[42] F. P OP, Lectures on anabelian phenomena in geometry and arithmetic (December 2010), available from http://math-proxy.
+sas.upenn.edu/~pop/Research/files-Res/AnabPhen_20Dec10.pdf
+[43] A. R OBERT , Elliptic curves, Lect. Notes Math. 326, Springer 1973.
+[44] J. S ILVERMAN , Advanced topics in the arithmetic of elliptic curves, Springer 1994.
+[45] T. S ZAMUELY , Galois groups and fundamental groups, CUP 2009, corrections are available from http://www.renyi.hu/
+~szamuely/erratafg.pdf
+[46] J. T ATE, A review of non-archimedean elliptic functions, available from https://www.ma.utexas.edu/users/voloch/
+Ellnotes/nonarch-ams.pdf
+[47] P. V OJTA, A more general abc conjecture,Int. Math. Res. Not., 21 (1998), 1103–1116, available fromhttp://arxiv.org/pdf/
+math/9806171v1.pdf
+[48] P. V OJTA, Diophantine inequalities and Arakelov theory, Appendix of S. Lang, Introduction to Arakelov theory, Springer 1988.
+[49] M. W ALDSCHMIDT , On the abc conjecture and some of its consequences, March 2013, available from http://webusers.
+imj-prg.fr/~michel.waldschmidt/articles/pdf/abcLahore2013VI.pdf
+[50] S H. Z HANG , Geometry of algebraic points, In First Intern. Congr. Chinese Mathematicians (Beijing, 1998), 185–198, AMS/IP
+Stud.Adv.Math. 20 (2001), available from https://web.math.princeton.edu/~shouwu/publications/iccm98.pdf
+[51] Y U. H OSHI , Introduction to inter-universal Teichmüller theory (in Japanese); Introduction to inter-universal Teichmüller theory,
+continued (in Japanese), available from http://www.kurims.kyoto-u.ac.jp/~yuichiro/papers_e.html
+[52] I. F ESENKO (ED.), Extended online proceedings of the Oxford workshop on IUT theory of Sh. Mochizuki, available fromhttps:
+//www.maths.nottingham.ac.uk/personal/ibf/files/iut-sch1.html
+[53] S H. M OCHIZUKI , Alien copies, Gaussians and inter-universal Teichmüller theory, available from http://www.kurims.
+kyoto-u.ac.jp/~motizuki/Alien%20Copies,%20Gaussians,%20and%20Inter-universal%20Teichmuller%
+20Theory.pdf
+[54] I. F ESENKO , S H. M OCHIZUKI , Y U.TAGUCHI (ORGS .), Inter-universal Teichmüller Theory Summit 2016, the workshop pages
+are available from https://www.maths.nottingham.ac.uk/personal/ibf/files/iut-kyoto-pr.html
+[55] I. F ESENKO , Fukugen, Inference: International Review of Science 2 no. 3 (2016), available fromhttp://inference-review.
+com/article/fukugen

@@ -1,0 +1,610 @@
+TEICHM ¨ULLER DILA TIONS OF V AR YING HUES:
+FROM COMPLEX TEICHM ¨ULLER THEOR Y TO
+IUT TO GT [JOINT WORK IN PROGRESS WITH
+TSUJIMURA/TSUJIMURA-SA ¨IDI] (2025 ICMS VERSION)
+Shinichi Mochizuki (RIMS, Kyoto University)
+April 2025
+https://www.kurims.kyoto-u.ac.jp/~motizuki/Tch%20Dilations%20of%20
+Varying%20Hues%20(ICMS%202025%20version).pdf
+§ 1. Ring-theoretic interpretation of complex Teichm¨ uller theory
+§ 2. The case of inter-universal Teichm¨ uller theory (IUT)
+§ 3. Combinatorial function theory for idempotents
+§ 4. GT via combinatorial algebraization theory (CAT)
+Typeset by A M S -T E X
+1
+
+2 SHINICHI MOCHIZUKI
+(RIMS, KYOTO UNIVERSITY)
+§1. Ring-theoretic interpretation of complex T eichm¨ uller theory
+· Review of classical
+complex Teichm¨ uller theory:
+(cf. [EssLgc],
+Example 3.3.1)
+Recall the most fundamental deformation of complex structure in
+classical complex Teichm¨ uller theory: forλ ∈ R>1,
+Λ : C → C
+C ∋ z =x +iy ↦→ ζ = ξ +iη
+def
+= λ ·x +iy ∈ C
+— where x,y ∈ R.
+· Classical complex Teichm¨ uller theory on Riemann surfaces:
+More generally,
+on a single (oriented) topological surface S, we
+can
+start with one holomorphic structure H1 on S and a square
+diﬀerential relative to H1,
+then form the Teichm¨ uller dilation,
+or Teichm¨
+uller map , obtained b
+y deforming (i.e., in the fashion
+described above) the canonical holomorphic coordinate obtained
+by integrating the square root of the square diﬀerential (along
+paths) so as to obtain a new holomorphic structure H2.
+Next, for i = 1
+, 2, write
+OHi for the sheaf of holomorphic functions on S, rel. to Hi;
+OR for
+the sheaf of (complex valued) real analytic fns. on S.
+Here, we
+note that for connected open subsets U ⊆S, OR(U) is
+a domain, i.e., unlik
+e the case with continuous or C∞-functions.
+That is to say, OR is in some sense close to being
+like OHi, for
+i = 1, 2, but still suﬀ’ly large as to allo
+w one to obtainembeddings
+in the common
+container OR:
+OH1 ⊆ O R ⊇ OH2
+· In the
+remainder of the present talk, we would like to consider
+various arithmetic analogues of the function
+theory discussed
+above in the complex case.
+..................................................
+..................................................
+
+TEICHM ¨ULLER DILATIONS OF V ARYING HUES 3
+§ 2. The case of inter-universal T eichm¨ uller theory (IUT)
+· A more detailed exposition of IUT may be found in
+· the survey texts [Alien], [EssLgc], as well as in
+· the videos/slides available at the following URLs:
+(cf. also my series of DWANGO LECTURES on IUT
+— URLs available at request!):
+https://www.kurims.kyoto-u.ac.jp/~motizuki/ExpHoriz
+IUT21/WS3/ExpHorizIUT21-InvitationIUT-notes.html
+https://www.kurims.kyoto-u.ac.jp/~motizuki/ExpHoriz
+IUT21/WS4/ExpHorizIUT21-IUTSummit-notes.html
+· Let R be an integral domain (e.g., Z ⊆ Q ) equipped with the
+action of a group G , ( Z ∋ ) N ≥ 2. For simplicity, assume that
+N = 1+ · · · +1 ̸= 0 ∈ R ; R has no nontrivial N -th roots of unity .
+Write R ⊿ ⊆ R for the multiplicative monoid R \ { 0 } . Then
+let us observe that the N -th power map on R ⊿ determines an
+isomorphism of multiplicative monoids equipped with actions
+by G
+G ↷ R ⊿ ∼
+→ (R ⊿ ) N ( ⊆ R ⊿ ) ↶ G
+that does not arise from a ring homomorphism , i.e., it is clearly
+not compatible with addition (cf. our assumption on N !).
+· Let †R , ‡R be two distinct copies of the integral domain R ,
+equipped with respective actions by two distinct copies †G , ‡G
+of the group G . We shall use similar notation for objects with
+labels “ † ”, “ ‡ ” to the previously introduced notation. Then
+one may use the isomorphism of multiplicative monoids arising
+from the N -th power map discussed above to glue together
+†G ↷ †R ⊇ (†R ⊿ ) N ∼
+← ‡R ⊿ ⊆ ‡R ↶ ‡G
+... where the notion of a gluing may be understood
+· as a quotient set via identiﬁcations, or (preferably)
+· as an abstract diagram (cf. graphs of groups/anabelioids!)
+the ring †R to the ring ‡R along the multiplicative monoid
+(†R ⊿ ) N ∼
+← ‡R ⊿ . This gluing is compatible with the respective
+actions of †G , ‡G relative to the isomorphism †G
+∼
+→ ‡G given by
+forgetting the labels “ † ”, “ ‡ ”, but, since the N -th power map is
+not compatible with addition (!), this isomorphism †G
+∼
+→ ‡G may
+be regarded either as an isomorphism of (“ coric ”, i.e., invariant
+with respect to the N -th power map) abstract groups (cf. the
+notion of “ inter-universality ”, as discussed in [EssLgc], § 3.2,
+§ 3.8!) or as an isomorphism of groups equipped with actions on
+certain multiplicative monoids , but not as an isomorphism of
+(“ Galois ” — cf. the inner automorphism indeterminacies of
+SGA1!) groups equipped with actions on rings/ﬁelds .
+
+4 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+· The problem of describing (certain portions of the) ring structure
+of †R in terms of the ring structure of ‡R — in a fashion that
+is compatible with the gluing and via a single algorithm that may
+be applied to the common (cf. logical AND ∧ ! ) glued data to re-
+construct simultaneously (certain portions of) the ring structures
+of both †R and ‡R , up to suitable relatively mild indeterminacies
+(cf. the theory of crystals !) — seems (at ﬁrst glance/in general)
+to be hopelessly intractable (cf. the case of Z )!
+... where we note that here, considering portions is
+important because we want to decompose the above
+diagram up into pieces so that we can consider
+symmetry properties involving these pieces!
+One well-known elementary example: when N = p , working
+modulo p (cf. indeterminacies , analogy with crystals !), where
+there is a common ring structure that is compatible with the
+p -th power map !
+Another important example: Faltings’ proof of invariance of
+height of elliptic curves under isogeny , under the assumption
+of the existence of a global multiplicative subspace (cf. [ClsIUT],
+§ 1; [EssLgc], Example 3.2.1)!
+... This is precisely what is achieved in IUT by means of the
+multiradial representation for the Θ -pilot via
+· anabelian geometry (cf. the abstract groups †G , ‡G !);
+· the p -adic/complex logarithm, theta functions ;
+· Kummer theory , to relate Frob.-/´ etale-like versions of objects.
+· Main point :
+The multiplicative monoid and abstract group structures (but not
+the ring structures!) are common (cf. “ logical AND ∧ ! ”) to † , ‡
+and can be used as the input data for an algorithm to construct
+the multirad. rep. for the Θ -pilot , i.e., a common container
+for the distinct ring strs. (i.e., “ arith. hol. strs. ”) † , ‡
+†R ⊆
+(
+multirad. rep. for the Θ-pilot
+)
+⊇ ‡R
+· When R = Z (or, in fact, more generally, the ring of integers
+“ O F ” of a number ﬁeld F — cf. the multiplicative norm map
+N F/ Q : F → Q ), one may consider the “ height/log-volume ”
+log( |x | ) ∈ R
+for 0 ̸= x ∈ Z . Then the N -th power map of (i), (ii) corresponds,
+after passing to heights , to multiplying real numbers by N ; the
+multiradial algorithm corresponds to saying that the height is
+unaﬀected (up to a mild error term!) by multiplication by N ,
+hence that the height is bounded !
+
+TEICHM ¨ULLER
+DILATIONS OF V ARYING HUES 5
+· In the case of IUT, the multirad. rep. for the Θ-pilot is
+obtained by
+means of a sort of “ analytic continuation”
+along a certain “inﬁnite H ”
+of
+the log-theta-lattice [cf.
+the discussion surrounding [EssLgc], §3.3,
+(InfH)]
+... where
+· the Θ-link b
+etween distinct ring strs. “ •” corresponds
+to the N-th power map discussed in the present §2, while
+· the log-link lo
+cally at nonarchimedean valuations looks
+like the p-adic logarithm between distinct ring strs. “ •”;
+· the descent operations rev
+olve around the establishment
+of certain coricity/symmetry prop
+erties.
+..
+. .
+.
+.
+↑
+log
+↑
+
+log
+...
+Θ
+− → •
+Θ
+− → •
+Θ
+− → ...
+↑
+log
+↑log
+...
+Θ
+− → •
+Θ
+− → •
+Θ
+− → ...
+↑
+log
+↑log
+...
+Θ
+− → •
+Θ
+− → •
+Θ
+− → ...
+↑
+log
+↑log
+..
+. .
+.
+.
+⊇
+.
+.
+. .
+.
+.
+↑
+log
+↑
+
+log
+• •
+↑
+log
+↑log
+•
+Θ
+− → •
+↑
+log
+↑log
+• •
+↑
+log
+↑log
+..
+. .
+.
+.
+(0, 0)
+(Stp1)
+⇝ (0, ◦)
+(Stp2)
+⇝ (0, ◦)⊢ (Stp3)
+⇝ (0, 0)⊢ (Stp3)
+⇐ ⇒ (1, 0)⊢
+— which involves a gradual introduction via “ descent
+”
+operations of
+“fuzziﬁcations”,
+corresponding to indeterminacies [cf.
+the discussion
+of [EssLgc], §3.10].
+· At a more technical level, the multirad. rep. for the Θ-pilot is
+obtained by
+constructing invariants with
+respects to the log-link,
+which has the eﬀect
+of juggling addition and multiplication —
+i.e., juggling the dilated and
+non-dilate
+d p
+ortions of the ring strs. —
+and, as a result, eﬀects a sort of
+“miraculous rotation”
+(the discussion of [EssLgc], §3.11)
+of the
+· “mysterious log-volume-dilating Θ-link gap”
+(between the
+domain/codomain of the Θ-link) onto the
+· “harmless log-volume-preserving log-link gap”
+(between the
+domain/codomain of the log-link) !
+•
+↑log
+•
+Θ
+− → •
+“ “  ↷ ↷  
+” ”  
+
+6 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+§ 3. Combinatorial function theory for idempotents
+(cf. [ArGT], § 1)
+· The following elementary result in combinatorial function theory
+concerning idempotents is the key technical lemma that underlies
+combinatorial algebraization theory (CAT) :
+Let
+· K be a perfect ﬁeld;
+· X an aﬃne hyperbolic curve over K ;
+· X act ⊆ X (K ) an inﬁnite subset;
+· Y → X a ﬁnite ´ etale Galois covering of hyperbolic curves over
+K , whose Galois group we denote by Q .
+Write
+R X ⊆ R Y ⊆ Fn( Y
+act
+, K )
+for the sub- K -algebras of the K -algebra Fn( Y act , K ) of (arbitrary set-theoretic)
+K -valued functions on Y act def
+= X act × X (K ) Y (K ) determined, via evaluation
+of functions at points ∈ Y act , by X and Y , respectively. Let A be a ﬁnite
+set and, for each α ∈ A ,
+R X ⊆ R α ⊆ Fn( Y
+act
+, K )
+a sub- K -algebra of Fn( Y act , K ) that contains R X , is isomorphic to R Y as
+an R X -algebra, and is stabilized by the natural action of Q on Fn( Y act , K )
+(induced by the natural action of Q on Y act ) in such a way that this natural
+action induces an isomorphism Q
+∼
+→ Gal( R α /R X ). Write
+R A ⊆ Fn( Y
+act
+, K )
+for the sub- R X -algebra of Fn( Y act , K ) generated by the sub- R X -algebras
+R α , as α ranges over the elements of A . Thus, one veriﬁes immediately
+that, after possibly removing ﬁnitely many elements of X act from X act , we
+may assume without loss of generality that R A is an R X -ﬂat quotient of the
+tensor product
+R⊗
+def
+= ⊗ α∈ A R α
+of R X -algebras, hence is ﬁnite ´ etale over R X . In particular, Spec( R A ) has
+only ﬁnitely many connected components. Write
+I
+for the ﬁnite set of connected components of Spec( R A );
+E
+def
+= {ϵi 0 }i 0∈ I
+for the set of idempotents of R A corresponding to the elements of I (i.e.,
+idempotents whose support consists of precisely one connected component
+of Spec( R A )). Thus, Q acts naturally on R A , R⊗ , and E , and one veriﬁes
+
+TEICHM ¨ULLER DILATIONS OF V ARYING HUES 7
+immediately that one may think of E as a set of mutually orthogonal idem-
+potents of R A of maximal cardinality . Then there exists an inﬁnite subset
+X act ,† ⊆ X act such that, if we write
+R
+†
+X , R
+†
+Y , R
+†
+A , E
+†, 0
+⊆ Fn( Y
+act, †
+, K )
+for the subsets of the set Fn( Y act, †, K ) of (arbitrary set-theoretic) K -valued
+functions on Y act, † def
+= X act ,† × X (K ) Y (K ) determined, via evaluation of
+functions at points ∈ Y act, † , by R X , R Y , R A and E , respectively, then
+the subset E † ⊆ E †, 0 of nonzero elements of E †, 0 satisﬁes the following
+properties:
+(a) The set E † is a set of mutually orthogonal idempotents of R
+†
+A of
+maximal cardinality , i.e., it is in natural bijective correspondence
+with the set of connected components of Spec( R
+†
+A ).
+(b) The natural action of Q on E † is transitive . In particular, the
+cardinality of E † divides the order of Q .
+(c) Let H ⊆ Q be the stabilizer of an element of E † . (Thus, the Q -
+conjugacy class of H is independent of the choice of an element of
+E † .) Then for any x ∈ X act ,† , the intersections with the Q -torsor
+Y
+act, †
+|x
+def
+= Y
+act, †
+× X act , † {x } ⊆ Y
+act, †
+of the supports of the elements of E † may be described, for a
+suitable choice of y ∈ Y act, † |x , as the subsets q · H · y ⊆ Y act, † |x ,
+as q ranges over the elements of Q .
+Proof (sketch) of (b) :
+Write
+E Q
+for the set of Q -orbits of E . Thus, since E consists of mutually orthogonal
+idempotents, each element of E Q may be thought of as a Q -invariant idem-
+potent of R A (i.e., by adding up the elements in the corresponding Q -orbit
+of E ). Moreover, it follows immediately that the idempotents associated to
+elements of E Q are also mutually orthogonal. Next, since the idempotents
+of E Q are Q -invariant, it follows from the structure of Fn( Y act , K ) that
+they may be thought of as idempotents of Fn( X act , K ). Since E Q is a ﬁnite
+set, by considering the supports of these idempotents of Fn( X act , K ), we
+thus obtain a ﬁnite partition of X act . Thus, since any ﬁnite partition of an
+inﬁnite set as a ﬁnite disjoint union of subsets contains at least one inﬁnite
+subset, we conclude that there exists a subset
+X
+act ,†
+⊆ X
+act
+of inﬁnite cardinality such that X act ,† is the support in X act of some element
+ϵQ ∈ E Q . In particular, it follows from the deﬁnition of X act ,† that an
+element ϵ ∈ E belongs to the Q -orbit ϵQ if and only if ϵ restricts to an
+element ∈ E † ⊆ E †, 0 . This equivalence immediately implies property (b).
+
+8 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+§ 4. GT via combinatorial algebraization theory (CAT)
+(cf. [CbGT]; [CbGal]; [ArGT]; [ArMCG])
+· Combinatorial algebraization theory (CAT) may be understood
+as “ a Teichm¨ uller theory ” analogous to
+· C Tch (i.e., complex Teichm¨ uller theory — cf. § 1) and
+· IUT (cf. § 2)
+for studying the conjugates of the image of
+G Q , ΠM g,r/ Q
+inside
+GT ( ⊆ Out(Π X )) , Out(Π X )
+— where X denotes a hyperbolic curve over Q of type (0 , 3)
+or arbitrary ( g,r ) (such that 2 g − 2 + r> 0).
+· The starting point of CAT involves considering distinct conjugates
+of G Q (or Im(Π M g,r/ Q
+)) inside GT ( ∋ σ,τ ) (or Out(Π X ) ( ∋ σ,τ ))
+G σ
+Q ⊆ GT ⊇ G τ
+Q
+Im(Π M g,r/ Q
+)σ ⊆ Out(Π X ) ⊇ Im(Π M g,r/ Q
+)τ
+... that is to say, distinct ring theories that are related by a
+mysterious non-ring-theoretic — i.e., purely combinatorial/
+group-theoretic — link , where the non-algebraicity of σ · τ− 1
+plays the role of the complex dilations of § 1, or, alternatively,
+the N -th power map /Θ -link of § 2.
+
+TEICHM ¨ULLER DILATIONS OF V ARYING HUES 9
+· In the case of CAT, the analysis of idempotents of § 3 — i.e.,
+roughly speaking,
+K σ
+X ⊆
+∏
+p
+Fn( { pts. of X over p }, res. ﬁeld of p ) ⊇ K τ
+X
+— where K X denotes the function ﬁeld of X , and p runs over a
+Zariski dense set of ﬁnite primes of Q or Q -points of M g,r/ Q that
+arise from Hurwitz schemes — yields a “ miraculous rotation ”
+from the
+· “ mysterious gap ” between the distinct ring theories
+associated to σ , τ -conjugates onto the
+· “ harmless gap between Q -conjugates ” — where Q is a
+ﬁnite, center-free characteristic quotient of Π X , and we
+note that such quotients are coﬁnal ! — provided by
+the transitivity property (b) of the Lemma of § 3
+... cf. the ring-th’ic interpretation of Teichm¨ uller maps in § 1;
+the multiradial representation/“miraculous rotation”
+Θ-link “ ↷ ” log -link
+of § 2.
+... Also, we note that just as in the case with the log -link of IUT
+— where we recall that forming invariants with respect to
+the log -link constitutes the key step in the construction of the
+multirad. representation of IUT — the “ miraculous rotation ”
+of CAT involves a rotation
+addition “ ⊞ ” “ ↷ ” multiplication “ ⊠ ”,
+i.e., at the level of ring structures between
+· “ ⊕ ” (cf. distinct connected components
+corresponding to non-algebraic σ · τ− 1 !) and
+· “ ⊗ ” (cf. the construction of § 3, which is closely
+related to the classical notion of the Weil restriction ).
+
+10 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+· One important technical tool in CAT is
+· Chebotarev-type results (“Chb”) over number ﬁelds , as
+well as over function ﬁelds over ﬁnite ﬁelds (in the case
+of GT), and the
+· Hilbertian property (“Hlb”) applied to rational varieties
+over number ﬁelds (in the case of Out(Π X ))
+— which are used to compute the multiplicative “ ⊗ ” gp. actions
+(i.e., group actions on tensor products as in § 3) since such group
+actions can only be related directly to the natural additive “ ⊕ ”
+scheme-theoretic group actions that arise naturally from Galois
+groups (or ´ etale fundamental groups) in scheme theory at the
+decomposition subgroups associated to the points “ p ” appearing
+in the above product
+“
+∏
+p
+”
+(i.e., ﬁnite primes of Q or Q -points of M g,r/ Q arising from certain
+Hurwitz schemes ).
+· The combinatorial anabelian geometry developed in [CbGT],
+[CbGal] (especially, natural isomorphisms
+Out F (Π X n +1 )
+∼
+→ Out F (Π X n )
+of ﬁber subgroup-preserving outer autom. gps. of conﬁguration
+space groups associated to X for suﬃciently large n ) — where
+we note that the passage X n ⇝ X n +1 corresponds, at “ toral ”
+(i.e., “ multiplicative ”!) nodes, to a passage to tripods (i.e., which
+involve “ additive ” symmetries t ↦→ 1 − t ), hence may be thought
+of as a sort of combinatorial analogue of the p -adic logarithm !
+(cf. the vertical columns of log -links in IUT!) — constitutes
+another crucial technical tool in CAT
+... cf. the fundamental role played throughout IUT by
+log -links, absolute p -adic anabelian geometry !
+· The technique of cyclotomic combinatorial Belyi cuspidalizations
+(cf. [CbGal])
+U ↪ → X
+
+
+↓ (− )
+N
+X
+also plays an important role in CAT
+... cf. the fundamental role played throughout IUT by
+the ´ etale theta fn./elliptic cuspidalizations !
+
+TEICHM ¨ULLER DILATIONS OF V ARYING HUES 11
+· The theory discussed above may be summarized as follows:
+C Tch IUT CAT for
+GT, Out(Π X )
+distinct distinct distinct
+holomorphic ring/arith. hol. ring structures
+structures O H i , structures on corresponding to
+for i = 1 , 2, on opposite sides of distinct
+same underlying the Θ -link conjugates of
+top. surface G Q or Π M g,r/ Q
+inside
+GT or Out(Π X )
+embedding multiradial rep. , embedding of
+of O H i ’s into up to mild indets. , distinct ring
+common yields common strs. into
+container/ container for
+∏
+p
+Fn( − , − ) via
+domain O R distinct ring/arith. analysis of
+via hol. strs. via idems./Chb/Hlb
+Teichm¨ uller miraculous rotation yields a miraculous
+maps Θ-link “ ↷ ” log -link rotation
+involving log -invars. GT, Out(Π X )-cnjs.
+via a rotation “ ↷ ” Q -cnjs.
+⊠ “ ↷ ” ⊞ , via a rotation
+absolute p -adic ⊗ “ ↷ ” ⊕ ,
+anab. geo. (cf., combinatorial
+especially, (Ind3)), anab. geo. ,
+´ etale theta fn./ cyclotomic
+elliptic arithmetic Belyi
+cuspidalizations cuspidalizations
+
+12 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+References
+[IUAni1] E. Farcot, I. Fesenko, S. Mochizuki, The Multiradial Representation of
+Inter-universal Teichm¨ uller Theory , animation available at the follow-
+ing URL:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/IUT-
+animation-Thm-A-black.wmv
+[IUAni2] E. Farcot, I. Fesenko, S. Mochizuki, Computation of the log-volume of
+the q -pilot via the multiradial representation , animation available at the
+following URL:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/2020-
+01%20Computation%20of%20q-pilot%20(animation).mp4
+[IUTchI] S. Mochizuki, Inter-universal Teichm¨ uller Theory I: Construction of
+Hodge Theaters, Publ. Res. Inst. Math. Sci. 57 (2021), pp. 3-207.
+[IUTchII] S. Mochizuki, Inter-universal Teichm¨ uller Theory II: Hodge-Arakelov-
+theoretic Evaluation, Publ. Res. Inst. Math. Sci. 57 (2021), pp. 209-401.
+[IUTchIII] S. Mochizuki, Inter-universal Teichm¨ uller Theory III: Canonical Split-
+tings of the Log-theta-lattice, Publ. Res. Inst. Math. Sci. 57 (2021),
+pp. 403-626.
+[IUTchIV] S. Mochizuki, Inter-universal Teichm¨ uller Theory IV: Log-volume Com-
+putations and Set-theoretic Foundations, Publ. Res. Inst. Math. Sci. 57
+(2021), pp. 627-723.
+[Alien] S. Mochizuki, The Mathematics of Mutually Alien Copies: from Gauss-
+ian Integrals to Inter-universal Teichm¨ uller Theory, Inter-universal Te-
+ichmuller Theory Summit 2016 , RIMS K¯ oky¯ uroku Bessatsu B84 , Res.
+Inst. Math. Sci. (RIMS), Kyoto (2021), pp. 23-192; available at the
+following URL:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/Alien%20Copies,%20
+Gaussians,%20and%20Inter-universal%20Teichmuller%20Theory.pdf
+[EssLgc] S. Mochizuki, On the essential logical structure of inter-universal Teich-
+m¨ uller theory in terms of logical AND “ ∧ ”/logical OR “ ∨ ” relations:
+Report on the occasion of the publication of the four main papers on
+inter-universal Teichm¨ uller theory , preprint available at the following
+URL:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/Essential%20Logical
+%20Structure%20of%20Inter-universal%20Teichmuller%20Theory.pdf
+[CbGT] Y. Hoshi, A. Minamide, S. Mochizuki, Group-theoreticity of Numer-
+ical Invariants and Distinguished Subgroups of Conﬁguration Space
+Groups, Kodai Math. J. 45 (2022), pp. 295 - 348.
+
+TEICHM ¨ULLER DILATIONS OF V ARYING HUES 13
+[CbGal] Y. Hoshi, S. Mochizuki, S. Tsujimura, Combinatorial construction of
+the absolute Galois group of the ﬁeld of rational numbers , RIMS Preprint
+1935 (December 2020), to appear in J. Math. Sci. Univ. Tokyo.
+[ArGT] S. Mochizuki, S. Tsujimura, On the Arithmeticity of the Gro-thendieck-
+Teichm¨ uller Group , manuscript in preparation.
+[ArMCG] S. Mochizuki, S. Tsujimura, M. Sa¨ ıdi, On the Arithmeticity of the Map-
+ping Class Group , manuscript in preparation.
+

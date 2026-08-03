@@ -1,0 +1,678 @@
+Alien copies, Gaussians, & Inter-universal Teichm uller theory 1
+x 3.10. The technique of tripodal transport
+In the present §3.10, we re-examine inter-universal T eichm¨ uller theory once
+again, this time from the point of view of the technique of tripodal transport . Various
+versions of this technique may also be seen in previous work of the author concerning
+· p -adic T eichm¨ uller theory ,
+· scheme-theoretic Hodge-Arakelov theory , and
+· combinatorial anabelian geometry .
+The proof given by
+· Bogomolov [cf. [ABKP], [Zh], [BogIUT], as well as the discussion of §4.3,
+(iii), below] of the geometric version of the Szpiro Conjecture over the complex
+numbers
+may also be re-interpreted from the point of view of this technique.
+c⃝ 2020 Research Institute for Mathematical Sciences, Kyoto University. All rights reserved.
+
+2 Shinichi Mochizuki
+(i) The notion of tripodal transport: The general notion of tripodal trans-
+port may be summarized as follows [cf. also Fig. 3.21 below]:
+(1
+trp
+) One starts with a “nontrivial property” of interest [i.e., that one wishes to
+verify !] associated to some sort of given arithmetic holomorphic structure —
+such as a hyperbolic curve or a number ﬁeld [cf. the discussion of §2.7, (vii)].
+(2
+trp
+) One observes that this nontrivial property of interest [i.e., associated to the
+given arithmetic holomorphic structure] may be derived by combining a “relatively
+trivial” property , again associated to the given arithmetic holomorphic structure,
+with some sort of alternative property of interest.
+(3
+trp
+) One establishes some sort of parallel transport mechanism — which is typ-
+ically not compatible with the given arithmetic [i.e., scheme-/ring-theoretic!] holo-
+morphic structure — that allows one to reduce the issue of verifying the alternative
+property of interest for the given arithmetic holomorphic structure to a “corre-
+sponding version” in the case of the tripod [i.e., the projective line minus three
+points] of this alternative property of interest.
+(4
+trp
+) One veriﬁes the alternative property of interest in the case of the tripod .
+(5
+trp
+) By combining (1
+trp
+), (2
+trp
+), (3
+trp
+), (4
+trp
+), one concludes that the original non-
+trivial property of interest associated to the given arithmetic holomorphic
+structure does indeed hold, as desired.
+
+Alien copies, Gaussians, & Inter-universal Teichm uller theory 3
+arithmetic
+geometry
+surrounding
+the tripod
+(non-holomorphic !)
+parallel transport
+← − − − − − − − − − →
+via rigidity properties
+given
+arithmetic
+holomorphic
+structure
+original nontrivial property
+∥
+relatively trivial property
++
+alternative property ← − − − − − − − − − → alternative property
+Fig. 3.21: Tripodal transport
+
+4 Shinichi Mochizuki
+Here, we note that the steps (3
+trp
+), (4
+trp
+) are often very closely related , and, indeed,
+at times, it is diﬃcult to isolate these two steps from one another. This sort of argument
+might strike some readers at ﬁrst glance as “mysterious” or “astonishing” in the sense
+that ultimately, one is able to
+conclude the original nontrivial property of interest [cf. (1
+trp
+)] associated to
+the given arithmetic holomorphic structure [cf. (5
+trp
+)] despite the fact
+that the nontrivial content of the argument centers around the arithmetic
+surrounding the tripod [cf. (3
+trp
+), (4
+trp
+)], in sharp contrast to the fact that
+the argument only requires the use of a “relatively trivial” observation con-
+cerning the given arithmetic holomorphic structure [cf. (2
+trp
+)].
+Perhaps it is most natural to regard this sense of “mysteriousness” or “astonishment”
+as a reﬂection of the potency of the parallel transport mechanism [cf. (3
+trp
+)] that
+is employed. This “potency” is, in many of the examples discussed below, derived as
+a consequence of various rigidity properties , such as anabelian properties . Such
+rigidity properties may only be derived by
+
+Alien copies, Gaussians, & Inter-universal Teichm uller theory 5
+applying the mechanism of parallel transport via rigidity properties —
+not to relatively simple “types of mathematical objects” such as vector spaces
+or modules , as is typically the case in classical instances of parallel transport!
+— but rather to complicated mathematical objects [cf. the discussion of
+[IUTchIV], Remark 3.3.2], such as the sort of Galois groups/´ etale fundamental
+groups that occur in anabelian geometry , i.e., mathematical objects whose
+intrinsic structure is suﬃciently rich to allow one to establish rigidity proper-
+ties that are suﬃciently “potent” to compensate for the “loss of structure”
+that arises from sacriﬁcing compatibility with classical scheme-/ring-theoretic
+structures .
+Here, we note that it is necessary to sacriﬁce compatibility with classical scheme-/ring-
+theoretic structures precisely because such structures typically constitute a fundamen-
+tal obstruction to relating the arithmetic surrounding the given arithmetic holomor-
+phic structure to the arithmetic surrounding the tripod . A typical example of this sort
+of “fundamental obstruction” may be seen by considering, for instance, the case of two
+[scheme-theoretically!] non-isomorphic proper hyperbolic curves over an algebraically
+closed ﬁeld of characteristic zero, which, nonetheless, have isomorphic ´ etale fundamen-
+tal groups . This point of view, i.e., of overcoming the sort of “fundamental obstruction ”
+to parallel transport that arises from imposing the restriction of working within a ﬁxed
+scheme/ring theory , is closely related to the introduction of the notions of F robenius-
+like and ´ etale-like structures — cf. the discussion of §2.7, (ii), (iii); §2.8.
+
+6 Shinichi Mochizuki
+Additional observations :
+· The technique of tripodal transport constitutes a unifying theme /eﬃcient mecha-
+nism for documenting the remarkably similar conceptual framework underlying
+various aspects of my work since the early 1990’s.
+· The technique of tripodal transport shows explicitly how anabelian geometry is by
+no means an isolated topic, but rather a topic that inextricably intertwined with
+the rest of arithmetic geometry.
+· The parallel transport portion of tripodal transport may be understood as a mech-
+anism for documenting structures common — i.e., “ ∧ ” — to distinct holomorphic
+structures . Such common structures may then be used to construct “containers” for
+the distinct holomorphic structures that allow one to compare the distinct holomorphic
+structures. One prime example of such a mechanism is anabelian geometry !
+· The technique of tripodal transport may be regarded as a reﬂection of the the fact
+that the tripod may be regarded as a sort of geometric representation of the inter-
+twining between addition and multiplication in a ring structure — cf. the theory
+of BGT! — hence is of fundamental importance to arithmetic geometry.
+
+Alien copies, Gaussians, & Inter-universal Teichm uller theory 7
+(ii) Inter-universal Teichm¨ uller theory via tripodal transport: We begin
+our discussion by observing that, when viewed from the point of view of the notion
+of tripodal transport, inter-universal T eichm¨ uller theory may be recapitulated as
+follows:
+The fundamental log volume estimate (12
+est
+) [cf. (1
+trp
+)] is obtained in the
+argument discussed in §3.7, (ii) [cf. (5
+trp
+)], by combining [cf. (9
+est
+), (10
+est
+),
+(11
+est
+)] a relatively simple argument [cf. (2
+trp
+)] carried out in the arithmetic
+holomorphic structure of the RHS of the Θ-link [cf. (1
+est
+), (7
+est
+)], involving
+relatively simple operations such as the formation of the holomorphic hull [cf.
+(6
+est
+), (7
+est
+), (8
+est
+)], with the parallel transport mechanism [cf. (3
+trp
+), as
+well as the discussion of §3.1, (iv), (v)] furnished by the multiradial repre-
+sentation [cf. (2
+est
+), (3
+est
+), (4
+est
+), (5
+est
+)], which is established by considering
+various properties of objects [cf. §3.4, §3.6], such as the theta function on the
+T ate curve [cf. §3.4, (iii), (iv); Fig. 3.9], on the LHS of the Θ-link [cf. (4
+trp
+)].
+Here, we recall from the discussion of §3.4, (iii), (iv); Fig. 3.9, that
+the theory surrounding the theta function on the T ate curve may be thought
+of as a sort of function-theoretic representation of the p -adic arithmetic
+geometry of a copy of the tripod for which the cusps “0” and “ ∞ ” are subject
+to the involution symmetry that permutes these two cusps and leaves the cusp
+“1” ﬁxed.
+
+8 Shinichi Mochizuki
+Also, we recall from the discussion of §3.7, (i) [cf. also the discussion of the prop-
+erties “IPL”, “SHE”, “APT”, “HIS” in [IUTchIII], Remark 3.11.1] that the parallel
+transport mechanism furnished by the multiradial representation revolves around the
+following central property :
+the algorithm that yields the multiradial representation converts any collection
+of input data [i.e., not just the codomain data ( a q ), ( b q ), ( c q ) of the Θ-link!]
+that is isomorphic to the domain data ( a  ), ( b  ), ( c  ) of the Θ-link — i.e., in
+somewhat more technical terminology [cf. [IUTchII], Deﬁnition 4.9, (viii)], any
+F I ×  -prime-strip — into output data that is expressed in terms of the
+arithmetic holomorphic structure of the input data , i.e., of the codomain
+of the Θ-link.
+Finally, at a more technical level, we recall from §3.3, (vi); §3.4, (ii); §3.4, (iii), (iv),
+that this parallel transport mechanism is established by applying
+· the theory of the ´ etale theta function developed in [EtTh];
+· the theory of [local and global] mono-anabelian reconstruction developed
+in [AbsTopII], [AbsTopIII].
+Here, it is of interest to observe that both the theory of elliptic cuspidalization ,
+which plays an important role in [EtTh], and the theory of Belyi cuspidalization ,
+which plays an important role in [AbsTopII], [AbsTopIII], may be regarded as essen-
+tially formal consequences of the fundamental anabelian results obtained in [ p GC].
+The rigidity properties developed in [EtTh] also depend, in a fundamental way, on the
+interpretation [i.e., as rigidity properties of the desired type!] given in [EtTh] of the
+theta symmetries of the theta function on the Tate curve.
+
+Alien copies, Gaussians, & Inter-universal Teichm uller theory 9
+(iii) p -adic T eichm¨ uller theory via tripodal transport: When viewed from
+the point of view of the notion of tripodal transport, a substantial portion of the p -adic
+T eichm¨ uller theory of [ p Ord], [ p Tch], [ p TchIn] may be summarized as follows:
+One constructs a theory of canonical indigenous bundles , canonical F robe-
+nius liftings , and associated canonical Galois representations into P GL 2 (− )
+[for a suitable “( − )” — cf. [ p TchIn], Theorems 1.2, 1.4, for more details] for
+quite general p -adic hyperbolic curves [cf. (1
+trp
+), (2
+trp
+), (5
+trp
+)] by establishing
+a parallel transport mechanism [cf. (3
+trp
+)] that allows one to transport
+similar canonical objects associated to the tautological family of elliptic curves
+over the tripod [cf. (4
+trp
+)].
+Here, we recall that, prior to [ p Ord], the existence of such canonical objects associated
+to a p -adic hyperbolic curve was only known in the case of Shimura curves , i.e., such
+as the tripod . From the point of view of the notion of tripodal transport , it is also of
+interest to observe that:
+The notion of an ordinary F robenius lifting [cf. [ p TchIn], Theorem 1.3],
+which plays a central role in [ p Ord], [ p Tch], [ p TchIn], may be understood as a
+sort of p -adic generalization of the most fundamental example of a F robenius
+lifting , namely, the endomorphism
+T 7→ T p
+[where T denotes the standard coordinate on the projective line] of the tripod
+over a p -adic ﬁeld. This endomorphism is equivariant with respect to the sym-
+metry of the tripod which permutes the cusps “0” and “ ∞ ” and leaves the cusp
+“1” ﬁxed.
+
+10 Shinichi Mochizuki
+At a more technical level, we recall that the parallel transport mechanism employed
+in p -adic Teichm¨ uller theory revolves around the following two fundamental technical
+tools :
+· the fact that the natural morphism from the moduli stack of nilcurves [i.e.,
+pointed stable curves equipped with an indigenous bundle whose p -curvature
+is square nilpotent] to the corresponding moduli stack of pointed stable curves
+is a ﬁnite , ﬂat , and local complete intersection morphism of degree p to
+the power of the dimension of these moduli stacks [cf. [ p TchIn], Theorem 1.1];
+· various strong rigidity properties , with respect to deformation , that
+hold precisely over the ordinary locus of the moduli stack of nilcurves , i.e.,
+the ´ etale locus of the natural morphism from the moduli stack of nilcurves to
+the corresponding moduli stack of pointed stable curves.
+In this context, it is of interest to observe, considering the fundamental role played by
+such notions as diﬀerentials and curvature in the classical diﬀerential-geometric ver-
+sion of parallel transport , that both of these fundamental technical tools rely on various
+subtle properties of the p -curvature and F robenius actions on diﬀerentials . This
+relationship with diﬀerentials is also interesting from the point of view of the funda-
+mental role played by the theory of [ p GC] in the discussion of [EtTh], [AbsTopII], and
+[AbsTopIII] in (ii), since diﬀerentials , treated from a p -adic Hodge-theoretic point
+of view, play a fundamental role in [ p GC]. Finally, we observe that although anabelian
+results do not play any role in the parallel transport mechanism of p -adic Teichm¨ uller
+theory, it is interesting to note that p -adic Teichm¨ uller theory has an important appli-
+cation to absolute anabelian geometry [cf. [CanLift], §3, as well as the discussion
+of [IUTchI], §I4; [IUTchII], Remark 4.11.4, (iii)].
+
+Alien copies, Gaussians, & Inter-universal Teichm uller theory 11
+(iv) Scheme-theoretic Hodge-Arakelov theory via tripodal transport:
+When viewed from the point of view of the notion of tripodal transport, the fundamen-
+tal theorem of Hodge-Arakelov theory , i.e., the natural isomorphism reviewed
+at the beginning of §3.9, (i) [cf. also Example 2.14.3; [HASurI]; [HASurII]], may be
+understood as follows:
+One veriﬁes [cf. the discussion of [HASurI], §1.1] that the natural morphism
+obtained by evaluating sections of an ample line bundle over the universal vec-
+torial extension of an elliptic curve at torsion points [cf. the discussion at the
+beginning of Example 2.14.3] is indeed an isomorphism [cf. (1
+trp
+), (5
+trp
+)] by
+verifying that it is an isomorphism in the case of T ate curves by means of an
+explicit computation involving derivatives of theta functions [cf. (4
+trp
+)] and
+then proceeding to parallel transport this isomorphism in the case of Tate
+curves to the entire compactiﬁed moduli stack of elliptic curves in characteris-
+tic 0 by means of an explicit computation [the leading term portion of which is
+reviewed in §3.9, (i)] of the degrees of the vector bundles on this compactiﬁed
+moduli stack that constitute the domain and codomain of the natural morphism
+under consideration [cf. (2
+trp
+), (3
+trp
+)].
+
+12 Shinichi Mochizuki
+Here, we recall from the discussion of (ii) above; §3.4, (iii), (iv); Fig. 3.9, that
+the theory surrounding the theta function on the T ate curve may be thought
+of as a sort of function-theoretic representation of the [not necessarily p -
+!]adic arithmetic geometry of a copy of the tripod for which the cusps “0” and
+“∞ ” are subject to the involution symmetry that permutes these two cusps and
+leaves the cusp “1” ﬁxed.
+In this context, it is also perhaps of interest to recall that there is an alternative approach
+to the parallel transport mechanism discussed above [i.e., computing degrees of vector
+bundles on the compactiﬁed moduli stack of elliptic curves], namely, the parallel trans-
+port mechanism applied in the proof of [HASurII], Theorem 4.3, which exploits various
+special properties of the F robenius and V erschiebung morphisms in positive char-
+acteristic . Finally, we observe that although the scheme-theoretic Hodge-Arakelov
+theory of [HASurI], [HASurII] is not directly related, in a logical sense, to anabelian
+geometry , it nevertheless played a central role , as was discussed in detail in §3.9, in
+motivating the development of inter-universal Teichm¨ uller theory , which may be
+understood as a sort of reformulation of the essential content of the scheme-theoretic
+Hodge-Arakelov theory of [HASurI], [HASurII] via techniques based on anabelian ge-
+ometry .
+
+Alien copies, Gaussians, & Inter-universal Teichm uller theory 13
+Example 2.14.3. Finite discrete approximation of harmonic analysis on
+complex tori. Let E be an elliptic curve over a ﬁeld F of characteristic zero, E † → E
+the universal extension of E , η ∈ E (F ) a [nontrivial] torsion point of order 2, l ̸= 2 a
+prime number. Write E [l] ⊆ E for the subscheme of l-torsion points , L
+def
+= O E (l · [η ])
+[where “[ η ]” denotes the eﬀective divisor on E determined by η ]. Here, we recall that
+E † → E is an A 1 -torsor [so E [l] may also be regarded as the subscheme ⊆ E † of l-torsion
+points of E † ]. In particular, it makes sense to speak of the sections Γ( E † , L| E † ) <l ⊆
+Γ( E † , L| E † ) of L over E † whose relative degree , with respect to the morphism E † → E ,
+is < l . Then the simplest version of the fundamental theorem of Hodge-Arakelov
+theory states that evaluation at the subscheme of l-torsion points E [l] ⊆ E † yields
+a natural isomorphism of F -vector spaces of dimension l 2
+Γ( E † , L| E † ) <l ∼
+→ L| E [l]
+[cf. [HASurI], Theorem A simple ].
+
+14 Shinichi Mochizuki
+(v) Combinatorial anabelian geometry via tripodal transport: Let F be
+a number ﬁeld , F an algebraic closure of F , X a hyperbolic curve over F , n ≥ 1 an
+integer. Write X n for the n -th conﬁguration space of X [cf., e.g., [MT], Deﬁnition 2.1,
+(i)]; Π n for the ´ etale fundamental group of X n × F F [for a suitable choice of basepoint];
+Π
+def
+= Π 1 ; Π tpd for “Π” in the case where X is the tripod [i.e., the projective line minus
+three points]; G F
+def
+= Gal( F /F ); Out FC (Π n ) for the group of outer automorphisms of
+Π n satisfying certain technical conditions [i.e., “FC”] involving the ﬁberwise subgroups
+and cuspidal inertia subgroups [cf. [CombCusp], Deﬁnition 1.1, (ii), for more details].
+Thus, it follows from the deﬁnition of “Out FC ” that the natural projection X n +1 → X n
+given by forgetting the ( n + 1)-st factor determines a homomorphism
+ϕ n +1 : Out FC (Π n +1 ) → Out FC (Π n )
+[cf. the situation discussed in [NodNon], Theorem B]; the natural action of G F on
+X n × F F determines an outer Galois representation
+ρ n : G F → Out FC (Π n )
+[cf. the situation discussed in [NodNon], Theorem C]. Write ρ
+def
+= ρ 1 , ρ tpd for “ ρ ” in the
+case where X is the tripod .
+
+Alien copies, Gaussians, & Inter-universal Teichm uller theory 15
+Then
+the proof of the injectivity [cf. [NodNon], Theorem C] of
+ρ : G F → Out FC (Π)
+given in [NodNon] is perhaps the most transparent/prototypical example of
+the phenomenon of tripodal transport .
+Indeed, this proof may be summarized as follows:
+One makes the [“relatively trivial”! — cf. (2
+trp
+)] observation that ρ admits a
+factorization
+ρ = ϕ 2 ◦ ϕ 3 ◦ ρ 3 : G F → Out FC (Π 3 ) → Out FC (Π 2 ) → Out FC (Π)
+— which allows one to reduce [cf. (2
+trp
+)] the veriﬁcation of the desired injectivity
+of ρ [cf. (1
+trp
+), (5
+trp
+)] to the veriﬁcation of the injectivity of ϕ 23
+def
+= ϕ 2 ◦ ϕ 3 [cf.
+(3
+trp
+), (4
+trp
+)] and ρ 3 [cf. (4
+trp
+)].
+
+16 Shinichi Mochizuki
+Then:
+· One observes that the injectivity of ϕ 23 depends only on the type
+“( g, r )” [i.e., the genus and number of punctures] of X , hence may
+be veriﬁed in the case of — i.e., may be “parallel transported”
+[cf. (3
+trp
+)] to the case of — a totally degenerate pointed stable
+curve , i.e., a pointed curve obtained by gluing together some collec-
+tion of tripods along the various cusps of the tripods [cf. (4
+trp
+)]. On
+the other hand, in the case of such a totally degenerate pointed stable
+curve, the desired injectivity [i.e., of the analogue of “ ϕ 23 ”] may be
+veriﬁed by applying the purely combinatorial/group-theoretic tech-
+niques of combinatorial anabelian geometry developed in [Com-
+bCusp], [NodNon] [cf. [NodNon], Theorem B].
+· One veriﬁes the injectivity of ρ 3 by applying a certain natural ho-
+momorphism called the tripod homomorphism
+τ : Out FC (Π 3 ) → Out FC (Π tpd )
+[cf. [CbTpII], Theorem C, (ii)], which satisﬁes the property that
+ρ tpd = τ ◦ ρ 3 : G F → Out FC (Π 3 ) → Out FC (Π tpd ) and hence allows
+one to conclude the injectivity of ρ 3 from the well-known injectivity
+result of Belyi to the eﬀect that ρ tpd is injective [cf. (4
+trp
+)].
+
+Alien copies, Gaussians, & Inter-universal Teichm uller theory 17
+Here, it is interesting to note, especially in light of the discussion of anabelian results
+and diﬀerentials in the ﬁnal portions of (i), (ii), (iii), the central role played by combi-
+natorial anabelian geometry — i.e., in particular, various combinatorial versions of
+the Grothendieck Conjecture such as [NodNon], Theorem A — in the parallel trans-
+port mechanism discussed above. Such combinatorial versions of the Grothendieck
+Conjecture concern group-theoretic characterizations of the decomposition of a pointed
+stable curve into various irreducible components glued together along the nodes of the
+curve. This sort of decomposition may be interpreted as a sort of discrete version
+of the notion of a diﬀerential , i.e., which may be thought of as a decomposition of a
+ring/scheme structure into inﬁnitesimals . Finally, we emphasize that this proof of the
+injectivity of ρ is a particularly striking example of the phenomenon of tripodal
+transport , in the sense that the issue of relating the injectivity of ρ for an arbitrary
+X to the injectivity of ρ tpd , i.e., in the case of the tripod , seems, a priori, to be entirely
+intractable , at least so long as one restricts oneself to morphisms between schemes [cf.
+the discussion in the ﬁnal portion of (i)].
+
+18 Shinichi Mochizuki
+(vi) T ripodal transport and Bogomolov’s proof: Often, as in the examples
+discussed in (ii), (iii), (iv), above, the tripod that appears in instances of the phe-
+nomenon of tripodal transport is a tripod in which the cusps “ 0” and “ ∞ ” play a
+distinguished , but symmetric role , which is somewhat diﬀerent from the role played by
+the cusp “ 1” . When considered from this point of view, the tripod may thought of
+as the underlying scheme of the group scheme G m [with its origin removed], hence, in
+particular, as a sort of algebraic version of the topological circle S 1 . If one thinks of
+the tripod in this way, i.e., as corresponding to S 1 , then the proof given by
+Bogomolov [cf. [ABKP], [Zh], [BogIUT], as well as the discussion of §4.3, (iii),
+below] of the geometric version of the Szpiro Conjecture over the complex num-
+bers may also be understood as an instance, albeit in a somewhat generalized
+sense, of the technique of tripodal transport .
+
+Alien copies, Gaussians, & Inter-universal Teichm uller theory 19
+To explain further, we introduce notation as follows:
+· Write Aut  (R ) for the group of self-homeomorphisms R
+∼
+→ R that commute
+with translation by π ∈ R . Thus, if we think of S 1 as the quotient R / (2 π ·Z ), then
+Aut  (R ) may be understood as the group of self-homeomorphisms of R that lift
+elements of the group Aut + (S 1 ) of orientation-preserving self-homeomorphisms
+of S 1 that commute with multiplication by − 1 on S 1 . In particular, we have a
+natural exact sequence 1 → 2π · Z → Aut  (R ) → Aut + (S 1 ) → 1.
+· Write Aut  (R ≥ 0 ) for the group of self-homeomorphisms R ≥ 0
+∼
+→ R ≥ 0 that
+stabilize and restrict to the identity on the subset π · N ⊆ R ≥ 0 .
+· Write R | | for the set of Aut  (R ≥ 0 )-orbits of R ≥ 0 [relative to the natural
+action of Aut  (R ≥ 0 ) on R ≥ 0 ]. Thus,
+R | | =
+( ∪
+n ∈ N { [n · π ] }
+)
+∪
+( ∪
+m ∈ N { [( m · π, (m + 1) · π )] }
+)
+— where we use the notation “[ − ]” to denote the element in R | | determined
+by an element or nonempty subset of R ≥ 0 that lies in a single Aut  (R ≥ 0 )-orbit;
+we use the notation “( − , − )” to denote an open interval in R ≥ 0 ; we observe
+that the natural order relation on R ≥ 0 induces a natural order relation on R | | .
+
+20 Shinichi Mochizuki
+· Write δ sup : Aut  (R ) → R | | for the map that assigns to α ∈ Aut  (R ) the
+element sup( δ (α )) ∈ R | | , where we observe that
+δ (α )
+def
+= { [ |α (x ) − x | ] | x ∈ R } ⊆ R | |
+is a ﬁnite subset [cf. the deﬁnition of Aut  (R )!] of R | | , and that [as is easily ver-
+iﬁed, by observing that for any β ∈ Aut  (R ) and x, y ∈ R such that x ≤ y , there
+exists a γ ∈ Aut  (R ≥ 0 ) such that β (y ) − β (x ) = β (( y − x )+ x ) − β (x ) = γ (y − x )]
+the assignments δ (− ), δ sup (− ) are Aut  (R )-conjugacy invariant .
+· Write SL 2 (R ) ∼ for universal covering of SL 2 (R ). Thus, we have a natural
+central extension of topological groups 1 → Z → SL 2 (R ) ∼ → SL 2 (R ) → 1. By
+composing the natural embedding S 1 ,→ R 2 × def
+= R 2 \ { (0 , 0) } with the natu-
+ral projection R 2 ×  R 2 ∠ def
+= R 2 × /R > 0 , we obtain a natural homeomorphism
+S 1 ∼
+→ R 2 ∠ , hence [by considering the natural action of SL 2 (R ) on R 2 × , R 2 ∠ ]
+natural actions
+SL 2 (R ) y S 1 ; SL 2 (R ) ∼ y R
+[where we think of R as the universal covering of S 1 = R /(2 π · Z )], the latter of
+which determines a natural injective homomorphism
+SL 2 (R ) ∼ ,→ Aut  (R )
+[which, at times, we shall use to think of SL 2 (R ) ∼ as a subgroup of Aut  (R )]. We
+may assume without loss of generality that the generator “1” of Z ,→ SL 2 (R ) ∼
+was chosen so as to act on R in the positive direction .
+
+Alien copies, Gaussians, & Inter-universal Teichm uller theory 21
+· Write SL 2 (Z ) ∼ def
+= SL 2 (R ) ∼ × SL 2 (R ) SL 2 (Z ). Thus, we have a natural central
+extension of discrete groups 1 → Z → SL 2 (Z ) ∼ → SL 2 (Z ) → 1. One shows
+easily [e.g., by considering the discriminant modular form , as in [BogIUT]] that
+the abelianization of SL 2 (Z ) ∼ is isomorphic to Z , and hence that there exists a
+unique surjective homomorphism
+χ : SL 2 (Z ) ∼  Z
+that maps positive elements of Z ,→ SL 2 (Z ) ∼ to positive elements of Z .
+In some sense, the fundamental phenomenon that underlies Bogomolov’s proof is the
+following elementary fact :
+Whereas the SL 2 (Z )-conjugacy classes of the unipotent elements
+τ m def
+=
+(
+1 m
+0 1
+)
+∈ SL 2 (Z )
+diﬀer for diﬀerent positive integers m , the SL 2 (R )-conjugacy classes of these
+elements coincide for diﬀerent positive integers m .
+
+22 Shinichi Mochizuki
+In the context of Bogomolov’s proof, if one thinks of SL 2 (Z ) as the topological fun-
+damental group of the moduli stack of elliptic curves over the complex numbers, then
+such unipotent elements arise as the images in SL 2 (Z ) — via the [outer] homomorphism
+induced on topological fundamental groups by the classifying morphism associated to
+a family of one-dimensional complex tori over a hyperbolic Riemann surface S of ﬁnite
+type — of the natural generators of cuspidal inertia groups of the topological funda-
+mental group of S . In this situation, the positive integer m then corresponds to the
+valuation of the q -parameter at a cusp of S . Next, we recall [cf., e.g., [BogIUT], (B1)]
+that unipotent elements of SL 2 (R ) admit canonical liftings to SL 2 (R ) ∼ . In par-
+ticular, it makes sense to apply both δ sup and χ to the canonical lifting eτ m ∈ SL 2 (Z ) ∼
+of τ m . Since χ is a homomorphism , we have
+χ ( eτ m ) = m
+[cf., e.g., [BogIUT], (B3)]. On the other hand, since δ sup (− ) is Aut  (R )- [hence, in
+particular, SL 2 (R ) ∼ -] conjugacy invariant , we have
+δ sup ( eτ m ) < [π ]
+[cf., e.g., [BogIUT], (B1)] for arbitrary m .
+
+Alien copies, Gaussians, & Inter-universal Teichm uller theory 23
+It is precisely by applying both χ and δ sup (− ) to a certain natural relation [arising from
+the image in SL 2 (Z ) of the “usual deﬁning relation” of the topological fundamental
+group of S ] between elements ∈ SL 2 (Z ) lifted to SL 2 (Z ) ∼ that one is able to derive the
+geometric version of the Szpiro inequality , that is to say, to bound the height of
+the given family of one-dimensional complex tori — i.e., more concretely, in essence, the
+sum of the “ m ”’s arising from the various cusps of S [cf., e.g., [BogIUT], (B4)] — by a
+number that depends only on the genus and number of cusps of S and not on the “ m ”’s
+themselves [cf., e.g., [BogIUT], (B2), (B5)]. From the point of view of the technique of
+tripodal transport , one may summarize this argument as follows:
+one bounds the height [i.e., essentially, the sum of the “ m ”’s] of the given
+family of one-dimensional complex tori [cf. (5
+trp
+)] — which is a reﬂection
+of the holomorphic moduli of this family [cf. (1
+trp
+)] — by combining a
+“relatively trivial” [cf. (2
+trp
+)] object χ arising from the holomorphic struc-
+ture of the moduli stack of elliptic curves over the complex numbers [i.e.,
+from the discriminant modular form ] with the parallel transport mecha-
+nism [cf. (3
+trp
+)] given by passing from the “holomorphic” SL 2 (Z ), SL 2 (Z ) ∼
+to the “real analytic” SL 2 (R ), SL 2 (R ) ∼ , i.e., in essence, by passing to the
+Aut + (S 1 )-invariant geometry of S 1 , as reﬂected in the Aut  (R )-conjugacy
+invariant map δ sup : Aut  (R ) → R | | [cf. (4
+trp
+)].
+
+24 Shinichi Mochizuki
+From the point of view of the analogy [cf. the discussion of (ii) above; [BogIUT]]
+between Bogomolov’s proof and inter-universal Teichm¨ uller theory , we observe that:
+· The canonical lifts discussed above of unipotent elements ∈ SL 2 (Z ) to
+SL 2 (Z ) ∼ correspond to the theory of the ´ etale theta function [i.e., [EtTh]]
+in inter-universal Teichm¨ uller theory.
+· The Aut + (S 1 )-invariant geometry of S 1 , as reﬂected in the Aut  (R )-
+conjugacy invariant map δ sup : Aut  (R ) → R | | , corresponds to the theory
+of mono-analytic log-shells and related log-volume estimates [cf. (12
+est
+);
+§3.7, (iv); [IUTchIV], §1, §2] in inter-universal Teichm¨ uller theory. In partic-
+ular, Aut + (S 1 )-/ Aut  (R )-indeterminacies in Bogomolov’s proof — in which
+both the additive [i.e., corresponding to unipotent subgroups of SL 2 (R )] and
+multiplicative [i.e., corresponding to toral , or equivalently, compact subgroups
+of SL 2 (R )] dimensions of SL 2 (R ) are “confused” within the single dimen-
+sion of S 1 — correspond to the indeterminacies (Ind1), (Ind2), (Ind3) of
+inter-universal Teichm¨ uller theory.
+· The role played by SL 2 (Z ), SL 2 (Z ) ∼ , χ corresponds to the role played by
+the ﬁxed arithmetic holomorphic structure of the RHS of the Θ-link [cf.
+(1
+est
+), (6
+est
+), (7
+est
+), (8
+est
+), (9
+est
+), (10
+est
+), (11
+est
+)] in the argument of §3.7, (ii).
+By contrast, the role played by SL 2 (R ), SL 2 (R ) ∼ , δ sup (− ) corresponds to the
+role played by the multiradial representation [cf. (2
+est
+), (3
+est
+), (4
+est
+), (5
+est
+)]
+in the argument of §3.7, (ii).
+
+Alien copies, Gaussians, & Inter-universal Teichm uller theory 25
+In particular, one has natural correspondences
+SL 2 (R ), SL 2 (R ) ∼ , δ sup (− ) ← → [IUTchIII], Theorem 3.11;
+SL 2 (Z ), SL 2 (Z ) ∼ , χ ← → [IUTchIII], Corollary 3.12 ( ⇐= Theorem 3.11)
+— i.e., where, more precisely, the RHS of the latter correspondence is to be under-
+stood as referring to the derivation of [IUTchIII], Corollary 3.12, from [IUTchIII], The-
+orem 3.11. These last two correspondences are particularly interesting in light of the
+well-documented historical fact that the theory/estimates in Bogomolov’s proof related
+to SL 2 (R ), SL 2 (R ) ∼ , δ sup (− ) were apparently already known to Milnor in the 1950’s
+[cf. [MlWd]], while the idea of combining these estimates with the theory surround-
+ing SL 2 (Z ), SL 2 (Z ) ∼ , χ appears to have been unknown until the work of Bogomolov
+around the year 2000 [cf. [ABKP]].
+
+26 Shinichi Mochizuki
+Moreover, these last two correspondences — and, indeed, the entire analogy between
+Bogomolov’s proof and inter-universal Teichm¨ uller theory — are also of interest in the
+following sense:
+Bogomolov’s proof only involves working with elements ∈ SL 2 (R ), SL 2 (R ) ∼
+that arise from topological fundamental groups , hence may be applied not only to
+algebraic/holomorphic families of elliptic curves, but also to arbitrary topolog-
+ical families of one-dimensional complex tori that satisfy suitable conditions
+at the points of degeneration, i.e., “bad reduction”.
+This aspect of Bogomolov’s proof is reminiscent of the fact that the initial Θ -data of
+inter-universal Teichm¨ uller theory [cf. §3.3, (i)] essentially only involves data that arises
+from various arithmetic fundamental groups associated to an elliptic curve over a
+number ﬁeld. In particular, this aspect of Bogomolov’s proof suggests strongly that
+perhaps, in the future, some version of inter-universal Teichm¨ uller theory could be de-
+veloped in which the initial Θ-data of the current version of inter-universal Teichm¨ uller
+theory is replaced by some collection of topological groups that satisﬁes conditions anal-
+ogous to the conditions satisﬁed by the collection of arithmetic fundamental groups
+that appear in the initial Θ-data of the current version of inter-universal Teichm¨ uller
+theory, but that does not necessarily arise, in a literal sense, from an elliptic curve over
+a number ﬁeld.

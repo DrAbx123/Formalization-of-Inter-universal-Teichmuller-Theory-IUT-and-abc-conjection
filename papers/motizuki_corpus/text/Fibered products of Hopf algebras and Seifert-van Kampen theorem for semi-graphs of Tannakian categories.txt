@@ -1,0 +1,1917 @@
+FIBERED PRODUCTS OF HOPF ALGEBRAS AND
+SEIFERT-VAN KAMPEN THEOREM FOR SEMI-GRAPHS OF
+TANNAKIAN CATEGORIES
+YUKI KAWAGUCHI
+Abstract. It is known that Seifert-van Kampen theorem (for “good” topolog-
+ical spaces) can be showed by arguing the category of covering spaces. Similar
+arguments should be valid for abstract Galois categories (which Mochizuki
+calls ”connected anabelioids”) and neutral Tannakian categories. But when
+we try to state the theorem, the problem is the existence of amalgams (in other
+words, ﬁbered coproducts) of proﬁnite groups and that of aﬃne group schemes
+(which is translated to the existence of ﬁbered products of commutative Hopf
+algebras). A construction of amalgams of proﬁnite groups can be found in
+Zalesskii [6]. We will construct ﬁbered products of commutative Hopf algebras
+by using the explicit construction of cofree coalgebras which Hazewinkel gave
+in [3]. Another interest is the existence of so-called HNN extensions of aﬃne
+group schemes, which we will also prove. By combining these two kinds of
+constructions, when we are given data of ﬁnitely many aﬃne group schemes
+and a manner of composing them, we can describe the composite aﬃne group
+scheme. The main theorem in this article is that, when we are given data of
+ﬁnitely many neutral Tannakian categories and a manner of glueing them, the
+fundamental group of the glued neutral Tannakian categories is isomorphic to
+the composition of the respective fundamental groups under the assumption
+that the data can be translated to the data of aﬃne group schemes, which is
+not true in general unlike the case of Galois categories and proﬁnite groups.
+Contents
+1. Fibered products of Hopf algebras 1
+2. The category of Tannakian categories 11
+3. Semi-graphs of Tannakian categories 13
+References 22
+1. Fibered products of Hopf algebras
+Throughout this article, k denotes a ﬁeld. In this section, we construct the
+ﬁbered product ofA1 and A2 over A0 for given Hopf algebrasA0,A1,A2 over k.
+We write Vectk (resp. Algk,Coalgk,Bialgk,Hopfk,Aﬀk and AGSk) for the
+category of k-vector spaces (resp. commutativek-algebras, k-coalgebras, commu-
+tative k-bialgebras, commutative k-Hopf algebras, k-aﬃne schemes and k-aﬃne
+groups schemes). Note that the same argument as in this section will be valid
+for non-commutativek-algebras, k-bialgebras andk-Hopf algebras. Let N denotes
+{0,1,2,... }.
+1
+
+2
+Deﬁnition 1.1.Let (C,Δ,ε) be a k-coalgebra, where C is ak-vector space,Δ:
+C −→C ⊗C is a comultiplication and ε: C −→k is a counit. For n ∈ N,
+Δn : C −→C⊗n is deﬁned by:
+Δ0 = ε: C −→k = C⊗0,
+Δ1 =i d: C −→C = C⊗1,
+Δn =( Δ⊗id⊗n−2)◦Δn−1 : C −→C⊗n (n ≥2).
+Remark 1.2. By the coassociativity ofΔ, it follows that forn,t,s ∈N such that
+t+s = n−2 ≥0,
+(
+id⊗t ⊗Δ⊗id⊗s )
+◦Δn−1 =Δn.
+Furthermore, one can also show that fort,s ∈N, we have(Δt⊗Δs)◦Δ=Δt+s.
+The following proposition is due to Hazewinkel [3].
+Proposition 1.3. The forgetful functorF : Coalgk −→Vectk has a right adjoint
+functor C and we can construct it as below.
+Proof. Let V ∈Vectk. We set
+ˆTV =
+∏
+n∈N
+V⊗n,
+ˆTV ˆ⊗ˆTV =
+∏
+t,s∈N
+V⊗t+s
+and
+Δ: ˆTV −→ˆTV ˆ⊗ˆTV ;(zn)n ↦→ (zt+s)t,s.
+An elementz ∈ˆTV is called representative if Δ(z) lies in the image of the natural
+map
+ˆTV ⊗ˆTV −→ˆTV ˆ⊗ˆTV ;(xt)t ⊗(ys)s ↦→ (xt ⊗ys)t,s.
+We write TVrepr for the set of representative elements ofˆTV . Then Δ restricts
+to Δ :TVrepr −→TVrepr ⊗TVrepr (see Hazewinkel [3] (3.12)). We deﬁneεas the
+composition of
+TVrepr −→ˆTV =
+∏
+n∈N
+V⊗n pr0
+−→k.
+Let us show that id⊗Δ◦Δ=Δ ⊗id◦Δ. For (zn)n ∈TVrepr,w ew r i t e
+Δ((zn)n)=
+∑
+l
+(
+x(l)
+t
+)
+t ⊗
+(
+y(l)
+s
+)
+s
+Δ
+((
+x(l)
+n
+)
+n
+)
+=
+∑
+l′
+(
+p(l,l′)
+t
+)
+t ⊗
+(
+q(l,l′)
+s
+)
+s
+and
+Δ
+((
+y(l)
+n
+)
+n
+)
+=
+∑
+l′
+(
+u(l,l′)
+t
+)
+t ⊗
+(
+v(l,l′)
+s
+)
+s.
+Then we have
+id⊗Δ◦Δ((zn)n)=
+∑
+l,l′
+(
+x(l)
+t
+)
+t ⊗
+(
+u(l,l′)
+r
+)
+r ⊗
+(
+v(l,l′)
+s
+)
+s
+and the image of the right hand side in
+∏
+t,r,s∈N
+V⊗t+r+s is
+( ∑
+l
+x(l)
+t ⊗
+( ∑
+l′
+u(l,l′)
+r ⊗v(l,l′)
+s
+))
+t,r,s
+.
+
+3
+Similarly we have
+Δ⊗id◦Δ((zn)n)=
+∑
+l,l′
+(
+p(l,l′)
+t
+)
+t ⊗
+(
+q(l,l′)
+r
+)
+r ⊗
+(
+y(l)
+s
+)
+s
+and the image of the right hand side in
+∏
+t,r,s∈N
+V⊗t+r+s is
+( ∑
+l
+( ∑
+l′
+p(l,l′)
+t ⊗q(l,l′)
+r
+)
+⊗y(l)
+s
+)
+t,r,s
+.
+Since
+x(l)
+t+s =
+∑
+l′
+p(l,l′)
+t ⊗q(l,l′)
+s
+and
+y(l)
+t+s =
+∑
+l′
+u(l,l′)
+t ⊗v(l,l′)
+s
+we see that
+( ∑
+l
+x(l)
+t ⊗
+( ∑
+l′
+u(l,l′)
+r ⊗v(l,l′)
+s
+))
+t,r,s
+=
+( ∑
+l
+x(l)
+t ⊗y(l)
+r+s
+)
+t,r,s
+=(zt+r+s)t,r,s
+and
+( ∑
+l
+( ∑
+l′
+p(l,l′)
+t ⊗q(l,l′)
+r
+)
+⊗y(l)
+s
+)
+t,r,s
+=
+( ∑
+l
+x(l)
+t+r ⊗y(l)
+s
+)
+t,r,s
+=(zt+r+s)t,r,s.
+Let us show that id⊗ε◦Δ= ε⊗id◦Δ = id. Under the same notation as above,
+we have for (zn)n ∈TVrepr
+id⊗ε◦Δ((zn)n)=
+∑
+l
+(
+y(l)
+0 x(l)
+t
+)
+t =( zt)t
+and thus id⊗ε◦Δ = id. Similarly we haveε⊗id◦Δ=i d .
+After allTVrepr becomes ak-coalgebra, which we denoteC(V). Moreover, for a
+k-linear map V −→W, we deﬁne ak-coalgebra homomorphism C(f): C(V) −→
+C(W);(zn)n ↦→ (f⊗n(zn))n. Then we obtain a functorC : Vectk −→Coalgk.
+Now let us show that C is a right adjoint functor ofF. We claim that, for
+C ∈Coalgk,V ∈Vectk, there is a functorial bijective map
+ϕC,V : HomVe c tk(F(C),V ) −→HomCoalgk(C,C(V));g ↦→
+(
+z ↦→
+(
+g⊗n ◦Δn(z)
+)
+n
+)
+.
+
+4
+First, we must check that
+(
+g⊗n ◦Δn(z)
+)
+n is a representative element ofˆTV .W h e n
+we write Δ(z)=
+∑
+l
+x(l) ⊗y(l) (
+x(l),y(l) ∈C
+)
+,w eh a v e
+Δ
+((
+g⊗n ◦Δn(z)
+)
+n
+)
+=
+(
+g⊗t+s(Δt+s(z))
+)
+t,s
+=
+(
+g⊗t+s
+( ∑
+l
+Δt
+(
+x(l))
+⊗Δs
+(
+y(l))))
+t,s
+=
+∑
+l
+(
+g⊗t ◦Δt
+(
+x(l))
+⊗g⊗s ◦Δs
+(
+y(l)))
+t,s
+using Remark 1.2. Here the right hand side is the image of
+∑
+l
+(
+g⊗n ◦Δn(x(l))
+)
+n ⊗
+(
+g⊗n ◦Δn(y(l))
+)
+n ∈ˆTV ⊗ˆTV , which implies that (g⊗n ◦Δn(z))n is representative.
+The above calculation shows also that the mapz ↦→
+(
+g⊗n◦Δn(z)
+)
+n is compatible
+with comultiplications. Moreover, it is easy to see that the mapz ↦→
+(
+g⊗n◦Δn(z)
+)
+n
+is counit preserving and hence ak-coalgebra homomorphism.
+For bijectivity ofϕC,V , we will show that the mapψC,V : f ↦→ pr1 ◦f is the
+inverse. Obviously we haveψC,V ◦ϕC,V = id. To see thatϕC,V ◦ψC,V =i d ,w e
+have to show that, forf ∈HomCoalgk(C,C(V)), prn ◦f is determined by pr1 ◦f for
+each n ∈N.S i n c ep r0 ◦f = ε,p r0 ◦f is determined. It is enough to show that for
+n ≥1, if prn ◦f is determined by pr1 ◦f,t h e np rn+1 ◦f is also determined. For
+z ∈C, we ﬁx a presentation Δ(z)=
+∑
+l
+x(l) ⊗y(l) and write f
+(
+x(l))
+=
+(
+α(l)
+n
+)
+n,
+f
+(
+y(l))
+=
+(
+β(l)
+n
+)
+n and f(z)=( γn)n.T h e nw eh a v e
+f ⊗f ◦Δ(z)=
+∑
+l
+f
+(
+x(l))
+⊗f
+(
+y(l))
+=
+∑
+l
+(
+α(l)
+n
+)
+n ⊗
+(
+β(l)
+n
+)
+n
+and the image of the right hand side in
+∏
+t,s∈N
+V⊗t+s is
+∑
+l
+(
+α(l)
+t ⊗β(l)
+s
+)
+t,s.O nt h e
+other hand the image of Δ◦f(z)i s(γt+s)t,s. Therefore we have fort,s ∈N
+γt+s =
+∑
+l
+α(l)
+t ⊗β(l)
+s
+and in particular,γn+1 =
+∑
+l
+α(l)
+n ⊗β(l)
+1 .T h e ns i n c eα(l)
+n and β(l)
+1 are determined
+by pr1 ◦f and z by assumption,γn+1 is also determined and hence we are done.□
+Remark 1.4. For C ∈Coalgk, the natural k-coalgebra homomorphism C −→
+C(F(C)) obtained from the adjointness is given byz ↦→ (Δn(z))n and injective.
+Thus we can always regardC as ak-subcoalgebra ofC(F(C)).
+Lemma 1.5. Let C ∈Coalgk and V ⊂C be ak-linear subspace. Then there is
+the largestk-subcoalgebra ofC contained inV.
+Proof. Fork-subcoalgebras C′′
+1 ,C′′
+2 ⊂C, weseethat C′′
+1 +C′′
+2 ⊂C isa k-subcoalgebra.
+Thus C′ =
+⋃
+{C′′ ⊂C : k-subcoalgebra | C′′ ⊂V} is the largestk-subcoalgebra of
+C contained inV. □
+
+5
+Proposition 1.6. For C1,C2 ∈Coalgk, a direct productC1 ⋆C2 of C1 and C2 in
+Coalgk exists and we can construct it as below.
+Proof. We regardCi as a k-subcoalgebra of C(F(Ci)). We deﬁneC1 ⋆C 2 as the
+largestk-subcoalgebraof C(F(C1)⊕F(C2))containedin C(pr1)−1(C1)∩C(pr2)−1(C2)
+where pri denotes thei-th projection F(C1)⊕F(C2) −→ F(Ci). Then for an ar-
+bitrary k-coalgebra D, we see that
+Hom(D,C1 ⋆C2)
+∼={h ∈Hom(D,C(F(C1)⊕F(C2))) | ImC(pr1)◦h ⊂C1,ImC(pr2)◦h ⊂C2}
+∼={f ∈Hom(D,C(F(C1))) | Imf ⊂C1}×{ g ∈Hom(D,C(F(C2))) | Img ⊂C2}
+∼=Hom(D,C1)×Hom(D,C2)
+using adjointness ofF and C and the fact that the image of ak-coalgebra homo-
+morphism isk-subcoalgebra. This implies thatC1 ⋆C2 satisﬁes the universality of
+a direct product ofC1 and C2. □
+Proposition 1.7. The functor C induces a right adjoint functor of the forgetful
+functor F : Bialgk −→Algk. We also writeC for that functor.
+Proof. This follows from almost the same argument with the proof of Proposition
+1.3. Note that for A ∈Algk, ˆTA has a natural structure ofk-algebra (the di-
+rect product of k-algebras A⊗n, not the tensor algebra of A)a n dTArepr is its
+k-subalgebra. □
+Lemma 1.8. Let A ∈Bialgk and B ⊂A be a k-subalgebra. Then the largest
+k-subcoalgebra ofA contained inB is the largestk-subbialgebra ofA contained in
+B.
+Proof. Let A′ be the largestk-subcoalgebra of A contained in B. We claim that
+A′ is also ak-subalgebra. Let A′′ be the k-subalgebra of A generated byA′, i.e.,
+the k-linear subspace of A spanned by elements x1x2 ··· xn with xi ∈A′.F o r
+x1,x2,...,x n ∈A′,s i n c eΔA(xi) ∈A′⊗A′ (i =1 ,2,...n ), wehaveΔA(x1x2 ··· xn) ∈
+A′′ ⊗A′′. Therefore A′′ is ak-subbialgebra contained inB and containingA′.W e
+conclude thatA′ = A′′ and henceA′ is the largestk-subbialgebra ofA. □
+Proposition 1.9. For A1,A2 ∈Bialgk, we can equip A1 ⋆A 2 constructed in
+L e m m a1 . 6w i t hak-bialgebra structure which makes it a direct product ofA1 and
+A2 in Bialgk.
+Proof. Note that C(pr1)−1(A1) ∩C(pr2)−1(A2)i sa k-subalgebra of C(F(A1) ⊕
+F(A2)). SinceA1⋆A2 is the largestk-subcoalgebra ofC(F(A1)⊕F(A2)) contained
+inC(pr1)−1(A1)∩C(pr2)−1(A2), it is the largestk-subbialgebra ofC(F(A1)⊕F(A2))
+contained inC(pr1)−1(A1)∩C(pr2)−1(A2) by Proposition 1.8. By the similar argu-
+ment as (1.6), we see thatA1⋆A2 satisﬁes the universality of a direct product ofA1
+andA2 (note that the image of ak-bialgebra homomorphism isk-subbialgebra). □
+Proposition 1.10. For A1,A2 ∈Hopfk, we can eqiuipA1 ⋆A 2 constructed in
+Proposition 1.9 with ak-Hopf algebra structure which makes it a direct product of
+A1 and A2 in Hopfk.
+Proof. We write
+S = SA1 ×SA2 : F(A1)×F (A2) −→ F(A1)×F (A2)
+
+6
+where SAi denotes the antipode ofAi (i =1 ,2) and
+S : ˆT(F(A1)×F (A2)) −→ˆT(F(A1)×F (A2));(zn)n ↦→ (τn ◦S⊗n(zn))n
+where τn denotes the map
+(F(A1)×F (A2))⊗n −→(F(A1)×F (A2))⊗n;zn,1 ⊗···⊗ zn,n ↦→ zn,n ⊗···⊗ zn,1.
+Weclaimthat S(C(F(A1)×F(A2))) ⊂C(F(A1)×F(A2)). For(zn)n ∈C(F(A1)×
+F(A2)), since it is representative, we can write
+(zt+s)t,s =
+∑
+l
+(
+x(l)
+t ⊗y(l)
+s
+)( (
+x(l)
+n
+)
+n,
+(
+y(l)
+n
+)
+n ∈ˆT(F(A1)×F (A2))
+)
+Then we have Δ(S((zn)n)) = Δ
+((
+τn ◦S⊗n(zn)
+)
+n
+)
+=
+(
+τt+s ◦S⊗t+s(zt+s)
+)
+t,s =∑
+l
+(
+τs ◦S⊗sy(l)
+s ⊗τt ◦S⊗tx(l)
+t
+)
+t,s, which impliesS((zn)n) is representative.
+Next we claim thatS(A1 ⋆A2) ⊂A1 ⋆A2. It is enough to show thatS(A1 ⋆A2)
+is ak-subbialgebra ofC(F(A1)×F (A2)) andC(pri)(S(A1 ⋆A2)) ⊂Ai (i =1 ,2). It
+is clear thatS(A1 ⋆A2)i sa k-subalgebra. Since the diagram
+C(F(A1)×F (A2)) Δ →→
+S
+↓↓
+C(F(A1)×F (A2))⊗C(F(A1)×F (A2))
+τ◦S⊗S
+↓↓
+C(F(A1)×F (A2)) Δ
+→→C(F(A1)×F (A2))⊗C(F(A1)×F (A2))
+is commutative (whereτ= τ2), we have Δ(S(A1 ⋆A2)) =τ(S ⊗S(Δ(A1 ⋆A2))) ⊂
+τ(S⊗S(A1⋆A2⊗A1⋆A2)) ⊂τ(S(A1⋆A2)⊗S(A1⋆A2)) ⊂S(A1⋆A2)⊗S(A1⋆A2),
+which implies thatS(A1⋆A2)i sak-subbialgebra. Moreover, we see that fori =1 ,2,
+C(pri)(S(A1 ⋆A2)) ⊂Ai since the diagram
+A1 ⋆A2 →→
+S
+↓↓
+C(F(A1)×F (A2))
+C(pri) →→
+S
+↓↓
+C(F(Ai))
+S
+↓↓
+Ai←←
+S
+↓↓
+S(A1 ⋆A2) →→C(F(A1)×F (A2))
+C(pri)
+→→C(F(Ai)) Ai←←
+is commutative.
+Now we will show that (A1 ⋆A2,m,e, Δ,ε,S)i sa k-Hopf algebra wherem and
+e denote the multiplication and the unit respectively. We have to show that the
+diagram
+A1 ⋆A2
+Δ →→
+ε
+↓↓
+(A1 ⋆A2)⊗(A1 ⋆A2)
+m◦id⊗S
+↓↓
+k e
+→→A1 ⋆A2
+is commutative. Let us consider (zn)n ∈A1⋆A2. Note that there is a pair ofa ∈A1
+and b ∈A2 such that pr⊗n
+1 (zn)=Δ n(a) and pr⊗n
+2 (zn)=Δ n(b)f o rn ∈N.W ec a n
+write
+(zt+s)t,s =
+∑
+l
+(
+x(l)
+t ⊗y(l)
+s
+)
+t,s
+((
+x(l)
+n
+)
+n,
+(
+y(l)
+n
+)
+n ∈ˆT(F(A1)×F (A2))
+)
+
+7
+and thus
+Δ((zn)n)=
+∑
+l
+(
+x(l)
+n
+)
+n ⊗
+(
+y(l)
+n
+)
+n.
+Then we have
+m◦(id⊗S)◦Δ((zn)n)= m◦id⊗S
+( ∑
+l
+(
+x(l)
+n
+)
+n ⊗
+(
+y(l)
+n
+)
+n
+)
+= m
+( ∑
+l
+(x(l)
+n )n ⊗(τn ◦S⊗n(y(l)
+n ))n
+)
+=
+( ∑
+l
+x(l)
+n ·τn ◦S⊗n(y(l)
+n )
+)
+n
+=
+( ∑
+l
+m◦
+(
+id⊗n ⊗τn ◦S⊗n)(
+x(l)
+n ⊗y(l)
+n
+))
+n
+=
+(
+m◦
+(
+id⊗n ⊗
+(
+τn ◦S⊗n))
+(z2n)
+)
+n.
+Thus it is enough to show that forn ∈N
+m◦
+(
+id⊗n ⊗
+(
+τn ◦S⊗n))
+(z2n)= z0(1,1)⊗n.
+Clearly this holds forn = 0. We consider the casen =1 .W h e nw ew r i t e
+z2 =
+∑
+l
+(
+α(l)
+1 ,β(l)
+1
+)
+⊗
+(
+α(l)
+2 ,β(l)
+2
+)
+we have ∑
+l
+α(l)
+1 ⊗α(l)
+2 =p r1 ⊗pr1(z2)=Δ (a),
+∑
+l
+β(l)
+1 ⊗β(l)
+2 =p r2 ⊗pr2(z2)=Δ (b)
+and thus ∑
+l
+α(l)
+1 S
+(
+α(l)
+2
+)
+= m◦id⊗S ◦Δ(a)= ε(a)= z0,
+∑
+l
+β(l)
+1 S
+(
+β(l)
+2
+)
+= m◦id⊗S ◦Δ(b)= ε(b)= z0.
+Hence m◦id⊗S(z2)=
+∑
+l
+(
+α(l)
+1 S
+(
+α(l)
+2
+)
+,β(l)
+1 S
+(
+β(l)
+2
+))
+=( z0,z0)= z0(1,1). We will
+show that ifn ≥1 and the claim holds forn then it also holds forn+1 . W eca n
+write
+(y(l)
+t+s)t,s =
+∑
+l,l′
+(
+p(l,l′)
+t ⊗q(l,l′)
+s
+)( (
+p(l,l′)
+n
+)
+n,
+(
+q(l,l′)
+n
+)
+n ∈ˆT(F(A1)×F (A2))
+)
+and
+(p(l,l′)
+t+s )t,s =
+∑
+l,l′,l′′
+(
+u(l,l′,l′′)
+t ⊗v(l,l′,l′′)
+s
+)( (
+u(l,l′,l′′)
+n
+)
+n,
+(
+v(l,l′l′′)
+n
+)
+n ∈ˆT(F(A1)×F(A2))
+)
+.
+
+8
+Then we have
+z2(n+1) =
+∑
+l
+x(l)
+n ⊗y(l)
+n+2
+=
+∑
+l
+x(l)
+n ⊗
+( ∑
+l′
+p(l,l′)
+2 ⊗q(l,l′)
+n
+)
+=
+∑
+l
+x(l)
+n ⊗
+( ∑
+l′
+( ∑
+l′′
+u(l,l′,l′′)
+1 ⊗v(l,l′,l′′)
+1
+)
+⊗q(l,l′)
+n
+)
+=
+∑
+l,l′,l′′
+x(l)
+n ⊗u(l,l′,l′′)
+1 ⊗v(l,l′,l′′)
+1 ⊗q(l,l′)
+n
+and thus
+m◦
+(
+id⊗n+1 ⊗
+(
+τn+1 ◦S⊗n+1))
+(z2(n+1))
+=
+∑
+l,l′,l′′
+m
+(
+x(l)
+n ⊗
+(
+τn ◦S⊗n)(
+q(l,l′)
+n
+))
+⊗m
+(
+u(l,l′,l′′)
+1 ⊗S
+(
+v(l,l′,l′′)
+1
+))
+=
+∑
+l,l′
+m
+(
+x(l)
+n ⊗
+(
+τn ◦S⊗n)(
+q(l,l′)
+n
+))
+⊗m
+( ∑
+l′′
+u(l,l′,l′′)
+1 ⊗S
+(
+v(l,l′,l′′)
+1
+))
+=
+∑
+l,l′
+m
+(
+x(l)
+n ⊗
+(
+τn ◦S⊗n)(
+q(l,l′)
+n
+))
+⊗m◦(id⊗S)
+(
+p(l,l′)
+2
+)
+=
+∑
+l,l′
+m
+(
+x(l)
+n ⊗
+(
+τn ◦S⊗n)(
+q(l,l′)
+n
+))
+⊗p(l,l′)
+0 (1,1)
+=
+∑
+l,l′
+m
+(
+x(l)
+n ⊗
+(
+τn ◦S⊗n)(
+p(l,l′)
+0 q(l,l′)
+n
+))
+⊗(1,1)
+=
+∑
+l
+m
+(
+x(l)
+n ⊗
+(
+τn ◦S⊗n)(
+y(l)
+n
+))
+⊗(1,1)
+= m◦id⊗n ⊗
+(
+τn ◦S⊗n)
+(z2n)⊗(1,1)
+= z0(1,1)⊗n+1.
+H e n c ew eh a v em◦(id⊗S)◦Δ= e◦ε,a sw e l la sm◦(S ⊗id)◦Δ= e◦ε.
+To see thatA1 ⋆A2 satisﬁes the universality, letB ∈Hopfk and fi : B −→Ai
+be ak-Hopf algebra homomorphism (i =1 ,2). Then the map
+g : B −→A1 ⋆A2;w ↦→
+(
+(F(f1)×F (f2))⊗n ◦Δn(w)
+)
+n
+is the uniquek-bialgebra homomorphism such thatC(pri)◦g = fi (i =1 ,2). Thus
+it is enough to show thath is ak-Hopf algebra homomorphism, i.e.,g ◦S = S ◦g.
+This is true because
+g ◦S(w)=
+(
+(F(f1)×F (f2))⊗n ◦Δn(S(w))
+)
+n
+=
+(
+(F(f1)×F (f2))⊗n ◦τn ◦S⊗n ◦Δn(w)
+)
+n
+=
+(
+τn ◦S⊗n ◦(F(f1)×F (f2))⊗n ◦Δn(w)
+)
+n
+=S ◦g(w).
+Note that, in general, for a Hopf algebraA,Δ ◦S = τ◦(S ⊗S) ◦Δ and thus
+Δn ◦S = τn ◦S⊗n ◦Δn (see Abe [1] Theorem 2.1.4). □
+
+9
+Lemma 1.11. Let A ∈Hopfk and B ⊂A be a k-subalgebra. Then there is the
+largest k-subHopf algebra ofA contained inB.
+Proof. We setB′ = {x ∈B | S(x) ∈B}⊂ B,w h i c hi sak-subalgebra. The largest
+k-subbialgebra A′ contained inB′ is ak-subHopf algebra. Indeed, sinceS(A′)i sa
+k-subbialgebra (see Abe [1] Theorem 2.1.4) and contained inS(B′)= B′, we see
+that S(A′) ⊂A′. A′ satisﬁes the property. □
+Proposition 1.12. For A0,A1 ∈Hopfk and k-algebra homomorphismf : A1 −→
+A0, there exists a unique (upto isomorphism) pair ofB ∈Hopfk and a k-Hopf
+algebra homomorphismg : B −→A1 that satisﬁes the following universal properties:
+− The composition of B
+g
+−→A1
+f
+−→A0 coincides with the composition of
+B
+counit
+−→k −→A0.
+− For any pair ofB′ ∈Hopfk and ak-Hopf algebra morphismg′ : B′ −→A1,
+if the composition ofB′ g′
+−→A1
+f
+−→A0 coincides with the composition of
+B′ counit
+−→ k −→A0, then there is a uniquek-Hopf algebra homomorphism
+h : B′ −→B such thatg ◦h = g′.
+Proof. WedeﬁneB asthelargest k-subHopfalgebraof A1 containedintheequalizer
+of f and the composition ofA1
+counit
+−→k −→A0,a n dg as the inclusionB −→A1.
+Then B and g clearly satisﬁy the ﬁrst property. For the second property, letg′ :
+B′ −→A1 be such a homomorphism. The image ofg′ is ak-subHopf algebra ofA1
+contained in the equalizer off and the composition ofA1
+counit
+−→k −→A0 and hence
+contained inB. Thereforeg′ induces ak-Hopf algebra homomorphismh : B′ −→B
+such thatg ◦h = g′. Uniqueness of suchh is clear. □
+Remark 1.13. Note that the morphism g : B −→A1 in the statement of the
+proposition is injective. Thus for V,W ∈ComodfB, a morphism V −→W of
+ComodfA1 is also a morphism ofComodfB.
+Proposition 1.14. For A0,A1,A2 ∈Hopfk and k-Hopf algebra homomorphisms
+f1 : A1 −→A0,f2 : A2 −→A0, a ﬁbered productA1 ⋆A0 A2 of A1 and A2 over A0
+in Hopfk exists and is constructed as below.
+Proof. Let A1 ⋆A 2 be a direct product of A1 and A2 in Hopfk and pri : A1 ⋆
+A2 −→Ai be the i-th projection. We apply Proposition 1.12 to the k-algebra
+homomorphism
+A1 ⋆A2
+Δ →→(A1 ⋆A2)⊗k (A1 ⋆A2)
+m◦((f1◦pr1)⊗(f2◦pr2 ◦S)) →→A0
+and obtaing : B −→A1 ⋆A2.T h e nB is a ﬁbered product ofA1 and A2 over A0.
+Indeed, since
+m◦((f1 ◦p1)⊗(f2 ◦p2 ◦S))◦Δ◦g = ε
+
+10
+we have
+f1 ◦pr1 ◦g
+=( (f1 ◦pr1)⊗ε)◦Δ◦g
+=( (f1 ◦pr1)⊗(ε◦f2 ◦pr2))◦Δ◦g
+= m◦((f1 ◦pr1)⊗(m◦(S ⊗id)◦Δ◦f2 ◦pr2))◦Δ◦g
+= m◦((f1 ◦pr1)⊗(m◦(f2 ◦pr2 ◦S ⊗f2 ◦pr2)◦Δ))◦Δ◦g
+= m◦(id⊗m)◦((f1 ◦pr1)⊗(f2 ◦pr2 ◦S)⊗(f2 ◦pr2))◦(id⊗Δ)◦Δ◦g
+= m◦(m⊗id)◦((f1 ◦pr1)⊗(f2 ◦pr2 ◦S)⊗(f2 ◦pr2))◦(Δ⊗id)◦Δ◦g
+= m◦((m◦(f1 ◦pr1 ⊗f2 ◦pr2 ◦S)◦Δ)⊗(f2 ◦pr2))◦Δ◦g
+= m◦(m◦(f1 ◦pr1 ⊗f2 ◦pr2 ◦S)◦Δ◦g)⊗(f2 ◦pr2 ◦g))◦Δ
+= m◦(ε⊗(f2 ◦pr2 ◦g))◦Δ
+= f2 ◦pr2 ◦g.
+Moreover, for a k-Hopf algebra homomorphism g′ : B′ −→A1 ⋆A 2 such that
+f1 ◦p1 ◦g′ = f2 ◦p2 ◦g′,s i n c e
+m◦((f1 ◦pr1)⊗(f2 ◦pr2 ◦S))◦Δ◦g′
+= m◦((f1 ◦pr1 ◦g′)⊗(f2 ◦pr2 ◦g′ ◦S))◦Δ
+= m◦((f1 ◦pr1 ◦g′)⊗(f1 ◦pr1 ◦g′ ◦S))◦Δ
+= m◦(id⊗S)◦Δ◦f1 ◦pr1 ◦g′
+= ε◦f1 ◦pr1 ◦g′
+= ε
+t h e r ei sau n i q u ek-Hopf algebra homomorphismh : B′ −→B such that g ◦h =
+g′. □
+Remark 1.15. We did not use commutativity of algebras in the above arguments.
+Thus it is almost clear that the same claim as Proposition 1.7-Proposition 1.14 holds
+even if we replaceAlgk (resp. Bialgk,Hopfk) by the category of non-commutative
+k-algebras (resp.k-bialgebras, k-Hopf algebras).
+By the contravariant equivalences betweenAlgk and Aﬀk, and betweenHopfk
+and AGSk, we immediately obtain the following corollaries.
+Corollary 1.16. For G1,G2 ∈AGSk, a free product (direct coproduct)G1 ∗G2 of
+G1 and G2 in AGSk exists.
+Corollary 1.17. For G0,G1 ∈AGSk and k-scheme morphism ρ: G0 −→G1,
+there exists a unique (upto isomorphism) pair ofH ∈AGSk and ak-aﬃne group
+scheme morphismϖ : G1 −→H that satisﬁes the following universal properties:
+− The composition ofG0
+ρ
+−→G1
+ϖ
+−→H coincides with the composition of
+G0 −→Speck
+unit
+−→H.
+− For any pair ofH′ ∈AGSk and a k-aﬃne group scheme morphismϖ′ :
+G1 −→H′, if the composition ofG0
+ρ
+−→G1
+ϖ′
+−→H′ coincides with the
+composition ofG0 −→Speck
+unit
+−→H′, then there is a uniquek-aﬃne group
+scheme morphismξ: H −→H′ such thatξ◦ϖ = ϖ′.
+
+11
+Corollary 1.18. For G0,G1,G2 ∈AGSk and k-aﬃne group scheme morphisms
+ρ1 : G0 −→G1,ρ2 : G0 −→G2, an amalgam (ﬁbered coproduct)G1 ∗G0 G2 of G1
+and G2 over G0 in AGSk exists.
+2. The category of Tannakian categories
+Inthissection, wewilldeﬁnethecategory Tannk ofneutralTannakiancategories
+overk asaquotientcategoryofthecategoryofpairsofneutralTannakiancategories
+overk, and its neutral ﬁber functors. Then we will get category equivalences among
+AGSk,Hopfk and Tannk.
+We writeVectfk for the category of the ﬁnite dimensionalk-vector spaces. For
+A ∈Hopfk,l e tComodfA denotes the category of ﬁnite dimensional (right)A-
+comodules over k and for G ∈AGSk,l e tRepfG denotes the category of ﬁnite
+dimensional representation ofG over k.
+Deﬁnition 2.1.We write Tann′
+k for the category whose object is a pair(C,ω)
+where C is a neutral Tannakian category overk and ωis a neutral ﬁber functor on
+C.F o r(C,ω),(C′,ω′) ∈Tann′
+k, a morphism between(C,ω) and (C′,ω′) is deﬁned
+to be a pair(F,ϕ) where F is an exact faithfulk-linear tensor functorC− →C′ and
+ϕis a tensor functor isomorphismF∗ω′ −→ω.F o r(F,ϕ):( C,ω) −→(C′,ω′) and
+(F′,ϕ′):( C′,ω′) −→(C′′,ω′′),w es e t(F′,ϕ′)◦(F,ϕ)=( F′ ◦F,ϕ◦F∗ϕ′).
+We deﬁne an equivalence relation∼on HomTa n n′((C,ω),(C′,ω′)) so that(F1,ϕ1) ∼
+(F2,ϕ2) if and only if there exists a tensor functor isomorphismμ: F1 −→F2 such
+that
+ω′ ◦F1
+ω′
+∗μ →→
+ϕ1
+↘↘GGGGGGGGG ω′ ◦F2
+ϕ2
+↙↙wwwwwwwww
+ω
+commutes. Then we can deﬁne the quotient categoryTannk = Tann′
+k / ∼.
+Consider the functorAGSk −→Tann′
+k deﬁned by sendingG to (RepfG,ωG)
+where ωG : RepfG −→Vectfk is the forgetful functor, and ρ: G −→G′ to
+(ρ∗,id). C denotes the composition of that functor followed by the natural functor
+Tann′
+k −→Tannk.
+Similarly, consider the functor Hopfk −→Tann′
+k deﬁned by sendingA to
+(ComodfA,ωA) where ωA : ComodfA −→Vectfk is the forgetful functor, and
+f : A −→A′ to (f∗,id). D denotes the composition of that functor followed by the
+natural functorTann′
+k −→Tannk.
+Remark 2.2. The category equivalenceHopfk −→AGSk;A ↦→ SpecA makes the
+following diagram commute:
+AGSk
+∼= →→
+C ↘↘JJJJJJJJJ Hopfk
+D↙↙ttttttttt
+Tannk
+.
+Proposition 2.3. We consider a functor fromTann′
+k to the category of group val-
+ued functors onAlgk deﬁned by sending(C,ω) to Aut⊗(ω) and (F,ϕ):( C,ω) −→
+(C′,ω′) to ρF,ϕ where, for R ∈Algk, (ρF,ϕ)R maps σ∈Aut⊗(ω′)(R) to ϕ⊗R ◦
+
+12
+F∗σ◦ϕ−1 ⊗R ∈Aut⊗(ω)(R). Then the functor factors as
+Tann′
+k −→Tannk
+π1
+−→AGSk −→(group valued functors onAlgk)
+Proof. It is a well-known fact that the functor factors throughAGSk. Hence it is
+enoughtoshowthatthefunctorfactorsthrough Tannk.C o n s i d e r(F1,ϕ1),(F2,ϕ2):
+(C,ω) −→(C′,ω′) and a tensor functor isomorphism μ: F1 −→F2 such that
+ϕ2 ◦ω′
+∗μ= ϕ1.T h e nf o rR ∈Algk and σ∈Aut⊗(ω′)(R), since
+ω′ ◦F1 ⊗R
+F∗
+1 σ →→
+ω′
+∗μ⊗R
+↓↓
+ω′ ◦F1 ⊗R
+ω′
+∗μ⊗R
+↓↓
+ω′ ◦F2 ⊗R
+F∗
+2 σ
+→→ω′ ◦F2 ⊗R
+commutes, we see thatϕ1 ⊗R◦F∗
+1 σ◦ϕ−1
+1 ⊗R = ϕ2 ⊗R◦ω′
+∗μ⊗R◦F∗
+1 σ◦ω′
+∗μ−1 ⊗
+R◦ϕ−1
+2 ⊗R = ϕ2 ⊗R◦F∗
+2 σ◦ϕ−1
+2 ⊗R. □
+Theorem 2.4. π1 is a quasi-inverse of C and consequently AGSk,Hopfk and
+Tannk are equivalent.
+Proof. ForG ∈AGSandR ∈Algk, wetakethemorphism G(R) −→Aut⊗(ωG)(R)
+which mapsσto ˜σwhere ˜σis the associationRepfG ∋ V ↦→ σV : ωG(V)⊗R −→
+ωG(V)⊗R. This gives a functor morphism idAGSk −→π1 ◦C, which is in fact a
+functor isomorphism by [4] Proposition 2.8.
+Next we will show that idTa n nk is isomorphic toC◦π1.L e t(C,ω) ∈Tannk and
+G = π1(C,ω). Then for each X ∈C, we seeω(X) has natural structure of ﬁnite
+dimensional representation ofG. Therefore ωfactors as
+C
+FC,ω
+−→RepfG
+ωG
+−→Vectfk .
+Here FC,ω is a equivalence ofk-linear tensor categories by [4] Theorem 2.11. We
+wanttoshowthattheassociation( C,ω) ↦→ [FC,ω,id] ∈HomTa n nk
+(
+(C,ω),C
+(
+π1(C,ω)
+))
+gives a functor morphism idTa n nk −→C ◦π1, i.e., for each morphism [F,ϕ]:
+(C,ω) −→(C′,ω′)i nTannk, the diagram
+(C,ω)
+[FC,ω,id]→→
+[F,ϕ]
+↓↓
+(RepfG,ωG)
+[ρ∗,id]
+↓↓
+(C′,ω′)
+[FC′,ω′,id]
+→→(RepfG′,ωG′)
+where G = π1(C,ω),G′ = π1(C′,ω′)a n dρ= π1(F,ϕ), is commutative. Since
+(ρ∗,id)◦(FC,ω,id) = (ρ∗◦FC,ω,id) and (FC′,ω′,id)◦(F,ϕ)=( FC′,ω′ ◦F,ϕ), what
+we have to show is that there exists a tensor functor isomorphismμ: FC′,ω′ ◦F −→
+ρ∗◦FC,ω that makes the diagram
+ωG′ ◦FC′,ω′ ◦F
+ωG′∗μ →→
+=
+↓↓
+ωG′ ◦ρ∗◦FC,ω
+=
+↓↓
+ω′ ◦F ϕ
+→→ωω G ◦FC,ω=
+←←
+
+13
+commute (as a diagram of functors). By the deﬁnition ofπ1,f o rX ∈C,R ∈Algk
+and σ∈G′(R),we see the diagram
+ω′ ◦F(X)⊗R
+ϕX⊗R→→
+σF (X)
+↓↓
+ω(X)⊗R
+(π1(F,ϕ)R(σ))X
+↓↓
+ω′ ◦F(X)⊗R ϕX⊗R
+→→ω(X)⊗R
+is commutative. This means that ϕX : ω′ ◦F(X) −→ω(X) is a morphism in
+RepfG′ under the natural action of G′, namely, the existence ofμthat we are
+looking for.
+It remains to show that, in general, for (C,ω),(C′,ω′) ∈Tannk and a k-linear
+tensor category equivalenceF : C− →C′ such that F∗ω′ = ω,[ F,i d ]:(C,ω) −→
+(C′,ω′) is an isomorphism in Tannk. We take a quasi-inverse F−1 of F and a
+tensor functor isomorphism δ: F ◦F−1 −→idC′.T h e n (F,id) ◦(F−1,ω′
+∗δ)=
+(F ◦F−1,ω′
+∗δ) ∼(id,id). When we write εfor the element of Hom(F−1 ◦F,id)
+that corresponds to F∗δ∈Hom(F ◦F−1 ◦F,F )b y F∗ : Hom(F−1 ◦F,id)
+∼=−→
+Hom(F ◦F−1 ◦F,F ), εis an isomorphism andω∗ε= ω′
+∗F∗ε= ω′
+∗F∗δ= F∗ω′
+∗δ:
+ω◦F−1 ◦F −→ω. This implies (F−1,ω′
+∗δ)◦(F,id) = (F−1 ◦F,F ∗ω′
+∗δ) ∼(id,id)
+and thus, we are done. □
+3. Semi-graphs of Tannakian categories
+By the result of the preceding section, we may expect that the Tannakian funda-
+mental group of the “ﬁbered product” of Tannakian categories should be isomorphic
+to the amalgam (ﬁbered coproduct) of their Tannakian fundamental groups. This
+is an analogy of Seifert-van Kampen theorem. In addition, we may consider the
+“HNN extension” of aﬃne group schemes. In this section we will generalize these
+two constructions by introducing “semi-graphs of Tannakian categories”. The idea
+of semi-graph of Tannakian categories is an analogy of “semi-graphs of anabelioids”
+introduced by Mochizuki in [5].
+Deﬁnition 3.1. (1) A semi-graph G consists of the following data:
+− as e tV, whose elements we refer to as “vertices”,
+− as e tE, whose elements we refer to as “edges”, each of whose elements
+e is a set of cardinality2 satisfying the property “e ̸= e′ =⇒ e∩e′ =
+∅”,
+− a collectionζof maps, one for each edge e, such thatζe : e −→ V∪{V}
+is a map from the sete to the setV ∪{V}.
+We refer to an edgee of a semi-graph(V,E,ζ) such that the inverse image
+of the subsetV ⊂ V∪{V}has cardinality2 as closed. We say a semi-graph
+G is connected if it is connected with respect to its natural topology. See[5]
+for more details.
+(2) A semi-graph C of Tannakian categories overk consists of the following
+data:
+− a semi-graph G =( V,E,ζ),
+− for each vertexv of G, a Tannakian categoryCv over k,
+
+14
+− for each edgee of G, a Tannakian categoryCe over k, together with,
+for each pairb ∈e and v ∈V such that ζe(b)= v, a exact faithful
+k-linear tensor functorFb : Cv −→ Ce.
+Let C =( G =( V,E,ζ),(Cv)v∈V,(Ce)e∈E,(Fb)b) be a semi-graph of Tan-
+nakian categories over k.W e s a yC is connected if its underlying semi-
+graph G is connected. If moreover there exists an edgee such that Ce is a
+neutral Tannakian category, i.e., it admits some neutral ﬁber functor, then
+we say C is neutral.
+(3) Let C =( G =( V,E,ζ),(Cv)v∈V,(Ce)e∈E,(Fb)b) be a connected semi-graph of
+Tannakian categories overk.I f G has at least one vertex,B(C) denotes the
+category whose object is((Xv)v∈V,(me)e:closed edge) where for eachv ∈V,
+Xv ∈Cv and for each closed edge e = {b1,b2}, me : Fb2(Xζe(b2)) −→
+Fb1(Xζe(b1)) is an isomorphism inCe and whose morphism is(Fv)v∈V that
+is compatible withme’s. If G has no vertices and hence precisely one edge,
+say e,t h e nw es e tB(C)= Ce.
+Note that for each vertex v there is a natural forgetful functor Pv :
+B(C) −→ Cv.
+Proposition 3.2. If a semi-graph C =( G =( V,E,ζ),(Cv)v∈V,(Ce)e∈E,(Fb)b) of
+Tannakian categories is neutral, thenB(C) has a natural structure of a rigidk-
+linear abelian tensor category whose unit object1 statisﬁesEnd(1) ∼= k and admits
+a neutral ﬁber functor, and hence becomes a neutral Tannakian category overk.
+Moreover, for each vertexv, the forgetful functorPv is an exact faithfulk-linear
+tensor functor.
+Proof. Of course we may assumeC has at least one vertex. It is clear thatB(C)
+has natural structure ofk-linear abelian category.
+To see thatB(C) is a tensor category, forX =( (Xv),(me)),X′ =( (X′
+v),(m′
+e)) ∈
+B(C), we setX ⊗X′ =( (Xv ⊗X′
+v),(me ⊗m′
+e)) where, fore = {b1,b2}, me ⊗m′
+e
+denotes the composition ofFb2(Xζ(b2) ⊗X′
+ζ(b2)) ∼= Fb2(Xζ(b2))⊗Fb2(X′
+ζ(b2))
+me⊗m′
+e
+∼=
+Fb1(Xζ(b1))⊗Fb1(X′
+ζ(b1)) ∼= Fb1(Xζ(b1) ⊗X′
+ζ(b1)). Obviously this makesB(C)i n t o
+tensor category.
+To see that B(C) has a unit object, we set 1 = ((1v),(ιe)) where 1v denotes
+a unit object in Cv for each vertexv,a n dιe denotes the canonical isomorphism
+Fb2(1v2) −→Fb1(1v1)f o re a c he = {b1,b2} (note that exact faithfulk-linear tensor
+functor maps a unit object to a unit object). Moreover, there is a canonical iso-
+morphism 1 = ((1v),(ιe)) −→((1v ⊗1v),(ιe ⊗ιe)) = 1⊗1. We can easily check
+that B(C) −→ B(C);X ↦→ 1⊗X is an equivalence of categories.
+For rigidity, we must construct internal homs. For X =( (Xv),(me)),Y =
+((Yv),(ne)) ∈B(C), we set Hom(X,Y ) = ((Hom(Xv,Yv)),(me,ne))) where for
+e = {b1,b2},( me,ne) denotes the composition of
+Fb2(Hom(Xζ(b2),Yζ(b2))) ∼= Hom(Fb2(Xζ(b2)),Fb2(Yζ(b2)))
+∼= Fb2(Xζ(b2))∨⊗Fb2(Yζ(b2))
+(m∨
+e )−1⊗ne
+∼= Fb1(Xζ(b1))∨⊗Fb1(Yζ(b1))
+∼= Hom(Fb1(Xζ(b1)),Fb1(Yζ(b1)))
+∼= Fb1(Hom(Xζ(b1),Yζ(b1))).
+
+15
+Then it is clear that forX1,X2,Y1,Y2 ∈B(C) the natural morphism Hom(X1,Y1)⊗
+Hom(X2,Y2) −→Hom(X1 ⊗X2,Y1 ⊗Y2) is an isomorphism and that forX ∈B(C)
+the natural morphismX −→X∨∨is an isomorphism.
+We claim that End(1)∼= k. Note that
+End(1) =
+{
+(fv) ∈
+∏
+v
+End(1v) | ιe ◦Fb2(fζ(b2))= Fb1(fζ(b1))◦ιe
+}
+.
+Since for a vertexv0 the composition ofk −→End(1)
+prv0
+−→End(1v0) ∼= k equals to
+identity, it is enough to show that prv0 is injective. Let (fv),(f′
+v) ∈End(1) such
+that fv0 = f′
+v0. We setW = {v ∈V| fv = f′
+v}⊂V .S i n c eW is non-empty andG
+is connected, ifW ̸= V, there exists an edgee = {b1,b2} such thatζ(b1) ∈W and
+ζ(b2) ̸∈W.B u tt h e nFb1(fζ(b1))= Fb1(f′
+ζ(b1)) and henceFb2(fζ(b2))= Fb2(f′
+ζ(b2)).
+Since the composition of k ∼= End(1ζ(b2))
+Fb2
+−→End(1e) ∼= k is identity, fζ(b2) =
+f′
+ζ(b2), which is absurd.
+For existence of a neutral ﬁber functor, we may assume, for an edgee0 = {b1,b2},
+Ce0 have a neutral ﬁber functorω0 and ζ(b1) is a vertex. We claim thatω= ω0 ◦
+Pζ(b1) is a neutral ﬁber functor onB(C). It is enough to show that, for each vertex
+v, Pv : B(C) −→ Cv is an exact faithfulk-linear tensor functor. The faithfulness
+can be checked similarly to the argument in the preceding paragraph and the other
+conditions are clear. □
+Proposition 3.3. Let C =( G =( V,E,ζ),(Cv)v∈V,(Ce)e∈E,(Fb)b) be a neutral
+semi-graph of Tannakian categories. Let us consider the situation thatV = {v1,v2},
+E = {e = {b1,b2}}, ζe(bi)= vi (i =1 ,2) and ωe is a neutral ﬁber functor onCe.W e
+write ωvi = F∗
+biωe, ω= P∗
+v1ωv1 G0 = π1(Ce,ωe) and Gi = π1(Cvi,ωvi)( i =1 ,2).
+Then π1(B(C),ω) is isomorphic toG1 ∗G0 G2.
+Proof. We rewriteCe (resp. Cvi, B(C), Fbi, Pvi, ωe and ωvi)a sC0 (resp. Ci , C, Fi,
+Pi,ω0 andωi). Notethat C equalstotheﬁberedproductcategory C1×C0C2.T h e r ei s
+a natural functor isomorphismμ: F2◦P2 −→F1◦P1 that associate to (X1,X2,m) ∈
+C the isomorphismF2(P2(X1,X2,m)) =F2(X2)
+m
+−→F1(X1)= F1(P1(X1,X2,m)).
+This is indeed a tensor functor isomorphism since for (X1,X2,m),(Y1,Y2,n) ∈C,
+the diagram
+F2 ◦P2(X1 ⊗Y1,X2 ⊗Y2,m ⊗n)
+∼= →→F2 ◦P2(X1,X2,m)⊗F2 ◦P2(Y1,Y2,n)
+F2(X2 ⊗Y2)
+∼= →→
+↓↓
+F2(X2)⊗F2(Y2)
+m⊗n
+↓↓
+F1(X1 ⊗Y1)
+∼= →→F1(X1)⊗F1(Y1)
+F1 ◦P1(X1 ⊗Y1,X2 ⊗Y2,m ⊗n) ∼=
+→→F1 ◦P1(X1,X2,m)⊗F1 ◦P1(Y1,Y2,n)
+
+16
+is commutative. Then we can easily see
+(C,ω)
+[P2,ω0∗μ] →→
+[P1,id]
+↓↓
+(C2,ω2)
+[F2,id]
+↓↓
+(C1,ω1)
+[F1,id]
+→→(C0,ω0)
+is a commutative diagram inTannk. We set Gi = π1(Ci,ωi), ρi = π1
+(
+[Fi,id]
+)
+,
+ν1 = π1
+(
+[P1,id]
+)
+and ν2 = π1
+(
+[P2,ω0∗μ]
+)
+.L e tH be a amalgam ofG1 and G2 over
+G0. Then we get a commutative diagram
+G
+H
+↖↖BBBB
+G2
+ι2←←
+ν2←←
+G1
+ι1
+↑↑
+ν1
+↑↑
+G0ρ1
+←←
+ρ2
+↑↑
+in AGSk and furthermore a commutative diagram
+RepfG
+↘↘
+→→
+→→OOO
+RepfH
+→→
+↘↘
+→→VVVVVVVV
+RepfG1 ×RepfG0
+RepfG2
+↓↓
+→→RepfG2
+↓↓
+RepfG1
+→→RepfG0
+of Tannakian categories. SinceCi ∼= RepfGi (i =0 ,1,2), we have
+C ∼= RepfG1 ×RepfG0
+RepfG2. We are going to show that RepfG ∼= RepfH.
+Considering the commutative diagram
+C
+∼=
+↙↙sssssssssss ∼=
+→→SSSSSSSSSSSSSSSSS
+RepfG →→RepfH →→RepfG1 ×RepfG0
+RepfG2
+it is enough to show that the natural functorRepfH −→RepfG1 ×RepfG0
+RepfG2
+is fully faithful. We deduce it from the following lemma. □
+Lemma 3.4. Let Ai ∈Hopfk (i =0 ,1,2), fi : Ai −→A0 be Hopf algebra ho-
+momorphisms (i =1 ,2) and A be a ﬁbered product ofA1 and A2 over A0.T h e n
+for V,W ∈ComodfA and a k-linear map g : V −→W, g is an A-comodule ho-
+momorphism if and only if it is anA1-comodule homomorphism andA2-comodule
+homomorphism.
+Proof. Let ρV : V −→V ⊗k A and ρW : W −→W ⊗k A be structure morphisms of
+V and W as A-comodules. What we have to show is that (g ⊗idA)◦ρV = ρW ◦g
+
+17
+if (g ⊗idAi)◦(idV ⊗pri)◦ρV =( i dW ⊗pri)◦ρW ◦g (i =1 ,2) where pri denotes
+the i-th projectionA −→Ai (i =1 ,2).
+Take bases{ei}⊂ V,{e′
+j}⊂ W.W ew r i t e
+g(ei)=
+∑
+j
+tije′
+j (tij ∈k)
+ρV (ei)=
+∑
+l
+el ⊗ail (ail ∈A)
+ρW(e′
+j)=
+∑
+m
+e′
+m ⊗bjm (bjm ∈A).
+Let I be the ideal ofA generated by
+{ ∑
+l
+tlmail −
+∑
+j
+tijbjm,SA
+( ∑
+l
+tlmail −
+∑
+j
+tijbjm
+)}
+i,m
+where SA denotes the antipode of A. We claim that I is a Hopf ideal, i.e., (1)
+ΔA(I) ⊂I ⊗k A+A⊗k I,( 2 )SA(I) ⊂I,( 3 )εA(I)=0 .
+Let us check that ΔA(I) ⊂I ⊗k A+A⊗k I.S i n c eΔA is ak-algebra homomor-
+phism it is enough to show that ΔA maps the generators ofI into I⊗k A+A⊗k I.
+Using the condition that (id⊗ΔA)◦ρV =( ρV ⊗id)◦ρV , we know that ΔA(ail)=∑
+s
+asl ⊗ais and similarly ΔA(bjm)=
+∑
+r
+brm ⊗bjr. Then we can achieve (1) by
+the caluculation
+ΔA
+( ∑
+l
+tlmail −
+∑
+j
+tijbjm
+)
+=
+∑
+l
+(
+tlm
+∑
+s
+asl ⊗ais
+)
+−
+∑
+j
+(
+tij
+∑
+r
+brm ⊗bjr
+)
+=
+∑
+s
+( ∑
+l
+tlmasl −
+∑
+j
+tsjbjm
+)
+⊗ais +
+∑
+s,j
+tsjbjm ⊗ais
++
+∑
+r
+brm ⊗
+( ∑
+l
+tlrail −
+∑
+j
+tijbjr
+)
+−
+∑
+r,l
+tlrbrm ⊗ail
+=
+∑
+s
+( ∑
+l
+tlmasl −
+∑
+j
+tsjbjm
+)
+⊗ais +
+∑
+r
+brm ⊗
+( ∑
+l
+tlrail −
+∑
+j
+tijbjr
+)
+∈I ⊗k A+I ⊗k A
+and
+ΔA
+(
+SA
+( ∑
+l
+tlmail −
+∑
+j
+tijbjm
+))
+=τ◦(SA ⊗SA)◦ΔA
+( ∑
+l
+tlmail −
+∑
+j
+tijbjm
+)
+∈τ◦(SA ⊗SA)(I ⊗k A+A⊗k I) ⊂τ(I ⊗k A+A⊗k I) ⊂I ⊗k A+A⊗k I.
+(2) is obvious sinceSA is a k-algebra homomorphism. To check (3), similarly
+to (1), it is enough to show thatεA maps the generators of I to 0. Note that
+
+18
+εA ◦SA = εA ([1] Theorem 2.1.4). For eachi and m,s i n c e
+∑
+m
+e′
+m ⊗ε
+( ∑
+l
+tlmail −
+∑
+j
+tijbjm
+)
+=(id⊗ε)◦((g ⊗id)◦ρV −ρW ◦g)(ei)
+=((g ⊗ε)◦ρV −(id⊗ε)◦ρW ◦g)(ei)
+=(g −g)(ei)=0
+and {e′
+m} is a basis, we see thatε
+( ∑
+l
+tlmail −
+∑
+j
+tijbjm
+)
+=0 .
+Next we claim that (4)I ⊂Kerpr1 ∩Kerpr2.F o ri and m,s i n c e
+∑
+m
+e′
+m ⊗pri
+( ∑
+l
+tlmail −
+∑
+j
+tijbjm
+)
+=(id⊗pri)◦((g ⊗id)◦ρV −ρW ◦g)(ei)=0
+and {e′
+m} is a basis, we see that pri
+( ∑
+l
+tlmail −
+∑
+j
+tijbjm
+)
+= 0. Moreover, since
+pri is ak-Hopf algebra homomorphism, pri
+(
+S
+( ∑
+l
+tlmail −
+∑
+j
+tijbjm
+))
+=0 .
+By (1),(2),(3) and (4) we obtain a commutative diagram
+A/I →→
+↓↓
+A2
+↓↓
+A1 →→A0
+in Hopfk and hence ak-Hopf algebra homomorphismA/I −→A such that the
+composition of A −→A/I −→A is idA using the universality ofA.T h u sI =0 ,
+which implies that for eachi and m,w eh a v e
+( ∑
+l
+tlmail −
+∑
+j
+tijbjm
+)
+= 0 and so
+((g ⊗id)◦ρV −ρW ◦g)(ei)
+=
+( ∑
+l,m
+tlme′
+m ⊗ail
+)
+−
+( ∑
+j,m
+tije′
+m ⊗bjm
+)
+=
+∑
+m
+e′
+m ⊗
+( ∑
+l
+tlmail −
+∑
+j
+tijbjm
+)
+=0 .
+Since {ei} is a basis, we conclude that (g ⊗id)◦ρV −ρW ◦g =0 . □
+Proposition 3.5. Let C =( G =( V,E,ζ),(Cv)v∈V,(Ce)e∈E,(Fb)b) be a neutral
+semi-graph of Tannakian categories. Let us consider the situation thatV = {v},
+E = {e = {b1,b2}}, ζe(bi)= v (i =1 ,2) and ωe is a neutral ﬁber functor onCe.W e
+set ωi = F∗
+biωe and ω= P∗
+v ω1. We assume there is a tensor functor isomorphism
+ϕ: ω2 −→ω1. We write G0 = π1(Ce,ωe), G1 = π1(Cv,ω1), ρ1 = π1(Fb1,id),ρ2 =
+π1(Fb2,ϕ): G0 −→G1 and C = B(C).T h e nπ1(C,ω) is isomorphic to thek-aﬃne
+
+19
+group schemeG obtained by applying Corollary 1.17 to the composition of
+G0
+ρ2×u×(i◦ρ1)×(i◦u) →→G1 × Zalg ×G1 × Zalg
+→→(G1 ∗Zalg)×(G1 ∗Zalg)×(G1 ∗Zalg)×(G1 ∗Zalg)
+m →→G1 ∗Zalg
+where i and m denotes the inverse and multiplication repectively,Zalg is the al-
+gebraic hull of Z and u :S p e ck −→Zalg is the image of1 by the natural group
+homomorphism Z −→Zalg(k).
+Proof. We may assumeCe = RepfG0,Cv = RepfG1 and ωe is the forgetful functor
+ωG0. It is enough to show that there is a equivalence C− →RepfG of tensor
+k-linear abelian categories that makes the diagram
+C
+∼= →→
+ω
+↘↘FFFFFFFFF RepfG
+ωG
+↙↙sssssssss
+Vectfk
+commutes. Let (X,m) ∈C, i.e., X ∈RepfG1 and m is an isomorphismρ∗
+2X −→
+ρ∗
+1X in RepfG0.L e t Zalg −→GL(ωG1(X)) be the representation of Zalg cor-
+responding to the representation Z −→GL(ωG1(X))(k);1 ↦→ m of Z.T h e n w e
+obtain G1 ∗Zalg −→GL(ω1(X)). We claim that the diagram
+G0
+m◦(ρ1×u×(i◦ρ2)×(i◦u))→→
+↓↓
+G1 ∗Zalg
+↓↓
+Speck →→GL(ω1(X))
+is commutative. ForR ∈Algk and σ∈G0(R), since the diagram
+ωG1(X)⊗R
+(ρ2)R(σ) →→
+m⊗R
+↓↓
+ωG1(X)⊗R
+m⊗R
+↓↓
+ωG1(X)⊗R
+(ρ1)R(σ)
+→→ωG1(X)⊗R
+is commutative, we have
+(ρ1)R(σ)·uR(e)·(i◦(ρ2)R(σ))·(i◦uR(e)) = idωG1(X)⊗R .
+
+20
+Thus the diagram
+G0(R)
+→→VVVVVVVVVVVVVV
+↘↘
+↓↓
+G1(R)× Zalg(R)×G1(R)× Zalg(R)
+↓↓
+(G1 × Zalg ×G1 × Zalg)(R)
+↓↓
+(G1(R)∗Zalg(R))4 →→
+↓↓
+(G1 ∗Zalg)4(R)
+↓↓
+G1(R)∗Zalg(R) →→
+→→YYYYYYYYYYYYYYYY (G1 ∗Zalg)(R)
+↓↓
+Speck(R) →→GL(ωG1(X))(R)
+is commutative, which proves the claim. Then by Corollary 1.17 we obtain an
+object Φ(X,m)=( G −→GL(ω1(X)) of RepfG.L e tf :( X,m) −→(Y,n)b ea
+morphism ofC, i.e.,f is a morphism ofRepfG1 such that the diagram
+ρ∗
+2X
+f →→
+m
+↓↓
+ρ∗
+2Y
+n
+↓↓
+ρ∗
+1X f
+→→ρ∗
+1Y
+is commutative, which implies that thek-linear mapf is a morphism ofRepf Zalg.
+By Lemma 3.4, we see thatf is a morphism ofRepfG1∗Zalg and furthermore a
+morphism of RepfG by Remark 1.13. Hence we can deﬁne a functor Φ :C− →
+RepfG. Clearly, Φ is ak-linear tensor funtor andωG ◦Φ= ω.
+Conversely, LetZ =( G −→GL(V)) ∈RepfG. We set X =( G1 −→G −→
+GL(V)). Let m be the image of 1 by Z −→ Zalg(k) −→GL(V)(k). We set
+Ψ(Z)=( X,m). Clearly Ψ becomes a functorRepfG −→ Cand gives a quasi-
+inverse of Φ. □
+Theorem 3.6. Let C =( G =( V,E,ζ),(Cv)v∈V,(Ce)e∈E,(Fb)b) be a neutral semi-
+graph of Tannakian categories such thatV and E are ﬁnite. We consider the case
+that Cv = RepfGv,Ce = RepfGe and Fb = ρ∗
+b whereGv,Ge ∈AGSk (v ∈V,e ∈E)
+and ρb is a k-aﬃne group scheme morphismGe −→Gζ(b) (b ∈e,ζ(b) ∈V).W e
+can calculateπ1(B(C)) as follows.
+(1) If there is a non-closed edgee0, we consider a new semi-graph of Tanakian
+categories C′ =( G′ =( V,E\{e0},ζ),(Cv)v,(Ce)e∈E\{e0},(Fb)b).T h e nB(C′)
+is naturally isomorphic toB(C).W er e p l a c eC by C′.W er e p e a tt h i sa r g u -
+ment and assume there is no non-closed edge.
+(2) We consider the case that there is a closed edgee0 = {b1,b2} such that
+ζ(b1) ̸= ζ(b2).W es e t
+V′ = V\{ ζ(b1),ζ(b2)}⨿{ v0}
+E′ = E\{ e0}
+ζ′(b)=
+(
+ζ(b)( if ζ(b) ̸∈{ζ(b1),ζ(b2)})
+v0 (if ζ(b) ∈{ζ(b1),ζ(b2)}) (b ∈e ∈E′)
+
+21
+Cv0 = RepfGζ(b1)∗GeGζ(b2 )
+∼= B
+( RepfGζ(b1 ) RepfGζ(b2 )
+RepfGe
+)
+ρ′
+b =
+( ρb (if ζ(b) ̸∈{ζ(b1),ζ(b2)})
+(Ge
+ρb
+−→Gζ(b) −→Gζ(b1) ∗Ge Gζ(b2))( if ζ(b) ∈{ζ(b1),ζ(b2)}) (b ∈e ∈E′)
+C′ =( (V′,E′,ζ′),(Cv),(Ce),(ρ′
+b
+∗))
+Then B(C′) is naturally isomorphic toB(C). We substitute C′ for C.W e
+repeat this argument and assume there is no edgee = {b1,b2} such that
+ζ(b1) ̸= ζ(b2).
+(3) We may assume there is a unique vertexv and all edges are closed. We
+consider the case that there is a edgee0.W es e t
+E′ = E\{ e0}
+C′
+v = RepfG ∼= B
+(
+RepfGvRepfGe
+)
+ρ′
+b =( Ge
+ρb
+−→Gv −→G)( b ∈e ∈E′)
+C′ =( (V,E′,ζ),(C′
+v),(Ce),(ρ′
+b
+∗))
+then B(C′) is naturally isomorphic toB(C). We substitute C′ for C.W e
+repeat this argument and assume there is a unique vertex and no edge.
+After these three steps,C consists of one Tannakian categoryRepfG where G is a
+k-aﬃne group scheme calculated from the ﬁrst dataC. We conclude thatG is what
+we want.
+Corollary 3.7. Let C =( G =( V,E,ζ),(Cv)v∈V,(Ce)e∈E,(Fb)b) be a neutral semi-
+graph of Tannakian categories such thatV and E are ﬁnite. Suppose we are given,
+for each closed edgee, neutral ﬁber functorωe on Ce and, for each triple(v,e =
+(b1,b2),e′ =( b′
+1,b′
+2
+)) such that ζ(b1)= ζ(b′
+1)= v, isomorphism betweenF∗
+b1ωe and
+F∗
+b′
+1
+ωe′. In this caseC is isomorphic to a neutral semi-graph of Tannakian categories
+of the form like one of the theorem. Thus we can calculate the fundamental group
+of C in the manner of the theorem.
+Remark 3.8. Let C be a neutral Tannakian category over an algebraically closed
+ﬁeldk. Suppose there is a setJ of objects which generateC as a tensor category
+satisfying one of the following two conditions:
+− J is countable.
+− The cardinality ofJ is less than the one ofk.
+Then any two neutral ﬁber functors onC are isomorphic([2]). Thus for a neutral
+semi-graph C of Tannakian categories over an algebraically closed ﬁeldk,i ft h e
+Tannakian category associated to each edge admits a neutral ﬁber functor and the
+Tannakian category associated to each vertex satisﬁes one of the conditions above,
+we may apply the corollary.
+
+22
+References
+[1] Eiichi Abe, Hopf algebras, Cambridge Uniersity Press, 1982.
+[2] Christopher Deninger, A remark on the structure of torsors under an aﬃne group scheme,
+http://arxiv.org/abs/1304.6216, 2013.
+[3] Michiel Hazewinkel, Cofree coalgebras and multivariable recursiveness, Journal of Pure and
+Applied Algebra 183, pp 61 - 103, 2003.
+[4] P.Deligne, J.Milne, Tannakian Categories, http://www.jmilne.org/math/xnotes/tc.pdf, 2012.
+[5] Shinnichi Mochizuki, Semi-graphs of Anabelioids, Publ. Res. Inst. Math. Sci. 42 , 2006.
+[6] Luis Ribes, Pavel Zalesskii, Proﬁnite Groups, Springer-Verlag Berlin Heidelberg, 2010.

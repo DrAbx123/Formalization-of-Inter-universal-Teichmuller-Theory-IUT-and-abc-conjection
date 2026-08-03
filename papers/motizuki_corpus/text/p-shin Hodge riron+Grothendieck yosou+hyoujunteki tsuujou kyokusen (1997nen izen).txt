@@ -1,0 +1,536 @@
+ȬǯȁȣȸȷȎȸȈᲴ
+ૠྸᄂᲣ
+ᇹɟᛅᲴFaltings Ʒ p ᡶțȃǸྸᛯƷኰʼᲴ
+Grothendieck ƷžᜋƷ᧙৖ſʖेƷ
+ᚇໜƔǒ
+ႸഏᲴ
+I.ஜႸ೅
+II. Galois cohomologyſ
+III. p-divisible groupӳ
+IஜႸ೅Ჴ
+(A.) ᙐእૠ˳C ɥƷțȃǸྸᛯᲴ ǇƣŴCƍЈƠƯƓƜƏŵX ǛŴ C ɥ proper
+ư smoothಮ˳ᲣƱƢǔŵƦƏƢǔƱŴɟ૾ưƸŴ
+Hi
+sing(X, C)
+Ƴǔsingular cohomology ƷǳțȢȭǸȸь፭ƕƋǓŴ˂૾ưƸŴ
+⨁
+p+q=i
+Hp(X, Ωq
+X)
+Ƴǔ Hodge cohomologyƱƠƯŴX ƷӨˮႻᆰ᧓Ʃ
+፯ƷɥưƸŴX Ʒᙐእನ
+ƠƯƍǔŵ ƦƜưŴ HodgeƸ೅แႎ
+ưƋǔᲴ
+Hi
+sing(X, C) ∼=
+⨁
+p+q=i
+Hp(X, Ωq
+X)
+ƱƍƏƜƱưƋǔŵƭǇǓŴᚕƍ੭ƑǕƹŴƜƷɟᙸμ໱ီឋƦƏƳʚƭƷɭမᲢᲷ Ȉȝȭ
+ǸȸƷɭမƱŴദЩǇƨƸˊૠႎƳ᧙ૠƷɭမᲣƕ೅แႎƴƭƳƕƬƯƍǔƷưƋǔŵ
+1
+
+(B.) pᲴ K Ƹ QpƱƠŴA ⊆ K ƸƦƷૢૠ࿢ƱƢǔŵ
+X→ Spec(A) Ƹ A ɥ smooth ư proper ƳǹǭȸȠƱƢǔŵ ƳƓŴX
+def
+= X⊗ A K ƱƢǔŵ
+Hodge cohomology ፭ƸஜឋႎƴƸˊૠႎƳǋƷƳƷưŴ(A.)Ʒp ᡶႎƳཞඞƷ
+ǋƱưǋƦƷǇǇᡫဇƢǔƚƲŴsingular cohomology໱ƷƜƱƳƕǒᲣ´etale co-
+homology ƴፗƖ੭ƑƳƍƱƍƚƳƍŵ ƦƏƢǔƱŴഏƷǑƏƳʚᆔ᫏Ʒᐯ໱ƳǳțȢȭǸȸ
+፭ƕưƖǔᲴ
+(1) Hi
+et(X ⊗K
+ K, Zp) ᲢƜƜưŴ
+K Ƹ K Ʒˊૠ᧍ѼᲣ
+(2) ⊕p+q=i Hp(X, Ωq
+X/A)
+ƬƯŴᲢᲫᲣƱᲢᲬᲣǛൔ᠋ƠǑƏƱƢǔƷƸᐯ໱ưƔƭಒƶദᚐƩƕŴƨƩƠŴƪǐƬƱ
+Ơƨ২ᘐႎƳբ᫆ƱƠƯŴᲢᲫᲣưƸZp ɥƷ rank ƕ BettiƠƯŴᲢᲬᲣƷ૾
+ưƸŴA ɥƷrank ƕ Betti ૠƴƳǔŵƦƠƯŴǋƏƪǐƬƱขЦƳբ᫆ƱƠƯŴᲢᲫᲣƴƸŴ
+ΓK
+def
+= Gal(
+K/K)ƠƯŴ
+ᲢᲬᲣƷ૾ƴƸŴΓKƨǒƳƍŵ
+ǔǋƷưƸƳƍƜƱ
+፯ƢǔƷ
+੭ƢǔƜƱƕ
+ưƖǔưƋǖƏƱƍƏƷƕŴGrothendieck Ʒžmysterious functorſʖेưƋǔŵ ƪƳǈƴŴ
+ʻƷʖेƸᲢᢒǢȸșȫπ1 ƴ᧙ƢǔᲣƍǘǏǔžGrothendieck ʖेſƱƸᢌƏƷƩƕŴžmys-
+teriousᲣƱƍƏ
+ǛʖेƠƯƍǔƱƍƏໜưƸŴ
+ƜƷʚƭƷžGrothendieckܱ
+ᨥŴ[3] ưƸŴƪǐƏƲžmysterious functorſʖेƷFaltings ƴǑǔᚐൿǛဇƍƯŴᲢ୺ዴƷ
+ӳƷᲣᢒǢȸșȫʖेǛᚰଢƠƯƍǔƜƱƔǒǋᇄƑǔǑƏƴŴƜƷƾƨƭƷʖेƷƭƳƕ
+ႎƳ᩿ͨǋஊǔŵ
+(C.) όЎਦ೅ƱFaltings [2]ᙲƳᚡӭǛኰʼƠ
+ƯƓƜƏŵχ :Γ K → Z×
+pƢǔΓK- ь፭Ǜ Zp(1) Ʊ୿ƘŵƳƓŴ
+ΓK- ь፭M Ʊ n ∈ ZƠƯŴM(n)
+def
+= M ⊗Zp Zp(1)⊗n ƱƢǔŵ ƦƏƢǔƱŴFaltings[2]
+ྸƸഏƷǑƏƴƳǔᲴ
+Theorem 1: Let X→ Spec(A) be proper and smooth. Then there exists a natural
+ΓK-equivariant isomorphism (for all i ∈ Z)
+Hi
+et(X ⊗K
+ K, Zp) ⊗Zp
+ K
+∧ ∼=
+⨁
+p+q=i
+Hp(X, Ωq
+X/K) ⊗K
+ K
+∧
+(−q)
+Moreover, there also exist integral and mod pn versions of this isomorphism.
+2
+
+IIᲨ Galois cohomologyſᲴ
+(A.) CӳᲴ StokesბᲴ FaltingsྸƷ᭽щƷƻƱƭƸŴƦƷᚰଢƕ
+ƋǔॖԛưƸŴCྸᲢᲷ(I.) Ʒ (A.)ᲣƷᚰଢƱǑƘ˩ƯƍǔƱƍƏƜƱưƋ
+ǔŵƲƜƕ˩ƯƍǔƔƱƍƏƱŴproper৑ႎ
+ბƠƯƍǔƱƍƏƱƜǖƩŵƦƠƯŴgeneral nonsense৑ႎ
+ႎƳኽௐǛЈƢŵ̊ƑƹŴCئ
+ƍЈƠƯǈǔƱŴXޖC Ʒ
+resolution ǛƾƨƭᎋƑǔŵƻƱƭƸŴC∞ƴǑǔde Rham complex ưŴǋƏ
+৑ႎƳҥ˳ſɥƷ᧙ૠƴǑǔcomplexǛҥ˳ƴƦƬƯ
+ǒǕǔŵƨƩƠŴƦƷᐯ໱Ƴϙ΂ƕǳ
+ƖឪƜƢƜƱǛƍƏƨǊƴƸŴϙ΂ƕҥƳǔь፭Ʒ᧓Ʒϙ΂ưƋǔ
+ƷǈƳǒƣƴŴcomplex Ʒ᧓Ʒϙ΂ưƋǔƜƱǛᚕǘƳƍƱƍƚƳƍŵƠƔƠŴƦǕƸƪǐƏ
+ƲŴn ഏΨᇌ૾˳ɥƷStokesᆢЎඥ
+ბƠƯƍǔƱƍƏǘƚƩŵpӳƴƸŴƜƷStokes
+ƢǔǋƷƸʻƔǒኰʼƢǔGalois cohomology৑ႎƳᚘምưƋǔŵ
+(B.)ǛžവǜƲſൈƢƨǊƷZp-ᲴA Ƹ (I.) Ʒ (B.) ƷǑƏƳ࿢ƱƠŴR Ƹ A ɥ smooth
+ႎഏΨd Ʒӧ੭࿢ƱƢǔŵቇҥƷƨǊƴŴR ƷɶƴŴdlog(ui) ƨƪƕΩR/AƱƳ
+ǔǑƏƳҥΨƨƪu1,...u dƢǔŵ ƞǒƴŴ
+R ǛŴ೅ૠᲪưƸǨǿȸȫƳR Ʒஇ
+ƱƠŴΓR
+def
+= Gal(
+RK/RK) ƱƢǔŵᙲƸŴΓR Ʒ Galois cohomology ǛᚘምƠƨƍ
+ƷƩƕŴႺ੗ᚘምƠǑƏƱƢǕƹᩊƠᢅƗǔƷưŴഏƷǑƏƳನ঺ǛƢǔŵǇƣŴ
+R∞
+def
+= R[ζp∞ ,u1/p∞
+i ] ⊆
+ R
+ᲢƜƜưŴζp∞ ƸɟƷpʈఌμ˳ǛॖԛƢǔᲣƱƍƏ
+RλƢǔŵ ƦƏƢǔƱŴ
+ƕƋǔᲴ
+(∗alm)
+ R Ƹ R∞ƱƠƯŴžവǜƲǨǿȸȫſưƋǔŵ
+Ƌǔ B- ࿢ C ƕ B ɥžവǜƲǨǿȸȫſưƋǔƱƸƲƏƍƏƜƱƔƱƍƏƱŴᲢƭǇǒƳƍ২
+ᘐႎƳவˑǛႾဦƢǔƱᲣ೅ૠᲪưƸǨǿȸȫưŴƔƭe ∈ C ⊗B C[1/p]Ǌᡂ
+ƕഏƷவˑǛ฼ƨƠƯƍǔᲴ˓ॖƷϵ> 0ƠƯŴpϵ · e ƕ C ⊗B C →
+C ⊗B C[1/p] Ʒ΂ƴλƬƯƍǔŵ ƭǇǓŴǋƠ C ƕ୍ᡫƷॖԛưǄǜƱƏƴB ɥǨǿȸȫ
+ƩƬƨǒŴdiagonal ƕ Spec(C ⊗B C)ƭƔƷᲣᡲኽ঺ЎƴƳǔƷưŴe ∈ C ⊗B C
+ƱƍƏƜƱƴƳǔƚƲŴžവǜƲǨǿȸȫſƳƱƖƴƸŴC ⊗B C ƴƸžവǜƲλƬƯƍǔſ
+ࡸ
+ƞƘƳǔǑƏƳC ƷɶƷ B-lattice ƕƱǕǔŴƱƍƏƜƱƩŵ̊ƑƹŴஇǋ
+ஜႎƳ̊ƸŴA[ζp∞ ]- ࿢ƱƠƯƷ
+A Ტdef
+=
+ K Ʒૢૠ࿢ᲣưƋǔŵ
+ƪƳǈƴŴ(∗alm) ƷᚰଢƩƕŴ২ᘐႎƴᡂǈλƬƯƍǔƷưŴƜƜưƸƋǇǓขλǓƠƨ
+ƘƳƍƷƩƕŴቇҥƴƍƏƱŴR Ǜ height 1 Ʒ prime৑҄ƢǔƜƱƴǑƬƯDVR ƴ᧙Ƣ
+ბƠƯƓƍƯŴƦǕưDVRஜ૾
+ᤆƩŵ
+3
+
+(C.)ЎǍǳțȢȭǸȸƷ᧙৖ႎਰᑈƍᲴ žവǜƲǨǿȸ
+ƷǑƏƴਰᑈƏƱƍƏƜƱƩŵ
+Ўь፭ƸžവǜƲǼȭƴƳǔſᲢᲷƭǇǓŴpϵ ƴᩐ҄ƞǕǔᲣŵ ƋǔƍƸŴ
+Galois cohomology ƴƠƯǋŴǋƠC ƕ B ɥ Galois ưŴGalois ፭ƕ G ƳǒƹŴC[G]- ь፭
+Ǜ̅ƏƜƱƴǑƬƯŴഏƷ
+μኒЗƷƻƱƭưƋǔ
+Ω
+A/A ⊗
+A
+ R → Ω
+R/R → Ω
+R/R⊗A
+A → 0
+ƱΩ
+A/A
+∼=
+ K/ρ−1
+A(1) ᲢƜƜưŴρ ∈
+ A −
+{0}μኒЗǛ
+0 → (
+R[1/p]/ρ−1
+R)(1) → ? → ΩR/A ⊗R (
+R[1/p]/
+R) → 0
+ƢǔƜƱƕưƖǔŵ୼ƴŴHom(Qp/Zp(1), ·) Ǜ଀ƢƱŴGaloisٻ
+0 → ρ−1
+R
+∧
+→ Eρ → ΩR/V ⊗R
+ R
+∧
+(−1) → 0
+ǒǕǔŵഏƴŴΔ R
+def
+= Ker(ΓR → ΓK) ƱƠƯƓƘƱŴΓK-ݧ
+ΩR/V ⊗R
+ R
+∧
+K(−1) → H1(Δ R,
+ R
+∧
+K)
+ǒǕǔŵ ƱƜǖƕŴHi(Δ R,
+ R
+∧
+K) ƱƍƏGalois cohomology ፭ƸŴR∞ /R ưǋƬƯᚘም
+ƢǔƜƱƕưƖǔᲢදᲴGal(R∞ /R) ∼= Zd+1
+p ƳƷưŴƦƷGalois cohomologyƴᚘም
+ƸŴ೅แႎƳᲢΓK -׹
+φi :Ω i
+R/V ⊗R
+ R
+∧
+K(−1) → Hi(Δ R,
+ R
+∧
+K)
+ྸƸƪǐƏƲX ƴ Spec(R) Ʊ୿ƚǔǢȕǣȳƨƪƴ
+ǑǔᘮᙴǛƱƬƯƖƯŴƦǕƧǕƷSpec(R)ƢǔφiǓӳǘƤǔƜƱƴǑƬƯ
+ᅆƢƷưƋǔŵ
+Remark: Faltings [2]׹φi ƱǄƱǜƲӷ͌ƳǋƷƸŴFaltings Ʊ
+ᛯ૨ưᲛᲣ཯ᇌƴႆᙸƞǕƯƍǔƦƏưƋǔŵ
+(D.)ྸƷᚰଢᲴ ǇƣŴǨǿȸȫƳSpec(R) →XƠƯŴ
+RK ƱƍƏΓR-ࣖݣ
+ᩃ৭ƴƍƏƱᲣXetޖRKݧ
+Hi
+et(X
+K, Qp) → Hi
+et(X
+K, RK)
+ǒǕǔŵƱƜǖƕŴφiǓӳǘƤƯŴǳțȢȭǸȸǛƱǔƱŴ
+Hi
+et(X
+K, RK) ∼=
+⨁
+p+q=i
+Hp(X, Ωq
+X/K(−q)) ⊗K
+ K
+∧
+ƖឪƜƞǕǔŵ ƦƠƯŴƜƷƾƨƭƷϙ΂Ʒӳ঺ǛӕǔƱŴΓK-ݧ
+4
+
+Hi
+et(X
+K, Qp) ⊗Qp
+ K
+∧
+→
+⨁
+p+q=i
+Hp(X, Ωq
+X/K(−q)) ⊗K
+ K
+∧
+঺ƢǔƷƩƕŴƦǕǛƍƏƨǊ
+ƴƸŴPoincar´e duality Ǜ̅ƬƯŴǇƣᡞϙ΂ᲢƷͅᙀᲣǛ˺ƬƯƓƍƯŴƦƠƯŴɥƷᐯ໱
+ƱƜƷᡞϙ΂Ʒͅᙀƕɲ૾ƱǋChernǛଓƘ᧙৖ႎƴƍơǔ
+ƴƳǔƜƱǛኽᛯƢǔŵ
+IIIᲨ p-divisible groupӳᲴ
+(A.) Tate ƷྸᛯᲴ G → Spec(A) Ǜ p-divisible group፯ƴ᧙ƠƯƸŴ[5] ǛӋ
+ༀŵᲣज़ᙾႎƴƸŴp-divisible groupٶ
+ಮ˳Ʒpಮ˳ƕɨƑǒǕƨ଺ŴƦƷKer(pn)
+ƨƪǛƱǔƜƱƴǑƬƯŴp-divisible group ǛƭƘǔƜƱƕưƖǔŵǋƬƱɟᑍƴŴ ˓ॖƷ
+p-divisible group GƣഏƷǑƏƴဃơǔᲴG→ Spec(A) ƱƍƏᲢǨǿȸȫƳᢿЎǛԃǉ
+፭ƕƋƬƯŴƦƷG Ʒ Ker(pn) ƨƪƷunion ƕ G ƴƳǔŵƱƜǖƕŴƜ
+Ʒ GǛᨊƍƯᲣunique ƳƷưŴG Ʒ੗ᆰ᧓ ΘG ǛŴ G ƷǼȭƴƓƚǔ੗ᆰ
+፯ƢǔƜƱƕưƖǔŵɟ૾ŴG Ǜ Spec(
+K)Ɩ৏ƠŴHom(Qp/Zp, ·) ǛƱǔƜƱƴ
+ǑƬƯŴƍǘǏǔTate ь፭ T(G) ǛƭƘǔƜƱƕưƖǔŵǑƘჷǒǕƯƍǔǑƏƴŴT(G) ƴ
+Ƹᐯ໱ƳΓK-ྸƕ঺ǓᇌƭᲢ[5]ᲣᲴ
+Theorem 2: Let G → Spec(A) be a p-divisible group. Then there is a natural isomor-
+phism of ΓK-modules
+T(G) ⊗Qp
+ K
+∧ ∼= ((ΩG∗) ⊕ ΘG(1)) ⊗A
+ K
+∧
+(Here, ΩG∗ is the A-dual of the A-module ΘG∗,a n dG∗ is the dual p-divisible group to G.)
+Moreover, when G arises from an abelian variety, this isomorphism commutes with that of
+Theorem 1 (due to Faltings).
+(B.)ӳᲴA ƕ ZpƳྸᛯᲢ[6]ᲣƕƋǔŵ ƜƜ
+ưƸŴኬƔƍƜƱƸႾဦƢǔƕŴଔƍᛅƠŴp-divisible group GƠƯŴﬁltration ˄ƖƷ
+ஊᨂᐯဌA- ь፭ᲢƍǘǏǔ Dieudonn´e- ь፭ᲣF1(M) ⊆ M ƱŴƦƷM ǁƷ Frobenius Ʒ
+˺ဇᲢᲷA Ʒ Frobenius׹ΦM : M → MƞƤǔƜƱƕ
+ưƖǔŵƠƔǋŴ
+F1(M) ∼= ΩG; M/F 1(M) ∼= ΘG∗
+ƕƋǔƔǒŴM Ƹ G Ʒ de Rham cohomology ƷǑƏƳǋƷƩŵƦƠ
+ƯŴ(F1(M) ⊆ M, ΦM ) ƱƍƏȇȸǿƔǒŴǋƱƷGΨƢǔƜƱƕưƖǔŵ̊Ƒ
+ƹŴTate ь፭ T(G) ƸŴBcrysƖƘƯᙐᩃƳ࿢ƷɥưƷM Ʒ Frobenius ᲢᲷ
+ΦMΨƢǔƜƱƕưƖǔŵ
+5
+
+ᇹʚᛅᲴGrothendieck ʖेƱ
+˄ƚ
+ႸഏᲴ
+I.ឋ
+II. Local pro-p Grothendieck Conjecture ƱƷ᧙̞
+Iឋ
+(A.) Serre-Tate ྸᛯƷhyperbolic ༿Ჴp ᡶႎƳbaseಮ˳ƷྸᛯưƸŴSerre-
+Tateӳ
+ಮ
+҄Ʒˁ૾ƸƋǔƕŴhyperbolicӳǁƷɟᑍ
+҄ưƋǔŵ k Ƹ೅ૠ pμ˳ƱƠŴA
+def
+= W(k) ƸƦƷ
+Witt ࿢ƱƢǔŵ ƦƏƢǔƱŴ Ag ᲢᲷ Zpಮ˳ƷȢǸȥȩǤȷǹǿȃ
+ǯᲣƷɥƴŴp ᡶႎƳ´etale formal stack
+Aord
+g →A g
+ƕஊƬƯŴAord
+g Ʒɥƴᐯ໱ƳFrobenius ਤƪɥƛΦA : Aord
+g →A ord
+g
+ƕ˺ဇƠƯƍƯŴƦƷ
+ΦAƞǕǔA- ஊྸໜƕŴSerre-Tate ƷॖԛưƷž೅แਤƪɥƛſưƋǔŵ ɟ૾Ŵӑ୺
+ӳŴ
+Mg,r ᲢᲷ Zp ɥƷ (g,r )ܭ
+ƴᐯ໱Ƴp ᡶႎƳ´etale formal stack
+N
+ord
+g,r →
+ Mg,r
+ƕஊƬƯŴ
+N
+ord
+g,r
+Ʒɥƴᐯ໱ƳFrobenius ਤƪɥƛΦN :
+ N
+ord
+g,r
+→
+ N
+ord
+g,r
+ƕ˺ဇƠƯƍƯŴƦƷ
+ΦNƞǕǔA- ஊྸໜǛŴ
+N
+ord
+g,rಮ˳
+ӳƱᢌƬƯŴ
+N
+ord
+g,r →
+ Mg,r Ƹ open immersion ƴƸƳǒƳƍƕŴ
+N
+ord
+g,r
+Ʒž೅แႎƳໜſ
+Ǜ
+ Mg,r ƴᓳƢƜƱƴǑƬƯŴ
+Mg,r Ʒž೅แႎƳA- ஊྸໜſŴұƪŴA ɥƷž೅แႎƳ୺ዴ
+X → Spec(A)ǒǕǔŵʻଐƷᛅƠƸƦƏƍƏX ƴ᧙ƢǔǋƷưƋǔŵ
+(B.) Frobenius˄ƚ: ž೅แ୺ዴſǛ(A.)፯ƠƯƠǇƏƱŴ
+N
+ord
+g,r Ǎ ΦNᝋƨƪƕЈƯƖƯŴ୺ዴƴ᧙ƠƯƸ˷
+፯ƴƸƳǒƳƍƷưŴ(A.)ƴႺƠƨƍŵƦǕǛᢋ঺
+6
+
+λƠƳƍƱƍƚƳƍƷ
+ƩƕŴX → Spec(A) ƱƍƏᆔૠg ≥ 2፯Ƣǔŵ
+Deﬁnition 1: (P → X, ∇P ) Ƹ X ɥƷŴ੗ዓ˄ƖƷP1-bundle ƱƢǔŵsection σ : X →
+P ƕɨƑǒǕƨǒŴσ Ǜ ∇PЎƢǔƜƱƴǑƬƯŴσ Ʒ Kodaira-Spencer mapτX → σ∗τP/X
+ᲢƜƜưŴžτſƸ tangent bundle ƷॖԛᲣƸƍƭưǋ˺ǕǔƕŴKodaira-Spencer map ƕ
+ƱƳǔǑƏƳσƢǔ(P, ∇P )ஊளſᲢindigenous bundle ᲣƱƍƏŵ
+XஊளP
+def
+=( P, ∇P ) ƕɨƑǒǕƨǒŴP Ǜ Crys(X ⊗A k/A) ɥƷcrystal ƱǈǔƜƱ
+ƕưƖǔŵƦƏƢǔƱŴXk
+def
+= X ⊗A k ɥƷ FrobeniusƖ৏ƢƜƱƴǑƬƯŴΦ∗
+X P Ʊƍ
+ƏૼƨƳCrys(X ⊗A k/A) ɥƷcrystalƸŴஇኳႎƴƸŴFrobenius
+Ɩ৏ƠƯǋᐯЎᐯ៲ƴ৏ǔǑƏƳžFrobeniusſƳ P ƴƭƍƯᎋƑƨƍƷƩƕŴƋǔ
+২ᘐႎƳྸဌƴǑƬƯŴžFrobeniusſǛΦ∗
+X P
+def
+= PƬ
+ƯŴƜƜưƸ˷ǓขλǓƠƨƘƳƍƷƩƕŴΦ∗
+X P Ʒ integral structureƠᛦૢƢǔᲢᲷƭ
+ǇǓŴ QpǘǒƳƍᲣƜƱƴǑƬƯŴF∗P ƱƍƏŴFrobeniusƖ৏ƠƷžǑǓ
+፯ᲢᲷrenormalized Ტϐദᙹ҄ᲣFrobenius፯Ǜ੔ဇ
+ƢǔƜƱƴǑƬƯŴǑǓଓƘᘍƘǑƏƳžFrobeniusǒǕǔŵ
+Deﬁnition 2:ஊள P ƕ F∗P ∼= P Ǜ฼ƨƠƯƍǔƱƖŴP ǛžFrobeniusஊ
+ளƱƍƏŵ
+ྸ([4]) ƕ঺Ǔᇌƭŵ
+Theorem 1: X → Spec(A) ƕŴ (A.) Ʒॖԛưž೅แ୺ዴſưƋǔƷƱŴžordinaryſᲢƱ
+ƍƏŴিǔ২ᘐႎƳவˑᲣǛ฼ƨƠƯƍǔžFrobeniusஊளPƢǔƷƱƕŴ
+ӷ͌ưƋǔŵ
+(C.) Galois ᘙྵ: X → Spec(A) Ƹ೅แ୺ዴƱƢǔŵƢǔƱŴTheorem 1 ƔǒЎƔǔǑƏƴŴ
+FrobeniusஊளP ƕ X ƴλǔŵƱƜǖƕŴDieudonn´eኽƱƠƯŴƦ
+ƏƍƏ PƣX ɥƷ p-divisible group G→ X Ʒ Dieudonn´e҄P(−)ᲣƱƠ
+ƯဃơǔƷƩŵƭǇǓŴᚕƍ੭ƑǕƹŴƜƷDieudonn´eኽƱƍƏƷƸŴᇹɟᛅƷᚕᓶ
+ưƍƏƱŴ(III.) Ʒ (B.) Ʒ parametrized versionƳƷưƋǔŵƠƨƕƬƯŴ୼ƴŴG Ǜ XK
+def
+=
+X ⊗A K ᲢƜƜưŴK Ƹ A Ʒՠ˳ᲣƴСᨂƢǔƱŴΠX
+def
+= π1(XK)ໜƷƜƱƸቇҥƷƨ
+ǊŴൢƴƠƳƍᲣƷ೅แႎƳᘙྵ
+κX :Π X → GL2(Zp)
+ǒǕǔŵƭǇǓŴXƢǔƩƚưŴκX ƷǑƏƳcrystalline ᘙྵ ᲢᲷ
+ӳƴƸŴҥƴŴp-divisible groupƴ᩼ᐯ
+ƘƜƱƕưƖƨŵΠX ƕƜƷǑƏƳcrystallineƢǔƱƍƏƜƱƸŴ୺
+ዴ XƭƔ˷Ǔ᣻ᙲư
+ᩃ৭ƴƍƏƱŴκX ƷǑƏƳcrystalline ᘙྵǛਤƭX
+ƣ೅แႎƴƳǔŵ
+7
+
+(D.) բ᫆੩ឪ: V → Spec(A)ಮ˳ƳǒƹŴᲢǑƘჷǒǕƯƍǔǑƏƴᲣƦƷp
+ᡶ Tate ь፭ Tp(V ) ǛᙸǔᲢƭǇǓŴTp(V ) ƕǨǿȸȫƳᢿЎƱʈඥႎƳᢿЎƷႺԧƴЎᚐƢ
+ǔƱƍƏவˑƩƕᲣƜƱƴǑƬƯŴVưƖǔŵƱƍƏƜƱ
+ƸŴᆔૠg ≥ 2 Ʒ୺ዴ X → Spec(A) ƕɨƑǒǕƨƱƖŴΠX ᲢিƍƸŴǋƬƱദᄩƴƍƏ
+ƱŴΓK
+def
+= Gal(K)˴ႎπ1Ŵ Δ X ⊆ ΠXᢿ˺ဇᲣƠƔ̅ǘƣƴŴX ƕ೅แႎ
+ᨥЈஹǔƷƩŴƱƍƏƷƕʻଐƷᛅƠƷɼ
+ȆȸȞưƋǔŵ
+IIᲨ Local pro-p Grothendieck Conjecture ƱƷ᧙̞
+(A.) [3]፼: ǇƣŴ[3]ƍЈƠ
+ƯƓƜƏŵ
+Theorem 2: Let K be as above. Let XK → Spec(K) and X′
+K → Spec(K) be smooth,
+proper, geometrically connected curves over K of genus ≥ 2.L e tΔ X (respectively, Δ X′ )
+be the pro- p completion of the geometric fundamental group of XK (respectively, X′
+K).
+Then the natural map
+IsomK(XK,X ′
+K) → Outρ(Δ X, Δ X′ )
+deﬁned by “looking at the induced morphism on fundamental groups” is bijective. Here,
+“Outρ” denotes outer isomorphisms between the two groups in parentheses that are com-
+patible with the natural outer actions of ΓK.
+ƭǇǓŴቇҥƴƍƏƱŴ୺ዴXK᫏ƸΔ X ǁƷ ΓKᢿ˺ဇƩƚư᧙৖ႎƴൿǇǔŴ
+ྸƸ(I.) Ʒ (D.) ư੩ឪƞǕƨ
+բ᫆ǁƷɟᆔƷሉƑǛଏƴ੩ᅆƠƯƍǔƷưƋǔŵƳƥƳǒŴTheorem 2 ƴǑǔƱŴXK Ʒ
+᫏ǇưƕΠX ưଏƴൿǇƬƯƠǇƏƠŴƠƔǋž೅แႎſƳƷƔƲƏƔƸଢǒƔƴǋXK
+ƠƳƍƷưŴƦǕưŴXK ƕ೅แႎƳƷƔƲƏƔƕΠXܭ
+ưƖƨƜƱƴƳǔŵ
+ඥƱƠƯ
+ƖƳբ᫆ໜƱƠƯŴƜ
+ƷǑƏƳሉƑƸ(I.) Ʒ (D.) ƷችᅕƔǒƸƣǕƯƍǔƷưƋǔŵ ƱƍƏƜƱƸŴিǔᘙྵΠX →
+GL2(Zp) ƕɨƑǒǕƨƱƖŴƦǕƕƲǜƳ଺ƴκX ƴƳǔƷƔŴƭǇǓŴƲǜƳ଺ƴcrystalline
+ƸŴX ƕ೅แႎ
+ƴƳǔƨǊƴƸŴƦƷᘙྵƕcrystallineƭƔƷኬƔƍ২ᘐႎƳவ
+ˑǛ฼ƨƞƳƍƱƍƚƳƍƕŴƦǕǒƷவˑƸ˷ǓஜឋႎưƸƳƍƠŴƠƔǋ፭ᛯႎƳᚕᓶƴ
+ƳƓƢƷƸൔ᠋ႎᐯଢưƋǔƷưŴƦƷᛅƠƸƜƜưƸႾဦƞƤƯǋǒƏŵᲣ
+ƱƴƔƘŴΠX ƷᘙྵƕƲǜƳƱƖƴcrystalline ƳƷƔᲢᲷX ɥƷ p-divisible group Ɣ
+ƸŴTheorem 2 ᐯ៲Ɣǒ
+ƸЈƳƍǋƷƷŴƦƷᚰଢƔǒƸЈǔƷưƋǔŵ
+8
+
+(B.) [3]፼: L Ƹ (K Ǜԃǉ)p ᡶ˳ᲢᲷฆ೅ૠưpͳƳᩉ૝ႎ˄͌࿢ OL Ʒՠ˳ᲣƱ
+ƠŴƦƷй˷˳kL ƕŴK Ʒй˷˳ kƢǔŵƦƏƢǔƱŴӲᲢ᩼ᡚ
+ݧ
+φ : Spec(L) → XK
+׹αφ :Γ L → ΠXƞ
+׹α :Γ L → ΠXƠƯŴƦƏƍƏφ Ɣǒဃơƨแ
+׹ΓL → ΠX˴ႎſƱԠƿŵ ƦƏƢǔƱŴিǔॖԛưƸŴ[3]ྸƸ
+ྸưƋǔᲴ
+Theorem 3: αưƖǔŵ
+ưƖǔ
+Ɣƴ᧙ƠƯƸŴ଺᧓Ʒ᧙̞ưƜƜưƸႾဦƢǔƕŴᛇƠƘƸ[3] Ʒ Section 7 Ʊ Section 10 Ǜ
+ƝӋༀɦƞƍŵ
+ƍƬƨǜTheorem 3 ǛᛐǊǔƱŴƦƜƔǒTheorem 2 ǛЈƢƷƸŴᇹɟᛅƷFaltings Ʒ
+ତƴЈஹǔƜƱưƋǔŵƭǇǓŴƲƏƍƏα˴ႎƳƷƔƕЎƔǕƹŴ
+˴ႎƳα = αφ ǛƱƬƯƖƯŴഏƷನ঺ƕưƖǔŵ ǇƣŴᇹɟᛅưƸR ƱԠǜưƍƨǋƷƷ
+ƔǘǓǛƭƱǊǔƷƸŴƜƜưƸŴL ƳǜƩƚƲŴR Ʊ L Ʒ᧓ưƸž࿢ſƱž˳ſƷᢌƍƸஊƬ
+ƯǋŴЭƱμƘӷơǑƏƴŴL Ʒ Galois cohomologyǛ̅ƬƯᚘምƢ
+ǒǕǔᲴ
+H1(Δ L,
+ L
+∧
+(1)) ∼= ΩL ⊗L
+ L
+∧
+ᲢƜƜưŴΔ L
+def
+= Ker(ΓL → ΓK)ŵᲣ ɟ૾Ŵ X
+K ƕžK(π,1)ܱ
+ƱŴᇹɟᛅƷTheorem 1 ǛᢘဇƢǔƱŴ
+H1(Δ X,
+ K
+∧
+(1)) ∼= H1
+et(X
+K,
+ K
+∧
+(1)) ∼= (H0(XK, ΩXK/K)⊗K
+K
+∧
+)⊕(H1(XK, OXK )⊗K
+K
+∧
+(1))
+Ɩ৏ƠſƱƍƏદ˺ƴ᧙ƠƯƸŴ̊
+ƷZariski ǳțȢȭǸȸưƋǖƏƕŴ˴ǋƔǋƕᐯ໱Ƴƨ
+ǊŴα = αφݧ
+H1(Δ X,
+ K
+∧
+(1))ΓK → H1(Δ L,
+ L
+∧
+(1))
+ᲢᏅƴƷƬƯƍǔžΓK ſƸΓK-ᢿЎƷॖᲣǛǈǔƷƱŴ
+H0(XK, ΩXK/K) → ΩL ⊗L
+ L
+∧
+ᎍƷ૾ƸŴǑƘᎋƑƯǈǔƱŴ(Ƴ
+ƘƱǋŴXK ƕ nonhyperellipticӳƴƸᲣXK → P
+def
+= P(H0(XK, ΩXK/K)) ƱƍƏ೅
+ǊᡂǈƴƓƚǔφ ∈ XK(L) ⊆ XK(
+L
+∧
+)೅ƴ˂ƳǒƳƍŵƠƔǋŴ
+φƠƯƍǔƨǊŴཎƴdominant ƴƳǔƷưŴXK ǛŴφ Ʒ P ƴƓƚǔ΂
+9
+
+ΨƢǔƜƱƕưƖǔŵƜǕưŴTheorem 2 ǛᲢFaltings ƷྸᛯǛဇƍƯᲣThe-
+orem 3ƸŴTheorem 3 ᐯ˳ǋƪǐƏƲƜƷǑƏƳᜭᛯưᚰଢƢǔ
+ƷưƋǔŵ
+(C.)ඥᲴƠƔƠŴЭƴǋᚑǕƨǑƏƴŴʻଐƷᛅƠƷɼƳႸႎƸŴTheo-
+rem 2ƴǋTheorem 3ኽƕƋǔƜƱǛਦઇƢǔƜƱƴƋǔŵƦǕƴƸŴ
+FaltingsƱƸŴቇҥƴƍƏƱŴᘙྵλ :
+ΠX → PGL2(Zp)ƠƯŴλ ƕ X ɥƷ p-divisible group G ƔǒဃơǔƨǊƴƸŴ (B.)
+ƴЈƯƖƨǑƏƳӲαφ :Γ L → ΠXƠƯŴλ Ʒ ΓL ǁƷᲢαφ ƴǑǔᲣСᨂƕSpec(OL)
+ɥƷp-divisible groupྸƱŴ(B.)
+Ʒ Theorem 3ŴƦƠƯ୼ƴ(I.) Ʒ (C.)ኽᲢ[3], Theorem 10.6,
+and [4], Chapter IV, Theorem 1.3ᲣƕЈǔᲴ
+Theorem 4: In order that a curve X → Spec(A)= Spec(W(k)) (where k is a perfect
+ﬁeld) be canonical, it is necessary and suﬃcient that there exist a representation κX :
+ΠX → PGL2(Zp) (whose corresponding ΠX-module we denote by V ) such that: (i) the
+ΓK-modules Hi(Δ X,A d(V )) satisfy certain (not so important) properties (which we omit
+here for the sake of brevity); (ii) det(V ) is the cyclotomic character; (iii) the restriction of
+κX to ΓL with respect to every geometric α :Γ L → ΠX arises from a p-divisible group of
+dimension 1 on Spec(OL).
+ඥƕưƖƨǘƚưƋǔŵ
+૨ྂ
+[1] Bloch, S. and Kato, K., L-Functions and Tamagawa Numbers in The Grothendieck
+Festschrift, Volume I, Birkh¨auser (1990), pp. 333-400.
+[2] Faltings, G.,p-adic Hodge Theory, Journal of the Amer. Math. Soc.1, No. 1, pp. 255-299
+(1988).
+[3] Mochizuki, S., The Local Pro-p Grothendieck Conjecture for Hyperbolic Curves , RIMS
+Preprint 1045.
+[4] Mochizuki, S., A Theory of Ordinary p-adic Curves, RIMS Preprint 1033 (1995).
+[5] Tate, J., p-divisible Groups , in Driebergen Conference on Local Fields, 1966 (T. A.
+Springer, ed.), Springer-Verlag, Berlin, pp. 158-183 (1967).
+[6] Fontaine, J. M., and Laﬀaille, G.,Construction de repr´esentations p-adiques, Ann. Sci.
+Ec. Norm. Super. 15, pp. 547-608 (1982).
+10

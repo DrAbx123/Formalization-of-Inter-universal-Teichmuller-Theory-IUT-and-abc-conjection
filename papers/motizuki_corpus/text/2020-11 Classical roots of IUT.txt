@@ -1,0 +1,578 @@
+CLASSICAL ROOTS OF INTER-UNIVERSAL
+TEICHM ¨ULLER THEOR Y
+Shinichi Mochizuki (RIMS, Kyoto University)
+November 2020
+http://www.kurims.kyoto-u.ac.jp/~motizuki
+\Travel and Lectures"
+§ 1. Isogeny invariance of heights of elliptic curves
+§ 2. Crystals and Hodge ltrations
+§ 3. Complex Teichm uller theory
+§ 4. Theta function on the upper half-plane
+Typeset by A M S -T E X
+1
+
+2 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+Overview
+Analogy with ´ etale cohomology , W eil conjectures
+← → classical singular (co)homology of topological spaces
+· Isogeny invariance of heights of elliptic curves (Faltings, 1983)
+· Crystals and Hodge ltrations (Grothendieck, late 1960's)
+· Complex Teichm uller theory (Teichm uller, 1930's)
+· Theta function on the upper half-plane (Jacobi, 19-th century)
+
+CLASSICAL ROOTS OF INTER-UNIVERSAL TEICHM ULLER THEORY 3
+§ 1. Isogeny invariance of heights of elliptic curves
+(cf. [Alien], § 2.3, § 2.4)
+We consider elliptic curves .
+For l a prime number, the module of l -torsion points associated to a
+T ate curve E
+def
+= G m =q Z | over, say, C or a p -adic eld | ts into a
+natural exact sequence:
+0 − →  l − → E [ l ] − → Z =l Z − → 0 :
+Thus, one has canonical objects as follows:
+a \ multiplicative subspace "  l ⊆ E [ l ] and \ generators " ± 1 ∈ Z =l Z .
+
+4 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+In the following, we x an elliptic curve E over a number ﬁeld F and
+a prime number l ≥ 5 such that E has stable reduction at all nite
+places of F .
+Then, in general, E [ l ] does not admit
+a global \ multiplicative subspace " and \ generators "
+that coincide with the above canonical \multiplicative subspace" and \gen-
+erators" at all ﬁnite places where E has bad multiplicative reduction !
+
+CLASSICAL ROOTS OF INTER-UNIVERSAL TEICHM ULLER THEORY 5
+Nevertheless, suppose (!!) that such global objects do in fact exist.
+Then, if we denote by
+E → E
+∗
+the isogeny obtained by forming the quotient of E by the
+\ global multiplicative subspace ",
+then, at each nite prime of bad multiplicative reduction, the respective
+q -parameters satisfy the following relation:
+q
+l
+E = q E  :
+If we write log( q E ), log( q E  ) for the arithmetic degrees ∈ R determined
+by these q -parameters, then the above relation takes on the following form:
+l · log( q E ) = log( q E  ) ∈ R :
+
+6 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+On the other hand, if we consider the respective heights of the elliptic
+curves by ht E ; ht E  ∈ R | i.e, roughly speaking, arithmetic degrees of
+arithmetic line bundles on F
+!
+⊗ 2
+E ; !
+⊗ 2
+E 
+associated to the sheaves of square diﬀerentials | then we may con-
+clude | cf. the discriminant mod. form , regarded as a section of the
+ample line bundle \ !
+⊗ 12
+M ell
+" on the compactiﬁed moduli stack M ell of
+elliptic curves! | that
+ht ( − ) ≈
+1
+6 · log( q ( − ) )
+(where \ ≈ " means \up to a discrepancy bounded by a constant").
+
+CLASSICAL ROOTS OF INTER-UNIVERSAL TEICHM ULLER THEORY 7
+Moreover, by the famous computation concerning diﬀerentials due to
+Faltings (1983), one knows that:
+ht E  ≈ ht E + log( l ) :
+Thus, ( by ignoring certain subtleties at archimedean places of F ) we con-
+clude that
+l · ht E . ht E + log( l ) ; i.e., ht E .
+1
+l − 1 · log( l ) . constant
+| that is to say, that the height ht E of the elliptic curve E can be bounded
+from above , and hence (under suitable hypotheses) that there are only
+ﬁnitely many isomorphism classes of elliptic curves E that admit a \global
+multiplicative subspace".
+
+8 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+Key point :
+Consider distinct elliptic curves E , E ∗ such that q l
+E = q E  (!), but
+which (up to negligible discrepancies) share | i.e., \ ∧ "! | a common
+! E ≈ ! E  .
+One way to understand IUT, esp. Hodge theaters of [IUTchI] :
+Apparatus to generalize the above argument | by focusing on the above
+key point ! | to the case of general elliptic curves for which \global
+multiplicative subspaces", etc. do not necessarily exist.
+
+CLASSICAL ROOTS OF INTER-UNIVERSAL TEICHM ULLER THEORY 9
+§ 2. Crystals and Hodge ﬁltrations
+(cf. [Alien], § 3.1, (iv), (v))
+Let X : a smooth, proper, connected algebraic curve over C ,
+E : a vector bundle on X .
+Consider the two projections : X
+p 1
+← − X × X
+p 2
+− → X
+Then in general, there exists a vector bundle F on X × X such that
+(
+F ∼= p
+∗
+1 E
+)
+∨
+(
+F ∼= p
+∗
+2 E
+)
+;
+but there does not exist a vector bundle F on X × X such that
+(
+F ∼= p
+∗
+1 E
+)
+∧
+(
+F ∼= p
+∗
+2 E
+)
+(which would imply that E is trivial !).
+
+10 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+Consider the ﬁrst inﬁnitesimal neighborhood of the diagonal
+X = V ( I ) ,→ X × X;
+i.e., X inf
+def
+= V ( I 2 ) ⊆ X × X :
+“moduli space of pairs of points of X (cf. X × X !) that are
+inﬁnitesimally close to one another” .
+Grothendieck denition of a connection on E :
+p
+∗
+1 E| X inf
+∼
+→ p
+∗
+2 E| X inf ;
+i.e.,
+“isomorphism between the ﬁbers of E at pairs of points of X (cf.
+p ∗
+1 E
+∼
+→ p ∗
+2 E on X × X !) that are inﬁnitesimally close to one
+another” .
+
+CLASSICAL ROOTS OF INTER-UNIVERSAL TEICHM ULLER THEORY 11
+In general, E does not admit a connection. The obstruction to the exis-
+tence of a connection (cf. Weil!) on det( E ) is a cohomology class in
+H
+1
+( X; ! X ) ;
+which is in fact equal to the ﬁrst Chern class of E , i.e., from the point of
+view of de Rham cohomology, the degree of E :
+deg( E ) ∈ Z :
+Thus, if E is a line bundle , then
+E admits a connection ⇐ ⇒ deg( E ) = 0 :
+There also exists a logarithmic version of this discussion: by considering
+logarithmic poles at a nite number of points of X ( C ).
+
+12 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+Suppose that X is equipped with a log structure determined by a nite set
+of r X points of X ( C ). Write X log for the resulting log scheme , U ⊆ X for
+the interior of X log .
+Consider a (compactied) family of elliptic curves
+f : E → X
+(i.e., a family of one-dimensional semi-abelian schemes over X with proper
+bers over U ⊆ X ). Then the relative ﬁrst de Rham cohom. module
+of this family determines a rank two vector bundle on X
+E
+def
+= R
+1
+f DR ; ∗ O E
+equipped with: Gauss-Manin (logarithmic!) connection ∇ E and
+a rank one Hodge subbundle ! E ⊆ E s.t. ! E ⊗ O X ( E =! E ) ∼= O X
+(cf. the bundle ! M ell
+of § 1!).
+
+CLASSICAL ROOTS OF INTER-UNIVERSAL TEICHM ULLER THEORY 13
+Note: ! E does not admit a connection, i.e., in general, p ∗
+1 ! E | X inf is not isom.
+to p ∗
+2 ! E | X inf ! But one can measure the extent to which ! E fails to admit
+a connection by means of ∇ E , i.e., by considering the ( generically nonzero,
+O X -linear !) composite morphism:
+! E ,→ E
+
+
+y ∇ E
+E ⊗ O X !
+log
+X  !
+− 1
+E ⊗ O X !
+log
+X :
+The resulting Kodaira-Spencer morphism
+ E : !
+⊗ 2
+E ,→ !
+log
+X ;
+yields a bound (\geometric Szpiro") on the height deg( !
+⊗ 2
+E ) of f : E → X
+(cf. § 1!):
+deg( !
+⊗ 2
+E ) ≤ deg( !
+log
+X ) = 2 g X − 2 + r X :
+
+14 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+Key point :
+p ∗
+1 E ∼= p ∗
+2 E serves as a common | i.e., \ ∧ "! | container
+(cf. the common \ ! E ≈ ! E  " of § 1!) that is
+· suﬃciently large to house both p ∗
+1 ! E ,→ p ∗
+1 E and p ∗
+2 ! E ,→ p ∗
+2 E , but
+· suﬃciently small to yield a nontrivial estimate on the height of
+the family of elliptic curves f : E → X under consideration.
+One way to understand IUT, esp. multiradial rep. of [IUTchIII] :
+Construction | by means of
+· absolute anabelian geometry and
+· the theory of the ´ etale theta function
+| of a common container that is
+· suﬃciently large to house the incompatible ring structures on
+either side of the gluing constituted by the theta link q N
+E 7→ q E , but
+· suﬃciently small to yield nontrivial estimate on the height of
+the elliptic curve over a number eld under consideration.
+
+CLASSICAL ROOTS OF INTER-UNIVERSAL TEICHM ULLER THEORY 15
+§ 3. Complex T eichm¨ uller theory
+(cf. [Pano], § 2; [Alien], § 3.3, (ii))
+Relative to a canonical coordinate z = x + iy | assoc'd to a square diﬀer-
+ential | on a Riemann surface, T eichm¨ uller deformations given by
+hol. str. hol. str.
+y y
+C ∋ z 7→  =  + i = x + iy ∈ C
+| where 1 <  < ∞ is the dilation factor.
+Key points :
+· non-hol. map, but common real analytic str. | i.e., \ ∧ "!
+· one hol. dim., but two underlying real dims., of which
+one is dilated/deformed , while the
+other is left ﬁxed/undeformed !
+
+16 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+Classical complex T eichm¨ uller deformation:
+
+CLASSICAL ROOTS OF INTER-UNIVERSAL TEICHM ULLER THEORY 17
+Recall: the upper half-plane H (
+∼
+→ open unit disk D ) may be regarded
+as the moduli space of hol. strs. on R 2 | cf. the bijection :
+hol. str. hol. str.
+y y
+C × \ GL + ( R ) = C × ∼
+→ [0 ; 1)
+(  0
+0 1
+)
+7→
+ − 1
+ +1
+| where
+·  ∈ R ≥ 1 , and we regard
+(  0
+0 1
+)
+as a dilation ;
+· GL + ( R ) denotes the group of 2 × 2 real matrices with determinant > 0;
+· C × denotes the multiplicative group of C , which we regard as a subgroup
+of GL + ( R ) via a + ib 7→
+( a b
+− b a
+)
+, for a; b ∈ R s.t. ( a; b ) ̸= (0 ; 0).
+Relative to GL + ( R ) y H by linear fractional transformations, C × is the
+stabilizer of i ∈ H , so the above bijection just states that any w ∈ D may
+be mapped to 0 ∈ D by a rotation ∈ C × , followed by a dilation .
+
+18 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+The fundamental domain of
+the upper half-plane and
+the unit disk :
+(cf. https://www.mathsisfun.com/geometry/unit-circle.html ;
+http://www.math.tifr.res.in/~dprasad/mf2.pdf)
+
+
+CLASSICAL ROOTS OF INTER-UNIVERSAL TEICHM ULLER THEORY 19
+Key point :
+In the discussion of H : R 2 (with standard orientation) serves as a
+common | i.e., \ ∧ "! | container for various hol. strs.
+In summary:
+hol. str. hol. str.
+≈ C × y dilation
+(  0
+0 1
+)
+x ≈ C ×
+One way to understand IUT, esp. log-theta-lattice of [IUTchIII] :
+“inﬁnite H ” portion (i.e., portion that is actually used ) of log-theta-lattice :
+rotations dilation rotations
+of arith. of ring of arith.
+hol. str. str. via hol. str.
+≈ log y theta link x ≈ log
+Here, arith. hol. str. ≈ ring str. , which is not preserved by theta link
+\ q N
+E 7→ q E "!
+
+20 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+The entire log-theta-lattice and the “inﬁnite H ” portion that is actually
+used :
+...
+...
+x
+
+ log
+x
+
+ log
+: : :
+
+− → •
+
+− → •
+
+− → : : :
+x
+
+ log
+x
+
+ log
+: : :
+
+− → •
+
+− → •
+
+− → : : :
+x
+
+ log
+x
+
+ log
+: : :
+
+− → •
+
+− → •
+
+− → : : :
+x
+
+ log
+x
+
+ log
+...
+...
+⊇
+...
+...
+x
+
+ log
+x
+
+ log
+• •
+x
+
+ log
+x
+
+ log
+•
+
+− → •
+x
+
+ log
+x
+
+ log
+• •
+x
+
+ log
+x
+
+ log
+...
+...
+
+CLASSICAL ROOTS OF INTER-UNIVERSAL TEICHM ULLER THEORY 21
+§ 4. Theta function on the upper half-plane
+(cf. nal portion of [Pano], § 3; discussion surrounding [Pano], Fig. 4.2)
+Recall the theta function on H ∋ z = x + iy , where q
+def
+= e 2 iz :
+ ( q )
+def
+=
++ ∞∑
+n = −∞
+q
+1
+2 n
+2
+:
+Restricting to the imaginary axis (i.e., x = 0) yields, for t
+def
+= y :
+ ( t )
+def
+=
++ ∞∑
+n = −∞
+e
+− n
+2
+t
+:
+Then the Jacobi identity holds:
+ ( t ) = t −
+1
+2 ·  ( t − 1 ) :
+Here, we note that
+GL + ( R ) ⊇ C × ∋ 
+def
+=
+( 0 1
+− 1 0
+)
+maps z 7→ − z − 1 , hence iy 7→ − iy − 1 , i.e., t 7→ t − 1 .
+
+22 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+As one travels along the imag. axis via GL + ( R ) ⊇ C × ∋
+( y 0
+0 1
+)
+: i 7→ iy :
+When | q | → 0 ⇐ ⇒ y → + ∞ :
+ ( t ) series terms are rapidly decreasing = ⇒ easy to compute !
+∧ (!)
+When | q | → 1 ⇐ ⇒ y → +0:
+ ( t ) series terms not rapidly decreasing = ⇒ diﬃcult to compute !
+Note: \ ∧ " makes sense precisely because one distinguishes the  -conjugate
+regions \ | q | → 0 ⇐ ⇒ y → + ∞ " and \ | q | → 1 ⇐ ⇒ y → +0"!
+This situation parallels the  -link of IUT (cf. | q N | → 0 vs. | q | ≈ 1!).
+
+CLASSICAL ROOTS OF INTER-UNIVERSAL TEICHM ULLER THEORY 23
+Jacobi identity  ( t ) = t −
+1
+2 ·  ( t − 1 ) may be interpreted as follows:
+ ( t ) descends , up to a suitable factor t −
+1
+2 , to the quotient by  .
+Comparison with IUT :
+Jacobi identity ← → multiradial representation of IUT
+the factor t −
+1
+2 ← → indeterminacies of multirad. rep.
+involution  ∈ C × ← → log -link of IUT: rotat. of hol. str.
+descent to quotient by  ← → descent to single hol. str./ring str.
+
+24 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+Behavior of (t) series terms up
+on applying Jacobi identity :
+ʿ
+̌
+(BVTTJBO
+(BVTTJBO
+В
+
+CLASSICAL ROOTS OF INTER-UNIVERSAL TEICHM ULLER THEORY 25
+Proof of Jacobi identity : One computes  ( t − 1 ) by using the fact that
+(
+Fourier transform
+)
+( e
+− t · 
+2
+) ≈ 
+−
+1
+2 t
+−
+1
+2 · e
+−
+1
+t · 
+2
+| a computation closely related to the computation of the Gaussian integral
+∫ + ∞
+−∞
+e
+− x
+2
+dx = 
+1
+2
+via polar coordinates!
+This computation is essentially a consequence of the quadratic form in
+the exponent of the Gaussian :
+e
+− t · \ 
+2
+"
+:
+
+26 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+quad. form ≈ Chern class \  2 " = ⇒ theta group symmetries
+= ⇒ rigidity properties of
+ etale theta function in IUT
+= ⇒ Kummer theory
+of ´ etale theta function
+compatible with log -link
+(cf. \ t · 2  
+1
+t · 2 "
+in above computation!)
+and multiradial rep. of IUT
+
+CLASSICAL ROOTS OF INTER-UNIVERSAL TEICHM ULLER THEORY 27
+References
+[IUTchI] S. Mochizuki, Inter-universal Teichm uller Theory I: Construction
+of Hodge Theaters, RIMS Preprint 1756 (August 2012), to appear in Publ.
+Res. Inst. Math. Sci.
+[IUTchII] S. Mochizuki, Inter-universal Teichm uller Theory II: Hodge-Ara-
+kelov-theoretic Evaluation, RIMS Preprint 1757 (August 2012), to appear
+in Publ. Res. Inst. Math. Sci.
+[IUTchIII] S. Mochizuki, Inter-universal Teichm uller Theory III: Canonical
+Splittings of the Log-theta-lattice, RIMS Preprint 1758 (August 2012), to
+appear in Publ. Res. Inst. Math. Sci.
+[IUTchIV] S. Mochizuki, Inter-universal Teichm uller Theory IV: Log-volume
+Computations and Set-theoretic Foundations, RIMS Preprint 1759 (August
+2012), to appear in Publ. Res. Inst. Math. Sci.
+[Pano] S. Mochizuki, A Panoramic Overview of Inter-universal Teichm uller
+Theory, Algebraic number theory and related topics 2012, RIMS K oky uroku
+Bessatsu B51 , Res. Inst. Math. Sci. (RIMS), Kyoto (2014), pp. 301-345.
+[Alien] S. Mochizuki, The Mathematics of Mutually Alien Copies: from
+Gaussian Integrals to Interuniversal Teichm uller Theory, RIMS Preprint
+1854 (July 2016).
+Updated versions are available at the following webpage:
+http://www.kurims.kyoto-u.ac.jp/~motizuki/papers-english.html

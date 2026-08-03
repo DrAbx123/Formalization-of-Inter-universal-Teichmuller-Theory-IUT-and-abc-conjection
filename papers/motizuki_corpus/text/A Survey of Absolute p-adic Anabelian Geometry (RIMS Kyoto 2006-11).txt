@@ -1,0 +1,421 @@
+A Survey of Absolute
+p-adic Anabelian Geometry
+Shinichi Mochizuki, RIMS
+http://www.kurims.kyoto-u.ac.jp/˜motizuki
+“Travel and Lectures”
+§1. Absolute Anabelian Geometry
+§2. Canonical Curves
+§3. Curves with Belyi Maps
+§4. Conﬁguration Spaces
+§5. Further Directions
+
+2
+§1. Absolute Anabelian Geometry
+Let F1, F2 be ﬁelds, with absolute Galois
+groups GF1 , GF2 ;
+φ : GF1
+∼
+→ GF2
+an isomorphism of proﬁnite groups. Then:
+QUESTION
+:
+Does φ necessarily
+ arise from an isomor-
+phism of ﬁelds F1
+∼
+→ F2?
+ANSWERS
+:
+· YES
+,i f Fi are number ﬁelds
+ (NF), by
+Neukirch-Uchida (NU).
+· NO
+,i f Fi are p-adic local ﬁelds
+ (pLF).
+· YES
+,i f Fi are pLF
+,a n dφ preserves the
+ramiﬁcation ﬁltration
+ , or, alternatively, the
+isom. class of the topological Galois module
+“ Cp”
+ (cf. [ QpGC]).
+
+3
+Thus, NO/YES for pLF is a measure of
+the extent to whichφ preserves the respec-
+tive “ p-adic Hodge theories
+”( pHT) of the
+Fi —a si f pHT is a sort of “holomorphic
+structure
+” on an underlying “real analytic/
+topological manifold
+” GFi .
+Now let:
+V be a class of varieties
+;
+F a class of ﬁelds
+ .
+If V ∈ V, F ∈ F,w r i t e :
+ΠV
+def
+= π1(V )( ´etale fund. group);
+GF
+def
+= GF (absolute Galois group).
+Consider the following assertions:
+(rel VFGC
+)F o rVi ∈ V (where i =1 ,2)
+over F ∈ F, the natural map
+IsomF (V1,V2) → OutIsomGF (ΠV1 ,ΠV2 )
+is a bijection
+.
+
+4
+(abs VFGC
+)F o rVi ∈ V over Fi ∈ F (where
+i =1 ,2), the natural map
+Isom(V1,V2) → OutIsom(ΠV1 ,ΠV2 )
+is a bijection
+.
+When V = “hyperbolic curves
+”, write:
+pGC
+def
+= VFGC, when F =“ pLF”;
+NFGC
+def
+= VFGC, when F = “NF”.
+Thus, by “YES for NF” (NU), we have:
+(rel NFGC) ⇐⇒ (abs NFGC)
+By contrast, even though (relpGC) is known
+(cf. [ pGC]), (abs pGC) is only known in
+certain special cases
+, to be discussed in the
+present survey.
+As discussed above, (abspGC) involves the
+subtle issue of preserving the “ pHT
+”, i.e.,
+the “holomorphic structure
+ ”, on GK,f o r
+K/Qp < ∞ .
+
+5
+Motivation
+ for (abs pGC): work on ABC
+Conjecture, in particular,
+“Inter-universal Teichm¨uller Theory
+”
+(IUTeich)
+(work in progress).
+Idea
+: construct “canonical Teich. lifts
+ ”o f
+pLF, NF, i.e.:
+scheme theory ←→ char. p scheme theory
+IUTeich lifts ←→ p-adic Witt/Teich. lifts
+Put another way, trying to construct a sort
+of
+“ Zp ×F1 Zp”
+where:
+one Zp
+ is scheme-theoretic
+,
+the other Zp
+ is Galois-theoretic
+.
+Then (abs pGC) arises in developing the
+theory of the “Galois-theoretic Zp”.
+
+6
+§2. Canonical Curves
+Let
+V
+def
+= “hyperbolic curves”
+F
+def
+=“ pLF”
+In p-adic Teichm¨uller theory
+ (cf. Serre-Tate
+theory; Bers uniformizations over C), one
+has a notion of canonical liftings
+of certain
+hyperbolic curves over ﬁnite ﬁelds (equipped
+with certain auxiliary data) to rings of Witt
+vectors of the base ﬁelds. Thus, we also
+consider (when p ≥ 3):
+V
+can def
+= “can. lifted hyperbolic curves”
+Fcan def
+= “absolutely unramiﬁed pLF”
+Thus, if we ﬁx the “type ( g,r )”, then the
+resulting set of isomorphism classes ofVcan
+is countably inﬁnite
+ and Zariski dense
+ in
+the moduli stack of hyperbolic curves of
+type (g,r ).
+
+7
+In the case of canonical curves, we have a
+somewhat weaker
+ result than the full “(abs
+pGC)”, which was, in fact, the ﬁrst result
+obtained (by the lecturer) in absolutep-adic
+anabelian geometry
+ (cf. [Canon]):
+Theorem
+:L e tX1,X2 ∈ V,
+φ :Π X1
+∼
+→ ΠX2
+an isomorphism of proﬁnite groups
+ . Then:
+(i) X1 ∈ Vcan ⇐⇒ X2 ∈ Vcan.
+(ii) Suppose that X1 or X2 belongs to
+Vcan.T h e nφ induces a functorial isomor-
+phism
+ of the respective log special ﬁbers
+ of
+X1, X2, which is, moreover, compatible with
+the canonical deformations
+ of these log spe-
+cial ﬁbers constituted by X1, X2.
+
+8
+§3. Curves with Belyi Maps
+Consider the following (“quasi-Belyi-ness
+”)
+condition on an (aﬃne) hyperbolic curve
+X over a ﬁeld F of char. 0:
+(QB) There exist a dominant morphism
+Y → (P1\01∞ )F ,
+where Y is a hyperbolic curve, together
+with a ﬁnite ´etale morphism
+ Y → X.
+Also, we consider the condition:
+(NFQB)
+def
+=( Q B )+(X is deﬁned over a NF
+).
+If Z is a proper hyperbolic curve
+ of genus
+≥ 2o v e rF, r> 0, then
+Z \ (generic
+ r-tuple of points)
+is not (QB)
+(A. Tamagawa — cf. [Conﬁg]).
+
+9
+The ﬁrst result
+ obtained (by the lecturer)
+concerning (abs pGC) is the following (cf.
+[Cusp]):
+Theorem A
+: (abs VFGC) holds, for
+V
+def
+= (NFQB)-curves, F
+def
+=“ pLF”.
+Subsequent to this result, A. Tamagawa re-
+ﬁned the technique of “applying Belyi maps
+to prove (abs pGC)
+” via the following re-
+sult, which is of independent interest
+:
+Theorem∗ B
+: Every Lubin-Tate group
+ ap-
+pears as a subquotient of the p-adic Tate
+module of some abelian variety
+ over a NF.
+Thm. B allows one to prove the following
+generalization of Thm. A:
+Theorem∗ C
+: (abs VFGC) holds, for
+V
+def
+= (QB)-curves, F
+def
+=“ pLF”.
+∗ orally communicated, unwritten as of the
+time of this lecture
+
+10
+Remarks
+:
+· Although Thm. A is weaker than Thm.
+C, the technique of Thm. A is “NF-friendly
+”,
+hence yields a new proof
+of (abs NFGC) for
+(NFQB)-curves that does not rely on NU
+!
+This is the ﬁrst example
+ of a proof of (a
+certain consequence of) NU that involves
+an explicit construction
+of the NF.
+· Thm. C is the ﬁrst version of (abs pGC)
+that applies to uncountably many
+ curves,
+as well as to arbitrary multiply-punctured
+elliptic curves
+.
+· It appears likely (?) that Thm. C may
+be generalized to a “Hom-version
+” (i.e., for
+open homomorphisms, as opposed to iso-
+morphisms, of arith. fund. groups).
+
+11
+§4. Conﬁguration Spaces
+Let X be a hyperbolic curve
+, n ≥ 1a ni n t e -
+ger. Then consider the n-th conﬁguration
+space
+X × ... × X\diagonals
+(where the product is of n copies of X)
+associated to X.
+Theorem
+:L e t F
+def
+=“ pLF”;
+V
+the class of n-th conﬁguration spaces
+ asso-
+ciated to hyperbolic curves
+ of type
+(g,r ) ̸=( 0,3); (1,1),
+where
+n ≥ 3i f r = 0 (the proper case),
+n ≥ 2i f r> 0 (the aﬃne case).
+Then (abs VFGC) holds
+.
+
+12
+Proof
+: Combine joint work with A. Tama-
+gawa (cf. [Conﬁg]) on the geometry of con-
+ﬁguration spaces
+ , with a certain “combina-
+torial version of the GC
+”( c f .[ C o m b G C ] ) ,
+and the (abs pGC) applied to the copy of
+P1\01∞ “lying inside the boundary
+ of the
+conﬁguration space” (cf. the assumption
+on n). □
+Note that this is the ﬁrst result
+of ab-
+solute p-adic anabelian geometry that ap-
+plies to arbitrary hyperbolic curves
+.
+
+13
+§5. Further Directions
+Let
+V
+def
+= hyperbolic curves,
+F
+def
+= pLF.
+If Σ is a set of primes
+, X ∈ V,w r i t e
+ΠΣ
+X
+for the max. geometrically pro-Σ quotient
+of ΠX.
+Then earlier this year, the lecturer showed
+the following:
+Theorem∗
+:L e tX1,X2 ∈ V,
+φ :Π Σ
+X1
+∼
+→ ΠΣ
+X2
+an isomorphism of proﬁnite groups
+ . Sup-
+pose that p, l ∈ Σ, where l ̸= p.T h e n
+φ arises geometrically
+ if and only if φ is
+point-theoretic
+ (i.e., preserves decomposi-
+tion groups of closed points of X1, X2).
+∗ unwritten as of the time of this lecture
+
+14
+Proof
+:I f X ∈ V lies over K ∈ F,t h e n
+by considering various ﬁnite ´ etale cover-
+ings of X of order a power of p,o n em a y
+eﬀect arbitrarily many “blow-ups”
+.T h e n
+careful inspection of the collection of closed
+points contained in the interior of the “new
+irreducible components
+” arising from these
+“blow-ups” shows that such collections of
+points correspond essentially to, i.e., may
+be thought of as “geometric realizations
+”
+of, various portions of the ramiﬁcation ﬁl-
+tration
+ of GK. Thus, one concludes via the
+theory of [ QpGC], together with the (rel
+pGC). □
+
+15
+Thus, it remains to show point-theoreticity
+.
+It appears likely that this should be possi-
+ble if one can answer the following question
+in the aﬃrmative:
+QUESTION
+: In the notation of the Theo-
+rem, write Ki ∈ F for the base ﬁeld of Xi;
+ΔΣ
+i
+def
+=K e r ( ΠΣ
+i ↠ GKi ). Let (for i =1 ,2)
+Hi ⊆ ΔΣ
+i
+be an open subgroup such that φ(H1)=
+H2. Then does the natural isomorphism
+(induced by φ)
+H1(GK1 ,H ab
+1 ⊗ Zp)
+∼
+→ H1(GK2 ,H ab
+2 ⊗ Zp)
+preserve
+ “ H1
+f ⊆ H1”?
+Put another way, does the resulting iso-
+morphism GK1
+∼
+→ GK2 preserve Hodge-Tate
+decompositions
+ of Galois modules which are
+known to be Hodge-Tate
+ for bothGK1 , GK2 ?
+
+16
+Remarks
+:
+· The question may (easily) be answered in
+the aﬃrmative when the Jacobians of the
+coverings determined by theH
+i are ordinary
+.
+· This question seems to be interesting as a
+question in p-adic Hodge theory
+, indepen-
+dent of anabelian geometry.

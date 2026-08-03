@@ -1,0 +1,686 @@
+GROTHENDIECK-TEICHM ¨ULLER THEORY AS A
+SPECIES OF TEICHM ¨ULLER THEORY [JOINT WORK IN
+PROGRESS WITH TSUJIMURA] (NGR2025 VERSION)
+Shinichi Mochizuki (RIMS, Kyoto University)
+October 2025
+https://www.kurims.kyoto-u.ac.jp/~motizuki/GT%20as%20Tch%20
+(NGR2025%20version).pdf
+§ 1. Ring-theoretic interpretation of complex Teichm¨ uller theory
+§ 2. The case of inter-universal Teichm¨ uller theory (IUT)
+§ 3. GT via genus zero quotients
+§ 4. Decomposition groups and function spaces
+Typeset by A M S -T E X
+1
+
+2
+SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+§1. Ring-theoretic interpretation of complex Teichm¨ uller theory
+· Review
+of classical complex Teichm¨ uller theory:
+(cf.
+[EssLgc], Example 3.3.1)
+Recall the most fundamental deformation of complex structure in
+classical complex Teichm¨ uller theory: forλ ∈ R>1,
+Λ : C → C
+C ∋ z =x +iy ↦→ ζ = ξ +iη
+def
+= λ ·x +iy ∈ C
+— where x,y ∈ R.
+· Classical complex Teichm¨ uller theory on Riemann surfaces:
+More
+generally, on a single (oriented) topological surface S,
+we
+can start with one holomorphic structure H1 on S and
+a square
+diﬀer
+ential relativ
+e to H1, then form the Teichm¨ uller dilation,
+or T
+eichm¨ uller map,
+obtained by deforming (i.e., in the fashion
+described above) the canonical holomorphic coordinate obtained
+by integrating the square root of the square diﬀerential (along
+paths) so as to obtain a new holomorphic structure H2.
+Next,
+for i = 1, 2, write
+OHi for the sheaf of holomorphic functions on S,
+rel. to Hi;
+OR for the sheaf of (complex valued) real analytic fns. on S.
+Here,
+we note that for connected open subsets U ⊆S, OR(U) is
+a domain,
+i.e., unlike the case with continuous or C∞-functions.
+That is to say, OR is in some sense close to
+being like OHi, for
+i = 1, 2, but still suﬀ’ly large as
+to allow one to obtainembeddings
+in
+the common container OR:
+OH1 ⊆
+OR ⊇ OH2
+· In the remainder of the present talk, we would like to consider
+various arithmetic analogues of
+the function theory discussed
+above in the complex case.
+OH1 ⊆ O R ⊇ OH2
+..................................................
+..................................................
+
+GT THEORY AS A SPECIES OF TEICHM ¨ULLER THEORY 3
+§ 2. The case of inter-universal Teichm¨ uller theory (IUT)
+· A more detailed exposition of IUT may be found in
+· the survey texts [Alien], [EssLgc] (cf. also [IUTchI-IV],
+[IUAni1], [IUAni2]), well as in
+· the videos/slides available at the following URLs:
+(cf. also my series of DWANGO LECTURES on IUT
+— URLs available at request!):
+https://www.kurims.kyoto-u.ac.jp/~motizuki/ExpHoriz
+IUT21/WS3/ExpHorizIUT21-InvitationIUT-notes.html
+https://www.kurims.kyoto-u.ac.jp/~motizuki/ExpHoriz
+IUT21/WS4/ExpHorizIUT21-IUTSummit-notes.html
+· Let R be an integral domain (e.g., Z ⊆ Q ) equipped with the
+action of a group G , ( Z ∋ ) N ≥ 2. For simplicity, assume that
+N = 1+ · · · +1 ̸= 0 ∈ R ; R has no nontrivial N -th roots of unity .
+Write R⊿ ⊆ R for the multiplicative monoid R \ { 0 } . Then
+let us observe that the N -th power map on R⊿ determines an
+isomorphism of multiplicative monoids equipped with actions
+by G
+G ↷ R⊿ ∼
+→ (R⊿ )N ( ⊆ R⊿ ) ↶ G
+that does not arise from a ring homomorphism , i.e., it is clearly
+not compatible with addition (cf. our assumption on N !).
+· Let †R , ‡R be two distinct copies of the integral domain R ,
+equipped with respective actions by two distinct copies †G , ‡G
+of the group G . We shall use similar notation for objects with
+labels “ † ”, “ ‡ ” to the previously introduced notation. Then
+one may use the isomorphism of multiplicative monoids arising
+from the N -th power map discussed above to glue together
+†G ↷ †R ⊇ (†R⊿ )N ∼
+← ‡R⊿ ⊆ ‡R ↶ ‡G
+... where the notion of a gluing may be understood
+· as a quotient set via identiﬁcations, or (preferably)
+· as an abstract diagram (cf. graphs of groups/anabelioids!)
+the ring †R to the ring ‡R along the multiplicative monoid
+(†R⊿ )N ∼
+← ‡R⊿ . This gluing is compatible with the respective
+actions of †G , ‡G relative to the isomorphism †G
+∼
+→ ‡G given by
+forgetting the labels “ † ”, “ ‡ ”, but, since the N -th power map is
+not compatible with addition (!), this isomorphism †G
+∼
+→ ‡G may
+be regarded either as an isomorphism of (“ coric ”, i.e., invariant
+with respect to the N -th power map) abstract groups (cf. the
+notion of “ inter-universality ”, as discussed in [EssLgc], § 3.2,
+§ 3.8!) or as an isomorphism of groups equipped with actions on
+certain multiplicative monoids , but not as an isomorphism of
+(“ Galois ” — cf. the inner automorphism indeterminacies of
+SGA1!) groups equipped with actions on rings/ﬁelds .
+
+4 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+· The problem of describing (certain portions of the) ring structure
+of †R in terms of the ring structure of ‡R — in a fashion that
+is compatible with the gluing and via a single algorithm that may
+be applied to the common (cf. logical AND ∧ ! ) glued data to re-
+construct simultaneously (certain portions of) the ring structures
+of both †R and ‡R , up to suitable relatively mild indeterminacies
+(cf. the theory of crystals !) — seems (at ﬁrst glance/in general)
+to be hopelessly intractable (cf. the case of Z )!
+... where we note that here, considering portions is
+important because we want to decompose the above
+diagram up into pieces so that we can consider
+symmetry properties involving these pieces!
+One well-known elementary example: when N = p , working
+modulo p (cf. indeterminacies , analogy with crystals !), where
+there is a common ring structure that is compatible with the
+p -th power map !
+Another important example: Faltings’ proof of invariance of
+height of elliptic curves under isogeny , under the assumption
+of the existence of a global multiplicative subspace (cf. [ClsIUT],
+§ 1; [EssLgc], Example 3.2.1)!
+... This is precisely what is achieved in IUT by means of the
+multiradial representation for the Θ -pilot via
+· anabelian geometry (cf. the abstract groups †G , ‡G !);
+· the p -adic/complex logarithm, Galois eval. of theta functions ;
+· Kummer theory , to relate Frob.-/´ etale-like versions of objects.
+· Main point :
+The multiplicative monoid and abstract group structures (but not
+the ring structures!) are common (cf. “ logical AND ∧ ! ”) to † , ‡
+and can be used as the input data for an algorithm to construct
+the multirad. rep. for the Θ -pilot , i.e., a common container
+for the distinct ring strs. (i.e., “ arith. hol. strs. ”) † , ‡
+†R ⊆
+(
+multirad. rep. for the Θ-pilot
+)
+⊇ ‡R
+· When R = Z (or, in fact, more generally, the ring of integers
+“ O F ” of a number ﬁeld F — cf. the multiplicative norm map
+N F/ Q : F → Q ), one may consider the “ height/log-volume ”
+log( |x | ) ∈ R
+for 0 ̸= x ∈ Z . Then the N -th power map of (i), (ii) corresponds,
+after passing to heights , to multiplying real numbers by N ; the
+multiradial algorithm corresponds to saying that the height is
+unaﬀected (up to a mild error term!) by multiplication by N ,
+hence that the height is bounded !
+
+GT THEOR
+Y AS A SPECIES OF TEICHM ¨ULLER THEORY 5
+· In the case of IUT, the multirad. rep. for the Θ-pilot is obtained
+by
+means of a sort of “ analytic continuation” along
+a certain “inﬁnite H ”
+of the lo
+g-theta-lattice (cf. the
+discussion surrounding [EssLgc], §3.3,
+(InfH))
+... where
+· the Θ-link bet
+ween distinct ring strs. “•” corresponds
+to the N-th power map discussed in the present §2, while
+· the log-link locally
+at nonarchimedean valuations looks
+like the p-adic logarithm between distinct ring strs. “ •”;
+· the descent operations revolv
+e around the establishment
+of certain coricity/symmetry properties.
+..
+. .
+.
+.
+↑
+log
+↑
+
+log
+.
+..
+Θ
+− → •
+Θ
+− → •
+Θ
+− → ...
+↑
+log
+↑log
+...
+Θ
+− → •
+Θ
+− → •
+Θ
+− → ...
+↑
+log
+↑log
+...
+Θ
+− → •
+Θ
+− → •
+Θ
+− → ...
+↑
+log
+↑log
+..
+. .
+.
+.
+⊇
+.
+.
+. .
+.
+.
+↑
+log
+↑
+
+log
+• •
+↑
+log
+↑log
+•
+Θ
+− → •
+↑
+log
+↑log
+• •
+↑
+log
+↑log
+..
+. .
+.
+.
+(0, 0)
+(Stp1)
+⇝ (0, ◦)
+(Stp2)
+⇝ (0, ◦)⊢ (Stp3)
+⇝ (0, 0)⊢ (Stp3)
+⇐ ⇒ (1, 0)⊢
+— which involves a gradual introduction via “ descent
+” op
+erations of
+“fuzziﬁcations”, corresp
+onding to indeterminacies (cf. the
+discussion
+of [EssLgc], §3.10).
+· At a more technical level, the multirad. rep. for the Θ-pilot is obtained
+by
+constructing invariants with resp
+ects to the log-link, whic
+h has the eﬀect
+of juggling addition and multiplication — i.e.,
+juggling the dilated and
+non-dilated portions
+of the ring strs. — and,
+as a result, eﬀects a sort of
+“miraculous rotation” (the
+discussion of [EssLgc], §3.11)
+•
+↑log
+•
+Θ
+− → •
+of the
+· “mysterious log-volume-dilating Θ-link gap” (b
+etween the
+domain/codomain of the Θ-link) onto the
+· “harmless log-volume-preserving log-link gap” (b
+etween the
+domain/codomain of the log-link) !
+“ “  ↷ ↷  
+” ”  
+
+6 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+§ 3. GT via genus zero quotients
+(cf. [CbGT]; [CbGal]; [ArGT], § 2, § 3)
+· The following result in combinatorial anabelian geometry on
+the faithfulness of the natural outer action of GT on the genus
+zero quotient of the geometric fundamental group of the tripod
+is the key technical result that underlies our new results on GT:
+Let
+· K be a ﬁeld of characteristic 0;
+· K an algebraic closure of K ;
+· X a hyperbolic curve of genus 0 with r cusps over K .
+Write Π X for the ´ etale fundamental group of X K
+def
+= X × K K ;
+(Π X ↠ ) Π
+0
+X
+def
+= Π X /
+( ⋂
+H
+H
+)
+— where H ⊆ Π X ranges over the open subgroups of Π X corresponding to
+genus 0 ﬁnite ´ etale coverings of X K , and we recall that Ker(Π X ↠ Π 0
+X ) ̸=
+{ 1 } (although, by a classical result of Ihara-Anderson, “= { 1 } ” holds in the
+pro- l case ) — for the genus zero quotient of Π X ;
+Out
+C
+(Π X )
+for the group of outer automorphisms of Π X that map cuspidal inertia
+subgroups to cuspidal inertia subgroups;
+Out
+C
+(Π X ) → Out(Π
+0
+X )
+for the natural homomorphism (since elements of Out C (Π X ) stabilize the
+class of open subgroups “ H ” considered above).
+Now suppose that the type (0 ,r ) of X is equal to (0 , 3), i.e., that X is
+a tripod , and that K = Q . Thus, as is well-known (“Belyi injectivity”; the
+deﬁnition of GT), we have natural injections
+G Q ↪→ GT ↪→ Out
+C
+(Π X )
+such that the composite homomorphism
+G Q → Out(Π
+0
+X )
+is injective (cf. [Wtbe]). Then the key technical result referred to above
+generalizes this injectivity to the case of GT:
+Theorem A [Expected] (Faithfulness of natural outer action of GT
+on the genus zero quotient). The natural composite homomorphism
+GT → Out(Π
+0
+X )
+is injective (cf. [ArGT], § 3).
+
+GT THEORY AS A SPECIES OF TEICHM ¨ULLER THEORY 7
+The proof of Theorem A yields an independent proof of the main result
+of [Wtbe] referred to above and involves applying highly technical results
+from combinatorial anabelian geometry (cf. [CbGT], [CbGal]) concerning
+the sequence of conﬁguration space groups (i.e., ´ etale fundamental groups
+of the base-change to K of various conﬁguration spaces X n associated to
+X )
+... ↠ Π X n +1 ↠ Π X n ↠ Π X n− 1 ↠ ...
+and the associated sequence of ﬁber subgroup-preserving outer automorphism
+groups
+...
+∼
+→ Out
+F
+(Π X n +1 )
+∼
+→ Out
+F
+(Π X n )
+∼
+→ Out
+F
+(Π X n− 1 )
+∼
+→ ...
+for arbitrarily large positive integers n ≥ 3 (cf. [CbGT], Corollary C).
+Here, we note that the passage X n ⇝ X n +1 corresponds, at “ toral ” (i.e.,
+“ multiplicative ”!) nodes, to a passage to tripods (i.e., which involve “ additive ”
+symmetries t ↦→ 1 − t ), hence may be thought of as a sort of combinatorial
+analogue of the p -adic logarithm — cf. the role played by
+the vertical columns of log -links/absolute p -adic anabelian geometry
+in the construction of the multiradial rep./“miraculous rotation”
+Θ-link “ ↷ ” log -link
+of IUT in § 2, which is obtained by forming invariants with respect
+to the log -link , which constitutes a rotation
+addition “ ⊞ ” “ ↷ ” multiplication “ ⊠ ”.
+The other main technical tool used in the proof of Theorem A is the
+following elementary variant of (the argument in the ﬁrst half of the proof
+of) Belyi’s Theorem :
+Write L
+def
+= Q (t ), where t is an indeterminate . Let L be an algebraic
+closure of L , f ∈ L . Thus, f may be thought of, via the standard
+coordinate on the projective line, as a point ∈ P 1
+L (L ). Then there
+exists a “Belyi map”
+P
+1
+L → P
+1
+L
+— i.e., a dominant morphism over L that maps the point cor-
+responding to f to an L -rational point of P 1
+L and, moreover, is
+unramiﬁed outside a ﬁnite set of L -rational points of P 1
+L .
+
+8 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+§ 4. Decomposition groups and function spaces
+(cf. [CbGT]; [CbGal]; [RNSPM]; [ArGT], § 4, § 5)
+· We maintain the notation of Theorem A of § 3 and consider
+distinct conjugates of G Q inside GT ( ∋ σ,τ )
+G σ
+Q ⊆ GT ⊇ G τ
+Q
+( ⇝ Q
+σ
+) ( ⇝ Q
+τ
+)
+... that is to say, distinct ring theories (where “ ⇝ ” denotes
+canonical anabelian reconstruction , as in [CbGal]) that
+are related by a mysterious non-ring-theoretic — i.e.,
+purely combinatorial/group-theoretic — link ;
+... the (possible) non-algebraicity of σ · τ− 1 may be understood
+as a sort of “ proﬁnite dilation ” that plays the role of the
+complex dilations of § 1, or, alternatively, of the N -th power
+map/ Θ -link of § 2.
+· Just as (noncuspidal) points ∈ P 1
+Q ( Q ) determine (up to Π X -
+conjugacy) — i.e., by considering stabilizers of liftings of these
+points to points of universal proﬁnite ´ etale coverings of X —
+(G Q -)decomposition groups
+D Q ⊆ Π X
+out
+⋊ G Q
+def
+= Aut(Π X ) × Out(Π X ) G Q
+that map isomorphically to open subgroups of G Q , we would like
+to consider “GT -decomposition groups ” (or, more generally,
+“G -decomposition groups ” for some closed subgroup G ⊆ GT,
+i.e., by restricting from GT to G )
+(D G ⊆ ) D GT ⊆ Π X
+out
+⋊ GT
+def
+= Aut(Π X ) × Out(Π X ) GT
+that map isomorphically to open subgroups of GT, by applying
+the technique of combinatorial arithmetic Belyi cuspidalizations
+(which may be constructed in a purely combin./group-theoretic
+fashion — cf. [CbGal], § 3):
+U
+open imm.
+↪→ X
+
+
+↓ Belyi map
+X
+... which leads us to the following ...
+
+GT THEORY AS A SPECIES OF TEICHM ¨ULLER THEORY 9
+· Fundamental Injectivity/Conjugate Synchronization Problem :
+Given an arithmetic ﬁeld F ⊆ Q (such as Q or Q ∩ Q p ) such that
+G F ⊆ G ( ⊆ GT ), is the restriction map
+D G ↦→ D G |G F
+injective ?
+...
+(essentially)
+⇐ ⇒ (since D G is det’d by {D G |G σ
+F
+}σ∈ G ) are the
+D G |G σ
+F
+synchronized , as σ ∈ G varies?
+· Construction : If this FICSP-property ( ⇐ = COF-property of
+[CbGal], § 3) holds for G , then for any genus 0 ﬁn. ´ etale covering
+Y Q → X Q ,
+one can use G -decomposition groups to construct
+· the set of points (i.e., Y Q ( Q ) ⊆ P 1
+Q
+( Q ) = Q ∪ {∞} ) and
+· the ﬁeld structure (via the S 3 symmetries , i.e., t ↦→ t− 1 ,
+t ↦→ 1 − t , etc.) on this set of points (i.e., on Q ),
+hence also a natural function space
+Fn( Y Q ( Q ), Q ),
+together with a subring of algebraic functions (by considering
+standard coord. fns. — cf. the “ degree one ” theta fn. in IUT!)
+in this function space and a natural Π 0
+X
+out
+⋊ G -action (i.e., if we
+allow the genus 0 ﬁnite ´ etale covering Y Q → X Q to vary ).
+... That is to say, we obtain that the natural outer action of G
+on Π 0
+X has algebraic monodromy , i.e., that the natural
+homomorphism G → Out(Π 0
+X ) factors through G Q , which,
+by Theorem A of § 3, implies that ( G F ⊆ ) G ⊆ G Q .
+... In particular, by applying this argument to closed subgroups
+G ⊆ GT that contain G Q , we obtain the following result:
+Theorem B [Expected] (Concise characterization of G Q in GT ).
+Let G ⊆ GT be a closed subgroup that contains G Q and satisﬁes the above
+FICSP-property ( ⇐ = COF-property of [CbGal], § 3). Then (cf. [ArGT], § 4)
+G = G Q .
+That is to say, we obtain a much simpler/more concise characterization of
+G Q in GT (i.e., by comparison to the characterizations obtained in [CbGal])
+via a single, relatively simple condition , namely, the FICSP-property . (Of
+course, the ideal result would be “ zero conditions ”, i.e., G Q = GT, but this
+has not yet been achieved!)
+
+10 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+· Next, ﬁx a prime number p . For □ ∈ {† , ‡} , let
+· K □ be a ﬁnite extension of Q p ;
+· K
+□
+an algebraic closure of K □ ;
+· X □ a hyperbolic curve of type (0 ,r □ ) over K □ .
+For n ≥ 1, write X □
+n for the n -th conﬁgur. space assoc’d to X □ ;
+X □
+K
+□
+def
+= X □ × K □ K
+□
+, (X □
+n )
+K
+□
+def
+= X □
+n × K □ K
+□
+;
+Π X □ , Π X □
+n
+for the respective ´ etale fundamental groups of X □
+K
+□ ,
+(X □
+n )
+K
+□ . Fix an isomorphism of proﬁnite groups
+α : Π X †
+∼
+→ Π X ‡ .
+Then we shall say that α is cuspidalizable if, for some integer
+n ≥ 2, there exists an isomorphism of proﬁnite gps. Π X
+†
+n
+∼
+→ Π X
+‡
+n
+that lifts α , rel. to the morphisms Π X □
+n
+↠ Π X □ (for □ ∈ {† , ‡} )
+induced by the natural projections to the ﬁrst factor. We shall
+say that α is graphic if it induces a bijection between the resp.
+collections of decomposition groups of irred. comps./nodes of the
+special ﬁbers of stable models of corresponding (relative to α )
+ﬁnite ´ etale coverings of Π X † , Π X ‡ . If r† = 3, then we shall write
+GT p ⊆ GT ( ⊆ Out(Π X † ))
+for the subgroup of graphic outer automorphisms, i.e., in essence
+(cf. [RNSPM], Theorem G), Yves Andr´ e’s p -adic version of GT.
+Then it follows from the theory of resolution of nonsingularities
+(RNS) (cf. [RNSPM], which builds on earlier results due to Akio
+Tamagawa and Emmanuel Lepage) that
+GT p satisﬁes the COF- ( ⇒ FICSP- ) property .
+In particular, it follows from the theory of [ArGT], § 4, § 5, that
+the following results — the ﬁrst of which (and, to a lesser extent,
+the second, as well) settles an important outstanding question of
+Andr´ e (i.e., the p -adic analogue of “ G Q = GT”) that dates back
+to around the year 2000 — hold:
+Corollary C [Expected] (Algebraicity of GT p monodromy). It holds
+(cf. [ArGT], § 4) that G Q p = GT p.
+Corollary D [Expected] (Tempered absolute anabelian result).
+There is a natural bijective correspondence (cf. [ArGT], § 5) between the
+set of graphic cuspidalizable outer automorphisms of proﬁnite groups
+Π X †
+∼
+→ Π X ‡
+(i.e., where one does not consider compatibility with any outer Galois ac-
+tions!) and the set of isomorphisms of Q p -schemes
+X
+†
+K
+†
+∼
+→ X
+‡
+K
+‡ .
+
+GT THEORY AS A SPECIES OF TEICHM ¨ULLER THEORY 11
+· The theory discussed above may be summarized as follows:
+C Tch IUT GT
+distinct distinct distinct
+holomorphic ring/arithmetic ring structures
+structures O H i , holomorphic corresponding to
+for i = 1 , 2, on structures on distinct
+same underlying opposite sides of conjugates of
+topological the Θ -link G Q inside GT
+surface
+embedding multiradial rep. , embedding of
+of O H i ’s into up to mild indets. , distinct ring
+common yields common strs. into
+container/ container for Fn( − , − ) via
+domain O R distinct ring/arith. analysis of
+via hol. strs. via GT -dec. groups ,
+Teichm¨ uller Galois evaluation , together with
+maps miraculous rotation embedding
+Θ-link “ ↷ ” log -link GT ↪→ Out(Π 0
+X )
+involving log -invars. via a combina-
+via a rotation torial rotation
+⊠ “ ↷ ” ⊞ , ⊠ “ ↷ ” ⊞
+absolute p -adic (i.e., inf. tower of
+anab. geo. (cf., conﬁg. spaces ),
+especially, (Ind3)), combinatorial
+(deg. 1) ´ etale theta anab. geo. ,
+function coord. fns.
+
+12 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+References
+[IUAni1] E. Farcot, I. Fesenko, S. Mochizuki, The Multiradial Representation of
+Inter-universal Teichm¨ uller Theory , animation available at the follow-
+ing URL:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/IUT-
+animation-Thm-A-black.wmv
+[IUAni2] E. Farcot, I. Fesenko, S. Mochizuki, Computation of the log-volume of
+the q -pilot via the multiradial representation , animation available at the
+following URL:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/2020-
+01%20Computation%20of%20q-pilot%20(animation).mp4
+[IUTchI] S. Mochizuki, Inter-universal Teichm¨ uller Theory I: Construction of
+Hodge Theaters, Publ. Res. Inst. Math. Sci. 57 (2021), pp. 3-207.
+[IUTchII] S. Mochizuki, Inter-universal Teichm¨ uller Theory II: Hodge-Arakelov-
+theoretic Evaluation, Publ. Res. Inst. Math. Sci. 57 (2021), pp. 209-401.
+[IUTchIII] S. Mochizuki, Inter-universal Teichm¨ uller Theory III: Canonical Split-
+tings of the Log-theta-lattice, Publ. Res. Inst. Math. Sci. 57 (2021),
+pp. 403-626.
+[IUTchIV] S. Mochizuki, Inter-universal Teichm¨ uller Theory IV: Log-volume Com-
+putations and Set-theoretic Foundations, Publ. Res. Inst. Math. Sci. 57
+(2021), pp. 627-723.
+[Alien] S. Mochizuki, The Mathematics of Mutually Alien Copies: from Gauss-
+ian Integrals to Inter-universal Teichm¨ uller Theory, Inter-universal Te-
+ichmuller Theory Summit 2016 , RIMS K¯ oky¯ uroku Bessatsu B84 , Res.
+Inst. Math. Sci. (RIMS), Kyoto (2021), pp. 23-192; available at the
+following URL:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/Alien%20Copies,%20
+Gaussians,%20and%20Inter-universal%20Teichmuller%20Theory.pdf
+[EssLgc] S. Mochizuki, On the essential logical structure of inter-universal Teich-
+m¨ uller theory in terms of logical AND “ ∧ ”/logical OR “ ∨ ” relations:
+Report on the occasion of the publication of the four main papers on
+inter-universal Teichm¨ uller theory , preprint available at the following
+URL:
+https://www.kurims.kyoto-u.ac.jp/~motizuki/Essential%20Logical
+%20Structure%20of%20Inter-universal%20Teichmuller%20Theory.pdf
+[CbGT] Y. Hoshi, A. Minamide, S. Mochizuki, Group-theoreticity of Numer-
+ical Invariants and Distinguished Subgroups of Conﬁguration Space
+Groups, Kodai Math. J. 45 (2022), pp. 295-348.
+
+GT THEORY AS A SPECIES OF TEICHM ¨ULLER THEORY 13
+[CbGal] Y. Hoshi, S. Mochizuki, S. Tsujimura, Combinatorial construction of
+the absolute Galois group of the ﬁeld of rational numbers, J. Math. Sci.
+Univ. Tokyo. 32 (2025), pp. 1-125.
+[RNSPM] S. Mochizuki, S. Tsujimura, Resolution of Nonsingularities, Point-theo-
+reticity, and Metric-admissibility for p -adic Hyperbolic Curves , RIMS
+Preprint 1974 (June 2023).
+[ArGT] S. Mochizuki, S. Tsujimura, Topics surrounding the arithmeticity of the
+Grothendieck-Teichm¨ uller Group , manuscript in preparation.
+[Wtbe] H. Watanabe, Belyi injectivity for outer representations on certain quo-
+tients of ´ etale fundamental groups of hyperbolic curves of genus zero,
+Hiroshima Math. J. 53 (2023), pp. 63-85.
+

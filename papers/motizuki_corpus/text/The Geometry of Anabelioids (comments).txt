@@ -1,0 +1,30 @@
+COMMENTS ON “THE GEOMETR Y OF ANABELIOIDS”
+Shinichi Mochizuki
+May 2022
+(1.) In the display of the paragraph immediately following Deﬁnition 1.1.10, “ζ(j)”
+should read “ζ(i)”.
+(2.) In Proposition 2.1.1, (ii), “Loc(X)” should read “Loc(X)”. In Proposition
+2.2.2, (ii), “LocQ(X)” should read “LocQ(X)”.
+(3.) The equation “ΞV
+X = ˜ΞV
+X ◦ΦV
+X” in the ﬁnal line of the statement of Theorem
+2.4.2 should read “˜ΞV
+X =ΞV
+X
+◦ΦV
+X”.
+(4.) In Deﬁnition 2.3.1, the word “irreducible” should read “connected”.
+(5.) In Proposition 2.3.5, (i) (respectively, (ii)), it should be assumed that the fun-
+damental group of every connected component ofQ′ (respectively, Q)i s countably
+(topologically) generated — cf. Deﬁnition 2.3.1.
+(6.) In Proposition 2.3.5, (vi), it should be assumed thatX is connected.M o r e o v e r ,
+degX is only deﬁned on (nonempty)connected objects of Loc(X) and in fact may
+be extended so as to be deﬁned on (nonempty)connected objects of Loc(X).
+(7.) In Proposition 2.3.6, (i) (respectively, (iii)), it should be assumed that Isog(G)
+(respectively, A)i s countably (topologically) generated — cf. Deﬁnition 2.3.1.
+(8.) In the situation of Proposition 2.3.6, we observe that it is easily veriﬁed that
+the natural inclusionG↪→ Isog(G)i srelatively slim, and hence that Isog(G)i sslim
+whenever it isproﬁnite (i.e., as in the situation of Proposition 2.3.6, (i)).
+Typeset by AMS-TEX
+1

@@ -1,0 +1,39 @@
+COMMENTS ON “CA TEGORICAL REPRESENT A TION
+OF LOCALLY NOETHERIAN LOG SCHEMES”
+Shinichi Mochizuki
+October 2014
+(1.) The theory exposed in§2 contains errors, as follows:
+· the necessityasserted in Proposition 2.3, isfalse;
+· the isomorphism asserted [unfortunately, without anexplicit proof!] in
+Lemma 2.6, (ii), isfalse.
+At the level ofmain results of the present paper, these errors in the theory of§2,
+do not aﬀect the proof of Theorem A given in§1, but theydo aﬀect theproof—a l -
+though not the validity ! — of Theorem B. This result Theorem B is given acorrect
+proofin [MnLgSch],§3 [cf. [MnLgSch], Theorem 3.8, (iii)]. Also, the errors referred
+to above are discussed in more detail in [MnLgSch], Example 0.3; [MnLgSch], Re-
+mark 1.4.1. At the level ofmain results of papers of the authorsubsequent to the
+present paper, theonly place where the errors in the theory of§2 have an aﬀect is
+in the portion of the proof of themain result of [ArLgSch] [i.e., [ArLgSch], Theorem
+5.1] that involves the theory of [ArLgSch],§4. The aﬀected portions of [ArLgSch],
+§4, are discussed in more detail in the introduction to [MnLgSch],§4. The main
+result [ArLgSch], Theorem 5.1, of [ArLgSch] is given acorrect proofin [MnLgSch],
+§4 [cf. [MnLgSch], Theorem 4.8, (iv)]. More details on the aﬀected portions of the
+present paper, as well as of [ArLgSch], may be found in the Appendix to [MnLgSch].
+(2.) In the ﬁrst paragraph of the proof of Lemma 2.5, the notation “Q ∈VZ” should
+read “Q ⊆VZ”.
+(3.) In the second sentence of the statement of Proposition 2.7, the phrase“(nec-
+essarily uniquely!) though” should read “(necessarily uniquely!) through” .I nt h e
+second paragraph of the proof of Proposition 2.7, the phrase“(uniquely) though”
+should read “(uniquely) through”.
+(4.) In the discussion immediately following the display in the statement of Corol-
+lary 2.12, (ii), the notation “Sch(Xlog)” should read “Schlog(Xlog)”.
+(5.) In Lemma 2.16, (iii), the phrase “a monomorphism” should read “a scheme-
+like monomorphism”.
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+Bibliography
+[ArLgSch] S. Mochizuki, Categories of log schemes with archimedean structures,J. Math.
+Kyoto Univ. 44 (2004), pp. 891-909.
+[MnLgSch] S. Mochizuki, Monomorphisms in Categories of Log Schemes, preprint.

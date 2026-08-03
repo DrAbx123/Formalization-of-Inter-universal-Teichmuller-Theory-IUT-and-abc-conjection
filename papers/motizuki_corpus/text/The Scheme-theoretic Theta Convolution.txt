@@ -1,0 +1,3000 @@
+The Scheme-Theoretic Theta Convolution
+by Shinichi Mochizuki
+September 1999
+Contents:
+§0. Introduction
+§1. The Scheme-Theoretic Fourier Transform
+§2. Discrete Gaussians and Gauss Sums
+§3. Review of Degree Computations in [HAT]
+§4. The Fourier Transform of an Algebraic Theta Function:
+The Case of an ´Etale Lagrangian Subgroup
+§5. The Fourier Transform of an Algebraic Theta Function:
+The Case of a Lagrangian Subgroup with Nontrivial Multiplicative Part
+§6. Generic Properties of the Norm
+§7. Some Elementary Computational Lemmas
+§8. The Various Contributions at Inﬁnity
+§9. The Main Theorem
+§10. The Theta Convolution
+§0. Introduction
+In this paper, we continue our development of the theory of the Hodge-Arakelov Com-
+parison Isomorphism of [HAT]. Our main result concerns theinvertibility of the coeﬃcients
+of the Fourier transform of an algebraic theta function. Using this result, we obtain a modi-
+ﬁed version of the Hodge-Arakelov Comparison Isomorphism of [HAT], which we refer to as
+the Theta-Convoluted Comparison Isomorphism. The signiﬁcance of this modiﬁed version
+is that the principle obstruction to the application of the theory of [HAT] to diophantine
+geometry — namely, the Gaussian poles — partially vanishes in the theta-convoluted con-
+text. Thus, the results of this paper bring the theory of [HAT] one step closer to possible
+application to diophantine geometry.
+Perhaps the simplest way to explain themain ideaof the present paper is the following:
+The theory of [HAT] may be thought of as a sort of discrete, scheme-theoretic version of
+1
+
+the theory of the classical Gaussian e−x2
+(on the real line) and its derivatives (cf. [HAT],
+Introduction, §2). The reason for the appearance of the “Gaussian poles” — which, as
+remarked above, constitute the principle obstruction to the application of the theory of
+[HAT] to diophantine geometry — is that, if, for instance, P(−) is a polynomial with
+constant coeﬃcients, then, at its most fundamental combinatorial level, the “comparison
+isomorphism” of [HAT] may be thought of as the mapping
+P(−) ↦→ P( ∂
+∂x) e−x2
+= P(−2x) · e−x2
+from a certain space of polynomials — which constitutes the de Rham side of the com-
+parison isomorphism — to a certain space of set-theoretic functions — which constitutes
+the ´etale side of the comparison isomorphism. Roughly speaking, in order to make this
+morphism into an isomorphism, it is necessary toeliminate the extra factor of e−x2
+on the
+right. Once this extra factor is eliminated, the mapping P(−) ↦→ P(−2x) is “manifestly”
+an isomorphism.
+The approach of [HAT] to making this mapping into an isomorphism is to introduce
+poles into the de Rham side of the morphism (i.e., the “Gaussian poles”), which amounts
+(relative to the above discussion) to artiﬁcially tensoring the left-hand side of the morphism
+with the “symbol” ex2
+, which then is to map to the “function” ex2
+. Once this operation
+is performed, the right-hand side becomes P(−2x)e−x2
+· ex2
+= P(−2x), so we get an
+isomorphism P(−) ↦→ P(−2x) as desired.
+The problem with this approach of [HAT] is that for diophantine applications, one
+wishes to leave the de Rham side of the comparison isomorphism untouched. On the other
+hand, although one wishes to modify the ´etale side, one wants to modify it in such a way
+that the resulting modiﬁed ´etale sidestill admits a natural Galois action, which is necessary
+in order to construct the arithmetic Kodaira-Spencer morphism (cf. [HAT], Chapter IX,
+§3, as well as Remark 2 following Theorem 10.1 in the present paper).
+In the present paper, the approach that we take may be explained in terms of the
+above discussion as follows: Instead of modifying the de Rham side of the comparison
+morphism, we modify the ´etale side by “tensoring it with the inverse of the line bundle
+deﬁned by the image on the ´etale side of the element ‘1’ (on the de Rham side).”Of course
+this image is simply e−x2
+, so dividing by this image amounts to multiplying byex2
+on the
+´etale side, thus giving us the desired isomorphism P(−) ↦→ P(−2x).
+Of course, in the theory of [HAT] and the present paper, we are not working literally
+with the Gaussian or even classical theta functions, but rather their discrete algebraic
+analogues. Thus, it is not surprising that many of the technical computations of this
+paper involve certain discrete analogues of the classical Gaussian on the real line(cf. §2).
+Since the correspondence between theta functions and Gaussian is, in essence, that the
+Gaussian represents the Fourier transform of a theta function, multiplying by a Gaussian
+corresponds, at the level of theta functions, to the operation of convolution.T h u s , t h e
+operation which we wish to perform (cf. the preceding paragraph) on the ´etale side of the
+comparison isomorphism is to apply the inverse of convolution with the theta function.I n
+2
+
+the present paper, we refer to the operation of convolution with the theta function as the
+“theta convolution.” Thus, the key technical result that is necessary in order to realize
+the philosophical idea explained above is a result concerning the invertibility of the theta
+convolution. Put another way, since our theta functions (in the theory of [HAT] and the
+present paper) are the algebraic theta functions of Mumford(cf. [Mumf1,2,3]), we thus see
+that the result that we need is a result concerning theinvertibility of the coeﬃcients of the
+Fourier transform of certain algebraic theta functions.
+This result is the ﬁrst main result of this paper (Theorem 9.1). We refer to §9f o r
+explicit technical details concerning its statement. In a word, this result states that the
+coeﬃcients of the Fourier transform of certain algebraic theta functions are invertible in
+characteristic 0 away from the divisor at inﬁnity (i.e., the locus where the elliptic curve in
+question degenerates). Moreover, in mixed characteristic and near the divisor at inﬁnity,
+we analyze explicitly the extent to which these coeﬃcients fail to be invertible. In fact,
+the proof of this result proceeds precisely by comparing the degree of the line bundle (on
+the moduli stack of elliptic curves) of which the norm of the Fourier transform (i.e., the
+product of its coeﬃcients) is a section to the degree of the zero locus of this norm in
+a neighborhood of the divisor at inﬁnity. A rather complicated calculation reveals that
+these two degrees coincide. This coincidence of degreesimplies that the norm is therefore
+invertible (in characteristic 0) away from the divisor at inﬁnity. Finally, we apply our
+ﬁrst main result to prove our second main result, i.e., the theta-convoluted comparison
+isomorphism (Theorem 10.1).
+Before proceeding, we would like to explain several ways to think about the contents
+of this paper. First of all, the fact that the coeﬃcients of the Fourier transform of certain
+algebraic theta functions are invertible away from the divisor at inﬁnity appears (to the
+knowledge of the author) to benew (i.e., it does not seem to appear in the classical theory
+of theta functions). Thus, one way to interpret Theorem 9.1 is as a result which implies
+the existence of certain interesting, new modular units. It would be interesting to see if
+this point of view can be pursued further (cf. the Remark following Theorem 9.1).
+Another way to think about the contents of this paper is the following. The classical
+representation of the Fourier expansion of a theta function — i.e., the representation which
+states that the Fourier coeﬃcients are essentially a “Gaussian” — arises from the Fourier
+expansion of the restriction of a theta function to a certainparticular cycle (or copy of the
+circle S
+1) on the elliptic curve E in question. More explicitly, if one thinks of this elliptic
+curve E as being
+E = C×/qZ
+then this special cycle is the image of the natural copy of S1 ⊆ C×. In the present
+context, we are considering discrete analogues of this classical complex theory, so instead
+of working with this S1,w ew o r kw i t hi t sd-torsion points (for some ﬁxed positive integer
+d), i.e., μd ⊆ S1 ⊆ C×.
+On the other hand, in order to obtain a theory valid over the entire moduli stack of
+elliptic curves, we must consider Fourier expansions of theta functions restricted not just
+3
+
+to this special cyclic subgroup of order d, i.e., μd ⊆ E, (with respect to which the Fourier
+expansion is particularly simply and easy to understand), but rather with respect to an
+arbitrary cyclic subgroup of orderd. Viewed from the classical complex theory, considering
+Fourier expansions arising from more general restriction subgroups amounts to considering
+the functional equation of the theta function. In the classical complex theory, Gauss sums
+arise naturally in the functional equation of the theta function. Thus, it is not surprising
+that Gauss sums (and, in particular, their invertibility) also play an important role in the
+theory of the present paper.
+In fact, returning to the theory of the Gaussian on the real line, one may recall that
+one “important number” that arises in this theory is theintegral of the Gaussian(over the
+real line). This integral is (roughly speaking) √
+π. On the other hand, in the theory of this
+paper, Gaussians correspond to “discrete Gaussians” (cf. §2), so integrals of Gaussians
+correspond to “Gauss sums.” That is to say, Gauss sums may be thought of as a sort of
+discrete analogue of √
+π. Thus, the appearance of Gauss sums in the theory of this paper
+is also natural from the point of view of the above discussion of the “main idea” involving
+Gaussians.
+Indeed, this discussion of discrete analogues of Gaussians and√
+π leads one to suspect
+that there is also a naturalp-adic analogue of the theory of this paper involving thep-adic
+ring of periodsBcrys. Since this ring of periods contains a certain copy ofZp(1) which may
+be thought of as a “ p-adic analogue of π,” it is thus natural to suspect that in a p-adic
+analogue of the theory of this paper some “square root of this copy of Zp(1)” — and, in
+particular, its invertibility — should play an analogously important role to the role played
+by the invertibility of Gauss sums in the present paper. We hope to develop such ap-adic
+theory in a future paper (cf. also [HAT], Introduction, §5.1).
+Finally, we explain the contents of the various §’s of this paper. In §1, we deﬁne and
+discuss the elementary properties of the Fourier transform of a ﬁnite ﬂat group scheme.
+In §2, we discuss the “discrete Gaussians” and their “integrals” (Gauss sums) that arise
+in the computations of this paper. In §3, we formalize the necessary technical details
+concerning the Fourier transform of an algebraic theta function. This formalization results
+in the appearance of various degrees of line bundles and divisors on the moduli stack of
+elliptic curves which were computed in [HAT]; in§3, we review these computations. In §4,
+5, we estimate the degree of vanishing of the norm of the Fourier transform of an algebraic
+theta function in a neighborhood of inﬁnity. It turns out that these computations diﬀer
+somewhat depending on the “position” of certain auxiliary torsion subgroups of the elliptic
+curve that are necessary in order to deﬁne our Fourier transform. Roughly speaking, the
+necesssary computations may be separated into two cases or parts, depending on the
+position of these auxiliary torsion subgroups. The two cases constitute, respectively, the
+content of §4, 5. In §6, we investigate when the norm of the Fourier transform isgenerically
+zero.I n §7, we perform certain complicated but elementary computations that we use in
+§8. These computations are at the level of high-school mathematics and, in particular,
+have nothing to do with arithmetic geometry. In §8, we combine the estimates of §4, 5,
+with the computations of §7 to show the important “coincidence of degrees” discussed
+above. In §9, we record the consequences of this coincidence of degrees, i.e., our ﬁrst main
+4
+
+result (Theorem 9.1). In §10, we apply Theorem 9.1 to construct the theta-convoluted
+comparison isomorphism (whose realization was, as explained above, the main motivation
+for the theory of this paper).
+§1. The Scheme-Theoretic Fourier Transform
+In this §, we extend the well-known theory ofFourier analysis on ﬁnite abelian groups
+to its “schematic analogue,” Fourier analysis on ﬁnite, ﬂat commutative group schemes.
+Let S be a scheme. Let
+G → S
+be a ﬁnite, ﬂat commutative group scheme over S.W r i t eˆG → S for the Cartier dual of G
+([Shz], §4). Thus, if T is an S-scheme, the T-valued points of ˆG are the homomorphisms
+GT (
+def
+= G ×S T) → (Gm)T .
+Let f ∈ Γ(G, OG) be a function on G. Then we deﬁne its Fourier transform ˆf ∈
+Γ( ˆG, O ˆG) as follows: The value of ˆf on a T-valued point ˆγ ∈ ˆG(T)( w h e r eT is an S-
+scheme) is given by:
+ˆf(ˆγ)
+def
+=
+∫
+GT /T
+f · (ˆγ)−1
+Here, we think of ˆγ as an (invertible) function on GT , and denote by “
+∫
+GT /T ”t h etrace
+morphism OGT →O T (which is well-deﬁned since G → S is ﬁnite and ﬂat). Since this
+deﬁnition is functorial in T, we thus obtain a well-deﬁned element ˆf ∈ Γ( ˆG, O ˆG). This
+completes the deﬁnition of the Fourier transform of f. In the following, we shall also write
+FG(f)
+(or F(f), when the choice of G is clear) for ˆf.
+Next, let f,g ∈ Γ(G, OG) be two functions onG. Then in addition to theusual product
+f · g ∈ Γ(G, OG), we also have the convolution (product)
+f ∗g ∈ Γ(G, OG)
+of f,g , deﬁned by:
+(f ∗g)(γ)
+def
+=
+∫
+γ′ ∈G
+f(γ · (γ′)−1) · g(γ′)
+5
+
+(for T-valued points γ ∈ G(T)). Finally, let us write I(f) for the function obtained by
+pulling f back via the inversion morphism [−1] : G → G on G.
+Proposition 1.1. Suppose that G → S is of constant rank |G|, and that the integer |G|
+is a nonzero divisor on S. Then we have:
+(i.) |G|·I (f)= F ˆG(FG(f)).
+(ii.) |G|·F G(f · g)= FG(f) ∗FG(g).
+(iii.) FG(f ∗g)= FG(f) ·F G(g). for any f ∈ Γ(G, OG).
+Proof. Since |G| is a nonzero divisor onS, we may assume without loss of generality that
+|G| is invertible on S, and hence that G → S is ´etale ([Shz], §4, Corollary 3). Then by
+replacing S by a ﬁnite ´etale cover of S, we may assume that G → S is of the form Γ × S,
+where Γ is a ﬁnite abelian group (in the category of sets). In this case, the stated identities
+are well-known (cf., e.g., [DyMc], §4.5). ⃝
+Now let us suppose that we have an exact sequence
+0 → H → G → K → 0
+of ﬁnite, ﬂat commutative group schemes over S. Taking Cartier duals, we obtain an exact
+sequence
+0 → ˆK → ˆG → ˆH → 0
+If f ∈ Γ(K, O
+K) is a function on K, then by pull-back, we obtain a function f|G ∈
+Γ(G, OG), which we also denote by ResG
+K(f).
+Now suppose thatK → S is of constant rank|K|, and that the integer|K| is a nonzero
+divisor on S. Then it follows that over SK
+def
+= S[|K|−1], K|SK → SK is ´etale, hence that
+H|SK is open and closed in GSK . Now suppose that f ∈ Γ(H, OH ) is a function on H,
+and that ˜f ∈ Γ(G, OG) is a function on G such that ˜f |H = f, and, moreover, that ˜f |SK
+vanishes on the open and closed subscheme GSK \HSK ⊆ GSK . Then we shall write
+IndG
+H(f)
+for ˜f.T h u s ,I n dG
+H(f) is the result of “extending f by zero” to a function onG. Note that
+such an ˜f is necessarily unique (since SK is schematically dense in S,a n d ˜f is uniquely
+determined on HSK and GSK \HSK ).
+6
+
+Proposition 1.2. Suppose that G → S is of constant rank |G|, and that the integer |G|
+is a nonzero divisor on S.T h e n :
+(i.) For any f ∈ Γ(K, OK), we have: FG(ResG
+K(f)) = |H|· IndˆG
+ˆK(FK(f)).
+(ii.) For any f ∈ Γ(H, OH ) such that IndG
+H(f) exists, we have: FG(IndG
+H(f)) =
+ResˆG
+ˆH(FH(f)).
+(iii.) In particular, if 1G is the constant function 1 on G,a n d δ0,G is the “delta
+distribution at the origin” (i.e., the function – deﬁned after one inverts|G| –w h i c hi s1 at
+the origin and 0 elsewhere), then FG(1G)= |G|· δ0, ˆG,a n dFG(δ0,G)=1 ˆG.
+Proof. Just as in the proof of Proposition 1.1, it suﬃces to verify the result under the
+assumption that G is of the form Γ×S, where Γ is a ﬁnite abelian group of order invertible
+on S. But in this case, the result is well-known (cf., e.g., [DyMc], §4.5). ⃝
+§2. Discrete Gaussians and Gauss Sums
+One of the key fundamental results in classical Fourier analysis on the real line is
+that the Fourier transform of a Gaussian is (up to a factor which typically involves √
+π)
+a Gaussian.I n t h i s §,w ee x a m i n et h ediscrete analogue of this phenomenon. Here,
+the discrete analogue of a classical Gaussian is a “discrete Gaussian,” while the discrete
+analogue of the factor that appears when one applies the Fourier transform is a Gauss
+sum.
+We maintain the notations of §1. Here, we assume further that the group scheme G
+is (noncanonically) isomorphic to Z/NZ, for some positive integer N which is invertible
+on S. In the following, we assume that some particular isomorphism
+G ∼= (Z/NZ) × S
+has been chosen. Note that the choice of such an isomorphism endows G with a structure
+of “ring scheme” (i.e., arising from the ring structure ofZ/NZ). In particular, if γ ∈ G(S),
+then we shall write (fori ∈ Z≥1) i·γ (respectively, γi) for the result of adding (respectively,
+multiplying) — i.e., relative to this ring scheme structure — γ to (respectively, by) itself
+a total of i times. Often, by abuse of notation, we shall simply write γ ∈ G for the N
+elements of G(S) deﬁned by Z/NZ.L e t
+χ : G → Gm
+be a faithful character of the group scheme G. Then consider the function
+7
+
+ψ : G → Gm
+deﬁned by ψ(γ)
+def
+= χ(γ2).
+Deﬁnition 2.1. Such a function ψ on G (deﬁned for some χ as above) will be referred
+to as a discrete Gaussian (on G).
+In the following, we would like to consider the Fourier transform of a discrete Gaussian
+and show that this Fourier transform is essentially another discrete Gaussian (times a
+certain Gauss sum).
+Let us ﬁrst observe that since χ is faithful, the characters of G are all of the form
+γ ↦→ χ(c · γ), for some c ∈ Z/NZ. Let us then compute the Fourier coeﬃcient of ψ for the
+character χ
+c corresponding to an even c =2 c′ (where c′ ∈ Z/NZ):
+∫
+γ∈G
+ψ(γ) · χ(−c · γ)=
+∫
+γ∈G
+χ(γ2 − 2c′ · γ)
+= χ(−(c′)2) ·
+∫
+γ∈G
+χ((γ − c′)2)
+= χ(−(c′)2) ·
+∫
+γ∈G
+χ(γ2)
+Write
+G(χ,N )
+def
+=
+∫
+γ∈G
+χ(γ2)
+for the Gauss sum deﬁned by χ. Then the above calculation shows in particular that for
+N odd (in which case all c may be written as c =2 c′), the Fourier transform F(ψ)i st h e
+function χc ↦→G (χ,N )·χ(− 1
+4 ·c2). This function is clearly a constant (=G(χ,N )) multiple
+of a discrete Gaussian.
+Next, we consider the more complicated case when N is even.W h e nN is even, we
+shall write N =2 M. First, let us suppose that N is divisible by 4. In this case, every
+γ ∈ Z/NZ satisﬁes:
+(γ+ M)2 ≡ γ2 +2 M · γ+ M2 ≡ γ2
+(modulo N). Thus, it follows that the functionψ on G ∼= Z/NZ is obtained by pulling back
+a function on G/M ·G ∼= Z/MZ via the natural projection G → G/M ·G. In particular, it
+follows from Proposition 1.2, (i.), that the Fourier coeﬃcients of ψ are zero for odd c (i.e.,
+c which cannot be written in the form c =2 c′). Thus, we see that the above calculation
+8
+
+implies that the Fourier transform F(ψ) in this case is the result of extending by zero a
+constant (= G(χ,N )) multiple of a function on Z/MZ ∼= 2 · ˆG ⊆ ˆG whose pull-back to
+Z/NZ is a discrete Gaussian on Z/NZ.
+Deﬁnition 2.2. If N is divisible by 4, and ˜ψ is a function on G/MG whose pull-back to
+G is a discrete Gaussianψ on G, then we shall refer to ˜ψ as a reduced discrete Gaussian on
+G/MG.I f N is odd, then we will also refer to arbitrary discrete Gaussians (as in Deﬁnition
+2.1) as reduced discrete Gaussians.
+Finally, we consider the case of odd M. In this case, every γ ∈ Z/NZ satisﬁes:
+(γ+ M)2 ≡ γ2 +2 M · γ+ M2 ≡ γ2 + M
+(modulo N). In particular, it follows from Proposition 1.2, (i.), that the Fourier coeﬃcients
+of ψ are zero for even c (i.e., c which can be written in the form c =2 c′). Thus, we must
+compute the coeﬃcients for odd c =2 c′ + M (where we note that since M is odd, we may
+take c′ to be even):
+∫
+γ∈G
+ψ(γ) · χ(−c · γ)=
+∫
+γ∈G
+χ(γ2 − 2c′ · γ − M · γ)
+= χ(−(c′)2) ·
+∫
+γ∈G
+χ((γ − c′)2 + M · γ)
+= χ(−(c′)2) ·
+∫
+γ∈G
+χ(γ2 + M · γ)
+Moreover,
+∫
+γ∈G
+χ(γ2 + M · γ)=
+∫
+γ∈2·G
+χ(γ2) −
+∫
+γ∈2·G
+χ((γ+ M)2)
+=
+∫
+γ∈2·G
+χ(γ2) −
+∫
+γ∈2·G
+χ(γ2 +2 M · γ+ M2)
+=2 ·
+∫
+γ∈2·G
+χ(γ2)
+=2 ·G (χ2,M )
+(where we note that since χ is faithful, we have χ(M2)= χ(M)= −1).
+Next, let us recall from the computations of Gauss sums in [Lang], pp. 86-87, that we
+have
+G(χ2,M )= ϵχ2,M ·
+√
+M ̸=0
+9
+
+where ϵ4
+χ2,M = 1. Similarly, if N is odd,t h e nw eh a v e
+G(χ,N )= ϵχ,N ·
+√
+N ̸=0
+where ϵ4
+χ,N = 1. Finally, if N is even,t h e nw eh a v e
+G(χ,N )= ϵχ,N · (1 +i) ·
+√
+N ̸=0
+where ϵ4
+χ,N =1 , i = √
+ −1. Thus, we see that we have proven the following result:
+Proposition 2.3. Let χ : G → Gm be a faithful character. Let ψ(γ)
+def
+= χ(γ2) be
+the discrete Gaussian on G associated to χ.F o r c ∈ Z/NZ, write χc for the character
+G → Gm deﬁned by χc(γ)
+def
+= χ(c · γ).T h e n :
+(i.) Suppose that N is odd.T h e n
+{F(ψ)}(χc)= G(χ,N ) · χ(− 1
+4 · c2)
+where G(χ,N )
+def
+= ∑
+γ∈G χ(γ2)= ϵχ,N ·
+√
+N ̸=0 (and ϵ4
+χ,N =1 ). Thus, F(ψ) is equal to
+a nonzero multiple of a discrete Gaussian on ˆG.
+(ii.) Suppose that N =2 M is even,b u t M is odd.T h e n {F(ψ)}(χc)=0 if c ∈
+2Z/NZ.I f c =2 c′ + M for c′ ∈ 2Z/NZ,t h e n
+{F(ψ)}(χc)=2 ·G (χ2,M ) · χ(−(c′)2)
+where G(χ2,M )
+def
+= ∑
+γ∈2Z/NZ χ(γ2)= ϵχ2,M ·
+√
+M ̸=0 (and ϵ4
+χ2,M =1 ). Thus, F(ψ) is
+equal to a nonzero multiple of the translate byM ∈ Z/NZ ∼= ˆG of the extension by zero of
+a discrete Gaussian on 2 · ˆG (⊆ ˆG).
+(iii.) Suppose that N =2 M and M are even.T h e n{F(ψ)}(χc)=0 if c ∈ (2Z +
+M)/NZ.I f c =2 c′ for c′ ∈ Z/NZ,t h e n
+{F(ψ)}(χc)= G(χ,N ) · χ(−(c′)2)
+where G(χ,N )
+def
+= ∑
+γ∈G χ(γ2)= ϵχ,N · (1 +i)
+√
+N ̸=0 (and ϵ4
+χ,N =1 , i = √
+ −1). Thus,
+F(ψ) is equal to a nonzero multiple of the extension by zero of a function on2 · ˆG ∼= Z/MZ
+whose pull-back to Z/NZ is a discrete Gaussian on Z/NZ.
+Thus, in summary, “the Fourier transform of a reduced discrete Gaussian is itself a nonzero
+multiple (i.e., by a certain Gauss sum) of a reduced discrete Gaussian.”
+10
+
+Remark. Frequently, we will work with ﬁnite, ﬂat group schemes G of order N over bases
+where N is not necessarily invertible, or with ﬁnite, ´etale group schemes which are ´etale
+locally, but not necessarily globally, isomorphic to Z/NZ. In these cases, we shall also
+refer to functions on G as (reduced) discrete Gaussiansif they become (reduced) discrete
+Gaussians as in Deﬁnition 2.2 after N is inverted, and a suitable isomorphism withZ/NZ
+is chosen over some ´etale covering of the original base.
+§3. Review of Degree Computations in [HAT]
+The purpose of this § is to review various aspects of the theory of [HAT] in character-
+istic 0, and to explain the fundamental set-up of the theory of the present paper.
+Let Slog be a Z-ﬂat ﬁne noetherian log scheme . Let us assume that we are given alog
+elliptic curve (cf. [HAT], Chapter III, §1.1)
+Clog → Slog
+over Slog which is smooth over a schematically dense open subscheme ofS. It thus follows
+that the “divisor at inﬁnity” (i.e., the pull-back via the associated classifying morphism
+of the divisor at inﬁnity of (
+M1,0)Z) is a Cartier divisor D ⊆ S. Thus, just as in [HAT],
+Chapter IV, §4,5, we have a stack S∞ obtained from S by adjoining the roots of the q-
+parameters at the locus D ⊆ S over which Clog → Slog degenerates. Over S∞ ,w eh a v e
+the smooth group scheme
+f : E∞ ,S → S∞
+whose connected components at the points of bad reduction are in natural one-to-one
+correspondence with Q/Z. The metrized line bundles of [Zh] may be thought of as living
+on E∞ ,S.
+Let m, dbe positive integers such that m does not divide d.L e t
+η ∈ E∞ ,S(S∞ )
+be a torsion point of order m. Then in [HAT], Chapter V, §1, we associated to this data
+certain metrized line bundles
+Lst,η,
+ L
+ev
+st,η
+In the following discussion, we will denote by
+11
+
+L
+the metrized line bundle
+ Lst,η (respectively,
+ L
+ev
+st,η)i f d is odd (respectively, even). Note
+that the push-forward f∗
+L of this metrized line bundle to S∞ deﬁnes a metrized vector
+bundle on S∞ . Moreover, this metrized line bundle admits the action of a certain natural
+theta group scheme G
+L (cf. [HAT], Chapter IV, §5).
+Next, let us assume that we are given ﬁnite, ﬂat (i.e., over S∞ ) subgroup schemes
+G, H ⊆ E∞ ,S
+which are ´etale locally isomorphic to Z/dZ in characteristic 0 (i.e., after tensoring with
+Q), and which satisfy
+H × G = dE∞ ,S ⊆ E∞ ,S
+(where dE∞ ,S is the kernel of multiplication by d on E∞ ,S). We shall refer to G as the
+restriction subgroup (since its principal use will be as a collection of points to which we
+will restrict sections of
+ L), and H as the Lagrangian subgroup (since its primary use will
+be to descend
+ L — cf. [HAT], Chapter IV, Theorem 1.4).
+In the following discussion, we would like to considerthe Fourier transforms of restric-
+tions of sections of
+ L to G.I f d is odd, then the datum of G is suﬃcient for this purpose.
+If, however, d is even, then in order to take the Fourier transform of a restricted section,
+we need a canonical trivialization of the restriction
+ L|G. Recall, however, from [HAT],
+Chapter IV, Theorem 1.6, that we only have such a canonical trivialization over 2· G,n o t
+over all of G. Thus, in the case that d is even, we must assume that we are also given the
+following data: First of all, let us write ˜E∞ ,S
+def
+= E∞ ,S/(d0 · G), where d0
+def
+= 1
+2 d.T h u s ,
+the multiplication by 2 morphism on ˜E∞ ,S factors into a composite of two morphisms of
+degree 2:
+˜E∞ ,S → E∞ ,S → ˜E∞ ,S = E∞ ,S/(d0 · G)
+Moreover, the 2-torsion of ˜E∞ ,S surjects ontod0 ·G ⊆ E∞ ,S. Thus, it follows by elementary
+group theory that G ⊆ E∞ ,S is contained in the image of the d-torsion of E∞ ,S.W r i t e
+˜G ⊆ ˜E∞ ,S for the inverse image of G ⊆ E∞ ,S in ˜E∞ ,S,a n d G˜E/E
+def
+=K e r (˜E∞ ,S →
+E∞ ,S) ⊆ ˜E∞ ,S. Then we have an exact sequence
+0 → G˜E/E → ˜G → G → 0
+of ﬁnite, ﬂat group schemes over S∞ which are annihilated by d. Then in the even case,
+we assume that we given the following additional data:
+12
+
+a subgroup scheme Gspl ⊆ ˜G that splits the above exact sequence (i.e.,
+maps isomorphically onto G).
+If we pull the metrized line bundle
+ L back to ˜E∞ ,S, the resulting metrized line bundle
+L|˜E∞ ,S
+has degree 2 d, hence admits (by [HAT], Chapter IV, Theorem 1.6) a canonical
+trivialization over any subgroup scheme of ˜E∞ ,S annihilated by d — in particular, over
+Gspl.
+Moreover, it follows (from [HAT], Chapter IV, Theorem 1.6, (2)) that if we modify
+the splitting Gspl by some homomorphism α : G → G˜E/E, then the resulting trivialization
+diﬀers from the trivialization corresponding to the given Gspl by a factor given by the
+function β ◦α : G → μ2, for some ﬁxed homomorphism β : G˜E/E → μ2 (which is
+independent of α).
+Remark. Suppose just for the remainder of this Remark thatS is of characteristic 0. Since
+G˜E/E is a ﬁnite ´etale group scheme of rank 2 over S∞ , G˜E/E is abstractly isomorphic to
+{±1} ∼= μ2 (where the “ ∼=” holds since we are in characteristic zero). Moreover, I claim
+that β is the unique isomorphism betweenG˜E/E and μ2. Indeed, if this were not the case,
+then β would be trivial, and we would obtain that the trivialization of
+ L|Gspl =
+ L|G is
+independent of the choice of splitting Gspl. Moreover, if the trivialization is independent
+of the splitting for this particular choice ofG, then it follows (by considering the action of
+Galois on G in the universal case, i.e., ﬁnite ´etale coverings of the moduli stack (M1,0)Q)
+that this holds for all G. On the other hand, if this holds for all G, then it would follow
+that the canonical section of [HAT], Chapter IV, Theorem 1.6, extends to a section deﬁned
+over K
+L (i.e., not just 2·K
+L) whose image is contained in the subschemeS
+L of symmetric
+elements. Also, let us observe that since the image of this extended section lies in S
+L,i t
+follows (by the same argument as that used to prove the latter part of [HAT], Chapter IV,
+Theorem 1.6, (2)) that the formula “{σ(a+b)·σ(a)
+−1 ·σ(b)−1}2 =[ a, b]” of [HAT], Chapter
+IV, Theorem 1.6, (2), also applies to this extended section. But this implies that theWeil
+pairing [−, −]o n d-torsion points of the universal elliptic curve over ( M1,0)Q admits a
+square root, which is absurd. (Indeed, the ﬁeld of constants in (i.e., algebraic closure of Q
+in) the ﬁeld of deﬁnition of these d-torsion points in the universal case is Q(e2πi/d), but
+the existence of such a square root would imply thatQ(e2πi/2d) ⊆ Q(e2πi/d), which is false,
+since d is even.) This completes the proof of the claim.
+The purpose of the above Remark was to convince the reader that theintroduction of
+the splitting Gspl is, in fact, unavoidable. Thus, one way to summarize the above discussion
+in a fashion which is independent of the choice of splitting Gspl is the following: There is
+a natural Hom(G, μ2)-torsor
+T2 → S∞
+13
+
+determined by E∞ ,S, G,w h i c hi snontrivial in general. Moreover, over T2, the restriction
+L|G admits a canonical trivialization.
+Thus, at any rate, if we assume that we are given a splitting Gspl whenever d is
+even, then regardless of the parity of d, we obtain (cf. [HAT], Chapter IX, §3) a natural
+isomorphism
+L|G ∼= OG ⊗OS∞ K
+where K
+def
+=
+ L|e is the restriction of
+L to the identity section∈ E∞ ,S(S∞ ). Similarly, (since
+our assumptions on G and H are identical) if we assume that we are given a splittingHspl
+of the analogous exact sequence for H
+0 → H˜E/E → ˜H → H → 0
+whenever d is even, then regardless of the parity of d, we obtain (cf. [HAT], Chapter IX,
+§3) a natural subgroup scheme
+H⊆G
+ L
+which is Lagrangian in the sense of [MB], Chapitre V, D´eﬁnition 2.5.1. Note that:
+(1) After possibly replacing S by a ﬁnite ﬂat cover, such an Hspl always
+exists.
+(2) Unlike in [HAT], Chapter IV,§1, we donot assume that H is isomorphic
+either to Z/dZ or μd over S.
+Let us write
+E∞ H ,S
+def
+= E∞ ,S/H
+for the quotient ofE∞ ,S by H. Thus, we have a natural isogenyE∞ ,S → E∞ H ,S.M o r e o v e r ,
+since we have a lifting H⊆G
+ L of H, we also get a natural metrized line bundle
+ LH on
+E∞ H,S that descends
+ L.W r i t efH : E∞ H,S → S∞ for the structure morphism of E∞ H,S.
+Note that the relative degree (i.e., with respect to fH)o f
+ LH is 1. Thus, it follows that
+(fH )∗
+LH is a metrized line bundle on S∞ .W r i t e
+M
+def
+= {(fH)∗
+LH }−1
+Next, let us observe that if we compose the Fourier transform FG (tensored with K)
+discussed in §1 with the trivialization isomorphism
+ L|G ∼= OG ⊗OS∞ K reviewed above, we
+get a morphism
+14
+
+L|G →O ˆG ⊗OS∞ K
+If we then compose this morphism with the morphism obtained by restricting sections of
+LH (ﬁrst to E∞ ,S and then) to G, we obtain a morphism
+E : M−1 →O ˆG ⊗OS∞ K
+which maps a section of
+ LH to the Fourier expansion of the corresponding algebraic theta
+function. This “theta Fourier expansion morphism” is the main topic of the present paper.
+Note that since O ˆG has a natural OS∞ -algebra structure, it makes sense to speak of
+the norm of a section of O ˆG. Thus, this norm will form a section of OS∞ . In particular, if
+we take the norm of E, we obtain a section
+ν ∈ Γ(S∞ , M⊗d ⊗K ⊗d)
+The main technical goal of the present paper is to show thatν is invertible on the interior
+US ⊆ S∞ of S∞ (i.e., the open subscheme where the log structure is trivial). This goal
+will be achieved by computing the order of the zeroes of ν at the points at inﬁnity, and
+comparing the sum of these orders to the degree of the metrized line bundle M⊗d ⊗K ⊗d
+(in the universal case, i.e., when the base is given by the moduli stack of log elliptic curves
+— note that over such a base, the notion of “degree” makes sense), which is given by
+Propositions 3.1, 3.2, below. It turns out that these two numbers coincide. This will
+suﬃce to show that ν is invertible on the interior US
+def
+= S − D.
+Remark. If we change the choice of splitting Gspl, then the resulting trivialization gets
+multiplied (cf. the above discussion) by some character G → μ2. The eﬀect of such
+a multiplication on the Fourier transform (cf. Proposition 1.1, (ii.)) is given by the
+automorphism of O ˆ
+G induced by translation by this character G → μ2 (regarded as
+an element of ˆG = Hom( G,Gm)). Clearly, the norm is unaﬀected by such automor-
+phisms. In particular, the norm ν is independent of the choice of splitting .O n e w a y t o
+summarize this observation in a way that does not involve Gspl explicitly is the follow-
+ing: The Hom( G, μ2)-torsor T2 → S∞ discussed above deﬁnes (via the natural inclusion
+Hom(G, μ2) ↪→ Hom(G,Gm)= ˆG)an a t u r a lˆG-torsor
+TˆG → S∞
+Moreover, the Fourier transform of a section of
+ L|G is naturally given by an element of
+OTˆG
+⊗OS∞ K.
+For the remainder of this §, let us assume that S is a smooth, proper (not necessarily
+connected) one-dimensional scheme over C (the complex number ﬁeld — in fact, any ﬁeld
+15
+
+of characteristic zero will do). Also, let us assume that the log structure of Slog arises
+from a ﬁnite number of points. For simplicity, we assume that Clog → Slog degenerates at
+all the points at which the log structure of Slog is nontrivial. Recall from [HAT], Chapter
+IV, §5, that, under these assumptions, it makes sense to consider the degree of a metrized
+vector bundle on S∞ , and from [HAT], Chapter V, Proposition 1.1, that:
+Proposition 3.1. We have: deg(M)= 1
+24d(d − 1) · log(q).
+Remark. Just as in [HAT], degrees will always be expressed in “log( q)” units, i.e., those
+units for which the divisor at inﬁnity of the moduli stack (
+ M1,0)C has degree 1.
+Proof. Since we are working here with “H-invariants” (cf. [HAT], Chapter IV, Theorem
+1.4) of the push-forward that appears in [HAT], Chapter V, Proposition 1.1, the degree of
+M
+−1 is 1
+d times the degree appearing in loc. cit. ⃝
+Proposition 3.2. We have: deg(M⊗d ⊗K ⊗d)= 1
+24 (d − 1) · log(q)+ d ·[
+L· e]. Moreover,
+[
+L· e]=0 if d is odd,a n d
+= − 1
+d ·
+∑
+ι
+{φ1(−d · ηι+ 1
+2) · log(q)= − 1
+d ·
+∑
+ι
+{φ1(−d · ηι+ 1
+2) − φ1(−d · ηι)}· log(q)
+if d is even.( H e r e ,ηι denotes the element of Q/Z (i.e., the connected component of
+the special ﬁber of E∞ ,S → S∞ ) deﬁned at the point at inﬁnity ιby the torsion point
+η ∈ E∞ ,S(S∞ ),a n d φ1(θ)= 1
+2 θ2 − 1
+2 |θ| + 1
+12 (for |θ|≤ 1
+2) is the function of [HAT],
+Chapter IV, Proposition 4.4.)
+Proof. It remains only to remark that the computation of [
+ L· e] follows from [HAT],
+Chapter V, Proposition 1.2. ⃝
+The computation underlying the coincidence of degrees referred to above is quite
+complicated and forms the topic of §4-8. One of the ingredients that we will need in
+this computation is (a certain consequence of) the rather complicated degree computation
+carried out in [HAT], Chapter VI,§3. For d
+′ a positive integer≤ d, let us consider the sums
+(cf. the computation in the proof of [HAT], Chapter VI, Theorem 3.1, which corresponds
+to the case d′ = d)
+Z(d, d′,m)
+def
+=
+∑
+ι
+d′
+∑
+j=1
+1
+d · cj(Case Xι) · log(q)
+(where, just as in [HAT], sums overιare to be interpreted asaverages, in keeping with the
+principle that everything is to be in “log( q) units”). Put another way, this number is the
+16
+
+sum of the d′ smallest exponents of q that appear in the q-expansion of the theta functions
+that arise at the various points ιat inﬁnity. It is not diﬃcult to see that this number is
+determined uniquely by d, d′,a n dm.
+Proposition 3.3. If d′ is odd,t h e n
+Z(d, d′,m)= d′
+24d((d′)2 − 1) · log(q)
+If d, d′ are even,t h e n
+Z(d, d′,m)= d′
+24d((d′)2 − 1) · log(q) − d′
+d ·
+∑
+ι
+φ1(−d · ηι+ 1
+2) · log(q)
+= d′
+24d((d′)2 − 1) · log(q) − d′
+d ·
+∑
+ι
+{φ1(−d · ηι+ 1
+2) − φ1(−d · ηι)}· log(q)
+Here, ηι denotes the element of Q/Z (i.e., the connected component of the special ﬁber of
+E∞ ,S → S∞ ) deﬁned at the point at inﬁnity ιby the torsion point η ∈ E∞ ,S(S∞ ),a n d
+φ1(θ)= 1
+2 θ2 − 1
+2 |θ| + 1
+12 (for |θ|≤ 1
+2) is the function of [HAT], Chapter IV, Proposition
+4.4.
+Proof. For d′ odd, the result follows (even when d is even) from the computations in
+[HAT], Chapter VI, the portion of the proof of Theorem 3.1 entitled “Computation of the
+Degree in the Odd Case” (which reduce, essentially, to [HAT], Chapter V, Lemma 4.2).
+For d, d
+′ even, the result follows from the computations in [HAT], Chapter VI, the portion
+of the proof of Theorem 3.1 entitled “Computation of the Degree in the Even Case.” ⃝
+Remark. Often, when the entire discussion consists of degrees “in log( q) units,” we will
+omit the symbol “log( q),” as in [HAT].
+Finally, before proceeding, we would like to introduce some more notation. Let us
+write
+m′ def
+= m
+(m, d)
+Thus, put another way, m′ is the order of the torsion point d · η. Note that Z(d, d′,m)
+depends only on d, d′,a n d m′, i.e., it may be thought of as a function of these three
+variables. When we wish to think of it that way, we shall write:
+Z′(d, d′,m ′)
+for Z(d, d′,m).
+17
+
+§4. The Fourier Transform of an Algebraic Theta Function:
+The Case of an ´Etale Lagrangian Subgroup
+In this §, we would like to estimate the order of vanishing of the section ν of §3a t
+those points at inﬁnity where the Lagrangian subgroup H ⊆ E∞ ,S is “ of ´etale type,” i.e.,
+maps injectively into the group of connected components Q/Z in the special ﬁber.
+We maintain the notation of§3, except that in the present§,w ew o r ki naneighborhood
+of inﬁnity , i.e., we assume that
+S
+def
+= Spec(C[[q
+1
+2md ]])
+(equipped with the log structure deﬁned by the divisor V (q
+1
+2md )) and that the one-
+dimensional semi-abelian scheme in questionE → S (i.e., the one-dimensional semi-abelian
+scheme whose logarithmic compactiﬁcation is Clog → Slog)i st h e Tate curve “Gm/qZ.”
+Write U for the standard multiplicative coordinate on the Gm that uniformizes E.S i n c e
+we chose the base S so that q admits a 2d-th root in OS, it follows that our Lagrangian
+and restriction subgroupsH,G ⊆ E∞ ,S,a sw e l la st h esplittings Gspl,Hspl ⊆ ˜E∞ ,S when d
+is even,a r ea l ld e ﬁ n e do v e rS (i.e., not just over S∞ ). Let us denote the unique “point at
+inﬁnity” (i.e., the special point of S)b y ∞ S. Also, we set n
+def
+=2 m (as in [HAT], Chapter
+IV, §2,3).
+Let us denote by E′
+∞ ,S another copy of E∞ ,S. In the following, we would like to
+think of E′
+∞ ,S as a covering of E∞ ,S, by means of the isogeny given by the morphism
+“multiplication by n”:
+E′
+∞ ,S
+[n]
+−→ E∞ ,S
+Write
+ L
+′ def
+=
+ L|E′
+∞ ,S
+. Note that since
+ L
+′
+has degree n2 · d, it follows that
+K
+L
+′ = n2·dE′
+∞ ,S
+We would like to think ofE′
+∞ ,S as admitting a Schottky uniformization by “another copy
+of Gm,” which we shall denote by G′
+m. The standard multiplicative coordinate on G′
+m
+will be denoted by U′.T h u s , (U′)n = U. Also, for various natural numbers N,w es h a l l
+denote the copy of μN that sits naturally inside G′
+m by μ′
+N .
+Next, let us observe that the natural action of G′
+m on the Schottky uniformization of
+(E′
+∞ ,S,
+ L
+′
+) (cf., e.g., the discussion of [HAT], Chapter IV, §2,3) induces a natural action
+of μ′
+n2·d on
+ L
+′
+(cf., e.g., the discussion at the beginning of [HAT], Chapter IV, §2) — that
+is, we get a homomorphism:
+iSch : μ′
+n2·d ↪→G
+ L
+′
+18
+
+On the other hand, let us observe that since
+ L is deﬁned by translating a symmetric line
+bundle by a torsion point of order m (and then readjusting the integral structure/metric
+— cf. the deﬁnitions of
+ Lst,η,
+ L
+ev
+st,η in [HAT], Chapter V, §1), it follows that if we forget
+about the adjustment of the metric, then
+ L
+′
+is totally symmetric (i.e., equal to the square
+of a symmetric line bundle). Moreover, it follows from the discussion preceding [HAT],
+Chapter V, Proposition 1.1, that the curvature of
+ L
+′
+is symmetric, which implies that
+ L
+′
+is, in fact, totally symmetric as a metrized line bundle . Thus, since n is even, it follows
+from [HAT], Chapter IV, Theorem 1.6, that the canonical section “ σ”o f loc. cit. deﬁnes
+a homomorphism:
+iσ′ : μ′
+n·d ↪→G
+ L
+′
+(the fact that the content of [HAT], Chapter IV, Theorem 1.6, is still valid when we consider
+metrics follows as in the discussion of [HAT], Chapter IX, §3). Thus, it is natural to ask
+whether or not these two homomorphisms coincide on μ′
+n·d:
+Lemma 4.1. We have: iσ′ = iSch|μ′
+n·d
+.
+Proof. Recall that
+ L
+′
+is totally symmetric as a metrized line bundle, and that the action
+of G′
+m on the Schottky uniformization of the pair (E′
+∞ ,S,
+ L
+′
+)i sa l s osymmetric (cf. [HAT],
+Chapter IV, §2). Thus, it follows that iSch maps into S
+L
+′ . Then it follows from the
+deﬁnition of the canonical section “ σ” in [HAT], Chapter IV, §1, (together with the fact
+that iSch is a homomorphism)t h a tiSch|μ′
+n·d
+= iσ′ , as desired. ⃝
+Next, let us recall that the push-forward (fH)∗(
+LH) is generated by a section whose
+corresponding theta function is given by (cf. [HAT], Chapter V, Theorem 4.8; [HAT],
+Chapter VII, §6):
+∑
+k∈Z
+q
+1
+d ( 1
+2 ·k2+(iχ /n)·k) · Uk · (U′)iχ · χ(k) · θm
+for some character χ : Z → μn (where n
+def
+=2 m), and some integer iχ ∈{ − m, −m +
+1,... , −1, 0,1,... ,m − 1}.S i n c e“ (U′)iχ · θm” essentially amounts to the trivialization in
+question, we see that the “actual theta function”i sg i v e nb y :
+Θ
+def
+=
+∑
+k∈Z
+q
+1
+d ( 1
+2 ·k2+(iχ /n)·k) · Uk · χ(k)
+Let us ﬁrst consider the case whereG is ofmultiplicative type, i.e., G = μd ⊆ Gm.T h i s
+is in some sense the most fundamental and important caseof the various cases (relative to
+the “position” of G, H inside dE∞ ,S) that will be considered in this and the following §.
+19
+
+(As we saw in the Remark following Proposition 3.2, the normνis independent of the choice
+of Gspl. Moreover, let us note that since d0 ·G is multiplicative, the isogeny ˜E∞ ,S → E∞ ,S
+of §3 is “of ´etale type,” i.e., it lies between E∞ ,S and its Schottky uniformization. Put
+another way, this means that ˜E∞ ,S is Schottky-uniformized by the same Gm as E∞ ,S.
+Thus, it makes sense to stipulate that we takeGspl
+def
+= μd ⊆ Gm.) In this case, restriction
+to G amounts to identifying Uk and Uk′
+whenever k ≡ k modulo d. Now according to
+the theory of [HAT], Chapter VIII, §2,3,4, there is a certain special set of d consecutive
+integers KCrit such that the result of restricting the above theta function to G = μd is
+given by:
+Θ μ
+def
+=
+∑
+k0 ∈Z/dZ
+(U|μd )k0 ·
+( ∑
+k∈Z,k ≡k0(mod d)
+q
+1
+d ( 1
+2 ·k2+(iχ /n)·k) · χ(k)
+)
+=
+∑
+k∈KCrit
+q
+1
+d ( 1
+2 ·k2+(iχ /n)·k) · (U|μd
+)k · (χ(k)+ ϵk) ·{ 1 + (smaller powers ofq)}
+where ϵk is a certain n-th root of unity if k is exceptional (cf. [HAT], Chapter VIII,
+Lemmas 4.3, 4.4), and ϵk = 0 otherwise (i.e., if k is not exceptional). There is at most one
+exceptional k in the set KCrit. Moreover, the exponents of q appearing in the above sum
+are precisely thed numbers 1
+d ·cj (for j =1 ,... ,d) appearing in the deﬁnition of Z(d, d, m).
+Moreover, since the set KCrit consists of k consecutive integers, it follows that the above
+function on μd is essentially the Fourier expansion of the restriction of the theta function
+in question to G = μd. Thus, we obtain that the degree of vanishing at ∞ S of the norm
+ν constructed in §3 — which we shall denote by deg( ν)—i s ≥ the “ ιportion” of the
+sum in the deﬁnition of Z(d, d, m), where ιcorresponds to the point at inﬁnity ∞ S where
+we have localized in the present discussion. (Here, we say “ ≥,” rather than “=” since we
+dot know whether or not the coeﬃcient χ(k)+ ϵk which appeared above is nonzero.) In
+particular, if we average over all the possibleι’s (which corresponds to all possible torsion
+points ηof order precisely m, weighted in the proper fashion), we obtain that the resulting
+average Avgη(deg(ν)) satisﬁes the following:
+Lemma 4.2. We have:
+Avgη(deg(ν)) ≥Z (d, d, m)
+for any G of multiplicative type (i.e., for which G = μd ⊆ Gm).
+Thus, it remains to consider the case when G is not necessarily of multiplicative type.
+Let us ﬁrst observe that since Im( G)=I m ( dE∞ ,S) ⊆ E∞ H,S is independent of G,i t
+follows that even in the case where G is not necessarily of multiplicative type, we are in
+eﬀect restricting the sections of (fH )∗
+LH to the same points as in the case where G is of
+multiplicative type. The eﬀect of using a diﬀerent (e.g., a non-multiplicative) G is that
+20
+
+a diﬀerent G results in a diﬀerent trivialization at those points. Thus, in particular, the
+resulting theta functions diﬀer by a factor given by some function ψ : μd → Gm.S i n c e
+ultimately we are interested in Fourier transforms of theta functions, we thus see that:
+The net eﬀect (of using a non-multiplicative G) on the Fourier trans-
+form of the theta function in question is to convolute by d−1 ·F (ψ)( c f .
+Proposition 1.1, (ii.)).
+Thus, in the following, we propose to computeψ and its Fourier transformF(ψ), and then
+consider the degree of the zero locus at inﬁnity of the convolution of d−1 ·F (ψ)w i t ht h e
+Fourier transform of the theta function considered above.
+To compute the diﬀerenceψ in trivializations arising fromG, we must introduce some
+new notation, as follows. First, we write Gμ
+def
+= μd ⊆ Gm.S i n c eH is of ´etale type, it
+follows that Gμ × H = dE∞ ,S. Note that since H injects into the group of connected
+components of the special ﬁber of E∞ ,S, we get a natural identiﬁcation
+H = Z/dZ
+Thus, we shall think ofdE∞ ,S as Gμ×H = μd×Z/dZ. Then relative to this decomposition,
+G may be written as the graph of some homomorphism αG : μd → Z/dZ.
+In fact, in order to calculate ψ, we will need to lift the above data on E∞ ,S to E′
+∞ ,S.
+Of course, many of the lifted data onE′
+∞ ,S will not be uniquely determined by the original
+data on E∞ ,S, but this will not matter, since diﬀerent choices of lifts will not aﬀect the
+end result. Thus, write
+G′
+μ
+def
+= μ′
+n2·d
+(so n · G′
+μ lifts Gμ)a n dc h o o s ea n
+H′ = Z/n2 · dZ ⊆ E′
+∞ ,S
+(where the identiﬁcation of H′ with Z/n2 · dZ is assumed to be given by the natural
+homomorphism of H′ into the group of connected components of the special ﬁber ofE′
+∞ ,S)
+such thatn·H′ lifts H. Finally, we choose aG′ ⊆ n2 ·dE′
+∞ ,S deﬁned by some homomorphism
+αG′ : μ′
+n2·d → Z/n2 · dZ
+such that n · G′ lifts G.L e tu sw r i t e
+σ′ :2 · K
+L
+′ →G
+ L
+′
+21
+
+for the canonical section of [HAT], Chapter IV, Theorem 1.6.
+We are now ready to compute ψ : μd → Gm.L e t a ∈ μd = Gμ. Select a lifting
+a′ ∈ n ·G′
+μ of a.L e ta′
+1 ∈ m ·G′
+μ be such that 2·a′
+1 = a′.W r i t eb′
+1
+def
+= αG′ (a′
+1); b′ def
+=2 b′
+1; b
+for the image ofb′ in E∞ ,S (i.e., b = αG(a)). Then it essentially follows from the deﬁnitions
+that:
+ψ(α)= σ′((a′,b ′)) · σ′(b′)−1 · σ′(a′)−1 · χex(a′)
+where χex : n · G′
+μ → Gm is a character. (Indeed, this essentially follows from the fact
+that σ′, as well as the sections of G
+L used in §3 to deﬁne the trivialization of
+ L|G and the
+subgroup H⊆G
+ L are all homomorphisms on n ·H′, n ·G′, G,a n dH. Thus, the restrictions
+of two such sections to the same subgroup diﬀer from one another by various characters.
+This is what leads to the “extra factor” χex.) On the other hand, by [HAT], Chapter IV,
+Theorem 1.6, (2), we have
+σ′((a′,b ′)) · σ′(b′)−1 · σ′(a′)−1 =( [b′
+1,a ′
+1
+]′)2
+(where [−, −]′ is the pairing associated to
+ L
+′
+). Clearly, the right-hand side of this equality
+is a 2d-th root of unity. Thus, (since ψ(−)d = 1) we obtain that χex(−)2d =1 .
+Now suppose that d is odd. In this case, we may choose a′ and a′
+1 to be of odd order.
+This implies that b′ and and b′
+1 are also of odd order. Since it makes sense to multiply
+elements of odd order by 1
+2 , we thus obtain:
+([b′
+1,a ′
+1
+]′)2 =( [b′,a ′]′)
+1
+2 =[ b, a]
+1
+2
+(where [−, −] is the pairing associated to
+ L). In particular, we get χex(−)d = 1. By abuse
+of notation, let us write χex(a)f o rχex(a′). That is, we have:
+ψ(a)=[ a, αG(a)]− 1
+2 · χex(a)
+for some χex : Gμ → μd. This completes the case when d is odd.
+Now suppose that d is even. In this case, we obtain:
+ψ(a)=( [ a′
+1,αG′ (2a′
+1)]′)−1 · χex(a′)
+Note that a′
+1 is well-deﬁned up to the addition of an element a′′ ∈ m · d · G′
+μ = μ′
+2n.
+Moreover, one checks easily that the pairing (x,y ) ↦→ [x,αG′ (y)]′ on G′
+μ ×G′
+μ is symmetric.
+Thus,
+22
+
+[a′
+1 + a′′,αG′ (2a′
+1 +2 a′′)]′ =[ a′
+1,αG′ (2a′
+1)]′ · [a′′,αG′ (2a′
+1)]′ · [a′
+1,αG′ (2a′′)]′ · [a′′,αG′ (2a′′)]′
+=[ a′
+1,αG′ (2a′
+1)]′ · [a′′,αG′ (a′)]′ · [a′,αG′ (a′′)]′ · [a′′,αG′ (2a′′)]′
+=[ a′
+1,αG′ (2a′
+1)]′ · [a′′,αG′ (2a′)]′ · [a′′,αG′ (2a′′)]′
+=[ a′
+1,αG′ (2a′
+1)]′ · [??,n · d · αG′ (a′ + a′′)]′
+=[ a′
+1,αG′ (2a′
+1)]′
+where we use that n · d · a′ =0 ;( s i n c ed is even) n · d · a′′ = 0. Thus, it follows that
+([a′
+1,αG′ (2a′
+1)]′)−1 depends only on a (i.e., not on the choice of lifting a′
+1). In particular,
+(since ψ(a) manifestly only depends on a) we obtain that χex(a′) depends only on a.B y
+abuse of notation, we will write χex(a)f o rχex(a′). Thus, in summary:
+Lemma 4.3. Let a ∈ Gμ = μd.T h e ni fd is odd,t h e n
+ψ(a)=[ a, αG(a)]− 1
+2 · χex(a)
+for some character χex : Gμ → μd.I f d is even,a n da′
+1 ∈ m · G′
+μ satisﬁes 2a′
+1 ↦→ a,t h e n
+ψ(a)=( [ a′
+1,αG′ (2a′
+1)]′)−1 · χex(a)
+for some character χex : Gμ → μd. In particular, if the homomomorphism αG : μd →
+Z/dZ is of order dord, then it follows that (regardless of the parity ofd) ψ : μd → Gm is —
+up to a factor given by the character χex — the pull-back to μd via the natural projection
+μd → μdord (arising from the fact that dord divides d)o fa reduced discrete Gaussian (cf.
+Deﬁnition 2.2) on μdord .
+Proof. It remains only to verify that the bracketed portions of the expressions that we
+obtained above for ψ(a) are indeed pull-backs of reduced discrete Gaussians as described.
+But this follows immediately from the deﬁnitions. Note that we use here the well-known
+fact that the pairings [−, −]; [−, −]′ are nondegenerate. (Indeed, if they were degenerate,
+then the theory of theta groups would imply that that
+ L
+′
+descends to some quotient of
+E′
+∞ ,S by a ﬁnite group scheme of order >n 2 · d, which is absurd, since deg(
+L
+′
+)= n2 · d.)
+⃝
+Thus, by Proposition 1.1, (ii.); Proposition 1.2, (i.); and Proposition 2.3, it follows
+that
+The eﬀect on the Fourier expansion of the theta function of the trivializa-
+tion deﬁned by G is given by translation by an element ofˆG (determined
+by the character χex), followed by convolution by a function on ˆG of the
+form:
+ϵ · dord
+− 1
+2 · IndZ/dZ
+Z/dordZξ
+23
+
+where ϵ is a 4-th root of unity (respectively,
+√
+2 times an 8-th root of
+unity) if dord is odd (respectively, even), and ξ is a reduced discrete
+Gaussian on Z/dordZ.
+Let us denote the function ψ · Θ μ on μd (whose Fourier expansion is discussed above) by:
+ΘG
+def
+= ψ · Θ μ
+Then if we assume (so that we do not have to deal in the expression below with “exceptional
+k”) that dord ̸= 1 (note: the case dord = 1 was dealt with above in Lemma 4.2), then
+since the values of ξ are all ∈ μ2dord, we obtain that (for k0 ∈ Z/dZ) the coeﬃcient of
+(U|μd )k0+kex (where kex ∈ Z/dZ is a ﬁxed element determined by χex) in the Fourier
+expansion of ΘG is of the following form:
+Coeﬀ(U |μd
+)k0+kex (ΘG)
+= ϵ ·dord
+− 1
+2 ·
+{ ∑
+k∈Z,k ≡k0(mod deff ) q
+1
+d ( 1
+2 ·k2+(iχ /n)·k) ·χ(k) ·ξ(k−k0
+deff
+)
+}
+= ϵ · dord
+− 1
+2 ·
+(
+a μn·dord-linear combination of those q
+1
+d ( 1
+2 ·k2+(iχ /n)·k)
+for which k ∈ KCrit, k ≡ k0 (modulo deﬀ),
++ smaller powers of q
+)
+where deﬀ
+def
+= d/dord. Since the power ofq that appears in the coeﬃcient of (U|μd )k0+kex for
+Θ μ is precisely the smallest exponent of q that appears in the q-expansion of the original
+theta function Θ among those terms indexed by a k such that k ≡ k0 (modulo d), it thus
+follows that the smallest power of q that appears in the coeﬃcient of (U|μd
+)k0+kex for ΘG
+is precisely the smallest exponent ofq that appears in theq-expansion of the original theta
+function Θ among those terms indexed by a k such that k ≡ k0 (modulo deﬀ). Moreover,
+this smallest power either appears precisely once in Coeﬀ(U |μd
+)k0+kex (ΘG), in which case
+its coeﬃcient (i.e., in the “ μn·dord-linear combination” discussed above) is ∈ μn·dord,o r
+(cf. the “exceptional case” of [HAT], Chapter VIII, Lemmas 4.3, 4.4) it appears twice in
+Coeﬀ(U |μd
+)k0+kex (ΘG), in which case its coeﬃcient is the sum of two elements ∈ μn·dord.
+Thus, by the same reasoning as that used to prove Lemma 4.2, we obtain the following,
+which is the main result of this §:
+Theorem 4.4. Assume that the Lagrangian subgroup H is of ´etale type. Then for any
+restriction subgroup G ⊆ dE∞ ,S, we have:
+Avgη(deg(ν)) ≥ dord ·Z (d, deﬀ,m)
+24
+
+where d = deﬀ ·dord,a n ddord is the order of the diﬀerence betweenG and the multiplicative
+subgroup Gμ = μd.
+Moreover, the coeﬃcient of the smallest power ofq in Coeﬀ(U |μd
+)k0+kex (ΘG) is of the
+form:
+ϵ · dord
+− 1
+2 · (an element ∈ μn·dord )
+(where ϵ is a 4-th root of unity (respectively,
+√
+2 times an 8-th root of unity) if dord is
+odd (respectively, even)), with at most one possible exceptional class of k0’s in Z/deﬀZ.
+If this exception occurs, and the above inequality is an equality, then the coeﬃcient of the
+smallest power of q in Coeﬀ(U |μd
+)k0+kex (ΘG) in this case is of the form:
+ϵ · dord
+− 1
+2 · (a nonzero sum of two elements ∈ μn·dord)
+(where ϵ is a 4-th root of unity (respectively,
+√
+2 times an 8-th root of unity) ifdord is odd
+(respectively, even)).
+Proof. Note that here, we only obtain an inequality
+Avgη(deg(ν)) ≥ dord ·Z (d, deﬀ,m)
+because we do not know whether or not (in the “exceptional case” for dord ̸=1 )t h es u m
+of the two (n · dord)-th roots of unity is nonzero. The factor of dord that appears on the
+right-hand side of this inequality arises because since the coeﬃcient Coeﬀ(U |μd
+)k0+kex (ΘG)
+depends only on the class ofk0 in Z/deﬀZ, zeroes occur with multiplicityd/deﬀ = dord. ⃝
+§5. The Fourier Transform of an Algebraic Theta Function:
+The Case of a Lagrangian Subgroup with Nontrivial Multiplicative Part
+In this §, we would like to estimate the order of vanishing of the sectionνof §3a tt h o s e
+points at inﬁnity where the Lagrangian subgroup H ⊆ E∞ ,S is “ not necessarily of ´etale
+type,” i.e., does not necessarily map injectively into the group of connected components
+Q/Z in the special ﬁber. In essence, our strategy will be to reduce to the case where H is
+of ´etale type, which was already dealt with in §4.
+In this §, we maintain the notation of §4. However, unlike the situation of §4, we do
+not assume that H is of ´etale type.W r i t e
+Hμ
+def
+= H
+⋂
+μd
+25
+
+(where μd ⊆ Gm sits inside the copy of Gm that uniformizes E). Note that the subgroup
+Hμ ⊆ H denotes the portion of the Lagrangian subgroupH which ispurely of multiplicative
+type.W r i t eHet for the image of H in the group of connected components in the special
+ﬁber of E∞ ,S (a group which may be identiﬁed with Q/Z). Thus, we have an exact
+sequence:
+0 → Hμ → H → Het → 0
+We denote the orders of Hμ, Het by: hμ
+def
+= |Hμ|; het
+def
+= |Het|.T h u s ,hμ · het = d.A l s o ,
+l e tu sw r i t e
+Get
+def
+=K e r ( [hμ]: G → G)
+for the kernel of multiplication by hμ on G.T h u s ,|Get| = het.
+Next, let us set:
+E∞ μ,S
+def
+= E∞ ,S/Hμ
+On the other hand, let us recall the quotient E∞ H,S
+def
+= E∞ ,S/H of §3. Since Hμ ⊆ H,i t
+follows that the isogeny E∞ ,S → E∞ H,S factors into a composite of isogenies:
+E∞ ,S
+Hμ−→ E∞ μ,S
+Het
+−→ E∞ H ,S
+where Hμ = μ(hμ); Het = Z/hetZ; and the groups above the arrows denote the ker-
+nels of the homomorphisms corresponding to the arrows. If we denote the respective
+“q-parameters”and “standard multiplicative coordinates on the respective Schottky uni-
+formizations”by q, qμ, qH,a n dU, Uμ,a n dUH, respectively, then we have:
+qhμ = qμ; qμ = qhet
+H ; Uhμ = Uμ; Uμ = UH
+In the following, we will also write Gm,( Gm)μ,( Gm)H for the copies of “ Gm”t h a t
+Schottky uniformize E∞ ,S, E∞ μ,S,a n dE∞ H,S, respectively, (so, in particular, (Gm)μ =
+(Gm)H)a n dμN ⊆ Gm; μμ
+N ⊆ (Gm)μ; μH
+N ⊆ (Gm)H for the copies of “ μN ” lying inside
+these copies of Gm. Finally, observe that since we are given a liftingH⊆G
+ L of H,w ea l s o
+get natural metrized line bundles
+ Lμ and
+ LH on E∞ μ,S and E∞ H ,S, respectively, that
+descend
+ L.
+Note that since H and G generate dE∞ ,S, it follows that G↪ → E∞ μ,S.T h u s , w e
+obtain subgroup schemes
+26
+
+Het,Get ↪→ E∞ μ,S
+Note that Het is tautologically of ´etale type. Thus, it follows that theimage ImE∞ H ,S (Get)
+of Get in E∞ H,S is of multiplicative type. (Indeed, since E∞ H,S is obtained from E∞ μ,S
+by forming the quotient by Het, which is of ´etale type, it follows that the entire image
+ImE∞ H ,S (het E∞ μ,S)=I m E∞ H ,S (μμ
+het
+)i n E∞ H ,S is of multiplicative type.)
+Next, write
+Gμ
+def
+= G/Get
+Note that |Gμ| = hμ, and that (since the image ImE∞ H ,S (Get)o f Get in E∞ H,S is of mul-
+tiplicative type) Gμ maps naturally into the group of connected components in the special
+ﬁber of E∞ H ,S. Moreover, this map isinjective. (Indeed, this injectivity may be veriﬁed for
+each of the p-primary portions (where p is a prime number) of Gμ independently; thus, it
+suﬃces to verify this injectivity in the case whered is a prime power. But then, if injectiv-
+ity did not hold, then it would follow that (ImE∞ μ,S (G)+Het) ⋂ μμ
+d ̸⊆ μμ
+het
+, which implies
+(by multiplying both sides of this non-inclusion byhet)t h a tI mE∞ μ,S (G) ⋂ μμ
+d ̸= {1} (so,
+in particular, G ⋂ μd ̸= {1}, hence (since G and H generate dE∞ ,S)t h a thμ = |Hμ| =1 ,
+so Gμ = {1} — which implies that injectivity holds trivially.) Thus, in summary, this
+injection induces a natural identiﬁcation
+Gμ = 1
+hμ
+Z/Z
+Next, let us deﬁne
+heﬀ
+def
+= |ImE∞ μ,S (Get)
+⋂
+μμ
+d |
+Note that since H and G generate dE∞ ,S, it follows that (heﬀ,h μ) = 1. Since heﬀ divides
+het,l e tu sw r i t ehet = heﬀ · hord.W r i t e
+Heﬀ ⊆ Het; Geﬀ ⊆ Get
+for the respective subgroups given by the kernel of multiplication by hord.T h u s ,|Heﬀ| =
+|Geﬀ| = heﬀ.
+The main theme of this § is the following:
+We would like to apply the theory of §4 to the data
+(E∞ μ,S;
+ Lμ;Het,Get ↪→ E∞ μ,S)
+27
+
+where we take the point “ η”o f §4 to be the given η plus a collection of
+representatives of the various classes of Gμ = G/Get.
+Next, we consider metrized line bundles. Note that the metrized line bundle
+ LH on
+E∞ H,S has degree 1 and curvature (cf. [HAT], Chapter V, §1) given by:
+1
+hμ
+·
+(hμ)−1
+∑
+i=0
+δ[i/hμ]
+(where δ[i/hμ] denotes the delta distribution onS1 concentrated at the point [i/hμ] ⊆ S1).
+Let
+L
+′
+H
+def
+=
+ LH(ψ)
+where ψ : S1 → R is the unique piecewise smooth function such that the curvature of
+ L
+′
+H
+is equal to δ[0],a n d
+∫
+S1 ψ = 0. Then, as reviewed in §4,
+ L
+′
+H is generated by the section
+deﬁned by the theta function:
+ΘH
+def
+= q
+− 1
+2 k2
+η
+H
+∑
+k∈Z
+q
+1
+2 (k+kη)2
+H · Uk
+H · χ(k)
+where we write kη
+def
+= iχ/n (so |kη|≤ 1
+2 ). Observe that as a function on Z, the function
+k ↦→ 1
+2 (k + kη)2 assumes its minimum at k = 0. Moreover, if we restrict ΘH to μH
+het ,t h e n
+the highest power of qH appearing in the coeﬃcient of ( UH |μH
+het
+)k0 is given by:
+− 1
+2k2
+η +M i nk≡k0 mod het {1
+2(k + kη)2}
+= −Mink∈Z {1
+2(k + kη)2} +M i nk≡k0 mod het {1
+2(k + kη)2}
+Now to consider such coeﬃcients of (UH |μH
+het
+)k0 amounts to considering the Fourier trans-
+form of the restriction of the theta function in question to μH
+het . More generally — cf. the
+theory of §4, which we think of as being applied to the data
+(E∞ μ,S;
+ Lμ;Het,Get ↪→ E∞ μ,S)
+— we would like to consider the Fourier coeﬃcients of the convolution of ΘH |μH
+het
+with
+some reduced discrete Gaussian (times a character) on μH
+hord (regarded as a quotient of
+μH
+het ). (Note that hord = het/heﬀ appears here since heﬀ = |ImE∞ μ,S (Get) ⋂ μμ
+d |.) Then
+28
+
+the highest power of qH appearing in the coeﬃcient of ( UH |μH
+het
+)k0+kex (for such a convo-
+lution, where kex is a constant determined by the character) is given by:
+− 1
+2k2
+η +M i nk≡k0 mod heff {1
+2(k + kη)2}
+= −Mink∈Z {1
+2(k + kη)2} +M i nk≡k0 mod heff {1
+2(k + kη)2}
+Note that for an appropriate choice of reduced discrete Gaussian,this convolution amounts
+precisely to the restriction of the theta function in question to Get.
+Of course, ultimately, we wish to consider the Fourier coeﬃcients of the restriction of
+the theta function in question toG. This amounts to restricting ΘH to Get +γ, for various
+γ ∈ Gμ = G/Get.W r i t ekγ ∈ 1
+hμZ for a representative of γ ∈ Gμ = 1
+hμZ/Z. Also, let us
+deﬁne a metrized line bundle on E∞ H ,S
+L
+′′
+H
+def
+=
+ LH(ψ(0))
+(where ψ : S1 → R is the function appearing in the deﬁnition of
+ L
+′
+H). Thus,
+ LH,
+ L
+′
+H
+,a n d
+L
+′′
+H
+have the same restriction to the generic ﬁber of E∞ H,S;
+ LH and
+ L
+′′
+H have the same
+curvature;a n d
+ L
+′
+H and
+ L
+′′
+H
+have the same metric structure at the connected component
+of the identity (in the special ﬁber of E∞ H ,S). Let us write ˆGm for the q-adic formal
+completion of (Gm)S∞ . Then it follows from thedetermination of the metricgiven in, e.g.,
+[HAT], Chapter VII, Lemma 6.4 (cf. also the discussion following this lemma), together
+with the well-known explicit form of theta functions on (Gm)H/q
+(1/(hμ·n))·Z
+H (cf. [HAT],
+Chapter V, Theorem 4.8), that if we regard ΘH as a section of
+ L
+′′
+H, then its restriction to
+the copy of ˆGm corresponding to γ will be given (up to a possible factor ∈ μ∞ )b y :
+Θ ′′
+H[γ]
+def
+= q
+− 1
+2 k2
+η
+H ·
+∑
+k∈Z
+q
+1
+2 (k+kη+kγ )2
+H · Uk+kγ
+H · χ(k)
+(where, in the above expression, the factor Ukγ
+H may be thought of as part of the triv-
+ialization in use; moreover, since this same factor multiplies all the terms in the above
+expression, it may be ignored — i.e., we essentially have a function in integral powers of
+UH). Thus, if we write
+1
+2k2
+H
+def
+=M i nk∈Z,γ ∈Gμ {1
+2(k + kη + kγ)2}≤ 1
+2k2
+η
+then
+ΘH[γ]
+def
+= q
+1
+2 k2
+η − 1
+2 k2
+H
+H · Θ ′′
+H[γ]= q
+− 1
+2 k2
+H
+H ·
+∑
+k∈Z
+q
+1
+2 (k+kη +kγ )2
+H · Uk+kγ
+H · χ(k)
+29
+
+is the theta function associated to a generator of(fH)∗
+LH. Moreover, if we then convolute
+ΘH[γ]|μH
+het
+with some reduced discrete Gaussian (times a character) pulled back from
+the quotient μH
+het → μH
+hord , then it follows that t h eh i g h e s tp o w e ro fqH appearing in the
+coeﬃcient of (UH |μH
+het
+)k0+kex (where k0 ∈ Z) for such a convolution is given by:
+− 1
+2k2
+H +M i nk≡k0 −kγ mod heff {1
+2(k + kη + kγ)2}
+(where k ∈ Z, and the congruence symbol “ ≡” is well-deﬁned since, as remarked above,
+(heﬀ,h μ)=1 ) . T h u s ,if we allow γ to vary, then we obtain that the highest power of qH
+appearing in the coeﬃcient of (UH |μH
+het
+)k0+kex (where k0 ∈ Z) for such a convolution is
+given by:
+− 1
+2k2
+H +M i nj/hμ≡k0 mod heff {1
+2((j/hμ)+ kη)2}
+= − 1
+2k2
+H + 1
+h2
+μ
+· Minj≡hμ·k0 mod heff {1
+2(j + hμ · kη)2}
+(where j ∈ Z, and the congruence symbol “ ≡” is well-deﬁned since, as remarked above,
+(heﬀ,h μ) = 1).
+The above analysis thus implies — by the same reasoning as that used to derive
+Theorem 4.4 in §4 — the following generalization of Theorem 4.4, which is the main result
+of this §:
+Theorem 5.1. For any Lagrangian subgroupH and any restriction subgroupG ⊆ dE∞ ,S,
+we have:
+Avgη(deg(ν)) ≥ (d/heﬀ) ·Z ′(d, heﬀ,m ′)
+where heﬀ = |ImE∞ μ,S (Get) ⋂ μμ
+d |.
+Proof. The sums Z′(−, −, −) are deﬁned as sums of minima such as
+Minj≡hμ·k0 mod heff {1
+2(j + hμ · kη)2}
+regarded as powers of q
+1
+d . Here, we wish to regard such minima as powers of q
+1/h2
+μ
+H .B u t
+in fact, q = q
+1/hμμ , qμ = qhet
+H implies q = q
+het/hμ
+H , hence
+q
+1
+d = q1/(het·hμ) = q
+1/h2
+μ
+H
+30
+
+so we see that we do not need to multiply the Z′(−, −, −)’s by any factor in our estimate
+of the degree of vanishing of the product of the Fourier coeﬃcients corresponding to a
+single collection of representatives inZ/dZ of the set of “equivalence classes” (Z/dZ)/heﬀ ·
+(Z/dZ)= Z/heﬀZ. Since, for a given class of Z/dZ modulo heﬀ, we must contend with a
+total of d/heﬀ Fourier coeﬃcients, we thus obtain a factor of d/heﬀ in our ﬁnal estimate.
+Finally, note that the termhμ·kη appearing in the minima above corresponds precisely
+to the image “ d · ηι”o f ηι ∈ S1 (where this S1 is the S1 corresponding to the special
+ﬁber of the original E∞ ,S)i n S1/(1
+dZ/Z). Indeed, kη corresponds to the image of ηι in
+S1/( 1
+het
+Z/Z)=( S1)H (i.e., the S1 corresponding to the special ﬁber of E∞ H,S), so the
+image “d ·ηι”o fηι in S1/(1
+dZ/Z) is given by multiplyingkη by d/het = hμ, as desired. ⃝
+Theorem 5.2. In the situation of Theorem 5.1, write hμ
+def
+= |H ⋂ μd|; d = hμ · het;
+het = heﬀ · hord. Then the coeﬃcient of the smallest power of q in the Fourier coeﬃcients
+of the algebraic theta function in question on G (cf. the discussion of §3) are of the form:
+ϵ · hord
+− 1
+2 · (an element ∈ μn·hμ·hord )
+(where ϵ is a 4-th root of unity (respectively,
+√
+2 times an 8-th root of unity) if hord is
+odd (respectively, even)), with at most one possible exceptional class of coeﬃcients in
+ˆG/heﬀ · ˆG. If this exception occurs, and the inequality of Theorem 5.1 is an equality, then
+the coeﬃcient of the smallest power of q in this coeﬃcient is of the form:
+ϵ · hord
+− 1
+2 · (a nonzero sum of two elements ∈ μn·hμ·hord )
+(where ϵ is a 4-th root of unity (respectively,
+√
+2 times an 8-th root of unity) ifhord is odd
+(respectively, even)).
+Proof. This follows essentially from the above analysis, together with the following re-
+marks: First of all, it follows from the fact that the function
+j ↦→ (j + hμ · kη)2
+(on integers j such that j ≡ hμ ·k0 mod heﬀ) is “essentially” injective (i.e., either injective
+or, if it is not injective, then the ﬁber consists of two elements) that the minima discussed
+above are achieved for “essentially” only one value of j (where “essentially” means that
+there is at most one exception, in which case the minimum is achieved for precisely of two
+values of j). Thus, by considering the class of this j modulo hμ, we see that we need
+only consider the restriction of Θ
+H to Get + γ,f o rﬁxed γ ∈ Gμ. But since (by deﬁnition)
+Gμ = G/Get, it follows that then we are essentially in the situation of §4, applied to the
+data
+(E∞ μ,S;
+ Lμ;Het,Get ↪→ E∞ μ,S)
+31
+
+(so “ dord”o f §4 becomes het/heﬀ = hord in the notation of the present discussion). Thus,
+Theorem 5.2 follows from Theorem 4.4. Note that here, when we apply Theorem 4.4, the
+“ n” of Theorem 4.4 becomes n · hμ (in the notation of the present discussion) since in
+addition to translating by η, we are also translating by γ whose order in G/Get divides
+hμ. This completes the proof of Theorem 5.2. ⃝
+§6. Generic Properties of the Norm
+In this §, we maintain the notation of §4. (In particular, we continue to assume that
+the Lagrangian subgroup is of ´etale type.) The goal of the present§ is to determine in which
+cases the norm ν (of the Fourier transform of an algebraic theta function) is generically
+nonzero (on the moduli space of elliptic curves in characteristic zero).
+Recall the notation
+m′ def
+= m
+(m, d)
+Thus, put another way, m′ is the order of the torsion point d · η.
+Deﬁnition 6.1. If our data satisﬁes the conditions:
+(1) d is even;
+(2) m′ =2 ;
+(3) d · η ∈ G (where G is the restriction subgroup);
+then we shall say that our data isof null type. If our data is not of null type, then we shall
+say that it is of general type.
+Remark. In fact, condition (1) of Deﬁnition 6.1 is implied by conditions (2) and (3).
+The main result of this § is the following:
+Proposition 6.2. The norm ν (introduced in §3) is generically zero on S if and only if
+our data is of null type.
+32
+
+Proof. If we work over a global S as in §3, then it is immediate that every connected
+component of S contains points at inﬁnity at which the restriction subgroup G is of mul-
+tiplicative type (cf. §4). Thus, it suﬃces to prove Proposition 6.2 in the case where G is of
+multiplicative type.
+Now we return to a local S (as in §4, 5). Since G is of multiplicative type,w ek n o w
+the explicit form of the restriction to G of the theta function in question (cf. §4):
+Θ μ
+def
+=
+∑
+k0 ∈Z/dZ
+(U|μd
+)k0 ·
+( ∑
+k∈Z,k ≡k0(mod d)
+q
+1
+d ( 1
+2 ·k2+(iχ /n)·k) · χ(k)
+)
+=
+∑
+k∈KCrit
+q
+1
+d ( 1
+2 ·k2+(iχ /n)·k) · (U|μd )k · (χ(k)+ ϵk) ·{ 1 + (smaller powers ofq)}
+Thus, if ν is generically zero, then it follows that we are “in the exceptional case,” and
+that “χ(k)+ ϵk” is zero. In this case, χ(k)+ ϵk is equal (up to a possible factor ∈ μ∞ )t o
+χ(d) + 1. Thus, we obtain:
+χ(d)= −1
+In particular, χ(d)2 =1 .
+Now, relative to the notation of [HAT], Chapter V, §4, the character χ may be iden-
+tiﬁed with a character “ χM,” and “χM” is related to another characterχL by:
+χM = χL · χθ
+(where χθ is a ﬁxed character which is independent of the particulars of the data under
+consideration). Note that all of these characters are characters μn × Zet → μn.N e x t ,
+recall that χL, χM (cf. the discussion at the beginning of [HAT], Chapter V,§4) faithfully
+capture the twist induced on
+ L by translation by η. More precisely,
+If d is odd (respectively, even), then the order of χL (respectively, χM)
+restricted to μn × (d · Zet) is equal to the order of d · η, i.e., to m′.
+(Here the factor ofd arises since the discussion of [HAT], Chapter V, concerns, in eﬀect, de-
+gree one line bundles on the´etale quotient E∞ ,S → E∞ ,S/(Z/dZ), relative to our notation
+in the present discussion.) Thus, in summary, we obtain that
+χM
+2|μn ×(d·Zet) = χL
+2|μn×(d·Zet) =1
+33
+
+(where we use the fact that since we are in the “exceptional case” (cf. [HAT], Chapter
+VIII, Lemma 4.3), we are in “Cases I or II” of [HAT], Chapter V, §4, which implies that
+the restriction of χL2, χM2 to μn is trivial). Thus, we obtain that:
+2 · (d · η)=1
+i.e., that m′ = 2. Also, since we are “in the exceptional case” (cf. [HAT], Chapter VIII,
+proof of Lemma 4.3), it follows that either we are in “Case I” (cf. [HAT], Chapter V, §4)
+and d is odd, or we are in “Case II” (cf. [HAT], Chapter V, §4) and d is even.
+Suppose that we are in “Case I” (cf. [HAT], Chapter V,§4) andd is odd. First, observe
+that since m′ = 2 and d is odd, it follows that we may assume that m = 2. Since we are
+in “Case I,” it follows that χL|μn
+= 1. Also, since d is odd, and n = 4, it follows (from
+χ(d)= −1) that χM2|Zet = 1 (but χM|Zet ̸=1 ,s i n c eχM(d)= χ(d)= −1), hence (by the
+explicit description of χθ in [HAT], Chapter IV, Theorem 2.1) that χM|Zet = χθ|Zet ,s o
+χL|Zet = 1. Thus, we obtain that χL is trivial. But since, as remarked above, the order of
+χL is equal to m′, we thus obtain that m′ = 1, which is absurd.
+Thus, we conclude that the hypothesis that ν is generically zero implies that we are
+in “Case II” (cf. [HAT], Chapter V, §4); that d is even; and that m′ =2 . I claim that
+d · η lies in G. Indeed, this follows from the fact that the portion of χM which governs
+the “´etale portion” of d · η (i.e., the connected component of the special ﬁber of E∞ ,S in
+which d · η lies), namely, χM|μn
+,i s trivial (since we are in “Case II”). Thus, the image
+in the special of E∞ ,S of the point d · η lies in the connected component of the identity,
+so d · η ∈ G (recall that we have assumed in this discussion that G is “of multiplicative
+type”!), as claimed. This completes the proof of the assertion thatif ν is generically zero,
+then our data is of null type.
+Thus, it remains to show that: if our data is of null type, then ν is generically zero.
+But this follows immediately from substitution into the explicit expression for Θ μ given
+above (i.e., one uses the fact that χ(−)o fa n yodd multiple of d is equal to −1t os h o w
+that the coeﬃcient of (U|μd
+)
+d
+2 vanishes). This completes the proof of Proposition 6.2. ⃝
+§7. Some Elementary Computational Lemmas
+In the following discussion, we assume that we are given a ﬁnite collection
+p1,p2,... ,pr
+(where r ≥ 1) of (distinct) prime numbers, together with a collection of positive integers
+e1,e2,... ,er.W r i t e
+34
+
+d
+def
+= pe1
+1 · pe2
+2 · ... · per
+r
+If A⊆{ 1, 2,... ,r } is a nonempty subset, let us write
+F(A)
+for the set of functions ψ : A→ Z (whose value at j ∈A we write ψj) such that for each
+j ∈A ,w eh a v e1≤ ψj ≤ ej.
+Lemma 7.1. We have:
+d − 1=
+∑
+A⊆{1,...,r}
+{ ∑
+ψ ∈F(A)
+{(
+∏
+j∈A
+p2ψj
+j ) − 1}·
+(∏
+j/∈A pj)
+{∏r
+j=1 (pj +1 )}
+·
+( ∏
+j∈A
+p−ψj
+j · (pj − 1+ δψj ,ej )
+)}
+where δx,y is 1 if x = y and 0 otherwise.
+Proof. It is immediate that it is equivalent to verify:
+(pe1
+1 · ... · per
+r − 1) ·
+r∏
+j=1
+(pj +1 )=
+∑
+∅̸=A⊆{1,...,r}
+(
+∏
+j/∈A
+pj) ·
+{ ∑
+ψ ∈F(A)
+{(
+∏
+j∈A
+p2ψj
+j ) − 1}·
+( ∏
+j∈A
+p−ψj
+j · (pj − 1+ δψj ,ej )
+)}
+Let us ﬁrst ﬁx A, and consider the sum over ψ ∈F (A). This sum may be thought of as
+consisting of two sums, corresponding to the two terms “∏
+j∈A p2ψj
+j ”a n d“−1.” The ﬁrst
+sum may be evaluated as follows:
+∑
+ψ ∈F(A)
+{
+∏
+j∈A
+p2ψj
+j }·
+( ∏
+j∈A
+p−ψj
+j · (pj − 1+ δψj ,ej )
+)
+=
+∑
+ψ ∈F(A)
+( ∏
+j∈A
+pψj
+j · (pj − 1+ δψj ,ej )
+)
+=
+∏
+j∈A
+{ ej∑
+ψj=1
+pψj
+j · (pj − 1+ δψj ,ej )
+}
+=
+∏
+j∈A
+{
+pj(pj − 1) ·
+(pej −1
+j − 1)
+(pj − 1) + pej+1
+j
+}
+=
+∏
+j∈A
+{
+pej
+j − pj + pej+1
+j
+}
+=
+∏
+j∈A
+Ψj
+35
+
+where we write Ψj
+def
+= pej
+j − pj + pej+1
+j . On the other hand,
+−
+{ ∑
+ψ ∈F(A)
+( ∏
+j∈A
+p−ψj
+j · (pj − 1+ δψj ,ej )
+)}
+= −
+∏
+j∈A
+{ ej∑
+ψj=1
+p−ψj
+j · (pj − 1+ δψj ,ej )
+}
+= −
+∏
+j∈A
+{
+p−1
+j · (pj − 1) ·
+(1 − p−ej+1
+j )
+(1 − p−1
+j ) + p−ej+1
+j
+}
+= −
+∏
+j∈A
+{
+(1 − p−ej+1
+j )+ p−ej+1
+j
+}
+= −1
+Thus, in summary, it suﬃces to show that:
+(pe1
+1 · ... · per
+r − 1) ·
+r∏
+j=1
+(pj +1 )=
+∑
+∅̸=A⊆{1,...,r}
+(
+∏
+j/∈A
+pj) ·
+{( ∏
+j∈A
+Ψj
+)
+− 1
+}
+To do this, we use induction on r. The result is clear for r =1 . T h u s ,l e tu sp r o v ei t
+for r ≥ 2, assuming the result known for strictly smaller r. First, let us note that the
+above sum over A ̸= ∅may be split into three sums: the ﬁrst (respectively, second; third)
+corresponding to the case where A = {1} (respectively, 1 ∈A (but A ̸= {1}); 1 /∈A ).
+Note that there is a natural bijective correspondence between the second and third types
+of A given by appending/deleting the element “1.” Thus, we obtain:
+∑
+∅̸=A⊆{1,...,r}
+(
+∏
+j/∈A
+pj) ·
+{( ∏
+j∈A
+Ψj
+)
+− 1
+}
+= −
+{ ∑
+∅̸=A⊆{1,...,r}
+(
+∏
+j/∈A
+pj)
+}
++
+∑
+∅̸=A⊆{1,...,r}
+(
+∏
+j/∈A
+pj) ·
+{ ∏
+j∈A
+Ψj
+}
+= −
+{ ∑
+∅̸=A⊆{1,...,r}
+(
+∏
+j/∈A
+pj)
+}
++(
+r∏
+j=2
+pj) · Ψ1
++
+∑
+1∈A⊆{1,...,r}, |A|≥2
+(
+∏
+j/∈A
+pj) ·
+{ ∏
+j∈A
+Ψj
+}
++
+∑
+∅̸=A′⊆{2,...,r}
+(
+∏
+j/∈A′
+pj) ·
+{ ∏
+j∈A′
+Ψj
+}
+36
+
+= −
+{ ∑
+∅̸=A⊆{1,...,r}
+(
+∏
+j/∈A
+pj)
+}
+− (
+r∏
+j=1
+pj)+(
+r∏
+j=2
+pj) · pe1
+1 · (p1 +1 )
++
+∑
+∅̸=A′⊆{2,...,r}
+(
+∏
+1̸=j/∈A′
+pj) · (Ψ1 + p1) ·
+{ ∏
+j∈A′
+Ψj
+}
+= −
+{ ∑
+A⊆{1,...,r}
+(
+∏
+j/∈A
+pj)
+}
++(
+r∏
+j=2
+pj) · pe1
+1 · (p1 +1 )
++( p1 +1 ) · pe1
+1 ·
+∑
+∅̸=A′⊆{2,...,r}
+(
+∏
+1̸=j/∈A′
+pj) ·
+{ ∏
+j∈A′
+Ψj
+}
+= −
+{ r∏
+j=1
+(pj +1 )
+}
++(
+r∏
+j=2
+pj) · pe1
+1 · (p1 +1 )
++( p1 +1 ) · pe1
+1 ·
+∑
+∅̸=A′⊆{2,...,r}
+(
+∏
+1̸=j/∈A′
+pj) ·
+{ ∏
+j∈A′
+Ψj
+}
+Next, let us write
+d′ def
+= pe2
+2 · ... · per
+r
+so d = pe1
+1 · d′.T h e nw eh a v e
+(d − 1) ·
+r∏
+j=1
+(pj +1 )=( d − pe1
+1 + pe1
+1 − 1) ·
+r∏
+j=1
+(pj +1 )
+= pe1
+1 (d′ − 1) ·
+r∏
+j=1
+(pj +1 )+( pe1
+1 − 1) ·
+r∏
+j=1
+(pj +1 )
+Thus, by dividing by (p1 + 1), we see that it suﬃces to show that:
+(pe1
+1 − 1) ·
+r∏
+j=2
+(pj +1 )+ pe1
+1 (d′ − 1) ·
+r∏
+j=2
+(pj +1 )
+= −
+{ r∏
+j=2
+(pj +1 )
+}
++ pe1
+1 · (
+r∏
+j=2
+pj)+ pe1
+1 ·
+∑
+∅̸=A′⊆{2,...,r}
+(
+∏
+1̸=j/∈A′
+pj) ·
+{ ∏
+j∈A′
+Ψj
+}
+But by the induction hypothesis on r,w eh a v e
+37
+
+−
+{ r∏
+j=2
+(pj +1 )
+}
++ pe1
+1 · (
+r∏
+j=2
+pj)+ pe1
+1 ·
+∑
+∅̸=A′⊆{2,...,r}
+(
+∏
+1̸=j/∈A′
+pj) ·
+{ ∏
+j∈A′
+Ψj
+}
+= −
+{ r∏
+j=2
+(pj +1 )
+}
++ pe1
+1 · (
+r∏
+j=2
+pj)+ pe1
+1 ·
+∑
+∅̸=A′ ⊆{2,...,r}
+(
+∏
+1̸=j/∈A′
+pj)
++ pe1
+1 · (d′ − 1) ·
+{ r∏
+j=2
+(pj +1 )
+}
+= −
+{ r∏
+j=2
+(pj +1 )
+}
++ pe1
+1 ·
+{ r∏
+j=2
+(pj +1 )
+}
++ pe1
+1 · (d′ − 1) ·
+{ r∏
+j=2
+(pj +1 )
+}
+=( pe1
+1 − 1) ·
+{ r∏
+j=2
+(pj +1 )
+}
++ pe1
+1 · (d′ − 1) ·
+{ r∏
+j=2
+(pj +1 )
+}
+as desired. This completes the proof of Lemma 7.1. ⃝
+Next, we shift gears and writeS1 for the unit circle R/Z, equipped with the standard
+coordinate θ(arising from the standard coordinate on R). Write
+f : S1 → R
+for the unique continuous, piecewise linear function onS1 which is linear except atθ=0 , 1
+2 ,
+and satisﬁes:
+f(0) = +1; f(1
+2)= −1
+Note that f satisﬁes the property:
+f(θ+ 1
+2)= −f(θ)
+and that df
+dθ = −4f o rθ ∈ [0, 1
+2 ]a n ddf
+dθ =4f o r θ ∈ [1
+2 ,1].
+Next, let us deﬁne, for N a positive integer:
+Φ(N)
+def
+= N ·
+N −1∑
+i=0
+f( i
+N ) ∈ R
+and (by induction on N, starting with Φexact(1)
+def
+= Φ(1))
+38
+
+Φexact(N)
+def
+=Φ (N) −
+∑
+a|N, a<N
+Φexact(a)
+where in the sum,a ranges over all positive integers<N which divide N. In the following,
+we would like to compute Φ(N) and Φexact(N) explicitly.
+Lemma 7.2. If N is an odd positive integer, then Φ(N)=1 .I f N is an even positive
+integer, then Φ(N)=0 .
+Proof. First, assume that N is odd.W r i t e
+(S1)′ def
+= S1/( 1
+N Z/Z)
+for the quotient of S1 by the subgroup 1
+N Z/Z ⊆ S1.T h u s ,(S1)′ is also naturally isomor-
+phic to a copy of S1.W r i t eθ′ for the standard coordinate on ( S1)′.T h u s ,θ′ = N · θ.
+Let
+g(θ′)
+def
+=
+N −1∑
+i=0
+f(θ+ i
+N )
+for the “push-forward” off to (S1)′.( T h u s ,g :( S1)′ → R.) Note that g is itselfcontinuous
+and piecewise linear on (S1)′.M o r e o v e r ,
+∫
+S1
+f =
+∫
+(S1)′
+g =0
+Finally, the derivative of g for “generic” (i.e., all but ﬁnitely many exceptional values) θ′
+may be computed as follows:
+N · dg
+dθ′ (θ′)= dg
+dθ(θ′)=
+N −1∑
+i=0
+(df
+dθ)(θ+ i
+N )
+=4 ·
+N −1∑
+i=0
+χ[ 1
+2 ,1](θ+ i
+N ) − χ[0, 1
+2 ](θ+ i
+N )
+=4 ·{ χ[ 1
+2 ,1](θ′) − χ[0, 1
+2 ](θ′)}
+where (for an interval [a, b] ⊆ R) χ[a,b] denotes the indicator function on this interval (i.e.,
+it is = 1 on [a, b]a n d=0o u t s i d eo f[a, b]), and, in the ﬁnal equality, we make essential use
+of the fact that N is odd.
+39
+
+But note that these properties imply that N · g on (S1)′ “looks just like” f on S1.
+Thus, in particular, it follows that
+Φ(N)= N · g(0) = f(0) = 1
+as desired.
+Now assume that N is even. Then observe that Φ( N) is deﬁned as (essentially) the
+sum of the values of the function f over a certain ﬁnite set of points of S1.M o r e o v e r ,
+since N is even, it follows that this set is invariant with respect to the automorphism of
+S1 given by θ ↦→ θ+ 1
+2 .S i n c ef(θ+ 1
+2 )= −f(θ), we thus obtain Φ(N) = 0, as desired. ⃝
+Lemma 7.3. We have: Φexact(1) = 1, Φexact(2) = −1. Moreover, if N is any positive
+integer ̸=1 ,2,t h e nΦexact(N)=0 .
+Proof. By deﬁnition Φ exact(1) = Φ(1) = 1, and Φ exact(2) = Φ(2) − Φ(1) = 0 − 1( b y
+Lemma 7.2). The ﬁnal assertion is proven by induction on N. This assertion is vacuous
+for N =1 ,2. Thus, assume that N ≥ 3, and that the assertion in question is known for
+strictly smaller N.
+We begin with the case of N odd. In this case, 2 does not divide N, so, by the
+induction hypothesis, we obtain (from the deﬁnition of Φ exact(N)):
+Φexact(N)=Φ ( N) − Φ(1) = 1 − 1=0
+(by Lemma 7.2). This completes the case when N is odd.
+Now assume that N is even. In this case, for all a as in the sum appearing in the
+deﬁnition of Φ exact(N), we have Φ exact(a) = 0, unless a =1 ,2. Moreover, in this case,
+a =1 ,2 both appear, so we get:
+Φexact(N)=Φ ( N) −{ Φexact(1) + Φexact(2)} =0 −{ 1 − 1} =0
+(by Lemma 7.2), as desired. ⃝
+§8. The Various Contributions at Inﬁnity
+In this §, we piece together the results of §5, 6, and 7, to obtain the main result of
+this paper concerning degrees. This result concerning degrees is the main technical result
+underlying the theory of this paper. In particular, the theorems of §9, 10, below, will
+essentially be formal consequences of this result concerning degrees.
+40
+
+The main point is that the various computations performed in§5, 6, and 7 are suﬃcient
+to compute the total degree of vanishing of the norm ν of §3, as follows. In this §,w eu s e
+the notation of the latter part of §3 (i.e., we assume that S is a curve in characteristic 0).
+As usual, degrees will always be expressed in log(q) units. The total degree of vanishing of
+ν will be a weighted sum/average over all the possibilities forH (the Lagrangian subgroup)
+and G (the restriction subgroup). In the following discussion, we shall write (cf. §7)
+d
+def
+= pe1
+1 · pe2
+2 · ... · per
+r
+(where p1,... ,pr are distinct prime numbers; and e1,... ,er are positive integers).
+First, let us observe that the estimate (from below) for deg( ν) in Theorem 5.1 (as a
+function of G, H) depends only on heﬀ.F o r a g i v e nG, H, we shall refer to the primes
+that divide heﬀ = |ImE∞ μ,S (Get) ⋂ μμ
+d | (cf. Theorem 5.1) as active primes. Thus, the set
+of active primes forms a subset
+A⊆{ 1, ... ,r }
+For each active primepj,t h epj-primary part of the resultingheﬀ (cf. §5) is equal to some
+pψj
+j . Thus, we obtain a function
+ψ : A→ Z
+given by j ↦→ ψj, and (by deﬁnition) we have:
+heﬀ =
+∏
+j∈A
+pψj
+j
+Next, let us observe that the probability that, at a given point at inﬁnity, the pj-
+primary part of heﬀ has order pψj
+j for all j ∈A , and order 1 for all j/∈A ,i sg i v e n
+by:
+{ ∏
+j∈A
+(pj − 1+ δψj ,ej
+(pj +1 )pψj
+j
+)}
+·
+{ ∏
+j/∈A
+( pj
+pj +1
+)}
+Indeed, clearly what happens for one pj is independent of what happens for the other
+pj’s. Thus, the probability in question is equal to the product of the probabilities for each
+individual pj. On the other hand, to compute the probability for a given pj,w em a k eu s e
+of the following lemma (where we think of “ M” as the module of d-torsion points in the
+Tate curve; “( Z/peZ) ⊕ 0” as the submodule deﬁned by “ μp
+ej
+j
+”; “N” as the submodule
+deﬁned by the restriction subgroup G;“ p”a s pj;“ e”a s ej;a n d“e′”a s ψj):
+41
+
+Lemma 8.1. Let p be a prime number, and e, e′ positive integers such that e′ ≤ e.
+Write M
+def
+=( Z/peZ) ⊕ (Z/peZ). Then the fraction of rank one free Z/peZ-submodules
+N⊆ M which are equal to the module (Z/peZ) ⊕ 0 modulo pe′
+but not modulo pe′+1 (if
+e′ <e ) is given by:
+p − 1+ δe′,e
+(p +1 )pe′
+On the other hand, the fraction of rank one freeZ/peZ-submodules N⊆ M which are not
+equal to the module (Z/peZ) ⊕ 0 modulo p is given by p
+p+1.
+Proof. Indeed, the computation of the second fraction is immediate, so let us concentrate
+on the computation of the ﬁrst fraction. First of all, the fraction of rank one free Z/peZ-
+submodules N⊆ M which are equal to the module (Z/peZ) ⊕ 0 modulo p is given by
+1
+p +1
+Such N admit a unique generator of the form γ =( 1,aγ), where aγ ∈ pZ/peZ.T h u s ,t h e
+ﬁrst fraction in the statement of Lemma 8.1 is equal to 1
+p+1 times the fraction of aγ which
+are ≡ 0 modulo pe′
+but not modulo pe′+1 (if e′ <e ). The fraction of such aγ is given by:
+|pe′
+Z/peZ|−| pe′+1Z/peZ|
+|pZ/peZ| = pe−e′
+− pe−e′ −1
+pe−1
+= pe−e′
+(1 − p−1)
+pe−1
+= p−e′
+(1 − p−1)
+p−1 = p−e′
+(p − 1)
+if e′ <e ,a n d
+|pe′
+Z/peZ|
+|pZ/peZ| = pe−e′
+pe−1 = p1−e′
+if e′ = e. Thus, multiplying by 1
+p+1 gives the desired result. ⃝
+Now let us recall the estimate (for a ﬁxed G, H) of Theorem 5.1:
+Avgη(deg(ν)) ≥ (d/heﬀ) ·Z ′(d, heﬀ,m ′)
+On the other hand, Z′(d, heﬀ,m ′) has been computed in Proposition 3.3. Note, moreover,
+that by Lemma 7.3, the “ φ1(−)” term in the expressions of Proposition 3.3 vanishes if
+42
+
+d is odd or m′ ̸= 2. (Indeed, up to a nonzero factor, one computes that the diﬀerences
+φ1(θ+ 1
+2 ) − φ1(θ) are equal (as functions on S1) to the function “ f” studied in the latter
+portion of §7. Thus, the asserted vanishing follows from the equality Φexact(m′)=0p r o v e n
+in Lemma 7.3.) Thus, in the following, we shall assume ﬁrst that either d is odd, or (if d
+is even, then) m′ ̸= 2. We will return later to the exceptional case where d is even and
+m′ =2 .
+Thus, under the present assumptions on d and m′, we obtain (by Proposition 3.3):
+(d/heﬀ) ·Z ′(d, heﬀ,m ′)= 1
+24((heﬀ)2 − 1)
+(where we omit the “log(q)” since we will always work in log(q) units). Thus, substituting
+the expression for heﬀ given above, and then taking the weighted sum (relative to the
+probabilities for various types ofG, H computed above), we obtain the following estimate
+for the total degree of vanishing degtot(ν) of the norm ν at the various points at inﬁnity
+of S:
+degtot(ν) ≥
+∑
+A⊆{1,...,r}
+{ ∑
+ψ ∈F(A)
+1
+24 {(
+∏
+j∈A
+p2ψj
+j ) − 1}·
+{ ∏
+j∈A
+(pj − 1+ δψj ,ej
+(pj +1 )pψj
+j
+)}
+·
+{ ∏
+j/∈A
+( pj
+pj +1
+)}}
+= 1
+24(d − 1)
+=d e g (M⊗d ⊗K ⊗d) − d · [
+L· e]
+=d e g (M⊗d ⊗K ⊗d)
+where in the ﬁrst equality (respectively, second; third), we apply Lemma 7.1 (respectively,
+Proposition 3.2; Proposition 3.2 and the above discussion concerningφ1(−)). On the other
+hand, since ν is, by deﬁnition, a section of the line bundle M⊗d ⊗K ⊗d (cf. §3), we thus
+conclude that all the zeroes of ν have been accounted for in the estimates of Theorem 5.1,
+i.e., that (under the assumption that d is odd or m′ ̸=2 ) :
+The norm νis invertible away from the points at inﬁnity, and, moreover,
+the inequalities of Theorem 5.1 are all equalities.
+Note that we make use here of the fact that (since d is odd or m′ ̸=2 ) ν is nonzero on a
+dense open subset of S, by Proposition 6.2.
+It remains to examine the case where d is even, and m′ =2 . B yt h et h e o r yo f§6, if
+our data is of null type (cf. Deﬁnition 6.1), then ν will be generically zero (cf. Proposition
+6.2). Thus, we assume that our data is of general type (cf. Deﬁnition 6.1). Note that the
+43
+
+estimate from below for deg tot(ν) will essentially be the same as before, except that we
+obtain an additional term (cf. Proposition 3.3)
+−φ1(−d · ηι+ 1
+2)+ φ1(−d · ηι)
+at those points at inﬁnity ιwhere 2 is an active prime (i.e., 2 ∈A ). Note that here, since
+we are not summing overall ι, but only certain specialι, it is important that we keepboth
+of the two terms “φ1(−)” in the above expression (i.e., it is not the same, in this case, to
+just compute the sum of the −φ1(−d · ηι+ 1
+2 ) over the speciﬁc ιin question) — cf. the
+computations of [HAT], Chapter VI, proof of Theorem 3.1, in the even case.
+Next, note that the probability that 2 ∈A is 1
+2+1 = 1
+3 . Moreover, at such ι,w eh a v e :
+d ·ηι /∈ G (since our data is of general type). But the fact that 2∈A implies that 2G = μ2,
+so we thus obtain that at such ι, d · ηι = 1
+2 .T h u s , t h enet contribution to the estimate
+from below for degtot(ν)i s :
+1
+3(−φ1(− 1
+2 + 1
+2)+ φ1(− 1
+2)) = 1
+3(−φ1(0) +φ1(− 1
+2)) = 1
+3(− 1
+12 − 1
+24)= − 1
+24
+Let us refer to this contribution as the ﬁrst new contribution.
+On the other hand, in the present context (where d is even and m′ = 2), the degree
+of the line bundle deg( M⊗d ⊗K ⊗d) is no longer equal to 1
+24(d − 1), since −d · [
+L· e]i s
+not necessarily zero (cf. Proposition 3.2). The resulting contribution of this new term —
+which we shall refer to as the second new contribution —i sg i v e nb y :
+−d · [
+L· e]=
+∑
+ι
+φ1(−d · ηι+ 1
+2)= 2
+3φ1(− 1
+2 + 1
+2)+ 1
+3φ1(0 + 1
+2)
+= 2
+3φ1(0) + 1
+3φ1(1
+2)= 2
+3 · 1
+12 − 1
+3 · 1
+24 = 1
+24
+where we note the following:
+(1) In the ﬁrst equality, since this time we are summing over all points
+at inﬁnity ι, we are free to use just the single term “ φ1(−d · ηι + 1
+2)”
+(instead of the diﬀerence “φ1(−d · ηι+ 1
+2 ) − φ1(−d · ηι)”).
+(2) In the second equality, we use the fact that the probability thatd·ηι = 1
+2
+(respectively, d · ηι =0 )i s 2
+3 (respectively, 1
+3 ) — cf. Lemma 8.1 in the
+case p =2 .
+Note, in particular, that the ﬁrst and second new contributions cancel one another out in
+our estimate from below for degtot(ν). Thus, by the same reasoning as in the case where
+44
+
+d is odd or m′ ̸= 2, we conclude the following result, which is the main technical result of
+this paper:
+Theorem 8.2. If the given data (i.e., d, m′,a n dη)a r eof general type (cf. Deﬁnition
+6.1), then the norm ν of §3i s invertible away from the points at inﬁnity, and, moreover,
+the inequalities of Theorem 5.1 are all equalities. If the given data (i.e.,d, m′,a n dη)a r e
+of null type (cf. Deﬁnition 6.1), then the norm ν of §3i s identically zero.
+§9. The Main Theorem
+So far, our discussion has mainly been in characteristic zero. In this present §,w e
+observe that what we have done so far extends immediately to mixed characteristic. This
+observation allows us to state and prove the main theorem of this paper, concerning the
+invertibility of the coeﬃcients of the Fourier transform of an algebraic theta function in
+mixed characteristic.
+Our notation is as at the beginning of §3. To review (cf. §3 for more details): S
+log
+is a Z-ﬂat ﬁne noetherian log scheme ; Clog → Slog is a log elliptic curve which is smooth
+over a schematically dense open subscheme ofS, hence deﬁnes a “divisor at inﬁnity” (i.e.,
+the pull-back via the associated classifying morphism of the divisor at inﬁnity of (
+M1,0)Z)
+D ⊆ S. Moreover, we have a stack S∞ obtained from S by adjoining the roots of the
+q-parameters at the locus D ⊆ S over which Clog → Slog degenerates, together with a
+smooth group scheme f : E∞ ,S → S∞ (which is useful for carrying out the constructions
+of [Zh]).
+Let m, d be positive integers such that m does not divide d,a n dη ∈ E∞ ,S(S∞ )b ea
+torsion point of order m.T h e nη deﬁnes a certain natural metrized line bundle
+ L which
+— in the notation of [HAT], Chapter V, §1—i se q u a lt o
+Lst,η (respectively,
+ L
+ev
+st,η)i f d is
+odd (respectively, even). The push-forward f∗
+L of this metrized line bundle to S∞ deﬁnes
+a metrized vector bundle on S∞ , equipped with the action of a certain natural theta group
+scheme G
+L (cf. [HAT], Chapter IV, §5).
+Next, we assume that we are given ﬁnite, ﬂat (i.e., overS∞ ) subgroup schemesG, H ⊆
+E∞ ,S which are ´etale locally isomorphic to Z/dZ in characteristic 0 (i.e., after tensoring
+with Q), and which satisfy H × G = dE∞ ,S ⊆ E∞ ,S.( w h e r edE∞ ,S is the kernel of
+multiplication by d on E∞ ,S). We shall refer to G as the restriction subgroup (since its
+principal use will be as a collection of points to which we will restrict sections of
+ L), and
+H as the Lagrangian subgroup (since its primary use will be to descend
+ L). When d is
+even, we also assume that we are given splittings Gspl, Hspl of certain natural surjections
+˜G → G, ˜H → H (cf. §3 for more details). With this data, we obtain (regardless of the
+parity of d) liftings G, H⊆G
+ L of G, H ⊆ dE∞ ,S.U s i n gH⊆G
+ L, we may descend
+ L to a
+line bundle
+ LH on E∞ H ,S
+def
+= E∞ ,S/H.
+45
+
+We are now ready to give the ﬁrst main result of this paper:
+Theorem 9.1. (Invertibility of the Coeﬃcients of the Fourier Transform of an
+Algebraic Theta Function) Suppose that we are given Clog → Slog, m, d, η, G, Gspl,
+H,a n dHspl, as above. Let us regard the Fourier expansion morphism
+E :( fH)∗
+LH →O ˆG ⊗OS∞ K
+(where K
+def
+=
+ L|e is the restriction of
+ L to the identity section e of E∞ ,S) for the algebraic
+theta functions obtained by restricting global sections of
+ LH to G as a “section” of the
+OS∞ -algebra O ˆG which is well-deﬁned up to scalar multiples. If our data is of null type (a
+condition on d, m, η,a n dG — cf. Deﬁnition 6.1), then the norm ν of E is generically
+zero. If our data is of general type (a condition on d, m, η,a n dG — cf. Deﬁnition 6.1),
+then E satisﬁes the following invertibility properties:
+(1) E is invertible over (US)Q (where US
+def
+= S − D; the subscripted Q denotes “ ⊗ ZQ”).
+(2) Let ι∈ D be a point at inﬁnity. Let
+hμ
+def
+= |H
+⋂
+μd|; het
+def
+= d/hμ; heﬀ
+def
+= |ImE∞ μ,S (Get)
+⋂
+μμ
+d |; hord
+def
+= het/heﬀ
+be the local invariants atιdeﬁned in §5. Then in a neighborhood of ι, the endomorphisms
+of the OS∞ -algebra O ˆG deﬁned by multiplying by local generators of the image ofE may be
+written (for an appropriate basis) as diagonal matrices whose diagonal entries are of the
+form
+d · ϵ · h
+ord
+− 1
+2 · ω · q
+1
+d ·cRem(j,heff )(Case Xι) · (a unit ≡ 1 modulo q(>0))
+where ϵ is a 4-th root of unity (respectively,
+√
+2 times an 8-th root of unity) if hord is odd
+(respectively, even); ω is a sum of either one or two elements of μn·hμ·hord (in fact, in all
+but one exceptional case,ω ∈ μn·hμ·hord ); the notation cj(Case Xι) is as in §3 (cf. [HAT],
+Chapter V, §4, for more details);j ranges from1 to d;a n dRem(j, heﬀ) denotes the unique
+positive integer ≤ heﬀ which is ≡ j modulo heﬀ.
+Proof. The statement of Theorem 9.1 is essentially an amalgamation of Theorems 5.2
+and Theorem 8.2. Note, in (2), that the extra factor of d (relative to the expressions in
+Theorem 5.2) arises from the fact that when we take Fourier expansions (i.e., apply the
+operator F of §1), the coeﬃcients of the various characters ofG get multiplied by d.A l s o ,
+46
+
+we observe that although our computations in §4, 5, were in a characteristic 0 setting, the
+assertions of (2) still hold, since the various bases of function spaces — i.e., in essence,
+q-expansions — that were used in §4, 5, all still form bases of the corresponding mixed
+characterstic spaces — cf., e.g., [HAT], Chapter IV,§2,3, where everything is done in mixed
+characteristic. This completes the proof. ⃝
+Remark. The invertibility of the coeﬃcients of the Fourier expansion of an algebraic theta
+function may be interpreted as the statement that certain modular functions are, in fact,
+modular units. It would thus be interesting to consider the meaning of Theorem 9.1 from
+the point of view of the theory of modular units, e.g., to see if one can write these new
+modular units explicitly in terms of classical modular units such as the Siegel modular
+units (cf., for instance, [KL], Chapter 4).
+§10. The Theta Convolution
+We maintain the notation of§9. In this §, we apply Theorem 9.1 to study a morphism
+which we call the theta convolution. This morphism is (essentially) the endomorphism of
+the space of functions on the restriction subgroupG given by convoluting with the algebraic
+theta function in question. In particular, we observe that the theory of the present paper
+implies that this theta convolution satisﬁes certain compatibility properties relative to the
+evaluation morphism studied in [HAT].
+In this §,l e tu sw r i t e
+Θ
+CV : M−1 ⊗O G →O G ⊗K
+(where all tensor products are over OS∞ ; M
+def
+= {(fH )∗
+LH }−1; K
+def
+=
+ L|e; e ∈ E∞ ,S(S∞ )
+is the identity section) for the morphism deﬁned as follows: First, recall that restricting
+sections of
+ LH to G deﬁnes a morphism
+M−1 →
+ L|G ∼= OG ⊗K
+On the other hand, the convolution operator ∗(cf. §1) deﬁnes a morphism
+OG ⊗O G →O G
+Thus, if we compose this convolution morphism (tensored with K) with the restriction
+morphism M−1 →O G ⊗K (tensored with OG), we get a morphism ΘCV as above. This
+morphism will be referred to as the theta convolution.
+By Proposition 1.1, (iii.), and Theorem 9.1, (1), it follows that ΘCV is invertible over
+(US)Q.S i n c e ΘCV is generically invertible, we thus obtain that the image of Θ CV in
+OG ⊗K ∼=
+ L|G, which we denote by
+47
+
+L|Θ
+G ⊆
+ L|G
+is a metrized vector bundle on S∞ which satisﬁes
+L|Θ
+G ∼= M−1 ⊗O G
+Note, moreover, that the inclusion
+ L|Θ
+G ⊆
+ L|G is an isomorphism over (US)Q.
+On the other hand, let us recall the object
+E†
+∞ ,[d]
+of [HAT], Chapter V, §2. Over (US)Q, this object is isomorphic to the universal extension
+of the elliptic curve E|(US)Q → (US)Q under consideration. Thus, in general, one may
+think of E†
+∞ ,[d] as a certain extension of this universal extension over the divisor at inﬁnity
+and the points of positive characteristic. Let us write
+f∗(
+L|
+E†
+∞ ,[d]
+)<d{et}
+for the push-forward consisting of sections of
+ L over E†
+∞ ,[d] whose torsorial degree (i.e.,
+relative degree for the morphism E†
+∞ ,[d] → E∞ ,S)i s <d , equipped with the ´etale-integral
+structure (cf. [HAT], Chapter V, §3) at the ﬁnite primes. Note that this push-forward
+forms a metrized vector bundle on S∞ of rank d2. Since we are given a subgroup scheme
+H ∼= H⊆G
+ L, we thus obtain a natural action of H on this push-forward. Let us denote
+by
+f∗(
+L|
+E†
+∞ ,[d]
+)<d{et}H
+the metrized vector bundle on S∞ of rank d consisting of sections that are ﬁxed by H.
+Then it follows from [HAT], Chapter VI, Theorem 3.1, (1), (2), that we have a natural
+evaluation map
+ΞG : f∗(
+L|
+E†
+∞ ,[d]
+)<d{et}H →
+ L|G
+which is an isomorphism over (US)Q.
+Now we have the following importantapplication of the theory of this paper(our second
+main result):
+48
+
+Theorem 10.1. (The Theta-Convoluted Scheme-Theoretic Comparison Iso-
+morphism) Suppose that we are in the situation of Theorem 9.1. Let us denote by
+ΞG : f∗(
+L|
+E†
+∞ ,[d]
+)<d{et}H →
+ L|G
+the evaluation map derived from [HAT], Chapter VI, Theorem 3.1, (1). Write C for the
+product of all the prime numbers that divide d or n.T h e n2d · C · ΞG factors through
+L|Θ
+G ⊆
+ L|G. Moreover, the resulting morphism
+ΞΘ
+G : f∗(
+L|
+E†
+∞ ,[d]
+)<d{et}H →
+ L|Θ
+G
+satisﬁes the following properties:
+(1) ΞΘ
+G is invertible over (US)Q. Moreover, the poles of the inverse of ΞΘ
+G over US are
+annihilated by 2d · C2.
+(2) There exists a natural modiﬁcation of the integral structure at inﬁnity of
+f∗(
+L|
+E†
+∞ ,[d]
+)<d{et}H analogous to the new integral structure at inﬁnity of [HAT], Chap-
+ter VI, §1, with respect to which ΞΘ
+G is both integral and invertible over SQ.( T h u s , i n
+particular, relative to this modiﬁed integral structure, ΞΘ
+G will be integral over all of S,
+and invertible over S, except for poles annihilated by 2d · C2.) Moreover, just as the new
+integral structure at inﬁnity of [HAT], Chapter VI, §1, is given by allowing poles on the
+Fj/Fj−1-portion of the push-forward of the form q− 1
+d cj(Case Xι) (cf. [HAT], Chapter VI,
+Theorem 3.1, (3)), in the present context, the new integral structure at inﬁnity is given
+by allowing poles on the Fj/Fj−1-portion of the push-forward of the form
+q− 1
+d {cj(Case Xι)−cRem(j,heff )(Case Xι)}
+(where Rem(j, heﬀ) is as in Theorem 9.1).
+Proof. Over (US)Q, everthing is immediate. Let us prove that 2d · C ·ΞG factors through
+L|Θ
+G ⊆
+ L|G. First, observe that 2 d · C is suﬃcient to cancel the poles of the inverse of
+the expression “ d · ϵ · hord
+− 1
+2 · ω” appearing in Theorem 9.1. This proves the existence of
+the desired factorization over US. Thus, (by working over various appropriate ﬁnite, ﬂat
+coverings of the moduli stack (
+M1,0)Z) one sees that to prove the existence of the desired
+factorization over S, it suﬃces to prove its existence at the points of DQ.
+To this end, we recall from the theory of [HAT] (cf., especially, [HAT], Chapter V,
+§4, Theorem 4.8; [HAT], Chapter VI, §4, proof of Theorem 4.1) that to consider the
+49
+
+restriction of sections of f∗(
+L|
+E†
+∞ ,[d]
+)<d{et}H (as opposed to just (fH)∗
+LH)t o G amounts
+to considering the various derivatives of the theta function in question. In our case, this
+essentially amounts to considering the various derivatives ( U · ∂
+∂U )jΘ (where Θ is as in
+§4; j =0 ,... ,d − 1). If we then restrict such derivatives to G and apply the appropriate
+trivializations (as discussed in §4, 5), we see that we obtain similar expressions to those
+obtained in §4, 5 in the case of Θ itself. The only diﬀerence is that, in the case of the
+various derivatives of Θ, the leading terms (i.e., terms involving the smallest powers of
+q) as in the statement of Theorem 5.2 will be multiplied by various constant factors.T h e
+point here, however, is that the smallest power ofq for these derivatives of Θ will always be
+≤ the smallest power of q that arises in the case of the original Θ. Thus, even if we divide
+the Fourier coeﬃcients of the restrictions of the derivatives of Θ by the Fourier coeﬃcients
+of the corresponding restrictions of Θ itself, the result will remain integral. This implies
+the existence of the factorization stated in Theorem 10.1.
+Next, we consider the invertibility of Ξ
+Θ
+G over US. The fact that the the poles of the
+inverse of ΞΘ
+G over US are annihilated by 2d · C2 follows formally from the fact that the
+poles of the inverse of ΞG are annihilated by C (cf. [HAT], Chapter VI, Theorem 4.1, (2)),
+together with the fact that 2d · C · ΞG is (by deﬁnition) the composite of ΞΘ
+G with another
+morphism.
+Finally, we consider the invertibility of ΞΘ
+G at the points of DQ. The argument is
+essentially the same as in the proof above of the existence of the factorization ΞΘ
+G. Indeed,
+just as in the situation of [HAT] (cf., especially, [HAT], Chapter V, Theorem 4.8; [HAT],
+Chapter VI, Theorem 4.1, (3)),a collection of local generators for the new integral structure
+is given by the
+q− 1
+d cj(Case Xι) · ζCG
+j−1
+(for j =1 ,... ,d), in the present context, a collection of local generatorsfor the new integral
+structure is given by the
+q− 1
+d {cj(Case Xι)−cRem(j,heff )(Case Xι)} · ζCG
+j−1
+(for j =1 ,... ,d). That is to say, the “work done by dividing by q
+1
+d cj(Case Xι)”i s
+partially absorbed by the inverse of the theta convolution , which results in division by
+q
+1
+d cRem(j,heff )(Case Xι) (cf. the theory of §4, 5; Theorem 9.1). Thus, in the present “theta-
+convoluted case,” the desired integral structure at inﬁnity is obtained by dividing by
+“what’s left.” This completes the proof of Theorem 10.1. ⃝
+Remark 1. In particular, we obtain that at points at inﬁnity ιwhere heﬀ = d — i.e.,
+when the restriction subgroup G is of multiplicative type— no modiﬁcation of the integral
+structure at inﬁnity is necessary. Put another way, at such ι:
+50
+
+The “Gaussian poles” of the “comparison isomorphism” deﬁned by the
+theta-convoluted evaluation map ΞΘ
+G vanish.
+(cf. the discussion of [HAT], Introduction, §5.1). It is this fact/observation that formed
+the fundamental motivation for the author to develop the theory of the present paper.
+Remark 2. Just as in [HAT], Chapter IX, §3, we constructed an “arithmetic Kodaira-
+Spencer morphism” from the “Hodge-Arakelov Comparison Isomorphism” ([HAT], Chap-
+ter VIII, Theorem A) of [HAT], one can now construct a theta-convoluted arithmetic
+Kodaira-Spencer morphismfrom the theta-convoluted comparison isomorphismof Theorem
+10.1. The procedure is entirely formally analogous to what was done in [HAT], Chapter
+IX, §3, i.e., one simply transports the natural Galois action on the “´ etale side” (i.e., the
+right-hand side) of the comparison isomorphism to the “de Rham-theoretic side” (i.e., the
+left-hand side) of the comparison isomorphism, and considers the extent to which this
+Galois action preserves the Hodge ﬁltration. We leave the entirely routine details to the
+reader. Note that the key technical point here is that:
+The range of the theta-convoluted comparison isomorphism, i.e.,
+L|Θ
+G ∼= M−1 ⊗O G
+admits a natural Galois action (arising from the Galois action on G).
+Moreover, we would like to emphasize — relative to the context of the theory of [HAT]
+(cf., especially, the discussion at the end of [HAT], Chapter IX, §3) — that:
+The construction of an arithmetic Kodaira-Spencer morphism in which
+the Gaussian poles have been at least partially eliminated brings us one
+step closer to the possibility of applying the theory of [HAT] and the
+present paper to diophantine geometry, as discussed in [HAT], Introduc-
+tion, §5.1, and [HAT], Chapter IX, §3.
+Remark 3. Of course, in order to complete the analogy with the theory of [HAT], one
+must also study the properties of the theta convolution at archimedean primes.J u s t a s
+in the theory of [HAT], by pulling back the natural metric on the ´etale side of the theta-
+convoluted comparison isomorphism one obtains an ´etale metric on the de Rham side of
+the theta-convoluted comparison isomorphism. The theta-convoluted arithmetic Kodaira-
+Spencer morphism of Remark 2 will have natural integrality properties with respect to this
+´etale metric. Of course, in order to make use of this machinery, one would like to have more
+explicit information about the ´etale metric, in particular, concerning the metrics induced
+by the ´etale metric on the various subquotients of the Hodge ﬁltration (on the de Rham side
+of the theta-convoluted comparison isomorphism). For the Hodge-Arakelov Comparison
+Isomorphism of [HAT], this sort of computation was carried out in [HAT], Chapters VII
+51
+
+and VIII. It is not diﬃcult to compute what happens to the “Hermite, Legendre, and
+Binomial Models” of the theory of [HAT] when one introduces the theta-convolution. It is
+the hope of the author to give an explicit exposition of this computation in a future paper.
+Bibliography
+[DyMc] H. Dym and H. P. McKean, Fourier Series and Integrals, Academic Press (1972).
+[HAT] S. Mochizuki, The Hodge-Arakelov Theory of Elliptic Curves: Global Discretization of
+Local Hodge Theories, manuscript.
+[KL] D. S. Kubert and S. Lang, Modular Units, Grundlehren der mathematischen Wis-
+senschaften 244, Springer-Verlag (1981).
+[Lang] S. Lang, Algebraic Number Theory, Graduate Texts in Mathematics 110, Springer-
+Verlag (1986).
+[MB] L. Moret-Bailly, Pinceaux de vari´et´es ab´eliennes,A s t ´erisque 129, Soc. Math. France
+(1985).
+[Mumf1,2,3] D. Mumford, On the equations deﬁning abelian varieties I, II, III, Invent. Math. 1
+(1966), pp. 287-354; 2 (1967), pp. 71-135; 3 (1967), pp. 215-244.
+[Shz] S. S. Shatz, Group Schemes, Formal Groups, and p-divisible Groups in Arithmetic
+Geometry, edited by G. Cornell and J. H. Silverman, Springer-Verlag (1986).
+[Zh] S. Zhang, Admissible pairing on a curve, Invent. Math. 112 (1993), pp. 171-193.
+52

@@ -1,0 +1,124 @@
+Section 3ԓ
+ஓஉૼɟ
+ŴSection 3ᜒ๫ᎍƕʚӸƓ
+ԓ˺ಅƸᡁ൞ƱЎਃƠƯᘍƳƏƜƱƴƠǇƠƨŵ˂ƷSection ƴλƬƯƍƨૠ
+ᝋƴൿǊƨᜒ๫ƸᲫᲪૠ̾ƴƷǅǓǇƠƨŵ໯ᬛƳ
+ᧉƷ
+p ᡶ Hodge ྸᛯƴᡈƍ pƠŴᇿᎍ
+ƸŴžƦƷ˂ſŴɼƱƠƯ Arakelov ྸᛯǍ DiophantusႎƳ
+ƞƤƯƍƨƩƖǇƠƨŵ
+˴Ʊ᧙̞ƕƋƬƯǋஜ᫆
+Ʒ Section 3 ƱƸК௒ƴλǓǇƢƕŴˌɦƷ Section 3ǘǕǔᛅǛƍ
+ԓƞƤƯ᪬ƖǇƢŵ
+V. VoevodskyƨBloch-
+KatoᄽƱƳƬƯ
+˴ưƸŴDold-ThomྸƱƍƏ
+ᆅ
+ΨƢǔƜƱƕưƖǇ
+ྸǛᡞ৖ƴƱƬƯŴέᆉƷҥኝƳદ˺Ƹμᢿˊ
+ƔǒЈႆƠƯŴ
+Dold-ThomྸƱμƘ᫏˩ႎ
+፯Ơ
+ƴᚘምƠƴƘƘƯŴ
+ӳŴƦƷ୺ዴƷȤ
+ǳȓǢȳᲢƷஊྸໜᢋƷƳƢь፭ᲣƴƳǓǇƢŵ
+E. HrushovskiǍƦ
+ƷϋᢿႎƳನᡯƴ᧙ƢǔྸᛯŴƷᛅǛƠƯƘǕǇƠƨŵɟᙸƠƨƱƜǖŴૢૠ
+˴ƱƸ˷Ǔ᧙̞ƋǓƦƏƴƳƍᛅưƢƕŴ
+Hrushovski ൞Ʒ৖ඥƸŴƜƷǑƏƳኝቦ
+ƷǈƴǑƬƯŴRaynaudྸᲢᲷᆔૠƕᲬˌɥƷˊૠ୺ዴǛƦƷȤǳȓǢȳ
+ǊᡂǜƩƱƖŴȤǳȓǢȳƷሁЎໜư୺ዴƴƷƬƯƍǔǋƷƸஊᨂ̾ƠƔƳƍƱƍƏǋ
+ƷᲣƷŴ ǍǍ
+eﬀectiveᲢᲷžஊᨂ̾ſƕᚕƑƨƩƚưƳƘŴ̾ૠƴɥᨂǛɨƑǔƜƱǋЈஹƨᲣ
+ᎍƔǒǋදႸǛᨼǊƯƍǔƦƏưƢŵ
+P. ShorƷȕǣȸȫǺចſƱǋƍƑǔžȍȴǡȳȪȳȊចſǛƱƬ
+ᝋƱƳƬƨŴ
+ƴ᧙Ƣǔᚘ
+ƷᚘምೞƩƱŴʚᡶඥƳƲǛ̅ƬƯŴ
+ᚘምೞſưƸŴ᣽
+ƷǑƏƴŴᙐእૠ˳ɥƷᲢஊᨂഏΨƷᲣșǯȈȫᆰ᧓ƷΨƨƪᲢƭǇǓŴșǯȈȫᲣ
+ƠƯŴಮŷƳᲢᙐእૠ
+Typeset by AMS-TEX
+1
+
+2 ஓஉૼɟ
+̞ૠƷᲣᘍЗǛੑƚǔƜƱƴǑƬƯǇƣƸžᄩᇌᛯႎƳሉƑſǛЈƠǇƢŵƜǕƸ୍ᡫƷᚘምƱ
+ƠƯŴƦƷሉƑƕദᚐư
+ǛЈƢƱƍƏǋƷưƢŵᚕƍ੭ƑǕƹŴƜƷǑƏƳɶ᧓ႎƳЈщƸŴΨŷჷǓƨ
+ƴŴ൭ǊƯƍǔሉƑ
+ƱŴҗЎƴǑƍᡲዓႎƳᡈ˩ƔǒŴஇኳႎƳሉ
+ƘƷưƢŵƜƷҾྸƸŴˌɦưኰʼƢǔ
+F. Gramain ൞ƷᛅƴЈƯƘǔžBox Principleſ
+ǍŴS. ZhangᧉЎ᣼ưƋǔ ArakelovƴǑƘ˩ƯƍƯŴૠ
+ԓưƱǓƋƛǔƜƱƴƞƤƯƍƨƩƖ
+ǇƠƨŵ
+F. Gramain৽Ʒᚰଢư
+ဇƍǒǕǔᛯඥƸ G. SiegelˊƷˁʙƴ้ǔǋƷưŴƍǘǏǔžSiegel Ʒᙀ᫆ſƱ
+žBox PrincipleſƷҾྸƴǑƬƯŴƋǔໜư᭗ƍˮૠƷᩐໜǛǋƭ᧙ૠǛನ঺ƠŴɟ૾ŴƦƷˮ
+ૠƕƦƜǇư᭗ƚǕƹŴ᧙ૠǛբ᫆ƷໜưTaylorƷǈƳǒƣŴέƷ
+ኽƞǕǇƢŵƱƜǖƕŴƦƏƳǔƱŴƦƷ᧙
+Ʒ
+Gramain ൞Ʒ
+ƷኽௐƕƨƘƞǜኰʼƞǕǇƠƨƕŴ᩿ႉƍƱƜǖƷ
+ƷૼƠƍᚰଢưƸŴɥƷᜭᛯƴЈƯƘǔឬឭ
+፯ƞǕ
+Ŵ
+ƍឬ
+ྸƕᅆƞǕǔƜƱƕҮᝋƴസǓǇƠƨŵ
+L. MerelſᲢ“uniform boundedness”)ʖेƴஇኳ
+ƘƋǔᢿЎႎƳᚐൿ
+ƷഭӪƷኰʼǍŴ
+MerelஜႎƳᛯඥƸŴ B. Mazur
+ҞƷˁʙᲢᲷ̊ƷʖेǛŴஊྸૠ˳ QưᅆƠƨǋƷᲣƴ
+ƳƍžǑƍՠſǛᢠǜ
+ኽƠǇƢŵƦƜưŴƜƷžǑ
+ƍՠſƴƲƷՠǛ੔ဇƢǔƔƕ᣻ᙲƳբ᫆ƴƳǓǇƢƕŴ
+Mazur ൞ǛƸơǊŴMerel ൞ˌЭƷƢ
+ǂƯƷˁʙưƸŴHecke ࿢Ʒ Eisenstein፯ƞǕǔՠƠƔ̅ǘǕƯƍƳƔƬƨ
+ƠƯŴMerel᩿ƷŴᖎ᠆Ტƭ
+ǇǓŴžy-፯ƞǕŴƦƷ᠛
+˳Ǜ̅ƬƯȢǸȥȩȸ୺ዴƷȤǳȓǢȳƷžǑƍՠſǛನ঺ƠǇƢŵ
+H. SchlickeweiˊƴᚰଢƞǕƨžSchmidtྸſƴ᧙ᡲƠƨஇᡈƷᛅ
+᣽ႎƳ versionྸƸŴɨƑǒ
+ƭƔƷˊૠႎૠ̞ૠƷŴnƠƯŴ˓ॖƷᲢஊྸᲣૢૠƷn࣏
+ƳƘƱǋᲣƲƪǒƔǛ฼ƨƢᲴ
+ƨƪƴƦƷ n ኵǈǛˊλƠƨƱƖƴŴЈƯƘǔ͌ƨƪƷᆢƕƋǔɧሁ
+Ǜ฼ƨƢŵ
+ᲢᲬᲣૢૠƷ nƞǕƨᲢƭǇǓŴբ᫆Ʒ n׹
+ƷᩐໜƴƳǔŵ
+᣽ႎƳોᑣ༿ƸSchlickewei Ყ Evertse ƴǑǔσӷᄂᆮưŴDiophantus ૾ᆉ
+ဇǋƋǓǇƢŵ
+
+SECTION 3ԓ 3
+S. ZhangƱŴBogomolov
+ʖेƷ E. Ullmo ƱᐯЎᐯ៲ƴǑǔᚰଢƴƭƍƯᛟଢƠǇƠƨŵ Diophantus˴ưƸŴૠᛯႎ
+ſǛยǔžheightӳദ
+ƞƤǇƢŵஊྸໜƷЗƕɨƑǒǕŴƦƷЗƷໜƨƪƷ height ƕᲪƴӓளƢǔƱ
+ƞƍſᲢ“small”)ƱԠƼǇƢŵZhang ൞˂ƕᅆƠƨ᣻ᙲƳኽௐƷɟƭƸŴ
+ࠋ
+ྸſǛ̅ƬƯŴUllmo ൞Ʊ Zhang ൞ƸŴ
+Bogomolovႎ
+ಮ˳
+ኽƷɟƭƱƠƯŴέᆉ
+Hrushovski ൞ƷᛅƴЈƨ RaynaudྸƕƋǓǇƢŵ
+᩿ưɟॖ҄
+Ʒ pྵƢǔƜƱǛႸႎƱƠƨஇᡈƷˁʙǛኰʼƠǇƠƨŵᙐ
+᩿ƴǑǔɟॖ҄ƴƸಮŷƳ᩿ͨǍᚐ᣷ƕƋǓǇƢƕŴƦƷƏƪƷʚƭƸˌ
+ɦƷᡫǓưƢᲴ
+ƠƯ
+ཋྸႎƳžᚐௌႎᘙᅆſǛɨƑƯƍǔŵ
+ǛᎋƑǔƜƱƴǑƬƯŴˊૠ୺ዴƷȢǸȥȩǤƕᐯ໱ƴ
+ɟॖ҄ƞǕǔŵ
+ӳƴƸŴžGrothendieck ʖेƷ pӳƴ
+ƸŴžp ᡶ Teichm¨uller ྸᛯſƱƍƏ p ᡶႎƳ᫏˩ƕƋǓŴƜǕǒƷኽௐƳƍƠྸᛯƴƭƍƯᚐᛟ
+ƠǇƠƨŵ
+μ˳ᜒ๫
+E. Hrushovski, “Geometric Model Theory”
+P. Shor, “Quantum Computing”
+V. Voevodsky, “Homotopy Theory of Algebraic Varieties”
+ᜒ๫
+F. Gramain, “Some Results of Algebraic Independence”
+L. Merel, “Determination of Rational Points Using Dirichlet Series”
+H. Schlickewei, “The Absolute Subspace Theorem and Applications”
+S. Zhang, “Small Points and Arakelov Theory”
+S. Mochizuki, “The Intrinsic Hodge Theory of p-adic Hyperbolic Curves”

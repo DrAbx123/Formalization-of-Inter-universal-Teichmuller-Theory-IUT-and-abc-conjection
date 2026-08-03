@@ -1,0 +1,41 @@
+COMMENTS ON “TOPICS IN
+ABSOLUTE ANABELIAN GEOMETR Y I:
+GENERALITIES”
+Shinichi Mochizuki
+January 2024
+(1.) Theﬁnalportion[beginningwiththe third sentence]ofthestatementofLemma
+4.5, (iv), should be replaced by the following text:
+Then the decomposition groups of cusps ⊆ H∗ may be character-
+ized [ “group-theoretically”]a st h e maximal closed subgroups I ⊆H∗
+isomorphic to Zl which satisfy the following condition: We have
+dχcyclo
+G
+((Il ·J)ab ⊗Ql)+1 <l ·{dχcyclo
+G
+((I ·J)ab ⊗Ql)+1 }
+[i.e., “the covering of curves corresponding to J ⊆I·J is totally ramiﬁed
+at some cusp”] for every characteristic open subgroup J ⊆H∗ such that
+J ̸= I ·J.
+(2.) In the statement of Proposition 2.5, (iv), the phrase “Suppose that k1 either
+an FF or an MLF;” should read “Suppose that k1 is either an FF or an MLF;”.
+(3.) In the ﬁnal portion of the proof of Proposition 2.5, the phrase “aMLF” should
+read “anMLF”.
+(4.) In Deﬁnition 2.9, the phrase “nonabelian pro-Σ-solvable free group” should be
+replaced by the phrase “nonabelian free pro-Σ-solvable group [cf. [FJ], Deﬁnition
+17.4.1]”.
+(5.) In the statement and (second paragraph of) the proof of Theorem 2.11, (iv),
+the notation “φ” should be replaced by the phrase “the natural inclusionH↪→ J”.
+(6.) In the proof of Proposition 3.2, the phrase “follows immediately the Hodge-
+Tate” should be replaced by the phrase “follows immediately from the Hodge-Tate”.
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+(7.) In Remark 3.7.1, the phrase “continue to hold when” should be replaced by
+the text “continue to hold, at least under the additional assumption that each ﬁeld
+k
+i contains a primitivep-th root of unity, when”.
+(8.) In the ﬁnal portion of the second line of the display in the statement of
+Proposition A.3, (ix), the notation “vj” should be replaced by “φV (vj)”.
+(9.) InthethirdsentenceoftheproofofPropositionA.6, (ii), thenotation“ W×Sk”
+should be replaced by “W ×k S”.

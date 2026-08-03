@@ -1,0 +1,177 @@
+࿦จϦετ
+ͷ࿦จ౳
+ԿҰൠɿ
+[1] S. Mochizuki, The Geometry of the Compactiﬁcation of the Hurwitz Scheme, Publ. Res.
+Inst. Math. Sci. 31 (1995), pp. 355-441.
+[2] S. Mochizuki, On Semi-Positivity and Filtered Frobenius Crystals, Publ. Res. Inst. Math.
+Sci. 31 (1995), pp. 81-94.
+[3] S. Mochizuki, Correspondences on Hyperbolic Curves, Journ. Pure Appl. Algebra 131
+(1998), pp. 227-244.
+[4] S. Mochizuki, Extending Families of Curves over Log Regular Schemes, J. reine angew.
+Math. 511 (1999), pp. 43-71.
+[5] S. Mochizuki, Noncritical Belyi Maps, Math. J. Okayama Univ. 46 (2004), pp. 105-113.
+[6] S. Mochizuki, Arithmetic Elliptic Curves in General Position, Math. J. Okayama Univ. 52
+(2010), pp. 1-28.
+త Hodge ཧ࿦ɿ
+[1] S. Mochizuki, The Intrinsic Hodge Theory of p-adic Hyperbolic Curves, Proceedings of the
+International Congress of Mathematicians , Vol. II (Berlin, 1998), Doc. Math. 1998, Extra
+Vol. II, pp. 187-196.
+[2] S. Mochizuki, The intrinsic Hodge theory of hyperbolic curves, Number Theory and Related
+Topics (Seoul 1998) , Yonsei Univ. Inst. Math. Sci. (2000), pp. 1-27.
+[3] S. Mochizuki, The intrinsic Hodge theory of p-adic hyperbolic curves, Taniguchi Conference
+on Mathematics, Nara ’98 , Adv. Stud. Pure Math. 31 (2001), Math. Soc. Japan, pp.
+211-233.
+p ਐ Teichm ¨uller ཧ࿦ɿ
+[1] S. Mochizuki, A Theory of Ordinary p-adic Curves, Publ. Res. Inst. Math. Sci. 32 (1996),
+pp. 957-1151.
+[2] S. Mochizuki, Foundations of p-adic Teichm¨uller Theory , AMS/IP Studies in Advanced
+Mathematics 11, American Mathematical Society/International Press (1999).
+Typeset by AMS-TEX
+
+2 ࿦จϦετ
+[3] S. Mochizuki, An Introduction to p-adic Teichm¨uller Theory, Cohomologies p-adiques et
+applications arithm´etiques I , Ast´erisque 278 (2002), pp. 1-49.
+Կɿ
+[1] S. Mochizuki, The Proﬁnite Grothendieck Conjecture for Closed Hyperbolic Curves over
+Number Fields, J. Math. Sci. Univ. Tokyo 3 (1996), pp. 571-627.
+[2] S. Mochizuki, A Version of the Grothendieck Conjecture for p-adic Local Fields, The Inter-
+national Journal of Math. 8 (1997), pp. 499-506.
+[3] S. Mochizuki, The Local Pro- p Anabelian Geometry of Curves, Invent. Math. 138 (1999),
+pp. 319-423.
+[4] S. Mochizuki, H. Nakamura, A. Tamagawa, The Grothendieck conjecture on the fundamental
+groups of algebraic curves, Sugaku Expositions 14 (2001), pp. 31-53.
+[5] S. Mochizuki, The Absolute Anabelian Geometry of Hyperbolic Curves, Galois Theory and
+Modular Forms, Kluwer Academic Publishers (2004), pp. 77-122.
+[6] S. Mochizuki, The Absolute Anabelian Geometry of Canonical Curves, Kazuya Kato’s ﬁftieth
+birthday, Doc. Math. 2003, Extra Vol. , pp. 609-640.
+[7] S. Mochizuki, Topics Surrounding the Anabelian Geometry of Hyperbolic Curves, Galois
+Groups and Fundamental Groups , Mathematical Sciences Research Institute Publications
+41, Cambridge University Press (2003), pp. 119-165.
+[8] S. Mochizuki, The Geometry of Anabelioids, Publ. Res. Inst. Math. Sci. 40 (2004), pp.
+819-881.
+[9] S. Mochizuki, Categorical representation of locally noetherian log schemes, Adv. Math. 188
+(2004), pp. 222-246.
+[10] S. Mochizuki, Categories of log schemes with archimedean structures, J. Math. Kyoto Univ.
+44 (2004), pp. 891-909.
+[11] S. Mochizuki, Semi-graphs of Anabelioids, Publ. Res. Inst. Math. Sci. 42 (2006), pp.
+221-322.
+[12] S. Mochizuki, Galois Sections in Absolute Anabelian Geometry, Nagoya Math. J. 179
+(2005), pp. 17-45.
+[13] S. Mochizuki, A combinatorial version of the Grothendieck conjecture, Tohoku Math. J. 59
+(2007), pp. 455-479.
+[14] S. Mochizuki, Conformal and quasiconformal categorical representation of hyperbolic Rie-
+mann surfaces, Hiroshima Math. J. 36 (2006), pp. 405-441.
+[15] S. Mochizuki, Absolute anabelian cuspidalizations of proper hyperbolic curves, J. Math.
+Kyoto Univ. 47 (2007), pp. 451-539.
+[16] S. Mochizuki, The Geometry of Frobenioids I: The General Theory, Kyushu J. Math. 62
+(2008), pp. 293-400.
+[17] S. Mochizuki, The Geometry of Frobenioids II: Poly-Frobenioids, Kyushu J. Math. 62
+(2008), pp. 401-460.
+[18] S. Mochizuki, Global Solvably Closed Anabelian Geometry, Math. J. Okayama Univ. 48
+(2006), pp. 57-71.
+
+࿦จϦετ 3
+[19] S. Mochizuki, The ´Etale Theta Function and its Frobenioid-theoretic Manifestations, Publ.
+Res. Inst. Math. Sci. 45 (2009), pp. 227-349.
+[20] S. Mochizuki, A. Tamagawa, The algebraic and anabelian geometry of conﬁguration spaces,
+Hokkaido Math. J. 37 (2008), pp. 75-131.
+[21] S. Mochizuki, Topics in Absolute Anabelian Geometry I: Generalities, J. Math. Sci. Univ.
+Tokyo 19 (2012), pp. 139-242.
+[22] S. Mochizuki, Topics in Absolute Anabelian Geometry II: Decomposition Groups and En-
+domorphisms, J. Math. Sci. Univ. Tokyo 20 (2013), pp. 171-269.
+[23] S. Mochizuki, Topics in Absolute Anabelian Geometry III: Global Reconstruction Algo-
+rithms, J. Math. Sci. Univ. Tokyo 22 (2015), pp. 939-1156.
+[24] S. Mochizuki, On the Combinatorial Cuspidalization of Hyperbolic Curves, Osaka J. Math.
+47 (2010), pp. 651-715.
+[25] Y. Hoshi, S. Mochizuki, On the Combinatorial Anabelian Geometry of Nodally Nondegen-
+erate Outer Representations, Hiroshima Math. J. 41 (2011), pp. 275-342.
+[26] Y. Hoshi and S. Mochizuki, Topics surrounding the combinatorial anabelian geometry of
+hyperbolic curves I: Inertia groups and proﬁnite Dehn twists, Galois-Teichm¨uller Theory
+and Arithmetic Geometry , Adv. Stud. Pure Math. 63, Math. Soc. Japan (2012), pp.
+659-811.
+[27] Y. Hoshi, S. Mochizuki, Topics surrounding the combinatorial anabelian geometry of hyper-
+bolic curves II — tripods and combinatorial cuspidalization , Lecture Notes in Mathematics
+2299, Springer (2022).
+[28] Y. Hoshi, S. Mochizuki, Topics Surrounding the Combinatorial Anabelian Geometry of Hy-
+perbolic Curves III: Tripods and Tempered Fundamental Groups , RIMS Preprint 1763 (No-
+vember 2012), to appear in Kyoto J. Math.
+[29] Y. Hoshi, S. Mochizuki, Topics Surrounding the Combinatorial Anabelian Geometry of
+Hyperbolic Curves IV: Discreteness and Sections, Nagoya Math. J. 256 (2024), pp. 785-
+885.
+[30] S. Mochizuki, Monomorphisms in Categories of Log Schemes, Kodai Math. J. 38 (2015),
+pp. 365-429.
+[31] Y. Hoshi, A. Minamide, S. Mochizuki, Group-theoreticity of Numerical Invariants and Dis-
+tinguished Subgroups of Conﬁguration Space Groups, Kodai Math. J. 45 (2022), pp. 295-
+348.
+[32] Y. Hoshi, S. Mochizuki, S. Tsujimura, Combinatorial construction of the absolute Galois
+group of the ﬁeld of rational numbers , RIMS Preprint 1935 (December 2020), to appear in
+J. Math. Sci. Univ. Tokyo .
+[33] S. Mochizuki, S. Tsujimura, Resolution of Nonsingularities, Point-theoreticity, and Metric-
+admissibility for p-adic Hyperbolic Curves , RIMS Preprint 1974 (June 2023).
+ઢͷ Hodge-Arakelov ཧ࿦ɿ
+[1] S. Mochizuki, The Hodge-Arakelov Theory of Elliptic Curves: Global Discretization of Local
+Hodge Theories, RIMS Preprint 1255, 1256 (October 1999).
+
+4 ࿦จϦετ
+[2] S. Mochizuki, The Scheme-Theoretic Theta Convolution , RIMS Preprint 1257 (October
+1999).
+[3] S. Mochizuki, Connections and Related Integral Structures on the Universal Extension of an
+Elliptic Curve , RIMS Preprint 1279 (May 2000).
+[4] S. Mochizuki, The Galois-Theoretic Kodaira-Spencer Morphism of an Elliptic Curve , RIMS
+Preprint 1287 (July 2000).
+[5] S. Mochizuki, The Hodge-Arakelov Theory of Elliptic Curves in Positive Characteristic ,
+RIMS Preprint 1298 (October 2000).
+[6] S. Mochizuki, A Survey of the Hodge-Arakelov Theory of Elliptic Curves I, Arithmetic Fun-
+damental Groups and Noncommutative Algebra , Proceedings of Symposia in Pure Mathe-
+matics 70, American Mathematical Society (2002), pp. 533-569.
+[7] S. Mochizuki, A Survey of the Hodge-Arakelov Theory of Elliptic Curves II, Algebraic Ge-
+ometry 2000, Azumino , Adv. Stud. Pure Math. 36, Math. Soc. Japan (2002), pp. 81-114.
+[8] S. Mochizuki, Anabelian Geometry in the Hodge-Arakelov Theory of Elliptic Curves, Com-
+munications in arithmetic fundamental groups (Kyoto 1999/2001) , RIMS K¯oky¯uroku 1267
+(2002), pp. 96-111.
+ࡍTeichm ¨uller ཧ࿦ɿ
+[1] S. Mochizuki, Inter-universal Teichm¨uller Theory I: Construction of Hodge Theaters, Publ.
+Res. Inst. Math. Sci. 57 (2021), pp. 3-207.
+[2] S. Mochizuki, Inter-universal Teichm¨ uller Theory II: Hodge-Arakelov-theoretic Evaluation,
+Publ. Res. Inst. Math. Sci. 57 (2021), pp. 209-401.
+[3] S. Mochizuki, Inter-universal Teichm¨uller Theory III: Canonical Splittings of the Log-theta-
+lattice, Publ. Res. Inst. Math. Sci. 57 (2021), pp. 403-626.
+[4] S. Mochizuki, Inter-universal Teichm¨ uller Theory IV: Log-volume Computations and Set-
+theoretic Foundations, Publ. Res. Inst. Math. Sci. 57 (2021), pp. 627-723.
+[5] S. Mochizuki, A Panoramic Overview of Inter-universal Teichm¨ uller Theory, Algebraic num-
+ber theory and related topics 2012 , RIMS K¯oky¯uroku Bessatsu B51, Res. Inst. Math. Sci.
+(RIMS), Kyoto (2014), pp. 301-345.
+[6] S. Mochizuki, Bogomolov’s proof of the geometric version of the Szpiro Conjecture from the
+point of view of inter-universal Teichm¨uller theory, Res. Math. Sci. 3 (2016), 3:6.
+[7] S. Mochizuki, The Mathematics of Mutually Alien Copies: from Gaussian Integrals to
+Inter-universal Teichm¨uller Theory, Inter-universal Teichmuller Theory Summit 2016 , RIMS
+K¯oky¯uroku Bessatsu B84, Res. Inst. Math. Sci. (RIMS), Kyoto (2021), pp. 23-192.
+[8] S. Mochizuki, I. Fesenko, Y. Hoshi, A. Minamide, W. Porowski, Explicit Estimates in Inter-
+universal Teichm¨uller Theory, Kodai Math. J. 45 (2022), pp. 175-236.
+[9] S. Mochizuki, On the Essential Logical Structure of Inter-universal Teichm¨ uller Theory in
+Terms of Logical AND “ ∧”/Logical OR “ ∨” Relations: Report on the Occasion of the Pub-
+lication of the Four Main Papers on Inter-universal Teichm¨ uller Theory , RIMS Preprint
+1968 (November 2022).
+
+࿦จϦετ 5
+ͷ࿦จ
+[1] தଜ തত ,உ ,͢Δ Grothendieck ༧૝ʯ, ਺
+ֶ50ר2߸1998), pp. 113-129.
+[2]৽Ұ,଄ʯ,ֶ36ר7߸1998), pp. 41-47.
+[3]৽Ұ,͢Δ Grothendieck ༧૝ — p఺͔Βʯ,ճ௡ాक़େ
+੔਺࿦γϯϙδ΢Ϝ (1998),ॴใ 17 (1999), pp.
+1-31.
+[4]৽Ұ,ࡌICM 98Կ Iʯ,ֶ51ୈ 1ʢ1999 ೥ 1
+ʣ, pp. 77-79.
+[5]৽Ұ, ʮϞ ν ʔ ϑ —֨ࠎ— ʯ,ηϛφʔ 38ר5߸1999),
+pp. 30-31.
+[6]৽Ұ,܎ؔ1), (2), (3), (4) ʯ,ηϛφʔ
+39ר4, 5, 6, 7߸2000), pp. 62-64, pp. 56-58, pp. 61-64, pp. 58-61.
+ԋͷΞϒετϥΫτɾϨΫνϟʔϊʔτ
+[1]৽Ұ,Կ,ֶ2000 ೥ 9݄.
+[2]৽Ұ, p ਐ Teichm ¨uller ཧ࿦,ֶ2001 ೥ 1݄.
+[3]৽Ұ, Anabelioidֶ,ֶ2002 ೥ 3݄.
+[4]৽Ұ, Anabelioidͱ Teichmuller ཧ࿦,འ, 2002 ೥ 8݄.
+[5]৽Ұ,ͷ almost etale extensionsੜ༻ͷϊʔτʣ,ڀݚ
+ॴ, 2005 ೥ 10݄.
+[6]৽Ұ,Կʯʢ2012 ೥ 8ʣ.

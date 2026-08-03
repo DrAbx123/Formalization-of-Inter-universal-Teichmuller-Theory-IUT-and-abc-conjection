@@ -1,0 +1,183 @@
+˴
+ૠྸᚐௌᄂᆮ৑Უ
+Ჳஉ
+F Ǜ೅ૠ0 Ʒ˳ƱƠŴXF Ǜ F࠹
+ಮ˳XF Ʒஜ፭ſπalg
+1 (XF )
+ˊƴGrothendieck፯ƞǕƨŵ ˓ॖƷᘮᙴǛወСƢǔ୍ᡫƷ
+ưਵƑǒǕǔƜƱƕ
+ӧᏡƳŴᲣ ᘮᙴſǛወСƠƯƍǔŵ ̊ƑƹŴXF
+def
+=S p e c (F)
+ƱƠƨƱƖŴ
+πalg
+1 (Spec(F)) = Gal(F/F )
+ᲢƭǇǓŴFǬȭǢ፭ᲣƱƳǓŴɟ૾ŴF = C Ტᙐእૠ˳ᲣƱƠƨƱƖŴ
+πalg
+1 (XF ) = lim←−N
+πtop
+1 (XF (C))/N
+ᲢƨƩƠŴN ⊆ πtop
+1 (XF (C))ಮ˳XF (C) ƷਦૠஊᨂƳദᙹᢿЎ፭ǛឥǔᲣ
+ƭǇǓŴXF (C)ƴЈƯƘ
+μኒЗƷ᫏˩ǋƋǓŴƦǕǛ XFݧXF → Spec(F) ƴᢘဇƢ
+ǔƱŴ
+1 → πalg
+1 (XF ) → πalg
+1 (XF ) → ΓF → 1
+ᲢƨƩƠŴXF
+def
+= XF ⊗F F ŴΓF
+def
+=G a l (F/F )μኒЗƕưƖǔŵ
+ᚕƍ੭ƑǕƹŴɥƷཞඞǛቇҥƴǇƱǊǔƱŴ
+XF ↦→{ πalg
+1 (XF ) → ΓF }
+፯ƢǔƜƱƕưƖƨŵ ƦƜưŴGrothen-
+dieck ƸŴ1983Ʒ FaltingsƷ৖ኡƷɶưŴഏƷǑƏƳᎋƑ૾Ǜ੩కƠƨᲴ
+җЎƴ ‘ૠᛯႎ’ Ƴ˳ F ⊆ C ƱŴҗЎƴӑ୺ႎᲢᲷhyperbolicᲣư
+ƋǓŴ Ɣƭ(C ͌ஊྸໜǛƱƬƨƱƖᲣ ˮႻႎƴƸ‘K(π,1)’ ƱƳƬ
+ಮ˳ XFƴƳƬƯƍǔ
+ưƋǖƏŵ
+ಮ˳ XF ƸŴžᢒǢȸșȫ (Ჷ anabelian)ſƱƍƏᲢྵ଺ໜư
+፯ǛஊƞƳƍᲣӸᆅǛ˄ƚǒǕƨŵƨƩƠŴXF Ʒ
+Typeset by AMS-TEX
+1
+
+2ૠྸᚐௌᄂᆮ৑Უ
+ႎƴ
+ƳॖԛǛǋƭʖेǛƨƯƯƍǔŵƜƷʖेƸŴ˳F ƕૠ˳ᲢᲷஊྸૠ˳ Q Ʒஊ
+ᲣǍp৑˳ᲢᲷ QpᲣƷǑƏƳᲢǍƸǓʖेƲƓǓᲣ‘ǍǍ
+ૠᛯႎƳ˳’ᬱဏ൞Ʊᇿᎍ ([Tama], [Mzk1,2])
+ႎƴᚐൿƞǕƯƍǔŵ
+ᨥŴGrothendieckஜႎ
+ƴƸૠ˳ƠƯƍƨǒƠƍƕŴ[Mzk2] ưƸŴp৑˳Ʒɥưǋ Grothendieck
+؏ٻ
+৑˳ƷƱƖưǋ঺ǓᇌƭưƋǖƏƱᇿᎍƕ̮ơǔƴᐱƬƨɟဪƷఌ
+ਗƸŴ
+p৑˳ǑǓƦƷನᡯǍૠᛯƕᢕƔƴЎƔǓǍƢƍŴૠ˳ޅ
+৑˳ᲣƷɥư Grothendieck ʖेƷ᫏˩ƕ঺Ǔᇌƭૠ˳ɥ
+˴Ʊ p˴Ʒ᧓Ʒ᫏˩ƴƭƍƯƸŴ[Mzk3], Introduction Ɠ
+ǑƼ [Mzk4], Introduction, §0.10ૠ˳ƷɥưƸŴ
+ૠ˳Ǎ pưGrothendieck Ʒᢒ
+ƱƸŴஜᜒ๫ưኰʼƢ
+ǔಮ˳ƷǻǯǷȧȳʖेſưƋǔŵ
+ǇƣŴಮ˳ಮ˳(X,ι)
+ಮ˳ Xӳ ι: X → X ƔǒƳǔኵ
+ಮ˳Ʒ
+Ǉǔ
+ٶ
+ಮ˳
+(X,ι) ƕɨƑǒǕǔƱŴX Ǜ ιƷ˺ဇưŴreal analytic stack ᲢᲷ real analytic
+orbifoldƴƓƍƯлǔƜƱƴǑƬƯŴreal analytic Ƴ stack XιǇǓŴƦƷ
+ஜ፭ǛᎋƑǔƜƱƴǑƬƯŴɥƷˊૠႎƳᛅƴЈƯ
+μኒЗƷ᫏˩ƕưƖǔᲴ
+1 → πtop
+1 (X) → πtop
+1 (Xι) → Gal(C/R) → 1
+ಮ˳Ʒ R ͌ஊྸໜƷ᫏˩ǛŴ
+Xι def
+= {x ∈ X | ι(x)= x}
+፯ƢǔƱŴstack ǇƨƸ orbifold፯ǑǓŴXι ƷӲໜ x ∈ Xιμኒ
+ЗƷᐯ໱Ƴ section
+αx :G a l (C/R) → πtop
+1 (Xι)
+ǛŴᲢπtop
+1 (X)ତƴᄩᛐƞǕǔǑƏƴŴ
+section αx ƸŴxƢǔ Xι Ʒᡲኽ঺Ў [x] ∈ π0(Xι) ƩƚưൿǇǔŵ
+ƠƯഏƷǑƏƳႎƳவ
+ˑǛᛢƠƨƍŵǇƣŴXಮ˳ƱƠŴμX ǛŴX ɥƷȪȸȞȳᚘ᣽ƱƢ
+ǔŵǋƠ X˴ƷॖԛưƷᲣ୍ᢄᘮᙴᆰ᧓Ǜ ˜X → X Ʊ୿ƘƱŴμX
+Ǜ ˜XƖ৏ƢƜƱƴǑƬƯ ˜X ɥƴᚘ᣽ μ
+/CT
+Xಮ˳ ˜X ƴᲢɟ
+
+˴ 3
+˴˄Ɩᆰ᧓ ( ˜X,μ
+/CT
+X) ƕžstraight
+line space ſ ᲢˌɦưƸŴSLS ƱဦƢᲣưƋǔƱƸᲴ
+˜X Ʒ˓ॖƷႻီƳǔʚໜ x1,x 2 ∈ ˜XƠƯŴƦƷʚໜǛኽƿ
+Ƣǔŵ
+᩿Ტᚘ᣽ᲷȦȸǯȪȃ
+᩿Ტᚘ᣽ᲷPoincar´e ᚘ᣽Უǋ SLS ƴƳǔƕŴᲢ୍ᡫƷᚘ᣽λǓƷᲣ
+ྶ᩿ S2᩿ C\{0} ƸŴᲢƢƙᄩᛐƞǕǔ
+ǑƏƴᲣSLS ƴƸƳǒƳƍŵ
+ྸᲢᛇƠƘƸ[Mzk5], The-
+orem 3.6 ǛӋༀᲣǛኰʼƠƨƍᲴ
+Theorem A. (X,ι)ಮ˳ƱƠŴμXӳ ιƷ˺ဇƷɦưɧ
+ưƋǓŴƔƭ ( ˜X,μ
+/CT
+X
+def
+= μX |
+/CT
+X) ƕ SLS ƱƳǔǑƏƳŴX ɥƷȪȸȞȳᚘ᣽ƱƢ
+፯Ơƨ Xι ∋ x ↦→ αxƴǑƬƯൿǇǔϙ΂
+π0(Xι) → SectGal(C/R)(πtop
+1 (Xι))
+ᲢƨƩƠŴӫᡀƸŴᲢπtop
+1 (X)ǛᨊƍƯƷᲣ πtop
+1 (Xι) → Gal(C/R) Ʒ
+sectionƴƳǔŵ
+ಮ˳ƱƠƯŴഏƷ̊ƕਫƛǒǕǔᲴ
+(1)ૠ˳ɥƷӑ୺ႎƳˊૠ୺ዴŵ
+(2)ૠ˳ɥƷӑ୺ႎƳˊૠ୺ዴƷȢǸȥȩǤȷǹǿȃǯ ŵ
+(3)ಮ˳ŵ
+(4)ಮ˳ƷȢǸȥȩǤȷǹǿȃǯ ŵ
+ཎƴŴƜƷȪǹȈƷɶƴƸŴGrothendieckಮ
+˳ƸμᢿԃǇǕǔƷưƋǔŵ
+ྸƷᚰଢƷƋǒƢơƸƩƍƨƍഏƷƱƓǓưƋǔŵ ǇƣŴX Ʒ୍ᢄᘮᙴᆰ᧓
+˜X ƕŴιƷ˺ဇưлƬƯ˺Ƭƨorbifold XιƷ୍ᢄᘮᙴᆰ᧓ưǋƋǔƜƱƔǒŴπtop
+1 (Xι)
+Ƹ ˜X ƴᐯ໱ƴ˺ဇƢǔŵ ɟ૾Ŵ ቇҥƴᄩᛐưƖǔǑƏƴŴ ᨼӳSectGal(C/R)(πtop
+1 (Xι))
+ƸŴπtop
+1 (Xι) ϋƷˮૠ 2 ƷΨ τ੭፭Ʒɟᑍ
+ƸŴഏƷƜƱƱӷ͌ưƋǔƜƱǛᅆƢƜƱ
+ƕưƖǔᲴ
+ƦƷǑƏƳˮૠ
+2 ƷΨ τ ƴ᧙Ƣǔ ˜X Ʒɧѣໜᨼӳ
+˜Xτ def
+= {x ∈ ˜X | τ(x)= x}⊆ ˜X
+
+4ૠྸᚐௌᄂᆮ৑Უ
+ƸŴᆰưƳƍŴᡲኽƳᨼӳƴƳǔŵ
+ƦǕưƸŴǇƣᆰƴƳǒƳƍƜƱǛᚰଢƠǑƏŵ x1 ∈ ˜X Ǜ ˜X ƷѨ৖ƳໜƱƠŴ
+x2
+def
+= τ(x1) ƱƢǔŵǋƠ x1 = x2 ƳǒƹŴx1 ∈ ˜Xτ ƱƍƏƜƱƴƳǔƔǒŴ ˜Xτ ƕ
+ᆰƴƳǒƳƍƱƍƏᚰଢƸኳǘǔŵɟ૾Ŵx1 ̸= x2 ƷƱƖŴ ˜X ƕ SLS ƴƳǔƱƍƏ
+ǛᢘဇƢǔƱŴx1 Ʊ x2 ǛŴƋǔᲢuniqueዴưኽƿƜƱƕưƖǔŵʻŴ
+ዴƷɶໜ x ǛƱǔƱŴᚘ᣽μ
+/CT
+X ƕ πtop
+1 (Xι)ưƋǔƜƱƱŴ
+ӳ τƕʚໜᨼӳ {x1,x 2} Ǜ̬ƭƜƱƔǒŴτƕɶໜ xዴƷɟ
+ƏŵƭǇǓŴx ∈ ˜Xτ ƱƍƏƜƱƴƳǔƔǒŴƜǕư ˜Xτ ƕᆰƴƳ
+ኽƞǕǔŵᲢǋ
+Ơ ˜XτƢǔໜx1 Ʊ x2 ǛᢠƿƱŴƦƷʚ
+ໜǛኽƿ uniqueዴμ˳ƕŴᲢτ ƕ μ
+/CT
+X Ǜ̬ƭƜƱƱŴτ(x1)= x1, τ(x2)= x2
+ǑǓᲣτዴƷໜμ˳ƕ ˜Xτ ƴλƬƯƍǔƜƱƴƳ
+ǔƔǒŴx1 Ʊ x2 ƕ ˜XτƴӒƢǔŵᚰ
+ଢኳŵᲣ
+ƴŴɥƷɶໜᜭᛯƩƕŴƜǕƸൿƠƯᇿᎍƕૼƠƘႆᙸƠƨǋƷưƸƳƘŴ
+Teichm¨uller ྸᛯưƸƝƘ೅แႎƳ৖ඥưƋǓŴӷྸᛯƷഭӪƷɶưƸŴദƴƜƷǑ
+ƏƳᜭᛯƕưƖǔǑƏƳཞඞǛૢƑƯƓƘƜƱƕŴTeichm¨uller˴
+ƖƳѣೞ˄ƚƱƞǕƯƖƨŵ
+૨ྂ
+[Mzk1] S. Mochizuki, The Proﬁnite Grothendieck Conjecture for Closed Hyperbolic
+Curves over Number Fields, J. Math. Sci., Univ. Tokyo 3 (1996), pp. 571-627.
+[Mzk2] S. Mochizuki, The Local Pro-p Anabelian Geometry of Curves, Inv. Math. 138
+(1999), pp. 319-423.
+[Mzk3] S. Mochizuki, A Theory of Ordinary p-adic Curves, Publ. of RIMS 32 (1996),
+pp. 957-1151.
+[Mzk4] S. Mochizuki, Foundations of p-adic Teichm¨uller Theory, AMS/IP Studies
+in Advanced Mathematics 11, American Mathematical Society/International
+Press (1999).
+[Mzk5] S. Mochizuki, Topics Surrounding the Anabelian Geometry of Hyperbolic Curves,
+RIMS Preprint ??.
+[Tama] A. Tamagawa, The Grothendieck Conjecture for Aﬃne Curves , Compositio
+Math. 109, No. 2 (1997), pp. 135-194.

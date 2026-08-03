@@ -1,0 +1,3672 @@
+ON THE COMBINATORIAL ANABELIAN GEOMETRY
+OF NODALLY NONDEGENERATE OUTER
+REPRESENTATIONS
+YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+DECEMBER 2011
+Abstract. Let Σ be a nonempty set of prime numbers. In the
+present paper, we continue the study, initiated in a previous paper
+by the second author, of the combinatorial anabelian geometry of
+semi-graphs of anabelioids of pro- Σ PSC-type, i.e., roughly speak-
+ing, semi-graphs of anabelioids associated to pointed stable curves.
+Our ﬁrst main result is a partial generalization of one of the main
+combinatorial anabelian results of this previous paper to the case
+of nodally nondegenerate outer representations, i.e., roughly speak-
+ing, a sort of abstract combinatorial group-theoretic generalization
+of the scheme-theoretic notion of a family of pointed stable curves
+over the spectrum of a discrete valuation ring. We then apply this
+result to obtain a generalization, to the case of proper hyperbolic
+curves, of a certain injectivity result, obtained in another paper by
+the second author, concerning outer automorphisms of the pro-Σ
+fundamental group of a conﬁguration space associated to a hyper-
+bolic curve, as the dimension of this conﬁguration space is lowered
+from two to one. This injectivity allows one to generalize a certain
+well-known injectivity theorem of Matsumoto to the case of proper
+hyperbolic curves.
+Contents
+Introduction 2
+0. Notations and Conventions 8
+1. Some complements concerning semi-graphs of anabelioids of
+PSC-type 10
+2. Nodally nondegenerate ou ter representations 22
+3. Group-theoretic aspects of the geometry of the underlying
+semi-graphs 36
+2000 Mathematics Subject Classiﬁcation. Primary 14H30; Secondary 14H10.
+Key words and phrases. hyperbolic curve, outer Galois representation, injec-
+tivity, semi-graph of anabelioids, nodally nondegenerate, combinatorial anabelian
+geometry, combinatorial cuspidalization.
+The ﬁrst author was supported by Grant-in-Aid for Young Scientists (B)
+(20740010).
+1
+
+2 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+4. A combinatorial anabelian theorem for nodally
+nondegenerate outer representations 51
+5. Injectivity via nodally nonde generate degenerations 54
+6. Consequences of injectivity 61
+References 68
+Introduction
+Let Σ be a nonempty set of prime numbers. In the present paper,
+we continue the study, initiated in [Mzk4] by the second author, of
+the combinatorial anabelian geometry of semi-graphs of anabelioids of
+pro-Σ PSC-type, i.e., roughly speaking, semi-graphs of anabelioids as-
+sociated to pointed stable curves. In particular, it was shown in [Mzk4]
+(cf. [Mzk4], Corollary 2.7, (iii)) that in the case of a semi-graph of an-
+abelioids of pro-Σ PSC-type that arises from astable log curveover alog
+point (i.e., the spectrum of an algebraically closed ﬁeldk of characteris-
+tic p ̸∈ Σ equipped with the log structure determined by the morphism
+of monoids N ∋ 1 ↦→ 0 ∈ k), the semi-graph of anabelioids in question
+may be reconstructed group-theoretically from the outer action
+of the pro-Σ logarithmic fundamental group of the log point (which
+is noncanonically isomorphic to the maximal pro-Σ quotient ˆZ
+Σ of ˆZ)
+on the pro-Σ fundamental group of the semi-graph of anabelioids. As
+discussed in the introduction to [Mzk4], this result may be regarded
+as a substantial reﬁnement of the pro- l criterion of Takayuki Oda for
+a proper hyperbolic curve over a discretely valued ﬁeld to have good
+reduction (i.e., a special ﬁber whose associated semi-graph consists of
+a single vertex and no edges). We shall refer to an outer action of
+the type just described as an outer representation of IPSC-type (cf.
+Deﬁnition 2.4, (i)).
+In the present paper, the theory of [Mzk4] is generalized to the case
+of nodally nondegenerate outer representations ,o r outer representa-
+tions of NN-type, for short (cf. Deﬁnition 2.4, (iii)). Indeed, our ﬁrst
+main result (cf. Corollary 4.2; Remark 4.2.1) is the following partial
+generalization of [Mzk4], Corollary 2.7, (iii).
+Theorem A (Graphicity of certain group-theoretically cuspi-
+dal isomorphisms). Let Σ be a nonempty set of prime numbers, G
+and H semi-graphs of anabelioids of pro-Σ PSC-type (cf. [Mzk4], Def-
+inition 1.1, (i)), Π
+G (respectively,ΠH) the pro-Σ fundamental group of
+G (respectively, H), α:Π G
+∼
+→ ΠH an isomorphism of proﬁnite groups,
+I and J proﬁnite groups, ρI : I → Aut(G) and ρJ : J → Aut(H) con-
+tinuous homomorphisms, and β: I
+∼
+→ J an isomorphism of proﬁnite
+groups. Suppose that the following three conditions are satisﬁed:
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 3
+(i) The diagram
+I −−−→ Out(ΠG)
+β
+⏐⏐
+↓
+⏐⏐
+↓
+Out(α)
+J −−−→ Out(ΠH)
+— where the right-hand vertical arrow is the homomorphism
+induced by α; the upper and lower horizontal arrows are the
+homomorphisms determined by ρI and ρJ, respectively — com-
+mutes.
+(ii) ρI, ρJ are of NN-type (cf. Deﬁnition 2.4, (iii)).
+(iii) Cusp(G) ̸= ∅, and the isomorphism α is group-theoretically
+cuspidal (i.e., roughly speaking, preserves cuspidal inertia groups
+— cf. [Mzk4], Deﬁnition 1.4, (iv)).
+Then the isomorphism α is graphic (i.e., roughly speaking, is compat-
+ible with the respective semi-graph structures — cf. [Mzk4], Deﬁnition
+1.4, (i)).
+The notion of an outer representation of NN-type may be regarded
+as a natural outgrowth of the philosophy pursued in [Mzk4] of reducing
+(various aspects of) the classical pro-Σ scheme-theoretic arithmetic
+geometry of stable curves over a discrete valuation ring whose residue
+characteristic is not contained in Σ to a matter of combinatorics.
+Ideally, one would like to reduce the entire proﬁnite classical scheme-
+theoretic arithmetic geometry of hyperbolic curves over number ﬁelds
+or p-adic local ﬁelds to a matter of combinatorics, but since this task
+appears to be too formidable at the time of writing, we concentrate on
+the pro-prime-to-p aspects of stable log curves over a log point. On the
+other hand, whereas the outer representations of IPSC-type studied
+in [Mzk4] literally arise from (log) scheme theory (i.e., a stable log
+curve over a log point), the outer representations of NN-type studied
+in the present paper are deﬁned in purely combinatorial terms, without
+reference to any scheme-theoretic family of stable log curves. If one
+thinks of a stable log curve as a sort of “rational point” of the moduli
+stack of stable curves, then this point of view may be thought of as
+as o r to fabandonment of the point of view implicit in the so-called
+“Section Conjecture”: that is to say, instead of concerning oneself with
+the issue ofprecisely whichgroup-theoretic objects arise from a scheme-
+theoretic rational point (as is the case with the Section Conjecture),
+one takes the deﬁnition of group-t heoretic objects via
+purely combinatorial/group-theoretic conditions —
+i.e., group-theoretic objects which do not necessarily
+arise from scheme theory — as the starting point of
+
+4 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+one’s research, and one regards as the goal of one’s re-
+search the study of the intrinsic combinatorial ge-
+ometry of such group-theoretic objects (i.e., without
+regard to the issue of the extent to which these objects
+arise from scheme theory).
+This point of view may be seen throughout the development of the
+theory of the present paper, as well as in the theory of [Mzk6].
+On the other hand, from a more concrete point of view, the theory
+of the present paper was motivated by the goal of generalizing the in-
+jectivity portion of [Mzk7], Theorem A, (i), toproper hyperbolic curves
+in the case of the homomorphism induced by the projection from two-
+dimensional to one-dimensional conﬁguration spaces (cf. Theorem B
+below). The main injectivity result thatwas proven in [Mzk7] (namely,
+[Mzk7], Corollary 2.3) was obtained by applying thecombinatorial an-
+abelian result given in [Mzk4], Corollary 2.7, (iii). On the other hand,
+this result of [Mzk4] is insuﬃcient in the case of proper hyperbolic
+curves. To see why this is so, we begin by recalling that this result of
+[Mzk4] is applied in [Mzk7] (cf. the discussion of“canonical splittings”
+in the Introduction to [Mzk7]) to study the degenerations of families
+of hyperbolic curves that arise when
+(a) a moving point on an aﬃne hyperbolic curve collides with a
+cusp.
+On the other hand, since proper hyperbolic curves haveno cusps,i no r -
+der to apply the techniques for proving injectivity — involving“canon-
+ical splittings”— developed in [Mzk7], it is necessary to consider the
+degenerations of families of hyperbolic curves that arise when
+(b) a moving point on a (not necessarily aﬃne) “degenerate hyper-
+bolic curve” (i.e., a stable curve) collides with anode.
+Since the local pro-Σ fundamental group in a neighborhood of a cusp or
+a node — i.e., the proﬁnite group that corresponds to the “fundamental
+group of the base space of the degenerating family of hyperbolic curves
+under consideration” — is isomorphic (in both the cuspidal and nodal
+cases!) to the (same!) proﬁnite group ˆZ
+Σ, one might at ﬁrst glance
+think that the situation of (b) may also be analyzed via the results of
+[Mzk7]. Put another way, both (a) and (b) involve a continuous action
+of a proﬁnite group isomorphic to ˆZ
+Σ on a semi-graph of anabelioids
+of pro-Σ PSC-type. On the other hand, closer inspection reveals that
+there is afundamental intrinsic diﬀerencebetween the situations of
+(a) and (b). Indeed, in the situation of (a), we apply the reconstruction
+algorithms developed in [Mzk4], which depend in an essential way on a
+certain positivity,n a m e l y ,t h epositivity of the period matrix—w h i c h
+implies, in particular, thenondegeneracyof this period matrix — of the
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 5
+Jacobians of the various coverings of the degenerating family of curves
+under consideration (cf. the proof of [Mzk4], Proposition 2.6). By
+contrast, one veriﬁes easily that
+the symmetry in a neighborhood of a node induced
+by switching the two branches of the nodeimplies
+that an analogous “positivity of the period matrix” of
+the Jacobians of the various coverings of the degenerat-
+ing family of curves under consideration can only hold in
+the sitation of (b) if this “positivity” satisﬁes the prop-
+erty of being invariant with respect to multiplication by
+−1 — which is absurd!
+In particular, one concludes that the situation of (b) cannever be “ab-
+stractly group-theoretically isomorphic” to the situation of (a). This
+was what led the second author to seek, in cooperation with the ﬁrst
+author, a (partial) generalization (cf. Theorem A) of [Mzk4], Corollary
+2.7, (iii), to the case of arbitrarynodally nondegenerate outer represen-
+tations (which includes the situation of (b) — cf. Proposition 2.14, as
+it is applied in the proof of Corollary 5.3).
+In passing, we note that the sense in which Theorem A is only a
+partial generalization (cf. Remark 4.2.1) of [Mzk4], Corollary 2.7, (iii),
+is interesting in light of the above discussion ofpositivity. Indeed, in the
+case of [Mzk4], Corollary 2.7, (iii), it isnot necessaryto assume that the
+semi-graph of anabelioids of pro-Σ PSC-type under consideration has
+any cusps. On the other hand, in the case of Theorem A, it is necessary
+to assume that the semi-graph of anabelioids of pro-Σ PSC-type under
+consideration has at least one cusp (cf. condition (iii) of Theorem A).
+That is to say, this state of aﬀairs suggests that perhaps there is some
+sort of“general principle”underlying these results — which, at the time
+of writing, the authors have yet to succeed in making explicit — that
+requires the existence of at least one cusp, whether that cusp lie in
+the “base of the degenerating family of curves under consideration” (cf.
+(a); [Mzk4], Corollary 2.7, (iii)) or in the “ ﬁbers of this degenerating
+family” (cf. (b); condition (iii) of Theorem A).
+The content of the various sections of the present paper may be
+summarized as follows. In §1, we review various “well-known” aspects
+of the combinatorial group-theoretic geometryof semi-graphs of anabe-
+lioids of pro-Σ PSC-type — i.e., without considering any continuous
+action of a proﬁnite group on the semi-graph of anabelioids under con-
+sideration. In §2, we deﬁne and develop the basic theory surrounding
+nodally nondegenerate outer representations.I n §3, we discuss vari-
+ous analogues of the combinatorial group-theoretic geometry reviewed
+in §1 in the case of nodally nondegenera te outer representations. In
+§4, we observe that the theory developed in §1, §2, and §3 is suﬃcient
+
+6 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+to prove the analogue discussed above (i.e., Theorem A) of the com-
+binatorial anabelian result given in [Mzk4], Corollary 2.7, (iii), in the
+case of nodally nondegenerate outer representations. In §5, we apply
+this result (i.e., Theorem A) to generalize (cf. the above discussion)
+[Mzk7], Corollary 2.3, to the case of not necessarily aﬃne curves (cf.
+Corollary 5.3). Finally, in §6, we discuss various consequences of the
+injectivity result proven in§5. The ﬁrst of these is the following partial
+generalization (cf. Theorem 6.1) of [Mzk7], Theorem A.
+Theorem B (Partial proﬁnite combinatorial cuspidalization).
+Let Σ be a set of prime numbers which is either of cardinality one
+or equal to the set of all prime numbers , n a positive integer,
+X a hyperbolic curve of type (g,r ) over an algebraically closed ﬁeld
+of characteristic ̸∈ Σ, X
+n the n-th conﬁguration space of X (i.e.,
+roughly speaking, the complement of the diagonals in the product of n
+copies of X — cf. [MzTa], Deﬁnition 2.1, (i)), Πn the maximal pro-Σ
+quotient of the fundamental group of Xn,a n dOutFC(Πn) ⊆ Out(Πn)
+the subgroup of the group Out(Πn) consisting of the outomorphisms
+(cf. the discussion entitled “Topological groups” in§0) of Πn which are
+FC-admissible (i.e., roughly speaking, preserve ﬁber subgroups and
+cuspidal inertia groups — cf. [Mzk7], Deﬁnition 1.1, (ii)). Set n0
+def
+=2
+if X is aﬃne, i.e., r ≥ 1; n0
+def
+=3 if X is proper, i.e., r =0 (cf.
+[Mzk7], Theorem A). Then the natural homomorphism
+OutFC(Πn+1) −→ OutFC(Πn)
+induced by the projectionXn+1 → Xn obtained by forgetting the(n+1)-
+st factor is injective if n ≥ 1 and bijective if n ≥ n0 +1 . Moreover,
+the image of the natural inclusion
+Sn ↪→ Out(Πn)
+— where we write Sn for the symmetric group onn letters — obtained
+by permuting the various factors of the conﬁguration space Xn is con-
+tained in the centralizer ZOut(Πn)(OutFC(Πn)).
+In Corollary 6.6, we also give a discrete analogue of the proﬁnite
+result constituted by Theorem B.
+In passing, we observe that the injectivity portion of the pro-l case
+of Theorem B may be derived from the Lie-theoretic version of Theo-
+rem B that was obtained (in the mid-1990’s!) by Naotake Takao (cf.
+[Tk], Corollary 2.7). In this context, we note that the point of view
+of [Tk] diﬀers quite substantially from the point of view of the present
+paper and is motivated by the goal of completing the proof of a cer-
+tain conjecture of Takayuki Odaconcerning pro-l outer Galois actions
+associated to various moduli stacks of stable curves. Nevertheless, this
+point of view of [Tk] is interesting in light of the point of view discussed
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 7
+above to the eﬀect that the content of [Mzk4] — and hence also of The-
+orem A above — may be thought of as a sort of substantial reﬁnement
+of Oda’s good reduction criterion.
+Theorem B allows one to obtain the following generalization (cf.
+Corollaries 6.2; 6.3, (i)) to not necessarily aﬃne hyperbolic curves of
+a well-known injectivity result of Matsumoto (cf. [Mts], Theorems 2.1,
+2.2).
+Theorem C (Kernels of outer representations arising from hy-
+perbolic curves). Let Σ be a set of prime numbers which is eitherof
+cardinality one or equal to the set of all prime numbers, X a
+hyperbolic curve over a perfect ﬁeld k such that every element of Σ is
+invertible in k,
+k an algebraic closure of k, n a positive integer, Xn
+the n-th conﬁguration space of X, Gk
+def
+=G a l (
+k/k), Δ Xn the maximal
+pro-Σ quotient of the fundamental group of Xn ⊗k
+ k,a n dΔ P1
+k \{0,1,∞}
+the maximal pro-Σ quotient of the fundamental group ofP1
+k \{0, 1, ∞} .
+Then the following hold:
+(i) The kernel of the natural outer representation
+ρΣ
+Xn/k : Gk −→ Out(ΔXn )
+is independent of n and contained in the kernel of the nat-
+ural outer representation
+ρΣ
+P1
+k \{0,1,∞} /k : Gk −→ Out(Δ P1
+k \{0,1,∞} ) .
+(ii) Suppose that Σ is the set of all prime numbers .( T h u s ,k
+is necessarily of characteristic zero.) Write
+ Q for the algebraic
+closure of Q determined by
+ k and GQ
+def
+=G a l (
+Q/Q). Then the
+kernel of the homomorphism ρΣ
+Xn/k is contained in the kernel
+of the outer homomorphism
+Gk −→ GQ
+determined by the natural inclusion Q ↪→ k.
+In particular, if k is a number ﬁeld or p-adic local ﬁeld (cf. the
+discussion entitled “Numbers” in §0), and Σ is the set of all prime
+numbers, then the outer representation
+ρΣ
+X/k : Gk −→ Out(π1(X ⊗k
+ k))
+determined by the natural exact sequence
+1 −→ π1(X ⊗k
+ k) −→ π1(X) −→ Gk −→ 1
+is injective.
+
+8 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+Finally, we remark that in [Bg], a result that corresponds to a certain
+special case of Theorem C, (i), is asserted (cf. [Bg], Theorem 2.5). At
+the time of writing, the authors of the present paper were not able to
+follow the proof of this result given in [Bg]. Nevertheless, in a sequel
+to the present paper, we hope to discuss in more detail the relationship
+between the theory of the present paper and the interesting geometric
+ideas of [Bg] concerning the issue of “canonical liftings” of cycles on a
+Riemann surface.
+0. Notations and Conventions
+Sets: If S is a set, then we shall denote by 2
+S the power set of S and
+by S♯ the cardinality of S.
+Numbers: The notation N will be used to denote the set or (additive)
+monoid of nonnegative rational integers. The notation Z will be used
+to denote the set, group, or ring of rational integers. The notation Q
+will be used to denote the set, group, or ﬁeld of rational numbers. The
+notation ˆZ will be used to denote the proﬁnite completion of Z.I f p is
+a prime number, then the notation Zp (respectively, Qp) will be used
+to denote the p-adic completion of Z (respectively, Q).
+A ﬁnite extension ﬁeld of Q will be referred to as a number ﬁeld.I f
+p is a prime number, then a ﬁnite extension ﬁeld of Qp will be referred
+to as a p-adic local ﬁeld.
+Monoids: We shall write Mgp for the groupiﬁcation of a monoid M.
+Topological groups: Let G be a topological group and H ⊆ G a
+closed subgroup of G. Then we shall denote by ZG(H) (respectively,
+NG(H); respectively, CG(H)) the centralizer (respectively, normalizer;
+respectively, commensurator)o f H in G, i.e.,
+ZG(H)
+def
+= { g ∈ G | ghg−1 = h for any h ∈ H } ,
+NG(H)
+def
+= { g ∈ G | g · H · g−1 = H } ,
+CG(H)
+def
+= { g ∈ G | H ∩g·H ·g−1 is of ﬁnite index in H and g·H ·g−1 } ;
+we shall refer to Z(G)
+def
+= ZG(G)a st h ecenter of G. It is immediate
+from the deﬁnitions that
+ZG(H) ⊆ NG(H) ⊆ CG(H); H ⊆ NG(H) .
+We shall say that the subgroup H is commensurably terminal in G if
+H = CG(H).
+We shall say that a proﬁnite group G is slim if ZG(H)= {1} for any
+open subgroup H of G.
+Let Σ be a set of prime numbers,l ap r i m en u m b e r ,a n dG a proﬁnite
+group. Then we shall write GΣ for the maximal pro-Σ quotient of G
+and G(l) def
+= G{l}.
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 9
+We shall write Gab for the abelianization of a proﬁnite group G, i.e.,
+the quotient of G by the closure of the commutator subgroup of G.
+If G is a proﬁnite group, then we shall denote the group of auto-
+morphisms of G by Aut(G) and the group of inner automorphisms of
+G by Inn(G) ⊆ Aut(G). Conjugation by elements of G determines a
+surjection of groups G ↠ Inn(G). Thus, we have a homomorphism
+of groups G → Aut(G) whose image is Inn( G) ⊆ Aut(G). We shall
+denote by Out( G) the quotient of Aut( G) by the normal subgroup
+Inn(G) ⊆ Aut(G) and refer to an element of Out( G)a sa n outomor-
+phism of G. In particular, if G is center-free, then the natural ho-
+momorphism G → Inn(G)i sa n isomorphism; thus, we have an exact
+sequence of groups
+1 −→ G −→ Aut(G) −→ Out(G) −→ 1 .
+If, moreover, G is topologically ﬁnitely generated, then one veriﬁes eas-
+ily that the topology of G admits a basis of characteristic open sub-
+groups, which thus induces a proﬁnite topology on the groups Aut(G)
+and Out(G) with respect to which the above exact sequence determines
+an exact sequence ofproﬁnite groups.I f ρ: J → Out(G) is a continuous
+homomorphism, then we shall denote by
+G
+out
+⋊ J
+the proﬁnite group obtained by pulling back the above exact sequence
+of proﬁnite groups via ρ.T h u s , w e h a v e anatural exact sequence of
+proﬁnite groups
+1 −→ G −→ G
+out
+⋊ J −→ J −→ 1 .
+One veriﬁes easily (cf. [Hsh], Lemma 4.10) that if an automorphism α
+of G
+out
+⋊ J preserves the subgroup G ⊆ G
+out
+⋊ J and induces the identity
+automorphisms of the subquotients G and J, then the automorphism
+α is the identity automorphism of G
+out
+⋊ J.
+If M and N are topological modules, then we shall refer to a ho-
+momorphism of topological modules φ: M → N as a split injection if
+there exists a homomorphism of topological modules ψ: N → M such
+that ψ ◦φ: M → M is the identity automorphism of M.
+Semi-graphs: Let Γ be a connected semi-graph. Then we shall say
+t h a tΓi suntangled if every closed edge of Γ abuts to two distinct
+vertices.
+Log stacks: Let Xlog and Y log be log stacks whose underlying (alge-
+braic) stacks we denote by X and Y , respectively; MX and MY the
+respective sheaves of monoids on X and Y deﬁning the log structures
+of Xlog and Y log; flog : Xlog → Y log a morphism of log stacks. Then
+we shall refer to the quotient of MX by the image of the morphism
+f −1MY →M X induced by flog as the relative characteristic sheaf of
+
+10 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+flog; we shall refer to the relative characteristic sheaf of the morphism
+Xlog → X (where, by abuse of notation, we write X for the log stack
+obtained by equipping X with the trivial log structure) induced by the
+natural inclusion O∗
+X ↪→M X as the characteristic sheaf of Xlog.
+Curves: We shall use the terms “hyperbolic curve”, “cusp”, “stable log
+curve”, “smooth log curve”, and “tripod” as they are deﬁned in [Mzk4],
+§0; [Hsh], §0. If (g,r ) is a pair of natural numbers such that 2g −2+r>
+0, then we shall denote by
+ Mg,r the moduli stack of r-pointed stable
+curves of genus g over Z whose r marked points are equipped with
+an ordering, Mg,r ⊆
+ Mg,r the open substack of
+ Mg,r parametrizing
+smooth curves,a n d
+ M
+log
+g,r the log stack obtained by equipping
+ Mg,r
+with the log structure associated to the divisor with normal crossings
+Mg,r \M g,r ⊆
+ Mg,r.
+Let n be a positive integer and Xlog a stable log curve of type (g,r )
+over a log scheme Slog. Then we shall refer to the log scheme obtained
+by pulling back the (1-)morphism
+ M
+log
+g,r+n →
+ M
+log
+g,r given by forgetting
+the last n points via the classifying (1-)morphism Slog →
+ M
+log
+g,r of Xlog
+as the n-th log conﬁguration space of Xlog.
+1. Some complements concerning semi-graphs of
+anabelioids of PSC-type
+In this section, we give some complements to the theory of semi-
+graphs of anabelioids of PSC-typedeveloped in [Mzk4].
+A basic reference for the theory ofsemi-graphs of anabelioids of PSC-
+type is [Mzk4]. We shall use the terms “ semi-graph of anabelioids of
+PSC-type”, “PSC-fundamental group of a semi-graph of anabelioids of
+PSC-type”, “ﬁnite ´etale covering of semi-graphs of anabelioids of PSC-
+type”, “vertex”, “edge”, “cusp”, “node”, “verticial subgroup”, “edge-like
+subgroup”, “nodal subgroup”, “cuspidal subgroup”, and “sturdy”a st h e y
+are deﬁned in [Mzk4], Deﬁnition 1.1. Also, we shall refer to the “PSC-
+fundamental group of a semi-graph of anabelioids of PSC-type” simply
+as the “fundamental group” (of the semi-graph of anabelioids of PSC-
+type). That is to say, we shall refer to the maximal pro-Σ quotient
+of the fundamental group of a semi-graph of anabelioids of PSC-type
+(as a semi-graph of anabelioids!) as the “fundamental group of the
+semi-graph of anabelioids of PSC-type”. In this section, let Σ be a
+nonempty set of prime numbers, G a semi-graph of anabelioids of pro-
+ΣP S C - t y p e ,a n dG the underlying semi-graph of G. (In particular, G
+is a ﬁnite semi-graph.) Also, let us ﬁx a universal covering ˜G→G with
+underlying projective system of semi-graphs ˜G (i.e., the projective sys-
+tem consisting of the underlying graphsG
+′ of the connected ﬁnite ´etale
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 11
+subcoverings G′ of ˜G→G ) and denote by ΠG the (pro-Σ) fundamental
+group of G.
+Deﬁnition 1.1.
+(i) We shall denote by Vert( G) (respectively, Cusp(G); Node( G))
+the set of the vertices (respectively, cusps; nodes) of G.
+(ii) We shall write
+Vert(˜G)
+def
+= lim←− Vert(G′);
+Cusp( ˜G)
+def
+= lim←− Cusp(G′);
+Node( ˜G)
+def
+= lim←− Node(G′)
+— where the projective limits are over all connected ﬁnite ´etale
+subcoverings G′ →G of the ﬁxed universal covering ˜G→G .
+(iii) We shall write
+VCN(G)
+def
+= Vert(G) ⊔ Cusp(G) ⊔ Node(G);
+Edge(G)
+def
+=C u s p (G) ⊔ Node(G);
+VCN( ˜G)
+def
+= Vert( ˜G) ⊔ Cusp( ˜G) ⊔ Node( ˜G);
+Edge( ˜G)
+def
+=C u s p (˜G) ⊔ Node( ˜G) .
+(iv) Let
+V :E d g e (G) −→ 2Vert(G)
+(respectively, C : Vert(G) −→ 2Cusp(G);
+N : Vert(G) −→ 2Node(G);
+E : Vert(G) −→ 2Edge(G))
+be the map obtained by sending e ∈ Edge(G) (respectively,
+v ∈ Vert(G); v ∈ Vert(G); v ∈ Vert(G)) to the set of vertices
+(respectively, cusps; nodes; edges) of G to which e abuts (re-
+spectively, which abut to v; which abut to v; which abut to v).
+Also, we shall write
+V :E d g e (˜G) −→ 2Vert(eG)
+(respectively, C : Vert(˜G) −→ 2Cusp( eG);
+N : Vert(˜G) −→ 2Node( eG);
+E : Vert(˜G) −→ 2Edge( eG))
+for the map induced by the various V’s (respectively, C’s; N’s;
+E’s) involved.
+
+12 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+(v) Let ˜z ∈ VCN( ˜G). Suppose that G′ →G is a connected ﬁnite
+´etale subcovering of ˜G→G . Then we shall denote by ˜z(G′) ∈
+VCN(G′) the image of ˜z in VCN(G′).
+(vi) Let v ∈ Vert(G), ˜v ∈ Vert(˜G) be such that ˜v(G)= v.T h e ni ti s
+easily veriﬁed that there exists a unique verticial subgroup Π ev
+of ΠG associated to the vertex v such that for every connected
+ﬁnite ´etale subcovering G′ →G of ˜G→G , it holds that the
+subgroup Π ev ∩ ΠG′ ⊆ ΠG′ —w h e r ew ew r i t eΠG′ ⊆ ΠG for the
+open subgroup corresponding to G′ →G — is a verticial sub-
+group of Π G′ associated to ˜v(G′) ∈ Vert(G′); thus, the element
+˜v determines a particular verticial subgroup of Π G associated
+to the vertex v. We shall refer to this verticial subgroup of Π G
+determined by ˜v as the verticial subgroup of Π G associated to ˜v
+and denote it by Πev.
+In a similar vein, for˜e ∈ Cusp( ˜G) (respectively, ˜e ∈ Node( ˜G);
+˜e ∈ Edge( ˜G)), by a similar argument to the argument just ap-
+plied to deﬁne the verticial subgroup of Π G associated to ˜v,t h e
+element ˜e determines a particular cuspidal (respectively, nodal;
+edge-like) subgroup of Π G associated to the cusp (respectively,
+node; edge) ˜e(G)o f G. We shall refer to this cuspidal (respec-
+tively, nodal; edge-like) subgroup of ΠG as the cuspidal (respec-
+tively, nodal; edge-like) subgroup of Π G associated to ˜e and de-
+note it by Πee.
+(vii) Let n be a natural number, and v, w ∈ Vert(G). Then we shall
+write δ(v,w ) ≤ n if the following conditions are satisﬁed:
+(1) If n =0 ,t h e nv = w.
+(2) If n ≥ 1, then there exist n nodes e1, ··· ,e n ∈ Node(G)o f
+G and n − 1 vertices v1, ··· ,v n−1 ∈ Vert(G)o f G such that,
+for 1 ≤ i ≤ n, it holds that V(ei)= {vi−1,v i} —w h e r ew e
+write v0
+def
+= v and vn
+def
+= w.
+Moreover, we shall writeδ(v,w )= n if δ(v,w ) ≤ n and δ(v,w ) ̸≤
+n−1. If δ(v,w )= n, then we shall say that thedistance between
+v and w is equal to n.
+(viii) Let ˜v, ˜w ∈ Vert(˜G). Then we shall write
+δ(˜v, ˜w)
+def
+=s u p
+G′
+{δ(˜v(G′), ˜w(G′))}∈ N ∪{ ∞ }
+—w h e r eG′ ranges over the connected ﬁnite ´etale subcoverings
+G′ →G of ˜G→G .I f δ(˜v, ˜w)= n ∈ N ∪{ ∞ }, then we shall say
+that the distance between ˜v and ˜w is equal to n.
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 13
+Remark 1.1.1. Let ˜z ∈ VCN( ˜G), and z
+def
+= ˜z(G) ∈ VCN(G). Then
+whereas ˜z completely determines the subgroup Π ez, z only determines
+the ΠG-conjugacy class of the subgroup Π ez.
+Deﬁnition 1.2. We shall say that the semi-graph of anabelioids of
+pro-Σ PSC-type G is untangled if the underlying semi-graph of G is
+untangled (cf. the discussion entitled “ Semi-graphs”i n §0).
+Remark 1.2.1.
+(i) It follows from a similar argument to the argument in the dis-
+cussion entitled “Curves” in [Mzk6],§0, that there exists a con-
+nected ﬁnite ´etale covering G′ →G of G such that G′ is untan-
+gled.
+(ii) It is easily veriﬁed that if G is untangled, then every ﬁnite ´etale
+covering G′ →G of G is untangled.
+(iii) It follows from (i) and (ii) that for every ˜e ∈ Node( ˜G), we have
+V(˜e)♯ =2 .
+Deﬁnition 1.3.
+(i) We shall denote by Π ab/edge
+G the quotient of Π ab
+G by the closed
+subgroup generated by the images in Π ab
+G of the edge-like sub-
+groups of ΠG.
+(ii) Let ˜v ∈ Vert(˜G). Then we shall denote by Πab/edge
+ev the quotient
+of the abelianization Π ab
+ev by the closed subgroup generated by
+the images in Πab
+ev of Π ee ⊆ Πev —w h e r e˜e ranges over elements
+of E(˜v). (Here, we note that it follows from [Mzk4], Proposition
+1.5, (i), that for ˜e ∈ Edge( ˜G), it holds that ˜e ∈E (˜v)i fa n do n l y
+if Πee ⊆ Πev.)
+(iii) Let v ∈ Vert(G). Then observe that conjugation by elements
+of Π G determines natural isomorphisms between the various
+Πab/edge
+ev ,a s ˜v ranges over the elements of Vert( ˜G) such that
+v = ˜v(G). We shall denote the resulting proﬁnite group by
+Πab/edge
+v .
+Lemma 1.4(Verticial decompositions inside ab/edge-quotients).
+The natural homomorphism⨁
+v∈Vert(G)
+Πab/edge
+v −→ Πab/edge
+G
+is a split injection (cf. the discussion entitled “Topological groups” in
+§0) whose image is a freeˆZΣ-module of ﬁnite rank (cf. [Mzk4], Remark
+1.1.4).
+
+14 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+Proof. It follows immediately from the well-known structure of the
+maximal pro-Σ quotient of the fundamental group of a smooth curve
+over an algebraically closed ﬁeld of characteristic̸∈ Σ that the quotient
+by the image of the natural homomorphism in question is a free ˆZ
+Σ-
+module. Therefore, to verify Lemma 1.4, it suﬃces to verify that the
+natural homomorphism in question is injective. Now suppose that we
+have been given, for eachv ∈ Vert(G), a connected ﬁnite ´etale covering
+Hv →G v of the anabelioid Gv corresponding to v ∈ Vert(G)w h i c h
+arises from an open subgroup of Π ab/edge
+v . Then to verify the desired
+injectivity, it suﬃces to verify that there exists a connected ﬁnite ´etale
+covering F→ G of G which arises from an open subgroup of Π ab/edge
+G
+such that, for each v ∈ Vert(G), any connected component of the re-
+striction of F→ G to Gv is isomorphic to Hv over Gv. To this end,
+for v ∈ Vert(G), write (Π ab/edge
+v ↠) Av for the Galois group of the
+connected ﬁnite ´etale covering Hv →G v,
+A̸=v
+def
+=
+∏
+w∈Vert(G)\{v}
+Aw ⊆ A
+def
+=
+∏
+w∈Vert(G)
+Aw ,
+Fv →G v for the (not necessarily connected) ﬁnite ´etale covering of Gv
+obtained as the disjoint union of copies of Hv indexed by the elements
+of A̸=v, and, for e ∈E (v), Fv|Ge →G e for the ﬁnite ´etale covering
+of Ge obtained as the restriction of Fv →G v to the anabelioid Ge
+corresponding to e ∈N (v). Then the natural action of A̸=v on A̸=v
+and the tautological action of Av on Hv over Gv naturally determine
+an action of A on Fv over Gv. Moreover, one veriﬁes immediately
+that this A-action determines a structure of A-torsor on the covering
+Fv →G v. Therefore, by gluing the various Fv (for v ∈ vert(G)) by A-
+equivariant isomorphisms between the variousFv |Ge (for e ∈ Node(G)),
+we obtain a ﬁnite ´etale covering F→G , any connected component of
+which satisﬁes the desired condition. This completes the proof of the
+injectivity of the homomorphism in question. □
+Remark 1.4.1. The following two assertions follow immediately from
+Lemma 1.4.
+(i) If Π
+v ⊆ ΠG is a verticial subgroup of Π G, then the natural
+homomorphism Πab/edge
+v → Πab/edge
+G is injective.
+(ii) If v1, v2 ∈ Vert(G)a r edistinct, then for any verticial subgroups
+Πv1 ,Π v2 ⊆ ΠG associated tov1, v2, the intersection of the images
+of Πv1 and Πv2 in Πab/edge
+G is trivial.
+Lemma 1.5 (Intersections of edge-like subgroups). Let ˜e1, ˜e2 ∈
+Edge( ˜G). Then the following conditions are equivalent:
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 15
+(i) ˜e1 = ˜e2.
+(ii) Π ee1 ∩ Πee2 ̸= {1}.
+In particular, if Πee1 ∩ Πee2 ̸= {1}, then Πee1 =Π ee2.
+Proof. The implication
+(i) =⇒ (ii)
+is immediate; thus, to verify Lemma 1.5, it suﬃces to prove the impli-
+cation
+(ii) =⇒ (i) .
+To this end, let us assume that Π ee1 ∩ Πee2 ̸= {1}.S i n c eΠG is torsion-
+free (cf. [Mzk4], Remark 1.1.3), by projecting to the maximal pro- l
+quotients, for some l ∈ Σ, of suitable open subgroups of the various
+pro-Σ groups involved, we may assume without loss of generality that
+Σ= {l}. In particular, since Πee1 and Πee2 are isomorphic to Zl,w em a y
+assume without loss of generality that Πee1 ∩Πee2 is open in Πee1 and Πee2 .
+Thus, by replacing G by a connected ﬁnite ´etale covering of G,w em a y
+assume without loss of generality that Π ee1 =Π ee2 . Then condition (i)
+follows from [Mzk4], Proposition 1.2, (i). □
+Lemma 1.6 (Group-theoretic characterization of subgroups of
+edge-like subgroups). Let J ⊆ ΠG be anontrivial procyclic closed
+subgroup of ΠG. Then the following conditions are equivalent:
+(i) J is contained in a(n) — necessarily unique (cf. Lemma 1.5)
+— edge-like subgroup.
+(ii) There exists a connected ﬁnite ´etale covering G† →G of G such
+that for any connected ﬁnite ´etale covering G′ →G of G that
+factors through G† →G , the image of the composite
+J ∩ ΠG′ ↪→ ΠG′ ↠ Πab/edge
+G′
+is trivial.
+Proof. The implication
+(i) =⇒ (ii)
+is immediate; thus, to verify Lemma 1.6, it suﬃces to prove the impli-
+cation
+(ii) =⇒ (i) .
+To this end, let us assume that condition (ii) holds. Now since edge-like
+subgroups are commensurably terminal (cf. [Mzk4], Proposition 1.2,
+(ii)), it suﬃces to verify condition (i) under the further assumption that
+G
+† = G (cf. the uniqueness portion of condition (i)). Moreover, since
+ΠG is torsion-free (cf. [Mzk4], Remark 1.1.3), to verify condition (i),
+we may assume without loss of generality (cf. the uniqueness portion
+of condition (i)) — by projecting to the maximal pro- l quotients, for
+
+16 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+some l ∈ Σ, of suitable open subgroups of the various pro-Σ groups
+involved — that Σ = {l}.
+If H ⊆ ΠG is an open subgroup of Π G, then let us denote by GH →
+G the connected ﬁnite ´etale covering of G corresponding to the open
+subgroup H ⊆ ΠG (i.e., ΠGH = H ⊆ ΠG). Now we claim that
+(∗) for any normal open subgroup N ⊆ ΠG of Π G,t h e r e
+exists an edge ofGJ·N at which the connected ﬁnite ´etale
+covering GN →G J·N is totally ramiﬁed, i.e., there exists
+an edge e ∈ Edge(GJ·N ) such that the composite of nat-
+ural homomorphisms
+Πe ↪→ ΠGJ ·N = J · N ↠ (J · N)/N
+is surjective.
+Indeed, since J is procyclic, it follows that (J · N)/N is cyclic;i np a r -
+ticular, we obtain a natural surjection Πab
+GJ ·N ↠ (J · N)/N.M o r e o v e r ,
+since (J ·N)/N is generated by the image ofJ, it follows from condition
+(ii) that the composite of natural homomorphisms
+⨁
+e′∈Edge(GJ ·N )
+Πe′ → Πab
+GJ ·N ↠ (J · N)/N
+is surjective. Therefore, it follows from the fact that (J ·N)/N is acyclic
+l-group that there exists an edge e of GJ·N such that the composite of
+the natural homomorphisms Π e ↪→ ΠGJ ·N = J · N ↠ (J · N)/N is
+surjective, as desired. This completes the proof of (∗).
+If N ⊆ ΠG is a normal open subgroup, then let us denote by EN ⊆
+Edge(GN ) the subset of Edge( GN ) consisting of edges which are ﬁxed
+by the natural action ofJ on GN . Then it follows from (∗)t h a tf o ra n y
+normal open subgroup N ⊆ ΠG, it holds that EN is nonempty;t h u s ,
+since EN is ﬁnite , the projective limit lim←−N EN —w h e r eN ranges over
+the normal open subgroups of Π G —i s nonempty.N o t e t h a t s i n c e⋂
+N N —w h e r eN ranges over the normal open subgroups of Π G —
+is {1}, it follows that each element of the projective limit lim←−N EN
+naturally determines an element of Edge( ˜G). Let ˜e ∈ Edge( ˜G)b ea n
+element of Edge( ˜G) determined by an element of lim←−N EN ̸= ∅.T h e n
+it follows from the various deﬁnitions involved that J ⊆ Π ee.T h i s
+completes the proof of the implication
+(ii) =⇒ (i) .
+□
+Remark 1.6.1. When G† = G and Node(G)= ∅, Lemma 1.6 follows
+immediately from [Naka], Lemma 2.1.4.
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 17
+Lemma 1.7(Intersections of verticial and edge-like subgroups).
+Let ˜v ∈ Vert(˜G),a n d˜e ∈ Edge( ˜G). Then the following conditions are
+equivalent:
+(i) ˜e ∈E (˜v).
+(ii) Π ev ∩ Πee ̸= {1}.
+In particular, if Πev ∩ Πee ̸= {1}, then Πee ⊆ Πev.
+Proof. The implication
+(i) =⇒ (ii)
+is immediate; thus, to verify Lemma 1.7, it suﬃces to prove the impli-
+cation
+(ii) =⇒ (i) .
+To this end, let us assume that Π ev ∩ Πee ̸= {1}.S i n c e ΠG is torsion-
+free (cf. [Mzk4], Remark 1.1.3), by projecting to the maximal pro- l
+quotients, for some l ∈ Σ, of suitable open subgroups of the various
+pro-Σ groups involved, we may assume without loss of generality that
+Σ= {l}. In particular, since Π
+ee is isomorphic to Zl, we may assume
+without loss of generality that Πev ∩Πee is open in Πee. Thus, by replacing
+G by a connected ﬁnite ´etale covering ofG, we may assume without loss
+of generality that Π ee ⊆ Πev. Then condition (i) follows from [Mzk4],
+Proposition 1.5, (i) (cf. also [Mzk4], Proposition 1.2, (i)). □
+Lemma 1.8 (Nonexistence of loops). Let ˜v1, ˜v2 ∈ Vert(˜G) be such
+that ˜v1 ̸= ˜v2. Then
+(N(˜v1) ∩N (˜v2))♯ ≤ 1;
+{ ˜v ∈ Vert(˜G) | δ(˜v, ˜v1)= δ(˜v, ˜v2)=1 }♯ ≤ 1 .
+Proof. If the cardinality of either of the sets equipped with a super-
+script “ ♯”i s ≥ 2, then the oﬀending edges or vertices give rise to a
+loop of ˜G, i.e., a projective system of loops (that map isomorphically
+to one another) in the various semi-graphs that appear in the projec-
+tive system ˜G. On the other hand, since ˜G is a universal covering of
+G, one veriﬁes immediately that no such projective system of loops
+exists. Thus, we obtain a contradiction. This completes the proof of
+Lemma 1.8. □
+Remark 1.8.1.
+(i) Let ˜v ∈ Vert(˜G). Recall that if ˜e ∈N (˜v), then the inclusion
+Π
+ee ⊆ Πev is strict (i.e., Π ee ̸=Π ev). In particular, it follows
+immediately that either N(˜v)= ∅or N(˜v)♯ ≥ 2.
+(ii) Let ˜v1, ˜v2 ∈ Vert(˜G). Then, in light of (i), it follows immediately
+from Lemma 1.8 that the following assertion holds:
+
+18 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+˜v1 = ˜v2 if and only if N(˜v1)= N(˜v2).
+(iii) Let ˜e1, ˜e2 ∈ Node( ˜G). Then it follows immediately from Lemma
+1.8 that the following assertion holds:
+If ˜e1 ̸= ˜e2,t h e n(V(˜e1) ∩V (˜e2))♯ ≤ 1.
+In particular, it follows from Remark 1.2.1, (iii), that the fol-
+lowing assertion holds:
+˜e1 = ˜e2 if and only if V(˜e1)= V(˜e2).
+Lemma 1.9(Graph-theoretic geometry via verticial subgroups).
+For i =1 , 2,l e t˜vi ∈ Vert(˜G). Then the following hold:
+(i) If Πev1 ∩ Πev2 ̸= {1}, then either Πev1 =Π ev2 or Πev1 ∩ Πev2 is a
+nodal subgroup of ΠG.
+(ii) Consider the following three (mutually exclusive) conditions:
+(1) δ(˜v1, ˜v2)=0 .
+(2) δ(˜v1, ˜v2)=1 .
+(3) δ(˜v1, ˜v2) ≥ 2.
+Then we have equivalences
+(1) ⇐⇒ (1′); ( 2 ) ⇐⇒ (2′) ⇐⇒ (2′′); ( 3 ) ⇐⇒ (3′)
+with the following four conditions:
+(1′)Π ev1 =Π ev2.
+(2′)Π ev1 ̸=Π ev2; Πev1 ∩ Πev2 ̸= {1}.
+(2′′)Π ev1 ∩ Πev2 is a nodal subgroup of ΠG.
+(3′)Π ev1 ∩ Πev2 = {1}.
+Proof. First, we consider assertion (i). Suppose that H
+def
+=Π ev1 ∩ Πev2 ̸=
+{1},a n dΠ ev1 ̸=Π ev2 (so ˜v1 ̸= ˜v2 — cf. [Mzk4], Proposition 1.2, (i)).
+Note that to verify assertion (i), it suﬃces to show that H is a nodal
+subgroup of Π G. Also, we observe that since nodal and verticial sub-
+groups of Π G are commensurably terminal in Π G (cf. [Mzk4], Proposi-
+tion 1.2, (ii)), it follows that we may assume without loss of generality
+— by replacing G by a connected ﬁnite ´ etale covering of G —t h a t
+˜v
+1(G) ̸= ˜v2(G).
+Let J ⊆ H be a nontrivial procyclic closed subgroup of H.T h e nw e
+claim that J is contained in anedge-like subgroup of ΠG. Indeed, since
+J ⊆ H =Π ev1 ∩ Πev2 —w h e r e˜v1 ̸= ˜v2 — it follows from Remark 1.4.1,
+(ii), together with our assumption that ˜v1(G) ̸= ˜v2(G), that the image
+of J in Πab/edge
+G is trivial. Thus, by applying this observation to the
+various connected ﬁnite ´etale coverings of G involved, we conclude that
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 19
+J satisﬁes condition (ii) in the statement of Lemma 1.6. In particular,
+it follows from Lemma 1.6 thatJ is contained in an edge-like subgroup.
+This completes the proof of the above claim. On the other hand, if Π ee
+is an edge-like subgroup of Π G such that J ⊆ Πee, then it follows from
+Lemma 1.7 that the inclusion J ⊆ Πee implies that Π ee is in fact nodal,
+and, moreover, that Πee ⊆ Πev1 ∩ Πev2 = H.
+By the above discussion, it follows that
+H =
+⋃
+ee∈N (ev1)∩N (ev2)
+Πee .
+On the other hand, it follows from Lemma 1.8 that the cardinality of
+the intersection N(˜v1) ∩N (˜v2)i s ≤ 1. Therefore, it follows that H is
+a nodal subgroup of Π G. This completes the proof of assertion (i).
+Next, we consider assertion (ii). The equivalence
+(1) ⇐⇒ (1′)
+follows from [Mzk4], Proposition 1.2, (i). In light of this equivalence,
+the implications
+(2) =⇒ (2′)= ⇒ (2′′)
+follow from assertion (i), while the implication
+(2′′)= ⇒ (2)
+follows from Lemma 1.7. The equivalence
+(3) ⇐⇒ (3′)
+then follows from the equivalences
+(1) ⇐⇒ (1′); ( 2 ) ⇐⇒ (2′) .
+□
+Remark 1.9.1. It follows immediately from the various deﬁnitions
+involved that for any semi-graph of anabelioids of pro-Σ PSC-type G,
+there exists, in the terminology of [Mzk6], Deﬁnition 1.2, (ii), an IPSC-
+extension
+1 −→ ΠG −→ ΠI −→ I −→ 1 .
+Therefore, Lemma 1.9 may also be obtained as a consequence of [Mzk6],
+Proposition 1.3, (iv).
+Lemma 1.10 (Conjugates of verticial subgroups). Suppose that
+G is untangled.L e t˜v, ˜v′ ∈ Vert(˜G) be such that ˜v(G)= ˜v′(G). Then
+˜v ̸= ˜v′ if and only if Πev ∩ Πev′ = {1}.
+Proof. The suﬃciency of the condition is immediate; thus, to prove
+Lemma 1.10, it suﬃces to verify the necessity of the condition. To this
+end, let us assume that ˜v ̸= ˜v′. Then there exists a connected ﬁnite
+´etale subcovering G′ →G of ˜G→G such that ˜v(G′) ̸= ˜v′(G′). On
+
+20 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+the other hand, since G is untangled,a n d˜v(G)= ˜v′(G), it follows that
+N(˜v(G′)) ∩N (˜v′(G′)) = ∅.T h u s ,Πev ∩ Πev′ ∩ ΠG′ = {1} by Lemma 1.9,
+(ii); in particular, since Π ev is torsion-free (cf. [Mzk4], Remark 1.1.3),
+we obtain that Πev ∩ Πev′ = {1}, as desired. □
+Remark 1.10.1. It follows immediately from Lemma 1.10 that the
+following assertion holds:
+Suppose that G is untangled.L e tv ∈ Vert(G) be a vertex
+of G,Π v ⊆ ΠG a verticial subgroup associated to v,a n d
+γ ∈ ΠG \ Πv.T h e nΠv ∩ γ · Πv · γ−1 = {1}.
+Deﬁnition 1.11. Suppose that G is sturdy. Then by eliminating the
+cusps (i.e., the open edges) of the semi-graphG, and, for each vertexv
+of G, replacing the anabelioid Gv corresponding to v by the anabelioid
+Gv of ﬁnite ´etale coverings of Gv that restrict to a trivial covering over
+the cusps of G that abut to v, we obtain a semi-graph of anabelioids
+of pro-Σ PSC-type
+ G. (Thus, the pro-Σ fundamental group of
+ Gv may
+be naturally identiﬁed, up to inner automorphism, with the quotient
+of Π
+v by the subgroup of Π v topologically normally generated by the
+Πe ⊆ Πv,f o re ∈C (v).) We shall refer to
+ G as the compactiﬁcation of
+G (cf. [Mzk4], Remark 1.1.6).
+Remark 1.11.1. It follows immediately from the deﬁnition of the
+compactiﬁcation that the quotient of Π G by the closed subgroup of
+ΠG topologically normally generated by the cuspidal subgroups of Π G
+is naturally isomorphic, up to inner automorphism, to the fundamen-
+tal group Π
+ G of
+ G. In particular, we have a natural outer surjection
+ΠG ↠ Π
+G.
+By analogy to the terms “group-theoretically verticial” and “group-
+theoretically cuspidal”introduced in [Mzk4] (cf. [Mzk4], Deﬁnition 1.4,
+(iv)), we make the following deﬁnition.
+Deﬁnition 1.12. Let H be a semi-graph of anabelioids of pro-Σ PSC-
+type, Π H the (pro-Σ) fundamental group of H,a n dα:Π G
+∼
+→ ΠH an
+isomorphism of proﬁnite groups. Then we shall say that α is group-
+theoretically nodal if, for any ˜e ∈ Node( ˜G), the image α(Πee) ⊆ ΠH is
+a nodal subgroup of Π H, and, moreover, every nodal subgroup of Π H
+arises in this fashion.
+Proposition 1.13 (Group-theoretical verticiality and nodality).
+Let H be a semi-graph of anabelioids of pro-Σ PSC-type, Π H the fun-
+damental group of H,a n dα:Π G
+∼
+→ ΠH a group-theoretically ver-
+ticial isomorphism. Then α is group-theoretically nodal.
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 21
+Proof. This follows immediately from Lemma 1.9, (i). □
+Lemma 1.14 (Graphicity of certain group-theoretically cuspi-
+dal and verticial isomorphisms). Let H be a semi-graph of anabe-
+lioids of pro-Σ PSC-type, and ΠH the fundamental group of H.I f a n
+isomorphism α:Π G
+∼
+→ ΠH satisﬁes the following two conditions, then
+α is graphic (cf. [Mzk4], Deﬁnition 1.4, (i)):
+(i) α is group-theoretically cuspidal.
+(ii) For any sturdy connected ﬁnite ´etale covering G′ →G of G
+such that the corresponding covering H′ →H of H (relative to
+the isomorphism α)i s sturdy, the induced isomorphism (cf.
+(i), Remark 1.11.1)
+Π
+G
+′
+∼
+−→ Π
+H
+′
+— where we write
+ G
+′
+(respectively,
+ H
+′
+) for the semi-graph of
+anabelioids of PSC-type obtained as thecompactiﬁcation (cf.
+Deﬁnition 1.11) of G′ (respectively,H′)—i s group-theoretically
+verticial.
+Proof. Since the isomorphism Π
+ G
+′
+∼
+→ Π
+H
+′ is group-theoretically ver-
+ticial (cf. condition (ii)), it follows from Proposition 1.13 that the
+isomorphism Π
+G
+′
+∼
+→ Π
+H
+′ is group-theoretically nodal. Therefore, it fol-
+lows immediately from (i) thatα is graphically ﬁltration-preserving (cf.
+[Mzk4], Deﬁnition 1.4, (iii)). Thus, it follows from [Mzk4], Theorem
+1.6, (ii), that α is graphic, as desired. □
+Lemma 1.15 (Chains of length two lifting adjacent vertices).
+Let ˜v1, ˜v2 ∈ Vert(˜G) be such that if we writevi
+def
+= ˜vi(G), then δ(v1,v2)=
+1. Then there exist ˜w1, ˜u1, ˜w2 ∈ Vert(˜G) which satisfy the following
+conditions (which imply that δ( ˜w1, ˜u1)=2 ):
+(i) v1 = ˜w1(G)= ˜u1(G); v2 = ˜w2(G).
+(ii) δ( ˜w1, ˜u1) ≥ 2.
+(iii) δ( ˜w2, ˜w1)= δ( ˜w2, ˜u1)=1 .
+Proof. First, we observe that by replacingG by a connected ﬁnite ´etale
+covering of G, we may assume without loss of generality that G is
+sturdy (cf. [Mzk4], Remark 1.1.5) and untangled (cf. Remark 1.2.1,
+(i)). Then it is easily veriﬁed that there exists a nontrivial connected
+ﬁnite ´etale covering of the anabelioid Gv2 corresponding to v2 which is
+unramiﬁed over the nodes and cusps of G which abut to v2. In light
+of the unramiﬁed nature of this connected ﬁnite ´etale covering of Gv2 ,
+by gluing this covering to a split covering over the remaining portion
+of G, we obtain a connected ﬁnite ´ etale covering H→G .T h e n i t
+
+22 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+follows immediately from the various deﬁnitions involved that the set
+V1 (respectively, V2) of vertices of H which lie over v1 (respectively,
+v2) is of cardinality ≥ 2 (respectively, of cardinality 1). Thus, there
+exist vertices w1, u1 ∈V 1, w2 ∈V 2 such that w1 ̸= u1 (which, since
+G is untangled, implies that δ(w1,u1) ≥ 2 — cf. condition (ii)), and,
+moreover, δ(w2,w1)= δ(w2,u1) = 1 (cf. condition (iii)). In particular,
+it follows immediately that there exist elements ˜w1, ˜u1, ˜w2 ∈ Vert(˜G)
+which satisfy the three conditions in the statement of Lemma 1.15.
+This completes the proof of Lemma 1.15. □
+2. Nodally nondegenerate outer representations
+In this section, we deﬁne the notion of an outer representation of
+NN-type and verify various fundamental properties of such outer rep-
+resentations.
+If G is a semi-graph of anabelioids of pro-Σ PSC-type for some
+nonempty set of prime numbers Σ, then since the fundamental group
+Π
+G of G is topologically ﬁnitely generated, the proﬁnite topology of Π G
+induces (proﬁnite) topologies on Aut(Π G) and Out(ΠG) (cf. the discus-
+sion entitled “Topological groups”i n §0). Moreover, if we write
+Aut(G)
+for the group of automorphisms of G, then by the discussion preceding
+[Mzk4], Lemma 2.1, the natural homomorphism
+Aut(G) −→ Out(ΠG)
+is an injection with closed image. (Here, we recall that an automor-
+phism of a semi-graph of anabelioids consists of an automorphism of
+the underlying semi-graph, together with a compatible system of iso-
+morphisms between the various anabelioids at each of the vertices and
+edges of the underlying semi-graph which are compatible with the var-
+ious morphisms of anabelioids associated to the branches of the under-
+lying semi-graph — cf. [Mzk3], Deﬁnition 2.1; [Mzk3], Remark 2.4.2.)
+Thus, by equipping Aut(G) with the topology induced via this homo-
+morphism by the topology of Out(Π
+G), we may regard Aut(G)a sb e i n g
+equipped with the structure of a proﬁnite group.
+Deﬁnition 2.1.
+(i) Let I be a proﬁnite group, Σ a nonempty set of prime numbers,
+G a semi-graph of anabelioids of pro-Σ PSC-type, Π G the fun-
+damental group of G,a n dρ: I → Aut(G) a homomorphism of
+proﬁnite groups. Then we shall refer to the pair(
+G,ρ: I → Aut(G)( ↪→ Out(ΠG))
+)
+as an outer representation of pro-Σ PSC-type.M o r e o v e r , w e
+shall refer to an outer representation of pro-Σ PSC-type for
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 23
+some nonempty set of prime numbers Σ as an outer represen-
+tation of PSC-type. For simplicity, we shall also refer to the
+underlying homomorphism “ ρ” of an outer representation of
+pro-Σ PSC-type (respectively, of PSC-type) as an outer repre-
+sentation of pro-Σ PSC-type (respectively, outer representation
+of PSC-type).
+(ii) Let (G,ρI : I → Aut(G)), (H,ρJ : J → Aut(H)) be outer repre-
+sentations of PSC-type. Then we shall refer to a pair
+(α: G
+∼
+−→ H ,β : I
+∼
+−→ J)
+consisting of an isomorphism α of semi-graphs of anabelioids
+and an isomorphismβ of proﬁnite groups such that the diagram
+I
+ρI
+−−−→ Aut(G)
+β
+⏐⏐
+↓
+⏐⏐
+↓
+Aut(α)
+J −−−→
+ρJ
+Aut(H)
+— where the right-hand vertical arrow is the isomorphism in-
+duced by α — commutes as an isomorphism of outer represen-
+tations of PSC-type.
+Remark 2.1.1. It follows immediately that a “pro-Σ IPSC-extension”
+1 −→ ΠG −→ ΠI −→ I −→ 1
+(i.e., roughly speaking, an extension that arises from a stable log curve
+over a log point — cf. [Mzk6], Deﬁnition 1.2, (ii)) gives rise to an outer
+representation I → Out(Π
+G) that factors through Aut(G) ⊆ Out(ΠG);
+in particular, we obtain an outer representation of pro-Σ PSC-type
+I → Aut(G).
+In the following, let us ﬁx a nonempty set of prime numbers Σ and
+an outer representation of pro-Σ PSC-type(
+G,ρI : I → Aut(G)( ↪→ Out(ΠG))
+)
+and write Π I
+def
+=Π G
+out
+⋊ I (cf. the discussion entitled “ Topological
+groups”i n §0); thus, we have an exact sequence
+1 −→ ΠG −→ ΠI −→ I −→ 1 .
+Deﬁnition 2.2.
+(i) Let v ∈ Vert(G)b ea vertex of G and Π v ⊆ ΠG a verticial
+subgroup of ΠG associated to v. Then we shall write
+Dv
+def
+= NΠI (Πv) ⊆ ΠI (respectively,I v
+def
+= ZΠI (Πv) ⊆ Dv)
+and refer to Dv (respectively, Iv)a s a decomposition (respec-
+tively, an inertia) subgroup of Π I associated to the vertex v,
+
+24 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+or, alternatively, the decomposition (respectively, inertia) sub-
+group of ΠI associated to the verticial subgroup Πv ⊆ ΠG.I f ,
+moreover, the verticial subgroup Π v is the verticial subgroup
+associated to an element ˜v ∈ Vert(˜G) (cf. Deﬁnition 1.1, (vi)),
+then we shall write Dev
+def
+= Dv (respectively, Iev
+def
+= Iv)a n dr e -
+fer to Dev (respectively, Iev)a s the decomposition (respectively,
+inertia) subgroup of ΠI associated to ˜v.
+(ii) Let e ∈ Cusp(G)b ea cusp of G and Π e ⊆ ΠG an edge-like
+subgroup of ΠG associated to e. Then we shall write
+De
+def
+= NΠI (Πe) ⊆ ΠI (respectively,I e
+def
+=Π e ⊆ De)
+and refer to De (respectively, Ie)a s a decomposition (respec-
+tively, an inertia) subgroup of ΠI associated to the cusp e,o r ,
+alternatively, the decomposition(respectively, inertia) subgroup
+of ΠI associated to the edge-like subgroup Πe ⊆ ΠG.I f , m o r e -
+over, the edge-like subgroup Π e is the edge-like subgroup as-
+sociated to an element ˜e ∈ Cusp( ˜G) (cf. Deﬁnition 1.1, (vi)),
+then we shall writeDee
+def
+= De (respectively,Iee
+def
+= Ie)a n dr e f e rt o
+Dee (respectively, Iee)a s the decomposition(respectively, inertia)
+subgroup of ΠI associated to ˜e.
+(iii) Let e ∈ Node(G)b ea node of G and Π e ⊆ ΠG an edge-like
+subgroup of ΠG associated to e. Then we shall write
+De
+def
+= NΠI (Πe) ⊆ ΠI (respectively,I e
+def
+= ZΠI (Πe) ⊆ De)
+and refer to De (respectively, Ie)a s a decomposition (respec-
+tively, an inertia) subgroup of ΠI associated to the node e,o r ,
+alternatively, the decomposition(respectively, inertia) subgroup
+of ΠI associated to the edge-like subgroup Πe ⊆ ΠG.I f , m o r e -
+over, the edge-like subgroup Π e is the edge-like subgroup as-
+sociated to an element ˜e ∈ Node( ˜G) (cf. Deﬁnition 1.1, (vi)),
+then we shall writeDee
+def
+= De (respectively,Iee
+def
+= Ie)a n dr e f e rt o
+Dee (respectively, Iee)a s the decomposition(respectively, inertia)
+subgroup of ΠI associated to ˜e.
+Lemma 2.3 (Basic properties of inertia subgroups).
+(i) Let ˜v ∈ Vert(˜G). Then {1} = Iev ∩ ΠG; in particular, the homo-
+morphism Iev → I induced by the surjection ΠI ↠ I is injec-
+tive.
+(ii) Let ˜e ∈ Node( ˜G), ˜v ∈V (˜e). Then Iev ⊆ Iee.
+Proof. Assertion (i) follows from the commensurable terminality of Π ev
+in ΠG (cf. [Mzk4], Proposition 1.2, (ii)), together with the slimness of
+Πev (cf. [Mzk4], Remark 1.1.3). Assertion (ii) follows from the fact that
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 25
+Πee ⊆ Πev, together with the deﬁnitions of inertia subgroups of vertices
+and nodes. □
+The following deﬁnition will play a central rolein the present paper.
+Deﬁnition 2.4.
+(i) We shall say that the outer representation of pro-Σ PSC-typeρI
+is of IPSC-type (where the “IPSC” stands for “inertial pointed
+stable curve”) if ρI is isomorphic, as an outer representation
+of PSC-type (cf. Deﬁnition 2.1, (ii)), to the outer representa-
+tion of PSC-type determined by (cf. Remark 2.1.1) an “IPSC-
+extension” (i.e., roughly speaking, an extension that arises from
+a stable log curve over a log point — cf. [Mzk6], Deﬁnition 1.2,
+(ii)).
+(ii) We shall say that the outer representation of pro-Σ PSC-typeρ
+I
+of VA-type(where the “VA” stands for “verticially admissible”)
+if the following two conditions are satisﬁed:
+(1) I is isomorphic to ˆZΣ as an abstract proﬁnite group.
+(2) For every ˜v ∈ Vert(˜G), the image of the injection Iev ↪→ I
+(cf. Lemma 2.3, (i)) is open in I.
+We shall say that the outer representation of pro-Σ PSC-type
+ρI is of SVA-type (where the “SVA” stands for “strictly ver-
+ticially admissible”) if, in addition to the above condition (1),
+the following condition is satisﬁed:
+(2′) For every ˜v ∈ Vert(˜G), the injection Iev ↪→ I is bijective.
+(iii) We shall say that the outer representation of pro-Σ PSC-typeρI
+is of NN-type (where the “NN” stands for “nodally nondegener-
+ate”) ifρI is of VA-type, and, moreover, the following condition
+is satisﬁed:
+(3) For every ˜e ∈ Node( ˜G), the homomorphism Iev1 × Iev2 → Iee
+—w h e r ew ew r i t e{˜v1, ˜v2} = V(˜e) ⊆ Vert(˜G) — induced by
+the inclusionsIev1 , Iev2 ⊆ Iee (cf. Lemma 2.3, (ii)) isinjective,
+and its image is open in Iee.
+We shall say that the outer representation of pro-Σ PSC-type
+ρI is of SNN-type(where the “SNN” stands for “strictly nodally
+nondegenerate”) ifρI is of SVA-type and of NN-type.
+Remark 2.4.1. Note that it isnot the case that condition (2) of Deﬁni-
+tion 2.4 is implied by conditions (1) and (3) of Deﬁnition 2.4. Indeed, it
+is easily veriﬁed that if Vert(G)= {v}, and Node(G)= ∅(so Πv =Π G),
+then any injection ˆZΣ ↪→ Out(ΠG) satisﬁes conditions (1) and (3), but
+fails to satisfy condition (2). (Moreover, it is also easily veriﬁed that
+
+26 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+such an injection exists.) On the other hand, when Node( G) ̸= ∅,
+it is not clear to the authors at the time of writing whether or not
+condition (2) of Deﬁnition 2.4 is implied by conditions (1) and (3) of
+Deﬁnition 2.4.
+Remark 2.4.2. It follows from [Mzk6], Proposition 1.3, (ii), (iii), that
+if ρ
+I is of IPSC-type, then ρI is of SNN-type, i.e.,
+IPSC-type = ⇒ SNN-type = ⇒ NN-type
+⇓⇓
+SVA-type = ⇒ VA-type.
+Lemma 2.5 (Group structure of inertia subgroups). If ρI is of
+VA-type, then the following hold:
+(i) Let ˜v ∈ Vert(˜G). Then as an abstract proﬁnite group, Iev is
+isomorphic to ˆZΣ.
+(ii) Let ˜e ∈ Cusp( ˜G). Then as an abstract proﬁnite group, Iee is
+isomorphic to ˆZΣ.
+(iii) Let ˜e ∈ Node( ˜G). Then as an abstract proﬁnite group, Iee is
+isomorphic to ˆZΣ × ˆZΣ.
+(iv) Let ˜e ∈ Node( ˜G). Then Πee = Iee ∩ ΠG; thus, we have an exact
+sequence
+1 −→ Πee −→ Iee −→ Im(Iee → I) −→ 1
+— where we write Im(Iee → I) for the image of the composite
+Iee ↪→ ΠI ↠ I. Moreover, the subgroupIm(Iee → I) ⊆ I is open
+in I.
+In particular, for ˜v ∈V (˜e), the image of the homomorphism
+Iev × Πee → Iee induced by the natural inclusions Iev, Πee ⊆ Iee is
+open in Iee. If, moreover, for ˜v ∈V (˜e), the composite Iev ↪→
+ΠI ↠ I is surjective (or, equivalently, bijective), then the
+homomorphism Iev × Πee → Iee induced by the natural inclusions
+Iev, Πee ⊆ Iee is bijective.
+Proof. Assertion (i) (respectively, (ii)) follows from conditions (1) and
+(2) of Deﬁnition 2.4 (respectively, from Deﬁnition 2.2, (ii)). Asser-
+tion (iv) follows from the commensurable terminality of Π ee in Π G (cf.
+[Mzk4], Proposition 1.2, (ii)), together with condition (2) of Deﬁni-
+tion 2.4. Assertion (iii) follows from the fact that I
+ee is an extension of
+ˆZΣ by ˆZΣ and abelian (cf. assertion (iv)). □
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 27
+Lemma 2.6 (Stability of verticial admissibility and nodal non-
+degeneracy). Suppose that ρI is of VA-type (respectively, of NN-
+type). Then the following hold:
+(i) Let ΠI′ ⊆ ΠI be an open subgroup of ΠI, ΠG′
+def
+=Π I′ ∩ ΠG,a n d
+I′ the image of the composite ΠI′ ↪→ ΠI ↠ I. Thus, we have
+an exact sequence
+1 −→ ΠG′ −→ ΠI′ −→ I′ −→ 1;
+the open subgroup ΠG′ ⊆ ΠG determines a covering G′ →G of
+G; the outer representation I′ → Out(ΠG′ ) determined by ΠI′
+factors through ρI′ : I′ → Aut(G′). Then ρI′ is of VA-type
+(respectively, of NN-type).
+(ii) Suppose that G is sturdy. Then the outer representation of
+pro-Σ PSC-type
+ ρI : I → Aut(
+G) —w h e r ew ew r i t e
+G for the
+compactiﬁcation of G — induced by ρI is of VA-type (re-
+spectively, of NN-type).
+Proof. First, we prove assertion (i). It follows immediately from the
+various deﬁnitions involved that ρI′ is of VA-type. Moreover, it follows
+from Lemma 2.5, (i), (iv), that the various “ Iev” (respectively, “Iee”)
+are torsion-free, and, moreover, that the commensurability class of the
+subgroup “ Iev” (respectively, “Iee”) is unaﬀected by passing fromΠI to
+ΠI′. Thus, condition (3) of Deﬁnition 2.4 for ρI′ follows from condition
+(3) of Deﬁnition 2.4 for ρI. This completes the proof of assertion (i).
+Next, we verify assertion (ii). First, let us observe that condition (1)
+of Deﬁnition 2.4 for
+ρI follows from condition (1) of Deﬁnition 2.4 forρI.
+Next, let us observe that it follows from Lemma 2.3, (i) (respectively,
+Lemma 2.5, (iv)), that for ˜v ∈ Vert(˜G) (respectively, ˜e ∈ Node( ˜G)),
+the natural surjection Π G ↠ Π
+G induces an open injection between
+the respective subgroups “Iev” (respectively, “Iee”). Thus, condition (2)
+(respectively, (3)) of Deﬁnition 2.4 for
+ ρI follows from condition (2)
+(respectively, (3)) of Deﬁnition 2.4 for ρI. This completes the proof of
+assertion (ii). □
+Lemma 2.7 (Group structure of decomposition subgroups). If
+ρI is of VA-type, then the following hold:
+(i) Let ˜v ∈ Vert(˜G). Then Πev = Dev ∩ ΠG; thus, we have an exact
+sequence
+1 −→ Πev −→ Dev −→ Im(Dev → I) −→ 1
+— where we write Im(Dev → I) for the image of the composite
+Dev ↪→ ΠI ↠ I. Moreover, the subgroup Im(Dev → I) ⊆ I is
+open in I.
+
+28 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+In particular, the image of the homomorphismIev ×Πev → Dev
+induced by the natural inclusions Iev, Πev ⊆ Dev is open in Dev.
+If, moreover, the composite Iev ↪→ ΠI ↠ I is surjective (or,
+equivalently, bijective), then the homomorphismIev ×Πev → Dev
+is bijective.
+(ii) Let ˜e ∈ Cusp( ˜G). Then Πee = Dee ∩ ΠG; thus, we have an exact
+sequence
+1 −→ Πee −→ Dee −→ Im(Dee → I) −→ 1
+— where we write Im(Dee → I) for the image of the composite
+Dee ↪→ ΠI ↠ I. Moreover, the subgroup Im(Dee → I) ⊆ I is
+open in I.
+In particular, for ˜v ∈V (˜e), the image of the homomorphism
+Iev × Πee → Dee induced by the natural inclusions Iev, Πee ⊆ Dee is
+open in Dee. If, moreover, for ˜v ∈V (˜e), the composite Iev ↪→
+ΠI ↠ I is surjective (or, equivalently, bijective), then the
+homomorphism Iev ×Πee → Dee induced by the natural inclusions
+Iev, Πee ⊆ Dee is bijective.
+(iii) Let ˜e ∈ Node( ˜G). Then Πee = Dee ∩ ΠG; thus, we have an exact
+sequence
+1 −→ Πee −→ Dee −→ Im(Dee → I) −→ 1
+—w h e r ew ew r i t eIm(Dee → I) for the image of the composite
+Dee ↪→ ΠI ↠ I. Moreover, the subgroup Im(Dee → I) ⊆ I is
+open in I.
+In particular, the image of the natural inclusion Iee ↪→ Dee is
+open in Dee. If, moreover, for ˜v ∈V (˜e), the composite Iev →
+I is surjective (or, equivalently, bijective), then the natural
+inclusion Iee ↪→ Dee is bijective.
+Proof. The computation of the intersection with Π G in assertion (i)
+(respectively, (ii); (iii)) follows from the commensurable terminality of
+Πev (respectively, Πee;Π ee)i nΠ G (cf. [Mzk4], Proposition 1.2, (ii)). The
+fact that the images of the respective decomposition subgroups in I
+are open follows from condition (2) of Deﬁnition 2.4. The ﬁnal portion
+of assertion (i) (respectively, (ii); (iii)) then follows immediately from
+Lemma(s) 2.3, (i) (respectively, 2.3, (i); 2.3, (i), and 2.5, (iv)) □
+Remark 2.7.1. It follows immediately from Lemmas 2.5, 2.7 that the
+following assertion holds:
+Let ˜v ∈ Vert(˜G) (respectively,˜e ∈ Cusp( ˜G); ˜e ∈ Node( ˜G)).
+If ρI is of SVA-type,t h e n
+Dev = Iev · Πev = Iev × Πev
+(respectively,D ee = Iev · Πee = Iev × Πee , for any ˜v ∈V (˜e);
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 29
+Dee = Iee = Iev · Πee = Iev × Πee , for any ˜v ∈V (˜e)) .
+Remark 2.7.2. Let ˜e1, ˜e2 ∈ Edge( ˜G). If ρI is of VA-type, then the
+following three conditions are equivalent:
+(i) ˜e1 = ˜e2.
+(ii) Iee1 = Iee2 .
+(iii) Dee1 = Dee2 .
+Indeed, the implications
+(i) =⇒ (ii) ; (i) = ⇒ (iii)
+are immediate. On the other hand, if condition (ii) (respectively, (iii))
+is satisifed, then Π ee1 = Iee1 ∩ ΠG = Iee2 ∩ ΠG =Π ee2 [cf. Deﬁnition 2.2,
+(ii); Lemma 2.5, (iv)] (respectively, Πee1 = Dee1 ∩ ΠG = Dee2 ∩ ΠG =Π ee2
+[cf. Lemma 2.7, (ii), (iii)]). Thus, it follows from [Mzk4], Proposition
+1.2, (i), that ˜e1 = ˜e2.
+Deﬁnition 2.8. Suppose that ρI is of SVA-type. Then we shall denote
+by
+G[ρI]
+the connected semi-graph of anabelioids (cf. [Mzk3], Deﬁnition 2.1) de-
+ﬁned as follows: The underlying graph of G[ρI] is the underlying graph
+of G. The anabelioid corresponding to a vertex v ∈ Vert(G) (respec-
+tively, an edge e ∈ Edge(G)) is the connected anabelioid determined
+by the decomposition subgroup, regarded up to inner automorphism,
+D
+v ⊆ ΠI (respectively, De ⊆ ΠI) associated to v (respectively, e); for
+v ∈V (e), the associated morphism of anabelioids is the morphism de-
+termined by the natural inclusion De (= Iv · Πe) ↪→ Dv (= Iv · Πv)( c f .
+Remark 2.7.1).
+Remark 2.8.1.
+(i) Note that the fundamental group of the anabelioid correspond-
+ing to a vertex of G[ρI] (i.e., the decomposition subgroup, re-
+garded up to inner automorphism, associated to the vertex) is
+not center-free (cf. Lemma 2.7, (i)). In particular, the semi-
+graph of anabelioids G[ρ
+I]i s not of PSC-type.
+(ii) Let Π G[ρI] be the pro-Σ fundamental group (i.e., the maximal
+pro-Σ quotient of the fundamental group) of the connected
+semi-graph of anabelioids G[ρ
+I] (cf. the discussion following
+[Mzk3], Deﬁnition 2.1). Then it follows from the deﬁnition of
+ΠG[ρI] that the inductive system of homomorphisms determined
+
+30 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+by the natural outer inclusions Dv ↪→ ΠI and De ↪→ ΠI gives
+rise to a natural outer homomorphism
+ΠG[ρI] −→ ΠI .
+Lemma 2.9 (An isomorphism of fundamental groups). Suppose
+that ρI is of SVA-type.L e tΠG[ρI] be the pro-Σ fundamental group of
+the connected semi-graph of anabelioidsG[ρI]. Then the homomorphism
+ΠG[ρI] → ΠI deﬁned in Remark 2.8.1, (ii), is an isomorphism.
+Proof. First, we observe (cf. Remark 2.7.1) that the decomposition
+subgroup Dz —w h e r ez ∈ VCN(G) — is an extension of I by Πz.N o w
+it is easily veriﬁed that theproﬁnite Galois covering ofG[ρI] determined
+by the various quotients Dz ↠ I (i.e., that arise as composites Dz ↪→
+ΠI ↠ I) is isomorphic to G; thus, we obtain an exact sequence
+1 −→ ΠG −→ ΠG[ρI] −→ I −→ 1 .
+On the other hand, it follows from the construction of this proﬁnite
+covering G→G [ρI], together with the deﬁnition of the homomorphism
+ΠG[ρI] → ΠI, that the composite Π G → ΠG[ρI] → ΠI coincides with the
+natural inclusion ΠG ↪→ ΠI. Thus, the bijectivity of the homomorphism
+ΠG[ρI] → ΠI follows from the “Five Lemma”. This completes the proof
+of Lemma 2.9. □
+Deﬁnition 2.10. Let (g,r ) be a pair of natural numbers such that
+2g − 2+ r> 0, k an algebraically closed ﬁeld of characteristic ̸∈ Σ, s ∈
+Mg,r(k)a k-valued geometric point of
+Mg,r (cf. the discussion entitled
+“Curves”i n §0), and slog :S p e c (k)log →
+ M
+log
+g,r the strict morphism
+of log stacks whose underlying morphism of stacks is the morphism
+corresponding to s.
+(i) We shall denote byX
+log
+s the stable log curve determined byslog.
+(ii) We shall denote by Gs the semi-graph of anabelioids of pro-Σ
+PSC-type determined by the stable log curve Xlog
+s (cf. [Mzk4],
+Example 2.5).
+(iii) Write Qs for the monoid obtained as the stalk of the charac-
+teristic sheaf (cf. the discussion entitled “ Log stacks”i n §0) of
+M
+log
+g,r at s,a n d
+Is
+def
+=H o m (Qgp
+s , ˆZ(1)Σ)
+— where the “(1)” denotes a “Tate twist”. Recall (cf. [Knud],
+Theorem 2.7) that it follows from the well-known geometry of
+the irreducible components of the divisor that deﬁnes the log
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 31
+structure of
+ M
+log
+g,r that we have a natural decomposition
+Qs ≃
+⨁
+e∈Node(Gs)
+Ne
+—w h e r ew ew r i t eNe for a copy of N indexed by e ∈ Node(Gs);
+thus, we obtain a decomposition
+Is ≃
+⨁
+e∈Node(Gs)
+Λ[e]
+—w h e r ew ew r i t eΛ [e] for a copy of ˆZ(1)Σ indexed by e ∈
+Node(Gs).
+(iv) It follows from the various deﬁnitions involved that, if we write
+πΣ
+1 (Xlog
+s ) for the maximal pro-Σ quotient of the logarithmic fun-
+damental group of Xlog
+s , then we have a natural exact sequence
+of proﬁnite group
+1 −→ ΠGs −→ πΣ
+1 (Xlog
+s ) −→ Is −→ 1
+— which gives rise to an outer representation Is → Out(ΠGs )
+that factors through Aut(Gs) ⊆ Out(ΠGs). Write
+ρs : Is −→ Aut(Gs)
+for the resulting homomorphism of proﬁnite groups and Π Is
+def
+=
+ΠGs
+out
+⋊ Is. Thus, we have a natural isomorphism of proﬁnite
+groups πΣ
+1 (Xlog
+s )
+∼
+→ ΠIs.
+(v) Let s′ ∈
+ Mg,r+1(k)b ea k-valued geometric point of
+ Mg,r+1
+that corresponds to a node of Xs. Then it follows immediately
+from the various deﬁnitions involved that the quotient of Π Gs′
+— where we use the notation obtained by applying (ii) to s′ —
+by the closed subgroup of ΠGs′ topologically normally generated
+by the edge-like subgroups of Π Gs′ associated to the (r +1 ) - s t
+cusp is naturally isomorphic to Π Gs; in particular, we have a
+natural surjection ΠGs′ ↠ ΠGs . We shall denote by
+Ns′/s :N o d e (Gs′) −→ Node(Gs)
+the map which — as is easily veriﬁed — is uniquely determined
+by the following condition:
+If e ∈ Node(Gs′), and Π e ⊆ ΠGs′ is an edge-like sub-
+group associated to e, then the image of Π e via the
+above surjection ΠGs′ ↠ ΠGs is an edge-like subgroup
+associated to Ns′/s(e) ∈ Node(Gs′).
+Lemma 2.11 (Log fundamental groups in a neighborhood of a
+node). In the notation of Deﬁnition 2.10, let e ∈ Node(Gs) b ean o d e
+
+32 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+of Gs,a n ds′ ∈
+ Mg,r+1(k) a k-valued geometric point that corresponds
+to the node of Xs determined by e. Then the following hold:
+(i) The inverse imageN−1
+s′/s(e) consists ofprecisely two elements
+e1, e2 ∈ Node(Gs′ );t h em a p
+Node(Gs′ ) \{ e1,e2}− → Node(Gs) \{ e}
+determined by Ns′/s is bijective.
+(ii) Write Is′ for the result of applying Deﬁnition 2.10, (iii), to s′.
+Then the homomorphism Is′ → ΠIs induced on maximal pro-
+Σ quotients of log fundamental groups by (the strict morphism
+of log schemes whose underlying morphism of schemes is the
+morphism corresponding to) s′ is injective, and its image is
+an inertia subgroup Ie of ΠIs associated to e. Moreover, if,
+in the notation of (i), we write
+M̸=e1,e2
+def
+=
+⨁
+f ∈Node(Gs′)\{e1,e2}
+Λ[f] ⊆ Is′ ,
+then for i =1 , 2, there exists a vertex vi ∈V (e) ⊆ Vert(Gs) of
+Gs such that the subgroup obtained as the image of the composite
+of the injections
+Λ[ei] ⊕ M̸=e1,e2 ↪→ Is′ ↪→ ΠIs
+is an inertia subgroup Ivi of ΠIs associated to vi. In this
+situation, we shall refer to vi as the vertex associated to ei.
+(iii) Let
+M̸=e
+def
+=
+⨁
+f ∈Node(Gs)\{e}
+Λ[f] ⊆ Is .
+Then the homomorphism Is′ → Is induced by
+ M
+log
+g,r+1 →
+ M
+log
+g,r
+(i.e., the composite Is′ ↪→ ΠIs ↠ Is) coincides with the homo-
+morphism
+Λ[e1] ⊕ Λ[e2] ⊕ M̸=e1,e2 = Is′ −→ Is =Λ [e] ⊕ M̸=e
+determined by the homomorphism
+Λ[e1] ⊕ Λ[e2] −→ Λ[e]
+(a, b) ↦→ a + b
+and the isomorphism
+M̸=e1,e2
+∼
+−→ M̸=e
+induced by the bijective portion of Ns′/s (cf. (i)).
+Proof. Assertion (i) follows immediately from the various deﬁnitions
+involved. Assertions (ii) and (iii) follow by computing the log structures
+involved by means of a chart for the morphism X
+log
+s → Spec (k)log at
+the k-valued point s′ of Xs. □
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 33
+Remark 2.11.1. In the notation of Deﬁnition 2.10, let ˜e ∈ Node( ˜Gs),
+e
+def
+= ˜e(Gs) ∈ Node(Gs), s′ ∈
+ Mg,r+1(k)a k-valued geometric point
+that corresponds to the node of Xs determined by e,a n d {e1,e2} =
+N−1
+s′/s(e) ⊆ Node(Gs′ ) (cf. Lemma 2.11, (i)). Moreover, for i =1 ,2 ,l e t
+us denote by ˜vi the (unique!) element of Vert( ˜Gs) such that ˜vi ∈V (˜e),
+and, moreover, ˜vi(Gs) is the vertex associated to ei (cf. Lemma 2.11,
+(ii)). (Thus, V(˜e)= {˜v1, ˜v2}.) Then it follows from Lemma 2.11 that
+if we identify M̸=e with M̸=e1.e2 via the isomorphism of Lemma 2.11,
+(iii), then the following assertion holds:
+The isomorphisms Ievi
+∼
+→ Λ[ei] ⊕ M̸=e (cf. Lemma 2.11,
+(ii)), Iee
+∼
+→ Is′
+∼
+→ Λ[e1] ⊕ Λ[e2] ⊕ M̸=e (cf. Lemma 2.11,
+(ii), (iii); Deﬁnition 2.10, (iii)), and Is
+∼
+→ Λ[e] ⊕ M̸=e
+(cf. Lemma 2.11, (iii); Deﬁnition 2.10, (iii)) ﬁt into the
+following commutative diagram
+Iev1 × Iev2 −−−→ Iee −−−→ Is
+≀
+⏐⏐
+↓
+≀
+⏐
+⏐
+↓
+⏐⏐
+↓
+≀
+(
+Λ[e1] ⊕ M̸=e
+)
+×
+(
+Λ[e2] ⊕ M̸=e
+)
+−−−→ Λ[e1] ⊕ Λ[e2] ⊕ M̸=e −−−→ Λ[e] ⊕ M̸=e
+(a, m, b, n) ↦→ (a, b, m+ n)
+(a, b, m) ↦→ (a+b, m)
+— where the upper left-hand horizontal arrow Iev1 ×
+Iev2 → Iee is the homomorphism induced by the natu-
+ral inclusions Iev1 , Iev2 ⊆ Iee (cf. Lemma 2.3, (ii)), and
+the upper right-hand horizontal arrow Iee → Is is the
+composite Iee ↪→ ΠIs ↠ Is.
+Lemma 2.12 (The invertibility of a certain homomorphism of
+free modules). Let A be a commutative ring with unity, M af r e e
+A-module of ﬁnite rank, N af r e eA-module of rank 1, ρ: N → N ⊕ M
+a homomorphism of A-modules, ρ1 : N → N the composite of ρ and
+the ﬁrst projection N ⊕ M ↠ N,a n d
+N1 × N2
+def
+=
+{
+(N ⊕ M) ×N ⊕M N
+}
+×
+{
+(N ⊕ M) ×N ⊕M N
+}
+−→ N0
+def
+=( N ⊕ N ⊕ M) ×N ⊕M N −→ (N ⊕ M) ×N ⊕M N
+— where the deﬁnition of “ N1” (respectively, “N2”) is to be understood
+as the ﬁrst (respectively, second) module in brackets “ {−}”; the nota-
+tion “(−) ×N ⊕M (−)” denotes the ﬁber product of modules overN ⊕ M
+— the diagram obtained via ρ from the diagram
+(N ⊕ M) × (N ⊕ M) −→ N ⊕ N ⊕ M −→ N ⊕ M
+(a, m, b, n) ↦→ (a, b, m+ n)
+
+34 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+(a, b, m) ↦→ (a + b, m) .
+Then the following hold:
+(i) N1 and N2 are free A-modules of rank 1,a n dN0 i saf r e eA-
+module of rank 2.
+(ii) If φ is a homomorphism of freeA-modules of rank1, then let us
+denote by D(φ) ⊆ Spec (A) the open subscheme of Spec (A) on
+which (the homomorphism of OSpec (A)-modules determined by)
+φ is an isomorphism. Then D(ρ1)= D(det(N1 × N2 → N0))
+(cf. (i)).
+Proof. Assertion (i) is immediate from the deﬁnition of N1, N2,a n d
+N0. Thus, to complete the proof of Lemma 2.12, it suﬃces to verify
+assertion (ii). To this end, since the various deﬁnitions of modules
+and homomorphisms in the statement of Lemma 2.12 are compatible
+with base-change, we may assume without loss of generality that A is
+a ﬁeld . On the other hand, if A is a ﬁeld, then ρ1 is either zero or an
+isomorphism, so it follows immediately from an easy computation that
+D(ρ1)a n dD(det(N1 × N2 → N0)) coincide. This completes the proof
+of assertion (ii). □
+Lemma 2.13 (Injectivity and images of homomorphisms of
+ˆZΣ-modules). In the notation of Deﬁnition 2.10, let ρ: I
+def
+= ˆZΣ → Is
+be a homomorphism of proﬁnite groups, and
+Jev1 × Jev2
+def
+=
+(
+Iev1 ×Is I
+)
+×
+(
+Iev2 ×Is I
+)
+−→ Jee
+def
+= Iee ×Is I −→ I
+the diagram of homomorphisms of proﬁnite groups obtained viaρfrom
+the upper row of the diagram in Remark 2.11.1. Then the following
+conditions are equivalent:
+(i) The image of the composite
+I
+ρ
+−→ Is ≃ Λ[e] ⊕ M̸=e
+pr
+−→ Λ[e]
+is open in Λ[e].
+(ii) The ﬁrst arrow Jev1 × Jev2 → Jee of the above sequence is injec-
+tive, and its image is open in Jee.
+Proof. It follows immediately from the various deﬁnitions involved that
+the implication
+(i) =⇒ (ii) (respectively , (ii) =⇒ (i))
+follows from the inclusion “ D(ρ) ⊆ D(det(N1 × N2 → N0))” (respec-
+tively, “D(det(N1 × N2 → N0)) ⊆ D(ρ)”) implicit in Lemma 2.12, (ii).
+Here, we consider the case of “ D(−)” that arise from an open ideal of
+the topological ring ˆZΣ, i.e., an ideal generated by a nonzero element
+of Z. □
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 35
+Proposition 2.14 (Nodal nondegeneracy of certain outer rep-
+resentations). In the notation of Deﬁnition 2.10, let ρ: I
+def
+= ˆZΣ → Is
+be a homomorphism of proﬁnite groups, ρI : I → Aut(Gs) the outer
+representation of pro-Σ PSC-type obtained as the composite
+I
+ρ
+−→ Is
+ρs
+−→ Aut(Gs) ,
+and ΠI
+def
+=Π Gs
+out
+⋊ I. In the following, for ˜z ∈ VCN( ˜Gs), we shall write
+Jez for the inertia subgroup “Iez”o fΠI (i.e., to avoid confusion with the
+corresponding inertia subgroups ofΠIs). Then the following hold:
+(i) ρI is of SVA-type.
+(ii) If ˜e ∈ Node( ˜Gs), then the following two conditions are equiva-
+lent:
+(1) The image of the composite
+I
+ρ
+−→ Is ≃
+⨁
+e∈Node(Gs)
+Λ[e]
+pree(Gs)
+−→ Λ[˜e(Gs)]
+is open in Λ[˜e(Gs)].
+(2) If V(˜e)= {˜v1, ˜v2}, then the homomorphism Jev1 × Jev2 → Jee
+induced by the inclusions Jev1, Jev2 ⊆ Jee is injective,a n d
+its image is open in Jee.
+In particular, if the image of the composite
+I
+ρ
+−→ Is ≃
+⨁
+e∈Node(Gs)
+Λ[e]
+prf
+−→ Λ[f]
+is open in Λ[f] for every f ∈ Node(G), then ρI is of SNN-type.
+Proof. The various assertions of Proposition 2.14 follow immediately
+from the various deﬁnitions involved, together with Lemma 2.13. □
+Remark 2.14.1. In the notation of Proposition 2.14, it is not diﬃcult
+to show — by applying various well-known group-theoretic construc-
+tions of certain natural isomorphisms between the various copies of
+ˆZ(1)
+Σ involved — that the condition on the homomorphism ρ: I → Is
+that the composite ρs ◦ρbe of IPSC-type is equivalent to the condition
+on ρ that there exists an isomorphism
+I ≃ Hom(Ngp, ˆZ(1)Σ)
+with respect to which ρ is positive deﬁnite in the sense that it arises
+(by applying the functor “Hom( −, ˆZ(1)Σ)”) from a homomorphism of
+monoids Qs → N such that for any f ∈ Node(Gs), the composite
+Nf ↪→
+⨁
+e∈Node(Gs)
+Ne ≃ Qs → N
+
+36 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+is nonzero. On the other hand, it follows from Proposition 2.14 that
+the (necessarily strict) nodal nondegeneracy of ρI is equivalent to the
+nondegeneracy of ρ, i.e., the condition that the image of the composite
+I
+ρ
+−→ Is ≃
+⨁
+e∈Node(Gs)
+Λ[e]
+prf
+−→ Λ[f]
+be open for every f ∈ Node(Gs). That is to say,
+IPSC-type = ⇒ (S)NN-type
+⇕⇕
+positive deﬁnite = ⇒ nondegenerate.
+3. Group-theoretic aspects of the geometry of the
+underlying semi-graphs
+In this section, we consider the geometry of the underlying semi-
+graph associated to a semi-graph of anabelioids of PSC-type from a
+group-theoretic point of view in the context of outer representations of
+NN-type (cf. [Mzk6], Proposition 1.3, for an analogous discussion in
+the case of outer representations of IPSC-type).
+In this section, let Σ be a nonempty set of prime numbers,G as e m i -
+graph of anabelioids of pro-Σ PSC-type, Π
+G the fundamental group
+of G, ρI : I → Aut(G) an outer representation of NN-type,a n dΠ I
+def
+=
+ΠG
+out
+⋊ I.
+Lemma 3.1 (Contagious conditions). Let (C) be a condition on an
+element of Vert(˜G) which satisﬁes the following property (∗):
+(∗): Let ˜v1, ˜v2 ∈ Vert(˜G) be such that δ(˜v1(G), ˜v2(G)) ≤
+1. Then ˜v1 satisﬁes the condition (C) if and only if ˜v2
+satisﬁes the condition (C).
+Suppose that there exists an element ofVert(˜G) which satisﬁes the con-
+dition (C). Then every element of Vert( ˜G) satisﬁes the condition (C).
+Proof. This follows immediately from the connectedness of the under-
+lying semi-graph of a semi-graph of anabelioids of PSC-type. □
+Lemma 3.2 (Verticial decompositions inside ab/(edge+iner)-
+quotients). Let Πab/edge
+I be the quotient of the abelianization Πab
+I by
+the closed subgroup generated by the images in Πab
+I of the edge-like
+subgroups ofΠG. Suppose that ρI is of SNN-type. Then the following
+hold:
+(i) For ˜v ∈ Vert(˜G),w r i t eMev for the image of the compositeIev ↪→
+ΠI ↠ Πab/edge
+I . Then the closed subgroup Mev ⊆ Πab/edge
+I is
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 37
+independent of the choice of the element˜v ∈ Vert( ˜G). Denote
+this closed subgroup by M. In the following, we shall write
+Πab/(edge+iner)
+I
+def
+=Π ab/edge
+I /M .
+(ii) The composite of the injection of Lemma 1.4 with the natural
+inclusion ΠG ↪→ ΠI induces a split injection (cf. the discus-
+sion entitled “Topological groups” in§0)
+⨁
+v∈Vert(G)
+Πab/edge
+v ↪→ Πab/(edge+iner)
+I
+(cf. Deﬁnition 1.3, (i)) whose image is a free ˆZΣ-module of
+ﬁnite rank.
+Proof. First, we verify assertion (i). If Node( G)= ∅, then assertion
+(i) is immediate; thus, assume that Node( G) ̸= ∅.N e x t , l e t u s ﬁ x a n
+element ˜v0 ∈ Vert(˜G). For ˜v ∈ Vert(˜G), we shall say that ˜v satisﬁes
+the condition (∗triv) if the image of Iev in the quotient Π ab/edge
+I /Mev0 is
+trivial. To verify assertion (i), it is immediate that it suﬃces to show
+that any ˜v ∈ Vert(˜G)s a t i s ﬁ e s(∗triv). Therefore, to verify assertion (i),
+it follows from Lemma 3.1 that it suﬃces to show that the condition
+(∗
+triv) satisﬁes the property ( ∗) in the statement of Lemma 3.1. To
+this end, let ˜v, ˜v′ ∈ Vert(˜G) be such that δ(˜v(G), ˜v′(G)) ≤ 1, and ˜v
+satisﬁes ( ∗triv). Let De ⊆ ΠI be a decomposition subgroup associated
+to e ∈N (˜v(G)) ∩N (˜v′(G)). Then since the image of Iev in Πab/edge
+I /Mev0
+is trivial,a n dDe is generated by an edge-like subgroup and a conjugate
+of Iev (cf. Remark 2.7.1), it follows that the image ofDe in Πab/edge
+I /Mev0
+is trivial. Therefore, since there exists a conjugate of Iev′ contained in
+De, we conclude that the image of Iev′ in Π ab/edge
+I /Mev0 is trivial;i n
+particular, ˜v′ satisﬁes ( ∗triv). This completes the proof of assertion (i).
+Finally, we observe that assertion (ii) follows from a similar argument
+involving coverings — this time of G[ρI] (cf. Deﬁnition 2.8) as opposed
+to G — to the argument applied in the proof of Lemma 1.4. □
+Remark 3.2.1. Suppose that ρI is of SNN-type.L e t˜v1, ˜v2 ∈ Vert(˜G).
+Then it follows immediately from Remark 1.4.1, (ii); Lemma 3.2 that
+the following assertion holds:
+If ˜v1(G) ̸= ˜v2(G), then the image of the intersection
+(Iev1 · Dev2 ) ∩ Πev1 ⊆ ΠG
+in Πab/edge
+G is trivial.
+Indeed, it follows from Lemma 3.2, (i); Remark 2.7.1, together with
+the various deﬁnitions involved, that the image of Iev1 (respectively,
+Dev2 )i nΠ ab/(edge+iner)
+I is trivial (respectively, coincides with the image
+of Π ev2 ⊆ ΠG). But, by Lemmas 1.4; 3.2, (ii), this implies that the
+
+38 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+image of (Iev1 · Dev2 ) ∩ Πev1 in Πab/edge
+G is contained in the intersection of
+the images of Π ev2 and Π ev1 in Πab/edge
+G . Therefore, the above assertion
+follows from Remark 1.4.1, (ii).
+Remark 3.2.2. In fact, it is not diﬃcult to verify that both the state-
+ment and the proof of Lemma 3.2 remain valid even under the weaker
+assumption that ρI is of SVA-type.
+Lemma 3.3 (Submodules of free Zl-modules). Let l be a prime
+number, r a positive integer; also, for 1 ≤ j ≤ r,l e t cj ∈ Zl \{ 0}.
+For 1 ≤ i ≤ l, 1 ≤ j ≤ r, set Mi,j
+def
+= Zl, M0
+def
+= Zl;w r i t eιi,j ∈ Mi,j,
+ι0 ∈ M0 for the generators corresponding to the element “1”. Next, let
+us write Mdiag ⊆ ⨁
+i,j Mi,j for the submodule obtained as the image of
+the diagonal homomorphism Zl ↪→ ⨁
+i,j Mi,j,
+N
+def
+=
+{( ⨁
+i,j
+Mi,j
+)
+/Mdiag
+}
+⊕ M0
+and regardM0 as a submodule of N via the inclusion M0 ≃ 0 ⊕ M0 ↪→
+N. Then if we denote by H the submodule of N generated by the
+elements of N determined by the (lr +1 )-tuples of the form
+(0, ··· , 0,c j · ιi,j, 0, ··· , 0,ι0)
+— where (i, j) ranges over pairs of natural numbers such that1 ≤ i ≤ l,
+1 ≤ j ≤ r — then H ∩ M0 ⊆ l · M0.
+Proof. Suppose that the element h ∈ H determined by
+∑
+i,j
+di,j(0, ··· , 0,c j · ιi,j, 0, ··· , 0,ι0)
+=( ··· ,d i,jcj · ιi,j, ··· ,
+∑
+i,j
+di,j · ι0) ∈
+( ⨁
+i,j
+Mi,j
+)
+⊕ M0
+—w h e r edi,j ∈ Zl — is contained in M0. Now let us observe that the
+homomorphism φ
+N =
+{( ⨁
+i,j Mi,j
+)
+/Mdiag
+}
+⊕ M0 −→
+( ⨁
+(i,j)̸=(1,1) Mi,j
+)
+⊕ M0
+([(λi,j)i,j],λ0) ↦→ ((λi,j − λ1,1)(i,j)̸=(1,1),λ0)
+— where we write “[?]” for the image of “?” in the module “ {−}”,
+and “ λ(−)”i sa ne l e m e n to f“M(−)”—i sa n isomorphism. Thus, by
+applying φ to h ∈ H ∩ M0, we conclude that di,jcj − d1,1c1 =0 ,f o r
+1 ≤ i ≤ l,1 ≤ j ≤ r; in particular, it follows that di,jcj is independent
+of the pair (i, j), hence that (di,j − di′,j)cj =0 . B u t ,s i n c ecj ̸=0 ,t h i s
+implies that di,j is independent of i, hence — since i ranges over the
+integers from 1 to l —t h a t∑
+i,j di,j ∈ l · Zl, as desired. □
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 39
+Lemma 3.4 (Existence of certain coverings). Suppose that the
+following two conditions are satisﬁed:
+(a) ρI is of SNN-type.
+(b) G is sturdy and untangled (cf. Deﬁnition 1.2).
+If, by abuse of notation, we write G for the underlying semi-graph of
+G[ρI] (cf. Deﬁnition 2.8), then, for a vertex v (respectively, an edge
+e)o f G, let us write Dv (respectively, De) for the connected anabelioid
+corresponding to v (respectively, e), and Π Dv (respectively, ΠDe) for
+the fundamental group of the connected anabelioidDv (respectively, De)
+[so it follows from the deﬁnition of G[ρI] that ΠDv , ΠDe are naturally
+isomorphic, up to inner automorphism, to Dv, De, respectively]. Fix
+a vertex v0 ∈ Vert(G). Then there exists a connected covering of
+semi-graphs of anabelioids (cf. [Mzk3], Deﬁnition 2.2, (i))
+H− →G [ρI]
+of G[ρI] such that if we denote the underlying semi-graph of H by H
+and use analogous notation for H to the notation introduced above for
+G[ρI], then the following conditions are satisﬁed:
+(1) The set of vertices of H which lie over v0 consists of precisely
+one element w0, and the image of the outer injection ΠDw0 ↪→
+ΠDv0 ≃ Dv0 induced by the morphism Dw0 →D v0 does not
+contain the normal subgroup Iv0 ⊆ Dv0 , i.e., “Iv0 ̸⊆ ΠDw0 ”.
+(2) For any v1 ∈ Vert(G) such that δ(v0,v1)=1 , the set of ver-
+tices of H which lie over v1 consists of precisely one element
+w1, and the image of the outer injection ΠDw1 ↪→ ΠDv1 ≃ Dv1
+induced by the morphismDw1 →D v1 contains the normal sub-
+group Iv1 ⊆ Dv1, i.e., “Iv1 ⊆ ΠDw1 ”.
+(3) For any v ∈ Vert(G) such that δ(v0,v ) ≥ 2, and any vertex w
+of H which lies over v, the morphism Dw →D v is an isomor-
+phism.
+(4) For any e ∈ Node(G) such that v0 ̸∈V (e), and any closed
+edge f of H which lies over e, the morphism Df →D e is an
+isomorphism.
+(5) For any e ∈ Cusp(G), and any open edgef of H which lies over
+e, the image of the outer injection ΠDf ↪→ ΠDe ≃ De induced
+by the morphism Df →D e contains the normal subgroupΠe ⊆
+De, i.e., “Πe ⊆ ΠDf ”.
+Proof. To verify Lemma 3.4, by replacingG by the compactiﬁcation of
+G (cf. Deﬁnition 1.11), we may assume without loss of generality that
+Cusp(G)= ∅, and hence that condition (5) is satisﬁed automatically.
+Moreover, by projecting to the maximal pro-l quotients, for somel ∈ Σ,
+
+40 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+of the various pro-Σ groups involved, to verify Lemma 3.4, we may
+assume without loss of generality that Σ = {l}.
+Write
+V≤1 ⊆ Vert(G)
+for the set of vertices v of G such that δ(v0,v ) ≤ 1,
+V=1 ⊆V ≤1
+for the set of vertices v of G such that δ(v0,v ) = 1 (i.e., V=1 = V≤1 \
+{v0}),
+N0 ⊆ Node(G)
+for the set of nodes of G which abut to v0 (i.e., N0
+def
+= N(v0)), and
+N1 ⊆ Node(G)
+for the set of nodes e of G such that V(e) ∩V =1 ̸= ∅ and v0 ̸∈V (e).
+Then we claim that there exists a connected ﬁnite ´ etale covering of
+semi-graphs of anabelioids F→G [ρI]o f G[ρI] such that if we denote
+the underlying semi-graph of F by F and use analogous notation for
+F to the notation introduced in the statement of Lemma 3.4, then the
+following conditions are satisﬁed:
+(i) The connected ﬁnite ´etale covering of semi-graphs of anabelioids
+F→ G [ρI]o f G[ρI]i s Galois, and its Galois group is isomorphic
+to Z/lZ.
+(ii) For anyv ∈V ≤1, the set of vertices ofF which lie overv consists
+of precisely one element u, and the image of the outer injection
+ΠDu ↪→ ΠDv ≃ Dv induced by the morphism Du →D v contains
+the normal subgroup Iv ⊆ Dv, i.e., “Iv ⊆ ΠDu ”.
+(iii) For any v ∈ Vert(G) such that δ(v0,v ) ≥ 2, and any vertexu of
+F which lies overv, the morphism Du →D v is an isomorphism.
+(iv) For any e ∈ Node(G), and any edge h of F which lies over e,
+the morphism Dh →D e is an isomorphism.
+Indeed, since G is sturdy (cf. condition (b)), it follows that Π ab/edge
+v ̸=
+{1} (cf. Deﬁnition 1.3, (iii)) for anyv ∈ Vert(G). Thus, the aboveclaim
+follows immediately from the existence of the natural split injection
+⨁
+v∈Vert(G)
+Πab/edge
+v ↪→ Πab/(edge+iner)
+I
+of Lemma 3.2, (ii).
+In light of the above claim, to complete the proof of Lemma 3.4, we
+may replace G[ρI]b y F and assume in the following that
+(∗1) there exists an action of a group Φ isomorphic to
+Z/lZ on G[ρI] such that the induced action of Φ on
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 41
+Vert(G) ﬁxes every element of V≤1, and the induced ac-
+tion of Φ on N0 is free.
+Now let Π v0 ⊆ ΠG be a verticial subgroup associated to v0; write
+Dv0 ⊆ ΠI (respectively, Iv0 ⊆ ΠI) for the decomposition (respectively,
+inertia) subgroup associated to Πv0 .N e x t ,f o re ∈N 0, write ve for the
+unique element of V(e) \{ v0}⊆V =1 (cf. assumption (b)); let Πe ⊆ ΠG
+be an edge-like subgroup associated to e such that Πe ⊆ Πv0 ; write Ie
+for the inertia subgroup associated to Π e.N e x t , l e tIve ⊆ ΠI be an
+inertia subgroup associated to ve such that Ive ⊆ Ie.( H e r e , w e n o t e
+that it is easily veriﬁed that such an Ive exists.) Thus, Ie =Π e × Iv0 ⊆
+Πv0 × Iv0 = Dv0 (cf. Remark 2.7.1); in particular, Ive ⊆ Dv0 .
+Next, write H for the Zl-submodule of the free Zl-module Dab
+v0 (≃
+Πab
+v0 × Iv0 ) generated by the images of the composite homomorphisms
+Ive ↪→ Dv0 ↠ Dab
+v0
+—w h e r ee ranges over elements of N0.T h e nw eclaim that
+(∗2) H ∩ Im(Iv0 ) ⊆ l · Im(Iv0 )
+—w h e r ew ew r i t eI m (Iv0 ) for the image of the compositeIv0 ↪→ Dv0 ↠
+Dab
+v0 . Indeed, by the well-known structure of the maximal pro-l quotient
+of the fundamental group of a smooth curve over an algebraically closed
+ﬁeld of characteristic ̸= l, there exists a topological generator ι
+e ∈ Πe
+of Πe such that the inclusions Iv0 ↪→ Dab
+v0 and Πe ↪→ Dab
+v0 determine a
+split injection
+{( ⨁
+e∈N0
+Πe
+)
+/Zl · (ιe)e∈N0
+}
+⊕ Iv0 ↪→ Dab
+v0
+into Dab
+v0 . Now let us ﬁx a topological generator ιv0 ∈ Iv0 and denote by
+ιve ∈ Ive the topological generator of Ive obtained as the image of ιv0 ∈
+Iv0 via the composite isomorphism Iv0
+∼
+→ I
+∼
+← Ive (cf. Deﬁnition 2.4,
+(2′)). Then it follows from condition (3) of Deﬁnition 2.4 that the
+natural inclusions Iv0 , Ive ↪→ Ie determine an open subgroup Iv0 ×Ive ⊆
+Ie (cf. condition (a)); in particular, there exists an elementcve ∈ Zl \{0}
+such that ιve = cve ιe + ιv0 .M o r e o v e r ,s i n c ew eh a v ea na c t i o no fΦo n
+G[ρI]a si n( ∗1), we obtain, for any e ∈N 0 and σ ∈ Φ, that cve = cveσ .
+Therefore, (∗2) follows immediately from Lemma 3.3.
+In light of (∗2), there exists an open subgroup H′ ⊆ Dab
+v0 such that
+H ⊆ H′ and Im(Iv0 ) ̸⊆ H′. Thus, since H is stabilized by the action of
+Φo n Dab
+v0 , it follows (for instance, by replacingH′ by the intersection of
+the translates of H′ by the action of Φ) that we may assume thatH′ is
+stabilized by the action of Φ on Dab
+v0 . Write Dw0 ⊆ Dv0 for the inverse
+image of H′ ⊆ Dab
+v0 via the natural surjection Dv0 ↠ Dab
+v0 .T h e n i t
+follows immediately from the deﬁnition of Dw0 that the following hold:
+(v) Dw0 is open and normal in Dv0 , and, moreover,Dw0 is stabilized
+by the induced outer action of Φ on Dv0 .
+
+42 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+(vi) For any e ∈N 0,w eh a v eIve ⊆ Dw0; in particular, by (v), for
+any e ∈N 0,e v e r yDv0 -conjugate of Ive is contained in Dw0 .
+(vii) Iv0 ̸⊆ Dw0 .
+Write Dw0 →D v0 for the connected ﬁnite ´etale covering of anabelioids
+corresponding to the open subgroup Dw0 ⊆ Dv0 of Dv0 ;
+Gsub
+for the connected sub-semi-graph of G whose set of vertices is V≤1 ⊆
+Vert(G), and whose set of edges is N0 ∪N 1;a n d
+G[ρI]sub
+for the semi-graph of anabelioids determined by restricting G[ρI]t o
+Gsub (cf. the discussion preceding [Mzk3], Deﬁnition 2.2). Then since
+we have an action of Φ on G[ρI]a si n( ∗1), it follows from (v) that
+for any e ∈N 0 and σ ∈ Φ, the ramiﬁcation indices of this covering
+Dw0 →D v0 at the cusps of Dv0 determined by e and eσ coincide.T h u s ,
+it follows from (vi) (together with the elementary fact that there exist
+l − 1e l e m e n t sai ∈ Z —w h e r e1≤ i ≤ l − 1 — such that the ai’s and∑l−1
+i=1 ai are prime to l) that one may extend this covering Dw0 →D v0
+to a connected ﬁnite ´etale covering Hsub →G [ρI]sub which satisﬁes the
+following conditions:
+(viii) The set of vertices of Hsub (i.e., the underlying semi-graph of
+Hsub) which lie over an element of V≤1 consists of precisely one
+element.
+(ix) For any e ∈N 0,i fw ed e n o t eb ywe the — necessarily unique
+(cf. (viii)) — vertex of Hsub which lies overve ∈V =1,b y Dwe the
+anabelioid corresponding to we,a n db yΠ Dwe the fundamental
+group of Dwe, then the image of the outer injection Π Dwe ↪→
+ΠDve ≃ Dve contains the normal subgroup Ive ⊆ Dve .
+(x) Hsub →G [ρI]sub restricts to the trivial covering over every edge
+corresponding to an element of N1.
+Moreover, it follows immediately from (x) that one may extend the
+covering Hsub →G [ρI]sub obtained above to a connected ﬁnite ´ etale
+covering H→G [ρI]o f G[ρI] such that
+(xi) H→G [ρI] restricts to the trivial covering over the verticesv of
+G such that δ(v0,v ) ≥ 2.
+Now by (vii) and (viii) (respectively,(viii) and (ix); (xi); (x) and (xi)),
+this covering H→G [ρI] satisﬁes condition (1) (respectively, (2); (3);
+(4)). This completes the proof of Lemma 3.4. □
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 43
+Remark 3.4.1. In light of the isomorphism of Lemma 2.9, the content
+of Lemma 3.4 admits the following interpretation:
+Suppose that ρI is of SNN-type,a n dt h a tG is sturdy and
+untangled.L e t˜v0 ∈ Vert(˜G). Then there exists an open
+subgroup Π ⊆ ΠI of Π I which satisﬁes the following
+conditions:
+(i) If ˜v ∈ Vert(˜G)s a t i s ﬁ e sδ(˜v0(G), ˜v(G)) = 0 (i.e.,
+v0(G)= v(G)), then Iev ̸⊆ Π.
+(ii) If ˜v ∈ Vert(˜G)s a t i s ﬁ e sδ(˜v0(G), ˜v(G)) = 1, then
+Iev ⊆ Π.
+(iii) If ˜v ∈ Vert(˜G)s a t i s ﬁ e sδ(˜v0(G), ˜v(G)) ≥ 2, then
+Dev ⊆ Π.
+(iv) If ˜e ∈ Edge( ˜G)s a t i s ﬁ e s˜e(G) ̸∈E (˜v0(G)), then Dee ⊆
+Π.
+(v) If ˜e ∈ Cusp( ˜G), then Πee ⊆ Π.
+Remark 3.4.2. Let Π ⊆ ΠI be the open subgroup of Remark 3.4.1.
+Then the following assertion holds:
+For ˜e ∈ Node( ˜G), consider the following conditions:
+(i) ˜e ∈N (˜v0).
+(i′) ˜e(G) ∈N (˜v0(G)).
+(ii) Π ee ̸⊆ Π.
+(ii′) ∃γ ∈ ΠG such that γ · Πee · γ−1 ̸⊆ Π.
+Then
+(i) =⇒ (ii) =⇒ (ii′) ⇐⇒ (i′) .
+Indeed, if condition (i) is satisﬁed, but condition (ii) is not satisﬁed,
+then it follows from condition (ii) in Remark 3.4.1 thatIee = Iev ·Πee ⊆ Π
+(cf. Remark 2.7.1), where we write ˜v for the unique element of V(˜e) \
+{˜v0}; thus, since Iev0 ⊆ Iee, we obtain that Iev0 ⊆ Π — in contradiction
+to condition (i) in Remark 3.4.1. This completes the proof of the
+implication
+(i) =⇒ (ii) .
+The implication
+(ii) =⇒ (ii′)
+is immediate. Next, if condition (i ′)i s not satisﬁed, then by applying
+condition (iv) in Remark 3.4.1 to the Π G-conjugates of ˜e, we conclude
+(since Πee ⊆ Dee) that condition (ii′)i s not satisﬁed. This completes the
+proof of the implication
+(ii′)= ⇒ (i′) .
+
+44 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+Finally, by applying the implication “(i) ⇒ (ii)” to a suitable Π G-
+conjugate of ˜e, we obtain the implication
+(i′)= ⇒ (ii′) .
+Proposition 3.5 (Graph-theoretic geometry via inertia sub-
+groups). Let ˜v ∈ Vert(˜G), ˜e ∈ Edge( ˜G). Then the following conditions
+are equivalent:
+(i) ˜v ∈V (˜e).
+(ii) Iev ∩ Dee ̸= {1}.
+In particular, if Iev ∩ Dee ̸= {1}, then Iev ⊆ Dee.
+Proof. The implication
+(i) =⇒ (ii)
+is immediate from the various deﬁnitions involved; thus, to complete
+the proof of Proposition 3.5, it suﬃces to verify the implication
+(ii) =⇒ (i) .
+To this end, let us assume that condition (ii) is satisﬁed. Then since
+Iev is torsion-free (cf. Lemma 2.5, (i)), to verify condition (i), by re-
+placing ΠI by an open subgroup of Π I, we may assume without loss
+of generality that ρI is of SNN-type,a n dt h a tG is sturdy (cf. [Mzk4],
+Remark 1.1.5) and untangled (cf. Remark 1.2.1, (i)); moreover, by pro-
+jecting to the maximal pro-l quotients, for somel ∈ Σ, of suitable open
+subgroups of the various pro-Σ groups involved, to verify condition (i),
+we may assume without loss of generality that Σ = {l}. On the other
+hand, since I
+ev is isomorphic to Zl as an abstract proﬁnite group (cf.
+Lemma 2.5, (i)), by replacing I by an open subgroup of I,t ov e r i f y
+condition (i), we may assume without loss of generality that Iev ⊆ Dee.
+Assume that ˜v ̸∈V (˜e), i.e., that condition (i) isnot satisﬁed. Then by
+applying Remark 3.4.1, where we take “˜v0”t ob e˜v, there exists an open
+subgroup Π ⊆ ΠI such that Iev ̸⊆ Π (cf. condition (i) in Remark 3.4.1),
+and, moreover, Dee ⊆ Π (cf. condition (iv) in Remark 3.4.1); in par-
+ticular, Iev ̸⊆ Dee —i n contradiction to our assumption that Iev ⊆ Dee.
+This completes the proof of the implication in question. □
+Remark 3.5.1. Let ˜v1, ˜v2 ∈ Vert(˜G). Then it follows immediately
+from Proposition 3.5 that the following assertion holds:
+If Iev1 ∩ Iev2 ̸= {1},t h e nN(˜v1)= N(˜v2).
+Indeed, suppose that Iev1 ∩Iev2 ̸= {1}.N o wi f˜e ∈N (˜v1), then it follows
+from Proposition 3.5 thatIev1 ⊆ Dee; thus, sinceIev1 ∩Iev2 ̸= {1}, it follows
+that Iev2 ∩Dee ̸= {1}. In particular, again by Proposition 3.5, we obtain
+that ˜e ∈N (˜v2). This completes the proof of the above assertion.
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 45
+In particular, it follows from Remark 1.8.1, (ii), that the following
+assertion holds:
+˜v1 = ˜v2 if and only if Iev1 ∩ Iev2 ̸= {1}.
+Lemma 3.6 (Centralizers, normalizers, and commensurators
+of verticial inertia subgroups). Let J ⊆ Iev be a nontrivial closed
+subgroup of Iev, where ˜v ∈ Vert(˜G). Then the following hold:
+(i) Π ev = ZΠI (J) ∩ ΠG = NΠI (J) ∩ ΠG = CΠI (J) ∩ ΠG.
+(ii) If ρI is of SNN-type, then Dev = ZΠI (J)= NΠI (J)= CΠI (J).
+Proof. First, we prove assertion (i). If Node( G)= ∅, then assertion
+(i) is immediate from the various deﬁnitions involved; thus, assume
+that Node( G) ̸= ∅. Since it is immediate that Π ev ⊆ ZΠI (J) ∩ ΠG,
+to prove assertion (i), it suﬃces to verify that CΠI (J) ∩ ΠG ⊆ Πev.
+To this end, let us assume that ( CΠI (J) ∩ ΠG) \ Πev ̸= ∅ (where “ \”
+denotes the set-theoretic complement). Let γ ∈ (CΠI (J) ∩ ΠG) \ Πev;
+write ˜vγ for the element of Vert( ˜G) that corresponds to the verticial
+subgroup γ · Πev · γ−1 ⊆ ΠG.T h e n s i n c eγ ̸∈ Πev, it follows from the
+commensurable terminality of Π ev in Π G (cf. [Mzk4], Proposition 1.2,
+(ii)) that Πev ̸= γ·Πev ·γ−1; in particular, it follows that ˜v ̸= ˜vγ.O nt h e
+other hand, since γ ∈ CΠI (J), it follows that J ∩ (γ · J · γ−1) ̸= {1};
+thus, it follows from Remark 3.5.1 that˜v = ˜vγ — a contradiction. This
+completes the proof of assertion (i).
+Next, we prove assertion (ii). SinceρI is of SNN-type, it follows from
+Remark 2.7.1 (cf. also Lemma 2.5, (i)) that Dev ⊆ ZΠI (Iev) ⊆ ZΠI (J),
+and that the composite Dev ⊆ ΠI ↠ I is surjective. Thus, assertion (ii)
+follows from assertion (i), together with Remark 2.7.1. □
+Lemma 3.7(Centralizers, normalizers, and commensurators of
+edge-like inertia subgroups). Let ˜e ∈ Edge( ˜G). Then the following
+hold:
+(i) Π ee = ZΠI (Iee) ∩ ΠG = NΠI (Iee) ∩ ΠG = CΠI (Iee) ∩ ΠG.
+(ii) If ρI is of SNN-type, then Dee = ZΠI (Iee)= NΠI (Iee)= CΠI (Iee).
+Proof. Assertion (i) in the case where ˜e ∈ Cusp( ˜G) follows from the
+commensurable terminality of Π ee in Π G (cf. [Mzk4], Proposition 1.2,
+(ii)), together with the deﬁnition of an inertia subgroup of a cusp.
+Assertion (i) in the case where ˜e ∈ Node( ˜G) follows from a similar
+argument to the argument used in the proof of Lemma 3.6, (i), together
+with Remark 2.7.2. Assertion (ii) follows from a similar argument to
+the argument used in the proof of Lemma 3.6, (ii). □
+
+46 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+Proposition 3.8 (Graph-theoretic geometry via edge-like de-
+composition subgroups). For i =1 , 2,l e t˜ei ∈ Edge( ˜G). Then the
+following hold:
+(i) Consider the following three (mutually exclusive) conditions:
+(1) ˜e1 = ˜e2.
+(2) ˜e1 ̸= ˜e2; V(˜e1) ∩V (˜e2) ̸= ∅.
+(3) V(˜e1) ∩V (˜e2)= ∅(which implies that ˜e1 ̸= ˜e2).
+Then we have equivalences
+(1) ⇐⇒ (1′); ( 2 ) ⇐⇒ (2′); ( 3 ) ⇐⇒ (3′)
+with the following three (mutually exclusive [cf. Lemma 1.5])
+conditions:
+(1′) Dee1 = Dee2 (so Πee1 = Dee1 ∩ ΠG = Dee2 ∩ ΠG =Π ee2 — cf.
+Lemma 2.7, (ii), (iii)).
+(2′)Π ee1 ∩ Πee2 (= Dee1 ∩ Dee2 ∩ ΠG)= {1}; Dee1 ∩ Dee2 ̸= {1}.
+(3′) Dee1 ∩ Dee2 = {1}.
+(ii) Suppose that ρI is of SNN-type. Then if condition (2 ′)i s
+satisﬁed, then V(˜e1) ∩V (˜e2) ̸= ∅, and, moreover,Dee1 ∩Dee2 = Iev
+— where we write ˜v for the unique element of V(˜e1) ∩V (˜e2)
+(cf. Lemmas 1.5, 1.8).
+Proof. First, we verify assertion (i). The equivalence
+(1) ⇐⇒ (1′)
+follows from [Mzk4], Proposition 1.2, (i). The implication
+(2) =⇒ (2′)
+follows from Lemma 1.5, together with the fact that Iev ⊆ Dee1 ∩ Dee2 ,
+where ˜v ∈V (˜e1) ∩V (˜e2) (cf. Proposition 3.5). Thus, since it is imme-
+diate that the equivalence
+(3) ⇐⇒ (3′)
+follows from the equivalences
+(1) ⇐⇒ (1′); ( 2 ) ⇐⇒ (2′) ,
+together with Lemma 1.5, to complete the proof of assertion (i), it
+suﬃces to verify the implication
+(† )( 2 ′)= ⇒ (2)
+under the assumption that ˜e1 ̸= ˜e2 (cf. Lemma 1.5).
+If Node(G)= ∅,t h e n(† ) is immediate; thus, assume that Node(G) ̸=
+∅. Now if condition (2′) is satisﬁed, then since Dee1 ∩Dee2 ∩ΠG = {1} —
+which implies, in particular, that the composite Dee1 ∩ Dee2 ↪→ ΠI ↠ I
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 47
+is injective —a n d I is torsion-free, it follows that the intersection
+Dee1 ∩ Dee2 is torsion-free.T h u s , t o p r o v e († ), by replacing Π I by an
+open subgroup of ΠI, we may assume without loss of generality thatG is
+sturdy (cf. [Mzk4], Remark 1.1.5) anduntangled (cf. Remark 1.2.1, (i)),
+and that ρI is of SNN-type; moreover, by projecting to the maximal
+pro-l quotients, for some l ∈ Σ, of suitable open subgroups of the
+various pro-Σ groups involved, to prove ( † ), we may assume without
+loss of generality that Σ = {l}. Write J
+def
+= Dee1 ∩ Dee2.
+Now we verify ( † ) in the case where {˜e1, ˜e2}⊆ Cusp( ˜G). To this
+end, let us assume that condition (2′) is satisﬁed. Then it follows from
+Lemma 2.7, (ii), that the image of the composite Deei ↪→ ΠI =Π G
+out
+⋊
+I ↠ Π
+G
+out
+⋊ I —w h e r ew ew r i t e
+G for the compactiﬁcation of G (cf.
+Deﬁnition 1.11) — coincides with the inertia subgroup Ievi of Π
+ G
+out
+⋊ I
+associated to the element ˜vi of Vert((
+G)∼ ) determined by the unique
+element of V(˜ei) ⊆ Vert(˜G). Thus, since J ̸= {1} and J ∩ ΠG = {1}
+(cf. condition (2 ′)), it follows that Iev1 ∩ Iev2 ̸= {1}; in particular, it
+follows from Remark 3.5.1 that ˜v1 = ˜v2, hence — by applying this
+conclusion to the various open subgroups of ΠI —t h a tV(˜e1)= V(˜e2).
+This completes the proof of († ) in the case where {˜e1, ˜e2}⊆ Cusp( ˜G).
+Next, we verify ( † ) in the case where {˜e1, ˜e2} ̸⊆ Cusp( ˜G). Thus,
+we may assume without loss of generality that ˜e1 ∈ Node( ˜G). Write
+V(˜e1)= {˜v, ˜v′}.
+Now we claim that if condition (2′) is satisﬁed (i.e., ˜e1 ̸= ˜e2 and J ̸=
+{1}), and J ∩Iev = {1}, then condition (2) is satisﬁed. Indeed, suppose
+that condition (2′) is satisﬁed and J ∩Iev = {1}, but that condition (2) is
+not satisﬁed. Then since J ∩Iev = {1} and ˜e1 ∈ Node( ˜G), it follows that
+(J ·Iev)∩ΠG =( J ×Iev)∩ΠG (≃ Zl)i sa nopen subgroup ofDee1 ∩ΠG =Π ee1
+(≃ Zl) (cf. Remark 2.7.1; Lemma 3.7); thus, by replacing Π I by an
+open subgroup of Π I, we may assume without loss of generality that
+(J ·Iev) ∩ΠG =Π ee1. In particular, we obtain that Πee1 ⊆ J ·Iev ⊆ Dee2 ·Iev.
+On the other hand, since ˜v′ ̸∈V (˜e2) (by the assumption that condition
+(2) is not satisﬁed), by applying Remark 3.4.1, where we take “ ˜v0”t o
+be ˜v′, we obtain an open subgroup Π ⊆ ΠI such that Πee1 ̸⊆ Π( c f .t h e
+implication “(i) ⇒ (ii)” in Remark 3.4.2), and, moreover,Iev, Dee2 ⊆ Π
+(cf. conditions (ii), (iv) in Remark 3.4.1) — in contradiction to the
+inclusion Πee1 ⊆ Dee2 · Iev. This completes the proof of the above claim.
+Next, we claim that if condition (2 ′) is satisﬁed (i.e., ˜e1 ̸= ˜e2 and
+J ̸= {1}), and J ∩ Iev ̸= {1}, then condition (2) is satisﬁed. Indeed,
+suppose that condition (2 ′) is satisﬁed, and J ∩ Iev ̸= {1}.T h e ns i n c e
+Σ= {l}, by replacingI by an open subgroup ofI, we may assume that
+Iev = J;t h u s ,Iev = J ⊆ Dee2. Therefore, it follows from Proposition 3.5
+that ˜v ∈V (˜e2); in particular, since ˜v ∈V (˜e1) ∩V (˜e2), condition (2) is
+
+48 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+satisﬁed. This completes the proof of the above claim, hence also of
+the proof of († ).
+Next, we verify assertion (ii). Since condition (2 ′) in assertion (i)
+is satisﬁed, we have Iev ⊆ Dee1 ∩ Dee2 (cf. Proposition 3.5). Moreover,
+since Dee1 ∩ Dee2 ∩ ΠG = {1},t h ec o m p o s i t eDee1 ∩ Dee2 ↪→ ΠI ↠ I is
+injective. On the other hand, since ρI is of SNN-type,t h ec o m p o s i t e
+Iev ↪→ ΠI ↠ I is bijective. Therefore, we obtain that Iev = Dee1 ∩Dee2 ,a s
+desired. □
+Proposition 3.9 (Graph-theoretic geometry via verticial de-
+composition subgroups). For i =1 , 2,l e t˜vi ∈ Vert(˜G). Then the
+following hold:
+(i) Consider the following four (mutually exclusive) conditions:
+(1) δ(˜v1, ˜v2)=0 .
+(2) δ(˜v1, ˜v2)=1 .
+(3) δ(˜v1, ˜v2)=2 .
+(4) δ(˜v1, ˜v2) ≥ 3.
+Then we have equivalences
+(1) ⇐⇒ (1′); ( 2 ) ⇐⇒ (2′); ( 3 ) ⇐⇒ (3′); ( 4 ) ⇐⇒ (4′)
+with the following four (mutually exclusive [cf. Lemma 1.9,
+(ii)]) conditions:
+(1′)Π ev1 =Π ev2 (so Dev1 = Dev2 , Iev1 = Iev2).
+(2′)Π ev1 ̸=Π ev2; Πev1 ∩ Πev2 (= Dev1 ∩ Dev2 ∩ ΠG) ̸= {1}.
+(3′)Π ev1 ∩ Πev2 (= Dev1 ∩ Dev2 ∩ ΠG)= {1}; Dev1 ∩ Dev2 ̸= {1}.
+(4′) Dev1 ∩ Dev2 = {1}.
+(ii) Suppose that ρI is of SNN-type. Then if condition (2 ′)i s
+satisﬁed, then N(˜v1) ∩N (˜v2) ̸= ∅, and, moreover, Dev1 ∩ Dev2 =
+Dee — where we write ˜e for theunique element of N(˜v1)∩N(˜v2)
+(cf. Lemmas 1.8; 1.9, (ii)).
+(iii) Suppose that ρI is of SNN-type. Then if condition (3′) is sat-
+isﬁed, then there exists a(n) — necessarilyunique (cf. Lemmas
+1.8; 1.9, (ii)) — element of ˜v3 ∈ Vert(˜G) such that δ(˜v1, ˜v3)=
+δ(˜v2, ˜v3)=1 , and, moreover, Dev1 ∩ Dev2 = Iev3.
+Proof. First, we verify assertion (ii). To this end, suppose that ρI is
+of SNN-type, and that condition (2′) is satisﬁed. Then it follows from
+Lemma 1.9, (ii), that there exists an element ˜e ∈ Node( ˜G) such that
+V(˜e)= {˜v1, ˜v2} (i.e., ˜e ∈N (˜v1) ∩N (˜v2)). Thus, it follows from Re-
+mark 2.7.1 that Dee ⊆ Dev1 ∩ Dev2 . Therefore, since Π ee = Dee ∩ ΠG =
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 49
+Dev1 ∩ Dev2 ∩ ΠG (cf. Lemmas 1.9, (ii); 2.7, (i), (iii)), and the composite
+Dee ↪→ ΠI ↠ I is surjective (since ρI is of SNN-type), it follows im-
+mediately that Dee = Dev1 ∩ Dev2 . This completes the proof of assertion
+(ii).
+Next, we verify assertion (iii). To this end, suppose thatρI is of SNN-
+type, and that condition (3′) is satisﬁed, i.e., thatJ
+def
+= Dev1 ∩Dev2 ̸= {1},
+and J ∩ ΠG = {1}. Note that it follows from Lemma 1.9, (ii), that
+˜v1 ̸= ˜v2; in particular, Node(G) ̸= ∅.
+Now we claim that
+(∗1) J ∩ Iev1 = J ∩ Iev2 = {1}.
+Indeed, if J ∩ Iev1 ̸= {1}, then (since Iev1 is isomorphic to ˆZΣ —c f .
+Lemma 2.5, (i)) by projecting to the maximal pro-l quotients, for some
+l ∈ Σ, of suitable open subgroups of the various pro-Σ groups involved,
+we may assume without loss of generality thatJ = Iev1 . But this implies
+that Iev1 = J ⊆ Dev2 = ZΠI (Iev2 ) (cf. Lemma 3.6, (ii)), hence that
+Iev2 ⊆ ZΠI (Iev1 )= Dev1 (cf. Lemma 3.6, (ii)). Therefore, we obtain that
+Iev2 ⊆ Dev1 ∩ Dev2 = J = Iev1 ; in particular, it follows from Remark 3.5.1
+that ˜v1 = ˜v2 — a contradiction. This completes the proof of ( ∗1).
+Next, for i =1 ,2 ,l e tu sw r i t eJi
+def
+=( Ievi · J) ∩ ΠG (= (Ievi × J) ∩ ΠG
+—c f .( ∗1)). Then for any pair of integersi, j such that {i, j} = {1, 2},
+since J ⊆ Devj , it follows thatJi =( Ievi ·J) ∩ΠG ⊆ (Ievi ·Devj ) ∩ΠG; since,
+moreover, J ⊆ Devi , it follows thatJi =( Ievi ·J) ∩ΠG ⊆ (Ievi ·Devi) ∩ΠG =
+Πevi (cf. Lemma 2.7, (i)). In particular, it follows that for any pair of
+integers i, j such that {i, j} = {1, 2},w eh a v eJi ⊆ (Ievi · Devj ) ∩ Πevi .
+On the other hand, it follows immediately from (∗1)t h a tJi ̸= {1}.
+Next, we claim that
+(∗2)f o ri = 1, 2, there exists an element ˜ei ∈E (˜vi)s u c h
+that Ji ⊆ Πeei.
+Indeed, let us ﬁrst observe that, for any pair of integers i, j such that
+{i, j} = {1, 2},s i n c eJi ⊆ (Ievi · Devj ) ∩ Πevi , it follows immediately from
+Remark 3.2.1 that if ˜v1(G) ̸= ˜v2(G), then the image of Ji in Πab/edge
+G
+is trivial. Moreover, by applying this observation to arbitrary open
+subgroups H ⊆ ΠI corresponding to connected ﬁnite ´etale coverings of
+G[ρI] that determine outer representations of SNN-type, we conclude
+that, if we write G′ →G for the connected ﬁnite ´etale covering of G
+determined by H, then the image of
+(
+(Ievi ∩ H) · (J ∩ H)
+)
+∩ ΠG′
+in Πab/edge
+G′ is trivial; but since, for a suitable positive integer n (that
+depends on H!), we have
+(Ji ∩ ΠG′ )n ⊆
+(
+In
+evi · Jn
+)
+∩ ΠG′ ⊆
+(
+(Ievi ∩ H) · (J ∩ H)
+)
+∩ ΠG′ ,
+
+50 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+it follows from the fact that Πab/edge
+G′ is torsion-free(cf. [Mzk4], Remark
+1.1.4) that the image of Ji ∩ ΠG′ in Πab/edge
+G′ is trivial.T h u s , w e m a y
+apply Lemma 1.6, together with Lemma 1.7, to conclude the existence
+of an ˜ei ∈E (˜vi), as desired. This completes the proof of (∗2). Note that
+since E(˜v1) ∩E (˜v2)= ∅(cf. Lemma 1.9, (ii)), it follows that ˜e1 ̸= ˜e2.
+Now it follows immediately from the deﬁnition ofJi that J ⊆ Ji ·Ievi .
+Thus, by (∗2), we obtain that J ⊆ J · Ievi ⊆ Ji · Ievi ⊆ Πeei · Ievi = Deei
+(cf. Remark 2.7.1); in particular, J ⊆ Dee1 ∩ Dee2 .N o ws i n c eJ ̸= {1},
+and ˜e1 ̸= ˜e2, it follows from Proposition 3.8, (i), (ii), that there exists
+an element ˜v3 ∈ Vert(˜G) such that ˜v3 ∈V (˜e1) ∩V (˜e2), and, moreover,
+(J ⊆) Dee1 ∩ Dee2 = Iev3 .M o r e o v e r , s i n c eE(˜v1) ∩E (˜v2)= ∅, it follows
+that ˜e1, ˜e2 ∈ Node( ˜G), and that ˜v3 ̸= ˜v1, ˜v2; in particular, it follows
+that δ(˜v3, ˜v1)= δ(˜v3, ˜v2)=1 . T h u s ,s i n c eIev3 ⊆ Ieei ⊆ Deei ⊆ Devi (cf.
+Remark 2.7.1) for i = 1, 2, it follows that Iev3 ⊆ Dev1 ∩ Dev2 = J.T h i s
+completes the proof of assertion (iii).
+Finally, we verify assertion (i). First, let us observe that the equiva-
+lences
+(1) ⇐⇒ (1′); ( 2 ) ⇐⇒ (2′)
+follow from Lemma 1.9, (ii). Now since the equivalence
+(4) ⇐⇒ (4′)
+follows from the equivalences
+(1) ⇐⇒ (1′); ( 2 ) ⇐⇒ (2′); ( 3 ) ⇐⇒ (3′)
+— together with the mutual exclusivity observed in the statement of
+Proposition 3.9, (i) — to complete the proof of assertion (i), it suﬃces
+to verify the equivalence
+(3) ⇐⇒ (3′) .
+To this end, assume that condition (3) is satisﬁed. Then it follows
+from Lemma 1.9, (ii), that Dev1 ∩ Dev2 ∩ ΠG = {1}. Now to verify
+condition (3′), by replacingI by an open subgroup ofI, we may assume
+without loss of generality thatρI is of SNN-type (so that we may apply
+Remark 2.7.1). Since condition (3) is satisﬁed, there exists an element
+˜v3 ∈ Vert(˜G) such that δ(˜v1, ˜v3)= δ(˜v2, ˜v3)=1 . F o r i =1 ,2 ,l e t
+˜ei ∈N (˜vi) ∩N (˜v3). Then it follows that Iev3 ⊆ Ieei ⊆ Deei ⊆ Devi (cf.
+Remark 2.7.1); in particular, Iev3 ⊆ Dev1 ∩ Dev2 . Thus, condition (3 ′)i s
+satisﬁed.
+Next, let us assume that condition (3′) is satisﬁed. Then since Dev1 ∩
+Dev2 ∩ ΠG = {1} — which implies, in particular, that the composite
+Dev1 ∩ Dev2 ↪→ ΠI ↠ I is injective —a n d I is torsion-free (cf. condition
+(1) of Deﬁnition 2.4), it follows thatDev1 ∩Dev2 is torsion-free. Therefore,
+to verify condition (3), by replacing I by an open subgroup of I,w e
+may assume without loss of generality that ρI is of SNN-type.T h e ni t
+follows immediately from assertion (iii), together with Lemma 1.9, (ii),
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 51
+that condition (3) is satisﬁed. This completes the proof of assertion
+(i). □
+4. A combinatorial anabelian theorem for nodally
+nondegenerate outer representations
+In this section, we prove two combinatorial anabelian results in the
+style of [Mzk4] for outer representations of NN-type.
+Theorem 4.1 (Group-theoretic verticiality and nodality of cer-
+tain isomorphisms). Let Σ be a nonempty set of prime numbers, G
+and H semi-graphs of anabelioids of pro- Σ PSC-type, ˜vG ∈ Vert(˜G),
+˜vH ∈ Vert( ˜H), ΠG (respectively, ΠH) the fundamental group of G (re-
+spectively, H), α:Π G
+∼
+→ ΠH an isomorphism of proﬁnite groups, I and
+J proﬁnite groups, ρI : I → Aut(G) and ρJ : J → Aut(H) continuous
+homomorphisms, and β: I
+∼
+→ J an isomorphism of proﬁnite groups.
+Suppose that the following three conditions are satisﬁed:
+(i) The diagram
+I −−−→ Out(ΠG)
+β
+⏐⏐↓
+⏐⏐↓Out(α)
+J −−−→ Out(ΠH)
+— where the right-hand vertical arrow is the homomorphism
+induced by α; the upper and lower horizontal arrows are the
+homomorphisms determined by ρI and ρJ, respectively — com-
+mutes.
+(ii) ρI, ρJ are of NN-type.
+(iii) α(ΠevG )=Π evH .
+Then the isomorphism α is group-theoretically verticial, hence, in
+particular, group-theoretically nodal (cf. Proposition 1.13).
+Proof. Note that to verify Theorem 4.1, it is immediate that by re-
+placing I by an open subgroup of I, we may assume without loss of
+generality that ρI and ρJ are of SNN-type. Let us denote by ˜α:Π I
+def
+=
+ΠG
+out
+⋊ I
+∼
+→ ΠJ
+def
+=Π H
+out
+⋊ J (cf. the discussion entitled “ Topological
+groups”i n§0) the isomorphism determined byα and β (cf. assumption
+(i)).
+For ˜v ∈ Vert(˜G), we shall say that ˜v satisﬁes the condition ( ∗pres)i f
+α(Πev) ⊆ ΠH is averticial subgroup ofΠH.F i r s t ,w eclaim that this con-
+dition (∗pres) satisﬁes the property ( ∗) in the statement of Lemma 3.1.
+To this end, let ˜v1, ˜v2 ∈ Vert(˜G) be such that δ(˜v1(G), ˜v2(G)) ≤ 1 and,
+moreover, ˜v1 satisﬁes the condition ( ∗pres). Now if ˜v1(G)= ˜v2(G), then
+
+52 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+it is immediate that ˜v2 satisﬁes the condition ( ∗pres); thus, we may as-
+sume that ˜v1(G) ̸= ˜v2(G). Then it follows from Lemma 1.15 that there
+exist ˜w1, ˜u1, ˜w2 ∈ Vert(˜G) which satisfy the following conditions:
+(1) ˜v1(G)= ˜w1(G)= ˜u1(G); ˜v2(G)= ˜w2(G).
+(2) δ( ˜w1, ˜u1) ≥ 2.
+(3) δ( ˜w2, ˜w1)= δ( ˜w2, ˜u1)=1 .
+Now it follows from condition (1), together with the assumption that
+˜v1 satisﬁes the condition ( ∗pres), that ˜w1 and ˜u1 also satisfy (∗pres); in
+particular, there exist ˜w′
+1, ˜u′
+1 ∈ Vert( ˜H) such that ˜α(D ew1)= D ew′
+1 and
+˜α(Deu1)= Deu′
+1 . Moreover, it follows from Proposition 3.9, (iii), together
+with conditions (2), (3), that D ew1 ∩ Deu1 = I ew2; in particular, it follows
+that D ew′
+1 ∩ Deu′
+1 ̸= {1} and D ew′
+1 ∩ Deu′
+1 ∩ ΠH = {1}. Thus, again by
+Proposition 3.9, (iii), there exists an element w′
+2 ∈ Vert( ˜H) such that
+D ew′
+1 ∩ Deu′
+1 = I ew′
+2.N o w s i n c e˜α(D ew1)= D ew′
+1 and ˜α(Deu1 )= Deu′
+1,i t
+follows that ˜α(I ew2)= I ew′
+2 ; thus, it follows from Lemma 3.6, (i), that
+α(Π ew2)=Π ew′
+2 . In particular, it follows from condition (1) that ˜v2
+satisﬁes the condition ( ∗pres). This completes the proof of the above
+claim.
+Now in light of the above claim, together with assumption (iii), we
+may apply Lemma 3.1 to conclude that the isomorphism α is group-
+theoretically verticial. This completes the proof of Theorem 4.1. □
+Corollary 4.2 (Graphicity of certain group-theoretically cusp-
+idal isomorphisms). Let Σ be a nonempty set of prime numbers, G
+and H semi-graphs of anabelioids of pro-Σ PSC-type (cf. [Mzk4], Def-
+inition 1.1, (i)), ΠG (respectively,ΠH) the pro-Σ fundamental group of
+G (respectively, H), α:Π G
+∼
+→ ΠH an isomorphism of proﬁnite groups,
+I and J proﬁnite groups, ρI : I → Aut(G) and ρJ : J → Aut(H) con-
+tinuous homomorphisms, and β: I
+∼
+→ J an isomorphism of proﬁnite
+groups. Suppose that the following three conditions are satisﬁed:
+(i) The diagram
+I −−−→ Out(ΠG)
+β
+⏐⏐↓
+⏐⏐↓Out(α)
+J −−−→ Out(ΠH)
+— where the right-hand vertical arrow is the homomorphism
+induced by α; the upper and lower horizontal arrows are the
+homomorphisms determined by ρI and ρJ, respectively — com-
+mutes.
+(ii) ρI, ρJ are of NN-type (cf. Deﬁnition 2.4, (iii)).
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 53
+(iii) Cusp(G) ̸= ∅, and the isomorphism α is group-theoretically
+cuspidal (cf. [Mzk4], Deﬁnition 1.4, (iv)).
+Then the isomorphism α is graphic (cf. [Mzk4], Deﬁnition 1.4, (i)).
+Proof. It is immediate that to verify Corollary 4.2, by replacing ΠI by
+an open subgroup of ΠI, we may assume without loss of generality that
+G and H are sturdy (cf. [Mzk4], Remark 1.1.5), and that ρI and ρJ are
+of SNN-type. Let us denote by ˜α:Π I
+def
+=Π G
+out
+⋊ I
+∼
+→ ΠJ
+def
+=Π H
+out
+⋊ J
+(cf. the discussion entitled “Topological groups”i n§0) the isomorphism
+determined by α and β (cf. assumption (i)).
+Now it follows from Lemma 1.14 that to prove the graphicity of α,
+it suﬃces to show that the isomorphism α satisﬁes condition (ii) in the
+statement of Lemma 1.14. Moreover, by replacing G by the “ G′”i n
+the statement of Lemma 1.14, it suﬃces to show that the isomorphism
+Π
+G
+∼
+→ Π
+H —w h e r ew ew r i t e
+G (respectively,
+ H) for the compacti-
+ﬁcation (cf. Deﬁnition 1.11) of G (respectively, H) — induced by α
+is group-theoretically verticial. The rest of the proof of Corollary 4.2
+is devoted to the proof of the fact that the isomorphism Π
+ G
+∼
+→ Π
+H
+induced by α is group-theoretically verticial.
+Write I → Out(Π
+G) (respectively, J → Out(Π
+H)) for the outer rep-
+resentation of pro-Σ PSC-type determined byρI (respectively, ρJ)a n d
+ΠI
+def
+=Π
+ G
+out
+⋊ I (respectively,
+ ΠJ
+def
+=Π
+ H
+out
+⋊ J). Let ˜eG ∈ Cusp( ˜G)( c f .
+assumption (iii)). Then it follows from assumption (iii) that there ex-
+ists an element ˜eH ∈ Cusp( ˜H) such that ˜α(DeeG )= DeeH .M o r e o v e r , i f
+we denote by˜vG (respectively, ˜vH) the unique element ofV(eG) (respec-
+tively, V(eH)), then it follows from Remark 2.7.1 that the image of the
+composite DeeG ↪→ ΠI ↠
+ ΠI (respectively, DeeH ↪→ ΠJ ↠
+ ΠJ)c o i n c i d e s
+with IevG (respectively, IevH ). Therefore, it follows from Lemma 3.6, (i),
+that α(ΠevG )=Π evH . In particular, we may apply Theorem 4.1 to con-
+clude that the isomorphism Π
+ G
+∼
+→ Π
+H is group-theoretically verticial.
+This completes the proof of Corollary 4.2. □
+Remark 4.2.1. One may verify the following assertion by applying
+[Mzk4], Corollary 2.7, (iii), as in the proof of [Mzk4], Corollary 2.8:
+In the notation of Corollary 4.2, if the following three
+conditions are satisﬁed, then α is graphic:
+(i) The diagram
+I −−−→ Out(ΠG)
+β
+⏐⏐
+↓
+⏐⏐
+↓
+Out(α)
+J −−−→ Out(ΠH)
+
+54 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+— where the right-hand vertical arrow is the homo-
+morphism induced by α; the upper and lower hor-
+izontal arrows are the homomorphisms determined
+by ρ
+I and ρJ, respectively — commutes.
+(ii) ρI, ρJ are of IPSC-type.
+(iii) The isomorphism α is group-theoretically cuspidal.
+That is to say, one may think of Corollary 4.2 as a partial (cf. the
+condition “Cusp( G) ̸= ∅” of Corollary 4.2, (iii)) generalization of the
+above assertion — whose proof is independent of the methods of [Mzk4].
+5. Injectivity via nodally nondegenerate degenerations
+In this section, we apply Corollary 4.2, together with a similar ar-
+gument to the argument used in the proof of [Mzk7], Corollary 2.3,
+to prove a certaininjectivity result concerning FC-admissible outomor-
+phisms (cf. the discussion entitled “Topological groups”i n§0) of pro-Σ
+fundamental groups of conﬁgurat ion spaces (cf. Corollary 5.3).
+Deﬁnition 5.1. Let Σ be a set of prime numbers which is either of
+cardinality one or equal to the set of all prime numbers ,( g,r )ap a i r
+of natural numbers such that 2 g − 2+ r> 0, n a natural number,
+S
+log an fs log scheme whose underlying scheme is the spectrum of an
+algebraically closed ﬁeld of characteristic ̸∈ Σ, and Xlog an r-pointed
+stable log curve of genus g over Slog, i.e., the log scheme obtained by
+pulling back the universal r-pointed stable log curve of genus g over
+M
+log
+g,r (cf. the discussion entitled “ Curves”i n §0) via a (1-)morphism
+Slog →
+ M
+log
+g,r.
+(i) We shall denote byXlog
+n the n-th log conﬁguration space of Xlog
+(cf. the discussion entitled “ Curves”i n §0).
+(ii) We shall denote by Πn the maximal pro-Σ quotient of the kernel
+of the surjection π1(Xlog
+n ) ↠ π1(Slog).
+(iii) For i = 1, 2, we shall denote by
+prlog
+i : Xlog
+2 −→ Xlog
+1 = Xlog
+the projection to the factor labeled i,a n db y
+pi :Π 2 ↠ Π1
+the surjection induced by prlog
+i .
+(iv) We shall denote by Π2/1 the kernel of the surjection p1 :Π 2 ↠
+Π1.
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 55
+(v) We shall denote by G the connected semi-graph of anabelioids
+of pro-Σ PSC-type arising from the pointed stable curve de-
+termined by the stable log curve X
+log over Slog (cf. [Mzk4],
+Example 2.5), and by Π G the fundamental group of G.N o t e
+that by the various deﬁnitions involved, there exists a natural
+isomorphism Π1 ≃ ΠG. In the following, we shall assume that
+(Vert(G)♯, Node(G)♯)=( 2 , 1)
+(cf. Remark 5.1.1 below) and write
+Vert(G)= {v1,v2} ;N o d e (G)= {e}
+(cf. Figure 1). Also, we observe that (it follows immediately
+from the various deﬁnitions involved that) we have Cusp(G)♯ =
+r.
+Figure 1: G, G/e,a n d“ Πsub
+2/1”
+•
+•
+•
+“Πsub
+2/1”
+?
+•
+•
+•
+•
+(= the ﬁber of the second
+log conﬁguration
+space at e)
+v◦
+1 v◦
+0 v◦
+2
+e◦
+1
+e◦
+2
+e◦
+0
+G/e
+?
+•
+•
+•
+v1 v2
+eG
+
+56 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+(vi) We shall denote by G/e the connected semi-graph of anabelioids
+of pro-Σ PSC-type arising from the pointed stable curve deter-
+mined by the ﬁber of pr log
+1 : Xlog
+2 → Xlog at the unique node e
+of Xlog (cf. Figure 1), and by Π G/e the fundamental group of
+G/e. Note that by the various deﬁnitions involved, we have
+(Vert(G/e)♯, Cusp(G/e)♯, Node(G/e)♯)=( 3 ,r +1 , 2) ;
+moreover, there exists a natural isomorphism Π2/1 ≃ ΠG/e .
+(vii) For i = 1, 2, there exists a unique vertex of G/e such that the
+image via the surjection Π G/e ≃ Π2/1 ↠ Π1 ≃ ΠG induced by
+p2 of a verticial subgroup of Π G/e associated to the vertex is a
+verticial subgroup of Π G associated to vi ∈ Vert(G). We shall
+denote this vertex by v◦
+i ∈ Vert(G/e). On the other hand, there
+exists a unique vertex of G/e such that the image via the sur-
+jection Π G/e ≃ Π2/1 ↠ Π1 ≃ ΠG induced by p2 of a verticial
+subgroup of Π G/e associated to the vertex is an edge-like sub-
+group of Π G associated to the unique node e ∈ node(G). We
+shall denote this vertex by v◦
+0 ∈ Vert(G/e). Thus, in summary,
+we have
+Vert(G/e)= {v◦
+1,v ◦
+2,v ◦
+0 } .
+(viii) For i =1 ,2 ,t h e r ee x i s t saunique node of G/e such that the
+subset of vertices ofG/e to which the node abuts is{v◦
+i ,v ◦
+0 }.W e
+shall denote this node bye◦
+i ∈ Node(G/e), i.e., V(e◦
+i )= {v◦
+i ,v ◦
+0 }.
+On the other hand, there exists a unique cusp which abuts to
+v◦
+0. We shall denote this cusp by e◦
+0 ∈ Cusp(G/e). Thus, in
+summary, we have
+Node(G/e)= {e◦
+1,e ◦
+2
+} ; V(e◦
+i )= {v◦
+i ,v ◦
+0 } ; V(e◦
+0)= {v◦
+0 } .
+(ix) Let Y ⊆ X be the irreducible component of the underlying
+scheme X of Xlog corresponding to v1, UY ⊆ Y the open sub-
+scheme ofY obtained as the complement of the nodes and cusps
+which abut to v1,a n dY log the smooth log curve (whose under-
+lying scheme isY )o v e rSlog determined by the hyperbolic curve
+UY .( T h u s ,UY ⊆ Y is the open subscheme of points at which
+the log structure of Y log coincides with the pull-back of the log
+structure of Slog.) Write gY for the genus of UY and rY for
+the number of cusps of UY .L e t Y log
+n be the n-th log conﬁg-
+uration space of Y log (cf. the discussion entitled “ Curves”i n
+§0). Note that the natural closed immersion Y↪ → X induces a
+commutative diagram
+Y2 −−−→ X2
+⏐⏐
+↓
+⏐⏐
+↓
+pr1
+Y −−−→ X
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 57
+— where the left-hand vertical arrow is the morphism induced
+by pr1 (cf. the discussion of [Mzk7], Deﬁnition 2.1, (iii)).
+(x) We shall denote by Π sub
+n the maximal pro-Σ quotient of the
+kernel of the surjection π1(Y log
+n ) ↠ π1(Slog), and by Π sub
+2/1 the
+kernel of the surjection Π sub
+2 ↠ Πsub
+1 induced by the ﬁrst pro-
+jection Y log
+2 → Y log. Note that if we denote by UYn ⊆ Yn the
+open subscheme of points at which the log structure of Y log
+n
+coincides with the pull-back of the log structure of Slog,t h e n
+recall that by the log purity theorem (cf. [Mzk7], the discussion
+of §0), the inclusion UYn ↪→ Yn induces a natural isomorphism
+π1(UYn )(Σ) ∼
+→ Πsub
+n . Thus, by restricting coverings of Xlog
+n to
+UYn for n = 1, 2, we obtain a commutative diagram (cf. the
+discussion of [Mzk7], Deﬁnition 2.1, (vi))
+1 −−−→ Πsub
+2/1 −−−→ Πsub
+2 −−−→ Πsub
+1 −−−→ 1⏐⏐
+↓
+⏐⏐
+↓
+⏐⏐
+↓
+1 −−−→ Π
+2/1 (≃ ΠG/e) −−−→ Π2 −−−→
+p1
+Π1 (≃ ΠG) −−−→ 1
+— where the right-hand upper horizontal arrow is the surjection
+induced by p1, the vertical arrows areinjective outer homomor-
+phisms, the horizontal sequences are exact, and the image of
+the right-hand vertical arrow is a verticial subgroup of Π G as-
+sociated to v1 (cf. Figure 1).
+Remark 5.1.1. One veriﬁes easily that if 2g − 2+ r> 1 (i.e., (g,r ) ̸=
+(0, 3), (1, 1)), then there exists a stable log curve Xlog as in Deﬁni-
+tion 5.1 (cf., especially, the assumption in Deﬁnition 5.1, (v)).
+Lemma 5.2 (Basic properties of verticial subgroups). In the
+notation of Deﬁnition 5.1: For i =1 , 2, let us ﬁx an edge-like subgroup
+Πe◦
+i ⊆ ΠG/e associated to e◦
+i ∈ Node(G/e) (Deﬁnition 5.1, (viii)). Then
+the following hold:
+(i) There exists aunique verticial subgroupΠv◦
+i (respectively,Πv◦
+0 )
+of ΠG/e associated tov◦
+i ∈ Vert(G/e) (respectively,v◦
+0 ∈ Vert(G/e))
+[cf. Deﬁnition 5.1, (vii)] that contains Πe◦
+i .
+(ii) There exists a unique Π2/1-conjugate of the image of Πsub
+2/1 via
+the left-hand vertical arrow in the diagram of Deﬁnition 5.1, (x),
+that contains and is topologically generated by the verticial
+subgroups Πv◦
+1 , Πv◦
+0 ⊆ ΠG/e obtained in (i) in the case where
+i =1 . By abuse of notation, we shall denote this particular
+Π2/1-conjugate of the image of Πsub
+2/1 by means of the notation
+“Πsub
+2/1”.
+
+58 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+(iii) Suppose that Πe◦
+2 was chosen so that (in the notation of (ii)) we
+have Πe◦
+2 ⊆ Πsub
+2/1. Then (in the notation of (i) and (ii)) Π2/1 is
+topologically generated by Πv◦
+2 and Πsub
+2/1.
+Proof. These assertions follow from similar arguments to the arguments
+used in the proofs of [Mzk7], Proposition 2.2, (ii), (iii). □
+The following result is the main result of the present section.
+Corollary 5.3 (Injectivity for not necessarily aﬃne hyperbolic
+curves). In the notation of Deﬁnition 5.1, the natural homomorphism
+OutFC(Π2) −→ OutFC(Π1)
+— where we write “ OutFC(−)” for the subgroup of the group “Out(−)”
+of outomorphisms (cf. the discussion entitled “Topological groups” in
+§0) of “(−)” deﬁned in [Mzk7], Deﬁnition 1.1, (ii) — induced by p1 is
+injective.
+Proof. If 2g − 2+ r = 1, then Corollary 5.3 follows from [Mzk7], Corol-
+lary 2.3, (ii); thus, to verify Corollary 5.3, we may assume without loss
+of generality that 2g − 2+ r> 1. Note that since 2g − 2+ r> 1, there
+exists a stable log curve Xlog as in Deﬁnition 5.1 (cf. Remark 5.1.1).
+Thus, in the following, we assume that we are in the situation described
+in Deﬁnition 5.1.
+To complete the proof of Corollary 5.3, it suﬃces, by [Mzk7], Proposi-
+tion 1.2, (iii), to verify theassertion that if an automorphismα of Π
+2 is
+IFC-admissible (cf. [Mzk7], Deﬁnition 1.1, (ii)), i.e., α satisﬁes the fol-
+lowing three conditions (i), (ii), and (iii), then the automorphismα is a
+Ξ2-inner automorphism—w h e r ew ew r i t eΞ2
+def
+=K e r (p1)∩Ker(p2) ⊆ Π2
+(cf. Deﬁnition 5.1, (iii)):
+(i) α preserves Ker(p1)( =Π 2/1)a n dK e r (p2).
+(ii) The automorphism of ΠG/e (≃ Π2/1) obtained as the restriction
+α|Π2/1 of α (cf. (i)) is group-theoretically cuspidal.
+(iii) The automorphism of the quotient (p1,p2): Π 2 ↠ Π1 ×Π1 of Π2
+induced by α (cf. (i)) is the identity automorphism of Π1 × Π1.
+The rest of the proof of Corollary 5.3 is devoted to verifying this as-
+sertion.
+It follows immediately from (i) and (iii) that we have a commutative
+diagram
+Π1
+ρ
+−−−→ Out(Π2/1)
+⏐⏐↓Out(α|Π2/1)
+Π1 −−−→
+ρ
+Out(Π2/1)
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 59
+— where the right-hand vertical arrow is the homomorphism induced
+by α|Π2/1,a n dw ew r i t eρ for the outer representation determined by
+the exact sequence
+1 −→ Π2/1 −→ Π2
+p1
+−→ Π1 −→ 1 .
+Let Πe ⊆ Π1 be an edge-like subgroup of Π 1 (≃ ΠG) associated to
+the unique node e of G. Then it follows immediately from the various
+deﬁnitions involved that the composite Π e ↪→ Π1
+ρ
+→ Out(Π2/1) factors
+through Aut(G/e) ⊆ Out(Π2/1); moreover, in light of the well-known
+local structure of Xlog in a neighborhood of the node corresponding to
+e, it follows immediately from Proposition 2.14 that the resulting outer
+representation of pro-Σ PSC-type Π e → Aut(G/e)i s of SNN-type.I n
+particular, it follows immediately from (ii), together with the fact that
+G
+/e has at least one cusp (cf. Deﬁnition 5.1, (vi)), that we may apply
+Corollary 4.2 to conclude that the restriction α|Π2/1 is graphic.
+Next, let us ﬁx an edge-like subgroup Π e◦
+1 ⊆ Π2/1 associated to
+e◦
+1 ∈ Node(G/e) (cf. Deﬁnition 5.1, (viii)). Then we claim that there
+exists an element γ ∈ Ξ2 such that α(Πe◦
+1 )= γ · Πe◦
+1 · γ−1. Indeed,
+it follows from the graphicity of α|Π2/1, together with (iii), that α|Π2/1
+induces the identity automorphism of the underlying semi-graph of G/e
+(cf. Deﬁnition 5.1, (vii), (viii)), hence that there exists an element
+γ′ ∈ Π2/1 such that α(Πe◦
+1 )= γ′ · Πe◦
+1 · γ′−1; in particular, again by
+(iii), we obtain that p2(Πe◦
+1 )= p2(γ′) · p2(Πe◦
+1 ) · p2(γ′−1). On the other
+hand, it follows immediately from the various deﬁnitions involved that
+p
+2(Πe◦
+1 ) ⊆ Π1 is an edge-like subgroupof Π1 associated to e ∈ Node(G).
+Thus, it follows from the commensurably terminality of p2(Πe◦
+1 )i nΠ 1
+(cf. [Mzk4], Proposition 1.2, (ii)) that p2(γ′) ∈ p2(Πe◦
+1 ). In particu-
+lar, by multiplying γ′ by an appropriate element of Πe◦
+1 ,w eo b t a i na n
+element γ, as desired. This completes the proof of the above claim.
+In light of the aboveclaim, we may assume without loss of generality
+—b yc o m p o s i n gα with an appropriate Ξ2-inner automorphism — that
+α(Πe◦
+1 )=Π e◦
+1
+.L e t Πv◦
+1 ,Π v◦
+0 ⊆ Π2/1 be the unique verticial subgroups
+associated, respectively, to v◦
+1, v◦
+0 ∈ Vert(G/e)t h a tcontain the ﬁxed
+edge-like subgroup Π e◦
+1 (cf. Lemma 5.2, (i)); Π sub
+2/1 ⊆ Π2/1 the unique
+Π2/1-conjugate of the image of the left-hand vertical arrow in the dia-
+gram in Deﬁnition 5.1, (x), that contains and is topologically generated
+by these verticial subgroups Πv◦
+1 ,Π v◦
+0 . (cf. Lemma 5.2, (ii)). Then in
+light of the graphicity of α, it follows from the fact that α(Πe◦
+1 )=Π e◦
+1
+,
+together with Lemma 5.2, (i), (ii), that α(Πv◦
+1 )=Π v◦
+1 , α(Πv◦
+0 )=Π v◦
+0 ,
+and α(Πsub
+2/1)=Π sub
+2/1.
+Next, let us observe that Π sub
+2/1 is commensurably terminal in Π2/1.
+(Indeed, this follows by applying [Mzk4], Proposition 1.2, (ii) — where
+we think of the ﬁber of Y log
+2 → Y log over e [by, for instance, deform-
+ing the unique node of this ﬁber] as a single irreducible component of
+
+60 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+the ﬁber of Xlog
+2 → Xlog.) Note that in light of this commensurable
+terminality, the compatibility of α2/1 with the outer action of Π 1 on
+Π2/1 (relative to the identity automorphism of Π1 — cf. condition (iii))
+implies the compatibility of α2/1|Πsub
+2/1
+with the outer action of Π sub
+1 on
+Πsub
+2/1 (relative to the identity automorphism of Πsub
+1 ). Thus, it follows
+from the commutative diagram in Deﬁnition 5.1, (x) (i.e., by apply-
+ing the natural isomorphism Π sub
+2 ≃ Πsub
+2/1
+out
+⋊ Πsub
+1 [cf. the discussion
+entitled “Topological groups”i n §0]), that the automorphism α2/1|Πsub
+2/1
+arises from an automorphism αsub of Πsub
+2 . Moreover, it follows imme-
+diately from the construction of αsub (cf. also [Mzk4], Proposition 1.5,
+(i)) that αsub is IFC-admissible (cf. [Mzk7], Deﬁnition 1.1, (ii)), i.e.,
+that αsub satisﬁes the analogue for Π sub
+2 of the above three conditions
+(i), (ii), and (iii). Therefore, since the stable log curve Y log [unlike the
+stable log curve Xlog!] necessarily has at least one cusp, we may apply
+[Mzk7], Corollary 1.12, (i), and [Mzk7], Corollary 2.3, (i) (cf. also Re-
+mark 5.3.1 below), to conclude thatα
+sub is a Ξsub
+2 -inner automorphism
+—w h e r ew ew r i t eΞsub
+2
+def
+=Ξ 2 ∩ Πsub
+2 for the analogue of “Ξ2”f o rΠsub
+2
+.
+In particular, it follows that α2/1|Πsub
+2/1
+is a Ξ2-inner automorphism.
+Now from the point of view of verifying the assertion that α is a
+Ξ2-inner automorphism, we may assume without loss of generality —
+by composing with an appropriate Ξ 2-inner automorphism — that α
+stabilizes and restricts to the identity automorphism of Πsub
+2/1; in partic-
+ular, since Πv◦
+0 ⊆ Πsub
+2/1, it follows that α stabilizes and restricts to the
+identity automorphism of Πv◦
+0 .
+Let Πe◦
+2 ⊆ Π2/1 be an edge-like subgroup associated toe◦
+2 ∈ Node(G/e)
+which is contained in Πv◦
+0 ,a n dΠv◦
+2 ⊆ Π2/1 the unique (cf. Lemma 5.2,
+(i)) verticial subgroup associated to v◦
+2 ∈ Vert(G/e)t h a tc o n t a i n sΠe◦
+2 .
+Now since α stabilizes and restricts to the identity automorphism of
+Πv◦
+0 , it follows that α(Πe◦
+2 )=Π e◦
+2
+. Thus, in light of the graphicity of α,
+we may apply Lemma 5.2, (i), to conclude that α(Πv◦
+2 )=Π v◦
+2 .N e x t ,
+let us observe that the surjection Π v◦
+2 ↠ p2(Πv◦
+2 ) determined by p2 is
+an isomorphism. Thus, it follows immediately from condition (iii) that
+α|Πv◦
+2
+is the identity automorphism.
+Since Π2/1 is topologically generated by Πsub
+2/1 and Πv◦
+2 (cf. Lemma 5.2,
+(iii)), the fact (cf. the above discussion) thatα|Πsub
+2/1
+and α|Πv◦
+2
+are equal
+to the respective identity automorphisms on Πsub
+2/1 and Πv◦
+2 implies that
+α|Π2/1 is the identity automorphism. But this implies that α is the
+identity automorphism (cf. the discussion entitled “Topological groups”
+in §0). This completes the proof of Corollary 5.3. □
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 61
+Remark 5.3.1.
+(i) An alternative approach to the portion in the latter half of the
+proof of Corollary 5.3 where one applies [Mzk7], Corollary 2.3,
+(i), may be given, at least when (g,r ) ̸=( 2, 0), as follows. One
+veriﬁes easily that 3 gY − 3+ rY < 3g − 3+ r, and, moreover
+that, at least when (g,r ) ̸=( 2, 0), one may always choose Xlog
+(in the situation of Deﬁnition 5.1, so ( g,r ) ̸=( 0, 3), (1, 1) —
+cf. Remark 5.1.1) so that ( gY ,r Y ) ̸=( 1, 1). Thus, by applying
+induction on 3g − 3+ r, one may reduce this portion of the
+proof of Corollary 5.3 to the case where 3 g − 3+ r = 0, i.e.,
+t h ec a s eo fatripod. That is to say, instead of applying [Mzk7],
+Corollary 2.3, (i), it suﬃces to apply [Mzk7], Corollary 1.12, (i).
+In particular, this alternative approach yields anew proof—a t
+least in the case of ( g,r ) ̸=( 1, 1) — of [Mzk7], Corollary 2.3,
+(ii) (i.e., via Corollary 4.2, as opposed to [Mzk4], Corollary 2.7,
+(iii) — cf. Remark 4.2.1).
+(ii) In passing, we recall that [Mzk4], Corollary 2.7, (iii), is applied
+in various situations throughout [Mzk7]. In fact, however, (cf.
+the discussion of (i)) it is not diﬃcult to verify that the par-
+tial generalization of [Mzk4], Corollary 2.7, (iii), constituted by
+Corollary 4.2 (cf. Remark 4.2.1) is suﬃcient (i.e., in the sense
+that the condition “Cusp( G) ̸= ∅” of Corollary 4.2, (iii), is al-
+ways satisﬁed) for verifying the various assertions in [Mzk7] (cf.
+the proof of [Mzk7], Proposition 1.3, (iv)) that are derived from
+[Mzk4], Corollary 2.7, (iii).
+6. Consequences of injectivity
+In this section, we discuss various consequences of the injectivity
+result proven in §5.
+The following theorem is a generalization of [Mzk7], Theorem A, (i),
+(ii).
+Theorem 6.1 (Partial proﬁnite combinatorial cuspidalization).
+Let Σ be a set of prime numbers which is either of cardinality one
+or equal to the set of all prime numbers , n a positive integer,
+X a hyperbolic curve of type (g,r ) over an algebraically closed ﬁeld
+of characteristic ̸∈ Σ, X
+n the n-th conﬁguration space of X (cf.
+[MzTa], Deﬁnition 2.1, (i)), Πn the maximal pro- Σ quotient of the
+fundamental group of Xn,a n dOutFC(Πn) ⊆ Out(Πn) the subgroup of
+the group Out(Πn) consisting of the outomorphisms (cf. the discussion
+entitled “Topological groups” in §0) of Πn which are FC-admissible
+(cf. [Mzk7], Deﬁnition 1.1, (ii)). Set n0
+def
+=2 if X is aﬃne, i.e., r ≥ 1;
+n0
+def
+=3 if X is proper, i.e., r =0 (cf. [Mzk7], Theorem A). Then the
+
+62 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+natural homomorphism
+OutFC(Πn+1) −→ OutFC(Πn)
+induced by the projectionXn+1 → Xn obtained by forgetting the(n+1)-
+st factor is injective if n ≥ 1 and bijective if n ≥ n0 +1 . Moreover,
+the image of the natural inclusion
+Sn ↪→ Out(Πn)
+—w h e r ew ew r i t eSn for the symmetric group onn letters — obtained
+by permuting the various factors of the conﬁguration space Xn is con-
+tained in the centralizer ZOut(Πn)(OutFC(Πn)).
+Proof. First, we consider thesurjectivity portion of thebijectivity asser-
+tion in the statement of Theorem 6.1. This surjectivity already follows
+from [Mzk7], Theorem A, (i), if n ≥ 4. Thus, we may assume that
+n = 3, which implies that r ≥ 1. Now by [Mzk7], Lemma 2.4; [Mzk7],
+Theorem 4.1, (ii), (a), it suﬃces (cf. the proof of the surjectivity por-
+tion of [Mzk7], Theorem 4.1, (i)) to verify (in the notation of [Mzk7])
+that Out
+FC(Π3)cusp =O u tFCP(Π3)cusp ⊆ OutFC(Π3)Δ+ — where the
+ﬁrst equality follows from [Mzk7], Theorem A, (ii). But this follows
+from a similar argument to the argument applied to prove [Mzk7],
+Corollary 3.4, (iii), by taking the section “ ξ ∈ X
+2(X)” of loc. cit. to
+be the section determined by the diagonal and applying the symmetry
+observed in the proof of [Mzk7], Corollary 3.4, (i).
+Next, we observe that the assertion concerning the centralizer fol-
+lows immediately from the injectivity assertion, together with [Mzk7],
+Theorem A, (ii); [Mzk7], Proposition 1.2, (iii). Thus, to complete the
+proof of Theorem 6.1, it suﬃces to verify the injectivity assertion. To
+this end, write Π †
+2 (respectively, Π †
+1
+) for the kernel of the surjection
+Πn+1 ↠ Πn−1 (respectively, Πn ↠ Πn−1) induced by the projection
+obtained by forgetting then-th and (n+1)-st factors (respectively, the
+n-th factor). Here, if n =1 ,t h e nw es e tΠn−1 =Π 0
+def
+= {1}. Then recall
+(cf. e.g., the proof of [Mzk7], Theorem 4.1, (i)) that we have natural
+isomorphisms
+Π
+n+1 ≃ Π†
+2
+out
+⋊ Πn−1 ;Π n ≃ Π†
+1
+out
+⋊ Πn−1
+(cf. the discussion entitled “ Topological groups”i n §0). Also, we recall
+(cf. [MzTa], Proposition 2.4, (i)) that one may interpret the surjec-
+tion Π †
+2 ↠ Π†
+1 induced by the surjection Π n+1 ↠ Πn in question as
+the surjection “Π 2 ↠ Π1” of Deﬁnition 5.1 (i.e., the surjection that
+arises from the projection pr 2 : Xlog
+2 → Xlog) in the case of an “ Xlog”
+of type ( g,r + n − 1). Moreover, one veriﬁes easily that this inter-
+pretation is compatible with the deﬁnition of the various “Out( −)’s”
+involved. Thus, the above natural isomorphisms allow one to reduce
+the injectivity in question to the case where n = 1 (cf. the discussion
+entitled “ Topological groups”i n §0), which follows immediately from
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 63
+Corollary 5.3 when 2g − 2+ r> 1 (cf. Remark 5.1.1) and from [Mzk7],
+Theorem A, (i), when 2 g − 2+ r = 1. This completes the proof of
+Theorem 6.1. □
+The following corollary is a gener alization of [Mts], Theorem 2.2.
+Note that [Mts], Theorem 2.2, corre sponds to the following corollary
+in the case where k is a subﬁeld of the ﬁeld of complex numbers, and,
+moreover, X is a curve of positive genus that has at least one cusp
+deﬁned over k.
+Corollary 6.2 (Kernels of outer representations arising from
+hyperbolic curves). Let Σ be a set of prime numbers which is either
+of cardinality one or equal to the set of all prime numbers, X
+a hyperbolic curve over a perfect ﬁeldk such that every element ofΣ is
+invertible in k,
+ k an algebraic closure of k, n a positive integer, Xn
+the n-th conﬁguration space of X, Gk
+def
+=G a l (
+k/k), Δ Xn the maximal
+pro-Σ quotient of the fundamental group of Xn ⊗k
+ k,a n dΔ P1
+k \{0,1,∞}
+the maximal pro-Σ quotient of the fundamental group ofP1
+k \{0, 1, ∞} .
+Then the following hold:
+(i) The kernel of the natural outer representation
+ρΣ
+Xn/k : Gk −→ Out(ΔXn )
+is independent of n and contained in the kernel of the nat-
+ural outer representation
+ρΣ
+P1
+k \{0,1,∞} /k : Gk −→ Out(Δ P1
+k \{0,1,∞} ) .
+(ii) Suppose that Σ is the set of all prime numbers .( T h u s ,k
+is necessarily of characteristic zero.) Write
+ Q for the algebraic
+closure of Q determined by
+ k and GQ
+def
+=G a l (
+Q/Q). Then the
+kernel of the homomorphism ρΣ
+Xn/k is contained in the kernel
+of the outer homomorphism
+Gk −→ GQ
+determined by the natural inclusion Q ↪→ k.
+Proof. Assertion (ii) follows immediately from assertion (i), together
+with a well-known injectivity result of Belyi (cf., e.g., the discussion
+surrounding [Mts], Theorem 2.2). Thus, to complete the proof of Corol-
+lary 6.2, it suﬃces to verify assertion (i). It follows immediately from
+Theorem 6.1 that the kernel of ρ
+Σ
+Xn/k is independent of n.M o r e o v e r ,
+if we denote by k′ ⊆
+ k the minimal Galois extension of k over which
+every cusp of X is deﬁned, then by considering the action of Gk on
+the set of conjugacy classes of edge-like subgroups of ΔX associated to
+cusps of X — a set which admits a natural bijection with the set of
+
+64 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+cusps of X (cf. e.g., [Mzk4], Proposition 1.2, (i)) — it follows imme-
+diately from the various deﬁnitions involved that for any n,t h ek e r n e l
+of the homomorphism ρΣ
+Xn/k is contained in Gk′ ⊆ Gk, and that the
+restriction of ρΣ
+Xn/k to Gk′ factors through the subgroup
+OutFC(ΔXn )cusp ⊆ OutFC(ΔXn )
+deﬁned in [Mzk7], Deﬁnition 1.1, (v). Thus, we have continuous homo-
+morphisms
+(Ker(ρΣ
+Xn/k) ⊆) Gk′ −→ OutFC(ΔX3 )cusp −→ OutFC(Δ P1
+k \{0,1,∞} )
+— where the ﬁrst arrow is the homomorphism induced by ρΣ
+X3/k,a n d
+the second arrow is the homomorphism determined by the diagonal in
+X2 (cf. [Mzk7], Theorem A, (iii)). Moreover, one veriﬁes easily that
+the compositeof these homomorphismscoincides with ρΣ
+P1
+k′ \{0,1,∞} /k′ (cf.
+the construction of the homomorphism
+OutFC(ΔX3 )cusp −→ OutFC(Δ P1
+k \{0,1,∞} )
+in [Mzk7]). Now assertion (i) follows immediately. □
+The injectivity portion of assertion (i) (in the case where n =1 )o f
+the following corollary is a generalization of [Mts], Theorem 2.1. Note
+that [Mts], Theorem 2.1, corresponds to the following corollary in the
+case where X is aﬃne .
+Corollary 6.3 (Injectivity and commensurable terminality for
+outer representations arising from hyperbolic curves). In the
+situation of Corollary 6.2, suppose thatk is a number ﬁeldor p-adic
+local ﬁeld (cf. the discussion entitled “Numbers” in §0), and that Σ
+is the set of all prime numbers.W r i t ek0
+def
+= Q if k is a number
+ﬁeld; k0
+def
+= Qp if k is a p-adic local ﬁeld; Aut(X
+k/k0) for the group
+of k0-linear automorphisms of the scheme X
+k
+def
+= X ⊗k
+ k; ρn
+def
+= ρΣ
+Xn/k.
+Then the following hold:
+(i) The outer representation
+ρn : Gk −→ Out(ΔXn )
+is injective. Moreover, the outer representations ρn+1 and
+ρn are compatible, in the evident sense, with the injection
+OutFC(ΔXn+1 ) ↪→ OutFC(ΔXn ) of Theorem 6.1.
+(ii) Every α ∈ Aut(X
+k/k0) induces a k0-linear automorphism of
+(Xn)
+k
+def
+= Xn ⊗k
+ k. In particular, we have a natural outer rep-
+resentation
+ρn/0 : Aut(X
+k/k0) −→ Out(ΔXn )
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 65
+which factors through OutFC(ΔXn ) ⊆ Out(ΔXn ) and is com-
+patible with ρn relative to the natural injectionGk ↪→ Aut(X
+k/k0)
+determined by taking the ﬁber product over Spec (k) with X.
+Moreover, the outer representations ρn+1/0 and ρn/0 are com-
+patible, in the evident sense, with the injectionOutFC(ΔXn+1 ) ↪→
+OutFC(ΔXn ) of Theorem 6.1.
+(iii) The outer representation ρn/0 of (ii) is injective.
+(iv) Suppose that the hyperbolic curve X is of quasi-Belyi type
+[cf. [Mzk5], Deﬁnition 2.3, (iii)] (respectively,aﬃne; proper).
+Set n0
+def
+=1 (respectively, n0
+def
+=2 ; n0
+def
+=3 ). Then the image of
+ρn/0 is commensurably terminal in OutF(ΔXn) (cf. [Mzk7],
+Deﬁnition 1.1, (ii)) for all n ≥ n0.
+Proof. The injectivity portion of assertion (i) follows immediately from
+Corollary 6.2, (ii), together with the injectivity of the outer homomor-
+phism “ G
+k → GQ” in the statement of Corollary 6.2, (ii), when k is a
+number ﬁeld or p-adic local ﬁeld. The compatibilityportion of assertion
+(i) follows immediately from the various deﬁnitions involved. Assertion
+(ii) follows immediately from the various deﬁnitions involved. Next, we
+consider assertion (iii). In light of the compatibility portion of asser-
+tion (ii), it suﬃces to verify assertion (iii) in the case where n =1 .
+Write Aut(X
+k/
+k) ⊆ Aut(X
+k/k0) for the subgroup of
+ k-linear automor-
+phisms. Then the injectivity of the restriction of ρ1/0 to Aut(X
+k/
+k)
+is well-known (cf. e.g., the injectivity portion of [Mzk1], Theorem A).
+On the other hand, one veriﬁes immediately that by restricting an au-
+tomorphism α ∈ Aut(X
+k/k0) to the base ﬁeld
+ k,o n eo b t a i n sanatural
+exact sequence
+1 −→ Aut(X
+k/
+k) −→ Aut(X
+k/k0) −→ Gal(
+k/k0)
+such that the image of the homomorphism Aut( X
+k/k0) → Gal(
+k/k0)
+contains Gk =G a l (
+k/k), hence is open. Thus, it follows immediately
+from the injectivity portion of assertion (i) (cf. also the ﬁrst compat-
+ibility discussed in assertion (ii)) that the kernel of ρ1/0 maps isomor-
+phically to a ﬁnite normal closed subgroup of some open subgroup of
+the slim proﬁnite group Gal(
+ k/k0) (cf. e.g., [Mzk2], Theorem 1.1.1,
+(ii)), hence is trivial, as desired. This completes the proof of asser-
+tion (iii). Finally, we consider assertion (iv). First, let us observe
+that it follows immediately from [Mzk4], Corollary 2.7, (i) (cf. also
+[Mzk7], Remark 1.1.3), that the commensurator of the image of ρ
+n/0
+in OutF(ΔXn )i si nf a c tcontained in OutFC(ΔXn ). Thus, it suﬃces to
+verify assertion (iv) with “Out F(−)” replaced by “OutFC(−)”. Next,
+let us observe that by theinjectivity portion of Theorem 6.1, it suﬃces
+to verify assertion (iv) in the case where n = n0. Thus, let us assume
+that n = n0. Then in light of assertion (iii), together with the fact
+
+66 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+that Δ Xn is slim (cf. the discussion entitled “Topological Groups”in
+§0; [MzTa], Proposition 2.2, (ii)), assertion (iv) follows immediately —
+in the case where the hyperbolic curve X is of quasi-Belyi type (re-
+spectively,is aﬃne ; proper)—f r o mt h e“Grothendieck Conjecture-type
+result”given in [Mzk5], Corollary 2.3 (respectively, [Mzk6], Corollary
+1.11, (iii), (iv); [Mzk6], Corollary 1.11, (iii), (iv)). □
+The following corollary is a genera lization of [MtTa], Theorem 1.1.
+Note that [MtTa], Theorem 1.1, corresponds to the following corollary
+in the case where r ≥ 1.
+Corollary 6.4 (Triviality of simultaneously arithmetic-geomet-
+ric actions). Let k be a ﬁeld of characteristic zero,
+k an algebraic clo-
+sure of k, (g,r ) a pair of natural numbers such that 2g − 2+ r> 0,
+(Mg,r)k the moduli stack of r-pointed smooth curves of genus g over
+k whose marked points are equipped with an ordering,Π Mg,r the proﬁ-
+nite fundamental group of the stack (Mg,r)k,a n dΔ Mg,r the proﬁnite
+fundamental group of the stack (Mg,r)k ⊗k
+ k; thus, we have an exact
+sequence
+1 −→ Δ Mg,r −→ ΠMg,r −→ Gal(
+k/k) −→ 1 .
+Moreover, let X be a hyperbolic curve of type(g,r ) over k,
+ρX/k :G a l (
+k/k) −→ Out(π1(X ⊗k
+ k))
+the outer representation arising from the hyperbolic curve X
+over k, i.e., the outer representation arising from the natural exact
+sequence
+1 −→ π1(X ⊗k
+ k) −→ π1(X) −→ Gal(
+k/k) −→ 1 ,
+and
+ρg,r :Π Mg,r −→ Out(π1(X ⊗k
+ k))
+the proﬁnite universal monodromy outer representation over
+k, i.e., the outer representation arising from the natural exact sequence
+1 −→ π1(X ⊗k
+ k) −→ ΠMg,r+1 −→ ΠMg,r −→ 1 .
+Then the subgroup
+ρ−1
+X/k(ρg,r(Δ Mg,r )) ⊆ Gal(
+k/k)
+of Gal(
+k/k) is contained in the kernel of the outer homomorphism
+Gal(
+k/k) −→ Gal(
+Q/Q)
+determined by the natural inclusion Q ↪→ k.
+In particular, if k is a number ﬁeld or p-adic local ﬁeld, then
+the intersection of the image of the outer representation
+ρX/k :G a l (
+k/k) −→ Out(π1(X ⊗k
+ k))
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 67
+and the image of the restriction
+ρg,r |Δ Mg,r :Δ Mg,r −→ Out(π1(X ⊗k
+ k))
+of ρg,r to Δ Mg,r ⊆ ΠMg,r is trivial.
+Proof. The various assertions of Corollary 6.4 follow from Theorem 6.1
+via a similar argument to the argument used in the proof of Corol-
+lary 6.2, (i), (ii). Alternatively, one may derive Corollary 6.4 directly
+from Corollary 6.2, (ii) — where we take “ k”t ob et h efunction ﬁeld
+of M
+g,r — via a similar argument to the argument used in the proof
+of [MtTa], Theorem 1.1, i.e., by considering, in eﬀect, the semi-direct
+product decomposition ΠMg,r ≃ Δ Mg,r ⋊ Gal(
+k/k) determined by the
+k-valued point of Mg,r corresponding to X. □
+Corollary 6.5(Outer representations arising from moduli stacks
+of stable curves). Let k be a number ﬁeld or p-adic local ﬁeld,
+k an algebraic closure of k, (g,r ) a pair of natural numbers such that
+2g − 2+ r> 0, (Mg,r)k the moduli stack of r-pointed smooth curves
+of genus g over k whose marked points are equipped with an ordering,
+ΠMg,r the proﬁnite fundamental group of the stack (Mg,r)k, Δ Mg,r the
+proﬁnite fundamental group of the stack (Mg,r)k ⊗k
+ k, Πg,r the proﬁ-
+nite completion of the surface group of type (g,r ) (i.e., the topological
+fundamental group of the complement ofr distinct points in a compact
+oriented topological surface of genusg), and
+ρg,r :Π Mg,r −→ Out(Πg,r)
+the proﬁnite universal monodromy outer representation over
+k. Then the congruence subgroup problem for the pair(g,r ) may be re-
+solved in theaﬃrmative (i.e., the restriction ofρg,r to Δ Mg,r ⊆ ΠMg,r
+is injective) if and only if the homomorphism ρg,r is injective.
+Proof. This follows immediately from Corollary 6.4, by considering a
+hyperbolic curve “ X”o ft y p e(g,r ) that is deﬁned over k (as in the
+statement of Corollary 6.4). Alternatively, one may deduce Corol-
+lary 6.5 directly from Corollary 6.2, (ii), by applying Corollary 6.2,
+(ii), to the function ﬁeld of M
+g,r. □
+The following corollary is a generalization of [Mzk7], Corollary 5.1,
+(ii), (iv).
+Corollary 6.6(Discrete combinatorial cuspidalization). Let (g,r )
+be a pair of natural numbers such that2g − 2+ r> 0, n a positive in-
+teger, X a topological surface of type (g,r ) (i.e., the complement of r
+distinct points in a compact oriented topological surface of genusg), Xn
+the n-th conﬁguration space ofX, Πn the topological fundamental group
+of Xn,a n dOutFC(Πn) ⊆ Out(Πn) the subgroup of the group Out(Πn)
+of outomorphisms (cf. the discussion entitled “Topological groups” in
+
+68 YUICHIRO HOSHI AND SHINICHI MOCHIZUKI
+§0) of Πn deﬁned in the statement of [Mzk7], Corollary 5.1. Then the
+natural homomorphism
+OutFC(Πn+1) −→ OutFC(Πn)
+induced by the projectionXn+1 →X n obtained by forgetting the(n+1)-
+st factor is bijective. Moreover, the image of the natural inclusion
+Sn ↪→ Out(Πn)
+—w h e r ew ew r i t eSn for the symmetric group onn letters — obtained
+by permuting the various factors of the conﬁguration space Xn is con-
+tained in the centralizer ZOut(Πn)(OutFC(Πn)).
+Proof. The assertion concerning the centralizer follows immediately
+from the bijectivity assertion, together with [Mzk7], Corollary 5.1, (iv),
+and the easily veriﬁed discrete analogueof [Mzk7], Proposition 1.2, (iii)
+(which may be veriﬁed, for instance, by applying [Mzk7], Corollary 5.1,
+(i); [Mzk7], Proposition 1.2, (iii)). Thus, to complete the proof of The-
+orem 6.1, it suﬃces to verify the bijectivity assertion. Moreover, it
+follows from [Mzk7], Corollary 5.1, (ii), that to complete the proof of
+the bijectivity assertion, it suﬃces to verify the injectivity portion of
+this bijectivity assertion. On the other hand, this injectivity follows
+from Theorem 6.1, together with [Mzk7], Theorem 5.1, (i). That is to
+say, the injectivity of the homomorphism Out
+FC(Πn+1) → OutFC(Πn)
+follows from the commutativity of the diagram of natural homomor-
+phisms
+OutFC(Πn+1) −−−→ OutFC(ˆΠn+1)⏐⏐
+↓
+⏐⏐
+↓
+Out
+FC(Πn) −−−→ OutFC(ˆΠn)
+—w h e r ew ew r i t e“ˆΠ(−)” for the proﬁnite completion of “Π (−)”—
+together with the injectivity of the upper horizontal and right-hand
+vertical arrows of the diagram. □
+Remark 6.6.1. Just as in the case of [Mzk7], Corollary 5.1, there
+is a partial overlap between the content of Corollary 6.6 above and
+Theorems 1, 2 of [IIM].
+References
+[Bg] M. Boggi, The congruence subgroup property for the hyperelliptic modular
+group: the open surface case, Hiroshima Math. J. 39 (2009), 351–362.
+[Hsh] Y. Hoshi, Absolute anabelian cuspidalizations of conﬁguration spaces over
+ﬁnite ﬁelds,Publ. Res. Inst. Math. Sci. 45 (2009), 661–744.
+[IIM] E. Irmak, N. Ivanov, J. D. McCarthy,Automorphisms of surface braid groups,
+preprint (arXiv:math.GT/0306069v1 3 Jun 2003).
+[Knud] F. Knudsen, The projectivity of the moduli space of stable curves. II. The
+stacks Mg,n, Math. Scand. 52 (1983), 161–199.
+
+NODALLY NONDEGENERATE OUTER REPRESENTATIONS 69
+[Mts] M. Matsumoto, Galois representations on proﬁnite braid groups on curves,
+J. Reine Angew. Math. 474 (1996), 169–219.
+[MtTa] M. Matsumoto and A. Tamagawa, Mapping-class-group action versus Ga-
+lois action on proﬁnite fundamental groups,Amer. J. Math. 122 (2000), 1017–
+1026.
+[Mzk1] S. Mochizuki, The Local Pro- p Anabelian Geometry of Curves, Invent.
+Math. 138 (1999), 319–423.
+[Mzk2] S. Mochizuki, The Absolute Anabelian Geometry of Hyperbolic Curves,
+Galois Theory and Modular Forms , Kluwer Academic Publishers (2003), 77–
+122.
+[Mzk3] S. Mochizuki, Semi-graphs of anabelioids, Publ. Res. Inst. Math. Sci. 42
+(2006), 221–322.
+[Mzk4] S. Mochizuki, A combinatorial version of the Grothendieck conjecture, To-
+hoku Math J. 59 (2007), 455–479.
+[Mzk5] S. Mochizuki, Absolute anabelian cuspidalizations of proper hyperbolic
+curves, J. Math. Kyoto Univ. 47 (2007), 451–539.
+[Mzk6] S. Mochizuki, Topics in Absolute Anabelian Geometry II: Decompo-
+sition Groups and Endomorphisms ,R I M SP r e p r i n t1625 (2008); see
+http://www.kurims.kyoto-u.ac.jp/~motizuki/papers-english.html for
+a revised version.
+[Mzk7] S. Mochizuki, On the Combinatorial Cuspidalization of Hyperbolic Curves,
+Osaka J. Math . 47 (2010), 651–715.
+[MzTa] S. Mochizuki and A. Tamagawa, The Algebraic and Anabelian Geometry
+of Conﬁguration Spaces, Hokkaido Math. J. 37 (2008), 75–131.
+[Naka] H. Nakamura, Galois rigidity of pure sphere braid groups and proﬁnite
+calculus, J. Math. Sci. Univ. Tokyo , 1 (1994), 71–136.
+[Tk] N. Takao, Braid monodromies on proper curves and pro- l Galois representa-
+tions, to appear in J. Inst. Math. Jussieu .
+(Yuichiro Hoshi) Research Institute for Mathematical Sciences, Ky-
+oto University, Kyoto 606-8502, JAPAN
+E-mail address: yuichiro@kurims.kyoto-u.ac.jp
+(Shinichi Mochizuki) Research Institute for Mathematical Sciences,
+Kyoto University, Kyoto 606-8502, JAPAN
+E-mail address: motizuki@kurims.kyoto-u.ac.jp

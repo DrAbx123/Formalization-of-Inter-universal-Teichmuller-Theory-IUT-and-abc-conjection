@@ -1,0 +1,721 @@
+INDECOMPOSABILITY OF V ARIOUS PROFINITE
+GROUPS ARISING FROM HYPERBOLIC CUR VES
+ARATA MINAMIDE
+Abstract. In this paper, we prove that the ´ etale fundamental group of
+a hyperbolic curve over an arithmetic ﬁeld [e.g., a ﬁnite extension ﬁeld of
+Q or Qp] or an algebraically closed ﬁeld satisﬁes the indecomposability
+[i.e., cannot be decomposed into the direct product of nontrivial proﬁ-
+nite groups]. Moreover, in the case of characteristic zero, we also prove
+that the ´ etale fundamental group of the conﬁguration space of a curve of
+the above type is indecomposable. Finally, we consider the topic of in-
+decomposability in the context of the theory of combinatorial anabelian
+geometry and pose the question: Is the Grothendieck-Teichm¨ uller group
+GT indecomposable? We give an aﬃrmative answer to a pro- l version
+of this question.
+Contents
+Introduction 1
+0. Notations and Conventions 4
+1. Indecomposability of Absolute Galois Groups 5
+2. Indecomposability of Geometric Fundamental Groups of Curves 7
+3. Indecomposability of Various Fundamental Groups 9
+4. Indecomposability of the Pro- l Grothendieck-Teichm¨ uller Group 13
+References 15
+Introduction
+In this paper, we study the indecomposability of various proﬁnite groups.
+The term indecomposability is deﬁned as follows [cf. Deﬁnition 1.1]:
+We shall say that a proﬁnite group G is indecomposable if,
+for any isomorphism of proﬁnite groups G ∼= G1 × G2, where
+G1, G2 are proﬁnite groups, it follows that either G1 or G2
+is the trivial group.
+In the “zero-dimensional” case, i.e., the case of the absolute Galois group
+Gk of a ﬁeld k, the following fact is known [cf. Theorem 1.2]:
+2010 Mathematics Subject Classication. Primary 14H30; Secondary 11R99.
+1
+
+2 ARATA MINAMIDE
+F act. (Haran-Jarden [cf. [6], Corollary 2.5]) Let k be a Hilbertian eld [cf.
+[FJ], Chapter 12]. Then Gk is indecomposable.
+In particular, the absolute Galois group of a ﬁnitely generated (respectively,
+ﬁnitely generated transcendental) extension ﬁeld of Q (respectively, Qp or
+Fp) is indecomposable [cf. Corollary 1.4]. Note that any p-adic local ﬁeld
+[i.e., a ﬁnite extension ﬁeld of Qp] is non-Hilbertian [cf. Remark 1.3], but
+whose absolute Galois group is also indecomposable [cf. Proposition 1.6].
+In this paper, we treat the “positive-dimensional” case. In the following,
+for a connected noetherian scheme ( −), we shall write Π (−) for the ´ etale
+fundamental group of ( −) [for some choice of basepoint]. Now we consider
+the case of ´ etale fundamental groups of smooth [hyperbolic] curves. First,
+we prove the following theorem [cf. Theorems 2.1, 2.2] which concerns the
+case where the base ﬁeld is algebraically closed.
+Theorem A. Let k be an algebraically closed eld; X a smooth curve of type
+(g, r) over k such that the pair (g, r) satises 2g − 2 + r > 0 (respectively,
+(g, r) ̸= (0, 0), (1, 0)) if the characteristic of k is zero (respectively, positive).
+Then ΠX is indecomposable.
+The characteristic zero case of Theorem A is shown in [20], Proposition 3.2.
+Next, we consider the case that the base ﬁeld is non-algebraically closed.
+Let k be a ﬁeld of characteristic p ≥ 0; l ̸= p a prime number. Then for the
+pair ( k, l), we consider the following condition:
+(∗l
+k) For any ﬁnite extension ﬁeld k′ of k, the l-adic cyclotomic character
+χk′ : Gk′ → Z×
+l of k′ is nontrivial.
+We shall say that k is l-cyclotomically full if the pair ( k, l) satisﬁes the
+condition ( ∗l
+k) [cf. Deﬁnition 3.1].
+Then we prove the following theorem [cf. Theorem 3.3]:
+Theorem B. Let k be a eld of characteristic p ≥ 0 such that Gk is center-
+free and indecomposable; X a smooth curve of type (g, r) over k such that
+the pair (g, r) satises 2g − 2 + r > 0 (respectively, (g, r) ̸= (0 , 0), (1, 0))
+if the characteristic of k is zero (respectively, positive). Suppose that there
+exists a prime number l ̸= p such that k is l-cyclotomically full. Then ΠX
+is indecomposable.
+Next, in the case of the ´ etale fundamental group of the conﬁguration space
+of a hyperbolic curve, we prove the following [cf. Theorem 3.4]:
+Theorem C. Let n be a positive integer; k a eld of characteristic zero
+such that Gk is center-free and indecomposable; X a hyperbolic curve over
+k; Xn the n-th conguration space associated to X. Suppose that either k
+is algebraically closed, or l-cyclotomically full for a prime number l. Then
+ΠXn is indecomposable.
+For instance, Theorems B and C imply the following [cf. Corollary 3.7]:
+
+INDECOMPOSABILITY OF V ARIOUS PROFINITE GROUPS 3
+Corollary D. Let n be a positive integer; k a eld; X a smooth curve of type
+(g, r) over k such that the pair (g, r) satises 2g − 2 + r > 0 (respectively,
+(g, r) ̸= (0, 0), (1, 0)) if the characteristic of k is zero (respectively, positive);
+Xn the n-th conguration space associated to X. Then the following hold:
+(i) If k is a nitely generated transcendental extension eld of Fp, then
+ΠX is indecomposable.
+(ii) If k is a nitely generated extension eld of either Q or Qp, then
+ΠXn is indecomposable.
+Theorem C also implies the following geometric result [cf. Theorem 3.8]:
+Theorem E. Let n be a positive integer; k a eld of characteristic zero; X
+a hyperbolic curve over k; Xn the n-th conguration space associated to X.
+Suppose that there exists an isomorphism of k-schemes
+Xn
+∼→ Y ×k Z
+| where Y , Z are k-varieties [i.e., schemes that are of nite type, separated,
+and geometrically integral over k]. Then it follows that either
+Y ∼= Spec(k) or Z ∼= Spec(k).
+Finally, we consider the Grothendieck-Teichm¨ uller group GT [cf. Deﬁ-
+nition 4.1]. One fundamental problem in the theory of GT is the issue of
+whether or not the well-known injection
+GQ ,→ GT
+is, in fact, bijective. On the other hand, from the point of view of the theory
+of combinatorial anabelian geometry [cf., e.g., [18], [10], [11], [12]], we recall
+that it is stated in [12], Introduction, that:
+“By contrast, one important theme of the present series of
+papers lies in the point of view that, instead of pursuing the
+issue of whether or not GT is literally isomorphic to GQ, it is
+perhaps more natural to concentrate on the issue of verifying
+that GT exhibits analogous behavior/properties to GQ [or
+Q].”
+From this point of view, it is natural to pose the following question:
+Is GT indecomposable?
+[Note that GQ is indecomposable [cf. the above F act].] In this paper, we
+give an aﬃrmative answer to a pro- l version of this question. More precisely,
+we prove the following result [cf. Theorem 4.4]:
+Theorem F. Let l be a prime number. Then the pro- l Grothendieck-
+Teichm uller groupGTl [cf. Denition 4.1] is indecomposable.
+The present paper is organized as follows: In §1, we review various proper-
+ties of absolute Galois groups. Also, we prove a [proﬁnite] group-theoretic
+result [cf. Proposition 1.7] which is needed in §3. In §2, we prove the inde-
+composability of the geometric fundamental group of a smooth [hyperbolic]
+curve [cf. Theorem A]. In §3, by applying the results of §1 and §2, we prove
+
+4 ARATA MINAMIDE
+Theorems B, C and Corollary D. Moreover, as an application of Theorem
+C, we conclude Theorem E. Finally, in §4, after reviewing the deﬁnitions of
+GT and GT l, we verify Theorem F as a consequence of a certain anabelian
+result over ﬁnite ﬁelds [cf. [7], Remark 6, (iv)].
+Acknowledgements: I would like to thank Professors Shinichi Mochizuki
+and Yuichiro Hoshi for their suggestions, many helpful discussions, and warm
+encouragement.
+0. Notations and Conventions
+In this paper, we follow the terminology and conventions of [20], §0,
+“Topological Groups”, “Curves”; [19], Deﬁnition 1.1, (ii), (iii).
+Fields: A ﬁnite extension ﬁeld of Q (respectively, Qp) will be referred to as
+a number eld (respectively, p-adic local eld ).
+T opological groups: Let G be a Hausdorﬀ topological group, and H ⊆ G
+a closed subgroup. Let us write ZG(H) for the centralizer of H in G. We
+shall write Z(G) def= ZG(G) for the center of G.
+We shall say that a proﬁnite group G is elastic if it holds that every
+topologically ﬁnitely generated closed normal subgroup N ⊆ H of an open
+subgroup H ⊆ G of G is either trivial or of ﬁnite index in G. If G is elastic,
+but not topologically ﬁnitely generated, then we shall say that G is very
+elastic.
+We shall say that a proﬁnite group G is slim if for every open subgroup
+H ⊆ G, the centralizer ZG(H) is trivial. A proﬁnite group G is slim if and
+only if every open subgroup of G has trivial center [cf. [16], Remark 0.1.3].
+It is easily veriﬁed that every ﬁnite closed normal subgroup N ⊆ G of a slim
+proﬁnite group G is trivial.
+Let p be a prime number. Then we shall write G(p) for the maximal pro-p
+quotient of a proﬁnite group G. If G admits an open subgroup which is
+pro-p, then we shall say that G is almost pro- p.
+We shall write Gab for the abelianization of a proﬁnite group G, i.e., the
+quotient of G by the closure of the commutator subgroup of G.
+If G is a topologically ﬁnitely generated proﬁnite group, then one ver-
+iﬁes easily that the topology of G admits a basis of characteristic open
+subgroups. Any such basis determines a proﬁnite topology on the groups
+Aut(G), Out( G).
+Let X be a connected noetherian scheme. Then we shall write Π X for the
+ etale fundamental groupof X [for some choice of basepoint]. For any ﬁeld
+k, we shall write Gk
+def= Π Spec(k) for the absolute Galois group of k.
+Curves: Let S be a scheme and X a scheme over S. If ( g, r) is a pair of
+nonnegative integers, then we shall say that X → S is a smooth curve of
+type (g, r) over S if there exist an S-scheme X which is smooth, proper, of
+relative dimension 1 with geometrically connected ﬁbers of genus g, and a
+
+INDECOMPOSABILITY OF V ARIOUS PROFINITE GROUPS 5
+closed subscheme D ⊆ X which is ﬁnite ´ etale of degree r over S such that
+the complement of D in X is isomorphic to X over S.
+We shall say that X is a hyperbolic curve over S if there exists a pair ( g, r)
+of nonnegative integers with 2 g − 2 + r > 0 such that X is a smooth curve
+of type ( g, r) over S. A tripod is a hyperbolic curve of type (0 , 3).
+Let X → S be a smooth curve of type ( g, r), and Pn the ﬁber product of
+n copies of X over S. Then we shall refer to as the n-th conguration space
+associated to X the S-scheme Xn which represents the open subfunctor
+T 7→ {(f1, . . . , fn) ∈ Pn(T ) | fi ̸= fj if i ̸= j }
+of the functor represented by Pn [cf. [7], Deﬁnition 2.1, (i), (ii)].
+1. Indecomposability of Absolute Galois Groups
+In this section, we review various properties of absolute Galois groups.
+Also, we prove a [proﬁnite] group-theoretic result [cf. Proposition 1.7] which
+is needed in §3.
+Denition 1.1. (cf. [20], Deﬁnition 3.1) We shall say that a proﬁnite group
+G is indecomposable if, for any isomorphism of proﬁnite groups G ∼= G1 ×G2,
+where G1, G2 are proﬁnite groups, it follows that either G1 or G2 is the
+trivial group. We shall say that G is strongly indecomposable if every open
+subgroup of G is indecomposable.
+Theorem 1.2. Let k be a Hilbertian eld [cf. [FJ], Chapter 12]. Then Gk
+is very elastic, slim, and strongly indecomposable.
+Proof. The very elasticity portion of Theorem 1.2 follows from [4], Lemma
+16.11.5; [4], Proposition 16.11.6. Note that for any open subgroup H of
+Gk, there exists a ﬁnite separable extension kH of k such that GkH
+∼→ H.
+Here, by [4], Corollary 12.2.3, kH is also a Hilbertian ﬁeld. Thus, to ver-
+ify the slimness and the strong indecomposability portions of Theorem 1.2,
+it suﬃces to show that Gk is center-free and indecomposable. But this
+center-freeness (respectively, indecomposability) follows from [4], Proposi-
+tion 16.11.6 (respectively, the theorem of Haran-Jarden [cf. [6], Corollary
+2.5]). 
+Remark 1.3. Let k be either a ﬁnite ﬁeld or a p-adic local ﬁeld. Then k
+is always non-Hilbertian. Indeed, Gk is topologically ﬁnitely generated [cf.
+Proposition 1.6, below; [4], Lemma 16.11.5].
+Corollary 1.4. The following types of elds are Hilbertian:
+(i) nitely generated extension elds of Q,
+(ii) nitely generated transcendental extension elds of Qp.
+(iii) nitely generated transcendental extension elds of Fp.
+In particular, their absolute Galois groups are very elastic, slim, and strongly
+indecomposable.
+
+6 ARATA MINAMIDE
+Proof. The ﬁrst statement follows from [4], Theorem 13.4.2. The last state-
+ment follows from the ﬁrst, together with Theorem 1.2. 
+Lemma 1.5. Let G be a pronite group. If G is elastic, slim, and topolog-
+ically nitely generated, then G is strongly indecomposable.
+Proof. First, we note that any open subgroup of G is also elastic, slim, and
+topologically ﬁnitely generated. Thus, to verify the assertion, it suﬃces to
+show that G is indecomposable. Suppose that we have an isomorphism of
+proﬁnite groups G ∼= G1 × G2 such that G1 ̸= {1}. Then since G1 is a
+nontrivial topologically ﬁnitely generated closed normal subgroup of G, [by
+the elasticity of G] G1 is of ﬁnite index in G. In particular, G1 is an open
+subgroup of G. Thus, by the slimness of G, we have G2 ⊆ ZG(G1) = {1}. 
+Proposition 1.6. Let k be a p-adic local eld. Then Gk is elastic, slim,
+topologically nitely generated, and strongly indecomposable.
+Proof. The assertions follow from Lemma 1.5; [19], Theorem 1.7, (ii); [21],
+Theorem 7.4.1. 
+Proposition 1.7. Let
+1 − − − − →∆ − − − − →Π
+p
+− − − − →G − − − − →1
+be an exact sequence of pronite groups. Then the following hold:
+(i) Suppose that ∆ is indecomposable, and G is center-free and inde-
+composable. Then if the natural outer Galois representation
+G → Out(∆)
+associated to the above exact sequence is nontrivial, then Π is also
+indecomposable.
+(ii) Suppose that ∆ is nontrivial and center-free, and that G is non-
+trivial. Then if Π is indecomposable, then the natural outer Galois
+representation
+G → Out(∆)
+associated to the above exact sequence is nontrivial.
+Proof. (i) Suppose that Π = Π 1 × Π2, where Π 1, Π 2 are nontrivial closed
+normal subgroups of Π. Then since G is center-free, it follows from [20],
+Proposition 3.3 that there exist normal closed subgroups Hi ⊆ Πi [for i = 1,
+2] such that Π 1/H1 × Π2/H2
+∼→ G. In particular, since G is indecomposable,
+we obtain that either Π 1/H1 = {1} or Π 2/H2 = {1}. Without loss of
+generality, we may assume that Π 1/H1 = {1}, so Π 1 = H1, Π 2/H2
+∼→ G.
+Thus, we have Π 1 × H2
+∼→ ∆.
+Now I claim that H2 ̸= {1}. Indeed, suppose that H2 = {1}, so Π 1
+∼→ ∆,
+Π2
+∼→ G. Then the extension determined by the exact sequence that appears
+
+INDECOMPOSABILITY OF V ARIOUS PROFINITE GROUPS 7
+in the statement of Proposition 1.7 is isomorphic to the trivial extension of
+G by ∆
+1 − − − − →∆ − − − − →∆ × G − − − − →G − − − − →1.
+Thus, the natural outer Galois representation G → Out(∆) induced by the
+conjugation action of G on ∆ is trivial. But this contradicts the assumption
+that the outer representation G → Out(∆) is nontrivial. This completes the
+proof of the claim.
+In light of the claim, by the indecomposability of ∆, we conclude that
+Π1 = {1}, a contradiction. This completes the proof that Π is indecompos-
+able.
+(ii) Suppose that the representation G → Out(∆) is trivial. Here, note
+that both ∆ and ZΠ(∆) are normal closed subgroups of Π. Moreover, by the
+triviality of the representation G → Out(∆), it follows that Π is generated by
+∆ and ZΠ(∆). Thus, since ∆ is center-free, i.e., ∆ ∩ ZΠ(∆) = Z(∆) = {1},
+we obtain that Π ∼= ∆ × ZΠ(∆). Here, we note that since p(ZΠ(∆)) = G
+is nontrivial, we have ZΠ(∆) ̸= {1}. Therefore, since ∆ is nontrivial, we
+conclude that Π is not indecomposable, a contradiction. 
+2. Indecomposability of Geometric Fundamental Groups of
+Curves
+In this section, we prove the indecomposability of the geometric funda-
+mental group of a smooth [hyperbolic] curve.
+Theorem 2.1. Let k be an algebraically closed eld of characteristic zero;
+X a hyperbolic curve over k. Then ΠX is elastic, slim, and topologically
+nitely generated. In particular, ΠX is strongly indecomposable.
+Proof. The fact that Π X is elastic (respectively, slim; topologically ﬁnitely
+generated) follows from [20], Theorem 1.5 (respectively, [20], Proposition
+1.4; [23], EXPOS ´E XIII, Corollaire 2.12). In particular, the strong inde-
+composability of Π X follows from Lemma 1.5 [cf. also [20], Proposition 3.2;
+[20], Remark 3.2.1]. 
+Theorem 2.2. Let k be an algebraically closed eld of characteristic p > 0;
+X a smooth curve of type (g, r) over k such that the pair (g, r) satises
+(g, r) ̸= (0, 0), (1, 0). Then G def= Π X is strongly indecomposable.
+Proof. First, we note that for any open subgroup H of G, there exists a
+connected ﬁnite ´ etale covering XH → X of X, where XH is also a curve
+of type ̸= (0 , 0), (1 , 0) over k such that Π XH
+∼→ H. Thus, to verify the
+assertion, it suﬃces to show that G is indecomposable. Suppose that we
+have an isomorphism of proﬁnite groups G ∼= G1 × G2 such that G1 ̸= {1},
+G2 ̸= {1}. In particular, by the slimness of G [cf. Proposition 2.4, below],
+it follows that G1, G2 are inﬁnite [cf. §0].
+
+8 ARATA MINAMIDE
+Now I claim that
+(∗1) there exists an open subgroup U of G such that U is [isomorphic to]
+the fundamental group of a curve of genus ≥ 2.
+Indeed, this fact is elementary and well-known, but we give a short proof
+here for completeness. First, we consider the case where the genus of X is
+0, i.e., the unique smooth compactiﬁcation of X is P1
+k. Here, note that if we
+identify the function ﬁeld of P1
+k with k(t), where t is an indeterminate, then
+for any Artin-Schreier equation
+xp − x = tm (m ∈ Z>0, p - m),
+one computes easily that the normalization of P1
+k in the extension ﬁeld
+k(t)[x]/(xp − x − tm) of k(t) determines a ﬁnite ramiﬁed covering ϕm :
+Cm → P1
+k of P1
+k branched only at ∞, where Cm is a smooth, proper curve
+of genus (m−1)(p−1)
+2 [cf., e.g., [26], Example 8.16]. Thus, for any curve X
+of type (0 , r), where r > 0, by taking m to be suﬃciently large, we obtain
+a connected ﬁnite ´ etale covering X ′ → X of X such that the genus of X ′
+is ≥ 2. Next, we consider the case where the genus of X is 1, i.e., the
+unique smooth compactiﬁcation of X is an elliptic curve E. Note that by
+applying the Riemann-Roch Theorem to E, we obtain a ﬁnite morphism
+E1
+def= E \ {p} → A1
+k over k, where p ∈ E \ X is a closed point of E. Next,
+let us observe that it follows from the genus 0 case, which has already been
+veriﬁed, that there exists a connected ﬁnite ´ etale covering C → A1
+k of A1
+k
+such that the genus of C is ≥ 2. Then any connected component of E1 ×A1
+k
+C
+determines a connected ﬁnite ´ etale covering C′ → E1 of E1. Moreover, by
+applying the Hurwitz formula to the compactiﬁcation of the ﬁnite morphism
+C′ ,→ E1 ×A1
+k
+C → C, it follows that the genus of C′ is also ≥ 2. Thus, for
+any curve X of type (1 , r), where r > 0, we obtain a connected ﬁnite ´ etale
+covering X ′ → X of X such that the genus of X ′ is ≥ 2. This completes the
+proof of ( ∗1).
+In light of ( ∗1) and the fact that G1, G2 are inﬁnite, we may assume,
+without loss of generality, that G is the fundamental group of a curve of
+genus ≥ 2.
+Next, I claim that
+(∗2) for every prime number l ̸= p, there exist ﬁnite quotients G1  Q1,
+G2  Q2 such that l divides the order of Q1, Q2.
+Indeed, suppose that l does not divide the order of any ﬁnite quotient of
+G1. Now let N1 ( G1 be a proper normal open subgroup of G1. Note that
+by assumption, we have N ab
+1 ⊗ Zl = {1}. Write N def= N1 × G2. Then since
+the conjugation action of G/N ∼= G1/N1 × {1} on
+N ab ⊗ Zl ∼= (N ab
+1 ⊗ Zl) × (Gab
+2 ⊗ Zl) ∼= {1} × (Gab
+2 ⊗ Zl)
+is trivial, by Proposition 2.4, below, we conclude that G/N = {1}, a con-
+tradiction. This completes the proof of ( ∗2).
+In light of the ( ∗2), by replacing G by the maximal pro- l quotient of
+a suitable open subgroup of G for some l ̸= p, we may assume without
+
+INDECOMPOSABILITY OF V ARIOUS PROFINITE GROUPS 9
+loss of generality that G, G1, G2 are pro- l groups. Then since G is slim
+[cf. Proposition 2.4, below], it follows that G1, G2 are nonabelian pro- l
+groups, so dim FlH 1(G1, Fl) ≥ 2, dim FlH 1(G2, Fl) ≥ 2 [cf. [22], Theorem
+7.8.1]. In particular, since we have an inclusion H 1(G1, Fl) ⊗ H 1(G2, Fl) ⊆
+H 2(G, Fl), we obtain that dim FlH 2(G, Fl) ≥ 4. This contradicts the fact
+that dim FlH 2(G, Fl) is either 0 or 1. [Indeed, H 2(G, Fl) is isomorphic to the
+second ´ etale cohomology group H 2
+´ et(X, Fl) of X [cf. [17], Proposition 1.1];
+the dimension over Fl of this last cohomology group is either 0 or 1 [cf. [5],
+Theorem 7.2.9 (ii); Proposition 7.2.10].] Therefore, G is indecomposable.
+
+Remark 2.3. In the situation of Theorem 2.2, if X is an aﬃne curve, then
+ΠX is never ﬁnitely generated. [In fact, the maximal pro- p quotient of Π X
+is a free pro- p group of rank |k| — cf. [24], Theorem 12.] In particular, we
+cannot apply Lemma 1.5 to Theorem 2.2.
+The following result is well-known [cf., e.g., [25], Proposition 1.11; [20],
+Propostion 1.4], but we review it brieﬂy for the sake of completeness.
+Proposition 2.4. Let k be an algebraically closed eld of characteristic
+p ≥ 0; l ̸= p a prime number; X a smooth curve of type (g, r) over k such
+that the pair (g, r) satises 2g − 2 +r > 0 (respectively, (g, r) ̸= (0, 0), (1, 0))
+if the characteristic of k is zero (respectively, positive). Then for any normal
+open subgroup N of G def= Π X such that the connected nite  etale covering
+XN → X corresponding to N has genus ≥ 2, the conjugation action of G/N
+on N ab ⊗ Zl is faithful. In particular, ΠX , as well as its maximal pro- l
+quotient Π(l)
+X , is slim.
+Proof. The faithfulness portion of Proposition 2.4 follows immediately from
+the argument given in [3], Lemma 1.14. The slimness portion of Proposition
+2.4 follows formally from the faithfulness portion of Proposition 2.4. 
+3. Indecomposability of V arious Fundamental Groups
+In this section, by applying the results of §1 and §2, we prove the inde-
+composability of various fundamental groups. Moreover, by applying an in-
+decomposability result, we prove the “scheme-theoretic indecomposability”
+of the conﬁguration space of a hyperbolic curve over a ﬁeld of characteristic
+zero [cf. Theorem 3.8].
+Denition 3.1. Let k be a ﬁeld of characteristic p ≥ 0; l ̸= p a prime
+number. Then for the pair ( k, l), we consider the following condition:
+(∗l
+k) For any ﬁnite extension ﬁeld k′ of k, the l-adic cyclotomic character
+χk′ : Gk′ → Z×
+l of k′ is nontrivial.
+We shall say that k is l-cyclotomically full if the pair ( k, l) satisﬁes the
+condition ( ∗l
+k).
+
+10 ARATA MINAMIDE
+Lemma 3.2. In the notation of Denition 3.1, the following hold:
+(i) Let l, p be two distinct prime numbers; k ∈ {Q, Ql, Qp, Fp}. Suppose
+that K is a nitely generated extension eld of k. Then K is l-
+cyclotomically full.
+(ii) Let X be a smooth curve of type (g, r) over k such that the pair
+(g, r) satises (g, r) ̸= (0 , 0), (0, 1) (respectively, (g, r) ̸= (0 , 0)) if
+the characteristic of k is zero (respectively, positive); k an algebraic
+closure of k. Write Xk
+def= X ×k k. Suppose, moreover, that k is
+l-cyclotomically full. Then the image of the natural outer Galois
+representation
+ρk : Gk → Out(ΠXk )
+associated to the \homotopy exact sequence"
+1 − − − − →ΠXk − − − − →ΠX − − − − →Gk − − − − →1
+[cf. [23], EXPOS E IX, Th eor eme 6.1] is innite, hence, in partic-
+ular, nontrivial. If, moreover, (g, r) ̸= (0 , 1), then the image of the
+naturally induced pro- l outer Galois representation
+ρ(l)
+k : Gk → Out(Π(l)
+Xk
+)
+is innite, hence, in particular, nontrivial.
+Proof. Assertion (i) follows from the various deﬁnitions involved.
+We consider assertion (ii). First, suppose that ( g, r) = (0 , 1) [so p > 0].
+Then observe that one veriﬁes immediately — by considering a suitable
+Artin-Schreier covering of X as in the proof of Theorem 2.2 over a suitable
+ﬁnite extension of k and applying [8], Lemma 23, (i), (iii) — that the in-
+ﬁniteness [hence, in particular, the nontriviality] of the image of ρk follows
+from the corresponding inﬁniteness in the case of g ≥ 1. Here, we note
+that, although, in [8], Lemma 23, “∆” [in the notation of [8], Lemma 23] is
+assumed to be topologically ﬁnitely generated, one veriﬁes immediately that
+this assumption is in fact unnecessary. Thus, in the remainder of the proof of
+assertion (ii), we may assume without loss of generality that ( g, r) ̸= (0, 1).
+Next, observe that to verify the inﬁniteness of ρk, it suﬃces to verify the
+inﬁniteness of ρ(l)
+k . Moreover, by replacing k by a suitable ﬁnite extension
+of k, it suﬃces to verify that ρ(l)
+k is nontrivial. Suppose that ρ(l)
+k is trivial.
+First, we assume that g ≥ 1. Write J(X) for the Jacobian variety of the
+smooth compactiﬁcation X of X, Tl(J(X)) for the l-adic Tate module of
+J(X). Then it follows that the natural l-adic Galois representation
+Gk → Aut(Tl(J(X)))
+associated to J(X) is trivial. Then since, as is well-known [cf. the natural
+isomorphisms ∧2g H 1
+´ et(X k, Zl) ∼→ H 2g
+´ et(X k, Zl) ∼→ Zl(−g) of Zl[Gk]-modules
+discussed in [14], Remark 15.5; [13], Theorem 11.1, (a)], the determinant of
+this representation is a positive power of the l-adic cyclotomic character of
+k, we conclude that some positive power of the l-adic cyclotomic character
+of k is trivial. But this contradicts to the condition ( ∗l
+k). Next, we assume
+
+INDECOMPOSABILITY OF V ARIOUS PROFINITE GROUPS 11
+that g = 0 and r ≥ 2. Then since r ≥ 2, we may identify Xk with an open
+subscheme of A1
+k \ { 0}. Thus, by considering the maximal pro- l abelian
+quotient of Π A1
+k\{0}, we conclude that the l-adic cyclotomic character of k is
+trivial, a contradiction. [Here, we recall that H 1
+´ et(A1
+k \{0}, Zl) ∼= Zl(−1).] 
+Theorem 3.3. Let k be a eld of characteristic p ≥ 0 such that Gk is
+center-free and indecomposable; X a smooth curve of type (g, r) over k such
+that the pair (g, r) satises 2g − 2 +r > 0 (respectively, (g, r) ̸= (0, 0), (1, 0))
+if the characteristic of k is zero (respectively, positive). Suppose that there
+exists a prime number l ̸= p such that k is l-cyclotomically full. Then ΠX
+is center-free and indecomposable.
+Proof. Let k be an algebraic closure of k; Xk
+def= X ×k k. Then by [23], EX-
+POS´E IX, Th´ eor` eme 6.1, we have the following “homotopy exact sequence”
+1 − − − − →ΠXk − − − − →ΠX − − − − →Gk − − − − →1.
+In particular, since Gk and Π Xk are center-free [cf. Proposition 2.4], it
+follows that Π X is also center-free. Here, we note that both Gk and Π Xk
+are indecomposable [cf. Theorems 2.1, 2.2]. Thus, since the natural outer
+Galois representation
+Gk → Out(ΠXk )
+associated to the above sequence is nontrivial [cf. Lemma 3.2, (ii)], it follows
+from Proposition 1.7, (i), that Π X is also indecomposable. 
+Theorem 3.4. Let n be a positive integer; k a eld of characteristic zero
+such that Gk is center-free and indecomposable; X a hyperbolic curve over
+k; Xn the n-th conguration space associated to X. Suppose that either k
+is algebraically closed, or l-cyclotomically full for a prime number l. Then
+ΠXn is center-free and indecomposable.
+Proof. First, we note that for n ≥ 1, any projection morphism Xn → Xn−1
+of length one determines a natural exact sequence of proﬁnite groups [cf.
+[20], Proposition 2.2, (i)]
+1 − − − − →Π(Xn)x − − − − →ΠXn − − − − →ΠXn−1 − − − − →1
+— where x is a geometric point of Xn−1; we write X0
+def= Spec( k); ( Xn)x
+denotes the ﬁber of Xn → Xn−1 over x. In particular, by applying induc-
+tion on n, we conclude from Proposition 2.4 and Theorem 3.3 that Π Xn
+is center-free. Here, we note that Π (Xn)x and Π X1 are indecomposable [cf.
+Theorems 2.1, 3.3]. Moreover, it is well-known that the natural outer Galois
+representation
+ΠXn−1 → Out(Π(Xn)x)
+associated to the above exact sequence is nontrivial. [In the case where k
+is an algebraically closed ﬁeld, the above representation is, in fact, injective
+— cf. [2], Theorem 1.] Thus, by induction on n, it follows from Proposition
+1.7, (i), that Π Xn is indecomposable. 
+
+12 ARATA MINAMIDE
+Corollary 3.5. Let n be a positive integer; k a Hilbertian eld of character-
+istic p ≥ 0; X a smooth curve of type (g, r) over k such that the pair (g, r)
+satises 2g − 2 + r > 0 (respectively, (g, r) ̸= (0 , 0), (1, 0)) if the charac-
+teristic of k is zero (respectively, positive); Xn the n-th conguration space
+associated to X. Suppose that there exists a prime number l ̸= p such that
+k is l-cyclotomically full. Also, if p > 0, then we assume further that n = 1.
+Then ΠXn is center-free and indecomposable.
+Proof. These assertions follow immediately from Theorems 1.2, 3.3, 3.4. 
+Remark 3.6. The center-freeness asserted in Theorems 3.3, 3.4 and Corol-
+lary 3.5 holds even if one does not assume that k is l-cyclotomically full.
+Corollary 3.7. Let n be a positive integer; k a eld; X a smooth curve of
+type (g, r) over k such that the pair (g, r) satises 2g−2+ r > 0 (respectively,
+(g, r) ̸= (0, 0), (1, 0)) if the characteristic of k is zero (respectively, positive);
+Xn the n-th conguration space associated to X. Then the following hold:
+(i) If k is a nitely generated transcendental extension eld of Fp, then
+ΠX is center-free and indecomposable.
+(ii) If k is a nitely generated extension eld of either Q or Qp, then
+ΠXn is center-free and indecomposable.
+Proof. First, we note that every ﬁeld k which appears in Corollary 3.7 is l-
+cyclotomically full for some prime number l [cf. Lemma 3.2, (i)]. Thus, in the
+case that k is Hilbertian [cf. Corollary 1.4] (respectively, non-Hilbertian, i.e.,
+p-adic local), the assertions follow from Corollary 3.5 (respectively, Propo-
+sition 1.6 and Theorem 3.4). 
+Theorem 3.8. Let n be a positive integer; k a eld of characteristic zero;
+X a hyperbolic curve over k; Xn the n-th conguration space associated to
+X. Suppose that there exists an isomorphism of k-schemes
+Xn
+∼→ Y ×k Z
+| where Y , Z are k-varieties [i.e., schemes that are of nite type, separated,
+and geometrically integral over k]. Then it follows that either
+Y ∼= Spec(k) or Z ∼= Spec(k).
+Proof. We may assume that k is algebraically closed. Then to verify the
+assertion, it suﬃces to show that either dim( Y ) = 0 or dim( Z) = 0. First,
+we note that by the K¨ unneth formula [cf. [23], EXPOS ´E XIII, Proposition
+4.6], there exists an isomorphism of proﬁnite groups
+ΠXn
+∼→ ΠY × ΠZ.
+Then since Π Xn is indecomposable by Theorem 3.4, we may without loss
+of generality that Π Y = {1}. Now we ﬁx a k-rational point z ∈ Z(k) of
+
+INDECOMPOSABILITY OF V ARIOUS PROFINITE GROUPS 13
+Z. Then we obtain a closed immersion Y ∼→ Y ×k {z} ,→ Y ×k Z ∼→ Xn.
+Write Y ′ → Y for the [surjective] morphism obtained by normalizing Y .
+Here, if we assume that dim( Y ) ≥ 1, then the composite Y ′ → Y , → Xn
+is nonconstant. Thus, since Xn is of LFG-type [cf. [9], Deﬁnition 2.5] by
+[9], Proposition 2.7, the image of the outer homomorphism Π Y ′ → ΠXn is
+inﬁnite — a contradiction. Therefore, we conclude that dim( Y ) = 0. 
+4. Indecomposability of the Pro- l Grothendieck-Teichmuller
+Group
+In this section, we verify the indecomposability of the pro- l Grothendieck-
+Teichm¨ uller group GTl [cf. Theorem 4.4] as a consequence of a certain
+anabelian result over ﬁnite ﬁelds [cf. [7], Remark 6, (iv)].
+Denition 4.1. (cf. [18], Deﬁnition 1.11, (i)) Let l be a prime number; k an
+algebraically closed ﬁeld of characteristic zero; X the tripod P1
+k \ {0, 1, ∞}
+over k; X2 the second conﬁgurartion space associated to X. Suppose that
+Π1 ∈ {ΠX , Π(l)
+X }. Write
+Π2
+def=
+{
+ΠX2, if Π 1 = Π X ,
+Π(l)
+X2, if Π 1 = Π (l)
+X .
+Then for n = 1, 2, we shall write
+OutFC(Πn) ⊆ Out(Πn)
+for the subgroup of Out(Π n) consisting of FC-admissible outomorphisms of
+Πn [cf. [18], Deﬁnition 1.1, (ii)];
+OutFCS(Πn) ⊆ OutFC(Πn)
+for the subgroup of Out(Π n) consisting of FC-admissible outomorphisms of
+Πn that commute with the outer modular symmetries [cf. [18], Deﬁnition
+1.1, (vi)];
+OutFC(Π1)∆+ ⊆ OutFC(Π1)
+for the image of Out FCS(Π2) via the natural injection Out FC(Π2) ,→ OutFC(Π1)
+induced by the ﬁrst projection X2 → X [cf. [18], Deﬁnition 1.11, (i); [18],
+Corollary 1.12, (ii); [18], Corollary 4.2, (i)]. We shall refer to
+GT def= Out FC(ΠX )∆+ (respectively, GTl
+def= Out FC(Π(l)
+X )∆+)
+as the Grothendieck-Teichm uller group(respectively, pro-l Grothendieck-
+Teichm uller group).
+Remark 4.2. GT as deﬁned in Deﬁnition 4.1 coincides with the Grothendieck-
+Teichm¨ uller group as deﬁned in more classical works [cf. [18], Remark
+1.11.1].
+The following lemma is well-known.
+Lemma 4.3. Let l be a prime number. Then GT, GTl are slim.
+
+14 ARATA MINAMIDE
+Proof. The asserted slimness follows immediately from the [pro- l] Grothendieck
+Conjecture over number ﬁelds [i.e., [15], Theorem A, applied to a tripod over
+a number ﬁeld] and [11], Lemma 3.5. 
+Theorem 4.4. Let l be a prime number. Then GTl is strongly indecompos-
+able.
+Proof. To verify the assertion, it suﬃces to show that for any open subgroup
+U ⊆ GTl of GT l, U is indecomposable. Let F be a ﬁnite ﬁeld of character-
+istic ̸= l. Write ∆ for the maximal pro- l quotient of the ´ etale fundamental
+group of the tripod P1
+F \ {0, 1, ∞} over F , where F is an algebraic closure
+of F , and
+ρ : GF → Out(∆)
+for the pro- l outer Galois representation associated to P1
+F \ {0, 1, ∞}. It
+follows immediately from the various deﬁnitions involved that G def= ρ(GF )
+is contained in GT l ⊆ Out(∆). Thus, by replacing F by a suitable ﬁnite
+extension of F , we may assume without loss of generality that G ⊆ U .
+Moreover, since Out(∆) is almost pro- l [cf. [1], Corollary 7], by replacing F
+by a suitable ﬁnite extension of F , we may assume without loss of generality
+that ρ factors through the maximal pro- l quotient GF  G(l)
+F of GF . Here,
+note that since G is inﬁnite [cf. Lemma 3.2, (i), (ii)], we have G ∼= Zl.
+Now suppose that we have an isomorphism of proﬁnite groups U ∼= H1 ×
+H2. In the following, we shall identify U and H1 × H2 via this isomorphism.
+Then I claim that it holds that
+either G ∩ H1 ̸= {1} or G ∩ H2 ̸= {1}.
+Indeed, suppose that G ∩ H1 = {1} and G ∩ H2 = {1}. In particular, it
+follows that, for i = 1, 2, the composite
+G , → U = H1 × H2
+pri
+ Hi
+— where pr i is i-th projection — is injective. Thus, if we write Ki ⊆ Hi
+for the image of the above composite, we obtain that G ∼→ Ki [∼= Zl]. Here,
+note that we have inclusions
+G ⊆ K def= K1 × K2 ⊆ H1 × H2.
+Thus, since K [∼= Zl × Zl] is abelian, we obtain that
+K ⊆ ZGTl(G) ,→ Z×
+l
+— where “ ,→” is induced by the morphism “deg P” of [7], Deﬁnition 3.1,
+which is injective by [7], Remark 6, (iv); [11], Lemma 3.5. In particular, by
+considering a suitable open subgroup of K, we obtain that Zl × Zl ∼= Zl, a
+contradiction. This completes the proof of the claim.
+In light of the claim, we may assume without loss of generality that
+G ∩ H1 ̸= {1}.
+Then since G ∩ H1 ⊆ G is a nontrivial closed subgroup of G ∼= Zl, it follows
+that G∩H1 is open in G. Thus, by replacing F by a suitable ﬁnite extension,
+
+INDECOMPOSABILITY OF V ARIOUS PROFINITE GROUPS 15
+we may assume without loss of generality that G ⊆ H1. In particular, we
+obtain that
+H2 ⊆ ZGTl(G) ,→ Z×
+l
+— where “ ,→” denotes the arrow “ ,→” in the ﬁnal display of the proof of the
+above claim. Thus, it follows that H2 is abelian. On the other hand, since
+H2 is center-free [cf. Lemma 4.3], we obtain that H2 = {1}. Therefore, we
+conclude that U is indecomposable, as desired. 
+References
+[1] M. P. Anderson, Exactness properties of proﬁnite completion functors, Topology 13
+(1974), pp. 229-239.
+[2] M. Asada, The Faithfulness of the Monodromy Representations Associated with Cer-
+tain Families of Algebraic Curves, J. Pure Appl. Algebra 159 (2001), pp. 123-147.
+[3] P. Deligne and D. Mumford, The Irreducibility of the Moduli Space of Curves of
+Given Genus, IHES Publ. Math. 36 (1969), pp. 75-109.
+[4] M. Fried and M. Jarden, Field Arithmetic (Second Edition) , Ergebnisse der Mathe-
+matik und ihrer Grenzgebiete 3. Folge, A Series of Modern Surveys in Mathematics
+11, Springer-Verlag (2005).
+[5] L. Fu, Etale Cohomology Theory , Nankai Tracts in Mathematics 13, World Scientiﬁc
+(2011).
+[6] D. Haran and M. Jarden, Compositum of Galois extensions of Hilbertian ﬁelds, Ann.
+Sci. Ecole Norm. Sup. 24 (1991), pp. 739-748.
+[7] Y. Hoshi, Absolute Anabelian Cuspidalization of Conﬁguration Spaces of Proper
+Hyperbolic Curves over Finite Fields, Publ. Res. Inst. Math. Sci. 45 (2009), pp.
+611-744.
+[8] Y. Hoshi, On Monodromically Full Points of Conﬁguration Spaces of Hyperbolic
+Curves, The Arithmetic of Fundamental Groups | PIA 2010 , Contributions in Math-
+ematical and Computational Sciences 2, Springer-Verlag (2012), pp. 167-207.
+[9] Y. Hoshi, The Grothendieck Conjecture for Hyperbolic Polycurves of Lower Dimen-
+sion, J. Math. Sci. Univ. Tokyo 21 (2014), pp. 153-219.
+[10] Y. Hoshi and S. Mochizuki, Topics Surrounding the Combinatorial Anabelian Ge-
+ometry of Hyperbolic curves I: Inertia groups and proﬁnite Dehn twists, Galois-
+Teichm uller Theory and Arithmetic Geometry , Adv. Stud. Pure Math. 63, Math.
+Soc. Japan (2012), pp. 659-811.
+[11] Y. Hoshi and S. Mochizuki, Topics Surrounding the Combinatorial Anabelian Geom-
+etry of Hyperbolic curves II , RIMS Preprint 1762 (November 2012).
+[12] Y. Hoshi and S. Mochizuki, Topics Surrounding the Combinatorial Anabelian Geom-
+etry of Hyperbolic curves III , RIMS Preprint 1763 (November 2012).
+[13] J. S. Milne, Etale Cohomology, Princeton Mathematical Series 33, Princeton Univer-
+sity Press (1980).
+[14] J. S. Milne, Abelian Varieties, Arithmetic Geometry, Springer-Verlag (1986), pp. 103-
+150.
+[15] S. Mochizuki, The Local Pro- p Anabelian Geometry of Curves, Invent. Math. 138
+(1999), pp. 319-423.
+[16] S. Mochizuki, The Absolute Anabelian Geometry of Hyperbolic Curves, Galois The-
+ory and Modular Forms , Kluwer Academic Publishers (2004), pp. 77-122.
+[17] S. Mochizuki, Absolute anabelian cuspidalizations of proper hyperbolic curves, J.
+Math. Kyoto Univ. 47 (2007), pp. 451-539.
+
+16 ARATA MINAMIDE
+[18] S. Mochizuki, On the Combinatorial Cuspidalization of Hyperbolic Curves, Osaka J.
+Math. 47 (2010), pp. 651-715.
+[19] S. Mochizuki, Topics in Absolute Anabelian Geometry I: Generalities, J. Math. Sci.
+Univ. Tokyo 19 (2012), pp. 139-242.
+[20] S. Mochizuki and A. Tamagawa, The Algebraic and Anabelian Geometry of Conﬁg-
+uration Spaces, Hokkaido Math. J. 37 (2008), pp. 75-131.
+[21] J. Neukirch, A. Schmidt, K. Wingberg, Cohomology of Number Fields (Second Edi-
+tion), Grundlehren der mathematischen Wissenschaften 323, Springer-Verlag (2008).
+[22] L. Ribes and P. Zalesskii, Pronite Groups (Second Edition) , Ergebnisse der Mathe-
+matik und ihrer Grenzgebiete 3. Folge, A Series of Modern Surveys in Mathematics
+40, Springer-Verlag (2009).
+[23] A. Grothendieck, Rev^ etementsEtales et Groupe Fondamental, Lecture Notes in Math-
+ematics (SGA1) 224, Springer-Verlag (1971).
+[24] T. Szamuely, Heidelberg Lectures on Fundamental Groups, The Arithmetic of Fun-
+damental Groups | PIA 2010 , Contributions in Mathematical and Computational
+Sciences 2, Springer-Verlag (2012), pp. 53-74.
+[25] A. Tamagawa, The Grothendieck Conjecture for Aﬃne Curves, Compositio Math.
+109 (1997), pp. 135-194.
+[26] K. Ueno, Algebraic Geometry 3 , Translation of Mathematical Monographs 218,
+American Mathematical Society (2003).
+Research Institute for Mathematical Sciences
+Kyoto University
+Kyoto 606-8502
+Japan
+minamide@kurims.kyoto-u.ac.jp

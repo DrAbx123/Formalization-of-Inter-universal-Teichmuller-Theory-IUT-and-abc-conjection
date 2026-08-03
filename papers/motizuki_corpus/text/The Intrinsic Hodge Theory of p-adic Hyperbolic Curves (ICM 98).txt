@@ -1,0 +1,275 @@
+The Intrinsic Hodge Theory
+of p-adic Hyperbolic Curves
+Shinichi Mochizuki
+Research Institute for
+Mathematical Sciences
+Kyoto University
+Kyoto 606-01, JAPAN
+motizuki@kurims.kyoto-u.ac.jp
+§1. Introduction
+§2. The Physical Approach
+in the p-adic Case
+§3. The Modular Approach
+in the p-adic Case
+1
+
+§1. Introduction
+(A.) The F uchsian Uniformization
+Hyperbolic Curve
+:s m o o t h ,
+proper connected genus g alg.
+curve −r points, s.t. 2g − 2+ r> 0
+Over C: unif. by upper half-plane H
+X(C)= X ∼= H/Γ
+=⇒ π1(X) → PSL 2(R)=A u t (H)
+∃a p-adic analogue
+ of this
+Fuchsian uniformization
+?
+Note
+: Fuchsian ̸= Schottky
+(cf. D. Mumford’s theory), e.g.,
+2
+
+Fuchsian unif. involves arithmetic
+, i.e.,
+real analytic structures ⇐⇒
+Frobenius at the inﬁnite prime
+(B.) The Physical Interpretation
+alg.
+ curve X ⇐⇒ SO(2)\PSL 2(R)/Γ
+(physical/analytic obj.)
+⇐⇒ π1(X)+ ρX
+⇐⇒ top.
+ + arith. str.
+Modular forms
+ deﬁne ﬁrst “ ⇐⇒ .”
+3
+
+(C.) The Modular Interpretation
+ρX : π1(X) → PSL 2(R) ⊆ PGL2(C)
+=⇒ π1(X) ↷ P1
+C
+Algebraize quotient (H× P1
+C)/π1(X)
+=⇒ (P → X, ∇P )
+(P1-bundle + connection)
+... a
+ (canonical) indigenous bundle
+Moduli of I.B.’s: Sg,r →M g,r
+... algebraic “Schwarz torsor
+”( w . r . t .
+Ωo f Mg,r), deﬁned over Z[1
+2 ].
+can. I.B. =⇒ canonical real analytic
+s : Mg,r(C) →S g,r(C)
+4
+
+Teichm¨uller theory (Bers unif.)
+⇐⇒ study of can. real an. sect. s
+⇐⇒ study of quasi-fuchsian
+deformations of ρX
+(D.) “Intrinsic Hodge Theory”
+alg. geom. ⇐⇒ topology + arith.
+Ex.
+: classical/p-adic Hodge theory:
+de Rham coh. ⇐⇒ sing./´et. coh.+Gal.
+Here
+: alg. geom. = curve itself, moduli
+top. + arith. = theory of ρX
+=⇒ “intrinsic”
+Not just philosophy; classical/p-adic
+Hodge theory techniques
+ important.
+5
+
+§2. The Physical Approach
+in the p-adic case
+(A.) The Arithmetic F undamental
+Group
+K
+def
+= char. 0 ﬁeld, Γ K
+def
+= Gal(
+ K/K)
+X: hyp. curve/K,
+ X
+def
+= X ×K
+ K.
+⇒ 1 → π1(
+X) → π1(X) → ΓK → 1
+π1(
+X) (geom. π1): indep. of moduli
+(but in char. p,m a yd e t e r m i n e
+moduli! – A. Tamagawa)
+Grothendieck’s anabelian philosophy
+:
+“Extension should determine moduli.”
+6
+
+(B.) The Main Theorem
+Theorem 1
+: K ⊆ ﬁn. gen. extn./ Qp,
+X: hyperbolic curve/K,
+S : smooth variety/K.
+⇒ X(S)dom ∼
+→ Homopen
+ΓK (π1(S),π1(X))
+i.e., alg. curve
+ X ⇐⇒
+phys./an. obj.
+ Homopen
+ΓK (−,π1(X))
+Builds on work of: H. Nakamura, A.
+Tamagawa + G. Faltings, Bloch/Kato.
+Proof
+: Consider p-adic analytic diﬀ.
+forms on (Zp[ T ] tame
+(p) )∧
+(maps to X) – cf. mod. forms on H.
+7
+
+Remark
+:A l s op r o -p, function ﬁeld
+versions (cf. F. Pop).
+(C.) Comparison with the Case of
+Abelian V arieties
+Th.1 resembles Tate Conjecture, i.e.,
+Hom(abelian varieties) ⇐⇒
+Hom(Tate modules)
+But T. C. false over local ﬁelds !
+New point of view
+:
+Theorem 1 = p-adic version of
+physical aspect
+ of
+of Fuchsian unif.
+8
+
+§3. The Modular Approach
+in the p-adic case
+(A.) The Example of Shimura
+Curves
+∃a can. p-adic section of Sch. torsor
+:
+Sg,r →M g,r (cf. can. real. an. s)?
+Guide
+: theory of Shimura curves
+(cf. Y. Ihara’s theory)
+Ex.
+:O v e rM1,0, de Rham coh. of
+univ. ell. curve =⇒ can. ind. bun.
+Note
+:m o dp, p-curv. square nilpotent
+!
+N.B.: p-curvature
+def
+=“ [ F r o b . ,∇ ]”
+9
+
+(B.) The Stack of Nilcurves
+(Sg,r)Fp ⊇N g,r: the stack of nilcurves
+(curves + I.B. with sq. nilp. p-curv.)
+Theorem 2
+: Ng,r → (Mg,r)Fp : ﬁnite,
+ﬂat, local complete intersection,
+degree = p
+3g−3+r, i.e.,
+Ng,r “almost” a section of Sch. torsor
+!
+Remarks
+:( 1 )Ng,r = central object of
+study of “ p-adic Teichm¨uller theory
+.”
+(2) ∃natural, smooth substacks
+Ng,r[d] ⊆N g,r,w h e r ed =d e g r e e
+of zero divisor (spikes
+)o f p-curv.
+10
+
+(2) (cont’d) ( d = ∞ =⇒ dormant
+);
+Ng,r[d] ̸= ∅⇒ dim = 3g − 3+ r.
+(3) Ng,r[0] aﬃne
+ ;t h i s=⇒
+Mg,r connected
+!
+(cf. Teich. th./ C; ab. vars. (Oort)!)
+(4) molecule
+def
+= nilcurve s.t. curve is
+is tot. degen. ( ⋃ P1’s)
+analyze mol.’s ⇒ str. of Ng,r at ∞
+(5) atom
+def
+= “toral” nilcurve s.t. curve
+is P1 −{ 0, 1, ∞} .
+{atoms}↔ three radii ∈ Fp/{±1}
+11
+
+(5) (cont’d) — reminiscent of:
+“pants
+” (top. ∼= P1 −{ 0, 1, ∞} )
+decomp. of hyp. Riemann surfaces
+(C.) Canonical Liftings
+Ng,r ⊇ (Nord
+g,r )Fp
+def
+=´et. locus/( Mg,r)Fp
+12
+
+⇒N ord
+g,r → (Mg,r)Zp ... ´etale
+morph. of p-adic formal stacks
+Theorem 3
+: ∃!( sN : Nord
+g,r →S g,r;
+Frob. lift. Φ N ↷ Nord
+g,r )
+s.t. I.B. def’d by sN is invariant
+w.r.t. Frob. act. def’d by Φ N , i.e.,
+sN = desired can. sect. of Sch. torsor
+ !
+Remarks
+:( 1 )( 1/p) · dΦN is isom., i.e.,
+ΦN is ordinary Frobenius lifting
+(2) ∃general theory of ord. F.L.’s ⇒
+(a.) can. loc. iso. to ˆGm × ... × ˆGm
+(b.) can. Witt vector liftings of
+13
+
+points/char. p perfect ﬁelds
+(cf. real analytic K¨ahler metrics
+)
+(3) ΦN ↔ Weil-Petersson metric
+can. mult. pars. ↔ Bers unif.
+(4) Serre-Tate Th. for ord. AV’s
+arises from ∃ord. F.L. Φ A (e.g., can.
+mult. coords. ↔ “S.-T. pars.,” etc.)
+⇒ Th.3 = Serre-Tate
+theory for hyp. curves!
+(5) But ΦN ,Φ A, respective “ord’s”
+are not compatible
+!
+↔M g →A g not isometric
+/C
+14
+
+(for WP metric, Siegel upper
+half-plane metric)
+(6) (Nord
+g,r )Fp ⊆N g,r[0] ... for other d,
+∃can. lift. theory with “Lubin-Tate
+(instead of ˆGm) uniformizations”!
+In fact, the larger
+ d
+⇒ the more “Lubin-Tate”
+the uniformization!
+(7) ∃corresponding can. Gal. reps.
+ρ: arithmetic π1(curve)
+→ PGL2(large ring w/Gal. act.)
+... the p-adic analogues of the can. rep.
+ρX arising from the Fuchs. unif.!
+15

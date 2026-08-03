@@ -1,0 +1,85 @@
+COMMENTS ON “INTRODUCTION
+TO P-ADIC TEICHM ¨ULLER THEOR Y”
+Shinichi Mochizuki
+March 2022
+(1.) In the second paragraph of§2.2, the phrase “generalize the the” should read
+“generalize the”.
+(2.) In the second paragraph of §2.5, the notation “EndOλ(Gλ)” should read
+“EndOλ(Gλ)”.
+(3.) With regard to the notation “N log ⊗Zp Qp”, “Clog ⊗Zp Qp” in the paragraph
+immediately preceding Theorem 1.4, we note the following: Let K be a ﬁnite
+extension of Qp and Y a formally smooth p-adic formal scheme over the ring of
+integers OK of K, i.e., such as a suitable ´etale localization of N or C.T h e n
+Y ×Zp Qp (i.e., “Y ⊗Zp Qp”) is deﬁned as theringed space obtained by tensoring
+the structure sheaf ofY over OK with K. Thus, if, for instance,Y is the formal
+scheme obtained as the formal inverse limit of an inverse system of schemes
+...↪ → Yn ↪→ Yn+1 ↪→ ...
+—w h e r en ranges over the positive integers, and each “↪→” is a nilpotent thickening
+—a n dU is an aﬃne open of thecommon underlying topological space of theYn,
+then the rings of sections of the respective structure sheavesOY, OY of Y, Y over
+U are, by deﬁnition, given as follows:
+OY(U)
+def
+= lim←−n
+OYn(U); OY (U)
+def
+= OY(U)⊗OK K.
+Here, we observe thatOY(U)i st h ep-adic completion of a normal noetherian ring
+of ﬁnite type over OK. In particular, we observe that one may considerﬁnite ´etale
+coverings of Y, i.e., by considering systems of ﬁnite ´ etale algebras AU over the
+various OY (U) [that is to say, asU is allowed to vary over the aﬃne opens of
+the Yn] equipped withgluings over the intersections of the variousU that appear.
+Note, moreover, that by considering thenormalizations of the OY(U)i n AU,w e
+conclude [cf. the discussion of the Remark immediately following Theorem 2.6 in
+S e c t i o nI Io f[ 1 ] ]t h a t
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+(NorFor) any such system {AU}U may be obtained as theW
+def
+= W ×OK K for
+some formal scheme W that is ﬁnite over Y, and that arises as theformal
+inverse limit of an inverse system of schemes
+...↪ → Wn ↪→ Wn+1 ↪→ ...
+—w h e r en ranges over the positive integers; each “↪→” is a nilpotent
+thickening; for each aﬃne openV of the common underlying topological
+space of theWn, OW(V)i st h ep-adic completion of a normal noetherian
+ring of ﬁnite type over OK.
+Indeed, this follows from well-known considerations in commutative algebra, which
+we review as follows. Let R be a normal noetherian ring of ﬁnite type over a
+complete discrete valuation ring A [i.e., such asOK in the above discussion] with
+maximal ideal mA and quotient ﬁeld F such that R is separated in the mA-adic
+topology. Thus, since A is excellent [cf. [2], Scholie 7.8.3, (iii)], it follows [cf. [2],
+Scholie 7.8.3, (ii)] thatR is excellent, hence that themA-adic completion ˆR of R is
+also normal [cf. [2], Scholie 7.8.3, (v)]. Then it is well-known and easily veriﬁed [by
+applying a well-known argument involving thetrace map] that the normalization
+of ˆR in any ﬁnite ´etale algebra over ˆR ⊗A F is a ﬁnite algebra over ˆR.L e t ˆS be
+such a ﬁnite algebra over ˆR. Then it follows immediately from a suitable version
+of “Hensel’s Lemma” [cf., e.g., the argument of [3], Lemma 2.1] that ˆS may be
+obtained, as the notation suggests, as themA-adic completion of a ﬁnite algebra
+S over R, which may in fact be assumed to beseparatedin the mA-adic topology
+and [by replacingS by its normalization and applying [2], Scholie 7.8.3, (v), (vi)]
+normal.L e tf ∈R be an element that maps to anon-nilpotentelement ofR/mA·R.
+WriteRf
+def
+= R[f − 1]; Sf
+def
+= S⊗RRf; ˆRf, ˆSf for the respectivemA-adic completions
+of Rf, Sf. Then it follows again from [2], Scholie 7.8.3, (v), thatˆSf,w h i c hm a y
+be naturally identiﬁed [sinceS is a ﬁnite algebra over R]w i t hˆS ⊗ˆR
+ˆRf,i s normal.
+That is to say, it follows immediately that
+(NorForZar) the operation of formingnormalizations [i.e., as in the above discussion]
+is compatiblewith Zariski localization on the given formal scheme .
+On the other hand, one veriﬁes immediately that (NorFor) follows formally from
+(NorForZar).
+Bibliography
+[1] G. Faltings, Crystalline Cohomology and p-adic Galois Representations,Pro-
+ceedings of the First JAMI Conference , Johns Hopkins Univ. Press (1990), pp.
+25-79.
+[2] A. Grothendieck and J. Dieudonn´e, ´El´ements de g´eom´etrie alg´ebrique IV,
+´Etude locale des sch´emas et des morphismes de sch´emas, S´econde partie,Publ.
+Math. IHES 24 (1965).
+[3] S.Mochizuki,TopicsinAbsoluteAnabelianGeometryII:DecompositionGroups
+and Endomorphisms, J. Math. Sci. Univ. Tokyo 20 (2013), pp. 171-269.

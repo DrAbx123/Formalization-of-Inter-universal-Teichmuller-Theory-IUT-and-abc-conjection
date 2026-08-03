@@ -1,0 +1,34 @@
+Title:  Inter -universal Teichmüller Theory as an Anabelian Gateway to Diophantine Geometry and Analytic Number 
+Theory 
+ 
+Speaker:  Shinichi Mochizuki (RIMS, Kyoto University)  
+ 
+Abstract: 
+One question that is frequently asked concerning inter-universal Teichmüller theory (IUT) is the following: 
+ 
+Why/how does IUT allow one to apply anabelian geometry to prove diophantine results? 
+ 
+In this talk, we address this question from various points of view.  First, we discuss the fundamental framework 
+underlying the relationship established by IUT between anabelian geometry, on the one hand, and diophantine 
+geometry/analytic number theory, on the other.  This discussion centers around the N -th power map on a subring of a 
+field and the difference between regarding a group as a Galois group and as an abstract group that is not equipped with 
+an embedding into the automorphism group of a field.  Here, we emphasize that this discussion is entirely elementary  
+and only assumes a knowledge of groups/monoids, rings, fields , and the elementary geometry surrounding the 
+projective line/Riemann sphere.  We then proceed to survey recent developments (work in progress) in IUT, namely, 
+the Galois-orbit version of IUT, which has new applications to the Section Conjecture (in anabelian geometry) and the 
+nonexistence of Siegel zeroes of certain Dirichlet L-functions.  The application to the Section Conjecture is interesting 
+in that it exhibits and reconfirms the essentially anabelian content of IUT, i.e., as a theory based on anabelian geometry 
+that is applied to prove new results in anabelian geometry.  On the other hand, these recent applications, taken together 
+with the original application of IUT to the ABC/Szpiro/V ojta Conjectures, are also noteworthy in that they may be 
+regarded as a striking example of Poincaré's famous quote to the effect that 
+ 
+“mathematics is the art of giving the same name to different things”. 
+ 
+That is to say , the common name “IUT”  that may be regarded as describing, in essence, a single mathematical 
+phenomenon that manifests itself, depending on relatively inessential (!) differences of context, as various (at first 
+glance, unrelated!) diverse phenomena in anabelian geometry, diophantine geometry, and analytic number theory .  
+The relationship with Poincaré's famous quote is also fascinating  in that it was apparently motivated by various 
+mathematical observations on the part of Poincaré concerning the similarities between transformat ion group 
+symmetries of modular functions such as theta functions and symmetry groups of the hyperbolic geometry of the upper 
+half-plane --- all of which are topics (cf. the discussion above of Galois groups versus abstract groups!) that bear a 
+profound relationship to IUT. 

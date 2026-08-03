@@ -1,0 +1,2924 @@
+The Absolute Anabelian Geometry of
+Hyperbolic Curves
+Shinichi Mochizuki
+Contents:
+§0. Notations and Conventions
+§1. Review of Anabelian Geometry
+§1.1. The Anabelian Geometry of Number Fields
+§1.2. The Anabelian Geometry of p-adic Local Fields
+§1.3. The Anabelian Geometry of Hyperbolic Curves
+§2. Reconstruction of the Logarithmic Special Fiber
+Appendix: Terminology of Graph Theory
+Introduction
+Let XK be a hyperbolic curve (cf. §0b e l o w )o v e raﬁeld K of characteristic 0.
+Denote its algebraic fundamental group by ΠXK .T h u s ,w eh a v eanatural surjection
+ΠXK ↠ GK
+of ΠXK onto the absolute Galois group GK of K.
+When K is a ﬁnite extension of Q or Qp, and one holds GK ﬁxed, then it is known
+(cf. [Tama1], [Mzk6]; Theorem 1.3.4 of the present manuscript) that one may recover
+the curve XK in a functorial fashion from ΠXK . This sort of result may be thought of
+as a “relative result” (i.e., over GK). Then the question naturally arises:
+To what extent are the“absolute analogues” of this result valid — i.e., what
+if one does not hold GK ﬁxed?
+If K is a number ﬁeld ,t h e ni ti sstill possible to recover XK from ΠXK (cf. Corollary
+1.3.5), by applying the theorem of Neukirch-Uchida (cf. Theorem 1.1.3). On the other
+1
+
+2 SHINICHI MOCHIZUKI
+hand, when K is a p-adic local ﬁeld (i.e., a ﬁnite extension of Qp), the analogue of the
+theorem of Neukirch-Uchida fails to hold, and indeed, it is the opinion of the author at
+the time of writing that it isunlikely (in the p-adic local case) that one can recoverXK
+in general (i.e., in the fashion of Corollary 1.3.5) from ΠXK .
+In the present manuscript, we begin by reviewing/surveying in §1 the anabelian
+geometry of number ﬁelds, p-adic local ﬁelds, and hyperbolic curves from the point of
+view of the goal of understanding to what extent the anabelian geometry of hyperbolic
+curves over p-adic local ﬁelds can be made “absolute”. Our main result (Theorem
+2.7), given in §2, states that when K is a p-adic local ﬁeld, (although we may be unable
+to recover XK itself) one may recover (in a functorial fashion) the special ﬁber of
+XK, together with its naturallog structure,i na n absolute fashion, i.e., solely from
+the isomorphism class of the proﬁnite group Π XK .
+Acknowledgements: I would like to thank A. Tamagawa for the time that he so gen-
+erously shared with me in numerous stimulating discussions, and especially for the
+following: (i) informing me of the arguments used to prove Lemma 1.1.4 in§1.1; (ii) ex-
+plaining to me the utility of a theorem of Raynaud in the context of§2 (cf. Lemma 2.4).
+Also, I would like to thank F. Oort,a sw e l la st h ereferee, for various useful remarks.
+Section 0: Notations and Conventions
+Numbers:
+We will denote by N the set of natural numbers, by which we mean the set of
+integers n ≥ 0. A number ﬁeld is deﬁned to be a ﬁnite extension of the ﬁeld of rational
+numbers Q.
+Topological Groups:
+Let G be a Hausdorﬀ topological group,a n dH ⊆ G a closed subgroup.L e tu s w r i t e
+Z
+G(H)
+def
+= {g ∈ G | g · h = h · g, ∀ h ∈ H}
+for the centralizer of H in G;
+NG(H)
+def
+= {g ∈ G | g · H · g−1 = H}
+for the normalizer of H in G;a n d
+CG(H)
+def
+= {g ∈ G | (g · H · g−1)
+⋂
+H has ﬁnite index in H, g · H · g−1}
+
+ABSOLUTE ANABELIAN GEOMETR Y 3
+for the commensurator of H in G. Note that: (i) ZG(H), NG(H)a n d CG(H)a r e
+subgroups of G; (ii) we have inclusions
+H, Z G(H) ⊆ NG(H) ⊆ CG(H)
+and (iii) H is normal in NG(H).
+Note that ZG(H), NG(H)a r ealways closed in G, while CG(H)i s not necessarily
+closed in G. Indeed, one may construct such an example as follows: Let
+M
+def
+=
+∏
+N
+Zp
+endowed with theproduct topology(of the various copies ofZp equipped with their usual
+topology). Thus, M is a Hausdorﬀ topological group.F o r n ∈ N,w r i t eFn(M) ⊆ M
+for the sub-topological group given by the product of the copies of Zp indexed by
+m ≥ n. Write Aut F (M) for the set of automorphisms of the topological group M
+that preserve the ﬁltration F ∗(M)o n M.I f α ∈ AutF (M), then for every n ∈ N,
+α induces a continuous homomorphism αn : M/F n(M) → M/F n(M) which is clearly
+surjective, hence anisomorphism (since M/F n(M) is proﬁnite and topologically ﬁnitely
+generated — cf. [FJ], Proposition 15.3). It thus follows that α induces an isomorphism
+Fn(M)
+∼
+→ Fn(M), hence that the inverse of α also lies in AutF (M). In particular, we
+conclude that AutF (M)i sa group. Equip AutF (M)w i t ht h ecoarsest topologyfor which
+all of the homomorphisms Aut F (M) → Aut(M/F n(M)) (where Aut( M/F n(M)) ∼=
+GLn(Zp) is equipped with its usual topology) are continuous. Note that relative to
+this topology, AutF (M) forms a Hausdorﬀ topological group. Now deﬁne G to be the
+semi-direct product of M with AutF (M)( s oG is a Hausdorﬀ topological group), and
+H to be ∏
+n∈N
+pn · Zp ⊆
+∏
+N
+Zp = M
+(so H ⊆ G is a closed subgroup). Then CG(H)i s not closed in G. For instance, if one
+denotes by en ∈ ∏
+N Zp the vector with a 1 in then-th place and zeroes elsewhere, then
+the limit A∞ (where
+A∞ (en)
+def
+= en + en+1
+for all n ∈ N) of the automorphismsAm ∈ CG(H)( w h e r eAm(en)
+def
+= en +en+1 if n ≤ m,
+Am(en)
+def
+= en if n>m ) is not contained in CG(H).
+Deﬁnition 0.1.
+(i) Let G be a proﬁnite group. Then we shall say that G is slim if the centralizer
+ZG(H) of any open subgroup H ⊆ G in G is trivial.
+
+4 SHINICHI MOCHIZUKI
+(ii) We shall say that a continuous homomorphism of proﬁnite groups G → H is
+relatively slim if the centralizer inH of the image of every open subgroup ofG is trivial.
+(iii) We shall say that a closed subgroupH ⊆ G of a proﬁnite group G is commen-
+surably (respectively, normally) terminal if the commensurator CG(H) (respectively,
+normalizer NG(H)) is equal to H.
+Remark 0.1.1. Thus, a proﬁnite group G is slim if and only if the identity morphism
+G → G is relatively slim.M o r e o v e r , i fH ⊆ G is a closed subgroup such that the
+inclusion H↪ → G is relatively slim, then both H and G are slim.
+Remark 0.1.2. It is a formal consequence of the deﬁnitions that:
+commensurably terminal = ⇒ normally terminal
+and that (if H ⊆ G is a closed subgroup of a proﬁnite group G, then):
+H ⊆ G commensurably terminal, H slim = ⇒
+the inclusion H↪ → G is relatively slim
+Remark 0.1.3. It was pointed out to the author by F. Oort that a proﬁnite group is
+slim if and only if every open subgroup of G has trivial center. (Indeed, the necessity
+of this condition is clear. Its suﬃciency may be shown as follows: If H ⊆ G is an open
+subgroup, then for any h ∈ ZG(H), let H′ ⊆ G by the (necessarily open) subgroup
+generated by H and h.T h u s ,h lies in the center ofH′, which is trivial by assumption.)
+This property of a proﬁnite group — i.e., that every open subgroup be center-free —
+was investigated in detail in [Naka1](cf., e.g., Corollaries 1.3.3, 1.3.4).
+Curves:
+Suppose that g ≥ 0i sa n integer.T h e nafamily of curves of genus g
+X → S
+is deﬁned to be a smooth, proper, geometrically connected morphism X → S whose
+geometric ﬁbers are curves of genus g.
+Suppose that g,r ≥ 0a r eintegers such that 2g − 2+ r> 0. We shall denote the
+moduli stack of r-pointed stable curves of genus g (where we assume the points to be
+unordered)b y
+ Mg,r (cf. [DM], [Knud] for an exposition of the theory of such curves;
+strictly speaking, [Knud] treats the ﬁnite ´etale covering of
+ Mg,r determined by ordering
+
+ABSOLUTE ANABELIAN GEOMETR Y 5
+the marked points). The open substack Mg,r ⊆
+ Mg,r of smooth curves will be referred
+to as the moduli stack of smooth r-pointed stable curves of genus g or, alternatively, as
+the moduli stack of hyperbolic curves of type(g,r ).
+A family of hyperbolic curves of type (g,r )
+X → S
+is deﬁned to be a morphism which factors X↪ → Y → S as the composite of an open
+immersion X↪ → Y onto the complementY \D of a relative divisorD ⊆ Y which is ﬁnite
+´etale over S of relative degree r, and a family Y → S of curves of genus g.O n ec h e c k s
+easily that, if S is normal, then the pair (Y,D )i s unique up to canonical isomorphism.
+(Indeed, when S is the spectrum of a ﬁeld, this fact is well-known from the elementary
+theory of algebraic curves. Next, we consider an arbitraryconnected normalS on which
+ap r i m el is invertible (which, by Zariski localization, we may assume without loss of
+generality). Denote by S′ → S the ﬁnite ´etale covering parametrizing orderings of the
+marked pointsand trivializations of the l-torsion points of the Jacobian ofY . Note that
+S′ → S is independent of the choice of (Y,D ), since (by the normality of S), S′ may be
+constructed as the normalization of S in the function ﬁeld of S′ (which is independent
+of the choice of ( Y,D ) since the restriction of ( Y,D ) to the generic point of S has
+already been shown to be unique). Thus, the uniqueness of (Y,D ) follows by considering
+the classifying morphism (associated to ( Y,D )) from S′ to the ﬁnite ´etale covering of
+(Mg,r)Z[ 1
+l ] parametrizing orderings of the marked points and trivializations of the l-
+torsion points of the Jacobian [since this covering is well-known to be a scheme, for l
+suﬃciently large].) We shall refer to Y (respectively, D; D; D)a st h ecompactiﬁcation
+(respectively, divisor at inﬁnity ; divisor of cusps ; divisor of marked points)o f X.A
+family of hyperbolic curves X → S is deﬁned to be a morphism X → S such that the
+restriction of this morphism to each connected component ofS is a family of hyperbolic
+curves of type (g,r ) for some integers (g,r )a sa b o v e .
+Section 1: Review of Anabelian Geometry
+§1.1. The Anabelian Geometry of Number Fields
+In this §, we review well-known anabelian (and related) properties of the Galois
+groups of number ﬁelds and (mainly p-adic) local ﬁelds.
+Let F be a number ﬁeld. Fix an algebraic closure
+ F of F and denote the resulting
+absolute Galois group of F by GF .L e tp be a (not necessarily nonarchimedean!) prime
+of F.W r i t eGp ⊆ GF for the decomposition group (well-deﬁned up to conjugacy)
+
+6 SHINICHI MOCHIZUKI
+associated to p and Fp for the completion of F at p. Then we have the following result
+(cf. also Corollary 1.3.3 below for a generalization of the slimness of Gp, GF ):
+Theorem 1.1.1. (Slimness and Commensurable Terminality) Suppose that p
+is nonarchimedean.T h e n :
+(i) The closed subgroup Gp ⊆ GF is commensurably terminal.
+(ii) The inclusion Gp ↪→ GF is relatively slim.I np a r t i c u l a r ,Gp, GF are slim.
+Proof. Assertion (i) is a formal consequence of [NSW], Corollary 12.1.3. As for assertion
+(ii), the slimness of Gp follows from local class ﬁeld theory (cf., e.g., [Serre2]). (That is,
+if σ ∈ Gp commutes with an open subgroup H ⊆ Gp,t h e nσ induces the trivial action
+on the abelianization Hab. But, by local class ﬁeld theory, Hab may be identiﬁed with
+the proﬁnite completion of K×,w h e r eK is the ﬁnite extension of Fp determined by
+H.T h u s ,σ acts trivially on all suﬃciently large ﬁnite extensions K of Fp,s o σ =1 ,
+as desired.) Relative slimness thus follows formally from the slimness of Gp and (i) (cf.
+Remark 0.1.2). ⃝
+Theorem 1.1.2. (Topologically Finitely Generated Closed Normal Sub-
+groups) Every topologically ﬁnitely generated closed normal subgroup of GF is trivial.
+Proof. This follows from [FJ], Theorem 15.10. ⃝
+Theorem 1.1.3. (The Neukirch-Uchida Theorem on the Anabelian Nature
+of Number Fields) Let F1, F2 be number ﬁelds. Let
+ F1 (respectively,
+ F2)b ea n
+algebraic closure ofF1 (respectively, F2). Write Isom(
+F2/F2,
+F1/F1) for the set of ﬁeld
+isomorphisms
+ F2
+∼
+→
+ F1 that map F2 onto F1. Then the natural map
+Isom(
+F2/F2,
+F1/F1) → Isom(Gal(
+F1/F1),Gal(
+F2/F2))
+is bijective.
+Proof. This is the content of [NSW], Theorem 12.2.1. ⃝
+Remark 1.1.3.1. It is important to note, however, that the analogue of Theorem
+1.1.3 for ﬁnite extensions of Qp is false (cf. [NSW], p. 674). Nevertheless, by considering
+isomorphisms of Galois groups that preserve the higher ramiﬁcation ﬁltration ,o n em a y
+obtain a partial analogue of this theorem forp-adic local ﬁelds (cf. [Mzk5]).
+
+ABSOLUTE ANABELIAN GEOMETR Y 7
+Next, we would like to consider a situation that arises frequently in anabelian
+geometry. Suppose that G is equal to GF or Gp (where we assume now that p is
+nonarchimedean!), and that we are given an exact sequence of proﬁnite groups:
+1 → Δ → Π → G → 1
+Suppose, moreover, that this sequencesplits over some open subgroup ofG, and that Δ
+is topologically ﬁnitely generated. The following result was related to the author by A.
+Tamagawa:
+Lemma 1.1.4. (Intrinsic Characterization of Arithmetic Quotients)
+(i) Suppose that G = GF .L e t Π′ ⊆ Π be an open subgroup. Then the kernel of
+the homomorphism Π′ → G may be characterized as the unique maximal closed normal
+subgroup of Π′ which is topologically ﬁnitely generated.
+(ii) Suppose that G = Gp. Assume further that for every open subgroup Π′′ ⊆ Π,
+the abelianization (Δ ′′)ab of Δ ′′ (where Δ ′′ def
+=Π ′′ ⋂ Δ) satisﬁes the following property:
+(∗) The maximal torsion-free quotient (Δ ′′)ab ↠ Q′′ of (Δ ′′)ab on which the
+action of G′′ def
+=Π ′′/Δ ′′ (by conjugation) is trivial is a ﬁnitely generated free
+ˆZ-module.
+Let Π′ ⊆ Π be an arbitrary open subgroup. Then:
+[G : G′] · [Fp : Qp]=d i mQp ((Π′)ab ⊗
+/CQ
+Z Qp) − dimQl ((Π′)ab ⊗
+/CQ
+Z Ql)
+(where Δ ′ def
+=Δ ⋂ Π′; G′ def
+=Π ′/Δ ′; p is the rational prime that p divides; and l is
+any prime number distinct from p). (In fact, p may also be characterized as the unique
+prime number for which the diﬀerence on the right is nonzero for inﬁnitely many prime
+numbers l.) In particular, the subgroup Δ ⊆ Π may be characterized as the intersection
+of those open subgroups Π
+′ ⊆ Π such that:
+[G : G′]=[ Π:Π ′]
+(i.e., such that [G : G′] · [Fp : Qp]=[ Π:Π ′] · ([G : G] · [Fp : Qp])).
+Proof. Assertion (i) is a formal consequence of Theorem 1.1.2.
+Now we turn to assertion (ii). Denote by K′ the ﬁnite extension of Fp determined
+by G′. Then:
+[G : G′] · [Fp : Qp]=[ K′ : Qp]
+
+8 SHINICHI MOCHIZUKI
+Next, let us observe that we have an exact sequence
+0 → Im(Δ ′) → (Π′)ab → (G′)ab → 0
+(where Im(Δ ′) is the image of Δ ′ in (Π ′)ab) of ﬁnitely generated ˆZ-modules. Note,
+moreover, that we have a natural surjection Q′ ↠ Im(Δ ′)/(torsion) (where Q′ is as
+in ( ∗)). On the other hand, it follows formally from our assumption that Π ′ ↠ G′
+splits over an open subgroup of G′ (together with the well-known fact that the group
+cohomology of a ﬁnite group is always annihilated by the order to the group) that this
+natural surjection is, in fact, anisomorphism. In particular, it follows formally from (∗)
+that:
+dim
+Qp ((Π′)ab ⊗
+/CQ
+Z Qp)− dimQl ((Π′)ab ⊗
+/CQ
+Z Ql)=d i mQp ((G′)ab ⊗
+/CQ
+Z Qp)− dimQl ((G′)ab ⊗
+/CQ
+Z Ql)
+Thus, to complete the proof of Lemma 1.1.4, it suﬃces to prove that:
+[K′ : Qp]=d i mQp ((G′)ab ⊗
+/CQ
+Z Qp) − dimQl ((G′)ab ⊗
+/CQ
+Z Ql)
+But this is a formal consequence oflocal class ﬁeld theory(cf., e.g., [Serre2]; §1.2 below),
+i.e., the fact that (G′)ab is isomorphic to the proﬁnite completion of ( K′)×. ⃝
+Typically, in applications involving hyperbolic curves, one shows that the condition
+(∗) of Lemma 1.1.4 is satisﬁed by applying the following:
+Lemma 1.1.5. (Tate Modules of Semi-abelian Varieties) Let K be a ﬁnite
+extension of Qp. Fix an algebraic closure
+ K of K; write GK
+def
+= Gal(
+K/K ).L e tA be a
+semi-abelian variety over K. Denote the resulting (proﬁnite) Tate module of A by:
+T(A)
+def
+= Hom(Q/Z,A(
+K))
+Then the maximal torsion-free quotient T(A) ↠ Q on which GK acts trivially is a
+ﬁnitely generated free ˆZ-module.
+Proof. A semi-abelian variety is an extension of an abelian variety by a torus. Thus,
+T(A) is the extension of the Tate module of an abelian variety by the Tate module of a
+torus. Moreover, since (after restricting to some open subgroup ofGK) the Tate module
+of a torus is isomorphic to the direct sum of a ﬁnite number of copies of ˆZ(1), we thus
+conclude that the image of the Tate module of the torus in Q is necessarily zero. In
+particular, we may assume for the remainder of the proof without loss of generality that
+A is an abelian variety.
+
+ABSOLUTE ANABELIAN GEOMETR Y 9
+Now it follows from the theory of [FC](cf., in particular, [FC], Chapter III, Corollary
+7.3), that T(A) ﬁts into exact sequences (of GK-modules)
+0 → Tgood → T(A) → Tcom → 0
+0 → Ttrc → Tgood → T(B) → 0
+where T(B) is the Tate module of an abelian variety B over K with potentially good
+reduction;a n d Tcom = Mcom ⊗ Z ˆZ, Ttrc = Mtrc ⊗ Z ˆZ(1) for ﬁnitely generated free Z-
+modules Mcom, Mtrc on which GK acts via a ﬁnite quotient. [Here, “com” (respectively,
+“trc”) stands for “combinatorial” (respectively, “toric”).] It is thus evident that Ttrc
+maps to 0 in Q. Moreover, by [Mzk4], Lemma 8.1 (the proof of which is valid for
+arbitrary B, even though inloc. cit., this result is only stated in the case of a Jacobian),
+and the Riemann Hypothesis for abelian varieties over ﬁnite ﬁelds (cf., e.g., [Mumf], p.
+206), it follows that T(B) also maps to 0 in Q. Thus, we conclude that Q is equal to
+the maximal torsion-free quotient of Tcom on which GK acts trivially. Since ˆZ is Z-ﬂat,
+however, this implies that Q is equal to the result of applying ⊗ Z ˆZ to the maximal
+torsion-free quotient of Mcom on which GK acts trivially. But this last quotient is
+manifestly ﬁnitely generated and free over Z. This completes the proof. ⃝
+§1.2. The Anabelian Geometry of p-adic Local Fields
+In this §, we review certain well-known“group-theoretic” properties of Galois groups
+of p-adic local ﬁelds, i.e., properties preserved by arbitrary isomorphisms between such
+Galois groups.
+For i =1 ,2, let pi be a prime number.L e t Ki be a ﬁnite extension of Qpi .W e
+denote the ring of integers (respectively, maximal ideal; residue ﬁeld )o f Ki by OKi
+(respectively, mKi ; ki). Also, we assume that we have chosen an algebraic closures
+ Ki
+of Ki and write
+GKi
+def
+= Gal(
+Ki/Ki)
+for the corresponding absolute Galois group of Ki. Thus, by local class ﬁeld theory (cf.,
+e.g., [Serre2]), we have a natural isomorphism
+(K×
+i )∧ ∼
+→ Gab
+Ki
+(where the “ ∧” denotes the proﬁnite completion of an abelian group; “ ×” denotes the
+group of units of a ring; and “ab” denotes the maximal abelian quotient of a topological
+group). In particular, G
+ab
+Ki ﬁts into an exact sequence
+0 →O ×
+Ki → Gab
+Ki → ˆZ → 0
+
+10 SHINICHI MOCHIZUKI
+(arising from a similar exact sequence for (K×
+i )∧). Moreover, we obtain natural inclu-
+sions
+k×
+i ↪→O ×
+Ki ⊆ K×
+i ↪→ Gab
+Ki
+K×
+i /O×
+Ki
+∼
+→ Z ↪→ Gab
+Ki /Im(O×
+Ki
+)
+(where “
+∼
+→ ” denotes the morphism induced by the valuation onK×
+i ) by considering the
+Teichm¨uller representatives of elements of k×
+i and the Frobenius element, respectively.
+Also, in the following discussion we shall write:
+μ
+/CQ
+Z(
+Ki)
+def
+= Hom(Q/Z,
+K
+×
+i ); μ
+/CQ
+Z′ (
+Ki)
+def
+= μ
+/CQ
+Z(
+Ki) ⊗
+/CQ
+Z
+ˆZ′;
+μ Q/Z(
+Ki)
+def
+= μ
+/CQ
+Z(
+Ki) ⊗
+/CQ
+Z Q/Z
+(where ˆZ′ def
+= ˆZ/Zp). Finally, we denote the cyclotomic character of GKi by:
+χi : GKi → ˆZ×
+Proposition 1.2.1. (Invariants of Arbitrary Isomorphisms of Galois Groups
+of Local Fields) Suppose that we are given an isomorphism of proﬁnite groups:
+α : GK1
+∼
+→ GK2
+Then:
+(i) We have: p1 = p2. Thus, (in the remainder of this proposition and its proof)
+we shall write p
+def
+= p1 = p2.
+(ii) α induces an isomorphism IK1
+∼
+→ IK2 between the respective inertia sub-
+groups of GK1 , GK2 .
+(iii) The isomorphism αab : Gab
+K1
+∼
+→ Gab
+K2 induced by α preserves the images
+Im(O×
+Ki ), Im(k×
+i ), Im(K×
+i ) of the natural morphisms discussed above.
+(iv) The morphism induced by α between the respective quotients Gab
+Ki /Im(O×
+Ki )
+preserves the respectiveFrobenius elements.
+(v) [K1 : Qp]=[ K2 : Qp]; [k1 : Fp]=[ k2 : Fp]. In particular, the ramiﬁcation
+indices of K1, K2 over Qp coincide.
+(vi) The morphisms induced by α on the abelianizations of the various open sub-
+groups of the GKi induce an isomorphism
+μ Q/Z(
+K1)
+∼
+→ μ Q/Z(
+K2)
+
+ABSOLUTE ANABELIAN GEOMETR Y 11
+which is Galois-equivariant with respect toα.I np a r t i c u l a r ,α preserves thecyclotomic
+characters χi.
+(vii) The morphism H2(K1, μ Q/Z(
+K1))
+∼
+→ H2(K2, μ Q/Z(
+K2)) induced by α (cf.
+(vi)) preserves the “residue map”
+H2(Ki, μ Q/Z(
+Ki))
+∼
+→ Q/Z
+of local class ﬁeld theory (cf. [Serre2], §1.1).
+Proof. Property (i) follows by considering theranks of Gab
+Ki over variousZl (cf. Lemma
+1.1.4, (ii)). Property (iii) for Im(k×
+i ) follows from the fact that Im(k×
+i ) may be recovered
+as the prime-to- p torsion subgroup of Gab
+Ki . Property (v) follows for [ Ki : Qp]b y
+considering the Zp-rank of Gab
+Ki (minus 1) and for [ki : Fp] by considering the cardinality
+of Im(k×
+i ) (plus 1) — cf. (i), (iii). Property (ii) follows from the fact that whether or not
+a ﬁnite extension is unramiﬁed may be determined group-theoretically by considering
+the variation of the ramiﬁcation index over Q
+p (cf. (v)). Property (iii) for Im( O×
+Ki
+)
+follows formally from (ii) (since this image is equal to the image inGab
+Ki of IKi ). Property
+(iv) follows by applying (iii) for Im( k×
+i ) to the various open subgroups of GKi that
+correspond to unramiﬁed extensions of Ki and using the fact the Frobenius element
+is the unique element that acts on
+ k
+×
+i (where
+ ki denotes the algebraic closure of ki
+induced by
+ Ki)a s multiplication by |k1| = |k2| [where, relative to our use of the term
+“multiplication”, we think of the abelian group
+ k
+×
+i additively]. Here, we note that if Li
+is a ﬁnite extension of Ki, then the inclusion
+Gab
+Ki
+∼
+→ (K×
+i )∧ ↪→ (L×
+i )∧ ∼
+→ Gab
+Li
+may be reconstructed group-theoretically by considering the Verlagerung, or transfer,
+map (cf. [Serre2], §2.4). Property (iii) for Im(K×
+i ) follows formally from (iv). Property
+(vi) follows formally from (iii). Finally, property (vii) follows (cf. the theory of the
+Brauer group of a local ﬁeld, as exposed, for instance, in [Serre2], §1) from the fact that
+the morphism H
+2(Ki, μ Q/Z(
+Ki))
+∼
+→ Q/Z may be constructed as the composite of the
+natural isomorphism
+H2(Ki, μ Q/Z(
+Ki)) = H2(GKi , μ Q/Z(
+Ki))
+∼
+→ H2(GKi ,
+K
+×
+i )
+— which is group-theoretic, by (iii) — with the inverse of the isomorphism
+H2(Gal(Kunr
+i /Ki),(Kunr
+i )×)
+∼
+→ H2(GKi ,
+K
+×
+i )
+(where Kunr
+i denotes the maximal unramiﬁed extension of Ki) — which is group-
+theoretic, by (ii), (iii) — followed by the natural isomorphism
+H2(Gal(Kunr
+i /Ki),(Kunr
+i )×)
+∼
+→ H2(Gal(Kunr
+i /Ki), Z)= H2(ˆZ, Z)= Q/Z
+
+12 SHINICHI MOCHIZUKI
+— which is group-theoretic, by (ii), (iii), (iv). ⃝
+Before proceeding, we observe that Proposition 1.2.1, (i), may be extended as
+follows: Write
+AQ
+def
+= |Spec(Z)|
+⋃
+{∞}
+(where “ |−| ” denotes the underlying set of a scheme) for the set of “all arithmetic
+primes of Q”. If v ∈ AQ is equal to (0) ∈| Spec(Z)| (respectively, ∞ ), set Gv
+def
+= GQ
+(respectively, Gv
+def
+= Gal(C/R)). If v ∈| Spec(Z)|⊆ AQ is equal to the prime determined
+by a prime number p, set Gv
+def
+= GQp .
+Proposition 1.2.2. (Intrinsicity of Arithmetic Types) For i =1 ,2,l e tvi ∈ AQ.
+Suppose that Hi is an open subgroup of Gvi .T h e nH1 ∼= H2 implies v1 = v2.
+Proof. Indeed, open subgroups of GQ may be distinguished by the fact that their
+abelianizations fail to be topologically ﬁnitely generated. (Indeed, consider the abelian
+extensions arising from adjoining roots of unity.) By contrast, abelianizations of open
+subgroups of G
+R or GQp (cf. the above discussion) are topologically ﬁnitely generated.
+Next, open subgroups of GR may be distinguished from those of any GQp by the fact
+they are ﬁnite . The remainder of Proposition 1.2.2 follows from Proposition 1.2.1, (i).
+⃝
+Next, let us write Spec(OKi )log for the log scheme obtained by equipping the scheme
+Spec(OKi )w i t ht h elog structure deﬁned by the divisor V (mKi ). Thus, by pulling back
+this log structure via the natural morphism Spec( ki) ↪→ Spec(OKi ), we obtain a log
+scheme Spec(ki)log, which we denote by
+klog
+i
+for short. Note that the “´etale monoid” that deﬁnes the log structure onklog
+i “admits a
+global chart” in the sense that it is deﬁned by a single constant monoid (in the Zariski
+topology of Spec(ki)) Mklog
+i
+, which ﬁts into a natural exact sequence (of monoids):
+1 → k×
+i → Mklog
+i
+→ N → 0
+Thus, the k×
+i -torsor Ui determined by considering the inverse image of 1 ∈ N in this
+sequence may be identiﬁed with the k×
+i -torsor of uniformizers ∈ mKi considered modulo
+m2
+Ki .
+Next, let us write
+GKi ↠ Glog
+ki
+
+ABSOLUTE ANABELIAN GEOMETR Y 13
+for the quotient deﬁned by the maximal tamely ramiﬁed extension Ktame
+i of Ki.T h u s ,
+Glog
+ki
+may also be thought of as the “logarithmic fundamental group”π1(klog
+i )o ft h el o g
+scheme klog
+i .M o r e o v e r ,Glog
+ki
+ﬁts into a natural exact sequence:
+1 → μ
+/CQ
+Z(
+ki) → Glog
+ki
+→ ˆZ → 1
+where, just as in the case of Ki,w ew r i t e :
+μ
+/CQ
+Z(
+ki)= μ
+/CQ
+Z′ (
+ki)
+def
+= Hom(Q/Z,
+k
+×
+i );
+μ Q/Z(
+ki)
+def
+= μ
+/CQ
+Z(
+ki) ⊗
+/CQ
+Z Q/Z
+The “abelianization”of this exact sequence yields an exact sequence:
+1 → k×
+i → (Glog
+ki
+)ab → ˆZ → 1
+Now we have the following:
+Proposition 1.2.3.
+(i) Any isomorphism α : GK1
+∼
+→ GK2 (as in Proposition 1.2.1) induces an isomor-
+phism Glog
+k1
+∼
+→ Glog
+k2
+between the respective quotients.
+(ii) There is a natural isomorphism of k×
+i -torsors between the torsor of uni-
+formizers Ui discussed above and the H1(ˆZ, μ
+/CQ
+Z(
+ki)) = k×
+i -torsor H1(Glog
+ki
+, μ
+/CQ
+Z(
+ki))[1]
+of elements ofH1(Glog
+ki
+, μ
+/CQ
+Z(
+ki)) that map to the identity element inH1(μ
+/CQ
+Z(
+ki), μ
+/CQ
+Z(
+ki)) =
+Hom
+/CQ
+Z′ (μ
+/CQ
+Z(
+ki), μ
+/CQ
+Z(
+ki)). This isomorphism is deﬁned by associating to a uniformizer
+π ∈ Ui the μ
+/CQ
+Z(
+ki)-torsor over klog
+i determined by the roots π1/N,a s N ranges (multi-
+plicatively) over the positive integers prime to pi.
+(iii) The proﬁnite group Glog
+ki
+is slim.
+Proof. Property (i) follows from Proposition 1.2.1, (ii), together with the fact that
+the quotient GKi ↠ Glog
+ki
+may be identiﬁed with the quotient of GKi by the (unique)
+maximal pro-p subgroup ofIKi . Next, since any morphism ofk×
+i -torsors isnecessarilyan
+isomorphism, property (ii) follows by observing that the stated association of coverings
+to uniformizers is indeed a morphism ofk
+×
+i -torsors — a tautology, which may by veriﬁed
+by considering the case N = qi − 1( w h e r eqi is the cardinality of ki), in which case
+this tautology amounts to the computation:( ζ1/N)qi = ζ· (ζ1/N)( f o rζ ∈ k×
+i ). Finally,
+property (iii) follows formally from the fact that the quotientGlog
+ki
+/Im(μ
+/CQ
+Z(
+ki)) is inﬁnite
+and acts faithfully on all open subgroups of the closed subgroup Im(μ
+/CQ
+Z(
+ki)) ⊆ Glog
+ki
+. ⃝
+In the following, let us denote by ( klog
+i )∼ → klog
+i the “universal covering” of klog
+i
+deﬁned by the extension Ktame
+i of Ki.T h u s ,Glog
+ki
+acts naturally as thegroup of covering
+transformations of (klog
+i )∼ → klog
+i .
+
+14 SHINICHI MOCHIZUKI
+Proposition 1.2.4. (The “Grothendieck Conjecture” for the Logarithmic
+Point) Suppose that we are given an isomorphism of proﬁnite groups:
+λ : Glog
+k1
+∼
+→ Glog
+k2
+Then:
+(i) We have: |k1| = |k2|; p1 = p2. Thus, (in the remainder of this proposition and
+its proof) we shall write p
+def
+= p1 = p2.
+(ii) λ preserves the subgroupsIm(μ
+/CQ
+Z(
+ki)) ⊆ Glog
+ki
+as well as the Frobenius elements
+in the quotients Glog
+ki
+/Im(μ
+/CQ
+Z(
+ki)).
+(iii) Assume further that the morphism
+k
+×
+1
+∼
+→
+ k
+×
+2
+induced by λ (by thinking of
+ k
+×
+i as μ Q/Z(
+ki)) arises from an isomorphism of ﬁelds
+σ :
+ k1
+∼
+→
+ k2. Then there exists a unique commutative diagram
+(klog
+1 )∼ (σlog)∼
+−→ (klog
+2 )∼
+⏐⏐
+↓
+⏐⏐
+↓
+k
+log
+1
+σlog
+−→ klog
+2
+of log schemes, compatible with the natural action of Glog
+ki
+on (klog
+i )∼ (for i =1 ,2), in
+which the vertical morphisms are the natural morphisms, and the horizontal morphisms
+are isomorphisms for which the morphisms on the underlying schemes are those in-
+duced by
+σ.
+Proof. Property (i) follows by observing that pi is the unique prime number such
+that 1 plus the cardinality of the torsion subgroup of ( Glog
+ki
+)ab — i.e., the cardinality
+of ki — is equal to a power of pi. Property (ii) follows by thinking of the quotients
+Glog
+ki
+/Im(μ
+/CQ
+Z(
+ki)) as the quotients of Glog
+ki
+obtained by forming the quotient of (Glog
+ki
+)ab
+by its torsion subgroup, and then using that the Frobenius element is the unique element
+that acts on the abelian group Im(μ
+/CQ
+Z(
+ki)) via multiplication by |k1| = |k2|. As for (iii),
+the morphism σlog is the unique logarithmic extension of σ whose induced morphism
+U1
+∼
+→ U2 is the morphism obtained (cf. Proposition 1.2.3, (ii)) by considering the
+morphism induced by λ between the H1(ˆZ, μ
+/CQ
+Z(
+ki)) = k×
+i -torsors H1(Glog
+ki
+, μ
+/CQ
+Z(
+ki))[1]
+(for i =1 ,2) — which are preserved by λ, by (ii). Note that here we also use (cf. (ii))
+that the Frobenius element ∈ ˆZ is preserved, since this element is necessary to ensure
+the compatibility of the identiﬁcations
+H1(ˆZ, μ
+/CQ
+Z(
+ki)) = k×
+i
+
+ABSOLUTE ANABELIAN GEOMETR Y 15
+(cf. Proposition 1.2.3, (ii)). The morphism ( σlog)∼ is obtained by applying this con-
+struction of “σlog” to the various ﬁnite log ´etale coverings ofklog
+i obtained by considering
+various open subgroups of Glog
+ki
+. Here, the transition morphisms among coverings are
+induced by theVerlagerung, as in the proof of Proposition 1.2.1. Finally, the uniqueness
+of the lifting (σlog)∼ of σlog is a formal consequence of the fact that Glog
+ki
+is center-free
+(cf. Proposition 1.2.3, (iii)). ⃝
+§1.3. The Anabelian Geometry of Hyperbolic Curves
+Characteristic Zero:
+Let K be a ﬁeld of characteristic 0 whose absolute Galois group is slim.L e tX be
+a hyperbolic curve of type (g,r )o v e rS
+def
+= Spec( K). Fix an algebraic closure
+ K of K
+and write
+ s : Spec(
+K) → S; GK
+def
+= Gal(
+K/K). Let
+ x ∈ X(
+K)b ea
+ K-valued point of
+X lying over
+ s. Then, setting Π X
+def
+= π1(X,
+ x), we obtain an exact sequence
+1 → Δ X → ΠX → GK → 1
+which determines a well-deﬁned continous homomorphism
+GK → Out(Δ X)
+to the group of outer automorphisms Out(Δ X) of Δ X.
+Lemma 1.3.1. (Slimness of Geometric and Arithmetic Fundamental
+Groups) The proﬁnite groups Δ X, ΠX are slim.
+Proof. The slimness of Π X is a formal consequence of the slimness of Δ X and our
+assumption that GK is slim. Thus, it remains to prove that Δ X is slim. One approach
+to proving this fact is given in [Naka1], Corollary 1.3.4. Another approach is the fol-
+lowing: Let H ⊆ Δ X be an open normal subgroup for which the associated covering
+XH → X
+K
+def
+= X ×K
+ K is such that XH is a curve of genus ≥ 2. Thus, Hab may be
+thought of as the proﬁnite Tate module associated to the generalized Jacobian of the
+singular curve obtained from the unique smooth compactiﬁcation of XH by identifying
+the various cusps (i.e., points of the compactiﬁcation not lying in XH)t oa single point.
+In particular, if conjugation by an element δ ∈ Δ X induces the trivial action on Hab,
+then we conclude that the image of δ in Δ X/H induces the trivial action on the gen-
+eralized Jacobian just discussed, hence on XH itself. But this implies that δ ∈ H.B y
+taking H to be suﬃciently small, we thus conclude that δ=1 . ⃝
+
+16 SHINICHI MOCHIZUKI
+In particular, it follows formally from Lemma 1.3.1 that:
+Corollary 1.3.2. (A Natural Exact Sequence) We have a natural exact sequence
+of proﬁnite groups:
+1 → Δ X → Aut(Δ X) → Out(Δ X) → 1
+In particular, by pulling back this exact sequence, one may recover the exact sequence
+1 → Δ X → ΠX → GK → 1 entirely group-theoretically from the outer Galois represen-
+tation GK → Out(Δ X).
+One example of the sort of “ K” under consideration is the case of a “sub-p-adic
+ﬁeld”:
+Corollary 1.3.3. (Slimness of Sub- p-adic Fields) The absolute Galois group of
+a sub-p-adic ﬁeld (i.e., a ﬁeld isomorphic to a subﬁeld of a ﬁnitely generated ﬁeld
+extension of Qp, for some prime number p)i s slim.
+Proof. This fact is implied by the argument of the proof of [Mzk6], Lemma 15.8. ⃝
+In [Mzk6], the author (essentially) proved the following result (cf. [Mzk6], Theorem
+A, for a stronger version that treats arbitrary dominant morphisms and open group
+homomorphisms [i.e., which are not necessarily isomorphisms]):
+Theorem 1.3.4. (“Sub- p-adic Proﬁnite Grothendieck Conjecture”) Suppose
+that K is a sub-p-adic ﬁeld , and that X and Y are hyperbolic curves overK. Denote
+by IsomK(X,Y ) the set of K-isomorphisms X
+∼
+→ Y ;b y IsomOut
+GK (Δ X,Δ Y ) the set of
+outer isomorphisms between the two proﬁnite groups in parentheses that are compatible
+with the respective outer actions of GK. Then the natural map
+IsomK(X,Y ) → IsomOut
+GK (Δ X,Δ Y )
+is bijective.
+Thus, by combining Theorems 1.1.3; 1.3.4; Lemma 1.1.4, (i), we obtain the follow-
+ing:
+Corollary 1.3.5. (Absolute Grothendieck Conjecture over Number Fields)
+Let K, L be number ﬁelds ; X (respectively, Y ) a hyperbolic curve over K (re-
+spectively, L). Denote by Isom(X,Y ) the set of scheme isomorphisms X
+∼
+→ Y ;b y
+
+ABSOLUTE ANABELIAN GEOMETR Y 17
+IsomOut(ΠX,ΠY ) the set of outer isomorphisms between the two proﬁnite groups in
+parentheses. Then the natural map
+Isom(X,Y ) → IsomOut(ΠX,ΠY )
+is bijective.
+Remark 1.3.5.1. Since the analogue of Theorem 1.1.3 in thep-adic local case is false,
+it seems unlikely to the author at the time of writing that the analogue of Corollary
+1.3.5 should hold over p-adic local ﬁelds.
+Remark 1.3.5.2. In fact, the statement of Corollary 1.3.5 holds when K is taken
+to be an arbitrary ﬁnitely generated ﬁeld extension of Q. This follows by applying a
+theorem of F. Pop (in place of the Neukirch-Uchida theorem) — cf. the discussion on
+[NSW], p. 677, for more details.
+One interesting result in the present context is the following, due toM. Matsumoto
+(cf. [Mtmo], Theorems 2.1, 2.2):
+Theorem 1.3.6. (Kernels of Outer Galois Representations) Let X be an
+aﬃne hyperbolic curve over a sub-complex ﬁeld K — i.e., a ﬁeld isomorphic to
+a subﬁeld of the ﬁeld of complex numbers. Then the kernel of the resulting outer Galois
+representation
+G
+K → Out(Δ X)
+is contained in the kernel of the natural homomorphism GK → GQ.
+Remark 1.3.6.1. Thus, in particular, when K is a number ﬁeld, the homomorphism
+GK → Out(ΔX)i s injective. This injectivity was ﬁrst proven by Belyi in the case of
+hyperbolic curves of type ( g,r )=( 0 ,3). It was then conjectured by Voevodskii to be
+true for all (hyperbolic) (g,r ) and proven by Voevodskii to be true for g = 1. Finally,
+it was proven by Matsumoto to hold for all ( g,r ) such that r> 0. To the knowledge
+of the author, the proper case remains open at the time of writing. We refer to the
+discussion surrounding [Mtmo], Theorem 2.1, for more details on this history.
+Remark 1.3.6.2. One interesting aspect of the homomorphism appearing in Theorem
+1.3.6 is that it allows one to interpret Theorem 1.3.4 (when X = Y )a sa computation
+of the centralizer of the image of this homomorphism GK → Out(Δ X). This point of
+view is surveyed in detail in [Naka2].
+
+18 SHINICHI MOCHIZUKI
+Next, we would like to discuss various properties of theinertia groups of the cusps
+of a hyperbolic curve. For every cusp x of X
+K
+def
+= X ×K
+ K — i.e., point of the unique
+smooth compactiﬁcation of X
+K over
+ K that does not lie inX
+K — we have an associated
+inertia group (abstractly isomorphic to ˆZ)
+Ix ⊆ Δ X
+(well-deﬁned, up to conjugation). If l is any prime number, then let us denote the
+maximal pro-l quotient of a proﬁnite group by means of a superscript “( l)”. Thus, we
+also obtain an inertia group I(l)
+x ⊆ Δ(l)
+X (abstractly isomorphic to Zl).
+Lemma 1.3.7. (Commensurable Terminality of Inertia Groups) The sub-
+groups I(l)
+x ⊆ Δ(l)
+X , Ix ⊆ Δ X are commensurably terminal.
+Proof. Indeed, let σ be an element of the commensurator. If the asserted commensu-
+rable terminality is false, then by projecting to a ﬁnite quotient, we may assume that
+we have a ﬁnite Galois covering
+Z → X
+K
+(of degree a power of l in the pro-l case), together with a cusp z of Z such that: (i) z
+maps to x; (ii) z ̸= zσ; (iii) z, zσ have conjugate inertia groups in Δ Z.W e m a y a l s o
+assume (by taking ΔZ ⊆ Δ X to be suﬃciently small) that Z has genus ≥ 2a n da d m i t s
+ac u s pz′ ̸= z,z σ. Then it is easy to see that Z admits an inﬁnite abelian (pro- l,i nt h e
+pro-l case) covering which is totally ramiﬁed atz, z′, but not atzσ. But this contradicts
+property (iii). ⃝
+Remark 1.3.7.1. As was pointed out to the author by the referee, in the case r ≥ 2,
+the assertion of Lemma 1.3.7 is a formal consequence of Theorem B′ of [HR].
+Now, let us assume that we are given two hyperbolic curves (Xi)Ki (for i =1 ,2),
+each deﬁned over a ﬁnite extension Ki of Qpi.L e t u s w r i t eqi for the cardinality of
+the residue ﬁeld of Ki. Choose basepoints for the ( Xi)Ki and denote the resulting
+fundamental groups by Π (Xi)Ki
+. Also, let us denote the unique proper smooth curve
+over Ki that compactiﬁes (Xi)Ki by (Yi)Ki . Suppose, moreover, that we are given an
+isomorphism
+αX :Π (X1)K1
+∼
+→ Π(X2)K2
+of proﬁnite groups.
+Lemma 1.3.8. (Group-Theoreticity of Arithmetic Quotients) The isomor-
+phism αX is necessarily compatible with the quotientsΠ(Xi)Ki
+↠ GKi .
+
+ABSOLUTE ANABELIAN GEOMETR Y 19
+Proof. This follows formally from Lemmas 1.1.4, 1.1.5. ⃝
+Thus, Lemma 1.3.8, Proposition 1.2.1, (v), imply that q1 = q2.
+Lemma 1.3.9. (Group-Theoreticity of the Cusps) The types (gi,ri) of the
+hyperbolic curves (Xi)Ki coincide. In particular, for any prime number l, αX maps
+inertia groups of cusps in Δ X1 (respectively, Δ(l)
+X1) to inertia groups of cusps in Δ X2
+(respectively, Δ(l)
+X2
+).
+Proof. Whether or not ri = 0 may be determined by considering whether or not Δ Xi
+is free as a proﬁnite group. When ri > 0, one may computeri by considering theweight
+— i.e., the number w such that the eigenvalues of the action are algebraic numbers of
+archimedean absolute value qw
+i — of the action of the Frobenius element ∈ Gki (cf.
+Proposition 1.2.1, (iv)) as follows: First, we observe that (as is well-known) the weights
+of the action of Frobenius on Δ ab
+Xi ⊗ Ql (where l is a prime number distinct from p1,
+p2) belong to the set {0, 1, 1
+2 }. (Here, we compute weights by choosing a lifting of the
+Frobenius element ∈ Gki to GKi . Since (as is well-known) the action of the inertia
+subgroup of GKi on Δab
+Xi ⊗ Ql is quasi-unipotent (i.e., unipotent on an open subgroup of
+this inertia subgroup), it follows immediately that the weights are independent of the
+choice of lifting.) Now if M is a Ql-vector space on which Frobenius acts, let us write
+Mwt w
+for the Ql-subspace of M on which Frobenius acts with eigenvalues of weightw. Then,
+setting Ii
+def
+=K e r ( Δab
+Xi ⊗ Ql ↠ Δab
+Yi ⊗ Ql), we have:
+ri − 1=d i mQl (Ii)=d i mQl (Iwt 1
+i )
+=d i mQl (Δab
+Xi ⊗ Ql)wt 1 − dimQl (Δab
+Yi ⊗ Ql)wt 1
+=d i mQl (Δab
+Xi ⊗ Ql)wt 1 − dimQl (Δab
+Yi ⊗ Ql)wt 0
+=d i mQl (Δab
+Xi ⊗ Ql)wt 1 − dimQl (Δab
+Xi ⊗ Ql)wt 0
+(where the fourth equality follows from the auto-duality (up to a Tate twist) of Δab
+Yi ⊗
+Ql; and the second and ﬁfth equalities follow from the fact that Frobenius acts on Ii
+with weight 1). On the other hand, the quantities appearing in the ﬁnal line of this
+sequence of equalities are all “group-theoretic”. Thus, we conclude that r1 = r2.S i n c e
+dimQl (Δab
+Xi ⊗ Ql)=2 gi − 1+ ri (respectively, = 2gi)w h e nri > 0 (respectively, when
+ri = 0), this implies that g1 = g2, as desired.
+Finally, the statement concerning preservation of inertia groups follows formally
+from the fact that “ ri is group-theoretic” (by applying this fact to coverings of Xi).
+
+20 SHINICHI MOCHIZUKI
+Indeed, let l be a prime number (possibly equal to p1 or p2). Since ri may be recovered
+group-theoretically, given any ﬁnite ´etale coverings
+Zi → Vi → Xi
+such that Zi is Galois, of degree a power of l,o v e rVi, one may determine group-
+theoretically whether or not Zi → Vi is “ totally ramiﬁed at a single point of Zi and
+unramiﬁed elsewhere”, since this condition is easily veriﬁed to be equivalent to the
+equality:
+r
+Zi =d e g (Zi/Vi) · (rVi − 1) + 1
+Moreover, the group-theoreticity of this condition extends immediately to the case of
+pro-l coverings Zi → Vi. Thus, by Lemma 1.3.7, we conclude that the inertia groups of
+cusps in (Δ Xi )(l) (i.e., the maximal pro-l quotient of ΔXi) may be characterized (group-
+theoretically!) as the maximal subgroups of (Δ Xi )(l) that correspond to (proﬁnite)
+coverings satisfying this condition.
+In particular, (by Lemma 1.3.7) theset of cusps ofXi may be reconstructed (group-
+theoretically!) as the set of (Δ Xi)(l)-orbits (relative to the action via conjugation) of
+such inertia groups in (Δ Xi )(l). Thus, by applying this observation to arbitrary ﬁnite
+´etale coverings of Xi, we recover the inertia subgroups of the cusps of Δ Xi as the
+subgroups that ﬁx some cusp of the universal covering ˜Xi → Xi of Xi determined by
+the basepoint in question. This completes the proof. ⃝
+Remark 1.3.9.1. As was pointed out to the author by the referee, the argument
+given in the second paragraph of the proof of Lemma 1.3.9 may be replaced by the
+more group-theoretic argument of [Tama2], Proposition 2.4.
+Positive Characteristic:
+For i =1 ,2, let ki be a ﬁnite ﬁeld of characteristic p; Xi a hyperbolic curveover ki.
+Choose a universal tamely ramiﬁed (i.e., at the punctures of Xi) covering ˜Xi → Xi of
+Xi;w r i t e
+Πtame
+Xi
+def
+= Gal( ˜Xi/Xi)
+for the corresponding fundamental groups.T h u s ,w eo b t a i nexact sequences:
+1 → Δtame
+Xi → Πtame
+Xi → Gki → 1
+(where Gki is the absolute Galois group ofki determined by ˜Xi). As is well-known, the
+Frobenius elementdetermines a natural isomorphism ˆZ ∼= Gki .
+Lemma 1.3.10. (Slimness of Fundamental Groups) For i =1 ,2, the proﬁnite
+groups Δtame
+Xi , Πtame
+Xi are slim.
+
+ABSOLUTE ANABELIAN GEOMETR Y 21
+Proof. The slimness of Δtame
+Xi follows by exactly the same argument — i.e., by consid-
+ering the action of Δ tame
+Xi on abelianizations of open subgroups — as that given in the
+proof of Lemma 1.3.1. [Alternatively, as was pointed out to the author by the referee,
+the slimness of Δtame
+Xi follows from [Tama1], Proposition 1.11 (cf. Remark 0.1.3).]
+By a similar argument, the slimness of Πtame
+Xi follows formally from:
+(i) the slimness of Δtame
+Xi ;
+(ii) some positive power of the character of Gki arising from the determinant of
+the prime-to-p portion of (Δtame
+Xi )ab coincides with some positive power of the
+cyclotomic character.
+(Here, we note (ii) is suﬃcient to deal with both the “ l-primary portion” of ˆZ ∼= Gki
+(for l ̸= p) and the “ p-primary portion” of ˆZ ∼= Gki .) ⃝
+Remark 1.3.10.1. Property (ii) in the proof of Lemma 1.3.10 was substantially
+simpliﬁed by a suggestion made to the author by the referee.
+The following fundamental result is due to A. Tamagawa (cf. [Tama1], Theorem
+4.3):
+Theorem 1.3.11. (The Grothendieck Conjecture for Aﬃne Hyperbolic
+Curves over Finite Fields)Assume, for i =1 ,2, that Xi is aﬃne . Then the natural
+map
+Isom( ˜X1/X1, ˜X2/X2) → Isom(Πtame
+X1 ,Πtame
+X2 )
+(from scheme-theoretic isomorphisms ˜X1
+∼
+→ ˜X2 lying over an isomorphism X1
+∼
+→ X2
+to isomorphisms of proﬁnite groups Πtame
+X1
+∼
+→ Πtame
+X2 ) is bijective.
+Finally, we observe that, just as in the characteristic zero case, inertia groups of
+cusps are commensurably terminal:I f xi is a cusp of (Xi)
+ki
+def
+= Xi ×ki
+ ki,t h e nw eh a v e
+an associated inertia group (abstractly isomorphic to ˆZ′)
+Ixi ⊆ Δtame
+Xi
+(well-deﬁned, up to conjugation). If l is any prime number distinct fromp,t h e nw ea l s o
+obtain an inertia group I(l)
+xi ⊆ (Δtame
+Xi )(l) (abstractly isomorphic to Zl).
+Lemma 1.3.12. (Commensurable Terminality of Inertia Groups) The
+subgroups I(l)
+xi ⊆ (Δtame
+Xi )(l), Ixi ⊆ Δtame
+Xi are commensurably terminal.
+
+22 SHINICHI MOCHIZUKI
+Proof. The proof is entirely similar to that of Lemma 1.3.7. [Alternatively, as was
+pointed out to the author by the referee, the assertion concerning Ixi ⊆ Δtame
+Xi follows
+from [Tama2], Lemma 2.1, while the assertion concerning I(l)
+xi ⊆ (Δtame
+Xi )(l) follows, at
+least in the case r ≥ 2, formally from Theorem B′ of [HR].] ⃝
+Section 2: Reconstruction of the Logarithmic Special Fiber
+For i =1 ,2, let Ki be a ﬁnite extension of Qpi (cf. §1.2), and suppose that we are
+given a hyperbolic curve (Xi)Ki over Ki. Let us ﬁx a
+ Ki-valued basepoint for (Xi)Ki
+and denote the resulting fundamental groupπ1((Xi)Ki )b yΠ (Xi)Ki
+. Suppose, moreover,
+that we are given an isomorphism αX :Π (X1)K1
+∼
+→ Π(X2)K2
+, which, by Lemma 1.3.8,
+necessarily ﬁts into a commutative diagram
+Π(X1)K1
+αX
+−→ Π(X2)K2
+⏐⏐
+↓
+⏐⏐
+↓
+G
+K1
+αK
+−→ GK2
+where the vertical morphisms are the natural ones, and the horizontal morphisms are
+assumed to be isomorphisms. Note that by Proposition 1.2.1, (i), this already implies
+that p1 = p2; set p
+def
+= p1 = p2. That such a diagram necessarily arises “geometrically”
+follows from the main theorem of [Mzk6] (cf. Theorem 1.3.4) — if one assumes that αK
+arises geometrically (i.e., from an isomorphism of ﬁelds K1
+∼
+→ K2). In this §,w ew o u l d
+like to investigate what one can say in general (i.e., without assuming that αK arises
+geometrically) concerning this sort of commutative diagram. In some sense, all the
+key arguments that we use here are already present in [Mzk4], except that there, these
+arguments were applied to prove diﬀerent theorems. Thus, in the following discussion,
+we explain how the same arguments may be used to prove Theorem 2.7 below.
+Let us denote the type of the hyperbolic curve ( X
+i)Ki by (gi,ri). Also, we shall
+denote the geometric fundamental group by
+Δ Xi
+def
+=K e r ( Π(Xi)Ki
+→ GKi )
+and the unique proper smooth curve over Ki that compactiﬁes (Xi)Ki by (Yi)Ki .
+Lemma 2.1. (Group-Theoreticity of Stability) (X1)K1 has stable reduction if
+and only if (X2)K2 does.
+Proof. This follows (essentially) from the well-known stable reduction criterion:T h a t
+is to say, (Xi)Ki has stable reduction if and only if the inertia subgroup of GKi acts
+
+ABSOLUTE ANABELIAN GEOMETR Y 23
+unipotently on Δ ab
+Yi ⊗ ˆZ′ and trivially on the (ﬁnite) set of conjugacy classes of inertia
+groups of cusps in Δ Xi (i.e., the set of cusps of ( Xi)Ki ⊗Ki
+ Ki — cf. Lemma 1.3.9).
+[Note that this condition is group-theoretic, by Proposition 1.2.1, (ii).] ⃝
+Now let us assume that ( Xi)Ki has stable reduction over OKi .D e n o t e t h estable
+model of (Xi)Ki over OKi by:
+(Xi)OKi
+→ Spec(OKi )
+Here, in the case where ri > 0, we mean by the term “stable model” the complement of
+the marked points in the unique stable pointed curve overOKi that extends the pointed
+curve over Ki determined by (Xi)Ki . Then, by the theory of [Mzk4], §2, 8, there exists
+a well-deﬁned quotient
+Π(Xi)Ki
+↠ Πadm
+(Xi)Ki
+whose ﬁnite quotients correspond to (subcoverings of) admissible coverings of the result
+of base-changing (Xi)OKi
+to rings of integers of tamely ramiﬁed extensions of Ki.I n
+particular, we have a natural exact sequence:
+1 → Δadm
+Xi → Πadm
+(Xi)Ki
+→ Glog
+ki
+→ 1
+(where Δ adm
+Xi is deﬁned so as to make the sequence exact). Moreover, Π adm
+(Xi)Ki
+itself
+admits a natural quotient (cf. [Mzk4], §3)
+Π(Xi)Ki
+↠ Πadm
+(Xi)Ki
+↠ Πet
+(Xi)Ki
+whose ﬁnite quotients correspond to coverings of ( Xi)Ki that extend to ﬁnite ´etale
+coverings of (Xi)OKi
+which are tamely ramiﬁed at the cusps . In particular, we have a
+natural exact sequence:
+1 → Δet
+Xi → Πet
+(Xi)Ki
+→ Gki → 1
+(where Δet
+Xi is deﬁned so as to make the sequence exact).
+Lemma 2.2. (Admissible and ´Etale Quotients)
+(i) The proﬁnite groups Π(Xi)Ki
+, Πadm
+(Xi)Ki
+,a n dΔadm
+Xi are all slim.
+(ii) The morphism αX is compatible with the quotients
+Π(Xi)Ki
+↠ Πadm
+(Xi)Ki
+↠ Πet
+(Xi)Ki
+of Π(Xi)Ki
+.
+
+24 SHINICHI MOCHIZUKI
+Proof. We begin with assertion (i). The slimness of Π (Xi)Ki
+follows formally from
+Theorem 1.1.1, (ii); Lemma 1.3.1. Next, let us assume that Δ adm
+Xi has already been
+shown to be slim. Then it follows formally from Proposition 1.2.3, (iii), that Π adm
+(Xi)Ki
+is
+slim.
+Thus, to complete the proof of assertion (i), it suﬃces to show that Δ adm
+Xi is slim.
+We argue as in Lemma 1.3.1, i.e., we consider the covering associated to anopen normal
+subgroup H ⊆ Δadm
+Xi . To simplify notation, we assume that ( Xi)ki is “that covering”;
+then it suﬃces to show (cf. the proof of Lemma 1.3.1) that any automorphism (ki-linear)
+σ of (Xi)ki which acts trivially on (Δ adm
+Xi )ab is itself trivial. We may assume without
+loss of generality [i.e., by taking H to be suﬃciently small] that ( Xi)ki is sturdy (cf.
+[Mzk4], Deﬁnition 1.1) — i.e., that the normalizations of all the geometric irreducible
+components of (Xi)ki have genus ≥ 2. Then by [Mzk4], Proposition 1.3, it follows that
+σ acts trivially on the set of geometric irreducible components of (Xi)ki .I np a r t i c u l a r ,
+σ acts on each such geometric irreducible component individually. Thus, by considering
+the action ofσ on the torsion points of the Jacobians of each these geometric irreducible
+components of ( Xi)ki (cf. the proof of Lemma 1.3.1), we conclude that σ acts as the
+identity on each of these geometric irreducible components, as desired.
+Next, we turn to assertion (ii). For Πadm
+(Xi)Ki
+, this follows (essentially) from Propo-
+sition 8.4 of [Mzk4] (together with Lemma 1.3.9, which shows that αX preserves the
+pro-p inertia groups associated to the cusps in Π(Xi)Ki
+). Of course, in [Mzk4], K1 = K2
+and αK is the identity, but in fact, the only property of αK necessary for the proof of
+[Mzk4], Proposition 8.4 — which is, in essence, a formal consequence of [Mzk4], Lemma
+8.1 (concerning unramiﬁed quotients of the p-adic Tate module of a semi-abelian vari-
+ety over a p-adic local ﬁeld) — is that αK preserve the inertia and wild inertia groups
+(which we know, by Proposition 1.2.1, (ii); Proposition 1.2.3, (i), of the present paper).
+Similarly, the portion of assertion (ii) concerning Πet
+(Xi)Ki
+follows (essentially) from
+[Mzk4], Proposition 3.2, at least in the case ri = 0. That is to say, even though αK is
+not necessarily the identity in the present discussion, the only properties ofαK that are
+necessary for the proof of [Mzk4], Proposition 3.2, are Proposition 1.2.3, (i); Proposition
+1.2.4, (ii) (of the present paper).
+Finally, to treat the case of arbitrary r
+i > 0, we argue as follows: Consider an
+open normal subgroup H ⊆ Πadm
+(Xi)Ki
+. Then observe that there exists an open normal
+subgroup H′ ⊆ Πadm
+(Xi)Ki
+such that the orders of the ﬁnite groups Πadm
+(Xi)Ki
+/H,Π adm
+(Xi)Ki
+/H′
+are relatively prime and such that the covering of ( Xi)ki determined by H′ is sturdy.
+Moreover, [by the assumption of relative primeness] it follows easily that the covering
+determined by H is “of ´etale type”(i.e., arises from a quotient of Πet
+(Xi)Ki
+)i fa n do n l y
+if it becomes a covering “of ´etale type” after base-change via the covering determined
+by H′. Thus, we conclude that we may assume without loss of generality that (Xi)ki is
+sturdy.
+
+ABSOLUTE ANABELIAN GEOMETR Y 25
+Now, let us observe that since ( Xi)ki is sturdy, it admits admissible coverings “of
+´etale type” witharbitrarily large prime-to-p ramiﬁcation at the cusps. Thus, [since the
+condition that an admissible covering be “of ´etale type” amounts to the condition that
+there be no ramiﬁcation at the nodes or at the prime of OKi ] we conclude that the
+covering of (Xi)ki determined by H is of ´etale type if and only if, forevery open normal
+H′′ ⊆ Πadm
+(Xi)Ki
+which has ramiﬁcation index divisible by the prime-to- p portion of the
+order of the ﬁnite group Πadm
+(Xi)Ki
+/H at all of the cusps , it becomes a covering of ´etale
+type after base-change by the covering determined by H′′. [Indeed, the necessity
+of this condition is clear; the suﬃciency of this condition follows from the existence of
+coverings of ´etale type with arbitrarily large prime-to-p ramiﬁcation at the cusps. Also,
+we note that by Lemma 1.3.9, this condition is preserved by α
+X.] On the other hand,
+such base-changed coverings are [by construction] necessarily unramiﬁed at the cusps .
+Thus, the issue of whether or not this base-changed covering is of ´ etale type reduces
+— by Lemma 1.3.9, which shows that αX preserves the quotient Π (Xi)Ki
+↠ Π(Yi)Ki
+—t ot h e“ ri = 0” case, which has already been resolved. This completes the proof of
+assertion (ii) in the case ri > 0. ⃝
+Lemma 2.3. (Group-Theoreticity of Dual Semi-Graphs of the Special
+Fiber) The morphism αX induces an isomorphism
+αX,Γc :Γ c
+(X1)k1
+∼
+→ Γc
+(X2)k2
+between the “dual semi-graphs with compact structure” (i.e., the usual dual graphs
+Γ(Xi)ki
+, together with extra edges corresponding to the cusps — cf. the Appendix) of
+the special ﬁbers (Xi)ki of (Xi)OKi
+. Moreover, αX,Γc is functorial with respect to pas-
+sage to ﬁnite ´etale coverings of the (Xi)Ki .
+Proof. Indeed, if one forgets about the “compact structure”, then this is a formal
+consequence of Lemma 1.3.9 [which shows that αX preserves the quotient Π(Xi)Ki
+↠
+Π(Yi)Ki
+]; Lemma 2.2, (ii), and the theory [concerning the ri = 0 case] of [Mzk4], §1–5 ,
+summarized in [Mzk4], Corollary 5.3. Even though αK is not necessarily the identity
+in the present discussion, the only properties of αK that are necessary for the proof of
+[Mzk4], Corollary 5.3 are Proposition 1.2.3, (i); Proposition 1.2.4, (ii) (of the present
+paper). That is to say, the point is that theFrobenius element is preserved, which means
+that the weight ﬁltrations on l-adic cohomology (where l is a prime distinct fromp)a r e ,
+as well.
+The compatibility with the “compact structure”follows from the pro-l (where l ̸= p)
+portion of Lemma 1.3.9, together with the easily veriﬁed fact (cf. the proof of Lemma
+1.3.7) that the inertia group of a cusp in Πadm
+(Xi)Ki
+is contained (up to conjugacy) in the
+decomposition group of a unique irreducible component of (Xi)ki . ⃝
+
+26 SHINICHI MOCHIZUKI
+Next, we would like to show thatαX is necessarily “of degree 1”. This is essentially
+the argument of [Mzk4], Lemma 9.1, but we present this argument in detail below since
+we are working here under the assumption that αK is arbitrary. For simplicity, we
+assume until further notice is given that:
+(∗CSSN) ri = 0 [i.e., the curves are compact] and, moreover, the special ﬁber
+(Xi)ki of ( Xi)OKi
+is singular and sturdy (cf. [Mzk4], Deﬁnition 1.1) — i.e.,
+the normalizations of all the geometric irreducible components of ( Xi)ki have
+genus ≥ 2 — and has a noncontractible dual semi-graph Γc
+(Xi)ki
+— i.e., this
+semi-graph is not a tree.
+(These conditions may always be achieved by replacing (Xi)Ki by a ﬁnite ´etale covering
+of (Xi)Ki — cf. [Mzk4], Lemma 2.9; [Mzk4], the ﬁrst two paragraphs of the proof of
+Theorem 9.2.)
+We begin by introducing some notation. Write:
+Vi
+def
+=Δ ab
+Xi ;
+Hi
+def
+= Hsing
+1 (Γc
+(Xi)ki
+, Z)= Hsing
+1 (Γ(Xi)ki
+, Z)
+(where “ Hsing
+1 ” denotes the ﬁrst singular homology group). Thus, by considering the
+coverings of (Xi)OKi
+induced by unramiﬁed coverings of the graph Γ (Xi)ki
+, we obtain
+natural (group-theoretic!) “combinatorial quotients”:
+Vi ↠ (Hi)
+/CQ
+Z
+def
+= Hi ⊗ ˆZ
+Lemma 2.4. (Ordinary New Parts, after Raynaud) For a “suﬃciently
+large prime number l” (where “suﬃciently large” depends only on p, gi), and after
+possibly replacing Ki by a ﬁnite unramiﬁed extension of Ki,t h e r ee x i s t sac y c l i c´etale
+covering (Zi)OKi
+→ (Xi)OKi
+of (Xi)OKi
+of degree l such that the “new part” V new
+i
+def
+=
+Δab
+(Zi)Ki
+/Δab
+(Xi)Ki
+of the abelianized geometric fundamental group of (Zi)Ki satisﬁes the
+following:
+(i) We have an exact sequence:
+0 → V mlt
+i → (V new
+i )Zp
+def
+= V new
+i ⊗
+/CQ
+Z Zp → V etl
+i → 0
+—w h e r eV etl
+i is an unramiﬁed GKi -module, and V mlt
+i is the Cartier dual
+of an unramiﬁed GKi -module.
+(ii) The “combinatorial quotient” of Δab
+(Zi)Ki
+(arising from the coverings of
+(Zi)OKi
+induced by unramiﬁed coverings of the dual semi-graph of the special
+ﬁber of (Zi)OKi
+) induces a nonzero quotient V new
+i ↠ (Hnew
+i )
+/CQ
+Z of V new
+i .
+
+ABSOLUTE ANABELIAN GEOMETR Y 27
+Here, the injectionΔab
+(Xi)Ki
+↪→ Δab
+(Zi)Ki
+is the injection induced by pull-back via(Zi)Ki →
+(Xi)Ki and Poincar´e duality (or, alternatively, by the “Verlagerung”).
+Proof. Note that since both conditions (i), (ii) aregroup-theoretic, they may be realized
+simultaneously for i =1 ,2. Now to satisfy condition (i), it suﬃces — cf., e.g., the
+discussion in [Mzk4], §8, of “ VG”, “VGord ” — to choose the covering so that the “new
+parts” of the Jacobians of the irreducible components of the special ﬁber of (Zi)OKi
+are
+all ordinary. That this is possible for l suﬃciently large is a consequence of atheorem of
+Raynaud (as formulated, for instance, in [Tama1], Lemma 1.9). Then let us observe that,
+so long as we choose the ´etale covering (Zi)OKi
+→ (Xi)OKi
+so that it is nontrivial over
+every irreducible component of (Xi)ki , condition (ii) is automatically satisﬁed: Indeed,
+if we write hi
+def
+=r kZ(Hi)—s o hi > 0s i n c eΓc
+(Xi)ki
+is assumed to be noncontractible —
+then to assert that condition (ii) fails to hold — i.e., that there are “no new cycles in
+the dual graph”— is to assert that we have an equality of Euler characteristics:
+( ∑
+j
+gZ,j
+)
++ hi − 1= l
+{( ∑
+j
+gX,j
+)
++ hi − 1
+}
+(where the ﬁrst (respectively, second) sum is the sum of the genera of the irreducible
+components of the geometric special ﬁber of (Zi)OKi
+(respectively, (Xi)OKi
+)). But, since
+∑
+j
+(gZ,j − 1) =
+∑
+j
+l(gX,j − 1)
+we thus conclude that (l − 1) =
+{ ∑
+j (l − 1)
+}
++ hi(l − 1), hence that 1 = (∑
+j 1) +hi
+—w h i c hi sabsurd, since both the sum and hi are ≥ 1. This completes the proof. ⃝
+Remark 2.4.1. The author would like to thank A. Tamagawa for explaining to him
+the utility of Raynaud’s theorem in this sort of situation.
+In the following discussion, to keep the notation simple,we shall replace (Xi)Ki by
+some (Zi)Ki as in Lemma 2.4. Thus, V new
+i is a GKi -quotient module of Vi.M o r e o v e r ,
+we have a surjection
+V new
+i ↠ (Hnew
+i )
+/CQ
+Z
+such that the quotient ( Hi)
+/CQ
+Z ↠ (Hnew
+i )
+/CQ
+Z is deﬁned over Z, i.e., arises from a quo-
+tient Hi ↠ Hnew
+i . (Indeed, this last assertion follows from the fact that the quotient
+Hi ↠ Hnew
+i arises as the cokernel (modulo torsion) of the morphism induced on ﬁrst sin-
+gular cohomology modules by a ﬁnite (ramiﬁed) covering of graphs — i.e., the covering
+induced on dual graphs by the covering (Z
+i)OKi
+→ (Xi)OKi
+of Lemma 2.4.)
+
+28 SHINICHI MOCHIZUKI
+On the other hand, the cup product on group cohomology gives rise to anondegen-
+erate (group-theoretic!) pairing
+V ∨
+i ⊗
+/CQ
+Z V ∨
+i ⊗
+/CQ
+Z μ
+/CQ
+Z(
+Ki) → Mi
+def
+= H2(Δ Xi , μ
+/CQ
+Z(
+Ki)) (∼= ˆZ)
+(where we think of V ∨
+i
+def
+= Hom( Vi, ˆZ)a s H1(Δ Xi , ˆZ)), hence, by restriction to
+(V new
+i )∨ ↪→ V ∨
+i ,a pairing
+(V new
+i )∨ ⊗
+/CQ
+Z (V new
+i )∨ ⊗
+/CQ
+Z μ
+/CQ
+Z(
+Ki) → Mi
+def
+= H2(Δ Xi , μ
+/CQ
+Z(
+Ki)) (∼= ˆZ)
+which is stillnondegenerate(over Q), since it arises from anample line bundle—n a m e l y ,
+the restriction of the polarization determined by the theta divisor on the Jacobian of
+(X
+i)Ki to the “new part” of ( Xi)Ki . This pairing determines an “isogeny” (i.e., a
+morphism which is an isomorphism over Q):
+(V new
+i )∨ ⊗
+/CQ
+Z μ
+/CQ
+Z(
+Ki) ⊗
+/CQ
+Z M∨
+i ↪→ V new
+i
+Thus, if we take the dual of the surjection discussed in the preceding paragraph, then
+we obtain an inclusion
+(Hnew
+i )∨
+/CQ
+Z ⊗ μ
+/CQ
+Z(
+Ki) ⊗ M∨
+i ↪→ (V new
+i )∨ ⊗ μ
+/CQ
+Z(
+Ki) ⊗ M∨
+i ↪→ V new
+i
+which (as one sees, for instance, by applying the fact that μ
+/CQ
+Z(
+Ki)GKi = 0) maps into
+the kernel of the surjection V new
+i ↠ (Hnew
+i )
+/CQ
+Z.
+Next, let us observe that thekernel Ni of the surjection of unramiﬁed GKi -modules
+(i.e., Gki -modules)
+V etl
+i ↠ (Hnew
+i )Zp
+satisﬁes:
+H0(Gki ,Ni ⊗ Qp)= H1(Gki ,Ni ⊗ Qp)=0
+(Indeed, Ni arises as a submodule of the module ofp-power torsion points of an abelian
+variety over ki, so the vanishing of these cohomology groups follows from the Riemann
+Hypothesis for abelian varieties over ﬁnite ﬁelds (cf., e.g., [Mumf], p. 206), i.e., the
+fact that (some power of) the Frobenius element of Gki acts on Ni with eigenvalues
+which are algebraic numbers with complex absolute values equal to a nonzero rational
+power of p.) In particular, we conclude that the above surjection admits a unique
+GKi -equivariant splitting (Hnew
+i )Zp ↪→ (V etl
+i )Qp . Similarly, (by taking Cartier duals)
+the injection (Hnew
+i )∨
+Zp ⊗ μ Zp (
+Ki) ⊗ M∨
+i ↪→ V mlt
+i also admits a unique GKi -equivariant
+splitting over Qp.T h u s ,by applying these splittings , we see that the GKi -action on
+(V new
+i )Zp determines a p-adic extension class
+(ηi)Zp ∈{ (Hnew
+i )∨
+Q
+p }⊗2⊗M∨
+i ⊗(H1(Ki, μ
+/CQ
+Z(
+Ki))/H1
+f (Ki, μ
+/CQ
+Z(
+Ki))) = {(Hnew
+i )∨
+Q
+p }⊗2⊗M∨
+i
+
+ABSOLUTE ANABELIAN GEOMETR Y 29
+where (by Proposition 1.2.1, (vii)) H1(Ki, μ
+/CQ
+Z(
+Ki)) may be identiﬁed with (K×
+i )∧,a n d
+we deﬁne
+H1
+f (Ki, μ
+/CQ
+Z(
+Ki))
+def
+= O×
+Ki
+⊆ (K×
+i )∧ ∼
+→ H1(Ki, μ
+/CQ
+Z(
+Ki))
+so the quotient group (H1(Ki, μ
+/CQ
+Z(
+Ki))/H1
+f (Ki, μ
+/CQ
+Z(
+Ki))) may be identiﬁed with ˆZ.
+Next, let us observe that the kernel N ′
+i of (V new
+i )
+/CQ
+Z′ ↠ (Hnew
+i )
+/CQ
+Z′ is an unramiﬁed
+representation ofGKi (since it arises from the module of prime-to-p-power torsion points
+of a semi-abelian variety over ki). Moreover, the injection of unramiﬁed GKi -modules
+(Hnew
+i )∨
+/CQ
+Z′ ⊗ μ
+/CQ
+Z′ (
+Ki) ⊗ M∨
+i ↪→ N ′
+i
+splits uniquely over Q, since (by the Riemann Hypothesis for abelian varieties over ﬁnite
+ﬁelds — cf., e.g., [Mumf], p. 206) the Frobenius element of Gki acts on the smaller
+module (respectively, quotient by this smaller module) with weight 1 (respectively, 1
+2 ).
+Thus, just as in the p-adic case, we may construct a prime-to-p-adic extension class
+(ηi)
+/CQ
+Z′ from the GKi -action on (V new
+i )
+/CQ
+Z′ , which, together with (ηi)Zp , yields an extension
+class (cf. [FC], Chapter III, Corollary 7.3):
+ηi ∈{ (Hnew
+i )∨
+/CQ
+Z }⊗2⊗M∨
+i ⊗{H1(Ki, μ
+/CQ
+Z(
+Ki))/H1
+f (Ki, μ
+/CQ
+Z(
+Ki))}⊗ Q = {(Hnew
+i )∨
+/CQ
+Z }⊗2⊗M∨
+i ⊗ Q
+That is to say, ηi may be thought of as a (group-theoretically reconstructible!) bilinear
+form:
+⟨−, −⟩i :( Hnew
+i )⊗2
+/CQ
+Z → (M∨
+i )Q
+def
+= M∨
+i ⊗ Q
+Moreover:
+Lemma 2.5. Assume that (Xi)OKi
+arises as some “ (Zi)OKi
+” as in Lemma 2.4.
+Then:
+(i) (Positive Rational Structures)The image of (Hnew
+i )⊗2 under the morphism
+(Hnew
+i )⊗2
+/CQ
+Z → (M∨
+i )Q forms a rank one Z-submodule of (M∨
+i )Q. Moreover, for any two
+nonzero elements a,b ∈ Hi, ⟨a,a ⟩i diﬀers from ⟨b,b ⟩i by a factor in Q>0 (i.e., a positive
+rational number). In particular, this image determines a “ Q>0-structure” on (M∨
+i )Q,
+i.e., a Q-rational structure on (M∨
+i )Q, together with a collection of generators of this
+Q-rational structure that diﬀer from one another by factors inQ>0. Finally, this Q>0-
+structure is the same as the Q>0-structure on M∨
+i determined by the ﬁrst Chern class
+of an ample line bundle on (Xi)Ki in Mi = H2(Δ Xi, μ
+/CQ
+Z(
+Ki)).
+(ii) (Preservation of Degree) The isomorphism
+M1 = H2(Δ X1 , μ
+/CQ
+Z(
+K1))
+∼
+→ H2(Δ X2 , μ
+/CQ
+Z(
+K2)) = M2
+induced by αX preserves the elements on both sides determined by the ﬁrst Chern class
+of a line bundle on (Xi)Ki of degree 1.
+
+30 SHINICHI MOCHIZUKI
+Proof. Indeed, assertion (i), follows formally from [FC], Chapter III, Corollary 7.3,
+and Theorem 10.1, (iii) (by considering “new part” of the Jacobian of (Xi)Ki equipped
+with the polarization induced by the theta polarization on the Jacobian).
+As for assertion (ii), the elements in question are the unique elements that, on the
+one hand, are rational and positive with respect to the structures discussed in assertion
+(i), and, on the other hand, generate Mi as a ˆZ-module. ⃝
+Remark 2.5.1. Note that the conclusion of Lemma 2.5, (ii), is valid not just for
+(Xi)Ki , but for any ﬁnite ´etale cover of the original (Xi)Ki , i.e., even if this cover does
+not arise as some “( Zi)OKi
+” as in Lemma 2.4. Indeed, this follows from the fact that
+the crucial “Q>0-structure”of Lemma 2.5, (i), is preserved by pull-back to such a cover,
+which just multiplies the Chern class at issue in Lemma 2.5, (ii), by the degree of the
+cover (an element of Q>0!).
+Remark 2.5.2. In the discussion of [Mzk4], §9, it was not necessary to be as careful
+as we were in the discussion above in constructing the p-adic class (ηi)Zp (i.e., “ μp”i n
+the notation of loc. cit. ). This is because in loc. cit. , we were working over a single
+p-adic base-ﬁeld “ K”. In this more restricted context, the extension class (ηi)Zp may be
+extracted much more easily from Vi by simply forming the quotient by the submodule
+of H1(Ki,Ker((Vi)Zp ↠ (Hi)Zp )) generated by the elements which are “crystalline”,
+or, more simply, of “geometric origin” (i.e., arise from OK-rational points of the for-
+mal group associated to the p-divisible group determined — via “Tate’s theorem” (cf.
+Theorem 4 of [Tate]) — by the GKi -module Ker((Vi)Zp ↠ (Hi)Zp )). Unfortunately, the
+author omitted a detailed discussion of this aspect of the argument in the discussion of
+[Mzk4], §9.
+Remark 2.5.3. Relative to Remark 2.5.2, we note nevertheless that even in the
+discussion of [Mzk4], §9, it is still necessary to work (at least until one recovers the
+“ Q
+>0-structure” — cf. Remark 2.5.1) with ( Xi)Ki such that the dual graph of the
+special ﬁber ( Xi)ki is noncontractible. This minor technical point was omitted in the
+discussion of [Mzk4], §9.
+Next, let us write ( Xlog
+i )OKi
+for the log scheme obtained by equipping ( Xi)OKi
+with the log structure determined by the monoid of regular functions∈O (Xi)OKi
+which
+are invertible on the open subscheme ( Xi)Ki ⊆ (Xi)OKi
+. Thus, in the terminology of
+[Kato2], (Xlog
+i )OKi
+is log regular. Also, let us write (Xlog
+i )ki for the log scheme obtained
+by equipping (Xi)ki with the log structure determined by restricting the log structure
+of (Xlog
+i )OKi
+. Thus, the quotient Π(Xi)Ki
+↠ Πadm
+(Xi)Ki
+determines a “universal admissible
+covering”
+( ˜Xlog
+i )ki → (Xlog
+i )ki
+
+ABSOLUTE ANABELIAN GEOMETR Y 31
+of (Xlog
+i )ki .
+Now let us choose a connected component ˜Ii of the ki-smooth locus (i.e., the com-
+plement of the nodes) of ( ˜Xlog
+i )ki .W r i t eIi ⊆ (Xi)ki for the image of ˜Ii in ( Xi)ki .
+Thus,
+˜Ii →I i
+is a “tame universal covering” of Ii (i.e., a universal covering of the hyperbolic curve
+Ii among those ﬁnite ´etale coverings that are tamely ramiﬁed at the “cusps” of this
+hyperbolic curve). In the following discussion, we shall also assume, for simplicity,
+that Ii is geometrically connectedover ki (a condition that may always be achieved by
+replacing Ki by a ﬁnite unramiﬁed extension of Ki).
+Now the Galois group Π Ii of this covering may also be thought of as the quotient
+of the decomposition group in Πadm
+(Xi)Ki
+of ˜Ii by its inertia group . In particular, since
+ΠIi is formed by taking the quotient by this inertia group, it follows that the surjection
+Πadm
+(Xi)Ki
+↠ Glog
+ki
+induces a natural surjection
+ΠIi ↠ Gki
+whose kernel is the geometric (tame) fundamental group πtame
+1 ((Ii)
+ki
+)o f Ii.
+Finally, we observe that it makes sense to speak of ˜I1 and ˜I2 as corresponding
+via αX. Indeed, by Lemma 2.3, αX induces an isomorphism between the pro-graphs
+determined by the ( ˜Xlog
+i )ki .T h u s , t h e˜Ii may be said to correspond via αX when the
+vertices that they determine in these pro-graphs correspond. Moreover, when the ˜Ii
+correspond via αX, it follows (by considering the stabilizer of the vertex determined
+by ˜Ii)t h a tαX induces a bijection between the respective decomposition groups Di in
+Πadm
+(Xi)Ki
+of ˜Ii, as well as between the respective inertia subgroups of these decomposi-
+tion groups Di (which may be characterized group-theoretically as the centers of the
+subgroups Di
+⋂ Ker(Πadm
+(Xi)Ki
+↠ Gki ), since πtame
+1 ((Ii)
+ki
+)i s center-free — cf. Lemma
+1.3.10). Thus, in summary, αX induces a commutative diagram:
+ΠI1
+∼
+→ ΠI2
+⏐⏐
+↓
+⏐⏐
+↓
+G
+k1
+∼
+→ Gk2
+We are now ready (cf. [Mzk4], §7) to apply the main result of [Tama1]. This result
+states that commutative diagrams as above are in natural bijective correspondence with
+commutative diagrams ˜I
+1
+∼
+→ ˜I2
+⏐⏐
+↓
+⏐⏐
+↓
+I
+1
+∼
+→I 2
+
+32 SHINICHI MOCHIZUKI
+lying over commutative diagrams
+k1
+∼
+→
+ k2
+⏐⏐
+↓
+⏐⏐
+↓
+k
+1
+∼
+→ k2
+(cf. Theorem 1.3.11). In particular, these commutative diagrams induce an isomorphism
+(ˆZ′ ∼=) H2
+c ((I1)
+k1
+, μ
+/CQ
+Z′ (
+k1))
+∼
+→ H2
+c ((I2)
+k2
+, μ
+/CQ
+Z′ (
+k2)) (∼= ˆZ′)
+(where “ H2
+c ” denotes ´etale cohomology with compact supports — cf. [Milne], Chapter
+III, Proposition 1.29; Remark 1.30) which maps the element “1” (i.e., the element
+determined by the ﬁrst Chern class of a line bundle of degree 1) on the left to the
+element “1” on the right. (Indeed, this follows from the fact that the morphismI
+1
+∼
+→I 2
+appearing in the above commutative diagram is an isomorphism, hence of degree 1.)
+Note that the isomorphism μ
+/CQ
+Z′ (
+k1)
+∼
+→ μ
+/CQ
+Z′ (
+k2) that we use here is that obtained from
+the commutative diagram above, i.e., that provided by Theorem 1.3.11.
+Lemma 2.6. (Compatibility of Isomorphisms Between Roots of Unity)
+Assume that (Xi)OKi
+arises as some “ (Zi)OKi
+” as in Lemma 2.4. Then the following
+diagram
+μ
+/CQ
+Z′ (
+k1)
+∼
+→ μ
+/CQ
+Z′ (
+k2)
+⏐⏐
+↓
+⏐⏐
+↓
+μ
+/CQ
+Z′ (
+K1)
+∼
+→ μ
+/CQ
+Z′ (
+K2)
+— in which the vertical morphisms are the natural ones (obtained by considering Te-
+ichm¨uller representatives); the upper horizontal morphism is the morphism determined
+by Theorem 1.3.11; and the lower horizontal morphism is the morphism determined by
+Proposition 1.2.1, (vi) — commutes.
+Proof. Indeed, the diagram in the statement of Lemma 2.6 induces a diagram:
+H
+2
+c ((I1)
+k1
+, μ
+/CQ
+Z′ (
+k1))
+∼
+→ H2
+c ((I2)
+k2
+, μ
+/CQ
+Z′ (
+k2))
+⏐⏐
+↓
+⏐⏐
+↓
+H
+2
+c ((I1)
+k1
+, μ
+/CQ
+Z′ (
+K1))
+∼
+→ H2
+c ((I2)
+k2
+, μ
+/CQ
+Z′ (
+K2))
+... (∗1)
+Moreover, we have a diagram
+H2
+c ((I1)
+k1
+, μ
+/CQ
+Z′ (
+K1))
+∼
+→ H2
+c ((I2)
+k2
+, μ
+/CQ
+Z′ (
+K2))
+⏐⏐
+↓
+⏐⏐
+↓
+H
+2((X1)
+K 1
+, μ
+/CQ
+Z′ (
+K1))
+∼
+→ H2((X2)
+K2
+, μ
+/CQ
+Z′ (
+K2))
+... (∗2)
+
+ABSOLUTE ANABELIAN GEOMETR Y 33
+where the horizontal morphisms are induced by αK (cf. Proposition 1.2.1, (vi)), and
+the vertical morphisms are induced “group-theoretically” as follows: First, observe that
+[since we continue to operate under the assumption (∗CSSN)]
+H2((Xi)
+K i
+, μ
+/CQ
+Z′ (
+Ki)) ∼= H2(Δ Xi , μ
+/CQ
+Z′ (
+Ki)) ∼= H2(Δadm
+Xi , μ
+/CQ
+Z′ (
+Ki))
+while
+H2
+c ((Ii)
+ki
+, μ
+/CQ
+Z′ (
+Ki)) ∼= H2((
+Ii)
+ki
+, μ
+/CQ
+Z′ (
+Ki)) ∼= H2(π1((
+Ii)
+ki
+), μ
+/CQ
+Z′ (
+Ki))
+(where we write
+ Ii for the unique nonsingular compactiﬁcation of Ii). Moreover, since
+we continue to operate under the assumption ( ∗CSSN), it follows (cf. the discussion
+of “Second Cohomology Groups” in the Appendix) that the natural “push-forward”
+morphism in ´etale cohomology
+(H2(π1((
+Ii)
+ki
+), μ
+/CQ
+Z′ (
+Ki)) ∼=) H2
+c ((Ii)
+ki
+, μ
+/CQ
+Z′ (
+Ki))
+→ H2((Xi)ki ⊗ki
+ ki, μ
+/CQ
+Z′ (
+Ki)) (∼= H2(Δet
+Xi , μ
+/CQ
+Z′ (
+Ki)))
+may be reconstructed group-theoretically(by using the various natural homomorphisms
+π1((
+Ii)
+ki
+) → Δet
+Xi [well-deﬁned up to composite with an inner automorphism]). Thus,
+the desired vertical morphisms of diagram ( ∗2) may be obtained by composing these
+“push-forward” morphisms with the morphisms
+H2(Δet
+Xi , μ
+/CQ
+Z′ (
+Ki)) → H2(Δadm
+Xi , μ
+/CQ
+Z′ (
+Ki))
+induced by the surjections Δ adm
+Xi ↠ Δet
+Xi [which are group-theoretic by Lemma 2.2,
+(ii)]. In particular, we thus see that the vertical morphisms of diagram ( ∗2)a r egroup-
+theoretic, i.e., (in other words) diagram (∗2) commutes.
+Now let us compose the above two diagrams (∗1), (∗2) to form a single diagram:
+H2
+c ((I1)
+k1
+, μ
+/CQ
+Z′ (
+k1))
+∼
+→ H2
+c ((I2)
+k2
+, μ
+/CQ
+Z′ (
+k2))
+⏐⏐
+↓
+⏐⏐
+↓
+H
+2((X1)
+K 1
+, μ
+/CQ
+Z′ (
+K1))
+∼
+→ H2((X2)
+K2
+, μ
+/CQ
+Z′ (
+K2))
+... (∗3)
+Note that this diagram (∗3) commutes, since, by Lemma 2.5, (ii) [applied to the lower
+horizontal morphism of (∗3)]; the discussion immediately preceding the present Lemma
+2.6 [applied to the upper horizontal morphism of ( ∗3)]; and the discussion of “Second
+Cohomology Groups” in the Appendix [applied to the vertical morphisms of ( ∗3)], all
+of the morphisms of this diagram are compatible with the elements “1” determined
+by the ﬁrst Chern class of a line bundle of degree 1. But this implies that diagram
+(∗1) commutes (since diagram ( ∗2) has already been shown to be commutative, and
+all the arrows in both of these diagrams (∗1), (∗2) are isomorphisms between rank one
+
+34 SHINICHI MOCHIZUKI
+free ˆZ′-modules). On the other hand, since diagram ( ∗1) was obtained by applying
+the functors H2
+c ((Ii)
+ki
+, −) (which are manifestly faithful, at least when restricted to
+constant coeﬃcient modules which are ﬁnitely generated and free over ˆZ′ —a si nt h e
+present situation) to the diagram appearing in the statement of Lemma 2.6, we thus
+conclude that the diagram appearing in the statement of Lemma 2.6 is commutative,
+as desired. ⃝
+The signiﬁcance of Lemma 2.6 from our point of view is the following: Lemma 2.6
+implies that αK induces an isomorphism
+αGlog
+k
+: Glog
+k1
+∼
+→ Glog
+k2
+which satisﬁes the hypothesis of Proposition 1.2.4, (iii). Thus, we conclude from Propo-
+sition 1.2.4, (iii), that αGlog
+k
+arises geometrically. In particular, it follows that we may
+apply [Mzk4], Theorem 7.2, to the commutative diagram
+Πadm
+(X1)K1
+∼
+→ Πadm
+(X2)K2⏐⏐
+↓
+⏐⏐
+↓
+G
+log
+k1
+∼
+→ Glog
+k2
+(where we note that Lemma 2.6 also implies — when translated into the terminology
+of [Mzk4], §7 — that the “RT-degree”associated to this commutative diagram is 1, as
+is necessary for the application of [Mzk4], Theorem 7.2). In particular, we conclude
+that the above commutative diagram of fundamental groups arises geometrically from
+a commutative diagram:
+(Xlog
+1 )k1
+∼
+→ (Xlog
+2 )k2
+⏐⏐
+↓
+⏐⏐
+↓
+k
+log
+1
+∼
+→ klog
+2
+Moreover, the isomorphism exhibited in the upper horizontal arrow of this commutative
+diagram is easily seen to be functorial with respect to arbitrary ﬁnite ´etale coverings of
+the (Xi)Ki (i.e., not just coverings that arise from ﬁnite ´etale coverings of the (Xi)OKi
+).
+Indeed, this functoriality follows formally from the uniqueness assertion in Proposition
+1.2.4, (iii), and the fact that dominant (i.e., not just ﬁnite ´etale) morphisms between
+proper hyperbolic curves in characteristic p may be distinguished by considering the
+morphisms that they induce between the respective Jacobians, hence, in particular, by
+the morphisms that they induce between the l-power torsion points (where l ̸= p)o f
+the respective Jacobians. [Note also that the morphisms between log structures at the
+nodes are uniquely determined by the morphisms between the various normal bundles
+on the branches at the nodes — cf. [Mzk3], §3.7, 3.8, 3.10.] Thus, in summary:
+
+ABSOLUTE ANABELIAN GEOMETR Y 35
+Theorem 2.7. (Group-Theoretic Reconstruction of the Logarithmic Special
+Fiber of a p-adic Hyperbolic Curve) Let p be a prime number. For i =1 ,2,l e tKi
+be a ﬁnite extension of Qp,a n d(Xi)Ki a hyperbolic curve over Ki whose associated
+pointed stable curve has stable reduction overOKi . Denote the resulting “stable model”
+of (Xi)Ki over OKi by (Xi)OKi
+. Assume that we have chosen basepoints of the (Xi)Ki
+(which thus induce basepoints of the Ki). Then every isomorphism of proﬁnite groups
+Π(X1)K1
+∼
+→ Π(X2)K2
+induces commutative diagrams:
+Π(X1)K1
+∼
+→ Π(X2)K2
+⏐⏐
+↓
+⏐⏐
+↓
+G
+K1
+∼
+→ GK2
+Πadm
+(X1)K1
+∼
+→ Πadm
+(X2)K2⏐⏐
+↓
+⏐⏐
+↓
+G
+log
+k1
+∼
+→ Glog
+k2
+Moreover, the latter commutative diagram (of admissible quotients Πadm
+(Xi)Ki
+of the
+Π(Xi)Ki
+lying over the tame Galois groupsGlog
+ki
+of the Ki) necessarily arises from unique
+commutative diagrams of log schemes
+( ˜Xlog
+1 )k1
+∼
+→ ( ˜Xlog
+1 )k1
+⏐⏐↓
+⏐⏐↓
+(Xlog
+1 )k1
+∼
+→ (Xlog
+2 )k2
+(klog
+1 )∼ ∼
+→ (klog
+2 )∼
+⏐⏐↓
+⏐⏐↓
+klog
+1
+∼
+→ klog
+2
+where the commutative diagram on the left lies over the commutative diagram on the
+right (which is as in Proposition 1.2.4, (iii)). Here, we equip Spec(OKi ) (respectively,
+Spec(ki); (Xi)OKi
+; (Xi)ki ) with the log structure determined by the closed point (re-
+spectively, determined by restricting the log structure onSpec(OKi ); determined by the
+monoid of functions invertible on the open subscheme(Xi)Ki ; determined by restricting
+the log structure on (Xi)OKi
+) and denote the resulting log scheme by Olog
+Ki
+(respectively,
+klog
+i ; (Xlog
+i )OKi
+; (Xlog
+i )ki ); the vertical morphisms in the above commutative diagrams
+of log schemes are the universal coverings induced by the various basepoints chosen.
+Proof. First, note that the additional assumptions that were used in the course of
+the above discussion — e.g., “( ∗CSSN)”; the assumption that ( Xi)OKi
+arise as some
+“( Zi)OKi
+” as in Lemma 2.4 — were applied only to show that the hypotheses of Propo-
+sition 1.2.4, (iii) (and [Mzk4], Theorem 7.2) are satisﬁed . Moreover, we observe that
+although [Mzk4], Theorem 7.2, is only stated in the proper singular case, itextends im-
+mediately to the aﬃne singular, as well as aﬃne nonsingular, cases.T h u s ,( c f .R e m a r k
+2.5.1; the discussion surrounding “(∗CSSN)”) one concludes that — except when (Xi)Ki
+is proper,w i t hgood reduction —o n em a yreconstruct the logarithmic special ﬁber in a
+functorial fashion (i.e., with respect to ﬁnite ´etale coverings of the (Xi)Ki ), as desired.
+In the case that ( Xi)Ki is proper, but has good reduction over OKi , we may still
+reconstruct its logarithmic special ﬁber (despite the fact that [Tama1], Theorem 4.3,
+
+36 SHINICHI MOCHIZUKI
+is only stated in [Tama1] for aﬃne hyperbolic curves!) by arguing as follows: First
+of all, we observe that in the case of good reduction, the log structure of the special
+ﬁber of the curve is obtained by simply pulling back the log structure of klog
+i .T h u s ,
+it suﬃces to construct the (non-logarithmic, scheme-theoretic) special ﬁber. Next, we
+observe that (after possibly enlarging K
+i) there exist — cf., e.g., [Mzk4], the ﬁrst two
+paragraphs of the proof of Theorem 9.2 — corresponding ﬁnite Galois ´etale coverings
+(Zi)Ki → (Xi)Ki (for i =1 ,2), where (Zi)Ki is a hyperbolic curve over Ki with bad
+stable reduction (Zi)OKi
+over OKi . Thus, by applying Theorem 2.7 to ( Zi)Ki allows
+us to reconstruct the logarithmic special ﬁber ( Zlog
+i )ki , together with the action of the
+Galois group Gi
+def
+=G a l ( (Zi)Ki /(Xi)Ki ). Note that irreducible components of ( Zi)ki
+that dominate (Xi)ki may be distinguished (group-theoretically!) by the fact that their
+geometric fundamental groups map surjectively onto open subgroups of the geometric
+fundamental group of (Xi)ki . Let us choose corresponding (closed, proper) irreducible
+components
+Ci ⊆ (Zi)ki
+that dominate (hence surject onto) (Xi)ki .D e n o t e t h edecomposition (respectively, in-
+ertia) group associated to Ci by Di ⊆ Gi (respectively, Ii ⊆ Di ⊆ Gi). Thus, Di/Ii
+acts faithfully on Ci,a n dt h eorder |Ii| of Ii is a power of p, equal to the degree of
+inseparability of the function ﬁeld of Ci over the function ﬁeld of ( Xi)ki .T h e nw em a y
+reconstruct (Xi)ki as a ﬁnite ﬂat quotient of Ci by considering the subsheaf
+(O|Ii |
+Ci )Di ⊆O Ci
+(i.e., the Di-invariants of the subalgebra O|Ii |
+Ci ⊆O Ci, where we use that |Ii| is a power
+of p). By applying the functoriality with respect to ﬁnite ´ etale coverings of ( Xi)Ki
+observed in the discussion immediately preceding the statement of Theorem 2.7, we
+conclude that this construction of (Xi)ki is independent of the choice of (Zi)Ki , Ci,a n d
+itself functorial with respect to ﬁnite ´etale coverings of (Xi)Ki .
+This completes our reconstruction of the logarithmic special ﬁbers of the(Xi)Ki ,i n
+a fashion that is functorial with respect to ﬁnite ´etale coverings of the (Xi)Ki .T h u s ,
+we conclude, in particular, (from this functoriality, applied to covering transformations;
+the slimness of Lemma 2.2, (i)) that the morphism induced on admissible fundamental
+groups by the isomorphism constructed between logarithmic special ﬁberscoincides with
+the original given morphism between admissible fundamental groups. This completes
+the proof of Theorem 2.7. ⃝
+Remark 2.7.1. Given data as in Theorem 2.7, one may consider the outer Galois
+representation
+G
+Ki → Out(ΔXi )
+
+ABSOLUTE ANABELIAN GEOMETR Y 37
+which is known to be injective if ri > 0 (cf. Theorem 1.3.6). Thus, at least in the case
+ri > 0, it is natural to ask:
+What is the commensurator of Im(GKi ) in Out(Δ Xi)?
+Although Theorem 2.7 does not give a complete explicit answer to this question, it
+tells us that, at any rate, elements of this commensurator (which deﬁne isomorphisms
+of the sort that are treated in Theorem 2.7) preserve the logarithmic special ﬁber .I n
+particular, (although one does not know whether or not elements of this commensurator
+induce “self-isogenies” of K
+i, i.e., are “geometric”) one obtains that elements of this
+commensurator do induce “self-isogenies”of klog
+i .[ H e r e , b y a“self-isogeny of an object”,
+we mean an isomorphism between two ﬁnite ´etale coverings of the object.] Moreover,
+since it follows from Theorem A of [Mzk6] (cf. Theorem 1.3.4, Remark 1.3.6.2) that
+the centralizer of Im(G
+Ki ) in Out(Δ Xi ) consists precisely of those (ﬁnitely many) au-
+tomorphisms that arise geometrically (i.e., from automorphisms of ( Xi)Ki ), it follows
+that a “self-isogeny” of GKi induced by an element of this commensurator corresponds
+to (up to ﬁnitely many well-understood possibilities) an essentially unique element of
+this commensurator. This motivates the point of view that:
+The “self-isogenies” of GKi deﬁned by elements of this commensurator —
+which we shall refer to as quasi-conformal self-isogenies of GKi —a r e
+natural objects to study in their own right.
+The reason for the choice of the terminology “quasi-conformal” is that those self-
+isogenies that are “of geometric origin” — i.e., “conformal” — are (by the main theo-
+rem of [Mzk5]) precisely those which preserve the higher ramiﬁcation ﬁltration, which
+is closely related to the “canonical p-adic metric”on the local ﬁeld in question. Thus,
+quasi-conformal self-isogenies do not preserve the “metric (or conformal) structure” but
+do preserve the “logarithmic special ﬁber” which one may think of as a sort of p-adic
+analogue of the “topological type” of the objects in question.
+Remark 2.7.2. Note that isomorphisms
+k
+log
+1
+∼
+→ klog
+2
+(such as those arising from “quasi-conformal isomorphisms”GK1
+∼
+→ GK2 as in Theorem
+2.7) need not be “geometric” from the point of view of characteristic zero (i.e., induced
+by an isomorphism of ﬁelds K1
+∼
+→ K2). For instance, such an isomorphism might take
+the section of the log structure corresponding to p to some multiple of this section by
+a root of unity (a situation which could never occur if the isomorphism arose from an
+isomorphism K
+1
+∼
+→ K2). Whether or not, however, this sort of phenomenon actually
+
+38 SHINICHI MOCHIZUKI
+takes place in the case of “quasi-conformal isomorphisms” as in Theorem 2.7 is not clear
+to the author at the time of writing.
+Remark 2.7.3. The theory of the present § prompts the question:
+Do isomorphisms Π(X1)K1
+∼
+→ Π(X2)K2
+as in Theorem 2.7 only preserve the
+logarithmic special ﬁber or do they preserve other information as well con-
+cerning the liftings (Xi)Ki of the respective logarithmic special ﬁbers?
+Although the author is unable to give a complete answer to this question at the time of
+writing, it does appear that when the lifting in question is in some sense “canonical”,
+then this canonicality is preserved by isomorphisms as in Theorem 2.7. In a future paper,
+we hope to discuss this sort of phenomenon — which may be observed, for instance, in
+the following cases:
+(1) Serre-Tate canonical liftings;
+(2) “arithmetic hyperbolic curves”, i.e., hyperbolic curves isogenous to
+a Shimura curve [that is to say, curves which admit a ﬁnite ´ etale
+covering which is isomorphic to a ﬁnite ´etale covering of some Shimura
+curve];
+(3) canonical liftings in the sense of “ p-adic Teichm¨uller theory” (cf.
+[Mzk1], [Mzk2])
+— in more detail. Perhaps this phenomenon should be regarded as a natural extension
+of the phenomenon of preservation of the logarithmic ﬁber in the sense that canonical
+liftings are, in some sense, liftings that are“deﬁned over F1”— i.e., a hypothetical (but,
+of course, ﬁctional!) absolute ﬁeld of constants sitting inside Zp.
+Appendix: Terminology of Graph Theory
+The Notion of a Semi-Graph:
+We shall refer to as a semi-graph Γ the following collection of data:
+(1) a set V — whose elements we refer to as “vertices”;
+(2) a set E — whose elements we refer to as “edges” — each of whose elements
+e is a set of cardinality 2 satisfying the property “ e ̸= e′ ∈E =⇒ e ⋂ e′ = ∅”;
+(3) a collection ζ of maps ζe [one for each edge e] — which we refer to as
+the “coincidence maps” — such that ζe : e →V ⋃{V} [where we note that
+V ⋂{V} = ∅since V /∈V ] is a map from the set e to the set V ⋃{V}.
+
+ABSOLUTE ANABELIAN GEOMETR Y 39
+We shall refer to the subsetζ−1
+e (V) ⊆ e [i.e., the inverse image of the subsetV⊆V ⋃{V}
+of elements ̸= V]a st h e verticial portion of an edge e; to the restriction of ζe to the
+verticial portion of e as the verticial restriction of ζe; and to the cardinality of the
+verticial portion of e as the verticial cardinality of e.A graph Γ is a semi-graph Γ for
+which everye ∈E has verticial cardinality precisely 2. We will say that a graph or semi-
+graph is ﬁnite if its sets of vertices and edges are ﬁnite. We shall refer to an element
+b ∈ e as a branch of the edge e.
+Let Γ = {V, E,ζ} be a semi-graph.I f e ∈E is an edge of Γ of verticial cardinality 2
+whose image via ζe consists of two (not necessarily distinct) elements v1, v2 of V,t h e n
+we shall say that e joins v1 to v2.I f v is any vertex in the image of ζe, then we shall
+say that e meets or abuts to v. Thus, an edge of a graph always abuts to at least one
+vertex, while an edge of a semi-graph may abut to no vertices at all.
+By thinking of vertices as points and edges as line segments that join points to
+points or are “open” at one or both ends, we may think of semi-graphs as deﬁning
+topological spaces. Thus, it makes sense to speak of a semi-graph as being contractible
+(in the sense of algebraic topology). Such a semi-graph will be referred to as a tree.
+Finally, a morphism between semi-graphs
+Γ= {V, E,ζ}→ Γ
+′ = {V′, E′,ζ′}
+is a collection of maps V→V ′; E→E ′; and for each e ∈E mapping to e′, an injection
+e↪ → e′ — all of which are compatible with the verticial restrictions of the respective
+coincidence maps. Thus, here, we allow an edge that abuts to no (respectively, precisely
+one) vertex to map to an edge that abuts to any number ≥ 0 (respectively, ≥ 1) of
+vertices.
+Semi-Graphs of Proﬁnite Groups:
+We shall refer to the following data G:
+(i) a ﬁnite semi-graph Γ;
+(ii) for each vertex v of Γ, a proﬁnite group Gv;
+(iii) for each edge e of Γ, a proﬁnite group Ge, together with, for each branch
+b ∈ e mapping to a vertex v via ζe, a continuous homomorphismb∗ : Ge → Gv
+as a semi-graph of proﬁnite groups. When Γ is a graph, we shall refer to this data G as
+a graph of proﬁnite groups.
+Suppose that we are given a semi-graph of proﬁnite groups G.T h e n t oG,o n e
+may associate (in a natural, functorial fashion) a proﬁnite group ΠG — namely, the
+
+40 SHINICHI MOCHIZUKI
+proﬁnite analogue of the well-known construction of the fundamental group associated
+to a (semi-)graph of groups (cf. [Serre1], I, §5.1). One way to describe this proﬁnite
+analogue is via Galois categories (cf., e.g., [SGA1] for an exposition of the theory of
+Galois categories) as follows: If H is an arbitrary proﬁnite group, then let us write
+B(H)
+for the category of ﬁnite sets with continuousH-action. Then H may be recovered as the
+“fundamental group” of the Galois category B(H). Also, we note that any continuous
+homomorphism of proﬁnite groupsH → H′ determines a natural functorB(H′) →B (H)
+[in the reverse direction]. In particular, the homomorphisms b∗ determine functors:
+b∗ : Cv
+def
+= B(Gv) →C e
+def
+= B(Ge)
+At any rate, to deﬁne Π G, it suﬃces to deﬁne a Galois category CG [which we would
+like to think of as “ B(ΠG)”]. We deﬁne CG to be the category of collections of data:
+{Sv;αe}
+Here, “ v” (respectively, “e”) ranges over the vertices (respectively, edges of verticial
+cardinality 2) of Γ;Sv is an object of Cv;a n dαe : b∗
+1(Sv1) ∼= b∗
+2(Sv2 )( w h e r ee = {b1,b2};
+vi
+def
+= ζe(bi), for i =1 ,2) is an isomorphism in Ce. Morphisms between such collections
+of data are deﬁned in the evident way. One then veriﬁes easily that this category CG is
+indeed a Galois category, as desired.
+Pointed Stable Curves:
+Let k be analgebraically closed ﬁeld.L e tg,r ≥ 0 be integers such that 2g−2+r> 0.
+Let (
+X → Spec(k),D ⊆
+ X)b ea n r-pointed stable curve of genus g (where D ⊆
+ X is
+the divisor of marked points) over k, and set:
+X
+def
+=
+ X\D
+Also, let us write X′ ⊆ X for the complement of the nodes in X.
+Next, we deﬁne the dual graph
+ΓX
+of X. The set of vertices of ΓX is the set of irreducible components of X.T o a v o i d
+confusion, we shall write Xv for the irreducible component corresponding to a vertex
+v. The set of edges of ΓX is the set of nodes of X. To avoid confusion, we shall write
+νe for the node corresponding to an edge e. The node νe has two branches νe[1] and
+νe[2], each of which lies on some well-deﬁned irreducible component of X. We take
+
+ABSOLUTE ANABELIAN GEOMETR Y 41
+e
+def
+= {νe[1],νe[2]} [so e is of verticial cardinality 2], and let ζe be the map that sends
+νe[i] to the irreducible component on which the branch νe[i] lies.
+Let us write X′
+v
+def
+= Xv
+⋂ X′ ⊆ X,a n d( f o ri =1 ,2) X′
+νe[i] for the scheme-theoretic
+intersection with X′ of the completion of the branch νe[i] at the node νe.T h u s ,X′
+νe[i]
+is noncanonically isomorphic to Spec(k[[t]][t−1]) (where t is an indeterminate).
+In the following discussion, we would like to ﬁx (k-linear) isomorphisms:
+X′
+νe[1] ∼= X′
+νe[2]
+via which we shall identifyX′
+νe[1] with X′
+νe[2] and denote the resulting object by X′
+e.I n
+particular, we have natural morphisms X′
+e → X′
+v1 , X′
+e → X′
+v2 (where vi
+def
+= ζe(νe[i]),
+for i =1 ,2). One veriﬁes immediately that the induced morphism on tame algebraic
+fundamental groups [i.e., corresponding to coverings which are tamely ramiﬁed at the
+nodes and marked points] is independent of the choice of isomorphism. Thus, the dual
+graph ΓX, together with the result of applying “ πtame
+1 (−)” [more precisely: the tame
+algebraic fundamental group functor, together withchoices of basepointsfor the various
+X′
+v, X′
+e,a n d choices of paths to relate these basepoints via the natural morphisms
+X′
+e → X′
+vi discussed above] to the data {X′
+v;X′
+e;X′
+e → X′
+v } determines a graph of
+proﬁnite groups GX associated to the stable curve X.
+When considering the case of a curve with marked points (i.e., r> 0), it is useful
+to consider the following slightly modiﬁed “data with compact structure”: Let us denote
+by Γc
+X the semi-graph obtained from ΓX by appending to ΓX, for each marked point
+x ∈
+ X, the following:
+an edge ex
+def
+= {x},w h e r ex ∈ ex is sent by ζex to the vertex vx corresponding
+to the irreducible component of
+ X that contains x.
+We shall refer to the new edges “ex” that were added to ΓX to form Γc
+X as the marked
+edges of Γc
+X and to Γc
+X
+itself as the dual graph with compact structureassociated to X.
+If, moreover, we associate toex the scheme X′
+x (which is noncanonically isomorphic
+to Spec(k[[t]][t−1])) obtained by removing x from the completion of
+ X at x, and apply
+“ πtame
+1 (−)” to the natural morphism X′
+x → X′
+vx , then we obtain a natural semi-graph
+of proﬁnite groups Gc
+X with underlying semi-graph Γc
+X
+. Moreover, one checks easily that
+when k is of characteristic 0, the proﬁnite group associated (as described above) to GX
+or Gc
+X is isomorphic to “ ˆΠg,r”, i.e., theproﬁnite completion of the fundamental group of
+a Riemann surface of genus g with r points removed.
+In fact, if we take k = C, and we think of the X′
+v as Riemann surfaces and of the
+X′
+e, X′
+x as “copies of the circle S1”, then we see that this construction corresponds quite
+geometrically to gluing Riemann surfaces with boundary along copies of the circle.
+
+42 SHINICHI MOCHIZUKI
+Finally, let us observe the following (valid for k of arbitrary characteristic): The
+proﬁnite group associated to GX or Gc
+X may be identiﬁed with the admissible funda-
+mental group
+Πadm
+X
+of (
+X,D ) (cf. [Mzk4], §2, 8; [Mzk3], §3). Moreover, if we deﬁne semi-graphs of groups
+Get
+X, Gc,et
+X by taking the proﬁnite group at a vertex v to be the tame fundamental group
+of Xv [i.e., instead of X′
+v] and the proﬁnite group at all of the edges to be trivial, then
+the resulting proﬁnite group may be identiﬁed with the fundamental group
+Πet
+X
+associated to the Galois category ofﬁnite ´etale coverings ofX which are tamely ramiﬁed
+at the cusps. In particular, we have a natural surjection Πadm
+X ↠ Πet
+X .
+Second Cohomology Groups:
+We continue with the notation of the above discussion. Letl be a prime numberdis-
+tinct from the characteristic of k. In the following discussion, we shall use the notation
+“ Hj(−)” (respectively, “Hj
+c (−)”) to denote the j-th ´etale cohomology module (respec-
+tively, j-th ´etale cohomology module with compact supports— cf. [Milne], Chapter III,
+Proposition 1.29; Remark 1.30) with coeﬃcients in Zl.
+If v is a vertex of Γ X,w r i t e
+Xv for the normalization of the corresponding irre-
+ducible component of
+ X,s o X′
+v = X′ ×
+X
+ Xv.T h e n w e h a v e anatural “push-forward”
+isomorphism
+H2
+c (X′
+v)
+∼
+→ H2(
+Xv)
+between free Zl-modules of rank 1. Moreover, the natural morphisms
+ Xv →
+ X (as v
+ranges over the vertices of ΓX) determine natural restriction morphisms whose direct
+sum is easily veriﬁed to be an isomorphism:
+H2(
+X)
+∼
+→
+⨁
+v
+H2(
+Xv)
+On the other hand, the composite of the natural “push-forward” morphism H2
+c (X′
+v) →
+H2(
+X) with a restriction morphism H2(
+X) → H2(
+Xw), where w ̸= v, is easily veriﬁed
+to be zero. [Indeed, this follows by considering the Chern class of the line bundle on
+X associated to a closed point of X′
+v: This Chern class is the image of a generator of
+H2
+c (X′
+v) and, moreover, vanishes upon restriction to
+ Xw since the restriction to
+ Xw of
+this line bundle is clearly trivial.] In particular, we conclude that the direct sum of the
+natural “push-forward” morphisms H2
+c (X′
+v) → H2(
+X) yields an isomorphism
+⨁
+v
+H2
+c (X′
+v)
+∼
+→ H2(
+X)
+
+ABSOLUTE ANABELIAN GEOMETR Y 43
+which, if we identify H2
+c (X′
+v), H2(
+Xv) via the isomorphism H2
+c (X′
+v)
+∼
+→ H2(
+Xv), is
+inverse to the isomorphism H2(
+X)
+∼
+→ ⨁
+v H2(
+Xv).
+Put another way, if we identify the cohomology modules H2
+c (X′
+v), H2(
+Xv) via
+the isomorphism H2
+c (X′
+v)
+∼
+→ H2(
+Xv), then the natural “push-forward” morphism
+H2
+c (X′
+v) → H2(
+X)m a yb erecoveredas the composite
+H2(
+Xv) ↪→
+⨁
+v
+H2(
+Xv)
+∼
+→ H2(
+X)
+of the natural inclusion of a direct summand with the inverse of the isomorphism
+H2(
+X)
+∼
+→ ⨁
+v H2(
+Xv) determined by the restriction morphisms.
+Finally, let us observe that if
+ X is sturdy (cf. [Mzk4], Deﬁnition 1.1) — i.e., every
+Xv has genus ≥ 2 — then the natural morphisms from proﬁnite group cohomology to
+´etale cohomology give rise to a commutative diagram
+H2(πtame
+1 (
+X)= π1(
+X), Zl) −→ H2(
+X)
+⏐⏐
+↓
+⏐⏐
+↓
+H
+2(πtame
+1 (
+Xv)= π1(
+Xv), Zl) −→ H2(
+Xv)
+in which the horizontal morphisms are isomorphisms [since arbitrary ´etale cohomology
+classes with ﬁnite l-power torsion coeﬃcients vanish upon restriction to some ﬁnite ´etale
+covering of
+ X or
+ Xv].
+References
+[FC] G. Faltings and C.-L. Chai, Degenerations of Abelian Varieties, Springer-Verlag
+(1990).
+[ F J ] M .F r i e da n dM .J a r d e n ,Field Arithmetic, Springer-Verlag (1986).
+[HR] W. Herfort and L. Ribes, Torsion elements and centralizers in free products of
+proﬁnite groups, J. Reine Angew. Math. 358 (1985), pp. 155-161.
+[Kato1] K. Kato, Logarithmic Structures of Fontaine-Illusie,Proceedings of the First JAMI
+Conference, Johns Hopkins Univ. Press (1990), pp. 191-224.
+[Kato2] K. Kato, Toric Singularities, Amer. J. Math. 116 (1994), pp. 1073-1099.
+[Knud] F. F. Knudsen, The Projectivity of the Moduli Space of Stable Curves, II, Math.
+Scand. 52 (1983), 161-199.
+[Mtmo] M. Matsumoto, Galois representations on proﬁnite braid groups on curves,J. Reine
+Angew. Math. 474 (1996), pp. 169-219.
+
+44 SHINICHI MOCHIZUKI
+[Milne] J. S. Milne, ´Etale Cohomology, Princeton Mathematical Series 33, Princeton Uni-
+versity Press (1980).
+[Mzk1] S. Mochizuki, A Theory of Ordinary p-adic Curves, Publ. of RIMS 32 (1996), pp.
+957-1151.
+[Mzk2] S. Mochizuki, Foundations of p-adic Teichm¨uller Theory , AMS/IP Studies in
+Advanced Mathematics 11, American Mathematical Society/International Press
+(1999).
+[Mzk3] S. Mochizuki, The Geometry of the Compactiﬁcation of the Hurwitz Scheme, Publ.
+of RIMS 31 (1995), pp. 355-441.
+[Mzk4] S. Mochizuki, The Proﬁnite Grothendieck Conjecture for Closed Hyperbolic Curves
+over Number Fields, J. Math. Sci. Univ. Tokyo 3 (1996), pp. 571-627.
+[Mzk5] S. Mochizuki, A Version of the Grothendieck Conjecture for p-adic Local Fields,
+The International Journal of Math. 8 (1997), pp. 499-506.
+[Mzk6] S. Mochizuki, The Local Pro-p Anabelian Geometry of Curves, Invent. Math. 138
+(1999), pp. 319-423.
+[Mumf] D. Mumford, Abelian Varieties, Oxford Univ. Press (1974).
+[Naka1] H. Nakamura, Galois rigidity of pure sphere braid groups and proﬁnite calculus, J.
+Math. Sci. Univ. Tokyo 1 (1994), pp. 71-136.
+[Naka2] H. Nakamura, Galois rigidity of proﬁnite fundamental groups [translation ofSugaku
+47 (1995), pp. 1-17], Sugaku Expositions 10 (1997), pp. 195-215.
+[NTM] H. Nakamura, A. Tamagawa, and S. Mochizuki, The Grothendieck Conjecture on
+the Fundamental Groups of Algebraic Curves, Sugaku Expositions 14 (2001), pp.
+31-53.
+[NSW] J. Neukirch, A. Schmidt, K. Wingberg, Cohomology of number ﬁelds, Grundlehren
+der Mathematischen Wissenschaften 323, Springer-Verlag (2000).
+[Serre1] J.-P. Serre, Trees, Springer-Verlag (1980).
+[Serre2] J.-P. Serre, Local Class Field Theory in Algebraic Number Theory, ed. J.W.S. Cas-
+sels and A. Fr¨ohlich, Academic Press (1967).
+[SGA1] Revˆetement ´etales et groupe fondamental,S ´eminaire de G´eometrie Alg´ebrique du
+Bois Marie 1960-1961 (SGA1), dirig´e par A. Grothendieck, augment´ed ed e u xe x -
+pos´es de M. Raynaud, Lecture Notes in Mathematics 224, Springer-Verlag (1971).
+[Tama1] A. Tamagawa, The Grothendieck Conjecture for Aﬃne Curves, Compositio Math.
+109 (1997), pp. 135-194.
+[Tama2] A. Tamagawa, On the Fundamental Groups of Curves over Algebraically Closed
+Fields of Characteristic> 0, International Mathematics Research Notices16 (1999),
+pp. 853-873.
+
+ABSOLUTE ANABELIAN GEOMETR Y 45
+[Tate] J. Tate, p-Divisible Groups, Proceedings of a Conference on Local Fields, Drieber-
+gen, Springer Verlag (1967), pp. 158-183.
+/CA/CT/D7/CT/CP/D6 /CR/CW /C1/D2/D7/D8/CX/D8/D9/D8/CT /CU /D3/D6 /C5/CP /D8/CW/CT/D1/CP /D8/CX/CR/CP/D0 /CB/CR/CX/CT/D2/CR/CT/D7/B8
+/C3/DD/D3/D8/D3 /CD/D2/CX/DA/CT/D6/D7/CX/D8/DD/B8
+/C3/DD/D3/D8/D3 /BI/BC/BI/B9/BK/BH/BC/BE/B8 /C2/CP/D4 /CP/D2
+E-mail address : motizuki@kurims.kyoto-u.ac.jp

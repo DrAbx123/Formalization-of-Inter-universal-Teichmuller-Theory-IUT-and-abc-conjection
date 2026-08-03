@@ -1,0 +1,204 @@
+Anabelioidܖ
+ૠྸᚐௌᄂᆮ৑Უ
+Ჭஉ
+§1.λƷѣೞ
+§2. anabelioid Ʊ core
+§3. ૠᛯႎƳ anabelioid Ʒ̊
+§1.λƷѣೞ
+F Ǜૠ˳ƱƠŴE ǛƦƷɥƷ౹ό୺ዴƱƢǔŵእૠl ≥ 3ƠŴቇҥƷƨǊŴ
+Spec(F ) ɥƷŴ l ሁЎໜƴǑǔ፭ǹǭȸȠE[l]ǇǔǬȭǢᘙྵ
+GF
+def
+= Gal(
+ F/ F) → GL2(Fl)
+Ƣǔŵ
+ഏƴŴ E ƕ bad, multiplicative reduction ǛਤƭᲢૠ˳ F ƷᲣእໜ pF ǛᎋƑ
+ǔŵ F Ǜ pFǒǕǔ˳ǛFpF Ʊ୿ƘƱƢǔƱŴFpF ƷɥưƸ౹ό୺ዴ
+EFpF
+def
+= E ⊗ F FpF Ʒ ‘Tate curve’ƱƠƯƷᘙᅆ ‘Gm/qZ’ǇǔŴcanonical Ƴ
+‘ʈඥႎƳ’ᢿЎ፭ǹǭȸȠ
+μl ⊆ E[l]|FpF
+ƕƋǔŵƜƜư౨ᚰƢǔբ᫆ƸᲴ
+ЭᡓƷ ‘৑ႎƳʈඥႎᢿЎь፭’ǛŴ ‘ႎƳʈඥႎᢿЎь፭’
+ƱƠƯ F μ
+ᧈƢǔƜƱƸưƖƳƍƔᲹ
+ƱƍƏƜƱưƋǔŵ
+ƴƿƪ
+ƨǔŵ̊ƑƹŴK
+def
+= F (E[l]) Ǜ l ሁЎໜƨƪƷŴF፯˳ƱƠŴK Ǉư
+ɥƕƬƯ˺ಅƠƯǈǔƱƢǔŵƢǔƱŴE[l]|K ƷᢿЎ፭ǹǭȸȠƱƠƯŴ‘μl’Ǜ K μ
+፯ƞǕǔǋƷ
+LK ⊆ E[l]|K
+ƴ˦ƹƢƜƱƕưƖǔƕŴƦƷLK ƸŴ
+Typeset by AMS-TEX
+1
+
+2ૠྸᚐௌᄂᆮ৑Უ
+K ƷവǜƲƷ bad, multiplicative reduction Ʒእໜ pK
+ ƴƓƍƯƸŴƦƷእ
+৑ྸᛯƔǒဃơǔ‘ʈඥႎƳᢿЎ፭ǹǭȸȠ’Ʊ ɟᐲƠƳƍ
+ŵ
+ƑƯǈǔ
+ᙲƕƋǔŵ ኽᛯƔǒƍƏ
+ƱŴ ‘ദƠƍᙻໜ’ƔǒƳƬƯƍǔᲴ
+(i)ƱƠƯƍƨᨼӳᛯႎƳ‘ܢ
+ܬ’ƴƓƍƯನ঺ƢǔƜƱǛ ƻƱǇƣ᛹Ǌ
+ܬܢ
+ƴƓƚǔŴ
+ᝋƨƪE, F , K ሁƷ ǳȔȸ
+E⊚, F⊚, K⊚ƢǔʈඥႎᢿЎ፭ǹǭȸ
+ȠƷನ঺ǛႸਦƢŵ
+(ii)ƷK ƷŴ pF ƷɥƷእໜƨƪpKƷK⊚ Ʒ base-
+point Ǜ parametrize ƢǔǋƷƱᙸǔŵ
+ƭǇǓŴɟᚕưƍƏƱŴK Ʒ basepoint ǛѣƔƢ
+ưƋǔŵѣƔƢƜƱƴ
+ƴƓƚǔ LKƷ (LK )⊚ႎƳˮፗ
+ƕᆆѣ
+ƢǔƜƱƴǑƬƯŴ
+žpK ƕᘙƠƯƍǔK⊚ Ʒ basepoint ƔǒŴ LKƢǔ(LK )⊚ Ǜ჏ǊƯ
+ǈǔƱŴƦƷ(LK )⊚ ƸŴᲢ∀ pKƴʈඥႎ
+ƴƳǔŵſ
+ƸŴƋǔॖԛưƸžӷ
+ྵƢǔƜƱƕưƖǔŵ
+§2. anabelioid Ʊ core
+ƱƠƯϼྸƢǔƨǊ
+ƱƳǔૼ২ᘐƸŴ‘anabelioid’
+ƷྸᛯưƋǔŵ
+‘anabelioid’ƱƸŴ§1ᝋ
+Ʒ
+ᝋƸŴǹǭȸȠƱᢌƍŴtoposח
+ưƋǔƨǊŴ an-
+abelioid μ˳Ʒ ‘ח’ƱƍƏǋƷƸŴ2-category ƴƳƬƯƠǇƏŵᡲኽƳƱƖƸŴanabe-
+lioid Ƹ [SGA1]Ƣǔ ‘Galois category’ˌɥƷഭӪǛਤƭ
+ᬘ௨ǈขƍǋƷƱӷơưƋǔŵƭǇǓŴᡲኽƳanabelioid ƸŴ ∃ иஊᨂ፭ GƠƯ
+B(G)
+def
+= {Gח}
+ƷƜƱưƋǔŵ
+anabelioid ႎƳᙻໜƕ[SGA1] ሁƴˊᘙƞǕǔӞχႎƳǋƷƱஇǋஜឋႎƴီƳǔ
+ƱƜǖƸŴ ᲢஊᨂഏᲣǨǿȸȫᘮᙴ
+ƷৢƍưƋǔŵӞχႎƳྸᛯưƸŴ̾КƷǨǿȸȫ
+ƳƲƸŴ ɟƭƷൿǇƬƨGalois category
+ ƴ
+ƢǔǋƷƱƠƯৢǘǕǔŵƜƷ Galois category໱ŴৢƬƯƍǔ ƢǂƯƷ
+ǨǿȸȫᘮᙴƷɦ
+ᝋᲣƴ˄᨟ƢǔǋƷưƋǔŵɟ૾Ŵan-
+abelioid ƷྸᛯưƸŴanabelioidᝋƱǈƳƢƨǊŴᲢஜஹŴʝ
+ƍƴμƘ᧙̞ƷƳƍŴᡲኽƳanabelioid X , Y, ZƠƯᲣ
+
+ANABELIOIDܖ3
+Z
+↙↘
+XY
+Ჷ‘correspondence’ƣƠ
+ƠƳƍ
+ᝋƱƠƯƍǔŴ
+ƠƯŴ
+Z
+↙↘
+XY
+↘↙
+C
+ƢǋƷƱ
+ƠƯ uniqueǛႆဃƢǔᲢX , Y, Z ƴǑǒƳƍᲣCƢǔƱƍ
+ƏཞඞƸŴ ಊǊƯཎഷ
+ưƋǔŵanabelioid ƷྸᛯưƸŴƜƷǑƏƳC ƷƜƱǛŴcore
+ƱԠƿŵcore ƱƳǔ anabelioidឋƱƠƯŴ
+žcore ƴƸŴ basepointɥ ɟƭƠƔƳƍ
+ſ
+ƬƯŴ§1 ƷᜭᛯƷǑƏƴŴѣƘbasepoint ǛৢƍƨƍƱƖŴžbasepoint
+ƳƍſcoreƢǔſƜƱƴǑƬƯŴ ѣƘ૾Ʒbasepointƴ
+ƴሥྸᲢႳᙻᲹᲣƢǔ
+ƜƱƕưƖǔŵƭǇǓŴcore ƸŴžbasepoint Ʒ
+Ƣǔ కϋ̞
+лǛௐƨƢƷưƋǔŵ
+§3. ૠᛯႎƳ anabelioid Ʒ̊
+§2 ƷɟᑍᛯǛᢘဇƢǔƨǊƴƸŴᲢ§1ᨥƴᐻԛǛਤƬƯƍ
+Ʒcoreſ
+ƸŴ
+coreƷவˑǛŴᲢ[SGA1]ஜ፭
+Ǜ̅ƬƯφ˳ႎƴ୿ƖɦƠ
+ƯǈǔƱŴƦƷவˑƸŴ
+ᢒǢȸșȫ (anabelianࣱ
+ƭǇǓŴƍǘǏǔᲢˊૠႎ୺ዴƴ᧙ƢǔᲣ žGrothendieck ʖेſ
+ Ტ[Mzk4], Introduc-
+tionƬƯŴžcore Ǜ੕Ƣſ
+ƱƍƏƜƱƸŴžGrothendieckྸƕჷǒǕƯƍǔǋƷǛ੕ƢſƜƱǛ
+ॖԛƢǔƷưƋǔŵ
+GrothendieckӳƸŴ ૠ˳
+Ŵ
+ұƪŴஊྸૠ˳ QӳŴSpec(Q) ƷஊᨂഏǨǿȸȫ
+ח
+
+4ૠྸᚐௌᄂᆮ৑Უ
+´Et(Q)
+ƱƍƏ anabelioid ƸŴˊૠႎૢૠᛯƷžNeukirch-UchidaྸᲢ[NSW], Chapter
+XII, §2 ǛӋༀᲣǑǓŴcoreƬƯŴ˓ॖƷૠ˳FƠƯŴQǛย
+ǔƜƱƴǑƬƯŴƦǕƴ˄᨟Ƣǔanabelioid Ʒ basepointƷཞඞƕЎƔǔŵ
+φ˳ႎƴƸŴૠ˳ FӳŴƪǐƏƲ[F : Q] ̾ƷŴஜឋႎƴႻီƳǔbasepoint ƕ
+ƢǔƷưƋǔŵ
+ૠ˳ɥƷӑ୺ႎˊૠ୺ዴ
+ƠƯǋŴGrothendieckǒǕƯƍǔ
+Ტ[Tama], [Mzk4]ႎƳ
+ǋƷǛᨊƚƹƢǂƯƷƦƏƍƏ୺ዴ—[ M z k 2 ] ǛӋༀᲣǋcore ƱƳǔŵ§1 ƷᜭᛯƱƷ
+ǒǕǔӑ୺ႎ୺ዴƸŴ
+Ტ±1ǛᨊƍƯƜƷǑƏƳǋƷƴƳǔƷưŴ˄᨟Ƣ
+ǔ anabelioid Ƹ core ƴƳǔŵ
+ɟ૾Ŵ p৑˳
+ᲢᲷ QpӳŴཞඞƸƩƍƿᢌƏƷưƋǔŵǇ
+ƣŴžNeukirch-UchidaƸദƠƘƳƍƜƱƕჷǒǕƯƍǔ
+Ƴ˄ьನᡯ
+ǛλǕǕƹŴžNeukirch-UchidaྸƱӷ
+ྸƕ঺ǓᇌƭƜƱƸჷǒǕƯƍǔᲢ[Mzk5] Უŵ
+ƴŴp৑˳ɥƷӑ୺ႎˊૠ୺ዴ
+ӳƩƕŴཞඞƸǇƨɟെƱᙐᩃƴƳǔŵ
+ႎ
+ƷᲣGro-
+thendieckྸƸჷǒǕƯƍǔᲢ[Mzk4]ႎ
+Ƴ
+ޅ
+৑˳ɥƷӑ୺ႎˊૠ୺ዴƴ˄᨟ƢǔanabelioidưৢƏƱƍƏƜƱƸŴ
+ᲢǑƘჷǒǕƯƍǔᲣQp Ʊ Fp((t)) ᲢƨƩƠŴtΨᲣƷ᫏˩ưᚕƑƹŴFp((t))
+ૠƷt ƕ
+Ŵ
+t ↦→
+∑
+n≥ 1
+an · tn
+ᲢƨƩƠŴan ∈ Fp, a1 ̸=0 ᲣƱƍƏƾƏƴѨ৖ƴѣƘ
+ǑƏƳཞඞƷɦưৢƏƜƱƴ
+ႎƳGrothen-
+dieckӳƸŴ բ᫆Ʒ୺ዴƕŴFpૠ
+፯ƞǕƯƍǔ
+ႎ
+Ƴ GrothendieckưᲣஇǋ̊Ʒ
+ӳƸŴբ᫆Ʒ୺ዴƕŴᲢ[Mzk1]ƢǔǑƏƳᲣcanonical Ƴਤƪɥƛ
+ƱƳ
+ӳưƋǔŵ
+૨ྂ
+[Mzk1] S. Mochizuki, A Theory of Ordinary p-adic Curves, Publ. of RIMS 32 (1996),
+pp. 957-1151.
+[Mzk2] S. Mochizuki, Correspondences on Hyperbolic Curves, Journ. Pure Appl. Al-
+gebra 131 (1998), pp. 227-244.
+
+ANABELIOIDܖ5
+[Mzk3] S. Mochizuki, The Proﬁnite Grothendieck Conjecture for Closed Hyperbolic
+Curves over Number Fields, J. Math. Sci., Univ. Tokyo 3 (1996), pp. 571-627.
+[Mzk4] S. Mochizuki, The Local Pro-p Anabelian Geometry of Curves, Inv. Math. 138
+(1999), pp. 319-423.
+[Mzk5] S. Mochizuki, A Version of the Grothendieck Conjecture for p-adic Local Fields,
+The International Journal of Math. 8 (1997), pp. 499-506.
+[Mzk6] S. Mochizuki, Global Anabelian Geometry in the Hodge-Arakelov Theory of
+Elliptic Curves, manuscript in preparation.
+[Mzk7] S. Mochizuki, Crystalline Anabelian Geometry in the Hodge-Arakelov Theory
+of Elliptic Curves, manuscript in preparation.
+[NSW] J. Neukirch, A. Schmidt, K. Wingberg, Cohomology of number ﬁelds, Grundlehren
+der Mathematischen Wissenschaften 323, Springer-Verlag (2000).
+[SGA1] Revˆetement ´etales et groupe fondamental,S ´eminaire de G´eometrie Alg´ebrique
+du Bois Marie 1960-1961 (SGA1), dirig´ e par A. Grothendieck, augment´ ed e
+deux expos´es de M. Raynaud, Lecture Notes in Mathematics 224, Springer-
+Verlag (1971).
+[Tama] A. Tamagawa, The Grothendieck Conjecture for Aﬃne Curves , Compositio
+Math. 109, No. 2 (1997), pp. 135-194.

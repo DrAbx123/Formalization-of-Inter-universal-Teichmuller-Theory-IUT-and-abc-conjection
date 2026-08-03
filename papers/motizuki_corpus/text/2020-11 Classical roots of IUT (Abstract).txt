@@ -1,0 +1,22 @@
+Classical Roots of Inter-universal Teichmüller Theory
+Abstract: New advances in mathematics are often portrayed as the ultimate outcome of a 
+strictly linear march, i.e., as the erection of a towering edifice, floor by floor, building on 
+the advances of the state of the art of the previous generation. On the other hand, some 
+advances in mathematics occur in such a way as to bear little resemblance to nearby 
+generations, while sporting a somewhat striking "atavistic" resemblance to generations of 
+the distant past. The present talk will focus on exposing the fundamental conceptual 
+framework of inter-universal Teichmüller theory as a natural, albeit somewhat novel, 
+outgrowth of mathematics that dates back partly to the 1980's (Faltings' invariance of the 
+height of abelian varieties with respect to isogeny), partly to the 1960's (Grothendieck's 
+theory of crystals), partly to the 1930's (classical complex Teichmüller theory), and partly 
+to the nineteenth century (the Jacobi identity for the theta function on the upper half-
+plane). Just as it is entirely unrealistic to attempt to understand the notion of a Weil 
+cohomology (such as étale cohomology) without first achieving an adequate level of 
+understanding of the notion of singular cohomology in algebraic topology, it is 
+substantially unrealistic to attempt to appreciate the central ideas of inter-universal 
+Teichmüller theory in the absence of a solid grasp of the common thread — consisting of a 
+certain common underlying logical structure — that permeates the (at first glance) 
+somewhat disparate theories listed above (i.e., invariance of the height by isogeny, 
+crystals, classical complex Teichmüller theory, and the functional equation of the theta 
+function). This common underlying logical structure will form the central theme of the 
+present talk.

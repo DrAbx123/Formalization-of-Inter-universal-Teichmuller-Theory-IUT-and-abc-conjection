@@ -1,0 +1,315 @@
+COMMENTS ON “SEMI-GRAPHS OF ANABELIOIDS”
+Shinichi Mochizuki
+May 2020
+(1.) In the third sentence of Example 2.10, the phrase “Now observe that a hyper-
+bolic Riemann surface of ﬁnite type” should read“Now observe that a hyperbolic
+Riemann surface of ﬁnite type of genus≥1”.
+(2.) With regard to the proof of Corollary 3.11:
+(i) In the ﬁrst line of the proof, it should be stipulated that the set Σ be
+nonempty.
+(ii) The phrase “as in (ii)”in line 2 of observation (iv) should read“as in
+(iii)”.
+(iii) A more detailed version of the argument used to verify observation (iv) is
+given in [AbsTopII], Corollary 2.11.
+(3.) In the discussion of the“pro-Σversion” of Corollary 3.11in Remark 3.11.1,
+one shouldassume that pα,pβ∈Σ.
+In fact, this assumption is, in some sense,implicit in the phraseology that appears
+in the ﬁrst two lines of Remark 3.11.1, but it should have been statedexplicitly.
+(4.) Note that in Theorem 5.4, the case where A is trivial [i.e., is equal to the
+anabelioid associated to thetrivial group{1}]i snot excluded. Thus, suppose that,
+in Theorem 5.4, we assume further thatA is trivial. Then let usobserve that this
+implies that the underlying graph ofG [orH] consists of asingle vertexandno edges.
+[Indeed, if the underlying graph ofG has at least one edge, then sinceG is assumed
+to betotally elevated, it follows from the assumption thatG is totally arithmetically
+estranged [cf. Deﬁnition 5.3, (ii)] that Πtemp
+G admits a closed subgroup thatfails
+to be arithmetically ample, hence that ΠA = {1} contains a closed subgroup which
+is not open—a contradiction.] Thus, Πtemp
+G itself is averticial subgroupof Πtemp
+G ,
+hence compact. In particular, Πtemp
+G is the unique maximal compact subgroupof
+Πtemp
+G , so assertions (i), (ii), and (iii) of Theorem 5.4 are, in essence,vacuous.
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+(5.) In the line 2 of Example 5.6, the phrase “Also, Suppose...” should read “Also,
+suppose...”. In lines 7–8 of Example 5.6, one should also assume thatMi was
+chosen so that the resulting Galois action on the dual semi-graph with compact
+structure of the special ﬁber of the stable model is trivial [i.e., so as to ensure
+that the assumption of Theorem 5.4 concerning switching the branches of edges is
+satisﬁed].
+(6.) Some readers may ﬁnd the argument given in the third and fourth paragraphs
+of the proof of Theorem 3.7, (iii), to be a bit confusing in its brevity. A more
+detailed argument may be given as follows. Fori ∈I,l e tu sw r i t e
+Vi, Ei
+for the sets ofvertices and closed edges, respectively, ofGi,∞ that areﬁxed by the
+action ofH.T h u s ,f o ri ≥j ∈I,w eh a v en a t u r a lm a p sVi → Vj, Ei → Ej;l e tu s
+write
+Ej,i ⊆Ej
+for the image ofEi in Ej.T h u s ,f o ri1,i 2 ∈I such thati1 ≥i2,w eh a v eEj,i1 ⊆
+Ej,i2 ⊆ Ej. Also, we recall that, by the argument given in the second paragraph
+of the proof, we have #Vi ≥ 1 [where we use the notation “#” to denote the
+cardinality of a set], for alli ∈I. For simplicity, in the following, we assume that
+the semi-graph Gi is untangled, for alli ∈I.N o w :
+(a) Suppose that for some coﬁnal subsetJ ⊆I,w eh a v e#Vj = 1, for all
+j ∈J. Then the unique elements of theVj,f o rj ∈J,f o r macompatible
+system of vertices ﬁxed byH. Thus, we conclude thatH is contained in
+some verticial subgroupof πtemp
+1 (G).
+(b) Suppose that for some coﬁnal subsetJ ⊆I,w eh a v e#Vj ≥2, for all
+j ∈J. Then it follows from Lemma 1.8, (ii), (b), that #Ej ≥1, for all
+j ∈J.N o wIclaim that for eachj ∈J, the following condition holds:
+(∗j) there exists ani ∈J such thati ≥j and #Ej,i =1 .
+Indeed, suppose that (∗j) fails to hold.T h e nf o re a c hi ≥j in J,t h e r e
+exists a pair ofdistinct edgesei,e′
+i ∈Ei whose respective imagesej,i,e′
+j,i ∈
+Ej are distinct. By Lemma 1.8, (ii), (b), we may assume without loss of
+the generality that the pair{ei,e′
+i}, hence also the pair{ej,i,e′
+j,i}, forms a
+subjoint.T h e ns i n c eGj is untangled, it follows that the respective images
+fj,i,f′
+j,i ofej,i,e′
+j,i in Gj alsoforma subjoint.W r i t efi,f′
+i fortherespective
+images ofei, e′
+i in Gi. Thus, it follows from the fact that the pair (fj,i,f ′
+j,i)
+forms a subjoint (of Gj) that the pair (fi,f ′
+i) forms a subjoint (of Gi).
+Moreover, for some coﬁnal subsetJ∗ ⊆J,t h es u b j o i n t s(fi,f ′
+i), where
+i ∈J∗, converge, in the proﬁnite topology, to someproﬁnite subjoint.A s
+discussed in the third paragraph, this leads to acontradiction, in light of
+our assumption thatG is totally estranged. This completes the proof of
+the claim. Now it follows from (∗j)t h a te a c ho ft h enonempty sets Ej,i,
+
+COMMENTS ON “SEMI-GRAPHS OF ANABELIOIDS” 3
+for i,j ∈J such thati is “suﬃciently large”relative toj, is of cardinality
+1. But this implies that each intersection
+Ej,∞
+def
+=
+⋂
+i≥j
+Ej,i
+is of cardinality 1. Thus, the unique elements of theEj,∞,f o rj ∈J, form
+a compatible system of closed edges ﬁxed byH. In particular, we conclude
+that H is contained in someedge-like subgroup, hence also intwo distinct
+verticial subgroups,o fπtemp
+1 (G).
+(c) Now it follows formally from (a), (b) thatH is always contained insome
+verticial subgroupof πtemp
+1 (G). If H is contained inthree distinct verticial
+subgroups, then it follows immediately from Lemma 1.8, (ii), (b), that one
+obtains a contradiction to the condition (∗j) of (b). This completes the
+proof of assertion (iii) of Theorem 3.7.
+(7.) In Proposition 4.4, (ii), the notation “G” should read “G”.
+(8.) In the context of Theorem 4.8, it should be observed thatGi is assumed to
+be a graph [i.e., not an arbitrary semi-graph!] of anabelioids. Also, it should be
+observed that it follows immediately from the assumption thatGi is totally aloof,
+together with the deﬁnition of the categoryLoc(Gi,Γi), that the map induced on
+branches of underlying semi-graphs by a locally trivial morphism ofLoc(Gi,Γi)i s
+completely determinedby the map induced [by the morphism under consideration]
+on vertices of underlying semi-graphs.
+(9.) The assertion stated in the second display of Remark 2.4.2 isfalse as stated.
+[The automorphisms of the semi-graphs of anabelioids in Example 2.10 that arise
+from “Dehn twists”constitute a well-known counterexample to thisassertion.] This
+assertion should be replaced by the following slightly modiﬁed version of thisas-
+sertion:
+The isomorphism classes of theφv completely determine the isomorphism
+c l a s so fe a c ho ft h eφe, as well as each isomorphismφb, up to composi-
+tion with an automorphism of the composite 1-morphism of anabelioids
+Ge →H f →H w that arises from an automorphism of the 1-morphism of
+anabelioids Ge →H f.
+Also, in thediscussion following thisassertion [as well as the various places where
+this discussion is applied, i.e., Remark 3.5.2; the second paragraph of§4; Deﬁnition
+5.1, (iv)], it is necessary to assume further that the semi-graphs of anabelioids that
+appear satisfy the condition thatevery edge abuts to at least one vertex.
+(10.) The phrase “isGalois” at the end of the ﬁrst sentence of the proof of Propo-
+sition 3.2 should read “is a countable coproduct ofGalois objects”.
+
+4 SHINICHI MOCHIZUKI
+(11.) In the ﬁrst sentence of Deﬁnition 3.5, (ii), the phrase “Suppose that” should
+read “Suppose that each connected component of”; the phrase “splitsthe restriction
+of” should read “splits the restriction of this connected component of”.
+(12.) Certain pathologies occur in the theory of tempered fundamental groups if
+one does not impose suitablecountability hypotheses.
+(i) In order to discuss these countability hypotheses, it will be convenient to
+introduce someterminology as follows:
+(T1) We shall say that a tempered group is Galois-countable if its topol-
+ogy admits a countable basis. We shall say that a connected temperoid
+is Galois-countable if it arises from a Galois-countable tempered group.
+We shall say that a temperoid isGalois-countable if it arises from a col-
+lection of Galois-countable connected temperoids. We shall say that a
+connected quasi-temperoid isGalois-countable if it arises from a Galois-
+countable connected temperoid. We shall say that a quasi-temperoid is
+Galois-countableif it arises from a collection of Galois-countableconnected
+quasi-temperoids.
+(T2) We shall say that a semi-graph of anabelioidsG is Galois-countable if it
+is countable, and, moreover, admits a countable collection of ﬁnite ´etale
+coverings {Gi →G }i∈I such that for any ﬁnite ´etale covering H→G ,
+there exists ani ∈I such that the base-changed coveringH× G Gi →G i
+splits over the constituent anabelioid associated to each component of [the
+underlying semi-graph of]Gi.
+(T3) We shall say that a semi-graph of anabelioidsG is strictly coherentif it
+is coherent [cf. Deﬁnition 2.3, (iii)], and, moreover, each of the proﬁnite
+groups associated to components c of [the underlying semi-graph of] G
+[cf. the ﬁnal sentence of Deﬁnition 2.3, (iii)] istopologically generated by
+N generators, for some positive integerN that is independent of c.I n
+particular, it follows that if G is ﬁnite and coherent,t h e ni ti sstrictly
+coherent.
+(T4) One veriﬁes immediately that every strictly coherent, countable semi-
+graph of anabelioids isGalois-countable.
+(T5) One veriﬁes immediately that if, in Remark 3.2.1, one assumes in addi-
+tion that the temperoidX is Galois-countable, then it follows that its as-
+sociated tempered fundamental groupπtemp
+1 (X)i swell-deﬁned and Galois-
+countable.
+(T6) One veriﬁes immediately that if, in the discussion of the paragraph
+preceding Proposition 3.6, one assumes in addition that the semi-graph
+of anabelioids G is Galois-countable, then it follows that its associated
+tempered fundamental groupπtemp
+1 (G)a n dtemperoid Btemp(G)a r ewell-
+deﬁned and Galois-countable.
+Here, we note that, in (T5) and (T6), theGalois-countability assumption is nec-
+essary in order to ensure that the index sets of“universal covering pro-objects”
+
+COMMENTS ON “SEMI-GRAPHS OF ANABELIOIDS” 5
+implicit in the deﬁnition of thetempered fundamental groupmay to be taken to
+be countable. This countability of the index sets involved implies that the various
+objects that constitute such a universal covering pro-object admit acompatible sys-
+tem of basepoints, i.e., that theobstruction to the existence of such a compatible
+system — which may be thought of as an element of a sort of “nonabelianR1 lim←−”
+— vanishes. In order to deﬁne the tempered fundamental group in an intrinsi-
+cally meaningful fashion, it is necessary to know the existence of such a compatible
+system of basepoints.
+(ii) The eﬀectsof the omission of Galois-countability hypothesesin §3o nt h e
+remainder of the present paper, as well as on subsequent papers of the author, may
+be summarized as follows:
+(E1) First of all, we observe that all topological subquotients ofabsolute Galois
+groups of ﬁelds of countable cardinalityare Galois-countable.
+(E2) Also, we observe that ifk is a ﬁeld whose absolute Galois group isGalois-
+countable,a n dU is a nonempty open subscheme of a connected proper
+k-scheme X that arises as the underlying scheme of a log scheme that is
+log smooth overk [where we regard Spec(k) as equipped with the trivial
+log structure], and whose interior is equal toU, then thetamely ramiﬁed
+arithmetic fundamental groupof U [i.e., that arises by considering ﬁnite
+´etale coverings ofU with tame ramiﬁcation over the divisors that lie in
+the complement ofU in X] is itselfGalois-countable [cf., e.g., [AbsTopI],
+Proposition 2.2].
+(E3) Next, we observe, with regard to Examples 2.10, 3.10, and 5.6, that
+the tempered groups and temperoids that appear in these Examples are
+Galois-countable[cf. (E1), (E2)], while the semi-graphs of anabelioids that
+appear in these Examples arestrictly coherent[cf. item (T3) of (i)], hence
+[cf. item (T4) of (i)]Galois-countable. In particular, there isno eﬀecton
+the theory of objects discussed in these Examples.
+(E4) It follows immediately from (E3) that there isno eﬀecton §6.
+(E5) It follows immediately from items (T3), (T4) of (i), together with the
+assumptions ofﬁniteness and coherencein the discussion of the paragraph
+immediately preceding Deﬁnition 4.2, the assumption ofcoherencein Def-
+inition 5.1, (i), and the assumption of Deﬁnition 5.1, (i), (d), that there
+is no eﬀecton §4, §5. [Here, we note that since the notion of atempered
+covering of a semi-graph of anabelioids is only deﬁned in the case where
+the semi-graph of anabelioids iscountable, it is implicit in Proposition 5.2
+and Deﬁnition 5.3 that the semi-graphs of anabelioids under consideration
+are countable.]
+(E6) There isno eﬀecton §1, §2, or the Appendix, sincetempered fundamental
+groups are never discussedin §1, §2, or the Appendix.
+(E7) IntheDeﬁnitions/Propositions/Theorems/Corollariesnumbered3.2, 3.3,
+3.4, 3.5, 3.6, 3.7, 3.8, 3.9, one must assume that all tempered groups, tem-
+peroids, and semi-graphs of anabelioids that appear areGalois-countable.
+
+6 SHINICHI MOCHIZUKI
+On the other hand, it follows immediately from (E1), (E2), and (E3) that
+there isno eﬀecton the remaining portions of§3.
+(E8) In [QuCnf] and [FrdII], one must assume that all tempered groups and
+[quasi-]temperoids that appear areGalois-countable.
+(E9) There is no eﬀecton any papers of the author other than the present
+paper and the papers discussed in (E8).
+(13.) In order to carry out the argument stated in the proof of Proposition 5.2,
+(i), it is necessary tostrengthen the conditions (c) and (d) of Deﬁnition 5.1, (i), as
+follows. This strengthening of the conditions (c) and (d) of Deﬁnition 5.1, (i), has
+no eﬀecteither on the remainder of the present paper or on subsequent papers of
+the author. Suppose thatG is as in Deﬁnition 5.1, (i). Then we begin by making
+the followingobservation:
+(O1) Suppose that G is ﬁnite.T h e nG admits a coﬁnal, countablecollection
+of connected ﬁnite ´etale Galois coverings{Gi →G }i∈I,e a c ho fw h i c hi s
+characteristic [i.e., any pull-back of the covering via an element of Aut(G)
+is isomorphic to the original covering]. [For instance, one veriﬁes immedi-
+ately, by applying theﬁniteness and coherenceof G, that such a collection
+of coverings may be obtained by considering, forn a positive integer, the
+compositeof all connected ﬁnite ´etale Galois coverings of degree≤n.] We
+may assume, without loss of generality, that this collection of coverings
+arises from aprojective system, which we denote by˜G. Thus, we obtain a
+natural exact sequence
+1 −→ Gal( ˜G/G) −→ Aut( ˜G/G) −→ Aut(G) −→ 1
+— where we write “Aut(˜G/G)” for the group of pairs ofcompatibleauto-
+morphisms of ˜G and G.
+This observation (O1) has the following immediate consequence:
+(O2) Suppose that we are in the situation of (O1). Consider, fori ∈I,t h e
+ﬁnite index normal subgroup
+Auti( ˜G/G) ⊆ Aut( ˜G/G)
+of elements of Aut(˜G/G) that induce theidentity automorphism on the
+underlying semi-graphGi of Gi, as well as on Gal(Gi/G). Then one veriﬁes
+immediately [from the deﬁnition of asemi-graph of anabelioids;c f .a l s o
+Proposition 2.5, (i)] that the intersection of the Auti( ˜G/G), for i ∈I,i s
+= {1}.T h u s , t h e A u ti( ˜G/G), for i ∈I, determine a natural proﬁnite
+topology on Aut(˜G/G) and hence also on the quotient Aut(G), which is
+easily seen to be compatible with the proﬁnite topology on Gal(˜G/G) and,
+moreover, independent of the choice of˜G.
+
+COMMENTS ON “SEMI-GRAPHS OF ANABELIOIDS” 7
+The new versionof the condition (c) of Deﬁnition 5.1, (i), that we wish to consider
+is the following:
+(cnew) The action of H on G is trivial; the resulting homomorphism H →
+Aut(G[c]), where c ranges over thecomponents [i.e., vertices and edges]
+of G,i s continuous [i.e., relative to the natural proﬁnite group topology
+deﬁned in (O2) on Aut(G[c])].
+It is immediate that (cnew) implies (c). Moreover, we observe in passing that:
+(O3) In fact, since H is topologically ﬁnitely generated [cf. Deﬁnition 5.1,
+(i), (a)], it holds [cf. [NS], Theorem 1.1] thatevery ﬁnite index subgroup
+of H is open in H. Thus, the conditions (c) and (c new) in fact hold
+automatically.
+The new versionof the condition (d) of Deﬁnition 5.1, (i), that we wish to consider
+is the following:
+(dnew)T h e r e i s aﬁnite set C∗ of components [i.e., vertices and edges] of G
+such that for every component c of G, there exists a c∗ ∈C∗ and an
+isomorphism of semi-graphs of anabelioidsG[c]
+∼
+→G [c∗]t h a ti scompatible
+with the action ofH on both sides.
+It is immediate that (dnew) implies (d). The reason that, in the context of the proof
+of Proposition 5.2, (i), it is necessary to consider thestronger conditions(cnew)a n d
+(dnew) is as follows. It suﬃces to show that, given aconnected ﬁnite ´etale covering
+G′ →G , after possibly replacingH by an open subgroup ofH, the action ofH on
+G lifts to an action onG′ that satisﬁes the conditions of Deﬁnition 5.1, (i). Such
+a lifting of the action ofH on G to an action on the portion ofG′ that lies over
+the vertices of G follows in a straightforward manner from theoriginal conditions
+(a), (b), (c), and (d). On the other hand, in order to conclude that such a lifting is
+[after possibly replacingH by an open subgroup ofH] compatible with the gluing
+conditions arising from the structure ofG′ over theedges of G, it is necessary to
+assume further that the“component-wise versions (cnew), (dnew)”of the original
+“vertex-wise conditions (c), (d)”hold. This issue is closely related to the issue
+discussed in (9.) above.
+(14.) In Deﬁnition 2.4, (iii), the phrase “underlying graph” should read “underlying
+semi-graph” (2 instances).
+(15.) Intheﬁrstsentenceofthefourthparagraphofthediscussionentitled“Curves”
+in §0, the notation “Dg,r ⊆Mg,r” should read “Dg,r ⊆Cg,r”.
+Bibliography
+[QuCnf] S. Mochizuki, Conformal and quasiconformal categorical representation of hy-
+perbolic Riemann surfaces,Hiroshima Math. J.36 (2006), pp. 405-441.
+
+8 SHINICHI MOCHIZUKI
+[FrdII] S. Mochizuki, The Geometry of Frobenioids II: Poly-Frobenioids,Kyushu J.
+Math. 62 (2008), pp. 401-460.
+[AbsTopI] S. Mochizuki, Topics in Absolute Anabelian Geometry I: Generalities,J. Math.
+Sci. Univ. Tokyo19 (2012), pp. 139-242.
+[AbsTopII] S.Mochizuki,TopicsinAbsoluteAnabelianGeometryII:DecompositionGroups
+and Endomorphisms,J. Math. Sci. Univ. Tokyo20 (2013), pp. 171-269.
+[NS] N. Nikolov and D. Segal, Finite index subgroups in proﬁnite groups,C. R.
+Math. Acad. Sci. Paris337 (2003), pp. 303-308.

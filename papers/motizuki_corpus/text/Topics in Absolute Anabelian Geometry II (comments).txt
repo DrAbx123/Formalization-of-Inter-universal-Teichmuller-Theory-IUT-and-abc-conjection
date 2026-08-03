@@ -1,0 +1,69 @@
+COMMENTS ON “TOPICS IN
+ABSOLUTE ANABELIAN GEOMETR Y II:
+DECOMPOSITION GROUPS AND ENDOMORPHISMS”
+Shinichi Mochizuki
+January 2024
+(1.) In the situation of Example 3.2, (ii) [cf. also Corollaries 3.3, 3.4], we observe
+that it follows immediately from thek-coricitycondition in Deﬁnition 3.1, (a), that
+the open subscheme [i.e., strictly speaking, open substack] UX ⊆ X is completely
+determined by the positive integerN and, in particular,independent of the choice
+of ﬁnite ´etale coverings V → X, V → D. In fact, this independence isimplicit in
+the statement of Corollary 3.4.
+(2.) In the statement of Corollary 3.4, the phrase “pro-ﬁnite ´etale covering of
+X” should read “pro-ﬁnite ´etale covering of Xi”.
+(3.) In the Π-chain discussed in Corollary 3.7, (a), it is to be understood that
+the proﬁnite group “Πj” [cf. the notational conventions of [AbsTopI], Deﬁnition
+4.2, (iii)] that corresponds to theinput datum for the ﬁnal “⋏” in the associated
+type-chain — i.e., the proﬁnite group that corresponds to the copy of the projective
+line minus three points “P” of Example 3.6, (ii) — is such that
+· the corresponding “geometric fundamental group Δ
+j” [cf. the notational
+conventions of [AbsTopI], Deﬁnition 4.2, (iii)] is aproﬁnite free group of
+rank 2;
+· the set ofconjugacy classes of cuspidal decomposition groups in Δj is of
+cardinality 3
+— i.e., such that Πj does indeed correspond to a copy of the projective line minus
+three points [cf. [AbsTopI], Lemma 4.1, (iv); [AbsTopI], Lemma 4.5, (v)]. Note
+that, by [AbsTopI], Lemma 4.5, (v), these conditions on Π
+j are entirely group-
+theoretic. Although these conditions were not stated explicitly in Corollary 3.7,
+(a), they were intended to be implicit in the phrase “which admits an entirely
+‘group-theoretic’ description”, together with the reference given in Corollary
+3.7, (a), to Example 3.6, (ii).
+(4.) In the ﬁnal paragaraph of the proof of Corollary 2.10, the text “totally ramiﬁed
+at precisely one closed point but unramiﬁed elsewhere” should read “totally ramiﬁed
+at some closed point”.
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+(5.) In the second to last sentence of the Introduction, the word “notatable” should
+read “notable”.
+(6.) In item (b) of the proof of Proposition 1.3, (viii), the notation “C
+def
+=” should
+be replaced by “C =”.
+(7.) In the second sentence of the proof of Proposition 2.5, (vi), the notation “Vx”
+should be replaced by “V x”.
+(8.) In the ﬁfth sentence of the proof of Proposition 2.5, (xi), the notation “W log →
+V log” should be replaced by “W log
+• → V log
+• ”.
+(9.) In the proof of Lemma 2.6, the phrase“totally wildly ramiﬁed” is to be un-
+derstood as referring to a situation in which one considers a ﬁnite extension ﬁeld
+of the ring of fractions of a discrete valuation ringO such that the integral closure
+O
+′ of O in the ﬁnite extension ﬁeld is itself a discrete valuation ring whose residue
+ﬁeld is apurely inseparable extension of the residue ﬁeld ofO.
+(10.) In items (c), (d) at the beginning of the proof of Lemma 2.6, (iv), the notation
+“C” should be replaced by “CW”.
+(11.) In the text immediately following the ﬁnal display in the proof of Corollary
+2.9, the phrase “inH1(Gki ,T i) with the image ofH1(Gki ,T ′
+i) of” should read “in
+H1(Gki ,T i), with the image ofH1(Gki ,T ′
+i), of”.
+
+COMMENTS ON “TOPICS IN ABSOLUTE ANABELIAN GEOMETRY II” 3
+Bibliography
+[AbsTopI] S. Mochizuki, Topics in Absolute Anabelian Geometry I: Generalities,J. Math.
+Sci. Univ. Tokyo 19 (2012), pp. 139-242.

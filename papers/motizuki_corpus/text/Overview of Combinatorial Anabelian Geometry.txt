@@ -1,0 +1,190 @@
+OVERVIEW OF COMBINATORIAL
+ANABELIAN GEOMETRY I, II, III
+Shinichi Mochizuki (RIMS, Kyoto University)
+July 2021
+http://www.kurims.kyoto-u.ac.jp/~motizuki
+“Travel and Lectures”
+T0. Semi-graphs of anabelioids
+T1. Motivation from diﬀerential topology and arithmetic
+T2. Combinatorial anabelian results
+T3. Combinatorial cuspidalization and “FC = F” results
+T4. Arithmetic applications of combinatorial cuspidalization over number
+ﬁelds and mixed-characteristic local ﬁelds
+T5. Synchronization of cyclotomes, proﬁnite Dehn twists, and geometric
+monodromy anabelian results
+T6. Tripod synchronization and the tripod homomorphism
+T7. StructuretheoryandarithmeticsubgroupsoftheGrothendieck-Teichm¨ uller
+group
+
+2 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+T0. Semi-graphs of anabelioids
+(cf. [GeoAn], [SemiAn], [CbGC])
+· Anabelioids ([GeoAn]): can consider
+ﬁnite ´etale coverings without specifying basepoints!
+· [SemiAn], §1, §2, §3; [CbGC],§1:
+semi-graphs of anabelioids (of PSC-type) ;
+ﬁnite ´etale and temperedcoverings
+· [SemiAn], Thm. 1.2, Cor. 1.6:Zariski’s main theorem for ﬁnite
+semi-graphs
+(∀immersion) = (∃ﬁnite ´etale covering)◦(∃embedding)
+(e.g., ∀ﬁnitely generated subgroup of a free group
+of ﬁnite rank “almost” arises from asubbasis!)
+· [SemiAn], Lem. 1.8: ﬁnite groups acting on trees
+ﬁxed point locus isnonempty, simply connected
+· [SemiAn], §2; [CbGC], Prop. 1.2:verticial/edge-like s/gps.
+satisfy commensurable terminality and independenceproperties
+· [SemiAn], Thm. 3.7:∀semi-graph of anabelioids of PSC-type,
+{maximal compact s/gps.} = {verticial s/gps.};
+{nontriv. ∩’s of distinct max. comp. s/gps. } = {edge-like s/gps.}
+· [SemiAn], Cor. 3.11, Thm. 6.6:∀hyp. curve /ﬁn. extn. of Qp,
+geometric tempered fundamental group
+⇝ semi-graph of special ﬁber
+... in particular, temp. fund. gp. ⇐⇒
+´et. fund. gp. + special ﬁber semi-graphs of ﬁn. et. covs.
+
+OVER VIEW OF COMBINATORIAL ANABELIAN GEOMETRY I, II, III 3
+T1. Motivation from diﬀerential topology and arithmetic
+(cf. [SemiAn], [CbCsp])
+· Semi-graphs of anabelioids and conﬁguration spaces
+· The Dehn-Nielsen-Baer Theorem
+· The cuspidalization problem (complete solution in discrete case)
+· Anabelian encoding of base ﬁeld ring structure in a tripod
+
+4 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+T2. Combinatorial anabelian results
+(cf. [CbGC], [NodNon], [CbTpIII])
+· Combinatorial Groth. Conj.-type results and cuspidalization
+· [CbGC], Cor. 2.7(i)(iii): IPSC to IPSC:
+gp.-theoretically cuspidal =⇒ graphic
+· [NodNon], Thm. A: NN to NN:
+gp.-theoretically cuspidal ∧∃at least one cusp =⇒ graphic
+· [CbTpII], Thm. 1.9: IPSC to NN:
+gp.-theoretically verticial, nodal
+
+OVER VIEW OF COMBINATORIAL ANABELIAN GEOMETRY I, II, III 5
+T3. Combinatorial cuspidalization and “FC = F” results
+(cf. [CbCsp], [NodNon], [CbTpI], [CbTpII], [HMT])
+· [NodNon], Cor. 6.5: Complete solution in discrete case∀n ≥1:
+OutFC(Πn+1)
+∼
+→ OutFC(Πn)
+· [NodNon], Thm. B: proﬁnite/pro-l case:
+OutFC(Πn+1) → OutFC(Πn)
+injective if n ≥1, bijective if n ≥3 (aﬃne) orn ≥4 (proper)
+· [CbTpI], Thm. A: proﬁnite/pro-l case:
+OutF(Πn+1) → OutFC(Πn)( ⊆OutF(Πn))
+· [CbTpII], Thm. A(i): proﬁnite/pro-l case:
+OutF(Πn+1) → OutF(Πn)
+injective if n ≥1 (aﬃne) orn ≥2( p r o p e r ) ,
+bijective if n ≥3 (aﬃne) orn ≥4 (proper)
+· [CbTpII], Thm. A(ii); [HMT], Cor. 2.2: proﬁnite/pro-l case:
+OutF(Πn)=O u tFC(Πn)
+if n ≥2 (genus 0) orn ≥3 (aﬃne) orn ≥4 (proper)
+
+6 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+T4. Arithmetic applications of combinatorial cuspidalization
+over number ﬁelds and mixed-characteristic local ﬁelds
+(cf. [NodNon], [CbTpIII])
+· [NodNon], Thm. C:X a hyperbolic curve overF an NF or MLF:
+GF → Out(Δ) injective
+(where 1→ Δ→ π´et
+1 (X) → GF → 1)
+· [CbTpIII], Thm. B(iii): X a hyperbolic curve overF an NF,
+p a nonarc. prime ofF:
+Gp = GF ∩OutM(Δ) (⊆ GT∩OutM(Δ)
+⊆ GT∩OutG(Δ) = Tsujimura’sp-adic version of GT)
+(where 1→ Δ→ π´et
+1 (X) → GF → 1)
+
+OVER VIEW OF COMBINATORIAL ANABELIAN GEOMETRY I, II, III 7
+T5. Synchronization of cyclotomes, proﬁnite Dehn twists, and
+geometric monodromy anabelian results
+(cf. [CbTpI])
+· Synchronization of cyclotomes : a sort of proﬁnite orientation
+(cf. [CbTpI], §3)
+· Proﬁnite Dehn twists :
+intrinsic deﬁnition, structure theorem, coordinates
+(cf. [CbTpI], §4, §5)
+· Pro-Σgeo. monodr. “GC” for(Mg,r)Q when(g,r) ̸=( 0,3); (1,1):
+ZOutC(Π)
+(
+open subgroup of Π(Mg,r)Q
+)
+=
+(
+scheme-theoretic aut. group of generic ﬁber
+)
+(cf. [CbTpI], §6)
+· Generalization to Hurwitz stacks
+
+8 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+T6. Tripod synchronization and the tripod homomorphism
+(cf. [CbTpII])
+· [CbTpII], Thm. C(i): Commensurator/centralizer
+CΠn(T)= T ×ZΠn(T)
+of a tripodT ⊆Πn; hence we have a natural homomorphism
+TT :O u tF(Πn)[T] → Out(T)
+· Central tripods: tripods emanating from thegeneric diag. cusp
+· [CbTpII], Thm. C(iv): if (Πn ↠)Π3 ⊇T is central,t h e nw e
+obtain the tripod homomorphism
+TT :O u tF(Πn)=O u tFC(Πn) ↠ GT (⊆Out(T))
+for n ≥3 (aﬃne) orn ≥4 (proper)
+(“↠ GT” requires theory ofgluing of cuspidalizations !)
+· Tripod synchronization: commutative diagram ofTT’s
+
+OVER VIEW OF COMBINATORIAL ANABELIAN GEOMETRY I, II, III 9
+T7. Structure theory and arithmetic subgroups of the
+Grothendieck-Teichm¨uller group
+(cf. [MT], [HMM], [HMT])
+· [HMM], Thm. A: reconstruction ofgeneralized ﬁber subgroups
+· [HMM], Thm. B: proﬁnite/pro-l case:
+Out(Πn)=O u tgF(Πn)× Sn∗
+for n ≥2a n d(g,r)s . t .(r,n) ̸=( 0,2).
+· [HMM], Thm. C: in proﬁnite/pro-l (cf. “Σ”) (0,3) case:
+for n ≥2,
+Out(Πn)=G TΣ× Sn+3; Sn+3 = Zloc(Out(Πn));
+GTΣ = ZOut(Πn)(Zloc(Out(Πn)))
+(also purely gp.-th. characterization + pf. of Sn+3 ⊆Out(Πn))
+· [HMT], Thm. A: for BGT⊆GT s.t. COF∧RGC:
+CGT(BGT) → GQBGT;
+· [HMT], Thms. B, F: for BGT⊆GT s.t. QAA:
+CGT(BGT) ↪→ GQBGT
+(e.g.: abs. Gal. gp. of TKND-A VKF-ﬁeld)
+· [HMT], Thm. C: GT⊇GQ is maximal AA closed s/gp.
+
+10 SHINICHI MOCHIZUKI (RIMS, KYOTO UNIVERSITY)
+References
+[GeoAn] S. Mochizuki, The Geometry of Anabelioids,Publ. Res. Inst. Math. Sci.
+40 (2004), pp. 819-881.
+[SemiAn] S. Mochizuki, Semi-graphs of Anabelioids,Publ. Res. Inst. Math. Sci.
+42 (2006), pp. 221-322.
+[CbGC] S. Mochizuki, A combinatorial version of the Grothendieck conjecture,
+Tohoku Math. J. 59 (2007), pp. 455-479.
+[MT] S. Mochizuki, A. Tamagawa, The algebraic and anabelian geometry of
+conﬁguration spaces, Hokkaido Math. J. 37 (2008), pp. 75-131.
+[CbCsp] S. Mochizuki, On the Combinatorial Cuspidalization of Hyperbolic
+Curves, Osaka J. Math. 47 (2010), pp. 651-715.
+[NodNon] Y. Hoshi, S. Mochizuki, On the Combinatorial Anabelian Geometry of
+Nodally Nondegenerate Outer Representations,Hiroshima Math. J. 41
+(2011), pp. 275-342.
+[CbTpI] Y. Hoshi and S. Mochizuki, Topics surrounding the combinatorial an-
+abelian geometry of hyperbolic curves I: Inertia groups and proﬁnite
+Dehntwists, Galois-Teichm¨uller Theory and Arithmetic Geometry, Adv.
+Stud. Pure Math. 63, Math. Soc. Japan (2012), pp. 659-811.
+[CbTpII] Y. Hoshi, S. Mochizuki, Topics Surrounding the Combinatorial An-
+abelian Geometry of Hyperbolic Curves II: Tripods and Combinatorial
+Cuspidalization, RIMS Preprint1762 (November 2012).
+[CbTpIII] Y. Hoshi, S. Mochizuki, Topics Surrounding the Combinatorial An-
+abelian Geometry of Hyperbolic Curves III: Tripods and Tempered Fun-
+damental Groups, RIMS Preprint1763 (November 2012).
+[CbTpIV] Y. Hoshi, S. Mochizuki, Topics Surrounding the Combinatorial An-
+abelian Geometry of Hyperbolic Curves IV: Discreteness and Sections ,
+RIMS Preprint1788 (September 2013).
+[HMM] Y. Hoshi, A. Minamide, S. Mochizuki,Group-theoreticity of Numerical
+Invariants and Distinguished Subgroups of Conﬁguration Space Groups ,
+RIMS Preprint1870 (March 2017).
+[HMT] Y. Hoshi, S. Mochizuki, S. Tsujimura,Combinatorial construction of
+the absolute Galois group of the ﬁeld of rational numbers ,RIMSPreprint
+1935 (December 2020).
+Updated versions are available at the following webpage:
+http://www.kurims.kyoto-u.ac.jp/~motizuki/papers-english.html

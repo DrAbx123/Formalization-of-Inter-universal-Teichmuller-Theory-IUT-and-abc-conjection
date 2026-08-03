@@ -1,0 +1,312 @@
+AnabelioidƱ Te i ch m ¨uller ྸᛯ
+ૠྸᚐௌᄂᆮ৑Უ
+Ჲஉ
+§1. pƔǒᙸǔ
+ܱ
+Ơƨᨥƴ੔ဇƞǕƨžᨼӳᛯſŴƭǇǓŴƋǔ Grothendieckܬܢ
+Ʒ
+ƠƯƍǔƷưƋǔŵƜƷžᲫƭƷᨼӳᛯſƷ੔ဇƸŴǋƬƱφ˳
+ႎƴƍƏƱŴ
+ƢǔᨼӳǍƦƷΨƷӸЭᲣƷȪǹȈƷᢠ৸ſ
+ƱᙸǔƜƱǋưƖǔŵƢǔƱŴഏƷǑƏƳբƍੑƚƕဃơǔᲴ
+բ
+ƔǒᙸƨǒŴ
+ݣ
+ᝋƸƲƷǑƏƴᙸƑǔƔᲹ
+ƴǋᡫơǔ
+ᝋǛৢƏǑƏƴƠƳƍƱŴᜭᛯƸॖԛǛ঺ƞƳƘƳǔƕŴᲢஜᆜưƸႾဦƢ
+ח
+ƴǋ
+ᡫơǔǋƷǛinter-universal
+ஜႎƔ
+ႎƳ inter-universalᝋƱƍƏƜƱƴƳǔŵ
+ƔǒᙸƨǒƲǜƳ᫘ƴᙸƑǔƔŴƱƍƏբƍƴሉƑǔ
+ƨǊƴƸŴǹǭȸȠǛŴinter-universal
+ᙲƕƋǔŵƜǕƴƸಮŷƳ৖ඥ
+ƕƋǔƕŴஜᆜưƸŴഏƷǋƷǛӕǓɥƛǔᲢКƷ৖᪭Ƴ̊ƴƭƍƯƸŴ[Mzk7] Ǜ
+ӋༀᲣᲴ
+´Et(X)
+def
+= {Xח}
+ᲢƨƩƠŴX ƸŴᡲኽƳȍȸǿȷǹǭȸȠƱƢǔŵᲣ иஊᨂ፭ GƠƯ B(G) ǛŴ
+G፯ƢǔƱŴ´Et(X)ƸŴ
+B(π1(X)) ᲢƨƩƠŴπ1(X) ƸŴXஜ፭ƱƢǔᲣƱӷ͌ƴƳǔŵ
+ƜƜưƸŴB(G)ᝋƱǈƳƠŴanabelioid
+ ƱԠƿƜƱƴƢǔŵ
+ƸŴB(G) ƸŴžᡲኽƳ anabelioid ſƴƳǔƕŴɟᑍƴƸŴᙐૠƷᡲኽ঺ЎǛǋƭ
+anabelioid ǛৢƏƜƱǋƋǔᲢᛇƠƘƸŴ[Mzk8] ǛӋༀᲣŵanabelioidƖ
+˴ႎદ˺ǛŴᲢ´Et(X)
+ƷǑƏƴǹǭȸȠƔǒဃơƨǋƷƔƲƏƔƱƸ᧙̞ƳƘᲣ anabelioid ƷǈƷɭမƴ
+Typeset by AMS-TEX
+1
+
+2ૠྸᚐௌᄂᆮ৑Უ
+ƓƍƯƍǘƹ ‘native’ஜႎƳ̊ƷɟƭƸŴ
+ஊᨂഏ
+ Ǩǿȸȫᘮᙴ
+፯ưƋǔŵᡲኽƳ anabelioid ᧓ƷஊᨂഏǨǿȸȫᘮᙴƸŴ
+B(H) →B (G)
+ᲢƨƩƠŴG Ƹиஊᨂ፭ŴHƷ᧓Ʒ᧙৖ƱᡞӼƖƴ
+፯ƞǕǔŵ
+ഏƴŴanabelioid X = B(G)ƠƯŴžX ɥǨǿȸȫƳ anabelioid μ˳Ʒ঺
+ſ
+Et(X)
+ƴƍƏƱŴƜƷ Et(X) ƸŴ1-category ưƸƳƘŴ2-category ƴ
+ƳƬƯƠǇƏŵɟᑍƴŴ2-category DƠƯŴobject ƱƠƯӷơ object ǛਤƪŴ
+morphism ƱƠƯŴƦƷ2-category Ʒ morphism᫏ǛਤƭŴƱƍƏ1-category
+|D| Ǜನ঺ƢǔƜƱƸưƖǔƕŴΨƷ DƣƠǋƜƷ |D|ƴӒପƞ
+ǕǔƱƸᨂǒƳƍŵ ƨƩƠŴDƠƯŴ ƦƷჵҮƸƢǂƯ‘id’Ǜਤƨ
+ƳƍƱƍƏவˑǛᛢƢƱŴD Ǜ |D|ǘǕƳƍŵиஊᨂ፭
+G ƕ slim
+ŴƭǇǓŴG Ʒ˓ॖƷ᧏ᢿЎ፭ H ƷŴG҄ᢿЎ፭ƕᐯଢƳƱƖŴ
+Et(X) ƸŴႸЈƨƘƜƷவˑǛ฼ƨƠŴƦǕƴ˄᨟Ƣǔ1-category ´Et(X)
+def
+= |Et(X)|
+ƷǈǛ̅ƬƯᜭᛯƢǔƜƱƕӧᏡƱƳǔŵ
+§2. Quasi-core Ʊ IEࣱ
+X, Q ƸŴslim ưᡲኽƳ anabelioid ƱƠŴ
+X→ Q
+ƸŴrelatively slim ᲢᲷ ‘slim’ Ʒ relative ༿ŵᛇƠƘƸ [Mzk8]ƱƢ
+ǔŵXƠƯŴ2-category
+Loc(X)
+፯ƢǔᲴobject ƸŴ ஊᨂഏǨǿȸȫᘮᙴY→X Ɣǒဃơǔanabelioid
+Y ƱƠŴmorphismݧY1 →Y 2ƸŴX ɥƷǋ
+ƷƱƸᨂǒƳƍᲛᲛᲣƱƢǔŵƜƷ 2-category ƸŴEt(X) ƱӷơவˑǛ฼ƨƢƷưŴ
+1-category Loc(X)
+def
+= |Loc(X)|ǘǕǔƜƱƸƳƍŵƳ
+ƓŴˌɦƷᜭᛯưƸŴLoc(X), Loc(X)ƠƯŴƦƷobject Y ƷஊᨂഏǨǿȸȫՠ
+ƱƠƯဃơǔ slim anabelioidח
+Loc(X),
+ Loc(X)
+Ʒ Q ɥƷ relativeƴྵǕǔƢǂƯƷ morphismƠƯŴ
+୼ƴŴQưƋǔƱƍƏவˑǛᛢƢƜƱƴǑƬƯưƖǔǋƷᲣ
+
+ANABELIOIDƱ TEICHM ¨ULLER ྸᛯ 3
+LocQ(X), LocQ(X),
+ LocQ(X),
+ LocQ(X)
+ǛဇƍǔƜƱǋƋǔŵ
+λƢǔŵcore
+ (respectively, Q-core
+) ƱƸŴ
+Loc(X)( r e -
+spectively,
+ LocQ(X)) ϋƷ terminal object ƷƜƱưƋǔŵX→ Q ƕ quasi-core
+ ƴ
+ƳǔƱƸŴᐯ໱Ƴ᧙৖
+LocQ(X) → Loc(X)
+ӷ͌ƴƳǔǋƷƷƜƱưƋǔŵǇƨŴX→ Q ƕ faithful
+Ɩឪ
+ݧπ1(X) → π1(Q)ƴƳǔǋƷƷƜƱưƋǔŵ
+೅ᛖႎƴƍƏƱŴcoreƸŴ
+core ƴƸŴbasepoint ƕŴᲫƭƠƔƳƍ
+ƱƍƏƜƱưƋǔŵbasepoint ƱƍƏƷƸŴanabelioidǛŴиஊᨂ፭ƱƍƏ
+੭ƢǔƨǊƷᘺፗưƋǔǘƚƩƔǒŴƦ
+ɥᲫƭƠƔƳƍƱƍƏƜƱƸŴƦƷ anabelioidƍ
+inter-universality Ǜ̬ஊƠƯƍǔƱƍƏƜƱưƋǔŵɟ૾Ŵquasi-core
+ƸŴƦ
+ǛᛐǊǕƹŴinter-universalឋư
+ƋǔᲢᛇƠƘƸŴ[Mzk8] ǛӋༀᲣŵ
+ɨƑǒǕƨ anabelioid XƠƯƦǕƴ˄᨟Ƣǔ quasi-core X→ QƢ
+ඥ
+ſ
+ƕƋǔŵиஊᨂGƠƯŴഏƷவˑƕ฼ƨƞǕǔƱƖŴG ǛŴwk IE
+ ᲢᲷ weakly
+intrinsically exhaustiveᲣ ƱԠƿᲴ˓ॖƷ᧏ᢿЎ፭H ⊆ GǊᡂǈι: H↪ → G
+ƠƯŴ[G : H]=[ G : ι(H)] ƕ঺ǓᇌƭŵǇƨŴGƘ
+ƠƨǋƷᲷ ‘intrinsically exhaustive
+’ᲢဦƠƯŴ‘IE’ᲣǛᎋƑǔƜƱǋƋǔŵ‘IE’ܭ
+ƠᧈƘƳǔƷưŴஜᆜưƸႾဦƢǔƕᲢᛇƠƘƸŴ[Mzk8] ǛӋༀᲣŴƦƷஇǋ
+ᙲƳᲣᢿЎƩƚઇǈЈƠƯǈǔƱŴഏƷǑƏƳவˑƴƳǔᲴ G Ʒ᧏
+ദᙹᢿЎ፭ƴǑǔ exhaustive Ƴ ﬁltration
+... ⊆ Gn ⊆ ... ⊆ G1 ⊆ G
+ƕƋǓŴ ˓ॖƷ᧏ᢿЎ፭H ⊆ GnǊᡂǈι: H↪ → GƠƯŴι(H) ⊆ Gn
+ƕ঺Ǔᇌƭŵ ƳƓŴ ᡲኽƳanabelioidஜ፭ƕŴwk IEŴ ǇƨƸIE Ʊ
+ƳǔƱƖŴanabelioid ᐯ៲ǋ wk IEŴǇ ƨ ƸIE ƱԠƿƜƱƴƢǔŵ ƦƜưŴquasi-core
+ඥſƱƳǔžԃॖ᧙̞ſƸഏƷǑƏƴƳƬƯƍǔᲴ
+∃ core =⇒ ∃ faithful quasi-core =⇒ IE =⇒ wk IE
+ǋƬƱႺᚇႎƳȬșȫưƍƏƱŴIE Ƴ anabelioid৑
+ႎ
+ƬƯŴinter-universalӧᏡƳanabelioid
+ƷƜƱưƋǔŵ
+ƞƯŴwk IE Ǎ IE ƷŴƜǕǇưႆᙸƞǕƯƍǔɶưˊᘙႎƳ̊
+ǛਫƛƯǈǑƏ
+ᲢᛇƠƘƸŴ[Mzk8] ǛӋༀᲣᲴ
+
+4ૠྸᚐௌᄂᆮ৑Უ
+(i) Zp⋊Zp
+×Ƴ᧏ᢿЎ፭p·Zp⋊Zp
+× ǛǋƭƨǊŴwk IE ɧ঺ᇌ
+ŵ
+(ii) PGL 2(Zp)Ჴ wk IE ঺ᇌ
+ŵɟ૾Ŵ
+(pn 0
+01
+)
+ƢǔƱŴžpnǛඥƱƠ
+ƯŴ1Ǉǔ᧏ᢿЎ፭Ƹ̬ƨǕƳƍ૏ŴIE ɧ঺ᇌ
+ŵ
+(iii) иஊᨂᐯဌ፭ ˆFn (n ≥ 2)Ჴwk IE ঺ᇌ
+ŵɟ૾Ŵ(ii) ƱӷಮƳᜭᛯƴǑǓŴ
+IE ɧ঺ᇌ
+ŵ
+(iv) ദ೅ૠƷǢȕǣȳႺዴƴ˄᨟Ƣǔanabelioid ´Et(A1
+Fp )൞ᲣᲴwk IE ɧ঺ᇌ
+ŵ
+(v) QpٻK ƴ˄᨟Ƣǔanabelioid ´Et(K)ȷJardenȷRitterᲣᲴ
+wk IE ঺ᇌ
+ŵɟ૾ŴJarden-RitterྸƴǑǓŴIE ɧ঺ᇌ
+ŵ
+ʻŴ೅ૠ 0 Ʒ˳ F ɥƷӑ୺୺ዴ
+ XFƠƯŴ
+anabelioid ƷƱƖƱӷಮŴLoc(XF ) ᲢᲷ object ƸŴXF ƷஊᨂഏǨǿȸȫᘮᙴƱƠ
+ƯဃơǔǋƷŵmorphism ƸŴXFŵᲣ
+Ǎ
+ Loc(XF )ǒǕƯƍǔᲢᛇ
+ƠƘƸŴ[Mzk8] ǛӋༀᲣᲴ
+ྸ 1
+: XF ƸŴgeometric core
+ ᲢᲷ
+Loc(XF ) ϋƷ terminal objectᲣǛਤƭƱƢǔŵ
+ƢǔƱŴX
+def
+= ´Et(XF ) ƸŴഏǛ฼ƨƢᲴ
+(a) Ტ[F : Q] < ∞ ƷƱƖᲣ X Ƹ core Ǜਤƭŵ
+(b) Ტ[F : Qp] < ∞ ƷƱƖᲣ X Ƹ quasi-core ǛਤƭŵƳƓŴXF ƕǢȕǣȳ
+ƷƱƖŴX Ƹ faithful Ƴ quasi-core Ǜਤƭŵ
+ƜƜưŴ(a) (respectively, (b))ƸŴ ૠ˳ɥ(respectively, p ᡶ˳ɥᲣ Ʒǰȭǿȳȇǣȸ
+ǯʖे — ᛇƠƘƸ [Mzk5] ǛӋༀ —ኽưƋǔŵ
+ྸ 2
+:ྸ 1 ƱӷơŵᲣ Xƴ wk IEŵƳƓŴXF ƕǢȕǣȳƷƱ
+ƖŴഏƷᲭƭƸӷ͌Ჴ
+(i) XF Ƹ geometric core
+ Ǜਤƭŵ
+(ii) X Ƹ faithful Ƴ quasi-core
+ Ǜਤƭŵ
+(iii) X Ƹ IEŵ
+ƜƷኽௐǋŴ[Mzk5]ኽưƋǔƕŴɥƷžˊᘙႎƳ̊ſƷ
+(v) ưਦઇƠƨƱƓǓŴp ᡶ˳ƴ˄᨟Ƣǔ anabelioid Ƹ IE ƴƸƳǒƳƍƜƱǛᎋƑ
+ྸ 2 Ʒ (iii)ƸŴƋǔॖԛưƸᭃƘǂƖǋƷưƋǔŵ
+
+ANABELIOIDƱ TEICHM ¨ULLER ྸᛯ 5
+§3. p ᡶ Grothendieck༿
+K Ǜ QpƱƠŴXK ǛKݧXK → Spec(K)
+Ǜ
+ΠXK → GK
+Ʊ୿ƘƱƢǔŵ[Mzk5]ྸƸŴGKܭ׍
+ƞǕƨ
+ GK Ʒɥ
+ƴƋǔиஊᨂ፭ƱƠƯƷ ΠXK Ɣǒˊૠ୺ዴ XKΨưƖǔƜƱǛᚕƬƯƍǔŵ
+ႎ p ᡶ Grothendieck ʖे
+ſƱԠƿƜƱƴƢǔŵƢǔ
+ƱŴഏƷǑƏƳᐯ໱ƳբƍੑƚƕဃơǔᲴ
+բ
+Ჴ GKӳŴиஊᨂ፭ΠXK Ტ⇐⇒ח´Et(XK)ᲣƷǈƔǒŴ
+XKΨưƖǔƔᲹ
+ႎƳᲣӒ̊ǋᙸƭƔƬ
+༿
+ſƸ঺Ǔᇌƨ
+ƳƍƷưƸƳƍƔƱƍƏज़ᙾǛਤƬƯƍǔŵ
+ɟ૾Ŵиஊᨂ፭ ΠXK —ח´Et(XK)—ΨưƖǔƜƱƕଏƴ
+ჷǒǕƯƍǔŴXK ƷȇȸǿƷžˊᘙႎƳ̊
+ſƸŴˌɦƷᲬƭưƋǔᲴ
+(i) ᲢXK ƕ semi-stable reduction ǛਤƭƱƖᲣXK Ʒlogarithmic special ﬁber
+ᲢᲷᐯ໱Ƴ log structure ˄ƖƷ semi-stable model Ʒ special ﬁber ᲣŵƜǕ
+ƸŴ[Tama]ྸƱŴ[Mzk4]ኽƞ
+ྸưƋǔᲢᛇƠƘƸŴ[Mzk6] ǛӋༀᲣŵ
+(ii) Loc( X
+K)ח
+ΨưƖǔᲢᛇƠƘƸŴ [Mzk9] ǛӋༀᲣŵƜǕƸŴ
+[Mzk5]ƏŵཎƴŴXK ƕ ‘arithmetic
+’஭୺
+ዴƱσᡫƳஊᨂഏǨǿȸȫᘮᙴǛਤƭᲣƔƲƏƔƸŴΠXK Ʒ፭ᛯႎನᡯƷ
+ӧᏡưƋǔƱƍƏƜƱƴƳǔŵ
+ƱƜǖƕŴƜƷᲬƭƷ̊ƴƸŴᲫƭƷȑǿȸȳ
+ƕᙸǒǕǔŵ(ii)ӳŴᲢ୺ዴƷž៲
+ǒǕǔவˑƱƍƏƷƸŴ୺ዴƷ
+arith-
+ meticity
+ ưƋǔŵ ɟ૾ŴƜƷ arithmeticity ƱƍƏǋƷƸŴКƷᚕƍ૾ǛƢǔ
+ƱŴɟᆔƷ canonicality
+ ưƋǔƕŴp৑˳
+k((t))
+Ʒ᫏˩ưᎋƑǔƱŴcanonical Ƴ୺ዴƱƍƏƷƸŴk((t)) ɥƷ୺ዴƷɶưȢǸȥȩǤ
+ૠ ˳
+ Ʒ kƬƯŴɥƷ (i) Ʊ (ii)
+ឋƸŴ
+ΨưƖǔ
+ſ
+ƱƍƏǋƷưƋǔŵΠXKႎƴſᲢᲷ GKƤƣƴᲣৢƏƜƱǛŴk((t))
+ႎƴৢƏƜƱᲢᲷ Spec(k((t)))ŴཎƴŴ˳ k((t)) Ʒ
+
+6ૠྸᚐௌᄂᆮ৑Უ
+ૠ
+ tƠ
+ΨưƖƳƍƱƍƏཞඞƸƝƘᐯ໱ưƋǔƱƍƏᙸ૾ǋưƖǔŵ
+ƦƏƢǔƱŴp ᡶ Grothendieck˺ǔƨǊ
+ƴƸŴžcanonical᣽ƔƭኵጢႎƴဃငƢǔ
+ǑƏƳžᘺፗſŴұƪ
+žྸᛯſ Ǜᙸ˄ƚƯƘǕƹǑƍŴ ƱƍƏኽᛯƴƳǔŵ ƱƜǖƕŴ[Mzk1] Ǎ[Mzk2]᧏
+ƞǕƯƍǔ‘p ᡶ Teichm¨uller ྸᛯ
+’ ƸŴ ദƴƦƷǑƍͅᙀưƋǔŵ ƜƷྸᛯƸŴSerre-
+Tate canonical lifting Ʒӑ୺୺ዴ༿ƱǋƍƑŴǇƨŴTeichm¨uller ᆰ᧓Ʒ BersǊᡂ
+ǈƷ p ᡶ༿ƱǋƍƑǔᲢᛇƠƘƸŴ[Mzk2], Introduction ǛӋༀᲣŵཎƴŴƜƷྸᛯư
+ƸŴദƴ Serre-Tate canonical liftingƢǔӑ୺୺ዴƷ canonical lifting
+ ƱƍƏ
+ƢǔƕŴƦƷǑƏƳᲢp ᡶ Teichm¨uller ྸᛯƷॖԛưƷᲣcanonical lifting
+ƴƭƍƯƸŴഏƷǑƏƳኽௐᲢᲷᢿЎႎƳŴžp ᡶ Grothendieck༿
+ſᲣƕ
+ƋǔᲴ
+ྸ 3
+: p ≥ 5 ƱƠŴi =1 , 2ƠƯŴ Qpޟ
+ٻKi ƱŴKi ɥƷӑ
+୺୺ዴ Xi ƕɨƑƯƋǔƱƢǔŵƳƓŴ´Et(X1), ´Et(X2)ƱƠƯӷ͌ưƋǔƜƱ
+ឋƸ঺ǓᇌƭᲴ
+(i) X1 Ƹ canonical lifting ⇐⇒ X2 Ƹ canonical lifting
+(ii) ƲƪǒƔƕ canonical lifting ƷƱƖŴX1 ∼= X2ŵ
+ྸƷᚰଢư̅ƏɼƳž஬૰ſƸŴ[Mzk6] ƷᲢlogarithmic special ﬁber ƴ᧙Ƣ
+ྸƱŴ[Mzk1], Chapters III, IV, ƷྸᛯưƋǔᲢᛇƠƘƸŴ[Mzk9] ǛӋༀᲣŵ
+ǈƴŴJacobian ƕ Serre-Tate canonical liftingƠ
+ྸ 3ƴྦྷƠƍ
+ ƜƱƕჷǒ
+ǕƯƍǔᲢ[DO], [OS] ǛӋༀᲣŵɟ૾ŴᲢp ᡶ Teichm¨uller ྸᛯƷॖԛưƷᲣcanonical
+liftingӳƸŴȢǸȥȩǤȷǹǿȃǯƷɶư Zariski dense ƴƳǔƜƱƕቇҥƴᅆ
+ྸ 3ƏᲴ
+ኒ
+: ૢૠ g, r, p ƸŴ2g −2+ r> 0, p ≥ 5 Ǜ฼ƨƢƱƢǔŵƢǔƱŴ(g,r )Ʒӑ୺୺
+ዴƷȢǸȥȩǤ ȷ ǹǿȃǯƷ
+Qp ͌ஊྸໜ Mg,r(
+Qp) ƷɶƴŴžp ᡶ Grothendieck ʖ
+༿ſƕ঺ᇌƢǔǑƏƳ୺ዴƴ˄᨟ƢǔஊྸໜƔǒƳǔŴᲢMg,r ϋưᲣZariski
+denseƢǔŵ
+ឋƱƠƯŴ ኒƷ૨ᚕƷɶƴŴ[Mzk1] Ǎ [Mzk2] Ʒဇᛖ ᲢᲷ‘canon-
+ical lifting’ƠƳƍƷưƋǔŵƭǇǓŴƜƷኒƸŴ[Mzk1] Ǎ [Mzk2] Ʒ
+ဇ
+ƴƳƬƯƍǔƱƍƏƜƱưƋǔŵ
+
+ANABELIOIDƱ TEICHM ¨ULLER ྸᛯ 7
+૨ྂ
+[DO] B. Dwork and A. Ogus, Canonical liftings of Jacobians, Compositio Math. 58
+(1986), pp. 111-131.
+[Mzk1] S. Mochizuki, A Theory of Ordinary p-adic Curves, Publ. of RIMS 32 (1996),
+pp. 957-1151.
+[Mzk2] S. Mochizuki, Foundations of p-adic Teichm¨uller Theory , AMS/IP Studies
+in Advanced Mathematics 11, American Mathematical Society/International
+Press (1999).
+[Mzk3] S. Mochizuki, Correspondences on Hyperbolic Curves, Journ. Pure Appl. Al-
+gebra 131 (1998), pp. 227-244.
+[Mzk4] S. Mochizuki, The Proﬁnite Grothendieck Conjecture for Closed Hyperbolic
+Curves over Number Fields, J. Math. Sci., Univ. Tokyo 3 (1996), pp. 571-627.
+[Mzk5] S. Mochizuki, The Local Pro-p Anabelian Geometry of Curves, Invent. Math.
+138 (1999), pp. 319-423.
+[Mzk6] S. Mochizuki, The Absolute Anabelian Geometry of Hyperbolic Curves , RIMS
+Preprint 1363 (June 2002).
+[Mzk7] S. Mochizuki, Categorical Representation of Locally Noetherian Log Schemes ,
+RIMS Preprint 1364 (June 2002).
+[Mzk8] S. Mochizuki, The Geometry of Anabelioids , แͳɶŵ
+[Mzk9] S. Mochizuki, The Absolute Anabelian Geometry of Canonical Curves , แͳɶŵ
+[OS] F. Oort and T. Sekiguchi, The canonical lifting of an ordinary Jacobian variety
+need not be a Jacobian variety, J. Math. Soc. Japan 38 (1986), pp. 427-437.
+[Tama] A. Tamagawa, The Grothendieck Conjecture for Aﬃne Curves, Compositio
+Math. 109 (1997), pp. 135-194.

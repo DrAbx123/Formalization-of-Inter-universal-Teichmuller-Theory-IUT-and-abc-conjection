@@ -1,0 +1,301 @@
+Lecture Notes on:
+The Intrinsic Hodge Theory of
+p-adic Hyperbolic Curves
+by Shinichi Mochizuki
+I. General Introduction
+A. The Exterior Galois Representation of a Hyperbolic Curve:
+Let p be a prime number. Let K be a ﬁnite extension of Qp.L e tXK be a hyperbolic
+curve over K (i.e., X
+K is obtained by removing r points from a smooth, proper, geomet-
+rically connected curve of genus g,a n d2g − 2+ r> 0). Let Γ K be the absolute Galois
+group of K.L e t Π XK
+def
+= π1(XK) be the fundamental group of XK (for some choice of
+base-point). Then if Δ X
+def
+= π1(X
+K) is the geometric fundamental group ofK,w eh a v ea n
+exact sequence
+1 → Δ X → ΠXK → ΓK → 1
+which induces an exterior Galois representation
+ρX :Γ K → Out(Δ X)
+(In fact, conversely, the above exact sequence can be recovered from the pair (Δ X,ρX)).
+Similarly, if Δ(p)
+X is the pro-p completion of Δ X, we have a “pro- p” version of the above
+exact sequence (1 → Δ(p)
+X → Π(p)
+XK → ΓK → 1), and a pro-p exterior Galois representation
+ρ(p)
+X :Γ K → Out(Δ(p)
+X ).
+Of course, one can formρX, ρ(p)
+X even when 2g − 2+ r ≤ 0. If 2g − 2+ r< 0, then ρX,
+ρ(p)
+X are uninteresting. If 2 g − 2+ r (i.e., essentially the case of elliptic curves), ρX, ρ(p)
+X
+have already been extensively studied. Thus, here we would like to study the hyperbolic
+case (i.e., when 2g − 2+ r> 0).
+1
+
+B. Intrinsic Hodge Theory (“IHT”):
+Once one decides that one wants to study the exterior Galois representation ρX,
+one important question is what should one try to prove about it. The theory of the
+Galois representations deﬁned by Tate modules of abelian varieties (and more generally,
+p-adic ´etale cohomology of smooth varieties) provides at least an approximate answer:
+one wants to study the Hodge Theory of such Galois representations. Here by “Hodge
+theory,” we mean a theory giving some sort of equivalence (or at least establishing an
+intimate relationship between)´etale topological data (i.e., π1’s, ´etale cohomology, etc.) and
+algebro-geometric data (i.e., data like diﬀerentials, cohomology groups of coherent sheaves,
+morphisms between varieties, etc., that exists in the purely algebro-geometric category).
+For instance, p-adic Hodge theory, which relates p-adic ´etale cohomology groups to de
+Rham cohomology is clearly a prime example of such a theory.
+In the case of ρ
+X, however, because one is dealing with a highly nonabelian object
+such as ΔX, it is not immediately clear what the appropriate Hodge theory should be. One
+approach is to consider nonabelian Hodge theory , which typically means looking at (´etale
+topological) spaces of representations of Δ X into an algebraic group G and relating them
+to (algebro-geometric) spaces of G-bundles with connections on XK. Although this sort of
+theory may of interest in its own right, however, there is something fundamentally diﬀerent
+about considering this sort of theory relative to understanding XK and considering, for
+instance, the Hodge theory of the Tate module of an elliptic curve. It is diﬃcult to
+summarize this diﬀerence in a single sentence, but the rest of this General Introduction
+will be devoted to trying to explain what we feel is the true hyperbolic analogue of the
+Hodge theory of the Tate module of an elliptic curve – namely, “intrinsic Hodge theory.”
+Roughly speaking, by “intrinsic Hodge theory,” we mean a Hodge theory (as deﬁned
+above) such that the sort of data that appears on the algebro-geometric side is data that is
+just enough (not too much or too little) to capture the curve XK and/or its moduli .I nt h e
+case of the nonabelian Hodge theory referred to in the preceding paragraph, what comes
+out on the algebro-geometric side, namely, spaces ofG-bundles with connection cannot be
+described as capturing precisely the curve X
+K or its moduli.
+C. The IHT of Hyperbolic Curves over C: Physical and Modular Aspects:
+Perhaps the best way to get a feel for what we mean by “IHT” is to consider the case
+of hyperbolic curves overC, which are better understood classically thanp-adic hyperbolic
+curves. Thus, let XC be a hyperbolic curve overC.L e t ΔX be its topological fundamental
+group. Then, forgetting the modern formalism of “Hodge theory” for a moment, the essence
+of the intrinsic Hodge theory of XC is the classical K¨obe uniformization
+˜XC ∼= H
+of the universal covering space ˜XC of XC by the upper half-plane H. There are many
+useful alternative ways to rephrase this uniformization, as follows:
+2
+
+(1) the canonical representation ρX :Δ X → PSL 2(R)= Aut(H) deﬁned
+by the uniformization;
+(2) the hyperbolic metric μX on XC obtained by pulling back the standard
+hyperbolic metric 1
+y2 (dx2 + dy2)o n H;
+(3) the indigenous bundle (terminology of Gunning) (P → XC, ∇P ) con-
+structed as follows: We let ΔX act on ˜XC × P1
+C by means of the natural
+action on the ﬁrst factor and ρX on the second factor. Taking the
+quotient of this product by Δ X then gives rise to a natural algebraic
+P1-bundle P → XC, equipped with a connection ∇P , and a section
+σ : XC → P (induced by the section ˜XC → ˜XC × P1
+C given by the
+uniformization mapping ˜XC ∼= H ⊆ P1
+C). Moreover, if one diﬀeren-
+tiates the section σ by means of ∇P , one obtains a Kodaira-Spencer
+mapping τXC → σ∗τP/XC which is an isomorphism. This sort of data
+(P → XC, ∇P ) (i.e., such that there exists a σ whose Kodaira-Spencer
+morphism is an isomorphism) is called an indigenous bundle . Lots of
+indigenous bundles exist on XC, but the one just constructed from the
+upper half-plane uniformization – called canonical – is a particularly
+special one.
+If one wants to formalize things according to the deﬁnition of “Hodge theory” given above,
+two natural approaches are the following:
+The Physical Picture: One can physically recover thealgebraic curve
+XC (algebro-geometric data) from the π1-theoretic (i.e., topological)
+datum ρX via the following well-known double-coset recipe:
+Im(ρX)\PSL 2(R)/PSO 2
+.
+The Modular Picture: Let Mg,r be the moduli stack of hyperbolic
+curves of type (g,r )o v e rC.T h e n o v e rMg,r, there is a natural stack
+S→M g,r of hyperbolic curves equipped with an indigenous bundle.
+Moreover, S has the natural structure of Ω Mg,r -torsor over Mg,r.( I n
+fact, this torsor is the Hodge-theoretic ﬁrst Chern class of a certain line
+bundle that can be written down explicitly.) The canonical indigenous
+bundle constructed above deﬁnes a real analytic section sH : Mg,r →S .
+Moreover, if m ∈M
+def
+= Mg,r, then by localizing at m, we see that sH
+deﬁnes a morphism of holomorphic germs Mm ×M c
+m →S m (where
+Mc is the complex conjugate stack to M). Restricting this morphism
+to m ∈M m, and letting Qm be the (3g − 3+ r)-dimensional (over C)
+aﬃne space which is the ﬁber of S→M at m, we see that we get an
+anti-holomorphic morphism
+3
+
+β : Mm → Qm
+which turns out to be an embedding. In fact, this morphism extends
+(uniquely) to all of ˜M (the universal covering space of M) to deﬁne an
+anti-holomorphic uniformization ˜M ↪→ Qm which is usually referred to
+as the Bers embedding. Thus, in summary, the theory just discussed
+relates the π1-theoretic ρX to the algebro-geometric Mm by showing
+how ρX deﬁnes canonical coordinates on Mm.
+The intrinsic Hodge theory of p-adic hyperbolic curves to be discussed in the rest of this
+lecture can be regarded as the generalization to thep-adic case of the physical and modular
+aspects of the intrinsic Hodge theory of hyperbolic curves over C discussed above.
+D. The IHT of Abelian V arieties:
+Since the intrinsic Hodge theory of abelian varieties has already been p-adicized, it is
+useful to recall what happens for abelian varieties. Namely, one has the following:
+The Physical Picture: Over C, one has the uniformization of an (al-
+gebraic) abelian variety AC by TA,e/π1(AC)( w h e r eTA,e is the tangent
+space to AC at the origin). In the p-adic case, there are several can-
+didates for an analogue. One is the Tate conjecture (Faltings’ theorem
+– see [Falt]), which states that if A and B are abelian varieties over a
+number ﬁeld F with p-adic Tate modulesTp(A)a n dTp(B), respectively,
+then the natural morphism
+HomF (A, B) ⊗Z Zp → HomΓF (Tp(A),T p(B))
+is bijective. Another candidate is the result that states that for an
+abelian variety A over a local p-adic ﬁeld K (i.e., a ﬁnite extension
+of Qp), the K-valued points A(K) (algebro-geometric data) may be
+recovered from the full (i.e., ˆZ-ﬂat) Tate module T(A)a st h ek e r n e lo f
+H1(ΓK,T (A)) → H1(ΓK,T (A) ⊗ˆZ Cp)
+(see [BK], §3). Both of these analogues are related to the result that we
+obtain for p-adic hyperbolic curves.
+The Modular Picture: Over C, this is given by the uniformization of
+(Ag)C (the moduli stack of principally polarized abelian varieties over
+C) by the Siegel upper half-plane. In thep-adic case, over (Aord
+g )Zp (the
+4
+
+moduli stack of principally polarized abelian varieties with ordinary mod
+p reduction over Zp), one has the Serre-Tate theory (see, e.g., [Mess]) of
+canonical coordinates and canonical liftings.
+II. The IHT of p-adic Hyperbolic Curves: the Modular Picture
+We begin with themodular picture, since this was discovered ﬁrst (see [Mzk1], [Mzk2],
+[Mzk3]). First observe that the notion of an indigenous bundle , being entirely algebraic,
+exists over Z[1
+2]. Thus, for instance, in characteristic p (where p is odd), we can consider
+nilpotent indigenous bundles , i.e., indigenous bundles whose p-curvature forms a nilpotent
+matrix. This gives rise to a stack
+ N g,r of stable curves (of type ( g,r )) equipped with
+nilpotent indigenous bundles. Moreover, the natural morphism
+N g,r → (
+Mg,r)Fp
+is ﬁnite and ﬂat of degree p3g−3+r. We denote by
+ N
+ord
+g,r ⊆
+ N g,r the ordinary locus, i.e.,
+the locus of points of
+ N g,r that are ´etale over (
+Mg,r)Fp .S i n c e
+N
+ord
+g,r → (
+Mg,r)Fp is ´etale,
+it lifts uniquely to an ´etale morphism (
+N
+ord
+g,r )Zp → (
+Mg,r)Zp ,w h e r e(
+N
+ord
+g,r )Zp is a formal
+p-adic stack.
+Over N
+def
+=(
+ N g,r)ord
+Zp , one has the following ordinary theory ([Mzk1]): First, there is
+a natural Frobenius lifting
+ΦN : N→ N
+(analogous to the Frobenius lifting
+ΦA :( Aord
+g )Zp → (Aord
+g )Zp
+of Serre-Tate theory given by mapping an abelian variety A (with ordinary reduction
+modulo p) to the quotient of A by the multiplicative part of the kernel of p · : A → A).
+Just as in Serre-Tate theory, there are uniquemultiplicative canonical coordinates ﬁxed by
+ΦN ,a sw e l la san o t i o no fcanonical liftings. Finally, if SN →N is the pull-back to N of
+the torsor of indigenous bundles over
+ Mg,r, then there is a canonical section N→ S N (cf.
+“ sH” in the complex case) that corresponds to a unique Frobenius-invariant indigenous
+bundle.
+In fact,
+ N g,r consists (in general) of irreducible components which are not generically
+ordinary. The degree of the ordinary (and nonordinary) locus of
+ N g,r over (
+Mg,r)Fp can
+be computed (at least, in principle) by means of a complicated combinatorial algorithm
+([Mzk3]). Moreover, in general there exist irreducible components whose generic points
+5
+
+correspond to dormant indigenous bundles (indigenous bundles whose p-curvatures are
+identically zero) and spiked indigenous bundles (indigenous bundles whose p-curvatures
+have zeroes, but are not identically zero). Roughly speaking, these loci also admit theories
+with Frobenius liftings, etc. analogous to the ordinary theory of the preceding paragraph,
+but instead of multiplicative canonical coordinates (i.e., local uniformizations by products
+of Gm), in the generalized ordinary theory ([Mzk2]), one gets local uniformizations by more
+general sorts of Lubin-Tate groups, or twisted (ﬁber) products of Lubin-Tate groups in the
+dormant and spiked cases. This sort of generalized ordinary theory is a phenomenon
+essentially without analogue in the case of hyperbolic curves over C or p-adic abelian
+varieties.
+III. The IHT of p-adic Hyperbolic Curves: the Physical Picture
+The physical side of the intrinsic Hodge theory of a p-adic hyperbolic curve consists
+of the following Theorem (roughly conjectured by Grothendieck in a letter to Faltings):
+First, some terminology: If K is a ﬁeld, we shall refer to a K-scheme SK as a smooth pro-
+variety (respectively, hyperbolic pro-curve)o v e rK if SK can be written as the projective
+limit of a projective system of smooth varieties (respectively, hyperbolic curves) overK in
+which the transition morphisms are all birational. Note that the notion of a “smooth pro-
+variety” (respectively, “hyperbolic pro-curve”) has as special cases: (i) a smooth variety
+(respectively, hyperbolic curve) over K; (ii) the spectrum of a function ﬁeld of arbitrary
+dimension (respectively, function ﬁeld of dimension one) over K. Then we have the fol-
+lowing π1-theoretic recipe for recovering the nonconstant SK -valued points (where SK is a
+smooth pro-variety over K) of a hyperbolic pro-curve XK ([Mzk5]):
+Theorem: Let p be a prime number. Let K be a subﬁeld of a ﬁnitely generated ﬁeld
+extension of Qp.L e t XK be a hyperbolic pro-curve over K. Then for any smooth pro-
+variety SK over K, the natural map
+XK(SK)nonconst → Homopen
+ΓK (Π(p)
+SK , Π(p)
+XK )
+is bijective. (Here Homopen
+ΓK (Π(p)
+SK , Π(p)
+XK ) denotes the set of open, continuous group homo-
+morphisms Π(p)
+SK → Π(p)
+XK over ΓK , considered up to composition with an inner homomor-
+phism arising from Δ(p)
+X .)
+Note that although this result is formally analogous to the Tate conjecture for abelian
+varieties over a number ﬁeld (especially if one takesSK also to be a hyperbolic pro-curve),
+one major diﬀerence is that the above Theorem is valid overlocal ﬁelds , whereas the Tate
+conjecture fails over local ﬁelds.
+One also has the following application (unrelated to curves) of the above Theorem:
+6
+
+Corollary: Let p be a prime number. Let K be a subﬁeld of a ﬁnitely generated ﬁeld
+extension of Qp.L e t L and M be function ﬁelds of arbitrary dimension over K. Then the
+natural map
+HomK(Spec(L),Sp e c(M)) → Homopen
+ΓK (ΓL, ΓM )
+is bijective. (Here, Homopen
+ΓK (ΓL, ΓM ) is the set of open, continuous group homomorphisms
+ΓL → ΓM over ΓK , considered up to composition with an inner homomorphism arising
+from Ker(ΓM → ΓK).)
+Note that in characteristic zero, this generalizes the result of [Pop], where a similar result
+to this Corollary is obtained, except that the morphisms ΓL → ΓM , Spec(L) → Spec(M)
+are required to be isomorphisms,a n dK is required to be ﬁnitely generated over Q.
+Bibliography:
+[BK] S. Bloch and K. Kato, L-Functions and Tamagawa Numbers in The Grothendieck
+Festschrift, Volume I, Birkh¨auser (1990), pp. 333-400.
+[Falt] G. Faltings, Endlichkeitss¨atze f¨ur Abelschen Variet¨aten ¨uber Zahlk¨orpern, Inv. Math.
+73, pp. 349-366 (1983).
+[Mess] W. Messing, The Crystals Associated to Barsotti-Tate Groups; with Applications to
+Abelian Schemes, Lecture Notes in Mathematics 264, Springer Verlag (1972).
+[Mzk1] S. Mochizuki, A Theory of Ordinary p-adic Curves , RIMS, Kyoto University, Preprint
+1033.
+[Mzk2] S. Mochizuki, The Generalized Ordinary Moduli of p-adic Hyperbolic Curves , RIMS,
+Kyoto University, Preprint 1051.
+[Mzk3] S. Mochizuki, Combinatorialization of p-adic Teichm¨uller Theory, RIMS, Kyoto Uni-
+versity, Preprint 1069.
+[Mzk4] S. Mochizuki, The Local Pro-p Grothendieck Conjecture for Hyperbolic Curves , RIMS,
+Kyoto University, Preprint 1045.
+[Mzk5] S. Mochizuki, The Local Pro-p Anabelian Geometry of Curves , manuscript.
+[Pop] F. Pop, Grothendieck’s Conjecture of Birational Anabelian Geometry II ,P r e p r i n tS e -
+ries Arithmetik II, No. 16, Heidelberg (1995).
+7

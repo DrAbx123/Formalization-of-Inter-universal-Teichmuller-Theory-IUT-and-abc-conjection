@@ -1,0 +1,398 @@
+Noncritical Belyi Maps
+Shinichi Mochizuki
+May 2004
+/BT/CQ/D7/D8/D6/CP /CR/D8/BA In the present paper, we present a slightly strengthened version of a
+well-known theorem of Belyi on the existence of “Belyi maps” . Roughly speaking,
+this strengthened version asserts that there exist Belyi maps which are unramiﬁed
+at [cf. Theorem 2.5] — or even near [cf. Corollary 3.2] — a prescribed ﬁnite set of
+points.
+Section 1: Introduction
+Write C for the complex number ﬁeld;
+ Q ⊆ C for the subﬁeld of algebraic
+numbers.L e t X be a smooth, proper, connected algebraic curveover
+ Q.I f F is a
+ﬁeld, then we shall denote by P1
+F the projective line over F.
+Deﬁnition 1.1. We shall refer to a dominant morphism [of
+ Q-schemes]
+φ : X → P1
+Q
+as a Belyi map if φ is unramiﬁed over the open subscheme UP ⊆ P1
+Q given by the
+complement of the points “0”, “1”, and “∞ ”o f P1
+Q; in this case, we shall refer to
+UX
+def
+= φ− 1(UP ) ⊆ X as a Belyi open of X.
+In [1], it is shown thatX always admitsat least one Belyi open.F r o m t h i s p o i n t
+of view, the main result (Theorem 2.5) of the present paper has as an immediate
+formal consequence (pointed out to the author by A. Tamagawa) the following
+interesting [and representative] result:
+Corollary 1.2. (Belyi Opens as a Zariski Base) If VX ⊆ X is any open
+subscheme of X containing a closed point x ∈ X, then there exists a Belyi open
+UX ⊆ VX ⊆ X such that x ∈ UX. In particular, the Belyi opens of X form a base
+for the Zariski topology of X.
+Acknowledgements:
+The author wishes to thank A. Tamagawa for helpful discussions during No-
+vember 1999 concerning the proof of Theorem 2.5 given here.
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+Section 2: The Main Result
+We begin with some elementary lemmas:
+Lemma 2.1. (Separating Properties of Belyi Maps) Let C ∈ R be such
+that C ≥ 2;l e t
+S ⊆ P1(Q)
+be a ﬁnite set of rational points such that:
+(i) 0,1, ∞∈ S;
+(ii) there exists an r ∈ S such that 0 <r< 1;
+(iii) every α ∈ S such that α ̸=0 ,r ,1, ∞ satisﬁes α> 1.
+Suppose that β ∈ Q\S satisﬁes the following condition:
+(iv) β/α ≥ C, for all α ∈ S\{0, ∞} .
+Write r = m/(m + n),w h e r em, n ≥ 1 are integers. Then the function
+f(x)
+def
+= xm · (x − 1)n
+satisﬁes the following properties:
+(a) f({0,r ,1, ∞} ) ⊆{ 0,f (r), ∞} ;
+(b) f′(x)=0 (where x ∈ C)i m p l i e sx ∈{ 0,r ,1, ∞} ⊆ S;
+(c) f(β) /∈ f(S);
+(d) (f(β)+ f0)/(f(α)+ f0) ≥ C for all α ∈ S\{∞} such that f(α)+ f0 ̸=0 .
+Here, we write f0
+def
+= − minα {f(α)},w h e r eα ranges over the elements ofS\{∞} .
+Proof. Property (a) is immediate from the deﬁnitions. Property (b) follows im-
+mediately from the fact that:
+f′(x)= xm− 1 · (x − 1)n− 1 ·{ (m + n)x − m}
+This computation also implies that for real x> 1, we have f′(x) > 0, hence that
+f(x)i s monotone increasing, for real x> 1. In particular, since, by condition (iv),
+β ≥ C · α ≥ 2 · α>α , for all α ∈ S\{0, ∞} , we conclude that f(β) >f (α), for all
+α ∈ S\{∞} such that α> 1.
+
+NONCRITICAL BEL YI MAPS 3
+Next, observe that since 1 ∈ S\{0, ∞} , condition (iv) implies that β ≥ C ≥ 2,
+so f(β) > 1. Since |f(x)|≤ 1f o rx ∈ [0, 1], we thus conclude thatf(β) /∈ f(S), i.e.,
+that property (c) is satisﬁed.
+Next, let us observe the following property:
+(e) If α ∈ S\{∞} satisﬁes α> 1, then ( β − 1)/(α − 1) ≥ β/α ≥ 1;
+f(β)/f(α) ≥ (β/α)2 ≥ β/α.
+[Indeed, as observed above,β ≥ α;t h u s ,f(β)/f(α)=( β/α)m ·{(β−1)/(α−1)}n ≥
+(β/α)m+n ≥ (β/α)2 ≥ β/α.] Now we proceed to verify property (d) as follows:
+Suppose that n is even.T h e nf(α) ≥ 0, for allα ∈ S\{∞} ,s o f(0) = 0 implies
+that f0 =0 . T h u s ,i f(S\{∞} ) ∋ α> 1, then, by condition (iv) and property (e),
+we have: f(β)/f(α) ≥ β/α ≥ C, as desired. Since f(0) = f(1) = 0, to complete
+the proof of property (d) for n even, it suﬃces to observe that 0 <f (r) ≤ 1, so
+f(β)/f(r) ≥ f(β)= βm · (β − 1)n ≥ β ≥ C [since β ≥ C ≥ 2, as observed above].
+Now suppose that n is odd.T h e nf(x) ≤ 0f o rx ∈ [0, 1], so [since f′(x)=0
+for x ∈ (0,1) ⇐⇒ x = r] we conclude that:
+f0 = |f(r)| = {m/(m + n)}m ·{ n/(m + n)}n
+Note, moreover, that this expression for f0 implies that 0 <f 0 ≤ 1
+4 . [Indeed, this
+is immediate in the following three cases: m, n≥ 2; m = n =1 ;o n eo fm, n is = 1
+and the other is ≥ 3. When one of m, n is = 1 and the other is = 2, it follows from
+the fact that ( 1
+3 ) · ( 2
+3 )2 ≤ 1
+4 .] Then if α> 1, then either f(α) ≥ f0, in which case
+(f(β)+ f0)/(f(α)+ f0) ≥ f(β)/{2 · f(α)}≥ 1
+2 · (β/α)2 ≥ (β/α) ≥ C
+[by property (e)] or f(α) ≤ f0, in which case
+(f(β)+ f0)/(f(α)+ f0) ≥ f(β)/{2 · f0}≥ 2 · f(β)=2 βm(β − 1)n ≥ β ≥ C
+[since 0 <f 0 ≤ 1
+4 , β ≥ C ≥ 2]. On the other hand, if α ∈{ 0, 1},t h e n
+(f(β)+ f0)/(f(α)+ f0)=( f(β)+ f0)/f0 ≥ f(β) ≥ βm · (β − 1)n ≥ β ≥ C
+[since β ≥ C ≥ 2, as observed above]. This completes the proof of property (d). ⃝
+Lemma 2.2. (Belyi Maps Noncritical at Prescribed Rational Points)
+Let
+S ⊆ P1(Q)
+be a ﬁnite set of rational points such that:
+(i) 0, ∞∈ S;
+(ii) α ∈ S\{0, ∞} implies α> 0.
+
+4 SHINICHI MOCHIZUKI
+Suppose that β ∈ Q\S satisﬁes the following condition:
+(iii) β/α ≥ 2, for all α ∈ S\{0, ∞} .
+Then there exists a nonconstant polynomialf(x) ∈ Q[x] which deﬁnes a morphism
+φ : P1
+Q → P1
+Q
+such that: (a) φ(S) ⊆{ 0, 1, ∞} ;( b ) φ(β) /∈{ 0, 1, ∞} ;( c ) φ is unramiﬁed over
+P1
+Q\{0, 1, ∞} .
+Proof. Indeed, we induct on the cardinality |S| of S and apply Lemma 2.1 [with,
+say, C = 2] to the set λ · S ⊆ P1
+Q, for some appropriate positive rational number
+λ. Then, so long as |S|≥ 4, the polynomial “f(x)+ f0” of Lemma 2.1 determines
+a morphism P1
+Q → P1
+Q, unramiﬁed away from the image of S, that maps β, S to
+some β′, S′ that satisfy conditions (i), (ii), (iii) of the present Lemma 2.2, but for
+which the cardinalities of S′, S satisfy |S′| < |S|. Thus, by applying the induction
+hypothesis and composing the resulting morphisms P1
+Q → P1
+Q, we conclude the
+existence of an “f”, “φ” as in the statement of the present Lemma 2.2. ⃝
+Lemma 2.3. (Separation of Collections of Points) Let
+S ⊆ P1(C)
+be a ﬁnite set of complex points. Then for any realC> 0 and β ∈ C\S ⊆ P1(C)\S,
+there exists a λ ∈ C such that the rational function
+f(x)=1 /(x − λ)
+satisﬁes f(β) ̸=0 , ∞ ; f(α) ̸= ∞ ;a n d|f(β)|≥ C ·| f(α)|, for all α ∈ S. Moreover,
+if β ∈ Q, then one may take λ ∈ Q.
+Proof. Indeed, it suﬃces to take λ such |λ − β| is suﬃciently small . ⃝
+Lemma 2.4. (Reduction to the Rational Case) Write
+ Q ⊆ C for the
+subset of algebraic numbers. Let
+S ⊆ P1(
+Q) ⊆ P1(C)
+be a ﬁnite set of
+ Q-rational points. Suppose that β ∈
+ Q\S. Then there exists a
+nonconstant rational function f(x) ∈
+ Q(x) which deﬁnes a morphism
+φ : P1
+Q → P1
+Q
+such that, for some Sφ ⊆ P1(Q), we have: (a) φ(S) ⊆ Sφ;( b )φ(β) ∈ P1(Q)\Sφ;
+(c) φ is unramiﬁed over P1
+Q\Sφ. Moreover, if S, β are deﬁned over a number ﬁeld
+F,t h e nφ may be taken to be deﬁned overF.
+
+NONCRITICAL BEL YI MAPS 5
+Proof. First of all, we observe that by applying the automorphism x ↦→ x − β,
+we may assume that β ∈ P1(Q). Moreover, under the hypothesis that β ∈ P1(Q),
+we shall construct a f(x) satisfying the required conditions such that f(x) ∈ Q(x).
+Also, we may replace S by the union of all Gal(
+Q/Q)-conjugates of S and assume,
+without loss of generality, that S is Gal(
+Q/Q)-stable.
+If F is a ﬁnite extension of Q, then let us refer to the number [ F : Q] − 1a s
+the reduced degreeof F.W r i t e
+m(S)
+for the maximum of the reduced degrees of the ﬁelds of deﬁnition of the various
+points contained in S and
+d(S)
+for the sum of those reduced degreesof the ﬁelds of deﬁnition of the various points
+contained in S which are equal to m(S). Thus, d(S) = 0 if and only if m(S)=0i f
+and only if S ⊆ P1(Q).
+Now we perform a“nested induction”on m(S), d(S): That is to say, we induct
+on m(S), and, for each ﬁxed value ofm(S), we induct on d(S). If m(S),d(S) ̸=0 ,
+then let α0 ∈ S\P1(Q) be such thatd0
+def
+=[ Q(α0): Q]i se q u a lt om(S)+1. Then by
+applying an automorphism (with rational coeﬃcients!) as in Lemma 2.3 and then
+multiplying by some positive rational number, we may assume that |α|≤ 1, for all
+α ∈ S\{∞} , while |β|≥ C,f o rs o m esuﬃciently large C, where “suﬃciently large”
+is relative to d0.L e tf0(x) ∈ Q[x]b et h emonic minimal polynomial for α0 over Q.
+Then one veriﬁes immediately that all of the coeﬃcients off0(x) have absolute value
+≤ dd0
+0 . In particular, it follows that the value of f0 at every α ∈ S\{∞} ,a sw e l l
+as at every element of the setS0 of roots of the derivative f′
+0(x) has absolute value
+bounded by some ﬁxed expression ind0. Thus, for a suitable choice of C, it follows
+that f0(β) /∈ S′ def
+= f0(S) ⋃ f0(S0). Moreover, since f0(α0) = 0; [Q(α′): Q] <d 0 for
+every α′ ∈ f0(S0)[ s i n c ef0(x),f ′
+0(x) ∈ Q[x]; f′
+0(x) has degree ≤ d0 − 1], it follows
+that S′ is Gal(
+Q/Q)-stable and satisﬁes the property that either
+m(S′) <m (S)
+or
+m(S′)= m(S); d(S′) <d (S)
+—t h u scompleting the induction step. In particular, replacing S by S′, β by f0(β),
+applying the induction hypothesis, and composing the resulting morphisms yields
+a morphism φ as in the statement of Lemma 2.4. ⃝
+Theorem 2.5. (Belyi Maps Noncritical at Prescribed Points) Let X be
+a smooth, proper, connected curve over
+Q and
+S, T ⊆ X(
+Q)
+ﬁnite sets of
+ Q-rational points such that S ⋂ T = ∅. Then there exists a morphism
+φ : X → P1
+Q
+
+6 SHINICHI MOCHIZUKI
+such that: (a) φ is unramiﬁed overP1
+Q\{0, 1, ∞} ;( b )φ(S) ⊆{ 0, 1, ∞} ; (c) we have
+φ(T) ⋂{0, 1, ∞} = ∅. Moreover, if X, S,a n dT are deﬁned over a number ﬁeldF,
+then φ may be taken to be deﬁned overF.
+Proof. Since X(
+Q)i s inﬁnite, we may always adjoin to T extra points of X(
+Q)
+that do not lie in S; in particular, we may assume, without loss of generality, that
+T has cardinality ≥ 2gX +1 ,w h e r egX is the genus of X.W r i t e
+D
+def
+=
+∑
+t∈T
+[t]
+for the eﬀective divisor on X obtained by taking the formal sum of the points in
+T, each with multiplicity one; denote the associated line bundle OX(D)b y L and
+the canonical bundle of X by ωX. Also, we shall write s0 ∈ Γ(X, L) for the section
+[uniquely determined up to a
+ Q
+×
+-multiple] whose zero divisor is D.T h u s , t h e
+degree deg(L)o f L is ≥ 2gX +1 ≥ 1. In particular, if x ∈ X(
+Q), then
+deg(ωX ⊗L − 1(x)) ≤ (2gX − 2) − (2gX +1 )+1= −2
+so Γ(X,ωX ⊗L − 1(x)) = 0. Since, by Serre duality, Γ( X,ωX ⊗L − 1(x)) is dual
+to H1(X, L(−x)), we thus conclude that H1(X, L(−x)) = 0. Now if we consider
+the long exact cohomology sequence associated to the exact sequence of coherent
+sheaves on X
+0 →L (−x) →L→L⊗ k(x) → 0
+[where k(x) is the residue ﬁeld of X at x] we obtain an exact sequence
+... → Γ(X, L) →L⊗ k(x) → H1(X, L(−x)) → ...
+— i.e., we have a surjection Γ(X, L) ↠ L⊗ k(x). Since
+ Q is inﬁnite, it thus follows
+that there exists an s1 ∈ Γ(X, L) such that s1(t) ̸=0f o ra l lt ∈ T.T h u s ,t h elinear
+series determined by the sections s0, s1 of L has no basepoints, hence determines a
+ﬁnite morphism
+ψ : X → P1
+Q
+such that the pull-back byψ of the unique [up to isomorphism] line bundle of degree
+1o n P1
+Q is isomorphic to L; ψ maps every t ∈ T to the point “0” ofP1
+Q.M o r e o v e r ,
+since every point of the support ofD has multiplicity one in D, ψ is unramiﬁedover
+the point “0” ofP1
+Q; since no point of S lies in the support of D, this point “0” of
+P1
+Q does not lie in the set ψ(S).
+Thus, in summary, byreplacing X by P1
+Q, T by the point “0” ofP1
+Q,a n dS by
+the union of ψ(S) and the points of P1
+Q over which ψ ramiﬁes, we conclude that
+we may reduce to the case X = P1
+Q, T = {β},f o rs o m eβ ∈ P1(
+Q)\{∞} .N e x t ,
+by applying Lemma 2.4, one reduces to the case X = P1
+Q, S ⊆ P1(Q), T = {β},
+for some β ∈ P1(Q)\{∞} . Finally, by applying an automorphism as in Lemma 2.3
+
+NONCRITICAL BEL YI MAPS 7
+[for, say, C = 4], followed by a suitable automorphism of the form x ↦→ ν · x + μ,
+where ν ∈{ ±1} and μ ∈ Q, gives rise to a situation in which the hypotheses of
+Lemma 2.2 are valid. Thus, Theorem 2.5 follows from Lemma 2.2. ⃝
+Section 3: Some Generalizations
+Corollary 3.1. (Belyi Maps Noncritical at Arbitrary Sets of Prescribed
+Cardinality) Let n ≥ 1 be an integer; X a smooth, proper, connected curve over
+Q and
+S ⊆ X(
+Q)
+a ﬁnite set of
+ Q-rational points. Then there exists a ﬁnite collection of morphisms
+φ1,... ,φ N : X → P1
+Q
+such that: (a) φi is unramiﬁed overP1
+Q\{0, 1, ∞} , for all i =1 ,... ,N ;( b )φi(S) ⊆
+{0, 1, ∞} , for all i =1 ,... ,N ; (c) for any subset T ⊆ X(
+Q) of cardinality n for
+which S ⋂ T = ∅, there exists an i ∈{ 1,... ,N } such that φi(T) ⋂{0, 1, ∞} = ∅.
+Proof. Note that we may think of T as a
+ Q-valued point of the n-fold product
+Y
+def
+=( X\S)n of (X\S)o v e r
+Q. Then observe that for any φ : X → P1
+Q such that:
+(a) φ is unramiﬁed over P1
+Q\{0, 1, ∞} ;( b )φ(S) ⊆{ 0, 1, ∞} , the subset
+Uφ ⊆ Y (
+Q)
+of y ∈ Y (
+Q) for which φ(y) ⋂{0, 1, ∞} = ∅[where, by abuse of notation, we write
+φ(y) for the subset of P1
+Q(
+Q) which is the image under φ of the subset of X(
+Q)
+determined by y] is nonempty and open [in the Zariski topology]. Moreover, by
+Theorem 2.5, the Uφ cover Y (
+Q) [i.e., as φ varies over those morphisms satisfying
+the conditions (a), (b)]. Since Y is quasi-compact, we thus conclude that there exist
+ﬁnitely many φ1,... ,φ N such that Y (
+Q) is covered by Uφ1 ,... ,U φN , as desired.
+⃝
+In the following, we shall refer to as a locally compact ﬁeldany completion of
+a number ﬁeld at an archimedean or nonarchimedean place.
+Corollary 3.2. (Belyi Maps Noncritical Near Arbitrary Points of Pre-
+scribed Degree) Let c, d ≥ 1 be integers; X a smooth, proper, connected curve
+over a number ﬁeld F ⊆
+ Q; V a ﬁnite set of valuations (archimedean or nonar-
+chimedean) of F.I f v ∈ V , then we denote by Fv the completion of F at v.T h e n
+there exists a ﬁnite collection ofmorphisms
+φ1,... ,φ N : X → P1
+Q
+
+8 SHINICHI MOCHIZUKI
+and, for each v ∈ V ,a locally compact ﬁeld Lv and a compact set
+Hv ⊆ (P1 \{0, 1, ∞} )(Lv) ⊆ P1(Lv)
+satisfying the following properties:
+(i) F ⊆ Fv ⊆ Lv [i.e., Lv is a topological ﬁeld extension ofFv];
+(ii) Lv contains all Q-conjugates of all extensions of F of degree ≤ d;
+(iii) every φi (where i ∈{ 1,... ,N }) is deﬁned over everyLv (where v ∈ V );
+(iv) φi is unramiﬁed over P1
+Q\{0, 1, ∞} , for all i =1 ,... ,N ;
+(v) for any subset T ⊆ X(
+Q) of cardinality ≤ c consisting of points x ∈ T
+whose ﬁeld of deﬁnition is of degree ≤ d over F, there exists an i ∈
+{1,... ,N } such that φi(xσ) ∈ Hv, for all x ∈ T, σ ∈ Gal(
+Q/F), v ∈ V .
+Proof. As in the proof of Corollary 3.1, write Y
+def
+= Xn for the n-fold product
+X over F, where we set n
+def
+= c · d. Thus, for any T ⊆ X(
+Q) as in the statement
+of Corollary 3.2, (v), the conjugates over F of the various x ∈ T [in any order,
+with possible repetition] form a point ∈ Y (
+Q). Let Lv be a locally compact ﬁeld
+containing Fv,a sw e l la sa l lQ-conjugates of all extensions ofF of degree ≤ d.T h e n
+observe that for any φ : X → P1
+Q which is deﬁned over all of the Lv [as v ranges
+over the elements of V ] and unramiﬁed over P1
+Q\{0, 1, ∞} , the subset
+Uφ ⊆ Y (LV )
+def
+=
+∏
+v∈V
+Y (Lv)
+of y ∈ Y (LV ) for which φ(y) ⋂{0, 1, ∞} = ∅[by abuse of notation, as in the proof
+of Corollary 3.1] is nonempty and open relative to the product topology of the
+Zariski topologies on the Y (Lv), hence a fortiori, relative to the product topology
+of the topologies on the Y (Lv) determined by the Lv. Moreover, by arguing as
+in the proof of Corollary 3.1 using Theorem 2.5 and the Zariski topology,w em a y
+assume that the Lv are suﬃciently large that [in fact, ﬁnitely many] suchUφ cover
+Y (LV ). Now since eachUφ is locally compactand contains acountable dense subset,
+it follows that each Uφ admits an exhaustive chain of open subsets
+Vφ,1 ⊆ Vφ,2 ⊆ ... ⊆ Uφ
+[i.e., ⋃
+j Vφ,j = Uφ] such that the closure
+ V φ,j in Uφ of each Vφ,j is compact.
+On the other hand, since Y is proper, it follows that Y (LV )i s compact.W e t h u s
+conclude that there exist ﬁnitely many φ1,... ,φ N such that Y (LV )i s covered by
+Vφ1,j1 ;... ;VφN ,jN , where [by abuse of notation, as in the proof of Corollary 3.1, we
+write]
+φi(Vφi,ji ) ⊆ φi(
+V φi,ji ) ⊆ φi(Uφi ) ⊆
+∏
+v∈V
+(P1\{0, 1, ∞} )(Lv)
+
+NONCRITICAL BEL YI MAPS 9
+for i =1 ,... ,N . Thus, we may takeHv to be theimage in the factor (P1\{0, 1, ∞} )(Lv)
+of theunion of the compact subsetsφi(
+V φi,ji ) of the product∏
+v∈V (P1\{0, 1, ∞} )(Lv).
+⃝
+References
+[1] G. V. Belyi, On Galois extensions of a maximal cyclotomic ﬁeld, Izv. Akad.
+Nauk SSSR Ser. Mat.43:2 (1979), pp. 269-276; English transl. inMath. USSR-
+Izv. 14 (1980), pp. 247-256.

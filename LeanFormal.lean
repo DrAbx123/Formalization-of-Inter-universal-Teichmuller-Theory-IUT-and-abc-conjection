@@ -1,2 +1,1 @@
-import LeanFormal.Basic
-import LeanFormal.IUTDispute
+import LeanFormal.IUT.Project

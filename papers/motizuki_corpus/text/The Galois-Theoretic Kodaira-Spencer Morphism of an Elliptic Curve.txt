@@ -1,0 +1,1493 @@
+The Galois-Theoretic
+Kodaira-Spencer Morphism of an Elliptic Curve
+Shinichi Mochizuki
+July 2000
+Contents:
+§0. Introduction
+§1. Galois Actions on the Torsion Points
+§2. Lagrangian Galois Actions
+§2.1. Deﬁnition and Construction
+§2.2. Relation to the Crystalline Theta Object
+§3. Global Multiplicative Subspaces
+§4. The Group Tensor Product
+Section 0: Introduction
+The purpose of this paper is to study in greater detail thearithmetic Kodaira-
+Spencer morphismof an elliptic curve introduced in [Mzk1], Chapter IX, in the gen-
+eral context of the Hodge-Arakelov theory of elliptic curves, developed in [Mzk1-3].
+In particular, after correcting a minor error (cf. Corollary 1.6) in the construction of
+this arithmetic Kodaira-Spencer morphism in [Mzk1], Chapter IX,§3, we deﬁne (cf.
+§2.1) a slightly modiﬁed “Lagrangian”version of this arithmetic Kodaira-Spencer
+morphism which has the following remarkable properties:
+(1) This Lagrangian arithmetic Kodaira-Spencer morphism is free
+of Gaussian poles (cf. Corollary 2.5).
+(2) A certain portion of the reduction modulo p of this Lagrangian
+arithmetic Kodaira-Spencer morphism may be naturally iden-
+tiﬁed with the usual geometric Kodaira-Spencer morphism (cf.
+Corollary 2.7).
+We recall that property (1) is of substantial interest since it is the Gaussian poles
+that are the main obstruction to applying the Hodge-Arakelov theory of elliptic
+curves to diophantine geometry (cf. the discussion of [Mzk1], Introduction, §5.1,
+for more details). On the other hand, property (2) is of substantial interest in that
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+it shows quite deﬁnitively that the analogy asserted in [Mzk1], Chapter IX, between
+the arithmetic Kodaira-Spencer morphism of the Hodge-Arakelov theory of elliptic
+curves and the usual geometric Kodaira-Spencer morphism of a family of elliptic
+curves is not just philosophy, but rigorous mathematics! (cf. the Remark following
+Corollary 2.7 for more details). In fact, both properties (1) and (2) are essentially
+formal consequences of a property that we refer to as the “crystalline nature of
+the Lagrangian Galois action”(cf. Theorem 2.4). Interestingly, the theory of §2o f
+the present paper makes essential use not only of the theory of [Mzk1], but also of
+[Mzk2], [Mzk3].
+Unfortunately, however, this Lagrangian arithmetic Kodaira-Spencer morphism,
+which is based on a certain “Lagrangian Galois action,” can only be deﬁned when
+there is a natural (rank one) multiplicative subspace (i.e., “weight 1” subspace) of
+the Tate module of the elliptic curve in question. Since such a subspace is well-
+known to exist in a formal neighborhood of inﬁnity (of the compactiﬁed moduli
+stack of elliptic curves), we work over such a base in §2. Ultimately, however, one
+would like to carry out this construction for elliptic curves over number ﬁelds .I n
+§3, 4, we discuss a certain point of view that suggests that this may be possible
+— cf. especially, §4, “Conclusion.” It is the hope of the author to complete the
+construction motivated in §3,4 in a future paper.
+Notation and Conventions:
+We will denote by (
+M
+log
+1,0)Z the log moduli stack of log elliptic curves over Z
+(cf. [Mzk1], Chapter III, Deﬁnition 1.1), where the log structure is that deﬁned
+by the divisor at inﬁnity. The open substack of (
+M1,0)Z parametrizing (smooth)
+elliptic curves will be denoted by (M1,0)Z ⊆ (M1,0)Z.
+Acknowledgements: The author would like to thank A. Tamagawa and T. Tsuji for
+stimulating discussions of the various topics presented in this manuscript.
+Section 1: Galois Actions on the T orsion Points
+In this §, we study various Galois actions on the space of functions on the set
+of torsion points of an elliptic curve. In particular, we observe that these actions
+give rise to a natural action of the “algebraic fundamental groupoid” of the base
+of a family of elliptic curves on the scheme of torsion points over this base. This
+action allows us to correct an error made in [Mzk1], Chapter IX, in the deﬁnition
+given there of the arithmetic Kodaira-Spencer morphism.
+Let S
+log be a ﬁne noetherian log scheme whose underlying scheme S is con-
+nected and normal.W r i t eUS ⊆ S for the open subscheme where the log structure
+is trivial. In the following discussion, we shall assume that US ̸= ∅.N e x t , l e t u s
+assume that we are given a log elliptic curve (cf. §0, Notations and Conventions)
+Clog → Slog
+
+GALOIS-THEORETIC KODAIRA-SPENCER 3
+(whose associated one-dimensional semi-abelian scheme we denote by E → S)a n d
+a positive integer d ≥ 1w h i c hi sgenerically invertible on S (i.e., invertible on a
+schematically dense open subscheme of S). Next, let us write
+UT [d−1] ⊆ E|US[d− 1]
+(where US[d−1]
+def
+= US ⊗Z Z[d−1]) for the kernel of the ﬁnite, ´etale morphism [d]:
+E|US[d− 1] → E|US[d− 1] of degreed2 (given by multiplication byd). Thus, UT [d−1] →
+US[d−1] is ﬁnite ´etale of degree d2.L e tu sw r i t e
+T → S
+for the normalization of S in UT [d−1], UT
+def
+= T |US (so UT [d−1]= UT ⊗Z Z[d−1]).
+Also, let us assume that we are given a connected, normal scheme Z over S such
+that if we write UZ
+def
+= Z|US , UZ[d−1]
+def
+= UZ ⊗Z Z[d−1], then UZ[d−1] → US[d−1]i s
+ﬁnite ´etale and Galois; UZ[d−1] → US[d−1] dominates every connected component
+of UT [d−1]; and Z is the normalization of S in UZ[d−1].
+Next, we consider ´etale fundamental groups.W r i t e
+ΠS
+for the fundamental group π1(US[d−1]) (for some choice of base-point, which we
+omit in the notation since it is irrelevant to our discussion). Then sinceUZ[d−1] →
+US[d−1]i s Galois, it follows that Π S acts naturally on UZ[d−1], hence also on Z
+(over S). In particular, Π S acts naturally on the module of d-torsion points
+M
+def
+=M o rS(Z,T )
+(where we observe that, as an abstract Z-module, M ∼= (Z/dZ)2). In the following
+discussion, we shall think of the action of ΠS on Z as an action from the right,a n d
+the action of ΠS on OZ, M as an action from the left.
+Next, let us us consider the OZ-algebra
+F
+def
+= Func(M, OZ)
+of OZ-valued functions on the ﬁnite set M. Then observe that Π S acts on F in
+several diﬀerent ways, e.g., via the action of ΠS on M, via the action of ΠS on OZ,
+etc.
+Deﬁnition 1.1. We shall refer to theOZ-linear (respectively, semi-linear, relative
+to the action of Π S on OZ)a c t i o no fΠS from the right (respectively, left) on F
+induced by the action of ΠS on M (respectively, OZ)a st h epoint-theoretic action
+
+4 SHINICHI MOCHIZUKI
+(respectively, value-theoretic action)o fΠ S on F. We shall refer to the OZ-semi-
+linear action of ΠS on F from the left given by composing the value-theoretic action
+with the inverse of the point-theoretic action (i.e., if σ ∈ ΠS,a n dφ ∈F ,t h e nσ
+maps φ to the function M ∋ m ↦→ σ(φ(σ−1m))) as the diagonal action of ΠS on
+F. We shall abbreviate the term “point-theoretic action” (respectively, “value-
+theoretic action”; “diagonal action”) by the termP-action (respectively, V-action;
+D-action).
+Proposition 1.2. There is a natural inclusion ι: OT ↪→F of OS-algebras which
+induces an isomorphism of OT onto the subalgebra of F of ΠS-invariants with
+respect to the D-action. Moreover, this inclusion induces an isomorphism
+(OT ⊗OS OZ)norm ∼
+→F
+(where the superscript “norm” denotes the normalization of the ring in parentheses)
+which is ΠS-equivariant with respect to the tensor product of the trivial action of
+ΠS on OT and the natural action of ΠS on OZ on the left, and the D-action of
+ΠS on F on the right.
+Proof. It is a tautology (cf. the deﬁnition M
+def
+=M o rS(Z,T )) that elements of M
+deﬁne OS-algebra homomorphisms OT →O Z. Thus, if we take the direct product
+of these various homomorphisms, then we get an OS-algebra homomorphism
+ι: OT →F
+(cf. the deﬁnition of F — i.e., F
+def
+= Func(M, OZ)). Moreover, it is a tautology that
+OT maps into the subalgebra of ΠS-invariants of F relative to the D-action. Since
+OT and F are both normal algebras, in order to verify the remaining assertions
+of Proposition 1.2, it suﬃces to verify that these assertions hold over US[d−1].
+To simplify notation, we assume (just for the remainder of this proof) that S =
+US[d−1].
+Thus, T → S and Z → S are ﬁnite ´etale, so, by (Galois) ´etale descent (with
+respect to the morphism Z → S), it follows that the Π S-invariants of F form
+an OS-algebra OT ′ , whose spectrum T ′ over S is ﬁnite ´etale over S.M o r e o v e r ,
+T ′ → S factors (cf. the discussion of the preceding paragraph) through T.T h u s ,
+since T ′ and T are both ﬁnite ´etale of degree equal to the cardinality of M (i.e.,
+d2)o v e rS, we obtain thatT ′ = T, as desired. The fact that the induced morphism
+OT ⊗OS OZ
+∼
+→F is an isomorphism then follows from elementary properties of ´etale
+descent. This completes the proof. ⃝
+Next, we would like to use the V-action of Π S on F to construct “some sort
+of group action” on F which descends to an action on OT . If, for instance, the
+V-action of Π S on F were equivariant with respect to the D-action of Π S on F,
+then the V-action itself would deﬁne an action of Π S on F that descends to an
+
+GALOIS-THEORETIC KODAIRA-SPENCER 5
+action on OT .I nf a c t ,h o w e v e r ,this sort of equivariance does not hold in the naive
+sense, but only in the following “twisted sense”:
+First, let us deﬁne the proﬁnite group with ΠS-action ΓS as follows: We take
+the underlying proﬁnite group of ΓS to be ΠS itself. The ΠS-action on ΓS is deﬁned
+to be the action given by: σ(γ)
+def
+= σ·γ·σ−1 (for σ ∈ ΠS, γ ∈ ΓS). Next, we endow
+F with the ΓS-action deﬁned by thinking of Γ S as ΠS and using the V-action of
+ΠS on F (cf. Deﬁnition 1.1). Then we have the following:
+Proposition 1.3. The ΓS-action on F is compatible with the ΠS-actions on ΓS
+and F (where we think of ΠS as acting on F by the D-action).
+Proof. Indeed, if σ ∈ ΠS, γ ∈ ΓS, φ ∈F , m ∈ M, then:
+(
+σD {γ(φ)}
+)
+(m)= σ ·{ γ(φ)}(σ−1 · m)
+= σ · γ · φ(σ−1 · m)
+= σ · γ · σ−1 · σ · φ(σ−1 · m)
+= σ(γ) · σ · φ(σ−1 · m)
+= σ(γ) ·{ σD(φ)}(m)
+=
+{
+σ(γ) ·
+(
+{σD(φ)}
+)}
+(m)
+(where the superscript D denotes the D-action of the group element bearing the
+superscript). This completes the proof. ⃝
+Let us write Gal(Z/S) for the Galois group of the Galois covering UZ[d−1] →
+US[d−1]. Then by forming the quotient ofZ by the action of Gal(Z/S) in the sense
+of stacks, we obtain an algebraic stack Ssk
+Z , together with morphisms
+Z → Ssk
+Z → S
+where the ﬁrst morphism is Galois, ﬁnite ´etale (with Galois group Gal(Z/S)), and
+the second morphism is an isomorphism over US[d−1]. If we let Z range over all
+connected Galois, ﬁnite ´etale coverings ofS, the inverse limit of theZ (respectively,
+Ssk
+Z ) thus deﬁnes a “pro-scheme” ˜S (respectively, “pro-algebraic stack”Ssk)o v e rS,
+together with morphisms:
+˜S → Ssk → S
+(where the ﬁrst morphism is “Galois, proﬁnite ´ etale” (with Galois group ΠS)a n d
+the second morphism is anisomorphism over US[d−1]). Moreover, by ´etale descent,
+the “proﬁnite group with Π S-action” ΓS deﬁnes a proﬁnite ´etale group scheme Γsk
+S
+over Ssk.
+
+6 SHINICHI MOCHIZUKI
+Deﬁnition 1.4. We shall refer to Γsk
+S as the algebraic fundamental groupoid of
+Slog.
+Note that sinceZ → Ssk
+Z is ﬁnite (Galois) ´etale, the D-action of ΠS on Spec(F)
+(where “ Spec” is to be understood as being taken with respect to the structure of
+OZ-algebra on F) deﬁnes descent datafor Spec(F) with respect toZ → Ssk
+Z (hence,
+a fortiori, with respect to ˜S → Ssk). We shall denote the resulting descended object
+over Ssk by:
+Tsk → Ssk
+Note that over US[d−1], we have Tsk|US[d− 1] = T |US[d− 1] (by Proposition 1.2).
+Corollary 1.5. The action of ΓS on F descends to an action of the algebraic
+fundamental groupoid Γsk
+S on Tsk.
+Proof. This follows immediately from Proposition 1.2, 1.3. ⃝
+Remark. The terminology of Deﬁnition 1.4 may be justiﬁed as follows: First,
+let us recall the well-known analogy between algebraic fundamental groups (such
+as Π
+S) and the usual topological fundamental groups of algebraic topology. This
+analogy gives us the freedom to phrase our justiﬁcation in the language oftopological
+fundamental groups.T h u s ,l e tX be a topological manifold. Note that for each point
+x ∈ X, we obtain (in a natural way) a group:
+x ↦→ π1(X,x )
+i.e., the fundamental group with base-point x. This correspondence deﬁnes a local
+system of groups on X, which is known (in algebraic topology) as thefundamental
+groupoid of X. On the other hand, there is a well-known equivalence of categories
+between local systems of groups on X and groups G equipped with an action
+of π1(X,x ) (given by associating to such a local system its ﬁber at x, together
+with the “monodromy action” of π1(X,x )). Moreover, it is an easy exercise to
+check that, relative to this equivalence of categories, the fundamental groupoid
+corresponds to the “group with π1(X,x )-action” deﬁned by letting π1(X,x ) act
+on itself via conjugation (cf. the deﬁnition given above for the Π S-action on ΓS).
+Thus, in summary, one may regard the object Γsk
+S as the algebraic analogue of the
+fundamental groupoid. This justiﬁes the terminology of Deﬁnition 1.4.
+Remark. One other interesting observation relative to the appearance of the al-
+gebraic fundamental groupoid (cf. Deﬁnition 1.4 — i.e., as opposed to group)i n
+the correct formulation of the arithmetic Kodaira-Spencer morphism (cf. Corollary
+1.6 below) is the following. Recall that in the asserted analogy between the arith-
+metic Kodaira-Spencer morphism of [Mzk1], Chapter IX, and the usual geometric
+
+GALOIS-THEORETIC KODAIRA-SPENCER 7
+Kodaira-Spencer morphism, the Galois group/fundamental group(oid) of the base
+plays the role of the tangent bundle of the base . On the other hand, the tangent
+bundle of the base (typically) does not admit a canonical global trivialization, but
+instead varies from point to point — i.e., at a given point, it consists of inﬁnites-
+imal motions originating from that point . Thus, it is natural that the arithmetic
+analogue of the tangent bundle should be not the “static” fundamental group, but
+instead the fundamental groupoid, which varies from point to point, and indeed,
+at a given point, consists of paths (which may be thought of as a sort of “motion”)
+originating from that point.
+We are now ready to apply the above discussion to correct an error made in
+[Mzk1], Chapter IX, in the deﬁnition given there of thearithmetic Kodaira-Spencer
+morphism:
+In [Mzk1], Chapter IX, Theorem 3.3, and the discussion preced-
+ing it, it is falsely asserted that there is a natural action (“with
+denominators”) of Π
+S on HDR (notation of loc. cit. )a r i s i n g
+from a natural action of Π S on T → S (notation of the present
+discussion).
+Although this assertion does indeed hold if theS-scheme T happens to be adisjoint
+union of copies of S, in general, it is false. That is to say, the correct formulation
+of this assertion is that the “twisted object” Γsk
+S acts on Tsk (not that ΠS acts on
+T).
+Corollary 1.6. (Correction to Error in [Mzk1], Chapter IX, §3) The
+phrase “natural action of ΠS on ... HDR” in [Mzk1], Chapter IX, Theorem 3.3,
+should read
+“natural action of Γsk
+S on ... HDR|Ssk ”
+(where “ |sk
+S ” denotes the pull-back via the morphism Ssk → S), and the divisor of
+possible poles “[η ⋂(dE)] +V (4)” should read
+[η
+⋂
+(dE)] +V (d)
+In particular, the resulting “arithmetic Kodaira-Spencer morphism” κarith
+E :
+ΠS → Filt(HDR)(S) ((erroneous) notation of [Mzk1], Chapter IX, §3) should in
+fact be thought of as a morphism
+κarith, sk
+E :Γ sk
+S → Filt(HDR)|Ssk
+of sheaves on the ´etale site of Ssk.
+Proof. It remains only to remark that the reason for the divisor “ V (d)” (i.e., the
+zero locus of the regular function determined by the integer d) is that the integral
+structure on the pull-back to Z (notation of the present discussion) of OdE diﬀers
+
+8 SHINICHI MOCHIZUKI
+from that of F (cf. the notation “norm” appearing in Proposition 1.2) by a factor
+which is bounded by the diﬀerent of the algebra OdE. Moreover, the fact that this
+diﬀerent dividesd follows from the fact that multiplication byd on an elliptic curve
+induces multiplication by d on the diﬀerentials of the elliptic curve. ⃝
+Remark. Thus, in summary, what is done in [Mzk1], Chapter IX, §3, is literally
+correct whenT → S happens to be a disjoint sum of copies ofS (a condition which
+may be achieved by base-change). In general, however, there is a certain “twist”
+that must be taken into account, but which was overlooked in the discussion of
+[Mzk1], Chapter IX.
+Section 2: Lagrangian Galois Actions
+In this §, we study the Galois action on the torsion points of an elliptic curve,
+along with the resulting “arithmetic Kodaira-Spencer morphism” (cf.§1) under the
+assumption that this Galois action preserves a “rank one multiplicative submodule
+” of the module of torsion points . In this situation, we show that the resulting
+“Lagrangian Galois action” is deﬁned without Gaussian poles, and, moreover, that
+a “certain piece” of the resulting arithmetic Kodaira-Spencer morphism coincides
+with the classical Kodaira-Spencer morphism (cf. §2.2). This further strengthens
+the analogy discussed in [Mzk1], Chapter IX, between the arithmetic (or “Galois-
+theoretic”) Kodaira-Spencer morphism and the classical (“geometric”) Kodaira-
+Spencer morphism.
+§2.1. Deﬁnition and Construction
+In this §, we maintain the notation of §1. Moreover, we assume that we are
+given a Π
+S-submodule Mμ ⊆ M whose underlying Z/dZ-submodule is free of rank
+one. Thus, we obtain an exact sequence of ΠS-modules
+0 → Mμ → M → Met → 0
+(where Met is deﬁned so as to make this sequence exact). Thus, restricting OZ-
+valued functions on M to Mμ gives rise to a surjection
+F = Func(M, OZ) ↠ Fμ def
+= Func(Mμ, OZ)
+of OZ-algebras. Observe that the V-action (cf. Deﬁnition 1.1) of Π S on F mani-
+festly preserves this surjection, so we get a natural V-action of ΠS on Fμ. Since,
+moreover, we are operating under the assumption that ΠS preserves the submodule
+Mμ ⊆ M, it thus follows that the P- and D-actions (cf. Deﬁnition 1.) of Π S on
+F also preserve this surjection, so we also get natural P- and D-actions of ΠS on
+
+GALOIS-THEORETIC KODAIRA-SPENCER 9
+Fμ. In particular, (cf. Proposition 1.2) taking the spectrum (over S)o ft h eΠ S-
+invariants of Fμ with respect to the D-action gives rise to a scheme Tμ together
+with a morphism
+Tμ → T
+which is a closed immersion over US[d−1]. (Note that since the operation of taking
+ΠS-invariants is not necessarily right exact, it is not clear whether or not Tμ → T
+is a closed immersion over S.)
+Next, let us suppose that we are given a splitting
+MH ⊆ M
+of the surjection of modules M ↠ Met (i.e., a submodule MH ⊆ M such that
+the morphism MH → Met is bijective), which is not necessarily preserved by ΠS.
+Even if MH is not preserved by ΠS, however, since Mμ ⊆ M is preserved by ΠS,
+it follows that an element σ ∈ ΠS will always carry MH ⊆ M to another splitting
+MHσ
+⊆ M of the surjection M ↠ Met.
+Next, we return to the “de Rham point of view,” and consider sections of
+line bundles on the universal extension of E. Also, for simplicity, we assume from
+now on that S is Z-ﬂat ,a n dt h a td is odd. Then we would like to consider the
+Hodge-Arakelov Comparison Isomorphism (cf. [Mzk1], Introduction, Theorem A),
+so, in the following discussion, we will use the notation of [Mzk1], Introduction,
+and [Mzk3], §9. (Here, we recall that certain minor errors in [Mzk1], Introduction,
+Theorem A were corrected in [Mzk3], §9, Theorem 9.2.) Thus, we assume that we
+have been given an integer m that does not divide d, together with a torsion point
+η ∈ E∞ ,S(S∞ )
+of order preciselym which deﬁnes a metrized line bundle Lst,η on E∞ ,S (cf. [Mzk1],
+Chapter V, §1). Here, we recall that S∞ is the stack (in the ﬁnite, ﬂat topology)
+obtained from S by gluing together US (“away from inﬁnity”) to the proﬁnite
+covering of S (“near inﬁnity”) deﬁned by “adjoining a compatible system of N-th
+roots of the q-parameter” (asN ranges multiplicatively over the positive integers).
+Over S∞ , we have the group object
+E∞ ,S → S∞
+which is equal to E → S over US (“away from inﬁnity”), and whose “special ﬁber”
+consists of connected components indexed by Q/Z, each of which is isomorphic to
+a copy of Gm — cf. the discussion of [Mzk1], Chapter V, §2, for more details. For
+simplicity, we shall also assume that n
+def
+=2 m is invertible on S. In the following
+discussion, we shall simply write L for Lst,η. Thus, in particular, over US:
+
+10 SHINICHI MOCHIZUKI
+L|US = OE(d · [η])|US
+Also, let us write
+Ed,Z → Z
+for the object which is equal to EZ
+def
+= E ×S Z over UZ, and, “near inﬁnity,” is the
+pull-back to Z of the object “ Ed” (cf. [Mzk1], Chapter IV, §4, where we take “N”
+of loc. cit. to be d). (In words, this object “ Ed” is the complement of the nodes of
+the unique regular semi-stable model of the Tate curve (withq-parameter “q”) over
+the base Z[[q
+1
+d ]].) Then the object “ E∗
+[d],et → E” of [Mzk3], §9, deﬁnes an object
+E∗
+[d],et,Z → Ed,Z
+(which, over (UZ)Q, may be identiﬁed with the universal extension E† → E of E)
+over Ed,Z. Indeed, the discussion of [Mzk3], §9, applies literally over UZ;“ n e a r
+inﬁnity,” the fact that we get an object over Ed,Z follows from the fact that the
+integral structure in question, i.e., “
+(d·(T −(iχ /2m))
+r
+)
+” (in the notation of [Mzk3], §9)
+is invariant with respect to the transformations T ↦→ T + j
+d , ∀j ∈ Z.
+Note that L has an associated theta group (cf. [Mzk1], Chapter IV, §1, §5, for
+a discussion of theta groups) GZ over Z which ﬁts into an exact sequence:
+1 → (Gm)Z →G Z → dEZ → 1
+(where dEZ (⊆ Ed,Z) → Z is the ﬁnite ﬂat group scheme of d-torsion points). Let
+us suppose that the submodulesMμ,M H ⊆ M arise from the restriction toUZ[d−1]
+of ﬁnite ﬂat group schemes
+Gμ
+Z,HZ ⊆ dEZ
+over Z such that the resulting morphism Gμ
+Z ×Z HZ → dEZ is an isomorphism of
+group schemes. Thus, (cf. Proposition 1.2) we have a natural inclusion
+OGμ
+Z
+↪→F μ
+of ﬁnite OZ-algebras, which is an isomorphism over UZ[d−1]. In the following
+discussion, we also assume that Gμ
+Z has been chosen so that the subalgebraOGμ
+Z
+↪→
+Fμ is preserved by the various actions (i.e., V-, P-, D-) of ΠS on Fμ. Finally, let
+us assume that we are given a lifting
+HZ ⊆G Z
+
+GALOIS-THEORETIC KODAIRA-SPENCER 11
+of HZ (i.e., HZ
+∼
+→ HZ via GZ → dEZ). (Thus, HZ is a “Lagrangian subgroup” (cf.
+[MB], Chapitre V, D´eﬁnition 2.5.1) of the theta group GZ.) In particular, we get a
+natural action of HZ ∼= HZ on L.
+In the following discussion, we will always denote (by abuse of notation)struc-
+ture morphisms to S, Z, E∞ ,S by f (cf. the conventions of [Mzk1]). We would like
+to consider the push-forward
+VL
+def
+= f∗(LE∗
+[d],et,Z
+)
+of the pull-back LE∗
+[d],et,Z
+of the metrized line bundle L to E∗
+[d],et,Z. (Here, we
+take the integral structure of this push-forward “near inﬁnity” to be the unique
+GZ-stable integral structure determined by the “ ζCG
+r ” — cf. [Mzk1], Chapter V,
+Theorem 4.8; the discussion of [Mzk3],§4.1, 4.2.) Thus, VL is a quasi-coherent sheaf
+on Z. Also, often we would like to consider the ﬁltration Fr(VL) ⊆V L consisting
+of sections whose “torsorial degree” is <r . (Here, by “torsorial degree,” we mean
+the relative degree with respect to the structure of “relative polynomial algebra”
+on O
+E† over OE (arising from the fact that E† → E is an aﬃne torsor). Since E†
+may be identiﬁed with E∗
+[d],et,Z over (UZ)Q, this deﬁnition also applies to sections
+of VL.) In particular, we shall write
+HDR
+def
+= Fd(VL)
+for the object which appears in [Mzk1], Introduction, Theorem A (cf. also [Mzk3],
+Theorem 9.2). Thus, HDR is a vector bundle of rank d on Z. Finally, observe that
+the theta group GZ acts naturally on VL, Fr(VL), HDR.
+Next, let us observe that (by the assumption that n =2 m is invertible on S)
+the d-torsion subgroup scheme dEZ ⊆ Ed,Z lifts (uniquely!) to a subgroup scheme:
+dE∗ ⊆ E∗
+[d],et,Z
+(Indeed, this follows from the fact that the integral structure used to deﬁneE∗
+[d],et,Z
+is given by “
+(d·(T −(iχ /2m))
+r
+)
+” (in the notation of [Mzk3], §9), an expression which
+gives integral values ∈O S for all T = j
+d (for j ∈ Z).) Moreover, we recall from
+[Mzk1], Chapter IX, §3, that (since d is odd)w eh a v ea“theta trivialization”
+L|dEZ
+∼= L|0EZ
+⊗OZ OdEZ
+(where 0EZ ∈ EZ(Z) is the zero section ofEZ
+def
+= E ×S Z → Z) of the restriction of
+L to dEZ ⊆ Ed,Z. Note, moreover, since L is deﬁned over E∞ ,S (i.e., without base-
+changing to Z), it follows that L|0EZ
+is, in fact, deﬁned over S∞ (i.e., in other
+words, it is deﬁned over S, except that “near inﬁnity,” one may need to adjoin
+roots of the q-parameter). In particular, it follows that there is a natural action of
+Gal(Z/S) —h e n c eo fΠS (via the surjection ΠS ↠ Gal(Z/S))—o n L0EZ
+.
+
+12 SHINICHI MOCHIZUKI
+Thus, by restricting sections of L over E∗
+[d],et,Z to dE∗ ⊆ E∗
+[d],et,Z,a n dc o m -
+posing with the theta trivialization reviewed above, we obtain a morphism:
+ΞV : VL → L|0EZ
+⊗OZ OdEZ
+Similarly, if we introduce Gaussian poles (cf. [Mzk1], Introduction, Theorem A,
+(3); [Mzk3], Theorem 6.2), we get a morphism:
+ΞGP
+V : VGP
+L → L|0EZ
+⊗OZ OdEZ
+Then the main result of [Mzk1] may be summarized as follows:
+Theorem 2.1. (Review of the Main Result of [Mzk1]) Assume that d is
+odd and that n
+def
+=2 m is invertible on S. Then restriction of sections of L over
+E∗
+[d],et,Z to the d-torsion points, composed with the canonical “theta trivialization”
+of L over the d-torsion points yields a morphism
+ΞV : VL → L|0EZ
+⊗OZ OdEZ
+whose restriction
+ΞH : HDR → L|0EZ
+⊗OZ OdEZ
+to HDR
+def
+= Fd(VL) ⊆V L satisﬁes: (i) ΞH is an isomorphism over UZ; (ii) if one
+introduces Gaussian poles , i.e., if one considers
+ΞGP
+H : HGP
+DR → L|0EZ
+⊗OZ OdEZ
+then ΞGP
+H is an isomorphism over Z.
+Proof. We refer to [Mzk1], Introduction, Theorem A, especially (2), (3). Note
+that the “zero locus of the determinant” is empty because of our assumption that
+n is invertible on S. ⃝
+Next, let us observe that it follows from the fact that the morphism G
+μ
+Z ×Z
+HZ → dEZ is an isomorphism of group schemes that the composite
+OHZ
+dEZ ⊆O dEZ ↠ OGμ
+Z
+(where OHZ
+dEZ denotes the subalgebra of OdEZ of functions which are invariant with
+respect to the natural action ofHZ on OdEZ )i sa nisomorphism. Thus, by applying
+this isomorphism to the various morphisms obtained by takingHZ ∼= HZ-invariants
+of the various morphisms of Theorem 2.1, we obtain the following result:
+
+GALOIS-THEORETIC KODAIRA-SPENCER 13
+Corollary 2.2. (Lagrangian V ersion of the Main Result of [Mzk1])
+Assume that d is odd and that n
+def
+=2 m is invertible on S. Then by applying the
+isomorphism OHZ
+dEZ ⊆O dEZ ↠ OGμ
+Z
+to the result of taking HZ ∼= HZ-invariants of
+the various morphisms of Theorem 2.1, we obtain a morphism
+ΞHZ
+V : VHZ
+L → L|0EZ
+⊗OZ OGμ
+Z
+whose restriction
+ΞHZ
+H : HHZ
+DR → L|0EZ
+⊗OZ OGμ
+Z
+to HHZ
+DR
+def
+= Fd(VHZ
+L ) ⊆V HZ
+L satisﬁes: (i) ΞHZ
+H is an isomorphism over UZ; (ii) if
+one introduces Gaussian poles , i.e., if one considers
+ΞGP,HZ
+H : HGP,HZ
+DR → L|0EZ
+⊗OZ OGμ
+Z
+then ΞGP,HZ
+H is an isomorphism over Z.
+Proof. This follows from Theorem 2.1, together with the elementary observation
+that taking the HZ ∼= HZ-invariants of an HZ ∼= HZ-equivariant isomorphism is
+again an isomorphism. ⃝
+Before proceeding, we recall that VHZ
+L admits the following interpretation:
+Since HZ ∼= HZ acts on Ed,Z; E∞ ,S; E∗
+[d],et,Z; L,w em a yf o r mt h equotients of
+these objects by this action. This yields objects ( Ed,Z)H,( E∞ ,S)H,( E∗
+[d],et,Z)H,
+(L)H (a metrized line bundle on (E∞ ,S)H). Then we have:
+VHZ
+L = f∗{(L)H |(E∗
+[d],et,Z)H }
+(where f as usual denotes the structure morphism toZ) — cf., e.g., [Mzk1], Chapter
+IV, Theorem 1.4.
+Deﬁnition 2.3. The V-, P-, and D-actions of Π S on Gμ
+Z, together with the
+isomorphism ΞGP,HZ
+H of Corollary 2.2, and the natural action of ΠS on L|0EZ
+, deﬁne
+V-, P-, and D-actions of ΠS on HGP,HZ
+DR , which we shall refer to as the Lagrangian
+Galois actions on HGP,HZ
+DR .
+Remark. Thus, unlike the “naive” Galois actions of §1, the Lagrangian Galois
+actions depend on the choice of the additional data Mμ, MH.
+Remark. Thus, a priori, the Lagrangian Galois actions appear to require theGauss-
+ian poles (i.e., it appears that they are not necessarily integrally deﬁned on HHZ
+DR).
+In fact, however, we shall see in §2.2 below that (under certain assumptions) the
+
+14 SHINICHI MOCHIZUKI
+Lagrangian Galois D-action has the remarkable property that it is deﬁned with-
+out introducing the Gaussian poles. This property is not possessed by the “naive”
+(non-Lagrangian) Galois actions of §1.
+§2.2. Relation to the Crystalline Theta Object
+In this §, we continue to use the notations of §2.1, except that we further
+specialize them as follows. Let A be a complete discrete valuation ring of mixed
+characteristic (0,p), with perfect residue ﬁeld .W r i t eK (respectively, k) for the
+quotient ﬁeld (respectively, residue ﬁeld )o f A.I n t h i s§, we suppose that S is of
+the form:
+S =S p e c (A[[q
+1
+N ]])
+for some positive integer N prime to d, and that the log structure on S is that
+deﬁned by the divisor V (q
+1
+N ) ⊆ S. Also, we suppose that the given log elliptic
+curve Clog → Slog is the “Tate curve,” i.e., that it has “ q-parameter” equal to
+q ∈O S.
+Thus, if we take A suﬃciently large, we may assume that Z is of the form:
+Z =S p e c (A[[q
+1
+N ·d ]])
+and that the log structure on Z is that deﬁned by the divisor V (q
+1
+N ·d ) ⊆ Z.T h u s ,
+we obtain a morphism Zlog → Slog of log schemes.
+Write EZ
+def
+= E ×S Z.T h u s ,EZ → Z is a one-dimensional semi-abelian scheme
+over Z. Note that EZ has a unique ﬁnite ﬂat subgroup scheme annihilated by d.
+This subgroup scheme is naturally isomorphic toμd. We take this subgroup scheme
+for our
+μd ∼= Gμ
+Z ⊆ dEZ ⊆ EZ
+(and note that it is easy to see that this Gμ
+Z satisﬁes the condition (cf. §2.1) that
+OGμ
+Z
+⊆F μ be preserved by the V-, P-, and D-actions of Π S on Fμ). Moreover,
+since (dEZ)/Gμ
+Z is naturally isomorphic to the constant group scheme (Z/dZ)Z,i t
+is easy to see that, over Z, there exists a ﬁnite ´etale group scheme HZ ⊆ dEZ such
+that the natural morphism
+Gμ
+Z ×Z HZ → dEZ
+is an isomorphism of group schemes. Thus, if we write EHZ
+def
+=( Ed,Z)H,t h e nw e
+see that EHZ → Z is a one-dimensional semi-abelian group scheme (i.e., its ﬁbers
+are all geometrically connected), and that the natural quotient morphism
+
+GALOIS-THEORETIC KODAIRA-SPENCER 15
+(EZ ⊆) Ed,Z ↠ EHZ
+(over Z) has kernel equal to HZ, hence is ﬁnite ´etale of degree d. Finally, we note
+that the q-parameter of EHZ is a d-th root of q. This completes our description of
+the specializations of the objects of §2.1 that we will use in the present §.
+Next, we would like torelate the present discussion to the theory of connections
+in [Mzk3]. To begin with, we recall that L|0EZ
+(where 0EZ ∈ EZ(Z) is the zero
+section of EZ → Z)i sa line bundle on Z equipped with a natural ΠS-action;
+moreover, this ΠS-action is derived from the fact that L|0EZ
+in fact arises from a
+“line bundle on S∞ .” Thus, there exists a trivialization
+τ: L|0EZ
+∼= q− a
+N ·d ·O Z
+(where a is a nonnegative integer<N d) — i.e., in the terminology of the discussion
+of [Mzk3], §5, a rigidiﬁcation of L at 0EZ —w h i c hi sΠ S-equivariant.I n t h e
+following discussion, we ﬁx such a “Π S-equivariant rigidiﬁcation” τ.
+Observe that τ deﬁnes, in particular, a logarithmic connection on the line
+bundle L|0EZ
+which is stable under the action ofΠS. Thus, according to the theory
+of [Mzk3], §5, this rigidiﬁcation gives rise to (logarithmic) connections
+∇ VL
+, ∇ V
+HZ
+L
+on VL, VHZ
+L , respectively (cf. [Mzk3], Theorems 5.2, 8.1), which are stabilized
+by the action of ΠS. Here, the logarithmic connections are relative to the log
+structure of Zlog, and all connections, diﬀerentials, etc., are to be understood as
+being continuous with respect to the (p, q)-adic topology on OZ.
+Moreover, sinceall higher p-curvatures of these connections vanish(cf. [Mzk3],
+§7.1, for a discussion of the general theory of higherp-curvatures; [Mzk3], Corollary
+7.6, for the vanishing result just quoted), we thus conclude that VL, VHZ
+L deﬁne
+“crystals” on the site
+Inf(Zlog ⊗ k/A)
+of inﬁnitesimal thickenings over A of open sub-log schemes of Zlog ⊗ k = Zlog ⊗
+(A/mA). That is to say, usually, “crystals” are deﬁned on sites of PD-thickenings
+(cf., e.g., [BO], §6, for a discussion of this theory), but here, since all of the higher
+p-curvatures vanish, we obtain crystals on the site of thickenings which do not
+necessarily admit PD-structures. Since the deﬁnitions and proofs of basic properties
+of such “crystals on Inf” are entirely similar to the divided power case, we leave the
+unenlightening details to the reader. Thus, in summary, we may think of the pairs
+(V
+L, ∇ VL
+); ( VHZ
+L , ∇ V
+HZ
+L
+)
+
+16 SHINICHI MOCHIZUKI
+as crystals on Inf(Zlog ⊗ k/A).
+In the following discussion, we will not use the entire group Π S, but only its
+“ m-inertia subgroup”Πm
+S ⊆ ΠS, deﬁned as follows:
+(ΠS ⊇)Π m
+S
+def
+= {σ ∈ ΠS | σ(φ) ≡ φ (mod mA ·O Z), ∀φ ∈O Z }
+Thus, in particular, one veriﬁes easily that the image Galm(Z/S)o fΠ m
+S in Gal(Z/S)
+is a p-group. More precisely, if we write
+d = dp · d̸=p
+(where dp, d̸=p are positive integers; dp is a power of p;a n d d̸=p is prime to p),
+then one veriﬁes immediately (using the simple explicit structures ofS, Z) that the
+correspondence
+ΠS ∋ σ ↦→ σ(q
+1
+N ·d )/q
+1
+N ·d
+deﬁnes isomorphisms:
+Πm
+S ↠ Galm(Z/S)
+∼
+→ (Z/dpZ)(1)
+⏐⏐↓
+⏐⏐↓
+⏐⏐↓
+ΠS ↠ Gal(Z/S)
+∼
+→ (Z/dZ)(1)
+(where the vertical arrows are the natural inclusions, and the horizontal arrows are
+deﬁned by the correspondence just mentioned).
+Next, let us observe that it follows immediately from the deﬁnition of Πm
+S that
+every σ ∈ Πm
+S deﬁnes an A-linear isomorphism
+σ : Zlog ∼
+→ Zlog
+which is the identity on Zlog ⊗ k. It thus follows from:
+(i) the fact that Zlog deﬁnes a(n) (inductive system of) thickening(s) in the
+category Inf(Zlog ⊗ k/A); and
+(iii) the fact that (VHZ
+L , ∇ V
+HZ
+L
+) forms a crystal on Inf(Zlog ⊗ k/A)
+that σ induces a σ-semi-linear isomorphism
+∫
+σ
+: ˆVHZ
+L → ˆVHZ
+L
+
+GALOIS-THEORETIC KODAIRA-SPENCER 17
+(where “σ-semi-linear” means semi-linear with respect to the action ofσ on OZ,a n d
+the “hat” denotes p-adic completion). Here, the justiﬁcation for the notation “
+∫
+σ”
+is that this isomorphism is the analogue of the isomorphism obtained in diﬀerential
+geometry by “parallel transporting” — i.e., “integrating” — sections of ˆVHZ
+L along
+the “path” σ (where we think of σ as an “element of the (algebraic) fundamental
+group” ΠS). That is to say, we obtain a natural ΠS-semi-linear action of ΠS on
+ˆVHZ
+L . (In fact, the same holds for “ ˆVHZ
+L ” replaced by “ˆVL,” but since this action is
+more interesting for ˆVHZ
+L , we restrict ourselves to the case of ˆVHZ
+L in the following
+discussion.)
+Theorem 2.4. (Crystalline Nature of the Lagrangian Galois Action)
+The action of ΠS on ˆVHZ
+L is compatible withΞHZ
+/CQ
+V (cf. Corollary 2.2; here the “hat”
+denotes p-adic completion) and the D-action on Gμ
+Z in the following sense: For
+σ ∈ ΠS, the following diagram commutes:
+ˆVHZ
+L
+Ξ
+HZ
+/CQ
+V
+−→ L|0EZ
+⊗OZ OGμ
+Z
+⏐⏐↓
+/CA
+σ
+⏐⏐↓σD
+ˆVHZ
+L
+Ξ
+HZ
+/CQ
+V
+−→ L|0EZ
+⊗OZ OGμ
+Z
+(where σD denotes the result of applyingσ to OGμ
+Z
+via the D-action ofΠS on OGμ
+Z
+).
+Proof. This follows from the naturality of all the morphisms involved, together
+with the compatibility (cf. [Mzk3], Theorem 6.1) over Gμ
+Z of the connection ∇ V
+HZ
+L
+with the “theta trivialization” reviewed in §2.1. ⃝
+Corollary 2.5. (Absence of Gaussian Poles in the Lagrangian Galois
+Action) Relative to the objects of the present discussion, the Lagrangian Galois D-
+action of ΠS on HGP,HZ
+DR (cf. Deﬁnition 2.3) is deﬁned without Gaussian poles ,
+i.e., it arises from an action of ΠS on HHZ
+DR.
+Proof. This follows immediately from the commutative diagram of Theorem 2.4,
+together with Lemma 2.6 below: Indeed, since the morphism “
+∫
+σ”i sintegral(i.e., in
+particular, deﬁned without Gaussian poles), restricting this commutative diagram
+to HHZ
+DR ⊆ ˆVHZ
+L (i.e., where “ ˆVHZ
+L ” denotes the “ˆVHZ
+L ” in the upper left-hand corner
+of the diagram) shows that by computing the Lagrangian D-actioninside ˆVHZ
+L and
+then applying Lemma 2.6 to the lower horizontal arrow of the diagram, we obtain
+the asserted integrality. ⃝
+Lemma 2.6. The image of the morphism ΞHZ
+/CQ
+V (cf. Corollary 2.2) is the same
+as the image of its restriction ΞHZ
+H to HHZ
+DR ⊆ ˆVHZ
+L .
+
+18 SHINICHI MOCHIZUKI
+Proof. In a word, these two images coincide because both images are equal to
+the image of the theta convolution (studied in detail in [Mzk2], cf. especially §10).
+Indeed, this is essentially the content of the proof of [Mzk2], Theorem 10.1. In this
+proof, only the image of Ξ HZ
+H — i.e., more concretely, the span of the derivatives
+of the theta function “Θ” of order <d — is discussed, and this image is shown to
+be the same as that of the theta convolution; but the argument never uses that the
+derivatives are of order <d — i.e., the exact same argument shows that the image
+of Ξ
+HZ
+/CQ
+V (= the span of the derivatives of the theta function “Θ” of arbitrary order)
+is equal to the image of the theta convolution.
+For the convenience of the reader, however, we review the argument brieﬂy as
+follows: If we write “U” for the standard coordinate onGm, then the image of ΞHZ
+H
+(respectively, ΞHZ
+/CQ
+V ) may be identiﬁed with the span of the restrictions to μd ⊆ Gm
+of the derivatives ( ∂
+∂U )jΘ—w h e r e
+Θ
+def
+=
+∑
+k∈Z
+q
+1
+d (1
+2 ·k2+(iχ /n)·k) · Uk · χ(k)
+(and χ (a characterZ → μn), iχ (an integer) are invariants associated to the torsion
+point η)—o f order <d (respectively, arbitrary order). On the other hand, a basis
+of the functions on μd is given by U0,... ,U d−1. If one computes the coordinates
+(relative to this basis) of Θ |μd , one sees that the coeﬃcient of the smallest power
+of q appearing in each coordinate is either a root of unity or a root of unity times
+a nonzero sum of two n-th roots of unity (cf. [Mzk2], Theorem 4.4, where we take
+dord to be 1). Since we have assumed that n is invertible on S (cf. Theorem 2.1),
+we thus obtain that this coeﬃcient is always a unit. On the other hand, to give an
+element in the span in question is to consider the restriction toμd ⊆ Gm of a series
+∑
+k∈Z
+q
+1
+d (1
+2 ·k2+(iχ /n)·k) · P(k) · Uk · χ(k)
+where P(−) is a polynomial (with coeﬃcients in OZ ⊗ Q, but which maps Z into
+OZ)o fd e g r e e<d (respectively, arbitrary degree) in the case of ΞHZ
+H (respectively,
+ΞHZ
+/CQ
+V ). Thus, in short, the assertion of Lemma 2.6 amounts to the claim that the
+span of
+{P(k) · qΦ(k) · Uk}k=0,... ,d−1
+(for some function Φ : {0, ... ,d − 1}→ 1
+N ·d · Z) is the same, regardless of whether
+one restricts the degree of P((−)t ob e <d or not. But this is easily veriﬁed. ⃝
+Finally, we observe that:
+Theorem 2.4 allows us to relate the “arithmetic Kodaira-Spencer
+morphism” arising from the Lagrangian Galois action to the clas-
+sical geometric Kodaira-Spencer morphism.
+
+GALOIS-THEORETIC KODAIRA-SPENCER 19
+as follows: Let
+Γ ⊆ Galm(Z/S)
+be a subgroup of order> 2. Write dΓ
+def
+= |Γ| for the order of Γ. Thus,dΓ ̸= 1 divides
+dp, and we have a natural isomorphism Γ ∼= (Z/dΓZ)(1) (cf. the discussion above
+immediately following the deﬁnition of Π m
+S ). Write
+(p · A ⊆) mΓ ⊊ A
+for the ideal generated by elements of the form 1 − ζ,w h e r eζ is a dΓ-th root of
+unity. Note that Γ acts trivially on Z ⊗ (A/mΓ)( m o dmΓ). Moreover, we have a
+homomorphism
+λΓ : μdΓ(A) → mΓ/m2
+Γ
+given by ζ ↦→ ζ− 1( m o dm2
+Γ). Thus, if we think of μdΓ(A)a s“ (Z/dΓZ)(1)” (which
+is naturally isomorphic to Γ), then we see that λΓ deﬁnes a homomorphism
+δΓ :Γ → mΓ/m2
+Γ
+which is easily seen (by the deﬁnition of the ideal mΓ) to induce an injection Γ ⊗
+(Z/pZ) ↪→ mΓ/m2
+Γ.
+Next, we would like to consider a“certain portion” of the “arithmetic Kodaira-
+Spencer morphism” associated to the Lagrangian Galois action, which will turn out
+to be related to the classical Kodaira-Spencer morphism. Let γ ∈ Γ. Then since γ
+acts on HHZ
+DR via the Lagrangian Galois D-action (Deﬁnition 2.3, Corollary 2.5), we
+see that γ deﬁnes a morphism γD : HHZ
+DR →H HZ
+DR.I fw e restrict this morphism to
+F1(HHZ
+DR), and compose with the surjection HHZ
+DR ↠ {HHZ
+DR/F2(HHZ
+DR)}⊗ A (A/m2
+Γ),
+we thus obtain a morphism
+F1(HHZ
+DR) →{ H HZ
+DR/F2(HHZ
+DR)}⊗ A (A/m2
+Γ)
+which (as one veriﬁes easily — by using the fact that γ is the identity onHHZ
+DR ⊗A k,
+HHZ
+DR ⊗ mΓ/m2
+Γ) vanishes on mΓ · F1(HHZ
+DR) and maps into {HHZ
+DR/F2(HHZ
+DR)}⊗ A
+mΓ/m2
+Γ). Thus, we obtain a morphism
+κγ : F1(HHZ
+DR) ⊗ k →{ H HZ
+DR/F2(HHZ
+DR)}⊗ A mΓ/m2
+Γ
+which we would like to analyze by applying Theorem 2.4. If one reduces the com-
+mutative diagram of Theorem 2.4 modulo m2
+Γ, it follows that κγ may be computed
+by applying the (logarithmic) connection ∇ V
+HZ
+L
+on VHZ
+L in the logarithmic tangent
+direction
+
+20 SHINICHI MOCHIZUKI
+∂
+∂log(q
+1
+N ·d )
+· δΓ(γ)
+— where we observe that
+γ(q
+1
+N ·d ) ≡ q
+1
+N ·d + δΓ(γ) · q
+1
+N ·d (mod m2
+Γ)
+(cf. the deﬁnition of δΓ, λΓ given above). That is to say, Applying ∇ V
+HZ
+L
+in this
+logarithmic tangent direction to F1(HHZ
+DR) ⊗ k = F1(VHZ
+L ) ⊗ k ⊆V L ⊗ k and then
+projecting via VHZ
+L ⊗ k ↠ VHZ
+L /F2(VHZ
+L ) ⊗ k deﬁnes a morphism:
+F1(VHZ
+L ) ⊗ k →V HZ
+L /F2(VHZ
+L ) ⊗ mΓ/m2
+Γ
+On the other hand, by [Mzk3], Theorem 8.1 (i.e., the property which was called
+“Griﬃths semi-transversality” in loc. cit. ), this morphism in fact maps into the
+submodule F3(VHZ
+L )/F2(VHZ
+L ) ⊗ mΓ/m2
+Γ. Moreover, ( F3/F2)(VHZ
+L ) is naturally
+isomorphic to 1
+2 · F1(VHZ
+L ) ⊗ τ⊗2
+EHZ
+(where we write τEHZ
+for the tangent bundle to
+EHZ at the origin 0EHZ
+). In particular, we obtain that κγ also maps into F3(−).
+(Note that here we use that d ≥ dp ≥ dΓ ≥ 3.) Thus, by letting γ vary, we obtain
+a homomorphism:
+κΓ :Γ → HomOZ (F1(HHZ
+DR) ⊗ k, (F3/F2)(HHZ
+DR) ⊗ mΓ/m2
+Γ)= 1
+2 · τ⊗2
+EHZ
+⊗ mΓ/m2
+Γ
+arising from theLagrangian Galois action, taken modulom2
+Γ, which, when regarded
+as an element
+κΓ ∈ Hom(Γ, 1
+2 · τ⊗2
+EHZ
+⊗ mΓ/m2
+Γ) = Hom(Γ, mΓ/m2
+Γ) ⊗ 1
+2 · τ⊗2
+EHZ
+is equal to the result of evaluating thegeometric Kodaira-Spencer morphism of the
+“crystalline theta object” (VHZ
+L , ∇ V
+HZ
+L
+) (cf. [Mzk3], Theorem 8.1)
+κ∇ :( ΩZlog/A)∨ → 1
+2 · τ⊗2
+EHZ
+on ∂
+∂log(q
+1
+N ·d )
+∈ (ΩZlog/A)∨ and multiplying the result by δΓ. We summarize this
+discussion as follows:
+Corollary 2.7. (Relation to the Classical Geometric Kodaira-Spencer
+Morphism) Let
+Γ ⊆ Galm(Z/S)
+
+GALOIS-THEORETIC KODAIRA-SPENCER 21
+be a subgroup of order > 2. This subgroup Γ gives rise to a natural ideal mΓ ⊆
+A (minimal among ideals modulo which Γ acts trivially on Zlog) and a natural
+morphism
+δΓ :Γ → mΓ/m2
+Γ
+(deﬁned by considering the action of Γ on q
+1
+N ·d modulo m2
+Γ). Then the morphism
+κΓ :Γ → HomOZ (F1(HHZ
+DR) ⊗ k, (F3/F2)(HHZ
+DR) ⊗ mΓ/m2
+Γ)= 1
+2 · τ⊗2
+EHZ
+⊗ mΓ/m2
+Γ
+obtained purely from the Lagrangian Galois D-action of Γ on HHZ
+DR (cf. Deﬁ-
+nition 2.3, Corollary 2.5) by restricting this action to F1(HHZ
+DR) and then reducing
+modulo m2
+Γ coincides with the morphism obtained by evaluating the “geometric
+Kodaira-Spencer morphism of the crystalline theta object” (VHZ
+L , ∇ V
+HZ
+L
+)
+(cf. [Mzk3], Theorem 8.1)
+κ∇ :( ΩZlog/A)∨ → 1
+2 · τ⊗2
+EHZ
+in the logarithmic tangent direction ∂
+∂log(q
+1
+N ·d )
+∈ (ΩZlog/A)∨ and multiplying the
+result by δΓ. Moreover, by [Mzk3], Theorem 8.1, this Kodaira-Spencer morphism
+associated to the crystalline theta object coincides (up to a factor of1
+2) with the usual
+Kodaira-Spencer morphism associated to the Gauss-Manin connection on the ﬁrst de
+Rham cohomology group. Thus, in summary, the arithmetic Kodaira-Spencer
+morphism associated to the Lagrangian Galois D-action coincides modulom2
+Γ (and
+up to a factor of 1
+2)w i t ht h eusual Kodaira-Spencer morphism .
+Remark. Note, moreover, that the correspondence between the logarithmic tangent
+direction ∂
+∂log(q
+1
+N ·d )
+∈ (ΩZlog/A)∨ and the morphismδΓ is essentially the same as the
+correspondence arising from Faltings’ theory of almost ´etale extensions between the
+logarithmic tangent bundle ofZlog and a certain Galois cohomology group (cf., e.g.,
+[Mzk1], Chapter IX, §2, especially Theorem 2.6, for more details). In particular:
+Corollary 2.7 shows that the analogy discussed in [Mzk1], Chap-
+ter IX, between the (usual)geometric Kodaira-Spencer mor-
+phism (cf. especially, [Mzk1], Chapter IX, Theorem 2.6) and the
+arithmetic Kodaira-Spencer morphism is more than just
+philosophy — it is rigorous mathematics!
+(cf. also the discussion of [Mzk3], Theorem 6.2, in [Mzk3], §0).
+Section 3: Global Multiplicative Subspaces
+In this §, we show how to construct a sort of global analogue of the crucial
+subgroup scheme “ Gμ
+Z ⊆ dEZ”o f §2.2. The author believes that this construc-
+tion indicates the proper approach to globalizing the local theory of §2 —c f . §4,
+“Conclusion.”
+
+22 SHINICHI MOCHIZUKI
+In this §,l e tu sw r i t eMZ for the moduli stack (M1,0)Z (cf. §0, Notations
+and Conventions); MZ ⊆ MZ for the open substack parametrizing smooth elliptic
+curves. We denote base change to Q by a subscript Q. Also, let us write
+ΠMQ
+def
+= π1(MQ)
+(for some choice of base-point).
+Next, let us ﬁx a prime number p.T h u s , t h ep-power torsion points of the
+tautological elliptic curve over MQ deﬁne a p-adic Tate module
+F
+— i.e., F is a free Zp-module of rank two equipped with a continuous ΠMQ -action
+ρF :Π MQ → GL(F). Write
+TQ →M Q
+for theproﬁnite ´etale coveringdeﬁned by the subgroup Ker(ρF ) ⊆ ΠMQ .S i n c eρF is
+surjective (cf., e.g., [Shi], Theorem 6.23, together with the fact that the cyclotomic
+character Gal(Q/Q) → Zp
+× is surjective), it follows that TQ →M Q is Galois,w i t h
+Galois group
+Gal(TQ/MQ) ∼= GL2(Zp)
+(where the isomorphism is determined by a choice of Zp-basis for F). Write
+T Z → MZ
+for the normalization of MZ in TQ; TZ
+def
+= T Z ×MZ
+MZ. Also, in the following dis-
+cussion, we will denote the p-adic formal schemes (or stacks) deﬁned by p-adically
+completing various schemes (or stacks) by means of a superscript “∧.”
+Now note that the natural Π MQ -actions on ˆT Z and F deﬁne a natural ΠMQ -
+action on
+O
+/CQ
+T Z
+⊗Zp F
+(which we regard as a coherent sheaf on ˆT Z). Let us write ωE for the line bun-
+dle on MZ deﬁned by the cotangent bundle at the origin of the tautological log
+elliptic curve over MZ. Then we recall the following result, which is essentially an
+immediate corollary of the p-adic Hodge theory of elliptic curves:
+
+GALOIS-THEORETIC KODAIRA-SPENCER 23
+Theorem 3.1. (Global Multiplicative Subspace) There is a natural ΠMQ -
+equivariant morphism
+ψω : O
+/CQ
+T Z
+⊗Zp F→ ωE |
+/CQ
+T Z
+whose image contains (1 − ζp) · ωE |
+/CQ
+T Z
+,w h e r eζp is a primitive p-th root of unity.
+Moreover, away from the supersingular points ofT Z ⊗Fp, this morphism is a surjec-
+tion, and (in a formal neighborhood of inﬁnity) its kernel is the subspace deﬁned by
+the multiplicative subgroup schemes “Gμ
+Z ⊆ dEZ” (cf. §2.2) where we take d
+def
+= pn,
+n →∞ .
+Proof. The morphism ψω is what is usually referred to in p-adic Hodge theory as
+the p-adic period map. There are many ways to construct the p-adic period map.
+Over the smooth locus MZ, one way to construct the period map (cf. [Mzk3], §2,
+the Remark following the proof of Theorem 2.2) is to use the canonical section
+(deﬁned modulo pn — cf. [Mzk3], §1, the discussion following Lemma 1.1 for more
+details on this canonical section)
+κH : H ⊗ (Z/pnZ) → E† ⊗ (Z/pnZ)
+of the universal extension E† → E (where E →M Z is the tautological elliptic
+curve) over the coveringH (
+def
+= E) → E of E given by multiplication bypn (where
+we let n →∞ ). By looking at “ﬁbers (of H, E† ) over the origin of E,” we thus
+see that κH determines a homomorphism from the pn-torsion points of E|
+/CQ
+TZ
+, i.e., in
+particular, from F⊗ (Z/pnZ) ↪→ E( ˆTZ), to ωE ⊗ (Z/pnZ)|
+/CQ
+TZ
+, as desired. Note that
+although only the smooth case is discussed in loc. cit. , one veriﬁes immediately
+that this approach may be extended over MZ (by using the canonical section of
+the universal extension near inﬁnity). Letting n →∞ and tensoring over Zp with
+O
+/CQ
+T Z
+thus completes the construction of ψω.
+The remaining statements concerning the various properties of ψω may be
+veriﬁed by using another approach to constructing the p-adic period map, which is
+discussed in [Mzk1], Chapter IX,§2. This approach has the slight disadvantage that
+it is not immediately clear that the resulting period map is deﬁned over ˆT Z (i.e.,
+a priori, it is only deﬁned over locally constructed “ ˆR’s”). Nevertheless, one may
+check easily (by working over the ordinary locus) that these two approaches yield
+the same period map (cf. [Mzk3], §2, the Remark following the proof of Theorem
+2.2). On the other hand, the approach of [Mzk1], Chapter IX,§2, has the advantage
+that it makes it clear that the morphism ψ
+ω : O
+/CQ
+T Z
+⊗Zp F→ ωE |
+/CQ
+T Z
+in question is
+the composite (at least locally on ˆT Z, but this is suﬃcient for our purposes) of a
+morphism — which we shall denote ψ1 —f r o mO
+/CQ
+T Z
+⊗Zp F to a certain rank two
+vector bundle on ˆT Z, followed by a surjection — which we shall denote ψ2 —f r o m
+this vector bundle onto the line bundle ωE |
+/CQ
+T Z
+(cf. the morphism “Ψ Zp ” — or,
+more precisely, its dual — of [Mzk1], Chapter IX, Theorem 2.5). Moreover, the
+determinant of ψ1 is equal to 1− ζp times a unit (cf. [Mzk1], Chapter IX, Theorem
+
+24 SHINICHI MOCHIZUKI
+2.5, as well as the proof of this theorem). On the other hand, since the range
+of the morphism ψω is a line bundle, it follows that the image of ψω determines
+an ideal J⊆ O
+/CQ
+T Z
+with the property that det( ψ1) vanishes modulo J .T h u s , w e
+conclude that 1 − ζp ∈J , as desired. Finally, the assertions of Theorem 3.1 over
+the ordinary locus and near inﬁnity follow from the theory of either [Mzk3], §2, or
+[Mzk1], Chapter IX, §2. This completes the proof ⃝
+Remark. Usually, in the context of p-adic Hodge theory, one constructs the p-adic
+period map not overglobal basessuch as MZ, but overp-adic bases,s u c ha sMZp .I t
+is immediate, however, from the ﬁrst approach discussed in the proof of Theorem 3.1
+to constructing thep-adic period map thatexactly the same construction works over
+MZ and gives rise to a morphism that isequivariant with respect toΠMQ = π1(MQ)
+(i.e., not just π1(MQp )). (The author wishes to thank A. Tamagawa for remarks
+that led to a simpliﬁcation of the proof of Theorem 3.1.)
+Remark. Thus, in particular, we obtain thatif E is a log elliptic curve overZ,t h e n
+(by pull-back via the classifying morphism to M1,0 deﬁned by E) the morphism ψω
+deﬁnes a Gal(Q/Q)-equivariant morphism:
+ψω(E): Tp(E) ⊗Zp O
+/CQ
+Q → ωE ⊗OF O
+/CQ
+Q
+(where Tp(E)i st h ep-adic Tate module of E; Q is an algebraic closure of Q;a n d
+the “hat” denotes p-adic completion) whose image contains p · ωE (cf. Theorems
+3.1, 3.2). In particular, since the completions of Q at each of its primes over p are
+all valuation rings, we thus conclude that ψω(E) deﬁnes a Gal( Q/Q)-equivariant
+surjection
+ψ′
+ω(E): Tp(E) ⊗Zp O
+/CQ
+Q → ω′
+E
+(where ω′
+E ⊆ ωE ⊗Z O
+/CQ
+Q is a free O
+/CQ
+Q-submodule of rank one) which coincides with
+ψω(E)o v e rQp. Thus, the kernel ofψ′
+ω(E) may be regarded as a global generalization
+of the multiplicative subspace “Zp(1) ⊆ Tp(E)” of the Tate curveE over Z[[q]].
+Section 4: The Group T ensor Product
+In this §, we present a very general construction that applies to arbitrary com-
+mutative group schemes, but which will be of fundamental importance for motivat-
+ing the theory that we wish to pursue in subsequent papers.
+We begin with the following deﬁnition, which is motivated by inﬁnite abelian
+group theory (cf. [Fchs], p. 94):
+
+GALOIS-THEORETIC KODAIRA-SPENCER 25
+Deﬁnition 4.1. We shall call a torsion-free abelian groupR ind-freeif every ﬁnite
+subset of R is contained in a ﬁnitely generated direct summand of R.
+Remark. It is known that every countable subgroup of an ind-free group is free(cf.
+[Fchs], pp. 93-94). Thus, in particular, every countable ind-free group is free.O n
+the other hand, groups such as an inﬁnite direct product of inﬁnite cyclic groups
+are ind-free, but not free (cf. [Fchs], p. 94). The reason that we wish to consider
+ind-free groups is because we wish to allow just such groups — i.e., such as the
+additive group of power seriesZ[[q]] — in the theory to be developed in the present
+and subsequent papers.
+Now let S be a noetherian scheme,a n dG a commutative group scheme over
+S. (Note: we do not necessarily assume that G is smooth or of locally of ﬁnite type
+over S.) Thus, G deﬁnes a functor
+T ↦→ G(T)
+from the category of S-schemes (such as T → S) to the category of abelian groups.
+Next, let us assume that we are given an ind-free Z-module R (cf. Deﬁnition
+4.1). Then let us consider the functor
+T ↦→ G(T) ⊗
+Z R
+— which we denote by G
+gp
+⊗ R — from the category of S-schemes (such as T → S)
+to the category of abelian groups.
+Deﬁnition 4.2. We shall refer to as an ind-group scheme an inductive system
+(indexed by a ﬁltered set) of group schemes in which the transition morphisms are
+all closed immersions.
+Remark. Thus, a Barsotti-Tate group (e.g., the p-divisible group deﬁned by an
+abelian variety) is a typical example of an ind-group scheme. Note that it is im-
+portant to assume that the transition morphisms are closed immersions. Indeed,
+so long as one assumes this, taking the inverse limit of sheaves of functions on the
+group schemes in the system gives rise to a sheaf of “functions on the ind-group
+scheme”which surjects onto the sheaves of functions on each of the group schemes
+in the system. If, on the other hand, one considers an inductive system such as
+E → E → E → E → E → ...
+(where E is an elliptic curve, and all of the arrows are multiplication by some
+positive integer d), then the inverse limit of the functions on the group schemes in
+
+26 SHINICHI MOCHIZUKI
+the system contains only the constant functions.T h u s ,it is diﬃcult to treat this
+sort of inductive system as a single geometric object.
+Proposition 4.3. This functor G
+gp
+⊗ R is representable by an ind-group scheme
+over S, which, by abuse of notation, we also denote by G
+gp
+⊗ R. Moreover:
+(1) G
+gp
+⊗ R is functorial with respect to G and R.
+(2) If R is ﬁnitely generated, then G
+gp
+⊗ R is representable by a
+(single) group scheme.
+(3) If R and R′ are ﬁnitely generated free Z-modules, and R↪ → R′
+is a split injection, then the resulting arrow G
+gp
+⊗ R → G
+gp
+⊗ R′
+is a closed immersion.
+Proof. First, note that any ind-freeR can be written as an inductive limit lim−→ Rj
+of ﬁnitely generated free Z-submodules Rj (for j in some ﬁltered index set J)s u c h
+that the injections Rj ↪→ R are split. Moreover, when j<j ′ (so Rj ⊆ Rj′ ), the
+fact that Rj ↪→ R is split implies that Rj ⊆ Rj′ is split. Thus, the representability
+of G
+gp
+⊗ R (for a general ind-free R) by an ind-group scheme overS follows formally
+from assertions (1), (2), (3).
+Let us prove (2), (3). Thus, for the remainder of this paragraph, let us assume
+that R is ﬁnitely generated (and free). But then R is (noncanonically) isomorphic
+to Zr (for some positive integer r), so G
+gp
+⊗ R can be represented by the group
+scheme G ×S G ×S ... ×S G (the ﬁbered product over S of r copies of G). This
+proves (2). Since any split injection Zr ↪→ Zr′
+is isomorphic to the injection Zr =
+Zr ×{ 0} ↪→ Zr × Zr′ −r = Zr′
+, assertion (3) follows immediately.
+Finally, assertion (1) follows immediately from the functorial deﬁnition of
+G
+gp
+⊗ R. ⃝
+Deﬁnition 4.4. By abuse of notation, we denote the ind-group scheme of Propo-
+sition 4.3 byG
+gp
+⊗ R, and refer to this ind-group scheme as thegroup tensor product
+of G with R.
+Remark. We shall principally be interested in the case where G is an elliptic curve
+E, or its universal extension equipped with some integral structure — e.g., E∗
+[d],et
+—a n d R is a ring closely related to the base scheme over which E is deﬁned —
+e.g., R = OF (the ring of integers) for some number ﬁeld F.
+
+GALOIS-THEORETIC KODAIRA-SPENCER 27
+Remark. Note that automorphisms of the module R induce automomorphisms of
+G
+gp
+⊗ R. Moreover, if, for instance, R is ﬁnitely generated,a n dG is equipped with
+an ample line bundle L,t h e nany choice of basis e1,... ,er of R determines an
+isomorphism G
+gp
+⊗ R ∼=
+∏r
+j=1 G, hence (by taking the tensor product of the pull-
+backs of L relative to each of the factors in the product),a natural choice of ample
+line bundle on G
+gp
+⊗ R. This ample line bundle, however, depends on the choice
+of basis, i.e., it will not be preserved in general by automorphisms of R.T h u s , i n
+summary:
+Although (for, say, ﬁnitely generatedR) the correspondenceG ↦→
+G
+gp
+⊗ R deﬁnes a natural functor from group schemes to group
+schemes, it doesnot deﬁne a natural functor frompolarizedgroup
+schemes to polarized group schemes.
+Since, in Hodge-Arakelov theory, it is of fundamental importance to work with
+polarized group schemes, the rather superﬁcial general nonsense of the present§ will
+not be suﬃcient for working with group tensored elliptic curves in Hodge-Arakelov
+theory. The resolution of this technical issue forms one of the main obstacles relative
+to developing a theory of the sort that the author envisions for globalizing the theory
+of §2.
+One important property of the group tensor product is the following:
+Proposition 4.5. Let d ≥ 1 be an integer, and write
+dG ⊆ G (respectively,
+d(G
+gp
+⊗ R) ⊆ G
+gp
+⊗ R) for the kernel of the morphism [d]: G → G (respectively, [d]:
+G
+gp
+⊗ R → G
+gp
+⊗ R), i.e., multiplication by d. Then we have a natural isomorphism:
+d(G
+gp
+⊗ R) ∼= (dG) ⊗Z/dZ (R/d · R)
+Proof. This follows immediately from the functorial deﬁnition of G
+gp
+⊗ R. ⃝
+Conclusion:
+If we formally combine Proposition 4.5 with the content of the second Remark
+following Theorem 3.1, we thus obtain the following:
+If E is a log elliptic curve over Z; d = pr (where p is a prime
+number, and r ≥ 1 is an integer); and R
+def
+= OK is the ring
+of integers of some ﬁnite Galois extension K of Q (which may
+
+28 SHINICHI MOCHIZUKI
+depend on the choice of d), then the rank 2( R/dR)-module of
+d-torsion points ofE
+gp
+⊗ R contains a rank1 submodule stabilized
+by Gal(Q/Q) and which coincides with the usual “multiplicative
+subspace” at primes of bad (multiplicative) reduction.
+In particular, this conclusion suggests that if we could somehow develop a “Hodge-
+Arakelov theory for objects such as E
+gp
+⊗ R,” then we should be able to deﬁne for
+such objects a Lagrangian Galois-theoretic Kodaira-Spencer morphism which is free
+of Gaussian poles (cf. Corollary 2.5). In subsequent papers, it is the hope of the
+author to develop just such a theory.
+Bibliography
+[BO] P. Berthelot and A. Ogus, Notes on Crystalline Cohomology, Princeton Univ.
+Press (1978).
+[MB] L. Moret-Bailly, Pinceaux de vari´et´es ab´eliennes, Ast´erisque 129,S o c .M a t h .
+France (1985).
+[Fchs] L. Fuchs, Inﬁnite Abelian Groups , Volume I, Pure and Applied Mathematics
+36, Academic Press (1970).
+[Mzk1] S. Mochizuki, The Hodge-Arakelov Theory of Elliptic Curves: Global Discretiza-
+tion of Local Hodge Theories, RIMS Preprint Nos. 1255, 1256 (October 1999).
+[Mzk2] S. Mochizuki, The Scheme-Theoretic Theta Convolution, RIMS Preprint No.
+1257 (October 1999).
+[Mzk3] S. Mochizuki, Connections and Related Integral Structures on the Universal
+Extension of an Elliptic Curve, RIMS Preprint No. 1279 (May 2000).
+[Shi] G. Shimura, Introduction to the Arithmetic Theory of Automorphic Forms ,
+Publ. Math. Soc. of Japan 11, Iwanami Shoten and Princeton Univ. Press
+(1971).

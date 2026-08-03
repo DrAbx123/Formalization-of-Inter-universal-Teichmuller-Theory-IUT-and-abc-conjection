@@ -1,0 +1,293 @@
+COMMENTS ON A COMBINA TORIAL
+VERSION OF THE SECTION CONJECTURE
+AND THE MAIN THEOREM OF POP-STIX
+Shinichi Mochizuki
+Updated March 3, 2011
+In the “Comments on the Main Theorem of Pop-Stix” dated November 15,
+2010 (i.e., [PSCom]), we discussed a remark of Y. Andr´e to the eﬀect that this
+theorem of Pop-Stix allows one to reduce theProﬁnite p-adic Section Conjecture to
+its temperedcounterpart. In the present note, we observe that thisreduction may
+also be obtained as a consequence of an entirelyelementary observation concerning
+actions of ﬁnite groups on a ﬁnite graph , hence, in particular, without resorting to
+the use of highly nontrivial arithmetic results such as Tamagawa’s“resolution of
+nonsingularities” [i.e., the main result of [Tama]].
+(1) Let Σ be a nonemptyset of prime numbers , G a ﬁnite cyclic group of order a
+power of a prime ∈Σ, Γ aﬁnite graph equipped with anaction by G. Suppose, for
+simplicity, that the action ofG on Γdoes not switch the branches of any edge of Γ.
+Observe that one may form aquotient graph
+Γ/G
+whose vertices are precisely the G-orbits of vertices of Γ, and whoseedges are
+precisely the G-orbits of edges of Γ; moreover, one has a natural morphism Γ→
+Γ/G. On the other hand, one may also form a“quotient orbigraph”
+Γ//G
+— i.e., a quotient of Γ byG “in the sense of stacks”. In the present discussion,
+we shall only be interested in thepro-Σ fundamental group [relative to a suitable
+basepoint]
+πΣ
+1 (Γ//G)
+of Γ//G. To deﬁne this proﬁnite group, it suﬃces to describe the connected ﬁnite
+´etale Galois coverings of Γ//G. [That is to say, then arbitrary ﬁnite ´etale coverings
+of Γ//G may be described as coproducts of subcoverings of such connected ﬁnite
+´etale Galois coverings.] A connected ﬁnite ´etale Galois covering of Γ//G consists of
+a connected ﬁnite ´etale Galois covering Γ∗→ Γ equipped with the action of a ﬁnite
+group G∗and an augmentation [i.e., a surjective homomorphism]ϵ∗: G∗↠ G such
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+that the action ofN∗def
+=K e r (ϵ∗)o nΓ∗induces an isomorphismN∗ ∼
+→ Gal(Γ∗/Γ),
+and the induced action ofG∗/N∗ ∼
+→ G on Γ is compatible with the original action
+of G on Γ. Thus, we have anatural exact sequence
+1 → πΣ
+1 (Γ)→ πΣ
+1 (Γ//G) → G → 1
+of proﬁnite groups. Now let us observe the following elementary graph-theoretic
+assertion — which may be thought of as a sort of“Combinatorial Section Conjec-
+ture”:
+(∗CSC) Suppose that the natural surjection ΠG
+def
+= πΣ
+1 (Γ//G) ↠ G admits a
+section σ: G → ΠG. Then there exists a vertexv of Γ that isﬁxed by G.
+Indeed, we may assume without loss of generality that the action ofG on Γ is
+faithful. Let us ﬁrst consider the case where the order ofG is prime. In this case,
+if (∗CSC)i s false, then it follows that the action ofG on Γ isfree, hence that the
+natural morphism Γ→ Γ/G is a ﬁnite ´etale covering,s oΓ//G may be identiﬁed
+with Γ/G; but since Γ/G is itself a graph, it follows thatπΣ
+1 (Γ/G)
+∼
+→ πΣ
+1 (Γ//G)
+is a free pro-Σ group, hence torsion-free, in contradiction to the existence of the
+section σ. Next, we consider the case ofG of arbitrary non-prime order.L e tH ⊆G
+be the unique subgroup such thatQ
+def
+= G/H is of prime order. Write ΓQ
+def
+=Γ/H.
+Then we have a diagram of graphs and group actions
+G ↷ Q ↷
+Γ −→ ΓQ
+which induces an outer homomorphism ΠG → ΠQ
+def
+= πΣ
+1 (ΓQ//Q), whose kernel
+we denote by N. The restriction of this outer homomorphism to σ(H) ⊆ ΠG
+determines an outer homomorphismσ(H) → πΣ
+1 (ΓQ). Since πΣ
+1 (ΓQ) is a free pro-
+Σ group, hence torsion-free, we thus conclude that this homomorphismσ(H) →
+πΣ
+1 (ΓQ)i s trivial, hence thatσdetermines a sectionσQ : Q → ΠQ of the natural
+surjection ΠQ ↠ Q. In particular, by applying (∗CSC) in the case ofQ [which has
+already been veriﬁed], we thus conclude that there exists a vertexvQ of ΓQ that is
+ﬁxed by the action ofQ.L e tv be a vertex of Γ that liftsvQ, g ∈G a generator
+of G.T h e ns i n c eQ ﬁxes vQ, it follows thatvg = vh,f o rs o m eh ∈H, hence that
+v is ﬁxed by g · h−1 ∈G. On the other hand, sinceg · h−1 generates G,w et h u s
+conclude thatv is ﬁxed byG. This completes the proof of (∗CSC).
+(2) Let Σ be a nonemptyset of primes , l ∈Σ,k a perfect ﬁeld of characteristic
+̸= l, k an algebraic closure ofk, Gk
+def
+= Gal(k/k). Then we shall say thatk is l-
+cyclotomically full if the image of thel-adic cyclotomic characterGk → Z×
+l is open
+in Z×
+l .W r i t eTlog for the log scheme obtained by equippingT
+def
+= Spec(k)w i t ht h e
+log structure determined by the chartN ∋ 1 ↦→ 0. Let Zlog → Tlog be a stable log
+curve [cf., e.g., [NodNon],§0], Xlog a connected coveringof Zlog that arises from the
+logarithmic fundamental group of Zlog,a n dSlog → Tlog the resulting covering of
+Tlog. Here, we assume further, to simplify notation, that the underlying morphism
+of schemesS → T is anisomorphism.W r i t eΠX/k,ΠS/k for the respectivemaximal
+
+COMMENTS ON THE MAIN THEOREM OF POP-STIX 3
+pro-l quotients of the logarithmic fundamental groups π1(Xlog ×k k), π1(Slog ×k k)
+[relative to suitable basepoints]. Write ΠX,Π S for the respective quotients of the
+logarithmic fundamental groups π1(Xlog), π1(Slog) [relative to suitable basepoints]
+of the natural surjectionsπ1(Xlog ×k k) ↠ ΠX/k, π1(Slog ×k k) ↠ ΠS/k.T h u s ,w e
+have natural exact sequences of proﬁnite groups
+1 → ΠS/k → ΠS → Gk → 1; 1 → ΠX/k → ΠX → Gk → 1
+1 → ΔX/S → ΠX/k → ΠS/k → 1; 1 → ΔX/S → ΠX → ΠS → 1
+—w h e r eΔX/S is deﬁned so as to render the ﬁnal two sequences exact. Write ΓX
+for the dual graph of Xlog ×k k. Suppose, for simplicity, that the natural action
+of π(Slog)o nΓX factors through the quotientπ(Slog) ↠ ΠS and, moreover, does
+not switch the branches of any edge of ΓX.W r i t e˜ΓX for the pro-graphdetermined
+by the proﬁnite universal covering ˜X → X of X corresponding to ΠX.T h e nl e t
+us observe the following consequence — which may be thought of as a sort of
+“Log-scheme-theoretic Section Conjecture” —o ft h epurely combinatorial result of
+(1):
+(∗LSC) Suppose that k is l-cyclotomically full , and that the natural surjection
+ΠX ↠ ΠS admits a section σ:Π S → ΠX. Then there exists a vertex
+˜v of ˜ΓX such that, if we write D˜v ⊆ ΠX for the decomposition group
+associated to ˜v,t h e nσ(ΠS) ⊆D˜v. Finally, the collection of possibilities
+for ˜v determines “star” in ˜ΓX, i.e., a [connected] tree in˜ΓX that admits
+av e r t e x˜v∗such that every vertex that of the tree is connected to ˜v∗by a
+path of length≤1.
+Indeed, write ΔΓ for the maximal pro-l quotient of πΣ
+1 (ΓX) ,w h e r ew et a k eΣ
+def
+=
+{l}. By replacing Xlog by an appropriate covering arising from ΠX, one veriﬁes
+immediately that one may assume without loss of generality that ΔΓis nonabelian.
+The natural action of ΠS on ΓX factors through aﬁnite quotient ΠS ↠ QS.T h u s ,
+one obtains a natural outer action of QS on ΔΓ, hence a proﬁnite group ΠΓ that
+ﬁts into a commutative diagram of proﬁnite groups
+1 −→ ΔX/S −→ ΠX −→ ΠS −→ 1
+⏐⏐
+↓
+⏐⏐
+↓
+⏐⏐
+↓
+1 −→ Δ
+Γ −→ ΠΓ −→ QS −→ 1
+in which the vertical arrows are surjections. Write ΠS/k ↠ QS/k, Gk ↠ Qk for the
+natural surjections determined by the natural surjection ΠS ↠ QS. Thus, these
+natural surjections determine anexact sequence of quotients 1 → QS/k → QS →
+Qk → 1, as well as a correspondingexact sequence of kernels 1 → NS/k → NS →
+Nk → 1, hence, in particular, a commutative diagram of proﬁnite groups
+1 −→ NS/k −→ NS −→ Nk −→ 1
+⏐⏐↓
+⏐⏐↓
+⏐⏐↓
+1 −→ ΠS/k −→ ΠS −→ Gk −→ 1
+⏐⏐↓
+⏐⏐↓
+⏐⏐↓
+1 −→ QS/k −→ QS −→ Qk −→ 1
+
+4 SHINICHI MOCHIZUKI
+— where we observe thatNS/k is an open subgroup of ΠS/k, hence noncanonically
+isomorphic toZl. Thus, if we set ΠΓ/k
+def
+=ΠΓ×QS QS/k, then we obtain an exact
+sequence
+1 → ΔΓ → ΠΓ/k → QS/k → 1
+as well as compatiblenatural surjections ΠX/k ↠ ΠΓ/k,Π X ↠ ΠΓ.N e x t ,l e tu s
+consider the homomorphisms
+NS/k → ΔΓ (⊆ ΠΓ/k); NS → ΠΓ
+obtained by composing these natural surjections with the restriction ofσto NS/k ⊆
+NS ⊆ ΠS/k ⊆ ΠS. Thus, any section τ: Nk → NS of the natural surjection
+NS ↠ Nk determines compatible actions of Nk on NS/k and ΔΓ.N o wl e tu so b -
+serve that Nk ⊆Gk acts on NS/k via the l-adic cyclotomic character , while the
+action of Nk on ΔΓ is trivial. Thus, it follows immediately from our assumption
+that k is l-cyclotomically full that the above homomorphismNS/k → ΔΓ is triv-
+ial. In particular, the homomorphism ΠS/k → ΠΓ/k determined by composing the
+restriction of σto ΠS/k ⊆ΠS with the natural surjection ΠX/k ↠ ΠΓ/k factors
+through the quotient ΠS/k ↠ QS/k, hence determines a section QS/k → ΠΓ/k of
+the natural surjection ΠΓ/k ↠ QS/k. Thus, by applying the observation (∗CSC)o f
+(1) above, weconclude that the natural action of ΠS/k [i.e., of QS/k]o nΓX ﬁxes
+some vertex of ΓX. By applying thisconclusion[obtained in the case of ΠX]t ot h e
+various open subgroups of ΠX, we thus obtain that there exists avertex ˜v of ˜ΓX
+such that, if we writeD˜v ⊆ΠX for the decomposition group associated to ˜v,t h e n
+σ(ΠS/k) ⊆D˜v. Moreover, by [NodNon], Proposition 3.9, (i), it follows immediately
+that the collection of possibilities for ˜v determines a [connected] tree in ˜ΓX such
+that any two vertices of the tree are connected by a path of length≤2. One veri-
+ﬁes immediately that such a tree is necessarily a“star”. Since, by assumption, the
+action ofσ(ΠS)o n ˜ΓX does not switch the branches of any edge of˜ΓX, it follows
+immediately that this star admits at least one vertexﬁxed by the action ofσ(ΠS).
+In particular, one may choose ˜v such thatσ(ΠS) ⊆D˜v. This completes the proof
+of (∗LSC).
+(3) It is not diﬃcult to verify that the observation (∗LSC) of (2) generalizes immedi-
+ately, for Σ an arbitrary nonempty set of primes [i.e., not necessarily of cardinality
+one], to the case of thegeometrically pro-Σfundamental groups associated to arbi-
+trary nodally nondegenerate outer representations, i.e., that do not necessarily arise
+from a stable log curve over a log point as in (2) [cf. the theory of [NodNon]]. We
+leave the routine details to the reader.
+(4) Now let us consider the situation discussed in [PSCom], (7). That is to say,
+let k be an arbitrary complete discrete valuation ﬁeld of mixed characteristic whose
+residue characteristic we denote byp, k an algebraic closure ofk, Gk
+def
+= Gal(k/k),
+Σa set of primes that contains a primel ̸= p, X a proper hyperbolic curve over k.
+Write
+ΠX ↠ Π(Σ)
+X
+for the geometrically pro-Σquotient of ΠX and
+Πtp,(Σ)
+X ⊆Π(Σ)
+X
+
+COMMENTS ON THE MAIN THEOREM OF POP-STIX 5
+for the “Σ-tempered fundamental group” , i.e., the image of the tempered funda-
+mental group Πtp
+X of X in Π(Σ)
+X . Thus, we have natural surjections Π(Σ)
+X
+↠ Gk,
+Πtp,(Σ)
+X ↠ Gk. Then the discussion of (2) has the following immediate consequence:
+(∗PTS) The natural map
+Sect(Πtp,(Σ)
+X /Gk) → Sect(Π(Σ)
+X /Gk)
+— i.e., from Πtp,(Σ)
+X -conjugacy classes of sections of Πtp,(Σ)
+X → Gk to Π(Σ)
+X -
+conjugacy classes of sections of Π(Σ)
+X → Gk —i s injective.I f ,m o r e o v e r ,k
+is l-cyclotomically full for somel ∈Σt h a ti s̸= p, then this natural map
+is bijective.
+Indeed, the proof of the assertedinjectivity is discussed in [PSCom], (7). On the
+other hand, the asserted surjectivity is an immediate consequence of (∗LSC) [i.e.,
+applied to the special ﬁbers of stable models of ﬁnite ´etale coverings ofX].
+(5) Thus, in the situation of (4) [cf. also the discussion of [PSCom], (2)], if one is
+given a coﬁnal system of ﬁnite ´etale connected Galois coverings ofX with stable
+reduction
+... → Xi+1 → Xi → ...
+[whereirangesoverthepositiveintegers]anda sections : Gk → Π(Σ)
+X ofΠ(Σ)
+X
+↠ Gk,
+then, by applying (∗LSC) to the special ﬁbers of stable models of the Xi,o n e
+concludes that [after possibly passing to a coﬁnal subsystem] there existseither a
+[not necessarily unique]system of vertices
+... ⇝ vi+1 ⇝ vi ⇝ ...
+or a [not necessarily unique]system of edges
+... ⇝ ei+1 ⇝ ei ⇝ ...
+of X — i.e., each vi (respectively, ei) is an irreducible component (respectively,
+node) of the special ﬁber of the stable model ofXi that is ﬁxed by the natural
+action of the image Im(s) of the sections; the image of the irreducible component
+vi+1 (respectively, node ei+1)i n Xi is contained in the irreducible componentvi
+(respectively, nodeei). The central issue discussed in [PSCom] is precisely the issue
+of
+(Q1) whether or not the main theorem of Pop-Stix yields anyessentially new
+informationconcerningtheabovesituation—i.e., informationthatcannot
+already be derived from the abovesystems of vertices or edges .
+Since
+(i) it appears that aside from various valuation-theoretic techniques,t h e
+main technically nontrivial input into the proof of the main theorem of
+Pop-Stix is Tamagawa’sresolution of nonsingularities , and, moreover,
+
+6 SHINICHI MOCHIZUKI
+(ii) it is diﬃcult to see how Tamagawa’sresolution of nonsingularities can
+lead to anyessentially stronger information than theexistence of a system
+of vertices or edges as discussed above,
+it seems reasonable to suspect that
+(Q2) it should be possible to derive the main theorem of Pop-Stix directly
+from the existence of a system of vertices or edges as discussed above,
+together with various purelyvaluation-theoretic techniques.
+Ontheotherhand, sinceIamnotfamiliarwiththesevaluation-theoretictechniques,
+it is not clear to me how to obtain a proof of the main theorem of Pop-Stix as in
+(Q2).
+Bibliography
+[Semi] S. Mochizuki, Semi-graphs of Anabelioids, Publ. Res. Inst. Math. Sci. 42
+(2006), pp. 221-322.
+[CmbGC] S. Mochizuki, A combinatorial version of the Grothendieck conjecture,Tohoku
+Math. J. 59 (2007), pp. 455-479.
+[NodNon] Y. Hoshi, S. Mochizuki, On the Combinatorial Anabelian Geometry of Nodally
+Nondegenerate Outer Representations, to appear inHiroshima Math. J.
+[AbsTopII] S.Mochizuki, Topics in Absolute Anabelian Geometry II: Decomposition Groups,
+RIMS Preprint 1625 (March 2008).
+[PSCom] S. Mochizuki, Comments on the Main Theorem of Pop-Stix , manuscript dated
+November 15, 2010.
+[PS] F. Pop and J. Stix,Arithmetic in the fundamental group of a p- a d i cc u r v e—
+On the p-adic section conjecture for curves , preprint, Philadelphia-Heidelberg-
+Cambridge, August 2010.
+[Tama] A. Tamagawa, Resolution of nonsingularities of families of curves,Publ. Res.
+Inst. Math. Sci. 40 (2004), pp. 1291-1336.

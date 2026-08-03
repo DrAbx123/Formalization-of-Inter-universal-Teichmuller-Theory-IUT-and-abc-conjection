@@ -1,0 +1,859 @@
+Introduction to Combinatorial
+Anabelian Geometry III
+§1 Introduction
+§2 Semi-graphs of Anabelioids
+§3 Application of CombGC
+§4 Proof of CombGC
+
+§1
+K:a nN F o r a nM L F↪→ K: an alg closure ofK
+GK
+def
+= Gal(K/K)
+(g,r): a pair of nonnegative integers s.t. 2g −2+ r> 0
+C: a hyperbolic curve of type (g,r)/ K
+(g:t h eg e n u s ,r: the number of cusps)
+π1((−)): the ´etale fundamental gp of (−)
+Recall: The homotopy ext seq
+1 → π1(C ×K K) → π1(C) → GK → 1
+induces an outer representation
+ρ: GK → Out(π1(C ×K K))
+Bely˘ı, Voevodski˘ı, Matsumoto
+If r> 0, thenρis injective. ■
+Today,
+Thm 1 (Hoshi-Mochizuki)
+For any (g,r), ρis injective. ■
+Method: Combinatorial Anabelian Geometry
+1
+
+Notations:
+k: an alg closed ﬁeld of char 0
+X: a hyperbolic curve of type (g,r)/ k
+Xn
+def
+= {(x1,··· ,xn) ∈
+n
+  
+X ×k ···× k X| xi ̸= xj if i ̸= j }
+Πn
+def
+= π1(Xn)
+In particular, the projections
+Xn → Xn−1 → ··· → X2 → X
+(x1,··· ,xn) ↦→ (x1,··· ,xn−1) ↦→ ··· ↦→ (x1,x2) ↦→ x1
+induce astandard sequenceof [outer] surjections
+Πn ↠ Πn−1 ↠ ··· ↠ Π2 ↠ Π1
+Write Km
+def
+=K e r ( Πn ↠ Πm), Π0
+def
+= {1}.
+⇝ {1} = Kn ⊆ Kn−1 ⊆· · ·⊆ K1 ⊆ K0 =Π n
+α∈Aut(Πn)i sF-admissible
+def
+⇔ For anyﬁber subgroup
+J ⊆Πn, it holds thatα(J)= J.
+Recall:
+J ⊆Πn is aﬁber subgroup
+def
+⇔ J =K e r ( Πn ↠ Πn′)
+—w h e r eΠn ↠ Πn′ is induced by a projXn → Xn′.
+2
+
+α∈Aut(Πn)i sC-admissible
+def
+⇔
+(i) α(Km)= Km (0 ≤m ≤n)
+(ii) α: Km/Km+1
+∼
+→ Km/Km+1 induces a bijection be-
+tween the set ofcusp’l inertia subgps⊆Km/Km+1
+α∈Aut(Πn)i sFC-admissible
+def
+⇔ αis F-admissible and
+C-admissible
+AutFC(Πn)
+def
+= { FC-admissible automorphisms of Πn }
+OutFC(Πn)
+def
+=A u tFC(Πn)/Inn(Πn)
+Observe: Xn+1 → Xn “forgetting the last factor” induces
+φn :O u tFC(Πn+1) → OutFC(Πn)
+Thm 2 φn is injective for n ≥1. ■
+Remark:
+(i) φn is bijective for n ≥4.
+(ii) VariousXn+1 → Xn “forgetting a factor” induce
+the same OutFC(Πn+1) → OutFC(Πn).
+3
+
+Thm 2 ⇒ Thm 1
+Let X
+def
+= C ×K K, k
+def
+= K
+( ⇝ π1(C ×K K)= π1(X)=Π 1 )
+Note:T h eo u t e rr e p ’ nρ: GK → Out(Π1)f a c t o r s a s
+GK → OutFC(Π1) ↪→ Out(Π1).
+Thus, to show thatρis injective, it suﬃces to show that
+GK → OutFC(Π1)i s injective.
+This follows from the commutativity of the diagram
+GK OutFC(Π1)
+GK OutFC(Π2)
+GK OutFC(Π3)O u t ( π1(P1
+K \{0,1,∞}))
+φ1
+injective by Bely˘ı
+φ2
+∃
+4
+
+Today, for simplicity, we consider the proof of the
+injectivity of φ1 :O u tFC(Π2) → OutFC(Π1).
+⇒ It suﬃces to verify:
+Prop 3
+Let
+AutIFC(Π2)
+def
+=
+⎧
+⎪⎪
+⎪
+⎪
+⎨
+⎪⎪
+⎪⎪⎩
+α∈Aut
+FC(Π2)
+⏐⏐
+⏐⏐⏐⏐⏐
+⏐⏐
+⏐
+Π
+1
+Π2
+Π1
+α1=id
+α
+p1
+p2
+α2=id
+⎫
+⎪⎪
+⎪
+⎪
+⎬
+⎪⎪
+⎪⎪⎭
+,
+Ξ
+def
+=K e r (p1) ∩Ker(p2)[ ⊆Π2 ].
+Then the injection
+Ξ
+conj.
+↪→ AutIFC(Π2)[ c f. the slimness of Π2]
+is bijective. ■
+Indeed, let σ∈AutFC(Π2)s . t .
+Π1
+Π2
+Π1
+σ1 = Inn(g1)
+σ
+p1
+p2
+σ2
+5
+
+Observe:L e tD ⊆Π2 be a decomp. gp assoc. to
+the diagonal ⊆X ×k X. Then it holds that
+σ(D)= π·D·π−1 (π∈Π2).
+Thus, since
+D Π2
+{(a,a)} Π1 ×Π1
+(p1,p2)
+we conclude that
+σ2 = Inn(g2)( g2 ∈Π1).
+Let g ∈Π2 s.t. p1(g)= g1 and p2(g)= g2.
+⇝ Inn(g)−1 ◦σ∈ AutIFC(Π2)
+∼
+← Ξ
+⇝ σ∈Inn(Π2)
+In the following, we consider the proof of Prop 3.
+6
+
+§2
+A pointed stable curve /k
+v1 v2
+e
+e1
+e2
+⇝
+A semi-graph of anabelioids of PSC-type
+B(π1(v1)) B(π1(v2))
+B(π1(e))B(π1(e1)) B(π1(e2))
+—w h e r e
+∗irreducible component ↔ vertex
+∗node ↔ closed edge
+∗cusp ↔ open edge
+∗B(G) : the connected anabelioid assoc. toG
+7
+
+G: a semi-graph of anabelioids of PSC-type
+⇝ A natural notion ofﬁnite ´etale coveringsof G
+⇝ One can deﬁne the [proﬁnite] fundamental gp ΠG
+Example: (A ﬁnite ´etale covering of degree 4)
+←−
+8
+
+Notation:
+G: a semi-graph of anabelioids of PSC-type
+G: the underlying semi-graph ofG
+V(G): the set ofvertices of G
+N(G): the set ofnodes of G
+C(G): the set ofcusps of G
+E(G)
+def
+= N(G)∪C(G)
+In particular,z ∈V(G) (resp. N(G); C(G); E(G)) deter-
+mines a(n)verticial (resp. nodal; cuspidal; edge-like)
+subgroup Πz ⊆ΠG [up to ΠG-conjugacy].
+G: a proﬁnite group ⊇ H: a closed subgroup
+ZG(H)
+def
+= {g ∈G | g ·h = h·g for ∀h ∈H }
+∩
+NG(H)
+def
+= {g ∈G | g ·H ·g−1 = H }
+∩
+CG(H)
+def
+=
+⎧
+⎪⎪
+⎪⎪
+⎨
+⎪⎪
+⎪
+⎪⎩
+g ∈G
+⏐⏐
+⏐
+⏐
+⏐
+⏐⏐⏐
+⏐⏐
+g ·H ·g
+−1
+g ·H ·g−1 ∩H
+H
+open
+open
+⎫
+⎪⎪
+⎪⎪
+⎬
+⎪⎪
+⎪
+⎪⎭
+9
+
+Prop 4
+(i) If z ∈V(G) (resp. E(G)), then Πz is slim (resp.
+∼= ˆZ).
+(ii) Let {z1,z2} be a subset of eitherV(G)o rE(G).
+If Πz1 ∩Πz2
+open
+⊆ Πz2,t h e nz1 = z2.
+(iii) If z ∈V(G)∪E(G), then CΠG (Πz)=Π z.
+(iv) Let z ∈E(G). Then Πz ⊆ΠG is cuspidal (resp.
+nodal) ⇔ Πz is contained in preciselyone
+(resp. two) verticial subgroup(s).■
+Deﬁnition
+G, H: semi-graphs of anabelioids of PSC-type
+α:ΠG
+∼
+→ ΠH: an isomorphism of proﬁnite groups
+(i) αis graphic ⇔ αarises from an isomG
+∼
+→H
+(ii) αis group-theoretically verticial(resp. nodal;
+cuspidal; edge-like) ⇔ αmaps each verticial
+(resp. nodal; cusp’l; edge-like) subgp⊆ΠG onto
+a verticial (resp. nodal; cusp’l; edge-like) subgp
+⊆Π
+H, and, every verticial (resp. nodal; cusp’l;
+edge-like) subgp⊆ΠH arises in this fashion.
+10
+
+Prop 5
+α:ΠG
+∼
+→ ΠH: an isomorphism of proﬁnite groups
+Then αis graphic ⇔ αis group-theoretically
+verticial and group-theoretically edge-like.
+Moreover, in this case,αarises aunique isom
+G
+∼
+→H . ■
+(Proof) Prop 5 follows from Prop 4, (ii), (iii).
+Observe:Π G is topologically ﬁnitely generated
+⇝ A proﬁnite topology on Out(ΠG)
+Since the natural hom. Aut(G) → Out(ΠG)i sa n
+injection with closed image[cf. Prop 5],
+⇝ A proﬁnite topology on Aut(G)
+Deﬁnition
+I: a proﬁnite group
+We refer to a continuous hom.
+I → Aut(G)[ ↪→ Out(ΠG)]
+as anouter representation of PSC-type.
+11
+
+Thm 6 (A comb. ver. of the Grothendieck Conj.)
+G, H: semi-graphs of anabelioids of PSC-type
+ρI : I → Aut(G), ρJ : J → Aut(H):
+outer representations of PSC-type
+α:ΠG
+∼
+→ ΠH: an isomorphism of proﬁnite groups
+which ﬁts into a commutative diagram
+I Aut(G) Out(Π G)
+J Aut(H) Out(Π H)
+∼
+ρI
+∼Out(α)
+ρJ
+—w h e r eI
+∼
+→ J is an isomorphism. Suppose that
+(i) ρI, ρJ are of NN-type[cf. §4].
+(ii) C(G) ̸= ∅and αis group-theoretically cusp’l.
+Then αis graphic [cf. Prop 5]. ■
+12
+
+§3
+(Proof of Prop 3)
+Remark: Atlastyear’sseminar, wehavealreadydiscussed
+the aﬃnecase of Prop 3!
+For simplicity, let
+X =
+To verify Prop 3, we may replaceX → Spec(k)b ya
+stable log curve
+v1
+v2
+e
+Zlog =
+over a log pointSlog. [cf. the deformation theory of
+stable log curves; the specialization isomorphism
+Π
+n = π1(Xn)
+∼
+→ Ker(πlog
+1 (Zlog
+n ) ↠ πlog
+1 (Slog))]
+13
+
+Zlog ⇝ a semi-graph of anabelioids of PSC-typeG
+Observe:T h eﬁber (Zlog
+2 )e of pr1 : Zlog
+2 → Zlog at e is
+v◦
+1 v◦
+2v◦
+0
+e◦
+1 e◦
+2
+e◦
+0
+⇝ a semi-graph of anabelioids of PSC-typeG/e
+In particular, we have
+1Π 2/1 Π2 Π1 1
+ΠG/e ΠG
+p1
+∼
+∼
+—w h e r eΠ2/1
+def
+=K e r ( Π2 ↠ Π1); the horizontal seq.
+is exact.
+⇝ an outer rep’nρ:Π1 → Out(Π2/1)
+14
+
+Y ⊆Z: the irreducible component corr. tov1
+Ylog:t h esmooth log curve overSlog determined by
+the hyperbolic curveY \{e}
+Πsub
+n
+def
+=K e r (π1(Ylog
+n ) ↠ π1(Slog))
+Πsub
+2/1
+def
+=K e r ( Πsub
+2 ↠ Πsub
+1 )
+Note: The natural closed imm.Y↪ → Z induces a
+commutative diagram
+Y2 Z2
+YZ
+pr1 pr1
+This diagram induces a commutative diagram
+1Π sub
+2/1 Πsub
+2 Πsub
+1
+1
+1Π 2/1 Π2 Π1 1
+p1
+— where the horizontal seq. is exact; the vertical
+arrows areinjective.
+⇝ an outer rep’nρsub :Πsub
+1 → Out(Πsub
+2/1)
+15
+
+Πsub
+2/1 ↪→ Π2/1
+↪→
+(Y log
+2 )e
+v◦
+1 v◦
+2v◦
+0
+e◦
+1 e◦
+2
+e◦
+0(Zlog
+2 )e
+Πsub
+1 ↪→ Π1
+↪→
+Y log
+v1 v2
+e
+Zlog
+16
+
+Let α∈AutIFC(Π2).
+Πe ⊆Π1: an edge-like subgp assoc. toe
+⇝ We have a comm. diag.
+Πe Π1 Out(Π2/1)
+Πe Π1 Out(Π2/1)
+ρ
+∼Out(α|Π2/1)
+ρ
+Note: Since the composite Πe ↪→ Π1 → Out(Π2/1)
+factors as the composite of
+Πe → Aut(G/e)w i t hA u t (G/e) ↪→ Out(Π2/1)
+— where the resulting outer rep’n isof NN-type—
+it follows from Thm 6 thatα|Π2/1 is graphic.
+Moreover, since
+Π2 Π1α p2
+α2=id
+α|Π2/1 induces identity automorphismon “G/e ”
+[cf. Prop 4, (i), (ii)].
+17
+
+Fix an edge-like subgroup Πe◦
+1 ⊆Π2/1 assoc. to e◦
+1.
+Claim: ∃γ∈Ξs . t .
+α(Πe◦
+1 )= γ·Πe◦
+1 ·γ−1.
+(Proof of Claim)
+By the above Note, there existsγ′ ∈Π2/1 s.t.
+α(Πe◦
+1 )= γ′ ·Πe◦
+1 ·γ′−1.
+Thus, we have
+p2(Πe◦
+1 )= p2(γ′)·p2(Πe◦
+1 )· p2(γ′)−1.
+By Prop4, (iii), we conclude that
+p2(γ′) ∈ p2(Πe◦
+1 ).
+In particular, by multiplyingγ′ by a suitable∈Πe◦
+1 ,
+we obtain an elementγ∈Ξ, as desired.
+In light of Claim, to verify thatα∈Ξ, we may
+assume that
+(1) α(Πe◦
+1 )=Π e◦
+1
+.
+18
+
+Πv◦
+1 ,Πv◦
+0 ⊆Π2/1:t h eunique verticial subgps assoc. to
+v◦
+1, v◦
+0 that contain Πe◦
+1 [cf. Prop 4, (iv)]
+Πsub
+2/1 ⊆Π2/1:t h eunique Π2/1-conj. of the image of
+“Πsub
+2/1 ↪→ Π2/1” that contains and is topologically
+generated by Πv◦
+1 ,Πv◦
+0
+⇝ By (1) and the graphicity ofα|Π2/1, we conclude:
+(2) α(Πv◦
+1 )=( Πv◦
+1 );
+(3) α(Πv◦
+0 )=( Πv◦
+0 );
+(4) α(Πsub
+2/1)=( Πsub
+2/1).
+Observe:S i n c eCΠ2/1(Πsub
+2/1)=Π sub
+2/1 [cf. Prop 4, (iii)],
+the diagram
+Πsub
+1 Out(Πsub
+2/1)
+Πsub
+1 Out(Πsub
+2/1)
+ρsub
+∼Out(α|Πsub
+2/1
+)
+ρsub
+[cf. (4)] commutes. Thus, α|Πsub
+2/1
+arises from an
+αsub ∈Aut(Πsub
+2 ) [cf. the slimness of Πsub
+2/1].
+19
+
+Moreover, it follows from the construction that
+αsub ∈ AutIFC(Πsub
+2 ).
+On the other hand, by theaﬃnecase of Prop 3 [cf.
+Remark at the beginning of the proof], we have
+AutIFC(Πsub
+2 )
+∼
+← Ξsub def
+=Ξ ∩Πsub
+2 .
+⇝ α|Πsub
+2/1
+is a Ξ-inner automorphism!
+T h u s ,t ov e r i f yt h a tα∈Ξ, we may assume that
+(5) α|Πsub
+2/1
+=i d.
+⇝ (6) α|Πv◦
+0
+= id [cf. (3)]
+Πe◦
+2 ⊆Π2/1: an edge-like subgp assoc. toe◦
+2 which
+is contained in Πv◦
+0
+Πv◦
+2 ⊆Π2/1:t h eunique verticial subgp assoc. tov2
+that contains Πe◦
+2 [cf. Prop 4, (iv)]
+⇝ (7) α(Πe◦
+2 )=Π e◦
+2
+By (7) and the graphicity ofα|Π2/1, we conclude:
+(8) α(Πv◦
+2 )=Π v◦
+2 .
+20
+
+By (8), we obtain a comm. diag.
+Πv◦
+2 Πv◦
+2
+p2(Πv◦
+2 ) p2(Πv◦
+2 )
+∼
+α|Πv◦
+2
+∼
+∼
+Hence, we have
+(9) α|Πv◦
+2
+=i d.
+Since Π2/1 is topologically generated by Πsub
+2/1 and
+Πv◦
+2 , it follows from (5), (9) that
+(10) α|Π2/1 =i d.
+Finally, it follows from (10) and the assumption
+Π2 Π1α p1
+α1=id
+that α=i d[ c f .t h eslimness of Π2/1].
+21
+
+§4
+Fix auniversal covering ˜G→G .
+V( ˜G)
+def
+= lim←−V(G′)
+N( ˜G)
+def
+= lim←−N(G′)
+C( ˜G)
+def
+= lim←−C(G′)
+E( ˜G)
+def
+= N( ˜G)∪C( ˜G)
+— where the proj. limits are over all conn. ﬁn. ´etale
+subcoverings G′ →G of ˜G→G
+Let □ ∈{ V,E}.
+If ˜z ∈□( ˜G), then we write ˜z(G′) for the image of
+˜z via the natural map □( ˜G) → □(G′).
+Π˜z ⊆ΠG:a unique □-like subgroup assoc. to ˜z(G)
+s.t. for every conn. ﬁn. ´etale subcovering G′ →G
+of ˜G→G , the subgroup Π˜z ∩ΠG′ ⊆ΠG′ is a
+□-like subgroup assoc. to ˜z(G′)
+22
+
+ρI : I → Aut(G): an outer rep’n of PSC-type
+ΠI
+def
+=ΠG
+out
+⋊ I: the proﬁnite group obtained by pulling
+back the exact sequence
+1Π G Aut(ΠG) Out(Π G)1
+conj.
+by the composite I
+ρI
+→ Aut(G) ↪→ Out(ΠG).
+⇝ we have a comm. diag.
+1Π G ΠI I 1
+1Π G Aut(ΠG) Out(Π G)1
+ρI
+— where the horizontal seq. are exact.
+Deﬁnition
+(i) If ˜z ∈V( ˜G)o r N( ˜G), then we shall write
+I˜z
+def
+= ZΠI (Π˜z) ⊆ D˜z
+def
+= NΠI (Π˜z).
+(ii) If ˜z ∈C( ˜G), then we shall write
+I˜z
+def
+=Π˜z ⊆ D˜z
+def
+= NΠI (Π˜z).
+23
+
+Lem 7
+(i) Let ˜v ∈V( ˜G). Then the compositeI˜v ↪→ ΠI ↠ I
+is injective.
+(ii) Let ˜e ∈N( ˜G) that abuts to ˜v ∈V( ˜G). Then it
+holds that I˜v ⊆I˜e. ■
+(Proof) (i) follows from Prop 4, (i), (iii). (ii) is easy.
+Deﬁnition
+ρI : I → Aut(G): an outer rep’n of PSC-type
+ρI is ofNN-type (resp. SNN-type) ⇔
+(1) I ∼= ˆZ.
+(2) For every ˜v ∈V( ˜G), the image of the composite
+I˜v ↪→ ΠI ↠ I is open (resp. I) [cf. Lem 7, (i)].
+(3) For every ˜e ∈N( ˜G), the natural inclusions
+I˜v1,I˜v2 ⊆I˜e —w h e r e˜e abuts to ˜v1,˜v2 ∈V( ˜G)
+[cf. Lem 7, (ii)] — induces anopen injection
+I˜v1 ×I˜v2 ↪→ I˜e.
+24
+
+Lem 8 ρI : I → Aut(G): of SNN-type
+(i) Let ˜v ∈V( ˜G). Then D˜v =Π˜v ×I˜v.
+(ii) Let ˜v ∈V( ˜G); ˜e ∈E( ˜G) an element that abuts
+to ˜v.T h e nD˜e =Π˜e ×I˜v.
+(iii) Π˜v = ZΠI (I˜v)∩ΠG = NΠI (I˜v)∩ΠG. ■
+Notation:
+(i) Let v, w ∈V(G). We shall writeδ(v,w) ≤n if
+the following conditions are satisﬁed:
+∗If n =0 ,t h e nv = w.
+∗If n ≥1, then there exist
+{e1,...,e n}⊆N (G); {v0,...,v n}⊆V (G)
+—w h e r ev0 = v; vn = w; ei abuts tovi−1, vi.
+We shall write δ(v,w)= n if δ(v,w) ≤n and
+δ(v,w) ̸≤n−1.
+(ii) Let ˜v,˜w ∈V( ˜G). We shall write
+δ(˜v, ˜w)
+def
+=s u pG′{δ(˜v(G′), ˜w(G′))}.
+25
+
+Lem 9
+ρI : I → Aut(G): an outer rep’n of PSC-type
+Let ˜v1,˜v2 ∈V( ˜G).
+Consider the following 8 conditions:
+(1) δ(˜v1,˜v2)=0 .
+(2) δ(˜v1,˜v2)=1 .
+(3) δ(˜v1,˜v2)=2 .
+(4) δ(˜v1,˜v2) ≥3.
+(1′) D˜v1 = D˜v2.
+(2′) D˜v1 ̸= D˜v2; D˜v1 ∩D˜v2 ∩ΠG ̸= {1}.
+(3′) D˜v1 ∩D˜v2 ̸= {1}; D˜v1 ∩D˜v2 ∩ΠG = {1}.
+(4′) D˜v1 ∩D˜v2 = {1}.
+Then we have equivalences
+(1) ⇔ (1′); (2) ⇔ (2′); (3) ⇔ (3′); (4) ⇔ (4′).
+Moreover, suppose thatρI is ofSNN-type.
+Then if (3′) is satisﬁed, then there exists aunique
+˜v3 ∈V( ˜G)s . t .
+δ(˜v1,˜v3)= δ(˜v2,˜v3)=1 a n d D˜v1 ∩D˜v2 = I˜v3. ■
+26
+
+(Proof of Thm 6)
+To verify Thm 6, by replacing ΠI by an open subgroup
+⊆ΠI, we may assume thatG, H are sturdy,a n dt h a t
+ρI, ρJ are ofSNN-type [cf. Prop 4, (iii)].
+∗sturdy ··· Every irr. component of the pointed stable
+curve that gives rise toG satisﬁes the following:
+The genus of the normalization is≥2.
+Thus, to verify Thm 6, it suﬃces to verify
+Claim A
+:
+G, H:t h ecompactiﬁcations of G, H, respectively
+Then the isom. α:ΠG
+∼
+→ ΠH which is induced
+by αis graphic. ■
+[We apply Claim A to various conn. ﬁn. ´et. coverings!]
+=⇒
+G G
+27
+
+Lem 10
+Gp-theoretically verticial ⇒ Gp-theoretically nodal. ■
+It follows from Prop 5, Lem 10 that Claim A⇔
+Claim B:
+α:ΠG
+∼
+→ ΠH is gp-theoretically verticial. ■
+(Proof of Claim B) First, let us prove that:
+There exists averticial subgroup ∇⊆ΠG s.t.
+α(∇)i s a verticial subgroup ⊆ΠH.
+Write I → Out(ΠG) (resp. J → Out(ΠH)) for the outer
+rep’n of PSC-type determined byρI (resp. ρJ)a n d
+ΠI
+def
+=Π G
+out
+⋊ I, ΠJ
+def
+=Π H
+out
+⋊ J
+⇝ α:ΠG
+∼
+→ ΠH [and α] induces a comm. diag.
+(⋆)
+ΠI =ΠG
+out
+⋊ I ΠH
+out
+⋊ J =ΠJ
+ΠI =ΠG
+out
+⋊ I ΠH
+out
+⋊ J = ΠJ
+∼
+β
+∼
+β
+— where the vertical arrows are the surj. induced by
+ΠG ↠ ΠG,Π H ↠ ΠH.
+28
+
+By assumption (ii), ∃eG ∈C(G), ∃eH ∈C(H)s . t .
+β(DeG )= DeH.
+Write vG ∈V(G) (resp. vH ∈V(H)) for the vertex
+to which eG (resp. eH) abuts.
+By Lem 8, (ii), the diag. (⋆) induces a diag.
+DeG DeH
+IvG IvH
+∼
+β
+∼
+β
+⇝ β(IvG )= IvH !
+Thus, we conclude from Lem 8, (iii), that
+α(ΠvG )= β(NΠI
+(IvG ) ∩ΠG)
+= NΠI
+(β(IvG )) ∩ΠH
+= NΠI
+(IvH) ∩ΠH
+=Π vH. ⇝ ∇
+def
+=ΠvG
+Therefore, to verify Claim B, it suﬃces to show that:
+Let ˜v1,˜v2 ∈V(˜G)s . t .δ(˜v1(G),˜v2(G)) ≤1. Then if
+α(Π˜v1)i s verticial,t h e nα(Π˜v2)i s verticial.
+29
+
+If ˜v1(G)=˜v2(G), then it is immediate. Suppose
+that ˜v1(G) ̸=˜v2(G)a n dt h a tα(Π˜v1)i s verticial.
+Observe: There exist ˜w1,˜u1,˜w2 ∈V(˜G)s . t .
+(a) ˜v1(G)=˜w1(G)=˜u1(G); ˜v2(G)=˜w2(G).
+(b) δ(˜w1,˜u1)=2 .
+(c) δ(˜w2, ˜w1)= δ(˜w2,˜u1) = 1. [cf. the next page]
+(a) ⇝ There exist ˜w′
+1,˜u′
+1 ∈V( ˜H)s . t .
+β(D˜w1)= D˜w′
+1, β(D˜u1)= D˜u′
+1.
+(b), (c), Lem 9 ⇝ D˜w1 ∩D˜u1 = I˜w2
+⇝ D˜w′
+1 ∩D˜u′
+1 ̸= {1}, D˜w′
+1 ∩D˜u′
+1 ∩ΠH = {1}
+⇝ ∃˜w′
+2 ∈V( ˜H)s . t .D˜w′
+1 ∩D˜u′
+1 = I˜w′
+2 [cf. Lem 9]
+⇝ β(I˜w2)= I˜w′
+2
+Thus, it follows from Lem 8, (iii), that
+α(Π˜w2)=Π ˜w′
+2.
+⇝ We conclude from (a) thatα(Π˜v2)i s verticial !
+30
+
+
+G
+′
+→ G: a connected ﬁnite ´etale covering of degree = 2
+
+˜w2(G
+′
+)
+˜w1(G
+′
+)
+˜u1(G
+′
+)
+←−
+˜v2(G)˜ v1(G)
+31

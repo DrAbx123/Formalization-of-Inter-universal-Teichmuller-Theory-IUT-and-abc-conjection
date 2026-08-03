@@ -1,0 +1,824 @@
+ஜ፭ƴ᧙Ƣǔ Grothendieck ʖे
+ɶ஭Ҧଯ ,ᬱဏ , ஓஉૼɟ
+ᘙ᫆Ʒ Grothendieckஜ፭Ƹ୺ዴ
+μƴൿǊƯƠǇƏŴƱƍƏʖेưƋǔŵƜƷբ᫆ƷᄂᆮƸŴᓸᎍƷɟʴ(ɶ஭)
+ˊƷ஛ƴႆᇢƕ᧏ƔǕŴǋƏɟʴ(߷)ˊЭҞƔǒ (ӳǛ
+ԃǉ)Ʒɟʴ(ஓஉ) ƴǑǓŴૼƠƍ(p ᡶႎƳ) ᚐ᣷
+ǛЈႆໜƱƢǔஇኳႎƳᚐൿƕɨƑǒǕƨŵ
+፼ƠƨƋƱŴʖेƕɤʴƴǑƬƯഏᇹƴᚐ
+ԓƢǔŵ
+§1.ஜ፭ —˴Ʊ፭ᛯƷ௚ƚ೛ —
+§1.1.ஜ፭
+ƳŴƍǘ
+ஜ፭ưൿǇǔƷƸƨƔƩ
+٭
+ஜ፭ƸŴ
+A. Grothendieckλ
+፯ƞǕǔǋƷư
+Ƌǔŵ
+ˊƴ
+[SGA1]˴ƴƓƚǔžǹǭȸȠƷǬȭǢྸᛯſǛ
+λƞǕƨǋƷưƋǓŴƦǕƴǑǕƹŴᡲኽƳǹǭȸȠ X ƱƦƷɥƷˊૠ
+᧍ໜ ¯xஜ፭ π1(X, ¯x) ƸഏƷǑƏƳžᚐᨼӳſƷኒЗƷፗ੭፭Ʊ
+፯ƞǕǔŵұƪ X ƷஊᨂഏǨǿȸȫᘮᙴ (ƠƹƠƹஊᨂഏᘮᙴƱဦƢ) Y ǛμƯឥ
+ǒƤǔƱƖŴ¯x ɥƷ ﬁber set Y (¯x)ፗ੭μ
+˳ƷƳƢ፭ƕ π1(X, ¯x) ưƋǔŵƜƷ፭ƴƸ̾ŷƷஊᨂᨼӳ Y (¯x)ಊᨂƱƠƯ
+proﬁnite ˮႻ፭1)ஜ፭ƷˮႻ፭ƱƠƯƷ
+ໜ ¯xƠƳƍƜƱƕǘƔǔƷưŴ፭ᛯႎƳನᡯƷǈƕբ
+ໜǛႾဦƠŴҥƴ π1(X) ƷǑƏƴǋ୿ƘƜƱƴƢǔŵ
+˓ॖƷஊᨂഏᘮᙴ Y → XƠƯŴY (¯x) Ƹ π1(X, ¯x) ƷᡲዓƳஊᨂፗ੭ᘙྵǛɨƑǔƕŴƜ
+ƴǑǓŴXƷஊᨂഏᘮᙴƷμ˳Ʊπ1(X, ¯x)ӷ͌ƴƳǔŵཎ
+ƴ (ᡲኽƳ YƠƯ) Y (¯x)҄፭Ƹ π1(X, ¯x) Ʒ᧏ᢿЎ፭2) (᫏)ܭ
+ǊŴ ᡞƴπ1(X, ¯x) Ʒ᧏ᢿЎ፭HƢǔஊᨂഏᡲኽᘮᙴY → X
+(Ʒӷ͌᫏)᧙̞ H ↔ YƷᜭᛯưǋƠƹƠƹྵǕǔƷưŴ Y = Y H,
+H = HYƢǔǋƷǛᘙƢƜƱƴƢǔŵཎƴ HY ƕ Yஜ፭ π1(Y ) Ʊ
+ஜႎưƋǔŵ
+Typeset by AMS-TEX
+1
+
+2 ɶ஭Ҧଯ,ᬱဏ, ஓஉૼɟ
+ᆰ᧓ X ƕɟໜŴཎƴ˳ K ƷǹȚǯȈȩȠ Spec (K) ƱƠƯɨƑǒǕƨƳǒƹŴᡲኽƳஊ
+ᨂഏᘮᙴ Y ɥƷ ﬁber set Y (¯x) Ƹ Yஜ፭
+π1(Spec (K))ǬȭǢ፭Gal(K)
+def
+=G a l (K/K)
+ƱӷɟᙻƞǕǔŵ(ƜƜư K Ƹ K ƷЎᩉ᧍ѼǛᘙƢŵ)
+ݧf : X1 → X2 ƓǑƼ X1 ɥƷˊૠ᧍ໜ ¯x1 ƕɨƑǒǕǔƱŴ ¯x1 Ʒ΂
+Ǜ ¯x2׹π1(X1, ¯x1) → π1(X2, ¯x2)ᨥŴஊᨂഏǨǿȸȫ
+ᘮᙴ Y → X2Ɩ৏Ơ (ȕǡǤȐȸᆢ) Y ′ → X1ƴ
+Y (¯x2) ∼= Y ′(¯x1)ƕ
+ໜ ¯x1ƷǋƱưӷ͌ƴƳƬ
+ໜǁƷᚕӏƸႾဦƠƯŴҥƴ π1(X1) → π1(X2) ƷǑƏƳ୿Ɩ૾
+ǛƢǔƜƱƴƢǔŵ
+X ƕ˳ KݧX → Spec (K) Ɠ
+ǑƼ Spec K → Spec KݧXK → X (XK
+def
+= X ×K K)ஜ፭Ʒ
+μЗ
+(1.1) 1 −→ π1(XK) −−−−→ π1(X)
+prX
+−−−−→ Gal(K) −→ 1
+ࢨݧprX ƷఋǛɨƑƯƍǔ፭ π1(XK) Ƹ Xஜ፭ƱԠƹǕŴK ƕ೅ૠ
+ஜ፭Ʒproﬁniteͳ҄ (μƯƷஊᨂ
+ಊᨂ)᣽ưƋǔ3)ஜ፭ π1(X)
+Ʒ Gal(K)-፭ƱƠƯƷನᡯ (1.1)҄ƢǔƔƕբ᫆ƱƳǔŵ
+μЗ (1.1) ƴƓƍƯ π1(XK) Ƹ π1(X)ǛƱǔƜƱƴ
+׹π1(X) → Aut(π1(XK))Ƹπ1(XK)ࠁ
+፭ƴϙƢƔǒŴՠǛƱǕƹŴGal(K)፭ Out(π1(XK)) ǁ
+׹( ǬȭǢᘙྵƱƍƏ)
+(1.2) ρX :G a l (K) → Out(π1(XK))
+ƕဃơǔŵʻƸ prX : π1(X) → Gal(K) ƔǒЈႆƠƯρX :G a l (K) → Out(π1(XK)) Ǜ፭ᛯႎƳ
+፯ƠƨƕŴπ1(XK)ӳƴƸŴᡞƴ ρX Ɣǒ፭ᛯႎƳદ˺ƴǑƬ
+Ư prX፯ƞǕƨӑ୺ႎˊૠ୺ዴ(ұƪŴ๖ǒ
+ƔƳˊૠ୺ዴưŴᆔૠǛ gŴ໯ᨂᢒໜƷૠǛ n ƱƢǕƹ (g,n ) ̸=( 0,0),(0,1),(0,2),(1,0) ưƋ
+ǔǑƏƳǋƷ)ஜ፭Ƹ᩼ǢȸșȫƳᐯဌ፭ƳƍƠ୺᩿፭Ʒproﬁnite׹
+ӳƴƋƯƸǇǔŵƜƷǑƏƳƱƖ
+ƸŴž
+π1(XK)ǬȭǢ˺ဇ ρX ſǛᎋƑǔƜƱƱžGal(K)፭ π1(X)ſǛᎋƑǔƜƱ
+ƸӷሁƱƳǔƷưƋǔŵ
+§1.2. Grothendieck ƷᢒǢȸșȫʖे
+Grothendieck([G1-3])ಮ˳ X ƕ ‘ᢒǢȸșȫ (anabelian)ಮ
+˳’ᄽ˳K ƕእ˳ɥ
+ஊᨂဃ঺ƳǒƹŴGal(K)፭ƱƠƯƷ π1(X) Ʒನᡯ (1.1) Ƹ XǛǳȳȈȭȸȫ
+ƢǔưƋǖƏŴƱƍƏႺज़ǛЈႆໜƱƢǔʖे፭ưƋƬƨŵ
+ǇƣᇹɟƴදॖǛƻƘƷƸŴGrothendieckஜʖेſƱԠǜưƍ
+ưƋǖƏŵ
+
+ஜ፭ƴ᧙Ƣǔ GROTHENDIECK ʖे 3
+(GC1)ஜžʖेſ. እ˳ɥஊᨂဃ঺Ƴ˳ Kಮ˳ Xஜ፭
+π1(X)ݧprX : π1(X) → Gal(K) ƷನᡯƔǒ ‘Ψ’ ưƖǔŵ
+˴ƕወ
+ಮ˳ƱƍƏǑƏƳॖԛưŴGrothendieck ƴǑǓоЈƞǕƨᚕᓶưƋǔƕŴɟ
+፯Ǜ Grothendieck ƕ̬သƠƯƠǇƬƨƷƱŴɥƷ ‘Ψ (reconstitute)
+Ƣǔ’ǛɧᄩƔƳǋƷƱ
+ƠƯƍǔ4)ŵƠƔƠ೅ૠᲪƷˊૠ୺ዴƴƭƍƯƸ Grothendieck ᐯ៲ƴǑǓഏƷǑƏƳଢᅆႎƳ
+ʖेƕᇌƯǒǕƨŵ
+(GC2) Hom ʖे. ஊྸૠ˳ɥஊᨂဃ঺Ƴ˳ KɥƷӑ୺ႎˊૠ୺ዴ X, YƠƯ
+HomK(X,Y ) → HomGal(K)(π1(X),π1(Y ))/ ∼
+ƴǑƬƯૅᣐႎƳ K-ƨƪƱ Gal(K)-ϙ΂Ʒ (ӫƔǒƷ π1(YK)˺ဇ
+ƴǑǔ)ƕɨƑǒǕǔŵ(˴ႎ
+ƴဌஹƢǔǋƷƴᨂǔŵ)
+Grothendieck ᐯ៲ǋදॖƠƯƍǔǑƏƴŴɥƷʖेƸG.Faltings ([F1]) ƴǑƬƯᚰଢƞǕƨ
+ಮ˳ƷᲫഏΨǨǿȸȫȷțȢȭǸȸ፭ƴ᧙Ƣǔ Tate ʖे:
+HomK(A, B) ⊗ ˆZ ∼= HomGal(K)(H1(AK, ˆZ),H1(BK, ˆZ))
+(ƜƜư A, B˳ Kಮ˳ưŴˆZ Ƹ Z Ʒ proﬁniteͳ҄) Ʊ᫏˩
+ƠƯƍǔŵǇƨŴƜǕƱӷ଺ƴFaltings ƴǑǓᚐൿƞǕƨ isogenyྸ (Ǎ Shafarevich ʖेሁ)
+ಮ˳ǛᎋƑǔƜƱƴǑǓŴɨƑǒǕƨᆔૠ2 ˌɥƷ proper ˊૠ୺ዴƱțȢ
+ȭǸȸ፭ H1ƏŵH1 ƕ π1 ƷǢȸș
+ஜʖे (GC1)ǊǔƜ
+Ǜஊᨂ̾ƔǒᲫ̾ƴ጑ǊǔƜƱǛᙲᛪƠƯƍǔƱᙸ
+ྸƷ eﬀectivity Ƹ (ӳ5)ǛᨊƍƯ)o r d e r
+ƖƍƷƕ୍ᡫưƋǓŴɟᑍƴƸӑ୺ႎ୺ዴƷGrothendieck ʖे (GC1)(GC2) Ʊ
+ಮ˳Ʒ Tate ʖेሁƱƸƔƳǓƷᨠƨǓƕƋǔŵ GrothendieckƷʖेƷఌਗ
+ஜ፭ π1(X)ſǛஊƢǔƜƱŴᚕƍƔƑǕƹƦƷૠᛯႎƳ
+‘ՠ’G a l (K)˴ ႎ ‘ᢿЎ’ π1(XK)˺ဇ (1.2)ƍſƸƣưƋǔƜ
+ƱǛ (ǳțȢȭǸȸྸᛯƴƓƍƯ A.Weil Ǎ P.Deligne ǒƴǑǓᚐଢƞǕƯƖƨǬȭǢᘙྵƷ᩼
+Ʊൔ᠋ƠƯ) ਫƛƯƍǔ ([G3])ŵ
+҄ưƖǔ (சᚐൿ) ʖेƱƠƯᐻԛขƍǋƷƴഏƷ Section ʖ
+ेƕƋǔŵ˳ Kಮ˳ X Ʒ K-ஊྸໜ x ∈ X(K)ݧX → Spec KƢǔ
+sectionݧx :S p e cK → X ƷƜƱưƋǔƔǒŴK-ஊྸໜ xμЗ
+(1.1) ǛЎᘷƞƤǔ section׹αx :G a l (K) → π1(X)( Ʒπ1(XK)-᫏)ƞǕǔŵ
+(GC3) Section ʖे. (GC2) Ʊӷơ X/KƠƯŴprX : π1(X) → Gal(K) Ʒ section แӷ
+׹α :G a l (K) → π1(X) ƸŴX Ʒ K-ஊྸໜƴဌஹƢǔǋƷƱŴ‘໯ᨂᢒ K-ஊྸໜ’ ƴဌஹƢǔ
+ǋƷƴᨂǔ6)ŵ
+
+4 ɶ஭Ҧଯ,ᬱဏ, ஓஉૼɟ
+໯ᨂᢒໜƴဌஹƢǔ (tangential) section ƴƭƍƯƸഏƷራưᚑǕǔŵǇƨ Hom ʖेƴƭƍ
+ƯƸŴGrothendieck ([G2]) Ƹ୼ƴ Xಮ˳ư Y ƕИሁႎᢒǢȸșȫˊ
+ಮ˳ (ႎ smooth ﬁbrationಮ˳)Ƣǔӧ
+ƴƭƍƯᚕӏƠƯƍǔ7)ŵSection ʖेƸŴHom ʖेƴƓƍƯ Xᄽ˳ƷǹȚǯȈȩȠ
+ӳƷ variant ưƋǔ8)ŵ୼ƴ X Ǎ Yӳƴƭ
+ƍƯǋᎋॾƕƋǓŴɲ૾ƱǋƦƏưƋǔƱƖǛžᢒǢȸșȫʖेƷӑஊྸ༿9)ſƱƠƯŴƜǕǋ
+ʖेƱƠƯƍǔŵ
+§1.3.ஜ፭ǛǊƙƬƯ
+Grothendieck Ʒ૨୿ ([G1-3]) ƴƸŴ§1.2 ưኰʼƠƨǑƏƳʖेƷǄƔƴǋŴˮႻ୺᩿ɥƷǰ
+ȩȕ (dessin d’enfant)ǍŴ୺ዴƷȢǸȥȩǤᆰ᧓Ʒૠᛯ
+᪃ŴƳƲƷ
+ƕᛖǒǕƯƍǔŵǇƨŴK = Q,X = P1 −{ 0, 1, ∞}ǬȭǢᘙྵ (1.2) ƕҥ
+ˊ஛Ʒ G.V.Belyi ([B])ࡇ
+ƔǒŴ[G1-3] Ǎ˂Ʒ཯ᇌƳ
+Ơƣƭ᧙ᡲƮƚǒǕƯᛐᜤ
+ǋǇƢǇƢ෇ႆƳᄂᆮƕᘍǘǕƯƍǔ
+(ǬȭǢƷᡞբ᫆ŴฆӳȢȁȸȕŴ
+Ǣȇȸȫႎཎഷ᧙ૠŴGrothendieck-Teichm¨uller ፭ƳƲ)ૠƷ᣻ᙲƳɼ᫆ǍஇᡈƷᡶ
+୿([1–6])૨ ([I2], [H])
+ƴᇌƪλǔƜƱƷưƖƳƍƜƱǛƓᛀƼဎƠɥƛƨƍŵɥƷǑ
+೔ƷɶƴƋƬƯŴஜᛯᛟưৢƏž
+Grothendieck
+ᛯႎƳᑥӳƍƷຜƍ௑ƷɟƭƱƍƏƜƱƕЈஹǔưƋǖƏŵ
+§2.ྸǁ (ɼƴ X :ᆔૠᲪ, K :ӳ)
+§2.1. Anderson-ྸ
+Grothendieckನᡯ (1.1)Ǭ
+ȭǢᘙྵ (1.2) ƷƲƜǛᙸǕƹΨƷᆰ᧓ƷˊૠನᡯƕᑣƘӒପƞǕƯƍǔƔŴƱƍƏբ᫆ǛᎋƑ
+ǇǔŵƱƜǖưእૠlǬȭǢᘙྵ(1.2) Ƹ π1(XK)ٻpro-l
+ՠ፭10) π(l)
+1 (XK)˺ဇ
+ρ(l)
+X :G a l (K) → Out(π(l)
+1 (XK))
+ᨙ ([I1]) ƸŴƦǕˌЭƷᄂᆮኺዾƔǒ
+Grothendieck, Deligne ሁƱƸ཯ᇌƴ X = P1 −{ 0, 1, ∞}Ƣǔ pro-lǬȭǢᘙྵƷᄂᆮǛ
+ࣱ( ȤǳȓԧŴόҥૠƱƷ᧙ǘǓ) ǛଢǒƔƴƠƨ11)ŵƦƠƯƜƷ˙ҾƷ
+ƷᄂᆮᎍǛɶ
+ƴᡶǊǒǕƨ
+12)ŵ
+ƕ G.Anderson-˙Ҿ ([AI])ྸƱƠƯჷǒǕƯ
+ƍƨŵஊᨂᨼӳ Λ ⊂ P1(K) ƕ 0,1, ∞ ǛԃǉƱƖŴ
+ྸ (Anderson-˙Ҿ). ᆔૠᲪƷ୺ዴ X = P1
+K − ΛƢǔ pro-lǬȭǢᘙྵρ(l)
+Xܭ׍
+˳ K(l)
+X Ƹᨼӳ Λ ƔǒᙐൔƱ lᄽ˳ K ƴ
+˳ưƋǔŵ
+
+ஜ፭ƴ᧙Ƣǔ GROTHENDIECK ʖे 5
+ྸƸŴpro-lǬȭǢᘙྵ ρ(l)
+X Ɣǒᐯ໱ƴဃƣǔ K ƷᢿЎ˳ K(l)
+Xໜᨼӳ
+Λ ⊂ P1(K)Ʒ৖᪯ưဃ঺ƞǕǔžૠſƷኒЗƴǑƬƯᚡᡓƢǔǋƷưƋǔƕŴ
+ஜ፭ π1(X) Ʒ Gal(K)-፭ƱƠƯƷನᡯƔǒ K(l)
+X ƱƍƏ K Ʒᢿ
+᣽ǛŴእૠ l ƝƱƴᚡᡓႎƴನ঺ƠƯƍǔƱǋǈƳƤǔŵɶ஭ƸŴƜ
+ƷǑƏƳ K᣽ǛǑǓኒወႎƴನ঺ưƖǕƹŴƦ
+ư Grothendieck ʖेǁƷǢȗȭȸȁ
+ƕЈஹǔƔǋƠǕƳƍŴƱᎋƑƨŵ
+§2.2. ǬȭǢፗ੭Ʒž፭ᛯႎſᚡᡓ
+Anderson-˙ҾƷ૾ඥƸŴ π1(P1 − Λ) ƴƓƚǔ pro-lǬȭǢᘙྵǛŴ P1 − Λ Ʒ “pro-l ୍
+ᢄᘮᙴƷጂ”Ƣǔ Λ ɥƷ “pro-cusp” ໜƨƪƷǬȭǢፗ੭ƷᚕᓶƴᎇᚪƠŴƦǕǛᆔૠᲪ
+(Ʒ୺ዴƨƪƷƳƢ)ბƢǔƱƜǖƕȝǤȳȈƴƳƬƯƍǔŵƦƜưǇƣŴžஊ
+ᨂഏᘮᙴƷ cuspஜ፭Ʒ(ٻ)፭
+ನᡯſƷǈǛဇƍǔ፭ᛯႎƳᚕᓶƴᎇᚪƢǔƜƱǛᎋƑǔŵ
+ɟᑍƴ X Ǜ K፯ƞǕƨ (˓ॖƷᆔૠƷ)a ﬃ n eӑ୺ႎ୺ዴƱƠŴY ǛƦƷஊᨂഏᘮᙴŴ
+Y ∗ ǛƦƷ᩼ཎီǳȳȑǯȈ҄ƱƢǕƹŴY Ʒ cusp ໜᨼӳƱƸΣY
+def
+= Y ∗ − Y ƷƜƱưƋǔŵǇ
+ƣŴᘮᙴ YƢǔ ᧏ᢿЎ፭HY = π1(Y ) Ʒ prX : π1(X) → Gal(K) ƴǑ
+˳ KYǒǕǔŵǇƨŴYஜ፭ƸσᡫᢿЎ HY ∩π1(XK)ࣄ
+ΨƞǕǔŵƜǕƸŴY ∗ Ʒᆔૠƕ gY ŴΣY (K)ƕ nY ưƋǔƱƢǕƹŴ᨞ૠ 2gY + nY − 1
+Ʒ᩼Ǣȸșȫᐯဌ proﬁniteٻpro-l ǢȸșȫՠƱƠƯ lᡶǨǿȸȫȷțȢȭ
+Ǹȸ፭ H1(YK, Zl)( = π(l)
+1 (YK)ab)ǛӕǔƜƱƴǑǓŴƦƜƴƸ Gal(KY )-ь፭
+ƱƠƯƷನᡯǋλƬƯƍǔŵƜƜƴŴcusp ໜᨼӳƴƓƚǔόЎፗ੭ᘙྵ13) ƕ (᨞ૠ nY − 1 Ʒ
+ᢿЎь፭ƱƠƯ) ǄǅλƬƯƍǔƷưŴƜǕǛ፭ᛯႎƴӕǓЈƤǕƹǑƍŵƦǕǛ̬ᚰƢǔƷƕ
+Riemann-WeilᨥŴբ᫆Ʒ ‘cusp ᢿЎ’ ƴǑǔ H1(YK, Zl) Ʒՠь፭Ƹ᨞ૠ 2gY
+ƱƳǓŴY ∗ಮ˳Ʒ l-ЎໜƨƪƷƳƢ l ᡶ TateưƋǔŵRiemann-Weil
+ʖेƸŴƦƜƴƓƚǔ Gal(KY ) Ɣǒဃơǔ Frobeniusࢲweight) ƕŴόЎ˺ဇ
+ӳƱǹǱȸȫƕီƳǔƜƱǛƍƬƯƍǔƷưŴH1(YK, Zl) Ʒ cusp ᢿЎƕ፭ᛯႎƴᜤКƞǕ
+ǔƜƱƴƳǔŵ
+§2.3.ྸ ([N1])
+ƦƜư̊Ƒƹ X = P1
+K − Λ( Λ ⊃{ 0, 1, ∞} ) Ʒᘮᙴ Y ƷƏƪŴ˳ K(
+N√
+1)፯˳ƱƠŴ
+XK( N√
+1) ɥ (Z/NZ)|Λ|−1 ǛǬȭǢ፭ƱƢǔǬȭǢᘮᙴƱƳƬƯƍǔǋƷǛᎋƑǔŵƦƠƯӲ
+H1(YK, Zl) Ʒ cusp˳ƷŴɥƷǑƏƳ Y Ʊእૠ l ƴǘƨǔ
+σᡫᢿЎǛᚘምƠƯǈǔƱŴ˳ K((λ − λ′)1/N | λ, λ′ ∈ Λ − {∞} )ݧ
+prX : π1(X) → Gal(K) Ɣǒᐯ໱ૠ N᣽ưƋǔŵ୼ƴ
+N ǛѣƔƤƹŴቇҥƳǯȳȞȸᜭᛯ(ࣱ)ƴǑǓŴʈඥ፭ K× ƷƳƔưஊᨂ
+ᨼӳ {λ − λ′ | λ, λ′ ∈ Λ − {∞} ,λ ̸= λ′}᣽ƴƳǔƜƱƕǘƔǔŵƜ
+ஜ፭ǛɨƑǔΛ ⊂ P1(K) ƷӕǓ૾ƕ (੭ǛඥƱƠ
+Ư) ஊᨂᡫǓƠƔƳƍƜƱŴǇƨ Kஜ፭ (ƷȡǿȷǢȸșȫ҄) ƕ
+P1 −{ Ხໜ } ǛൿǊƯƠǇƏƜƱƳƲƕᅆƞǕǔŵ
+§2.4.ྸ
+ǑǓјྙǑƘ cuspƸπ1(X) ƷμƯƷ᧏ᢿ
+
+6 ɶ஭Ҧଯ,ᬱဏ, ஓஉૼɟ
+Ў፭ HƢǔᘮᙴY H ƴ˄᨟Ƣǔcusp ᢿЎ ⊂ H1((Y H)K, Zl)
+ǛμᢿᨼǊƯƘǔƜƱǛᎋƑǔŵƜƷcusp ᢿЎƸ (§2.2 ưᡓǂƨǑƏƴ) weight ﬁltration
+ƮƚǒǕƯƍǔƔǒŴμƯƷ᧏ᢿЎ፭ H ƓǑƼእૠ l ƴǘƨƬƯ I ∩ HƴƦ
+Ʒ cusp ᢿЎƴᓳƪǔǑƏƳπ1(XK)ᢿЎ፭ I Ʒӳ́Ǜ˺ǕƹŴGal(K)-፭ π1(X) Ɣ
+ǒ፭ᛯႎƴӕǓЈƤǔ π1(XK)ǒǕǔŵ
+ƜƷᢿЎᨼӳƕ ‘cuspidal isotropy ᢿЎ፭’ Ʒ (᫏)ƢǔǋƷŴƍƍƔƑǕ
+ƹ X Ʒ໯ᨂᢒໜ (ұƪ XƢǔ cusp ໜ) ƴƓƚǔ π1(XK)፭ (∼= ˆZ) μ˳Ʒ
+ӳ́ƴƳǔƜƱƕᚰଢƞǕǔ (ᢒǢȸșȫ weight ﬁltration [N2,4])፭Ʒദᙹ҄፭ƱƠƯ
+π1(X)ΨƞǕǔƕŴƜƷЎᚐ፭Ʒɶƴ΂ǛਤƭǑƏƳ prX : π1(X) → Gal(K)
+Ʒ section׹α :G a l (K) → π1(X) ƨƪǛ X Ʒ໯ᨂᢒ K-ஊྸໜƔǒႆƢǔ tangential
+section ƱԠƿŵGrothendieck Ʒ Section ʖे (GC3) ưբ᫆ƱƞǕǔ sectionƷƏƪ໯
+ᨂᢒ K-ƮƚƕɨƑǒǕǔŵ
+፭ (ƢǔЎᚐ፭)ƮƚǒǕƨƨǊŴ̊ƑƹʚƭƷ୺ዴ
+X1, X2/Kஜ፭Ʒ᧓ƴ Gal(K)׹π1(X1) ∼= π1(X2) ƕɨƑǒǕƨƳǒƹŴƦ
+Ƣǔ໯ᨂᢒໜƷй
+˷˳ǋ
+(Ўᚐ፭Ʒ prX˳ƱƠƯ)ƬƯ X1 ƕ X′
+1؈
+λƞǕǔƳǒŴX2 ǋπ1(X′
+1) ∼= π1(X′
+2) ƱƳǔ X′
+2λƞǕƳƘƯƸƳǒƳƍŵཎƴŴᆔૠ
+ᲪƷ୺ዴ P1 −{ n ໜ }ΨƷբ᫆Ƹ P1 −{ Ხໜ }˴
+ưƖǔƜƱǛМဇ
+ƢǔƱŴ
+[N1] Ʒ৖ඥǛੲဇƠƯπ1(P1 −{ 0, 1, ∞ ,λ})᣽ƱƠƯ K× ƷʈඥᢿЎ፭Ʒɤƭ
+ኵ ⟨λ⟩, ⟨1 − λ⟩, ⟨ λ
+λ−1 ⟩ᨥ P1 −{ 0, 1, ∞ ,λ}᫏Ǜཎ
+ƮƚǔŵƜƷǑƏƴƠƯ Qஜ፭Ɣǒ ‘Ψ’
+ƞǕǔƜƱǛᅆƢƜƱƕưƖǔ ([N2])ŵ
+ƮƚƕɟᑍƷᆔૠƷ aﬃne ୺ዴƷ pro-lஜ፭ưǋӧᏡƳƜƱƔǒŴ
+Grothendieck ʖेǛ pro-lЗƳƲǛᡫƠƯ
+‘᣽ႎƴ’ƕဃǇǕƨŵཎƴpro-l፭Ʒᚸ̖Ʒբ᫆ƴཎഷ
+҄ƢǔƱŴ᭗ᆔૠƷ୺ዴǍƦƷᣐፗᆰ᧓Ʒpro-lǬȭǢᘙྵƷჷᜤǛᆔŷƷﬁltration Ʒ૾ඥư
+ǔƜƱƕưƖǔ(ᛯᛟ [N7] Ǎ [NTs],[NTa],[MT] Ƴ
+ƲǛӋༀ)ΨƢǔբ᫆ƸŴ(GC2) Ʒ Isom
+༿ǁƷǹȆȃȗƷɟᢿЎƱǈƳƢƜƱǋưƖǔŵƠƔƠŴǑǓஜឋႎƳ৙᧏ǛɨƑǔƴƸŴǇƣ
+Ʒˁʙ (§3)ƨƳƚǕƹƳǒƳƔƬƨŵ
+ƱƜǖưɥƴƓƍƯŴ໯ᨂᢒໜƔǒဃƣǔ tangential sectionƠƯᘍƳƬƨǑƏƳŴ
+፭ನᡯ prX : π1(X) → Gal(K)Ơ
+ǛਤƭǑƏƳ section׹α :G a l (K) → π1(X)
+Ǜ (˂ƷɟᑍƷ sectionƔǒ) ፭ᛯႎƴᜤКƢǔŴ
+ǍஓஉƷˁʙƴƓƍƯǋσᡫƠƯᘍǘǕǔᢿЎƱƳƬƯƍǔŵƦ
+ƷᨥŴπ1(X) Ʒ᧏ᢿЎ፭ HƢǔᘮᙴ୺ዴ Y H ƨƪƷǨ
+ǛžᢒǢȸșȫႎƴſᨼኖƞƤǔŴƱƍƏ৖ඥ
+ƷǋƱưŴ
+Y H ƷƲƷǑ
+ǛǨǿȸȫȷǳțȢȭǸȸƷɶƴᙸЈƠŴƲƷǑƏƴƦǕǒǛᨼኖƞƤƯኽௐƴ
+ƖƳբ᫆ưƋǔŵˌɦƷӲራ
+
+ஜ፭ƴ᧙Ƣǔ GROTHENDIECK ʖे 7
+ȷஓஉƷŴƦǕƧǕƷૠᛯႎཞඞƴƓƚǔǢǤȇǣǢƷ
+ƕǓ૾Ǜ (ݲٶ
+ƳǓƱǋ) ԛǘƬƯ᪬ƚǔǑƏƴŴɟഩɟഩᇿǛᡶǊǔƜƱƴƠǑƏŵ
+§3.ஜ፭Ʊ Grothendieck ʖे
+§3.1. ஊᨂ˳ɥƷ Grothendieck ʖे
+ƜƷራưƸŴk Ǜஊᨂ˳ƱƠŴX ǛƦƷɥƷ (᩼ཎီ)a ﬃ n e߷[T1]) Ʒɼኽ
+ௐƷɟƭƸŴǹǭȸȠ X ƕ π1(X)ΨƞǕǔƜƱ (ǑǓദᄩƴƸ (GC2) Ʒ Isom ༿Ʒ᫏
+˩) ǛᅆƠƨƜƱưƋǔŵƦƷᚰଢƷ૾ᤆƸŴ᧙ૠ˳k(X)ǬȭǢ፭ Gal(k(X)) Ɣǒ
+ΨƞǕǔƜƱǛᅆƠƨϋဋᐻʚƷˁʙ ([U])ƖƘɤƭƷǹȆȃȗƴЎ
+ƔǕǔᲴ
+(i) X∗ƮƚᲵ
+(ii) ʈඥ፭ k(X)×ΨᲵ
+(iii) k(X)= k(X)× ∪{ 0}Ψŵ
+ƜƜưŴ§2 ƷᡫǓŴXƷ᩼ཎီǳȳȑǯȈ҄Ǜ X∗ ƱᚡƢŵ
+ǹȆȃȗ (i) ưƸŴϋဋƸ Brauer ፭Ǜဇƍƨ Neukirch ƷǢǤȇǣǢǛ̅ƬƨƕŴǘǕǘǕ
+ӳŴX፭ƕෞƑƯЎᚐ፭ƕй˷˳ (ƬƯஊᨂ˳)ǬȭǢ
+ƴƳǓŴH2 ƕෞƑƯƠǇƏƷưŴˊǘǓƴŴˌɦᛟଢƢǔǑƏƳǢǤȇǣǢǛဇƍǔŵ
+ǇƣŴX ƷɥƷӲ᧍ໜ x׹
+αx :G a l (k(x)) = π1(Spec (k(x))) → π1(X)
+ưƋƬƯ prX ◦αxݧGal(k(x)) ↪→ Gal(k) ƴɟᐲƢǔǑƏƳǋƷǛɨƑŴαx Ʒ΂
+ƕ x ƷЎᚐ፭ƱƳǔƜƱƴදॖƢǔŵཎƴŴ x ƕ k-׹αx Ƹ prX Ʒ
+sectionӳǛᎋƑǔŵբ᫆ƸŴѨ৖ƴɨƑǒǕƨ prX Ʒ
+section׹α ƕŴƋǔ x ∈ X(k)Ƣǔ αx ƱƳǔƨǊƷவˑǛ፭ᛯႎƴᚡᡓƢǔƜƱư
+Ƌǔŵ(Gal(k) ∼= ˆZ ƕᐯဌ proﬁnite ፭ƳƷưŴSection ʖे (GC3) Ʒ᫏˩ƦƷǋƷƸ঺ᇌƠƑ
+ƳƍƜƱƴදॖŵ) ǇƣஇИƴǘƔǔƷƸŴբ᫆ƷவˑƕŴ
+(∗)
+α Ʒ΂ Im(α) ǛԃǉǑƏƳ π1(X) Ʒ˓ॖƷ᧏ᢿЎ፭ HƠƯŴ
+Ƣǔ X Ʒᘮᙴ Y H Ʒ k-ஊྸໜᨼӳ Y H(k) ƸᆰƴƳǒƳƍ
+ƍŴҗЎ
+ƴǑǓŴIm(α)Ƣǔ X Ʒ
+(pro-) ᘮᙴǋǇƨ k-ƏƷưŴƦƷk-ஊྸໜǛɟƭƱƬƯ X ƴƓƚǔ΂Ǜ
+x ƱƢǕƹŴα = αx ƱƳǔƜƱƔǒǘƔǔŵƋƱƸŴ(∗) ƕ঺ᇌƢǔƔƲƏƔŴƋǔƍƸɟᑍ
+ƴஊᨂ˳ kƢǔƱƍƏբ
+᫆ƕസǔƕŴƜǕƸŴஊྸໜƷ̾ૠ (≥ 0) Ǜ l ᡶǨǿȸȫȷǳțȢȭǸȸ፭ (l Ƹ k Ʒ೅ૠƱီ
+Ƴǔእૠ) ǁƷ Frobenius ΨƷ˺ဇưᚡᡓƢǔ LefschetzƴǑƬƯᚐൿƞǕǔŵ໯ᨂᢒໜ
+x ∈ Σ
+def
+= X∗ − X፭ƕෞƑƳƍƷưŴЎᚐ፭ƷɶǁƷ section׹αx Ƹɟ
+ॖƴƸൿǇǒƣŴǇƨŴαxӳƴǋŴ
+
+8 ɶ஭Ҧଯ,ᬱဏ, ஓஉૼɟ
+̲ദƠƯᢘဇƢǔƱŴӲ x ∈ ΣƠƯ໯ᨂ̾Ʒ (ƓƜǓƏǔμƯƷ) αx ƕ፭
+ΨƞǕǔƷưŴƦǕǒƷ΂ưဃ঺ƞǕǔ π1(X) ƷᢿЎ፭ƱƠƯŴ xΨƞ
+Ǖǔŵ
+ǹȆȃȗ (ii) Ƹ [U] ƱǄǅӷಮưŴ᧙ૠ˳k(X)Ǜ̅Əŵ᫏˳ᛯƸŴǋƱǋ
+Ʊʈඥ፭ƴǑƬƯǬȭǢ፭ƷǢȸșȫ҄ǛᚡᡓƢǔǋƷƩƕŴᡞƴƜǕǛǬȭǢ፭Ʒɶƴʈඥ፭
+ƕλƬƯƍǔƱᙸǔƷưƋǔŵǹȆȃȗ
+(i) ư X∗ ƷӲ᧍ໜ xΨưƖ
+৑᫏˳ᛯƴǑǓŴƦƷǢȸșȫ҄ƷžWeil ፭ᢿЎſƱƠƯŴx ∈ X Ƴǒƹ ˆK×
+x / ˆO×
+x
+(∼= Z)Ŵx ∈ Σ Ƴǒƹ ˆK×
+xݧˆK×
+x / ˆO×
+x → π1(X)ab ƳƍƠ ˆK×
+x → π1(X)ab ƱƱǋƴ
+ΨƞǕƨƜƱƴƳǔŵ(ƜƜưŴ ˆOx৑࿢ OX∗,xͳ҄Ŵ ˆKx ƸƦƷՠ˳ǛᘙƢŵ) ƦƜ
+ưŴArtin ϙ΂ ∏
+x∈X
+′ ˆK×
+x / ˆO×
+x ×
+∏
+x∈Σ
+ˆK×
+x −→ π1(X)ab
+ǋǇƨ π1(X)ΨƞǕŴƜƷఋƱƠƯʈඥ፭k(X)×ΨƞǕǔŵ(ƜƜưŴ
+X ƕ aﬃne ưƋǔƜƱǛИǊƯဇƍǔŵX = X∗፭ k(X)×/k×ΨưƖƳƍŵ)
+ǹȆȃȗ (iii) ƸŴ২ᘐႎƴƸǋƬƱǋᩊƠƍǹȆȃȗưƋǔŵǇƣŴǹȆȃȗ (ii) ưŴʈඥ
+፭ƩƚưƸƳƘŴX∗ ƷӲ᧍ໜ x ƴ˄᨟Ƣǔᩉ૝˄͌ ordx : k(X)× → Z ǍŴx ∈ Σ Ƴǒƹ୼
+ƴ reduction ϙ΂ Ker(ordx)= O×
+X∗,x → k(x)× (Ʒఋ)ΨƞǕǔƜƱƴදॖƢǔŵƞƯŴ[U]
+ᄽ˳ k (ƋǔƍƸ¯k)ΨƠŴഏƴŴ(“Σ = X∗” ƳƷư) ໯ᨂ
+Ƣǔ reductionΨƢǔƜƱƕưƖ
+ӳƴƸŴ(Σ ƕஊᨂᨼӳƷƨǊ)ƷᢿЎƕƏǇƘƍƔƳƍƷưŴˊǘǓƴŴ
+(X = P1
+k −{ 0, 1, ∞} =S p e c (k[t, t−1,(t − 1)−1]) ƴƓƚǔ t ƷǑƏƳ)žǑƍſ᧙ૠ f ∈ k(X)
+ǛဇƍƯ k(f) ⊂ k(X)ΨƠŴƦǕǒ
+ǛžƸǓӳǘƤƯſk(X)ΨƢǔŵ
+§3.2. ஊᨂ˳Ɣǒஊᨂဃ঺˳ǁ
+§3.1 ưᛟଢƠƨኽௐƓǑƼᚰଢƸŴXӳƴƸŴ(ૠᛯႎ)ஜ፭ π1(X) Ǜ
+ƦƷՠưƋǔ tameஜ፭ πtame
+1 (X)ƑƯǋ঺ǓᇌƭŵƜƷራưƸŴஊྸૠ˳ɥஊᨂဃ঺Ƴ
+˳ƷɥƷ aﬃneƢǔ Grothendieck ʖे (GC2) Ʒ Isom ༿ƕŴஊᨂ˳ɥƷ aﬃne
+ӑ୺ႎ୺ዴƷ tameƚǔƜƱǛᛟଢƢǔŵ §1.2 ư Tate ʖेƱ
+Grothendieck ʖेƷ᫏˩ǛਦઇƠƨƕŴTate ʖेƷஊᨂ˳༿ưƋǔ Tateٻ
+ǛԃǇƳƍҥኝƳᜭᛯƴǑƬƯ FaltingsƚǔƱƸᎋƑƴƘƍŵTate ʖे
+Ʊ GrothendieckឋƷɟƭƷᢌƍƕƜƜƴƋǔŵ(§4.1 ǋӋༀŵ)
+ତƳƷưŴˌɦưƸŴK Ǜૠ˳
+ƱƠŴK ɥƷ aﬃne ӑ୺ႎ୺ዴ X ǛৢƏŵբ᫆ƸŴK ƷӲஊᨂእໜƴƓƚǔ X Ʒ reduction
+Ʒ tameஜ፭ǛŴX৑˳ɥƷ
+ӑ୺ႎ୺ዴƕ good reduction ǛਤƭƔƲƏƔǛ pro-lஜ፭ (l Ƹй˷˳Ʒ೅ૠƱီƳǔእૠ)
+ܱ(ಮ˳Ʒ good reduction
+Ʒ Serre-TateඥƷ᫏˩) ƕᦆƱƳǔŵ(ƜƷŴӑ୺ႎ୺ዴƷ good reductionඥ
+ƸŴproper࠳ܑ[O1,2]) ƴǑǔŵ)
+ʻŴv Ǜ K ƷஊᨂእໜƱƠŴKv Ǜ K Ʒ vͳ҄ŴOv ǛƦƷૢૠ࿢Ŵkv ǛƦƷй˷˳
+ƱƠǑƏŵKvǬȭǢ፭Ƹᐯ໱ƴ KǬȭǢ፭ƷᢿЎ፭ƱǈƳƞǕŴǇƨŴX࠹
+ஜ፭Ʊ XKvஜ፭ƸɟᐲƢǔƷưŴ XKvஜ፭ π1(XKv ) ƸŴ(1.1)
+
+ஜ፭ƴ᧙Ƣǔ GROTHENDIECK ʖे 9
+Ʒᚡӭư pr−1
+X (Gal(Kv))ඥǛᢘဇƢǕƹŴXKv ƕ
+good reductionƞǕǔƷưŴˌɦưƸŴXKv ƕ good reduction
+ƠŴXOv Ǜ XKv Ʒ Ov ɥƷžǑƍſȢȇȫŴXkv ǛƦƷ reduction ƱƢǔŵƜ
+ƷƱƖŴπtame
+1 (Xkv ) Ʊ π1(XOv )ƕƋǔƜƱƕჷǒǕƯƍǔƷưŴπtame
+1 (Xkv )
+ǛŴ π1(XKv ) Ʒՠ፭ π1(XOv )ΨƢǔƨǊƴ
+ƸŴXKv ƷӲஊᨂഏǨǿȸȫ (ǬȭǢ)ƠŴƦƷᘮᙴƕ XOvࡨ
+ƸŴᘮᙴƷ୺ዴǋ
+Ǉƨ good reduction ǛਤƭƱƍƏ (ƍ)ඥƴǑǓ፭ᛯႎ
+ưƖǔŵˌɥƴǑǓŴૠ˳K ɥƷӑ୺ႎ୺ዴ X ƕእໜ v ư good reductionӳ
+ƴŴƦƷ reduction Xkv Ʒ tameஜ፭ƕŴ(Xஜ፭ƷᢿЎՠƱƠƯ)Ψ
+ƞǕƨƜƱƴƳǔŵ
+ƞƯŴૠ˳K ɥƷʚƭƷ aﬃne ӑ୺ႎ୺ዴ X1,X2ஜ፭Ʒ᧓ƴŴGal(K)׹
+π1(X1) ∼= π1(X2) ƕɨƑǒǕǔƱŴɥƷᜭᛯƴǑǓŴ(X1,X2 ƕƦƜư good reduction ǛਤƭǑ
+ƏƳ) ǄƱǜƲμƯƷ K Ʒእໜ v ƴƓƍƯπtame
+1 ((X1)kv ) ∼= πtame
+1 ((X2)kv )ƬƯ
+ஊᨂ˳ɥƷ aﬃne ӑ୺ႎ୺ዴƷ tame׹(X1)kv
+∼= (X2)kv
+ࣱ( ƴǑǔ Isomࣱ)Ɣǒ
+Isom(X1,X2) ∼= Isom((X1)kv ,(X2)kv )
+ƕǄƱǜƲμƯƷ vƠƯ঺ǓᇌƭƷưŴX1 ∼= X2ƏŵƜƏƠƯŴஊᨂ˳ɥƷ aﬃne ӑ
+୺ႎ୺ዴƷ tameஜ፭ƴ᧙ƢǔɥᚡƷኽௐƔǒૠ˳ɥƷ aﬃneƢǔ (GC2) Ʒ
+IsomኽƢǔŵ
+ƳƓŴ[M1] ưƸŴஊᨂ˳ɥƷ aﬃne ӑ୺ႎ୺ዴƷ tameஜ፭ƴ᧙ƢǔɥᚡƷኽௐƔǒŴૠ
+˳ɥƷ properƢǔ (GC2) Ʒ IsomƍƯƍǔŵƜƜưŴʚƭƷኽௐǛኽ
+ƿᦆƸŴஊᨂ˳ɥƷ (๖ǒƔưƳƍ)୺ዴƷžlogƢǔ (GC2) Ʒ Isom ༿Ʒ᫏
+˩ưƋǔŵ
+§3.3.ஜ፭
+೅ૠ 0᫏ƸŴᆔૠ g Ʊ໯ᨂᢒໜƷૠ n ƷǈưൿǇǔƕŴ
+ᨥŴ[T2] ưƸŴFp ɥƷᆔૠ 0׹
+ƞǕǔƜƱƕᚰଢƞǕƯƍǔŵƜƷǑƏƳኽௐƕŴദ೅ૠ
+ˊૠ᧍˳ɥƷ
+(ӑ୺ႎ)ƠƯɟᑍƴ঺ǓᇌƭƷƔƲƏƔŴƋǔƍƸ tameஜ፭ƴ
+ƭƍƯǋ᫏˩Ʒኽௐƕ঺ǓᇌƭƷƔƲƏƔŴᐻԛƕਤƨǕǔŵ
+§4.৑˳༿ƴᐱǔኺዾ
+§4.1.৑˳
+§1 ưƸ Grothendieck؏ٻ
+ᝋƴ᧙ƢǔǋƷƱƠƯኰʼƠƨƕŴஓஉƷɟᡲƷᛯ૨ ([M1-4]) ƸŴƜƷʖेǛ
+৑˳ɥƷpλ
+৑˳༿Ʒ Grothendieck ʖे (§5.1) ƸŴஊྸૠ˳ɥஊᨂဃ঺Ƴ
+҄ƞǕƯƍƨΨƷʖे (GC2) ǛԃǉŴǑǓɟᑍႎƳኽௐƱƳƬƯƍǔƕŴƜƷૼƠ
+ႎƳ˳ǛƱǔƜƱƕᐯ໱
+ǘǕƯƍƨᏑ୎Ǜ౨ᚰƠƯǈǑƏŵ
+
+10 ɶ஭Ҧଯ,ᬱဏ, ஓஉૼɟ
+(A)ಮ˳Ʒ Ta t eʖेᲴ§1 ưǋᚑǕƨǑƏƴŴGrothendieckܭ
+҄ƢǔƴƋƨƬƯਦઇƠƨƜƱƷɟƭƱƠƯŴFaltings ([F1])ƴǑƬƯᚰଢƞǕƨTate ʖेƱ
+Ʒ᫏˩ƕஊƬƨƕŴFaltings ƷƦƷᚰଢưƸŴૠ˳ɥƷheightಮ˳Ʒ᧓Ʒ
+ᑣƘෞӊƠƋƬƯ
+ႎƳཞඞƕஊјƴ̅ǘǕƯƍǔŵɟ૾ưૠ˳
+(Ǎஊᨂ˳) Ʊ
+ᢌƬƯŴQp৑˳ƷɥưƸŴTateƕʖेƞǕ
+ƬƯŴ
+žGrothendieck ʖे=Tate ʖेƷӑ୺ႎ୺ዴ༿ſ
+ƱƍƏᙻໜƴᇌƯƹŴ(GC2)ƠǑƏƱƢǔ૾Ӽƕ
+ᐯ໱ƱƍƑǑƏŵ
+(B) Diophantusဇ ᲴᎍƷ᧓ưƸŴGrothen-
+dieck ʖेƸŴDiophantus˴Ŵұƪႎಮ˳ƷஊྸໜƷᄂᆮǁƷૼƠƍǢȗȭȸ
+ȁƱƠƯᛐᜤƞǕƯƍƨǑƏưƋǔŵƦƷǢȗȭȸȁǛˊᘙƢǔǋƷƱƠƯŴഏƷǑƏƳᜭᛯƕ
+ಮ˳ƕஊᨂ̾ƷஊྸໜƠƔਤƨƳƍƜƱǛᚰଢƢǔ૾ඥƱƠƯŴǋƠˎƴ໯ᨂ
+ឋǛਤƨƟǔǛ
+܍
+˴Ƴǔ
+(᩼ᐯଢƳ)ͳƴ
+ƸൿƠƯႺƪƴƸЎƔǒƳƍŵɟ૾ưŴ(ࡸ1.2) ƷǑƏ
+Ƴ)ƠƯŴ
+ତƴᚰଢưƖǔŵƦƜưŴSection ʖे (GC3)
+ƠƯƍǔǑƏƴŴ ஊྸໜƱ (ƋǔவˑǛ฼ƨƢ)ᝋưƋǔŴƱ
+נ܍
+҄ƢǕƹŴ̊ƑƹŴ᭗ᆔૠƷˊૠ୺
+Ƣǔž
+Mordell ʖे14)ſƷКᚰଢƕ Section ʖे (GC3)ƕƋǔŵ ƜƷ
+᪽ƴፗƍƯǈǔƱŴ Grothendieckݑ
+ƠǑƏƱƢǔƷƕǍƸǓᐯ໱Ƴ්ǕƱƍƑǑƏŵ
+˳Ɣǒ p ᡶ˳ǁſƱƍƏႆेƷ᠃੭ƕஓஉƷˁʙƴǑƬƯǋƨ
+ǒƞǕƨŵƦƷƖƬƔƚƱƳƬƨᚇໜƴƭƍƯŴˌɦưᚐᛟƠƯǈǔƜƱƴƢǔŵ
+§4.2.ȪȸȞȳ᩿Ʒɟॖ҄ྸᛯƱƷ᫏˩
+GrothendieckǬȭǢᘙྵ(1.2)Ŵұƪ
+ஜ፭ᲥƦǕƴλǔᐯ໱Ƴžૠᛯႎ˄ьನᡯſ
+ǛབྷཌƴƠŴžૠ
+፯ƴᚐ᣷ƢǕƹŴƜǕƴ᫏˩ƢǔྵᝋƕଏƴҗʋɭኔɶƴჷǒǕ
+ȪȸȞȳ᩿Ʒɟॖ҄ྸᛯƷƜƱưƋǔŵ
+ᙐእૠ˳
+C ɥƷӑ୺ႎ୺ዴ XƕɨƑǒǕƨǒŴXȪȸȞȳ᩿ XǇǓŴƦƷ
+X Ʒ୍ᢄᘮᙴ ˜X→ Xܭ
+ྸƔǒŴ ˜X᩿ H
+def
+= {z ∈ C | Im(z) > 0}ƬƯŴ
+
+ஜ፭ƴ᧙Ƣǔ GROTHENDIECK ʖे 11
+Aut( ˜X) ∼= Aut(H)= S L 2(R)/{±1} Ǜ̅ƏƱŴX Ʒ (ႎƳ)ஜ፭π1(X) Ʒ
+˜X ǁƷ˺ဇƔǒ
+(4.1) ρX : π1(X) → SL2(R)/{±1}
+ƱƍƏ (SL2(R)/{±1}ǛᨊƍƯ) ೅แႎƳᘙྵƕൿǇǔŵᡞƴŴρX ƕɨƑǒǕǕƹŴ
+π1(X)᩿ HǇǓŴH ǛƦƷ˺ဇưлǔƜƱƴǑƬƯŴȪȸȞȳ᩿ X Ŵƻ
+ƍƯƸΨƷˊૠ୺ዴƷXΨƞǕǔŵஓஉƸᙐእᚐௌƷɭမƴƓƚǔˌɥ
+ƷཞඞƴბႸƠŴ୼ƴ (1.2) ƷρX Ʊ (4.1) ƷρXஜ፭ᲥƦǕƴλǔ
+ƴᚑႆƞǕŴ
+ᘙྵ ρX Ɣǒ (ƔƘǋႺ੗Ɣƭᐯ໱ƴ)X Ǜ (ϐ) ನ঺ưƖǔ
+ƱƍƏྵᝋƷ p ᡶ༿ƸƳƍƔᲹ
+ᨥŴˌɦ(§5) ưኰʼƢǔ Grothendieck ʖेƷ p ᡶ༿ (ྸ 5.1) ƸŴƜ
+ႎƳᚐሉǛ੩ᅆƠƯƍǔǋƷƱᙸǔƜƱƕЈஹǔ15)ŵ
+ஜ፭π1(X) Ʒ H ǁƷ˺ဇƔǒˊૠ୺ዴ XǛφ˳ႎƴನ঺ƢǔƨǊƴƸŴӞχႎƴǑ
+ƘဇƍǒǕǔ৖ඥƱƠƯŴπ1(X)Ƴ HǛ˺ǔƱƍƏǋƷƕƋǔŵ
+᩿ Hᆰ᧓ PXݧ
+φ : H → PX
+ӳŴ
+(Xƍ২ᘐႎƳவˑǛᛢƤƹ) Xಮ˳
+ಮ˳ƴƳǔƜƱǛᚰଢƢǔƷƴ̅ǘǕǔƷ
+ƠૢྸƢǕƹŴƜƷ৖ƷᜭᛯƷᙲໜƸŴ
+φࡸ࢟
+ƸѸᛯஇኳႎƴƸ XɥˊૠႎƳǋƷƴƳǔƷƩƕŴನ঺Ʒെ᨞ƴƓƍƯƸŴ H ɥᚐௌႎƳǋƷ
+ƷᚐௌႎƳᘙᅆǛৢƏſƱƍƏᚇໜƸ
+ྸ
+5.1лǛௐƨƠƯƍǔŵ
+§4.3. p ᡶ Hodge ྸᛯƱƷ᧙̞
+ྸ 5.1 ǛᚰଢƢǔƴƋƨƬƯŴЭራưኰʼƠƨᙐእૠ˳ɥƷྸᛯƱƷ᫏˩ƸɟƭƷ৖
+ੑƔǓƴƸƳǔƕŴƦƷ᫏˩Ǜ pᙲ
+ƴƳǔŵƦƷ২ᘐǛɨƑƯƘǕƯƍǔǋƷƸ Faltings Ʒ p ᡶ Hodge ྸᛯ ([F2]) ưƋǔŵžp ᡶ
+HodgeˊҞƹƷ Tate ƷέᬝႎƳˁʙƴᢓǔᧈƍഭӪƕ
+ஊǔƕŴƜƜư᣻ᙲƳƜƱƸŴƦƷྸᛯƱGrothendieckưƋǔŵp ᡶ Hodge
+ྸᛯƷɼƳȆȸȞƸŴp ᡶ˳ (̊ƑƹŴQp˳)ಮ˳Ʒ (ǬȭǢ˺ဇ˄ƖƷ) Ǩ
+ྸưƋǔŵұƪŴ
+੭ƠƋƏǑƏƳžᜋƷ᧙৖ſ
+(mysterious functor)
+ƢǔưƋǖƏŴƱƍƏज़ᙾƳƍƠʖेƕp ᡶ Hodge ྸᛯƷҾໜưƋǔŵƜƜưŴȉ ȷ ȩȸ
+ȠȷǳțȢȭǸȸƸ XឋǛଓƘɟƭƷᙐӳ˳ƴǇƱǊǔ
+᣽ưƋǔƕŴ (GC2)ƱƍƬƨ
+˴ (ࡸ)ƷɭမƷ˰ʴưƋǔŵɟ૾ư (GC2)ǬȭǢ
+
+12 ɶ஭Ҧଯ,ᬱဏ, ஓஉૼɟ
+ƜƦƋǕŴǨǿȸȫȷǳțȢȭǸȸƱӷơƘŴ
+ಮ˳ X᣽ưƋǔŵƜƷǑƏƴᎋƑƯǈǔƱŴ
+mysterious functor ʖेƴƠƯǋŴ(GC2) ƴˊᘙƞǕǔᢒǢȸșȫʖे16) ƴƠƯǋŴƍƣǕǋ
+˴ႎನᡯ ⇐⇒ ǨǿȸȫˮႻᲥǬȭǢ˺ဇſ
+ྸſƷ঺ᇌǛƏƨƬƯƍǔǋƷƱᙸǔƜƱƕЈஹǑƏŵƨƩƠŴp
+ᡶ Hodge ྸᛯƱ GrothendieckſƸஊƬƯǋŴǢȸșȫƱ
+ྸ5.1ٻ
+ƖƳ২ᘐႎᛢ᫆ƱƳƬƨŵ
+§5.৑˳ɥƷ Grothendieck ʖे
+§5.1.ྸƷኰʼ
+ˌɦưƸŴእૠpƠŴQpྵӧᏡƳ˳Ǜžэp ᡶ˳ſ
+(sub-p-adic ﬁeld) ƱԠƿƜƱƴƢǔŵэ p ᡶ˳ƷˊᘙႎƳ̊ƱƠƯŴQ ӍƸ QpƷஊᨂဃ঺Ƴਘ
+˳Ʒ˂ƴŴദૢૠ NƠƯஊྸૠ˳ Q ƷμƯƷ Nࢽ
+ǒǕǔ (Qٻ)˳ሁƕਫƛǒǕǔŵஓஉ ([M3])ྸưƋǔŵ
+ྸ 5.1. э p ᡶ˳ Kಮ˳ SƱӑ୺ႎ୺ዴ XƠƯŴ
+Homdom
+K (S, X) → Homopen
+Gal(K)(π1(S),π1(X))
+→ Homopen
+Gal(K)(π(p)
+1 (S),π(p)
+1 (X))
+ƴƳǔŵƨƩƠŴƜƜưŴ Homdom
+K ƸžૅᣐႎƳ Kƨƪ
+μ˳ſŴHomopen
+Gal(K)ƸžGal(K)Ʒ (ӫƔǒƷπ1(XK)˺ဇƴ
+᧙Ƣǔ) ӷ͌᫏ƨƪμ˳ſǛॖԛƠŴǇƨŴ π(p)
+1 (V ) Ƹπ1(V ) Ʒᐯ໱Ƴ pro-pཋ (π1(V ) Ʒ
+Ker(π1(VK) → π(p)
+1 (VK)) ƴǑǔՠ፭) ǛᘙƢƱƢǔŵ
+ྸƸʖे (GC2)ưᚐൿƠƯƍǔǋƷưƋǔŵ§4.2 ưኰʼƠƨɟॖ҄ྸᛯƱƷ
+ᡀƕ XƷ S͌ஊྸໜŴұƪˊૠ୺ዴ XƠƯŴ
+ஜ፭ƔǒႺ੗ဃơǔžᚐௌႎƳໜſưƋǔŵƭǇǓŴȪȸ
+ྸ 5.1˳ƱŴƦƷૠᛯႎ˄ьನ
+ǛᚫƑƯƍǔǘƚưƋǔŵ
+ྸ 5.1Ʒɟᑍ҄ (Ჷ [M3]ྸ A) ƷኒƱƠƯഏƷ Grothendieck ʖेƷӑஊྸ
+༿ƕஊǔŵ
+ኒ 5.2. э p ᡶ˳ Kૠ˳ƱƢǔ˓ॖഏΨƷദЩƳ᧙ૠ˳ L Ʊ MƠƯŴ
+HomK(M,L ) → Homopen
+Gal(K)(Gal(L),Gal(M))
+ƴƳǔŵƨƩƠŴƜƜưŴ HomK ƸžKƨƪμ˳ſŴ
+Homopen
+Gal(K)ƸžGal(K)Ʒ (ӫƔǒƷ Gal(M ⊗K K)˺ဇƴ
+᧙Ƣǔ) ӷ͌᫏ƨƪμ˳ſǛॖԛƢǔƱƢǔŵ
+
+ஜ፭ƴ᧙Ƣǔ GROTHENDIECK ʖे 13
+ᄽ˳ Kƕஊྸૠ˳ɥஊᨂဃ঺Ƴ˳ƷƱƖŴƜƷኒƷIsom ༿Ǜ F.Pop ƕ [M3] ˌЭƴμƘᢌƏ
+૾ඥƴǑƬƯᚰଢƠƯƍǔ ([P2])ŵ
+දŵ(i)ྸ 5.1 Ƹ˳ Kಮ˳Ǎӑ୺ႎ୺ዴƴ᧙ƢǔǋƷƩƕŴbase ƱƠƯэ p ᡶ˳Ʒˊǘ
+Ǔƴэ pಮ˳BǛӕǓŴSƱ XƕƦǕƧǕ Bಮ˳Ŵӑ୺ႎ୺ዴƷ๖
+ྸ 5.1ᨥŴƦƷǑƏƳኽௐƸ
+(B Ʒ᧙ૠ˳ƕϐƼэ p ᡶ˳ƴƳǔƜƱƴදॖƢǕƹ)ྸ 5.1ƏƷưƋǔŵ
+(ii)ྸ 5.1ኽƱƠƯŴӑ୺ႎ୺ዴɥƷ smooth Ƴӑ୺ႎ୺ዴଈƷμᆰ᧓ƱƠ
+ǒǕǔǑƏƳˊૠ୺᩿ƴ᧙Ƣǔ (GC2) Ʒ IsomƚǔŵᛇƠƘƸ [M4] ǛӋༀƷƜƱŵ
+§5.2.ྸ 5.1 ƷᚰଢƷ૾ᤆ
+˳ Kƕ QpӳƴСᨂƠƯᛅǛᡶǊǔƜƱƴƢ
+ǔŵ ୼ƴŴቇҥƷƨǊƴŴ X(ƓǑƼ S) ƕ proper Ɣƭ non-hyperelliptic Ƴӑ୺ႎ୺ዴưƋǔ
+ӳƸƜǕǒ
+ྸ
+5.1 ưƸŴɤƭƷžHomſƕ
+ЈƯƘǔƕŴ(ǋƬƱǋஜឋႎƳǋƷưƋǔ) ɟ̾ႸƱɤ̾ႸƷ Hom Ʒ᧓Ʒϙ΂ƴᨼɶƢǔƜƱ
+˴ƴƠƯπ(p)
+1 (X) → Gal(K) Ɣǒ XΨƢǔƔƱƍƏƜƱưƋǔŵ
+ǇƣŴT
+def
+= π(p)
+1 (XK)abƬƯŴX ƕᆔૠ g Ʒ୺ዴƩƱƢǔƱŴT Ƹ Zp ɥƷ᨞ૠ
+2g Ʒᐯဌь፭ƱƳǓŴGal(K)-ь፭ƱƠƯƷᐯ໱ƳನᡯǋλǔŵƱƜǖƕŴžp ᡶ Hodge ྸᛯſ
+ƷŴTateኽƱƠƯŴKƷ pͳ҄Ǜ CpưᘙƢƱƢǔƱŴ
+(T ⊗Zp Cp)Gal(K) ∼= DX
+def
+= H0(X,ωX/K)
+ϋƷь፭Ʒ Gal(K)-ᢿЎưŴӫᡀƸŴ
+XЎμ˳ƔǒƳǔK ɥƷ gഏΨșǯȈȫᆰ᧓ưƋǔŵഏƴŴDXࣖݣ
+ᆰ᧓Ǜ PX ưᘙƢƱƢǔƱŴXƕ non-hyperellipticƔǒŴXƕ PX Ʒ
+˴ƴǑǓƢƙЎƔǔŵƭǇǓŴ X Ʒ೅แႎƳ
+žλǕǋƷſƱƳǔ PX Ǜ ρXƬƯբ
+˴ƴƠƯ PXಮ˳(ƭǇǓŴX)ΨƢǔƔŴƱƍƏƜƱƴ
+Ƴǔŵ
+ƜƜưŴ§4.2ݧφ : H → PXƍЈƠƯ᪬ƖƨƍŵƦƜưᛇᡓƠƨಮƴŴ
+፯ƞǕǔǋƷưƋǔŵ
+Ʒ
+pư(িǔॖԛư) ᫏˩ႎƳನ঺ǛᘍƍƨƍƷƩƕŴƦƜưȝǤ
+ȳȈƱƳǔƷƸŴH ƴӕƬƯˊǘǔǋƷƸ˴ƔŴƱƍƏƜƱưƋǔŵ[M2] Ǎ [M3] ƷᚰଢưƸŴ
+ႸǛ๫ơƯƘǕǔǋƷƸŴXឋǛਤƬƨ pͳ҄ƠŴ
+ٻtameٻtameǛ pࢽ
+ǒǕǔ˳ưƋǔŵƜƷ˳ǛˌɦưƸL Ʊ୿ƘƜƱƴƢǔ17)ŵƜƷ˳ L ƸŴQpƱӷ
+ͳƳ p ᡶ˄͌ƷλƬƨ˄͌˳ưƸƋǔƕŴQp˴ႎƳഏΨſǛ
+ɟ̾ԃஊƠƯƍǔǋƷưƋǔŵ̊ƑƹŴƦƷƜƱƷྵǕƷɟƭƱƠƯŴL Ʒй˷˳Ƹஊᨂ˳ɥƷ
+ƱƳǔŵƦƠƯŴL፯ƔǒႺƪ
+ݧ
+ξ:S p e c (L) → X
+
+14 ɶ஭Ҧଯ,ᬱဏ, ஓஉૼɟ
+ឋƱƠƯŴL᫏ƸXƷȢǸȥȩǤƴƸ
+ឋƴƸŴH᫏ƕ XƠƳƍƱƍ
+ǛᡲेƞƤǔǋƷƕƋǔŵ
+Lƕ̬ᚰƠƯƘǕǔƜƱƷɟƭƱƠƯŴXЎǛ(ξưǋƬ
+Ư) LǒǕǔ Spec(L)ƬƯŴ
+XЎǛ Spec(L)ЎǛŴΨ
+ӳƱƷ᫏˩ưᚕƑƹŴƜƷદ˺
+ƸǳȳȑǯȈƳȪȸȞȳ᩿ X᩿ HƠƯ
+ƍǔŵ
+ƞƯŴPXಮ˳ƱƠƯƷXΨƷբ᫆ƴ৏ǓƨƍƕŴFaltings Ʒ p ᡶ Hodge
+ኽƷɟƭƱƠƯŴ(ƍ፭ᛯႎƳவˑǛ฼ƨƢ)׹α :G a l (L) →
+π(p)
+1 (X)ƠƯŴKݧ
+φα :S p e c (L) → PX
+፯ƞǕǔŵƭǇǓŴžᚐௌႎƳL-ƠƯŴ§4.2 ƷᙐእᚐௌƷᛅƴЈƯƖƨφ : H →
+PXƴ᫏˩ႎƳŴpݧφαǇǔŵբ᫆ƸŴφα Ʒ΂ƕƲƏƳǔƔƱƍƏƜƱ
+ưƋǔŵ̊ƑƹŴαƕξ˴ႎƳſL-ஊྸໜ (ƭǇǓŴX(L) ƷΨ) Ɣǒဃơǔ18)ӳ
+ƴƸŴφα ƷǹǭȸȠᛯႎƳ΂Ʒ᧍Ѽƕ XƬƯŴ
+žα˴ႎƴဃơǔſƱƍƏவˑǛŴXᝋƷƏƪ
+π(p)
+1 (X) → Gal(K) ƩƚƠƔᘙᑈӨƴЈƯƜƳƍǑƏƳᘙྵƴ୿ƖႺƢ
+঺Ƣǔŵ
+Ʒᚰଢ19)׹αƸŴXᄽ˳Ǜ K
+Ɣǒ L ƴ base-changeǒǕǔ୺ዴ XLஜ፭π(p)
+1 (XL) → Gal(L)
+Ʒ section αL :G a l (L) → π(p)
+1 (XL)፯ƠƯƍǔŵƦƷ section׹αLƷπ(p)
+1 (XL) Ʒɶư
+Ʒ΂ Im(αL) ƸŴ Gal(L)ƳŴπ(p)
+1 (XL) Ʒ᧍ᢿЎ፭ƴƳǔƕŴƦƷᢿЎ፭ǛԃǉӲ᧏ᢿ
+Ў፭ H ⊆ π(p)
+1 (XL)ƠƯŴY H → XLǇǔŵƜƜưŴY H Ƹ
+L˴ႎƴᡲኽƳӑ୺ႎˊૠ୺ዴƴƳǔƕŴදႸƢǂƖƜƱƸŴƜƷǑƏƴဃơǔᘮᙴƨƪ
+{Y H → XL} μ˳ƔǒƳǔžᘮᙴƷଈſƕα׹
+αƖឪƜƞǕǔ section׹αL҄ưƖǔᲴ
+(∗) Im(αL) Ǜԃǉ π(p)
+1 (XL) ƷӲ᧏ᢿЎ፭ HƠƯŴ
+Y H Ʒ L-ஊྸໜƷᨼӳ Y H(L) ƸᆰƴƳǒƳƍŵ
+ˎƴƜƷவˑƕ঺ᇌƢǔƜƱƕᚕƑƨƱƠǑƏŵƦƏƢǔƱŴ᧏ᢿЎ፭ HƴឥǒƤƨƱ
+ƖŴY H(L) ̸= ∅ƳƷưŴY H(L) Ʒ΂ƱƠƯŴXL(L) ƴಮŷƳໜƨƪƕᓳƪƯƘǔŵƱƜǖƕŴ
+[F2] Ʒ mod pN ༿ǛᢘဇƢǔƜƱƴǑƬƯŴƜƷǑƏƴဃơǔ XL(L)ƠƯŴέᆉƷ
+ϙ΂φα Ʒ mod pN ༿Ǜನ঺ưƖŴƦƷϙ΂ƨƪǛဇƍǔƜƱƴǑƬƯƜƷ XL(L) ƷໜƨƪƕŴ
+Ʒໜ x∞ ∈ XL(L) ƴӓளƢǔƜƱƕᚰଢưƖǔŵƠƔǋŴƜƷໜx∞׹
+Gal(L) → π(p)
+1 (X)׹αƏŵƭǇǓŴ
+αƠૢྸƢǔƱŴαƢǔவˑ (∗) ƕኝƴž፭ᛯႎſ
+ưƋǔƜƱƞƑᚕƑǕƹŴᚰଢƸኳǘǔŵ
+
+ஜ፭ƴ᧙Ƣǔ GROTHENDIECK ʖे 15
+բ᫆ƸᙲƢǔƴ Y H Ʒ L-ưƖǔƔƲƏƔƩƕŴƜƷբ᫆ƸŴ
+ሁƴǑǔႺ੗ႎƳǢȗȭȸȁƴƸᬘ௨
+ᙲƱƢǔǋƷưƋǔŵұƪŴ
+L ɥஊྸƳໜƷˊǘǓƴŴL
+ɥஊྸƳ (p ƱእƳഏૠƷ) line bundleǛᎋƑǔƷưƋǔŵƦƷྸဌƱƠƯŴline bundle
+Ʒ૾ƸŴƦƷChern ᫏ǛƱǔƜƱƴǑƬƯŴ୺ዴY H ƷǨǿȸȫȷǳțȢȭǸȸ᫏ƱƠƯᙸǔƜ
+ஜ፭Ʒ፭ǳțȢȭǸȸƱ
+ᝋƱƳǔŵƢǔƱŴǳțȢȭǸȸ፭ƷɶưŴ
+p ƱእƳ
+ഏૠƷ line bundle Ʒ ChernƮƚƕբ᫆ƴƳǔƕŴƜƷբ᫆
+Ƹ [BK] Ʒ p ᡶ exponential mapბƞ
+Ǖǔ20)ŵƭǇǓŴY H ɥƷŴ L ɥஊྸƳໜƱᢌƬƯŴL ɥஊྸƳ (p ƱእƳഏૠƷ) line bundle
+˴ƔǒƢƙ
+ЎƔǔǑƏƴŴY H ɥư p ƱእƳഏૠƷ L ɥஊྸƳ line bundleƕᚕƑǕƹŴp ƱእƳഏૠ
+Ʒ L-ஊྸƳ ample Ƴ line bundleƕᚕƑŴƦƷ line bundle Ǜ eﬀectiveƱƠƯ୿
+ƘƜƱƴǑƬƯŴY H ƕŴp ƱእƳഏૠƷ L˳ƷɥưஊྸໜǛਤƭƜƱƕЎƔǔŵƠƔƠŴ
+ƣ L Ʒ tameƴƳǔƜƱƱŴL፯ǑǓ᩼ᐯଢƳ tameٻ
+ǛਤƨƳƍƜƱƔǒŴY H ƕଏƴ LኽƞǕǔŵƭǇǓŴˌɥƷ
+வˑǛ฼ƨƢ line bundleඥƸᐯѣႎƴ L-ඥƴǋƳǔƱƍƏƜƱư
+ྸ 5.1ኽǛᙸǔƜƱƱƳǔŵ
+ද
+1)ಊᨂƱƠƯᘙƤǔˮႻ፭Ǜ proﬁnite ፭ (иஊᨂ፭)ܦ
+μɧᡲኽȏǦǹȉȫȕˮႻ፭ƱƍƬƯǋӷ͌ŵ
+2) proﬁnite ፭ƴƓƍƯƸ᧏ᢿЎ፭ưƋǔƜƱƱਦૠஊᨂƳ᧍ᢿЎ፭ưƋǔƜƱƸӷ͌ŵ
+3)ஜ፭
+ƷɶƴǋԃǇǕƯƍǔƜƱƕᚐଢƞǕƭƭƋǔŵ[H] ƓǑƼ §3.3 ǛӋༀƷƜƱŵ
+4) Grothendieckႎ smooth ﬁbration ƱƠƯᘙƤǔᆰ᧓
+ಮ˳ƷͅᙀƱƠƯᅆՐƠƯƍǔŵஇᡈƷᄂᆮưƸŴᢒǢȸ
+ஜ፭ƕ
+‘ᘍЗ፭ႎ’ ƱƍƏǑǓ ‘ᐯဌ፭ႎ’ ƳǋƷ
+ưƋǔƜƱƳƲƕਫƛǒǕƯƍǔŵ[IN] Ӌༀŵ
+5) ̊ƑƹŴᖎૠʈඥǛਤƨƳƍ౹ό୺ዴưƸ Faltings ƷኽௐǛኵǈӳǘƤƯᲫ̾ƴƢǔᜭᛯ
+ǋӧᏡưƋǔŵ[N6] 5.4 Ӌༀŵ
+6)ᄽ˳ KఌǛμƯชьƠƨ˳Ǜ K∞ Ʊ୿ƘƱƖŴX Ʒ K-ஊྸໜƴဌஹƢǔǋ
+ƷƸ α(Gal(K∞ )) Ʒ π1(XK)Ʈƚǒ
+ǕǔƜƱǋʖेƞǕƯƍǔŵ
+7) ƜǕǑǓŴ Grothendieck Ƹ Xಮ˳Y Ʒ X-ஊྸໜƷᨼӳ
+Y (X) = Hom(X,Y )ƍ੨ƍƯƍƨƱᎋƑǒǕǔŵ
+ƜƷྸेǛИǊƯ (ᢿЎႎƴ)ƨƷƸஓஉ ([M3]) ưƋǔŵ§5 Ӌༀŵ
+8)ưƳƍ sectionƢǔŴƱƍƏƜƱƸŴMordell-
+WeilဇƱƠƯGrothendieck ([G3])ဇƱƠƯŴᙐ
+ಮ˳ƴƭƍƯᅆƢƜƱƕ
+Јஹǔ
+([N5], [N7]2.2 Ӌༀ)ྸ5.1Ƣǔ section
+Ʒ pro-pƍƯƍǔ ([M3], Theorem C ǛӋༀ)ŵ
+
+16 ɶ஭Ҧଯ,ᬱဏ, ஓஉૼɟ
+9) ƜǕƴƭƍƯƸ F.Pop ([P1,2])Ŵஓஉ (§5 Ӌༀ) ƴǑǔᝡྂƕƋǔŵƳƓŴPop ƷᄂᆮƸŴ
+ҞƷ J.Neukirch ([Ne])ຓͤ
+ࣄ
+ΨſƱƍƏᄂᆮƷ්ǕǛൽǉǋƷưƋǔŵ
+10) proﬁnite ፭ G ƷˮႻႎƳՠ፭ưஊᨂ lƷǋƷ
+Ǜ Gٻpro-l ՠ፭ƱƍƏŵ
+11) [I1]ˊǑǓ཯ᐯƷᚇໜƔǒஊᨂ˳ɥ
+Ʒ modularˊИ᪽ǇưƴƸ Fp2 ɥƷ
+P1
+λ −{ 0, 1, ∞} Ʒ tame ᘮᙴƷƏƪSL2(Z[1
+p ]) Ʒ (ӳӷ) ᢿЎ፭ưወСƞǕǔଈƕŴ‘supersingular
+Ƴ λ-μЎᚐ’ƮƚǒǕǔƜƱƳƲǛᅆƠƯƍǔŵ ƜƷǑƏ
+ƷᄂᆮƸŴ§1.1 ưᡓǂƨǑƏƳGrothendieck
+ᚨƷѣೞƱƸμƘီឋƳឪเǛਤƭŴ˙Ҿ཯ཎƷ (᩼Ǣȸșȫ) ᫏
+˳ᛯႎƳᚇໜƔǒဃǇǕƯƍǔŵƳƓŴ[2] ৑ӓƷ DeligneƷ්ǕƷɶ
+ҥˊૠ፭҄ſǛӕǓɥƛƯƍǔƕŴƜǕǋǇƨ཯ᇌƷᚇໜǛឪเƱ
+ƠƯƍǔƱƍƑǔŵ
+12)ƴƭƍƯƸɼƴ [I2] ƓǑƼ [1] ৑ӓƷᜂᛯ૨ǛӋༀŵ
+13)ఌǁƷ˺ဇƔǒဃơǔᐯ໱ƳɟഏΨ l ᡶᘙྵ Zl(1) Ǜቇҥƴ
+όЎ˺ဇƱԠƼŴƜǕƱ cusp ໜƷᨼӳƴƓƚǔፗ੭ᘙྵƱƷȆȳǽȫᘙྵǛ ‘όЎፗ੭ᘙྵ’ Ʊ
+Ԡǜưƍǔŵ
+14) ૠ˳ɥƷᆔૠ 2 ˌɥƷ୺ዴƷஊྸໜƕஊᨂ̾ƠƔƳƍƱƍƏʖेŵFaltings ƴǑƬƯTate
+ʖेƱӷơᛯ૨ ([F1]) ưᚰଢƞǕƨŵ
+15)ǒǕƯƍǔ (ᛇ
+ƠƘƸ [M5-8] ǛӋༀ)ŵ
+16)ƸŴmysterious functorǛʖᚕƠƨƷǋ˂ưǋƳƍ Grothendieck ƩƕŴʚƭƷ
+ƸƱǋƔƘŴ§5.2 ưኰʼƢǔǑƏƳᚰଢƴƭƳƕǔ
+ួƸƳƍŵƦƏƍƬƨཞඞƷᏑ୎ƴƭƍƯƸŴ
+§4.1 ǛӋༀŵ
+17)ƸŴLƠƸɧദᄩƴƳǔƕŴ˷Ǔஜឋ
+ឡ᪬ƘƜƱƴƢǔŵ
+18)˴ႎƳஊྸໜ Spec(L) → XݧSpec(L) → XƠƯŴπ1
+ݧGal(L)= π1(Spec(L)) → π1(X) → π(p)
+1 (X) ƱƠƯ
+ဃơǔƱƍƏॖԛưƋǔŵ
+19) ᛇƠƘƸŴ§3.1 (i) ǛӋༀŵ
+20) ᛇƠƘƸŴ[M3] ǛӋༀŵ
+૨ྂ
+[AI] G.Anderson, Y.Ihara, Pro-l branched coverings of P1 and higher circular l-units, Part 1 , Ann. of
+Math. 128 (1988), 271–293; Part 2, Intern. J. Math. 1 (1990), 119–148.
+[B] G.V.Belyi, On Galois extensions of a maximal cyclotomic ﬁeld , Izv. Akad. Nauk. SSSR 8 (1979),
+267–276 (Russian); English transl. in Math. USSR Izv. 14 (1980), no. 2, 247–256.
+[BK] S.Bloch, K.Kato, L-functions and Tamagawa numbers of motives , The Grothendieck Festschrift,
+Volume I, Birkh¨auser, 1990, pp. 333–400.
+
+ஜ፭ƴ᧙Ƣǔ GROTHENDIECK ʖे 17
+[F1] G.Faltings, Endlichkeitss¨atze f¨ur abelsche Variet¨aten ¨uber Zahlk¨orpern, Invent. Math. 73 (1983),
+349–366.
+[F2] , p-adic Hodge theory, J. of the Amer. Math. Soc. 1 (1988), 255–299.
+[SGA1] A.Grothendieck, M.Raynaud, Revˆetement Etales et Groupe Fondamental (SGA1), Lecture Note in
+Math., vol. 224, Springer, Berlin Heidelberg New York, 1971.
+[G1] A.Grothendieck, La longue marche `a travers de la th´eorie de Galois, 1981 , in preparation by
+J.Malgoire (ﬁrst few chapters available since 1996).
+[G2] , Esquisse d’un Programme, 1984, in [6] vol.1, 7–48.
+[G3] , Letter to G.Faltings, June 1983, in [6] vol.1, 49–58.
+[H] D.Harbater, Fundamental groups of curves in characteristic p,P r o c .I C M ,Z ¨urich (1994), 654–666.
+[I1] Y.Ihara, Proﬁnite braid groups, Galois representations, and complex multiplications, Ann. of Math.
+123 (1986), 43–106.
+[I2] , Braids, Galois groups and some arithmetic functions, Proc. ICM, Kyoto (1990), 99–120.
+[IN] Y.Ihara, H.Nakamura, Some illustrative examples for anabelian geometry in high dimensions,i n[ 6 ]
+vol.1, 127–138.
+[MT] M.Matsumoto, A.Tamagawa, Mapping-class-group action versus Galois action on proﬁnite funda-
+mental groups, Preprint 1997.
+[M1] S.Mochizuki, The proﬁnite Grothendieck conjecture for hyperbolic curves over number ﬁelds, J. Math.
+Sci., Univ. Tokyo 3 (1996), 571–627.
+[M2] , The local pro-p Grothendieck conjecture for hyperbolic curves, RIMS Preprint 1045, Kyoto
+Univ. (1995).
+[M3] , The local pro-p anabelian geometry of curves, RIMS Preprint 1097, Kyoto Univ. (1996).
+[M4] , A Grothendieck conjecture-type result for certain hyperbolic surfaces, RIMS Preprint 1104,
+Kyoto Univ. (1996).
+[M5] , A theory of ordinary p-adic curves, Publ. of RIMS 32 (1996), 957–1151.
+[M6] , The generalized ordinary moduli of p-adic hyperbolic curves, RIMS Preprint 1051, Kyoto
+Univ. (1995).
+[M7] , Combinatorialization of p-adic Teichm¨uller theory , RIMS Preprint 1076, Kyoto Univ.
+(1996).
+[M8] , Correspondences on hyperbolic curves, J. Pure Appl. Algebra (to appear).
+[N1] H.Nakamura, Rigidity of the arithmetic fundamental group of a punctured projective line ,J .r e i n e
+angew. Math. 405 (1990), 117–130.
+[N2] , Galois rigidity of the ´etale fundamental groups of punctured projective lines, J. reine angew.
+Math. 411 (1990), 205–216.
+[N3] , On galois automorphisms of the fundamental group of the projective line minus three points,
+Math. Z. 206 (1991), 617–622.
+[N4] , Galois rigidity of pure sphere braid groups and proﬁnite calculus, J. Math. Sci., Univ. Tokyo
+1 (1994), 71–136.
+[N5] , Galois rigidity of algebraic mappings into some hyperbolic varieties , Intern. J. Math. 4
+(1993), 421–438.
+[N6] , On exterior Galois representations associated with open elliptic curves, J. Math. Sci., Univ.
+Tokyo 2 (1995), 197–231.
+[N7] ,ࣱ, ܖ47 (1995), 1–17; English translation to appear in
+Sugaku Exposition (AMS).
+[NTa] H.Nakamura, N.Takao, Galois rigidity of pro-l pure braid groups of algebraic curves, Trans. Amer.
+Math. Soc. (to appear).
+[NTs] H.Nakamura, H.Tsunogai, Some ﬁniteness theorems on Galois centralizers in pro- l mapping class
+groups, J. reine angew. Math. 441 (1993), 115–144.
+[Ne] J.Neukirch, Kennzeichnung der p-adischen und der endlichen algebraischen Zahlk¨ orper, Invent.
+math. 6 (1969), 296–314.
+[O1] T.Oda, A note on ramiﬁcation of the Galois representation on the fundamental group of an algebraic
+curve, J. Number Theory 34 (1990), 225–228.
+
+18 ɶ஭Ҧଯ,ᬱဏ, ஓஉૼɟ
+[O2] , A note on ramiﬁcation of the Galois representation on the fundamental group of an algebraic
+curve, II, J. Number Theory 53 (1995), 342–355.
+[P1] F.Pop, On Grothendieck’s conjecture of birational anabelian geometry, Ann. of Math. 138 (1994),
+145–182.
+[P2] , On Grothendieck’s conjecture of birational anabelian geometry II, Preprint (June 1995).
+[T1] A.Tamagawa, The Grothendieck conjecture for aﬃne curves, Compositio Math. 109 (1997), no. 2,
+135–194.
+[T2] , On the fundamental groups of curves over algebraically closed ﬁelds of characteristic > 0,
+Preprint 1997.
+[U] K.Uchida, Isomorphisms of Galois groups of algebraic function ﬁelds , Ann. of Math. 106 (1977),
+589–598.
+[1] Y.Ihara (ed.), Galois Representations and Arithmetic Algebraic Geometry, Advanced Studies in Pure
+Math., vol. 12, Kinokuniya Co. Ltd., North-Holland, 1987.
+[2] Y.Ihara, K.Ribet, J.-P.Serre (eds.), Galois Groups overQ, Math. Sci. Res. Inst. Publications, vol. 16,
+Springer, 1989.
+[3] J.-P.Serre, Topics in Galois Theory, Jones and Bartlett Publ., 1992.
+[4] L.Schneps (ed.), The Grothendieck Theory of Dessins d’Enfants, London Math. Soc. Lect. Note Ser.,
+vol. 200, Cambridge Univ. Press, 1994.
+[5] M.Fried et al. (eds.), Recent Developments in the Inverse Galois Problem, Contemp. Math., vol. 186,
+AMS, 1995.
+[6] L.Schneps, P.Lochak (eds.), Geometric Galois Actions; 1.Around Grothendieck’s Esquisse d’un Pro-
+gramme, 2.The Inverse Galois Problem, Moduli Spaces and Mapping Class Groups, London Math.
+Soc. Lect. Note Ser., vol. 242-243, Cambridge Univ. Press, 1997.

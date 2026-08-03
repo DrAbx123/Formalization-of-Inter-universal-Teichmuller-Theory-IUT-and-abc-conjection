@@ -1,0 +1,30 @@
+COMMENTS ON “THE ABSOLUTE ANABELIAN
+GEOMETR Y OF HYPERBOLIC CUR VES”
+Shinichi Mochizuki
+June 2016
+(1.) The assumption of the existence of asplitting over some open subgroup in the
+discussion preceding Lemma 1.1.4 is, in fact,unnecessary, at least in the context
+of Lemma 1.1.4. Indeed, this assumption is never applied in the proof of Lemma
+1.1.4, (i). In the proof of Lemma 1.1.4, (ii), this assumption is applied; on the other
+hand, the application of this assumption may be circumvented by applying instead
+the well-known fact thatH2(G, ˆZ⊗Z Q)=0 .
+(2.) In the Appendix, the phrase“dual graph with compact structure” should read
+“dual semi-graph with compact structure” .
+(3.) The ﬁnal portion (beginning with thethird sentence)o ft h esecond paragraph
+of the proof of Lemma 1.3.9 should be replaced by the following text:
+Since ri may be recovered group-theoretically, given any ﬁnite ´etale cov-
+erings
+Zi → Vi → Xi
+such that Zi is cyclic (hence Galois), of degree a power of l,o v e rVi,
+one may determine group-theoretically whether or notZi → Vi is totally
+ramiﬁed (i.e., at some point ofZi), since this condition is easily veriﬁed
+to be equivalent to the condition that the covering Zi → Vi admit a
+factorization Zi → Wi → Vi,w h e r eWi → Vi is ﬁnite ´etale of degree l,
+and rWi <l · rVi. Moreover, this group-theoreticity of the condition that a
+cyclic covering betotally ramiﬁed extends immediately to the case ofpro-l
+cyclic coverings Zi → Vi. Thus, by Lemma 1.3.7, we conclude thatthe
+inertia groups of cusps in (ΔXi)(l) (i.e., themaximalpro- lquotientofΔ Xi)
+may be characterized (group-theoretically!) as the maximal subgroups of
+(ΔXi)(l) that correspond to (proﬁnite) coverings satisfying this condition.
+Typeset by AMS-TEX
+1

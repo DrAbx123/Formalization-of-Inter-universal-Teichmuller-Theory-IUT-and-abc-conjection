@@ -1,0 +1,122 @@
+Dear Colleagues, 
+ 
+I am writing on behalf of the Organizing Committee of the two workshops 
+ 
+・“Invitation to Inter-universal Teichmüller Theory” (Notes) 
+・“Inter-universal Teichmüller Theory Summit 2021” (Notes) 
+ 
+held online at RIMS, Kyoto University, in September 2021.  These two workshops are part 
+of a yearlong RIMS Project 
+ 
+“Expanding Horizons of Inter-universal Teichmüller Theory” 
+ 
+on topics related to Inter -universal Teichmüller Theory  (IUT).  Earlier this year, two other 
+closely related anabelian workshops 
+ 
+・“Foundations and Perspectives of Anabelian Geometry” (Notes
+) 
+・“Combinatorial Anabelian Geometry and Related Topics” (Notes) 
+ 
+were also held online at RIMS. 
+ 
+I am writing, on behalf of the Organizing Committee of the two IUT  workshops, to invite 
+you to register to view the  Zoom videos from the two IUT  workshops.  Mathematicians 
+who attended the online Berkeley Colloquium talk “ Classical Roots of Inter -universal 
+Teichmüller Theory” in November 2020 may think of these two IUT workshops as  a sort of 
+vastly expanded version of this B erkeley Colloquium talk.   Alternatively, mathematicians 
+who attended the online seminar  
+ 
+・ “Promenade in Inter-universal Teichmüller Theory”
+  
+ 
+held at RIMS, Kyoto University, and Lille University (France) during the period September 
+2020 - April 2021 may think of these two IUT workshops as a sort of in-depth, concentrated 
+version of the RI MS-Lille seminar.   Access to the Zoom videos from the two anabelian 
+geometry workshops mentioned above is also available for those who are interested. 
+ 
+Access to the videos will be provided to professional mathematicians (and graduate students 
+in mathematics) who register by sending an e-mail to any of the members of the Organizing 
+Committee stating the 
+ 
+・name,  
+・affiliation, and  
+・Gmail address 
+ 
+
+of the person to be registered.  Access will, at least initially, be provided until March 31, 2022 
+(the end of the Japanese school year), but may be extended further  if there is sufficient 
+interest. 
+ 
+The videos may be shown to a few colleagues, but are not to be made public.  Moreover, the 
+videos are to be used only for scholarly, mathematical purposes.  In particular, the videos 
+are not to be used for non-mathematical purposes. 
+ 
+Many developments have come to pass in the nine years since the preprints on IUT were 
+first made public in August 2012.   The four original papers on IUT were published in the 
+international mathematical journal PRIMS in March 2021.   A subsequent paper by five 
+authors on explicit estimates in IUT, which gives a new proof of Fermat's Last Theorem, was 
+recently accepted for publication in the Kodai Math. J.  Moreover, three mathematicians 
+have begun writing a new series of  papers on a  generalized version of IUT  with 
+various new applications .  In particular, IUT continues to be a field of  active 
+research and exciting new developments. 
+ 
+Unfortunately, it has come to my attention that certain  misunderstandings concerning IUT 
+continue to persist in certain parts of the world.   Perhaps the most famous 
+misunderstanding concerns an asserted identification of  “redundant copies ”.  This 
+misunderstanding involves well -known, essentially  elementary mathematics at the 
+beginning graduate level concerning the general nonsense surrounding “ gluings”.  For 
+instance, if one “applies” this misunderstanding to the well -known gluing construction of 
+the projective line, then one concludes that the two copies of the affine line that appear in this 
+gluing are “redundant’’, hence may be identified.  This identification leads immediately to 
+a contradiction, i.e., to a “proof” that the projective line cannot exist!  More details may be 
+found in the Introduction to [EssLgc]
+ and the references given there.  
+ 
+ As discussed in  [EssLgc]
+, §1, such misunderstandings give rise to  entirely unnecessary 
+confusion and can, at times, lead to  deeply detrimental disruptions of the  operational 
+normalcy of the field of mathematics (cf. [EssLgc], §1.10). 
+ 
+On the other hand, as discussed in 
+[EssLgc], §1, the potent tools of 
+ 
+(1) pr oducing detailed, explicit, accessible, and  mathematically substantive  written 
+records of the mathematical reasoning underlying various assertions  concerning IUT (cf., 
+e.g., article (6.) of the subsection entitled "Responsibilities  of authors" of 
+the 
+EMSCOP (!); [EssLgc], §1.5) and 
+ 
+(2) enhancing the mathematical and person- to-person interconnectivity (cf. [EssLgc]
+, §1.11) 
+of the worldwide mathematical community by fostering  constructive 
+mathematical dialogue (e.g., via e- mail and video meetings)  among mathematicians 
+worldwide concerning issues of mutual interest  
+
+ 
+can play an important role in overcoming unnecessary and 
+unconstructive misunderstandings. 
+ 
+It is the sincere hope of the Organizing Committee that the workshop videos discussed above 
+can serve as a  dynamic stimulus  in promoting activities  around the world of the sort 
+described above in (1) and (2) concerning IUT. 
+ 
+ 
+ 
+ 
+                     Sincerely, 
+ 
+ 
+                     Shinichi Mochizuki ( motizuki@kurims.kyoto-u.ac.jp
+ ) 
+                      
+ 
+                     On behalf of the Organizing Committee: 
+ 
+                     Benjamin Collas ( bcollas@kurims.kyoto-u.ac.jp
+ ) 
+                     Ivan Fesenko ( ivan.b.fesenko@gmail.com ) 
+                     Yuichiro Hoshi ( yuichiro@kurims.kyoto-u.ac.jp ) 
+                     Shinichi Mochizuki ( motizuki@kurims.kyoto-u.ac.jp ) 
+                     Yuichiro Taguchi ( taguchi@math.titech.ac.jp ) 
+ 
+ 

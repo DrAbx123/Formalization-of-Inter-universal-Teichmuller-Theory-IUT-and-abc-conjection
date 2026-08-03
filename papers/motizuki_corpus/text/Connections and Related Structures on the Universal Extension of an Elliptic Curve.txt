@@ -1,0 +1,4213 @@
+Connections and Related Integral Structures on
+the Universal Extension of an Elliptic Curve
+by Shinichi Mochizuki
+May 2000
+Contents:
+§0. Introduction
+§1. The ´Etale Integral Structure on the Universal Extension
+§2. The ´Etale Integral Structure for an Ordinary Elliptic Curve
+§2.1. Some p-adic Function Theory
+§2.2. The Verschiebung Morphism
+§3. Compactiﬁed Hodge Torsors
+§4. The ´Etale Integral Structure on the Hodge Torsors
+§4.1. Notation and Set-Up
+§4.2. Degenerating Elliptic Curves
+§4.3. Ordinary Elliptic Curves
+§4.4. The General Case
+§5. Construction of the Connection
+§5.1. Complex Analogue
+§5.2. The Schematic Case
+§6. The Schottky-Theoretic Hodge-Arakelov Comparison Isomorphism
+§7. Crystalline Theta Expansions
+§7.1. Generalities on Higher p-Curvatures
+§7.2. Application to Theta Expansions
+§8. “Griﬃths Semi-Transversality”
+§8.1. The Kodaira-Spencer Morphism of the Crystalline Theta Object
+§8.2. Calculation of the Higher p-Curvatures
+§8.3. Hasse-type Invariants of the Crystalline Theta Object
+§9. Relation to the Theory of [Mzk1]
+1
+
+§0. Introduction
+In this paper, we continue our study of the Hodge-Arakelov theory of elliptic curves,
+initiated in [Mzk1], [Mzk2]. The essence of this theory lies in thinking of the comparison
+isomorphism of the (complex or p-adic) Hodge theory of an elliptic curve as a restriction
+morphism from functions on the de Rham cohomology to functions on some sort of “torsion
+points” inside the de Rham cohomology(cf. [Mzk1], Introduction). This function-theoretic
+point of view allowed us in [Mzk1] to discretize the usual complex and p-adic Hodge
+theories of an elliptic curve into a global, Arakelov-theoretic“Hodge-Arakelov Comparison
+Isomorphism”(cf. [Mzk1]).
+The ﬁrst main goal of the present paper is to clear up the confusion surrounding the
+discussion of the “´etale integral structure”on the universal extension of an elliptic curve,
+which was introduced in [Mzk1]. This integral structure may be described as follows.
+Over a formal neighborhood of the point at inﬁnity on the moduli stack of elliptic curves,
+the tautological elliptic curve E looks like G
+m, while its universal extension E† (roughly
+speaking: the moduli space of degree zero line bundles on E equipped with a connection)
+may be described as the product Gm × A1 of Gm with the aﬃne line. If we write “ T”
+for the standard coordinate on this aﬃne line, then near inﬁnity, the standard integral
+structure on E† may be described as that given by
+⨁
+r≥0
+OGm · Tr
+while the ´etale integral structure on E† is given by
+⨁
+r≥0
+OGm ·
+(T
+r
+)
+(where
+(T
+r
+)def
+= 1
+r! T(T − 1) ·... ·(T − (r − 1))). Since this integral structure forms an algebra
+which is compatible with the group scheme structure ofE† , it corresponds to a geometric
+object E†
+et such that E†
+et ⊗ Q = E† ⊗ Q.
+Although the above deﬁnition of E†
+et is only valid near inﬁnity, this integral structure
+may, in fact, be extended over the entire moduli stack of elliptic curves . This fact is
+discussed in [Mzk1], Chapter V, §3, but the proof given there is incomplete. Thus, in §1
+of the present paper, we give acomplete proof of the extendability of this integral structure
+over the entire moduli stack of elliptic curves (cf. Theorem 1.3). Next, in §2, we analyze
+the p-adic structure of E†
+et in the case of a p-adic elliptic curve whose reduction modulo p
+is ordinary. The main result of this analysis is an isomorphism (cf. Theorem 2.2)
+(E†
+et)∧ ∼= EF∞
+2
+
+between the p-adic completion of E†
+et and a certain object EF∞
+obtained by considering
+composites of the “Verschiebung morphism associated to an ordinary elliptic curve.”
+In fact, ultimately, in both the theory of [Mzk1] and of the present paper, we will
+need to make use not only of E† and E†
+et, but of certain natural torsors — which we
+refer to as Hodge torsors —o v e rE† and E†
+et. The Hodge torsors E∗ may be interpreted
+functorially over E as the moduli spaces of connections on certain ample line bundles on
+E (where ∗denotes the ample line bundle in question). The elementary theory of Hodge
+torsors and their (partial) compactiﬁcations is the topic of §3. In fact, over Q,w eh a v e
+natural identiﬁcations E∗ ⊗ Q = E† ⊗ Q, i.e., Hodge torsors may be thought of as being
+certain integral structures on E† . In a neighborhood of inﬁnity, (relative to the notation
+introduced above) this integral structure may be described as that in which the “ Tr” (in
+the case of E† ) are replaced by “( T − (iχ/n))r” (where the rational number iχ/n is an
+invariant determined by the ample line bundle in question).
+Just as in the case of the universal extension E† , the Hodge torsors also admit ´etale
+integral structures, i.e., the integral structures in which the “( T − (iχ/n))r” are replaced
+by
+(T − (iχ/n)
+r
+)
+These integral structures are, in fact, necessary not just in the theory of the present paper,
+but also in the theory of [Mzk1]. In [Mzk1], however, no proof is given of the fact that the
+above deﬁnition near inﬁnity (i.e.,
+(T −(iχ /n)
+r
+)
+) extends neatly over the entire moduli stack
+of elliptic curves. In the present paper, however, we give a complete proof of this result (cf.
+Theorem 4.3). It turns out that this extendability result for Hodge torsors is somewhat
+more diﬃcult than its universal extension analogue (i.e., Theorem 1.3), especially at the
+prime p = 2. In particular, at the prime p = 2, in order to complete the proof of Theorem
+4.3, it is necessary to use the nontrivial theory of connections and higher p-curvatures
+developed in the second half of the present paper.
+In §5, we prove that the pair ( E∗
+et, LE∗
+et ) (where ∗ may be set equal either to † —
+in which case E∗
+et
+def
+= E†
+et — or to an ample line bundle (satisfying certain conditions)
+— in which case E∗
+et is to denote the corresponding Hodge torsor equipped with its ´etale
+integral structure) consisting of E∗
+et together with the pull-back to E∗
+et of an ample line
+bundle L on the original elliptic curve E admits a connection satisfying certain natural
+functorial properties (cf. Theorems 5.2, 5.3; Corollary 8.3). That is to say, put another
+way, this means that the pair (E
+∗
+et, LE∗
+et ) forms acrystal valued in the category of “polarized
+schemes”(i.e., schemes equipped with an ample line bundle) over the base. This generalizes
+the classical result that the universal extension itself E† forms a crystal in schemes over
+the base. From another point of view, this result may be regarded as the scheme-theoretic
+analogue of the complex analytic fact that if E is a Riemann surface equipped with an
+ample line bundle L, then (if we denote the underlying real analytic objects corresponding
+3
+
+to various complex analytic objects by means of a subscript “R,” then) not onlyER, but
+the pair (ER, LR) is, in fact, a topological invariant (i.e., does not vary as the complex
+moduli of E vary) of E.
+In fact, it is useful here to recall that in some sense:
+The essential spirit of the “Hodge-Arakelov Theory of Elliptic Curves”
+(studied in [Mzk1], [Mzk2], and the present paper) may be summarized as
+being the Hodge theory of the pairs (E
+R, LR) (at archimedean primes),
+(E∗
+et, LE∗
+et ) (at non-archimedean primes), as opposed to the “usual Hodge
+theory of an elliptic curve” which may be thought of as the Hodge theory
+of ER (at archimedean primes) or E∗
+et (at non-archimedean primes).
+In this connection, we note that the “Hodge-Arakelov theory of an elliptic curve at an
+archimedean prime” is discussed/reviewed in detail in [Mzk1], Chapter VII, §4. On the
+other hand, the very direct and explicit relationship between E†
+et at archimedean primes
+and the “classical” p-adic Hodge theory of an elliptic curve may be seen in the theory of
+§2 of the present paper.
+Once the canonical connection on the pair ( E∗
+et, LE∗
+et ) is constructed in §5, we then
+proceed to prove in §6, 7, what may be regarded as Local Hodge-Arakelov Comparison
+Isomorphisms, i.e., local versions (that is to say, versions relating to a formal neighbor-
+hood of a (scheme-valued) point of the moduli stack of elliptic curves) of the “discrete
+Hodge-Arakelov Comparison Isomorphism” of [Mzk1]. The ﬁrst such local comparison
+isomorphism is given in §6 (cf. Theorem 6.2), and is referred to as the“Schottky-Theoretic
+Hodge-Arakelov Comparison Isomorphism,”since it involves the Schottky uniformization
+of a degenerating elliptic curve. The main technical result underlying Theorem 6.2 is the
+explicit computation (cf. Theorem 6.1) of the connection constructed in §5 near inﬁnity
+(i.e., for degenerating elliptic curves). The second local comparison isomorphism is given in
+§7 (cf. Theorem 7.6; Corollary 8.3) and concerns formal neighborhoods ofnondegenerating
+elliptic curves.
+Another interesting way to think of these local comparison isomorphisms is as results
+which allow one to give naturaltheta expansions of sections of an ample line bundle on an
+elliptic curve. Near inﬁnity (cf. §6), this theta expansion is simply the classical one. At
+smooth points (cf. §7), however, this expansion appears to benew, and gives rise to a sort
+of crystalline theta expansion of sections of an ample line bundle on an elliptic curve (cf.
+the discussion of §7 for more details).
+In some sense, the comparison isomorphisms of Theorem 6.2 and Corollary 7.6 may
+be regarded as prototypes of the comparison isomorphism of [Mzk1]. Put another way, it
+seems natural to regard the comparison isomorphism of [Mzk1] as a sort of“extension via
+discretization”of the local comparison isomorphisms of §6, 7 (which, as discussed above,
+concern formal neighborhoods of points in the moduli stack) over the entire moduli stack
+of log elliptic curves. In fact, since the proofs of the local comparison isomorphisms of
+the present paper are, in many respects, technically much simpler than the proof of the
+4
+
+main result of [Mzk1], many readers may wish to study the present paper as a sort of
+“introduction” to the main idea behind the theory of [Mzk1].
+Yet another interesting aspect of the local comparison isomorphisms of the present
+paper — especially Theorem 6.2 — is that Theorem 6.2 further justiﬁes the assertion of the
+author in [Mzk1] that the “arithmetic Kodaira-Spencer morphism” constructed in [Mzk1],
+Chapter IX, is indeed a natural arithmetic analogue of the usual geometric Kodaira-Spencer
+morphism. Indeed:
+The comparison isomorphism of Theorem 6.2 renders explicit the sense
+in which the charactersU
+k on the “continuous torsion subgroup”Gm of
+the elliptic curve deﬁne (through their role as “horizontal sections”), the
+usual Gauss-Manin connection on the (polarized) universal extension.
+Thus, in particular, this comparison isomorphism makes explicit the fact that looking
+at the extent to which the Hodge ﬁltration is preserved by the Gauss-Manin connection
+on the “de Rham cohomology” (= in this case, the polarized universal extension of the
+elliptic curve) — i.e., the recipe for the usual geometric Kodaira-Spencer morphism — is
+essentially equivalent to looking at the extent to which the Hodge ﬁltration is preserved
+by permutations of the characters on the torsion — i.e., the recipe for the “arithmetic
+Kodaira-Spencer morphism” of [Mzk1], Chapter IX.
+One interesting consequence of Theorem 6.2 is that it implies that the p-curvature
+of the pair (E
+∗
+et, LE∗
+et ) vanishes identically for all prime numbers p (cf. Corollaries 8.2,
+8.3). This property is interesting in that it is somewhat diﬀerent from what might expect,
+considering the behavior of more classical objects with connection such asE† itself (cf. the
+discussion of §6 for more details). In fact, a stronger result holds: Namely, not only the
+p-curvature, but also the “higher p-curvatures”(introduced in [Mzk3], Chapter II, §2.1;
+and reviewed in §7.1 of the present paper) of the pair (E∗
+et, LE∗
+et ) vanish identically for all
+prime numbers p (cf. Corollaries 8.2, 8.3). This property of the higher p-curvatures is
+of essential importance in the proof of the extendability (over the entire moduli stack of
+elliptic curves) of the ´etale integral structure on E∗ (cf. Theorem 4.3; §8.3).
+In §8, we study more of the intrinsic properties of the connection constructed in
+§5. One of the most fundamental such properties is that, unlike more classical objects
+with connection for which the connection gives rise to jumps of length ≤ 1 in the Hodge
+ﬁltration (“Griﬃths transversality”), the connection of §5 on the pair (E∗
+et, LE∗
+et ) gives rise
+to jumps of length ≤ 2 on the Hodge ﬁltration. We refer to this property as “Griﬃths
+semi-transversality.” Using this property, one can deﬁne a certain analogue for the pair
+(E∗
+et, LE∗
+et ) of the classical Kodaira-Spencer morphism of a family of elliptic curves. In
+§8.1, we compute the Kodaira-Spencer morphism explicitly and show that it is equal to
+precisely 1
+2 of the classical Kodaira-Spencer morphism (Theorem 8.1). In §8.3, we deﬁne
+analogues for the pair ( E∗
+et, LE∗
+et ) of the classical Hasse invariant of a family of elliptic
+curves in characteristic p. Moreover, whereas the classical Hasse invariants only involve
+the p-curvature, in §8.3, we consider “higher analogues” of this sort of invariant, involving
+the higher p-curvatures. Then, using a general formula (i.e., having nothing to do with
+5
+
+the Hodge-Arakelov theory of elliptic curves) for computing higher p-curvatures which
+we develop in §8.2, we compute the various analogues of the Hasse invariant of the pair
+(E∗
+et, LE∗
+et ) (cf. Theorem 8.9). These computations are of crucial importance in the proof
+of the extendability (over the entire moduli stack of elliptic curves) of the ´etale integral
+structure on E∗ given as the end of §8.3.
+Finally, in §9, we clear up the confusion concerning the discussion of the ´etale integral
+structure in [Mzk1] by describing explicitly the relationship between the theory of the
+present paper and that of [Mzk1].
+To conclude, we remark that since the spaceVL
+def
+= f∗(LE∗
+et ) of global sections of LE∗
+et
+over E∗
+et admits a natural connection, as well as a natural Hodge ﬁltration, it is natural to
+ask if it does not also admit some sort of natural Frobenius action (i.e., like the MF∇ -
+objects of [Falt], §2). It is the desire of the author to address this question in more detail
+in a future paper. Once such a Frobenius action is deﬁned, it is natural to study the
+resulting Frobenius invariants (cf. the case of MF
+∇ -objects; [Falt], §2) over some sort
+of ring of p-adic periods such as “ Bcrys.” In the present context, however, since instead
+of “Griﬃths transversality,” our object only satisﬁes “Griﬃths semi-transversality,” it is
+natural to expect that the “ p-adic periods of B
+crys” are likely not to be suﬃcient, i.e.,
+one expects that in addition to the “ p-adic analogue of 2 πi,” which is a certain copy of
+Zp(1) lying inside Bcrys, we will also need the square root of this p-adic 2πi. That is to
+say, it seems that in the case of Griﬃths semi-transversality, it is natural to work over a
+sort of quadratic extension of B
+crys obtained from Bcrys by adjoining a square root of this
+p-adic 2πi. This conforms to the idea that one expects this p-adic theory of “crystalline
+theta functions” to be a sort ofp-adic analogue of the complex Hodge theory of a polarized
+elliptic curve (cf. [Mzk1], Chapter VII, §4), where square roots of 2π occur very naturally.
+We hope to address these issues in more detail in a future paper.
+Acknowledgement of Support: The research for this paper was partially conducted by the
+author for the Clay Mathematics Institute during Spring 2000. The author would like
+to thank the Clay Mathematics Institute for its support to the author as a “Clay Prize
+Fellow” during this period, which allowed the author the opportunity to ﬁnish writing this
+paper at the University of Tokyo (Tokyo, Japan).
+Other Acknowledgements: The author would like to express his appreciation to: (i) the
+Mathematical Sciences Research Institute (Berkeley, California, USA) where the author
+spent much of October 1999 carrying out a substantial portion of the research that is
+discussed in this paper; (ii) A. Ogus and A. Tamagawa for technical discussions concerning
+various portions of the present paper; (iii) the University of Tokyo, and, in particular, K.
+Kato and T. Saito, for providing the stimulating environment in which the author ﬁnished
+writing this paper.
+6
+
+§1. The ´Etale Integral Structure on the Universal Extension
+In this §, we discuss the ´etale integral structure on the universal extension of an
+elliptic curve. This integral structure is discussed in [Mzk1], Chapter V, §3, but since
+certain technical details — especially concerning the cohomology and global sectionsof the
+structure sheaf of the universal extension equipped with the ´ etale integral structure —
+were omitted in that discussion, we would like to discuss them in the following since they
+will be of substantial importance in the present paper.
+Let S
+log be a ﬁne noetherian log scheme, and
+Clog → Slog
+a log elliptic curve (cf. [Mzk1], Chapter III, Deﬁnition 1.1) over Slog. Write D ⊆ S for
+the pull-back to S of the divisor at inﬁnity of the moduli stack of log elliptic curves, and
+E ⊆ C for the one-dimensional semi-abelian scheme which forms an open subscheme of
+the semi-stable compactiﬁcation C. Also, let us write
+E† → E
+for the universal extension of E (cf. [Mzk1], Chapter III, Deﬁnition 1.2). We shall write
+ωE for the line bundle on S given by the relative cotangent bundle of E over S restricted
+to the zero section 0 E : S → E. Then E† has a natural structure of ωE-torsor over E.
+Alternatively, one may think ofE† as a (commutative)group schemeover S which surjects
+(in the category of group schemes) onto E, with kernel given by the S-group scheme WE
+deﬁned by the line bundle ωE.
+Next, let us write ˆS for the formal scheme given by completing S along D. Let us
+denote the result of base-changing objects over S to ˆS by means of a subscript ˆS. Then
+one has a natural identiﬁcation
+EˆS =( Gm)ˆS
+Moreover, E†
+ˆS
+→ EˆS admits a unique splitting
+κˆS : EˆS → E†
+ˆS
+(cf. [Mzk1], Chapter III, Theorem 2.1) in the category of group objects over ˆS. More-
+over, over ˆS, the line bundle ωE admits a natural trivialization deﬁned by the diﬀerential
+d log(U)= dU/U on (Gm)ˆS = EˆS (where U is the standard multiplicative coordinate on
+Gm). Thus, in particular, by using κˆS and d log(U), one may think of the push-forward
+R of the structure sheaf O
+E†
+ˆS
+to EˆS as being given by a polynomial algebra:
+7
+
+R = OEˆS
+[T]
+(where the indeterminate T is that deﬁned by the trivialization of ωE given by d log(U)).
+In [Mzk1], Chapter III,§6, we deﬁned (in the case whereS is, say,Z-ﬂat ) a new integral
+structure on this algebra R — which we shall refer to as the ´etale integral structure —a s
+follows: First, let us write (for r ∈ Z≥0)
+T[r] def
+=
+(T
+r
+)
+= 1
+r!T(T − 1)(T − 2) · ... · (T − (r − 1)) ∈R Q
+def
+= R⊗ Q
+Thus, if we deﬁne the operator δon polynomials f ∈O S[T]b y :
+δ(f)
+def
+= f(T +1 ) − f(T) ∈R
+then δ(T[r])= T[r−1]. Then the ´etale integral structure on RQ is given by:
+Ret def
+=
+⨁
+r≥0
+OEˆS
+· T[r]
+It follows immediately from Lemma 1.1 below that this integral structure respects the
+OEˆS
+-algebra structure of R, as well as the structure of Hopf algebra onR arising from the
+fact that E† is group scheme over S.
+Lemma 1.1. For nonnegative integers r1,r2, we have:
+(i) T[r1] · T[r2] is a Z-linear combination of the T[j], for j ∈ Zj≥0.
+(ii)
+(T1+T2
+r
+)
+= ∑r
+j=0
+(T1
+j
+)
+·
+(T2
+r−j
+)
+(where T1,T2 are indeterminates).
+Proof. Property (i) follows immediately from the well-known fact that theZ-linear span of
+the T[j] (for j ∈ Z≥0) may be identiﬁed with the ring of Z-valued polynomial functions on
+Z. Property (ii) follows by considering the formal identity (1+x)T1+T2 =( 1 +x)T1 ·(1+x)T2
+(cf. [Mzk1], Chapter III, Lemma 7.5). ⃝
+Remark. The name “´etale integral structure” arises from the fact that although in origin,
+the universal extension E† is a “de Rham-theoretic object,” its integral structure is not
+well-suited torestriction to torsion points(which are “´etale-theoretic”). The “´etale integral
+8
+
+structure” is thus the natural integral structure onE† which is compatible with the integral
+structure arising from restriction to torsion points (cf. [Mzk1], Chapter V, §3).
+Remark. The notation T[r] is reminiscent of the notation typically used in discussions of
+the crystalline site for the divided powers 1
+r! Tr. The point of view that the author wishes
+to express here is the following: Just as divided powers arise naturally in discussions of
+“usual continuous calculus” and satisfy such properties as
+d
+dT ( 1
+r! Tr)= 1
+(r−1)! T(r−1) (with
+respect to “continuous diﬀerentiation”), the T[r]’s satisfy δ(T[r])= T[r−1] (where we wish
+to think of δ as a sort of “discrete derivative”) and are naturally adapted to discussions
+of “discrete calculus” (cf., e.g., [Mzk1], Introduction, §3.4). We would thus like to refer to
+them as discrete divided powers.
+In [Mzk1], Chapter V, §3, the issue of extending the ´etale integral structure over all
+of S is discussed. This issue of extending the ´etale integral structure is closely related to
+the issue of extending the section κˆS. Let us assume just in the following discussion that
+S is an aﬃne scheme which is ´etale (i.e., the classifying morphism deﬁned by E → S is
+´etale) over the moduli stack (M1,0)Zp of (smooth!) elliptic curves over Zp (for some prime
+number p). Let us write
+H → E
+for the isogeny given by multiplication by pn. Thus, H → S is another copy of E → S.
+It was shown in [Mzk1], Chapter V,§3, that E† → E admits a natural sectionmodulo
+pn over H. In the following, we give a slightly diﬀerent construction of this section from
+that given in loc. cit. First, let us consider the pull-back morphisms
+H1(E,ω E/S )
+φ
+−→ H1(H,ωE/S |H)
+ψ
+−→ H1(H,ωH/S)
+induced by the isogeny H → E. Note that all three of these cohomology modules are
+projective OS-modules of rank 1. In fact, the ﬁrst and third cohomology modules even have
+natural trivializations given by the so called “residue map,” which (by elementary algebraic
+geometry) may also be thought of as the “degree.” Thus, relative to these trivializations,
+the composite ψ ◦φ corresponds to multiplication by p
+2n (i.e., the degree of the isogeny
+H → E). On the other hand, by functoriality, the morphism ωE/S |H → ωH/S is simply
+multiplication by pn. Thus, in particular, we obtain that (for appropriate trivializations)
+the morphism φ : H1(E,ω E/S ) → H1(H,ωE/S |H) may be identiﬁed with multiplication
+by p2n/pn = pn. In particular, it follows that the ωE-torsor E† → E splits modulo pn over
+H. Moreover, since H0(H,ωE/S |H)= ωE (i.e., such sections are constant on the ﬁbers of
+H → S), it follows that restriction to the zero section 0H : S → H of H deﬁnes a natural
+equivalence of categories between splittings modulo pn of E† |H and splittings modulo pn
+of E† |0H = E† |0E . On the other hand, E† is a group scheme, hence is equipped with its
+9
+
+own zero section 0
+E† which thus deﬁnes a natural splitting of E† |0E → S, hence deﬁnes a
+unique splitting modulo pn of E† |H, which we denote by:
+κH : HZ/pnZ → E†
+(where the subscript Z/pnZ denotes base-change toZ/pnZ). Note that since this splitting
+is natural, it agrees on ﬁber products (over M1,0) of diﬀerent S’s, hence is deﬁned over
+the moduli stack ( M1,0)Z/pn Z. Moreover, κH is compatible with the splitting κˆS in the
+following sense: When the base S is taken to be complement of the point at inﬁnity in
+a neighborhood of inﬁnity of M1,0 — i.e., S =S p e c ( (Z/pnZ)[[q]][q−1]) (where q is the
+“ q-parameter,” deﬁned in a formal neighborhood of the point at inﬁnity of M1,0) — then
+κH coincides with the section of E† |H deﬁned by κˆS (cf. [Mzk1], Chapter V, §3, for more
+details). (Indeed, this follows from the above discussion and the fact that both sections
+pass through the zero section 0
+E† of E† .)
+The section κH is the key ingredient that allows one to extend the ´ etale integral
+structure over all of M1,0, as desired. This fact is observed in [Mzk1], Chapter V, §3 (at
+the end of the “Analytic Continuation Argument”), but the technicalities supporting this
+observation were regrettably omitted in loc. cit. (a fact for which the author wishes to
+apologize to readers of [Mzk1]), so we would like to discuss them in the following (since
+these details turn out to be important in the general framework of the present paper).
+Let us return to discussing the situation for a general S for which S is Z-ﬂat . Also,
+since we have already deﬁned the ´ etale integral structure in a neighborhood of inﬁnity,
+let us assume that E → S is proper (so S
+log is equipped with the trivial log structure).
+Write R for the push-forward of the structure O
+E† to E. Recall that R is equipped with
+a natural ﬁltration
+Fr(R) ⊆R
+given by the functions whose torsorial degree(i.e., degree when thought of as polynomials
+in the relative aﬃne variable of E† → E) <r . Thus, Fr(R)i sa vector bundle on S of
+rank r. Moreover, we have a natural identiﬁcation
+(Fr+1/Fr)(R)= τ⊗r
+E |E
+for r ≥ 0 (where τE is the dual bundle to ωE).
+Now we would like to construct new integral structures Fr(Ret)o n Fr(R) which
+extend the ´etale integral structure in a neighborhood of inﬁnity. (Here, when we speak of
+“integral structures” Fr(Ret), we will always assume that Fr(R) ⊆ Fr(Ret).) We would
+like to do this by induction on r. Consider the following conditions on Fr(Ret):
+10
+
+(Ir) The integral structure induced on (Fr+1/Fr)(R)= τ⊗r
+E |E by Fr(Ret)
+is given by 1
+r! · τ⊗r
+E |E.
+(IIr) The surjection Fr(Ret) → 1
+(r−1)! · τ⊗r−1
+E |E (cf. ( Ir−1)) induces an
+isomorphism on cohomology after arbitrary base-change:
+Rf1
+∗(Fr(Ret) ⊗OS OT ) ∼= Rf1
+∗( 1
+(r − 1)! · τ⊗r−1
+E |E ⊗OS OT )
+(where f : E → S is the structure morphism, and T → S is an arbitrary
+— i.e., not necessarily Z-ﬂat — S-scheme).
+(IIIr) For any S-scheme T,w eh a v ef∗(Fr(Ret) ⊗OS OT )= OT .
+(IVr) Write H → E for the isogeny given by multiplication by pn (so H is
+just another copy of E). Then the morphism Fr(R) →O H ⊗ Z/pnZ
+induced by the section κH constructed above factors through Fr(Ret).
+(Vr) When S =S p e c (Z[[q]][q−1]) (where q is the “q-parameter,” deﬁned in a
+formal neighborhood of the point at inﬁnity ofM1,0), the integral struc-
+ture Fr(Ret) is that given by the “ Ret def
+= ⨁
+j≥0 OEˆS
+· T[j]” discussed
+above (cf. [Mzk1], Chapter V, §3, for more details).
+We would like to construct Fr(Ret) by induction on r in such a way that it is functorial
+in (Z-ﬂat) S and, moreover, satisﬁes the above ﬁve properties.
+Let us observe ﬁrst that takingF1(Ret)
+def
+= F1(R)= OE satisﬁes the above properties
+and is functorial in S. Now let us suppose that Fr(Ret) has been constructed for some
+r ≥ 1 (which satisﬁes the above ﬁve properties and is functorial in S). Then Fr+1(Ret)
+may be constructed as follows. First, let us push-forward the exact sequence
+0 → Fr(R) → Fr+1(R) → τ⊗r
+E |E → 0
+by Fr(R) ↪→ Fr(Ret) to obtain an exact sequence:
+0 → Fr(Ret) → Fr+1(R)′ → τ⊗r
+E |E → 0
+If we then consider the associated long exact sequence in cohomology over the base T
+(where T is an S-scheme), we obtain:
+0 → f∗(Fr(Ret) ⊗OS OT )= OT → f∗(Fr+1(R)′ ⊗OS OT ) → τ⊗r
+E ⊗OS OT
+∂′
+→ R1f∗(Fr(Ret) ⊗OS OT )= 1
+(r − 1)! · τ⊗r
+E ⊗OS OT → R1f∗(Fr+1(R)′ ⊗OS OT )
+→ τ⊗r+1
+E |E ⊗OS OT → 0
+11
+
+(where we use properties (Ir), (IIr), and (IIIr), together with the natural identiﬁcation
+(by Serre duality) of R1f∗(OE) with τE).
+Lemma 1.2. The morphism ∂′ : τ⊗r
+E ⊗OS OT → 1
+(r−1)! · τ⊗r
+E ⊗OS OT is given by
+multiplication by r on τ⊗r
+E , followed by the natural inclusion τ⊗r
+E ↪→ 1
+(r−1)! · τ⊗r
+E (tensored
+over OS with OT ).
+Proof. The connecting morphism τE → R1f∗(OE) for the exact sequence
+0 → F1(R)= OE → F2(R) → τE |E → 0
+may be identiﬁed (up to perhaps a sign — which is irrelevant here) with the identiﬁcation
+τE = R1f∗(OE) (via Serre duality referred to above) — cf. [Mzk1], Chapter III, Theorem
+4.2. It thus follows immediately from the “combinatorics of the symmetric algebra” —
+i.e., the fact that the automorphism of the polynomial algebra in an indeterminateX that
+maps X ↦→ X + c (for some constant c) will necessarily map Xr ↦→ Xr + r · c · Xr−1 +...
+— that the connecting morphism τ⊗r
+E → R1f∗(τ⊗r−1
+E )= τ⊗r
+E for the exact sequence
+0 → (Fr/Fr−1)(R)= τ⊗r−1
+E → (Fr+1/Fr−1)(R) → (Fr+1/Fr)(R)= τ⊗r
+E |E → 0
+is given by multiplication byr. Since this connecting morphism is related to the connecting
+morphism ∂′ in question by an obvious commutative diagram (which we leave to the reader
+to write out), the lemma follows immediately. ⃝
+Now suppose that T
+def
+= SZ/pn Z, where n>a
+def
+= ordp(r!); write b
+def
+= n − a. Then we
+get an exact sequence
+0 →O T → f∗(Fr+1(R)′ ⊗OS OT ) → τ⊗r
+E ⊗ (pbZ/pnZ) → 0
+Note, moreover, that this exact sequence splits. Indeed, by property (IVr), it follows that
+κH induces a morphism Fr+1(R)′ →O H ⊗ Z/pnZ; applying f∗ to this morphism thus
+induces a splitting α of the above exact sequence. Moreover, the above exact sequence
+induces an isomorphism:
+Ker(α) ∼= τ⊗r
+E ⊗ (pbZ/pnZ)
+Now observe that this splitting α induces a splitting of the surjection
+Fr+1(R)′ ⊗ (pbZ/pnZ) → τ⊗r
+E |E ⊗ (pbZ/pnZ)
+12
+
+of vector bundles on E ⊗ (Z/paZ). Let us denote the image of τ⊗r
+E |E ⊗ (pbZ/pnZ) via this
+splitting by
+M⊆ Fr+1(R)′ ⊗ (pbZ/pnZ)
+Next, let us deﬁne
+Fr+1(Ret) ⊆ 1
+r! · Fr+1(R)′
+at the prime p as the subsheaf generated by the sections m of 1
+r! · Fr+1(R) for which
+pn ·m ∈M . (Here, we think of multiplication bypn as deﬁning an isomorphism Fr+1(R)′ ⊗
+(p−aZ/Z) ∼= Fr+1(R)′ ⊗ (pbZ/pnZ).)
+Then one checks easily that this deﬁnition is independent of n, and that the resulting
+Fr+1(Ret) is a vector bundle on OE of rank r + 1 which contains Fr(Ret) (in such a
+way that (Fr+1/Fr(Ret)i s torsion free) and satisﬁes the condition (Ir+1) discussed above.
+Thus, we get a long exact sequence (for an arbitrary S-scheme T):
+0 →O T
+β
+→ f∗(Fr+1(Ret) ⊗OS OT ) → 1
+r! · τ⊗r
+E ⊗OS OT
+∂et
+→ 1
+(r − 1)! · τ⊗r
+E ⊗OS OT → R1f∗(Fr+1(Ret) ⊗OS OT )
+γ
+→ 1
+r! · τ⊗r+1
+E |E ⊗OS OT → 0
+(cf. the exact sequence discussed above in the case of Fr+1(R)′). Moreover, since the
+connecting morphism ∂et is given by multiplication by r (cf. Lemma 1.2), it follows that
+∂et is an isomorphism. In particular, we obtain that β and γ are also isomorphisms,
+so conditions (IIr+1) and (IIIr+1) are also satisﬁed by Fr+1(Ret). Moreover, it follows
+from the deﬁnition of the section α and the construction of Fr+1(Ret) that Fr+1(Ret)
+also satisﬁes ( IVr+1). To see that Fr+1(Ret) satisﬁes ( Vr+1), it suﬃces to observe that,
+for instance, ( Ir+1) and (IVr+1) uniquely determine Fr+1(Ret) (cf. the construction of
+Fr+1(Ret) by means of α), and that the “Fr+1(Ret)” deﬁned above in a neighborhood of
+inﬁnity also satisﬁes ( Ir+1) and (IVr+1) (indeed, this essentially amounts to the fact that
+the T[j] assume integral values on all elements of Z — cf. [Mzk1], Chapter V, §3, for more
+details). This completes the construction of the Fr(Ret) (for all r ≥ 1).
+We summarize the above discussion as follows:
+Theorem 1.3. ( ´Etale Integral Structure on the Universal Extension)Let Slog be
+a ﬁne, Z-ﬂat noetherian log scheme. Let Clog → Slog be a log elliptic curve. Write E ⊆ C
+for the open subscheme which is a one-dimensional semi-abelian scheme, andE† → E for
+the universal extension. Thus, there is a naturalωE-torsor E†
+C → C that extends E† → E
+13
+
+(cf. [Mzk1], Chapter III, Corollary 4.3). Denote by R the push-forward of O
+E†
+C
+to C,
+equipped with its natural ﬁltration Fr(R) (given by considering sections whose torsorial
+degree is <r ). Then there is a natural integral structure (functorial in Slog)
+Ret ⊆R Q
+that satisﬁes the following properties:
+(I) (Subquotients) The integral structure induced on (Fr+1/Fr)(R)=
+τ⊗r
+E |C by Fr(Ret) is given by 1
+r! · τ⊗r
+E |C.
+(II) (Cohomology) The surjection Fr(Ret) → 1
+(r−1)! · τ⊗r−1
+E |C (cf. (I))
+induces an isomorphism on cohomology after arbitrary base-change:
+Rf1
+∗(Fr(Ret) ⊗OS OT ) ∼= Rf1
+∗( 1
+(r − 1)! · τ⊗r−1
+E |C ⊗OS OT )
+(where f : C → S is the structure morphism, andT → S is an arbitrary
+— i.e., not necessarily Z-ﬂat — S-scheme). In particular, we have:
+Rf1
+∗(Ret ⊗OS OT )=0 .
+(III) (Global Sections)We have: f∗(Ret ⊗OS OT )= OT (for any S-scheme
+T).
+(IV) (Compatibility with the Canonical Section)Suppose that E = C.
+Write H → E for the isogeny given by multiplication bypn (so H is just
+another copy ofE). Then the morphism Fr(R) →O H ⊗ Z/pnZ induced
+by the section κH constructed above factors throughFr(Ret).
+(V) (Description at Inﬁnity) When S =S p e c (Z[[q]][q−1]) (where q is the
+“q-parameter,” deﬁned in a formal neighborhood of the point at inﬁnity
+of M1,0), the integral structure Fr(Ret) is that given by the “ Ret def
+=⨁
+j≥0 OEˆS
+· T[j]” discussed above (cf. [Mzk1], Chapter V,§3, for more
+details).
+(VI) (Group Scheme Structure) Ret is an OC-algebra which is compat-
+ible with the group scheme structure of E† .
+Thus, in particular, E†
+et
+def
+= Spec(Ret|E) deﬁnes a group scheme (which is not of ﬁnite
+type) over S equipped with a homomorphism
+E†
+et → E
+Moreover, over Q, this homomorphism may be identiﬁed with E† → E.
+14
+
+Proof. It remains only to verify property (VI). But this follows immediately from property
+(V) and the discussion preceding Lemma 1.1 above. (Here we use the fact that the moduli
+stack (
+M1,0)Z is regular of dimension 2, so integral structures are completely determined
+once they are determined over Q and near the point at inﬁnity.) ⃝
+Remark. The observation that property (VI) (of Theorem 1.3) holds arose from discussions
+between the author and A. Ogus in October 1999.
+Remark. Properties (II) and (III) of Theorem 1.3 will be offundamental importancein this
+paper. Note that these properties do not hold for the universal extension with its usual
+integral structure.
+§2. The ´Etale Integral Structure for an Ordinary Elliptic Curve
+Let p be a prime number. In this §, we make explicit the structure of the p-adic
+completion (E†
+et)∧ of the universal extension equipped with the ´etale integral structure,
+in the case of an elliptic curve whose reduction modulo p is ordinary. In particular, we
+construct an isomorphism
+(E†
+et)∧ ∼= EF∞
+between this p-adic completion and a certain object EF∞
+obtained by considering com-
+posites of the “Verschiebung morphism associated to an ordinary elliptic curve.”
+§2.1. Some p-adic Function Theory:
+In the following discussion, if X and Y are topological spaces, then let us write
+Cont(X,Y )
+for the space of continuous functions from X to Y . On the other hand, let us write
+Comb(Zp)
+for the free Zp-module generated by the symbols T[j], for j ∈ Z≥0. Thus, by thinking
+of the symbol T[j] as the continuous Zp-valued function on Zp that maps λ ∈ Zp to(λ
+j
+)
+, we obtain a natural morphism Comb(Zp) → Cont(Zp,Zp). One sees easily that this
+15
+
+morphism extends naturally to thep-adic completion Comb(Zp)∧ of Comb(Zp). Moreover,
+it is well-known (by a result of Mahler — cf., e.g., [Katz3], §3.2) that:
+Lemma 2.1. The resulting morphism
+Comb(Zp)∧ → Cont(Zp,Zp)
+is a bijection.
+§2.2. The Verschiebung Morphism:
+Let S be a p-adic formal scheme S which is formally smooth over Zp. Assume also
+that we are given a family of ordinary elliptic curves E → S such that the associated
+classifying morphism S → (M1,0)Zp is formally (i.e., relative to thep-adic topology) ´etale.
+(Here, by “ordinary,” we mean that the ﬁbers of E → S over all the points of SFp have
+nonzero Hasse invariant.) For n ≥ 1, write
+E[pn]
+def
+= Ker([pn]: E → E)
+for the kernel of multiplication by pn on E. Then, as is well-known (cf., e.g., [Katz4], p.
+150), there is a unique exact sequence
+0 → E[pn]µ → E[pn] → E[pn]et → 0
+of ﬁnite ﬂat group schemes over E such that E[pn]µ (respectively, E[pn]et)i s´etale locally
+isomorphic to µpn (respectively, Z/pnZ).
+Let us write
+EFn def
+= E/E[pn]µ
+Then since EFn
+→ S is a family of elliptic curves, and the classifying morphism associated
+to E → S is ´etale, it follows that EFn
+→ S deﬁnes a morphism
+Φn
+S : S → S
+One checks easily that ΦS
+def
+=Φ 1
+S is a lifting of the Frobenius morphism in characteristic
+p, and that Φn
+S is the result of iterating ΦS a total of n times (as the notation suggests).
+The morphism
+V : EF → E
+16
+
+given by dividingEF by the image inEF of E[p] will be referred to as the theVerschiebung
+morphism associated to E. For any n ≥ 1, the morphism
+Vn : EFn
+→ E
+given by dividing EFn
+by the image in EFn
+of E[pn] is easily seen to be equal (as the
+notation suggests) to the “ n-th iterate” (i.e., up to various appropriate base changes by
+iterates of Φ S)o f V. Note that the kernel of Vn may be identiﬁed with E[pn]et.I n
+particular, it follows that Vn is ´etale of degree pn.
+Thus, we obtain a tower
+... → EFn
+→ EFn− 1
+→ ... → EF → E
+of ´etale isogenies of degree p. Let us denote the p-adic completion of the inverse limit of
+this system of isogenies by EF∞
+. Thus, in particular, we have a natural morphism
+EF∞
+→ E
+The goal of the present § is to construct a natural isomorphism
+EF∞
+∼= (E†
+et)∧
+between EF∞
+and the p-adic completion of E†
+et.
+We begin by constructing a morphism
+κ[pn]: EFn
+⊗ Z/pnZ → E† ⊗ Z/pnZ
+as follows: First, observe that sinceVn : EFn
+→ E is ﬁnite ´etale of degreepn, it follows that
+the pull-back via Vn of any ωE-torsor on E splits modulo pn (cf. the argument involving
+the isogeny “ H → E”i n §1). Thus, if we take the (unique!) splitting modulo pn of the
+pull-back of E† → E via Vn which maps the origin of EFn
+to that of E† , we obtain a
+morphism κ[pn]: EFn
+⊗ Z/pnZ → E† ⊗ Z/pnZ, as desired. Note, moreover, that since the
+morphism H → E (given by multiplication by pn) considered in §1 factors through EFn
+,
+it makes sense to compare the splitting κH ⊗ Z/pnZ of §1 with κ[pn]|H. Then it follows
+immediately from the deﬁnitions that these two splittings coincide.
+Now, if we pass to the limit n →∞ , we obtain a morphism
+κ[p∞ ]: EF∞
+→ (E† )∧
+17
+
+(where “ ∧” denotes p-adic completion). Finally, by the property of Theorem 1.3, (IV)
+(i.e., compatibility of the ´etale integral structure with κH), together with the coincidence
+“ κH ⊗Z/pnZ = κ[pn]|H” observed above (and the fact that the morphismsH → EFn
+→ E
+in the factorization ofH → E are both faithfully ﬂat), we obtain thatκ[p∞ ] factors through
+the ´etale integral structure of E† , i.e., we obtain a morphism
+κ∞
+et : EF∞
+→ (E†
+et)∧
+as desired.
+Theorem 2.2. (Explicit Description of the ´Etale Integral Structure of an
+Ordinary Elliptic Curve) The natural morphism
+κ∞
+et : EF∞
+→ (E†
+et)∧
+from the p-adic completion of the “Verschiebung tower” of E to the p-adic completion of
+the universal extension of E equipped with the ´etale integral structure is an isomorphism.
+Proof. Write G
+def
+= EF∞
+. Thus, we have a natural morphism G → E. In order to prove
+that κ∞
+et is an isomorphism, we would like to regard κ∞
+et and κ[p∞ ]a s morphisms over
+E; then to base-change these morphisms by the faithfully ﬂat morphism G → E; and
+ﬁnally, to apply Lemma 2.1 to show that the result of base-changing κ∞
+et by G → E is an
+isomorphism. This will complete the proof that κ∞
+et itself is an isomorphism.
+Write Eet for the inverse limit of the E[pn]et via the natural projection morphisms.
+Thus, Eet → S is a “proﬁnite ´etale covering.” Moreover, sinceEF∞
+→ E admits a natural
+structure of Eet-covering, it follows that we have a natural isomorphism
+EF∞
+×E G ∼= Eet ×S G
+On the other hand, if we base-change (E† )∧ → E by G → E, then the resulting (E† )∧|G →
+G admits a splitting (deﬁned by κ[p∞ ])
+(E† )∧ ×E G ∼= (V(ωE))∧ ×S G
+(where V(−) denotes the aﬃne group scheme over S deﬁned by the line bundle in paren-
+theses). Moreover, let us observe that if we think of Eet as a local system of Zp-modules
+on S, then we have a natural isomorphism
+Eet ⊗Zp OS ∼= ωE
+18
+
+(cf., e.g., [Katz4], p. 163). Now I claim that relative to these natural isomorphisms, the
+morphism κ[p∞ ]|G amounts to the natural inclusion
+Eet|G ↪→ V(Eet ⊗Zp OS)∧|G ∼= (V(ωE))∧|G
+Indeed, this claim may be veriﬁed in a formal neighborhood of inﬁnity, where it follows from
+the well-known structure of the universal extension in a formal neighborhood of inﬁnity,
+as reviewed, for instance, in §1.
+The elucidation of the structure of κ[p
+∞ ]|G in the preceding paragraph thus shows
+that (up to choosing a trivialization Eet ∼= Zp over some proﬁnite ´etale covering of S) the
+morphism induced by κ∞
+et |G on functions is none other than the morphism
+Comb(Zp)∧ → Cont(Zp,Zp)
+considered in Lemma 2.1 (topologically tensored over Zp with OG). Thus, Lemma 2.1
+implies that κ∞
+et |G, hence (by faithful ﬂat descent) that κ∞
+et is an isomorphism, as desired.
+⃝
+Remark. One way to think of the content of Theorem 2.2 is as the assertion that:
+The ´etale integral structure on E† is very closely related to the p-adic
+Hodge theory of E.
+Another manifestation of this phenomenon is the following: The splitting κH : HZ/pnZ →
+E† used in §1 to construct the ´etale integral structure on E† deﬁnes a morphism
+κH[pn]: E[pn] → V(ωE) ⊗ Z/pnZ
+(i.e., by thinking of κH as a morphism over E and taking the morphism induced on ﬁbers
+over the origin ofE). Note that κH[pn] is deﬁned even without the ordinariness assumption
+on E. Moreover, if we denote by T → S the normalization of S in the ﬁnite ´etale covering
+TQp → SQp given by considering pn-level structures on E, and by T (E) the p-adic Tate
+module of E, then restricting κH[pn]t o T deﬁnes a morphism
+αn : T (E) ⊗Zp OT ⊗ Z/pnZ → ωE |T ⊗ Z/pnZ
+which is the “fundamental morphism (often referred to as the ‘period map’) of the p-adic
+Hodge theory of E” (cf., e.g., the morphism “Hom( TE,J Qp ) → ωE ⊗R
+ˆRQp ” of [Mzk1],
+Chapter IX, §2). Indeed, the coincidence of these two morphisms may be veriﬁed in a
+formal neighborhood of inﬁnity, where it is clear from the discussion of [Mzk1], Chapter
+19
+
+IX, §2, together with the well-known structure of the universal extension (as reviewed, for
+instance, in §1 of the present paper).
+Remark. Since E†
+et is deﬁned globally over Z whenever E is deﬁned globally over Z, Theo-
+rem 2.2 may also be taken as asserting that E†
+et enjoys the following remarkable interpre-
+tation:
+The universal extension of an elliptic curve equipped with the ´etale inte-
+gral structure is a natural globalization overZ of the (very local!) p-adic
+Hodge theory of the Hodge elliptic curve.
+This interpretation is very much in line with the general philosophy of [Mzk1] and the
+present paper (cf., e.g., the Introduction of [Mzk1]).
+§3. Compactiﬁed Hodge Torsors
+In this §, we expand on the discussion of [Mzk1], Chapter III, §4, and, in particular,
+further clarify the relationship between the universal extension of an elliptic curve and the
+Hodge-theoretic ﬁrst Chern class of a line bundle on the elliptic curve.
+Let
+Clog → Slog
+be a log elliptic curve as in §1. Also, we write E ⊆ C, D ⊆ S, E† → E (cf. §1) for the
+various objects associated to Clog → Slog. In this §, we would also like to consider a line
+bundle L on C, whose relative degree over S we denote by d. Now deﬁne
+CL → C
+to be the ωE-torsor over C of logarithmic connections (relative to the morphism Clog →
+Slog) on the line bundle L. We will denote the open subscheme CL ×C E ⊆ CL by EL.
+Next, we would like to show that EL admits a natural structure of E† -torsor. First,
+let us observe that we have a natural action of E† on CL. Indeed, suppose that we are
+given an S-scheme T → S, a point α† ∈ E† (T) (whose image in E(T) we denote by α),
+an open subscheme U ⊆ CT
+def
+= C ×S T, and a logarithmic connection ∇ on L|U . Write
+Uα ⊆ CT (respectively, Lα; ∇α) for the open subscheme⊆ CT (respectively, line bundle on
+CT ; logarithmic connection on Lα |Uα ) obtained from U (respectively, L; ∇) by translating
+by α. Then we must construct, from this data, a logarithmic connection ∇α on L|Uα .T o
+20
+
+do this, we observe that the lifting α† of α corresponds to a logarithmic connection ∇ ′ on
+OCT ([α] − [0CT ]) (where 0CT is the zero section of CT ). On the other hand, we have the
+following
+Lemma 3.1. We have an isomorphism of line bundles on C
+OCT ([α] − [0CT ])⊗d ∼= Lα ⊗OCT
+L−1
+T ⊗OT N
+for some line bundle N on T.
+Proof. First, let us observe that it suﬃces to show the existence of such an isomorphism
+(Zariski) locally on S. Moreover, after localizing on S, it follows from the fact that the
+divisor [0C] ⊆ C (deﬁned by the zero section 0 C)i s ample that L is linearly equivalent to
+a divisor of the form
+N · [0C] − F
+for some eﬀective Cartier divisorF ⊆ E ⊆ C overS (i.e., such thatF → S is ﬁnite and ﬂat).
+Since the “moduli space” of such divisors over S is given by the some symmetric product
+of copies of E (over S), it follows that (by working with universal T = S, Clog → Slog, α,
+and F), we may assume thatD ⊆ S (i.e., the pull-back toS of the divisor at inﬁnity of the
+moduli stack of log elliptic curves) is a Cartier divisor in S. But, under this assumption,
+one sees easily that Lemma 3.1 holds if and only if it holds overS\D. Thus, in particular,
+we may assume that D = ∅.
+Thus, E → S is proper and smooth. Moreover, the line bundle L(−d · [0E]) on E is
+of relative degree 0, hence ispreserved (up to tensor product with a line bundle pulled back
+from S) by translation by α. (This essentially amounts to the “theorem of the square” —
+cf., e.g., [Mumf5], Chapter II, §6, Corollary 4.) Writing this fact out explicitly yields the
+isomorphism asserted in the statement of Lemma 3.1 ⃝
+Thus, by subtracting (∇ ′)⊗d from the connection ∇α on Lα |Uα , we obtain a connection
+∇α on L|Uα , as desired. It is clear that this correspondence ( α, ∇) ↦→∇ α is additive in α
+and functorial in T.
+Thus, we obtain a natural action of E† on CL, as desired. Since this action is
+compatible with the usual action of E on C relative to the projections E† → E and
+CL → C, as well as with the natural action of WE ⊆ E on the ﬁbers of CL → C (where
+WE is the aﬃne group scheme over S associated to ωE), we thus see that this action of
+E† on CL induces a natural structure of E† -torsor on EL. Now we make the following:
+Deﬁnition 3.2. We shall refer to EL (respectively, CL), equipped with its natural
+E† -action as deﬁned above, as the Hodge torsor (respectively, compactiﬁed Hodge torsor)
+associated to the line bundle L.
+21
+
+If L is deﬁned by a Cartier divisor F on C, then we will frequently write EF , CF for EL,
+CL.
+Observe that if L1 and L2 are line bundles on C of the same relative degree over S,
+then CL1 and CL2 diﬀer by a ωE-torsor
+T L1,L2 → S
+deﬁned over S. Indeed, this follows from the fact the class in
+R1f∗(ωE |C) ∼= OS
+deﬁned by any CL is simply the relative degree of L. Thus, we will write
+CL1 = T L1,fl 2 + CL2
+(where the “+” is to be understood as the “sum of ωE-torsors”). Similarly, since (cf.
+[Mzk1], Chapter III, Theorem 4.2) the class deﬁned in R1f∗(ωE |C) ∼= OS by E†
+C is −1, for
+any line bundle L of relative degree −1, we shall write
+T † ,L → S
+for the ωE-torsor over S given by the diﬀerence “ E†
+C − CL.” When L = OC(−[0C]), we
+shall simply write
+T † → S
+for T † ,L → S.
+In fact, theωE-torsor CL → C was discussed in [Mzk1], Chapter III,§4, in some detail,
+under the name “ Tor → C.” In the notation of the present discussion, the discussion of
+[Mzk1], Chapter III, §4, may be summarized as follows:
+Proposition 3.3. (Relationship Between the Universal Extension and the
+Hodge Torsor) The ωE-torsor T † satisﬁes the following:
+(1) The ωE-torsor T † is naturally isomorphic to the torsor of splittings of
+the exact sequence
+0 → ω⊗2
+E = I2/I3 →I /I3 → ωE = I/I2 → 0
+22
+
+(where we write I for the sheaf of ideals on C that deﬁnes the zero
+section). Moreover, the torsor 2 ·T † (obtained from T † by pushing
+out via the map [2] : ωE → ωE given by multiplication by 2) admits a
+canonical trivialization. The splitting of the above exact sequence that
+corresponds to this trivialization may be characterized as either (i) the
+unique splitting that is compatible with the natural action of ±1 on the
+above exact sequence (cf. [Mzk1], Chapter III, §4); or (ii) the splitting
+deﬁned by integrating invariant diﬀerentials on E (cf. [Mzk1], Chapter
+IX, Appendix).
+(2) There is a canonical isomorphism of ω
+E-torsors over C:
+E†
+C
+∼= C−[OC] + T †
+(which is valid even if 2 is not invertible on S). Thus, if 2 is
+invertible on S, we obtain an isomorphism E†
+C
+∼= C−[OC] (cf. [Mzk1],
+Chapter III, Theorem 4.2).
+Finally, (as was observed in [Mzk1], Chapter III, the Remark following Corollary 3.3) in
+general, the torsor T † is nontrivial.
+Before concluding this §, we also note the following:
+Proposition 3.4. (Relationship Between Diﬀerent Hodge Torsors) Let α ∈
+E(S). Write Lα for the line bundle on C obtained by translating L by α. Then “transport
+of structure” induces natural isomorphisms
+CL ∼= CLα ; EL ∼= ELα
+compatible with the actions of E† on both sides, and (via the projections to C on both
+sides) with translation by α on C.
+If, moreover,α is a torsion point of orderm, and m ∈O ×
+S , then then there exists a
+unique torsion point α† ∈ E† (S) lifting α. Moreover, transport of structure via translation
+by −α, followed by the action of α† ∈ E† (S) on CL, deﬁnes a natural isomorphism
+CLα ∼= CL
+compatible with the projections on both sides toC (as well as with the actions on both sides
+of E† ). In particular, in this case, the torsor T L,Lα → S admits a natural splitting.
+Proof. There is practically nothing here that requires further argument. Note that the
+existence of a lifting α† as asserted follows from the fact that the kernelWE of E† → E is
+23
+
+the aﬃne group scheme associated to the line bundleωE on S, together with the assumption
+that m ∈O ×
+S . ⃝
+Remark. Suppose that α ∈ E(S)i sa torsion point of order m, and that 2 m ∈O S is a
+non-zero divisor. Then, by identifying the restrictions to S ⊗ Z[ 1
+m ]o f C−[0C] and C−[α] via
+the isomorphism at the end of Proposition 3.4 involvingα† , and using the natural splitting
+of T † discussed in Proposition 3.3, we see that
+One may think of C−[α] ∼= Cα as a sort of “modiﬁed integral structure”
+on C−[0C] ⊗ Z[ 1
+m ] or, alternatively, on E†
+C ⊗ Z[ 1
+2m ].
+Of course, all of these integral structures are compatible with the natural actions of E† ,
+and the natural projections to C.
+Remark. In fact, just as we deﬁned ´etale integral structureson E† , E†
+C in §1, we would also
+like to deﬁne ´etale integral structures on the (compactiﬁed) Hodge torsors of the present§,
+in such a way that the various actions ofE† are compatible with the various ´etale integral
+structures. This is precisely the topic of §4, below.
+§4. The ´Etale Integral Structure on the Hodge Torsors
+In this §, we show that thecompactiﬁed Hodge torsors introduced in §3 admit natural
+´etale integral structures, similar to those constructed on the universal extension in §1. In
+fact, in the present§, we will only give the proof of the existence of such integral structures
+for degenerating elliptic curves and elliptic curves with ordinary reduction modulo p.I n
+order to complete the proof for arbitrary elliptic curves (which we will do in §8), we will
+need to enlist the aid of the techniques of §6, 7, below. (Note: The results of §6, 7, that
+will be necessary to complete the proof will only require the ´ etale integral structure for
+degenerating elliptic curves, so there will not be any “vicious circles” in the reasoning.)
+§4.1. Notation and Set-Up:
+In this §, we use notation similar to that of [Mzk1], Chapter IV, §2: More precisely,
+let O be a Zariski localization of the ring of integers of a ﬁnite extension of Q; let m be a
+positive integer; n
+def
+=2 m;
+A
+def
+= O[[q
+1
+n ]]; S
+def
+=S p e c (A); ˆS
+def
+= Spf( A)
+(where q is an indeterminate, and we regardA as equipped with theq-adic topology). Over
+S,w eh a v eanatural degenerating elliptic curve E → S (with “Tate parameter” given by
+24
+
+q), together with acompactiﬁcation C → S whose pull-back CˆS → ˆS to ˆS may be obtained
+as the quotient of an object C∞
+ˆS
+with respect to the natural action of a group , which we
+denote by Zet
+def
+= Z,o n C∞
+ˆS
+:
+CˆS = C∞
+ˆS /Zet
+Here, C∞
+ˆS
+is the pull-back to ˆS of the “N´eron model”of (Gm)O[[q]][q− 1] over O[[q]]. Thus,
+the special ﬁber (C∞
+ˆS
+)spl of C∞
+ˆS
+(i.e., the zero locus of the function q
+1
+n )i sa chain of P1’s
+over Spec(O) indexed by Z (which we think of as the group of exponents of q that occur
+in ( O[[q]][q−1])×) and permuted by the action of the group Zet, in a fashion which is
+compatible with the indexing by Z and the natural action of Zet = Z on Z (by addition).
+Note, moreover, that we have a natural identiﬁcation EˆS =( Gm)ˆS. We will denote the
+usual multiplicative coordinateon this copy of Gm by U.
+In the following discussion, in addition to C → S, we will also need to make use of
+the log elliptic curve ˜C → S whose Tate parameter is given by q
+1
+n . Let us denote by ˜E,
+˜C∞
+ˆS
+, ˜U, etc. the various objects (analogous to E, C∞
+ˆS
+, U, etc.) associated to ˜C. Also, let
+us observe that we have a natural isogeny of degree n:
+˜C → C
+deﬁned by U ↦→ ˜Un. Thus, this isogeny is covered by an isogeny˜C∞
+ˆS
+→ C∞
+ˆS
+(also of degree
+n, and deﬁned by U ↦→ ˜Un). Put another way, instead of introducing ˜C, etc., we could
+simply have said that occasionally we will also make use of the n-th root U
+1
+n of U.
+Next, we consider line bundles. Write
+LC
+def
+= OC(0C); L˜C
+def
+= O ˜C([(µn)˜C])
+(where 0C is the zero section of C → S, and ( µn)˜C ⊆ ˜C is the kernel of the isogeny
+˜E → E). Thus, the pull-back of LC to ˜C is given by L˜C.
+Now it follows from the theory of [Mzk1], Chapter IV, §2, that L˜C∞
+ˆS
+def
+= L|˜C∞
+ˆS
+admits
+a natural trivialization “ θm.” Moreover, the line bundle L|˜C∞
+ˆS
+admits a natural action of
+Zet × µn (which is compatible with the natural action of Zet × µn on ˜C∞
+ˆS
+). Relative to
+this action, µn acts trivially on θm, while ket ∈ Zet maps θm ↦→ q
+1
+2 k2
+· Uk · θm (cf. [Mzk1],
+Chapter IV, Proposition 2.2). Moreover, LC is obtained from L˜C∞
+ˆS
+by descending L˜C∞
+ˆS
+by means of the action obtained by tensoring this natural action with a certain character
+χθ : Zet × µn → µn (cf. [Mzk1], Chapter IV, Theorem 2.1) of order two.
+25
+
+In the present discussion, we would like to assume further (cf. [Mzk1], Chapter V,§4)
+that we are given a character
+χL ∈ Hom(Zet × µn, µn)
+We would then like to consider (cf. [Mzk1], Chapter V, §4) what is, in eﬀect, the result of
+twisting LC by χL. In more down to earth terms, this amounts to considering sections of
+L˜C∞
+ˆS
+which are invariant which respect to the action of (various subgroups of) Zet × µn
+given by tensoring the natural action with the character χM
+def
+= χL · χθ. (Here, the
+“subgroup” is the subgroup corresponding to the intermediate covering of ˜C∞
+ˆS
+→ CˆS over
+which the section is to be deﬁned.) In the following discussion, for the sake of brevity:
+We shall denote by “ Lχ
+C” the object consisting of L˜C∞
+ˆS
+, equipped with
+the action of χM.
+In particular, we shall refer toχM-invariant sections of L˜C∞
+ˆS
+as “sections of Lχ
+C.” Observe
+that, by applying ﬁnite ﬂat descent to L˜C∞
+ˆS
+(equipped with the action deﬁned by χM)
+and then algebrizing, overE ⊆ C, as well as over ˜C, we obtain genuine line bundles “ Lχ
+E,”
+“ Lχ
+˜C
+.” (Note that we cannot apply such a descent argument to ˜C → C since it fails to be
+ﬂat at the nodes .)
+Thus, the space
+Γ(C∞
+ˆS , Lχ
+C∞
+ˆS
+)
+may be identiﬁed with the topological A-linear combinations of
+Uk · ˜Uiχ · θm
+where iχ ∈{ −m, −m +1 ,... ,m − 1} is a number that depends only on the character χL
+(cf. [Mzk1], Chapter V, Theorem 4.8), and k ranges over all integers. Moreover, fork ∈ Z,
+the corresponding element ket ∈ Zet acts on these sections by:
+θm ↦→ χM(ket) · q
+k2
+2 · Uk · θm; ˜U ↦→ q
+k
+n · ˜U; U ↦→ qk · U;
+Thus, a generator of Γ(C, LC) is given by the series
+∑
+k∈Z
+χM(ket) · q
+1
+2 k2+
+iχ
+n k · Uk · ˜Uiχ · θm
+26
+
+(cf. [Mzk1], Chapter V, Theorem 4.8).
+§4.2. Degenerating Elliptic Curves:
+Just as E† and E†
+C admit natural ´etale integral structures (cf. the discussion of
+§1), the compactiﬁed Hodge torsors CL introduced in §3 also admit natural ´etale integral
+structures. Also, just as in the case of E†
+C, we will construct these integral structures by
+ﬁrst constructing them in a formal neighborhood of inﬁnity (cf. the discussion below) and
+then extending them to the rest of the moduli stack of elliptic curves.
+First, let us observe (cf. the discussion preceding Lemma 1.1) that by using the
+splitting κC∞
+ˆS
+: C∞
+ˆS
+→ E†
+C∞
+ˆS
+def
+= E†
+C |C∞
+ˆS
+(deﬁned by the canonical section “ κ” of [Mzk1],
+Chapter III, Theorem 2.1) and the logarithmic diﬀerential d log(U), one may think of the
+push-forward R of the structure sheafO
+E†
+C∞
+ˆS
+to C∞
+ˆS
+as being given by apolynomial algebra:
+R = OC∞
+ˆS
+[T]
+(where the indeterminate T is that deﬁned by the trivialization of ωE given by d log(U)).
+Then we would like to deﬁne the χL-´etale integral structure on R by:
+Ret
+χ
+def
+=
+⨁
+r≥0
+OC∞
+ˆS
+· T[r]
+χ
+where
+T[r]
+χ
+def
+=
+(T − (iχ/n)
+r
+)
+(cf. the integral structure
+Ret def
+=
+⨁
+r≥0
+OC∞
+ˆS
+· T[r]
+deﬁned by the ´etale integral structure on E†
+C,et).
+Observe (by applying Lemma 1.1, “shifted over by iχ/n”) that Ret
+χ is closed under
+multiplication, hence deﬁnes an OC∞
+ˆS
+-algebra. Moreover, the corresponding geometric
+object Spec(Ret
+χ )o v e rC∞
+ˆS
+forms a torsor over the C∞
+ˆS
+-group (cf. Lemma 1.1, (ii)) object
+Spec(Ret). In more concrete terms:
+27
+
+This torsor amounts to the Z-torsor (iχ/n)+ Z.
+That is, Ret
+χ (respectively, Ret) may be thought of as the ring ofOC∞
+ˆS
+-valued functions on
+(iχ/n)+ Z (respectively, Z).
+Note that over the “generic ﬁber”EU
+def
+= E⊗AA[q−1], the notationLχ
+EU corresponds to
+a genuine line bundle of the formOEU (η), for some torsion pointη ∈ E(A[q−1]) annihilated
+by n. Then let us observe that, over A[q−1], the integral structure on E† deﬁned by
+⨁
+r≥0
+OC∞
+ˆS
+·{ T − (iχ/n)}r
+coincides with the integral structure on E† deﬁned by C[η] (cf. the ﬁrst Remark following
+Proposition 3.4). Indeed, to see this, we argue as follows: First, note that the relative
+connection (i.e., over ˆS) ∇C∞
+ˆS
+on Lχ
+˜C∞
+ˆS
+= L˜C∞
+ˆS
+obtained by pull-back (via the canonical
+section) from the tautological (cf. [Mzk1], Chapter III, Theorem 4.2) relative connection
+∇
+E†
+C∞
+ˆS
+on E†
+C∞
+ˆS
+is that for which θm is horizontal (cf. [Mzk1], Chapter III, Theorem
+5.6). But this connection becomes integral on Γ( C∞
+ˆS
+, Lχ
+C∞
+ˆS
+) (i.e., on sections of the form
+Uk · ˜Uiχ · θm) if and only if it is supplemented by the extra term “−(iχ/n).” On the other
+hand, since ∇
+E†
+C∞
+ˆS
+may be written as ∇C∞
+ˆS
++ T (cf. the discussion of [Mzk1], Chapter
+III, §7), it thus follows that the integral structure on E† deﬁned by C[η] is that given by
+polynomials in T − (iχ/n), as desired (cf. also [Mzk1], Chapter IV, Theorem 3.3).
+Note that the Ret
+χ is preserved by the natural action on R of Zet (for which 1et(T)=
+T + 1). Thus, Ret
+χ descends to an integral structure on E†
+C, which we denote by
+C[η]
+et
+i.e., C[η]
+et |C∞
+ˆS
+= Spec(Ret
+χ ) (where the “Spec” is as an object over C∞
+ˆS
+). In particular, it is
+natural to regard C[η]
+et as the analogue for C[η] of the ´etale integral structureE†
+C,et on E†
+C.
+Finally, before proceeding, we note that the integral structure Ret
+χ also satisﬁes the
+following properties:
+(1) The integral structureRet
+χ is completely determined by the torsion point
+η. In particular, it is independent of the choice of n, χL (i.e., among
+those n, χL that give rise to the same twist of the line bundleLC as η).
+28
+
+(2) The sections ζCG
+0 ,ζCG
+1 ,... ,ζCG
+r ,... ∈ Γ((E†
+C,et)ˆS, Lχ
+(E†
+C,et)ˆS
+) ⊗ Q of
+[Mzk1], Chapter V, Theorem 4.8, form a basis over A of the module
+Γ(C[η]
+et , Lχ |C[η ]
+et
+). Indeed, this follows from the description of ζCG
+r given
+in [Mzk1], Chapter V, Theorem 4.8, as the result of applying the oper-
+ator ( ∇C∞
+ˆS
++ λr − (iχ/n)
+r
+)
+(cf. the deﬁnition of T[r]
+χ above and the fact that “λr”i sa n integer)t o
+ζCG
+0 , together with [Mzk1], Chapter III, Theorem 5.6.
+§4.3. Ordinary Elliptic Curves:
+In the following, we maintain the notation of the discussion of the Verschiebung mor-
+phism in §2. Write L
+def
+= OE(0E) for the line bundle deﬁned by the origin of E. Since the
+pull-back of L by Vn : EFn
+→ E has degree pn, the resulting theta group (cf. [Mumf1,2,3];
+[Mumf5], §23; or, alternatively, [Mzk1], Chapter IV, §1, for an exposition of the theory of
+theta groups) ﬁts into an exact sequence:
+0 → Gm →G (Vn)∗L → (EFn
+)[pn] → 0
+of group schemes over S. Next, observe that since Vn is ´etale, the natural morphism
+(EFn
+)[pn]µ → E[pn]µ
+is an isomorphism. Thus, we get a natural inclusion
+E[pn]µ ↪→ (EFn
+)[pn] ⊆ EFn
+If we pull-back the above exact sequence via this inclusion, we thus obtain an exact se-
+quence
+0 → Gm →G n → E[pn]µ → 0
+of group schemes over S. Note, moreover, that since the commutator of G(Vn)∗L clearly
+vanishes on the “cyclic” group scheme E[pn]µ, it follows that Gn is abelian. Also, let
+us observe that ±1 acts naturally on all the objects (i.e., EFn
+, L, etc.) involved in the
+deﬁnition of Gn. We thus obtain a natural action of ±1o n Gn itself which is compatible
+with the above exact sequence, and induces thetrivial action (respectively, theusual action
+of ±1) on Gm (respectively, E[pn]µ).
+29
+
+Now let us write Eµ for the inductive limit of the E[pn]µ. Then it is clear that the
+formation of Gn is compatible with the morphisms of the “Verschiebung tower” of E (cf.
+§2), hence that we obtain natural inclusionsGn ↪→G n+1, which induce the identity onGm
+and the natural inclusion E[pn]µ ↪→ E[pn+1]µ on E[pn]µ. Thus, passing to the limit, we
+obtain an exact sequence
+0 → Gm →G ∞ → Eµ → 0
+of group objects over S (equipped with an action by ±1). If we then take the “Cartier
+dual” of this exact sequence (i.e., apply the functor Hom( −,Gm)), we obtain an exact
+sequence
+0 → Eet → M∞ → Z → 0
+of ´etale local systems on S equipped with an action by ±1. In particular, if we push-
+forward this exact sequence by the morphism [2] : Eet → E′
+et
+def
+= Eet (i.e., multiplication
+by 2 on Eet), the resulting exact sequence
+0 → E′
+et → M ′
+∞ → Z → 0
+admits a unique splitting compatible with the action by ±1 (which acts trivially on Z,
+and as ±1o n E′
+et). Returning to the category of group objects, we thus obtain that if we
+pull-back G∞ by the morphism [2] :E′
+µ
+def
+= Eµ → Eµ given by multiplication by 2 onEµ,
+we obtain an exact sequence of group objects
+0 → Gm →G ′
+∞ → E′
+µ → 0
+which admits a unique splitting compatible with the action by ±1. Note that this split-
+ting may be interpreted as a symmetric trivialization (where by “symmetric,” we mean
+compatible with the action by ±1)
+t′
+L :( L|0E )|E′
+µ
+∼= L|E′
+µ
+which restricts to the identity over 0E. Also, we observe that:
+(1) Since t′
+L is uniquely characterized by the fact that it is symmetric, it
+follows that in a neighborhood of inﬁnity, t′
+L coincides with the trivi-
+alization by the section “ θ” (cf. the discussion of §4.1, 4.2, in the case
+n =2 ; χL trivial), since this trivialization is also symmetric.
+(2) In general, when p = 2, the trivialization t′
+L does not descend to Eµ.
+Indeed, by (1) above, this assertion may be checked in a neighborhood
+30
+
+of inﬁnity, where it amounts to the fact that the multiplicative portion
+of the character “χ” of [Mzk1], Chapter IV, Theorem 2.1, isnontrivial.
+Thus, in particular, (2) implies that the restriction of the unique symmetric splitting of
+G′
+∞ → E′
+µ to the kernel µ′
+2 ⊆ E′
+µ of E′
+µ → Eµ diﬀers from the homomorphism µ′
+2 →G ∞
+deﬁned by the fact that L|E′
+µ is obtained via pull-back from Eµ by the unique nontrivial
+character µ′
+2 → Gm ⊆G ′
+∞ .
+Next, observe that sinceE[p]et/(2) (i.e., the quotient ofE[p]et by 2·E[p]et)i sa n´etale
+local system on S of cyclic groups (i.e., the trivial group if p is odd; the group Z/2Z if
+p = 2), it follows that E[p]et/(2) admits a unique generating section over S. Let us write
+ˆT → S
+for the p-adic completion of the proﬁnite ´etale covering ofS given by theEet-torsor T → S
+of liftings of the unique generating section of E[p]et/(2) relative to the natural surjection
+E′
+et ∼= Eet → E[p]et/(2). Observe that this torsor T → S also admits the following
+interpretation: If p is odd, then let M be the trivial line bundle on Eµ.I f p = 2, then the
+morphism
+[2] : E′
+µ → Eµ
+may be regarded as aµ2-torsor overEµ. In particular, this µ2-torsor corresponds to a line
+bundle M on Eµ equipped with an isomorphism M⊗2 ∼= OEµ. Then, regardless of the
+parity of p, T → S may be interpreted as the Hom(Eµ,Gm)= Eet-torsor of trivializations
+of M by a section of M over Eµ that corresponds to a character ∈ Hom(E′
+µ,Gm)= E′
+et
+of E′
+µ.
+In particular, we see that — regardless of the parity of p —w eh a v ea tautological
+trivializing section
+sM ∈M | ˆT
+of M over ˆT.
+Now write
+P
+def
+= L⊗ OS (L|−1
+0E )
+Thus, since t′
+L deﬁnes a section of P|E′
+µ on which µ′
+2 acts (cf. the discussion above) via
+the unique nontrivial character, we thus obtain that t′
+L may be regarded as a section of
+P⊗M over Eµ. In particular, by applying the trivialization sM of M over ˆT, we see
+that t′
+L deﬁnes a trivialization
+31
+
+tL :( L|0E )|Eµ|ˆT
+∼= L|Eµ|ˆT
+over ˆT.
+Next, let us write I for the coherent sheaf of ideals on E such that V (I)=0 E, and
+Eϵ
+def
+= V (I2) ⊆ E
+for the ﬁrst nontrivial inﬁnitesimal neighborhood of 0 E in E. Note that the diﬀerence
+between the tautological point ∈ E(Eϵ ⊗ Z/pnZ) and the origin 0E is annihilated by pn,
+hence lies inside E[pn]µ. Thus, we obtain that Eϵ ⊗ Z/pnZ ⊆ E[pn]µ, hence (by passing
+to the p-adic limit) we have
+Eϵ ⊆ E∧
+µ
+(where E∧
+µ denotes the p-adic completion of Eµ). In particular, if we restrict (the p-adic
+completion of) tL to Eϵ, we obtain a trivialization
+tϵ :( L|0E )|(Eϵ)ˆT
+∼= L|(Eϵ)ˆT
+But observe that such a trivialization is none other than a connection (relative to the
+morphism E → S) on the line bundle L at the point 0E. Thus, by the deﬁnition of the
+Hodge torsor EL (cf. §3), we obtain that tϵ deﬁnes a natural symmetric section
+sord : ˆT → EL
+of the Hodge torsor EL over ˆT.
+Now since E† acts on EL, the section sord thus determines a natural symmetric iso-
+morphism
+EL|ˆT
+∼= E† |ˆT
+Moreover, we have the following result:
+Lemma 4.1. If we equip EL|ˆT with the integral structure obtained by transporting
+the ´etale integral structure on E† |ˆT via the above isomorphism, then, in a neighborhood
+of inﬁnity, this integral structure coincides with the ´etale integral structure deﬁned on EL
+in the discussion of §4.2 (for trivial χL). In particular, this integral structure descends
+from ˆT to S. Finally, if p is odd, then this integral structure coincides with the integral
+32
+
+structure obtained by transporting the ´etale integral structure on E†
+et via the isomorphism
+E† ∼= EL discussed at the end of Proposition 3.3, (2).
+Proof. Indeed, in a neighborhood of inﬁnity, t′
+L corresponds to the trivialization θ. More-
+over, the torsor T → S corresponds to (the result of pushing out viaZ → Zp) the Z-torsor
+of liftings a ∈ 1
+2 ·Z of the unique nonzero element of1
+2 ·Z/Z. The trivialization tL obtained
+by “dividing” t′
+L by sM then corresponds to the trivialization in a neighborhood of inﬁnity
+given by U −a · θ. Since the coordinate “ T” of the discussion of §5 corresponds to the
+splitting of EL
+Q deﬁned by the connection for which θ is horizontal, it thus follows that
+“ T − a” corresponds to the splitting of EL
+Q deﬁned by the connection for which U −a · θis
+horizontal. In particular, we see that the integral structure on EL|ˆT obtained by trans-
+porting the ´etale integral structure on E† |ˆT via the isomorphism EL|ˆT
+∼= E† |ˆT amounts
+to that deﬁned by the “
+(T −a
+r
+)
+.” But this integral structure is (by elementary properties
+of the binomial coeﬃcient polynomials) the same as that deﬁned by the “
+(T −a′
+r
+)
+” for any
+a ∈ 1
+2 · Zp that lifts the unique nonzero element of 1
+2 · Zp/(2). In particular, this integral
+structure is the same as that deﬁned by the “
+(T+ 1
+2
+r
+)
+.” Since, in the present situation,χL is
+trivial, it thus follows that (in the notation of §5) iχ/n = − 1
+2 , hence that the two integral
+structures in question coincide. Since this integral structure is independent of the choice
+of lifting a, we thus see that this integral structure also descends from ˆT to S, as desired.
+Finally, if p is odd, then the fact that the integral structure under consideration coincides
+with the integral structure obtained by transporting the ´etale integral structure onE†
+et via
+the isomorphism E† ∼= EL discussed at the end of Proposition 3.3, (2), follows from the
+fact that, if p is odd, then the integral structure deﬁned by the “
+(T+ 1
+2
+r
+)
+” is the same as the
+integral structure deﬁned by the “
+(T
+r
+)
+.” ⃝
+Remark. It would be nice if a construction of tϵ could be found that works without the
+hypothesis of ordinariness. Such a construction would alleviate the need for treating the or-
+dinary and non-ordinary cases separately, as we have done here. Unfortunately, it appears
+unlikely that such a construction is possible.
+§4.4. The General Case:
+In the following discussion, we let S be ´etale over ( M
+1,0)Zp , and E → S be the
+pull-back from ( M1,0)Zp of the tautological elliptic curve over (M1,0)Zp . Also, let us
+write L
+def
+= OE(0E), and Sord ⊆ S for the open subscheme obtained by removing the
+supersingular pointsin characteristic p. In particular, we do not assume that the reduction
+modulo p of E → S is a family of ordinary elliptic curves. In the following discussion, we
+would like to show that the ´etale integral structure on EL constructed in Lemma 4.1 over
+ˆSord extends (necessarily uniquely) over S. (Here and in the following, “ ∧” will be used
+to denote p-adic completion.)
+33
+
+Write M for a line bundle of the form L⊗N (for a positive integer N). Since L|EL
+is ample on EL, working with integral structures on EL is equivalent to working with
+(compatible) integral structures on
+HM
+def
+= f∗(M|EL )
+(for various N). Note that HM has a natural ﬁltration Fr(HM) ⊆H M, consisting of
+those sections of torsorial degree <r . Thus, we have a natural isomorphism
+(Fr+1/Fr)(HM) ∼= τ⊗r
+E ⊗OS f∗(M)
+In particular, Fr(HM) is a vector bundle on S of rank r.
+Next, let us observe that, since S is a regular scheme of dimension 2, it follows that
+the ´etale integral structure on EL|ˆSord constructed in Lemma 4.1 (which gives rise to an
+integral structure onHM|ˆSord , Fr(HM)|ˆSord ) already deﬁnes a (unique!) integral structure
+on HM, Fr(HM). Thus, we obtain quasi-coherent sheaves Het
+M, Fr(Het
+M)o n S which
+coincide with HM, Fr(HM)o v e rQp. Moreover, by elementary commutative algebra (cf.,
+e.g., [Mzk1], Chapter VI, Lemma 1.1), Fr(Het
+M) is necessarily a vector bundle of rank r.
+Thus, we obtain a morphism
+ψr :( Fr+1/Fr)(Het
+M) → 1
+r! · τ⊗r
+E ⊗OS f∗(M)
+(which, when it is necessary to stress the dependence of ψr on M, we shall also write
+“ ψM
+r ”). Note that the domain of ψr is necessarily a torsion-free coherent sheafon S,s oi t
+follows immediately that ψr is injective. It is not immediately clear, however, that ψr is
+surjective (although this would follow if, for instance, we knew that the domain of ψr is a
+line bundle).
+Lemma 4.2. For N suﬃciently large, the morphism ψr is surjective.
+Proof. If p is odd, then this follows from the ﬁnal statement in Lemma 4.1, together with
+Theorem 1.3, (I). If p = 2, then a more complicated argument is necessary. This argument
+will be presented in §8.3. ⃝
+We are now ready to state the main result of the present §:
+Theorem 4.3. ( ´Etale Integral Structure on the Hodge Torsors) Let Slog be a
+ﬁne, Z-ﬂat noetherian log scheme. Let Clog → Slog be a log elliptic curve. Write E ⊆ C
+for the open subscheme which is a one-dimensional semi-abelian scheme, and E† → E
+for the universal extension. Suppose, moreover, that L is a line bundle on C of relative
+34
+
+degree 1 over S such that some positive tensor power of L(−[0C]) is trivial. Thus, there
+is a natural ωE-torsor CL → C, equipped with a natural action of E† (cf. §3). Denote
+by RL the push-forward of OCL to C, equipped with its natural ﬁltration Fr(RL) (given
+by considering sections whose torsorial degree is <r ). Then there is a natural integral
+structure (functorial in Slog)
+RL,et ⊆R L
+Q
+that satisﬁes the following properties:
+(I) (Subquotients) The integral structure induced on(Fr+1/Fr)(RL)=
+τ⊗r
+E |C by Fr(RL,et) is given by 1
+r! · τ⊗r
+E |C.
+(II) (Cohomology) The surjection Fr(RL,et) → 1
+(r−1)! · τ⊗r−1
+E |C (cf. (I))
+induces an isomorphism on cohomology after arbitrary base-change:
+Rf1
+∗(Fr(RL,et) ⊗OS OT ) ∼= Rf1
+∗( 1
+(r − 1)! · τ⊗r−1
+E |C ⊗OS OT )
+(where f : C → S is the structure morphism, andT → S is an arbitrary
+— i.e., not necessarily Z-ﬂat — S-scheme). In particular, we have:
+Rf1
+∗(RL,et ⊗OS OT )=0 .
+(III) (Global Sections) We have: f∗(RL,et ⊗OS OT )= OT (for any S-
+scheme T).
+(IV) (Description at Inﬁnity) When S =S p e c (Z[[q
+1
+n ]][q−1]) (where n ∈
+2 · Z>0, and q is the “ q-parameter,” deﬁned in a formal neighborhood
+of the point at inﬁnity of M1,0), the integral structureFr(RL,et) is that
+given by the “ Ret
+χ
+def
+= ⨁
+j≥0 OC∞
+ˆS
+· T[j]
+χ ” (for χL corresponding to L)
+discussed in §4.2.
+(V) (Torsor Structure) RL,et is an OC-algebra which is compatible with
+the action of E† on CL.
+Moreover, the resulting action of E† on CL
+et
+def
+= Spec(RL,et) → C extends to an action of
+E†
+et on CL
+et which deﬁnes a structure of E†
+et-torsor on EL
+et
+def
+= CL
+et|E.
+Proof. First, observe that by the isomorphisms in the ﬁrst paragraph of the statement
+of Proposition 3.4, it suﬃces to prove Theorem 4.3 in the case L = OC(0C). Then the
+existence of CL
+et follows by applying “Proj” to Lemma 4.2. Moreover, Property (I) (re-
+spectively, (IV); (V)) follows from Lemma 4.2 (respectively, the construction of CL
+et near
+inﬁnity in §4.2; by checking that (V) holds near inﬁnity). Properties (II) and (III) may
+be checked as in §1 in the case of E†
+C (by using the analogues in the present context of
+35
+
+Lemma 1.2 and the various long exact sequences that appeared in§1). The ﬁnal assertions
+concerning the action of E† may be checked near inﬁnity. This completes the proof. ⃝
+Deﬁnition 4.4. In the context of Theorem 4.3, if N is a line bundle on C of relative
+degree d such that some positive tensor power of N(−d · [0C]) is trivial, then we shall say
+that N is of torsion type.
+Finally, before proceeding, we introduce one more notion, which we will use in §8.3.
+Let N ≥ 1 be an integer. Then in addition to the integral structures E†
+C,et, CL
+et deﬁned
+by the algebras Ret, RL,et in Theorems 1.3, 4.3, we also have intermediate ´etale integral
+structures E† ;{N }
+C,et , CL;{N }
+et deﬁned by forming the spectra of the algebras
+Ret;{N } ⊆R et; RL,et;{N } ⊆R L,et
+where Ret;{N } (respectively, RL,et;{N }) is the subalgebra ofRet (respectively, RL,et) gener-
+ated by FN+1(Ret) (respectively, FN+1(Ret)). Note that the subquotients (Fr+1/Fr)(−)
+of these intermediate integral structures are given by
+1
+γ(N,r ) · τ⊗r
+E |C
+(cf. property (I) of Theorems 1.3, 4.3), where γ(N,r ) is the least common multiple of the
+set of integers
+c1! · c2! · ... · ca!
+where the c1,c2,... ,ca ∈{ 1, 2,3,... ,N } satisfy c1 + c2 +...+ ca = r.
+§5. Construction of the Connection
+In this §, we construct (for a given log elliptic curve Clog → Slog)a connection on
+the pair (E∗
+et, L|E∗
+et ), where “ ∗” is either † ,o r N (for some degree one line bundle N of
+torsion type on C), and L|E∗
+et is the pull-back to E∗
+et of a line bundle L on C. It is the
+elementary study of the properties of this connection that is the main purpose of the present
+paper. The main technical tool that allows us to construct this connection is properties
+(II) and (III) of Theorems 1.3, 4.3. We begin the discussion of this § by motivating our
+construction in the abstract algebraic case by ﬁrst examining the complex analogue of the
+abstract algebraic theory.
+36
+
+§5.1. Complex Analogue:
+Let E be an elliptic curve over C (the ﬁeld of complex numbers). In this discussion of
+the complex analogue, we shall regard E as a complex manifold (rather than an algebraic
+variety). Let us write OE (respectively, OER ) for the sheaf of complex analytic (respec-
+tively, real analytic) complex-valued functions onE. In both the complex and real analytic
+categories, we have exponential exact sequences:
+0 −→ 2πi · Z −→ O E
+exp
+−→ O ×
+E −→ 0
+0 −→ 2πi · Z −→ O ER
+exp
+−→ O ×
+ER −→ 0
+Since (as is well-known from analysis) H1(E, OER )= H2(E, OER )= H2(E, OE)=0 ,
+taking cohomology thus gives rise to the following exact sequences:
+0 −→ H1(E, 2πi · Z) −→ H1(E, OE) −→ H1(E, O×
+E )
+deg
+−→ H2(E, 2πi · Z)= Z −→ 0
+0 → H1(E, O×
+ER )
+deg
+−→ H2(E, 2πi · Z)= Z → 0
+In other words, (as is well-known) the isomorphism class of aholomorphic line bundle on E
+is not determined just by its degree (which is a topological invariant), but instead also has
+continuous holomorphic moduli (given byH
+1(E, OE) ̸= 0), while the isomorphism class of
+real analytic line bundle is completely determined by its degree. Thus, in particular, the
+complex analytic pair (E, L) (i.e., a “polarized elliptic curve”) has nontrivial moduli, and
+in fact, even if the moduli of E are held ﬁxed, L itself has nontrivial moduli. (Here, by
+“nontrivial moduli,” we mean that there exist continuous families of such objects which
+are not locally isomorphic to the trivial family.) On the other hand, (if we write LR
+def
+=
+L⊗ OE OER , then) the real analytic pair (ER, LR) has trivial moduli , i.e., continuous
+families of such objects are always locally isomorphic to the trivial family. Put another
+way,
+The real analytic pair (ER, LR) is a topological invariant of the po-
+larized elliptic curve (E, L).
+Note that once one admits that ER itself is a “topological invariant” of E (a fact which
+may be seen immediately by thinking of ER as H1(E, S1), where S1 ⊆ C× is the unit
+circle), (one checks easily that) the fact that LR is also a topological invariant follows
+essentially from the fact that H1(E, OER ) = 0. Note that if one thinks of E†
+et as the
+algebraic analogue of ER, then the analogue of this fact in the algebraic context is given
+37
+
+precisely by Theorem 1.3, (II). In the present §, we would like to exploit this fact to show
+that the pair (E†
+et, L|
+E†
+et
+) (or, more generally, (E∗
+et, L|E∗
+et )) has a natural structure ofcrystal
+(valued in the category of “polarized varieties,” or varieties equipped with an ample line
+bundle). Thus, in summary, the analogy that we wish to assert here is the following:
+topological invariance of (ER, LR) ←→ (E†
+et, L|
+E†
+et
+)i sa crystal
+§5.2. The Schematic Case:
+Now let us return to the abstract algebraic context. Let
+Clog → Slog
+be a log elliptic curve as in §1. Moreover, let us assume that we are given aﬁne log scheme
+Tlog, together with a morphism Slog → Tlog, such that S is T-ﬂat , and T is Z-ﬂat . Then
+we shall write
+Slog ×PD,∞
+T log Slog
+for the (ind-log scheme) given by taking theformal divided power envelope of the diagonal
+inside Slog ×T log Slog. Similarly, for n ≥ 0 an integer, we shall write
+Slog ×PD,n
+T log Slog
+for the n-th PD-inﬁnitesimal neighborhood of the diagonal in Slog ×PD,∞
+T log Slog. (That is to
+say, if the diagonal is deﬁned by a PD-ideal I, then Slog ×PD,n
+T log Slog is deﬁned by the n-th
+divided power of I.) In the following discussion, Tlog will be ﬁxed, so we will omit it, in
+order to simplify the notation.
+Let us write π1,π2 : Slog ×PD,∞ Slog → Slog for the left and right projections, respec-
+tively. Note that it follows immediately from the deﬁnition of the universal extension as
+a parameter space for line bundles equipped with a connection (cf. [Mzk1], Chapter III,
+§1), that E† → S is equipped with a structure of log crystal over S
+log. This structure of
+log crystal on E† → S gives rise to a natural isomorphism:
+Ξ
+E† : π∗
+1(E† ) ∼= π∗
+2(E† )
+between the two pull-backs of E† → S to Slog ×PD,∞ Slog. Moreover, this isomorphism
+satisﬁes the “cocycle condition” with respect to the various pull-backs to the triple product
+S
+log ×PD,∞ Slog ×PD,∞ Slog. In fact, by considering the universal case (i.e., the case
+38
+
+when S is ´etale over (M1,0)Z), if follows from the fact (M1,0)Z is regular of dimension 2
+(together with the fact that Slog ×PD,∞ Slog is S-ﬂat) that this isomorphism extends to
+an isomorphism between the compactiﬁcations
+Ξ
+E†
+C
+: π∗
+1(E†
+C) ∼= π∗
+2(E†
+C)
+(cf. [Mzk1], Chapter III, §4).
+Now suppose that Slog is log smoothover Tlog. Then it follows that Slog ×PD,∞ Slog is
+S-ﬂat, hence, in particular, Z-ﬂat, so it makes sense to speak of integral structures on ﬂat
+objects over Slog ×PD,∞ Slog.N o wi fN is a line bundle on C of torsion type(cf. Deﬁnition
+4.4), then there is a natural identiﬁcation
+CN ⊗ Q = E†
+C ⊗ Q
+(cf. the ﬁrst Remark following Proposition 3.4). That is to say, CN may be regarded
+as “another integral structure” on E†
+C. Similarly, the ´etale integral structure E†
+C,et (cf.
+Theorem 1.3), as well as the ´ etale integral structure CN
+et (cf. Theorem 4.3), may be
+regarded as “integral structures on E†
+C.”
+When we wish to discuss these integral structures on a similar footing,
+we shall use the notation “ ∗,” where ∗∈{ † , N}.
+Thus, if ∗= † , then E∗
+C = E†
+C, E∗
+C,et = E†
+C,et, while if ∗= N, then E∗
+C = CN , E∗
+C,et = CN
+et .
+Lemma 5.1. Let ∗∈{ † , N}.I f ∗= N, then let us suppose that the following condition
+is satisﬁed:
+(∗KS) The derivative
+Ω(M
+log
+1,0)Z/Z|Slog → ΩSlog/T log
+of the classifying morphism Slog → (M
+log
+1,0)Z of Clog → Slog (i.e., the
+“Kodaira-Spencer morphism” of the familyClog → Slog) factors through
+2 · ΩSlog/T log .
+Then the isomorphism Ξ
+E†
+C
+is compatible with the integral structures ofE∗
+C, E∗
+C,et.
+Remark. In fact, in the case of E∗
+C,et, the assumption ( ∗KS)m a yb eomitted. This is the
+topic of Corollary 8.3, to be proven in§8.1. The reader may check easily that there are no
+“vicious circles” in the reasoning.
+39
+
+Proof. First, we make the following elementary reductions:
+(1) By the elementary theory of integrable connections, it suﬃces to prove
+the result over Slog ×PD,2 Slog (as opposed to Slog ×PD,∞ Slog).
+(2) Away from inﬁnity ,b y translating by the unique torsion point α† ∈
+E† (S ⊗ Q) that lifts the torsion pointα deﬁned by N(−0E) (cf. Propo-
+sition 3.4), we can reduce to the case where N = OC(0C). Note that
+here, we use the fact that, at least in characteristic zero (i.e., after ten-
+soring with Q) the section α† of E† is necessarily horizontal (since it is
+a torsion point of E† ).
+(3) Near inﬁnity, we can reduce to theuniversal case, e.g., the case in which
+S is smooth of dimension 1 over a ring of the form Tlog =S p e c (Z[ζ])
+(where ζ is a root of unity, and Tlog is equipped with the trivial log
+structure), and the q-parameter of the family Clog → Slog deﬁnes a Z-
+ﬂat Cartier divisor D on S. Since such an S is regular of dimension 2,
+integral structures over S are determined by their restrictions to S\D.
+(4) By combining reduction steps (2) and (3), we thus reduce to the uni-
+versal case away from inﬁnity , i.e., where N = OE(0E); T =S p e c (Z);
+S is ´etale over (M1,0)Z; and S and T are equipped with the trivial log
+structure. In fact, we may also assume that the reduction of E → S
+modulo 2 is a family of ordinary elliptic curves.
+(5) By replacing the S of (4) by a suitable double cover, we may assume
+that there exists a 2-torsion point α ∈ E(S) such that the EN for
+N
+def
+= OE(α) coincides (as an integral structure) with E† . (Indeed, in
+the notation of 4.2, we choose anα such that the resulting “iχ/n”i s 1
+2 .)
+Thus, by translating as in (2) (to make up for the diﬀerence between the
+N
+def
+= OE(0E) of (4) and theN
+def
+= OE(α) of the present reduction step),
+we reduce to the case where∗= † . (Note that passing to a double cover
+as above means thateven in the universal case, we are, in eﬀect, working
+with the diﬀerentials “ 1
+2 · Ω(M
+log
+1,0)Z/Z” — i.e., not with the diﬀerentials
+Ω(M
+log
+1,0)Z/Z. This is what necessitates the assumption ( ∗KS) in the case
+∗ = N. Also note that the fact that it suﬃces to look only at the
+diﬀerentials(as opposed to Slog ×PD,∞ Slog in its entirety) follows from
+reduction step (1).)
+Thus, in summary,it suﬃces to prove the result in the case of∗= † , S ´etale over (M1,0)Z.
+In this case, however, the integral structure ofE†
+et is obtained near inﬁnity by adjoining
+the “T[r]” (cf. §1). Thus, it suﬃces to observe that the indeterminate “T” of the discussion
+of §1 is the same, whether pulled back by π1 or π2. This will follow as soon as we verify
+40
+
+that the canonical sectionκˆS of §1, as well as the invariant diﬀerentiald log(U) satisfy this
+property (i.e., are horizontal). But the horizontality ofκˆS follows from the fact that it may
+be characterized as the unique section which is agroup homomorphism. The horizontality
+of the diﬀerential d log(U) follows from that of the multiplicative coordinate U, which, in
+turn, follows from the well-known fact that automorphisms of group schemes of multicative
+type (i.e., such as G
+m) are rigid. This completes the proof of Lemma 5.1. ⃝
+Remark. Note that, at least in the case ∗ = † , by pulling back from ( M1,0)Z, one thus
+obtains a structure of log crystal on E∗
+C,et — valid even for bases S which are not log
+smooth over some Tlog (where T is Z-ﬂat) .
+Theorem 5.2. (The Universal Extension as a Polarized Log Crystal) Let ∗∈
+{† , N}, where (∗KS) is to be satisﬁed if ∗= N (cf. Lemma 5.1). Then the ´etale integral
+structure on E∗
+C (cf. Theorems 1.3, 4.3) deﬁnes an S-scheme E∗
+C,et → S, which is equipped
+with a natural structure of log crystal with respect to the morphism Slog → Tlog, i.e., we
+have a natural isomorphism:
+ΞE∗
+C,et
+: π∗
+1(E∗
+C,et) ∼= π∗
+2(E∗
+C,et)
+which satisﬁes the “cocycle condition” with respect to the various pull-backs to the triple
+product Slog ×PD,∞ Slog ×PD,∞ Slog. Moreover, if L is any line bundle on E∗
+C,et, and
+σ : S → E∗
+C,et is a horizontal section of E∗
+C,et, then restriction to σ deﬁnes a bijection
+between isomorphisms
+π∗
+1 L ∼= π∗
+2 L
+(of line bundles on π∗
+1(E∗
+C,et) ∼= π∗
+2(E∗
+C,et)) and isomorphisms
+π∗
+1 Lσ ∼= π∗
+2 Lσ
+(of line bundles on Slog ×PD,∞ Slog). Here, we write Lσ
+def
+= σ∗L. Moreover, the same
+assertion holds if we replace “×PD,∞ ”b y“ ×PD,n” for any (ﬁnite) integer n ≥ 1.
+Proof. It remains only to prove the asserted bijection between isomorphisms of line
+bundles. Clearly, this assertion is local on S (with respect to, say, the ´etale topology on
+S). Thus, we may assume thatS is aﬃne. In this case, the asserted bijection will follow as
+soon as we show that there exists at least one isomorphismπ∗
+1 L ∼= π∗
+2 L, and that any other
+isomorphism is obtained by multiplication by an invertible function onSlog ×PD,∞ Slog. But
+since deformations of such line bundles (respectively, deformations of such isomorphisms
+of line bundles) are parametrized by H
+1 (respectively, H0) of the structure sheaf OE∗
+C,et
+,
+we thus see that the desired assertions follow from properties (II), (III) of Theorems 1.3,
+4.3. ⃝
+Remark. If ∗= † (respectively, ∗= OC(α), for a torsion point α ∈ E(S)), then a natural
+choice for the horizontal sectionσ is the zero sectionof E†
+C,et (respectively, section ofE∗
+C,et
+41
+
+determined by the torsion lifting α† ∈ E†
+C,et(S ⊗ Q) as in Proposition 3.4). Thus, if one
+takes L to be an ample line bundle and ﬁxes a rigidiﬁcation
+Lσ ∼= OS
+(so Lσ gets a structure of log crystal arising from the trivial structure of log crystal on
+OS) then this rigidiﬁcation deﬁnes (by the bijection of Theorem 5.2) a structure of “log
+crystal valued in the category of polarized varieties”on the pair
+(E∗
+C,et, L|E∗
+C,et
+)
+(where, if one replaces E∗
+C,et by E∗
+et, then one may replace “varieties” by “smooth group
+schemes” (respectively, “E†
+et-torsors”) when ∗ = † (respectively, ∗ = N)). Put another
+way, this rigidiﬁcation deﬁnes a natural integrable logarithmic connection(relative to the
+morphism Slog → Tlog) on the pair (E∗
+C,et, L|E∗
+C,et
+). Finally, we remark that the construc-
+tion and demonstration of the elementary properties of this sort of connection constitute
+the main goal of the present paper.
+Remark. Note that although we used the ´etale integral structure onE∗
+C in order to deﬁne a
+connection on the pair (E∗
+C,et, L|E∗
+C,et
+), in fact, it is not diﬃcult to prove (cf. the discussion
+of “Griﬃths semi-transversality” in §8.1) that (except at the prime p =2 ) this connection
+arises from a connection on the pair (E∗
+C, L|E∗
+C
+) (i.e., equipped with the usual integral
+structure). We believe, however, that because the crucial properties (II), (III) of Theorems
+1.3, 4.3, do not hold for the usual integral structure, it is nonethelessmuch more natural to
+consider this connection in the context of the ´etale integral structure. Another reason for
+this is that the important “Schottky-Theoretic Hodge-Arakelov Comparison Isomorphism”
+of §6, as well as the related vanishing of the higherp-curvatures discussed in §7, only hold
+with respect to the ´etale integral structure.
+Theorem 5.3. (Functoriality) Suppose that the subscheme D ⊆ S (i.e., the pull-back
+of the divisor at inﬁnity of (
+M1,0)Z) forms a Z-ﬂat Cartier divisor on S. Suppose that
+˜Clog → Slog is another log elliptic curve, and that we are given an isogeny
+˜E → E
+(which implies that the subscheme “ ˜D” corresponding to ˜E also forms a Z-ﬂat Cartier
+divisor on S). Let ∗∈{ † , { ˜N, N} }, where (∗KS) is to be satisﬁed by both E and ˜E if
+∗= { ˜N, N} (cf. Lemma 5.1). Here, we assume that ˜N is a degree one torsion type line
+bundle on ˜C whose push-forward to C (via ˜E → E) is equal to N. In the following, when
+∗ = { ˜N, N},“ ∗” is to be interpreted as ˜N (respectively, N) when it appears on tilded
+(respectively, non-tilded) objects. Then by pushing forward line bundles with connection
+42
+
+on ˜E to E (cf. the functorial deﬁnition of the universal extension discussed in [Mzk1],
+Chapter III, §1; cf. also the discussion of [Mzk1], Chapter IV, §3), this isogeny deﬁnes
+morphisms
+˜E∗ → E∗
+which arecompatible with the ´etale integral structures, hence give rise to morphisms
+˜E∗
+et → E∗
+et. Finally, if L is a line bundle on E∗
+C (whose pull-back to ˜E∗
+C we denote by ˜L),
+and σ ∈ E∗
+C,et(S), ˜σ ∈ ˜E∗
+C,et(S) are compatible horizontal sections, then the bijections (for
+L, ˜L) between isomorphisms of line bundles appearing in Theorem 5.2 are compatible with
+the morphism ˜E∗
+et → E∗
+et.
+Proof. First, note that the push-forward morphism ˜E∗ → E∗ is clearly deﬁned over Q;
+to see that it is integral overZ, one ﬁrst reduces to the case ∗= † by translating as in the
+proof of Lemma 5.1. In the case ∗= † , it suﬃces to observe this integrality (at a prime p)
+for line bundles whose l-th power is trivial (where (l,p ) = 1). But this integrality follows
+immediately (by raising to the l-th power) for such line bundles from the corresponding
+integrality for the trivial line bundle. Moreover, this integrality for the trivial line bundle
+follows from the elementary fact that thetrace of a diﬀerentialon ˜E gives rise to anintegral
+diﬀerential on E. This shows that ˜E
+∗ → E∗ is integral.
+Since ˜E† → E† is clearly a group scheme homomorphism, it follows that it is com-
+patible with the respective canonical sections “ κˆS” (cf. the discussion of §1; the proof of
+Lemma 5.1). Thus, we conclude the desired integrality of ˜E†
+et → E†
+et. More generally, the
+integrality of ˜E∗
+et → E∗
+et follows by translating as in the proof of Lemma 5.1.
+The compatibility with the bijections between isomorphisms of line bundles appearing
+in Theorem 5.2 then follows immediately from the facts that: (i) ˜E∗
+et → E∗
+et maps ˜σ to σ;
+(ii) because of our assumption onD, it suﬃces to carry out the veriﬁcation of the asserted
+compatiblity on S\D = S\ ˜D (over whichE∗
+et, ˜E∗
+et coincide with E∗
+C,et, ˜E∗
+C,et, respectively).
+This completes the proof. ⃝
+Remark. Note in particular that Theorem 5.3 applies to the case where ˜E → E is given by
+an automorphism of E, such as the automorphism deﬁned by multiplication by −1 (which
+we denote by [−1]). Thus, if the line bundles N, L, together with the rigidiﬁcation of L
+(cf. the Remark following Theorem 5.2), are ﬁxed by [ −1] (i.e., are symmetric), then we
+get a natural action of ±1 on the resulting log crystal (structure on) (E∗
+C,et, L|E∗
+C,et
+).
+§6. The Schottky-Theoretic Hodge-Arakelov Comparison Isomorphism
+In this §, we prove a simpliﬁed version of the “Hodge-Arakelov Comparison Isomor-
+phism” of [Mzk1], in a neighborhood of inﬁnity. We then apply this Schottky-Theoretic
+43
+
+Comparison Isomorphism to prove various technical results concerning this object, e.g.,
+that its p-curvature is zero. This property is particularly remarkable in that typically,
+for MF∇ -objects as in [Falt], §2, zero p-curvature is related to vanishing of the Kodaira-
+Spencer morphism(cf. [Katz1,2]). On the other hand, in §8, we shall see that the analogue
+of the Kodaira-Spencer morphism in the present context does not vanish. Thus, we see
+(even without the aid of a Frobenius action) that the polarized varieties with connection
+constructed in the present paper possess properties that areintrinsically diﬀerentfrom the
+MF
+∇ -objects of [Falt], §2. We will study properties related to the p-curvature in more
+detail in §7. In addition, (in the present §) we compute the monodromy of the object with
+connection under consideration in a neighborhood of inﬁnity.
+In this §, we use the notation of §4.2. The ﬁrst goal of our discussion is to describe
+the connection constructed in Theorem 5.2 explicitly using U, θm. To do this, let us ﬁrst
+observe that the canonical section “ κ” (of [Mzk1], Chapter III, Theorem 2.1) deﬁnes a
+natural morphism
+κet
+C∞
+ˆS
+: C∞
+ˆS → (E†
+C,et)ˆS
+(cf. [Mzk1], Chapter III, Theorem 5.6, as well as the section “κˆS” and Theorem 1.3, (IV),
+of §1 of the present paper). If we compose this morphism with the natural projection
+˜C∞
+ˆS
+→ C∞
+ˆS
+, then we obtain a morphism
+κet
+˜C∞
+ˆS
+: ˜C∞
+ˆS → (E†
+C,et)ˆS
+Note that κet
+˜C∞
+ˆS
+is horizontal with respect to the natural connection on E†
+C,et (cf. Theorem
+5.2) and the connection on ˜C∞
+ˆS
+arising from the description of ˜C∞
+ˆS
+as the pull-back to ˆS
+of the “N´eron model” of (Gm)O[[q]][q− 1] over O[[q]].
+In the following discussion, let us set:
+∗
+def
+= Lχ
+Note that if we tensor with Q, then (E†
+C,et)ˆS ⊗ Q =( E∗
+C,et)ˆS ⊗ Q. In particular, over Q,
+we may regard κet
+˜C∞
+ˆS
+as a morphism to (E∗
+C,et)ˆS. Also, over Q, the zero section of (E†
+C,et)ˆS
+deﬁnes a horizontal section ϵ ∈ (E∗
+C,et)ˆS( ˆS ⊗ Q). Now we have the following:
+Theorem 6.1. (Explicit Description of the Connection) Denote by ∇alg the con-
+nection on( ˜C∞
+ˆS
+, Lχ
+˜C∞
+ˆS
+)⊗Q obtained by pulling back viaκet
+˜C∞
+ˆS
+the connection on(E∗
+C,et, Lχ
+E∗
+C,et
+)
+44
+
+determined by some rigidiﬁcation (cf. Theorem 5.2) at ϵ. On the other hand, denote
+by ∇ ∞ the connection on ( ˜C∞
+ˆS
+, Lχ
+˜C∞
+ˆS
+) obtained by declaring the section ˜Uiχ · θm to be
+horizontal. Then, if we think of ∇alg and ∇ ∞ as logarithmic connections on the object
+Γ(C∞
+ˆS
+, Lχ
+C∞
+ˆS
+) ⊗ Q over Slog, then both ∇alg and ∇ ∞ are integral (i.e., deﬁned without
+tensoring with Q), and, moreover, we have:
+∇alg = ∇ ∞ − ω∞
+where ω∞
+def
+= dlog(F)
+dq · dq, and F ∈ A× depends on the rigidiﬁcation chosen. In particular,
+these two connections agree up to ascalar diﬀerential form.
+Proof. Indeed, the point here (cf. the proof of Theorem 5.2) is that the diﬀerence between
+the two connections on the pair ( ˜C∞
+ˆS
+, Lχ
+˜C∞
+ˆS
+) ⊗ Q naturally forms a section
+∈ Γ( ˜C∞
+ˆS , O ˜C∞
+ˆS
+⊗ Q) · dlog(q)= AQ · dlog(q)
+(where AQ
+def
+= A⊗Q), i.e., this diﬀerence is aconstant (relative to the morphism ˜C∞
+ˆS
+→ ˆS)
+— cf. the application of Theorem 1.3, (III), in the proof of Theorem 5.2. (Note that
+Γ( ˜C∞
+ˆS
+, O ˜C∞
+ˆS
+⊗ Q)= AQ follows, for instance, from the fact that the special ﬁber of
+˜C∞
+ˆS
+→ ˆS is an inﬁnite chain of P1’s.) Thus, it suﬃces to show that the diﬀerence between
+the connections induced by ∇alg and ∇ ∞ on LC |ϵ = L˜C∞
+ˆS
+|ϵ is as asserted. But note
+that ∇ ∞ is integral by deﬁnition , and, moreover, has the property that its restriction to
+LC |ϵ is induced by a trivialization of LC |ϵ. On the other hand, ∇alg is determined by a
+trivialization of LC |ϵ ⊗ Q. Thus, since these two trivialization diﬀer by a factor F ∈ A×
+Q,
+∇alg and ∇ ∞ diﬀer by the scalar diﬀerential formω∞
+def
+= dlog(F)
+dq ·dq. Finally, observe that
+since A×
+Q = A× ·K× (where K is the ﬁnite extension of Q which is the quotient ﬁeld of the
+ring O appearing in the deﬁnition of A — cf. §4.1), we may take F to be in A× without
+aﬀecting ω∞ . This completes the proof. ⃝
+Next, let us write
+VGm
+def
+= Γ((Gm)ˆS, O(Gm)ˆS
+)
+for the topological A-module of regular functions on (Gm)ˆS. Thus, VGm is the free topo-
+logical A-module on the generators
+Uk
+45
+
+for k ∈ Z. On the other hand, we also have
+(V∗
+Lχ )ˆS
+def
+= Γ((E∗
+C,et)ˆS, Lχ
+(E∗
+C,et)ˆS
+)
+(cf. the notation “Γ( C[η]
+et , Lχ |C[η ]
+et
+)” used in the discussion at the end of §4.2).
+In the following discussion, we would like to consider the restriction morphism
+Ξ: ( V∗
+Lχ )ˆS →V Gm
+deﬁned by: (i) ﬁrst, pulling back sections of Lχ
+(E†
+C,et)ˆS
+to ˜C∞
+ˆS
+via κet
+˜C∞
+ˆS
+: ˜C∞
+ˆS
+→ (E†
+C,et)ˆS;
+(ii) applying the trivialization “ ˜Uiχ ·θm” discussed above to obtain “usual functions” (i.e.,
+as opposed to sections of a line bundle) on ˜C∞
+ˆS
+; (iii) observing (cf. the discussion of
+§4.1) that the resulting functions descend from ˜C∞
+ˆS
+to C∞
+ˆS
+(i.e., may be expressed using
+integral powers of U, without using ˜U); and, ﬁnally, (iv) restricting functions over C∞
+ˆS
+to EˆS =( Gm)ˆS. (Observe that, although a priori, Ξ is only deﬁned over Q, Ξ is, in
+fact, integral (cf. the discussion of §4.1, 4.2), as the notation suggests.) Note that Ξ is
+a topological A-morphism of topological A-modules which is, moreover, horizontal up to a
+scalar diﬀerential (cf. Theorem 6.1) with respect to the natural logarithmic connections
+(over Slog) on both sides. Another way to think of the fact that Ξ is “horizontal up to
+a scalar diﬀerential” is to say that Ξ is projectively horizontal, i.e., compatible with the
+natural projective connections on both sides. (We leave the routine formulation of these
+various “projective notions” to the reader.)
+In the following, in order to analyze Ξ in more detail, we would like to introduce a
+natural basis(i.e., the “ζCG
+r ” — cf. the discussion at the end of §4.2) of the domain (V∗
+Lχ )ˆS
+of Ξ (following the theory of [Mzk1], Chapter V, §4). In order to discuss this basis, we
+must ﬁrst review the relevant notation of [Mzk1], Chapter V, §4. For integers r ≥ 0, let
+λr
+def
+=
+[r
+2 + iχ
+n
+]
+(i.e., the greatest integer ≤ the number in brackets), and
+Fr(Z)
+def
+= {0 − λr,1 − λr,... ,r − 1 − λr }⊆ Z
+Thus, Fr+1(Z) ⊇ Fr(Z) is obtained from Fr(Z) by appending one more integer “ k[r]”
+directly to the left/right of Fr(Z) (where “left/right” depends only on the parity ofr). In
+particular, the map Z≥0 → Z given by
+r ↦→ k[r]
+46
+
+is a bijection. Also, let us write
+Ψ(k)
+def
+= 1
+2k2 + iχ
+n k
+(cf. the discussion at the beginning of [Mzk1], Chapter VIII, §3).
+Now we are ready to discuss the basis referred to above. This (topological A-) basis
+of (V∗
+Lχ )ˆS is given by the “congruence canonical Schottky-Weierstrass zeta functions”:
+ζCG
+0 ,ζCG
+1 ,... ,ζCG
+r ,... ∈ (V∗
+Lχ )ˆS
+which are uniquely determined by their images under Ξ:
+Ξ(ζCG
+r )=
+∑
+k∈Z
+(k + λr
+r
+)
+· χM(ket) · q
+1
+2 k2+
+iχ
+n k · Uk
+(cf. [Mzk1], Chapter V, Theorem 4.8). Moreover, ζCG
+r ≡ 0 modulo qΨ(k[r]). Thus, we
+obtain sections
+˜ζCG
+r
+def
+= q−Ψ(k[r]) · ζCG
+r ∈ q−∞ · (V∗
+Lχ )ˆS
+In particular, the ˜ζCG
+r deﬁne a new integral structure on (V∗
+Lχ )ˆS, which we denote by
+(VGP
+Lχ )ˆS =Γ GP((E†
+C,et)ˆS, L
+(E†
+C,et)ˆS
+)
+(where the “GP” stands for “Gaussian poles,” i.e., the poles arising from the q−Ψ(k[r]) —
+cf. [Mzk1], Chapter VI, Theorem 4.1, and the Remarks following that theorem). Thus, in
+particular, the ˜ζCG
+r form a topological A-basis for (VGP
+Lχ )ˆS, and Ξ factors through ( VGP
+Lχ )ˆS
+to form a morphism
+ΞGP :( VGP
+Lχ )ˆS →V Gm
+Finally, we recall from the theory of [Mzk1] (Chapter V, §4, and Chapter VIII, §3), that
+the ΞGP(˜ζCG
+r ) form a basis of VGm . Indeed, this follows by observing that, modulo q
+1
+n ,
+ΞGP(˜ζCG
+r ) ≡ (∈ µn) · Uk[r] +...
+where “. . .” iseither (depending on the parity of r) zero or a term of the form ( ∈ µn) ·
+Uk[r+1] — i.e., modulo q
+1
+n , it is clear that the ΞGP(˜ζCG
+r ) form a basis ofVGm . In particular,
+47
+
+since (by deﬁnition) the ˜ζCG
+r form a basis of ( VGP
+Lχ )ˆS, we thus obtain that Ξ GP is an
+isomorphism.
+Thus, in summary, we obtain the following “Hodge-Arakelov-type Comparison Iso-
+morphism” (i.e., a comparison isomorphism reminiscent of the main theorem of [Mzk1]),
+except in the present “Schottky-theoretic context” (i.e., the context of the Schottky uni-
+formization “ E = G
+m/qZ”):
+Theorem 6.2. (Schottky-Theoretic Hodge-Arakelov Comparison Isomorphism)
+Let O be a Zariski localization of the ring of integers of a ﬁnite extension of Q; n
+def
+=2 m;
+A
+def
+= O[[q
+1
+n ]]; S
+def
+=S p e c (A); ˆS
+def
+= Spf( A)
+(where q is an indeterminate, and we regard A as equipped with the q-adic topology). Let
+E → S be the degenerating elliptic curve whose Tate parameter is given by q, and
+C → S its natural semi-stable compactiﬁcation. Write LC
+def
+= OC(0C) for the line bundle
+on C deﬁned by the zero section, and assume that we are given a character
+χL ∈ Hom(Zet × µn, µn)
+(to be thought of as a “twist” applied to LC). Set ∗
+def
+= Lχ, and equip the extension of the
+universal extension E† → E over C with the ´etale integral structure for the Hodge
+torsor corresponding to Lχ (cf. Theorem 5.2) to form E∗
+C,et → S.L e t
+VGm
+def
+= Γ((Gm)ˆS, O(Gm)ˆS
+); ( V∗
+Lχ )ˆS
+def
+= Γ((E∗
+C,et)ˆS, Lχ
+C |(E∗
+C,et)ˆS
+)
+Then pull-back via the canonical section κet
+C∞
+ˆS
+: C∞
+ˆS
+→ (E†
+C,et)ˆS (cf. [Mzk1], Chapter
+III, Theorem 5.6, as well as the section “κˆS” and Theorem 1.3, (IV), of§1 of the present
+paper), together with the natural trivialization of Lχ
+C over the Schottky uniformization of
+˜C (where ˜C → C is the ﬁnite covering obtained by extracting an n-th root of the standard
+multiplicative coordinateU on the Schottky uniformization ofC, and ˜C has “q-parameter”
+equal to q
+1
+n ), deﬁnes a natural restriction morphism
+Ξ: ( V∗
+Lχ )ˆS →V Gm
+which is projectively horizontal. Here, by “horizontal,” we mean with respect to the
+logarithmic connection (over Slog) on the left-hand side deﬁned by Theorem 5.2 and the
+logarithmic connection (over Slog) on the right-hand side deﬁned by the fact that Gm is
+deﬁned over O. By “projectively,” we mean up to the scalar diﬀerentialω∞ (cf. Theorem
+6.1). If one equips the domain (V∗
+Lχ )ˆS of Ξ with the integral structure obtained by allowing
+“Gaussian poles,” then Ξ deﬁnes a morphism
+ΞGP :( VGP
+Lχ )ˆS →V Gm
+48
+
+which is an isomorphism over A.
+Proof. All of the assertions follow from the above discussion. ⃝
+Remark. In some sense, the comparison isomorphism of Theorem 6.2 may be regarded as
+the prototype of the comparison isomorphism of [Mzk1] (cf. the discussion in the Introduc-
+tion).
+Remark. One superﬁcial diﬀerence between the comparison isomorphisms of Theorem 6.2
+and [Mzk1] is that unlike the case with the main result of [Mzk1], in the present context,
+the comparison isomorphism holds even without twisting (i.e., even for trivial χ
+L, which
+corresponds to taking the “η” of [Mzk1] to be the origin 0E). This has to do with the fact
+that since here we restrict to Gm, rather than to a ﬁnite set of torsion points, the case
+treated here corresponds (from the point of view of [Mzk1]) to the case of twisting by a
+sort of “generic (hence nontrivial) η ∈ G
+m.”
+Remark. Another way to make an isomorphism out of Ξ (i.e., instead of introducing “Gaus-
+sian poles” to form ΞGP) is to make use of thetheta convolution— i.e., convolution (relative
+to Fourier expansions on Gm) with the “theta function” ζCG
+0 — cf. the “theta-convoluted
+comparison isomorphism” of [Mzk2], Theorem 10.1. Since the deﬁnitions and proofs of
+the analogue in the present “Schottky-theoretic context” (i.e., as opposed to the “discrete
+context” of [Mzk1,2]) of [Mzk2], Theorem 10.1, are entirely similar (only technically much
+simpler!) to those of [Mzk2], we leave their precise formulation (in the present “Schottky-
+theoretic context”) to the reader.
+Corollary 6.3. (Description of Monodromy) The monodromy at∞ of ((V
+∗
+Lχ )ˆS, ∇(V∗
+Lχ )ˆS
+)
+(i.e., (V∗
+Lχ )ˆS equipped with its natural connection) in the logarithmic tangent direction
+∂
+∂log(q) is an operator which may be represented as an inﬁnite diagonal matrix whose diag-
+onal entries are given by the Ψ(k[r]), for r ≥ 0.
+Proof. Clearly, VGm has zero monodromy (since it arises from an object deﬁned over
+O). Thus, since ΞGP is an isomorphism, we obtain that (VGP
+Lχ )ˆS also has zero monodromy.
+(Note that “projectively” may be ignored as far as monodromy computations are concerned
+since the diﬀerential ω
+∞ of Theorem 6.1 has zero monodromy.) On the other hand, since
+the ˜ζCG
+r form a basis of (VGP
+Lχ )ˆS, it thus follows that it suﬃces to compute the monodromy
+using the basis ζCG
+r = qΨ(k[r]) · ˜ζCG
+r of (V∗
+Lχ )ˆS. Since ∂
+∂log(q) (qΨ(k[r]))=Ψ ( k[r]) · qΨ(k[r]),
+Corollary 6.3 follows immediately. ⃝
+Corollary 6.4. (Vanishing of p-Curvature) The p-curvature (cf. [Katz1], §5,6, for
+a discussion of the basic theory of thep-curvature) of ((V∗
+Lχ )ˆS, ∇(V∗
+Lχ )ˆS
+) ⊗ Fp is identically
+zero.
+49
+
+Proof. Since inverting q does not aﬀect the issue of whether or not the p-curvature
+vanishes identically, it suﬃces to prove the result for ( VGP
+Lχ )ˆS. Moreover, since Ξ GP is a
+projectively horizontal isomorphism, and the diﬀerential ω∞ is the logarithmic exterior
+derivative of a regular function F ∈ A×, it suﬃces to prove the result for VGm . But this is
+clear, since VGm admits a horizontal basis (given by the Uk, for k ∈ Z). ⃝
+Remark. As remarked earlier, the property of Corollary 6.4 is particularly remarkable in
+that typically, for MF∇ -objects as in [Falt], §2, zero p-curvature is related to vanishing of
+the Kodaira-Spencer morphism(cf. [Katz2]). In the present situation, however, (cf. §8) the
+corresponding Kodaira-Spencer morphismdoes not vanish. For a substantial generalization
+of Corollary 6.4, we refer the reader to §7 below.
+§7. Crystalline Theta Expansions
+In this §, we generalize Corollary 6.4 to show that not only the p-curvature, but
+also the “higher p-curvatures”(cf. [Mzk3], Chapter II, §2.1) of the object considered in
+Corollary 6.4 vanish identically. This property will be used in §8 to complete the proof of
+Lemma 4.2. Moreover, in the present §, we shall observe that the results that we obtain
+are suﬃcient to give a sort of crystalline analogue of the well-known Fourier expansion
+“ ∑q
+1
+2 k2
+·Uk” of a theta functionin a formal neighborhood of the divisor at inﬁnity of the
+moduli stack of log elliptic curves which is valid in a formal neighborhood of an (essentially)
+arbitrary point (cf. Corollary 7.6 below for details) of this moduli stack (i.e., not just the
+point at inﬁnity). This construction is of interest in that, by contrast to the complex case,
+where the well-known Fourier expansion “∑q
+1
+2 k2
+· Uk” is known to be valid not just near
+inﬁnity, but over the entire upper half-plane, up till now (to the knowledge of the author)
+no analogue of this expansion has been givenwhich is valid in a formal neighborhood of an
+arbitrary point of the moduli stack of elliptic curves.
+§7.1. Generalities on Higher p-Curvatures:
+In the following, we review what is necessary of the theory of higher p-curvatures
+developed in [Mzk3], Chapter II, §2.1. In particular, it is not necessary (for the purposes
+of this paper) for the reader to have any knowledge of the theory of [Mzk3].
+Let p be a prime number. Let A be a Zp-ﬂat complete topological ring equipped with
+the p-adic topology(i.e., the topology deﬁned by powers of the idealp·A), and k
+def
+= A⊗Fp.
+Also, let us suppose that we are given a p-adic formal scheme S which is formally smooth
+of relative dimension 1 over A.
+In the following discussion, we would like to develop the theory of pn-curvatures of
+certain types of sheaves equipped with a connection on S. First, let us ﬁx an integer
+50
+
+n ≥ 1. Let EZ/pn Z be a locally free (though not necessarily of ﬁnite rank!) quasi-coherent
+sheaf of OSZ/pnZ -modules (where SZ/pnZ
+def
+= S ⊗ Z/pnZ). Assume, moreover, that EZ/pn Z
+is equipped with a connection ∇ (relative to the morphism S → Spf(A)). Then the p-
+curvature of (EFp , ∇) (where EFp
+def
+= EZ/pn Z ⊗ Fp) is a section
+P1 ∈ Γ(S,ΩF
+SFp
+⊗OS EndOS (EFp ))
+(cf. [Katz1], §5,6, for a discussion of the basic theory of the p-curvature). Here and in the
+following discussion, all diﬀerentials areover A, and we denote the result of base-changing
+objects on SFp via the j-th power of the Frobenius morphism ΦS : SFp → SFp by means
+of a superscript Fj. Also, let us write O[0]
+def
+= OSFp , and (for any integer m ≥ 0)
+O[m] ⊆O [0]
+for the k-subalgebra of O[0] generated by the image of the pm-th power map on O[0].
+One basic property of the p-curvature is the following:
+This section P1 ≡ 0 if and only if the natural morphism
+E∇
+Fp ⊗O[1] O[0] →E
+(where E∇
+Fp ⊆E Fp is the O[1]-submodule of horizontal sections) is an
+isomorphism.
+Thus, if P1 ≡ 0, the restriction ∇| EFp of the connection ∇ to EFp is uniquely determined
+by the property that it vanishes on E∇
+Fp .
+In particular, the pj-curvature has been deﬁned for j = 1. Let us write E[0]
+def
+= EFp ;
+E[1]
+def
+= E∇
+Fp ⊆E [0]. Denote the connection induced by ∇ on E[0] by ∇[0]. Next, assume
+that:
+We are given a positive integer m ≤ n such that the pm′
+-curvature has
+been deﬁned and, moreover, vanishes identically for all m′ <m .
+Suppose, moreover, that under these circumstances:
+(1) For all 1≤ m′ <m , we have deﬁned an O[m′]-submodule E[m′] ⊆E [0].
+(2) For all 0≤ m′ <m − 1, we have constructed a connection∇[m′] on the
+O[m′]-module E[m′] whose p-curvature is zero.
+(3) For all 1 ≤ m′ <m , E[m′]= E[m′ − 1]∇[m′ −1].
+51
+
+(4) For all 1 ≤ m′ <m , E[m′] is generated Zariski locally on SZ/pnZ by
+sections that lift to sections of EZ/pn Z which are horizontal modulo pm′
+.
+Observe that:
+(∗LF) Since O[0] is ﬁnite and ﬂat over O[m′], and EZ/pn Z is locally free, prop-
+erty (3) above implies that, as an O[m′]-module, E[m′] enjoys the prop-
+erty that some direct sum of a ﬁnite number of copies of E[m′]i s locally
+free.
+Then we would like to construct the pm-curvature of EZ/pn Z, as follows.
+First, we would like to construct a connection ∇[m − 1] on E[m − 1]. If sFp is a local
+section of E[m − 1], then let sZ/pn Z be a lifting ofsFp to EZ/pnZ which is horizontal modulo
+pm−1 (cf. (4) above). Then ∇(sZ/pn Z) is divisible by pm−1, so it makes sense to deﬁne
+∇[m − 1](sFp )
+def
+= Cm−1(p−(m−1) ·∇ (sZ/pn Z) modulo p)
+(where Cm−1 : E[0] ⊗O[0] ΩSFp →E [m − 1] ⊗O[m−1] ΩFm− 1
+SFp
+is the (m − 1)-th power of the
+Cartier operator (cf. [Katz1], Theorem 7.2, for basic properties of the Cartier operator);
+note that this Cartier operator is deﬁned precisely because — cf. (2) above — the p-
+curvature of ∇[m′] ≡ 0 for m′ <m − 1). It is an easy exercise using the observation
+(∗LF), property (4) above, and Lemma 7.1 below to show that this deﬁnition of ∇[m −
+1](sFp )i s independent of the choice of lifting sZ/pn Z. Moreover, it follows immediately
+from the deﬁnition of ∇[m − 1](sFp ) that this correspondencesFp ↦→∇ [m − 1](sFp ) deﬁnes
+a connection ∇[m − 1] on the O[m − 1]-module E[m − 1].
+We then deﬁne thepm-curvature of EZ/pnZ to be thep-curvature of(E[m−1], ∇[m−1]).
+Moreover, one checks easily (using the observation (∗LF), together with Lemma 7.2 below
+for property (4)) that when this pm-curvature is identically zero, (if we setE[m]
+def
+= E[m −
+1]∇[m−1], then) the above properties (1), ..., (4) are satisﬁed when “ m” is replaced by
+m + 1. Thus, by induction, we obtain a deﬁnition of the pm-curvature for all m ≤ n.
+The following lemmas are well-known:
+Lemma 7.1. Let f be a local section of OSZ/pnZ which satisﬁes df ≡ 0 modulo pn−1.
+Suppose that t is a local parameter onS (relative to A). Then f may be written as a power
+series in terms of the form
+c · ta
+where c ∈ A, a ∈ Z≥0, and c · a ≡ 0 modulo pn−1. In particular, we have Cn(p−(n−1) ·
+df(modulo p)) = 0 (where Cn is the n-th power of the Cartier operator).
+Proof. The ﬁrst assertion is clear. Moreover, it implies that θ
+def
+= p−(n−1) · df (modulo p)
+is a power series in terms of the form
+52
+
+(p−(n−1) · c · a) · ta−1dt
+But Cn is nonzero only on those terms for which a is divisible by pn; moreover, for such
+terms, the coeﬃcient ( p−(n−1) · c · a) ≡ 0 (modulo p). This completes the proof. ⃝
+Lemma 7.2. Let θ be a local section of the sheaf of diﬀerentials ΩSFp which satisﬁes
+Cn(θ)=0 . Then there exists a local section f of OSZ/pnZ such that df = pn−1 · θ.
+Proof. Suppose that t is a local parameter of S over A. Let K
+def
+= Ker(Cn); write I for
+the image modulo p of p−(n−1) · d on those sections of OSZ/pnZ whose exterior derivative
+is 0 modulo pn−1. Then both K and I form locally free O[n]-submodules of O[0] · dt.I t
+suﬃces to show that these two submodules coincide. But observe that (by faithfully ﬂat
+descent) this may be shown after passing to power series int. Thus, it suﬃces to show the
+existence of a power series f such that df = p
+n−1 · θ.
+Observe that θmay be written as a power series in terms of the form
+c · ta−1 · dt
+where c ∈ A, a ∈ Z≥1\(pn · Z≥1). Thus, if we take f to be an appropriate power series in
+terms of the form
+(pn−1 · a−1) · c · ta
+(where we observe that (pn−1 ·a−1) ∈ Zp), we obtain a solution to the equationdf = pn−1 ·θ,
+as desired. ⃝
+Remark. Note that if, for instance, 1 <m ≤ n, then it does not make sense to state that
+“the pm-curvature of EZ/pnZ is zero” in the absence of any hypothesis on thep-curvature of
+EZ/pn Z. It does, however, make sense to state that “the pj-curvature of EZ/pn Z is zero for
+all j ≤ m.” That is to say, this statement is to be interpreted as meaning that, ﬁrst of all,
+the p-curvature of EZ/pn Z is zero, which (by the above discussion) allows us to deﬁne the
+p2-curvature; then that thep2-curvature is zero, which allows us to deﬁne thep3-curvature,
+etc. (up to pm).
+We summarize the above discussion as follows:
+Theorem 7.3. Let A be a Zp-ﬂat complete topological ring equipped with the p-adic
+topology; k
+def
+= A ⊗ Fp; and S be a p-adic formal scheme which is formally smooth of
+relative dimension 1 over A.L e t EZ/pn Z be a locally free (though not necessarily of ﬁnite
+53
+
+rank!) quasi-coherent sheaf of OSZ/pnZ -modules (for some integer n ≥ 1), equipped with a
+connection ∇ over A. Then the pj-curvature of (EZ/pn Z, ∇) is ≡ 0 for all j ≤ n if and
+only if EZ/pn Z is generated Zariski locally on SZ/pn Z by horizontal sections.
+Remark. Note, in particular, that the various pm-curvatures (when they are deﬁned) are
+sections of locally free sheaves onSFp . Thus, if they vanish over, say, a formal neighborhood
+of some point of SFp , then it follows that they vanish overthe schematic closure in SFp of
+that formal neighborhood.
+Corollary 7.4. Let S and A be as in Theorem 7.3. Let E be a quasi-coherent sheaf of
+OS-modules such that EZ/pn Z is locally free (not necessarily of ﬁnite rank!) over SZ/pn Z
+for all integers n ≥ 1. Suppose, moreover, that E is equipped with a connection ∇ over
+A whose pn-curvature vanishes for all n ≥ 1.L e t σ ∈ S(A) be an A-valued point of S.
+Write Sσ for the formal completion of S along σ. Then there is a unique isomorphism of
+OSσ -modules
+(E|σ) ˆ⊗AOSσ
+∼= E|Sσ
+(where “ ˆ⊗” denotes the topological tensor product) which (i) is equal to the identity when
+restricted to σ; and (ii) maps E|σ on the left-hand side into the set of horizontal sections
+on the right-hand side.
+Proof. Since E is topologically locally free (with respect to the p-adic topology), and the
+assertion in question is compatible with Zariski localization on Spec( A), we may assume
+that E|σ is a topologically freeA-module. To prove the existence of a unique isomorphism
+as asserted, it suﬃces to show that for any sectionϵ of E|σ, there exists a unique horizontal
+section ˜ϵ of E|Sσ lifting ϵ. Write I for the sheaf of ideals deﬁning the subobject σ inside
+Sσ. By Theorem 7.3, it follows that for any n ≥ 1, there exists a section ϵn of Sσ which
+lifts ϵ and whose reduction modulo pn is horizontal. Moreover, by the “description of ‘ f’
+as a power series” given in Lemma 7.1, it follows that as n →∞ , the ϵn converge in the
+(Ip,p)-adic topology to a unique horizontal section ϵ of E|Sσ , as desired. ⃝
+Corollary 7.5. Let A be aZ-ﬂat commutative ring, and S a smooth A-scheme of relative
+dimension 1 over A.L e tE be a quasi-coherent sheaf of locally free (not necessarily of ﬁnite
+rank!) OS-modules. Suppose, moreover, that E is equipped with a connection ∇ over A
+such that for every prime number p, the pn-curvature of (EZ/pn Z, ∇ Z/pn Z) vanishes for all
+n ≥ 1.L e tσ ∈ S(A) be an A-valued point of S. Write Sσ for the formal completion of S
+along σ. Then there is a unique isomorphism of OSσ -modules
+(E|σ) ˆ⊗AOSσ
+∼= E|Sσ
+(where “ ˆ⊗” denotes the topological tensor product) which (i) is equal to the identity when
+restricted to σ; and (ii) maps E|σ on the left-hand side into the set of horizontal sections
+on the right-hand side.
+54
+
+Proof. Write SPD
+σ for the (completed) divided power envelope of σ inside S. Thus, if t
+is a local parameter for S over A at σ (i.e., such that t =0o n σ), then OSPD
+σ consists of
+power series of the form
+∑
+n≥0
+cn · tn
+n!
+(where cn ∈ A). In particular, it follows from the elementary theory of integrable connec-
+tions that we get a unique isomorphism
+(E|σ) ˆ⊗AOSPD
+σ
+∼= E|SPD
+σ
+satisfying (i), (ii). To check that this isomorphism is, in fact, deﬁned overOSσ (as asserted
+in Corollary 7.5) — i.e., to check that the denominators do not, in fact, appear — it suﬃces
+to see that this holds after S and A are replaced by their p-adic completions. But then
+the assertion to be checked is precisely the content of Corollary 7.4. ⃝
+§7.2. Application to Theta Expansions:
+Now we apply the theory of the above discussion to the objects considered in Corollary
+6.4.
+Corollary 7.6. (Crystalline Theta Expansions) Let A be a Z-ﬂat commutative
+ring, and S a smooth A-scheme of relative dimension 1 over A.L e t f : E → S be an
+elliptic curve over S, equipped with anample line bundle L of the form O
+E(η), where
+η ∈ E(S) is a torsion point. Also, let us assume that for every prime number p, the
+generic member of this family of elliptic curves in each irreducible component of SFp is
+ordinary (i.e., has nonzero Hasse invariant), and that the condition(∗KS) of Lemma 5.1
+is satisﬁed for T
+def
+=S p e c (A) (equipped with the trivial log structure). Set ∗
+def
+= L, and
+write ∇ VL for the connection on
+VL
+def
+= f∗(LE∗
+et )
+determined by Theorem 5.2 for some choice of a rigidiﬁcation of L at the origin 0E of E.
+Then VL is locally free on S, and the pn-curvature of the pair (VL, ∇ VL ) is ≡ 0 for all
+integers n ≥ 1.
+Let σ ∈ S(A) be an A-valued point of S. Write Sσ for the formal completion of S
+along σ. Then there is a unique isomorphism of OSσ -modules
+(VL|σ) ˆ⊗AOSσ
+∼= VL|Sσ
+55
+
+(where “ ˆ⊗” denotes the topological tensor product) which (i) is equal to the identity when
+restricted to σ; and (ii) maps VL|σ on the left-hand side into the set of horizontal sections
+on the right-hand side.
+In particular, the expansion of a section of F1(VL)|Sσ = f∗(L)|Sσ as a topological
+OSσ -linear combination of elements of some basis of VL|σ may be regarded as a sort of
+“crystalline analogue” of the usual expansion “ ∑q
+1
+2 k2
+· Uk” of a theta function (cf. the
+Remark below for more details).
+Remark. It is natural to regard the expansion discussed at the end of the statement of
+Corollary 7.6 as a “crystalline analogue” of the usual expansion “∑q
+1
+2 k2
+· Uk” of a theta
+function for the following reason: The usual expansion is precisely an expansion in terms
+of the U
+k (for k ∈ Z), which, as we saw in§6, form (via the isomorphism ΞGP)a horizontal
+(topological) basis of VL in a formal neighborhood of inﬁnity.
+Proof. (of Corollary 7.6) The proof of the vanishing of the higherp-curvatures is entirely
+the same as that of Corollary 6.4 (cf. also the Remark following Theorem 7.3) — i.e., one
+uses the projectively horizontal isomorphism ΞGP of Theorem 6.2, together with the fact
+that VGm admits a horizontal basis, given by the Uk, for k ∈ Z (cf. Theorem 7.3). Note
+that here we use the assumption that the family of elliptic curves in question is generically
+ordinary in characteristic p in order to reduce (cf. the Remark following Theorem 7.3) to
+the situation studied in §6 in a formal neighborhood of inﬁnity. The remaining assertions
+are formal consequences of Corollary 7.5. ⃝
+Remark. Although in Corollary 7.6, we tookL to be of degree 1, it is not diﬃcult to derive
+from Corollary 7.6 (using the theory of theta groups — cf. the discussion of §8.1) the
+corresponding result for L of arbitrary degree. We leave the routine details to the reader.
+§8. “Griﬃths Semi-Transversality”
+In this §, we investigate the relationship between the connections deﬁned in §5 and
+the Hodge ﬁltrations (determined by torsorial degree) on various spaces of functions on the
+universal extension. In some sense, the central phenomenon here is the fact that unlike
+many well-known objects with similar structures for which the connection gives rise to
+jumps of length 1 in the Hodge ﬁltration (i.e., “Griﬃths transversality”), in the present
+situation, the connection gives rise to jumps of length 2 in the Hodge ﬁltration. We refer
+to this phenomenon as “Griﬃths semi-transversality.” At a more concrete level, this
+phenomenon may be thought of as thequadratic (i.e., nonlinear) nature of the exponent of
+the q-parameter in the well-known theta expansion “∑q
+1
+2 k2
+·Uk.” Moreover, it turns out
+that this phenomenon gives rise to interesting (non-trivial) Kodaira-Spencer morphisms,
+56
+
+as well as Hasse-type invariants. In the present §, in addition to calculating these objects,
+we apply these calculations at the primep = 2 to complete the proof of Lemma 4.2 of§4.4.
+§8.1. The Kodaira-Spencer Morphism of the Crystalline Theta Object:
+In the following discussion, we use the notation of§5.2. Moreover, we letT
+def
+=S p e c (Z)
+(equipped with the trivial log structure), so S is smooth over Z, and we assume that the
+log structure on S is deﬁned by a Z-ﬂat divisor with normal crossings ⊆ S, and that the
+condition (∗KS) of Lemma 5.1 is satisﬁed. (For instance, a typical example of such anSlog
+is given by any ´etale morphism S → (M1,0)Z[ 1
+2 ] to the moduli stack of log elliptic curves
+over Z[1
+2 ].)
+Next, let us assume that we are given adegree one ample line bundleL of torsion type
+(cf. Deﬁnition 4.4) on C (i.e., the semi-stable compactiﬁcation of E). Note that
+R1f∗(L)=0
+(where, in the following discussion, we shall (by abuse of notation) denote all structure
+morphisms to S by “f”). Indeed, this follows from Serre duality, and the fact thatf∗(ωE ⊗
+L−1) = 0, since L is ample. Also, let us assume that we are given a rigidiﬁcation
+Lϵ ∼= OS
+(where Lϵ is the restriction ofL to the zero section ofC → S) at the zero section ofC → S.
+Set ∗
+def
+= L. By Theorem 5.2, we thus obtain a logarithmic connection on the pair
+(E∗
+C,et, LE∗
+C,et
+)
+(where LE∗
+C,et
+def
+= L|E∗
+C,et
+), regarded as a family of polarized varieties over S. Since taking
+global sections is a natural operation, we thus get an induced logarithmic connection∇ VL
+on the quasi-coherent sheaf of OS-modules given by
+VL
+def
+= f∗(LE∗
+C,et
+)
+Note that in addition to the connection ∇ VL , the sheaf VL is also equipped with a “Hodge
+ﬁltration” Fr(VL) induced by the ﬁltration on RL,et (cf. Theorem 4.3) with subquotients
+given by
+(Fr+1/Fr)(VL)= 1
+r! · τ⊗r
+E ⊗OS f∗(L)
+57
+
+(where we use the fact that R1f∗(L) = 0).
+Remark. Note that the data ( VL,F r(VL), ∇ VL ) is reminiscent of the “ MF ∇ -objects”of
+[Falt], §2. There are, of course, various obvious diﬀerences: e.g., VL is “a vector bundle of
+inﬁnite rank”; we have yet to deﬁne aFrobenius action(though the author hopes to address
+this issue in a future paper). One more subtle diﬀerence is the behavior of the connection
+∇ VL relative to the Hodge ﬁltration — cf. the discussion of “Griﬃths semi-transversality”
+below. Yet another more subtle diﬀerence is the relationship between the p-curvature (cf.
+the Remark following Corollary 6.4) and the Kodaira-Spencer morphism(to be studied in
+detail below). Nevertheless, the analogy with the MF∇ -objects of [Falt], §2, is one of the
+fundamental motivations for the present paper. It is the hope of the author to develop this
+point of view further in future papers.
+Note that ifL and its rigidiﬁcation are symmetric (i.e., preserved by the natural action
+of ±1o n C), then ±1 acts naturally on (VL,F r(VL), ∇ VL ). If, moreover, 2 is invertible on
+S, then considering eigenspaces for this action gives rise to a natural splitting
+VL = VL
++ ⊕V L
+−
+which is compatible with Fr(VL) and ∇ VL . In particular, since the relative degree of L
+over S is one, ±1 acts trivially on F1(VL)= f∗(L), while −1 acts as −1o n τE. Thus, in
+this case, ±1 acts as (±1)r on
+(Fr+1/Fr)(VL)= 1
+r! · τ⊗r
+E ⊗OS f∗(L)
+i.e., for ‡∈{ +, −},
+(Fr+1/Fr)(VL
+‡ )=( Fr+1/Fr)(VL)
+if the sign of (−1)r is equal to ‡ , and (Fr+1/Fr)(VL
+‡ ) = 0 otherwise.
+Next, we would like to consider theextent to which the connection ∇ VL preserves the
+Hodge ﬁltration. First, let us recall the isomorphism
+Ξ
+E†
+C
+: π∗
+1(E†
+C) ∼= π∗
+2(E†
+C)
+of the discussion preceding Lemma 5.1. Note that this isomorphism is well-known to
+preserve the Hodge ﬁltration on O
+E†
+C
+up to a jump in the index which is ≤ 1, i.e., Fr(−)
+on one side is not necessarily sent into Fr(−) on the other, but it is sent into Fr+1. This
+property of “connections giving rise to jumps of magnitude ≤ 1” is often referred to as
+58
+
+Griﬃths transversality (cf., e.g., [Falt], §2). In the case of the universal extension, this
+Griﬃths transversality follows easily from the deﬁnition of the universal extension as the
+moduli space of certain line bundles with connection (cf. [Mzk1], Chapter III, §1).
+Note that since E†
+C and E∗
+C,et are the same in characteristic zero, it follows that
+ΞE∗
+C,et
+: π∗
+1(E∗
+C,et) ∼= π∗
+2(E∗
+C,et)
+(cf. Theorem 5.2) also satisﬁes Griﬃths transversality .
+Now let us consider the connection on the pair ( E∗
+C,et, LE∗
+C,et
+). That is to say, we
+would like to compare π∗
+1 LE∗
+C,et
+with π∗
+2 LE∗
+C,et
+via ΞE∗
+C,et
+, over the base Slog ×PD,2 Slog.
+Write I for the ideal deﬁning the diagonal in Slog ×PD,2 Slog. Then let us observe that
+both π∗
+1 LE∗
+C,et
+and π∗
+2 LE∗
+C,et
+deﬁne line bundles on π∗
+2(E∗
+C,et) which agree modulo I and
+which are deﬁned by transition functions that belong to F2(−) of the structure sheaf of
+π∗
+2(E∗
+C,et). Indeed, the transition functions deﬁning π∗
+2 LE∗
+C,et
+belong to F1(−) ⊆ F2(−)
+since this line bundle is pulled back from the line bundleπ∗
+2 L on π∗
+2C. On the other hand,
+π∗
+1 LE∗
+C,et
+, regarded as a line bundle on π∗
+1(E∗
+C,et), is (by the same reasoning) deﬁned by
+transition functions that belong to F1(−) of the structure sheaf of π∗
+1(E∗
+C,et), but these
+transition functions are mapped into F2(−) of the structure sheaf of π∗
+2(E∗
+C,et) (by the
+Griﬃths transversality of ΞE∗
+C,et
+).
+Thus, in summary, in order to obtain an (or — equivalently, by Theorem 4.3, (III)
+— the unique) isomorphism between π∗
+1 LE∗
+C,et
+and π∗
+2 LE∗
+C,et
+, it suﬃces to introduce Fr(−)
+for a suﬃciently large r such that the deformation class that gives the diﬀerence between
+these two line bundles vanishes. Since (by the discussion of the preceding paragraph) this
+deformation class lies in F2(−), we conclude, by Theorem 4.3, (II), that it suﬃces to pass
+to F3(−), in order to cause this deformation to vanish. Thus, in summary, we started with
+an object (i.e., π∗
+1 LE∗
+C,et
+) which lies in F1(−)o n π∗
+1(E∗
+C,et), then transported this object
+via ΞE∗
+C,et
+to an object lying in F2(−)o n π∗
+2(E∗
+C,et) which, when regarded as an object
+lying in F3(−)= F1+2(−) (on π∗
+2(E∗
+C,et)), is isomorphic to π∗
+2 LE∗
+C,et
+. That is to say, we
+have shown the following:
+The connection on (E∗
+C,et, LE∗
+C,et
+) preserves the Hodge ﬁltration up to
+jumps of magnitude ≤ 2.
+We will refer to this property of preserving the Hodge ﬁltration up to jumps of magnitude
+≤ 2a s Griﬃths semi-transversality (by analogy to “Griﬃths transversality,” in the
+case of jumps of magnitude ≤ 1).
+Next, we would like to consider the “Kodaira-Spencer morphism” obtained from
+(VL,F r(VL), ∇ VL ) by looking at the extent to which F1(VL) is preserved by ∇ VL . More
+precisely, we would like to consider the composite:
+59
+
+f∗(L)= F1(VL) ↪→V L
+∇ VL
+−→ V L ⊗OS ΩSlog → (VL/F2(VL)) ⊗OS ΩSlog
+By “Griﬃths semi-transversality,” we see that the above composite maps into
+1
+2 · τ⊗2
+E ⊗OS f∗(L) ⊗OS ΩSlog =( F3/F2)(VL) ⊗OS ΩSlog ⊆ (VL/F2(VL)) ⊗OS ΩSlog
+Moreover, the above composite is easily seen to be OS-linear, hence (by taking duals)
+deﬁnes a morphism
+κL :Θ Slog → End(f∗(L)) ⊗OS
+1
+2 · τ⊗2
+E
+(where ΘSlog is the dual of Ω Slog , and “ End” denotes the sheaf of OS-endomorphisms of
+the locally free OS-module f∗(L)).
+Now, since in the present discussion, f∗(L) forms a line bundle on S, it follows that:
+End(f∗(L)= OS. Thus, κL is a morphism
+κL :Θ Slog → 1
+2 · τ⊗2
+E
+By considering the universal case (i.e., when S =( M1,0)Z, except with diﬀerentials “ 1
+2 ·
+Ω(M
+log
+1,0)Z
+” in order to take account of (∗KS)), we thus obtain thatκL (for arbitrary Clog →
+Slog) arises from some element
+∈ Γ((M1,0)Z, 1
+2 · Ω(M
+log
+1,0)Z
+⊗ 1
+2 · τ⊗2
+E )= 1
+4 · Z
+(since, as is well-known, the Kodaira-Spencer morphism of the ﬁrst de Rham cohomol-
+ogy module of the tautological log elliptic curve over ( M
+log
+1,0)Z deﬁnes an isomorphism
+Ω(M
+log
+1,0)Z
+⊗ 1
+2 · τ⊗2
+E ∼= 1
+2 ·O (M
+log
+1,0)Z
+). That is to say, κL is equal to some universal constant
+∈ 1
+4 · Z.N o wI claim that
+(∗UC) κL = 1
+2 .
+In this paper, we will present two independent proofs of the fact that κL ̸= 0. In the ﬁrst
+proof, we prove the stronger result (∗UC). In the second proof, we show only that κL ̸=0 .
+Thus, logically speaking, the second proof is unnecessary. The reasons for the inclusion of
+the second proof in this paper are that:
+60
+
+(i) The author ﬁnds this proof to be aesthetically appealing.
+(ii) This proof shows how one can “almost prove” (∗UC) using only ele-
+mentary algebraic geometry (whereas the ﬁrst proof requires the “more
+advanced” techniques of§6).
+First Proof that κL ̸=0 :
+In this proof, we use the notation of §6. In the context of §6, the Kodaira-Spencer
+morphism in question arises from applying the connection on ( V∗
+Lχ )ˆS to F1((V∗
+Lχ )ˆS) and
+looking at the image of this map in ( F3/F2)((V∗
+Lχ )ˆS). By Theorem 6.1 (and the fact
+that scalar diﬀerentials have no eﬀect on the Kodaira-Spencer morphism), we thus see
+that this amounts to diﬀerentiating Ξ(ζ
+CG
+0 ) (which generates F1((V∗
+Lχ )ˆS)) in, say, the
+logarithmic tangent direction ∂
+∂log(q) , noting that this results in a linear combination of
+Ξ(ζCG
+0 ),Ξ(ζCG
+1 ),Ξ(ζCG
+2 ), and, ﬁnally, observing that the coeﬃcient of Ξ( ζCG
+2 ) is what we
+would expect (relative to all the canonical identiﬁcations involved) if the Kodaira-Spencer
+morphism is to equal “ 1
+2 ,” as desired.
+Since
+Ξ(ζCG
+0 )=
+∑
+k∈Z
+χM(ket) · q
+1
+2 k2+
+iχ
+n k · Uk
+we thus see that applying ∂
+∂log(q) amounts to multiplying the k-th coeﬃcient in the series
+by 1
+2 k2 + iχ
+n k, hence yields the same series as that obtained by applying P( ∂
+∂log(U) ), where
+P(X) ∈ Q[X] is a polynomial with rational coeﬃcients of degree 2 whose leading term
+is 1
+2 X2. Relative to all the canonical identiﬁcations involved, this leading term means
+precisely that the “Kodaira-Spencer morphism” in question is 1
+2 , as desired (at least in a
+neighborhood of inﬁnity; but this is suﬃcient, since (cf. the discussion above) the Kodaira-
+Spencer morphism is a “constant”). This completes the proof of ( ∗
+UC). ⃝
+Remark. Finally, we remark that the above proof, which involves the ideas surrounding
+the comparison isomorphism of Theorem 6.2, further justiﬁes the assertion of the author
+in [Mzk1] that the “arithmetic Kodaira-Spencer morphism” constructed in [Mzk1], Chap-
+ter IX, is indeed analogous to the usual geometric Kodaira-Spencer morphism (cf. the
+discussion in the Introduction).
+We summarize the above discussion as follows:
+Theorem 8.1. (The Crystalline Theta Object) Let S be a smooth Z-scheme of
+ﬁnite type, equipped with a log structure deﬁned by aZ-ﬂat divisor with crossings ⊆ S.L e t
+61
+
+Clog → Slog be a log elliptic curve, equipped with a degree one ample line bundle L of
+torsion type (cf. Deﬁnition 4.4) on C, and a rigidiﬁcation Lϵ ∼= OS of this line bundle
+over the zero section of Clog. Also, we assume that the condition (∗KS) of Lemma 5.1 is
+satisﬁed.
+Then this data deﬁnes a natural logarithmic connection ∇ VL on the quasi-coherent
+OS-module
+VL
+def
+= f∗(LE∗
+C,et
+)
+This OS-module VL is equipped with a natural Hodge ﬁltrationFr(VL), whose subquotients
+are given by
+(Fr+1/Fr)(VL)= 1
+r! · τ⊗r
+E ⊗OS f∗(L)
+Moreover, the triple(VL,F r(VL), ∇ VL ) is compatible with automorphisms of the given data.
+(We leave it to the reader to write out the routine details.) In particular, if L and its
+rigidiﬁcation are symmetric (i.e., preserved by the natural action of ±1 on Clog), and
+2 ∈O ×
+S , then considering the eigenspaces of this action gives rise to a natural direct sum
+decomposition
+VL = VL
++ ⊕V L
+−
+such that (for ‡∈{ +, −}) (Fr+1/Fr)(VL
+‡ ) is =( Fr+1/Fr)(VL) if the sign of (−1)r is
+equal to ‡ , and =0 otherwise.
+The natural logarithmic connections on (E∗
+C,et, LE∗
+C,et
+) (cf. Theorem 5.2) and VL
+satisfy “Griﬃths semi-transversality” with respect to the natural Hodge ﬁltrations (i.e.,
+the connections preserve the Hodge ﬁltrations up to jumps of magnitude ≤ 2). Thus, ∇ VL
+induces a Kodaira-Spencer morphism
+κL :Θ Slog → 1
+2 · τ⊗2
+E
+which (modulo the identiﬁcation τ⊗2
+E
+∼= Θ M1,0
+|S) is equal to 1
+2 times the usual Kodaira-
+Spencer morphism.
+Proof. Everything follows from the above discussion. ⃝
+Remark. In anticipation of the deﬁnition of some sort of natural Frobenius action on VL
+(cf. the Remark on MF∇ -objects at the beginning of this §), we shall refer to the triple
+(VL,F r(VL), ∇ VL )
+as the crystalline theta object.
+Before presenting the “Second Proof” referred to above, we would like to pause to
+review (those aspects that will be necessary in the present paper of) the theory of theta
+62
+
+groups. This theory will be of use not only in the “Second Proof,” but also in various other
+arguments that we use in the remainder of this paper.
+Let l ≥ 2b ea n integer, and assume that we are given a family of elliptic curves
+E → S
+over a base scheme S which satisﬁes the hypotheses of Theorem 8.1 (with trivial log
+structure), and on which (for simplicity)l is invertible. Also, we assume that we are given
+a degree one line bundle of torsion type L as in Theorem 8.1. Let us write
+˜E → E
+for the (´etale) isogeny given by multiplication byl on ˜E
+def
+= E. It is worth noting here that
+since ˜L
+def
+= L|˜E will then be of degree l2 ≥ 4 ≥ 3, it follows that ˜L is very ample (over S)
+and, moreover, (for n ≥ 1)
+Sn{f∗( ˜L)}→ f∗( ˜L⊗n)
+is surjective (cf., e.g., [Mumf4], §2, Theorem 6). It is these properties of very ampleness and
+surjectivity that often make it desirable to use the line bundle ˜L, rather than the (simpler
+and more readily analyzable) degree one line bundleL.
+Now let us write (for an S-scheme T)
+G ˜L(T)
+def
+= {(α,ι) | α ∈ ˜E(T),ι : T ∗
+α ˜LT ∼= ˜LT }
+for the theta group associated to ˜L (cf. [Mumf1,2,3]; [Mumf5], §23; or, alternatively,
+[Mzk1], Chapter IV, §1, for an exposition of the theory of theta groups). (Here, we write
+Tα : ˜ET → ˜ET for the automorphism given by translation by α.) Thus, G ˜L ﬁts into an
+exact sequence:
+1 → Gm →G ˜L → l2 E → 1
+(where l2 E is the kernel of multiplication by l2 on E).
+Now observe that since l is invertible on S, ˜E → E induces a natural morphism
+˜E† → E† (cf. Theorem 5.3) which, in turn, induces an isomorphism ˜E† ∼= E† ×E ˜E,a s
+well as a morphism ˜E†
+et → E†
+et (cf. Theorem 5.3). Moreover, the kernel of ˜E†
+et → E†
+et
+projects isomorphically into l ˜E ⊆ ˜E, i.e., we have an exact sequence
+0 → l ˜E → ˜E†
+et → E†
+et → 0
+63
+
+of group schemes over S. Next, observe that it follows from the fact that ˜L is obtained by
+pull-back from E that we have a natural subgroup scheme
+H ⊆G ˜L × ˜E
+˜E†
+et
+(describing how to descend ˜L back down to L) that maps isomorphically to l ˜E. Thus, H
+acts naturally on
+V ˜L
+def
+= f∗( ˜L|E∗
+et ×E ˜E)
+(where ∗
+def
+= L). Moreover, the isogeny ˜E → E induces an inclusion VL
+def
+= f∗(LE∗
+et ) ↪→V ˜L
+which is compatible with connections and Hodge ﬁltrations and which identiﬁes VL with
+the H-invariants V ˜L
+H of V ˜L. Conversely, the theory of theta groups assures us that V ˜L
+may be recovered from the data (VL,H ). Thus, in summary,
+Although it is frequently necessary to work with ˜L, and, in particular,
+with V ˜L in order to make use of the very ampleness of ˜L, the theory of
+theta groups tells us that the structure of V ˜L may be analyzed (at least
+in principle) by using the “simpler” object VL.
+We are now ready to present the “Second Proof” of the nonvanishing of κL.
+Second Proof thatκL ̸=0 :
+In this proof, we work over an S which is ´etale over (M1,0)Q. Thus, in particular,
+the various integral structures considered on E† all coincide. Also, we use the notation
+˜E → E, ˜L, V ˜L, of the review of theta groups given above.
+Now observe that just as we deﬁned a Kodaira-Spencer morphism for VL,w em a y
+deﬁne an analogous morphism
+κ˜L :Θ S → End(f∗( ˜L)) ⊗OS
+1
+2 · τ⊗2
+E
+for V ˜L. Note that since the action of H on V ˜L is clearly horizontal, it follows that κ˜L
+factors through
+EndH(f∗( ˜L)) ⊗OS
+1
+2 · τ⊗2
+E ⊆ End(f∗( ˜L)) ⊗OS
+1
+2 · τ⊗2
+E
+where we use the subscript “ H” to denote endomorphisms that commute with the action
+of H. Since EndH(f∗( ˜L)) = End(f∗(L)) = OS, we thus obtain a morphism
+64
+
+ΘS → 1
+2 · τ⊗2
+E
+which (by the evident horizontality of the natural inclusion VL ↪→V ˜L)m a yb eidentiﬁed
+with κL. In particular, if κL = 0, then it follows that κ˜L = 0, as well. Put another way,
+this means that, ∇ VL , ∇ V˜L
+map F1(VL), F1(V ˜L) into F2(VL), F2(V ˜L), respectively.
+Next, let us observe that since ±1 acts horizontally (i.e., in such a way that ∇ VL is
+preserved) on VL, and deg(L) = 1, it follows from the above discussion that ∇ VL always
+maps F1(VL) ⊆V L
++ into VL
++. Since VL
++ ⋂F2(VL) ⊆ F1(VL), we thus obtain that ∇ VL
+preserves F1(VL). By considering the action of H as above, we thus conclude that ∇ V˜L
+preserves F1(V ˜L). In particular, we thus obtain a connection ∇1 on
+F1
+def
+= f∗( ˜L)= F1(V ˜L)
+Moreover, since the natural morphism
+Sn(F1) →F n
+def
+= f∗( ˜L⊗n) ⊆V ˜L⊗ n
+def
+= f∗( ˜L⊗n|˜E† )
+(for n ≥ 1) given by multiplication of sections is clearly horizontal, and the morphism
+Sn(F1) →F n is surjective (cf. the review of theta groups given above), we thus obtain
+that the entire graded OS-algebra
+⨁
+n≥0
+Fn
+(where we let F0
+def
+= OS) admits a connection. Since “ Proj ” of this graded algebra is the
+elliptic curve ˜E → S, we thus obtain that the family of elliptic curves ˜E ∼= E → S admits
+a connection. But (unraveling the deﬁnitions) this implies that the classifying morphism
+S → (M1,0)Q for this familyE → S has Kodaira-Spencer morphism(i.e., derivative) equal
+to 0, which contradicts the fact that we took S → (M1,0)Q to be ´etale. This completes
+the “Second Proof” that κL ̸=0 . ⃝
+Before proceeding, we note that the technique of the above proof (involving theta
+groups and taking “Proj”) motivates the following immediate consequence of Corollary
+7.6:
+Corollary 8.2. (Higher p-Curvatures of the Polarized Universal Extension) In
+the notation of Corollary 7.6, all of the higher p-curvatures of the pair (E
+∗
+et, LE∗
+et ) vanish
+identically. Moreover, if σ, Sσ are as in Corollary 7.6, then there is a unique isomorphism
+{(E∗
+et, LE∗
+et )|σ } ˆ⊗AOSσ
+∼= (E∗
+et, LE∗
+et )|Sσ
+65
+
+over Sσ (where “ ˆ⊗” denotes the topological tensor product) which (i) is equal to the identity
+when restricted to σ; and (ii) maps (E∗
+et, LE∗
+et )|σ on the left-hand side into the set of
+horizontal sections on the right-hand side.
+Remark. We leave it to the reader to formulate the routine details of deﬁning the “higher
+p-curvatures of the nonlinear object (E∗
+et, LE∗
+et ).”
+Finally, before proceeding, we note one other important consequence of the above
+discussion. Recall the condition ( ∗KS) of Lemma 5.1. Because we used this condition in
+the proof of Lemma 5.1, it became necessary to assume this condition whenever we wished
+to make use of a connection on E
+∗
+C,et (where ∗ is as in Lemma 5.1) — cf. Theorems
+5.2, 5.3, 8.1; Corollaries 7.6, 8.2. The above discussion shows, however, that in fact, this
+condition is not necessary. Indeed, by translating as in the proof of Lemma 5.1, it suﬃces
+to verify this in the case where ∗ is the line bundle deﬁned by the origin. Moreover, by
+working in the universal case, it suﬃces to show thatarbitrary tangent vectors on (M1,0)Z2
+(i.e., not just tangent vectors divisible by 2) act in an integral fashion on E∗
+C,et via the
+connection of Theorem 5.2. But observe that this may be veriﬁed in a neighborhood of
+inﬁnity. Moreover, by working with theta groups and the isogeny ˜E
+def
+= E → E given by
+multiplication by an odd integer l ≥ 1 (cf. the review of theta groups given above), we
+see that it suﬃces to check the asserted integrality for the action of the connection on
+VL
+def
+= f∗(LE∗
+C,et
+), where L
+def
+= OE(0E). But this then amounts (cf. the “First Proof”
+above) to the assertion that ∂
+∂log(q) acts integrally on VL, which is generated by the “ζCG
+r ,”
+i.e., by series of the form
+∑
+k∈Z
+P(k) · χM(ket) · q
+1
+2 (k2 −k) · Uk
+where P(−)i sa n integer-valued polynomial with rational coeﬃcients (cf. the explicit
+description of Ξ(ζCG
+r ) given in §6). (Note that here, since “ χL” is trivial, iχ
+n = − 1
+2 .) But
+acting on such a series by ∂
+∂log(q) amounts to replacingP(T) (where T is an indeterminate)
+by 1
+2 (T2 − T) · P(T), which is still an integer-valued polynomial with rational coeﬃcients.
+Thus, ∂
+∂log(q) acts integrally on VL, as desired. In summary:
+Corollary 8.3. The assumption that the condition (∗KS) be satisﬁed in Theorems 5.2,
+5.3, 8.1; Corollaries 7.6, 8.2; may be omitted without aﬀecting the validity of these results.
+§8.2. An Explicit Formula for the Higher p-Curvatures:
+In this §, we give an explicit formula for calculating the higher p-curvatures deﬁned
+in §7.1. This formula is obtained in the context of the general discussion of §7.1, and has
+66
+
+nothing to do with the “Hodge-Arakelov theory of elliptic curves.” In§8.3 below, we apply
+this formula to obtain a certain “higher p-curvature version” of the result concerning the
+Kodaira-Spencer morphism given in Theorem 8.1.
+In the following discussion, we use the notation of §7.1. In particular, we ﬁx a prime
+number p, and letA be a Zp-ﬂat complete topological ring equipped with thep-adic topology,
+and k
+def
+= A ⊗ Fp. Also, let us suppose that we are given a p-adic formal scheme S which
+is formally smooth of relative dimension 1 over A, together with a locally free (though not
+necessarily of ﬁnite rank!) quasi-coherent sheaf EZ/pnZ of OSZ/pnZ -modules (where n ≥ 1
+is an integer, and SZ/pn Z
+def
+= S ⊗ Z/pnZ) equipped with a connection ∇ E (relative to the
+morphism S → Spf(A)). In addition, we assume that we are given a local coordinatet (of
+S over A), and that we wish to compute the higherp-curvatures of EZ/pnZ in a “punctured
+formal neighborhood”Spec(A[[t]][t−1]) of V (t) ⊆ S. In the discussion to follow, all of our
+derivatives will be in the direction d log(t)
+def
+= dt
+t . Thus, for instance, we will write ∇
+(respectively, D) for the result of applying ∇ E (respectively, the exterior derivative d)i n
+the tangent direction deﬁned by (the dual of) d log(t).
+Often in our discussion, we shall wish to consider variousdiﬀerential operatorsacting
+on EZ/pnZ. Many of these diﬀerential operators will be constructed from simpler diﬀerential
+operators by substituting the simpler diﬀerential operators into various formal polynomials.
+The most fundamental formal polynomial in the following discussion is given by:
+Ψ(T)
+def
+=
+(T
+p
+)
+= 1
+p!T(T − 1) · ... · (T − (p − 1)) ∈ Qp[T]
+Also, we shall write
+Ψ {j}(T)
+def
+= Ψ(Ψ(. . . Ψ(T)))
+for the result of iterating Ψ a total of j times (where j ≥ 1 is an integer).
+Lemma 8.4. Suppose that the pj-curvature of EZ/pn Z vanishes identically for all j ≤ n.
+Then
+(p · Ψ {j})(∇) ≡ 0 modulo p
+for all j ≤ n.
+Proof. Since the pj-curvature of EZ/pnZ vanishes identically for all j ≤ n, it follows that
+EZ/pn Z is locally generated by horizontal sections (cf. Theorem 7.3). Thus, it suﬃces to
+prove Lemma 8.4 in the case whereEZ/pn Z = OSZ/pnZ equipped with the trivial connection.
+In particular, if suﬃces to show that for any series
+f =
+∑
+k>>−∞
+ck · tk
+67
+
+(where ck ∈ A), the coeﬃcients of each of the
+Ψ {j}(D) · f
+are ∈ A (i.e., are integral). But this amounts to showing the integrality of the
+Ψ {j}(k)
+for k ∈ Z, which follows from the well-known fact that Ψ(−) maps integers to integers. ⃝
+Now suppose that n ≥ 2, and that the pj-curvature of EZ/pn Z vanishes identically
+for all j ≤ n − 1. Then it follows that EZ/pn Z is locally generated by sections that are
+horizontal modulo pn−1. Thus, for an appropriate local basis, ∇ may be written in the
+form:
+∇ = D + pn−1 · ω
+where ω is a section of End(EFp ). Let us compute ( p · Ψ)( ∇). Since ( pn−1 · ω)2 =0 ,i t
+follows that
+(p · Ψ)( ∇)=( p · Ψ)(D)+ {(p − 1)!}−1 · pn−1·
+p−1∑
+j=0
+D · ... · (D − (j − 1)) · ω · (D − (j + 1)) · ... · (D − (p − 1))
+=( p · Ψ)(D)+ pn−1 · Linω {(p · Ψ)(D + ω)}
+=( p · Ψ)(D) − pn−1 · Linω {(D + ω)p − (D + ω)}
+=( p · Ψ)(D) − pn−1 ·{ Dp−1(ω) − ω}
+where “Lin ω(−)” denotes the “term of degree one in ω”; (p − 1)! ≡− 1 modulo p (by an
+easy calculation using the fact that Fp
+× is cyclic); and the equation
+Linω {(D + ω)p} = Dp−1(ω)
+follows from Jacobson’s formula(see, e.g., [Jac], pp. 186-187). This formula states that if
+a and b are elements of an associative ring R of characteristic p, then
+(a + b)p = ap + bp +
+p−1∑
+i=1
+si(a, b)
+68
+
+where the si(a, b) are given by the formula:
+(ad(Ta + b))p−1(a)=
+p−1∑
+i=1
+isi(a, b)Ti−1
+computed in the ring R[T], where T is an indeterminate. (Here, we apply this formula in
+the case a
+def
+= ω; b
+def
+= D, and use the fact that if f ∈O SFp , then (ad(b))(f)=[ b, f]=
+[D,f ]= D(f).) On the other hand, an easy computation reveals that:
+−(Dp−1(ω) − ω)= C(ω)
+(i.e., the result of applying the Cartier operator to ω). (Indeed, the point here is that (in
+characteristic p) Dp−1(tj) − tj =( jp−1 − 1) · tj, which is = −tj if j is divisible by p, and
+= 0 otherwise.)
+Thus, in summary, we obtain that modulo pn−1:
+Ψ( ∇) ≡ D1 + pn−2 · ω1
+where D1
+def
+=Ψ ( D), and ω1
+def
+= C(ω).
+Next, let us observe that the operator D1 acts as 1
+p · D on tpj (where j ∈ Z) modulo
+p. Indeed, this follows from the fact that
+(pj
+p
+)
+≡ j · (p − 1)! ·{ (p − 1)!}−1 ≡ j
+(modulo p). Since ω1 may be written as a series in terms of the form tpj, it thus follows
+that we may repeat the above calculation with ∇ replaced by Ψ( ∇). In particular, if we
+repeat this calculation over and over again, we see that we obtain the following result:
+Lemma 8.5. For 1 ≤ j ≤ n − 1, we have: modulo pn−j,
+Ψ {j}(∇) ≡ Dj + pn−1−j · ωj
+where Dj
+def
+=Ψ {j}(D), and ωj
+def
+= Cj(ω).
+In particular, observe that if we takej = n−1, then the right-hand side of the equality
+in Lemma 8.5 — regarded as an operator on series in terms of the form tpn− 1·a (where
+a ∈ Z) in characteristic p — is simply the connection denoted “ ∇[n − 1]” in §7.1. (Here,
+we use that Dn−1(tpn− 1 ·a) ≡ a · tpn− 1 ·a, which follows from Lemma 8.7 below.) Thus, in
+particular, if we substitute
+69
+
+Ψ {n−1}(∇) ≡ Dn−1 + ωn−1
+into the polynomial (p · Ψ)(T) ≡− (Tp − T) (modulo p), we obtain an operator
+−{(Dn−1 + ωn−1)p − (Dn−1 + ωn−1)}
+which, when restricted to series in terms of the formtpn− 1·a in characteristic p, is equal to
+minus the pn-curvature Pn of EZ/pn Z. On the other hand, by Jacobson’s formula (quoted
+above), it follows that this operator diﬀers from−(Dp
+n−1 − Dn−1) by an operator which is
+OS-linear. Moreover, the operator −(Dp
+n−1 − Dn−1) is easily seen to be ≡ 0 modulo p (cf.
+Lemma 8.4 above). Thus, in summary, we see that we have proven the following: modulo
+p,
+(p · Ψ
+{n})(∇)= −Pn
+(where both sides are linear over OS). We state this as a theorem:
+Theorem 8.6. (Explicit Formula for Higher p-Curvatures) Let EZ/pnZ be a quasi-
+coherent sheaf of locally free OSZ/pnZ -modules (where n ≥ 1 is an integer, and SZ/pn Z
+def
+=
+S ⊗ Z/pnZ) equipped with a connection∇ E (relative to the morphism S → Spf(A)). Sup-
+pose that we are also given a local coordinate t (of S over A). Write ∇ for the result of
+applying ∇ E (respectively, the exterior derivatived) in the tangent direction deﬁned by (the
+dual of) d log(t)
+def
+= dt
+t . Also, let us write
+Ψ(T)
+def
+=
+(T
+p
+)
+= 1
+p!T(T − 1) · ... · (T − (p − 1)) ∈ Qp[T]
+(where T is an indeterminate) and
+Ψ {j}(T)
+def
+= Ψ(Ψ(. . . Ψ(T)))
+for the result of iterating Ψ a total of j times (where j ≥ 1 is an integer). Suppose that
+the pj-curvature of EZ/pn Z is ≡ 0 for all j ≤ n − 1. Then the pn-curvature Pn of EZ/pn Z
+is given by the formula:
+Pn ≡− (p · Ψ {n})(∇)
+(modulo p).
+Remark. In fact, it is not diﬃcult to see that instead of using the speciﬁc polynomial Ψ(T),
+we could have usedany polynomial F(T) ∈ 1
+p ·Zp[T] of degreep such thatp·F(T) ≡ p·Ψ(T)
+(modulo p). Similarly, if one is interested indiﬀerentiating in the tangent direction dual to
+70
+
+dt (i.e., rather that d log(t)), then a similar formula to that of Theorem 8.6 holds, except
+with Ψ(T) replaced by the polynomial 1
+p! Tp (or, indeed, any polynomial F(T) ∈ 1
+pZp[T]o f
+degree p such that p · F(T) ≡ p · ( 1
+p! Tp) (modulo p)). Since these variants may be proved
+by exactly the same argument as that given above, and, in the present paper, we only need
+the explicit formula stated in Theorem 8.6, we leave the precise statement and proof of
+these variants as (easy!) exercises for the reader.
+Lemma 8.7. Modulo p, we have:
+Ψ
+{n−1}(pn−1 · a) ≡ a
+(for a ∈ Z).
+Proof. Indeed, this follows from recursive application of the formula:
+Ψ(pm · a) ≡ pm−1 · a · (p − 1)! ·{ (p − 1)!}−1 ≡ pm−1 · a
+modulo pm (where m ≥ 1 is an integer). ⃝
+§8.3. Hasse-type Invariants of the Crystalline Theta Object:
+In this §, we study the relationship between thehigher p-curvatures and the Hodge ﬁl-
+tration of the crystalline theta object. In the case of the ﬁrst de Rham cohomology module
+of an elliptic curve in positive characteristic, the invariant that describes the relationship
+between the p-curvature and the Hodge ﬁltration is referred to as the “Hasse invariant.”
+Thus, one may think of the invariants discussed in the present§ as analogues of the Hasse
+invariant for the crystalline theta object . In addition to computing these invariants, we
+apply our computations to compute the proof of Lemma 4.2 of §4.4.
+In this §, we let p be a prime number. In the following discussion, we shall use the
+notation of §4.4. Thus, we let S be ´etale over (M1,0)Zp , and E → S be the pull-back from
+(M1,0)Zp of the tautological elliptic curve over (M1,0)Zp . Also, let us write L
+def
+= OE(0E),
+and Sord ⊆ S for the open subscheme obtained by removing the supersingular points in
+characteristic p.
+Recall the intermediate ´etale integral structuresE∗;{N }
+et (where ∗
+def
+= L) deﬁned at the
+end of §4.4. Note that in the present p-adic context,w eh a v e :
+E∗;{N }
+et = E∗;{pj }
+et
+where j ≥ 0 is the largest integer such that pj ≤ N. (Indeed, this can be seen, for
+instance, by using the description at the end of §4.4 of the subquotients ( Fr+1/Fr)(−)
+71
+
+of the intermediate ´etale integral structures, together with the elementary numerical fact
+that if pj ≤ N<p j+1, then
+ordp(N!) =
+j∑
+i=0
+ai · ordp{(pi)!}
+(where N = ∑j
+i=0 aipi; ai ∈{ 0, 1,2,... ,p − 1}).) Now we have the following observation:
+Lemma 8.8. The connection of Theorem 5.2 (cf. also Corollary 8.3) on (E∗
+et, LE∗
+et ) in
+fact acts integrally on (E∗;{N }
+et , LE∗;{N }
+et
+) for all integers N ≥ 2.
+Proof. Indeed, the argument is that of the discussion preceding Corollary 8.3: Namely,
+the point is that the exponent of q in the expansion
+∑
+k∈Z
+P(k) · χM(ket) · q
+1
+2 (k2 −k) · Uk
+is given by 1
+2 k(k − 1), which is equal to
+(k
+2
+)
+. Thus, multiplication by this factor preserves
+all intermediate integral structures (for which N ≥ 2). ⃝
+Now let us write
+V{N }
+L
+def
+= f∗(LE∗;{N }
+et
+)
+Thus, V{N }
+L admits a natural connection ∇ V (as soon as we choose a rigidiﬁcation of Lϵ
+— cf. Theorem 8.1). Now let r ≥ 0; a, b ≥ 1b e integers. Suppose that the pj-curvature of
+V{pb}
+L vanishes for j<a . Then if we compose the inclusion Fr+1(V{pb }
+L ) ⊆V {pb }
+L with the
+pa-curvature of V{pb}
+L , we obtain a morphism
+Fr+1(V{pb }
+L )Fp ⊗OS τ⊗ 2pa
+E → (V{pb}
+L )Fp
+(where we note that (by our assumption that S → (M1,0)Zp is ´etale) we may identify
+τ⊗ 2
+E with the tangent bundle of S over Zp). Note that by the explicit formula for the pa-
+curvature (Theorem 8.6), it follows that thepa-curvature may be computed as a polynomial
+in ∇ V of degree ≤ pa. Since — by Griﬃths semi-transversality (cf. Theorem 8.1) — ∇ V
+gives rise to jumps of length ≤ 2 in the Hodge ﬁltration, it thus follows that the above
+morphism maps into Fr+1+2pa
+(V{pb}
+L )Fp ⊆ (V{pb}
+L )Fp (and, similarly, maps Fr(−)i n t o
+Fr+2pa
+(−)). Thus, by projecting onto (Fr+1+2pa
+/Fr+2pa
+)(−), we obtain a morphism
+72
+
+{ 1
+γ(pb,r ) · f∗(L) ⊗OS τ⊗ r+2pa
+E
+}
+Fp
+→
+{ 1
+γ(pb,r +2 pa) · f∗(L) ⊗OS τ⊗ r+2pa
+E
+}
+Fp
+(where γ(−, −) is as in the discussion at the end of §4.4), i.e., (since f∗(L) and τE are line
+bundles on S) an element
+hp;r;a,b ∈
+{ γ(pb,r )
+γ(pb,r +2 pa) ·O S
+}
+⊗ Fp
+which may be regarded as a sort of generalization of the Hasse invariant of an elliptic
+curve in that it describes the extent to which the (higher) p-curvature is compatible with
+the Hodge ﬁltration.
+Theorem 8.9. (Computation of Hasse-type Invariants of the Crystalline
+Theta Object) Let p be a prime number. Suppose that S is ´etale over (M1,0)Zp , and
+write E → S for the pull-back from (M1,0)Zp of the tautological elliptic curve over
+(M1,0)Zp . Also, let us write L
+def
+= OE(0E).L e t r ≥ 0; a, b ≥ 1 be integers, and suppose
+that the pj-curvature of V{pb}
+L vanishes for j<a . Then the invariant
+hp;r;a,b ∈
+{ γ(pb,r )
+γ(pb,r +2 pa) ·O S
+}
+⊗ Fp
+(where γ(−, −) is the number deﬁned at the end of §4.4) obtained by restricting the pa-
+curvature to
+Fr+1(V{pb }
+L ) ⊆V {pb}
+L
+def
+= f∗(LE∗;{pb }
+et
+)
+and then projecting onto (Fr+1+2pa
+/Fr+2pa
+)(−) is equal to the image of
+(1
+2
+)pa
+·
+{ −p
+(p!)pa− 1
+· (p!)pa− 2
+· ... · (p!)p · p!
+}
+∈
+(1
+2
+)pa
+·
+{ p
+(pa)!
+}
+· Zp
+×
+in { γ(pb,r)
+γ(pb,r+2pa) ·O S }⊗ Fp.
+Proof. Indeed, it suﬃces to compute hp;a,b near inﬁnity using Theorem 8.6. Then hp;r;a,b
+is simply the leading term of −p · Ψ {a}(1
+2 k(k − 1)). Each iteration of Ψ( −) aﬀects the
+leading term by raising it to the p-th power, and then dividing it by p!. Thus, induction
+on a gives rise to the expression stated in Theorem 8.9. ⃝
+Remark. Thus, Theorem 8.9 may be interpreted as a sort of “higher p-curvature” gener-
+alization of the portion of Theorem 8.1 concerning the Kodaira-Spencer morphism of the
+73
+
+crystalline theta object (which, so to speak, corresponds to the case “ a = 0”). Note that
+one may also think of Theorem 8.9 as a result thatreduces the computation of the various
+(arithmetic-geometric!) Hasse-type invariants of the crystalline theta object to a matter of
+combinatorics.
+One might suspect from the appearance of the number 2 throughout the statement
+of Theorem 8.9 that the content of this theorem takes on a particularly interesting form
+when one restricts to the case p = 2. This is indeed the case. In the following discussion,
+we would like to make this intuition explicit. Thus, for the remainder of this§, we assume
+that p = 2. First, let us observe that the leading term of
+Pa(T)
+def
+=Ψ {a}(1
+2T(T − 1))
+is (up to a Zp
+×-multiple) of the form
+1
+(pa+1)! · Tpa+1
+(since, in the present situation, 2pa
+· (pa)! ∈ (pa+1)! · Zp
+×). Thus, in particular, it follows
+that for any integer a ≥ 0, the Zp-subalgebra of Qp[T] generated by P0(T)= 1
+2 T(T −
+1),P1(T),... ,Pa(T) coincides with the Zp-subalgebra generated by {
+(T
+r
+)
+}, where r ranges
+over all powers of p which are ≤ pa+1. On the other hand, since vanishing of the pa-
+curvature is equivalent to the integrality of Ψ {a}(∇ V) (cf. Theorem 8.6), we thus obtain
+the following result:
+Corollary 8.10. (Higher p-Curvatures in the Case p=2) In the context of The-
+orem 8.9, assume that p =2 . Then the pa-curvature of V{pb }
+L vanishes for all a<b .
+Moreover, the pa-curvature of V{pa}
+L maps F1(V{pa}
+L ) ⊗ τ⊗ pa+1
+E ⊗ Fp isomorphically onto
+the image of the morphism
+p · F1+pa+1
+(V{pa+1 }
+L ) ⊆ F1+pa+1
+(V{pa }
+L ) → F1+pa+1
+(V{pa }
+L )Fp
+Finally, the composite of thepa-curvature of V{pa}
+L with the natural projection to the subquo-
+tient (F1+pa+1
+/Fpa+1
+)(−) maps F1(V{pa }
+L )⊗τ⊗ pa+1
+E ⊗Fp isomorphically onto the reduction
+of
+(F1+pa+1
+/Fpa+1
+)(V{pa }
+L )= p · (F1+pa+1
+/Fpa+1
+)(V{pa+1 }
+L )
+modulo p.
+Proof. All of the assertions follow from the above discussion, together with the fact that
+{(pa)!}p · p ∈ (pa+1)! · Zp
+×. ⃝
+74
+
+We are now ready to apply Theorem 8.9 in the case ofp = 2 to complete the proof of
+Lemma 4.2:
+Completion of the Proof of Lemma 4.2:
+By applying the theory of theta groups (as reviewed in §8.1— cf. especially the “very
+ampleness” and “surjectivity” properties that were discussed there), we reduce immediately
+to the case (cf. the notation of Lemma 4.2) where the line bundle “M” is equal toL. Then
+we must show the surjectivity of
+(F
+r+1/Fr)(VL) → 1
+r! · τ⊗r
+E ⊗OS f∗(L)
+for all r ≥ 0. We propose to do this by induction on r. Note that this surjectivity is
+clear for r =0 ,1. Moreover, let us observe that for r = 2, this surjectivity follows from
+the description of the Kodaira-Spencer morphismin Theorem 8.1. Indeed, this description
+implies that if we take apply ∇ V (in a generating tangent direction at some point ofS)t o
+a generator of F1(VL), then the image in (F3/F2)(VL) of the resulting section of F3(VL)
+generates 1
+2 · τ⊗2
+E ⊗OS f∗(L), as desired. This completes the proof of this surjectivity for
+r ≤ 2. It turns out that the proof for r> 2 will proceed in a similar (although somewhat
+more intricate) fashion by applying Corollary 8.10 in place of Theorem 8.1.
+Next, let us observe that once we show this surjectivity for all r ≤ N (where N ≥ 1
+is some integer), it follows from the theory of theta groups (as discussed above) that the
+corresponding surjectivity for r ≤ N and “ M” equal to suﬃciently large tensor powers of
+L also holds. In particular, by the deﬁnition of the “intermediate ´etale integral structures”
+(i.e., as consisting of those functions lying in the algebra generated by F
+r+1(−) of the
+“full” ´etale integral structure) we obtain (by taking “Proj”) that the subquotients of the
+structure sheaf of E∗;{N }
+et have the expected form (as given at the end of §4.4). Thus, in
+summary, we see that if we show the desired surjectivity for allr ≤ pa (where a ≥ 1i sa n
+integer), then this already implies the desired surjectivity for all r<p a+1.
+In particular, we see that it suﬃces to prove the desired surjectivity for r = pa+1
+(where a ≥ 1 is an integer), under the assumption that the subquotients of the structure
+sheaf ofE∗;{pa}
+et have the expected form(as given at the end of§4.4). But now let us observe
+that
+Fj(V{pa }
+L )= Fj(V{pa+1 }
+L )
+for j ≤ pa+1, while (cf. Corollary 8.10)
+(F1+pa+1
+/Fpa+1
+)(V{pa }
+L )|Sord = p · (F1+pa+1
+/Fpa+1
+)(V{pa+1 }
+L )|Sord
+75
+
+(i.e., we restrict to the ordinary locusSord since overSord the desired surjectivity is already
+known). Thus, in particular, the desired surjectivity forr = pa+1 will follow as soon as we
+show that the torsion-free sheaf ( F1+pa+1
+/Fpa+1
+)(V{pa+1 }
+L )i sa line bundle over all of S.
+But this will follow as soon as we show that the splitting σa of the morphism
+F1+pa+1
+(V{pa }
+L )Fp →
+{ p
+(pa+1)! · τ⊗ pa+1
+E ⊗OS f∗(L)
+}
+Fp
+deﬁned over Sord
+Fp by taking the image of the morphism
+p · F1+pa+1
+(V{pa+1 }
+L ) ⊆ F1+pa+1
+(V{pa }
+L ) → F1+pa+1
+(V{pa }
+L )Fp
+extends over SFp .
+On the other hand, by (the portion concerning V{pa}
+L of) Corollary 8.10 (which, by
+the induction hypothesis, we are free to use), if we take a generator of F1(V{pa }
+L )Fp near
+an arbitrary point of SFp and apply to this generator the pa-curvature of V{pa}
+L (in a
+generating tangent direction), the image of the resulting section of F1+pa+1
+(V{pa}
+L )Fp in
+{ p
+(pa+1)! · τ⊗ pa+1
+E ⊗OS f∗(L)}Fp is generating, and, in fact, deﬁnes the same splitting over
+Sord
+Fp as σa. That is to say, σa extends over SFp , as desired. This completes the proof of
+Lemma 4.2. ⃝
+§9. Relation to the Theory of [Mzk1]
+So far in this paper, we have only discussed the ´ etale integral structure on Hodge
+torsors for line bundles of relative degree 1. In [Mzk1], however, we need to make use of
+Hodge torsors of arbitrary positive degreed. Unfortunately, however, although the integral
+structure necessary for what is done in [Mzk1] is implicitly given correctly in [Mzk1] in
+a neighborhood of inﬁnity — in the form of the “ ζ
+CG
+r ” of [Mzk1], Chapter V, §4.8, the
+author is guilty of making a number of erroneous assertions relative to extending this
+integral structure over the entire moduli stack (
+M1,0)Z, which he would like to take the
+opportunity to correct in the following discussion:
+(1) First of all, the author wrote [Mzk1], Chapter VI, §1, under the mis-
+taken presumption that the correct integral structure in a neighborhood
+of inﬁnity (i.e., that given by the “ζCG
+r ”) coincides with the ´etale integral
+structure of the universal extension (i.e., the integral structure presented
+in §1 of the present paper) in a neighborhood of inﬁnity. Put another
+way, the author ignored the fact that the Hodge torsors are only tor-
+sors over the universal extension, which do not (in general) admit global
+76
+
+integral trivializations (cf. the ﬁrst Remark following Proposition 3.4).
+Another more concrete way to describe the author’s error is to state
+that he confused the integral structure deﬁned by the “
+(
+T
+r
+)
+” with that
+deﬁned by the “
+(T −(iχ /n)
+r
+)
+” (notation of §4.2).
+(2) The proof that the ´etale integral structure on the universal extension
+extends over the entire moduli stack (M1,0)Z given in [Mzk1], Chapter
+V, §3, is incomplete. A complete proof, however, is given in §1 of the
+present paper.
+(3) In fact, in the context of [Mzk1], it is necessary (cf. (1) above) to
+prove not just that the ´etale integral structure on the universal extension
+extends over the entire moduli stack (M1,0)Z (i.e., Theorem 1.3 of the
+present paper), but that also that the ´etale integral structure on the
+Hodge torsors extends over the entire moduli stack (M1,0)Z. This is
+carried out correctly in the proof of Theorem 4.3 given in the present
+paper.
+The author would like to take this opportunity to apologize to readers of [Mzk1] for these
+errors.
+Next, we would like to clear up the confusion resulting from the above errors by
+stating, in the notation of the present paper, the correct integral structure for what is done
+in [Mzk1] (more precisely, for the main result (i.e., Theorem A of [Mzk1], Introduction,§1)
+of [Mzk1]). Since the correct integral structure in a neighborhood at inﬁnity is essentially
+given accurately in [Mzk1](i.e., using the “ ζ
+CG
+r ’s” — cf., e.g., the reference to [Mzk1],
+Chapter V, Theorem 4.8, given in [Mzk1], Introduction, Theorem A, (3)), we concentrate
+here on the case of smooth elliptic curves E → S over a Z-ﬂat noetherian scheme S.
+First, let us recall that in [Mzk1], Chapter V, §2, we deﬁned the object E†
+[d] by
+“pushing out” the ωE-torsor E† via the morphism [d]: ωE → ωE given by multiplication
+by (some positive integer) d. The reason that this was necessary was that we wished to
+deal with d-torsion points inside E† which only become integral if we use the modiﬁed
+integral structure E†
+[d]. In fact, of course, in order to obtain an integral structure suitable
+for Theorem A of [Mzk1], Introduction, §1, we must also make further modiﬁcations of
+the integral structure of E† . For instance, we would like to use the various properties of
+the ´etale integral structure, so, in fact, we need an “´ etale integral structure version” of
+E†
+[d]. Since (unlike the kernel of E† → E) the kernel of E†
+et → E is diﬃcult to describe
+explicitly, instead of deﬁning the ´etale integral structure version of E†
+[d] by “pushing out
+via multiplication byd on the kernel ofE†
+et → E,” we take the following indirect approach:
+We begin by observing that we have a commutative diagram
+77
+
+0 −→ ωE −→ E† −→ E −→ 0
+⏐⏐↓[d]
+⏐⏐↓
+⏐⏐↓id
+0 −→ ωE −→ E†
+[d] −→ E −→ 0
+⏐⏐↓id
+⏐⏐↓
+⏐⏐↓[d]
+0 −→ ωE −→ E† −→ E −→ 0
+of morphisms of group objects overS. This diagram shows that E†
+[d] may be deﬁned either
+as the result of pushing forward the ﬁrst exact sequence via [d]: ωE → ωE, or as the result
+of pulling back the third exact sequence via [d]: E → E. This makes it natural to deﬁne
+E†
+[d],et
+def
+= E†
+[d] ×E,[d] E
+(i.e., the morphism E → E implicit in the second factor of the ﬁbered product is the
+morphism [d]: E → E given by multiplication by d). Note that we have a natural
+commutative diagram of morphisms over E
+E†
+et −→ E†
+⏐⏐↓
+⏐⏐↓
+E†
+[d],et −→ E†
+[d]
+where F2(O
+E†
+[d],et
+)= F2(O
+E†
+[d]
+) (i.e., the subsheaves of the structure sheaves ofE†
+[d],et and
+E†
+[d] consisting of functions of torsorial degree < 2 coincide). Moreover, if we consider the
+morphism E†
+[d],et → E†
+[d] in a neighborhood of inﬁnity, we see that, just as the integral
+structure of E† (respectively, E†
+[d]; E†
+et) is deﬁned by the “ Tr” (respectively, “(d · T)r”;
+“
+(T
+r
+)
+”), the integral structure ofE†
+[d],et is deﬁned by the “
+(d·T
+r
+)
+” (cf. the notation of §1).
+Now letη ∈ E(S)b ea torsion point of orderm. Then we would like to deﬁne the “E†
+[d]
+versions” (i.e., “pushed out by [ d]: ωE → ωE versions”) of E∗, E∗
+et, where ∗
+def
+= OE(η).
+Since E∗ (respectively, E∗
+et)i sa torsor over E† (respectively, E†
+et), the natural way to
+deﬁne such objects E∗
+[d], E∗
+[d],et is as follows:
+Deﬁnition 9.1. We deﬁne E∗
+[d] (respectively, E∗
+[d],et) is to be the result of executing the
+“change of structure group” E† → E†
+[d] (respectively, E†
+et → E†
+[d],et) to the E† - (respec-
+tively, E†
+et-) torsor E∗ (respectively, E∗
+et).
+78
+
+Thus, in a neighborhood of inﬁnity, (if we let iχ,n
+def
+=2 m be as in §4.2, then) just
+as the integral structure of E∗ (respectively, E∗
+et) is deﬁned by the “( T − (iχ/2m))r”
+(respectively, “
+(T −(iχ /2m)
+r
+)
+”), the integral structure ofE∗
+[d] (respectively, E∗
+[d],et) is deﬁned
+by the “{d ·(T − (iχ/2m))}r” (respectively, “
+(d·(T −(iχ /2m))
+r
+)
+”) (cf. the notation of§1; §4.2).
+Theorem 9.2. (Correct Integral Structure for [Mzk1]) Let
+E → S
+be a family of elliptic curves over a Z-ﬂat noetherian scheme S.L e t d, m ≥ 1 be in-
+tegers such that m does not divide d.L e t η ∈ E(S) be a torsion point of order pre-
+cisely m, and let us write L
+def
+= OE(d · [η]). Then the correct deﬁnition of the notation
+“(fS)∗(L|
+E†
+∞ ,[d]
+)<d{∞ ,et}” of [Mzk1], Introduction, §1, Theorem A, is given (relative to
+the notation of the present paper) by:
+Fd(f∗(LE∗
+[d],et
+))
+where ∗
+def
+= OE(η); Fd(−) denotes the subobject of sections of torsorial degree <d ; and
+E∗
+[d],et is as deﬁned in Deﬁnition 9.1.
+Remark. Although the deﬁnition of the integral structure necessary for the purposes of
+[Mzk1] that we gave in [Mzk1] is partially inaccurate (as explained above), once one deﬁnes
+this integral structure correctly (as in Theorem 9.2 above), the arguments used to prove
+Theorem A in [Mzk1], Introduction, §1, are all valid without change.
+Bibliography
+[Falt] G. Faltings, Crystalline Cohomology and p-adic Galois Representations, Proceedings
+of the First JAMI Conference, Johns-Hopkins University Press (1990), pp. 25-79.
+[Jac] N. Jacobson, Lie Algebras, Interscience Tracts in Pure and Applied Mathematics 10,
+Interscience Publishers (a division of John Wiley & Sons) (1962).
+[Katz1] N. Katz, Nilpotent Connections and the Monodromy Theorem: Applications of a Re-
+sult of Turritin, Publ. Math. IHES 39 (1970), pp. 355-412.
+[Katz2] N. Katz, Algebraic solutions of diﬀerential equations ( p-curvature and the Hodge
+ﬁltration), Invent. Math. 18 (1972), pp. 1-118.
+[Katz3] N. Katz, The Eisenstein Measure andp-adic Interpolation, Amer. Journ. of Math.99,
+No. 2 (1977), pp. 238-311.
+79
+
+[Katz4] N. Katz, Serre-Tate Local Moduli, in Surfaces alg´ebriques, S´eminaire de G´eom´etrie
+Alg´ebrique, 1976–78, edited by Jean Giraud, Luc Illusie and Michel Raynaud, Lecture
+Notes in Mathematics 868, Springer-Verlag (1981).
+[Mzk1] S. Mochizuki, The Hodge-Arakelov Theory of Elliptic Curves: Global Discretization of
+Local Hodge Theories, RIMS Preprint Nos. 1255, 1256 (October 1999).
+[Mzk2] S. Mochizuki, The Scheme-Theoretic Theta Convolution , RIMS Preprint No. 1257
+(October 1999).
+[Mzk3] S. Mochizuki, Foundations of p-adic Teichm¨uller Theory, AMS/IP Studies in Ad-
+vanced Mathematics 11, American Mathematical Society/International Press (1999),
+529 pp.
+[Mumf1,2,3] D. Mumford, On the equations deﬁning abelian varieties I, II, III, Invent. Math. 1
+(1966), pp. 287-354; 2 (1967), pp. 71-135; 3 (1967), pp. 215-244.
+[Mumf4] D. Mumford, Varieties deﬁned by quadratic equations, inQuestions on Algebraic Vari-
+eties, Centro Internationale Matematica Estivo, Cremonese, Rome (1970), pp. 29-100.
+[Mumf5] D. Mumford, Abelian Varieties, Oxford Univ. Press (1974).
+80

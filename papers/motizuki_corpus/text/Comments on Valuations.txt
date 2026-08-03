@@ -1,0 +1,160 @@
+COMMENTS ON V ALUA TIONS ASSOCIA TED TO SYSTEMS OF
+VER TICES/EDGES AND THE MAIN THEOREM OF POP-STIX
+Shinichi Mochizuki
+Updated May 2, 2011
+Let k be an arbitrary complete discrete valuation ﬁeld of mixed characteristic
+whose residue characteristic we denote byp, k an algebraic closure of k, Gk
+def
+=
+Gal(k/k), Σ aset of primes that contains a primel ̸= p, X a proper hyperbolic
+curve over k. Suppose, further, thatk is l-cyclotomically full, i.e., that the image
+of thel-adic cyclotomic characterGk → Z×
+l is open in Z×
+l .W r i t e
+ΠX ↠ Π(Σ)
+X
+for thegeometrically pro-Σquotient of the´etale fundamental group ΠX of X.T h u s ,
+we have a natural surjection Π(Σ)
+X ↠ Gk.L e t
+... → Xi+1 → Xi → ...
+[whereirangesoverthepositiveintegers]beacoﬁnalsystemof ﬁnite ´etale connected
+Galois coverings of X with stable reduction arising from open subgroups of Π(Σ)
+X
+and
+s : Gk → Π(Σ)
+X
+a section of Π(Σ)
+X ↠ Gk. Then in the “Comments on a Combinatorial Version of
+the Section Conjecture and the Main Theorem of Pop-Stix” dated March 3, 2011
+(cf. [CbSC], (5)), we showed that
+(∗v/e) [after possibly passing to a coﬁnal subsystem of the given system of
+coverings] there existseither a [not necessarily unique]system of vertices
+... ⇝ vi+1 ⇝ vi ⇝ ...
+or a [not necessarily unique]system of edges
+... ⇝ ei+1 ⇝ ei ⇝ ...
+— i.e., eachvi (respectively,ei) is an irreducible component (respectively,
+node) of the special ﬁber of the stable modelXi of Xi that is ﬁxed by
+the natural action of the image Im(s) of the sections; the image of the
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+irreducible componentvi+1 (respectively, nodeei+1)i nXi is contained in
+the irreducible componentvi (respectively, nodeei).
+In the present note, we verify (cf. (1), (2) below), by means of a quite elementary
+argument in scheme theory/commutative algebra, that
+(∗val) such a system of vertices or edges determines asystem of valuations of
+the function ﬁelds Ki of the Xi that are ﬁxed by the natural action of
+Im(s).
+In particular, we obtain a proof of themain theorem of Pop-Stix (cf. [PS]) by means
+of elementary graph-theoretic and scheme-/ring-theoretic considerations, without
+r e s o r t i n gt ot h eu s eo fhighly nontrivial arithmetic results such as Tamagawa’s
+“resolution of nonsingularities” [i.e., the main result of [Tama]]. Here, werecall that
+this result of [Tama] depends, in an essential way, onhighly arithmetic arguments
+that require one to take Σ to be theset of all primes , as well as on relatively
+deep wild ramiﬁcation properties of p-power coverings of X. In particular, the
+essential role played by this result in the proof of [PS] has the eﬀect ofportraying
+the phenomenon discussed in the main theorem of [PS] as being a consequence of
+such deep arithmetic considerations. In fact, however, the arguments of the present
+note imply that
+the essential phenomenon discussed in the main theorem of [PS] is [not
+“arithmetic” or “p-adic”, but rather]“l-adic” and “combinatorial” in na-
+ture and may be obtained as a consequence of quite elementary con-
+siderations concerning ﬁnite group actions on graphs and scheme the-
+ory/commutative algebra.
+(1) Suppose that one has asystem of vertices {vi} as in (∗v/e). If [after possibly
+passing to a coﬁnal subsystem of the given system of coverings] eachvi+1 maps
+quasi-ﬁnitely tovi, thenthesystemofvaluationsassociatedtothe vi alreadyyieldsa
+system of valuations as desired. Thus, [after possibly passing to a coﬁnal subsystem
+of the given system of coverings] we may assume without loss of generality thatvi+1
+maps to a closed point xi of vi. If [after possibly passing to a coﬁnal subsystem
+of the given system of coverings] thexi are all nodes, then we obtain asystem of
+edges {ei} as in (∗v/e); this situation will be dealt with in (2) below. Thus, [after
+possibly passing to a coﬁnal subsystem of the given system of coverings] we may
+assume without loss of generality that eachxi is a smooth point. In particular, the
+local ringRi of Xi at xi is regular of dimension 2, hence aUFD.W r i t e
+ordi : K×
+i → Q
+for the valuation associated tovi, normalized so as to restrict to a ﬁxed [i.e., inde-
+pendent ofi], given valuation onk. Then it follows immediately from the deﬁnition
+of xi, together with the fact thatRi is a UFD,t h a tw eh a v e
+ordj′(f) ≥ ordj(f) ≥ 0
+
+V ALUATIONS AND THE MAIN THEOREM OF POP-STIX 3
+for any nonzerof ∈Ri ⊆Ki, j′ ≥j ≥i. [Here, we think of the variousKi as
+being related to one another via the natural inclusionsKi ⊆... ⊆Kj ⊆... ⊆Kj′.]
+Next, let us observe that it follows immediately from the fact that each ordj(−)i s
+a valuation that, if we set ordj(0)
+def
+=+ ∞, then the subset
+Ri ⊇ Ii
+def
+= {f ∈Ri | lim
+j→∞
+ordj(f)=+ ∞}
+is, in fact, aprime ideal ofRi whose intersection with the ring of integersOk ⊆Ri of
+k is equal to{0}. In particular, theheight of Ii is ≤1. If [after possibly passing to a
+coﬁnal subsystem of the given system of coverings] theIi are all of height 1, then it
+follows immediately thatIi determines a closed point ξi of Xi, and that the system
+of valuations associated to theξi yields a system of valuations as desired [indeed, of
+the “ideal type”, from the point of view of the original Section Conjecture!]. Thus,
+[after possibly passing to a coﬁnal subsystem of the given system of coverings] we
+may assume without loss of generality that eachIi is of height 0, hence equal to
+{0}. But this implies that, forf ∈K×
+i ,t h eq u a n t i t y
+ord∞(f)
+def
+= lim
+j→∞
+ordj(f) ∈R
+is well-deﬁned. Moreover, one veriﬁes immediately that ord ∞(−) determines a
+valuation on Ki that is ﬁxed b yt h ea c t i o no fI m (s). In particular, one obtains a
+system of valuations as desired.
+(2) Suppose that one has asystem of edges {ei} as in (∗v/e). Write Xlog
+i for the
+regular log scheme whose underlying scheme isX and whose interior is the generic
+ﬁber Xi ⊆Xi. Thus, the characteristic of the log structure ofXlog
+i at xi determines
+— by tensoring the groupiﬁcation of the characteristic withR — a 2-dimensional
+real vector space, whose dual we denote by Mi.T h u s ,Mi is equipped with a
+natural positive rational structure Pi [i.e., a submonoid isomorphic toQ≥0 ⊕Q≥0
+that generatesMi as a real vector space]. [Put another way,Mi is the sort of real
+vector space that appears in discussions oftoric varieties.] The natural morphism
+Xlog
+i+1 →X log
+i induces an R-linear map of vector spaces Mi+1 → Mi of rank ≥1
+that maps Pi+1 into Pi.W r i t eP i ⊆Mi for the closure ofPi in Mi. Let us refer
+to as aP -ray of Mi ar a yo fMi emanating from the origin that is contained inP i.
+Now it follows immediately from thecompactnessof the space ofP-rays ofMi that
+[after possibly passing to a coﬁnal subsystem of the given system of coverings] we
+may assume that there exists acompatible system {λi} of P-rays of theMi which
+are, moreover, ﬁxed b yt h ea c t i o no fI m (s). Suppose that [after possibly passing
+to a coﬁnal subsystem of the given system of coverings] eachλi is rational [i.e.,
+g e n e r a t e db ya ne l e m e n to fPi]. Then λi corresponds to an irreducible component
+vi of a suitable blow-up ofXi at ei; one may construct these blow-ups so thatvi+1
+maps intovi. If [after possibly passing to a coﬁnal subsystem of the given system
+of coverings] each vi+1 maps quasi-ﬁnitely to vi, then the system of valuations
+associated to thevi already yields a system of valuations as desired. Thus, [after
+possibly passing to a coﬁnal subsystem of the given system of coverings] we may
+assume without loss of generality thatvi+1 maps to aclosed pointxi ofvi;m o r e o v e r ,
+it follows immediately from the fact that theλi form a compatible system that each
+
+4 SHINICHI MOCHIZUKI
+xi is a smooth point. Thus, one may construct either a system ofclosed points ξi
+of Xi or a system of “limit valuations ord∞(−)” as in (1); this yields a system
+of valuations as desired. This completes the proof in the case where theλi are
+rational. Thus, [after possibly passing to a coﬁnal subsystem of the given system of
+coverings] we may assume without loss of generality that eachλi is irrational.B u t
+then it is well-known that eachλi determines a valuation onKi; the compatibility
+of these valuations as one variesi follows immediately from the compatibility of the
+λi. Thus, one obtains a system of valuations as desired.
+(3) The present note beneﬁted from discussions with Fumiharu Kato in November
+2010.
+Bibliography
+[CbSC] S. Mochizuki,Comments on a Combinatorial Version of the Section Conjecture
+and the Main Theorem of Pop-Stix , manuscript dated March 3, 2011.
+[PS] F. Pop and J. Stix,Arithmetic in the fundamental group of a p- a d i cc u r v e—
+On the p-adic section conjecture for curves , preprint, Philadelphia-Heidelberg-
+Cambridge, August 2010.
+[Tama] A. Tamagawa, Resolution of nonsingularities of families of curves,Publ. Res.
+Inst. Math. Sci. 40 (2004), pp. 1291-1336.

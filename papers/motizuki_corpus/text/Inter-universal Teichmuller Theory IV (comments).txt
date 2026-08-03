@@ -1,0 +1,96 @@
+COMMENTS ON [IUTCHIV], THEOREM 1.10
+Shinichi Mochizuki
+October 2012
+In the following, we discuss aminor errorin the theory of [IUTchIII], [IUTchIV]
+concerning the precise content of the“ϵ portion”of the ABC Conjecture. This error
+is easily repaired and, moreover, hasno eﬀect on the conclusion constituted by the
+ABC Conjecture[i.e., [IUTchIV], Theorem A; [IUTchIV], Corollary 2.3]. That is
+to say, it only concerns thesomewhat subtle content of the “ϵ term”that appears
+in these results.
+(1.) In late September 2012, Vesselin Dimitrov and Akshay Venkatesh pointed out
+to me, in e-mails, the possibility that the inequality of [IUTchIV], Theorem 1.10,
+contradicts the examples constructed in [Mss]. In fact, I had considered this issue
+when I wrote [IUTchIV] — cf. the discussion of [IUTchIV], Remark 2.3.2, (ii). At
+the time I wrote [IUTchIV], I had not studied the proof given in [Mss] in detail.
+However, the construction given in [Mss] is performed in such a way that there
+is no apparent way to bound the contribution at the prime2. Since the theory of
+[IUTchI], [IUTchII], [IUTchIII], depends, in an essential way, on the theory of the
+´etale theta function developed in [EtTh], which breaks down in an essential way
+at the prime2, the bound given in [IUTchIV], Theorem 1.10, does not involve the
+contribution at the prime 2. In particular,
+at apurely explicitlevel, there isno contradictionbetween the inequality
+of [IUTchIV], Theorem 1.10, and the examples constructed in [Mss].
+This was precisely my understanding when I wrote [IUTchIV].
+(2.) On the other hand, it was pointed out to me by Akshay Venkatesh that the
+argument of [Mss] may be modiﬁed in such a way as to obtain examples for which
+thecontributionattheprime2maybe bounded. Thisledmetoreexaminetheentire
+theory of [IUTchI], [IUTchII], [IUTchIII], [IUTchIV] in detail. My conclusions may
+be summarized as follows:
+(a) I continue to believe that the abstract theory of [IUTchI], [IUTchII],
+[IUTchIII] contains no essential errors.
+(b) I continue to believe that the log-volume computations of [IUTchIV]
+contain no essential errors.
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+(c) On the other hand, I now see that I made a slight error in the in-
+terpretation via log-volume of the abstract theoryof [IUTchI], [IUTchII],
+[IUTchIII], i.e., in the“bridge”between this abstract theory and the log-
+volume computations discussed in [IUTchIV],§1.
+That is to say, at a more technical level, it appears that I made a slight error in
+the deﬁnition of the constant “CΘ” in [IUTchIII], Corollary 3.12.
+(3.) The error discussed in (2.) may be explained in more detail as follows. The
+essence of the abstract theory of [IUTchI], [IUTchII], [IUTchIII] lies in thecompu-
+tation — via anabelian geometry, the theory of Frobenioids, etc. — of an“alien”
+arithmetic holomorphic structurein terms of a giveninitial arithmetic holomorphic
+structure that is related to the “alien” structure via certain“mono-analytic” data.
+This is intended to be an arithmetic analogue of the situation [i.e., in classical
+complex Teichm¨uller theory] in which one considersdistinct holomorphic structures
+related by asingle underlying real analytic structureon a topological surface. The
+current deﬁnition of the constant “CΘ” amounts, in essence, to [an upper bound on]
+the log-volume of the “alien” structure measured in terms of themono-analytic
+[i.e., thearithmeticanalogueof“underlyingrealanalytic”]data. Ontheotherhand,
+upon further consideration, I reached the conclusion that the correct deﬁnition of
+this constant “CΘ” is as [an upper bound on]
+the log-volume of the “alien” structure measured in terms of the given
+initial arithmetic holomorphic structure .
+Indeed, this is in essence the content of the crucial argument given in Step (xi) of
+the proof of [IUTchIII], Corollary 3.12. That is to say, in summary, my current
+understanding is that
+there is nothing essentially wrong with this argument/proof, but rather
+that I made anerror in thestatement of the conclusionsthat one should
+draw from this argument [i.e., in the deﬁnition of the constant “CΘ”].
+Although I am quite busy with other work, I hope to post a revised version of
+[IUTchIII] on my homepage [i.e., with the correct deﬁnition of the constant “CΘ”]
+in the not so distant future.
+(4.) At the level of the computations of [IUTchIV],§1, the eﬀect of the change in
+the deﬁnition of the constant “CΘ” discussed in (3.) is in fact quite limited. That
+is to say, in a word, there is in fact no eﬀect on the computations at archimedean
+primes and at nonarchimedean primes (i.e., of the ﬁeld “K”) that are “moderately
+ramiﬁed”, i.e., whose absolute ramiﬁcation index is<p −1. At nonarchimedean
+primes(i.e., oftheﬁeld“K”)thatare[possiblytamely, but] not moderately ramiﬁed,
+one must add a new term arising from the fact that theradius of convergence of the
+p-adic log/exp seriesis p−1/p−1. The main contribution then occurs at the [odd!]
+bad primes , i.e., where there istame ramiﬁcation of indexl, which typically is
+much larger than p. The total new contribution — say, in the case where the
+base ﬁeld is the ﬁeld of rational numbersQ, the conductor of theabc-triple under
+
+COMMENTS ON [IUTCHIV], THEOREM 1.10 3
+consideration is denotedN, and we make the assumption (which is possible in the
+context of Theorem 1.10) thatl is ≤a positive constant multiple of log(N)—i s
+then roughly of the form
+ω(N′)·log(log(N))−log(N′)
+— i.e., where “ω(−)” denotes the number of primes that divide the integer in paren-
+theses, and we writeN′ for the product ofp dividing N that are<l . Elementary
+estimates via the prime number theorem then yield asymptotic upper bounds for
+the new contribution of the form [a positive constant times]
+log(N)·(log(log(log(N))))/log(log(N))
+— i.e., which is safely out of range of the lower bound (log(N))1/2/log(log(N)) of
+Masser’s examples. Again, although I am quite busy with other work, I hope to
+post a revised version of [IUTchIV] on my homepage [i.e., with the corrected version
+of Theorem 1.10 and its proof] in the not so distant future.
+(5.) In the context of (4.), it is of interest to note that the contribution involving
+ω(N) discussed in (4.) is [not precisely the same as, but nevertheless] strongly
+reminiscent of the manyreﬁnements of the ABC Conjectureconsidered by Baker
+in his 1996 and 2004 papers on the ABC Conjecture.

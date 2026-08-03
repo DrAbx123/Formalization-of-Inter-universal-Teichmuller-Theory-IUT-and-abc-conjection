@@ -1,0 +1,354 @@
+The Intrinsic Hodge Theory
+of p-adic Hyperbolic Curves
+Shinichi Mochizuki
+Research Institute for
+Mathematical Sciences
+Kyoto University
+Kyoto 606-01, JAPAN
+motizuki@kurims.kyoto-u.ac.jp
+§1. Uniformization Theory as a Hodge
+Theory at Arithmetic Primes
+§2. The Physical Aspect:
+Embedding by Automorphic Forms
+§3. The Modular Aspect:
+Canonical Frobenius Actions
+1
+
+§1. Unif. Theory as a Hodge
+Theory at Arithmetic Primes
+(A.) Uniformization as a
+Catalogue of Rational Points
+Problem
+: For a variety Z/C, list/
+catalogue explicitly the set of rational
+rational points Z(C), e.g.,
+Complex Planar Varieties
+:
+Z(C)
+def
+= V (f(X,Y ))
+= {(x, y) ∈ C2| f(x, y)=0 }
+1. Linear
+: X =0 = ⇒
+(0, ?) : C
+∼
+→ Z(C)
+2
+
+2. Quadratic
+: X · Y =1 = ⇒
+exp : C → Z(C)= C×
+3. Cubic
+: Elliptic Curve E =⇒
+expE : C → E(C)= C/Λ
+4. Higher Degree
+:
+Hyperbolic Curve Z: smooth, proper
+connected genus g algebraic curve
+− r points, s.t. 2g − 2+ r> 0
+⇓ (K¨obe)
+Upper half-plane H→ Z(C)= H/Γ
+3
+
+(B.) “Intrinsic” Hodge Theories
+Unif. = linear/geometric catalogue
+of rational points
+⇓ an equivalence
+:
+⎛
+⎜⎜⎜⎝
+alg.
+geom.
+(e.g.,
+rat.
+pts.)
+⎞
+⎟⎟⎟⎠ ⇐⇒
+⎛
+⎜⎜
+⎜⎜⎜⎝
+C
+:t o p .+
+diﬀ. geom.
+p-adics
+:
+pro-p ´etale
+top. + Gal.
+action
+⎞
+⎟⎟
+⎟⎟⎟⎠
+A “Hodge Theory
+”: but not of cohoms.
+(i.e., de Rham. ⇐⇒ sing./et. cohom.)
+4
+
+Uniformization
+ = case where:
+“alg. geom.” = “variety itself,” e.g.,
+⃝ Its Rat. Points ⇝ Physical Aspect
+(uniformization of variety itself)
+⃝ Its Moduli ⇝ Modular Aspect
+(uniformization of moduli space)
+... “Intrinsic Hodge Theory
+ ”( I H T )
+Note
+:F o rGm = V (XY − 1), elliptic
+curve E,
+IHT = HT of cohoms.
+since these are 1-motives
+!
+5
+
+(C.) Completion at Arith. Primes
+To realize (I)HT, typically must
+complete
+ at “arithmetic primes
+ ”:
+inf. primes ( C), p-adic primes (Qp),
+degenerate object (power series/Z)
+Guiding Principle
+: ∀ arithmetic prime,
+∃ canonical unif. theory at that prime.
+(but, in general, theories at diﬀerent
+primes are not compatible
+!!
+Examples
+: (Phys./Mod.)
+(1.) Abelian Varieties
+(2.) Hyperbolic Curves
+6
+
+(1.) Abelian Varieties
+C
+ p-adic
+ Deg. Obj.
+exp. map.
+of AV/
+Siegel
+upper
+half-pl.
+Tate’s
+thm./
+Serre-
+Tate
+theory
+Schottky
+unifs.
+of Tate/
+Mumford
+(2.) Hyperbolic Curves
+C
+ p-adic
+ Deg. Obj.
+Fuchsian
+unif./
+Teich.-
+Bers Unif.
+Theory
+§2
+(anab.
+conj.)/
+§3
+(p-adic
+Teich.
+th.)
+formal
+algebr.
+Schottky
+unif. of
+Mumford
+7
+
+§2. The Physical Aspect:
+Embedding by Aut. F orms
+(A.) The Complex Case
+alg.
+ curve X ⇐⇒ SO(2)\PSL 2(R)/Γ
+(physical/analytic obj.)
+⇐⇒ π1(X) + action on H
+⇐⇒ top.
+ + arith. str.
+ (geom.)
+Autom. forms
+ deﬁne ﬁrst “ ⇐⇒ ”: i.e.,
+to recover alg. str., constr. aut. forms
+analytically
+, then embed in proj. sp.
+8
+
+Point
+: analytic repr. of alg. diﬀ. forms.
+=⇒ do this p-adically using p-adic HT
+Upp. half-pl. H→ Proj. Sp.
+↓∥
+Alg. Curve ↪→ Proj. Sp.
+The Case of SL2(Z)
+9
+
+(B.) The Arith. F und. Group
+K
+def
+= char. 0 ﬁeld, Γ K
+def
+= Gal(
+ K/K)
+X: hyp. curve/K,
+ X
+def
+= X ×K
+ K.
+⇒ 1 → π1(
+X) → π1(X) → ΓK → 1
+π1(
+X) (geom. π1): indep. of moduli
+(but in char. p,m a yd e t e r m i n e
+moduli! – A. Tamagawa)
+Grothendieck’s anabelian philosophy
+:
+“Extension should determine moduli.”
+10
+
+(C.) The Main Theorem
+Theorem 1
+: K ⊆ ﬁn. gen. extn./ Qp,
+X: hyperbolic curve/K,
+S : smooth variety/K.
+⇒ X(S)dom ∼
+→ Homopen
+ΓK (π1(S),π1(X))
+i.e., alg. curve
+ X ⇐⇒
+phys./an. obj.
+ Homopen
+ΓK (−,π1(X))
+Builds on work of: H. Nakamura, A.
+Tamagawa + G. Faltings, Bloch/Kato.
+Proof
+: Consider p-adic analytic diﬀ.
+forms on (Zp[ T ] tame
+(p) )∧
+(maps to X) – cf. mod. forms on H.
+11
+
+Remark
+:A l s op r o -p, function ﬁeld
+versions (cf. F. Pop).
+(D.) Comparison with the Case of
+Abelian V arieties
+Th.1 resembles Tate Conjecture, i.e.,
+Hom(abelian varieties) ⇐⇒
+Hom(Tate modules)
+But T. C. false over local ﬁelds !
+New point of view
+:
+Theorem 1 = p-adic version of
+physical aspect
+ of
+of Fuchsian unif.
+12
+
+§3. The Modular Aspect:
+Canonical F robenius Actions
+(A.) The Complex Case
+{hyp. curve X + proj. str. } ⇝ S
+g,r
+= {squ. diﬀs.}-(‘Schwarz’) torsor/Mg,r
+(proj. str. ⊆O X, sects. diﬀer loc.
+by lin. fract. trans. )
+Over C
+: ∃ “open ball of
+quasi-conformal gps.
+”
+‘S int∞
+g,r ’ ↶ Fr∞
+∥
+RepQC(π1(X),
+PGL2(C))
+open
+↪→ (Sg,r)C⋃ ↓
+Fr∞ -invars.
+∼
+→ (Mg,r)C
+13
+
+⇝ can. real an.
+ s :( Mg,r)C → (Sg,r)C
+(= section assoc. to Fuchs. unif.
+)
+s.t.: (1)
+ ∂s = Weil-Petersson metric
+(2)
+∫
+WP = Bers coords.
+=p rMg,r ◦(Fr∞ |Fiber)
+“Bers unif. is
+ a Frobenius action!”
+14
+
+(B.) T eich. Theory in Char. p
+Proj. str. s.t. p-curv
+.( =“ [ F r o b . ,∇]”)
+squ. nilp
+. (cf. Shimura curves) =⇒
+(Sg,r)Fp =( Sg,r)Fp⋃ ↓
+Ng,r → (Mg,r)Fp
+Theorem 2
+: Ng,r → (Mg,r)Fp : ﬁn., ﬂat,
+loc. compl. int., deg. = p3g−3+r, i.e.,
+Ng,r “almost” a section of Sch. torsor
+!
+Remarks
+:( 1 )Ng,r ⇝ ‘p-adic Teich. th
+.’
+(2) Ng,r ⇒ new prf. that Mg,r conn.!
+(cf. Teich. th./ C; ab. vars. (Oort)!)
+15
+
+(C.) Canonical p-adic Liftings
+Ng,r ⊇ (Nord
+g,r )Fp
+def
+=´et. loc./( Mg,r)Fp
+=⇒ (Sg,r)Zp =( Sg,r)Zp
+∪↓
+ΦN ↷ (Nord
+g,r )Zp
+p-adic et
+−→ (Mg,r)Zp
+·||·
+RepCrys(π1(XQp ),PG L2(Zp))
+Thm. 3
+: {ΦN , ∪} are ! Frob.-inv
+.p a i r .
+=⇒ sN = can. sect. of Sch. torsor
+ !
+Remarks
+:( 1 )( 1/p) · dΦN is isom., i.e.,
+ΦN is ordinary Frobenius lifting
+16
+
+(2) ‘
+∫
+ord. F.L.’ =⇒
+canonical mult. parameters
+(cf. real analytic K¨ahler metrics
+)
+(3) ΦN ←→ Weil-Petersson metric
+‘
+∫
+ΦN ’ ←→ Bers coordinates
+17
+
+(4) ∃ ord. F.L. Φ A =⇒
+Serre-Tate Theory for ord. AV’s
+(can. mult. pars. ←→ “S.-T. pars.”)
+⇒ Th.3 = Serre-Tate
+theory for hyp. curves!
+(5) ΦN ,Φ A, “ord’s” not compatible
+!
+←→ M g →A g not isometric
+/C
+(for WP metric,
+Siegel upper half-plane metric)
+18

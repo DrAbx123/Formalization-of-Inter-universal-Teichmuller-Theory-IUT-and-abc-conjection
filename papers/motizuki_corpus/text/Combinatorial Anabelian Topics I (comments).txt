@@ -1,0 +1,86 @@
+COMMENTS ON “COMBINA TORIAL ANABELIAN TOPICS I”
+Shinichi Mochizuki
+January 2024
+(1.) In Deﬁnition 2.6, (i), “Aut |grph|(G)” should be deﬁned as the subgroup of
+Aut(G) of automorphisms of G which induce the identity automorphism on the
+underlying semi-graph ofG [cf. the deﬁnition given in Theorem B]. In a similar vein,
+in Deﬁnition 2.6, (iii), “Aut|H|(G)” should be deﬁned as the subgroup of Aut(G)o f
+automorphisms ofG which preserve the sub-semi-graphH of the underlying semi-
+graph ofG and, moreover, induce the identity automorphism ofH. Since the correct
+deﬁnitions are applied throughout the exposition of the present paper, these errors
+in the statement of the deﬁnitions haveno substantive eﬀecton the exposition of
+the present paper, except for the following two instances [which themselves do not
+have any substantive eﬀect on the exposition of the present paper]:
+(i) In the display of Proposition 2.7, (ii), “Aut
+|grph|(G)” should be replaced
+by “Aut|VCN(G)|(G)”.
+(ii) In Proposition 2.7, (iii), the phrase “In particular” should be replaced
+by the word “Finally”.
+(2.) In Deﬁnition 2.8, (vii), the phrase “equivalent class” should read “equivalence
+class”.
+(3.) In the portion of the proof of Corollary 5.9 concerning the implication “(iii-3)
+=⇒ (iii-1)”, the subscript “3g −g +r” should read “3g −3+ r”.
+(4.) In the proof of Lemma 1.3, the phrase “scheme-theoretic image ofsi : Bi ↪→
+B ×k C” should read “scheme-theoretic image ofsi : B↪→ B ×k C”.
+(5.) There is a slight [but substantively irrelevant] inaccuracy in the ﬁnal sentence
+of the discussion entitled “Curves” in§0. A corrected version of this ﬁnal sentence
+may be given as follows:
+Then we shall refer to as then-th log conﬁguration spaceof Xlog the log scheme
+obtained by pulling back the (1-)morphismM
+log
+g,r+n → M
+log
+g,r given by forgetting
+the last n points via the classifying (1-)morphismT log → M
+log
+g,r of Xlog ×S T for
+some ﬁnite ´etale covering T → S [i.e., over which thedivisor of cusps splits]o f
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+the underlying schemeS of Slog and then descending [in the evident fashion] from
+T log def
+= T ×S Slog to Slog.
+(6.) In the statement of Theorem C and Corollary 5.10, there are references to
+[CmbGC], Example 2.5, concerning the deﬁnition of a certainsemi-graph of an-
+abelioids of pro-ΣPSC-type determined by a stable log curve over a base [fs] log
+scheme whose underlying scheme is the spectrum of a ﬁeld. At ﬁrst glance, this may
+appear to be problematic since the “stable log curve over a base log scheme whose
+underlying scheme is the spectrum of a ﬁeld” that appears in [CmbGC], Example
+2.5, is subject to the condition that the log structure of this base log scheme be of
+a certainrestricted type. In fact, this is not a problem, however, since the construc-
+tion of thesemi-graph of anabelioids of pro-ΣPSC-type in [CmbGC], Example 2.5,
+depends only on thepointed stable curveover a ﬁeld determined by the given log
+stable curve [i.e., isindependent of the log structure on the base log scheme].
+(7.) There are some ﬂaws in the typesetting of the initial portion of the statement
+of Corollary 5.10. These ﬂaws did not exist in the original text that was submitted
+for publication, but apparently appeared at some stage of the typesetting carried
+out by the publishing company. The [correct] original version of this portion of the
+statement of Corollary 5.10 is as follows:
+Corollary 5.10 (Combinatorial/group-theoretic nature of scheme-
+theoreticity). Let (g,r) be a pair of nonnegative integers such that2g−2+ r> 0;
+Σa nonempty set of prime numbers;R a complete discrete valuation ring whose
+residue ﬁeldk is separably closed of characteristic̸∈Σ; S
+log the log scheme obtained
+by equipping S
+def
+=S p e cR with the log structure determined by the maximal ideal
+of R; x ∈(Mg,r)S(k) a k-valued point of themoduli stack of curves (Mg,r)S of
+type (g,r) over S [cf. the discussion entitled “Curves” in§0]; ˆO the completion of
+...
+(8.) At the beginning of Deﬁnitions 2.2, 2.4, 2.5, and 2.8, the phrase “at the
+beginning the present” should read “at the beginning of the present”.
+(9.) In the ﬁnal sentence of the proof of Lemma 1.1, “the fact that thefi’s are
+isomorphisms (respectively, ” should read “the fact that the image⊆B ×k C of
+each sectionsi is of degree1o v e rB (respectively, ”.
+(10.) In the ﬁnal display of the proof of Corollary 3.9, the subscript “b′
+i” that
+appears above the upper middle horizontal arrow should read “b′
+1”.
+(11.) In the ﬁnal sentence of the statement of Lemma 4.3, (ii), the word “satis-
+ﬁes” should be replaced by the text “, which we denote byZAut|grph| (G∞ )(πtop
+1 (G)),
+satisﬁes”.
+(12.) In Remark 5.10.1, (i), the phrase “discussed in [HM],” should read “discussed
+in [NodNon],”.

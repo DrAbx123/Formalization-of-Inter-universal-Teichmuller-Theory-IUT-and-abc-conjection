@@ -1,0 +1,412 @@
+The Hodge-Arakelov Theory
+of Elliptic Curves
+Shinichi Mochizuki
+Research Institute for
+Mathematical Sciences
+Kyoto University
+Kyoto 606-8502, JAPAN
+motizuki@kurims.kyoto-u.ac.jp
+§1. Main Results
+(Comparison Isomorphisms and
+Arithmetic Kodaira-Spencer
+Morphism)
+§2. Philosophy: In Search of an
+Absolute Derivative
+0
+
+§1. Main Results
+(A.) Simple Version of the Main
+Comparison Theorem
+K: a ﬁeld of characteristic 0
+E: an elliptic curve/K
+E† : its universal extension
+= { moduli of (L, ∇ L):
+(L, ∇ L):d e g (L)=0 }
+char 0
+= H1
+DR(E, O×
+E)
+Over C
+: E† = H1
+DR(E, OE)/Λ
+=‘ ER ⊗R C’ (under. real an. man.)
+where Λ = H1
+sing(E, 2πiZ) ∼= Z2
+1
+
+In general
+:
+Tang. sp. to E† = H1
+DR(E, OE)
+Char. 0
+: dE† ∼= dE
+def
+=k e r [d]: E → E
+(d: a positive integer)
+(in mixed char., denominators
+ arise)
+η ∈ E(K): torsion point of order m,
+s. t. d does not divide m
+L
+def
+= OE(d · [η])
+Theorem
+: The restriction morphism
+Γ(E† , L)<d ∼
+→L | dE†
+is an isomorphism.
+2
+
+Note
+:
+(1.) “ <d ” denotes torsorial degree
+(relative degree: E† /E) <d .
+(2.) Both sides are K-vector spaces
+of dimension d2.
+(3.) Theorem false if d divides m.
+(e.g., if d = m =1 ,t h e n
+Γ(E, OE([0E]) = L) →L | 0E is 0)
+(4.) Proof
+:
+Mumford’s algebraic theta functions
++ Zhang’s theory of admiss. metrics
++ complicated degree computations
+3
+
+(B.) Integral Structures
+at “Arithmetic” Primes
+In general
+:
+0 → ωE → E† → E → 0
+(ωE = invariant diﬀs. on E)
+Near “point at inﬁnity” ∞
+ :
+E = Gm/qZ
+(“Tate curve”)
+=⇒ Over power series in q (‘hat’):
+ˆE = ˆGm
+ˆE† = ˆGm × ˆωE = ˆGm ×⟨ dU
+U ⟩
+4
+
+Integral structure at ﬁnite primes
+ :
+OˆE[T]= ⨁ OˆE · Tj =⇒
+⨁ OˆE ·
+(T −η∞ − 1
+2
+j
+)
+where T:c o o r d .o nωE,d e f ’ db ydU
+U
+...(p-adic analytically) extends
+over all
+ M1,0, not just near ∞
+Integral Structure Near ∞
+ :
+⨁ OˆE ·
+(T −η∞ − 1
+2
+j
+)
+=⇒
+⨁ OˆE · q ≈−j2/8d ·
+(T −η∞ − 1
+2
+j
+)
+“Gaussian poles
+ ”( c f .e−x2
+)
+5
+
+Important Theme
+:
+Gaussian and its derivatives
+(cf. Hermite polynomials)
+...also, main obstruct. to Dio. applics.
+Integral Structure at Arch. Primes
+:
+To relate ‘DR metric
+’t o‘ ´etale metric
+’
+=⇒ approximate by comparison
+to special functions — models
+ :
+Hermite
+ polys. (slope = 1
+2 )
+Legendre
+ polys. (slope = 1)
+= lim (disc. Tchebycheﬀ polys.)
+Binomial
+ polys. =
+(T
+r
+)
+(slope = 0)
+slope
+ = scaling factor as d →∞
+(cf. Frobenius
+ on cryst. coh.)
+6
+
+(C.) Arithmetic Kodaira-Spencer
+Morphism
+Main Theorem is a sort of
+function-theoretic comp. isom.
+:
+linear
+ fns. + completion
+ of tors. pts.
+=⇒ get classical comp. isoms.
+:
+Over C
+:
+H1
+DR(E, OE) ⊇ H1
+sing(E, 2πi · R)
+↓↓
+E† ⊇ ER
+7
+
+Over p-adics
+:
+Hodge-Tate, DR comp. isoms:
+‘H1
+DR ∼= H1
+´et’
+also def’able by rest. to p∞ tors. pts.
+In general
+ (global, C, p-adics):
+{
+DR coh.
+} ∼
+→
+{
+´et. coh.
+}
+↶ Galois
+=⇒ Galois acts on DR coh.!!
+=⇒ Look at eﬀect on Hodge ﬁltr.
+=⇒ Kodaira-Spencer morphism
+motion in base
+↦→ induced motion of Hodge ﬁltr.
+8
+
+Over C
+:
+“Galois” = SL2(R) on upp. half-plane
+=⇒ above ‘arith. KS’ = classical KS
+Over p-adics
+:
+Gal(Zp[[T]]Qp )
+≈ Tang. bun.(Zp[[T]]Qp )
+(Faltings’ theory of alm. et. extns.)
+=⇒ above ‘arith. KS’ = classical KS
+(cf. Serre-Tate theory)
+Hodge-Arakelov (global) Case
+:
+Gal
+( B a s eo fF a m .o fE l l .C u r v e s⊗ Q)
+arith. KS
+−→ { Arak
+.-theoretic ﬂag bun. } !!
+9
+
+§2. Philosophy: In Search of an
+Absolute Derivative
+(A.) From Diﬀerentiation
+to Comparison Isomorphisms
+S:as c h e m e ;E → S fam. of ell. curves
+=⇒ classifying morphism
+ S →M 1,0
+=⇒ derivative
+ (KS) ΩM1,0 |S → ΩS
+⇓
+Does ∃ arithmetic/absolute analogue
+‘ΩM1,0 |S → ΩZ/F1 ’
+(when S = Spec(Z),
+or Spec(OF ), [F : Q] < ∞ )?
+10
+
+Observe
+:Ω M1,0 |S = ω⊗2
+E ,a n d
+ωE ↪→ H1
+DR(E)
+∇GM
+−→ H1
+DR(E) ⊗ ΩS
+−→ τE ⊗ ΩS
+=⇒ ΩM1,0 |S = ω⊗2
+E → ΩS (KS)
+(∇ GM: Gauss-Manin conn.
+ on H1
+DR)
+⇓
+Since ∃ H1
+DR,H o d g eﬁ l t r .(ωE ↪→ H1
+DR)
+in arith. case, need analogue of ∇ GM
+=⇒ Recall de Rham isomorphism
+(= comparison isomorphism/C):
+11
+
+S: Riemann surface
+ =⇒
+H1
+DR(E/S) ∼= H1
+sing(E/S, Z) ⊗Z OS
+=⇒ sections of H1
+sing(E/S, Z)a r e
+horizontal
+ for ∇ GM
+=⇒∇ GM is the unique conn.
+ for which
+sects. of H1
+sing(E/S, Z) are horiz.
+⇓
+Knowledge of comp. isom.
+ =⇒
+Knowledge of ∇ GM
+Conclusion
+: To construct arith. KS
+,
+suﬃces to construct arith. comp. isom.
+12
+
+(B.) Function-Theoretic
+Comparison Isomorphisms
+So what form
+ should a (global)
+arith. comp. isom.
+ (ACI) take?
+(e.g., over C
+: ⊗ C;
+over p-adics
+: ⊗ BDR, Bcrys,e t c . )
+In geometric case/C
+: one implicit
+ sign
+of exist. of ∇ GM is a sort of ‘stability
+’:
+0 → ωE → H1
+DR(E/S) → τE → 0
+If this sequ. split
+ — i.e.,
+H1
+DR is ‘unstable
+’—t h e n
+∃∇ on ωE (= ample l.b.): ABSURD!
+13
+
+=⇒ Even if can’t translate ‘∇’i n t o
+arith. case, can translate stability
+— i.e., of Arakelov
+ bundles
+= usual v.b. + metric
+=⇒ ‘Stability’ (e.g., overZ)
+= ‘equidistrib. of matter
+ in lattice’
+Note
+: Arakelov degree large (small)
+⇐⇒ matter dense (sparse)
+⇓
+Expected Form I of ACI
+:{
+Matter Distrib. in DR coh.
+}
+∼=
+{
+Matter Distrib. in ´etale coh.
+}
+14
+
+Note
+: RHS is ‘equidist.’ by ‘Galois’
+=⇒ By ACI, LHS also ‘equidist.’
+In no. theory, ‘matter distributions
+’
+typically measured by ‘test fns.
+’= ⇒
+Expected Form II of ACI
+:{
+test fns. on DR coh.
+}
+∼=
+{
+test fns. on ´etale coh.
+}
+where ‘∼=’i si s o m e t r y
+at all primes
+of a number ﬁeld (cf. Arak. theory)
+... = the content of the main theorem!!
+‘Hodge-Arakelov Comp. Isom.
+’
+15
+
+‘Split’ distrib. of matter
+:
+‘Equidist.’ distrib. of matter
+:
+16
+
+(C.) Discretization and the
+Meaning of Nonlinearity
+Note
+: To measure distribs. in this
+case, need nonlinear
+ test fns. — cf.
+linearity
+ of Hodge theory/C, p-adics,
+additive
+ approach to motive theory.
+Reasons for Nonlinearity
+:
+(1.) In Arakelov theory
+, things tend
+to become nonlinear (e.g., H0(L)).
+(2.) Nonlinear symmetries
+ of
+noncomm. torus ≈ theta gp.
+≈ Heisenberg alg. (cf. Gaussians!)
+17
+
+Also, related to discreteness
+:
+Hodge-Arakelov Comp. Isom. =
+‘discretization
+ of loc. Hodge theories’
+— e.g.,
+Hodge theory/C ≈ ‘calculus on ER’
+HACI ≈ ‘discrete calc. on tors. pts.’
+=⇒ periods
+ analogous to
+2πi = lim
+d→∞
+d · (e2πi/d − 1)
+= lim
+d→∞
+(‘theta fns.’ on Gm eval-
+uated on tors. pts. of Gm)
+18
+
+(D.) Diophantine Applications
+Goal
+: apply theory to Dio. Geom.
+(i.e., ABC Conj.
+)
+Main Obstacle
+: Gaussian Poles.
+Recent Work
+: new “Lagrangian
+Galois action” overZ[[q]]:
+(1.) No Gaussian Poles!!
+(2.) mod pϵ,
+≈ usual Kodaira-Spencer!!
+Trying to extend to number ﬁelds
+using ‘E
+gp
+⊗O K’ ...
+19

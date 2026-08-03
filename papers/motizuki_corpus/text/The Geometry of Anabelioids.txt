@@ -1,0 +1,2546 @@
+The Geometry of Anabelioids
+Shinichi MOCHIZUKI*
+Contents:
+§0. Notations and Conventions
+§1. Anabelioids
+§1.1. The Notion of an Anabelioid
+§1.2. Finite ´Etale Morphisms
+§2. Cores and Quasi-Cores
+§2.1. Localizations and Cores
+§2.2. Holomorphic Structures and Commensurable Terminality
+§2.3. Quasi-Cores and Intrinsic Exhaustivity
+§2.4. Canonical Construction of the Fundamental Group
+§3. Anabelioids Arising from Hyperbolic Curves
+§3.1. Anabelioid-Theoretic Interpretation of Scheme-Theoretic Cores
+§3.2. The Logarithmic Special Fiber via Quasi-Cores
+Communicated by T. Kawai. Received October 20, 2003. Revised January 15, 2004.
+2000 Mathematics Subject Classiﬁcation: 14H30
+*Research Institute for Mathematical Sciences, Kyoto University , Kyoto 606-8502, Japan
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI*
+Introduction
+The goal of the present manuscript is to consider the following question:
+To what extent can thefundamental group of a Galois category be con-
+structed in a canonical fashion which is independent of a choice of
+basepoint?
+Put another way, we would like to consider the extent to which the elements (consid-
+ered, say, up to conjugation) of the fundamental group may be assignedcanonical
+names,o r labels.
+In §1, §2, we consider this issue from avery general point of view.T h a t i s t o s a y ,
+we develop the general theory of “anabelioids” — i.e., “multi-Galois categories”
+in the terminology of [SGA1]— with an eye to giving an answer to this question.
+We use the new terminology “anabelioid”, partly because it is shorter than “(multi-
+)Galois category”, and partly because we wish to emphasize that we would like to
+treat such objects from a fundamentally diﬀerent point of view — a point of view
+partially motivated by Grothendieck’s anabelian philosophy (cf. [Groth]; Remark
+1.1.4.1 below) — from the point of view taken in [SGA1]: Namely, we would like to
+regard anabelioids as the primary geometric objects of interest, which themselves
+form a category [i.e., not as a category containing as objects the primary geometric
+objects of interest].
+Our main result in §1, §2, is Theorem 2.4.3, which states that:
+When an anabelioid possesses a“faithful quasi-core”(cf. Deﬁnition 2.3.1),
+then its fundamental group may be constructed in a canonical fashion as
+a proﬁnite group.
+The notion of a “quasi-core” is motivated partly by the notion of a“hyperbolic core”
+(cf. [Mzk3]) and partly by the “Motivating Example” given below. The condition
+for a quasi-core states, roughly speaking, that a certain “forgetful functor” from a
+category of geometric objects equipped with some special auxiliary structure to the
+category of the same geometric objects not equipped with this auxiliary structure
+is, in fact, an equivalence. Indeed, this general pattern of considering such forgetful
+functors which are, in fact, equivalences is an importanttheme in the present man-
+uscript (cf. Deﬁnition 2.3.1, as well as Theorem 2.4.2). One elementary example
+of this sort of phenomenon — which was, in fact, one of the main motivations for
+the introduction of the notion of a “quasi-core” — is the following example from
+elementary complex analysis:
+Motivating Example: Metrics on Hyperbolic Riemann Surfaces. A
+connected Riemann surface is calledhyperbolicif its universal covering is biholomor-
+phic to theupper half plane. An arbitrary Riemann surface will be called hyperbolic
+if every connected component of this Riemann surface is hyperbolic. Let us write
+Loc
+hyp
+
+THE GEOMETR Y OF ANABELIOIDS 3
+for the category whose objects are hyperbolic Riemann surfaces and whose mor-
+phisms are ´etale morphisms [i.e., holomorphic maps with everywhere nonvanishing
+derivative]. If X ∈ Ob(Lochyp) is a object of Loc hyp, then we shall refer to the
+metric on its tangent bundle determined by the standard Poincar´e metric on the
+upper half plane [which is biholomorphic to the universal covering of every con-
+nected component of X]a st h ecanonical metricon X.I f f : X → Y is a morphism
+in Lochyp, then we shall say that this morphism f is integral if the norm of its
+derivative [when measured with respect to the canonical metrics on the tangent
+bundles of X, Y ]i s ≤ 1. Let us write
+Lochyp
+int ⊆ Lochyp
+for thesubcategorywhose objects are the objects of Lochyp and whosemorphisms are
+the integralmorphisms of Lochyp. Then it follows from the“theory of the Kobayashi
+hyperbolic metric”that the natural inclusion functor
+Lochyp
+int ↪→ Lochyp
+is, in fact, an equivalence. At a more concrete level, one veriﬁes easily that the
+essential substantive fact that one needs to show this equivalence is the well-known
+Schwarz lemma of elementary complex analysis [to the eﬀect that any holomorphic
+function φ : D → C on the open unit disc D in the complex plane satisfying
+φ(0) = 0, |φ(z)|≤ 1( f o ra l lz ∈ D), necessarily satisﬁes |φ′(0)|≤ 1]. This lemma
+of Schwarz in turn may be regarded as a formal consequence of the well-known
+“maximum modulus principle” of elementary complex analysis.
+From a category-theoretic point of view, the point of this example is that,
+although the object of Lochyp determined by the upper half plane is by no means
+a terminal object in Lochyp — i.e., a “core” (cf. the theory of [Mzk3]) — the fact
+that the inclusion functor Loc hyp
+int ↪→ Lochyp is an equivalence serves to express,
+in a rigorous mathematical fashion, the sentiment that, in some sort of “metric”
+sense, the upper half plane “almost serves as a core” for Lochyp. It is this set of
+circumstances that led the author to the introduction of the notion of a “quasi-
+core”.
+This example also suggests an interesting relationship between the notions
+of uniformization and of canonical labels for elements of the fundamental group:
+Namely, the Koebe uniformization theorem for hyperbolic Riemann surfaces gives
+rise to “canonical labels” (up to an ambiguity arising from some sort of conjuga-
+tion action) via 2 by 2 matrices since it induces an embedding of the topological
+fundamental group of the Riemann surface into PSL
+2(R).
+This leads us to the content of §3: In §3, we discuss the theory of §1, §2, in
+the case of hyperbolic curves over p-adic and number ﬁelds. In this case, our main
+result — Theorem 3.1.6 — states that:
+If a non-proper hyperbolic curve over such a ﬁeld is a “geometric core”
+(i.e., a core as in [Mzk3]), then its associated anabelioid admits a faithful
+quasi-core.
+
+4 SHINICHI MOCHIZUKI*
+This allows us to assign “canonical names” to the elements of its arithmetic
+fundamental group in a fashion reminiscent of the way in which the Koebe uni-
+formization theorem allows one to assign “canonical names” to the elements of the
+topological fundamental group of a hyperbolic Riemann surface. This main result
+is, in essence, a formal consequence of Theorem A of [Mzk6], and may be regarded
+as an interpretation of the main result of [Mzk9],§2, via thegeometry of anabelioids.
+Acknowledgements: I would like to thank A. Tamagawa for countless stimulating
+discussions concerning the theory presented in this paper and especially for his com-
+ments concerning the theory of quasi-cores and intrinsic exhaustivity (cf. Remarks
+2.3.6.2, 2.3.7.1 in the text). Also, I would like to thank T. Tsuji for pointing out
+to me (cf. [Mzk2], §1) an error in [Mzk1], Chapter IX — an event which opened
+my eyes to the importance (in the context of the arithmetic Kodaira-Spencer mor-
+phism) ofkeeping track of basepoints. Finally, I would like to thankH. Nakamurafor
+organizing a conference on arithmetic fundamental groups at RIMS, Kyoto Univer-
+sity, in October 2001, at which the author was aﬀorded the opportunity to present
+a “preliminary version”(cf. [Mzk7]) of the ideas exposed in the present paper.
+
+THE GEOMETR Y OF ANABELIOIDS 5
+Section 0: Notations and Conventions
+Numbers:
+We will denote by N the set of natural numbers, by which we mean the set of
+integers n ≥ 0. A number ﬁeld is deﬁned to be a ﬁnite extension of the ﬁeld of
+rational numbers Q.
+Topological Groups:
+Let G be a Hausdorﬀ topological group,a n dH ⊆ G a closed subgroup.L e tu s
+write
+ZG(H)
+def
+= {g ∈ G | g · h = h · g, ∀h ∈ H}
+for the centralizer of H in G;
+NG(H)
+def
+= {g ∈ G | g · H · g−1 = H}
+for the normalizer of H in G;a n d
+CG(H)
+def
+= {g ∈ G | (g · H · g−1)
+⋂
+H has ﬁnite index in H, g · H · g−1}
+for the commensurator of H in G. Note that: (i) ZG(H), NG(H)a n dCG(H)a r e
+subgroups of G; (ii) we have inclusions
+H, Z G(H) ⊆ NG(H) ⊆ CG(H)
+and (iii) H is normal in NG(H).
+Note that ZG(H), NG(H)a r ealways closed in G, while CG(H)i s not neces-
+sarily closed in G.
+Indeed, one may construct such an example as follows: Let
+M
+def
+=
+∏
+N
+Zp
+endowed with the product topology(of the various copies of Zp equipped with their
+usual topology). Thus, M is a Hausdorﬀ topological group.F o r n ∈ N,w r i t e
+Fn(M) ⊆ M for the sub-topological group given by the product of the copies
+of Zp indexed by m ≥ n. Write Aut F (M) for the set of automorphisms of the
+topological group M that preserve the ﬁltration F ∗(M)o n M.I f α ∈ AutF (M),
+then for every n ∈ N, α induces a continuous homomorphism αn : M/F n(M) →
+M/F n(M) which is clearly surjective, hence an isomorphism (since M/F n(M)i s
+proﬁnite and topologically ﬁnitely generated — cf. [FJ], Proposition 15.3). It
+thus follows that α induces an isomorphism Fn(M)
+∼
+→ Fn(M), hence that the
+inverse of α also lies in Aut F (M). In particular, we conclude that Aut F (M)i s
+
+6 SHINICHI MOCHIZUKI*
+a group. Equip Aut F (M)w i t ht h ecoarsest topology for which all of the homo-
+morphisms AutF (M) → Aut(M/F n(M)) (where Aut( M/F n(M)) ∼= GLn(Zp)i s
+equipped with its usual topology) are continuous. Note that relative to this topol-
+ogy, AutF (M) forms a Hausdorﬀ topological group. Now deﬁne G to be the semi-
+direct productof M with AutF (M)( s oG is a Hausdorﬀ topological group), and H
+to be ∏
+n∈N
+pn · Zp ⊆
+∏
+N
+Zp = M
+(so H ⊆ G is a closed subgroup). Then CG(H)i s not closed in G. For instance,
+if one denotes by en ∈ ∏
+N Zp the vector with a 1 in the n-th place and zeroes
+elsewhere, then the limit A∞ (where
+A∞ (en)
+def
+= en + en+1
+for all n ∈ N) of the automorphisms Am ∈ CG(H)( w h e r eAm(en)
+def
+= en + en+1 if
+n ≤ m, Am(en)
+def
+= en if n>m ) is not contained in CG(H).
+Curves:
+Suppose that g ≥ 0i sa n integer.T h e nafamily of curves of genus g
+X → S
+is deﬁned to be a smooth, proper, geometrically connected morphismX → S whose
+geometric ﬁbers are curves of genus g.
+Suppose that g,r ≥ 0a r eintegers such that 2g − 2+ r> 0. We shall denote
+the moduli stack of r-pointed stable curves of genus g (where we assume the points
+to be unordered)b y
+ Mg,r (cf. [DM], [Knud] for an exposition of the theory of such
+curves; strictly speaking, [Knud] treats the ﬁnite ´etale covering of
+ Mg,r determined
+by ordering the marked points). The open substackMg,r ⊆
+ Mg,r of smooth curves
+will be referred to as the moduli stack of smooth r-pointed stable curves of genus g
+or, alternatively, as the moduli stack of hyperbolic curves of type(g,r ).
+A family of hyperbolic curves of type (g,r )
+X → S
+is deﬁned to be a morphism which factors X↪ → Y → S as the composite of an
+open immersion X↪ → Y onto the complement Y \D of a relative divisor D ⊆ Y
+which is ﬁnite ´etale over S of relative degree r, and a family Y → S of curves of
+genus g. One checks easily that, if S is normal, then the pair (Y,D )i s unique up
+to canonical isomorphism. (Indeed, when S is the spectrum of a ﬁeld, this fact
+is well-known from the elementary theory of algebraic curves. Thus, the asserted
+uniqueness follows formally from the normality of S and the fact that
+Mg,r is a
+separated algebraic stack (cf. [DM], [Knud]).) We shall refer to Y (respectively,
+D; D; D)a st h ecompactiﬁcation (respectively, divisor at inﬁnity ; divisor of cusps;
+
+THE GEOMETR Y OF ANABELIOIDS 7
+divisor of marked points)o f X.A family of hyperbolic curves X → S is deﬁned to
+be a morphism X → S such that the restriction of this morphism to each connected
+component of S is a family of hyperbolic curves of type(g,r ) for some integers (g,r )
+as above.
+Next, we would like to consider “orbicurves”. We shall say that an algebraic
+stack is generically scheme-like if it admits an open dense algebraic substack which
+is isomorphic to a scheme. Let X be a smooth, geometrically connected, generically
+scheme-like algebraic stack of ﬁnite type over a ﬁeld k of characteristic zero.T h e n
+we shall say that X is an orbicurve if it is of dimension 1. We shall say thatX is a
+hyperbolic orbicurve if it is an orbicurve which admits a compactiﬁcation X↪ →
+ X
+(necessarily unique!) by a proper orbicurve
+ X over k such that if we denote the
+reduced divisor
+ X\X by D ⊆
+ X,t h e n
+X is scheme-like near D, and, moreover,
+the line bundle ω
+X/k(D)o n
+ X has positive degree.A n example of a hyperbolic
+orbicurve overk is given by the quotient — in the sense of stacks— of a hyperbolic
+curve over k by the action of a ﬁnite group which acts freely on all but a ﬁnite
+number of points of the curve.
+Now suppose that
+X
+is a hyperbolic orbicurveover a ﬁeld k (of characteristic zero), with compactiﬁcation
+X↪ →
+ X.L e t
+k be an algebraic closure of k.W r i t e
+X →
+ X
+′
+for the “coarse moduli space”(cf. [FC], Chapter I, Theorem 4.10) associated to
+ X.
+Thus,
+ X
+′
+is a smooth, proper, geometrically connected curve over k.D e n o t e t h e
+open subscheme of
+ X
+′
+which is the image of X by X′.W r i t e :
+N∞
+def
+=( N\{0,1})
+⋃
+{∞}
+Then we shall say that the hyperbolic curve X is of type
+(g,⃗r)
+if
+ X
+′
+is of genus g and ⃗r : N∞ → N is the function with ﬁnite support [i.e., which is
+0 away from some ﬁnite subset of N∞ ] deﬁned as follows: ⃗r(∞ ) is the cardinality
+of (
+X
+′
+\X′)(
+k). For every positive integer e ∈ N∞ , ⃗r(e) is the cardinality of the
+set of
+ k-valued points of X′ over which X is (necessarily tamely) ramiﬁed with
+ramiﬁcation index e.
+When k =
+ k, it is well-known (and easily veriﬁed) that theisomorphism classof
+the algebraic fundamental group π1(X)i s completely determined by the type(g,⃗r).
+
+8 SHINICHI MOCHIZUKI*
+Categories:
+We shall say that two arrows fi : Ai → Bi (where i =1 ,2) in a category C
+are abstractly equivalent —a n dw r i t ef1
+abs
+≈ f2 — if there exists a commutative
+diagram:
+A1
+∼
+→ A2
+⏐⏐
+↓
+f1
+⏐
+⏐
+↓
+f2
+B1
+∼
+→ B2
+(where the horizontal arrows are isomorphisms in C).
+We shall refer to a natural transformation between functors all of whose com-
+ponent morphisms are isomorphisms as an isomorphism between the functors in
+question. A functor φ : C1 →C 2 between categories C1, C2 will be called rigid if φ
+has no nontrivial automorphisms.
+A diagram of functors between categories will be called 1 -commutative if the
+various composite functors in question are rigid and isomorphic. When such a
+diagram “commutes in the literal sense” we shall say that it 0 -commutes. Note
+that when a diagram “1-commutes”, it follows from the rigidity hypothesis that
+any isomorphism between the composite functors in question is necessarilyunique.
+Thus, to state that the diagram 1-commutes does not result in any “loss of infor-
+mation” by comparison to the datum of aspeciﬁc isomorphism between the various
+composites in question.
+We shall say that two rigid functors φ
+i : Ci →C ′
+i (where i =1 ,2; the Ci, C′
+i
+are categories) are abstractly equivalent —a n dw r i t eφ1
+abs
+≈ φ2 — if there exists a
+1-commutative diagram
+C1
+∼
+→C 2
+⏐⏐
+↓
+φ1
+⏐
+⏐
+↓
+φ2
+C′
+1
+∼
+→C ′
+2
+(in which the horizontal arrows are equivalences of categories).
+
+THE GEOMETR Y OF ANABELIOIDS 9
+Section 1: Anabelioids
+§1.1. The Notion of an Anabelioid
+We begin by ﬁxing a (Grothendieck) universeV , in the sense of set-theory (cf.,
+e.g., [McLn1]; [McLr], §12.1), in which we shall work. Also, let us assume that we
+are given a V -small category Ensf of ﬁnite sets .
+Let G be a (V -small) proﬁnite group — that is to say, the underlying proﬁnite
+set of G is an inverse limit of V -sets indexed by a V -set. Then to G,w em a y
+associate the (V -small) category
+B(G)
+of (V -small) ﬁnite sets ∈ Ob(Ensf) with continuous G-action. This category is a(n)
+(elementary) topos (in the sense of topos theory). In fact, it forms a rather special
+kind of topos called a Galois category (cf. [John1] for an exposition of the general
+theory of topoi and, in particular, of Galois categories; cf. also [SGA1], Expos´eV ) .
+Deﬁnition 1.1.1. We shall refer to as a connected anabelioid any category X
+which is equivalent to a category of the form B(G) for some proﬁnite group G.
+Remark 1.1.1.1. Thus, a “connected anabelioid” is the same as aGalois category
+(as deﬁned, for instance, in [John1], p. 285) — i.e., a “Boolean topos” that admits
+an “exact, isomorphism reﬂecting functor” to the category of ﬁnite sets.
+Let X be a connected anabelioid. Then recall (cf. [SGA1], Expos´eV , §5) the
+notion of a fundamental functor
+β∗ : X→ Ensf
+— i.e., an exact functor. Here, we recall that an exact functor is a functor that
+preserves ﬁnite limits and ﬁnite colimits. Note that (since X is assumed to be a
+connected anabelioid) an exact functor β∗ : X→ Ensf is necessarily isomorphism
+reﬂecting (i.e., a morphism α of X is an isomorphism if and only if β∗(α)i s ) .
+Recall, moreover, that if X
+def
+= B(G), and β∗ : B(G) → Ensf is the functor deﬁned
+by forgetting the G-action, then G may be recovered,u pt o inner automorphism,
+from X, β as the group:
+Aut(β∗)
+Also, let us recall that any two fundamental functors are isomorphic. Note that
+Ensf itself is a connected anabelioid (i.e., the result of applying B(−) to the trivial
+group), so we may think of fundamental functors as “basepoints” in the following
+way:
+
+10 SHINICHI MOCHIZUKI*
+Deﬁnition 1.1.2.
+(i) If X and Y are connected anabelioids, then we deﬁne amorphism φ : X→ Y
+to be an exact functor φ∗ : Y→X (cf. [SGA1], Expos´e V, Proposition 6.1). An
+isomorphism between connected anabelioids is a morphism whose corresponding
+functor in the opposite direction is an equivalence of categories.
+(ii) We deﬁne a basepoint of a connected anabelioid X to be a morphism β :
+Ensf →X .I f β is a basepoint of X, then we refer to the group Aut( β)a st h e
+fundamental group π1(X,β) of (X,β).
+Remark 1.1.2.1. Thus, the “category of (V -small) connected anabelioids”is a 2-
+category (cf., e.g., [John1], §0.1; [McLr], Chapter 12; [McLn2], XII), hence requires
+special care, for instance, when considering composites, etc. Also, we remark,
+relative to the standard terminology of category theory, that if φ : X→ Y is an
+isomorphism (of connected anabelioids), it will not, in general, be the case that φ∗
+is an isomorphism of categories (i.e., an equivalence for which the correspondence
+between classes of objects in the two categories is a bijection — cf. [McLn2], IV,
+§4).
+Remark 1.1.2.2. Since the isomorphism class of the fundamental groupπ1(X,β)
+is independent of the choice of basepointβ, we will also speak of the “fundamental
+group π1(X) of X” when the choice of basepoint is irrelevant to the issue under
+discussion.
+Remark 1.1.2.3. Note that a functor φ∗ : Y→X which is an equivalence is
+always necessarily exact. Thus, an isomorphism of anabelioids φ : X→ Y is simply
+an equivalence φ∗ : Y→X in the opposite direction.
+Example 1.1.3. Anabelioids Associated to Schemes. Let X be a (V -small)
+connected locally noetherian scheme. Then we shall denote by
+´Et(X)
+the category whose objects are (V -small) ﬁnite ´etale coverings of X and whose
+morphisms are morphisms of schemes over X. Then it is well-known (cf. [SGA1],
+Expos´eV , §7) that ´Et(X) is a connected anabelioid.
+If G is a proﬁnite group, then we shall use the notation
+Aut(G); Inn( G); Out( G)
+def
+=A u t (G)/Inn(G)
+to denote the group of (continuous) automorphisms (respectively, inner automor-
+phisms; (continuous) outer automorphisms)o f G.I f H is another proﬁnite group,
+
+THE GEOMETR Y OF ANABELIOIDS 11
+then we shall write Hom(G,H ) for the set of continuous homomorphisms G → H,
+and
+HomOut(G,H )
+for the set of continuous outer homomorphisms G → H, i.e., the quotient of
+Hom(G,H ) by the natural action of H from the right. Also, we shall write
+HomOut(G,H )
+for the (V -small) category whose objects are the elements of the set Hom( G,H )
+and for which the morphisms
+MorHomOut (ψ1,ψ2)
+from an object ψ1 : G → H to an object ψ2 : G → H are the elements h ∈ H such
+that ψ2(g)= h · ψ1(g) · h−1, ∀g ∈ G. Thus, Hom Out(G,H ) may be thought of as
+the set of isomorphism classes of the category HomOut(G,H ).
+Proposition 1.1.4. (The “Grothendieck Conjecture” for Connected
+Anabelioids) Let X
+def
+= B(G), Y
+def
+= B(H) (where G, H are proﬁnite groups), and
+β : Ensf →X , γ : Ensf →Y be the tautological basepoints of X, Y, respectively,
+determined by the deﬁnition of the notation “ B(−)”. Then:
+(i) There is a natural equivalence of categories:
+HomOut(G,H )
+∼
+→ Mor(X, Y)
+which induces a natural bijection:
+HomOut(G,H )
+∼
+→ Mor(X, Y)
+Here, Mor(X, Y) (respectively, Mor(X, Y)) denotes the category (respectively, set
+of isomorphism classes) of morphisms X→ Y .
+(ii) There is a natural bijection:
+Hom(G,H )
+∼
+→ Mor{(X,β);( Y,γ)}
+Here, Mor{(X,β);( Y,γ)} denotes the set of (isomorphism classes of) morphisms
+φ : X→ Y such that φ ◦β = γ.
+Proof. Let us ﬁrst consider the situation of (2). Given a homomorphism ψ : G →
+H, composition with ψ induces a continuous action of G on any ﬁnite set with
+continuous H-action. Moreover, this operation does not aﬀect the underlying ﬁnite
+set, so we get an elementψMor ∈ Mor{(X,β);( Y,γ)}. This deﬁnes the morphism of
+(2). On the other hand, given an element φ ∈ Mor{(X,β);( Y,γ)}, it follows from
+the deﬁnitions that φ induces a morphism Aut( β) → Aut(γ). One checks easily
+
+12 SHINICHI MOCHIZUKI*
+that this correspondence deﬁnes a two-sided inverse (well-deﬁned up to composition
+with an inner automorphism of Aut(γ) ∼= H) to the correspondence ψ ↦→ ψMor.
+Next, we consider the situation of (1). By the above paragraph, we get a
+morphism
+Hom(G,H ) → Mor(X, Y)
+Let us ﬁrst verify that this morphism is a surjection. Denote by S the pro-object
+of Y whose underlying proﬁnite set Sset = H and whose H-action is given by the
+usual action on Sset = H from the left. Note that the group of automorphisms
+AutY(S)o f S (as a pro-object of Y) may be identiﬁed with H via the action of H
+on Sset = H from the right. In fact, this action of H on S (from the right) endows
+S with a structure of “H-torsor object”of Y.T h u s , i fφ : X→ Y is a morphism,
+then T
+def
+= φ∗(S)i sa n H-torsor object of X. If we think of T as a proﬁnite set
+Tset equipped with a G-action from the left and an H-action from the right,t h e n
+let us observe that, by ﬁxing some element t ∈ Tset, we may identify the group of
+automorphisms AutH(Tset) of the proﬁnite setTset that commute with theH-action
+from the right with H via its action from the left. Here, we observe that such an
+identiﬁcation
+AutH(Tset) ∼= H
+is determined by the choice of a “basepoint” t ∈ Tset, hence is well-deﬁned, up
+to composition with an inner automorphism of H. It thus follows that the action
+of G on Tset from the left determines a continuous outer homomorphism G →
+AutH(Tset)= H which (cf. the preceding paragraph) gives rise to a morphism
+X→ Y isomorphic to φ. This completes our veriﬁcation of surjectivity.
+Thus, to complete the proof of (1), it suﬃces to verify that there is a natural
+bijection between the set of isomorphisms between the morphisms φ1,φ2 : X→ Y
+arising from two continuous homomorphisms
+ψ1,ψ2 : G → H
+and the subset Mor HomOut (ψ1,ψ2) ⊆ H. To verify this, let us observe that if we
+pull-back the H-torsor object S of Y (cf. the preceding paragraph) via φ1,φ2 to
+obtain H-torsor objects T1
+def
+= φ∗
+1(S), T2
+def
+= φ∗
+2(S)o f X, then it is a tautology that
+isomorphisms φ1
+∼
+→ φ2 are in natural bijective correspondence with isomorphisms
+T1
+∼
+→ T2 of H-torsor objects of X. Thus, the desired bijection is a consequence of
+Lemma 1.1.5 below. ⃝
+Lemma 1.1.5. (Two-Sided Group Actions) Let
+ψ1,ψ2 : G → H
+be continuous homomorphisms. Fori =1 ,2, denote byYi a copy ofH equipped with
+the usual action of H from the right and the action of G determined by composing
+the usual action ofH from the left with ψi; write ti for the copy of “1”i nYi.T h e n
+ξ↦→ h ∈ H
+
+THE GEOMETR Y OF ANABELIOIDS 13
+—w h e r eh satisﬁes ξ(t1)= t2 ·h — determines a bijection from the set of(G,H )-
+equivariant bijections ξ: Y1
+∼
+→ Y2 to the subset MorHomOut (ψ1,ψ2) ⊆ H.
+Proof. Indeed,
+t2 · h · ψ1(g)= ξ(t1) · ψ1(g)= ξ(t1 · ψ1(g)) = ξ(g · t1)= g · ξ(t1)= t2 · ψ2(g) · h
+i.e., h ·ψ1(g) ·h−1 = ψ2(g), ∀g ∈ G.T h u s ,h ∈ MorHomOut (ψ1,ψ2) ⊆ H. Similarly,
+if ψ1 and ψ2 diﬀer by composition with an inner automorphism of H deﬁned by
+an element h ∈ MorHomOut (ψ1,ψ2), then t1 ↦→ t2 · h deﬁnes a ( G,H )-equivariant
+bijection ξ, as desired. ⃝
+Remark 1.1.4.1. Many readers may feel that Proposition 1.1.4 is “trivial” and
+“well-known”. The reason that we nevertheless chose to give a detailed exposition
+of this fact here is that it represents the essential spirit that we wish to convey
+in the term “anabelioid”. That is to say, we wish to think of anabelioids X as
+generalized spaces (which is natural since they are, after all, topoi — cf. [John2])
+whose geometry just happens to be “completely determined by their fundamental
+groups”(albeit somewhat tautologically!). This is meant to recall the notion of an
+anabelian variety (cf. [Groth]), i.e., a variety whose geometry is determined by its
+fundamental group. The point here (which will become clear as the manuscript
+progresses) is that:
+The introduction of anabelioids allows us to work with both “algebro-
+geometric anabelioids” (i.e., anabelioids arising from (anabelian) varieties
+— cf. Example 1.1.3) and “abstract anabelioids” (i.e., those which do not
+necessarily arise from an (anabelian) variety) as geometric objects on
+an equal footing.
+The reason that it is important to deal with “geometric objects” as opposed to
+groups, is that:
+We wish to study what happens as one varies the basepoint of one of
+these geometric objects.
+That is to say, groups are determined only once one ﬁxes a basepoint. Thus, it
+is diﬃcult to describe what happens when one varies the basepoint solely in the
+language of groups.
+Next, let
+φ : X→ Y
+be a morphism between connected anabelioids.W r i t e
+I
+φ ⊆X
+
+14 SHINICHI MOCHIZUKI*
+for the smallest subcategory of X that contains all subquotients of objects in the
+essential image of the pull-back functor φ∗. One veriﬁes immediately that Iφ is a
+connected anabelioid. Note that the morphism φ : X→ Y factors naturally as a
+composite
+X→ I φ →Y
+with the property that if we choose a basepoint βX of X and denote the result-
+ing basepoints of Iφ, Y,b y βIφ , βY , respectively, then the induced morphisms of
+fundamental groups
+π1(X,βX ) ↠ π1(Iφ,βIφ ) ↪→ π1(Y,βY )
+are a surjection followed by an injection. Moreover, we note the following conse-
+quence of Proposition 1.1.4, (i):
+Corollary 1.1.6. (Automorphism of an Arrow Between Connected
+Anabelioids) The set of automorphismsAut(X→ Y ) of a1-arrow X→ Y between
+connected anabelioids is in natural bijective correspondence with thecentralizer in
+the fundamental group of Y of the image of the fundamental group of X.
+Deﬁnition 1.1.7.
+(i) We shall refer to Iφ as the image of X in Y.
+(ii) We shall refer to a morphism φ : X→ Y between connected anabelioids
+as a π1-epimorphism (respectively, π1-monomorphism) if the morphism Iφ →Y
+(respectively, X→ I φ) is an equivalence.
+Now let I be a ﬁnite set . Assume that for each i ∈ I,w ea r eg i v e naconnected
+anabelioid Xi.W r i t e
+XI
+def
+=
+∏
+i∈I
+Xi
+for the product of the categories Xi. In the terminology of [SGA1], Expos´eV , §9,
+this XI is a “multi-Galois category”. In particular, XI is a topos.
+Deﬁnition 1.1.8. Let X be a topos, and S ∈ Ob(X) an object of X.W r i t e
+0X (respectively, 1X ) for the initial (respectively, terminal) object of X.T h e na n y
+collection of data
+S ∼=
+∐
+a∈A
+Sa
+(where 0X ̸∼= Sa ∈ Ob(X); the index set A is ﬁnite) will be called a decomposition
+of S. The object S will be called connected if the index set of any decomposition
+of S has cardinality one. The topos X will be called connected if 1X is connected.
+Next, let us observe that:
+
+THE GEOMETR Y OF ANABELIOIDS 15
+The set I and the categories Xi (for i ∈ I), as well as the equivalence of
+categories between XI with the product of the Xi may be recovered entirely
+from the abstract category XI.
+Indeed, let us denote (for i ∈ I) the object of XI obtained by taking the product
+of 1Xi with the 0Xj (for j ̸= i)b y ϵi. Thus, we obtain a decomposition
+1XI =
+∐
+i∈I
+ϵi
+of the object 1XI . Moreover, this decomposition is clearly maximal with respect
+to the partial ordering on decompositions of 1XI determined by the (obviously
+deﬁned) notion of reﬁnements of decompositions of 1XI . Thus, we see that this
+decomposition may be recovered solely from internal structure of the category XI.
+In particular, the ﬁnite set I may be recovered category-theoretically from the
+category XI. Moreover, the category Xi may be recovered category-theoretically
+from the category XI as the subcategory of objects over ϵi. Finally, it is clear that
+these subcategories determine the equivalence of categories between XI with the
+product of the Xi.
+Deﬁnition 1.1.9. We shall refer to the Xi as the connected components of XI
+and to π0(XI)
+def
+= I as the (ﬁnite) index set of connected components.
+Deﬁnition 1.1.10.
+(i) We shall refer to a category equivalent to a category of the form XI as an
+anabelioid. We shall denote the 2-category of V -small anabelioids by
+AnabV
+(or simply Anab, when there is no danger of confusion).
+(ii) A morphism between anabelioids is deﬁned to be an exact functor in the
+opposite direction. An isomorphism between anabelioids is a morphism whose
+corresponding functor in the opposite direction is an equivalence of categories.
+Next, let us observe that if we are given a ﬁnite setJ, together with connected
+anabelioids Yj for each j ∈ J,a n dmorphisms
+ζ: I → J; φi : Xi →Y ζ(j)
+we get an exact functor φ∗
+I : YJ →X I (by forming the product of the φi), which
+we would like to regard as a morphism φI : XI →Y J .
+Proposition 1.1.11. (Morphisms of Not Necessarily Connected Anabe-
+lioids) The association
+{ζ,φi} ↦→ φI
+
+16 SHINICHI MOCHIZUKI*
+deﬁnes an equivalence between the category of data on the left and the category of
+arrows ψ : XI →Y J.
+Proof. Indeed, this follows immediately by considering the pull-back of 1YJ ,a s
+well as of its maximal decomposition, via the exact functor ψ∗, in light of the fact
+(observed above) that
+1XI =
+∐
+i∈I
+ϵi
+is the maximal (relative to reﬁnement) decomposition of 1XI . ⃝
+Deﬁnition 1.1.12. We shall refer to a morphism between anabelioids as a π1-
+epimorphism (respectively, π1-monomorphism) if each of the component morphisms
+(cf. Proposition 1.1.11) between connected anabelioids is aπ1-epimorphism (respec-
+tively, π1-monomorphism).
+§1.2. Finite ´Etale Morphisms
+In this §, we consider the notion of a“ﬁnite ´etale morphism”in the context of
+anabelioids.
+Let X be an anabelioid.L e tS ∈ Ob(X). We will denote the category ofobjects
+over S by
+XS
+(i.e., the objects of XS are arrows T → S in X; the arrows of XS between T → S
+and T ′ → S are S-morphisms T → T ′). Let us write
+jS : XS →X
+for the forgetful functor (i.e., the functor that maps T → S to T)a n d
+i∗
+S : X→ X S
+for the functor given by taking the product with S.
+Proposition 1.2.1. (The Extension Functor)
+(i) The category XS is an anabelioid whose connected components are in
+natural bijective correspondence with the connected components ofS.
+(ii) The functor jS is left adjoint to the functor i∗
+S.
+(iii) The functor i∗
+S is exact, hence deﬁnes a morphism of anabelioids iS :
+XS →X .
+(iv) Suppose thatS is the coproduct of a ﬁnite number of copies of1X (indexed,
+say, by a (V -)set A). Then each connected component ofXS may be identiﬁed with
+
+THE GEOMETR Y OF ANABELIOIDS 17
+X; the set of connected components of XS may be identiﬁed with A. Moreover, jS
+maps a collection of objects {Sa}a∈A of X indexed by A to the coproduct object
+∐
+a∈A
+Sa
+in X.
+(v) Suppose that X = B(G) (where G is a ( V -small) proﬁnite group) and
+that S is given by the G-set G/H,w h e r eH ⊆ G is an open subgroup.T h e n
+iS : XS →X may be identiﬁed with [i.e., is “abstractly equivalent” (cf. §0) — in a
+natural fashion — to] the morphism
+B(H) →B (G)
+induced by the inclusion H↪ → G. Moreover, if T ∈ Ob(XS) is represented by an
+H-set Tset,t h e njS(T) is isomorphic to the G-set given by
+(G × Tset)/H
+where H ∋ h acts on G × Tset ∋ (g,t ) via (g,t ) ↦→ (hg, ht), and the G-action is the
+action induced on (G × Tset)/H by letting G ∋ g act on G by multiplication by g−1
+from the right.
+Proof. These assertions all follow immediately from the deﬁnitions. ⃝
+Thus, Proposition 1.2.1, (ii), shows that if φ : Y→X factors as the com-
+posite of an isomorphism α : Y
+∼
+→X S with the morphism iS : XS →X for some
+S ∈ Ob(X), then there is a natural choice for the isomorphism α, namely, the
+isomorphism induced by the left adjoint φ! : Y→X to the functor φ∗. Indeed,
+it follows from Proposition 1.2.1, (ii), that such a left adjoint φ! always exists and
+that φ! induces an isomorphism Y
+∼
+→X Sφ ,w h e r eSφ
+def
+= φ!(1Y).
+Deﬁnition 1.2.2.
+(i) A morphism of anabelioids φ : Y→ X will be called ﬁnite ´etale if it factors
+as the composite of an isomorphism α : Y
+∼
+→X S with the morphism iS : XS →X
+for some S ∈ Ob(X).
+(ii) Suppose that φ : Y→X is a ﬁnite ´etale morphism. Then we shall refer
+to the left adjoint functor φ! to the pull-back functor φ∗ as the extension functor
+associated to φ.
+Remark 1.2.2.1. Thus, the morphism B(H) →B (G) induced by a continuous
+homomorphism φ : H → G is ﬁnite ´etale if and only if φ is an injection onto an
+open subgroup of G. Moreover, any ﬁnite ´etale morphism of connected anabelioids
+
+18 SHINICHI MOCHIZUKI*
+may be written in this form (by choosing appropriate basepoints for the domain
+and range). The characterization of Deﬁnition 1.2.2, (i), however, has the virtue of
+being independent of choices of basepoints.
+Deﬁnition 1.2.3. Let φ : Y→X be a ﬁnite ´etale morphism of anabelioids.
+Then we shall say that φ is a covering (respectively, relatively connected)i ft h e
+induced morphism π0(Y) → π0(X) on connected components (cf. Deﬁnition 1.1.9)
+is surjective (respectively, an bijective).
+Deﬁnition 1.2.4.
+(i) LetG be a proﬁnite group. Then we shall say thatG is slim if the centralizer
+ZG(H) of any open subgroup H ⊆ G in G is trivial.
+(ii) Let X be an anabelioid. Then we shall say thatX is slim if the fundamental
+group π1(Xi) of every connected component i ∈ π0(X)o f X is slim.
+(iii) A morphism of anabelioids whose corresponding pull-back functor is rigid
+will be called rigid. A 2-category of anabelioids will be called slim if every 1-
+morphism in the 2-category is rigid.
+(iv) If C is a 2-category, we shall write
+|C|
+for the associated 1-category whose objects are objects of C and whose morphisms
+are isomorphism classes of morphisms of C. We shall also refer to |C| as the coar-
+siﬁcation of C.
+Remark 1.2.4.1. The name“coarsiﬁcation” is motivated by the theory of “coarse
+moduli spaces” associated to (say) “ﬁne moduli stacks”.
+Remark 1.2.4.2. Thus, a diagram of rigid morphisms of anabelioids“1-commutes”
+(cf. §0) if and only if it commutes in the coarsiﬁcation.
+In a word, the theory of coverings of anabelioids is easiest to understand when
+the anabelioid in question is slim. For instance:
+Proposition 1.2.5. (Slim Anabelioids) Let X be a slim anabelioid. Then:
+(i) The pull-back and extension functors associated to a ﬁnite ´etale morphism
+between slim anabelioids arerigid (cf. §0). In particular, if we write
+Et(X) ⊆ Anab
+
+THE GEOMETR Y OF ANABELIOIDS 19
+for the 2-category whose(0-)objects are ﬁnite ´etale morphisms Y→X and whose
+(1-)morphisms are ﬁnite ´etale arrows Y1 →Y 2 “over” X [i.e., in the sense of
+“1-commutativity” — cf. §0], then Et(X) is slim. Write: ´Et(X)
+def
+= |Et(X)|.
+(ii) The functor
+FX : X→ ´Et(X)
+S ↦→ (XS →X )
+(where S ∈ Ob(X))i sa n equivalence (i.e., fully faithful and essentially surjec-
+tive).
+Proof. Indeed, (i) follows formally from Corollary 1.1.6 and Deﬁnition 1.2.4, (i),
+(ii), (iii). As for (ii), essential surjectivity follows formally from Deﬁnition 1.2.2, (i).
+To prove fully faithfulness, it suﬃces to compute, when X = B(G), Y1 = B(H1),
+Y2 = B(H2), and H1, H2 are open subgroups of G, the subset
+MorX (Y1, Y2) ⊆ Mor(Y1, Y2)
+[i.e., of isomorphism classes of morphisms “over” X] via Proposition 1.1.4, (i).
+This computation yields that the set in question is equal to the quotient, via the
+conjugation action byH2, of the set of morphismsH1 → H2 induced by conjugation
+by an elementg ∈ G such thatH1 ⊆ g ·H2 ·g−1. But this quotient may be identiﬁed
+with the subset of elements g · H2 ∈ G/H2 such that H1 ⊆ g · H2 · g−1. Note that
+here we must apply the assumption ofslimness, to conclude that it is not necessary
+to quotient G/H2 any further by various centralizers inG of conjugates of H1.O n
+the other hand, this quotient is simply another description of the set
+HomG(G/H1,G / H2)
+as desired. ⃝
+Remark 1.2.5.1. By Proposition 1.2.5, (i), it follows that, at least when we
+restrict our attention to ﬁnite ´etale morphisms of slim anabelioids, we do not “lose
+any essential information” by working in the coarsiﬁcation (of Anab). Thus,
+in the following discussion, we shall often do this, since this simpliﬁes things sub-
+stantially. For instance, if φ : Y→X and ψ : Z→X are arbitrary ﬁnite ´etale
+morphism of slim anabelioids, then [if we work in the coarsiﬁcation] it makes sense
+to speak of the pull-back (of φ via ψ), or ﬁber product (of Y, Z over X):
+Y×
+X Z
+Indeed, such an object may be deﬁned by the formula:
+Zψ ∗(φ!(1Y)) →Z
+
+20 SHINICHI MOCHIZUKI*
+By thinking of φ : Y→X as some “ XS →X ” as in the above discussion, one
+veriﬁes easily that this deﬁnition satisﬁes all the expected properties. One veriﬁes
+easily that all conceivable compatibilities are satisﬁed [e.g., when one interchanges
+the roles of φ and ψ].
+Remark 1.2.5.2. In fact, essentially all of the anabelioids that we shall actually
+deal with in this paper will be slim. Thus, in some sense, it might have been more
+natural to take the notion of a “slim anabelioid” as our deﬁnition of the term
+“anabelioid”. There are two reasons why we chose not to do this: First, this would
+requireus to prove slimness every time that we wish to use term “anabelioid”, which
+would, in some sense, be rather unnatural, just as having to prove separatedness
+every time one uses the term “scheme” (if, as in the earlier terminology, one deﬁnes
+a scheme to be a “separated scheme” (in the current terminology)). Second, just as
+with the separatedness of schemes, which is not a Zariski local notion, the notion
+of slimness of an anabelioid is not (ﬁnite) ´etale local. (That is to say, a non-
+slim anabelioid may admit a ﬁnite ´etale covering which is slim.) Thus, requiring
+anabelioids to be slim would mean that the notion of an anabelioid is not “ﬁnite
+´etale local”, which would again be unnatural.
+Remark 1.2.5.3. Note that althoughF
+X is fully faithful and essentially surjective,
+substantial care should be exercised when speaking of FX as an “equivalence”. The
+reason for this is that:
+The collection of objects of´Et(X) or Et(X) necessarily belongs to alarger
+Grothendieck universe — that is to say, unlike X,t h ec a t e g o r y´Et(X)
+is no longer V -small — than the collection of objects of X.
+Put another way,FX , i.e., the passage fromX to ´Et(X), may be thought of as a sort
+of “change of Grothendieck universe, while keeping the internal category structure
+intact”.
+Just as in the theory of schemes, one often wishes to work not just with ﬁnite
+´etale coverings, but also with“proﬁnite ´etale coverings”(i.e., projective systems of
+´etale coverings). In the case of anabelioids, we make the following
+Deﬁnition 1.2.6. We shall refer to as apro-anabelioid any “pro-object” (indexed
+by a set)
+X = lim←−α
+Xα
+relative to the coarsiﬁed category
+Anab
+def
+= |Anab|
+in which all of the transition morphisms Xα →X β are ﬁnite ´etale coverings of
+slim anabelioids. Here, by “pro-object”, we mean an equivalence class of projective
+systems (relative to the evident notion of equivalence).
+
+THE GEOMETR Y OF ANABELIOIDS 21
+Remark 1.2.6.1. Thus, (for us) pro-anabelioids only exist at the “coarsiﬁed
+level”(unlike anabelioids, which may be treated either in Anab or in Anab).
+Remark 1.2.6.2. Given a pro-anabelioid
+X = lim←−α
+Xα
+it is natural to deﬁne the set of connected componentsof X by:
+π0(X)
+def
+= lim←−α
+π0(Xα)
+In general, π0(X) will be a proﬁnite set . Moreover, for each i ∈ I,o n eo b t a i n sa
+connected pro-anabelioid
+Xi
+by forming
+lim←−α
+of the compatible system of connected components of the Xα indexed by i.
+Remark 1.2.6.3. Given two pro-anabelioids X = lim←−α Xα; Y = lim←−β Yβ,b yt h e
+deﬁnition of a “pro-object”, it follows that:
+Mor(X, Y) = lim←−
+β
+lim−→α
+Mor(Xα, Yβ)
+Note that this formula also applies in the case when one or both of X, Y is an
+anabelioid, by thinking of anabelioids as pro-anabelioids indexed by the set with
+one element.
+Suppose that we are given a connected anabelioid X
+def
+= B(G)( w h e r eG is
+a proﬁnite group). Let us write β : Ensf →X for the tautological basepoint of
+B(G). Then one important example of a pro-anabelioid which forms a proﬁnite
+´etale covering of X is the “universal covering” ˜Xβ, deﬁned as follows: For each
+open subgroup H ⊆ G,l e tu sw r i t eXH
+def
+= B(H). (In other words, XH is the
+category XS associated to the object S ∈ Ob(X) determined by the G-set G/H.)
+Thus, if H′ ⊆ H, then we have a natural morphism XH′ →X H. Moreover, these
+morphisms form a projective system whose transition morphisms are clearly ﬁnite
+´etale coverings. Hence, we obtain a pro-anabelioid
+˜Xβ
+def
+= lim←−
+H
+XH
+(where H ranges over the open subgroups of G), together with a “proﬁnite ´etale
+covering”
+˜Xβ →X
+
+22 SHINICHI MOCHIZUKI*
+which (just as in the case of schemes) has the property that the pull-back via
+this covering of any ﬁnite ´etale covering Y→X splits (i.e., is isomorphic to the
+coproduct of a ﬁnite number of copies of the base).
+Deﬁnition 1.2.7. Let X be an anabelioid, and Y a pro-anabelioid. Then a
+proﬁnite ´etale covering Y→X will be referred to as a universal covering of X if
+it is relatively connected [i.e., given by a projective system of relatively connected
+ﬁnite ´etale morphisms] and satisﬁes the property that the pull-back to Y of any
+ﬁnite ´etale covering of X splits.
+Note that by Proposition 1.2.5, (ii), it follows that whenX = B(G)i s slim,t h e
+set
+Mor
+X ( ˜Xβ, XH)
+may be identiﬁed with G/H. In particular, we obtain the result that the base-
+point β is naturally equivalent to the restriction to the image of the functor FX of
+Proposition 1.2.5, (ii), of the basepoint of ´Et(X) deﬁned by the formula:
+MorX ( ˜Xβ, Y)
+(where Y→ X is an object of ´Et(X)).
+Proposition 1.2.8. (Basic Properties of Universal Coverings) Let X be
+a slim anabelioid.T h e n :
+(i) There exists a universal covering Y→X .
+(ii) Any two universal coverings Y→X , Y′ →X are isomorphic over X.
+(iii) Suppose that X is connected. Then the formula
+β
+/CT
+X (S)
+def
+=M o rX ( ˜X, XS)
+(where S ∈ Ob(X)) deﬁnes an equivalence of categories between the category
+of universal coverings ˜X→ X (whose morphisms are isomorphisms ˜X
+∼
+→ ˜X ′
+over X) and thecategory of basepointsβ : Ensf →X (whose morphisms β
+∼
+→ β′
+are isomorphisms of functors (β′)∗ ∼
+→ β∗). In particular, if ˜X→ X determines the
+basepoint β
+/CT
+X ,t h e n
+AutX ( ˜X)=A u t (β
+/CT
+X )= π1(X,β
+/CT
+X )
+(where AutX ( ˜X) is the set of automorphisms relative to the category of universal
+coverings just deﬁned).
+(iv) Suppose that X
+def
+= B(G), X ′ def
+= B(G′) are slim connected anabelioids. Let
+˜X→ X , ˜X ′ →X ′ be the universal coverings determined by the tautological base-
+points β, β′. Then, if we denote by Isom( ˜X, ˜X ′) the set of isomorphisms ˜X
+∼
+→ ˜X ′
+
+THE GEOMETR Y OF ANABELIOIDS 23
+which do not necessarily lie over some isomorphism X
+∼
+→X ′, we have a natural
+isomorphism
+Isog((X,β);( X ′,β ′))
+def
+=I s o m (˜X, ˜X ′)
+∼
+→ lim−→H
+{open injections H↪ → G′}
+(where H ranges over the open subgroups ofG).
+Proof. Assertions (i), (ii) follow formally from the deﬁnitions and the above discus-
+sion. Now let us consider assertion (iv). Suppose that we are given an isomorphism
+φ : ˜X
+∼
+→ ˜X ′. By Proposition 1.1.4, (i), such a morphism arises from some homo-
+morphism H → H′, determined up to conjugation with an inner automorphism
+arising from H′. Here, we take H ⊆ G, H′ ⊆ G′ to be normal open subgroups.
+If K′ ⊆ G is another normal open subgroup contained in H′, then there exists a
+normal open subgroup K ⊆ G contained in H, together with a homomorphism
+K → K′ (determined by φ, up to conjugation with an inner automorphism arising
+from K′) such that the outer homomorphismH → H′ is compatible with the outer
+homomorphism K → K′. Note, moreover, that since X ′ is slim,a unique homo-
+morphism H → H′ up to conjugation with an inner automorphism arising fromK′
+is determined by the homomorphism K → K′. (Indeed, this follows by considering
+the faithful actions (by conjugation) of H, H′ on K, K′, respectively.) Thus, by
+taking K′ to be arbitrarily small, we see thatφ determines a unique homomorphism
+H → H′ ⊆ G′. Consideration of the inverse to φ shows that this homomorphism
+H → G′ is necessarily an open injection. On the other hand, any open injection
+H↪ → G′ clearly determines an isomorphism φ. This completes the proof of (iv).
+Finally, we consider property (iii). Since it is clear that any isomorphism be-
+tween universal coverings induces an isomorphism of the corresponding basepoints,
+it suﬃces to prove property (iii) in the “automorphism” case. For simplicity, we
+shall write X = B(G), and assume that the basepointβ in question is the tautolog-
+ical basepoint. By property (iv), any isomorphism φ : ˜X
+∼
+→ ˜X arises from an open
+injection H↪ → G. The fact that the composite of φ with ˜X→ X is isomorphic
+to ˜X→ X implies (cf. Proposition 1.1.4, (i)) that this open injection H↪ → G is
+induced by conjugation by aunique (by slimness) element ofG. On the other hand,
+conjugation by an element of G clearly determines an element of AutX ( ˜X). Thus,
+AutX ( ˜X)= G, as desired. ⃝
+Remark 1.2.8.1. When (cf. Proposition 1.2.8, (iv)) β, β′ are ﬁxed throughout
+the discussion, we shall write
+Isog(X, X ′)
+for Isog(( X,β);( X ′,β ′)). When ( X,β)=( X ′,β ′), we shall write Isog( X)f o r
+Isog(X, X ′).
+Finally, before proceeding, we present the following:
+
+24 SHINICHI MOCHIZUKI*
+Deﬁnition 1.2.9.
+(i) We shall say that a continuous homomorphism of Hausdorﬀ topological
+groups G → H is relatively slim if the centralizer in H of the image of every open
+subgroup of G is trivial.
+(ii) We shall say that a morphism of anabelioids U→V is relatively slim if
+the induced morphism between fundamental groups of corresponding connected
+components of U, V is relatively slim.
+Remark 1.2.9.1. Thus, X is slim if and only if the identity morphism X→ X is
+relatively slim. Also, if U→V is relatively slim, then the arrow U→V is rigid [i.e.,
+has no nontrivial automorphisms — cf. Corollary 1.1.6]. If U→ V is a relatively
+slim morphism between connected anabelioids, then it follows that V is slim;i f ,
+moreover, U→ V is a π1-monomorphism, then it follows that U is also slim.
+Remark 1.2.9.2. The construction of a pull-back, or ﬁber product, discussed in
+Remark 1.2.5.1 generalizes immediately to the case where φ : Y→X is a ﬁnite
+´etale morphism of slim anabelioids,a n dψ : Z→X is an arbitrary relatively slim
+morphism of slim anabelioids, via the formula of loc. cit.:
+Zψ ∗(φ!(1Y)) →Z
+One veriﬁes immediately that all conceivable compatibilities are satisﬁed.
+
+THE GEOMETR Y OF ANABELIOIDS 25
+Section 2: Cores and Quasi-Cores
+§2.1. Localizations and Cores
+In this §, we discuss the notion of a core in the context of slim anabelioids.
+This notion will play a central role in the theory of the present paper.
+Let X be a slim anabelioid.L e tu sw r i t e
+Loc(X)( ⊆ Anab)
+for the 2-category whose (0-)objects are (necessarily slim) anabelioids Y that admit
+a ﬁnite ´etale morphism to X, and whose (1-)morphisms are ﬁnite ´etale morphisms
+Y1 →Y 2 (that do not necessarily lie overX!). Note that given an object of Loc(X),
+the set of connected components of this object may be recovered entirely category-
+theoretically from the coarsiﬁcation
+Loc(X)
+def
+= |Loc(X)|
+of the 2-category Loc(X) (cf. Proposition 1.1.11).
+Proposition 2.1.1. (Categories of Localizations) Let X be a slim anabe-
+lioid.T h e n :
+(i) Loc(X) is slim.
+(ii) Denote by
+Loc(X)
+the 2-category whose (0-)objects Z are slim anabelioids which arise as ﬁnite
+´etale quotients of objects in Loc(X) [i.e., there exists a ﬁnite ´etale morphism Y→
+Z,w h e r eY∈ Ob(Loc(X))] and whose (1-)morphisms are ﬁnite ´etale morphisms.
+Then the 2-category
+ Loc(X) is slim. Write:
+ Loc(X)
+def
+= |
+Loc(X)|.
+(iii) The 2-category
+ Loc(X) (respectively, category
+ Loc(X)) may be recon-
+structed entirely category-theoretically from Loc(X) (respectively, Loc(X))b y
+considering the “ 2-category (respectively, category) of objects of Loc(X) (respec-
+tively, Loc(X)) equipped with a ﬁnite ´etale equivalence relation”.
+(iv) Suppose that we arbitrarily choose ﬁnite ´etale structure morphisms to
+X for all of the objects of Loc(X). Then every morphism Y1 →Y 2 of Loc(X)
+may be written as thecomposite of an isomorphism Y1
+∼
+→Y 3 with a ﬁnite ´etale
+morphism Y3 →Y 2 over X.
+Proof. Assertions (i) and (ii) are formal consequences of Corollary 1.1.6. Asser-
+tions (iii) and (iv) follow formally from the deﬁnitions. ⃝
+Let X be a slim anabelioid. Then:
+
+26 SHINICHI MOCHIZUKI*
+Deﬁnition 2.1.2.
+(i) We shall say that X is a(n) (absolute) core if X is a terminal object in
+Loc(X).
+(ii) We shall say that X admits a(n) (absolute) core if there exists a terminal
+object Z in
+ Loc(X). In this case,
+ Loc(X)=
+ Loc(Z)=L o c (Z), so we shall say that
+Z is a core.
+Remark 2.1.2.1. Note that in Proposition 2.1.1, (ii), it is important to assume
+that the quotients Z that one considers are slim. Indeed, if one did not impose
+this condition, then by “forming quotients of slim anabelioids by the trivial actions
+of ﬁnite groups”, one veriﬁes easily that the 1-category associated to the resulting
+2-category never admits a terminal object — i.e., “no slim anabelioid would admit
+a core”. From the point of view of anabelian varieties — e.g.,hyperbolic orbicurves
+— this condition of slimness amounts to the condition that the algebraic stacks
+that one works with are generically schemes (cf. [Mzk9], §2).
+Remark 2.1.2.2. Note that thedeﬁnability of Loc(X),
+Loc(X) is one of the most
+fundamental diﬀerences between the theory of ﬁnite ´etale coverings of anabelioids
+as discussed in §1.2 and the theory of ﬁnite ´etale coverings from the point of view
+of “Galois categories”, as given in [SGA1]. Indeed, from the point of view of the
+theory of [SGA1], it is only possible to consider “´Et(X)” — i.e., ﬁnite ´etale coverings
+and morphisms that always lie over X. That is to say, in the context of the theory
+of [SGA1], it is not possible to consider diagrams such as:
+Z
+↙↘
+XY
+(where the arrows are ﬁnite ´ etale) that do not necessarily lie over any speciﬁc
+geometric object. We shall refer to such a diagram as a correspondenceor isogeny
+between X and Y. When there exists an isogeny between X and Y,w es h a l ls a y
+that X and Y are isogenous.
+Next, we would like to consider universal coverings.L e t β,γ be basepoints of
+a connected slim anabelioid X.W r i t e
+πβ : ˜Xβ →X ; πγ : ˜Xγ →X
+for the associated universal coverings (cf. the discussion of §1.2). In the following
+discussion, we would also like to consider an isomorphism
+ξ: ˜Xβ
+∼
+→ ˜Xγ
+(cf. Proposition 1.2.8, (iv)).
+
+THE GEOMETR Y OF ANABELIOIDS 27
+Deﬁnition 2.1.3. We shall refer to an isomorphism ξ: ˜Xβ
+∼
+→ ˜Xγ as above as an
+outer path from β to γ.I f ξarises from a commutative [i.e., at the coarsiﬁed level]
+diagram of anabelioids
+˜Xβ
+ξ
+−→ ˜Xγ
+⏐⏐
+↓
+⏐⏐
+↓
+X
+idX
+−→ X
+then we shall refer toξas an inner path from β to γ. An outer (respectively, inner)
+path from β to itself will be referred to as an( ˜Xβ-valued) open (respectively, closed)
+path.
+Remark 2.1.3.1. Thus, inner paths are precisely the paths of [SGA1], Expos´eV ,
+§7. Note that the diﬀerence between an“inner” path and an “outer” path depends
+essentially on the“identity” of β, γ — i.e., what appears to be an outer path if one
+thinks of β and γ as in fact being “equal” may appear to be an inner path if one
+thinks of β and γ as “distinct”. Put another way:
+The distinction between inner and outer paths depends essentially on the
+“model of set theory” under consideration — i.e., on the labels that
+one uses to describe the various sets involved in the discussion.
+It is the hope of the author to pursue this point of view in more detail in a future
+paper.
+Remark 2.1.3.2. Note that an inner path is a special case of an outer path. The
+diﬀerence between an inner path and an arbitrary outer path is easiest to analyze
+when β = γ (but cf. Remark 2.1.3.1!). In this case, an ( ˜Xβ-valued) closed path is
+simply an element of the fundamental group π1(X,β).
+On the other hand, the motivation for the terminology “open path” is the
+following. Let K be a perfect ﬁeld; L a ﬁnite Galois extension of K;a n d
+ K an
+algebraic closure of K.T h e n t o g i v e a
+K-valued basepoint β of L is to give an
+embedding ιβ : L↪ →
+ K.I f w ea r et h e n g i v e n aK-linear isomorphism σ :
+ K
+∼
+→
+ K
+(i.e., an element σ ∈ Gal(
+K/K )), then the composite of σ with ιβ determines
+another embedding ιγ : L↪ →
+ K. Of course, the two basepoints β, γ of Spec(L)
+deﬁned by ιβ,ιγ map to the same basepoint of Spec(K) — i.e., “if one applies the
+projection Spec(L) → Spec(K), then σ becomes a closed path in Spec(K)”. This is
+intended to be reminiscent of theanalogy between Galois groups in ﬁeld theory and
+fundamental groups in algebraic topology (where we recall that the theory of the
+latter may be formulated not just in terms of covering groups, but also in terms of
+literal closed paths, i.e., topological images of the circleS1, in the space in question).
+Thus, it is natural to regard σ — when working with σ as an object associated to
+Spec(L) — as an open path (valued in
+ K), i.e., the analogue of a topological image
+of the interval [0, 2π] as opposed to the circle S1, on Spec(L).
+
+28 SHINICHI MOCHIZUKI*
+Incidentally, this example also shows the reason for the choice of terminology
+“inner/outer path”. That is to say, inner/closed paths induce (via “parallel trans-
+port”) inner automorphisms of the fundamental group, while outer/open paths
+arise from arbitrary (outer) automorphisms, or even isogenies, of the fundamental
+group.
+Proposition 2.1.4. (The Totality of Basepoints) Let X be a connected
+slim anabelioid.L e t ˜X→ X be a universal covering of X, that determines
+some basepoint β of X.T h e n :
+(i) The subgroup
+ΠX
+def
+= π1(X,β) = AutX ( ˜X) ⊆ Aut( ˜X) = Isog(X)
+is commensurable with all of its conjugates in Isog(X). Moreover, the open
+subgroups of ΠX deﬁne a basis for a topology on Isog(X) with respect to which
+Isog(X) forms a Hausdorﬀ topological group . Finally, the subgroup ΠX ⊆
+Isog(X) is both open and closed with respect to this topology.
+(ii) Isog(X) acts transitively on the set of ˜X-valued basepoints — i.e.,
+(isomorphism classes of) proﬁnite ´etale morphisms ˜X→ X —o f X. Moreover,
+this action determines a bijection between the set of ˜X-valued basepoints and the
+coset space:
+Isog(X)/ΠX
+(iii) Suppose that X is a core.T h e nΠX =I s o g (X). That is to say, X admits
+precisely one ˜X-valued basepoint. In particular, all open paths onX are, in fact,
+closed. Moreover, the natural functors
+Et(X) → Loc(X) →
+ Loc(X); ´Et(X) → Loc(X) →
+ Loc(X)
+are equivalences.
+Proof. These assertions are all formal consequences of the deﬁnitions (cf. also
+Proposition 1.2.8, (iv)). ⃝
+Remark 2.1.4.1. Note, however, that the subgroup of Isog(X) generated by ΠX
+and some conjugate of Π X does not necessarily contain either of these two groups
+as a ﬁnite index subgroup. Perhaps the most famous example of this phenomenon
+is the theorem of Ihara (cf., e.g., [Serre1], II, §1.4, Corollary 1; [Ihara]) expressing
+SL2(Qp)a sa n amalgam of two copies of SL2(Zp), amalgamated along a subgroup
+which is open in both copies of SL2(Zp). In the notation of the present discussion,
+this example corresponds to the case
+X
+def
+= B(SL±
+2 (Zp))
+
+THE GEOMETR Y OF ANABELIOIDS 29
+(where, instead of SL2(Zp), we use its quotient SL±
+2 (Zp)b y ±1 to ensure that X
+is slim). Note that this example shows that Isog( X) does not necessarily admit a
+natural structure of proﬁnite group . Indeed, in the case of SL±
+2 (Zp), one checks
+easily (by applying the theory ofp-adic Lie groups — cf., e.g., [Serre2], Chapter V,
+§7) that Isog(X)= PGL2(Qp) (which is not proﬁnite).
+Remark 2.1.4.2. The above example of SL2(Zp) highlights one of the major
+themes of the present paper, i.e., that:
+open paths ⇐⇒ Isog(X) ⇐⇒ correspondences
+— that is to say, just as (in the “classical theory” of the ´etale fundamental group
+given in [SGA1]) closed paths (i.e., elements of π1) correspond to elements of Π X ,
+open paths corresponds to elements of Isog(X), i.e., “correspondences”.
+Remark 2.1.4.3. It is interesting to note relative to Proposition 2.1.4, (ii) (cf.
+also Proposition 1.2.8, (iii); Remark 2.1.3.1) that the cardinality of the collection
+of basepoints Ensf →X is the same as that of the collection of proﬁnite ´etale
+morphisms ˜X→ X . Indeed, both collections have the same cardinality as the
+collection of morphisms Ensf → Ensf.
+§2.2. Holomorphic Structures and Commensurable Terminality
+In this §, we wish to discuss a relative version of the theory of §2.1. Let X, Q
+be slim anabelioids.
+Deﬁnition 2.2.1.
+(i) A Q-holomorphic structureon X is the datum of a relatively slim morphism
+(cf. Deﬁnition 1.2.9, (ii)) X→ Q , which we shall refer to as thestructure morphism.
+(ii) A slim anabelioid equipped with aQ-holomorphic structure will be referred
+to as a Q-anabelioid.
+(iii) A Q-holomorphic morphism (or “ Q-morphism” for short) between Q-
+anabelioids is a morphism of anabelioids compatible with theQ-holomorphic struc-
+tures.
+(iv) A Q-holomorphic structure/Q-anabelioid will be calledfaithful if its struc-
+ture morphism is a π1-monomorphism.
+Remark 2.2.1.1. Here, we note that the term “compatible” in Deﬁnition 2.2.1,
+(iii), makes sense, precisely because of the assumption of relative slimness in Deﬁ-
+nition 2.2.1, (i) (cf. Corollary 1.1.6).
+
+30 SHINICHI MOCHIZUKI*
+Let us write
+LocQ(X)
+for the 2 -category whose (0-)objects Y→Q are Q-anabelioids that admit a Q-
+holomorphic ﬁnite ´etale morphism Y→X to X, and whose (1-)morphisms are
+arbitrary ﬁnite ´etale Q-morphisms (that do not necessarily lie over X!). Now we
+have the “ Q-holomorphic analogue”of Proposition 2.1.1:
+Proposition 2.2.2. (Categories of Holomorphic Localizations) Let Q be
+a slim, connected anabelioid; X a Q-anabelioid.T h e n :
+(i) LocQ(X) is slim. Write: LocQ(X)
+def
+= |LocQ(X)|.
+(ii) Denote by
+LocQ(X)
+the 2-category whose (0-)objects Z→Q are Q-anabelioids which arise as ﬁnite
+´etale quotients of objects in LocQ(X) [i.e., there exists a ﬁnite ´etale Q-morphism
+Y→Z ,w h e r eY∈ Ob(LocQ(X))] and whose (1-)morphisms are ﬁnite ´etale Q-
+morphisms. Then the 2-category
+ LocQ(X) is slim. Write:
+ LocQ(X)
+def
+= |
+LocQ(X)|.
+(iii) The 2-category
+ LocQ(X) (respectively, category
+LocQ(X)) may be recon-
+structed entirely category-theoretically from LocQ(X) (respectively, LocQ(X))
+by considering the “ 2-category (respectively, category) of objects of LocQ(X) (re-
+spectively, LocQ(X)) equipped with a ﬁnite ´etale equivalence relation”.
+(iv) Suppose that we arbitrarily choose ﬁnite ´etale structure morphisms to
+X for all of the objects of LocQ(X). Then every morphism Y1 →Y 2 of LocQ(X)
+may be written as the composite of an isomorphism Y1
+∼
+→Y 3 (over Q)w i t ha
+ﬁnite ´etale morphism Y3 →Y 2 over X.
+Let X be a Q-anabelioid. Then:
+Deﬁnition 2.2.3.
+(i) We shall say that X is a Q-core if X [i.e., X→ Q ] is a terminal object in
+LocQ(X).
+(ii) We shall say that X admits a Q-core if there exists a terminal object Z in
+LocQ(X). In this case,
+ LocQ(X)=
+ LocQ(Z) = LocQ(Z), so we shall say that Z is
+a Q-core.
+Deﬁnition 2.2.4.
+(i) We shall say that a closed subgroup H ⊆ G of a proﬁnite group G is
+commensurably (respectively, normally) terminal if the commensurator CG(H)( r e -
+spectively, normalizer NG(H)) is equal to H.
+
+THE GEOMETR Y OF ANABELIOIDS 31
+(ii) We shall say that a π1-monomorphism of anabelioids U→V is commen-
+surably (respectively, normally) terminal if the image of the induced morphism
+between fundamental groups of corresponding connected components of U, V is
+commensurably (respectively, normally) terminal.
+Remark 2.2.4.1. Thus, it is a formal consequence of the deﬁnitions that:
+commensurably terminal = ⇒ normally terminal
+and that
+commensurably terminal with slim domain = ⇒ relatively slim
+(where the “domain” is the groupH (respectively, anabelioid U) in Deﬁnition 2.2.4,
+(i) (respectively, (ii))).
+Proposition 2.2.5. (Commensurable Terminality and Holomorphic
+Cores) Let X be a connected faithful Q-anabelioid; assume that Q is also
+connected. Then X is a Q-core if and only if its structure morphism iscommen-
+surably terminal.
+Proof. Without loss of generality, we may writeX = B(H), Q = B(G), where H ⊆
+G is a closed subgroup. First, we verify suﬃciency. By Proposition 1.1.4, it suﬃces
+to prove that, ifH′ ⊆ H is an open subgroup, then any continuous homomorphism
+φ : H′ → G whose image lies inH and which factors as the composite of the natural
+inclusion H′ ↪→ G with conjugation by an element g ∈ G is, in fact, equal to the
+to composite of the natural inclusion H′ ↪→ G with conjugation by an element
+h ∈ H. But this follows immediately from Deﬁnition 2.2.4, (i), which implies that
+g ∈ H. Finally, necessityfollows by reversing the preceding argument in the evident
+fashion. ⃝
+Let X be a connected Q-anabelioid. For simplicity, we also assume that Q
+is connected. Suppose that we are given a universal covering ˜Q→Q of Q and
+consider the resulting cartesian diagram:
+˜Q|X −→ ˜Q
+⏐⏐
+↓
+⏐⏐
+↓
+X− → Q
+Note that Π
+Q
+def
+=A u tQ( ˜Q) acts (compatibly) on ˜Q over Q,a sw e l la so n˜Q|X over
+X. On the other hand, if we consider a connected component ˜X of ˜Q|X as an
+independent geometric object,e v e ni ft h eQ-holomorphic structure on ˜X remains
+ﬁxed, in general ˜X will admitdistinct (proﬁnite) ´etale morphisms toX. Put another
+
+32 SHINICHI MOCHIZUKI*
+way, in general, X admits distinct ˜X-valued Q-holomorphic basepoints. That is to
+say, we have the Q-holomorphic analogue of Proposition 2.1.4:
+Proposition 2.2.6. (The Totality of Q-Holomorphic Basepoints) Let X
+be a connected faithful Q-anabelioid,w h e r eQ is also connected. Let ˜Q→Q be
+a universal covering of Q; ˜X→ X a connected component of ˜Q|X →X . Write
+ΠQ
+def
+=A u tQ( ˜Q), ΠX
+def
+=A u tX ( ˜X ). Thus, we have a natural inclusion ΠX ⊆ ΠQ.
+Then:
+(i) The subgroup
+ΠX =A u tX ( ˜X) ⊆ IsogQ(X)
+def
+=A u tQ( ˜X )= CΠQ (ΠX )
+is commensurable with all of its conjugates in IsogQ(X). Moreover, the open
+subgroups of ΠX deﬁne a basis for a topology on IsogQ(X) with respect to which
+IsogQ(X) forms a Hausdorﬀ topological group. Finally, the subgroup ΠX ⊆
+IsogQ(X) (respectively, IsogQ(X) ⊆ Isog(X)) is both open and closed (respectively,
+open) with respect to this topology.
+(ii) IsogQ(X) acts transitively on the set of ˜X-valued Q-holomorphic
+basepoints — i.e., (isomorphism classes of) proﬁnite ´etale Q-morphisms ˜X→ X
+—o f X. Moreover, this action determines a bijection between the set of ˜X-valued
+Q-holomorphic basepoints and the coset space:
+IsogQ(X)/ΠX
+(iii) Suppose that X is a Q-core.T h e nΠX =I s o gQ(X). That is to say, X
+admits precisely one ˜X-valued Q-holomorphic basepoint. In particular, all “ Q-
+holomorphic” open paths onX are, in fact, closed. Moreover, the natural functors
+Et(X) → LocQ(X) →
+ LocQ(X); ´Et(X) → LocQ(X) →
+ LocQ(X)
+are equivalences.
+Remark 2.2.6.1. Thus, at a more intuitive level, just as “(absolute) cores
+have essentially only one basepoint”, if X is a Q-core, then every basepoint of Q
+determines an essentially unique (up to renaming) Q-holomorphic basepoint of X.
+Remark 2.2.6.2. The topology of Proposition 2.2.6, (i), is not to be confused
+with the topology onCΠQ (ΠX ) induced by the topology of ΠQ. For instance, if ΠX
+is the proﬁnite free group on 2 generators (which is easily seen to be slim —c f . ,
+e.g., [Mzk8], Lemma 1.3.1) and ΠQ =A u t ( ΠX ) (which also has a natural structure
+of proﬁnite group), then Π Q = CΠQ (ΠX ), but Π X is not open [i.e., relative to the
+proﬁnite topology of Π Q]i nΠ Q. Here, we note that Out(Π X ) = Aut(Π X )/ΠX ,
+hence also ΠQ,i s inﬁnite and slim. [Indeed, the slimness of ΠQ may be shown, for
+
+THE GEOMETR Y OF ANABELIOIDS 33
+instance, as follows: By [Tama], Theorem 0.4, applied to the projective line minus
+three points over the ﬁeld of rational numbers, it follows that the centralizer of
+any open subgroup of Out(ΠX ) is contained in the subgroup of Out(ΠX ) obtained
+by considering the permutation group of the three points. On the other hand, by
+projecting to Out(Π ab
+X ) ∼= GL2(ˆZ), one sees that any element of this permutation
+group that centralizes an open subgroup of GL2(ˆZ) must be trivial.]
+§2.3. Quasi-Cores and Intrinsic Exhaustivity
+In order to deﬁne the fundamental group of a (connected slim) anabelioid X,
+it is necessary to choose a basepoint for X. As we saw in Proposition 1.2.8, this
+is equivalent to choosing a universal cover ˜X→ X of X. On the other hand, in
+general, there is nothing special that distinguishes a given proﬁnite ´etale ˜X→ X
+from another ˜X→ X obtained from the ﬁrst by composition with some element of
+Aut( ˜X ) = Isog(X). That is to say, the diﬀerence between these two ˜X→ X is a
+“matter of arbitrary choices of labels”. Thus, the question naturally arises:
+To what extent is it possible to construct the fundamental group of a (con-
+nected slim) anabelioid in a canonical fashion that does not depend on
+such arbitrary choices?
+In this § and the next, we would like to analyze this issue in more detail. Our main
+result (cf. Theorem 2.4.3 below) states that when the anabelioid in questionadmits
+a “faithful quasi-core”(cf. Deﬁnition 2.3.1), then its fundamental group can indeed
+be constructed in a rather canonical fashion. In addition to quasi-cores, we also
+consider the notion of intrinsic exhaustivity, which provides a convenient, intrinsic
+necessary condition for an anabelioid to admit a faithful quasi-core.
+In the following, we shall always consider morphisms between anabelioids in
+the coarsiﬁcation Anab of Anab.
+Deﬁnition 2.3.1. Let X be a Q-anabelioid (so X, Q are slim). For simplicity,
+we also assume that the fundamental group of every irreducible component ofQ is
+countably (topologically) generated.
+(i) We shall say that X admits (Q as) a quasi-core if the natural functor
+LocQ(X) → Loc(X)
+(given by forgetting the Q-holomorphic structure) is an equivalence.
+(ii) We shall say that X admits (Q as) a faithful quasi-core if X admits Q as
+a quasi-core, and, moreover, the Q-structure on X is faithful.
+Next, let us recall that if G is a slim proﬁnite group, then it admits a natural
+injection
+G↪ → Isog(G)
+def
+= Isog(B(G))
+
+34 SHINICHI MOCHIZUKI*
+(cf. Propositions 1.2.8, (iv); 2.1.4, (i)). Thus, in the following discussion, we shall
+regard G as a subgroup of Isog(G).
+Deﬁnition 2.3.2. We shall refer to as a proﬁnite subgroup K ⊆ Isog(G) a sub-
+group K of theabstract groupIsog(G) which is equipped with a structure of proﬁnite
+group such that the intersection K ⋂ G is a closed subgroup of both G and K
+whose induced topologies from G and K coincide.
+Remark 2.3.2.1. If K ⊆ Isog(G)i sa proﬁnite subgroup which is, moreover,
+commensurable to a closed subgroup F ⊆ G (i.e., K ⋂ F is open in F, K), then
+one veriﬁes easily that the topology on K is the unique topology with respect to
+which K ⊆ Isog(G)i sa proﬁnite subgroup.
+Remark 2.3.2.2. One veriﬁes immediately that if G′ ⊆ Isog(G)i sa proﬁnite
+subgroup commensurable toG — so that one has a natural identiﬁcation Isog(G)=
+Isog(G′) — then the proﬁnite subgroups of Isog( G)a r et h esame (relative to this
+identiﬁcation) as the proﬁnite subgroups of Isog( G′).
+We will also make use of the following deﬁnitions:
+Deﬁnition 2.3.3.
+(i) A proﬁnite group G will be called weakly intrinsically exhaustiveif for every
+open subgroup H ⊆ G and every open embedding ι: H↪ → G,w eh a v e :
+[G : H]=[ G : ι(H)]
+(ii) A slim proﬁnite groupG will be calledintrinsically exhaustive if there exists
+aﬁ l t r a t i o n
+... ⊆ Gn+1 ⊆ Gn ⊆ ... ⊆ G
+(where n ranges over the positive integers) of open normal subgroupsGn of G such
+that ⋂
+n
+Gn = {1}
+and, moreover, for any proﬁnite subgroup K ⊆ Isog(G) commensurable to G,t h e r e
+exists an integer nK — depending only on the proﬁnite subgroup K — such that
+Gn ⊆ K for n ≥ nK, and, for any open subgroup H ⊆ Gn (where n ≥ nK)a n d
+any open embedding ι: H↪ → K,w eh a v eι(H) ⊆ Gn (⊆ K).
+(ii) An anabelioid will be called intrinsically exhaustive (respectively, weakly
+intrinsically exhaustive) if the fundamental group of every connected component of
+the anabelioid is intrinsically exhaustive (respectively, weakly intrinsically exhaus-
+tive).
+Deﬁnition 2.3.4. Let X be a Q-anabelioid. Then we shall refer to a ﬁnite ´etale
+(necessarily Galois) covering Y→X obtained as the direct summand of the pull-
+back via the structure morphism X→ Q of a ﬁnite ´etale Galois covering R→Q
+as Q-Galois.
+
+THE GEOMETR Y OF ANABELIOIDS 35
+Proposition 2.3.5. (Basic Properties of Quasi-Cores and Intrinsic Ex-
+haustivity)
+(i) Suppose that a slim anabelioid X admits a quasi-core X→ Q . Then the
+natural functor
+LocQ(X) →
+ Loc(X)
+(given by forgetting the Q-holomorphic structure) is an equivalence. Moreover, any
+relatively slim composite X→ Q ′ of X→ Q with a morphism Q→Q ′ of slim
+anabelioids is also a quasi-core for X.
+(ii) If a slim anabelioid X admits a core X→ Q ,t h e nX→ Q is a faithful
+quasi-core for X.
+(iii) Suppose that X and Y are slim, connected anabelioids which are isoge-
+nous.T h e nX admits a quasi-core (respectively, admits a faithful quasi-core) if
+and only if Y does.
+(iv) Suppose that X and Y are slim, connected anabelioids which are isoge-
+nous.T h e nX is intrinsically exhaustive (respectively, weakly intrinsically exhaus-
+tive) if and only if Y is.
+(v) If X is intrinsically exhaustive, then it is weakly intrinsically exhaustive.
+(vi) Suppose that X is weakly intrinsically exhaustive. Then there is a
+unique map
+degX : Ob(Loc(X)) → Q>0
+such that
+degX (X)=1 ; d e g (Y1/Y2)=d e gX (Y1)/degX (Y2)
+for all morphisms Y1 →Y 2 of Loc(X). In particular, if Y→X is a ﬁnite ´etale
+morphism of connected anabelioids of degree> 1,t h e nY is not isomorphic to X.
+(vii) Let X be a slim, connected,weakly intrinsically exhaustiveanabelioid
+that admits a quasi-core X→ Q .L e t
+φ : Y→ X
+be a connected Q-Galois covering. Then any ﬁnite ´etale (not necessarily Galois!)
+morphism ψ : Y→X is abstractly equivalent (cf. §0) to φ.
+(viii) If X admits afaithful quasi-core,t h e nX is intrinsically exhaustive.
+In particular, if X admits a core, then X is intrinsically exhaustive.
+Proof. Assertions (i), (ii), (iv), and (vi) are immediate from the deﬁnitions. As-
+sertion (iii) follows from the deﬁnitions and assertion (i). Next, we verify assertion
+(v). Let H ⊆ G be an open subgroup, and ι: H↪ → G be an open embedding.
+
+36 SHINICHI MOCHIZUKI*
+Suppose that (for some large n) Gn (as in Deﬁnition 2.3.3) is contained in H,s o
+ι(Gn) ⊆ Gn. Then:
+∞ > [G : ι(H)] · [H : Gn]=[ G : ι(H)] · [ι(H): ι(Gn)]
+=[ G : ι(Gn)] = [G : Gn] · [Gn : ι(Gn)]
+≥ [G : Gn]=[ G : H] · [H : Gn]
+Thus, [G : ι(H)] ≥ [G : H]. On the other hand, if we apply this inequality to
+ι−1 : ι(H) ↪→ G, then we obtain the reverse inequality. This implies equality, as
+desired.
+Next, we turn to assertion (vii). Suppose that X→ Q is a quasi-core for X.
+Without loss of generality, we may assume that X = B(G), Q = B(A), and that
+X→ Q is induced by a continuous homomorphism G → A which factors:
+G ↠ GA ⊆ A
+If B ⊆ A is an open normal subgroup of A,a n dHA
+def
+= GA
+⋂ B, H
+def
+= G ×A B,
+then for any open embedding ι : H↪ → G, it follows from Deﬁnition 2.3.1, (i),
+that the image of the composite of ιwith the homomorphism G → A is equal to
+a · HA · a−1 (for some element a ∈ A). Thus, since B is normal in A, we conclude
+that a · HA · a−1 ⊆ GA
+⋂ B = HA (for some a ∈ A). On the other hand, this
+implies that ιfactors through H, hence — by assertion (vi) — that ι(H)= H,a s
+desired.
+Finally, we turn to assertion (viii). Suppose that X→ Q is a faithful quasi-
+core for X. Without loss of generality, we may assume that X = B(G), Q = B(A),
+where G ⊆ A is a closed subgroup of a proﬁnite group A.L e t
+... ⊆ An+1 ⊆ An ⊆ ... ⊆ A
+(where n ranges over the positive integers) be a descending sequence ofopen normal
+subgroups of A (which exists since A is assumed to be countably (topologically)
+generated — cf. Deﬁnition 2.3.1) such that:
+⋂
+n
+An = {1}
+Let Gn
+def
+= G ⋂ An. Then for any proﬁnite subgroup K ⊆ Isog(G) commensurable
+to G, it follows from assertion (i) that K ⋂ G ⊆ G ⊆ A extends uniquely to
+an inclusion K ⊆ A.N o w t a k enK to be suﬃciently large that Gn = Kn
+def
+=
+K ⋂ An (⊆ K), for all n ≥ nK. Then for any open subgroup H ⊆ Gn (where
+n ≥ nK) and any open embedding ι: H↪ → K, it follows from Deﬁnition 2.3.1, (i),
+that the composite of ιwith the inclusion K ⊆ A is induced by conjugation by an
+element a ∈ A. Thus, (since An is normal in A) we obtain the desired inclusion:
+ι(H)= a · H · a−1 ⊆ K
+⋂
+An = Kn = Gn
+
+THE GEOMETR Y OF ANABELIOIDS 37
+⃝
+Remark 2.3.5.1. Thus, in words (cf. Deﬁnition 2.3.3; Proposition 2.3.5, (vi)),
+weak intrinsic exhaustivity means, with respect to ﬁnite ´etale localization on B(G),
+that:
+The property of “being suﬃciently local as to be ﬁnite ´etale over B(G)o f
+degree N”is intrinsic.
+On the other hand, intrinsic exhaustivity means that:
+The property of “being suﬃciently local as to be ﬁnite ´etale over B(Gn)”
+is intrinsic.
+Moreover, we have implications (cf. Proposition 2.3.5, (v), (viii)):
+existence of a faithful quasi-core = ⇒ intrinsic exhaustivity
+=⇒ weak intrinsic exhaustivity
+Here, the second implicationis strict (cf. Example 2.3.7, (ii), (iii), below), but it is
+not clear to the author at the time of writing to what extent the ﬁrst implication
+is strict (but cf. Theorem 3.1.3, (iii); Corollary 3.1.7).
+Proposition 2.3.6. (Quasi-Cores and the Group of Isogenies) Let G be a
+slim proﬁnite group .
+(i) Suppose that Isog(G) is proﬁnite (i.e., “ Isog(G) ⊆ Isog(G) is a proﬁnite
+subgroup” — cf. Deﬁnition 2.3.2). Then B(G) →B (Isog(G)) is a quasi-core.
+(ii) Suppose that G is intrinsically exhaustive;l e t{Gn} be as in Deﬁnition
+2.3.3, (ii). Then the natural inclusions ... ⊆ Aut(Gn) ⊆ Aut(Gn+1) ⊆ ... ⊆
+Isog(G) (where n ≥ nG) induce an isomorphism of abstract groups:
+lim−→n
+Aut(Gn)
+∼
+→ Isog(G)
+(iii) Suppose that G is a closed subgroup of a slim proﬁnite group A such
+that the inclusion G↪ → A is relatively slim. Then the following are equivalent:
+(a) B(G) →B (A) is a faithful quasi-core.
+(b) The natural inclusion CA(G) ↪→ Isog(G) is surjective.
+(c) The homomorphism of abstract groups G↪ → A factors through G↪ →
+Isog(G).
+
+38 SHINICHI MOCHIZUKI*
+Proof. These assertions are all formal consequences of the deﬁnitions. ⃝
+Remark 2.3.6.1. Relative to Proposition 2.3.6, (ii), we note that Aut(Gn)i sa l s o
+equal to the normalizer of Gn in Isog(G). When G (hence also the Gn)i s topo-
+logically ﬁnitely generated, then it follows that G admits an exhaustive descending
+sequence of characteristic open subgroups... ⊆ Hm ⊆ ... ⊆ G, hence that Aut(G)
+(hence also the Gn) admits a natural structure of proﬁnite group (by considering
+the inverse limit of the images of Aut(G) in the various Aut(G/Hm)). On the other
+hand, this proﬁnite topology on Aut( Gn) does not, in general, coincide with the
+topology induced by the topology of Isog(G) discussed in Proposition 2.1.4, (i) —
+cf. Remark 2.2.6.2. Moreover, (relative to Proposition 2.3.6, (ii)) the work of [TSH]
+— involving inductive limits of topological groups whose inductive limit topology
+(in the category of topology spaces) is not necessarily compatible with the group
+structure of the inductive limit — shows that the topology of inductive limits of
+topological groups can, in general, be a rather subtle issue.
+Remark 2.3.6.2. The observations given in Proposition 2.3.6, (i), (iii); Remark
+2.3.6.1 were related to the author by A. Tamagawa.
+Example 2.3.7. Non-Intrinsically Exhaustive Proﬁnite Groups. Let p
+be a prime number.
+(i) Take A
+def
+= Zp
+×, B
+def
+= Zp.L e t A act on B in the usual fashion. Take
+G
+def
+= B ⋊ A. Note that G is slim. Then the open subgroup
+H
+def
+=( p · B) ⋊ A ⊆ G
+is clearly isomorphic to G, hence violates Proposition 2.3.5, (vi). Thus, G fails to
+be weakly intrinsically exhaustive.
+(ii) Let G
+def
+= PGL2(Zp). Note that G is slim.F o rm a positive integer, write
+Cm ⊆ G for the subgroup determined by the matrices congruent to the identity
+matrix modulo pm.T h e nG fails to be intrinsically exhaustive. Indeed, if {Gn} is
+as in Deﬁnition 2.3.3, then there exist positive integers m ≥ n ≥ nG such that:
+Cm ⊆ Gn ⊆ C1
+Thus, for all open embeddings ι: Cm ↪→ G, we should have: ι(Cm) ⊆ C1.B u tt h i s
+inclusion fails to hold if we take ιto be the embedding given by conjugation by
+the matrix
+( pm 0
+01
+)
+. On the other hand, (it is an easy exercise to show that) in
+this case, the unimodularity of the action by conjugation of GL2(Qp)o n M2(Qp)
+implies that G is weakly intrinsically exhaustive.
+(iii) For n ≥ 2, let G
+def
+= ˆFn,t h efree proﬁnite group on n generators.T h e nG
+is slim (cf., e.g., [Naka], Corollary 1.3.4; [Mzk8], Lemma 1.3.1). Moreover, since,
+
+THE GEOMETR Y OF ANABELIOIDS 39
+for any n, m ≥ 2, ˆFn, ˆFm admit isomorphic open subgroups,i no r d e rt op r o v e
+that G is not intrinsically exhaustive for all n, it suﬃces to prove that G fails to
+be intrinsically exhaustive for some n (cf. Proposition 2.3.5, (iv)). On the other
+hand, there exists an n such that G is isomorphic to an open subgroup of the
+proﬁnite completion SL2(Z)∧ of SL2(Z). Thus, one may show that to assume the
+intrinsic exhaustivity of any open subgroup of such a G leads to a contradiction
+by conjugating by “Hecke operator-type matrices”— an operation which preserves
+the quotient SL2(Z)∧ ↠ SL2(Zp) — as in (ii), above. Note, however, that in this
+case, the Nielsen-Schreier formula (cf., e.g., [FJ], Proposition 15.25) implies that
+G is weakly intrinsically exhaustive.
+(iv) The anabelioid ´Et(A1
+Fp ) (notation as in Example 1.1.3) associated to the
+aﬃne line over Fp fails to be weakly intrinsically exhaustive. Indeed, the existence
+of the ﬁnite ´etale morphism A1
+Fp → A1
+Fp deﬁned by
+T ↦→ Tp + T
+(where T is the standard coordinate on A1
+Fp ) contradicts Proposition 2.3.5, (vi).
+(v) If K is a ﬁnite extension of Qp, then the associated anabelioid ´Et(K)i s
+weakly intrinsically exhaustive (cf., e.g., [Mzk5], Proposition 1.2), but fails to be
+intrinsically exhaustive, at least when p> 2. Indeed, to see that GK (the absolute
+Galois group ofK) fails to be intrinsically exhaustive, let us ﬁrst recall the following
+theorem of [JR]:
+Let K1, K2 be ﬁnite extensions of Qp (where p> 2) which contain the
+roots of unity of order p.T h e nGK1
+∼
+→ GK2 if and only if [ K1 : Qp]=
+[K2 : Qp]a n dK1
+⋂ (Qp
+ab)= K2
+⋂ (Qp
+ab)( w h e r eQp
+ab is the maximal
+abelian extension of Qp).
+Now suppose that {Gn} is a sequence of open normal subgroups of GK as in Def-
+inition 2.3.3, (ii). Without loss of generality (cf. Proposition 2.3.5, (iv)), we may
+assume that K contains the roots of unity of order p, and that [K : Qp] ≥ 3. Let
+L be the ﬁnite Galois extension of K corresponding to some Gn.W r i t eM ⊆ L
+for the maximal tamely ramiﬁed subextension of L over K. By taking n to be suf-
+ﬁciently large, we may assume that the extension L of M is not cyclotomic, i.e.,
+that L ̸= L ⋂ (M · Qp
+ab). Since [ M : Qp] ≥ [K : Qp] ≥ 3, it thus follows from
+local class ﬁeld theory (cf., e.g., [Serre3]) that the wild inertia subgroup of Gab
+M has
+rank ≥ 3o v e rZp, hence that there exists a wildly ramiﬁed abelian extension L′ of
+M such that:
+[L′ : M]=[ L : M]; L′ ̸= L; L′ ⋂
+(M · Qp
+ab)= L
+⋂
+(M · Qp
+ab)
+Thus, (by the theorem of [JR] quoted above) we conclude that GL′
+∼
+→ GL = Gn
+despite the fact that GL′ ̸= GL.B u tt h i scontradicts Deﬁnition 2.3.3, (ii).
+Remark 2.3.7.1. Examples (iv) and (v) were related to the author by A.
+Tamagawa.
+
+40 SHINICHI MOCHIZUKI*
+§2.4. Canonical Construction of the Fundamental Group
+Let X be a slim, connected anabelioid.I nt h i s§, we would like to examine the
+extent to which the fundamental group of X may be constructed in a canonical
+fashion, independent of a choice of basepoint.
+We begin by introducing some notation. Let us write
+Locbp(X)
+for the category each of whose objects is an arrow U→Y ,w h e r eY is a connected
+object of Loc( X), and U→ Y is a universal covering of Y (cf. Deﬁnition 1.2.7),
+and whose morphisms from an arrow U1 →Y 1 to an arrow U2 →Y 2 are pairs of
+arrows αU : U1
+∼
+→U 2, αY : Y1 →Y 2 such that the diagram
+U1
+αU
+−→ U 2
+⏐⏐
+↓
+⏐⏐
+↓
+Y
+1
+αY
+−→ Y 2
+commutes; αU is an isomorphism;a n dαY is ﬁnite ´etale. Thus, in particular, by
+mapping U→ Y to Y,w eo b t a i nafunctor
+ΦX :L o cbp(X) → Loc(X)0
+— where the superscript “0” is to denote the full subcategory consisting of con-
+nected objects — which (by deﬁnition) is surjective on objects.
+On the other hand, if we deﬁne
+SGp
+to be the category whose objects are pairs (G,H ), where G is a group, and H is
+a subgroup of G, and whose morphisms from (G1,H1)t o( G2,H2) are homomor-
+phisms φ : G1 → G2 such that φ(H1) ⊆ H2, then we obtain a natural functor
+Ψ X :L o cbp(X) → SGp
+by mapping an arrow U→Y to the pair
+(Aut(U),AutY(U) ⊆ Aut(U))
+and a morphism fromU1 →Y 1 to U2 →Y 2 to the isomorphism Aut(U1)
+∼
+→ Aut(U2).
+Thus:
+Locbp(X) may be thought of as the“category of objects ofLoc(X) equipped
+with a basepoint”and ΨX may be thought of as thestandard construction
+of the fundamental group (in the presence of a basepoint).
+
+THE GEOMETR Y OF ANABELIOIDS 41
+When it is necessary tospecify the universeV relative to which we are working
+— i.e., relative to which we take all of our (pro-)anabelioids (respectively, groups)
+to be V -small (respectively, V -sets) — we shall write Loc V
+bp(X), LocV (X) (respec-
+tively, SGpV ). [Similarly, we shall write ΦV
+X ,Ψ V
+X
+.] Thus, we observe, in particular,
+that the categories LocV
+bp(X), LocV (X)a r enot V -small.
+Proposition 2.4.1. (Dependence of the Fundamental Group on the
+Choice of Universal Covering) Let V be a universe [which is, therefore, in
+particular, a “set” in some ambient model of set theory]. LetX be a V -small slim,
+connected anabelioid such that the subgroup ΠX ⊆ Isog(X) (cf. Proposition 2.1.4,
+(i)) is not normal. Then there exist distinct objects of LocV
+bp(X) that map via
+ΦV
+X to the same object of LocV (X)0, but via ΨV
+X to distinct objects of SGpV .I n
+particular, the functor ΨV
+X does not factor through ΦV
+X .
+Proof. Indeed, let π : ˜X→ X be a universal covering; let α ∈ Aut( ˜X)b ea n
+element that does not normalize Π X
+def
+=A u tX ( ˜X ). Then π′ def
+= π ◦α−1 is also a
+universal covering of X. Moreover, we have
+ΨV
+X (π)=( A u t (˜X),ΠX ) ̸=Ψ V
+X (π′)=( A u t (˜X),α · ΠX · α−1)
+but ΦV
+X (π)=Φ V
+X (π′)= X. ⃝
+Remark 2.4.1.1. Thus, the proof of Proposition 2.4.1 suggests, in particular,
+that, in order to obtain a factorization of Ψ V
+X through Φ V
+X
+— i.e., to obtain a
+“canonical construction” of the fundamental group that does not depend on the
+choice of basepoint — it is necessary to modify Ψ
+V
+X so that it takes values in
+some sort of “quotient” in which subgroups of Aut( ˜X)a r eidentiﬁed with their
+conjugates. This motivates the following discussion.
+Let V , X be as in Proposition 2.4.1. Then let us denote by
+SGpV
+X
+the category each of whose objects is an assignment A
+U ↦→ AU
+—w h e r eU ranges over all V -small universal coverings of X [i.e., all domains of
+arrows in Locbp(X)], and AU is a collection of subgroups of Aut(U)—s u c ht h a t
+for every isomorphism U1
+∼
+→U 2, the induced isomorphism Aut( U1)
+∼
+→ Aut(U2)
+maps AU1 onto AU2 ; and whose morphisms Hom(A,A ′) are deﬁned as follows: The
+cardinality of Hom(A,A ′)i sa l w a y s≤ 1; we take the cardinality of Hom(A,A ′)t o
+be 1 if and only if the following condition is satisﬁed: for every U,e v e r yH ∈ AU ,
+there exists an H′ ∈ A′
+U such that H ⊆ H′. Note that this category SGpV
+X is not
+V -small.
+
+42 SHINICHI MOCHIZUKI*
+Thus, we obtain a natural functor
+˜ΞV
+X :L o cV
+bp(X) → SGpV
+X
+by mapping an arrowU→Y to the assignment that maps a universal coveringV to
+the conjugacy class of subgroupsof Aut(V) determined by the subgroup AutY(U) ⊆
+Aut(U) and an isomorphism Aut(U)
+∼
+→ Aut(V) which is induced by an isomorphism
+U
+∼
+→V . [Note that this conjugacy class is independent of the choice of isomorphism
+U
+∼
+→V .] Moreover, it is evident from the deﬁnition of ˜ΞV
+X that:
+Theorem 2.4.2. (Canonical Fundamental Groups up to Isogeny) Let V ,
+X be as in Proposition 2.4.1. Then there exists a functor
+ΞV
+X :L o cV (X)0 → SGpV
+X
+such that ΞV
+X = ˜ΞV
+X ◦ΦV
+X .
+Remark 2.4.2.1. Thus, the functor of Theorem 2.4.2 yields afunctorial [i.e., with
+respect to ﬁnite ´etale coverings] construction of the fundamental group as a group
+of transformations of some geometric object [i.e., the universal covering], albeit up
+to a certain indeterminacy, given by the action of Isog(X). On the other hand,
+this functor has the drawback that it only constructs the fundamental group as an
+“abstract group”, i.e., not as a proﬁnite group , as one might ideally wish.
+Now let us assume that X is a connected Q-anabelioid. For simplicity, we
+assume that Q is also connected. In the following discussion, we would like to show
+that (certain quotients) of the fundamental group of X may be constructed in a
+very canonicalfashion complete with theirproﬁnite structure, under theassumption
+that X→ Q is a quasi-core for X.
+First, let us choose an explicit system of ﬁnite ´etale Galois coverings
+... →Q n+1 →Q n → ... →Q
+of Q which, when regarded as a pro-anabelioid Q∞ , forms a universal covering of
+Q.F o re a c hn, choose a coherent system of connected components
+Xn ↪→Q n|X
+of Qn|X (cf. the proof of Proposition 2.3.5, (viii)). This system thus deﬁnes a
+pro-anabelioid X∞ , together with a morphism X∞ →Q ∞ .
+Now observe that, since X→ Q is a quasi-core, it follows that any automor-
+phism α : Xn
+∼
+→X n necessarily lies over Q, hence that the natural morphism
+Xn →Q n
+
+THE GEOMETR Y OF ANABELIOIDS 43
+[obtained by composing the inclusionXn ↪→Q n|X with the projection Qn|X →Q n]
+is preserved by composition on the the left with arbitrary automorphisms of Xn,
+up to the action of a (unique) element of Gal( Qn/Q)
+def
+=A u tQ(Qn). That is to
+say, there is a unique element αQn ∈ Gal(Qn/Q) for which the following diagram
+commutes:
+Xn →Q n
+⏐⏐
+↓
+α
+⏐
+⏐
+↓
+αQn
+Xn →Q n
+Moreover, the uniqueness of this element implies that the assignmentα ↦→ αQn is a
+homomorphism. Thus, in summary, we see that we obtain anouter homomorphism
+ρAut
+n :A u t (Xn) → Gal(Qn/Q)
+which isentirely determined(as an outer homomorphism) by theisomorphism class
+of Xn. In particular, restricting to Gal( Xn/X) ⊆ Aut(Xn), we obtain an outer
+homomorphism
+ρGal
+n : Gal(Xn/X) → Gal(Qn/Q)
+which is entirely determined (as an outer homomorphism) by the abstract equiv-
+alence class of the morphism Xn →X , hence, in particular, by the isomorphism
+class of X plus the covering Qn →Q (since X→ Q is a quasi-core).
+Since the above construction is clearly “functorial inn”, by passing to the limit
+over n, we thus obtain an outer homomorphism
+ρGal
+∞ : Gal(X∞ /X) → ΠQ
+def
+= Gal(Q∞ /Q)
+whose image is entirely determined (up to conjugacy) by the isomorphism class of
+X. Let us denote this image (well-deﬁned up to conjugacy) by:
+ΠX/Q ⊆ ΠQ
+Moreover, since the above construction is determined entirely by the isomorphism
+class of X, it follows (cf. Proposition 2.1.1, (iv)) that the assignment X ↦→ ΠX/Q
+is functorial with respect to ﬁnite ´etale coverings X1 →X 2 of connected objects of
+Loc(X) in the sense that such a covering induces an inclusion
+ΠX1/Q ⊆ ΠX2/Q (⊆ ΠQ)
+which is well-deﬁned up to conjugation by elements of ΠQ. (That is to say, one
+allows an indeterminacy with respect to distinguishing between, say, a given inclu-
+sion Π X1/Q ⊆ ΠX2/Q and some other inclusion Π X1/Q ⊆ π · ΠX2/Q · π−1,w h e r e
+π ∈ ΠQ.)
+If G is a Hausdorﬀ topological group, then let us write
+Sub(G)
+
+44 SHINICHI MOCHIZUKI*
+for the category whose objects are conjugacy classes of closed subgroups H ⊆ G,
+and whose morphisms H → H′ are inclusions of H into a (conjugate of) H′.T h a t
+is to say, the cardinality of the set of morphisms between two objects of Sub(G)i s
+either 0 or 1.
+Then the above discussion may be summarized as follows:
+Theorem 2.4.3. (Canonically Constructed Fundamental Groups via
+Quasi-Cores) Let Q be a slim, connected anabelioid. Suppose thatX is a connected
+Q-anabelioid for which X→ Q is a quasi-core. Then there is a functor
+Loc(X)0 → Sub(ΠQ)
+Y ↦→{ ΠY/Q ⊆ ΠQ}
+such that B(ΠY/Q) is isomorphic to the image of Y in Q (cf. Deﬁnition 1.1.7). In
+particular, if X→ Q is a faithful quasi-core,t h e nY ∼= B(ΠY/Q).
+Remark 2.4.3.1. Thus, Theorem 2.4.3 yields a canonical construction of
+the fundamental group of a slim, connected X which admits a faithful quasi-core
+Q. Moreover, this construction has the virtue that it is compatible [cf. the above
+discussion!] with the proﬁnite structure of the fundamental group of X.T h a ti s
+to say, more concretely:
+The functor of Theorem 2.4.3 may be written as an inverse limit of a
+compatible system of functors to the categories
+Sub(ΠQ/Hn)
+where ... ⊆ Hn ⊆ ... ⊆ ΠQ is an exhaustive descending sequence of open
+normal subgroups of ΠQ.
+This compatibility with the proﬁnite structure is closely related to the the intrin-
+sicity of “knowing how local one is” (cf. Remark 2.3.5.1).
+On the other hand, one drawback of the construction of Theorem 2.4.3 is that
+it depends on the arbitrary choice of a universal covering Q∞ →Q for Q as an
+“input datum”. This motivates the following deﬁnition:
+Deﬁnition 2.4.4. Let X be a slim, connected anabelioid. Then we shall refer to
+a closed subgroup Δ ⊆ ΠX , considered as a subgroup of Isog( X), as an intrinsic
+proﬁnite subgroup if it is topologically ﬁnitely generated, normal in Isog( X), and,
+moreover, the continuous inclusion of Hausdorﬀ topological groups Δ ↪→ Isog(X)
+is relatively slim.
+Remark 2.4.4.1. Note that since Δ is topologically ﬁnitely generated, it follows
+(cf. Remark 2.3.6.1) that Aut(Δ) has a natural structure of proﬁnite group.
+
+THE GEOMETR Y OF ANABELIOIDS 45
+Proposition 2.4.5. (The Faithful Quasi-Core Associated to an Intrinsic
+Proﬁnite Subgroup) Let Δ ⊆ Isog(X) be an intrinsic proﬁnite subgroup .
+Then the action by conjugation of ΠX on Δ yields a morphism
+X ∼= B(ΠX ) →B (Aut(Δ))
+which is a faithful quasi-core for X.
+Proof. Indeed, this is a formal consequence of Proposition 2.3.6, (iii), (a)⇐⇒ (c).
+⃝
+Remark 2.4.5.1. Thus, when the quasi-core of Theorem 2.4.3 is obtained as in
+Proposition 2.4.5, one can replace the functor of Theorem 2.4.3 by afunctor in the
+style of Proposition 2.4.2: That is to say, instead of considering a conjugacy class
+of subgroups of a particular proﬁnite group ΠQ, we observe that for any universal
+covering U,w eo b t a i nanatural proﬁnite subgroup
+Δ U ⊆ Aut(U)
+(determined by conjugating Δ by some isomorphism U
+∼
+→ ˜X of U to the universal
+covering ˜X used to deﬁne Isog( X)) such that any isomorphism U1
+∼
+→U 2 maps Δ U1
+to Δ U2. In particular, we obtain an assignment
+U ↦→A U
+def
+= Aut(Δ U )
+which is functorial in isomorphisms U1
+∼
+→U 2. Then instead of obtaining a con-
+jugacy class of subgroups [as in Theorem 2.4.3] in a particular Π Q,w eo b t a i na
+conjugacy class of subgroups of AU ,f o re a c hU, which is compatible with all iso-
+morphisms U1
+∼
+→U 2. [We leave the routine details to the reader.] At any rate, this
+yields a construction of the canonical fundamental groups of Theorem 2.4.3 which
+is independent of the choice of any universal covering of Q.
+
+46 SHINICHI MOCHIZUKI*
+Section 3: Anabelioids Arising from Hyperbolic Curves
+§3.1. Anabelioid-Theoretic Interpretation of Scheme-Theoretic Cores
+In the following discussion, we wish to translate the scheme-theoretic theory
+of cores in the context of hyperbolic curves (cf. [Mzk9], §2) into the language
+of anabelioids (cf. the proﬁnite group-theoretic approach to such a translation
+given in [Mzk9], §2). The main technical tool that will enable us to do this is the
+“Grothendieck Conjecture”— i.e., Theorem A of [Mzk6].
+For i =1 ,2, let Fi be either Q or Qpi (for some prime number pi). Let Ki be a
+ﬁnite extension of Fi.L e t( Xi)Ki be a hyperbolic orbicurve over Ki. Assume that
+we have chosen basepoints of the ( Xi)Ki , which thus induce basepoints/algebraic
+closures
+ Ki of theKi and determinefundamental groupsΠ(Xi)Ki
+def
+= π1((Xi)Ki )a n d
+Galois groups GKi
+def
+= Gal(
+Ki/Ki). Thus, for i =1 ,2, we have an exact sequence:
+1 → Δ Xi → Π(Xi)Ki
+→ GKi → 1
+(where Δ Xi ⊆ Π(Xi)Ki
+is deﬁned so as to make the sequence exact). Here, we
+shall think of GKi as a quotient of Π(Xi)Ki
+(i.e., not as an independent group to
+which Π(Xi)Ki
+happens to surject). One knows (cf. [Mzk8], Lemma 1.3.8) that this
+quotient Π(Xi)Ki
+→ GKi is an intrinsic invariant of the proﬁnite group Π (Xi)Ki
+.
+Next, we would like to introduce anabelioids into our discussion. Write:
+Xi
+def
+= ´Et((Xi)Ki ); Si
+def
+= ´Et(Ki)
+Note that Xi, Si are slim (cf. [Mzk8], Theorem 1.1.1, (ii); [Mzk8], Lemma 1.3.1),
+and that the structure morphisms Xi →S i are relatively slim (cf. [Mzk8], Theorem
+1.1.1, (ii)). Thus, we may think of Xi as an Si-anabelioid (cf. §2.2). In particular,
+we may consider the categories
+LocSi (Xi);
+ LocSi (Xi)
+of §2.2. In the following discussion, we shall work with anabelioids“at the coarsiﬁed
+level”[i.e., in Anab].
+Corollary 3.1.1. (Anabelioid-Theoretic Preservation of Arithmetic
+Quotients) Any ﬁnite ´etale morphism
+α : X1 →X 2
+induces a commutative diagram
+X1
+α
+−→ X 2
+⏐⏐
+↓
+⏐⏐
+↓
+S
+1
+αS
+−→ S 2
+
+THE GEOMETR Y OF ANABELIOIDS 47
+(where the horizontal morphisms are ﬁnite ´etale), hence pull-back
+LocS2 (X2) → LocS1 (X2 ×S2 S1);
+ LocS2 (X2) →
+ LocS1 (X2 ×S2 S1)
+and extension functors
+LocS1 (X1) ↪→ LocS1 (X2 ×S2 S1);
+ LocS1 (X1)
+∼
+→
+ LocS1 (X2 ×S2 S1)
+which are equivalences wheneverα is an isomorphism. Here, the extension functor
+on “ Loc(−)’s” (respectively, “
+Loc(−)’s”) is a full embedding (respectively, equiva-
+lence).
+Proof. Indeed, this is a formal consequence of [Mzk8], Lemma 1.3.8 (and Propo-
+sition 2.2.2, (iv)). ⃝
+Theorem 3.1.2. (Anabelioid-Theoreticity of Correspondences) Let K
+be a ﬁnite extension of Qp or Q; XK a hyperbolic orbicurve over K; write
+X
+def
+= ´Et(XK), S
+def
+= ´Et(K). Then the natural functor
+LocK(XK) −→ LocS(X)
+Z ↦→ ´Et(Z)
+(deﬁned by applying “ ´Et(−)”) is an equivalence of categories. A similar asser-
+tion holds for “ Loc(−)” replaced by “
+Loc(−)”. In particular, XK is (respectively,
+admits) a K-core if and only if X is (respectively, admits) an S-core.
+Proof. Since “
+ Loc(−)” may be categorically reconstructed from “Loc( −)” via
+the same recipe for both schemes and anabelioids, it suﬃces to prove the asserted
+equivalence in the case of “Loc( −)”.
+In this case, it is immediate from the deﬁnitions that the functor in question is
+essentially surjective. It follows from the injectivity of [Mzk6], Theorem A (cf. also
+Proposition 1.1.4) that this functor is faithful. Thus, it suﬃces to prove that this
+functor is full. Since “fullness” follows from Proposition 1.2.5, (ii), for morphisms
+over X, it suﬃces (by Proposition 2.2.2, (iv)) to prove that every S-isomorphism
+Y
+∼
+→Z
+(where Y, Z are anabelioids representing objects of Loc S(X)) arises from a mor-
+phism of schemes in LocK(XK). But this is a formal consequence of [Mzk6], The-
+orem A (cf. also Proposition 1.1.4). ⃝
+Theorem 3.1.3. (Absolute Cores over Number Fields) Let K be a num-
+ber ﬁeld ; XK a hyperbolic orbicurve over K; write X
+def
+= ´Et(XK).T h e n :
+
+48 SHINICHI MOCHIZUKI*
+(i) XK is an [absolute] core if and only if XK is a K-core, and, moreover,K
+is a minimal ﬁeld of deﬁnition for XK.
+(ii) Applying “ ´Et(−)” induces an equivalence of categories:
+Loc(XK)
+∼
+→ Loc(X)
+In particular, X is (respectively, admits) an [absolute] core if and only if XK is
+(respectively, admits) an [absolute] core.
+(iii) Suppose that XK is non-proper.T h e nX admits a core if and only if
+it is intrinsically exhaustive.
+Proof. Assertion (i) follows formally from [Mzk9], Deﬁnition 2.1 and [Mzk9],
+Remark 2.1.1. Assertion (ii) follows, in light of [Mzk8], Theorem 1.1.3, by the same
+argument as that used to prove Theorem 3.1.2. To prove assertion (iii), let us recall
+from the theory of [Mzk3] (cf. [Mzk9], Remark 2.1.2) that X
+K [or, equivalently, by
+assertion (ii), X] fails to admit a core if and only if XK is isogenous to a Shimura
+curve.S i n c eXK is assumed to be non-proper, this Shimura curve may be taken to
+be the moduli stack of hemi-elliptic curves (cf. [Take], p. 396, second paragraph).
+Thus, if XK fails to admit a core, one may show that X fails to be intrinsically
+exhaustive by using Hecke correspondences on the moduli stack of hemi-elliptic
+curves, as in Example 2.3.7, (ii), (iii) (cf. Proposition 2.3.5, (iv)). On the other
+hand, if X admits a core, then it follows from Proposition 2.3.5, (ii), (viii), that X
+is intrinsically exhaustive. ⃝
+Remark 3.1.3.1. One expects that the assumption that XK be non-proper in
+Theorem 3.1.3, (iii), is inessential. We made this assumption only to technically
+simplify the proof that X fails to be intrinsically exhaustive (when it is assumed
+to fail to admit a core). The point of Theorem 3.1.3, (iii), was to give an example
+where the existence of a core is equivalent to intrinsic exhaustivity (cf. Remark
+2.3.5.1), since this contrasts with the situation that occurs in the p-adic case (cf.
+Remark 3.1.6.1, Corollary 3.1.7 below).
+Corollary 3.1.4. (Anabelioid-Theoreticity of Cores) Let
+α : X
+1 →X 2
+be a ﬁnite ´etale morphism. Then:
+(i) α induces — in a fashionfunctorial with respect toα — a pull-back functor
+LocK2 ((X2)K2 ) →
+ LocK1 ((X1)K1 )
+which is an equivalence whenever S1 →S 2 is an isomorphism, and is equal to
+the usual scheme-theoretic pull-back functor whenever α arises from a ﬁnite ´etale
+morphism of schemes (X1)K1 → (X2)K2 .
+
+THE GEOMETR Y OF ANABELIOIDS 49
+(ii) (X1)K1 is K1-arithmetic if and only if (X2)K2 is K2-arithmetic. Simi-
+larly, if X1 →X 2 ×S2 S1 is an isomorphism, then (X1)K1 is a K1-core if and only
+if (X2)K2 is a K2-core.
+(iii) If a ﬁnite ´etale morphism (X2)K2 → (Z2)K2 to a K2-core (Z2)K2 maps
+(via the functor of (i)) to a ﬁnite ´etale morphism (X1)K1 → (Z1)K1 ,t h e n(Z1)K1
+is a K1-core, and, moreover, the morphism X1 →X 2 ×S2 S1 extends uniquely
+to a commutative diagram:
+X1 →X 2 ×S2 S1 →X 2
+⏐⏐
+↓
+⏐⏐
+↓
+⏐⏐
+↓
+Z
+1
+∼
+→Z 2 ×S2 S1 →Z 2
+(where Zi
+def
+= ´Et((Zi)Ki ), and the lower horizontal arrow on the left is an isomor-
+phism).
+Proof. The functor of (i) is obtained by composing the pull-back functor on
+“
+ Loc(−)’s” of Corollary 3.1.1 with an inverse to the extension functor on “
+Loc(−)’s”
+of Corollary 3.1.1 (which is an equivalence), and then applying the equivalences of
+Theorem 3.1.2 to the domain and codomain of this composite. Assertion (ii) is a
+formal consequence of assertion (i); [Mzk9], Deﬁnition 2.1; [Mzk9], Remark 2.1.1;
+and [Mzk9], Proposition 2.3, (i). To prove assertion (iii), we may assume, for sim-
+plicity, (cf. Proposition 2.1.1, (iv)) thatS
+1 →S 2 is anisomorphism. Then it follows
+that the pull-back functor on “
+Loc(−)’s” of (i) is anequivalence:
+LocK2 ((X2)K2 )
+∼
+→
+ LocK1 ((X1)K1 )
+Thus, the existence of an extension as in assertion (iii) follows formally by think-
+ing of Xi, Zi as subcategories of
+ LocKi ((Xi)Ki ) (cf. Proposition 1.2.5, (ii)). The
+uniqueness of such an extension is a formal consequence of the slimness of Zi. ⃝
+Proposition 3.1.5. (Absolute Degrees) For i =1 ,2, set:
+degarith(Xi)
+def
+=[ Ki : Fi]
+and deggeo(Xi) equal to the Euler characteristic of (Xi)Ki . [That is to say,
+if (Xi)Ki is a hyperbolic curve of type (gi,ri),t h e nw es e tdeggeo(Xi) equal to
+2gi−2+ri; more generally, if(Xi)Ki is only an orbicurve, then we take itsdeggeo(−)
+to be thedeggeo(−) of some degreed ﬁnite ´etale covering of(Xi)Ki which is a curve,
+divided by d.] Then for any ﬁnite ´etale morphism α : X1 →X 2 (which thus induces
+a commutative diagram as in Corollary 3.1.1), we have:
+deggeo(X1)=d e ggeo(X2)·(deg(α)/deg(αS)); deg arith(X1)=d e garith(X2)·deg(αS)
+In particular, Xi is weakly intrinsically exhaustive. We shall refer todeggeo(Xi)
+(respectively, degarith(Xi))a st h e absolute geometric (respectively, absolute
+arithmetic) degree of Xi.
+
+50 SHINICHI MOCHIZUKI*
+Proof. Indeed, this follows from [Mzk8], Lemma 1.3.9, (for theabsolute geometric
+degree) and [Mzk8], Proposition 1.2.1, (i), (v) (for the absolute arithmetic degree).
+⃝
+Remark 3.1.5.1. Proposition 3.1.5 already suggests the possibility that, under
+the further assumption that ( Xi)Ki admits a Ki-core, Xi should admit a faithful
+quasi-core. In the remainder of the present §, we shall show that this is, in fact, the
+case (at least when (Xi)Ki is non-proper) — cf. Theorem 3.1.6 below. In light of
+Proposition 2.3.5, (ii); Theorem 3.1.3, (ii), this fact is primarily of interest in the
+case where Ki is a p-adic local ﬁeld (although we shall not assume this to be the
+case in the following discussion).
+In the following discussion, we would like to assume that:
+(a) The hyperbolic orbicurve ( Xi)Ki admits a Ki-core (Zi)Ki (where i =
+1,2).
+(b) The anabelioids X1, X2 are isogenous.
+Choose basepoints for (Zi)Ki , so that we obtain, for i =1 ,2, exact sequences:
+1 → Δ Zi → Π(Zi)Ki
+→ GKi → 1
+Write Zi
+def
+= ´Et((Zi)Ki ). Then assumptions (a), (b); Corollary 3.1.4, (iii); and
+[Mzk8], Lemma 1.3.9, imply that ( Z1)K1 ,( Z2)K2 are hyperbolic orbicurves of the
+same type (g,⃗r). Let us choose once and for all a model
+ˆΠg,⃗r
+of the geometric fundamental group of a hyperbolic orbicurve of type(g,⃗r) (in char-
+acteristic 0). To simplify notation, in the following discussion, we shall simply write
+ˆΠf o r ˆΠg,⃗r.
+Thus, we have (noncanonical) isomorphisms ˆΠ ∼= Δ Zi . Such isomorphisms
+induce an outer homomorphism Π(Zi)Ki
+→ Aut(ˆΠ) which is independent (as an
+outer homomorphism) of the choice of such isomorphism and, moreover, ﬁts into a
+commutative diagram:
+1 −→ Δ Xi −→ Π(Xi)Ki
+−→ GKi −→ 1
+⏐⏐
+↓
+⏐⏐
+↓
+⏐⏐
+↓
+1 −→ Δ
+Zi −→ Π(Zi)Ki
+−→ GKi −→ 1
+⏐⏐
+↓
+⏐⏐
+↓
+⏐⏐
+↓
+1 −→ ˆΠ −→ Aut( ˆΠ) −→ Out(ˆΠ) −→ 1
+
+THE GEOMETR Y OF ANABELIOIDS 51
+Here, we observe that the vertical arrows between the ﬁrst and second lines are al-
+ways injective.I f ,m o r e o v e r ,(Xi)Ki is non-proper, then the vertical arrowsbetween
+the second and third linesare also injective (by the theory of [Mtmo] — cf. [Mzk8],
+Theorem 1.3.6). If we then set
+Zcom
+def
+= B(Aut(ˆΠ)) →M com
+def
+= B(Out(ˆΠ))
+— i.e., we wish to think of Zcom →M com as a sort of “universal combinatorial
+model” of Zi →S i — then we obtain a commutative diagram of connected slim
+anabelioids
+Xi −→ Z i −→ Z com
+⏐⏐
+↓
+⏐⏐
+↓
+⏐⏐
+↓
+S
+i
+id
+−→ S i −→ M com
+in which the horizontal arrows are allrelatively slim(cf. [Mzk8], Theorem 1.1.1, (ii);
+[Mzk8], Lemma 1.3.1; [Mzk6], Theorem A). Next, let us observe that the intrinsic
+nature of the anabelioid associated to a geometric core (cf. Corollary 3.1.4, (iii))
+implies that the morphism Xi →Z com is functorial with respect to arbitrary ﬁnite
+´etale morphisms X1 →X 2.
+Finally, let us observe that Aut( ˆΠ) (hence also Out( ˆΠ)) is countably (topo-
+logically) generated. Indeed, to show this, it suﬃces to show the existence of a
+descending sequence of open subgroups
+... ⊆ An+1 ⊆ An ⊆ ... ⊆ Aut(ˆΠ)
+such that ⋂
+n An = {1}. To this end, let us note that ˆΠa d m i t sadescending
+sequence of open characteristic subgroups
+... ⊆ ˆΠ[n +1 ] ⊆ ˆΠ[n] ⊆ ... ⊆ Aut( ˆΠ)
+such that ⋂
+n ˆΠ[n]= {1}. Thus, if we set
+An
+def
+=K e r ( A u t (ˆΠ) → Aut(ˆΠ/ ˆΠ[n]))
+we obtain a sequence {An} with the desired properties.
+Thus, in summary, we see that we have proven (most of) the following:
+Theorem 3.1.6. (The Quasi-Core Associated to a Geometric Core) Let
+K be a ﬁnite extension of Qp or Q; XK a hyperbolic orbicurve over K which
+admits a K-core ZK of type (g,⃗r). Write:
+X
+def
+= ´Et(XK); Z
+def
+= ´Et(ZK); Zcom
+def
+= B(Aut(ˆΠg,⃗r)); Mcom
+def
+= B(Out(ˆΠg,⃗r))
+Then:
+
+52 SHINICHI MOCHIZUKI*
+(i) ZK determines a Zcom-holomorphic structure X→ Z com on X which is a
+quasi-core for X. In particular, the theory of §2.3, 2.4 may be applied to X.
+(ii) If XK is non-proper, then this quasi-core is faithful and, moreover,
+obtained as the quasi-core associated to an intrinsic proﬁnite subgroup (cf.
+Proposition 2.4.5). Finally, if K is a number ﬁeld which is a minimal ﬁeld of
+deﬁnition for ZK, then the morphism Z→Z com is commensurably terminal.
+Proof. It remains only to observe that the ﬁnal part of (ii) is a formal consequence
+of Theorem 3.1.3, (i), (ii); Proposition 2.2.5. ⃝
+Remark 3.1.6.1. In the case of p-adic local ﬁelds, one does not expect Z
+def
+=
+´Et(ZK)t ob ea core (even if K is a minimal extension of Qp over which ZK is
+deﬁned). Nevertheless, Theorem 3.1.6 shows that Z has the interesting property
+of being “closer to being a core”than, for instance, PGL2(Qp) (cf. Example 2.3.7,
+(ii), (iii); Theorem 3.1.3, (iii); Corollary 3.1.7 below).
+Remark 3.1.6.2. Our use of [Mzk8], Theorem 1.3.6 [i.e., the main result of
+[Mtmo]] in the above construction of a faithful quasi-core — which (by the the-
+ory of §2.4) allows us to construct “canonical fundamental groups”, i.e., to assign
+canonical names, or labels (up to conjugacy) to the elements of the funda-
+mental group — is reminiscent of the essential idea lying behind the theory of
+the Grothendieck-Teichm¨uller group, which applies this same injectivity to assign
+canonical names (up to conjugacy) to the elements of G
+Q. It is interesting to
+note, however, that although this theory of the Grothendieck-Teichm¨ uller group
+is typically applied to analyzing GQ, in fact, (by the “Neukirch-Uchida Theorem”
+— cf., e.g., [Mzk8], Theorem 1.1.3) the elements of GQ already possess intrinsic,
+canonically determined names (up to conjugacy). Thus, the ability to assign
+canonically determined names has much greater signiﬁcance in the case of p-adic
+local ﬁelds.
+Remark 3.1.6.3. Relative to Remark 3.1.6.2, it is also interesting to note that,
+just as the theory of §2.4 only applies in the case where the curve in question
+admits a geometric core, the theory of the Grothendieck-Teichm¨uller group centers
+around considering not just the projective line minus three points — a curve which
+fails to admit a geometric core — but instead a certain system of moduli stacks
+of hyperbolic curves, which includes, for instance, the moduli stack of hyperbolic
+curves of type (0,5) which (by [Mzk3], Theorem C) does admit a geometric core.
+Finally, we have the following analogue of Theorem 3.1.3, (iii), which is valid
+in the local p-adic case as well:
+Corollary 3.1.7. (Criteria for the Existence of a Geometric Core) Let
+K be a ﬁnite extension of Qp or Q; XK a non-proper hyperbolic orbicurve
+over K; write X
+def
+= ´Et(XK). Then the following assertions are equivalent:
+
+THE GEOMETR Y OF ANABELIOIDS 53
+(i) XK admits a K-core.
+(ii) X admits a faithful quasi-core.
+(iii) X is intrinsically exhaustive.
+Proof. This is a formal consequence of Theorem 3.1.6, (i), (ii); Proposition 2.3.5,
+(viii); and the existence of Hecke correspondences(cf. the proof of Theorem 3.1.3,
+(iii)) when XK does not admit a K-core. ⃝
+Remark 3.1.7.1. The implication (i) =⇒ (iii) of Corollary 3.1.7 (in the p-adic
+case) is somewhatsurprising in light of Example 2.3.7, (v). That is to say, Corollary
+3.1.7 implies that (whenXK admits a K-core) the rigidity of ´Et(XK)i s suﬃciently
+strong to eliminate the non-intrinsic exhaustivity of ´Et(K). In particular, we con-
+clude in this case that the natural inclusion
+COut(Δ Z)(GK) ↪→ Isog(GK)
+fails to be surjective (cf. Propositions 2.3.5, (viii); 2.3.6, (iii)).
+§3.2. The Logarithmic Special Fiber via Quasi-Cores
+In this §, we interpret the results of [Mzk8], §2, from the point of view of the
+theory of quasi-cores —c f . §2.3, 2.4.
+Let XK be a hyperbolic curveover a ﬁnite extension K of Qp.D e n o t et h ering
+of integers (respectively, residue ﬁeld )o f K by OK (respectively, k); also we shall
+use notation such as “klog”, “(klog)∼ ”, as in [Mzk8], §2.
+Assume that XK admits a stable model over OK (cf. [Mzk8], §2), as well as
+a K-core ZK,a n dt h a tXK is Galois over ZK.T h e nw edeﬁne the stable model of
+ZK to be the quotient — in the sense of [log] stacks — of the stable model of XK
+by Gal(XK/ZK). Let us denote the logarithmic special ﬁbers of the stable models
+of XK, ZK by Xlog
+k , Zlog
+k , respectively. Write:
+X
+def
+= ´Et(XK); Z
+def
+= ´Et(ZK)
+Also, let us write Zcom for the quasi-core (for X, Z) of Theorem 3.1.6.
+Now recall from [Mzk8], the discussion following Remark 2.5.3, the“universal
+admissible covering”
+˜Xlog
+k → Xlog
+k
+of Xlog
+k determined by theadmissible quotient ΠXK ↠ Πadm
+XK . Put another way, this
+covering is the composite of all admissible coverings (cf. [Mzk4], §3) of Xlog
+k ×klog
+
+54 SHINICHI MOCHIZUKI*
+(klog)∼ . In the following discussion, let us denote the category of (disjoint unions
+of coverings isomorphic to) subcoverings of this universal admissible covering (re-
+spectively, subcoverings of the “geometric universal admissible covering” ˜Xlog
+k →
+Xlog
+k ×klog (klog)∼ )b y :
+´Etadm(Xlog
+k ) (respectively, ´Etadm(Xlog
+k ×klog (klog)∼ ))
+To keep the notation simple, we set:
+X0
+def
+= ´Etadm(Xlog
+k );
+ X0
+def
+= ´Etadm(Xlog
+k ×klog (klog)∼ )
+[so the fundamental group of X0 (respectively,
+ X0) may be identiﬁed with Π adm
+XK
+(respectively, the geometric portion Δadm
+XK ⊆ Πadm
+XK of Πadm
+X
+K — cf. [Mzk8], §2)].
+Similarly, we may construct
+Z0
+def
+= ´Etadm(Zlog
+k )
+[for instance, as the quotient of X0 by the faithful action on X0 of the ﬁnite group
+Gal(XK/ZK)].
+Next, let us write
+Q0
+for the “anabelioid quotient” of
+ X0 by the natural action on
+ X0 by the proﬁnite
+group
+Aut(Xlog
+k ×klog (klog)∼ )
+[i.e., the group of automorphisms of the abstract log scheme which do not neces-
+sarily lie over klog or (klog)∼ !]. That is to say, at the level of proﬁnite groups ,
+the fundamental group of the anabelioid Q0 is the extension of the proﬁnite group
+Aut(Xlog
+k ×klog (klog)∼ )b yt h e[slim! — cf. [Mzk8], Lemma 2.2, (i)] fundamental
+group of
+ X0 determined by the natural outer action of the former proﬁnite group
+on the latter. Note that by the deﬁnition of “Aut”, the slimness of
+ X0,a n dt h e
+slimness of Gal((klog)∼ /klog) [cf. [Mzk8], Proposition 1.2.3, (iii)], it follows thatQ0
+is also slim.
+Thus, we have a commutative diagram of naturalrelatively slim morphisms of
+slim, connected anabelioids
+X→ Z
+⏐⏐
+↓
+⏐⏐
+↓
+X
+0 →Z 0 →Q 0
+in which the horizontal morphisms are all ﬁnite ´etale.
+
+THE GEOMETR Y OF ANABELIOIDS 55
+Theorem 3.2.1. (The Admissible Quotient as Quasi-Core) Assume that
+X→ Z is Zcom-Galois. Then the morphism
+X→ Q 0
+is a quasi-core. In particular, the theory of §2.3, 2.4 may be applied to this
+morphism.
+Proof. By the functoriality of the anabelioid associated to a geometric core [(cf.
+Corollary 3.1.4, (iii)] and our hypothesis that X→ Z is Zcom-Galois [cf. Proposi-
+tion 2.3.5, (vii)], it follows that it suﬃces to consider, for K′ a ﬁnite extension of
+K, the behavior of automorphisms of the quotient
+(ΠX ⊇)Π XK′ ↠ Πadm
+XK′ (⊆ ΠX0 )
+induced by arbitrary automorphisms of ΠXK′ . By [Mzk8], Theorem 2.7, it follows
+that such automorphisms of Π adm
+XK′ necessarily arise from automorphisms of the
+logarithmic special ﬁber of XK′ . Thus, we conclude by the deﬁnition of Q0 and the
+easily veriﬁed fact that base-change to totally wildly ramiﬁed extensions K′′ of K′
+does not aﬀect the automorphism group of the logarithmic special ﬁber. ⃝
+Remark 3.2.1.1. Note that the anabelian nature of the logarithmic special ﬁber
+(i.e., [Mzk8], Theorem 2.7) is applied in Theorem 3.2.1 in a fashion similar to the
+way in which theanabelian nature of hyperbolic curves over number ﬁeldsis applied
+in Theorem 3.1.3, (ii).
+
+56 SHINICHI MOCHIZUKI*
+Bibliography
+Unpublished RIMS preprints are available as .ps ﬁles at:
+http://www.kurims.kyoto-u.ac.jp/∼ kenkyubu/paper/all.html
+[DM] P. Deligne and D. Mumford, The Irreducibility of the Moduli Space of Curves
+of Given Genus, IHES Publ. Math. 36 (1969), pp. 75-109.
+[FC] G. Faltings and C.-L. Chai,Degenerations of Abelian Varieties, Springer-Verlag
+(1990).
+[ F J ] M .F r i e da n dM .J a r d e n ,Field Arithmetic, Springer-Verlag (1986).
+[Groth] A. Grothendieck, Letter to G. Faltings (June 1983) in Lochak, L. Schneps,Geo-
+metric Galois Actions; 1. Around Grothendieck’s Esquisse d’un Programme ,
+London Math. Soc. Lect. Note Ser. 242, Cambridge Univ. Press (1997).
+[Ihara] Y. Ihara, On discrete subgroups of the two by two projective linear group over
+p-adic ﬁelds, J. Math. Soc. Japan 18 (1966), pp. 219-235.
+[JR] M. Jarden and J. Ritter, On the characterization of local ﬁelds by their absolute
+Galois groups, J. Number Theory 11 (1979), pp. 1-13.
+[John1] P. T. Johnstone, P. T,Topos theory, London Mathematical Society Monographs
+10, Academic Press (1977).
+[John2] P. T. Johnstone, How general is a generalized space?, Aspects of topology,
+London Math. Soc. Lecture Note Ser. 93, Cambridge Univ. Press (1985), pp.
+77-111.
+[Knud] F. F. Knudsen, The Projectivity of the Moduli Space of Stable Curves, II,
+Math. Scand. 52 (1983), 161-199.
+[McLn1] S. MacLane, One Universe as a Foundation for Category Theory,Reports of the
+Midwest Category Seminar III, Lecture Notes in Mathematics 106, Springer-
+Verlag (1969).
+[McLn2] S. MacLane, Categories for the working mathematician (Second edition), Grad-
+uate Texts in Mathematics 5, Springer-Verlag (1998).
+[McLr] C. McLarty, Elementary Categories, Elementary Toposes, Oxford Logic Guides
+21, Oxford University Press (1992).
+[Mtmo] M. Matsumoto, Galois representations on proﬁnite braid groups on curves, J.
+Reine Angew. Math. 474 (1996), pp. 169-219.
+[Mzk1] S. Mochizuki, The Hodge-Arakelov Theory of Elliptic Curves: Global Discretiza-
+tion of Local Hodge Theories, RIMS Preprint Nos. 1255, 1256 (October 1999).
+[Mzk2] S. Mochizuki, The Galois-Theoretic Kodaira-Spencer Morphism of an Elliptic
+Curve, RIMS Preprint No. 1287 (July 2000).
+
+THE GEOMETR Y OF ANABELIOIDS 57
+[Mzk3] S. Mochizuki, Correspondences on Hyperbolic Curves, Journ. Pure Appl. Al-
+gebra 131 (1998), pp. 227-244.
+[Mzk4] S. Mochizuki, The Geometry of the Compactiﬁcation of the Hurwitz Scheme,
+Publ. of RIMS 31 (1995), pp. 355-441.
+[Mzk5] S. Mochizuki, A Version of the Grothendieck Conjecture forp-adic Local Fields,
+The International Journal of Math. 8 (1997), pp. 499-506.
+[Mzk6] S. Mochizuki, The Local Pro-p Anabelian Geometry of Curves, Invent. Math.
+138 (1999), pp. 319-423.
+[Mzk7] S. Mochizuki, Anabelian geometry in the Hodge-Arakelov theory of elliptic
+curves, Communications in arithmetic fundamental groups (Kyoto, 1999/2001),
+S¯urikaisekikenky¯usho K¯oky¯uroku 1267 (2002), pp. 96-111.
+[Mzk8] S. Mochizuki, The Absolute Anabelian Geometry of Hyperbolic Curves,Galois
+Theory and Modular Forms, Kluwer Academic Publishers (2003), pp. 77-122.
+[Mzk9] S. Mochizuki, The Absolute Anabelian Geometry of Canonical Curves, RIMS
+Preprint 1379, October 2002.
+[Naka] H. Nakamura, Galois rigidity of pure sphere braid groups and proﬁnite calculus,
+J. Math. Sci. Univ. Tokyo 1 (1994), pp. 71-136.
+[Serre1] J.-P. Serre, Trees, Springer-Verlag (1980).
+[Serre2] J.-P. Serre, Lie Algebras and Lie Groups, Lecture Notes in Mathematics 1500,
+Springer-Verlag (1992).
+[Serre3] J.-P. Serre, Local Class Field Theoryin Algebraic Number Theory , ed. J.W.S.
+Cassels and A. Fr¨ohlich, Academic Press (1967).
+[SGA1] Revˆetement ´etales et groupe fondamental,S ´eminaire de G´eometrie Alg´ebrique
+du Bois Marie 1960-1961 (SGA1), dirig´e par A. Grothendieck, augment´ed e
+deux expos´es de M. Raynaud, Lecture Notes in Mathematics 224, Springer-
+Verlag (1971).
+[Take] K. Takeuchi, Arithmetic Fuchsian Groups with Signature (1;e), Journ. Math.
+Soc. Japan 35 (1983), pp. 381-407.
+[Tama] A. Tamagawa, The Grothendieck Conjecture for Aﬃne Curves, Compositio
+Math. 109 (1997), pp. 135-194.
+[TSH] N. Tatsuuma, H. Shimomura, T. Hirai, On group topologies and unitary rep-
+resentations of inductive limits of topological groups and the case of the group
+of diﬀeomorphisms, J. Math. Kyoto Univ. 38 (1998), pp. 551-578.

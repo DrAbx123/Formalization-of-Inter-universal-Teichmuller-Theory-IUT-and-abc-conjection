@@ -1,0 +1,1615 @@
+AN EXPLICIT FORMULA
+FOR THE GENERIC NUMBER
+OF DORMANT INDIGENOUS BUNDLES
+YASUHIRO WAKABAYASHI
+Abstract. A dormant indigenous bundle is an integrable P1-bundle on a
+proper hyperbolic curve of positive characteristic satisfying certain condi-
+tions. Dormant indigenous bundles were introduced and studied in the p-
+adic Teichm¨uller theory developed by S. Mochizuki. Kirti Joshi proposed
+a conjecture concerning an explicit formula for the degree over the moduli
+stack of curves of the moduli stack classifying dormant indigenous bundles.
+In this paper, we give a proof for this conjecture of Joshi.
+Contents
+Introduction 1
+1. Preliminaries 4
+2. Indigenous bundles 5
+3. Dormant indigenous bundles 9
+4. Quot-schemes 12
+5. Computation via the Vafa-Intriligator formula 17
+6. Relation with other results 22
+References 25
+Introduction
+Let
+M
+Zzz...
+g,Fp
+be the moduli stack classifying proper smooth curves of genus g> 1o v e r
+Fp := Z/pZ together with a dormant indigenous bundle (cf. the notation
+“Zzz...”!). It is known (cf. Theorem 3.3) thatM
+Zzz...
+g,Fp is represented by a smooth,
+geometrically connected Deligne-Mumford stack over Fp of dimension 3g − 3.
+Moreover, if we denote by Mg,Fp the moduli stack classifying proper smooth
+curves of genus g over Fp, then the natural projection M
+Zzz...
+g,Fp →M g,Fp is ﬁnite,
+faithfully ﬂat, and generically ´etale. The main theorem of the present paper,
+Y. Wakabayashi: Research Institute for Mathematical Sciences, Kyoto University, Kyoto
+606-8502, Japan;
+e-mail: wakabaya@kurims.kyoto-u.ac.jp;
+2010 Mathematical Subject Classiﬁcation . Primary 14H10; Secondary 14H60.
+1
+
+2 YASUHIRO W AKABAYASHI
+which was conjectured by Kirti Joshi, asserts that if p> 2(g − 1), then the
+degree degMg,Fp
+(M
+Zzz...
+g,Fp )o f M
+Zzz...
+g,Fp over Mg,Fp may be calculated as follows:
+Theorem A (= Corollary 5.4).
+degMg,Fp
+(M
+Zzz...
+g,Fp )= pg− 1
+22g− 1 ·
+p− 1∑
+θ=1
+1
+sin2g− 2(π·θ
+p ).
+Here, recall that an indigenous bundle on a proper smooth curve X is a P1-
+bundle on X, together with a connection, which satisﬁes certain properties (cf.
+Deﬁnition 2.1). The notion of an indigenous bundle was originally introduced
+and studied by Gunning in the context of compact hyperbolic Riemann surfaces
+(cf. [10], §2, p. 69). One may think of an indigenous bundle as an algebraic ob-
+ject encoding uniformization data for X. It may be interpreted as a projective
+structure, i.e., a maximal atlas covered by coordinate charts on X such that
+the transition functions are expressed as M¨obius transformations. Also, various
+equivalent mathematical objects, including certain kinds of diﬀerential opera-
+tors (related to Schwarzian equations) of kernel functions, have been studied by
+many mathematicians.
+In the present paper, we focus on indigenous bundles in positive characteris-
+tic. Just as in the case of the theory over C, one may deﬁne the notion of an
+indigenous bundle and the moduli space classifying indigenous bundles. Vari-
+ous properties of such objects were ﬁrstly discussed in the context of the p-adic
+Teichm¨uller theory developed by S. Mochizuki (cf. [29], [30]). (In a diﬀerent
+point of view, Y. Ihara developed, in, e.g., [14], [15], a theory of Schwarzian
+equations in arithmetic context.) One of the key ingredients in the develop-
+ment of this theory is the study of the p-curvature of indigenous bundles in
+characteristic p. Recall that the p-curvature of a connection may be thought
+of as the obstruction to the compatibility of p-power structures that appear in
+certain associated spaces of inﬁnitesimal (i.e., “Lie”) symmetries. We say that
+an indigenous bundle is dormant (cf. Deﬁnition 3.1) if its p-curvature vanishes
+identically. This condition on an indigenous bundle implies, in particular, the
+existence of “suﬃciently many” horizontal sections locally in the Zariski topol-
+ogy. Moreover, a dormant indigenous bundle corresponds, in a certain sense, to
+a certain type of rank 2 semistable bundle. Such semistable bundles have been
+studied in a diﬀerent context (cf. § 6.1). This sort of phenomenon is peculiar
+to the theory of indigenous bundles in positive characteristic.
+In this context, one natural question is the following:
+Can one calculate explicitly the number of dormant indigenous
+bundles on a general curve?
+Since (as discussed above) M
+Zzz...
+g,Fp is ﬁnite, faithfully ﬂat, and generically ´etale
+over Mg,Fp , the task of resolving this question may be reduced to the explicit
+computation of the degree degMg,Fp
+(M
+Zzz...
+g,Fp )o f M
+Zzz...
+g,Fp over Mg,Fp .
+
+THE GENERIC NUMBER OF DORMANT INDIGENOUS BUNDLES 3
+I nt h ec a s eo fg = 2, S. Mochizuki (cf. [30], Chap. V, §3.2, p. 267, Corollary
+3.7), H. Lange-C. Pauly (cf. [25], p. 180, Theorem 2), and B. Osserman (cf. [33],
+p. 274, Theorem 1.2) veriﬁed (by applying diﬀerent methods) the equality
+degM2,Fp
+(M
+Zzz...
+2,Fp )= 1
+24 · (p3 − p).
+For arbitrary g, Kirti Joshi conjectured, with his amazing insight, an explicit
+description, as asserted in Theorem A, of the value deg Mg,Fp
+(M
+Zzz...
+g,Fp ). (In fact,
+Joshi has proposed, in personal communication to the author, a somewhat more
+general conjecture. In the present paper, however, we shall restrict our attention
+to a certain special case of this more general conjecture.) The goal of the present
+paper is to verify the case r = 2 of this conjecture of Joshi.
+Our discussion in the present paper follows, to a substantial extent, the ideas
+discussed in [18], as well as in personal communication to the author by Kirti
+Joshi. Indeed, certain of the results obtained in the present paper are mild
+generalizations of the results obtained in [18] concerning rank 2 opers to the
+case of families of curves over quite general base schemes. (Such relative for-
+mulations are necessary in the theory of the present paper, in order to consider
+deformations of various types of data.) For example, Lemma 4.1 in the present
+paper corresponds to [18], p. 10, Theorem 3.1.6 (or [19], § 5.3, p. 627; [35], § 2,
+p. 430, Lemma 2.1); Lemma 4.2 corresponds to [18], p. 20, Theorem 5.4.1; and
+Proposition 4.3 corresponds to [18], p. 21, Proposition 5.4.2. Moreover, the in-
+sight concerning the connection with the formula of Holla (cf. Theorem 5.1),
+which is a special case of the Vafa-Intriligator formula, is due to Joshi.
+On the other hand, the new ideas introduced in the present paper may be
+summarized as follows. First, we verify the vanishing of obstructions to defor-
+mation to characteristic zero of a certain Quot-scheme that is related toM
+Zzz...
+g,Fp
+(cf. Proposition 4.3, Lemma 4.4, and the discussion in the proof of Theorem
+5.2). Then we relate the value deg Mg,Fp
+(M
+Zzz...
+g,Fp ) to the degree of the result
+of base-changing this Quot-scheme to C by applying the formula of Holla (cf.
+Theorem 5.1, the proof of Theorem 5.2) directly.
+Finally, F. Liu and B. Osserman have shown (cf. [22], p. 126, Theorem 2.1)
+that the value degMg,Fp
+(M
+Zzz...
+g,Fp ) may expressed as a polynomial with respect to
+the characteristic of the base ﬁeld. This was done by applying Ehrhart’s theory
+concerning the cardinality of the set of lattice points inside a polytope. In § 6,
+we shall discuss the relation between this result and the main theorem of the
+present paper.
+Acknowledgement
+The author cannot express enough his sincere and deep gratitude to Professors
+Shinichi Mochizuki and Kirti Joshi (and hyperbolic curves of positive charac-
+teristic!) for their helpful suggestions and heartfelt encouragements, as well
+as for formulating Joshi’s conjecture. Without their philosophies and amazing
+insights, his study of mathematics would have remained “dormant”.
+
+4 YASUHIRO W AKABAYASHI
+The author would also like to thank Professors Yuichiro Hoshi, Brian Osser-
+man, and Go Yamashita for their helpful discussions and advices. The author
+was supported by the Grant-in-Aid for Scientiﬁc Research (KAKENHI No. 24-
+5691) and the Grant-in-Aid for JSPS fellows.
+Special thanks go to Mr. Katsurou Takahashi, the staﬀ members at “CAFE
+PROVERBS [15:17]” in Kyoto, Japan, and the various individuals with whom
+the author became acquainted there. The author deeply appreciates the relaxed
+and comfortable environment that they provided for writing the present paper.
+Finally, the author would like to thank the referee for reading carefully his
+manuscript and giving him some comments and suggestions.
+1. Preliminaries
+1.1. Throughout this paper, we ﬁx an odd prime number p.
+1.2. We shall denote by (Set) the category of (small) sets. If S is a Deligne-
+Mumford stack, then we shall denote by ( Sch)
+S the category of schemes over
+S.
+1.3. If S is a scheme andF an OS-module, then we shall denote byF∨ its dual
+sheaf, i.e., F∨ := HomOS (F, OS). If f : T → S is a ﬁnite ﬂat scheme over a
+connected scheme S, then we shall denote by degS(T) the degree of T over S,
+i.e., the rank of locally free OS-module f∗OT .
+1.4. If S is a scheme (or more generally, a Deligne-Mumford stack), then we
+deﬁne a curve over S to be a geometrically connected and ﬂat (relative) scheme
+f : X → S over S of relative dimension 1. Denote by Ω X/S the sheaf of 1-
+diﬀerentials of X over S and TX/S the dual sheaf of Ω X/S (i.e., the sheaf of
+derivations of X over S). We shall say that a proper smooth curve f : X → S
+over S is of genus g if the direct image f∗ΩX/S is locally free of constant rank
+g.
+1.5. Let S be a scheme over a ﬁeldk, X a smooth scheme overS, G an algebraic
+group over k,a n dg the Lie algebra ofG. Suppose that π : E→ X is a G-torsor
+over X. Then we may associate to π a short exact sequence
+0 → ad(E) → ˜TE/S
+αE
+→T X/S → 0,
+where ad(E): = E× G g denotes the adjoint bundle associated to theG-torsor E,
+and ˜TE/S denotes the subsheaf of G-invariant sections (π∗TE/S)G of π∗TE/S.A n
+S-connection on E is a split injection ∇ : TX/S → ˜TE/S of the above short exact
+sequence (i.e., αE ◦∇ = id). If X is of relative dimension 1 over S,t h e na n y
+such S-connection is necessarily integrable, i.e., compatible with the Lie bracket
+structures on TX/S and ˜TE/S =( π∗TE/S)G.
+
+THE GENERIC NUMBER OF DORMANT INDIGENOUS BUNDLES 5
+Assume that G is a closed subgroup of GLn for n ≥ 1. Then the notion of an
+S-connection deﬁned here may be identiﬁed with the usual deﬁnition of an S-
+connection on the associated vector bundle E× G (O⊕n
+X ) (cf. [20], p. 10, Lemma
+2.2.3; [21], p. 178, (1.0)). In this situation, we shall not distinguish between
+these deﬁnitions of a connection.
+If V is a vector bundle on X equipped with an S-connection on V, then
+we denote by V
+∇ the sheaf of horizontal sections in V (i.e., the kernel of the
+S-connection V→V⊗ ΩX/S).
+1.6. Let S be a scheme of characteristic p (cf. § 1.1) and f : X → S as c h e m e
+over S.T h e Frobenius twist of X over S is the base-change X(1) of the S-
+scheme X via the absolute Frobenius morphism FS : S → S of S.D e n o t e b y
+f (1) : X(1) → S the structure morphism of the Frobenius twist of X over S.
+The relative Frobenius morphism of X over S is the unique morphism FX/S :
+X → X(1) over S that ﬁts into a commutative diagram of the form
+X
+FX/S
+−−−→ X(1) −−−→ X
+f
+⏐⏐
+↓
+f (1)
+⏐
+⏐
+↓
+f
+⏐
+⏐
+↓
+S
+id
+−−−→ S −−−→ S,
+where the upper (respectively, the lower) composite is the absolute Frobenius
+morphism of X (respectively, S). If f : X → S is smooth, geometrically
+connected and of relative dimension n, then the relative Frobenius morphism
+FX/S : X → X(1) is ﬁnite and faithfully ﬂat of degree pn. In particular, the
+OX(1) -module FX/S∗OX is locally free of rank pn.
+2. Indigenous bundles
+In this section, we recall the notion of an indigenous bundle on a curve. Much
+of the content of this section is implicit in [29].
+First, we discuss the deﬁnition of an indigenous bundle on a curve (cf. [7],§4,
+p. 104; [29], Chap. I,§ 2, p. 1002, Deﬁnition 2.2). Fix a schemeS of characteristic
+p (cf. §1.1) and a proper smooth curve f : X → S of genus g> 1 (cf. §1.2).
+Deﬁnition 2.1.
+(i) Let P⊛ =( P, ∇) be a pair consisting of a PGL2-torsor P over X and an
+(integrable) S-connection ∇ on P. We shall say that P⊛ is an indige-
+nous bundle on X/S if there exists a globally deﬁned section σ of the
+associated P1-bundle P1
+P := P× PGL2 P1 which has a nowhere vanishing
+derivative with respect to the connection∇. We shall refer to the section
+σ as the Hodge section of P⊛ (cf. Remark 2.1.1 (i)).
+
+6 YASUHIRO W AKABAYASHI
+(ii) Let P⊛
+1 =( P1, ∇ 1), P⊛
+2 =( P2, ∇ 2) be indigenous bundles on X/S.A n
+isomorphism from P⊛
+1 to P⊛
+2 is an isomorphism P1
+∼
+→P 2 of PGL 2-
+torsors over X that is compatible with the respective connections (cf.
+Remark 2.1.1 (iii)).
+Remark 2.1.1.
+Let P⊛ =( P, ∇) be an indigenous bundle on X/S.
+(i) The Hodge section σ of P⊛ is uniquely determined by the condition
+that σ have a nowhere vanishing derivative with respect to ∇ (cf. [29],
+Chap. I, § 2, p. 1004, Proposition 2.4).
+(ii) The underlying PGL 2-torsors of any two indigenous bundles on X/S
+are isomorphic (cf. [29], Chap. I, § 2, p. 1004, Proposition 2.5). If there
+is a spin structure L =( L,ηL)o n X/S (cf. Deﬁnition 2.2), then the
+P1-bundle P1
+P is isomorphic to the projectivization of an L-bundle F as
+in Deﬁnition 2.3 (i), and the subbundle L⊆F (cf. Deﬁnition 2.3 (i))
+induces the Hodge section σ (cf. Proposition 2.4).
+(iii) If two indigenous bundles onX/S are isomorphic, then any isomorphism
+between them is unique. In particular, an indigenous bundle has no
+nontrivial automorphisms (cf. § 1.1; [29], Chap. I, § 2, p. 1006, Theorem
+2.8).
+Next, we consider a certain class of rank 2 vector bundles with an integrable
+connection (cf. Deﬁnition 2.3 (ii)) associated to a speciﬁc choice of a spin
+structure (cf. Deﬁnition 2.2). In particular, we show (cf. Proposition 2.4)
+that such objects correspond to indigenous bundles bijectively. We recall from,
+e.g., [17], §2.1, p. 25 the following:
+Deﬁnition 2.2.
+A spin structure on X/S is a pair
+L := (L,η
+L)
+consisting of an invertible sheaf L on X and an isomorphism ηL :Ω X/S
+∼
+→L ⊗ 2.
+A spin curve is a pair
+(Y/S, L)
+consisting of a proper smooth curve Y/S of genus g> 1 and a spin structure L
+on Y/S .
+Remark 2.2.1.
+(i) X/S necessarily admits, at least ´etale locally on S, a spin structure.
+Indeed, let us denote byPicd
+X/S t h er e l a t i v eP i c a r ds c h e m eo fX/S clas-
+sifying the set of (equivalence classes, relative to the equivalence relation
+determined by tensoring with a line bundle pulled back from the base
+S,o f )d e g r e ed invertible sheaves on X. Then the morphism
+Picg− 1
+X/S → Pic2g− 2
+X/S :[ L] ↦→ [L⊗ 2]
+
+THE GENERIC NUMBER OF DORMANT INDIGENOUS BUNDLES 7
+given by multiplication by 2 is ﬁnite and ´ etale (cf. § 1.1). Thus, the
+S-rational point of Pic 2g− 2
+X/S classifying the equivalence class [Ω X/S]d e -
+termined by ΩX/S lifts, ´etale locally, to a point of Picg− 1
+X/S.
+(ii) Let L =( L,ηL) be a spin structure onX/S and T an S-scheme. Then by
+pulling back the structuresL, ηL via the natural projectionX ×ST → X,
+we obtain a spin structure on the curveX ×S T over T, which, by abuse
+of notation, we shall also denote by L.
+In the following, let us ﬁx a spin structure L =( L,ηL)o n X/S.
+Deﬁnition 2.3.
+(i) An L-bundle on X/S is an extension, in the category of OX-modules,
+0 −→ L −→ F −→ L ∨ −→ 0
+of L∨ by L whose restriction to each ﬁber overS is nontrivial (cf. Remark
+2.3.1 (i)). We shall regard the underlying rank 2 vector bundle associated
+to an L-bundle as being equipped with a 2-step decreasing ﬁltration
+{F
+i}2
+i=0, namely, the ﬁltration deﬁned as follows:
+F2 := 0 ⊆F 1 := Im(L) ⊆F 0 := F.
+(ii) An L-indigenous vector bundle on X/S is a triple
+F⊛ := (F, ∇, {F1}2
+i=0)
+consisting of an L-bundle (F, {Fi}2
+i=0)o n X/S and an S-connection ∇ :
+F→ F⊗ ΩX/S on F (cf. §1.5) satisfying the following two conditions.
+( 1 )I fw ee q u i pOX with the trivial connection and the determinant
+bundle det(F) with the natural connection induced by ∇, then the
+natural composite isomorphism
+det(F)
+∼
+→L⊗L ∨ ∼
+→O X
+is horizontal.
+(2) The composite
+L
+∇| L
+→F⊗ ΩX/S ↠ L∨ ⊗ ΩX/S
+of the restriction ∇| L of ∇ to L (⊆F ) and the morphism F⊗
+ΩX/S ↠ L∨ ⊗ ΩX/S induced by the quotient F ↠ L∨ is an isomor-
+phism. This composite is often referred to as the Kodaira-Spencer
+map.
+(iii) Let F⊛
+1 =( F1, ∇ 1, {F1
+1 }2
+i=0
+), F⊛
+2 =( F2, ∇ 2, {F1
+2 }2
+i=0
+)o n X/S be L-
+indigenous bundles on X/S. Then an isomorphism from F⊛
+1 to F⊛
+2 is
+an isomorphism F1
+∼
+→F 2 of OX-modules that is compatible with the
+respective connections and ﬁltrations and induces the identity morphism
+of OX (relative to the respective natural composite isomorphisms dis-
+cussed in (i)) upon taking determinants.
+
+8 YASUHIRO W AKABAYASHI
+Remark 2.3.1.
+(i) X/S always admits an L-bundle. Moreover, any two L-bundles on X/S
+are isomorphic Zariski locally on S. Indeed, since f : X → S is of rela-
+tive dimension 1, the Leray-Serre spectral sequenceHp(S, Rqf∗ΩX/S) ⇒
+Hp+q(X,f ∗ΩX/S) associated to the morphismf : X → S yields an exact
+sequence
+0 → H1(S, f∗ΩX/S) → Ext1(L∨, L) → H0(S, R1f∗ΩX/S) → H2(S, f∗ΩX/S),
+where the set Ext 1(L∨, L)( ∼= H1(X, ΩX/S)) corresponds to the set of
+extension classes of L∨ by L. In particular, if S is an aﬃne scheme,
+then the set of nontrivial extension classes corresponds bijectively to
+the set H
+0(S, OS) \{ 0}⊆ H0(S, OS) ∼= H0(S, R1f∗ΩX/S).
+Also, we note that it follows immediately from the fact that the degree
+of the line bundle L on each ﬁber over S is positive that the structure
+of L-bundle on the underlying rank 2 vector bundle of an L-bundle is
+unique.
+(ii) If two L-indigenous vector bundles on X/S are isomorphic, then any
+isomorphism between them is unique up to multiplication by an element
+of Γ(S, OS) whose square is equal to 1 (i.e, ±1i f S is connected). In
+particular, the group of automorphisms of anL-indigenous vector bundle
+may be identiﬁed with the group of elements of Γ( S, OS) whose square
+is equal to 1. (Indeed, these facts follow from an argument similar to
+the argument given in the proof in [29], Chap. I, §2, p. 1006, Theorem
+2.8.)
+(iii) One may deﬁne, in an evident fashion, the pull-back of an L-indigenous
+vector bundles on X/S with respect to a morphism of schemes S′ →
+S; this notion of pull-back is compatible, in the evident sense, with
+composites S′′ → S′ → S.
+Let F⊛ =( F, ∇, {Fi}2
+i=0)b ea n L-indigenous vector bundle on X/S.B y
+executing a change of structure group via the natural map SL 2 → PGL2,o n e
+may construct, from the pair ( F, ∇), a PGL 2-torsor PF together with an S-
+connection ∇ PF on PF. Moreover, the subbundle L (⊆F ) determines a globally
+deﬁned section σ of the associated P1-bundle P1
+F := PF ×PGL2 P1 on X.O n e
+may verify easily from the condition given in Deﬁnition 2.3 (ii) (2) that the pair
+P
+⊛ := (PF, ∇ PF ) forms an indigenous bundle on X/S, whose Hodge section is
+given by σ (cf. Deﬁnition 2.1 (i)). Then, we have (cf. [29], Chap. I, §2, p. 1004,
+Proposition 2.6) the following:
+Proposition 2.4.
+If (X/S, L) is a spin curve, then the assignment F⊛ ↦→P ⊛ discussed above
+determines a functor from the groupoid ofL-indigenous vector bundles on X/S
+to the groupoid of indigenous bundles onX/S. Moreover, this functor induces a
+bijective correspondence between the set of isomorphism classes ofL-indigenous
+vector bundles on X/S (cf. Remark 2.3.1 (ii)) and the set of isomorphism
+
+THE GENERIC NUMBER OF DORMANT INDIGENOUS BUNDLES 9
+classes of indigenous bundles on X/S (cf. Remark 2.1.1 (iii)). Finally, this
+correspondence is functorial with respect toS (cf. Remark 2.3.1 (iii)).
+Proof. The construction of a functor as asserted in the statement of Proposi-
+tion 2.4 is routine. The asserted (bijective) correspondence follows from [29],
+Chap. I, § 2, p. 1004, Proposition 2.6. (Here, we note that Proposition 2.6 in
+loc. cit. states only that an indigenous bundle determines an indigenous vector
+bundle (cf. [29], Chap. I, § 2, p. 1002, Deﬁnition 2.2) up to tensor product with
+a line bundle together with a connection whose square is trivial. But one may
+eliminate such an indeterminacy by the condition that the underlying vector
+bundle be an L-bundle.) The asserted functoriality with respect to S follows
+immediately from the construction of the assignment F⊛ ↦→P ⊛ (cf. Remark
+2.3.1 (iii)). □
+3. Dormant indigenous bundles
+In this section, we recall the notion of a dormant indigenous bundle and
+discuss various moduli functors related to this notion.
+Let S be a scheme over a ﬁeld k of characteristic p (cf. §1.1) and f : X → S
+a proper smooth curve of genus g> 1. Denote by X(1) the Frobenius twist of
+X over S and FX/S : X → X(1) the relative Frobenius morphism of X over S
+(cf. §1.6).
+First, we recall the deﬁnition of the p-curvature map. Let us ﬁx an algebraic
+group G over k and denote by g the Lie algebra of G.L e t (π : E→ X, ∇ :
+TX/S → ˜TE/S) be a pair consisting of a G-torsor E over X and an S-connection
+∇ on E, i.e., a section of the natural quotientαE :( π∗TE/S)G =: ˜TE/S →T X/S (cf.
+§ 1.5). If ∂is a derivation corresponding to a local section∂of TX/S (respectively,
+˜TE := (π∗TE/S)G), then we shall denote by∂[p] the p-th iterate of∂, which is also
+a derivation corresponding to a local section of TX/S (respectively, ˜TE). Since
+αE(∂[p])=( αE(∂))[p] for any local section of TX/S, the image of thep-linear map
+from TX/S to ˜TE/S deﬁned by assigning ∂ ↦→∇ (∂[p]) − (∇(∂))[p] is contained in
+ad(E)( =k e r (αE)). Thus, we obtain an OX-linear morphism
+ψ(E,∇ ) : T ⊗p
+X/S → ad(E)
+determined by assigning
+∂⊗p ↦→∇ (∂[p]) − (∇(∂))[p].
+We shall refer to the morphism ψ(E,∇ ) as the p-curvature map of (E, ∇).
+If U is a vector bundle on X(1), then we may deﬁne an S-connection (cf.
+§ 1.5; [21], p. 178, (1.0))
+∇ can
+U : F ∗
+X/S U→ F ∗
+X/S U⊗ ΩX/S
+on the pull-back F ∗
+X/S U of U, which is uniquely determined by the condition
+that the sections of the subsheafF − 1
+X/S(U) be horizontal. It is easily veriﬁed that
+
+10 YASUHIRO WAKABAYASHI
+the p-curvature map of ( F ∗
+X/S U, ∇ can
+U ) vanishes identically on X (cf. Remark
+3.0.1 (i)).
+Remark 3.0.1.
+Assume that G is a closed subgroup of GLn for n ≥ 1 (cf. §1.5). Let (E, ∇)b e
+a pair consisting of a G-torsor E over X and an S-connection ∇ on E. Write V
+for the vector bundle on X associated to E and ∇ V for the S-connection on V
+induced by ∇.
+(i) The p-curvature mapψ(E,∇ ) of (E, ∇) is compatible, in the evident sense,
+with the classical p-curvature map (cf., e.g., [21], §5, p. 190) of (V, ∇ V).
+In this situation, we shall not distinguish between these deﬁnitions of
+the p-curvature map.
+(ii) The sheaf V
+∇ of horizontal sections in V may be considered as anOX(1) -
+module via the underlying homeomorphism of the relative Frobenius
+morphism FX/S : X → X(1). Thus, we have a natural horizontal mor-
+phism
+ν(V,∇ V ) :( F ∗
+X/S V∇ , ∇ can
+V∇ ) → (V, ∇ V)
+of OX-modules. It is known (cf. [21],§5, p. 190, Theorem 5.1) that thep-
+curvature map of (V, ∇ V) vanishes identically onX if and only ifν(V,∇ V )
+is an isomorphism. In particular, the assignment V ↦→ (F ∗
+X/S V, ∇ can
+V∇ )
+determines an equivalence, which is compatible with the formation of
+tensor products (hence also symmetric and exterior products), between
+the category of vector bundles on X(1) and the category of vector bun-
+dles on X equipped with an S-connection whose p-curvature vanishes
+identically.
+Deﬁnition 3.1.
+We shall say that an indigenous bundle P⊛ =( P, ∇) (respectively, an L-
+indigenous vector bundle F⊛ =( F, ∇, {Fi}2
+i=0)) on X/S is dormant if the
+p-curvature map of (P, ∇) (respectively, (F, ∇)) vanishes identically on X.
+Next, we shall deﬁne a certain class of dormant indigenous bundles, which we
+shall refer to as dormant ordinary.L e t P⊛ =( P, ∇) be a dormant indigenous
+bundle on X/S.D e n o t eb y
+ad(P⊛): =( a d (P), ∇ ad)
+the pair consisting of the adjoint bundle ad( P) associated to P and the S-
+connection ∇ ad on ad( P) naturally induced by ∇. Let us consider the 1-st
+relative de Rham cohomology sheaf H1
+dR(ad(P⊛)) of ad(P⊛), that is,
+H1
+dR(ad(P⊛)) := R1f∗(ad(P) ⊗ Ω•
+X/S),
+where ad(P) ⊗ Ω•
+X/S denotes the complex
+··· − → 0 −→ ad(P)
+∇ ad
+−→ ad(P) ⊗ ΩX/S −→ 0 − → ···
+
+THE GENERIC NUMBER OF DORMANT INDIGENOUS BUNDLES 11
+concentrated in degrees 0 and 1. Recall (cf. [29], Chap. I, §2, p. 1006, Theorem
+2.8) that there is a natural exact sequence
+0 → f∗(Ω⊗ 2
+X/S) →H 1
+dR(ad(P⊛)) → R1f∗(TX/S) → 0.
+On the other hand, the natural inclusion ad( P)∇ ↪→ ad(P) of the subsheaf of
+horizontal sections induces a morphism of OS-modules
+R1f∗(ad(P)∇ ) →H 1
+dR(ad(P⊛)).
+Thus, by composing this morphism with the right-hand surjection in the above
+short exact sequence, we obtain a morphism
+γP⊛ : R1f∗(ad(P)∇ ) → R1f∗(TX/S)
+of OS-modules.
+Deﬁnition 3.2.
+We shall say that an indigenous bundle P⊛ is dormant ordinary if P⊛ is
+dormant and γP⊛ is an isomorphism.
+Next, let us introduce notations for various moduli functors classifying the
+objects discussed above. Let Mg,Fp be the moduli stack of proper smooth curves
+of genus g> 1 over Fp.D e n o t eb y
+Sg,Fp :( Sch)Mg,Fp −→ (Set)
+(cf. [29], Chap. I, § 3, p. 1011, the discussion preceding Lemma 3.2) the set-
+valued functor on (Sch)Mg,Fp (cf. §1.2) which, to any Mg,Fp -scheme T, classi-
+fying a curve Y/T , assigns the set of isomorphism classes of indigenous bundles
+on Y/T . Also, denote by
+M
+Zzz...
+g,Fp (resp., ⊚M
+Zzz...
+g,Fp )
+the subfunctor of Sg,Fp classifying the set of isomorphism classes of dormant
+indigenous bundles (resp., dormant ordinary indigenous bundles). By forgetting
+the datum of an indigenous bundle, we obtain natural transformations
+S
+g,Fp −→ M g,Fp, M
+Zzz...
+g,Fp −→ M g,Fp.
+Next, if (X/S, L) is a spin curve, then we shall denote by
+M
+Zzz...
+X/S,L :( Sch)S −→ (Set)
+the set-valued functor on ( Sch)S which, to any S-scheme T, assigns the set
+of isomorphism classes of dormant L-indigenous bundles on the curve X ×S T
+over T. It follows from Proposition 2.4 that there is a natural isomorphism of
+functors on (Sch)S
+M
+Zzz...
+X/S,L
+∼
+→M
+Zzz...
+g,Fp ×Mg,Fp S,
+where M
+Zzz...
+g,Fp ×Mg,Fp S denotes the ﬁber product of the natural projection
+M
+Zzz...
+g,Fp →M g,Fp and the classifying morphism S →M g,Fp of X/S.
+
+12 YASUHIRO WAKABAYASHI
+Next, we quote a result from p-adic Teichm¨uller theory due to S. Mochizuki
+concerning the moduli stacks (i.e., which are in fact schemes, relatively speak-
+ing, over Mg,Fp ) that represent the functors discussed above. Here, we wish to
+emphasize the importance of the open density of the dormant ordinary locus.
+As we shall see in Proposition 4.2 and its proof, the properties stated in the fol-
+lowing Theorem 3.3 enable us to relate a numerical calculation incharacteristic
+zero to the degree of certain moduli spaces of interest inpositive characteristic.
+Theorem 3.3.
+The functor S
+g,Fp is represented by a relative aﬃne space over Mg,Fp of
+relative dimension 3g −3. The functor M
+Zzz...
+g,Fp is represented by a closed substack
+of Sg,Fp which is ﬁnite and faithfully ﬂat over Mg,Fp, and which is smooth and
+geometrically irreducible overFp. The functor ⊚M
+Zzz...
+g,Fp is an open dense substack
+of M
+Zzz...
+g,Fp and coincides with the ´etale locus of M
+Zzz...
+g,Fp over Mg,Fp.
+Proof. The assertion follows from [29], Chap. I, §2, p. 1007, Corollary 2.9; [30],
+Chap. II, § 2.3, p. 152, Lemma 2.7; [30], Chap. II,§2.3, p. 153, Theorem 2.8 (and
+its proof). □
+In particular, it follows that it makes sense to speak of the degree
+degMg,Fp
+(M
+Zzz...
+g,Fp )
+of M
+Zzz...
+g,Fp over Mg,Fp . The generic ´etaleness of M
+Zzz...
+g,Fp over Mg,Fp implies that if
+X is a suﬃciently generic proper smooth curve of genus g over an algebraically
+closed ﬁeld of characteristic p, then the number of dormant indigenous bun-
+dles on X is exactly deg Mg,Fp
+(M
+Zzz...
+g,Fp ). As we explained in the Introduction,
+our main interest in the present paper is the explicit computation of the value
+degMg,Fp
+(M
+Zzz...
+g,Fp ).
+4. Quot-schemes
+To calculate the value of degMg,Fp
+(M
+Zzz...
+g,Fp ), it will be necessary to relateM
+Zzz...
+g,Fp
+to certain Quot-schemes. Here, to prepare for the discussion in §5b e l o w ,w e
+introduce notions for Quot-schemes in arbitrary characteristic.
+Let T be a noetherian scheme, Y a proper smooth curve over T of genus
+g> 1a n dE a vector bundle on Y .D e n o t eb y
+Q2,0
+E/Y/T :( Sch)T −→ (Set)
+the set-valued functor on (Sch)T which to any f : T ′ → T associates the set of
+isomorphism classes of injective morphisms of coherent OY ×T T ′ -modules
+i : F→ E T ′,
+where ET ′ denotes the pull-back of E via the projection Y ×T T ′ → Y , such that
+the quotient ET ′/i(F)i sﬂ a to v e rT ′ (which, since Y/T is smooth of relative
+
+THE GENERIC NUMBER OF DORMANT INDIGENOUS BUNDLES 13
+dimension 1, implies that F is locally free), and F is of rank 2 and degree 0. It
+is known (cf. [8], Chap. 5,§ 5.5, p. 127, Theorem 5.14) thatQ2,0
+E/Y/T is represented
+by a proper scheme over T.
+Now let (X/S, L =( L,ηL)) be a spin curve of characteristic p and denote,
+for simplicity, the relative Frobenius morphism FX/S : X → X(1) by F. Then
+in the following discussion, we consider the Quot-scheme discussed above
+Q2,0
+F∗(L∨ )/X(1)/S
+in the case where the data “( Y/T, E)” is taken to be (X(1)/S, F∗(L∨)). If we
+denote by ˜i : ˜F→ (F∗(L∨))Q2,0
+F∗(L∨ )/X(1)/S
+the tautological injective morphism of
+sheaves onX(1) ×S Q2,0
+F∗(L∨ )/X(1)/S, then the determinant bundle det(˜F): = ∧2( ˜F)
+determines a classifying morphism
+det : Q2,0
+F∗(L∨ )/X(1)/S → Pic 0
+X(1)/S
+to the relative Picard schemePic 0
+X(1)/S (cf. Remark 2.2.1 (i)) classifying the set
+of equivalence classes of degree 0 line bundles on X(1)/S. We shall denote by
+Q2,O
+F∗(L∨ )/X(1)/S
+the scheme-theoretic inverse image, via det, of the identity section ofPic 0
+X(1)/S.
+Next, we discuss a certain relationship between M
+Zzz...
+X/S,L and Q2,O
+F∗(L∨ )/X(1)/S.
+To this end, we introduce a certain ﬁltered vector bundle with connection as
+follows. Let us consider the rank p vector bundle
+AL := F ∗F∗(L∨)
+on X (cf. § 1.6), which has the canonical S-connection
+∇ can
+F∗(L∨ )
+(cf. the discussion preceding Remark 3.0.1). By using this connection, we may
+deﬁne a p-step decreasing ﬁltration
+{Ai
+L}p
+i=0
+on AL as follows.
+A0
+L := AL,
+A1
+L := ker(AL
+q
+↠ L∨),
+Aj
+L := ker(Aj− 1
+L
+∇ can
+F∗(L∨ )|Aj− 1
+L
+−→ A L ⊗ ΩX/S ↠ AL/Aj− 1
+L ⊗ ΩX/S)
+(j =2 , ··· ,p ), where AL(= F ∗F∗(L∨))
+q
+↠ L∨ denotes the natural quotient
+determined by the adjunction relation “ F ∗(−) ⊣ F∗(−)” (i.e., “the functor
+F ∗(−) is left adjoint to the functor F∗(−)”).
+Lemma 4.1.
+
+14 YASUHIRO WAKABAYASHI
+(i) For each j =1 , ··· p − 1, the map
+Aj− 1
+L /Aj
+L →A j
+L
+/Aj+1
+L ⊗ ΩX/S
+deﬁned by assigning a ↦→ ∇ can
+F∗(L∨)(a) (a ∈A j− 1
+L ), where the “bars” denote
+the images in the respective quotients, is well-deﬁned and determines an
+isomorphism of OX-modules.
+(ii) Let us identify A1
+L/A2
+L with L via the isomorphism
+A1
+L/A2
+L
+∼
+→A 0
+L/A1
+L ⊗ ΩX/S
+∼
+→L ∨ ⊗ ΩX/S
+∼
+→L ,
+obtained by composing the isomorphism of (i) (i.e., the ﬁrst isomorphism
+of the display) with the tautological isomorphism arising from the deﬁ-
+nition of A
+1
+L (i.e., the second isomorphism of the display), followed by
+the isomorphism determined by the given spin structure (i.e., the third
+isomorphism of the display). Then the natural extension structure
+0 →A 1
+L/A2
+L →A L/A2
+L →A L/A1
+L → 0
+determines a structure of L-bundle on AL/A2
+L.
+Proof. The various assertions of Lemma 4.1 follow from an argument (in the
+case where S is an arbitrary scheme) similar to the argument (in the case where
+S = Spec(k) for an algebraically closed ﬁeld k)g i v e ni nt h ep r o o f so f[ 1 9 ] ,§5.3,
+p. 627 and [35], § 2, p. 430, Lemma 2.1. □
+Lemma 4.2.
+Let g : V→ F∗(L∨) be an injective morphism classiﬁed by anS-rational point
+of Q2,0
+F∗(L∨ )/X(1)/S and denote by {(F ∗V)i}p
+i=0 the ﬁltration on the pull-back F ∗V
+deﬁned by setting
+(F ∗V)i := (F ∗V) ∩ (F ∗g)− 1(Ai
+L),
+where we denote by F ∗g the pull-back of g via F.
+(i) The composite
+F ∗V→A L ↠ AL/A2
+L
+of F ∗g with the natural quotient AL ↠ AL/A2
+L is an isomorphism of
+OX-modules.
+(ii) If, moreover,g corresponds to anS-rational point ofQ2,O
+F∗(L∨ )/X(1)/S, then
+the triple
+(F ∗V, ∇ can
+V , {(F ∗V)i}2
+i=0),
+where ∇ can
+V denotes the canonical connection onF ∗V (cf. the discussion
+preceding Remark 3.0.1), forms a dormantL-indigenous bundle onX/S.
+Proof. First, we consider assertion (i). Since F ∗V and AL/A2
+L are ﬂat over S,
+it suﬃces, by considering the various ﬁbers over S, to verify the case where
+S = Spec(k)f o raﬁ e l dk.I fw ew r i t eg ri := (F ∗V)i/(F ∗V)i+1 (i =0 , ··· ,p − 1),
+then it follows immediately from the deﬁnitions that the coherent OX-module
+gri admits a natural embedding
+gri ↪→A i
+L/Ai+1
+L
+
+THE GENERIC NUMBER OF DORMANT INDIGENOUS BUNDLES 15
+into the subquotient Ai
+L/Ai+1
+L . Since this subquotient is a line bundle (cf.
+Lemma 4.1 (i), (ii)), one veriﬁes easily that gri is either trivial or a line bundle.
+In particular, since F ∗V is of rank 2, the cardinality of the set I :=
+{
+i
+⏐⏐gri ̸=
+0
+}
+is exactly 2. Next, let us observe that the pull-back F ∗g of g via F is
+compatible with the respective connections ∇ can
+V (cf. the statement of assertion
+(ii)), ∇ can
+F∗(L∨ ). Thus, it follows from Lemma 4.1 (i) that gri+1 ̸= 0 implies gri ̸=0 .
+But this implies that I = {0, 1}, and hence that the composite
+F ∗V→A L ↠ AL/A2
+L
+is an isomorphism at the generic point of X. On the other hand, observe that
+deg(F ∗V)= p · deg(V)= p · 0=0
+and
+deg(AL/A2
+L)=d e g (AL/A1
+L)+d e g (A1
+L/A2
+L)=d e g (L∨)+d e g (L)=0
+(cf. Lemma 4.1 (i)). Thus, by comparing the respective degrees of F ∗V
+and AL/A2
+L, we conclude that the above composite is an isomorphism of OX-
+modules. This completes the proof of assertion (i). Assertion (ii) follows imme-
+diately from the deﬁnition of an L-indigenous bundle, assertion (i), and Lemma
+4.1 (i), (ii). □
+By applying the above lemma, we may conclude that the moduli space
+M
+Zzz...
+X/S,L is isomorphic to the Quot-scheme Q2,O
+F∗(L∨ )/X(1)/S as follows.
+Proposition 4.3.
+Let (X/S, L) be a spin curve. Then there is an isomorphism of S-schemes
+Q2,O
+F∗(L∨ )/X(1)/S
+∼
+→M
+Zzz...
+X/S,L.
+Proof. The assignment
+[g : V→ F∗(L∨)] ↦→ (F ∗V, ∇ can
+F ∗V, {(F ∗V)i}2
+i=0),
+discussed in Lemma 4.2, determines (by Lemma 4.2 (ii)) a map
+αS : Q2,O
+F∗(L∨ )/X(1)/S(S) →M
+Zzz...
+X/S,L(S)
+between the respective sets of S-rational points. By the functoriality of the
+construction of αS with respect to S, it suﬃces to prove the bijectivity of αS.
+The injectivity of αS follows from the observation that any element [g : V→
+F∗(L∨)] ∈Q 2,O
+F∗(L∨)/X(1)/S(S) is, by adjunction, determined by the morphism
+F ∗V→L ∨, i.e., the natural surjection, as in Deﬁnition 2.3 (i), arising from the
+fact that F ∗V is an L-bundle (cf. Lemma 4.2 (ii)).
+Next, we consider the surjectivity of αS.L e t( F, ∇, {Fi}i) be a dormant L-
+indigenous bundle on X/S. Consider the composite F ∗F∇ ∼
+→F ↠ L∨ of the
+natural horizontal isomorphism F ∗F∇ ∼
+→F (cf. Remark 3.0.1 (ii)) with the
+natural surjection F ↠ F/F1 = L∨. This composite determines a morphism
+gF :( F ∼=)F ∗F∇ → F ∗F∗(L∨)(=: AL)
+
+16 YASUHIRO WAKABAYASHI
+via the adjunction relation “ F ∗(−) ⊣ F∗(−)” (cf, the discussion preceding
+Lemma 4.1) and pull-back by F.
+Next, we claim that gF is injective. Indeed, since gF is (tautologically, by
+construction!) compatible with the respective surjections F ↠ L∨, AL ↠ L∨
+to L∨, we conclude thatgF(F1) ⊆A 1
+L,a n dk e r (gF) ⊆F 1. Since gF is manifestly
+horizontal (by construction), ker(gF) is stabilized by ∇, hence contained in the
+kernel of the Kodaira-Spencer map F1 →F /F1 ⊗ ΩX/S(cf. Deﬁnition 2.3 (ii)
+(2)), which is an isomorphism by the deﬁnition of an L-indigenous bundle (cf.
+Deﬁnition 2.3 (ii)). This implies that gF is injective and completes the proof
+of the claim. Moreover, by applying a similar argument to the pull-back of
+gF via any base-change over S, one concludes that gF is universally injective
+with respect to base-change over S. This implies that AL/gF(F)i s ﬂat over S
+(cf. [26], p. 17, Theorem 1).
+N o wd e n o t eb yg∇
+F : F∇ → F∗(L∨) the morphism obtained by restricting gF
+to the respective subsheaves of horizontal sections in F, AL. Observe that the
+pull-back of g∇
+F via F may be identiﬁed with gF,a n dt h a tF ∗(F∗(L∨)/g∇
+F (F∇ ))
+is naturally isomorphic to AL/gF(F). Thus, it follows from the faithful ﬂatness
+of F that g∇
+F is injective, and F∗(L∨)/g∇
+F (F∇ )i sﬂ a to v e rS. On the other
+hand, since the determinant of ( F, ∇) is trivial, det( F∇ ) is isomorphic to the
+trivial OX(1) -module (cf. Remark 3.0.1 (ii)). Thus, g∇
+F determines an S-rational
+point of Q2,O
+F∗(L∨ )/X(1)/S that is mapped by αS to the S-rational point of M
+Zzz...
+X/S,L
+corresponding to ( F, ∇, {Fi}i). This implies that αS is surjective and hence
+completes the proof of Proposition 4.3. □
+Next, we relate Q2,O
+F∗(L∨ )/X(1)/S to Q2,0
+F∗(L∨ )/X(1)/S. By pulling back line bundles
+on X(1) via the relative Frobenius F : X → X(1), we obtain a morphism
+Pic0
+X(1)/S → Pic0
+X/S
+[N] ↦→ [F ∗N].
+We shall denote by
+VerX/S
+the scheme-theoretic inverse image, via this morphism, of the identity section of
+Pic0
+X/S. It is well-known (cf. [4], EXPOSE VII,§4.3, pp. 440-443; [28],§8, p. 114,
+Proposition 8.1 and p. 115, Theorem 8.2; [27], APPENDIX, p. 175, Lemma
+(1.0)) that VerX/S is ﬁnite and faithfully ﬂat over S of degree pg and, more-
+over, ´etale over the points s of S such that the ﬁber of X/S at s is ordinary.
+(Recall that the locus of Mg,Fp classifying ordinary curves is open and dense.)
+Then we have the following
+Lemma 4.4.
+There is an isomorphism of S-schemes
+Q2,O
+F∗(L∨ )/X(1)/S ×S VerX/S
+∼
+→Q 2,0
+F∗(L∨ )/X(1)/S.
+
+THE GENERIC NUMBER OF DORMANT INDIGENOUS BUNDLES 17
+Proof. It suﬃces to prove that there is a bijection between the respective sets
+of S-rational points that is functorial with respect to S.
+Let (g : V→ F∗(L∨), N) be an element of ( Q2,O
+F∗(L∨ )/X(1)/S ×S VerX/S)(S). It
+follows from the projection formula that the composite
+gN : V⊗N → F∗(L∨) ⊗N → F∗(L∨ ⊗ F ∗N)
+∼
+→ F∗(L∨ ⊗O X)= F∗(L∨)
+determines an element of Q2,0
+F∗(L∨ )/X(1)/S(S). Thus, we obtain a functorial (with
+respect to S)m a p
+γS :( Q2,O
+F∗(L∨ )/X(1)/S ×S VerX/S)(S) →Q 2,0
+F∗(L∨ )/X(1)/S(S).
+Conversely, let g : V→ F∗(L∨) be an injective morphism classiﬁed by an
+element of Q2,0
+F∗(L∨ )/X(1)/S(S). Consider the injective morphism g
+det(V)⊗ p− 1
+2
+, i.e.,
+the morphism gN constructed above in the case where “ N”i st a k e nt ob e
+N =d e t (V)⊗ p− 1
+2 . Here, we observe that
+det(V⊗ det(V)⊗ p− 1
+2 ) ∼= det(V) ⊗ det(V)⊗ 2· p− 1
+2 ∼= det(V)⊗p ∼= F ∗
+S(F ∗(det(V))),
+where F ∗
+S(−) denotes the pull-back by the morphism X(1) → X obtained by
+base-change of X/S via the absolute Frobenius morphism FS : S → S of S
+(cf. §1.6). On the other hand, since F ∗(det(V)) ∼= (AL/A1
+L) ⊗ (A1
+L/A2
+L) ∼=
+L∨ ⊗L ∼= OX (cf. Lemmas 4.1 (ii), 4.2 (i)), it follows that the determinant
+of V⊗ det(V)⊗ p− 1
+2 is trivial. Thus the pair ( g
+det(V)⊗ p− 1
+2
+, det(V)) determines an
+element of (Q2,O
+F∗(L∨ )/X(1)/S ×SVerX/S)(S). One veriﬁes easily that this assignment
+determines an inverse to γS. This completes the proof of Lemma 4.4. □
+5. Computation via the V afa-Intriligator formula
+By combining Proposition 4.3, Lemma 4.4, and the discussions preceding
+Theorem 3.3 and Lemma 4.4, we obtain the following equalities:
+degMg,Fp
+(M
+Zzz...
+g,Fp ) = degS(M
+Zzz...
+X/S,L) = degS(Q2,O
+F∗(L∨ )/X(1)/S)= 1
+pg ·degS(Q2,0
+F∗(L∨ )/X(1)/S).
+Therefore, to determine the value of deg Mg,Fp
+(M
+Zzz...
+g,Fp ), it suﬃces to calculate
+the value degS(Q2,0
+F∗(L∨)/X(1)/S)( f o ra narbitrary spin curve (X/S, L)).
+In this section, we review a numerical formula concerning the degree of a
+certain Quot-scheme over the ﬁeld of complex number C and relate it to the
+degree of the Quot-scheme in positive characteristic.
+Let C be a smooth proper curve over C of genus g> 1. If r is an integer,
+and E is a vector bundle on C of rank n and degree d with 1 ≤ r ≤ n,t h e nw e
+deﬁne invariants
+emax(E,r ): =m a x
+{
+deg(F) ∈ Z
+⏐⏐ F is a subbundle of E of rank r
+}
+,
+sr(E): = d · r − n · emax(E,r ).
+
+18 YASUHIRO WAKABAYASHI
+(Here, we recall that one veriﬁes immediately, for instance, by considering an
+embedding of E into a direct sum of n line bundles, that emax(E,r ) is well-
+deﬁned.)
+In the following, we review some facts concerning these invariants (cf. [11]; [23];
+[12]). Denote by sNn,d
+C the moduli space of stable bundles on C of rank n and
+degree d (cf. [23], §1, pp. 310-311). It is known that sNn,d
+C is irreducible (cf.
+the discussion at the beginning of [23], §2, p. 311). Thus, it makes sense to
+speak of a “suﬃciently general” stable bundle in sNn,d
+C , i.e., a stable bundle
+that corresponds to a point of the scheme sNn,d
+C that lies outside some ﬁxed
+closed subscheme. If E is a suﬃciently general stable bundle in sNn,d
+C , then it
+holds (cf. [23], § 1, pp. 310-311) thatsr(E)= r(n − r)(g − 1) +ϵ,w h e r eϵ is the
+unique integer such that 0 ≤ ϵ<n and sr(E)= r · d mod n. Also, the number
+ϵ coincides (cf. [12], § 1, pp. 121-122) with the dimension of every irreducible
+component of the Quot-scheme Qr,emax(E,r)
+E/C/C (cf. §4). If, moreover, the equality
+sr(E)= r(n − r)(g − 1) holds (i.e., dim( Qr,emax(E,r)
+E/C/C ) = 0), then Qr,emax(E,r)
+E/C/C is
+´etale over Spec(C) (cf. [12], §1, pp. 121-122). Finally, under this particular as-
+sumption, a formula for the degree of this Quot-scheme was given by Holla as
+follows.
+Theorem 5.1.
+Let C be a proper smooth curve over C of genus g> 1, E a suﬃciently
+general stable bundle in sNn,d
+C . Write (a, b) for the unique pair of integers
+such that d = an − b with 0 ≤ b<n . Also, we suppose that the equality
+sr(E)= r(n − r)(g − 1) (equivalently, emax(E,r )=( dr − r(n − r)(g − 1))/n)
+holds. Then we have
+degC(Qr,emax(E,r)
+E/C/C )= (−1)(r− 1)(br− (g− 1)r2)/nnr(g− 1)
+r!
+∑
+ρ1,··· ,ρr
+(∏r
+i=1 ρi)b−g+1
+∏
+i̸=j(ρi − ρj)g− 1 ,
+where ρn
+i =1 , for 1 ≤ i ≤ r and the sum is over tuples(ρ1, ··· ,ρr) with ρi ̸= ρj.
+Proof. The assertion follows from [12], §4, p. 132, Theorem 4.2, where “k” (re-
+spectively, “r”) corresponds to our r (respectively, n). □
+By applying this formula, we conclude the same kind of formula for certain
+vector bundles in positive characteristic, as follows.
+Theorem 5.2.
+Let k an algebraically closed ﬁeld of characteristic p and (X/k, L =( L,ηL))
+a spin curve of genus g> 1. Suppose that X/k is suﬃciently general in Mg,Fp.
+(Here, we recall that Mg,Fp is irreducible (cf. [3], §5); thus, it makes sense
+to speak of a “suﬃciently general” X/k, i.e., an X/k that determines a point
+of Mg,Fp that lies outside some ﬁxed closed substack.) Then Q2,0
+F∗(L∨ )/X(1)/k is
+ﬁnite and ´etale over k. If, moreover, we suppose that p> 2(g − 1), then
+the degree degk(Q2,0
+F∗(L∨ )/X(1)/k) of Q2,0
+F∗(L∨ )/X(1)/k over Spec(k) is given by the
+
+THE GENERIC NUMBER OF DORMANT INDIGENOUS BUNDLES 19
+following formula:
+degk(Q2,0
+F∗(L∨ )/X(1)/k)= p2g− 1
+22g− 1 ·
+p− 1∑
+θ=1
+1
+sin2g− 2(π·θ
+p )
+(
+= (−1)g− 1 · p2g− 1
+2 ·
+∑
+ζp=1,ζ̸=1
+ζg− 1
+(ζ− 1)2g− 2
+)
+.
+Proof. Suppose that X is an ordinary (cf. the discussion preceding Lemma 4.4)
+proper smooth curve over k classiﬁed by a k-rational point of Mg,Fp which lies
+in the complement of the image of M
+Zzz...
+g,Fp \ ⊚M
+Zzz...
+g,Fp via the natural projection
+M
+Zzz...
+g,Fp →M g,Fp (cf. Theorem 3.3; the discussion preceding Theorem 3.3). Then
+it follows from Theorem 3.3, Proposition 4.3, and Lemma 4.4 thatQ2,0
+F∗(L∨ )/X(1)/k
+is ﬁnite and ´etale over k.
+Next, we determine the value of degk(Q2,0
+F∗(L∨ )/X(1)/k). Denote by W the ring
+of Witt vectors with coeﬃcients in k and K the fraction ﬁeld of W. Since
+dim(X(1)) = 1, which implies that H2(XF , Ω∨
+X(1) ) = 0, it follows from well-
+known generalities concerning deformation theory that X(1) may be lifted to a
+smooth proper curve X(1)
+W over W of genus g. In a similar vein, the fact that
+H2(X(1), EndOX(1) (F∗(L∨))) = 0 implies that F∗(L∨) may be lifted to a vector
+bundle E on X(1)
+W .
+Now let η be a k-rational point of Q2,0
+F∗(L∨ )/X(1)/k classifying an injective mor-
+phism i : F→ F∗(L∨). The tangent space to Q2,0
+F∗(L∨ )/X(1)/k at η may be nat-
+urally identiﬁed with the k-vector space Hom OX(1) (F,F ∗(L∨)/i(F)), and the
+obstruction to lifting η to any ﬁrst order thickening of Spec( k)i sg i v e nb ya n
+element of Ext1
+OX(1) (F,F ∗(L∨)/i(F)). On the other hand, since, as was observed
+above, Q2,0
+F∗(L∨)/X(1)/k is ´etale over Spec(k), it holds that HomOX(1) (F,F ∗(L∨)/i(F)) =
+0, and hence Ext 1
+OX(1) (F,F ∗(L∨)/i(F)) = 0 by Lemma 5.3 below. This im-
+plies that η may be lifted to a W-rational point of Q2,0
+E/X(1)
+W /W
+, and hence
+that Q2,0
+E/X(1)
+W /W
+is ﬁnite and ´etale over W by Lemma 5.3 and the vanishing
+of HomOX(1) (F,F ∗(L∨)/i(F)). Now it follows from a routine argument that K
+may be supposed to be a subﬁeld of C.D e n o t eb yX(1)
+C the base-change of X(1)
+W
+via the morphism Spec( C) → Spec(W) induced by the composite embedding
+W↪ → K↪ → C,a n dEC the pull-back ofE via the natural morphismX(1)
+C → X(1)
+W .
+Thus, we obtain equalities
+degk(Q2,0
+F∗(L∨ )/Xk/k) = degW (Q2,0
+E/X(1)
+W /W
+) = degC(Q2,0
+EC/X(1)
+C /C
+).
+To prove the required formula, we calculate the degree deg C(Q2,0
+EC/X(1)
+C /C
+)b y
+applying Theorem 5.1.
+By [35], § 2, p. 431, Theorem 2.2, F∗(L∨) is stable. Since the degree of EC
+coincides with the degree of F∗(L∨), EC is a vector bundle of degree deg(EC)=
+
+20 YASUHIRO WAKABAYASHI
+(p−2)(g−1) (cf. the proof of Lemma 5.3). On the other hand, one veriﬁes easily
+from the deﬁnition of stability and the properness of Quot schemes (cf. [8],§5.5,
+p. 127, Theorem 5.14) that EC is a stable vector bundle. Next, let us observe
+that Q2,0
+EC/X(1)
+C /C
+is zero-dimensional (cf. the discussion above), which, by the
+discussion preceding Theorem 5.1, implies that s2(EC)=2 ( p − 2)(g − 1). Thus,
+by choosing the deformationE of F∗(L∨) appropriately, we may assume, without
+loss of generality, that EC is suﬃciently general in sNp,(p− 2)(g− 1)
+X(1)
+C
+that Theorem
+5.1 holds. Now we compute (cf. the discussion preceding Theorem 5.1):
+emax(EC, 2) = 1
+p · (degC(EC) · 2 − s2(EC))
+= 1
+p · ((p − 2)(g − 1) · 2 − 2 · (p − 2)(g − 1))
+=0 .
+If, moreover, we write (a, b) for the unique pair of integers such that degC(EC)=
+p · a − b with 0 ≤ b<p , then it follows from the hypothesis p> 2(g − 1) that
+a = g − 1a n db =2 (g − 1). Thus, by applying Theorem 5.1 in the case where
+the data
+“(C, V,n ,d ,r ,a ,b ,emax(V,r ))”
+is taken to be
+(X(1)
+C , EC,p ,(g − 1)(p − 2), 2,g − 1, 2(g − 1), 0),
+we obtain that
+degC(Q2,0
+EC/X(1)
+C /C
+)= (−1)(2− 1)(2(g− 1)2− (g− 1)22)/pp2(g− 1)
+2! ·
+∑
+ρ1,ρ2
+(∏2
+i=1 ρi)2(g− 1)−g+1
+∏
+i̸=j(ρi − ρj)g− 1
+= (−1)g− 1 · p2g− 1
+2 ·
+∑
+ζp=1,ζ̸=1
+ζg− 1
+(ζ− 1)2g− 2
+= p2g− 1
+2g ·
+∑
+ζp=1,ζ̸=1
+1
+(1 − ζ+ζ− 1
+2 )g− 1
+= p2g− 1
+22g− 1 ·
+p− 1∑
+θ=1
+1
+sin2g− 2(π·θ
+p ).
+This completes the proof of the required equality. □
+The following lemma was used in the proof of Theorem 5.2.
+Lemma 5.3.
+Let k be a ﬁeld of characteristic p, (X/k, L := ( L,ηL)) a spin curve, and
+i : F→ F∗(L∨) an injective morphism classiﬁed by a k-rational point of
+
+THE GENERIC NUMBER OF DORMANT INDIGENOUS BUNDLES 21
+Q2,0
+F∗(L∨ )/X(1)/k. Write G := F∗(L∨)/i(F). Then G is a vector bundle on X(1),
+and it holds that
+dimk(HomOX(1) (F, G)) = dimk(Ext1
+OX(1) (F, G)).
+Proof. First, we verify that G is a vector bundle. Since F : X → X(1) is
+faithfully ﬂat, it suﬃces to verify that the pull-back F ∗G is a vector bundle on
+X. Recall (cf. Lemma 4.2 (i)) that the composite F ∗F→ A L(= F ∗F∗(L∨)) →
+AL/A2
+L of the pull-back of i with the natural surjection AL →A L/A2
+L is an
+isomorphism. One veriﬁes easily that this implies that the natural composite
+A
+2
+L →A L → F ∗G is an isomorphism, and hence that F ∗G is a vector bundle,
+as desired.
+Next we consider the asserted equality. Since the morphism F : X → X(1)
+is ﬁnite, it follows from well-known generalities concerning cohomology that we
+have an equality of Euler characteristics χ(F∗(L∨)) = χ(L∨). Thus, it follows
+from the Riemann-Roch theorem that
+deg(F∗(L∨)) = χ(F∗(L∨)) − rk(F∗(L∨))(1 − g)
+= χ(L∨) − p(1 − g)
+=( p − 2)(g − 1),
+and, since rk(HomOX(1) (F, G)) = 2(p − 2), that
+deg(HomOX(1) (F, G)) = 2 · deg(G) − (p − 2) · deg(F)
+=2 · deg(F∗(L∨)) − 0
+=2 (p − 2)(g − 1).
+Finally, by applying the Riemann-Roch theorem again, we obtain equalities
+dimk(HomOX(1) (F, G)) − dimk(Ext1
+OX(1) (F, G))
+=d e g (HomOX(1) (F, G)) + rk(HomOX(1) (F, G))(1 − g)
+=2 (p − 2)(g − 1) + 2(p − 2)(1 − g)
+=0 .
+□
+Thus, we conclude the main result of the present paper.
+Corollary 5.4.
+Suppose that p> 2(g − 1). Then the degree degMg,Fp
+(M
+Zzz...
+g,Fp ) of M
+Zzz...
+g,Fp over
+Mg,Fp is given by the following formula:
+degMg,Fp
+(M
+Zzz...
+g,Fp )= pg− 1
+22g− 1 ·
+p− 1∑
+θ=1
+1
+sin2g− 2(π·θ
+p )
+(
+= (−1)g− 1 · pg− 1
+2 ·
+∑
+ζp=1,ζ̸=1
+ζg− 1
+(ζ− 1)2g− 2
+)
+.
+
+22 YASUHIRO WAKABAYASHI
+Proof. L e tu sﬁ xas p i nc u r v e(X/k, L) for which Theorem 5.2 holds. Then it
+follows from Theorem 5.2 and the discussion at the beginning of §5 that
+degMg,Fp
+(M
+Zzz...
+g,Fp )= 1
+pg · degC(Q2,0
+F∗(L∨ )/X(1)/k)
+= pg− 1
+22g− 1 ·
+p− 1∑
+θ=1
+1
+sin2g− 2(π·θ
+p )
+(
+= (−1)g− 1 · pg− 1
+2 ·
+∑
+ζp=1,ζ̸=1
+ζg− 1
+(ζ− 1)2g− 2
+)
+.
+□
+6. Relation with other results
+Finally, we discuss some topics related to the main result of the present paper.
+6.1. Let k be an algebraically closed ﬁeld of characteristic p and X ap r o p e r
+smooth curve over k of genus g with p> 2(g − 1). Denote by F : X →
+X(1) the relative Frobenius morphism. Let E be an indecomposable vector
+bundle on X of rank 2 and degree 0. If E admits a rank one subbundle of
+positive degree, then it follows from the deﬁnition of semistability that E is not
+semistable. On the other hand, since E is indecomposable, a computation of
+suitable Ext1 groups via Serre duality shows that the degree of any rank one
+subbundle of E is at most g − 1. We shall say that E is maximally unstable if
+E admits a rank one subbundle of degree g − 1(> 0). Let us denote by B the
+set of isomorphism classes of rank 2 semistable bundles V on X(1) such that
+det(V) ∼= OX,a n dF ∗V is indecomposable and maximally unstable. Then it is
+well-known (cf., e.g., [32],§4, p. 110, Proposition 4.2) that there is a natural 22g-
+to-1 correspondence between B and the set of isomorphism classes of dormant
+indigenous bundles on X/k. Thus, Corollary 5.4 of the present paper enables
+us to calculate the cardinality of B, i.e., to conclude that
+♯B =2 · pg− 1 ·
+p− 1∑
+θ=1
+1
+sin2g− 2(π·θ
+p ).
+I nt h ec a s ew h e r eg = 2, this result is consistent with the result obtained in [25],
+Introduction, p. 180, Theorem 2.
+6.2. F. Liu and B. Osserman have shown (cf. [22], §2, p. 127, Theorem 2.1)
+that the value degMg,Fp
+(M
+Zzz...
+g,Fp ) may be expressed as a polynomial with respect
+to the characteristic p of degree 3g − 3 (e.g., deg M2,Fp
+(M
+Zzz...
+2,Fp )= 1
+24 · (p3 − p),
+as referred to in Introduction). In fact, this result may also be obtained as a
+consequence of Corollary 5.4. This may not be apparent at ﬁrst glance, but
+
+THE GENERIC NUMBER OF DORMANT INDIGENOUS BUNDLES 23
+nevertheless may be veriﬁed by applying either of the following two diﬀerent
+(but, closely related) arguments.
+(1) Let C be a connected compact Riemann surface of genusg> 1. Then it
+is known that the moduli space of S-equivalence classes (cf. [13], §1.5,
+p. 24, Deﬁnition 1.5.3) of rank 2 semistable bundles on C with trivial
+determinant
+ssN 2,O
+C
+may be represented by a projective algebraic variety of dimension 3g − 3
+(cf. [34], §8, p. 333, Theorem 8.1; [2], §1, p. 18; [31], Introduction), and
+that Pic(ssN 2,O
+C ) ∼= Z · [L] for a certain ample line bundle L (cf. [5], § 0,
+p. 55, Theorem B; [2], § 2, p. 19, Theorem 1; [2], p. 21, the discussion
+at the beginning of § 4). The Verlinde formula, introduced in [37] and
+proved, e.g., in [6],§4, p. 367, Theorem 4.2, implies that, fork =0 , 1, ··· ,
+we have an equality
+dimC(H0(ssN 2,O
+C , L⊗k)) = (k +2 )g− 1
+2g− 1 ·
+k+1∑
+θ=1
+1
+sin2g− 2( π·θ
+k+2)
+(cf. [2], §5, p. 24, Corollary). Thus, for suﬃciently largek, the value atk
+of the Hilbert polynomial HilbL(t) ∈ Q[t]o f L coincides with the RHS of
+the above equality. On the other hand, it follows from Corollary 5.4 that
+for an odd primep, the value atk = p−2 of this RHS divided by 2
+g coin-
+cides with the value degMg,Fp
+(M
+Zzz...
+g,Fp ). Thus, the value degMg,Fp
+(M
+Zzz...
+g,Fp )
+(for suﬃciently large p) may be expressed as HilbL(p − 2) for a suitable
+polynomial HilbL(t) ∈ Q[t]o fd e g r e e3g − 3 (= dim( ssN 2,O
+C )) .
+(2) By comparison to the discussion of (1), the approach of the following
+discussion yields a more concrete expression for degMg,Fp
+(M
+Zzz...
+g,Fp ). For a
+pair of positive integers (n, k), we set
+V (n, k): =
+k− 1∑
+θ=1
+1
+sin2n(π·θ
+k ).
+Then it follows from [38], p. 449, Theorem 1 (i), (ii); [38], p. 449, the
+proof of Theorem 1 (iii), that
+V (n, k)= −Resx=0
+[k · cot(kx)
+sin2n(x) dx
+]
+,
+where Resx=0(f) denotes the residue of f at x =0 . T h u s ,V (n, k)
+may be computed by considering the relation 1
+sin2(x) =1+c o t 2(x)a n d
+the coeﬃcient of the Laurent expansion (cf. [38], p. 449, the proof of
+Theorem 1 (iii))
+cot(x)= 1
+x +
+∞∑
+j=1
+(−1)j22jB2j
+(2j)! x2j− 1
+
+24 YASUHIRO WAKABAYASHI
+where B2j denotes the (2j)-th Bernoulli number, i.e.,
+w
+ew − 1 =1 − w
+2 +
+∞∑
+j=1
+B2j
+(2j)!w2j.
+In particular, it follows from an explicit computation that V (n, k)m a y
+be expressed as a polynomial of degree 2n with respect to k.T h u s ,t h e
+value degMg,Fp
+(M
+Zzz...
+g,Fp )( = pg− 1
+22g− 1 · V (g − 1,p ) by Corollary 5.4) may be
+expressed as a polynomial with respect top of degree 2(g − 1)+( g − 1) =
+3g − 3. Moreover, by applying the above discussion to our calculations,
+we obtain the following explicit expressions for the polynomials under
+consideration:
+deg
+M2,Fp
+(M
+Zzz...
+2,Fp )= 1
+24 · (p3 − p),
+degM3,Fp
+(M
+Zzz...
+3,Fp )= 1
+1440 · (p6 +1 0p4 − 11p2),
+degM4,Fp
+(M
+Zzz...
+4,Fp )= 1
+120960 · (2p9 +2 1p7 + 168p5 − 191p3),
+degM5,Fp
+(M
+Zzz...
+5,Fp )= 1
+7257600 · (3p12 +4 0p10 + 294p8 + 2160p6 − 2497p4),
+degM6,Fp
+(M
+Zzz...
+6,Fp )= 1
+2048 ·
+( 2
+93555p15 + 1
+2835p13 + 26
+8505p11 + 164
+8505p9
++ 128
+945p7 − 14797
+93555p5
+)
+,
+degM7,Fp
+(M
+Zzz...
+7,Fp )= 1
+8192 ·
+( 1382
+638512875p18 + 4
+93555p16 + 31
+70875p14
++ 556
+178605p12 + 3832
+212625p10 + 256
+2079p8 − 92427157
+638512875p6
+)
+degM8,Fp
+(M
+Zzz...
+8,Fp )= 1
+32768p7 ·
+( 4
+18243225p14 + 1382
+273648375p12 + 4
+66825p10
++ 311
+637875p8 + 1184
+382725p6 + 1888
+111375p4 + 1024
+9009p2
+− 36740617
+273648375
+)
+degM9,Fp
+(M
+Zzz...
+9,Fp )= 1
+131072p8 ·
+( 3617
+162820783125p16 + 32
+54729675p14
++ 226648
+28733079375p12 + 2144
+29469825p10 + 4946
+9568125p8
++ 268864
+88409475p6 + 17067584
+1064188125p4 + 2048
+19305p2
+− 61430943169
+488462349375
+)
+
+THE GENERIC NUMBER OF DORMANT INDIGENOUS BUNDLES 25
+degM10,Fp
+(M
+Zzz...
+10,Fp )= 1
+524288p9 ·
+( 87734
+38979295480125p18 + 3617
+54273594375p16
++ 92
+91216125p14 + 2092348
+201131555625p12 + 4042
+49116375p10
++ 18716
+35083125p8 + 119654944
+40226311125p6 + 16229632
+1064188125p4
++ 32768
+328185p2 − 23133945892303
+194896477400625
+)
+.
+References
+[1] A. Bertram, Quantum Schubert calculus. Adv. Math. 128 (1997), pp. 289-305.
+[2] A. Beauville, Vector bundles on curves and generalized theta functions: recent results
+a n do p e np r o b l e m s .Current topics in complex algebraic geometry, Math. Sci. Res. Inst.
+Publ. 28 (1995), pp. 17-33.
+[3] P. Deligne, D. Mumford, The irreducibility of the space of curves of given genus. Publ.
+Math. I.H.E.S. 36 (1969), pp. 75-110.
+[4] M. Demazure, A. Grothendieck, Sch´ema en Groupes. Lecture Notes in Mathematics 151
+Springer (1970).
+[5] J. M. Drezet, M. S. Narashimhan, Groupe de Picard des vari´ et´e de modules de ﬁbr´es
+semistables sur les courbes alg´ebriques. Invent. Math. 97 (1989), pp. 53-94.
+[6] G. Faltings, A proof for the Verlinde formula. J. Algebraic Geom. 3 (1994), pp. 347-374.
+[7] E. Frenkel, Langlands Correspondence for Loop Groups. Cambridge Studies in Advanced
+Mathematics 103 Cambridge Univ. Press (2007).
+[8] B. Fantechi, L. G¨uttsche, L. Illusie, S. Kleiman, N. Nitsure, A. Vistoli, Angelo, Funda-
+mental algebraic geometry. Grothendieck’s FGA explained. . Mathematical Surveys and
+Monographs, 123 AMS (2005).
+[9] R. C. Gunning, Lectures on Riemann surfaces. Princeton Mathematical Notes 2 Prince-
+ton University Press, Princeton, NJ, (1966).
+[10] R. C. Gunning, Special coordinate covering of Riemann surfaces.Math. Ann. 170 (1967),
+pp. 67-86.
+[11] A. Hirschowitz, Probl´emes de Brill-Noether en rang sup´erieur. C. R. Math. Acad. Sci.
+Paris, 338 (2004), pp. 869-879.
+[12] Y. Holla, Counting maximal subbundles via Gromov-Witten invariants.Math. Ann. 328
+(2004), pp. 121-133.
+[13] D. Huybrechts, M. Lehn, The geometry of moduli spaces of sheaves, Second edition ,
+Cambridge Mathematical Library . Cambridge University Press (2010).
+[14] Y. Ihara, Schwarzian equations. Jour. Fac. Sci. Univ. Tokyo Sect IA Math. 21 (1974),
+pp. 97-118.
+[15] Y. Ihara, On the diﬀerentials associated to congruence relations and the Schwarzian
+equations deﬁning uniformizations. Jour. Fac. Sci. Univ. Tokyo Sect IA Math.21 (1974),
+pp. 309-332.
+[16] K. Intriligator, Fusion residues. Modern Physics Letters A 6 (1991), pp. 3543-3556.
+[17] T. J. Jarvis, The Picard group of the moduli of higher spin curves. New York J. Math.
+7 (2001), pp. 23-47
+[18] Kirti Joshi, C. Pauly, Hitchin-Mochizuki morphism, opers and Frobenius-destabilized
+vector bundles over curves. math. AG/0912.3602 (2009).
+[19] Kirti Joshi, S. Ramanan, E. Z. Xia, and J. K. Yu, On vector bundles destabilized by
+Frobenius pull-back. Composito Mathematica 142 (2006), pp. 616-630.
+[20] R. K¨allstr¨om, Smooth modules over Lie algebroids I. math. AG/9808108 (1998).
+[21] N. M. Katz, Nilpotent connections and the monodromy theorem: Applications of a result
+of Turrittin. Inst. Hautes Etudes Sci. Publ. Math. 39 (1970), pp. 175-232.
+
+26 YASUHIRO WAKABAYASHI
+[22] F. Liu, B. Osserman, Mochizuki’s indigenous bundles and Ehrhart polynomials. J. Alge-
+braic Combin. 26 (2006), pp. 125-136.
+[23] H. Lange, P. Newstead, Maximal subbundles and Gromov-Witten invariants. A Tribute
+to C. S. Seshadri , Trend Math. Birkh¨auser, Basel (2003), pp. 310-322.
+[24] H. Lange, C. Pauly, The action of the Frobenius map on rank 2 vector bundles in char-
+acteristic 2. J. Algebraic Geom. 11 (2002), pp. 219-243.
+[25] H. Lange, C. Pauly, On Frobenius-destabilized rank-2 vector bundles over curves. Com-
+ment. Math. Helv. 83 (2008), pp. 179-209.
+[26] H. Matsumura, Commutative Algebra. 2nd edn, Benjamin, New York, (1980).
+[27] W. Messing, The Crystals Associated to Barsotti-Tate Groups . Lecture Notes in Mathe-
+matics 151 Springer (1970).
+[28] J. Milne, Abelian Varieties. Arithmetic Geometry, Springer, New York, (1986), pp. 103-
+150.
+[29] S. Mochizuki, A theory of ordinary p-adic curves. Publ. RIMS 32 (1996), pp. 957-1151.
+[30] S. Mochizuki, Foundations of p-adic Teichm¨uller theory. American Mathematical Society,
+(1999).
+[31] M. S. Narasimhan, S. Ramanan, Moduli space of vector bundles on a compact Riemann
+surface. Ann. of Math. 89 (1969), pp. 14-51.
+[32] B. Osserman, Mochizuki’s crys-stable bundles: A lexicon and applications. Publ. Res.
+Inst. Math. Sci. 43 (2007), pp. 95-119.
+[33] B. Osserman, Frobenius-unstable bundles and p-curvature. Transactions of the Amer.
+Math. Soc. 360 (2008), pp. 273-305.
+[34] C. S. Seshadri, Space of unitary vector bundles on a Riemann surface. Ann. of Math. 85
+(1967), pp. 303-336.
+[35] X. Sun, Direct images of bundles under Frobenius morphism. Invent. Math. 173 (2008),
+pp. 427-447.
+[36] A. Szenes, The combinatorics of the verlinde formula.London Math. Society Lecture Note
+Series 208 (1995), pp. 241-253.
+[37] E. Verlinde, Fusion rules and modular transformation in 2 d conformal ﬁeld theory. Nu-
+clear Phys. B 300 (1988), pp. 360-376.
+[38] D. Zagier, Elementary aspects of the Verlinde formula and of the Harder-Narasimhan-
+Atiyah-Bott formula. Israel Math. Conf. Proc. 9 (1996), pp. 445-462.

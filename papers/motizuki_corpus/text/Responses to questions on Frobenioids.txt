@@ -1,0 +1,434 @@
+RESPONSES TO QUESTIONS ON FROBENIOIDS
+Shinichi Mochizuki
+December 2015
+The Geometry of Frobenioids I: The General Theory ([FrdI])
+Question 1: Deﬁnition 1.2, (i): Since the validity of the condition that two arrows
+be “metrically equivalent” depends solely on the images via “Div” of the two ar-
+rows, might it not be better to call such arrows “Div-equivalent” and then, to avoid
+confusion, to use the term “Φ-equivalent” for arrows that, in the current terminol-
+ogy, are called “Div-equivalent”?
+Response 1:
+First of all, the terminology “Φ-equivalent” is not very good since it depends on
+the notation “Φ” for aspeciﬁcmonoid on a base category. The sense underlying
+the terminology“base-equivalent”/“Div-equivalent”is the idea that the pair of mor-
+phisms induce thesame morphism on the base object/collection of divisors of the
+base object. That is to say, these two terms (i.e., base-/Div-equivalent) are most
+naturally regarded as being “parallel”. Thus, the term“divisor-equivalent”would
+be one reasonable alternative to “Div-equivalent”. By contrast, the sense underly-
+ing the terminology“metrically equivalent”/“isometric”is that it corresponds, in
+the case of Frobenioids that arise frommetrized line bundles, to the idea that the
+morphism(s) involved induce(s) thesame/no discrepancy in metrics. That is to
+say, from the point of view of maintaining the close relationship to the term“iso-
+metric”, it does not seem to me that it would be desirable to replace “metrically
+equivalent” by “Div-equivalent”.
+Question 2: Deﬁnition 1.2, (ii): Are there any other equivalent deﬁnitions of the
+notion of a pull-back morphism?
+Response 2:
+I am not aware of any natural equivalent deﬁnitions. It seems that the deﬁni-
+tion given is suﬃciently natural, relative to the way in which the term “pull-back
+morphism” is typically applied in arithmetic geometry.
+Question 3: Deﬁnition 1.2, (iii): Is it true that, if one restricts one’s attention to
+the portion of the theory of Frobenioids that is used in the IUTeich papers, then
+the only Frobenioids in which there exist morphisms that are not co-angular are
+the archimedean Frobenioids?
+Response 3:
+Yes. Indeed, the only Frobenioids that are used in the IUTeich papers are the
+following:
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI
+(F1) tempered Frobenioids, i.e., a generalization developed in [EtTh],§3, §4,
+§5, of the geometric example given in [FrdI], Example 6.1, to the case of
+the tempered coveringsthat arise in the theory of the theta function;
+(F2) Frobenioidsassociated to number ﬁeldsas in [FrdI], Example 6.3 (cf.,
+e.g., [IUTchIII], Example 3.6), together with therealiﬁcationsassociated
+to (certain of) such Frobenioids;
+(F3) certain special cases of thep-adic Frobenioidsdiscussed in [FrdII], Ex-
+ample 1.1 (cf., e.g., the Frobenioids “Cv”, “C⊢
+v ”c o n s i d e r e di n[ I U T c h I ] ,
+Example 3.3, (i), which also appear in R11 and R13 — i.e., the responses
+to questions Q11 and Q13 — below), together with various related Frobe-
+nioids obtained by forming associated realiﬁcationsor by forming the
+quotient “O×μ = O×/Oμ” of the units “O×” by the torsion subgroup
+“Oμ ⊆O×”;
+(F4) copies of the archimedean Frobenioiddiscussed in [FrdII], Example 3.3,
+(ii) (i.e., the Frobenioid denoted “C”).
+Here, we note that (F3) and (F4) areinessential since a Frobenioid as in (F3)
+essentially amounts to (i.e., may be replaced by) a suitable topological monoid with
+a continuous action by a topological group, while a Frobenioid as in (F4) essentially
+amounts to a copy of the topological monoidO⊿
+C (i.e., the multiplicative topological
+monoid of nonzero complex numbers of absolute value≤1). In this context, it
+should, however, be pointed out that, in fact, (F3) is a bit“less inessential”than
+(F4) since (F3) occurs in the theory of (F1). At any rate, from the point of view
+of studying IUTeich,
+(I1) in [FrdI], one may assume that all Frobenioids aremodel Frobenioids(cf.
+[FrdI], Theorem 5.2, (ii)), which implies, in particular, that every object
+of a Frobenioid isisotropic, and that every morphism of a Frobenioid is
+co-angular;
+(I2) one may in factignore [FrdII], §3, §4, §5.
+Here, we note that (I1) results in asubstantial simpliﬁcationof the theory of [FrdI].
+Question 4: Deﬁnition 1.2 and the Chart of Types of Morphisms in a Frobenioid at
+the end of [FrdI]: The deﬁnitions of many types of morphisms concern properties of
+1) the projection to the base category, 2) the zero divisor image, 3) the Frobenius
+degree. Might it not be easier to keep track of the terms (and, moreover, allow
+one to simplify the Chart of Types of Morphisms) if one instead refers to linear
+morphisms as 3-morphisms, to isometries as 2-morphisms, to base-isomorphisms
+as 1-morphisms, to pre-steps as 13-morphisms, to morphisms of Frobenius type
+(in light of later results) as co-angular 12-morphisms, to pull-back morphisms (in
+light of later results) as co-angular 23-morphisms, and to isometric pre-steps as
+123-morphisms? Then co-angular 123-morphisms are isomorphisms, etc.
+Response 4
+:
+The point of the naming conventions introduced in Deﬁnition 1.2 was precisely
+to give “combinatorial”,o r “mechanical”(i.e., involving “1”, “2”, and “3”) char-
+acterizations of various types of morphisms that typically appear in arithmetic
+geometry. That is to say, the terminology was chosen so as tosuggest well-known
+
+RESPONSES TO QUESTIONS ON FROBENIOIDS 3
+situations familiar from conventional arithmetic geometry. The content of the def-
+initions of this terminology was then intended to be a sort oftranslation of termi-
+nology that was close to familiar wording in conventional arithmetic geometryinto
+combinatorial/mechanical/“123”-type language. If, however, you have a proposal
+for a slightly diﬀerent sort of table involving “123”, then you are certainly welcome
+to construct such a table.
+Question 5: Deﬁnition 1.3 contains 7 parts, some of which consist of subparts.
+Might it be possible, if one restricts one’s attention to the applications to IUTeich,
+to reduce the number of deﬁning properties?
+Response 5:
+In light of (I1) of R3, properties (iii), (a), (b); (v); and (vii) of Deﬁnition 1.3 may
+be omitted.
+Question 6: Remark 3.1.2: “the image of 1∈Z≥0”: Does this expression in fact
+refer to “the image of (1,1) ∈F”?
+Response 6:
+Yes. I believe that the intended meaning is clear from the context, but this issue is
+addressed in the newly released version of the Comments for [FrdI].
+Question 7: Theorem 5.2, (i), (b): Should “to as the projection toD to φ”b e
+replaced by “to as the projection toD of φ?
+Response 7:
+Thank you. This is indeed a misprint which is corrected in the newly released
+version of the Comments for [FrdI].
+Question 8: I have not read the IUTeich papers yet. I wonder if there are Theorems
+and Propositions of [FrdI] whose statements hold by obvious reasons for all the
+Frobenioids that appear in the papers on IUTeich (and which therefore may be
+omitted in one’s preparation for studying the IUTeich papers)?
+Response 8:
+As discussed in R3, once oneassumes (I1), the entire theory of [FrdI] becomemuch
+easier. One approach (cf. R3) to presenting the theory of Frobenioids to people
+whose main interest is to prepare for studying the IUTeich papers might be
+(A1) to start by discussing thefundamental exampleof [FrdI], Deﬁnition 1.1,
+(iii);
+(A2) then proceed to discussing the explicit construction ofmodel Frobenioids
+as in [FrdI], Theorem 5.2 (cf. also Proposition T in R23 below);
+(A3) explainhow, byspecifyingappropriate divisor monoidsandrational func-
+tion monoids, one may obtain [FrdI], Examples 6.1, 6.3; [FrdII], Example
+1.1, as special cases of the notion of amodel Frobenioid;
+(A4) then proceed to discussing the [FrdI], Corollary 4.11 (which, in fact,
+may, from the point of view of studying IUTeich, simply beaccepted on
+faith!), in the case of model Frobenioids, explaining a few of the main,
+representative ideas of the proofs (such as [FrdI], Remark 3.1.2).
+In this context, I should perhaps mention that, other than [FrdI], Corollary 4.11,
+perhaps the most important property of the theory of Frobenioids that is used in
+[EtTh], §3, §4, §5 (and hence also in IUTeich) is [FrdI], Proposition 5.6.
+
+4 SHINICHI MOCHIZUKI
+Question 9: Remark 6.3.1: How much is known about the use of Frobenioids to
+studyarithmeticlinebundlesonregularpropermodelsofcurvesovernumberﬁelds?
+Should one look at Frobenioids whose base category is a Frobenioid? Or should
+one perhaps develop a theory of two-dimensional Frobenioids, where the monoid of
+positive integers is replaced by the monoid of positive elements ofZ× Z equipped
+with the lexicographical ordering?
+Response 9:
+Note that in Example 6.1, there isno restrictionon thedimension of the varietyV.
+In particular, the nontriviality of extending Example 6.3 to the case of arithmetic
+line bundles on (two-dimensional) regular proper models of curves over number
+ﬁelds doesnot lie in thetwo-dimensionality of such models. In particular, there is
+no issueof being having to contend with “two-dimensional Frobenioids” or monoids
+more complicated than N that arise from lexicographic orderings. Rather, the
+nontriviality (i.e., the “complications” referred to in Remark 6.3.1) of extending
+Example 6.3 as discussed in Remark 6.3.1 lies in the issue of how to represent,
+in a category-theoretic fashion, the notion of anarbitrary (say, C∞-class) metric
+on the archimedean localization of an arithmetic line bundle. I have not thought
+about this issue in much detail, but it appears to involve various nontrivial technical
+complications. Ontheotherhand, anotherpossibilityforfurtherdevelopmentofthe
+theory of Frobenioids that is not particularly related to archimedean localizations,
+but is related to more complicated monoids is the following:
+One could try to construct some sort of more general type of Frobenioid
+that corresponds to the“tautological system of monoids corresponding to
+valuations on Berkovich spaces”.
+That is to say, since each point of a Berkovich space corresponds to a valuation,
+each such point has a natural monoid (i.e., the monoid determined by the valua-
+tion) attached to it. One could then try to consider the abstract topological space
+(i.e., determined by a Berkovich space) equipped with this tautological system of
+monoids, construct some sort of associated category (i.e., in the spirit of the notion
+of a Frobenioid), and then see to what extent various properties of this category
+can be reconstructedcategory-theoretically, i.e., without using, for instance, some
+given p-adic scheme that gave rise to the Berkovich space.
+
+RESPONSES TO QUESTIONS ON FROBENIOIDS 5
+The Geometry of Frobenioids II: Poly-Frobenioids ([FrdII])
+Question 10: Example 1.1, (i): The object ΦZ
+0 is not deﬁned in [FrdII]. As a result,
+in the ﬁrst displayed line of (ii), ΦΛ
+0 is not deﬁned for the type Λ =Z, i.e., there is
+no explicitly stated restriction there to the eﬀect that Λ̸= Z.
+Response 10:
+Thankyou. Thisisindeedaslightoversightintheuseofnotationwhichisaddressed
+in the newly released version of the Comments for [FrdII].
+Question 11: Example 1.1, (ii): In the third line of this example, is it assumed that
+the output monoprime monoids of Φ are of type Λ?
+Response 11:
+No, this is certainly not assumed. For instance, in the case of thep-adic Frobenioid
+“Cv” considered in [IUTchI], Example 3.3, (i), the output monoprime monoids of
+Φa r eo ft y p eQ ̸=Λ= Z.
+Question 12: Example 1.1, (ii): What is Φ(K)? Probably “K”i su s e da sas h o r t -
+hand for “Spec(K)”, an object ofD0, but even then Φ is a functor deﬁned onD,
+not onD0.
+Response 12:
+Thank you. This is indeed a misprint which is corrected in the newly released
+version of the Comments for [FrdII].
+Question 13: Example 1.1, (ii): I do not understand the meaning of “absolutely
+primitive” and “ﬁeldwise saturated”. (Here, I took into account the correction in
+the Comments for [FrdII], replacing Φ(K)b yΦ (K)gp in the deﬁnition of “ﬁeldwise
+saturated”.) The current deﬁnitions appear to imply the following conclusions: if
+Λ= Z (resp. Q, resp. R), then Φ is absolutely primitive iﬀ the output monoprime
+m o n o i d so fΦa r eo ft y p eZ (resp. Z or Q, resp. Z or Q or R); Φ is always ﬁeldwise
+saturated. Is this what was intended?
+Response 13:
+First of all, it is true that Φ isalways absolutely primitive if Λ =R. Also, you
+are correct in asserting that, when Λ =Q,Φi s absolutely primitive if and only
+if the output monoprime monoids of Φ are of type≤Λ= Q (i.e., relative to the
+ordering on{Z, Q, R} induced by the relation of inclusion). In particular,the notion
+of being absolutely primitive is only interesting whenΛ= Z. On the other hand,
+I was entirely unable to understand the remaining cases of your assertion. Write
+ord(p) ∈ord(Q×
+p ) for the element determined byp ∈Qp.L e tn ∈N≥1. Consider
+t h ec a s ew h e r eD = D0, and Φ is given by the assignment
+Spec(K) ↦→ 1
+n · N·ord(p)
+(for Spec(K) ∈Ob(D0)). (Thus, the output monoprime monoids of Φ are of type
+Z.) Then Φ isnot ﬁeldwise saturated for anyn ∈N≥1. (Indeed, if the ramiﬁcation
+index eK of K over Qp does not divide n,t h e no r d (K×)= 1
+eK
+· Z · ord(p) ̸⊆
+1
+n · Z·ord(p) = Φ(Spec(K))gp.) Moreover, when Λ =Z, it holds that Φ isabsolutely
+primitive if and only ifn = 1. (Indeed, Φ(Spec(K)) =1
+n · N·ord(p) ⊆Z·ord(p)=
+Λ·ord(Q×
+p ) if and only ifn = 1.) Finally, I should perhaps mention that this sort
+of Φ (for Λ =Z) in the casen = 1 appears in the case of thep-adic Frobenioid
+“C⊢
+v ” considered in [IUTchI], Example 3.3, (i).
+
+6 SHINICHI MOCHIZUKI
+Question 14: Remark 1.2.2, the last sentence: If one works with id`eles, it is not
+unnatural to consider situations wherep is mapped top times a unit.
+Response 14:
+Your assertion does not appear to contradict the assertion that the situation consid-
+ered in Remark 1.2.2 “never arises in conventional scheme theory”. That is to say,
+“conventional scheme theory” refers to the situation where one only considers mor-
+phisms of schemes, i.e., (when the schemes involved areaﬃne, such as Spec(Qp))
+ring homomorphisms. T h ep o i n th e r ei st h a ti ti snever the case (at least when
+u ̸=1 )t h a ta na s s i g n m e n tQ×
+p ∋ p ↦→ p·u ∈Q×
+p of the sort considered here arises
+from aring homomorphism Qp → Qp.
+Question 15: Example 1.3, (i): What isBtemp(Π)Π/Π0, i.e., what is the role of the
+subindex Π/Π0?
+Response 15:
+This is a special case of the notational convention “CA” (i.e., whereA is an object
+of the categoryC) discussed at the beginning of the discussion of “Categories” in
+[FrdI], §0.
+Question 16: Deﬁnition 2.2, (i), and Example 2.2, (ii), (b), “AD is Galois”: What
+is the deﬁnition of a Galois object? I was unable to ﬁnd the deﬁnition of a Galois
+object in [FrdI], [FrdII].
+Response 16:
+Here, the category “D” under consideration is, as discussed in Example 1.3, (i), a
+subcategory of a category (i.e.,“temperoid”) of the sort discussed in [SemiAnbd],§3
+(cf. [SemiAnbd], Deﬁnition 3.1, (ii)). The term “Galois” is deﬁned in [SemiAnbd],
+Deﬁnition 3.1, (iv).
+Question 17: Deﬁnition 2.2, (i):H is a normal open subgroup ofG, and, in par-
+ticular, it is possible that H = G. Why then is the homomorphism G → GA
+determined up to composition with an inner automorphism, whileH → HA is only
+well-deﬁned up to composition with conjugation by an element ofG?
+Response 17:
+The arrowH ↠ HA of the third display of Deﬁnition 2.2, (i), is determined pre-
+cisely by restricting the arrow G ↠ GA of the second display of Deﬁnition 2.2,
+(i). Thus, theG-conjugacy indeterminacies of the latter arrowG ↠ GA necessar-
+ily induce G-conjugacy indeterminacies on the former arrowH ↠ HA.T h e r e i s
+no reason to expect that these indeterminacies may be “reduced” toH-conjugacy
+indeterminacies.
+Question 18: Deﬁnition 2.2, (ii): I could not ﬁnd any explicit deﬁnition of the ac-
+tion ofH on μN(A). Does it act via the homomorphismH → HA?
+Response 18:
+Yes. My understanding was that this is implicit in the phrasing “the natural sur-
+jective homomorphismH ↠ HA induces isomorphisms” that immediately precedes
+the ﬁrst display of Deﬁnition 2.2, (ii).
+Question 19: Deﬁnition 2.2, (iii): The wording here seems to imply that the notions
+of “ﬁeldwise saturated” and “absolutely primitive” are complementary to one other.
+As I wrote in Q13, I was unable to understand the deﬁnitions of these terms.
+
+RESPONSES TO QUESTIONS ON FROBENIOIDS 7
+Response 19:
+Theassertionthat(inthesituationunderconsideration)ifΦisabsolutelyprimitive,
+then it is not ﬁeldwise saturated follows immediately from an argument of the sort
+discussed in R13: that is to say, it suﬃces to consider the case whereeK ̸=1 ,s o
+ord(K×)= 1
+eK
+· Z·ord(p) ̸⊆Φ(Spec(K))gp ⊆Z·ord(p)=Λ ·ord(Q×
+p ).
+Question 20: Beginning of the proof of Theorem 2.4, the second sentence: could
+you provide a veriﬁcation of this fact?
+Response 20:
+This fact follows immediately from the deﬁnitions (cf. the arguments used in R13
+and R19).
+Question 21: Deﬁnition 3.1, (v): Should AutFA(B) be replaced by AutFA(B → A)?
+Response 21:
+This is not a misprint, but instead reﬂects my understanding that in this context
+(i.e., where one considers “B” as an object of “FA”), the “object ofFA” denoted by
+“B” is precisely the object determined by the arrowB → A under consideration.
+Nevertheless, this issue is addressed in the newly released version of the Comments
+for [FrdII].
+Question 22: Example 3.3: Is the categoryC0 equivalent to some model Frobenioid?
+Response 22:
+No. It is clear from the discussion of Example 3.3, (i), (ii) (cf. also Deﬁnition 3.1,
+(iii)) thatC0 contains non-isotropic objects. Thus, the fact thatC0 is not equivalent
+to a model Frobenioid follows formally from the fact (cf. Theorem 5.2, (ii)) that a
+model Frobenioid is necessarily ofisotropic type.
+
+8 SHINICHI MOCHIZUKI
+Both [FrdI] and [FrdII]:
+Question 23: [FrdI], Examples 6.1 and 6.3, “one veriﬁes immediately that a mor-
+phism L→M ... may be thought of as consisting ...”, and [FrdII], Example 1.1,
+“we observe in passing that an object ofC0 lying over Spec(K) may be thought of
+as a metrized line bundle on Spec(K) ...”: It seems that both are special cases of a
+general property of model Frobenioids that allows one to think of the objects of a
+model Frobenioid as metrized line bundles. If this is the case, then it seems that it
+would be preferable to provide, for ease of reference, an explicit statement of such
+a general property and its proof.
+Response 23:
+Both instances of this pattern are immediate from the deﬁnitions and simply
+amount to the well-known observation that a (metrized) line bundle may be under-
+stood as a rational equivalence class of divisors. It does not appear to be feasible to
+formulate this sort of pattern as a “general property” of Frobenioids since, in gen-
+eral, only the “rational equivalence class of divisors”aspect appears in the general
+theory of Frobenioids. That is to say, the“(metrized) line bundle”aspect doesnot
+appear in the general theory of Frobenioids; it only appears in speciﬁc situations
+where oneconstructs a Frobenioid as a suitably deﬁned category of (metrized) line
+bundles on a(n) (arithmetic) scheme. In particular, since it appears diﬃcult to for-
+mulate such constructions from scheme theory in any sort of generality, it does not
+appear realistic (at least relative to the theory of Frobenioids in its present form)
+to expect a formulation of a “general property” of the sort that you appear to have
+in mind. I suppose, however, that onetautologicalapproach (i.e., as in [IUTchIII],
+Example 3.6, (i)) to making the construction of [FrdI], Theorem 5.2, (i), look more
+like a category of (metrized) line bundles is the following result (whose proof is
+immediate from the deﬁnitions):
+Proposition T. (T autological Torsor-theoretic Approach to Model Frobe-
+nioids) Let D, Φ, B, DivB : B → Φgp,a n dC be as in [FrdI], Theorem 5.2. Write
+Ctor for the category deﬁned as follows:
+· An object of Ctor is a triple
+(AD,TA,τA)
+where AD ∈Ob(D); TA is a B(AD)-torsor; τA is a trivialization of the
+Φ(AD)gp-torsor obtained fromTA by executing the “change of structure
+group” operation determined by the homomorphismDivB(AD): B(AD) →
+Φ(AD)gp.T h u s ,f o ra n yd ∈Z, we obtain an object
+(AD,T ⊗d
+A ,τ⊗d
+A )
+by executing the “change of structure group” operation determined by the
+homomorphism B(AD) → B(AD) given by multiplication byd.
+· a morphism of Ctor
+φ: A
+def
+=( AD,TA,τA) → B
+def
+=( BD,TB,τB)
+is a collection of data as follows: (a) an elementd ∈N≥1; (b) a morphism
+Base(φ): AD → BD, which determines [i.e., by executing the “change of
+
+RESPONSES TO QUESTIONS ON FROBENIOIDS 9
+structure group” operations determined by the homomorphismsB(BD) →
+B(AD), Φ(BD)gp → Φ(AD)gp] an objectφ∗B =( AD,φ∗TB,φ∗τB);( c )a n
+isomorphism of B(AD)-torsors
+T⊗d
+A
+∼
+→ φ∗TB
+that maps the trivializationτ⊗d
+A to an element in theΦ(AD)-orbit of the
+trivialization φ∗τB. Composites of morphisms are deﬁned in the evident
+fashion.
+Then there is anatural equivalence of categories
+C
+∼
+→C tor
+deﬁned as follows: An object(AD,α) of C [cf. [FrdI], Theorem 5.2, (i)] is mapped
+to the object(AD,TA,τA) of Ctor,w h e r eTA is the trivial B(AD)-torsor, and τA is
+the trivialization ofTA obtained by shifting the tautological trivialization ofTA by
+the element −α∈Φ(AD)gp. A morphism (AD,α) → (BD,β) of C determined by
+data as in [FrdI], Theorem 5.2, (i), (a), (b), (c), (d), is mapped to the morphism
+(AD,TA,τA) → (BD,TB,τB) of Ctor for which the data (a), (b) [as in the deﬁnition
+of Ctor] is determined [in the evident way] by the data of [FrdI], Theorem 5.2,
+(i), (a), (b), and the data (c) [as in the deﬁnition ofCtor] is the isomorphism of
+trivial B(AD)-torsors T⊗d
+A
+∼
+→ φ∗TB determined by multiplication by the element
+uφ∈B(AD) of [FrdI], Theorem 5.2, (i), (d).
+Question 24: In view of Q23, might it not be possible to replace the current deﬁni-
+tionof a model Frobenioid bysome sortof alternativedeﬁnition whichuses metrized
+line bundles or some variant of metrized line bundles as in [FrdII], Example 3.3,
+and would then include both this example and the examples referred to in Q23
+as special cases? One could then discuss the relationship between this alternative
+deﬁnition and the current deﬁnition of a model Frobenioid.
+Response 24:
+As discussed in R22, the category C0 of [FrdII], Example 3.3, is not equivalent
+to a model Frobenioid. In fact, the original deﬁnitionof a Frobenioid given in
+[FrdI], Deﬁnition 1.3, was intended/arrived atprecisely as an approachto giving a
+uniﬁed treatmentof the examples that you refer to (i.e., [FrdI], Examples 6.1 and
+6.3; [FrdII], Examples 1.1 and 3.3), together with thetempered Frobenioidstreated
+in [EtTh]. The price of insisting on such a uniﬁed approach may be seen in the
+numerous technicalitiesthat appear in the theory of [FrdI], [FrdII], e.g., involving
+objects that are not necessarily isotropicand morphisms that arenot necessarily
+co-angular. I do not know at the present time of another approach to obtaining such
+a uniﬁed formulation. (It would be interesting, however, if you are able to ﬁnd an
+alternative approach to obtaining such a uniﬁed formulation.) I suppose that, from
+the point of view of using model Frobenioids, perhaps the closest kind of mathemat-
+ical object that appears in [FrdI], [FrdII] to the sort of alternative version of a model
+Frobenioid that you seem to have in mind may be seen in thepoly-Frobenioidsof
+[FrdII],§5, i.e., in the case where one takes theglobaland nonarchimedeanportions
+of the poly-Frobenioid to bemodel Frobenioidsand thearchimedeanp o r t i o no ft h e
+poly-Frobenioid to be a Frobenioid as in [FrdII], Example 3.3 — cf., e.g., [FrdII],
+Example 5.6.
+
+10 SHINICHI MOCHIZUKI
+Question 25: To what extent could one use the theory of ad`eles and id`eles to
+simplify the portion of the theory of Frobenioids, as it is currently formulated, that
+is used in the papers on IUTeich?
+Response 25:
+As explained in R3, the only types of Frobenioids that appear in IUTeich are the
+types discussed in (F1), (F2), (F3), and (F4). Of these, the Frobenioids of (F3)
+and (F4) may be replaced by very simple objects. Also, the Frobenioids of (F2)
+are rather elementary and may be treated to a substantial extent without invoking
+the general theory of Frobenioids. On the other hand, the theory developed in
+[EtTh], §3, §4, §5, concerning thetempered Frobenioidsof (F1) is rather nontrivial.
+I do not see any reason to believe that this theory may be simpliﬁed by using
+ad`eles/id`eles. Here, let us recall that model Frobenioids(i.e., such as tempered
+Frobenioids) essentially amount to the data consisting of adivisor monoid and a
+rational function monoid(as in [FrdI], Theorem 5.2). This data is, in fact,already
+in a form that is very close, in spirit, to objects that occur in the theory of id`eles.
+On the other hand, onefundamental diﬀerencebetween the conventional theory of
+id`eles and the theory of Frobenioids is that the former starts from aﬁxed number
+ﬁeldand concerns the study of various properties of id`eles and related objects in a
+fashion that makesessential use of the way in which such objects were originally
+constructed from a number ﬁeld. By contrast, the theory of Frobenioids starts
+from abstract “combinatorial objects”(such asabstract monoids)t h a ta r et r e a t e d
+without reference to any rings/schemes (such as number ﬁelds). That is to say,
+the goal of the theory of Frobenioids is to see just how much of the structure that
+might arise, in various conventional situations, from some sort of ring or scheme,
+may in fact bereconstructed purely category-theoretically, i.e.,without referenceto
+any rings/schemes (cf. [FrdI],§I2). I do not see any reason to expect that the use
+of ad`eles/id`eles would result in a meaningful simpliﬁcation of the theory of such
+reconstruction algorithms.

@@ -1,0 +1,651 @@
+Anabelian Geometry in the
+Hodge-Arakelov Theory of Elliptic Curves
+Shinichi Mochizuki （望月 新一）
+RIMS, Kyoto University （京都大学数理解析研究所）
+Abstract:
+The purpose of the present manuscript is to survey some of the main ideas that
+appear in recent research of the author on the topic of applyinganabelian geometry
+to construct a“global multiplicative subspace”— i.e., an analogue of the well-known
+(local) multiplicative subspace of the Tate module of a degenerating elliptic curve.
+Such a global multiplicative subspace is necessary to apply theHodge-Arakelov the-
+ory of elliptic curves ([Mzk1-5]; also cf. [Mzk6], [Mzk7] for a survey of this theory)
+— i.e., a sort of “Hodge theory of elliptic curves” analogous to the classicalcomplex
+and p-adic Hodge theories, but which exists in the global arithmetic framework of
+Arakelov theory —t oo b t a i nr e s u l t si ndiophantine geometry. Unfortunately, since
+this research is still in progress, the author is not able at the present time to give
+a complete, polished treatment of this theory.
+Contents:
+§1. Multiplicative Subspaces and Hodge-Arakelov Theory
+§2. Basepoints in Motion
+§3. Anabelioids and Cores
+§4. Holomorphic Structures and Commensurable Terminality
+Section 1: Multiplicative Subspaces and Hodge-Arakelov Theory
+At a technical level, the Hodge-Arakelov theory of elliptic curves may in some
+sense be summarized as the arithmetic theory of the theta function
+Θ=
+∑
+n∈Z
+q
+1
+2 n2
+· Un
+and its logarithmic derivatives (U · ∂/∂U)rΘ. Here, we think of the elliptic curve
+in question as the “complex analytic Tate curve”
+Typeset by AMS-TEX
+1
+
+2 SHINICHI MOCHIZUKI （望月 新一）
+E
+def
+= C×/qZ
+where q ∈ C× satisﬁes |q| < 1. Note that this representation of E as a quotient of
+C× induces a natural exact sequence on the singular homologyof E:
+0 → 2πi · Z = Hsing
+1 (C×, Z) → Hsing
+1 (E, Z) → Z → 0
+We shall refer to the subspace Im(2πi · Z) ⊆ Hsing
+1 (E, Z)a st h emultiplicative sub-
+space of Hsing
+1 (E, Z), and to the generator 1 ∈ Z (well-deﬁned up to multiplication
+by ±1) of the quotient ofHsing
+1 (E, Z) by the multiplicative subspace as thecanonical
+generator of this quotient.
+It is not diﬃcult to see that the multiplicative subspace and canonical gen-
+erator constitute the essential data necessary to represent the theta function as a
+series in q and U. Without this representation, it is extremely diﬃcult to perform
+explicit calculations concerning Θ and its derivatives. Indeed, it is (practically)
+no exaggeration to state that all the main results of Hodge-Arakelov theory are,
+at some level, merely formal consequences of this series representation — i.e., of
+the existence of the multiplicative subspace/canonical generator(and its arithmetic
+analogues).
+Since, ultimately, however, we wish to “do arithmetic,” it is necessary to be
+able to consider the analogue of the above discussion in various arithmetic situa-
+tions. The most basic arithmetic situation in which such an analogue exists is the
+following. Write A
+def
+= Z[[q]] ⊗ Z Q[q−1]( w h e r eq is an indeterminate). Write
+E
+def
+=‘ Gm/qZ’
+for the Tate curve over A. Then the structure of E as a (rigid analytic) quotient
+of Gm gives rise to an exact sequence
+0 → μ d → E[d] → Z/dZ → 0
+involving the group scheme E[d]( o v e rA)o f d-torsion points, for some integer
+d ≥ 1. This exact sequence is a “ q-analytic” analogue of the complex analytic
+exact sequence considered above. We shall refer to the image Im( μ d) ⊆ E[d]
+(respectively, generator 1 ∈ Z/dZ, well-deﬁned up to multiplication by ±1) as the
+multiplicative subspace (respectively, canonical generator)o f E[d].
+Since much of the Hodge-Arakelov theory of elliptic curves deals with the
+values of Θ and its derivatives on the d-torsion points, it is not surprising that
+this multiplicative subspace/canonical generator play an important role in Hodge-
+Arakelov theory, especially from the point of view of“eliminating Gaussian poles”
+(cf. [Mzk2]; [Mzk6], §1.5.1).
+
+ANABELIAN GEOMETRY IN HODGE-ARAKELOV THEORY 3
+Note that by pulling back the objects constructed above over A,o n em a y
+construct a multiplicative subspace/canonical generator for any Tate curve over
+a p-adic local ﬁeld , e.g., a completion Fp of a number ﬁeld F at a ﬁnite prime
+p. Ultimately, however, to apply Hodge-Arakelov theory to diophantine geometry,
+it is necessary to construct a multiplicative subspace/canonical generator not just
+over such local ﬁelds, but globally over a number ﬁeld . It turns out that this is a
+highly nontrivial enterprise, which requires, in an essential way, the use ofanabelian
+geometry, as will be described below.
+Section 2: Basepoints in Motion
+In this §,w el e t F be a number ﬁeld and consider an elliptic curve E over
+G
+def
+=S p e c (F)w i t hbad, multiplicative reductionat a ﬁnite prime pG of F.W r i t e
+N→ G
+for the ﬁnite Galois ´etale covering of trivializations (Z/dZ)2 ∼
+→ E[d] of the ﬁnite
+´etale group scheme of d-torsion points E[d]; denote the ﬁnite ´ etale local system
+determined by E[d]o v e rG (respectively, N)b y EG (respectively, EN ). Also, for
+simplicity, weassume that N is connected(an assumption which holds, for instance,
+whenever d is a power of a suﬃciently large prime number).
+Note that there is a tautological trivialization (Z/dZ)2 ∼
+→ E[d]o f E[d]o v e rN.
+By applying this tautological trivialization to the elements “(1 , 0)” and “(0 , 1),”
+respectively, we obtain — just as a matter of “general nonsense,” i.e., without
+applying any diﬃcult results from anabelian geometry — a submodule/generator
+(of the quotient by the submodule) of EN .N o w ,l e tu schoose ap r i m eo fN
+p⊛
+lying over pG with the property that this submodule/generator coincides with the
+multiplicative subspace/canonical generator (cf. §1) at pG. (One veriﬁes easily that
+such a p⊛ always exists.) Denote this data of submodule/generator of EN by:
+L⊛,N ⊆E N ; γ⊛,N
+Note that although the restricted data
+L⊛,N |p⊛ ; γ⊛,N |p⊛
+is (by construction) multiplicative/canonical at p⊛,a t “most” of the primes pN of
+N lying over pG, the restricted data will not be multiplicative/canonical. Thus:
+
+4 SHINICHI MOCHIZUKI （望月 新一）
+At ﬁrst glance, the goal of constructing a submodule/generator which
+is “always multiplicative/canonical” globally over all of N appears to be
+hopeless.
+In fact, however, in the theory of [Mzk16], we wish to think about things in a
+diﬀerent way from the “naive” approach just described.
+Namely, in addition to the original (set-theoretic) universe
+⊛
+in which we have been working up until now — which we shall also often refer to as
+the “base universe” — we would also like to consider another distinct, independent
+universe in which “equivalent/analogous, but not equal ”objects are constructed.
+This analogous, but distinct universe will be referred to as the reference universe:
+⊚
+The analogous objects belonging to the reference universe will be denoted by a
+subscript ⊚: e.g., G⊚, N⊚,e t c .
+Then instead of thinking of the primes
+pN
+of N which lie over pG as primes at which one is to restrict L⊛,N ; γ⊛,N to see
+if they are canonical (i.e., multiplicative/canonical), we think of these points as
+parametrizing the possible relationships between the N of the “original universe”
+and the N⊚ of the “reference universe.” That is to say, assuming for the moment
+that there is a canonical identiﬁcation between G and G⊚ —af a c tw h i c hi sn o t
+obvious (or indeed true, without certain further assumptions — cf. Example 3.2 in
+§3 below), but is, in fact, a highly nontrivial consequence of the methods introduced
+in §3—t h e n pN parametrizes that particular relationship
+“ α[pN ; p⊚]”
+(well-deﬁned up to an ambiguity described by the action of the decomposition sub-
+group in Gal(N/G) determined by pN ) between N, N⊚ that associates the prime
+pN of N to the prime p⊚ of N⊚.M o r e o v e r :
+Relative to the relationship “α[pN ; p⊚]” parametrized bypN , the data (sub-
+module/generator) on N⊚ determined by L⊛,N |pN ; γ⊛,N |pN are multi-
+plicative/canonical at the “basepoint”p⊚ of N⊚.
+
+ANABELIAN GEOMETRY IN HODGE-ARAKELOV THEORY 5
+In other words:
+By allowing, in eﬀect, the “basepoint in question” to vary, we obtain
+globally canonical data in the sense that L⊛,N |pN ; γ⊛,N |pN are always
+canonical, relative to the basepoint parametrized by pN .
+This is the reason why it is necesary to introduce the “reference universe”— i.e.,
+in order to have an alternative arena in which to consider a “distinct, independent
+basepoint”(i.e., p⊚) from the “original basepoint” p⊛ of N, relative to which the
+data in question becomes canonical. Note that once one introduces a distinct,
+independent reference universe, it is atautology — by essentially the same reasoning
+as that of “Russell’s paradox” concerning the “set of all sets” — that all possible
+relationships “ α[pN ; p⊚]” between these two universes do, in fact, occur.
+We refer to the ﬁgure below for a pictorial representation of the situation just
+described:
+————————————————————————————————————
+[N]
+———
+p⊛ : ↑ ... ↘
+pN,⋏ ∥∥
+pN,⋏⋏ ∥∥
+pN,⋏⋏⋏ ∥∥
+pN,⋏⋏⋏⋏ ∥∥
+pN : ↘
+||
+||
+||
+| ⧸ |
+| ⧸ |
+| ⧸ |
+| ⧸ |
+||
+||
+[N
+⊚]
+———
+↑ : p⊚
+pN,⋎⋎⋎⋎⋎
+pN,⋎⋎⋎⋎
+pN,⋎⋎⋎
+pN,⋎⋎
+pN,⋎
+————————————————————————————————————
+In this depiction, the “ p’s” denote various primes in N, N⊚ lying over pG,
+(pG)⊚; the arrows denote “directions” in EN , EN⊚ ; the arrow shown closest to a
+“:” is to be understood to represent the multiplicative subspaceat the prime on the
+other side of the “:”; the area set out on the left (respectively, right) is to be taken
+to represent thebase universe(respectively,reference universe); the diagonal dotted
+
+6 SHINICHI MOCHIZUKI （望月 新一）
+line between these two universes is to be taken to be the equivalence “ α[pN ; p⊚]”
+discussed above; the “∥∥ ’s” are to be taken to representparallel transportof arrows
+— which is possible since the local system EN is trivial,a n dN is connected.
+On the other hand, once one introduces such a distinct, independent universe,
+the task ofrelating events in the new universe in an orderly, consistent way to events
+in the old becomes highly nontrivial. This is the role played by the introduction of
+ideas motivated by anabelian geometry, to be described below in §3, 4.
+Section 3: Anabelioids and Cores
+A connected anabelioidis simply a Galois category (in the classical language of
+[SGA1], Expos´e V). In general, we will also wish to consider arbitrary anabelioids,
+which have ﬁnitely many connected components, each of which is a connected
+anabelioid. Thus, in the language of [SGA1], Expos´ eV , §9, an anabelioid is a
+multi-Galois category.
+Thus, an anabelioid is a topos — hence, in particular, a (1-)category — sat-
+isfying certain properties. Moreover, the ﬁnite set of connected components of an
+anabelioid, as well as the connected anabelioid corresponding to each element of this
+set, may be recovered entirely category-theoreticallyfrom the original anabelioid.
+Suppose that we work in a universe ⊛ in which we are given a small category
+of sets Ens.L e tG be a small proﬁnite group. Then the category
+B(G)
+of sets in Ens equipped with a continuous G-action is a connected anabelioid. In
+fact, every connected anabelioid is equivalent to B(G)f o rs o m eG.
+Another familiar example from scheme theory is the following. Let X be a
+(small) connected locally noetherian scheme. Denote by
+´Et(X)
+the category whose objects are (small) ﬁnite ´etale coverings of X and whose mor-
+phisms are X-morphisms of schemes. Then it is well-known (cf. [SGA1], Expos´ e
+V,
+§7) that ´Et(X) is a connected anabelioid.
+Note that since an anabelioid is a 1-category, the “category of anabelioids”
+naturally forms a 2-category. In particular, if G and H are proﬁnite groups, then
+one veriﬁes easily that the (1-)category of morphisms
+Mor(B(G), B(H))
+is equivalent to the category whoseobjects are continuous homomorphisms of proﬁ-
+nite groups ψ : G → H, and whose morphisms from an object ψ1 : G → H to
+
+ANABELIAN GEOMETRY IN HODGE-ARAKELOV THEORY 7
+an object ψ2 : G → H are the elements h ∈ H such that ψ2(g)= h · ψ1(g) · h−1,
+∀g ∈ G.
+At this point, the reader might wonderwhy the author felt the need to introduce
+the terminology “anabelioid,” instead of using the term “multi-Galois category” of
+[SGA1]. The main reason for the introduction of this terminology is that we wish
+to emphasize that we would like to think of anabelioids X as generalized spaces—
+which is natural since they are, after all, topoi — whose geometry just happens to
+be “completely determined by their fundamental groups” (albeit somewhat tauto-
+logically! — cf. the preceding paragraph). This is meant to recall the notion of an
+anabelian variety, i.e., a variety whose geometry is determined by its fundamental
+group. The point here is that:
+The introduction of anabelioids allows us to work with both “algebro-
+geometric anabelioids” (i.e., anabelioids arising as the “´Et(−)”o fa n( a n -
+abelian) variety) and “abstract anabelioids” (i.e., those which do not nec-
+essarily arise from an (anabelian) variety) as geometric objects on an
+equal footing.
+The reason that it is important to deal with “geometric objects” B(G) as opposed
+to (proﬁnite) groups G,i st h a t :
+We wish to study what happens as one varies the basepoint of one of
+these geometric objects (cf. §2).
+That is to say, groups are determined only once one ﬁxes a basepoint. Thus, it
+is diﬃcult to describe what happens when one varies the basepoint solely in the
+language of groups.
+Next, we introduce some terminology, as follows: A morphism of connected
+anabelioids
+X→ Y
+is ﬁnite ´etale if it is equivalent to a morphism of the form B(H) →B (G), induced
+by applying “B(−)” to the natural injection of anopen subgroupH of G into G.A
+morphism of anabelioids is ﬁnite ´etale if the induced morphisms from the various
+connected components of the domain to the various connected components of the
+range are all ﬁnite ´etale. A ﬁnite ´etale morphism of anabelioids is a covering if it
+induces a surjection on connected components. A proﬁnite group G is slim if the
+centralizer ZG(H) of any open subgroup H ⊆ G in G is trivial. An anabelioid X is
+slim if the fundamental groupπ1(Xi) of every connected componentXi of X is slim.
+A 2-category is slim if the automorphism group of every 1-arrow in the 2-category
+is trivial.
+In general, if C is a slim 2-category, we shall write
+|C|
+
+8 SHINICHI MOCHIZUKI （望月 新一）
+for the associated 1-category whose objects are objects of C and whose morphisms
+are isomorphism classes of morphisms of C.
+Finite ´etale morphisms of anabelioids are easiest to understand when the an-
+abelioids in question are slim. Indeed, let X be a slim anabelioid. Write
+Et(X)
+for the 2-category whose objects are ﬁnite ´etale morphisms Y→X and whose
+morphisms are ﬁnite ´etale arrows Y1 →Y 2 over X. Then the 2-category Et(X)i s
+slim. Moreover, if we write ´Et(X)
+def
+= |Et(X)|, then the functor
+FX : X→ ´Et(X)
+S ↦→ (XS →X )
+(where S is an object of X; XS denotes the category whose objects are arrows
+T → S in X, and whose morphisms between T → S and T ′ → S are S-morphisms
+T → T ′; XS →X is the natural “forgetful functor”) is an equivalence.
+Next, let us write
+Loc(X)
+for the 2-categorywhose objects are anabelioids Y that admit a ﬁnite ´etale morphism
+to X, and whose morphisms are ﬁnite ´etale morphisms Y1 →Y 2 (that do not
+necessarily lie over X!). Then it follows from the assumption that X is slim that
+Loc(X)i sa l s oslim.W r i t e :
+Loc(X)
+def
+= |Loc(X)|
+Perhaps the most fundamental notion underlying the theory of [Mzk16] is that
+of a “core.” We shall say that a slim anabelioidX is a core if X is a terminal object
+in the (1-)category Loc(X).
+Here we make the important observation that thedeﬁnability of Loc(X)i so n e
+of the most fundamental diﬀerences between the theory of ﬁnite ´ etale coverings
+of anabelioids as presented in the present manuscript and the theory of ﬁnite ´etale
+coverings from the point of view of“Galois categories,”as given in [SGA1]. Indeed,
+from the point of view of the theory of [SGA1], it is only possible to consider
+“ ´Et(X)” — i.e., ﬁnite ´etale coverings and morphisms that always lie over X.T h a t
+is to say, in the context of the theory of [SGA1], it is not possible to consider
+diagrams such as:
+
+ANABELIAN GEOMETRY IN HODGE-ARAKELOV THEORY 9
+Z
+↙↘
+XY
+(where the arrows are ﬁnite ´ etale) that do not necessarily lie over any speciﬁc
+geometric object, as is necessary for the deﬁnition of Loc(X). We shall refer to such
+a diagram as a correspondenceor isogeny between X and Y.
+Here, we wish to emphasize that the reason that cores play a key role in the
+theory of [Mzk16] is that:
+(Up to renaming) cores have essentially only one basepoint .
+Indeed, this is essentially a formal consequence of the deﬁnition of a core. The
+reason that this property of “having essentially only one basepoint” is important
+is that it means that even if we consider (cf. the discussion of §2) distinct copies
+of a core that belong to distinct, independent universes, we may still identify their
+basepoints without fear of confusion or inconsistencies — such as “Russell’s para-
+dox” concerning the “set of all sets.” That is to say, cores allow us to “navigate
+between universes” without “getting lost.” We refer to this phenomenon as “an-
+abelian navigation.”
+Moreover, even for (slim) anabelioids that are not cores, we may still perform
+a sort of anabelian navigation by “measuring the distance of such anabelioids from
+a core.” Thus, even though for such non-cores, it is not possible tocompletely iden-
+tify basepoints of copies of the object belonging to distinct, independent universes
+without confusion (as in the case of cores), we can nevertheless identify basepoints
+of copies of such non-cores up to a controllable ambiguity (cf. the “ α[pN ; p⊚]’s” of
+§2), which is often suﬃcient for applications that we have in mind.
+Finally, we close this § by presenting some examples of cores (and non-cores),
+all of which are ofcentralimportance in the theory of [Mzk16]. Since these examples
+involve schemes, in order to discuss them in an orderly fashion, it is necessary to
+have a deﬁnition of “Loc( −)” for schemes, as well. LetX be a connected noetherian
+regular scheme. Then let us write
+Loc(X)
+for the (1-)category whose objects are schemes Y that admit a ﬁnite ´etale morphism
+to X, and whose morphisms are ﬁnite ´etale morphisms Y1 → Y2 (that do not
+necessarily lie over X!).
+Example 3.1. Number Fields. Perhaps the most basic example of a core is
+the (slim) anabelioid
+
+10 SHINICHI MOCHIZUKI （望月 新一）
+X
+def
+= ´Et(Q)
+(where Q is the rational number ﬁeld; and ´Et(Q)
+def
+= ´Et(Spec(Q))). That X is a
+core follows formally from: (i) the fact that Spec(Q) is a terminal object in Loc(Q);
+(ii) the theorem of Neukirch-Uchida-Iwasawa-Ikeda (cf. [NSW], Chapter XII, §2)
+on the anabelian nature of number ﬁelds. Note, on the other hand, that if F is a
+number ﬁeld (i.e., ﬁnite extension of Q) which is not equal to Q,t h e n
+´Et(F)
+is not a core. Indeed, this follows (via the theorem of Neukirch-Uchida-Iwasawa-
+Ikeda) from the easily veriﬁed fact that Spec( F)i s not a terminal object in the
+category Loc(F).
+Example 3.2. Non-arithmetic Hyperbolic Curves. Let K be a ﬁeld of
+characteristic 0. Let XK be a hyperbolic curve over K (i.e., the complement of a
+divisor of degree r in a smooth, proper, geometrically connected curve of genus g
+over K, such that 2g − 2+ r> 0). In fact, more generally, one may takeXK to be a
+hyperbolic orbicurveover K (i.e., the quotient in the sense of stacksof a hyperbolic
+curve by the action of ﬁnite group, where we assume that the ﬁnite group actsfreely
+on a dense open subscheme of the curve). Also, we assume that we have been given
+an algebraic closure
+ K of K and write X
+K
+def
+= XK ⊗K
+ K.
+We will say that XK is a geometric core (cf. the term “hyperbolic core” of
+[Mzk11], §3) if X
+K is aterminal objectin Loc(X
+K) (where, in the case of orbicurves,
+we allow the objects of Loc(X
+K) to be orbicurves that admit a ﬁnite ´etale morphism
+to X
+K). We will say that XK is arithmetic (cf. [Mzk11], §2) if it is isogenous to a
+Shimura curve (i.e., some ﬁnite ´etale covering of XK is isomorphic to a ﬁnite ´etale
+covering of a Shimura curve). As is shown in [Mzk11], §3, if XK is non-arithmetic,
+then there exists a hyperbolic orbicurve ZK together with a ﬁnite ´etale morphism
+XK → ZK such that ZK is a geometric core. Moreover, (cf. [Mzk11], Theorem B)
+in the case of hyperbolic curves of type (g,r ), where 2g − 2+ r ≥ 3, a general curve
+of that type is a geometric core.
+Suppose that XK is a geometric core;a n dt h a tK is a number ﬁeld which is
+a minimal ﬁeld of deﬁnition for XK. Then it follows formally from the theorem of
+Neukirch-Uchida-Iwasawa-Ikeda(cf. Example 3.1), together with the“Grothendieck
+Conjecture for algebraic curves” (cf. [Tama]; [Mzk13]; [Mzk15]) that the (slim)
+anabelioid
+´Et(XK)
+is a core.
+Example 3.3. Arithmetic Hyperbolic Curves. On the other hand, an
+arithmetic curve XK (notation as in the last paragraph of Example 3.2) is never
+
+ANABELIAN GEOMETRY IN HODGE-ARAKELOV THEORY 11
+a geometric core. For instance, consider the hyperbolic orbicurve XK given by the
+moduli stack of “hemi-elliptic orbicurves” (i.e., orbicurves obtained by forming the
+quotient (in the sense of stacks) of an elliptic curve by the action of ±1). Then
+the existence of the well-known Hecke correspondences on XK shows that X
+K is
+“far from being” a terminal object in Loc( X
+K). Thus, in particular, the (slim)
+anabelioid
+´Et(XK)
+will never be a core in this case.
+Section 4: Holomorphic Structures and Commensurable T erminality
+Sometimes, when considering the extent to which an anabelioid is a core, it is
+natural not to consider all ﬁnite ´etale morphisms (as in the deﬁnition of Loc(−)),
+but instead to restrict our attention to ﬁnite ´etale morphisms that preserve some
+auxiliary structure. In some sense, the two main motivating examples of this phe-
+nomenon are the following:
+Example 4.1. Complex Holomorphic Structures. Let X be a hyperbolic
+orbicurve (cf. Example 3.2) over the ﬁeld of complex numbers C.W r i t eXan for
+the associated Riemann surface(or one-dimensional complex analytic stack). Then
+we may consider the “complex analytic analogue”
+X
+def
+= ´Etan(Xan)
+of ´Et(X), namely, the category of local systems(in the complex topology) on Xan.
+Just as in the case of anabelioids, one may consider ﬁnite ´ etale coverings of X,
+hence also the category:
+Loc(X)
+On the other hand, it is easy to see that this category is “too big” to be of interest.
+Instead, it is more natural to do the following: The well-known uniformization of
+Xan by the upper half plane determines a homomorphism of the (usual topolog-
+ical) fundamental group πtop
+1 (Xan)o f Xan into PSL 2(R). This homomorphism
+determines a local system of PSL 2(R)-torsors on Xan, hence an object QX ∈X .
+Then, if we regard ﬁnite ´ etale coverings Y→X as always being equipped with
+the auxiliary structure QY determined by pulling back QX to Y and then deﬁne
+Lochol(X) to be the 2-category whose objects are such ( Y,Q Y) and whose mor-
+phisms (Y1,Q Y1 ) → (Y2,Q Y2 ) are ﬁnite ´etale morphisms Y1 →Y 2 for which the
+
+12 SHINICHI MOCHIZUKI （望月 新一）
+pull-back of QY2 is isomorphic to QY1 , then we obtain a slim 2-category Lochol(X)
+whose associated 1-category
+Lochol(X)
+is easily seen to be isomorphic to Loc( X) (since the morphisms of Loc hol(X)a l -
+ways arise from complex analytic morphisms of Riemann surfaces, which may be
+algebrized). In particular, X is a geometric coreif and only if X is a terminal object
+in Lochol(X).
+Example 4.2. p-adic Holomorphic Structures. The analogue of Example
+3.1 for Qp does not hold, since the (naive) analogue of the theorem of Neukirch-
+Uchida-Iwasawa-Ikeda does not hold for ﬁnite extensions of Qp. On the other
+hand, if K is a ﬁnite extension of Qp, then its absolute Galois group GK has a
+natural action on Cp (the p-adic completion of the algebraic closure of Qp under
+consideration). Moreover, although (unlike the case of number ﬁelds) it is not
+necessarily the case that an arbitrary isomorphism GK1
+∼
+→ GK2 (where K1, K2 are
+ﬁnite extensions of Qp) arises from a ﬁeld isomorphism K1
+∼
+→ K2,i t is necessarily
+the case that such an isomorphism GK1
+∼
+→ GK2 arises from a ﬁeld isomorphism if
+GK1
+∼
+→ GK2 is compatible with the natural actions of both sides on Cp (cf. the
+theory of [Mzk14]). Thus, if one thinks ofCp as determining a (pro-ind-)object QK
+in ´Et(K), and deﬁnes the morphisms of
+Lochol(Qp)
+to be morphisms ´Et(K1) → ´Et(K2)o f Loc(Qp) for which the pull-back of QK2 is
+isomorphic to QK1 ,t h e n´Et(Qp) determines a terminal object in Lochol(Qp).
+The above two examples motivate the following approach:L e t Q be a slim
+anabelioid. Deﬁne a Q-holomorphic structure on a slim anabelioid X to be a mor-
+phism X→ Q . We will refer to a slim anabelioid equipped with a Q-holomorphic
+structure as a Q-anabelioid.A Q-holomorphic morphism (or “ Q-morphism” for
+short) between Q-anabelioids is a morphism of anabelioids compatible with the
+Q-holomorphic structures. Then we obtain a 2-category
+LocQ(X)
+whose objects are Q-anabelioids that admit a Q-holomorphic ﬁnite ´etale morphism
+to X, and whose morphisms are arbitrary ﬁnite ´etale Q-morphisms (that do not
+necessarily lie over X!).
+Thus, instead of considering whether or not X is a(n) (absolute) core (as in
+§3), one may instead consider whether or not X is a Q-core, i.e., determines a
+
+ANABELIAN GEOMETRY IN HODGE-ARAKELOV THEORY 13
+terminal object in LocQ(X)
+def
+= |LocQ(X)|. Just as cores “have essentially only one
+basepoint”:
+If X is a Q-core, then every basepoint of Q determines an essentially
+unique (up to renaming) basepoint of X (so long as the Q-holomorphic
+structures involved are held ﬁxed).
+Thus, the theory of “ Q-holomorphic structures” gives rise to a sort of “relative
+version” of theory of cores discussed in §3.
+Next, we introduce some terminology, as follows. A closed subgroup H ⊆ G of
+a proﬁnite group G will be called commensurably terminal if the commensurator
+CG(H)
+def
+= {g ∈ G | (g · H · g−1)
+⋂
+H has ﬁnite index in H, g · H · g−1}
+of H in G is equal to H itself. An arbitrary morphism of connected anabelioids
+X→ Y will be called a π1-monomorphism (respectively, π1-epimorphism)i ft h e
+induced morphism on fundamental groupsπ1(X) → π1(Y) is injective (respectively,
+surjective). A π1-monomorphism X→ Y of connected anabelioids will be called
+commensurably terminalif the induced morphism on fundamental groupsπ1(X) →
+π1(Y) is commensurably terminal.
+Now it is an easy, formal consequence of the deﬁnitions that:
+Suppose that X is a Q-anabelioid with the property that the morphism
+X→ Q deﬁning the Q-holomorphic structure is a π1-monomorphism.
+Then X is a Q-core if and only ifX→ Q is commensurably terminal.
+This observation allows to construct manyinteresting explicit examples of Q-cores,
+as follows:
+Example 4.3. p-adic Local Fields Revisited. Let F be a number ﬁeld,w i t h
+absolute Galois group GF .L e t p be a ﬁnite prime of F, with associated decompo-
+sition subgroup Gp ⊆ GF . Then the closed subgroup Gp ⊆ GF is commensurably
+terminal (cf. [NSW], Corollary 12.1.3). In particular, in Example 4.2, instead of
+considering the “holomorphic structure” determined by the action onCp,w ec o u l d
+have considered instead the Q-holomorphic structure on ´Et(Qp), i.e., the holomor-
+phic structure determined by the morphism
+´Et(Qp) →Q
+def
+= ´Et(Q)
+(arising from the morphism of schemes Spec(Qp) → Spec(Q)). Then ´Et(Qp) deter-
+mines a Q-core, i.e., a terminal object in LocQ(´Et(Qp)).
+
+14 SHINICHI MOCHIZUKI （望月 新一）
+Example 4.4. Hyperbolic Orbicurves over p-adic Local Fields. Let XK
+be a hyperbolic orbicurve(cf. Example 3.2) over a ﬁeld K which is a ﬁnite extension
+of Qp.S e tQ
+def
+= ´Et(Q), and equip X
+def
+= ´Et(XK)w i t ht h eQ-holomorphic structure
+X→ Q determined by the morphism of schemes XK → Spec(Q). Then if XK is a
+geometric coreand K is a minimal extension of Qp over which XK is deﬁned, then
+it follows (cf. Example 3.2; [Mzk15]) that X determines a Q-core in LocQ(X).
+Example 4.5. Inertia Groups of Marked Points. Let ˆΠg,r be the proﬁnite
+completion of the fundamental group of a topological surface of genus g with r
+punctures,w h e r e2g − 2+ r> 0. Suppose that r> 0, and let
+I ⊆ ˆΠg,r
+be the inertia group associated to one of the punctures. Then it is an easy exercise
+to show that I ⊆ ˆΠg,r is commensurably terminal.
+Example 4.6. Graphs of Groups. Suppose that we are given a (ﬁnite,
+connected) graph of (proﬁnite) groups G.T h a t i s t o s a y , w e a r e g i v e n aﬁnite
+connected graph Γ, together with, for each vertex v (respectively, edge e)o fΓa
+proﬁnite group Πv (respectively, Πe), and, for each vertex v that abuts to an edge
+e,a continuous injective homomorphism Πe → Πv. Denote by
+ΠG
+the proﬁnite fundamental group associated to this graph of proﬁnite groups. Then
+we obtain natural injections Πe ↪→ ΠG,Π v ↪→ ΠG (well-deﬁned up to composition
+with an inner automorphism of ΠG).
+Now let Δ be a connected subgraphof Γ. Then “restricting” G to Δ gives rise
+to a graph of groups GΔ . If we then denote the associated “Π GΔ ”b yΠ Δ ,t h e n
+we obtain a natural continuous homomorphism Π Δ → ΠG. Then by constructing
+various “ﬁnite ramiﬁed coverings” of G by gluing together compatible systems of
+coverings at the various edges and vertices, one veriﬁes easily that:
+(i) The homomorphism Π Δ → ΠG is injective.
+(ii) Suppose that for each vertex v of Δ, their exists an inﬁnite closed sub-
+group N ⊆ Πv with the property that for every edge e that meets v,a n d
+every g ∈ Πv,w eh a v eΠe
+⋂ (g · N · g−1)= {1}.T h e n ΠΔ is com-
+mensurably terminal in Π G. In particular, for every vertex v of Δ, Π v is
+commensurably terminal in ΠG.
+The hypotheses of (ii) are satisﬁed, for instance, when all the Πe = {1} and all the
+Πv are inﬁnite .
+
+ANABELIAN GEOMETRY IN HODGE-ARAKELOV THEORY 15
+Example 4.7. Stable Curves and Graphic Automorphisms. Let K be
+an algebraically closed ﬁeld of characteristic 0. Let X be a stable hyperbolic curve
+of type (g,r )o v e rK — i.e., the complement of the divisor of marked points in a
+pointed stable curve of type (g,r )o v e rK.T h e nt oX, one may associate a natural
+graph of groups GX as follows: The underlying graph Γ X of GX is the dual graph
+of X. That is to say, the vertices (respectively, edges) of Γ X are the irreducible
+components (respectively, nodes) of X, and an edge abuts to a vertex if and only
+if the corresponding node is contained in the corresponding irreducible component.
+If v (respectively, e)i sa vertex (respectively, edge)o fΓ X, then we associate to
+it the proﬁnite group Π v (respectively, Π e) given by the algebraic fundamental
+group of the irreducible component (respectively, inertia group (∼= ˆZ) of the node)
+corresponding to v (respectively, e); the inclusions Πe ↪→ Πv are the natural ones.
+Note that the proﬁnite fundamental group Π X associated to GX may be identiﬁed
+with the algebraic fundamental group of X, hence is (noncanonically) isomorphic
+to ˆΠg,r (cf. Example 4.5).
+One veriﬁes easily that all of the Π e,Π v are commensurably terminal in ΠX
+(cf. Examples 4.5, 4.6). Denote by
+OutΓ(ΠX) ⊆ Out(ΠX)
+def
+= Aut(ΠX)/Inn(ΠX)
+the subgroup of graphic outer automorphisms of ΠX. Here, an automorphism α :
+ΠX
+∼
+→ ΠX is graphic if there exists an automorphism αΓ :Γ X
+∼
+→ ΓX such that: (i)
+for every vertex v (respectively, edge e)o fΓ X, α(Πv) (respectively, α(Πe)) is equal
+to a conjugate of ΠαΓ(v) (respectively, ΠαΓ(e)); (ii) the resulting outer isomorphism
+Πv
+∼
+→ ΠαΓ(v) preserves the conjugacy classes of the inertia groups associated to the
+punctures of X that lie on v, αΓ(v), respectively. Then it is not diﬃcult to show
+by an argument involving “weights” as in [Mzk13], §1 – 5, that:
+OutΓ(ΠX)i s commensurably terminal in Out(ΠX).
+One may regard this fact as a sort of anabelian analogue of the well-known “linear
+algebra fact” thatthe subgroup of upper triangular matrices inGLn(ˆZ) is commen-
+surably terminal in GLn(ˆZ).
+Bibliography
+[Mzk1] S. Mochizuki, The Hodge-Arakelov Theory of Elliptic Curves: Global Discretiza-
+tion of Local Hodge Theories, RIMS Preprint Nos. 1255, 1256 (October 1999).
+[Mzk2] S. Mochizuki, The Scheme-Theoretic Theta Convolution, RIMS Preprint No.
+1257 (October 1999).
+
+16 SHINICHI MOCHIZUKI （望月 新一）
+[Mzk3] S. Mochizuki, Connections and Related Integral Structures on the Universal
+Extension of an Elliptic Curve, RIMS Preprint No. 1279 (May 2000).
+[Mzk4] S. Mochizuki, The Galois-Theoretic Kodaira-Spencer Morphism of an Elliptic
+Curve, RIMS Preprint No. 1287 (July 2000).
+[Mzk5] S. Mochizuki, The Hodge-Arakelov Theory of Elliptic Curves in Positive Char-
+acteristic, RIMS Preprint No. 1298 (October 2000).
+[Mzk6] S. Mochizuki, A Survey of the Hodge-Arakelov Theory of Elliptic Curves I, to
+appear in“Moduli of Proﬁnite Aspects of Arithmetic Covers,”an AMS research
+volume edited by M. Fried.
+[Mzk7] S. Mochizuki, A Survey of the Hodge-Arakelov Theory of Elliptic Curves II ,
+manuscript.
+[Mzk9] S. Mochizuki, A Theory of Ordinary p-adic Curves, Publ. of RIMS 32 (1996),
+pp. 957-1151.
+[Mzk10] S. Mochizuki, Foundations of p-adic Teichm¨uller Theory, AMS/IP Studies
+in Advanced Mathematics 11, American Mathematical Society/International
+Press (1999).
+[Mzk11] S. Mochizuki, Correspondences on Hyperbolic Curves, Journ. Pure Appl. Al-
+gebra 131 (1998), pp. 227-244.
+[Mzk12] S. Mochizuki, The Geometry of the Compactiﬁcation of the Hurwitz Scheme,
+Publ. of RIMS 31 (1995), pp. 355-441.
+[Mzk13] S. Mochizuki, The Proﬁnite Grothendieck Conjecture for Closed Hyperbolic
+Curves over Number Fields,J. Math. Sci., Univ. Tokyo 3 (1996), pp. 571-627.
+[Mzk14] S. Mochizuki, A Version of the Grothendieck Conjecture forp-adic Local Fields,
+The International Journal of Math. 8 (1997), pp. 499-506.
+[Mzk15] S. Mochizuki, The Local Pro-p Anabelian Geometry of Curves, Invent. Math.
+138 (1999), pp. 319-423.
+[Mzk16] S. Mochizuki, Global Anabelian Geometry in the Hodge-Arakelov Theory of
+Elliptic Curves, manuscript in preparation.
+[NSW] J. Neukirch, A. Schmidt, K. Wingberg,Cohomology of number ﬁelds, Grundlehren
+der Mathematischen Wissenschaften 323, Springer-Verlag (2000).
+[SGA1] Revˆetement ´etales et groupe fondamental,S ´eminaire de G´eometrie Alg´ebrique
+du Bois Marie 1960-1961 (SGA1), dirig´e par A. Grothendieck, augment´ed e
+deux expos´es de M. Raynaud, Lecture Notes in Mathematics 224, Springer-
+Verlag (1971).
+[Tama] A. Tamagawa, The Grothendieck Conjecture for Aﬃne Curves, Compositio
+Math. 109 (1997), pp. 135-194.

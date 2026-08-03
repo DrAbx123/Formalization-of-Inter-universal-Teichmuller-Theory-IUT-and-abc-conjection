@@ -1,0 +1,1841 @@
+RECONSTRUCTION OF INER TIA GROUPS ASSOCIA TED TO
+LOG DIVISORS FROM A CONFIGURA TION SP ACE GROUP
+EQUIPPED WITH ITS COLLECTION OF LOG-FULL
+SUBGROUPS
+KAZUMI HIGASHIYAMA
+Abstract. In the present paper, we study conguration space groups. The
+goal of this paper is to reconstruct group-theoretically the inertia groups asso-
+ciated to various types of log divisors of a log conguration space of a smooth
+log curve from the associated conguration space group equipped with its col-
+lection of log-full subgroups.
+0. Introduction
+Let l be a prime number; k an algebraically closed ﬁeld of characteristic ̸= l;
+S
+def
+= Spec( k); (g, r) a pair of nonnegative integers such that 2 g−2+r > 0; X log → S
+a smooth log curve of type ( g, r) (cf. Notation 1.3, (iv)); n ∈ Z>1. In the present
+paper, we study the n-th log conﬁguration space X log
+n associated to X log → S (cf.
+Deﬁnition 2.1). Write UX for the interior of the log scheme X log (cf. Notation 1.2,
+(vi)). The log scheme X log
+n may be thought of as a certain compactiﬁcation of
+the usual n-th conﬁguration space UXn associated to the smooth curve UX . Write
+Πn
+def
+= πpro-l
+1 (X log
+n ) for the pro- l conﬁguration space group determined by X log
+n (cf.
+[MzTa], Deﬁnition 2.3, (i)), i.e., the maximal pro- l quotient of the fundamental
+group of the log scheme X log
+n (for a suitable choice of basepoint). We shall refer to
+an irreducible divisor of the underlying scheme of X log
+n contained in the complement
+of UXn as a log divisor of X log
+n . Each log divisor V determines, up to Π n-conjugacy,
+an inertia group IV (≃ Zl) ⊆ Πn, which plays a central role in the present paper. Let
+V1, . . . , Vn be distinct log divisors of X log
+n such that V1 ∩ · · · ∩Vn ̸= ∅. Then we shall
+refer to P
+def
+= V1 ∩ · · · ∩Vn as a log-full point (cf. Deﬁnition 2.2, (ii), and Proposition
+2.10). The log-full point P = V1 ∩· · ·∩ Vn determines, up to Π n-conjugacy, a log-full
+subgroup A (≃ IV1 ×· · ·×IVn ≃ Z⊕n
+l ) ⊆ Πn (cf. Deﬁnition 2.2, (iii)). It is known that
+the log-full subgroups of a conﬁguration space group may be characterized group-
+theoretically whenever the conﬁguration space group is equipped with the action
+of a proﬁnite group that satisﬁes certain properties (cf. [HMM], Theorem D). In
+the present paper, we reconstruct group-theoretically the inertia groups associated
+to the log divisors from a conﬁguration space group equipped with its collection of
+log-full subgroups. Moreover, we reconstruct group-theoretically the inertia groups
+associated to the tripodal divisors (cf. Deﬁnition 3.1, (ii)) and the drift diagonals
+(cf. Deﬁnition 3.1, (iv)), as well as the drift collections of Π n (cf. Deﬁnition 8.13)
+and the generalized ﬁber subgroups of Π n (cf. Deﬁnition 9.1).
+Our main result is as follows:
+1
+
+2 KAZUMI HIGASHIYAMA
+Theorem 0.1. For  ∈ {◦ , •}, let l be a prime number; k an algebraically
+closed eld of characteristic ̸= l; S def
+= Spec( k); (g, r) a pair of nonnegative
+integers such that 2g − 2 + r > 0;
+X log → S
+(cf. Notation 1.2, (vi)) a smooth log curve of type (g, r); n ∈ Z>1; X log
+n the
+n-th log conguration space associated to X log → S; Π def
+= πpro-l
+1 (X log
+n )
+(for a suitable choice of basepoint);
+ϕ : Π ◦ ∼
+→ Π•
+an isomorphism of pronite groups. We suppose that r > 0 (cf. the discussion
+below); ϕ induces a bijection between the set of log-full subgroups of Π◦ and the set
+of log-full subgroups of Π•. Then the following hold:
+(i) ϕ induces a bijection between the set of inertia groups of Π◦ associated to log
+divisors of X log ◦
+n◦ and the set of inertia groups of Π• associated to log divisors
+of X log •
+n• (cf. Theorem 5.2).
+(ii) ϕ induces a bijection between the set of inertia groups of Π◦ associated to
+tripodal divisors of X log ◦
+n◦ and the set of inertia groups of Π• associated to
+tripodal divisors of X log •
+n• (cf. Theorem 6.6).
+(iii) ϕ induces a bijection between the set of inertia groups of Π◦ associated to
+drift diagonals of X log ◦
+n◦ and the set of inertia groups of Π• associated to drift
+diagonals of X log •
+n• (cf. Theorem 7.3).
+(iv) ϕ induces a bijection between the set of drift collections of Π◦ and the set of
+drift collections of Π• (cf. Theorem 8.14).
+(v) ϕ induces a bijection between the set of generalized ber subgroups of Π◦ and
+the set of generalized ber subgroups of Π• (cf. Theorem 9.3).
+Note that, roughly speaking, Theorem 0.1, (i), asserts that we may extract group-
+theoretically a “geometric direct summand Zl” (i.e., an inertia group associated to
+a log divisor) from “ Z⊕n
+l ” (i.e., a log-full subgroup).
+Note that one may deﬁne the notion of a log-full point even if r = 0 (cf. [HMM],
+Deﬁnition 1.1). On the other hand, since log-full points do not exist when r = 0,
+we suppose that r > 0 in the present paper.
+In the proof of Theorem 0.1, (ii), we use the fact that, in the notation of Theorem
+0.1, in fact ( g◦, r◦, n◦) = ( g•, r•, n•) (cf. Theorem 3.10, (i)), which is proven in
+[HMM], Theorem A, (i).
+This paper is organized as follows: In §1, we explain some notations. In §2, we
+deﬁne log conﬁguration spaces, log-full points, and log divisors. In §3, we deﬁne
+tripodal divisors and drift diagonals and then proceed to study the geometry of
+various types of log divisors. In §4, we give a group-theoretic reconstruction of the
+scheme-theoretically non-degenerate elements (cf. Deﬁnition 4.6, (i)) of a log-full
+subgroup. In §5, we reconstruct the inertia groups associated to the log divisors.
+In §6, we reconstruct the inertia groups associated to the tripodal divisors. In
+§7, we reconstruct the inertia groups associated to the drift diagonals. In §8, we
+reconstruct the drift collections of a conﬁguration space group. In §9, we reconstruct
+the generalized ﬁber subgroups of a conﬁguration space group.
+
+RECONSTRUCTION OF LOG DIVISORS 3
+1. Notations
+Notation 1.1. (i) Let G be a group. Then we shall write “1 G ∈ G” for the
+identity element of G.
+(ii) Let G be a group, H ⊆ G a subgroup, and α ∈ G. Then we shall write
+ZG(H)
+def
+= {g ∈ G | gh = hg for any h ∈ H}
+for the centralizer of H in G;
+ZG(α)
+def
+= ZG(⟨α⟩) = {g ∈ G | gα = αg}
+for the centralizer of α in G;
+NG(H)
+def
+= {g ∈ G | gHg −1 = H}
+for the normalizer of H in G.
+Notation 1.2. Let Slog be an fs log scheme (cf. [Naka], Deﬁnition 1.7).
+(i) Write S for the underlying scheme of Slog.
+(ii) Write MS for the sheaf of monoids that deﬁnes the log structure of Slog.
+(iii) Let s be a geometric point of S. Then we shall denote by I(s, MS) the ideal
+of OS,s generated by the image of MS,s \ O ×
+S,s via the homomorphism of
+monoids MS,s → O S,s induced by the morphism MS → O S which deﬁnes
+the log structure of Slog.
+(iv) Let s ∈ S and s a geometric point of S which lies over s. Write ( MS,s/O×
+S,s)gp
+for the groupiﬁcation of MS,s/O×
+S,s. Then we shall refer to the rank of the
+ﬁnitely generated free abelian group ( MS,s/O×
+S,s)gp as the log rank at s. Note
+that one veriﬁes easily that this rank is independent of the choice of s, i.e.,
+depends only on s.
+(v) Let m ∈ Z. Then we shall write
+Slog≤m def
+= {s ∈ S | the log rank at s is ≤ m}.
+Note that since Slog≤m is open in S (cf. [MzTa], Proposition 5.2, (i)), we shall
+also regard (by abuse of notation) Slog≤m as an open subscheme of S.
+(vi) We shall write US
+def
+= Slog≤0 and refer to US as the interior of Slog. When
+US = S, we shall often use the notation S to denote the log scheme Slog.
+Notation 1.3. Let (g, r) be a pair of nonnegative integers such that 2 g − 2 +r > 0.
+(i) Write Mg,r for the moduli stack (over Z) of pointed stable curves of type
+(g, r) and Mg,r ⊆ Mg,r for the open substack corresponding to the smooth
+curves. Here, we assume the marked points to be ordered.
+(ii) Write
+Cg,r → Mg,r
+for the tautological curve over Mg,r; Dg,r
+def
+= Mg,r \ Mg,r for the divisor at
+inﬁnity.
+(iii) Write M
+log
+g,r for the log stack obtained by equipping the moduli stack Mg,r
+with the log structure determined by the divisors with normal crossings Dg,r.
+
+4 KAZUMI HIGASHIYAMA
+(iv) The divisor of Cg,r given by the union of Cg,r ×Mg;r
+Dg,r with the divisor of
+Cg,r determined by the marked points determines a log structure on Cg,r; we
+denote the resulting log stack by C
+log
+g,r. Thus, we obtain a morphism of log
+stacks
+C
+log
+g,r → M
+log
+g,r
+which we refer to as the tautological log curve over M
+log
+g,r. If Slog is an arbitrary
+log scheme, then we shall refer to a morphism
+C log → Slog
+whose pull-back to some ﬁnite ´ etale coveringT → S is isomorphic to the pull-
+back of the tautological log curve via some morphism T log def
+= Slog ×S T →
+M
+log
+g,r as a stable log curve (of type ( g, r)). If C → S is smooth, i.e., every
+geometric ﬁber of C → S is free of nodes, then we shall refer to C log → Slog
+as a smooth log curve (of type ( g, r)).
+(v) A smooth log curve of type (0 , 3) will be referred to as a tripod. A vertex of
+a semi-graph of anabelioids of pro- l PSC-type (cf. [CmbGC], Deﬁnition 1.1,
+(i)) of type (0 , 3) (cf. [CbTpI], Deﬁnition 2.3, (iii)) will also be referred to as
+a tripod.
+Denition 1.4. Let G be a semi-graph of anabelioids of pro- l PSC-type (cf.
+[CmbGC], Deﬁnition 1.1, (i)) and G the underlying semi-graph of G. Write
+Cusp(G) (resp. Node( G), Vert(G), Edge(G))
+for the set of cusps (resp. nodes, vertices, edges) of G and
+Cusp(G)
+def
+= Cusp( G), Node(G)
+def
+= Node( G),
+Vert(G)
+def
+= Vert( G), Edge(G)
+def
+= Edge( G).
+2. Log conguration spaces and log divisors
+Let l be a prime number; k an algebraically closed ﬁeld of characteristic ̸= l;
+S
+def
+= Spec( k); ( g, r) a pair of nonnegative integers such that 2 g − 2 + r > 0;
+X log → S
+(cf. Notation 1.2, (vi)) a smooth log curve of type ( g, r); n ∈ Z>0. We suppose
+that the marked points of X log are equipped with an ordering, and that
+r > 0
+(cf. the discussion at the end of the Introduction). In the present §2, we deﬁne log
+conﬁguration spaces, log-full points, and log divisors.
+Denition 2.1. The smooth log curve X log over S determines, up to a choice of
+ordering of the marked points (which will in fact not aﬀect the following construc-
+tion), a classifying morphism S → M
+log
+g,r. Thus, by pulling back the morphism
+M
+log
+g,r+n → M
+log
+g,r given by forgetting the last n marked points via this morphism
+S → M
+log
+g,r, we obtain a morphism of log schemes
+X log
+n → S.
+
+RECONSTRUCTION OF LOG DIVISORS 5
+We shall refer to X log
+n as the n-th log conguration space associated to X log → S.
+Note that X log
+1 = X log. Write X log
+0
+def
+= S.
+Denition 2.2. (i) Write
+Πn
+def
+= πpro-l
+1 (X log
+n )
+for the maximal pro- l quotient of the fundamental group of the log scheme
+X log
+n (for a suitable choice of basepoint). We refer to [Hsh], Theorems B.1,
+B.2, for more details on fundamental groups of log schemes.
+(ii) Let P be a closed point of Xn. By abuse of notation, we shall use the
+notation“P ” both for the corresponding point of the scheme Xn and for the
+reduced closed subscheme of Xn determined by this point. Then we shall say
+that P is a log-full point of X log
+n if
+dim(OXn,P /I(P, MXn )) = 0
+(cf. Notation 1.2, (iii)).
+(iii) Let P be a log-full point of X log
+n and P log the log scheme obtained by restrict-
+ing the log structure of X log
+n to the reduced closed subscheme of Xn determined
+by P . Then we obtain an outer homomorphism π1(P log) → Πn (for suitable
+choices of basepoints). We shall refer to the subgroup Im( π1(P log) → Πn),
+which is well-deﬁned up to Π n-conjugation, as a log-full subgroup at P .
+(iv) We shall often refer to a point of the scheme Xn as a point of X log
+n . Let
+P be a point of X log
+n . Then P parametrizes a pointed stable curve of type
+(g, r + n) (cf. Deﬁnition 2.1). Thus, any geometric point of X log
+n lying over
+P determines a semi-graph of anabelioids of pro- l PSC-type, which is in fact
+easily veriﬁed to be independent of the choice of geometric point lying over
+P . We shall write GP for this semi-graph of anabelioids of pro- l PSC-type.
+(v) Let us ﬁx an ordered set
+Cr,n
+def
+= {c1, . . . , cr, x1
+def
+= cr+1, . . . xn
+def
+= cr+n}.
+Thus, by deﬁnition, for each point P of X log
+n , we have a natural bijection
+Cr,n
+∼
+→ Cusp(GP ). In the following, let us identify the set Cusp( GP ) with
+Cr,n.
+(vi) We shall refer to an irreducible divisor of Xn contained in the complement
+Xn \ UXn of the interior UXn of X log
+n as a log divisor of X log
+n . That is to
+say, a log divisor of X log
+n is an irreducible divisor of Xn whose generic point
+parametrizes a pointed stable curve with precisely two irreducible components
+(cf. Deﬁnition 2.1).
+(vii) Let V be a log divisor of X log
+n . Then we shall write GV for “ GP ” in the case
+where we take “ P ” to be the generic point of V .
+(viii) For each i ∈ {1, . . . , n}, write pi : X log
+n → X log for the projection morphism of
+co-proﬁle {i} (cf. [MzTa], Deﬁnition 2.1, (ii)). Write ι
+def
+= ( p1, . . . , pn) : X log
+n →
+X log ×S · · · ×S X log.
+Denition 2.3. Let m ≥ 2 and y1, . . . , ym ∈ Cr,n distinct elements such that
+♯({y1, . . . , ym} ∩ {c1, . . . , cr}) ≤ 1. Then one veriﬁes immediately — by considering
+clutching morphisms (cf. [Knu], Deﬁnition 3.8) — that there exists a unique log
+divisor V of X log
+n , which we shall denote by V ({y1, . . . , ym}), that satisﬁes the
+following condition: GV has precisely two vertices v1, v2 such that v1 is of type
+
+6 KAZUMI HIGASHIYAMA
+(0, m + 1), v2 is of type ( g, n + r − m + 1), and y1, . . . , ym are cusps of GV |v1 (cf.
+[CbTpI], Deﬁnition 2.1, (iii)).
+Remark 2.4. Let V be a log divisor of X log
+n . Then let us observe that there exists
+a unique collection of distinct elements y1, . . . , ym ∈ Cr,n such that ♯({y1, . . . , ym} ∩
+{c1, . . . , cr}) ≤ 1 and V = V ({y1, . . . , ym}). (Note that uniqueness holds even in
+the case where g = 0 (in which case r ≥ 3), as a consequence of the condition that
+♯({y1, . . . , ym} ∩ {c1, . . . , cr}) ≤ 1.) This observation is essentially a special case of
+Proposition 2.6, (iii), below.
+Denition 2.5. Let G be a semi-graph of anabelioids of pro- l PSC-type and G the
+underlying semi-graph of G. Suppose that G is a tree. Let e ∈ Edge(G), v ∈ Vert(G)
+be such that e abuts to v. Write b for the branch of e that abuts to v. By replacing
+e by open edges e1, e2 such that e1 abuts to v, and e2 abuts to the vertex ̸= v to
+which e abuts (resp. e1 abuts to v, and e2 is an edge which abuts to no vertex) if
+e ∈ Node(G) (resp. e ∈ Cusp(G)), we obtain two connected semi-graphs. Write G̸∋b
+for the semi-graph (among these two connected semi-graphs) that does not contain
+b. Write G∋b for the semi-graph (among these two connected semi-graphs) that
+contains b. Observe that
+• for arbitrary e ∈ Edge(G), G determines a natural semi-graph of anabelioids
+of pro- l PSC-type G∋b whose underlying semi-graph may be identiﬁed with
+G∋b;
+• if e ∈ Node(G), then G also determines a natural semi-graph of anabelioids
+of pro- l PSC-type G̸∋b whose underlying semi-graph may be identiﬁed with
+G̸∋b.
+Proposition 2.6. Let P be a point of X log
+n . Write G for the underlying semi-graph
+of GP (cf. Denition 2.2, (iv)). Then the following hold:
+(i) G is a tree.
+(ii) Cusp(GP ) = {c1, . . . , cr, x1, . . . , xn}.
+(iii) There exists a unique vertex vg ∈ Vert(GP ) that satises the following prop-
+erties:
+(a) The genus of GP |vg (cf. [CbTpI], Denitions 2.1, (iii); 2.3, (ii)) is g.
+(b) Let e ∈ Node(GP ) that abuts to vg and bg the branch of e that abuts to
+vg. Then ♯(Cusp((G)∋bg ) ∩ {c1, . . . , cr}) ≥ r − 1.
+(c) For each v ∈ Vert(GP ) \ {vg}, the genus of GP |v is 0.
+Proof. Assertion (i) follows immediately from the deﬁnition of GP . Assertion (ii)
+follows from Deﬁnition 2.2, (v). Finally, we verify assertion (iii). Existence is
+immediate. If g ̸= 0, uniqueness is immediate. If g = 0, it follows that r ≥ 3. Now
+assume that there exists a vertex v′
+g ∈ Vert(GP ) such that v′
+g ̸= vg, and v′
+g satisﬁes
+conditions (a), (b). It follows immediately from the connectedness of G that there
+exists a node e ∈ Node(GP ) such that e abuts to vg, and v′
+g ∈ Vert(G̸∋bg ), where
+we write bg for the branch of e that abuts to vg. By condition (b) in the case
+of vg, bg, it holds that ♯(Cusp(G∋bg ) ∩ {c1, . . . , cr}) ≥ r − 1 ≥ 2. On the other
+hand, it follows immediately from the connectedness of G that there exists a node
+e′ ∈ Node(GP ) such that e′ abuts to v′
+g, and vg ∈ Vert(G̸∋b′
+g ), where we write b′
+g for
+the branch of e′ that abuts to v′
+g. Next observe that it follows immediately from
+the fact that G is a tree that G∋bg is a sub-semi-graph of G̸∋b′g , which implies that
+
+RECONSTRUCTION OF LOG DIVISORS 7
+♯(Cusp(G∋b′
+g ) ∩ {c1, . . . , cr}) ≤ r − 2. Thus, by condition (b) in the case of v′
+g, b′
+g,
+we obtain a contradiction. 
+Denition 2.7. Let P be a point of X log
+n . Write G for the underlying semi-graph
+of GP , vg ∈ Vert(GP ) for the vertex of Proposition 2.6, (iii). For e ∈ Node(GP ),
+write be for the branch of e such that vg ∈ Vert(G∋be). Then we shall write
+IG
+def
+= {Cusp((G)̸∋be ) ∩ Cr,n | e ∈ Node(GP )} ⊆ 2Cr;n,
+where we write 2 (−) for the set of subsets of ( −). Note that it follows immediately
+from Proposition 2.6, (iii), that for each I ∈ IG, ♯I ≥ 2.
+Proposition 2.8. Let P, P ′ be points of X log
+n . Write G, G′ for the respective
+underlying semi-graphs of GP , GP ′; vg, v′
+g for the respective vertices characterized
+in Proposition 2.6, (iii). If IG = IG′ ⊆ 2Cr;n, then there exists a unique isomorphism
+of semi-graphs G
+∼
+→ G′ that maps vg 7→ v′
+g and is compatible with the labels of cusps
+∈ Cr,n. Moreover, ♯Vert(G) = ♯IG + 1, ♯Node(G) = ♯Node(GP ) = ♯IG.
+Proof. Let J ∈ IG. Write J⊆
+def
+= {I ∈ IG | I ⊆ J ⊆ Cr,n}. Then one veriﬁes
+immediately that one may construct a (well-deﬁned) semi-graph GJ satisfying the
+following properties:
+(i) The elements of Vert( GJ ) are equipped with labels ∈ J⊆ that determine a
+bijection Vert(GJ )
+∼
+→ J⊆.
+(ii) Let us call a subset {J1, J2} ⊆ J⊆ of cardinality ≤ 2 an adjacent pair of J⊆ if
+J1 ( J2, and there does not exist an element I ∈ IG such that J1 ( I ( J2. For
+e ∈ Node(GJ ), write Vert( e) ⊆ Vert(GJ )
+∼
+→ J⊆ for the subset (of cardinality
+≤ 2) of vertices to which e abuts. Then the assignment
+Node(GJ ) ∋ e 7→ Vert(e) ∈ 2Vert(GJ ) ∼
+→ 2J⊆
+determines a bijection of Node( GJ ) onto the set of adjacent pairs of J⊆.
+(iii) The cusps of GJ are equipped with labels ∈ Cr,n in such a way that, for each
+I ∈ J⊆, these labels determine a bijection from the set of cusps of the vertex
+labeled by I onto the subset I \ (∪
+IG∋J ∗(I J ∗) ⊆ Cr,n. Moreover, these labels
+determine a bijection Cusp( GJ )
+∼
+→ J (⊆ Cr,n).
+Next, one veriﬁes immediately that one may construct a (well-deﬁned) semi-graph
+GIG satisfying the following properties:
+(I) There exists a unique vertex of GIG equipped with a label vg. The set of cusps
+of this vertex vg are equipped with labels ∈ Cr,n which determine a bijection
+from the set of cusps of this vertex vg to the subset Cr.n \ (∪
+I∈IG
+I) ⊆ Cr,n.
+(II) The semi-graph GIG is obtained from vg (together with its associated cusps)
+by gluing vg to GJ , where J ∈ IG ranges over the elements of IG that are max-
+imal with respect to the relation of inclusion, along a node eJ ∈ Node(GIG )
+that abuts to vg and the vertex of GJ labeled J (cf. (i)).
+(III) The cusps of GIG are equipped with labels ∈ Cr,n that are compatible with
+the labels of (I) (in the case of the cusps associated to the vertex labeled vg)
+and (i) (in the case of the cusps associated to vertices ∈ Vert(GJ ), for J as
+in (II)). These labels determine a bijection Cusp( GIG )
+∼
+→ Cr,n.
+Then it follows immediately from Deﬁnition 2.7 that there exists a unique isomor-
+phism of semi-graphs G
+∼
+→ GIG that is compatible with the label “ vg”, as well as
+
+8 KAZUMI HIGASHIYAMA
+with the labels of cusps ∈ Cr,n. Since G is a tree, it follows that GIG
+∼
+← G is also a
+tree. On the other hand, observe that it follows immediately from the construction
+of GIG (cf. (i), (I), (II)), together with the deﬁnition of IG (cf. Deﬁnition 2.7), that
+♯Vert(GIG ) = ♯IG + 1. Since GIG is a tree, we thus conclude that ♯Node(GIG ) = ♯IG.
+Finally, since GIG is completely determined by the subset IG ⊆ 2Cr;n, the remainder
+of Proposition 2.8 follows immediately. 
+Proposition 2.9. Let P be a point of X log
+n and I ⊆ Cr,n such that ♯(I ∩{c1, . . . , cr})
+≤ 1. Write G for the underlying semi-graph of GP . Then the following conditions
+are equivalent:
+(i) P ∈ V (I) (cf. Denition 2.3).
+(ii) I ∈ IG.
+(iii) GV (I) is obtained from GP by generization (with respect to some subset of
+Node(GP ) (cf. [CbTpI], Denition 2.8)).
+Proof. The equivalence (i) ⇐ ⇒(iii) follows immediately — by considering clutching
+morphisms (cf. [Knu], Deﬁnition 3.8) — from the latter portion of Deﬁnition 2.2,
+(vi). The equivalence (ii) ⇐ ⇒(iii) follows immediately from Deﬁnition 2.7. 
+Proposition 2.10. Let m ∈ { 1, . . . , n}; V1, . . . , Vm a collection of distinct log
+divisors of X log
+n such that V1 ∩ · · · ∩ Vm ̸= ∅. Then there exist nonnegative integers
+i0, . . . , im such that
+i0 + · · · + im = n − m,
+and the intersection V1 ∩ · · · ∩ Vm is isomorphic, over S, to
+Xi0 ×S (M0,i1+3 ×Z · · · ×Z M0,im+3 ×Z S).
+In particular, the intersection V1 ∩ · · · ∩ Vm is irreducible of dimension n − m; if
+m = n, then V1 ∩ · · · ∩Vn is (the reduced closed subscheme determined by) a log-full
+point.
+Proof. Let P be a generic point of V1 ∩ · · · ∩Vm. Write GP for the underlying semi-
+graph of GP . Recall from Proposition 2.8 that ♯Vert(GP ) − 1 = ♯Node(GP ) = ♯IGP .
+Thus, we conclude from Remark 2.4, together with the equivalence (i) ⇐ ⇒(ii) of
+Proposition 2.9, that
+♯Node(GP ) = ♯IGP = ♯{V | V is a log divisor of X log
+n such that P ∈ V } ≥ m.
+Since the divisor that determines the log structure of X log
+n is a divisor with normal
+crossings, we thus conclude that ♯Vert(GP ) − 1 = ♯Node(GP ) = m, and hence that
+{V | V is a log divisor of X log
+n such that P ∈ V } = {V1, . . . , Vm}.
+Thus, it follows from Proposition 2.6, (ii), that
+♯{branches of edges (i.e., cusps and nodes) of GP } = n + r + 2m.
+Next, observe that it follows from Proposition 2.6, (iii), that there exists a clutch-
+ing morphism
+ρP : Xi0 ×S (M0,i1+3 ×Z · · · ×Z M0,im+3 ×Z S) → Xn
+(cf. [Knu], Deﬁnition 3.8) such that P lies in the image of this morphism ρP . Since
+the morphism ρP is a proper monomorphism (cf. Propositions 2.6, (iii); 2.8), it
+follows that the morphism ρP is a closed immersion. Thus, if we write XP for
+the scheme-theoretic closure of P in Xn and XρP for the image of ρP in Xn, then
+XP ⊆ XρP .
+
+RECONSTRUCTION OF LOG DIVISORS 9
+Next, observe that since the sum of the cardinalities of the sets of cusps of the
+pointed stable curves parametrized by the moduli stack factors of the domain of
+ρP is equal to
+(i0 + r) +
+m∑
+j=1
+(ij + 3),
+it holds that
+(i0 + r) +
+m∑
+j=1
+(ij + 3) = ♯{branches of edges of GP } = n + r + 2m,
+and hence that
+i0 +
+m∑
+j=1
+ij = n − m.
+Since
+dim(XρP ) = dim( Xi0 ×S (M0,i1+3 ×Z · · · ×Z M0,im+3 ×Z S)) = i0 +
+m∑
+j=1
+ij,
+and V1 ∪ · · · ∪Vm is a divisor with normal crossings (which implies that dim( XP ) =
+dim(V1 ∩ · · · ∩ Vm) = n − m), we thus conclude that
+dim(XρP ) = dim( XP ),
+and hence that XρP = XP . Moreover, since
+{V | V is a log divisor of X log
+n such that P ∈ V } = {V1, . . . , Vm},
+we thus conclude from Remark 2.4, together with the equivalence (i) ⇐ ⇒(ii) of
+Proposition 2.9, that {V1, . . . , Vm} determines IGP , hence, by Proposition 2.8, that
+{V1, . . . , Vm} determines GP . But this implies that every generic point of V1∩· · ·∩Vm
+lies in XρP , for some ﬁxed P , and hence that V1 ∩ · · · ∩ Vm is irreducible. This
+completes the proof of Proposition 2.10. 
+3. V arious types of log divisors
+We continue with the notation introduced at the beginning of §2. In addition, we
+suppose that n ∈ Z>1. In the present §3, we deﬁne various types of log divisors
+and study their geometry.
+Denition 3.1. (i) For positive integers i ∈ { 1, . . . , n− 1}, j ∈ { i + 1, . . . , n},
+write
+πi,j : X ×S · · · ×S X → X ×S X
+for the projection of the ﬁber product of n copies of X → S to the i-th and j-
+th factors. Write δ′
+i,j for the inverse image via πi,j of the image of the diagonal
+embedding X ,→ X ×S X. Write δi,j for the uniquely determined log divisor
+of X log
+n whose generic point maps to the generic point of δ′
+i,j via the natural
+morphism Xn → X ×S · · · ×S X (cf. Deﬁnition 2.2, (viii)). We shall refer to
+the log divisor δi,j as a naive diagonal of X log
+n .
+(ii) Let V be a log divisor of X log
+n . We shall say that V is a tripodal divisor if one
+of the vertices of GV (cf. Deﬁnition 2.2, (vii)) is a tripod (cf. Notation 1.3,
+(v)).
+
+10 KAZUMI HIGASHIYAMA
+(iii) Let V be a log divisor of X log
+n . We shall say that V is a ( g, r)-divisor if one
+of the vertices of GV is of type ( g, r) (cf. [CbTpI], Deﬁnition 2.3, (iii)).
+(iv) Let V be a log divisor of X log
+n . We shall say that V is a drift diagonal if there
+exist a naive diagonal δ and an automorphism α of X log
+n over S such that
+V = α(δ).
+Remark 3.2. Recall (cf. [NaTa], Theorem D) that:
+• when ( g, r) = (0 , 3) or (1 , 1), any automorphism of X log
+n over S necessarily
+arises as the composite of an automorphism (of X log
+n that arises from an
+automorphism) of X log over S with an automorphism of X log
+n that arises
+from a permutation of the r + n marked points of the stable log curve
+X log
+n+1 → X log
+n ;
+• when ( g, r) ̸= (0 , 3), (1, 1), any automorphism of X log
+n over S necessarily
+arises as the composite of an automorphism (of X log
+n that arises from an
+automorphism) of X log over S with an automorphism of X log
+n that arises
+from a permutation of the n factors of X log
+n .
+Proposition 3.3. The following hold:
+(i) It holds that
+{naive diagonals } = {V ({xi, xj}) | i ∈ {1, . . . , n− 1}, j ∈ {i + 1, . . . , n}}
+(cf. Denition 2.3).
+(ii) If (g, r) ̸= (0, 3), then
+{tripodal divisors}
+= {V ({y1, y2}) | y1, y2 ∈ Cr,n are distinct elements , {y1, y2} ̸⊆ { c1, . . . , cr}}
+(cf. Denition 2.3).
+(iii) If (g, r) = (0 , 3), then
+{tripodal divisors} = {V ({y1, y2}) | Cr,n ⊇ {y1, y2} ̸⊆ { c1, c2, c3}}
+∪ { V ({y1, y2})
+def
+= V (Cr,n \ {y1, y2}) | {y1, y2} ⊆ { c1, c2, c3}}
+(cf. Denition 2.3).
+(iv) Let V be a tripodal divisor and α an automorphism of X log
+n over S. Then
+α(V ) is a tripodal divisor.
+Proof. First, assertion (i) follows immediately from the various deﬁnitions involved.
+Next, assertions (ii), (iii) follow immediately from Remark 2.4, together with the
+deﬁnition of tripodal divisors. Finally, we consider assertion (iv). It follows from Re-
+mark 3.2 that α lifts to an automorphism of X log
+n+1 relative to the natural morphism
+X log
+n+1 → X log
+n , hence induces an isomorphism of GV with Gα(V ). This completes
+the proof of assertion (iv). 
+Proposition 3.4. The following hold:
+(i) It holds that
+{naive diagonals } ⊆ { drift diagonals } ⊆ { tripodal divisors} ⊆ { log divisors }.
+(ii) If (g, r) ̸= (0, 3), (1, 1), then
+{naive diagonals } = {drift diagonals }.
+
+RECONSTRUCTION OF LOG DIVISORS 11
+(iii) If (g, r) = (0 , 3) or (1, 1), then
+{drift diagonals } = {tripodal divisors}.
+Proof. First, we verify assertion (i). The ﬁrst and third inclusions follow imme-
+diately from the various deﬁnitions involved. The second inclusion follows from
+Proposition 3.3, (i), (iv). This completes the proof of assertion (i). Assertion (ii)
+follows immediately from Remark 3.2.
+Finally, we consider assertion (iii). Let V be a tripodal divisor. Let us ﬁrst
+suppose that ( g, r) = (0 , 3). Then X log
+n is naturally isomorphic to the mod-
+uli stack ( M
+log
+0,n+3)k
+def
+= M
+log
+0,n+3 ×Z S over S, on which the symmetric group on
+n + 3 letters acts naturally. Moreover, it follows from Proposition 3.3, (iii), that
+V = V ({y1, y2}), where y1, y2 ∈ Cr,n are distinct elements. Thus, there exists a
+permutation α ∈ Sn+3 such that α(V ({x1, x2})) = V ({y1, y2}). Assertion (iii) in
+the case where ( g, r) = (0 , 3) now follows immediately.
+Next, let us suppose that ( g, r) = (1 , 1). Then X log
+n is naturally isomorphic to
+the ﬁber product M
+log
+1,n+1 ×M
+log
+1;1
+S over S, where the arrow S → M
+log
+1,1 is taken to be
+the classifying morphism S → M
+log
+1,1 determined by X log (cf. Deﬁnition 2.1). Thus,
+one veriﬁes easily, by considering the automorphisms of an elliptic curve given by
+translation by a rational point, that the action of the symmetric group on n + 1
+letters on M
+log
+1,n+1 induces an action of the symmetric group on n + 1 letters on
+X log
+n . Moreover, it follows from Proposition 3.3, (ii), that V = V ({y1, y2}), where
+y1, y2 ∈ Cr,n are arbitrary distinct elements (cf. Deﬁnition 2.3). Thus, there exists
+a permutation α ∈ Sn+1 such that α(V ({x1, x2})) = V ({y1, y2}). Assertion (iii) in
+the case where ( g, r) = (1 , 1) now follows immediately. 
+Denition 3.5. Let G be a semi-graph of anabelioids of pro- l PSC-type.
+(i) We shall say that a vertex of G is a terminal vertex if precisely one node abuts
+to it.
+(ii) We shall say that a node of G is a terminal node if it abuts to a terminal
+vertex.
+(iii) Write
+TerNode(G) ⊆ Node(G)
+for the set of terminal nodes of G.
+Proposition 3.6. Let P be a closed point of X log
+n . Then it holds that
+P is a log-full point ⇐ ⇒Node(Gp) = n.
+Proof. This equivalence follows immediately from Deﬁnitions 2.1, 2.2, (ii), together
+with the well-known modular interpretation of the log moduli stacks that appear
+in the deﬁnition of X log
+n (where we recall that the log structure of this log stack
+arises from a divisor with normal crossings). 
+Proposition 3.7. Let P be a log-full point of X log
+n and A a log-full subgroup at P
+(cf. Denition 2.2, (iii)). Then the following hold:
+(i) It holds that ♯Node(GP ) = n. The underlying semi-graph of GP is a tree
+that has precisely n + 1 vertices, one of which is of type (g, r) (cf. [CbTpI],
+Denition 2.3, (iii)); the other vertices are tripods (cf. Notation 1.3, (v)).
+
+12 KAZUMI HIGASHIYAMA
+(ii) Write Node(GP ) = {e1, . . . , en} (cf. (i)). Then for each i ∈ { 1, . . . , n}, there
+exists a unique log divisor Vi such that there exists an isomorphism of GVi with
+(GP ) Node(GP )\{ei} (cf. [CbTpI], Denition 2.8) which preserves the respective
+orderings of cusps. In this situation, we shall say that Vi is the log divisor
+associated to ei ∈ Node(GP ).
+(iii) In the situation of (ii),
+P = V1 ∩ · · · ∩ Vn and A = IV1 × · · · × IVn ,
+where IVi ⊆ Πn is a suitable inertia group associated to Vi contained in A.
+Moreover, for each i ∈ {1, . . . , n}, it holds that IVi ≃ Zl and A ≃ Z⊕n
+l .
+(iv) Let m be a positive number; W1, . . . , Wm distinct log divisors such that P =
+W1 ∩ · · · ∩ Wm. Then m = n, and {W1, . . . , Wm} = {V1, . . . , Vn} (cf. (iii)).
+Proof. Assertion (i) follows immediately from Propositions 2.6, 2.8, and 3.6, to-
+gether with the observation that a log-full point (cf. Deﬁnition 2.2, (ii)) corre-
+sponds to an intersection of the sort considered in Proposition 2.10, in the case
+where n = m, and ij = 0, for j = 0 , 1, . . . , m. Assertion (ii) follows immediately
+from Proposition 2.9. Assertion (iii) follows from Propositions 2.9 and 2.10, and
+[CbTpI], Lemma 5.4, (ii). Assertion (iv) follows immediately from Propositions 2.8,
+2.9, 2.10, together with assertion (iii). 
+Denition 3.8. Let P be a log-full point of X log
+n and V1, . . . , Vn the log divisors
+such that P = V1 ∩ · · · ∩ Vn (cf. Proposition 3.7, (iv)). We shall say that Vi is a
+terminal divisor of P if there exists a terminal node e ∈ TerNode(GP ) such that Vi
+is the log divisor associated to e ∈ Node(GP ) (cf. Proposition 3.7, (ii)).
+Lemma 3.9. Let P be a log-full point of X log
+n and V1, . . . , Vn the log divisors such
+that P = V1 ∩ · · · ∩Vn (cf. Proposition 3.7, (iv)). Then the following conditions are
+equivalent:
+(i) Vi is a terminal divisor of P .
+(ii) Vi is a tripodal divisor or a (g, r)-divisor.
+Proof. The implication (i) = ⇒ (ii) follows from Proposition 3.7, (i), (ii). The
+implication (ii) = ⇒ (i) follows immediately from the various deﬁnitions involved.
+
+Theorem 3.10. For  ∈ {◦ , •}, let l be a prime number; k an algebraically
+closed eld of characteristic ̸= l; S def
+= Spec( k); (g, r) a pair of nonnegative
+integers such that 2g − 2 + r > 0;
+X log → S
+a smooth log curve of type (g, r); n ∈ Z>1; X log
+n the n-th log conguration
+space associated to X log → S; Π def
+= πpro-l
+1 (X log
+n ) (for a suitable choice of
+basepoint);
+ϕ : Π ◦ ∼
+→ Π•
+an isomorphism of pronite groups. Then the following hold:
+(i) (g◦, r◦, n◦) = ( g•, r•, n•).
+(ii) If (g, r) ̸= (0 , 3), (1, 1), then ϕ induces a bijection between the set of ber
+subgroups of a given co-length (cf. [MzTa], Denition 2.3, (iii)) of Π◦ and the
+set of ber subgroups of the same co-length of Π•.
+
+RECONSTRUCTION OF LOG DIVISORS 13
+(iii) Suppose that (g, r) ̸= (0, 3), (1, 1). Write ι
+ : Π → Π
+1 × · · · × Π
+1 for the
+outer homomorphism induced by ι : X log
+n → X log ×S · · · ×S X log (cf.
+Denition 2.2, (viii)), where Π
+1
+def
+= πpro-l
+1 (X log) (for a suitable choice of
+basepoint). Then ϕ induces a commutative diagram
+Π◦ ϕ //
+ι◦
+
+
+Π•
+ι•
+
+
+Π◦
+1 × · · · × Π◦
+1
+∼ // Π•
+1 × · · · × Π•
+1,
+where the lower horizontal isomorphism preserves the respective direct product
+decompositions (but possibly permutes the factors).
+Proof. Assertion (i) follows from [HMM], Theorem A, (i). Assertion (ii) follows
+from [MzTa], Corollary 6.3. Assertion (iii) follows from assertion (ii). 
+4. Reconstruction of non-degenerate elements of log-full subgroups
+We continue with the notation of §3. In the present §4, we reconstruct the subset
+of scheme-theoretically non-degenerate elements (cf. Deﬁnition 4.6, (i), below) of a
+log-full subgroup (cf. Theorem 4.15 below).
+Proposition 4.1. Let m < n be an integer, q : X log
+n → X log
+m a projection, V a
+log divisor of X log
+n . Write q : Π n → Πm for the outer homomorphism induced by
+q : X log
+n → X log
+m . Suppose that q(V ) ( Xm. Then the following hold:
+(i) q(V ) is a log divisor of X log
+m .
+(ii) Let IV ⊆ Πn be an inertia group associated to V . Then q(IV ) (≃ IV ) is an
+inertia group associated to q(V ).
+Proof. Assertion (i) follows immediately from the latter portion of Deﬁnition 2.2,
+(vi), together with the well-known modular interpretation of the log moduli stacks
+that appear in the deﬁnition of X log
+n and X log
+m . Assertion (ii) follows from [NodNon],
+Remark 2.4.2, together with the surjectivity portion of [NodNon], Lemma 2.7, (ii).
+
+Proposition 4.2. Let P be a log-full point of X log
+n ; V1, . . . , Vn the log divisors such
+that P = V1 ∩ · · · ∩Vn; A = IV1 × · · · ×IVn the log-full subgroup at P (cf. Proposition
+3.7, (iii), (iv)). Then the following hold:
+(i) There exists a tripodal divisor in {V1, . . . , Vn}. Suppose that V1 is a tripodal
+divisor. Thus, GV1 has precisely two vertices v1, v′
+1, one of which is a tripod.
+Suppose that v1 is a tripod.
+(ii) If r = 1 , then there exists a unique (g, r)-divisor in {V1, . . . , Vn}. Suppose
+that Vn is this unique (g, r)-divisor.
+(iii) In the situation of (i), if (g, r) ̸= (0, 3), then there exists an i0 ∈ {1+ r, . . . , n+
+r} such that ci0 is a cusp of GV1|v1 (cf. [CbTpI], Denition 2.1, (iii)). In this
+case, write p : X log
+n → X log
+n−1 for the projection morphism of prole {i0 − r}
+(cf. [MzTa], Denition 2.1, (ii)).
+(iv) In the situation of (i), if (g, r) = (0 , 3), then there exists an i0 ∈ {1, . . . ,3 +n}
+such that ci0 is a cusp of GV1 |v1. In this case, write p : X log
+n → X log
+n−1 for the
+
+14 KAZUMI HIGASHIYAMA
+morphism determined by the morphism (M
+log
+0,n+3)k → (M
+log
+0,n+2)k obtained by
+forgetting the i0-th marked point (cf. the proof of Proposition 3.4, (iii)) ɽ
+(v) In the situation of (iii) or (iv), it holds that V ′
+1
+def
+= p(V1) = Xn−1 and V ′
+i
+def
+=
+p(Vi) is a log divisor of X log
+n−1, for all i ∈ {2, . . . , n}.
+(vi) In the situation of (v), it holds that V ′
+i ̸= V ′
+j , for all i ∈ { 1, . . . , n− 1}, j ∈
+{i + 1, . . . , n}.
+(vii) In the situation of (v), it holds that p(P ) is a log-full point of X log
+n−1.
+(viii) In the situation of (iii) or (iv), for arbitrary (g, r), we write, by abuse of
+notation, p : Π n → Πn−1 for the (outer) homomorphism induced by p. Then
+A′ def
+= p(A) is a log-full subgroup of Πn−1, and we have exact sequences
+1 // Πn/n−1
+def
+= Ker( p) // Πn
+p // Πn−1 // 1,
+1 // IV1
+// A
+p // A′ // 1.
+Proof. Assertions (i), (ii) follow from Proposition 3.7, (i), (ii) (cf. also Lemma 3.9).
+Assertion (iii) follows from Proposition 3.3, (ii). Assertion (iv) is immediate. Asser-
+tion (v) follows from our choice of p : X log
+n → X log
+n−1, together with the terminality
+of v1 (cf. also Proposition 4.1, (i)). Next, we verify assertion (vi). By assertion (v),
+it holds that V ′
+1 ̸= V ′
+j , for all j ∈ {2, . . . , n}. Thus, we may assume without loss of
+generality that 1 < i < j , and that GVi has precisely two vertices vi, wi such that
+ci0 is a cusp of GVi |vi. Let us recall that we have identiﬁed Cusp( GVi), Cusp( GVj )
+with Cr,n (cf. Deﬁnition 2.2, (v)). Suppose that V ′
+i = V ′
+j . Observe that ci0 does
+not belong to the set of cusps of any tripod (vertex) of GVi, GVj . Thus, one veriﬁes
+easily that GVj has precisely two vertices vj, wj such that
+(Cusp(GVj |vj
+) ∩ Cusp(GVj )) ∪ {ci0 } = Cusp(GVi|vi
+) ∩ Cusp(GVi);
+♯Cusp(GVj |vj
+) + 1 = ♯Cusp(GVi|vi
+);
+(Cusp(GVi|wi) ∩ Cusp(GVi )) ∪ {ci0} = Cusp(GVj |wj
+) ∩ Cusp(GVj );
+♯Cusp(GVi|wi
+) + 1 = ♯Cusp(GVj |wj
+);
+g(vi) = g(vj), g (wi) = g(wj),
+where we write g(v(−)), g(w(−)) for the “genus” of GV(−)|v(−)
+, GV(−)|w(−)
+(cf. [CbTpI],
+Deﬁnition 2.3, (ii)). But one veriﬁes easily from the correspondence between log
+divisors and subsets of Cr,n (cf. Remark 2.4), together with the deﬁnition of ci0 in
+the statements of assertions (iii), (iv), that this implies that there exists a tripod
+(vertex) vP of GP such that
+Cusp(GP |vP
+) ∩ Cusp(GP ) = {ci0 }.
+On the other hand, this contradicts the terminality of the tripodal divisor V1 (cf.
+Lemma 3.9). In particular, we conclude that V ′
+i ̸= V ′
+j . Assertion (vii) follows from
+assertion (vi). Finally, assertion (viii) follows from assertions (v), (vii), together
+with [MzTa], Proposition 2.2, (i). 
+
+RECONSTRUCTION OF LOG DIVISORS 15
+Proposition 4.3. Let P be a log-full point of X log
+n and IV an inertia group asso-
+ciated to a log divisor V . Then it holds that
+P ∈ V ⇐ ⇒ there exists a log-full subgroup A at P such that IV ⊆ A.
+Proof. The implication = ⇒ follows immediately from Proposition 3.7, (iii), (iv).
+Thus, it suﬃces to consider the implication ⇐=. Let V1, . . . , Vn be log divisors such
+that P = V1 ∩ · · · ∩Vn (cf. Proposition 3.7, (iii), (iv)). We may assume without loss
+of generality that V1 is a tripodal divisor (cf. Proposition 4.2, (i)). In the following,
+we consider a projection p : X log
+n → X log
+n−1 as in Proposition 4.2, (iii) or (iv), and
+the corresponding (outer) homomorphism p : Π n → Πn−1 of Proposition 4.2, (viii).
+Let us ﬁrst suppose that p(V ) = Xn−1. Then since the generic point of V
+maps via p to the generic point of Xn−1, IV ⊆ Ker(p) ∩ A = IV1 (cf. Proposition
+4.2, (viii)). Now observe that since p(V ) = p(V1) = Xn−1, IV and IV1 may be
+regarded as cuspidal inertia groups of the smooth log curve determined by the
+geometric generic ﬁber of p : X log
+n → X log
+n−1. In particular, the inclusion IV ⊆ IV1 of
+profnite groups isomorphic to Zl (cf. Proposition 3.7, (iii)) implies, by [CmbGC],
+Proposition 1.2, (i), that P ∈ V1 = V .
+Thus, it suﬃces to consider the case where p(V ) ̸= Xn−1. Then by Proposition
+4.1, (i), (ii), V ′ def
+= p(V ) is a log divisor of X log
+n−1, and p induces an isomorphism
+IV
+∼
+→ IV ′. Now we apply induction on n. Here, we note that although we have
+assumed that n > 1, the assertion corresponding to the implication ⇐= for n = 1
+follows immediately from [CmbGC], Proposition 1.2, (i). Since A′ def
+= p(A) is a log-
+full subgroup at P ′ def
+= p(P ) (cf. Proposition 4.2, (viii)) that contains IV ′, it follows
+from the induction hypothesis that P ′ = V ′
+2 ∩ · · · ∩ V ′
+n ∈ V ′, where V ′
+i
+def
+= p(Vi)
+and i ∈ {2, . . . , n}. By Proposition 3.7, (iv), it holds that V ′ ∈ {V ′
+2 , . . . , V′
+n}, so we
+may assume without loss of generality that V ′ = V ′
+2 . It follows immediately from
+the latter portion of Deﬁnition 2.2, (vi), together with the well-known modular
+interpretation of the log moduli stacks that appear in the deﬁnition of X log
+n and
+X log
+n−1, that there exists a log divisor W ̸= V2 of X log
+n such that p(W ) = V ′
+2 and
+(V ⊆) p−1(V ′
+2 ) = V2 ∪ W . Note that V ∈ {V2, W }. Suppose that V = W . Then
+IW = IV ⊆ p−1p(IV ) = p−1(IV ′) = p−1(IV ′
+2 ) = IV1 ⊕ IV2 ,
+where the last equality follows from Proposition 4.2, (viii). Now let us consider the
+stable log curve obtained by restricting p : X log
+n → X log
+n−1 to the generic point of
+V ′
+2 . This stable log curve has precisely two irreducible components, corresponding
+to V2 and W , whose intersection consists of precisely one node, which we denote
+by eV2∩W ; moreover, V1 may be regarded as a cusp of this stable log curve which,
+since V1 ∩ V2 ̸= ∅, is contained in the irreducible component of the stable log curve
+corresponding to V2. Write IV2∩W for the inertia group of eV2∩W such that
+IV2∩W ⊆ IV2 ⊕ IW = IV2 ⊕ IV .
+Since (IV ⊂) IV1 ⊕ IV2 is an abelian group, it holds that (the cuspidal inertia group)
+IV1 commutes with IV2 and IV = IW , hence with (the nodal inertia group) IV2∩W .
+In particular, by [CmbGC], Proposition 1.2, (i), (ii), we obtain a contradiction to
+our assumption that V = W . Thus, V = V2, and P ∈ V2 = V . 
+
+16 KAZUMI HIGASHIYAMA
+Proposition 4.4. Let V, W be log divisors and IV an inertia group associated to
+V . Then it holds that
+W = V ⇐ ⇒ there exists an inertia group IW associated to W such that IW = IV .
+Proof. The implication = ⇒ follows immediately from the various deﬁnitions in-
+volved. Thus, it suﬃces to consider the implication ⇐=. Recall that it follows
+from the well-known modular interpretation of the log moduli stacks that appear
+in the deﬁnition of X log
+n that there exists a log-full point P such that P ∈ V . Let
+V1, . . . , Vn be the distinct log divisors such that P = V1 ∩ · · · ∩Vn, V ∈ {V1, . . . , Vn}
+(cf. Proposition 3.7, (iii), (iv)). Thus, we may assume without loss of generality
+that IV = IVi ⊆ A for some i ∈ {1, . . . , n}. In the following, we assume that there
+exists an inertia group IW associated to the log divisor W such that IW = IV and
+consider a projection p : X log
+n → X log
+n−1 as in Proposition 4.2, (iii) or (iv), and the
+corresponding (outer) homomorphism p : Π n → Πn−1 of Proposition 4.2, (viii).
+Let us ﬁrst suppose that p(V ) = Xn−1. Then since the generic point of V maps
+via p to the generic point of Xn−1, IV ⊆ Ker(p) ∩ A = IV1 (cf. Proposition 4.2,
+(viii)). Since IW = IV ⊆ Ker(p), it follows from Propositions 3.7, (iii); 4.1, (i), (ii),
+that p(W ) = Xn−1. Now observe that since p(V ) = p(W ) = p(V1) = Xn−1, IV ,
+IW , and IV1 may be regarded as cuspidal inertia groups of the smooth log curve
+determined by the geometric generic ﬁber of p : X log
+n → X log
+n−1. In particular, the
+equality and inclusion IW = IV ⊆ IV1 of proﬁnite groups isomorphic to Zl (cf.
+Proposition 3.7, (iii)) implies, by [CmbGC], Proposition 1.2, (i), that W = V = V1.
+Thus, it suﬃces to consider the case where p(V ) ̸= Xn−1. By Proposition 4.1, (i),
+(ii), V ′ def
+= p(V ) is a log divisor of X log
+n−1, and p induces an isomorphism IV
+∼
+→ IV ′.
+If p(W ) = Xn−1, then since the generic point of W maps via p to the generic
+point of Xn−1, it follows that IW = IV ⊆ Ker(p), in contradiction to the existence
+of the isomorphism IV
+∼
+→ IV ′ (cf. Proposition 3.7, (iii)). Thus, we conclude that
+p(W ) ̸= Xn−1 and hence, by Proposition 4.1, (i), (ii), that W ′ def
+= p(W ) is a
+log divisor of X log
+n−1, and IW
+∼
+→ IW ′ . Now we apply induction on n. Here, we
+note that although we have assumed that n > 1, the assertion corresponding to
+the implication ⇐= for n = 1 follows immediately from [CmbGC], Proposition
+1.2, (i). Then since IW ′ = IV ′, it follows from the induction hypothesis that
+W ′ = V ′. Now suppose that W ̸= V . Then it follows immediately from the latter
+portion of Deﬁnition 2.2, (vi), together with the well-known modular interpretation
+of the log moduli stacks that appear in the deﬁnition of X log
+n and X log
+n−1, that the
+stable log curve obtained by restricting p : X log
+n → X log
+n−1 to the generic point of
+W ′ = V ′ has precisely two irreducible components, corresponding to W and V ,
+whose intersection consists of precisely one node. Thus, since IW = IV , we conclude
+from [CmbGC], Proposition 1.2, (i), that W = V . 
+Proposition 4.5. Let P †, P ‡ be log-full points of X log
+n and A† a log-full subgroup
+at P †. Then it holds that
+P † = P ‡ ⇐ ⇒ there exists a log-full subgroup A‡ at P ‡ such that A† = A‡.
+In particular, the assignment P † 7→ [A†] (where \ [(−)]" denotes the Πn-conjugacy
+class of \ (−)") determines a natural bijection
+{log-full points }
+∼
+→ { Πn-conjugacy classes of log-full subgroups }.
+
+RECONSTRUCTION OF LOG DIVISORS 17
+Proof. The assertion of the second display follows from the assertion of the ﬁrst
+display. Let us prove the assertion of the ﬁrst display. The implication = ⇒ is
+immediate. Thus, it suﬃces to prove the implication ⇐=. Suppose that A† = A‡.
+Let V1, . . . , Vn be log divisors such that P † = V1 ∩ · · · ∩ Vn; write A† = IV1 ×
+· · · × IVn (cf. Proposition 3.7, (iii), (iv)). In particular, for each j ∈ { 1, . . . , n},
+IVj ⊆ A† = A‡. In particular, it follows from Proposition 4.3 that P ‡ ∈ Vj. Thus,
+P ‡ ∈ V1 ∩ · · · ∩ Vn = P † (cf. the notational conventions of Deﬁnition 2.2, (ii)), i.e.,
+P † = P ‡, as desired. 
+In the remainder of the present §4, we shall apply the notational conventions
+introduced in the statement of Proposition 4.2 (cf, especially, Proposition 4.2, (i),
+(ii)).
+Denition 4.6. Let α ∈ A and
+A = IV1 × · · · × IVn : α 7→ (a1, . . . , an).
+(i) We shall say that α is scheme-theoretically non-degenerate if ai ̸= 1 A for each
+i ∈ {1, . . . , n}.
+(ii) We shall say that α is group-theoretically non-degenerate if Zn (α) is an
+abelian group.
+Theorem 4.7. It holds that
+{scheme-theoretically non-degenerate elements of A}
+= {group-theoretically non-degenerate elements of A}.
+Proof. When r ̸= 1, this follows from Propositions 4.9, 4.12, below. When r = 1,
+this follows from Propositions 4.9, 4.12, and 4.14, below. 
+Lemma 4.8. It holds that
+Nn (A) = A,
+i.e., every log-full subgroup of Πn is normally terminal in Πn.
+Proof. In the following, we consider the projection p : X log
+n → X log
+n−1 of Proposition
+4.2, (iii) or (iv), and the associated (outer) homomorphism p : Π n → Πn−1 of
+Proposition 4.2, (viii).
+We apply induction on n. Here, we note that although we have assumed that
+n > 1, the analogous assertion for n = 1 follows immediately from [CmbGC],
+Proposition 1.2, (ii). By deﬁnition, Nn (A) ⊇ A. Let α ∈ Nn (A). Since αAα−1 =
+A, it follows that p(α)A′p(α)−1 = A′, where we recall the log-full subgroup A′ =
+p(A) of Π n−1 discussed in Proposition 4.2, (viii). Then it follows from the induction
+hypothesis that A′ is normally terminal. Thus, p(α) ∈ A′, i.e., p(Nn (A)) ⊆ A′.
+Since p(Nn (A)) ⊇ p(A) = A′, it follows that p(Nn (A)) = A′.
+Next, we observe that by Proposition 4.2, (viii), Nn (A) ∩ Πn/n−1 ⊇ A ∩
+Πn/n−1 = IV1 . Let α ∈ Nn (A) ∩ Πn/n−1. Since αAα−1 = A, and Π n/n−1 is
+normal in Π n (cf. Proposition 4.2, (viii)), it follows that αIV1 α−1 = IV1 ⊆ A.
+On the other hand, let us observe that V1 determines a cusp of the smooth log
+curve obtained by restricting p : X log
+n → X log
+n−1 to the generic point of Xn−1 (cf.
+Proposition 4.2, (v)). Thus, we conclude from [CmbGC], Proposition 1.2, (ii), that
+α ∈ Nn=n−1 (IV1) = IV1, i.e., that Nn (A) ∩ Πn/n−1 = IV1 .
+
+18 KAZUMI HIGASHIYAMA
+It follows from the above discussion that we have an exact sequence
+1 // IV1
+// Nn (A)
+p // A′ // 1.
+By the ﬁve lemma (cf. Proposition 4.2, (viii)), it thus follows that Nn (A) = A. 
+Proposition 4.9. Let (a1, . . . , an) ∈ IV1 × · · · × IVn = A. If a1, . . . , an ̸= 1 A, then
+Zn (a1 · · · an) = A, hence, in particular, is an abelian group.
+Proof. Let X log
+n+1 → X log
+n be the projection morphism of proﬁle {n + 1 }. This
+projection induces an exact sequence
+1 // Πn+1/n // Πn+1 // Πn // 1,
+which gives rise to an outer representation ρ : Π n → Out(Πn+1/n). Recall that ρ
+is injective (cf. [Asd], the Remark following the proof of Theorem 1). Moreover,
+recall that there exists an isomorphism Π GP
+∼
+→ Πn+1/n such that ρ determines an
+isomorphism
+A
+∼
+→ Dehn(GP )
+(cf. [CbTpI], Deﬁnition 4.4; [CbTpI], Proposition 5.6, (ii)), and, moreover, it holds
+that
+Aut(GP ) = NOutC(n+1=n)(Dehn(GP ))
+(cf. [CbTpI], Theorem 5.14, (iii)).
+Since A ≃ Z⊕n
+l (cf. Proposition 3.7, (iii)) is an abelian group, it suﬃces to verify
+that Zn (a1 · · · an) = A. Since A is an abelian group, and a1 · · · an ∈ A ⊆ Πn,
+it follows that Zn (a1 · · · an) ⊇ A. By [NodNon], Theorem A (cf. also [NodNon],
+Remark 2.4.2), and [CbTpI], Corollary 5.9, (ii), it follows that ρ(Zn (a1 · · · an)) ⊆
+Aut(GP ). Thus, we conclude that
+ρ(Zn (a1 · · · an)) ⊆ Aut(GP ) ∩ ρ(Πn) = NOutC(n+1=n)(Dehn(GP )) ∩ ρ(Πn)
+= Nρ(n)(Dehn(GP )) = Nρ(n)(ρ(A)) = ρ(Nn (A)).
+In particular, Zn (a1 · · · an) ⊆ Nn (A) = A (cf. Lemma 4.8). 
+Denition 4.10. Let G be a semi-graph of anabelioids of pro- l PSC-type. Write G
+for the underlying semi-graph of G. Suppose that G is a tree. Let e1, e2 ∈ Edge(G);
+b1, b′
+1 the two branches of e1; b2, b′
+2 the two branches of e2. We suppose that
+G̸∋b1 ∩ G̸∋b2 = ∅ (cf. Deﬁnition 2.5). Write H for the semi-graph obtained by
+considering the “intersection” (in the evident sense) of G∋b1 and G∋b2 . Then we
+deﬁne the semi-graph of anabelioids of pro- l PSC-type
+Gb1/b2
+(obtained by \switching" b1 and b2) as follows. We take the underlying semi-graph
+Gb1/b2 of Gb1/b2 to be the semi-graph obtained by “gluing” H to G̸∋b1 and G̸∋b2 in
+the following way:
+• we glue the branch of H corresponding to b1 and the branch of G̸∋b2 corre-
+sponding to b′
+2 along a single edge (whose branches correspond to the two
+branches that are glued to one another);
+• we glue the branch of H corresponding to b2 and the branch of G̸∋b1 corre-
+sponding to b′
+1 along a single edge (whose branches correspond to the two
+branches that are glued to one another).
+
+RECONSTRUCTION OF LOG DIVISORS 19
+Then the various connected anabelioids that constitute G naturally determine a
+semi-graph of anabelioids of pro- l PSC-type Gb1/b2 whose underlying semi-graph is
+the semi-graph Gb1/b2.
+Proposition 4.11. Suppose that r ̸= 1 (resp. r = 1 ). Let i ∈ { 1, . . . , n} (resp.
+i ∈ {1, . . . , n− 1}). Then there exists a log divisor H ̸= Vi such that
+V1 ∩ · · · ∩ Vi−1 ∩ H ∩ Vi+1 ∩ · · · ∩ Vn
+is a log-full point ( ̸= P ).
+Proof. Write G for the underlying semi-graph of G
+def
+= GP . It follows from Propo-
+sition 3.7, (ii), that there exists a node e ∈ Node(G) such that Vi is the log divisor
+associated to e ∈ Node(G). Let w1, w2 ∈ Vert(G) be distinct vertices such that e
+abuts to w1, w2.
+First, let us suppose that w1, w2 are tripods. Then let us observe that there exist
+distinct elements
+y1, z1, y2, z2 ∈ (Cr,n
+⨿
+Node(G)) \ {e}
+such that (suitable branches of) e, y1, z1 give rise to the three cusps of G|w1 , and
+(suitable branches of) e, y2, z2 give rise to the three cusps of G|w2 .
+Let b1 be the branch of y1 that abuts to w1; b2 the branch of y2 that abuts
+to w2; G′ def
+= ( G)b1/b2 (cf. Deﬁnition 4.10). Then it follows immediately from the
+deﬁnitions (Deﬁnitions 2.3, 4.10), together with the fact that
+(Cusp(G∋b1 ) ∩ Cusp(G∋b2 ) ∩ Cr,n) ( Cr,n
+(cf. Deﬁnition 2.3, Remark 2.4), that there exists a log divisor H ̸= Vi such that
+H is the log divisor associated to the element e′ ∈ Node(G′) corresponding to
+e ∈ Node(G) and V1 ∩ · · · ∩ Vi−1 ∩ H ∩ Vi+1 ∩ · · · ∩ Vn is a log-full point P ′ ̸= P
+such that GP ′ = G′. (Here, we observe that for j ∈ { 1, . . . , n} \ { i}, Vj may be
+regarded as the log divisor associated to a suitable choice of element e′
+j ∈ Node(G′)
+corresponding to the element ej ∈ Node(G) to which the log divisor Vj is associated.)
+This completes the proof of Proposition 4.11 in the case where w1, w2 are tripods.
+Thus, we may assume without loss of generality that w2 is not a tripod. Then it
+follows from Proposition 3.7, (i), that w1 is a tripod, and w2 is of type ( g, r) ̸= (0, 3).
+Next, let us observe that r ̸= 1. Indeed, if r = 1, then it follows immediately from
+the fact that w2 is of type ( g, r) ̸= (0 , 3), together with the deﬁnition of Vn (cf.
+Proposition 4.2, (ii)), that Vi = Vn. This contradicts our assumption that i ≤ n − 1
+if r = 1. Thus, in summary, we may assume that w1 is a tripod, w2 is of type
+(g, r) ̸= (0, 3), and r ̸= 1.
+Next, let us observe that there exist distinct elements
+y†, y‡, y∗, y1, . . . , yr−2 ∈ (Cr,n
+⨿
+Node(G)) \ {e}
+such that (suitable branches of) e, y†, y‡ give rise to the three cusps of G|w1 , and
+(suitable branches of) e, y∗, y1, . . . , yr−2 give rise to the r cusps of G|w2. (Here, we
+remark that since r ̸= 0, 1, it follows that r + 1 ≥ 3.)
+Let b† be the branch of y† that abuts to w1; b‡ the branch of y‡ that abuts to w1;
+b∗ the branch of y∗ that abuts to w2. Then observe that, after possibly permuting
+the superscripts “ †” and “ ‡”, we may assume that Cusp(( G)∋b‡) ⊇ { c1, . . . , cr}.
+
+20 KAZUMI HIGASHIYAMA
+Let G′ def
+= ( G)b†/b∗ . Then it follows immediately from the deﬁnitions (cf. the choice
+of b1; Deﬁnitions 2.3, 4.10), together with the fact that
+(Cusp(G∋b† ) ∩ Cusp(G∋b∗) ∩ Cr,n) ( Cr,n
+(cf. Deﬁnition 2.3, Remark 2.4), that there exists a log divisor H ̸= Vi such that
+H is the log divisor associated to the element e′ ∈ Node(G′) corresponding to
+e ∈ Node(G) and V1∩· · ·∩Vi−1∩H ∩Vi+1∩· · ·∩Vn is a log-full point P ′ ̸= P such that
+GP ′ = G′. (Here, we observe that for j ∈ {1, . . . , n} \ {i}, Vj may be regarded as the
+log divisor associated to a suitable choice of element e′
+j ∈ Node(G′) corresponding
+to the element ej ∈ Node(G) to which the log divisor Vj is associated.) 
+Proposition 4.12. Suppose that r ̸= 1 (resp. r = 1). Let i ∈ {1, . . . , n} (resp. i ∈
+{1, . . . , n−1}) and (a1, . . . , an) ∈ IV1 ×· · ·×IVn = A. Then Zn (a1 · · · ai−1ai+1 · · · an)
+is a non-abelian group.
+Proof. By Proposition 4.11, there exists a log divisor H ̸= Vi such that P ′ =
+V1 ∩ · · · ∩Vi−1 ∩ H ∩ Vi+1 ∩ · · · ∩Vn is a log-full point. Write A′ = IV1 × · · · ×IVi−1 ×
+IH × IVi+1 × · · · × IVn . Since
+a1 · · · ai−1ai+1 · · · an ∈ A ∩ A′,
+and A, A′ are abelian groups, it follows that
+A, A′ ⊆ Zn (a1 · · · ai−1ai+1 · · · an).
+Since A, A′ are distinct log-full subgroups (cf. Proposition 4.5) and contained in
+Zn (a1 · · · ai−1ai+1 · · · an), by Lemma 4.8, it follows that Zn (a1 · · · ai−1ai+1 · · · an)
+is a non-abelian group. 
+Proposition 4.13. If r = 1, then there exists an element i ∈ {1, . . . , n} such that
+the projection morphism q : X log
+n → X log of co-prole {i} (cf. [MzTa], Denition
+2.1, (ii)) induces an isomorphism V1 ∩ · · · ∩ Vn−1
+∼
+→ X.
+Proof. Let w be the unique vertex of GP of genus g (cf. Proposition 3.7, (i)). (Note
+that since r = 1, it holds that g ̸= 0.) Then since r = 1, it follows immediately
+from Propositions 3.7, (i); 4.2, (ii), that there exist a unique vertex u ∈ Vert(GP )
+and a unique node e ∈ Node(GP ) (corresponding to Vn) such that e abuts to w, u,
+and, moreover, u is a tripod. Next, let us observe that there exist distinct elements
+y†, y‡ ∈ (Cr,n
+⨿Node(GP )) \ {e} such that (suitable branches of) e, y†, y‡ give rise
+to the three cusps of GP |u. Let b† be the branch of y† that abuts to u, b‡ the branch
+of y‡ that abuts to u. Write GP for the underlying semi-graph of GP . Thus, y† ∈
+Edge((GP )∋b‡ ), y‡ ∈ Edge((GP )∋b† ). Then observe that, after possibly permuting
+the superscripts “ †” and “ ‡”, we may assume that c1 ∈ Cusp((GP )∋b‡ ) \ {y‡}.
+Note that since, whenever y‡ ̸∈ Cr,n, the genus portion of the type (i.e., “( g, r)”)
+of the semi-graph of anabelioids of PSC-type ( GP )̸∋b‡ is = 0 (cf. Proposition 3.7,
+(i)), the fact that c1 ∈ Cusp((GP )∋b‡ ) \ {y‡} implies that
+either y‡ ∈ (Cusp((GP )∋b† ) ∩ Cr,n) \ {c1} or Cusp(( GP )̸∋b‡ ) ∩ Cr,n ̸= ∅.
+In particular, since y† ̸= y‡ and, whenever y‡ ̸∈ Cr,n, Cusp(( GP )̸∋b‡ ) ∩ Cr,n ⊆
+Cusp((GP )∋b† ) \ { y†}, there exists an element i ∈ { 1, . . . , n} such that xi ∈
+Cusp((GP )∋b† ) \ {y†}. Now it follows immediately from our choice of i, together
+with the fact that the divisor Vn corresponds to the node e (cf. Propositions 3.7, (ii);
+
+RECONSTRUCTION OF LOG DIVISORS 21
+4.2, (ii)), that the projection morphism q : X log
+n → X log of co-proﬁle {i} induces an
+isomorphism q : V1 ∩ · · · ∩ Vn−1
+∼
+→ X, as desired. 
+Proposition 4.14. Let (a1, . . . , an) ∈ IV1 × · · · × IVn = A. If r = 1 , then
+Zn (a1 · · · an−1) is a non-abelian group.
+Proof. By Proposition 4.13, there exists an element i ∈ { 1, . . . n} such that the
+projection morphism q : X log
+n → X log of co-proﬁle {i} induces an isomorphism
+V1 ∩ · · · ∩ Vn−1
+∼
+→ X. By abuse of notation, we write q : Π n → Π1 for the outer
+homomorphism induced by q. Write V log
+1 ∩ · · · ∩ V log
+n−1 for the log scheme obtained
+by restricting the log structure of X log
+n to the reduced closed subscheme of Xn
+determined by V1 ∩ · · · ∩ Vn−1; V log
+j , where j ∈ { 1, . . . , n− 1}, for the log scheme
+obtained by restricting the log structure of X log
+n to the reduced closed subscheme of
+Xn determined by Vj. Then it follows immediately that the morphism V log
+1 ∩ · · · ∩
+V log
+n−1 → V log
+j → X log induced by q : X log
+n → X log determines (for suitable choices
+of basepoints) homomorphisms of proﬁnite groups
+πpro-l
+1 (V log
+1 ∩ · · · ∩ V log
+n−1) → πpro-l
+1 (V log
+j ) → Πn → Π1.
+Note that it follows immediately from the deﬁnition of IVj as an inertia group
+(cf. Proposition 3.7, (iii)) that, for suitable choices of basepoints in the π1(−)’s
+of the above display, the image of πpro-l
+1 (V log
+j ) in Π n, hence also the image of
+πpro-l
+1 (V log
+1 ∩ · · · ∩ V log
+n−1) in Π n, is contained in Zn (IVj ) ⊂ Πn. In particular, we
+obtain homomorphisms of proﬁnite groups
+πpro-l
+1 (V log
+1 ∩ · · · ∩ V log
+n−1) → DV1 ∩ · · · ∩ DVn−1 ,→ Πn → Π1,
+where DVj
+def
+= Zn (IVj ) is the decomposition group associated to Vj determined
+by IVj (cf. [Hsh], Corollary 2). Next, observe that it follows from the well-known
+modular interpretation of the log moduli stacks involved (cf. Deﬁnition 2.2, (vi))
+that V log
+1 ∩ · · · ∩ V log
+n−1 → X log is of type N⊕n−1 (cf. [Hsh], Deﬁnition 6). Since
+V log
+1 ∩ · · · ∩ V log
+n−1 → X log is of type N⊕n−1, one veriﬁes immediately that the
+composite πpro-l
+1 (V log
+1 ∩· · ·∩V log
+n−1) → Π1 is a surjection. In particular, the composite
+DV1 ∩ · · · ∩ DVn−1 ,→ Πn → Π1 is a surjection, i.e., q(DV1 ∩ · · · ∩ DVn−1 ) = Π 1.
+Thus, it follows immediately from the deﬁnitions that
+Π1 = q(DV1 ∩ · · · ∩ DVn−1 ) = q(Zn (IV1 ) ∩ · · · ∩ Zn (IVn−1 ))
+⊆ q(Zn (a1) ∩ · · · ∩ Zn (an−1)) ⊆ q(Zn (a1 · · · an−1)) ⊆ Π1.
+In particular, q(Zn (a1 · · · an−1)) = Π 1, hence also Zn (a1 · · · an−1), is a non-
+abelian group. 
+Theorem 4.15. For  ∈ {◦ , •}, let l be a prime number; k an algebraically
+closed eld of characteristic ̸= l; S def
+= Spec( k); (g, r) a pair of nonnegative
+integers such that 2g − 2 + r > 0;
+X log → S
+a smooth log curve of type (g, r); n ∈ Z>1; X log
+n the n-th log conguration
+space associated to X log → S; Π def
+= πpro-l
+1 (X log
+n ) (for a suitable choice of
+basepoint);
+ϕ : Π ◦ ∼
+→ Π•
+
+22 KAZUMI HIGASHIYAMA
+an isomorphism of pronite groups; A◦ a log-full subgroup of Π◦. We suppose that
+r > 0, and that A• def
+= ϕ(A◦) is a log-full subgroup of Π•. Then ϕ induces a bijec-
+tion between the set of scheme-theoretically non-degenerate elements (cf. Denition
+4.6, (i)) of A◦ and the set of scheme-theoretically non-degenerate elements of A•.
+Proof. This follows immediately from Theorem 4.7. 
+5. Reconstruction of log divisors
+We continue with the notation of §4. In the present §5, we reconstruct the set of
+inertia groups associated to log divisors (cf. Theorem 5.2 below).
+Lemma 5.1. The following hold:
+(i) There exists a unique collection of subgroups B†
+1, . . . , B†
+n ⊆ A such that the
+following hold:
+(a) dimQl (B†
+i ⊗ Ql) = n − 1, for each i ∈ {1, . . . , n}.
+(b) For each i ∈ { 1, . . . , n}, no element of B†
+i is (group-theoretically) non-
+degenerate.
+(c) B†
+i = A ∩ (B†
+i ⊗ Ql) ⊂ A ⊗ Ql, for all i ∈ {1, . . . , n}.
+(ii) In the situation of (i), {B†
+i | i ∈ { 1, . . . , n}} = {Bj
+def
+= ∏
+m∈{1,...,n}\{j} IVm |
+j ∈ {1, . . . , n}}.
+(iii) In the situation of (i), {IV1, . . . , IVn } = {∩
+m∈{1,...,n}\{j} B†
+m | j ∈ {1, . . . , n}}.
+Proof. For a ∈ A, we shall write
+J(a)
+def
+= {m ∈ {1, . . . , n} | a ̸∈ Bj}.
+Observe that if a1, a2 ∈ A are such that J(a1), J(a2) ̸= ∅, and J(a1) ∩ J(a2) =
+∅, then there exists an element λ ∈ Zl such that a1aλ
+2 is non-degenerate. Now
+assertions (i), (ii) follow the deﬁnitions, together with this observation. Assertion
+(iii) follows immediately from assertion (ii). 
+Theorem 5.2. For  ∈ {◦ , •}, let l be a prime number; k an algebraically
+closed eld of characteristic ̸= l; S def
+= Spec( k); (g, r) a pair of nonnegative
+integers such that 2g − 2 + r > 0;
+X log → S
+a smooth log curve of type (g, r); n ∈ Z>1; X log
+n the n-th log conguration
+space associated to X log → S; Π def
+= πpro-l
+1 (X log
+n ) (for a suitable choice of
+basepoint);
+ϕ : Π ◦ ∼
+→ Π•
+an isomorphism of pronite groups. We suppose that r > 0, and that ϕ induces a
+bijection between the set of log-full subgroups of Π◦ and the set of log-full subgroups
+of Π•. Then ϕ induces a bijection between the set of inertia groups of Π◦ associated
+to log divisors of X log ◦
+n◦ and the set of inertia groups of Π• associated to log divisors
+of X log •
+n• .
+Proof. Recall that it follows from the well-known modular interpretation of the log
+moduli stacks that appear in the deﬁnition of X log
+n that, for each log divisor V † of
+X log
+n , there exists a log-full point P † such that P † ∈ V †. Thus, Theorem 5.2 follows
+from Proposition 3.7, (iii), (iv); Theorem 4.15; Lemma 5.1. 
+
+RECONSTRUCTION OF LOG DIVISORS 23
+6. Reconstruction of tripodal divisors
+We continue with the notation of §5. In the present §6, we reconstruct the set of
+inertia groups associated to tripodal divisors (cf. Theorem 6.6 below).
+Lemma 6.1. Let V be a log divisor of X log
+n . Write V log for the log scheme obtained
+by equipping V with the log structure induced by the log structure of X log
+n . Let
+Y log → S be a smooth log curve of type (0, 3). For m ∈ Z>0, write Y log
+m for the
+m-th log conguration space associated to Y log → S.
+(i) If V is a tripodal divisor, then V log≤1 is isomorphic to UXn−1 .
+(ii) If V is a (g, r)-divisor, then V log≤1 is isomorphic to UYn−1 .
+(iii) If V is neither a tripodal divisor nor a (g, r)-divisor, then there exists an
+element m ∈ {1, . . . , n−2} such that V log≤1 is isomorphic to UYm ×S UXn−1−m.
+Proof. These assertions follow immediately by considering the objects parametrized
+by the various schemes which appear in the assertions. 
+Denition 6.2. We shall say that a proﬁnite group G is indecomposable if, for any
+isomorphism of proﬁnite groups G ≃ G1 × G2, where G1, G2 are proﬁnite groups,
+either G1 or G2 is the trivial group (cf. [Ind], Deﬁnition 1.1). We shall say that a
+proﬁnite group G is decomposable if G is not indecomposable.
+Remark 6.3. Let m ∈ Z>0. Then we recall from [Ind], Theorem 3.5 (cf. also
+[MzTa], Remark 1.2.2; [MzTa], Proposition 2.2, (i)), that Π m is indecomposable
+and nontrivial. If, moreover m > 1, then ( g, r, m) is completely determined by the
+isomorphism class of Π m (cf. Theorem 3.10, (i)). If m = 1, then the isomorphism
+class of Π m is completely determined by 2 g − 2 + r (cf. [CmbGC], Remark 1.1.3;
+[MzTa], Remark 1.2.2).
+Remark 6.4. Let V , V log be as in Lemma 6.1; IV an inertia group associated
+to V . Then we observe that, for suitable choices of basepoints, there is a nat-
+ural homomorphism πpro-l
+1 (V log) → Zn (IV ) (cf. [Hsh], Corollary 2). Moreover,
+this natural homomorphism is, in fact, injective (cf. (the evident pro- l version
+of) [SemiAn], Proposition 2.5, (i); [CmbGC], Remark 1.1.3; [MzTa], Proposition
+2.2, (i); [AbsTpII], Remark 1.5.1) and surjective (cf. [AbsTpII], Remark 1.5.2;
+[AbsTpII], Proposition 1.6, (v)), hence yields an isomorphism
+πpro-l
+1 (V log)
+∼
+→ Zn (IV ).
+Lemma 6.5. Let V be a log divisor of X log
+n and IV an inertia group associated to
+V . Then the following hold:
+(i) Zn (IV )/IV is either decomposable, isomorphic to Πn−1, or (in the notation
+of Lemma 6.1) isomorphic to Πtripod
+n−1
+def
+= πpro-l
+1 (Y log
+n−1) (for a suitable choice of
+basepoint).
+(ii) If (g, r) ̸= (1, 1) or n ≥ 3, then it holds that V is a tripodal divisor if and only
+if Zn (IV )/IV is isomorphic to Πn−1.
+(iii) If (g, r) = (1 , 1) and n = 2, then there exist distinct log divisors E, W1, W2, W3
+of X log
+n such that
+{log divisors of X log
+n } = {E, W1, W2, W3},
+{tripodal divisors of X log
+n } = {W1, W2, W3},
+{log-full points of X log
+n } = {E ∩ W1, E ∩ W2, E ∩ W3}.
+
+24 KAZUMI HIGASHIYAMA
+(iv) If (g, r) = (1 , 1) and n = 2 , then it holds that V is a tripodal divisor if and
+only if there exists a log-full subgroup A of Πn such that A does not contain
+any inertia group associated to V .
+Proof. Assertions (i), (ii) follow from Lemma 6.1; Remarks 6.3, 6.4; [Hsh], Corollary
+2. Assertion (iii) follows immediately from the well-known modular interpretation
+of the log moduli stacks that appear in the deﬁnition of X log
+n . Assertion (iv) follows
+from assertion (iii) and Proposition 4.3. 
+Theorem 6.6. For  ∈ {◦ , •}, let l be a prime number; k an algebraically
+closed eld of characteristic ̸= l; S def
+= Spec( k); (g, r) a pair of nonnegative
+integers such that 2g − 2 + r > 0;
+X log → S
+a smooth log curve of type (g, r); n ∈ Z>1; X log
+n the n-th log conguration
+space associated to X log → S; Π def
+= πpro-l
+1 (X log
+n ) (for a suitable choice of
+basepoint);
+ϕ : Π ◦ ∼
+→ Π•
+an isomorphism of pronite groups. We suppose that r > 0, and that ϕ induces a
+bijection between the set of log-full subgroups of Π◦ and the set of log-full subgroups
+of Π•. Then ϕ induces a bijection between the set of inertia groups of Π◦ associated
+to tripodal divisors of X log ◦
+n◦ and the set of inertia groups of Π• associated to tripodal
+divisors of X log •
+n• .
+Proof. Theorem 6.6 follows from Remark 6.3; Theorem 5.2; Lemma 6.5, (ii), (iv).
+
+7. Reconstruction of drift diagonals
+We continue with the notation of §6. In the present §7, we reconstruct the set of
+inertia groups associated to drift diagonals (cf. Theorem 7.3 below).
+Lemma 7.1. The outer homomorphism ι : Π n → Π1 × · · · ×Π1 induced by ι : X log
+n
+→ X log ×S · · · ×S X log (cf. Denition 2.2, (viii)) is a surjection whose kernel is
+topologically generated by the inertia groups associated to the naive diagonals.
+Proof. It follows from [Hsh], Remark B.2, that we have a natural commutative
+diagram
+πpro-l
+1 (UXn ) //
+
+πpro-l
+1 (UX1 ) × · · · × πpro-l
+1 (UX1 )
+
+Πn ι
+// Π1 × · · · × Π1,
+where πpro-l
+1 (UXn ) → πpro-l
+1 (UX1 ) × · · · × πpro-l
+1 (UX1 ) denotes the outer surjective
+homomorphism induced by the open immersion UXn ,→ UX1 ×S · · · ×S UX1 ; the
+two vertical arrows are isomorphisms. Thus, it follows from the deﬁnition of the
+notion of an inertia group that ι : Π n → Π1 × · · · ×Π1 is a surjection whose kernel
+is topologically generated by the inertia groups associated to the naive diagonals.
+This completes the proof of Lemma 7.1. 
+
+RECONSTRUCTION OF LOG DIVISORS 25
+Lemma 7.2. Let V be a tripodal divisor and IV an inertia group associated to V .
+Write ι : Π n → Π1 × · · · × Π1 for the outer homomorphism induced by ι : X log
+n →
+X log ×S · · · ×S X log (cf. Denition 2.2, (viii)). Then the following hold:
+(i) If V is a naive diagonal, then ι(IV ) = {11×···×1 }.
+(ii) If V is not a naive diagonal, then ι(IV ) ̸= {11×···×1 }.
+Proof. Assertion (i) follows from Lemma 7.1. Assertion (ii) follows immediately
+the easily veriﬁed fact (i.e., by applying induction on n, together with Proposition
+4.1, (i)) that if V is not a naive diagonal, then there exists an i ∈ { 1, . . . , n} such
+that the projection pi : X log
+n → X log maps V to a cusp of X log. 
+Theorem 7.3. For  ∈ {◦ , •}, let l be a prime number; k an algebraically
+closed eld of characteristic ̸= l; S def
+= Spec( k); (g, r) a pair of nonnegative
+integers such that 2g − 2 + r > 0;
+X log → S
+a smooth log curve of type (g, r); n ∈ Z>1; X log
+n the n-th log conguration
+space associated to X log → S; Π def
+= πpro-l
+1 (X log
+n ) (for a suitable choice of
+basepoint);
+ϕ : Π ◦ ∼
+→ Π•
+an isomorphism of pronite groups. We suppose that r > 0, and that ϕ induces a
+bijection between the set of log-full subgroups of Π◦ and the set of log-full subgroups
+of Π•. Then ϕ induces a bijection between the set of inertia groups of Π◦ associated
+to drift diagonals of X log ◦
+n◦ and the set of inertia groups of Π• associated to drift
+diagonals of X log •
+n• .
+Proof. First, let us observe that ( g◦, r◦, n◦) = ( g•, r•, n•) (cf. Theorem 3.10, (i)).
+Next, let us observe that when ( g◦, r◦) = ( g•, r•) = (0 , 3) or (1 , 1), Theorem 7.3
+follow formally from Theorem 6.6 and Proposition 3.4, (iii).
+Thus, in the remainder of the proof of Theorem 7.3, we suppose that ( g◦, r◦) =
+(g•, r•) ̸= (0, 3), (1, 1). Write Π
+1
+def
+= πpro-l
+1 (X log). Then it follows from Theorem
+3.10, (iii), that ϕ induces a commutative diagram
+Π◦ ϕ //
+ι◦
+
+
+Π•
+ι•
+
+
+Π◦
+1 × · · · × Π◦
+1
+∼ // Π•
+1 × · · · × Π•
+1,
+where ι
+ : Π → Π
+1 ×· · ·×Π
+1 is the outer homomorphism induced by ι : X log
+n →
+X log ×S · · ·×S X log (cf. Deﬁnition 2.2, (viii)). Thus, the proof of Theorem 7.3
+in the case where ( g◦, r◦) = ( g•, r•) ̸= (0 , 3), (1, 1) follows formally from Theorem
+6.6; Lemma 7.2; Proposition 3.4, (i), (ii). 
+8. Reconstruction of drift collections
+We continue with the notation of §7. In the present §8, we reconstruct the drift
+collections of Π n (cf. Theorem 8.14 below).
+
+26 KAZUMI HIGASHIYAMA
+Denition 8.1. Let Λ be a set of drift diagonals of X log
+n . Then we shall say that
+Λ is a drift collection of X log
+n if there exists an automorphism α of X log
+n over S such
+that Λ = {α(V ) | V is a naive diagonal }.
+Denition 8.2. Let V1, V2 be distinct drift diagonals and IV1 , IV2 inertia groups
+associated to V1, V2, respectively.
+(i) Since V1, V2 are tripodal divisors (cf. Proposition 3.4, (i)), and n > 1, there
+exists a unique vertex v1 (resp. v2) of GV1 (resp. GV2 ) such that v1, v2 are
+tripods. We shall say that {V1, V2} is a scheme-theoretically co-cuspidal pair
+if there exists a cusp y ∈ Cr,n which is a cusp of GV1|v1, GV2 |v2 .
+(ii) We shall say that {V1, V2} is a group-theoretically co-cuspidal pair if there is
+no log-full subgroup A such that there exist conjugates of IV1, IV2 that are
+contained in A.
+(iii) We shall say that {V1, V2} is a non-intersecting drift pair if V1 ∩ V2 = ∅.
+Lemma 8.3. Let V1, V2 be distinct drift diagonals. Then it holds that
+{V1, V2} is a group-theoretically co-cuspidal pair
+⇐ ⇒ there is no log-full point contained in V1 ∩ V2.
+Proof. This follows immediately from Proposition 4.3. 
+Lemma 8.4. Let V1, V2 be log divisors. Then it holds that
+V1 ∩ V2 ̸= ∅ ⇐ ⇒ there is a log-full point contained in V1 ∩ V2.
+Proof. The implication ⇐= is immediate. Thus, it suﬃces to verify the implication
+=⇒. Suppose that V1 ∩ V2 ̸= ∅. Let P ∈ V1 ∩ V2 be a point and Q ∈ X log
+n such
+that ♯Node(GQ) = n and GP is obtained from GQ by generization (with respect to
+some subset of Node( GQ) (cf. [CbTpI], Deﬁnition 2.8)). Then it follows from the
+equivalence (i) ⇐ ⇒(ii) of Proposition 2.9 that Q ∈ V1 ∩ V2. On the other hand,
+by Proposition 3.6, it holds that Q is a log-full point. This completes the proof of
+the implication = ⇒. 
+Lemma 8.5. Every scheme-theoretically co-cuspidal pair is group-theoretically co-
+cuspidal.
+Proof. Let {V1, V2} be a scheme-theoretically co-cuspidal pair, v1 the unique ver-
+tex of GV1 which is a tripod, and y1, y2 ∈ Cr,n the two cusps of GV1 |v1 . By Lemma
+8.3, to complete the proof of Lemma 8.5, it suﬃces to derive a contradiction under
+the assumption that V1 ∩ V2 contains a log-full point P . Thus, suppose that this
+assumption holds. Then v1 determines a unique vertex vP
+1 of GP , which is neces-
+sarily a tripod (cf. [CbTpI], Deﬁnition 2.8, (iii)). In particular, since GV2 may be
+regarded as a generization of GP , the vertex vP
+1 of GP determines a vertex w2 of
+GV2 such that y1, y2 are cusps of GV2 |w2 (cf. [CbTpI], Deﬁnition 2.8, (iii)). Since
+{V1, V2} is a scheme-theoretically co-cuspidal pair, it thus follows from Remark 2.4
+that V1 = V2, a contradiction. 
+Lemma 8.6. Every non-intersecting drift pair is scheme-theoretically co-cuspidal.
+Proof. Let {V1, V2} be a pair of distinct drift diagonals which is not a scheme-
+theoretically co-cuspidal pair. Then since n > 1, there exists a unique vertex v1
+(resp. v2) of GV1 (resp. GV2 ) such that v1, v2 are tripods (cf. Proposition 3.4,
+(i)). Since {V1, V2} is not a scheme-theoretically co-cuspidal pair, there exist cusps
+
+RECONSTRUCTION OF LOG DIVISORS 27
+y1, z1 of GV1 |v1 and cusps y2, z2 of GV2|v2 such that y1, z1, y2, z2 ∈ Cr,n are distinct
+elements, ♯({y1, z1} ∩ {c1, . . . , cr}) ≤ 1, ♯({y2, z2} ∩ {c1, . . . , cr}) ≤ 1 (cf. Deﬁnition
+2.3). Thus, it follows from the well-known modular interpretation of the log moduli
+stacks that appear in the deﬁnition of X log
+n that there exist a point P of X log
+n and
+terminal vertices t1, t2 of GP such that t1, t2 are tripods, y1, z1 are cusps of GP |t1 ,
+and y2, z2 are cusps of GP |t2. In particular, by the equivalence (i) ⇐ ⇒(iii) of
+Proposition 2.9, it holds that P ∈ V1 ∩ V2. Thus, {V1, V2} is not a non-intersecting
+drift pair. 
+Proposition 8.7. Let V1, V2 be distinct drift diagonals. Then it holds that
+{V1, V2} is a scheme-theoretically co-cuspidal pair
+⇐ ⇒{V1, V2} is a group-theoretically co-cuspidal pair
+⇐ ⇒{V1, V2} is a non-intersecting drift pair.
+Proof. This follows immediately from Lemmas 8.3, 8.4, 8.5, 8.6. 
+Denition 8.8. Let V1, V2, V3 be distinct drift diagonals. Then we shall say that
+{V1, V2, V3} is a scheme-theoretically co-cuspidal triple if {V1, V2}, {V2, V3}, and
+{V3, V1} are scheme-theoretically co-cuspidal pairs.
+Denition 8.9. Let Λ be a set of drift diagonals such that ♯Λ = n(n−1)
+2 . We shall
+say that Λ is a scheme-theoretic drift collection of X log
+n if there exist distinct drift
+diagonals Vi,j, where i ∈ {1, . . . , n− 1}, j ∈ {i + 1, . . . , n}, such that Λ = {Vi,j | i ∈
+{1, . . . , n− 1}, j ∈ {i + 1, . . . , n}}, and, moreover, the following hold:
+(a) For any i ∈ { 1, . . . , n − 2}, {Vi,i+1, Vi+1,i+2} is a scheme-theoretically co-
+cuspidal pair.
+(b) For any i ∈ {1, . . . , n− 2}, j ∈ {i + 2, . . . , n− 1}, then {Vi,i+1, Vj,j+1} is not a
+scheme-theoretically co-cuspidal pair.
+(c) For any i ∈ { 1, . . . , n− 2}, j ∈ { i + 2, . . . , n}, {Vi,j, Vi,i+1, Vi+1,j} is a scheme-
+theoretically co-cuspidal triple.
+Lemma 8.10. Every drift collection of X log
+n is a scheme-theoretic drift collection
+of X log
+n .
+Proof. Let Λ be a drift collection of X log
+n . Then it follows from Proposition 3.3, (i)
+(cf. also Remark 3.2), that there exist distinct elements y1, . . . , yn ∈ Cr,n such that
+Λ = {V ({yi, yj}) | i ∈ {1, . . . , n− 1}, j ∈ {i + 1, . . . , n}.
+Then one veriﬁes easily that if we write Vi,j
+def
+= V (yi, yj), then the Vi,j’s satisfy the
+conditions of Deﬁnition 8.9, and hence that Λ is a scheme-theoretic drift collection
+of X log
+n . 
+Lemma 8.11. Every scheme-theoretic drift collection of X log
+n is a drift collection
+of X log
+n .
+Proof. By Proposition 3.4, (ii), we may assume without loss of generality that
+(g, r) = (0 , 3) or (1 , 1). Let Λ be a scheme-theoretic drift collection of X log
+n . By
+Deﬁnitions 2.3; 8.2, (i); 8.9, (a), there exist elements y1, y2, y3 ∈ Cr,n such that
+V1,2 = V ({y1, y2}), V2,3 = V ({y2, y3}). By Deﬁnitions 2.3; 8.2, (i); 8.9, (a), (b),
+there exist elements y4, . . . , yn ∈ Cr,n such that Vi,i+1 = V ({yi, yi+1}). Thus,
+by Deﬁnitions 2.3; 8.8; 8.9, (c), it holds that Vi,j = V ({yi, yj}). Finally, since
+
+28 KAZUMI HIGASHIYAMA
+(g, r) = (0 , 3) or (1 , 1), by applying a suitable automorphism of X log
+n that arises
+from a permutation of the r +n marked points of the stable log curve X log
+n+1 → X log
+n ,
+it follows that Λ = {V ({yi, yj}) | i ∈ { 1, . . . , n− 1}, j ∈ { i + 1, . . . , n}} is a drift
+collection of X log
+n . 
+Proposition 8.12. Let Λ be a set of drift diagonals of X log
+n . Then Λ is a drift
+collection of X log
+n if and only if Λ is a scheme-theoretic drift collection of X log
+n .
+Proof. This follows immediately from Lemmas 8.10, 8.11. 
+Denition 8.13. We shall refer to as a drift collection of Π n any collection
+{IV | V ∈ Λ}
+of subgroups of Π n associated to some drift collection Λ of X log
+n , where IV denotes
+an inertia group of Π n associated to V ∈ Λ.
+Theorem 8.14. For  ∈ {◦ , •}, let l be a prime number; k an algebraically
+closed eld of characteristic ̸= l; S def
+= Spec( k); (g, r) a pair of nonnegative
+integers such that 2g − 2 + r > 0;
+X log → S
+a smooth log curve of type (g, r); n ∈ Z>1; X log
+n the n-th log conguration
+space associated to X log → S; Π def
+= πpro-l
+1 (X log
+n ) (for a suitable choice of
+basepoint);
+ϕ : Π ◦ ∼
+→ Π•
+an isomorphism of pronite groups. We suppose that r > 0, and that ϕ induces a
+bijection between the set of log-full subgroups of Π◦ and the set of log-full subgroups
+of Π•. Then ϕ induces a bijection between the set of drift collections of Π◦ and the
+set of drift collections of Π• (cf. Denition 8.13).
+Proof. This follows from Theorem 7.3 and Propositions 8.7, 8.12. 
+9. Reconstruction of generalized ber subgroups
+We continue with the notation of §8. In the present §9, we reconstruct the gener-
+alized ﬁber subgroups of Π n (cf. Theorem 9.3 below).
+Denition 9.1. Let H be a closed subgroup of Π n. We shall say that H is a
+generalized ber subgroup if there exist an automorphism α of X log
+n over S and
+a ﬁber subgroup F ⊆ Πn (cf. [MzTa], Deﬁnition 2.3, (iii)) such that H = β(F ),
+where β is an automorphism of Π n which arises from α (cf. Remark 3.2; [HMM],
+Deﬁnition 2.1, (ii); [HMM], Remark 2.1.1).
+Proposition 9.2. If (g, r) ̸= (0, 3), (1, 1), then
+{generalized ber subgroups} = {ber subgroups}.
+Proof. This follows immediately from Remark 3.2. 
+Theorem 9.3. For  ∈ {◦ , •}, let l be a prime number; k an algebraically
+closed eld of characteristic ̸= l; S def
+= Spec( k); (g, r) a pair of nonnegative
+integers such that 2g − 2 + r > 0;
+X log → S
+
+RECONSTRUCTION OF LOG DIVISORS 29
+a smooth log curve of type (g, r); n ∈ Z>1; X log
+n the n-th log conguration
+space associated to X log → S; Π def
+= πpro-l
+1 (X log
+n ) (for a suitable choice of
+basepoint);
+ϕ : Π ◦ ∼
+→ Π•
+an isomorphism of pronite groups. We suppose that r > 0, and that ϕ induces a
+bijection between the set of log-full subgroups of Π◦ and the set of log-full subgroups
+of Π•. Then ϕ induces a bijection between the set of generalized ber subgroups of
+Π◦ and the set of generalized ber subgroups of Π• (cf. Denition 9.1).
+Proof. Write Π
+1
+def
+= πpro-l
+1 (X log). For any drift collection Λ  of Π, write
+ι : Π → Q
+ for the surjection obtained by forming the quotient by the nor-
+mal closed subgroup generated by the subgroups ⊆ Π that constitute the drift
+collection Λ. Recall that it follows from Lemma 7.1 that there exist n surjec-
+tions Q
+ → Π
+1 , which we shall refer to as Λ -projections, such that the resulting
+product homomorphism determines an isomorphism Q
+
+∼
+→ Π
+1 × · · · × Π
+1 .
+Let F ◦ ⊆ Π◦ be a generalized ﬁber subgroup of Π ◦. Then one veriﬁes immedi-
+ately that there exists a drift collection Λ ◦ of Π ◦ such that F ◦ is contained in the
+kernel Ker( p◦) of some Λ ◦-projection p◦. Write Λ • for the drift collection of Π •
+determined by applying ϕ to Λ ◦ (cf. Theorem 8.14).
+Next, observe that since each factor “Π 1” of the n factors of the product “Π 1 ×
+· · · × Π1” of Lemma 7.1 is slim (cf., e.g., [MzTa], Proposition 1.4), it follows that
+each such factor “Π 1” may be reconstructed as the centralizer of any product of
+open subgroups of the remaining n − 1 factors. In particular, it follows immediately
+from [MzTa], Corollary 3.4, that there exists a commutative diagram
+Π◦ ϕ //
+p◦
+
+Π•
+p•
+
+Π◦
+1 // Π•
+1,
+where p• is a Λ •-projection, and the horizontal arrows are isomorphisms. On the
+other hand, it follows immediately from the deﬁnition of p that Ker( p) has a
+natural structure of conﬁguration space group (whose “( g, r)” is ̸= (0 , 3), (1, 1)!),
+and that F ◦ is a ﬁber subgroup of Ker( p◦) (cf. [MzTa], Proposition 2.4, (i), (ii)).
+Thus, by [MzTa], Corollary 6.3, F • def
+= ϕ(F ◦) is a ﬁber subgroup of Ker( p•), hence
+also of Π •. 
+Acknowledgements
+I would like to thank Professor Yuichiro Hoshi and Professor Shinichi Mochizuki
+for suggesting the topics and helpful discussions.
+References
+[Asd] M. Asada, The faithfulness of the monodromy representations associated with certain fam-
+ilies of algebraic curves, J. Pure Appl. Algebra 159 (2001), 123-147.
+[Hsh] Y. Hoshi, The exactness of the log homotopy sequence, Hiroshima Math. J. 39 (2009), no.
+1, 61-121.
+
+30 KAZUMI HIGASHIYAMA
+[NodNon] Y. Hoshi and S. Mochizuki, On the combinatorial anabelian geometry of nodally non-
+degenerate outer representations, Hiroshima Math. J. 41 (2011), no. 3, 275-342.
+[CbTpI] Y. Hoshi and S. Mochizuki, Topics surrounding the combinatorial anabelian geometry
+of hyperbolic curves I: Inertia groups and pronite Dehn twists, Galois-Teichm uller Theory
+and Arithmetic Geometry, 659-811, Adv. Stud. Pure Math., 63, Math. Soc. Japan, Tokyo,
+2012.
+[Knu] F. F. Knudsen, The projectivity of the moduli space of stable curves II, Math. Scand . 52
+(1983), 161-199.
+[Ind] A. Minamide, Indecomposability of Anabelian Pronite Groups, Math. J. Okayama Univ.
+60 (2018), 175-208.
+[HMM] Y. Hoshi, A. Minamide and S. Mochizuki, Group-theoreticity of numerical invariants and
+distinguished subgroups of conguration space groups , RIMS Preprint 1870 (March 2017).
+[SemiAn] S. Mochizuki, Semi-graphs of Anabelioids, Publ. Res. Inst. Math. Sci. 42 (2006), 221-
+322.
+[CmbGC] S. Mochizuki, A combinatorial version of the Grothendieck conjecture, Tohoku Math
+J. 59 (2007), 455-479.
+[CmbCsp] S. Mochizuki, On the Combinatorial Cuspidalization of Hyperbolic Curves, Osaka J.
+Math. 47 (2010), 651-715.
+[AbsTpII] S. Mochizuki, Topics in Absolute Anabelian Geometry II: Decomposition Groups and
+Endomorphisms, J. Math. Sci. Univ. Tokyo. 20 (2013), 171-269.
+[MzTa] S. Mochizuki and A. Tamagawa, The Algebraic and Anabelian Geometry of Conguration
+Spaces, Hokkaido Math. J. 37 (2008), no. 1, 75-131.
+[NaTa] H. Nakamura and N. Takao, Galois Rigidity of pro- l Pure Braid Groups of Algebraic
+Curves, Trans. Amer. Math. Soc. 350 (1998), 1079-1102.
+[Naka] C. Nakayama, Logarithmic  etale cohomology,Math. Ann. 308 (1997), 365-404.
