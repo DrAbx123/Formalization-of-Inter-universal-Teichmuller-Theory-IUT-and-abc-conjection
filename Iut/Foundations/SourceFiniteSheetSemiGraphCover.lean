@@ -60,6 +60,33 @@ theorem projection_edgeMap (edge : (cover base Sheet transport).Edge) :
     (projection base Sheet transport).edgeMap edge = edge.1 :=
   rfl
 
+/-- A finite-sheet projection has finite vertex fibers, independently of
+whether the base semigraph has finitely or infinitely many vertices. -/
+instance projection_vertexFiber_finite [Finite Sheet]
+    (vertex : base.Vertex) :
+    Finite ((projection base Sheet transport).VertexFiber vertex) := by
+  let encode : (projection base Sheet transport).VertexFiber vertex → Sheet :=
+    fun source ↦ source.1.2
+  exact Finite.of_injective encode (by
+    intro first second equality
+    apply Subtype.ext
+    apply Prod.ext
+    · exact first.2.trans second.2.symm
+    · exact equality)
+
+/-- A finite-sheet projection likewise has finite edge fibers. -/
+instance projection_edgeFiber_finite [Finite Sheet]
+    (edge : base.Edge) :
+    Finite ((projection base Sheet transport).EdgeFiber edge) := by
+  let encode : (projection base Sheet transport).EdgeFiber edge → Sheet :=
+    fun source ↦ source.1.2
+  exact Finite.of_injective encode (by
+    intro first second equality
+    apply Subtype.ext
+    apply Prod.ext
+    · exact first.2.trans second.2.symm
+    · exact equality)
+
 @[simp]
 theorem projection_branchEquiv
     (edge : (cover base Sheet transport).Edge)

@@ -156,8 +156,8 @@ theorem incidenceRel_map {target : SourceSemiGraph.{u}}
   cases first <;> cases second <;>
     simp only [incidenceRel, map_vertex, map_edge, map_branch] at related ⊢
   case edge.branch edge branch =>
-    simpa [SourceSemiGraph.Hom.totalBranchMap] using
-      congrArg hom.edgeMap related
+    rcases branch with ⟨branchEdge, branch⟩
+    exact congrArg hom.edgeMap related
   case branch.vertex branch vertex =>
     exact hom.compactificationMap.map_coincidence
       branch.1 branch.2 vertex related
@@ -2772,7 +2772,8 @@ theorem treePerm_base_ne_base_of_ne_one
   apply transformationNontrivial
   apply encoding_injective (UniversalVertex.base graph root)
   apply Prod.ext
-  · simpa only [baseSymmetry] using symmetryEqualsOne
+  · change baseSymmetry transformation = (1 : Acting)
+    exact symmetryEqualsOne
   · exact fixesBase
 
 /-- Consequently the reduced loop encoded by the transformed base vertex has
@@ -3017,6 +3018,10 @@ theorem source_isConnected_of_bijective_hom
     subst targetEdge
     intro firstBranch secondBranch branchesDistinct
       firstCoincidence secondCoincidence
+    change target.coincidence (hom.edgeMap sourceEdge) firstBranch =
+      some first at firstCoincidence
+    change target.coincidence (hom.edgeMap sourceEdge) secondBranch =
+      some second at secondCoincidence
     let sourceFirst := (hom.branchEquiv sourceEdge).symm firstBranch
     let sourceSecond := (hom.branchEquiv sourceEdge).symm secondBranch
     have sourceBranchesDistinct : sourceFirst ≠ sourceSecond := by
@@ -3065,6 +3070,8 @@ theorem source_isConnected_of_bijective_hom
     · intro sourceEdge
       obtain ⟨targetVertex, targetBranch, targetCoincidence⟩ :=
         verticial.2.1 (hom.edgeMap sourceEdge)
+      change target.coincidence (hom.edgeMap sourceEdge) targetBranch =
+        some targetVertex at targetCoincidence
       let sourceBranch := (hom.branchEquiv sourceEdge).symm targetBranch
       obtain ⟨sourceVertex, sourceCoincidence⟩ :=
         (proper sourceEdge sourceBranch).mpr ⟨targetVertex, by
@@ -3074,7 +3081,9 @@ theorem source_isConnected_of_bijective_hom
       have targetPath := verticial.2.2
         (hom.vertexMap first) (hom.vertexMap second)
       have sourcePath := targetPath.lift vertexEquiv.symm reflectsAdjacent
-      simpa [vertexEquiv] using sourcePath
+      convert sourcePath using 1
+      · exact (vertexEquiv.symm_apply_apply first).symm
+      · exact (vertexEquiv.symm_apply_apply second).symm
   · refine Or.inr ⟨?_, ?_, ?_⟩
     · letI : IsEmpty target.Vertex := isolated.1
       exact ⟨fun vertex => isEmptyElim (hom.vertexMap vertex)⟩
@@ -4210,7 +4219,9 @@ noncomputable def liftIncidentBranch
             semiGraph.coincidence
                 (incidentEdge semiGraph root vertex branch).edge branch.1.2 =
               some vertex.vertex := by
-          simpa only [incidentEdge] using branch.2
+          simpa only [incidentEdge, SourceSemiGraph.coincidenceTotal,
+            SourceSemiGraph.TotalBranch.edge] using
+            branch.2
         change SourceSemiGraphUniversalCover.coincidence semiGraph root
           (incidentEdge semiGraph root vertex branch) branch.1.2 = some vertex
         rw [coincidence_eq_some_of_eq_some semiGraph root _ _ _
@@ -4648,26 +4659,20 @@ theorem deckAction_faithful :
   exact UniversalVertex.CompositeDeckTransformation.constituentFiber_faithful
     (ConstituentFiber diagram root level)
 
-/-- Under finite-base hypotheses the constructed composite deck group is
+/-- Under countable-base hypotheses the constructed composite deck group is
 countable and discrete. -/
 theorem deckGroup_countable
-    [Finite diagram.base.Vertex] [Finite diagram.base.Edge] :
+    [Countable diagram.base.Vertex] [Countable diagram.base.Edge] :
     Countable (DeckGroup diagram root level) := by
   letI : GaloisCategory diagram.GluedObject :=
     SourceSemiGraphOfAnabelioids.GluedObject.galoisCategory diagram root
   letI : PreGaloisCategory.IsGalois level.object := level.isGalois
-  letI : Finite (LevelSemiGraph diagram root level).Vertex :=
-    SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.vertex_finite
-      diagram root level
-  letI : Finite (LevelSemiGraph diagram root level).Edge :=
-    SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.edge_finite
-      diagram root level
   letI : Countable (LevelSemiGraph diagram root level).Vertex :=
-    Finite.to_countable
+    SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.vertex_countable
+      diagram root level
   letI : Countable (LevelSemiGraph diagram root level).Edge :=
-    Finite.to_countable
-  letI : Finite (IncidenceNode (LevelSemiGraph diagram root level)) :=
-    inferInstance
+    SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.edge_countable
+      diagram root level
   letI : Countable (Aut level.object) := Finite.to_countable
   infer_instance
 
@@ -6063,7 +6068,9 @@ theorem incidenceActionHom_ker_le
       (fun automorphism : UniversalVertex.graphAutomorphismSubgroup
           (IncidenceGraph diagram finer) => automorphism.1 source)
       finerKernel
-    simpa using equality
+    change IncidenceNode.incidencePerm (LevelSemiGraph diagram finer)
+      (diagram.normalOpenLevel finer).cosetAction element source = source at equality
+    exact equality
   change IncidenceNode.incidencePerm (LevelSemiGraph diagram coarser)
       (diagram.normalOpenLevel coarser).cosetAction element
         (RefinementIncidenceMap diagram refinement source) =

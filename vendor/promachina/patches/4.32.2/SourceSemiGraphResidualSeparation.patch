@@ -1,0 +1,36 @@
+diff --git a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceSemiGraphResidualSeparation.lean b/Iut/Foundations/SourceSemiGraphResidualSeparation.lean
+index cdbc458..9ab3d13 100644
+--- a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceSemiGraphResidualSeparation.lean
++++ b/Iut/Foundations/SourceSemiGraphResidualSeparation.lean
+@@ -373,6 +373,22 @@ instance separationCover_edge_finite [Finite semiGraph.Edge] :
+     Finite (separationCover semiGraph walk).Edge :=
+   inferInstance
+ 
++/-- A finite-sheet separator of a countable vertex set remains countable. -/
++noncomputable instance separationCover_vertex_countable
++    [Countable semiGraph.Vertex] :
++    Countable (separationCover semiGraph walk).Vertex := by
++  letI : Countable (SeparationSheet semiGraph walk) := Finite.to_countable
++  change Countable (semiGraph.Vertex × SeparationSheet semiGraph walk)
++  infer_instance
++
++/-- A finite-sheet separator of a countable edge set remains countable. -/
++noncomputable instance separationCover_edge_countable
++    [Countable semiGraph.Edge] :
++    Countable (separationCover semiGraph walk).Edge := by
++  letI : Countable (SeparationSheet semiGraph walk) := Finite.to_countable
++  change Countable (semiGraph.Edge × SeparationSheet semiGraph walk)
++  infer_instance
++
+ @[simp]
+ theorem branchTransport_apply
+     (edge : semiGraph.Edge) (branch : semiGraph.Branch edge)
+@@ -876,7 +892,7 @@ theorem separationTreeProjection_liftUniversalVertex
+       ⟨pathPrevious, pathCurrent, path⟩ := by
+   induction path with
+   | nil =>
+-      simpa only [liftUniversalVertex_nil] using
++      simpa only [liftUniversalVertex_nil, UniversalVertex.base] using
+         separationTreeProjection_base semiGraph walk pathRoot initial
+   | @step pathPrevious pathCurrent pathNext path adjacent notBacktrack
+       inductionHypothesis =>

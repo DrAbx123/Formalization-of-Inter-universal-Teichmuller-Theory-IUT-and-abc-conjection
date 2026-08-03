@@ -1,0 +1,66 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "comparedFrom": "36ef280d022fe644b72e358562c2304ab54e2903",
+  "head": "581e2b898b8429cbb696f75c4548e732d440650d",
+  "checkedAt": "2026-08-04T06:05:00+08:00",
+  "leanFileCount": 189,
+  "tokenScan": {
+    "sorry": 0,
+    "admit": 0,
+    "topLevelAxiom": 0,
+    "topLevelOpaque": 0,
+    "note": "Token absence is not a proof that record fields have been constructed."
+  },
+  "files": [
+    {
+      "relativePath": "Iut/Foundations/SourceAndreTemperedExactSequence.lean",
+      "sha256": "DB85F9F4DFDBD8E0A6CC033A065F8D5F2F594E32D289FFF84276BD9EB15A7B26",
+      "classification": "interface-only-with-proved-generic-kernels",
+      "provedKernels": [
+        "inverse-limit presentation defines a T2 tempered topological group",
+        "inner-conjugacy quotient operations",
+        "closed inclusion range and open quotient map derived from supplied exact-sequence fields",
+        "transport of an exact sequence along a continuous multiplicative equivalence"
+      ],
+      "interfaceFields": [
+        "SourceAndreTemperedExactSequence.inclusion_injective",
+        "SourceAndreTemperedExactSequence.projection_surjective",
+        "SourceAndreTemperedExactSequence.exact",
+        "SourceAndreTemperedExactSequence.projection_isOpen",
+        "SourceAndreTemperedFundamentalGroupPrerequisite.geometricProfiniteCompletion_isCompletion",
+        "SourceAndreTemperedFundamentalGroupPrerequisite.arithmeticProfiniteCompletion_isCompletion",
+        "SourceAndreTemperedFundamentalGroupPrerequisite.geometricProfiniteCompletion_injective",
+        "SourceAndreTemperedFundamentalGroupPrerequisite.arithmeticProfiniteCompletion_injective",
+        "SourceAndreTemperedFundamentalGroupPrerequisite.completion_inclusion_commutes",
+        "SourceAndreTemperedFundamentalGroupPrerequisite.completion_projection_commutes"
+      ],
+      "decision": "Do not import the wrapper as evidence for Andre's theorem; use it only as an obligation vocabulary."
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceBadLocalArithmeticTemperedTower.lean",
+      "sha256": "F0702536E68E4EF47BEAF606D6928D63E9BF885ABEF56F6B7E8818BA8997E77B",
+      "classification": "interface-only-with-direct-proof-extraction-candidates",
+      "provedKernels": [
+        "finite quotient transition and surjectivity",
+        "nested normal quotient transition, continuity, and surjectivity",
+        "canonical map to compatible quotient coordinates",
+        "canonical-map injectivity from trivial intersection of kernels",
+        "topological equivalence after supplied surjectivity and inducing hypotheses"
+      ],
+      "interfaceFields": [
+        "SourceExhaustiveCharacteristicSequence.exhaustive",
+        "SourceFiniteLogEtaleSpecialFiberPrerequisite.diagram",
+        "SourceFiniteLogEtaleSpecialFiberPrerequisite.specialization",
+        "SourceFiniteLogEtaleSpecialFiberPrerequisite.specialization_surjective",
+        "SourceFiniteLogEtaleSpecialFiberPrerequisite.temperedTransition",
+        "SourceBadLocalArithmeticTemperedTower.specializationKernel_normal",
+        "SourceBadLocalArithmeticTemperedTower.specializationKernel_antitone",
+        "SourceBadLocalArithmeticTemperedTower.specializationKernel_exhaustive",
+        "SourceBadLocalArithmeticTemperedTower.level_outer_exact",
+        "SourceBadLocalArithmeticTemperedTower.canonicalMap_surjective",
+        "SourceBadLocalArithmeticTemperedTower.canonicalMap_isInducing"
+      ],
+      "decision": "Extract only the generic nested-quotient lemmas if absent locally; exclude the stable-log and arithmetic wrapper from the proof boundary."
+    }
+  ]
+}

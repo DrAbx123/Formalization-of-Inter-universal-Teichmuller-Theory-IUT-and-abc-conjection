@@ -1,7 +1,7 @@
-diff --git "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\GaloisComplement.lean" "Iut\\Foundations\\GaloisComplement.lean"
-index 6efd947..12cf9b1 100644
---- "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\GaloisComplement.lean"
-+++ "Iut\\Foundations\\GaloisComplement.lean"
+diff --git a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/GaloisComplement.lean b/Iut/Foundations/GaloisComplement.lean
+index 6efd947..8f9f04a 100644
+--- a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/GaloisComplement.lean
++++ b/Iut/Foundations/GaloisComplement.lean
 @@ -2,6 +2,9 @@
  Copyright (c) 2026 IUT Lean formalization contributors. All rights reserved.
  Released under Apache 2.0 license as described in the file LICENSE.
@@ -12,10 +12,11 @@ index 6efd947..12cf9b1 100644
  -/
  import Mathlib.CategoryTheory.Galois.Full
  import Mathlib.CategoryTheory.Limits.Types.Coproducts
-@@ -25,6 +28,41 @@ open CategoryTheory Limits
+@@ -25,6 +28,42 @@ open CategoryTheory Limits
  variable {C : Type (u + 1)} [Category.{u} C] [GaloisCategory C]
    (F : C ⥤ FintypeCat.{u}) [FiberFunctor F]
  
++omit [GaloisCategory C] [FiberFunctor F] in
 +/-- Transport the function facts returned after applying `FintypeCat.incl`
 +back to the underlying functions of the original `FintypeCat` morphisms.
 +Lean 4.32 distinguishes these two coercion paths even though their pointwise
@@ -54,7 +55,7 @@ index 6efd947..12cf9b1 100644
  theorem complementTarget_mem
      {X₁ Z₁ Y₁ X₂ Z₂ Y₂ : C}
      (i₁ : X₁ ⟶ Y₁) (u₁ : Z₁ ⟶ Y₁)
-@@ -50,11 +88,11 @@ theorem complementTarget_mem
+@@ -50,11 +89,11 @@ theorem complementTarget_mem
    have facts₁' : Function.Injective (F.map i₁) ∧
        Function.Injective (F.map u₁) ∧
        IsCompl (Set.range (F.map i₁)) (Set.range (F.map u₁)) := by
@@ -68,7 +69,7 @@ index 6efd947..12cf9b1 100644
    rw [← facts₂'.2.2.compl_eq]
    rw [Set.mem_compl_iff]
    rintro ⟨a, ha⟩
-@@ -118,11 +156,11 @@ noncomputable def complementComparisonActionHom
+@@ -118,11 +157,11 @@ noncomputable def complementComparisonActionHom
    have facts₁' : Function.Injective (F.map i₁) ∧
        Function.Injective (F.map u₁) ∧
        IsCompl (Set.range (F.map i₁)) (Set.range (F.map u₁)) := by
@@ -82,7 +83,7 @@ index 6efd947..12cf9b1 100644
    let target (z : F.obj Z₁) : F.obj Y₂ := F.map y.hom (F.map u₁ z)
    have target_mem (z : F.obj Z₁) :
        target z ∈ Set.range (F.map u₂) :=
-@@ -209,7 +247,8 @@ theorem mono_right_of_isColimit_binaryCofan
+@@ -209,7 +248,8 @@ theorem mono_right_of_isColimit_binaryCofan
    apply (forget₂ (Action FintypeCat (Aut F)) FintypeCat).mono_of_mono_map
    apply FintypeCat.incl.mono_of_mono_map
    rw [mono_iff_injective]

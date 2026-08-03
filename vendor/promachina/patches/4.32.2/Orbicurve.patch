@@ -1,7 +1,7 @@
-diff --git "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\Orbicurve.lean" "Iut\\Foundations\\Orbicurve.lean"
+diff --git a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/Orbicurve.lean b/Iut/Foundations/Orbicurve.lean
 index 1de2e53..c1fb7ee 100644
---- "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\Orbicurve.lean"
-+++ "Iut\\Foundations\\Orbicurve.lean"
+--- a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/Orbicurve.lean
++++ b/Iut/Foundations/Orbicurve.lean
 @@ -471,11 +471,11 @@ variable
      {X Y : HyperbolicOrbicurve F}
      {f g h : X.Hom Y}

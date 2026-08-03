@@ -1,7 +1,7 @@
-diff --git "a/vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceGluedAnabelioid.lean" "b/Iut\\Foundations\\SourceGluedAnabelioid.lean"
+diff --git a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceGluedAnabelioid.lean b/Iut/Foundations/SourceGluedAnabelioid.lean
 index eeec697..0d526b3 100644
---- "a/vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceGluedAnabelioid.lean"
-+++ "b/Iut\\Foundations\\SourceGluedAnabelioid.lean"
+--- a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceGluedAnabelioid.lean
++++ b/Iut/Foundations/SourceGluedAnabelioid.lean
 @@ -648,9 +648,20 @@ noncomputable def limitCone
          intro vertex
          letI := (diagram.vertexAnabelioid vertex).coverCategory

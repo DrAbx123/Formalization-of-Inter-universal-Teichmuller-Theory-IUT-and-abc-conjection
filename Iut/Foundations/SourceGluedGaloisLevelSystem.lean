@@ -644,10 +644,18 @@ theorem edgeAction_transitive_on_projection_fiber
                   (automorphism.hom.app reference.vertex)) firstPoint) =
             (rootFiber diagram reference.vertex).map automorphism.hom
               firstVertexPoint := by
-      simpa only [FintypeCat.comp_apply] using
-        ConcreteCategory.congr_hom
-          (pointed.fiberIso.hom.naturality
-            (automorphism.hom.app reference.vertex)) firstPoint
+      have hnatural := ConcreteCategory.congr_hom
+        (pointed.fiberIso.hom.naturality
+          (automorphism.hom.app reference.vertex)) firstPoint
+      change
+        pointed.fiberIso.hom.app
+              (level.object.vertexObject reference.vertex)
+              ((diagram.edgeAnabelioid firstEdge).fiber.map
+                (reference.pullback.map
+                  (automorphism.hom.app reference.vertex)) firstPoint) =
+            (rootFiber diagram reference.vertex).map automorphism.hom
+              firstVertexPoint at hnatural
+      exact hnatural
     exact naturalityPoint.trans vertexPointEquality
   refine ⟨automorphism, ?_⟩
   refine Sigma.ext rfl ?_
@@ -786,6 +794,30 @@ noncomputable instance edge_finite
       Finite (CoverEdgeComponent diagram root level.object edge) :=
     inferInstance
   change Finite (Σ edge, CoverEdgeComponent diagram root level.object edge)
+  infer_instance
+
+/-- A countable base has countably many lifted vertices at every Galois
+level; every fiber over a base vertex is finite. -/
+noncomputable instance vertex_countable
+    [Countable diagram.base.Vertex]
+    (level : GaloisLevel diagram root) : Countable level.semiGraph.Vertex := by
+  letI (vertex : diagram.base.Vertex) :
+      Countable (CoverVertexComponent diagram level.object vertex) :=
+    Finite.to_countable
+  change Countable
+    (Σ vertex, CoverVertexComponent diagram level.object vertex)
+  infer_instance
+
+/-- A countable base has countably many lifted edges at every Galois level;
+every fiber over a base edge is finite. -/
+noncomputable instance edge_countable
+    [Countable diagram.base.Edge]
+    (level : GaloisLevel diagram root) : Countable level.semiGraph.Edge := by
+  letI (edge : diagram.base.Edge) :
+      Countable (CoverEdgeComponent diagram root level.object edge) :=
+    Finite.to_countable
+  change Countable
+    (Σ edge, CoverEdgeComponent diagram root level.object edge)
   infer_instance
 
 end GaloisLevel

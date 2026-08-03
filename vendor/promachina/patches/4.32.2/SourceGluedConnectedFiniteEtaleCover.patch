@@ -1,0 +1,29 @@
+diff --git a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceGluedConnectedFiniteEtaleCover.lean b/Iut/Foundations/SourceGluedConnectedFiniteEtaleCover.lean
+index 5cf7547..0c7ed78 100644
+--- a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceGluedConnectedFiniteEtaleCover.lean
++++ b/Iut/Foundations/SourceGluedConnectedFiniteEtaleCover.lean
+@@ -521,7 +521,7 @@ noncomputable instance reachableVertexActionInclusion_mono
+   exact Subtype.val_injective
+ 
+ /-- The Galois-category lift of the reachable-point subaction. -/
+-noncomputable def reachableVertexLift
++theorem reachableVertexLift
+     (base : CoverVertex diagram object)
+     (vertex : diagram.base.Vertex) :
+     let data := diagram.vertexAnabelioid vertex
+@@ -1250,9 +1250,12 @@ noncomputable instance reachableInclusion_isIso
+ theorem coverReachableFrom_symmetric
+     {first second : CoverVertex diagram object}
+     (path : CoverReachableFrom diagram root object first second) :
+-    CoverReachableFrom diagram root object second first :=
+-  Relation.ReflTransGen.symmetric
+-    (fun _ _ adjacent => coverAdjacent_symm diagram root object adjacent) path
++    CoverReachableFrom diagram root object second first := by
++  induction path with
++  | refl => exact Relation.ReflTransGen.refl
++  | tail path adjacent inductionHypothesis =>
++      exact inductionHypothesis.head
++        (coverAdjacent_symm diagram root object adjacent)
+ 
+ /-- A connected object of the literal glued category produces a connected
+ finite-etale semigraph, as asserted after Definition 2.1. -/

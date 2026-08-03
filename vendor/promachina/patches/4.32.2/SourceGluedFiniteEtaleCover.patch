@@ -1,0 +1,38 @@
+diff --git a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceGluedFiniteEtaleCover.lean b/Iut/Foundations/SourceGluedFiniteEtaleCover.lean
+index d6596c4..1c74bb2 100644
+--- a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceGluedFiniteEtaleCover.lean
++++ b/Iut/Foundations/SourceGluedFiniteEtaleCover.lean
+@@ -63,9 +63,13 @@ noncomputable def fiberComponentEquiv
+         obtain ⟨automorphism, relation⟩ := relation
+         refine ⟨automorphism, ?_⟩
+         rw [← relation]
+-        simpa only [FintypeCat.comp_apply] using
+-          ConcreteCategory.congr_hom
+-            (automorphism.hom.naturality identification.hom) secondPoint)
++        have hnatural := ConcreteCategory.congr_hom
++          (automorphism.hom.naturality identification.hom) secondPoint
++        change
++          automorphism • data.fiber.map identification.hom secondPoint =
++            data.fiber.map identification.hom
++              (automorphism • secondPoint) at hnatural
++        exact hnatural)
+   let reverse : data.FiberComponent second → data.FiberComponent first :=
+     Quotient.map' (fun point => data.fiber.map identification.inv point)
+       (fun firstPoint secondPoint relation => by
+@@ -73,9 +77,13 @@ noncomputable def fiberComponentEquiv
+         obtain ⟨automorphism, relation⟩ := relation
+         refine ⟨automorphism, ?_⟩
+         rw [← relation]
+-        simpa only [FintypeCat.comp_apply] using
+-          ConcreteCategory.congr_hom
+-            (automorphism.hom.naturality identification.inv) secondPoint)
++        have hnatural := ConcreteCategory.congr_hom
++          (automorphism.hom.naturality identification.inv) secondPoint
++        change
++          automorphism • data.fiber.map identification.inv secondPoint =
++            data.fiber.map identification.inv
++              (automorphism • secondPoint) at hnatural
++        exact hnatural)
+   exact
+     { toFun := forward
+       invFun := reverse

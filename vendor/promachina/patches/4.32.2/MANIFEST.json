@@ -1,0 +1,199 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+  "targetVersion": "4.32.2",
+  "generatedAt": "2026-08-04T05:53:42.4157836+08:00",
+  "changedFiles": 19,
+  "identicalFiles": 8,
+  "files": [
+    {
+      "module": "Iut.Foundations.GaloisComplement",
+      "status": "patched",
+      "sourceSha256": "CA76606C177AAF50FDF183A4293C1AECB58A44B44DFD22B005C81B493899636C",
+      "targetSha256": "36B552941EA4AD28FABBB48659DAF869E82301970CC6BB8DB8A5A8AD4F1F3E4B",
+      "patch": "vendor/promachina/patches/4.32.2/GaloisComplement.patch"
+    },
+    {
+      "module": "Iut.Foundations.GaloisImage",
+      "status": "patched",
+      "sourceSha256": "32913C0532256192A68CFD84FB4AA03D89D09A554C831EC34521F933BB03E1C8",
+      "targetSha256": "8D073E788DD205AEF932A9991D009069F991A70F4F1DEF2DC07D4ABFA4246763",
+      "patch": "vendor/promachina/patches/4.32.2/GaloisImage.patch"
+    },
+    {
+      "module": "Iut.Foundations.Orbicurve",
+      "status": "patched",
+      "sourceSha256": "2E669120BCA9EED382344638331322F4C0E2BB61D9E7426EF70E798754ECAC08",
+      "targetSha256": "15D1362D6064AB079B3796B830F991343885D8B33ED4AAB30A8BDEE7DC7F0E1D",
+      "patch": "vendor/promachina/patches/4.32.2/Orbicurve.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceAnabelioid",
+      "status": "patched",
+      "sourceSha256": "0A94538C72BA25928CF0BCBAFDCFB61AF2BA3A810F8A18378EE52EC6AB0EDEC8",
+      "targetSha256": "F45D287E18E4D5992830B6E1BB7A68B0122C14FEE253AED2AADB55027C4A67C2",
+      "patch": "vendor/promachina/patches/4.32.2/SourceAnabelioid.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceAnabelioidComponents",
+      "status": "patched",
+      "sourceSha256": "9AE10CB31FD1F95059558167B66498F900F546DCF33218EC23762D33B0369769",
+      "targetSha256": "31C1ED9A21588573EF590175BA89D5E1E0085D700D8319924A4574FE2937C4B4",
+      "patch": "vendor/promachina/patches/4.32.2/SourceAnabelioidComponents.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceAnabelioidSlice",
+      "status": "patched",
+      "sourceSha256": "5FD306C2881D55630D1DC4A471F948B5FC92A1455AD5C756D7FE63F022D6E9C7",
+      "targetSha256": "0655509F2D5DE1B8C0C88B0D1216D8471D9E3B7CCCA251DFBA16122D10EC183E",
+      "patch": "vendor/promachina/patches/4.32.2/SourceAnabelioidSlice.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceCombinatorialUniversalCover",
+      "status": "patched",
+      "sourceSha256": "87859856157A27DCACC70DF81F921ED9BD0CF3C2955D54926F25978D9ED6AEB2",
+      "targetSha256": "91DE049407658B0C0FF3832826E6D64681ADF9BE003549F4B2BD03AA0694DD3D",
+      "patch": "vendor/promachina/patches/4.32.2/SourceCombinatorialUniversalCover.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceConnectedAnabelioidSlice",
+      "status": "patched",
+      "sourceSha256": "D125C47A728E0FE3E31EFD52EEAEA4BBDDE013751949F471C1E23EC189952809",
+      "targetSha256": "73749070BEEA7406EAE89D44F010B3759A4F195005374F39BAEF9975CECE9C25",
+      "patch": "vendor/promachina/patches/4.32.2/SourceConnectedAnabelioidSlice.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceContinuousAnabelioid",
+      "status": "patched",
+      "sourceSha256": "5B638F6B67B759344AC4C64DDD20EB124E7753AE1B8912BE7C11DCE9F72CD76D",
+      "targetSha256": "AB9CDC355BA189C4F4B68D52DEC171BFA991D76E2676A311CF54C609C9DCC04A",
+      "patch": "vendor/promachina/patches/4.32.2/SourceContinuousAnabelioid.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceFiniteSheetSemiGraphCover",
+      "status": "patched",
+      "sourceSha256": "D4FDF5CBB57DA12FF063E9C81A17C8F0F8B5E8B765A12B69A537267B01C8A95B",
+      "targetSha256": "78CD13CCAEE6A0BE7D464680EEDFB5267485E0E5568854DF0E27F2DD3789C386",
+      "patch": "vendor/promachina/patches/4.32.2/SourceFiniteSheetSemiGraphCover.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedAnabelioid",
+      "status": "patched",
+      "sourceSha256": "E7849E6BF4AC24189D00070223D33D6F4AA52C875A7792689C83F4C9504D6DDE",
+      "targetSha256": "1C0A73C7FFE8EC0ED9FB808DB9AC2F107F2CDE2E16E0444B49A32411FED177CF",
+      "patch": "vendor/promachina/patches/4.32.2/SourceGluedAnabelioid.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedConnectedFiniteEtaleCover",
+      "status": "patched",
+      "sourceSha256": "71FACAF7D2001DC0F67AE9179E7C170085EBD589DD783B2FF597EA74F47AFBF0",
+      "targetSha256": "84CEED7256B25F093AFECF89D400B66FC2DB71F74F32CAA15920489A11DADC23",
+      "patch": "vendor/promachina/patches/4.32.2/SourceGluedConnectedFiniteEtaleCover.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedFiniteEtaleCover",
+      "status": "patched",
+      "sourceSha256": "BBFF6EF2149274329490A18EDA5A9093191470FF43116509D45C78EB16DB1049",
+      "targetSha256": "0E73FA2BD484633C17E6531280F8A6BEDDA0B15D88BDA45F64EE004DAA10D055",
+      "patch": "vendor/promachina/patches/4.32.2/SourceGluedFiniteEtaleCover.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedFiniteEtaleTransition",
+      "status": "patched",
+      "sourceSha256": "70AC7EA16C6CAB26878FA60EDBD72092D60713AF0E1131E1C23B98BB9FF8D815",
+      "targetSha256": "F5F0E08D1685B21A36ACCEC3C86F360A0A487EA3F7C4EA8D2ADC89C8C699DD5B",
+      "patch": "vendor/promachina/patches/4.32.2/SourceGluedFiniteEtaleTransition.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedGalois",
+      "status": "patched",
+      "sourceSha256": "8A6511B410D7F8178ECB3ACA99A14131352091883436804B8A5734BE490AA761",
+      "targetSha256": "50D9F77D4935926E31FB5F889E904F4C3C4A17B7493C4243504DB032AA8C69F5",
+      "patch": "vendor/promachina/patches/4.32.2/SourceGluedGalois.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedGaloisLevelSystem",
+      "status": "patched",
+      "sourceSha256": "F3F24ECA5B4AACC36136C37718C9EE21B8FA449324AB22CA96572F9C289F61B1",
+      "targetSha256": "6BB8C89274DCAC6F289F277D630380CCD263EF500F36FD9CB30395055D97FF37",
+      "patch": "vendor/promachina/patches/4.32.2/SourceGluedGaloisLevelSystem.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedIsolatedFiniteEtaleCover",
+      "status": "identical",
+      "sourceSha256": "80072B6E9971484CF4828EFBFCEB7594EA06AA07020AC3DCF75838BD5C4E678F",
+      "targetSha256": "80072B6E9971484CF4828EFBFCEB7594EA06AA07020AC3DCF75838BD5C4E678F",
+      "patch": null
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedIsolatedGaloisLevelSystem",
+      "status": "identical",
+      "sourceSha256": "E7EEA9FB1A52BF84809380BFE500B07C1D0B427172B19C27B0AE06E0B5E397C1",
+      "targetSha256": "E7EEA9FB1A52BF84809380BFE500B07C1D0B427172B19C27B0AE06E0B5E397C1",
+      "patch": null
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedTotalAnabelioid",
+      "status": "identical",
+      "sourceSha256": "96D80EA6A54B5BDD9E1179DEE84AA837B4EFA0C0C8EA8AC216BDA09B686AB09B",
+      "targetSha256": "96D80EA6A54B5BDD9E1179DEE84AA837B4EFA0C0C8EA8AC216BDA09B686AB09B",
+      "patch": null
+    },
+    {
+      "module": "Iut.Foundations.SourceProfiniteCosetSystem",
+      "status": "identical",
+      "sourceSha256": "679C0E429947293CF2BEF65EBA3E47E648B0381CA1C0FF10734E97226688A1CD",
+      "targetSha256": "679C0E429947293CF2BEF65EBA3E47E648B0381CA1C0FF10734E97226688A1CD",
+      "patch": null
+    },
+    {
+      "module": "Iut.Foundations.SourceProfiniteSemiGraphSystem",
+      "status": "identical",
+      "sourceSha256": "84DA5D37CE536C0BA9BE6CA47CE19D370BEA97D80C87971F169F131C39DD839C",
+      "targetSha256": "84DA5D37CE536C0BA9BE6CA47CE19D370BEA97D80C87971F169F131C39DD839C",
+      "patch": null
+    },
+    {
+      "module": "Iut.Foundations.SourceReducedWordFiniteSeparation",
+      "status": "patched",
+      "sourceSha256": "541F13F0DBA1BF8DBF1A47B4983D8E8763BAE48A766465B1926733A6FA881AAA",
+      "targetSha256": "19B9AE154F41D6923558B1EED5AB24812B305BB93EA375162096A3CA0E270624",
+      "patch": "vendor/promachina/patches/4.32.2/SourceReducedWordFiniteSeparation.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceSemiGraph",
+      "status": "patched",
+      "sourceSha256": "67C213B7BA9C8C9957DB6126356448ADD60A8D1663C52133CA550A67031516CC",
+      "targetSha256": "70677FBCFAB98D31EDEFA381235826E32387AAB59BA75241B6863F7FE7D60ADD",
+      "patch": "vendor/promachina/patches/4.32.2/SourceSemiGraph.patch"
+    },
+    {
+      "module": "Iut.Foundations.SourceSemiGraphAction",
+      "status": "identical",
+      "sourceSha256": "8761032B08CA2A3D3339169E5E55984286C887548548F822BFF03081A41D10C5",
+      "targetSha256": "8761032B08CA2A3D3339169E5E55984286C887548548F822BFF03081A41D10C5",
+      "patch": null
+    },
+    {
+      "module": "Iut.Foundations.SourceSemiGraphOfAnabelioids",
+      "status": "identical",
+      "sourceSha256": "455A12EFEB397019F1844FC8AAB84FEFCD61CDB3622E59714A70F4D60D02F98A",
+      "targetSha256": "455A12EFEB397019F1844FC8AAB84FEFCD61CDB3622E59714A70F4D60D02F98A",
+      "patch": null
+    },
+    {
+      "module": "Iut.Foundations.SourceSemiGraphOfSubgroups",
+      "status": "identical",
+      "sourceSha256": "341E23E299710418C6FEABF04ACC4032FD47A9CDFDA9A7A49036D13729EF56C7",
+      "targetSha256": "341E23E299710418C6FEABF04ACC4032FD47A9CDFDA9A7A49036D13729EF56C7",
+      "patch": null
+    },
+    {
+      "module": "Iut.Foundations.SourceSemiGraphResidualSeparation",
+      "status": "patched",
+      "sourceSha256": "CAB93633FAB2029F41DC7FA774A6CC046C6524AEB1474027B5433245E8FE2E8B",
+      "targetSha256": "33602AB26EBCD24ED058A0FDCE9A06B6599D01C224917E85708294768DBF5E1A",
+      "patch": "vendor/promachina/patches/4.32.2/SourceSemiGraphResidualSeparation.patch"
+    }
+  ]
+}

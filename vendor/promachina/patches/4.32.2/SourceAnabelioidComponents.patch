@@ -1,0 +1,60 @@
+diff --git a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceAnabelioidComponents.lean b/Iut/Foundations/SourceAnabelioidComponents.lean
+index cc6fc3e..3317c48 100644
+--- a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceAnabelioidComponents.lean
++++ b/Iut/Foundations/SourceAnabelioidComponents.lean
+@@ -335,7 +335,10 @@ instance : SMul G (SourceSliceComponentCarrier T component) where
+       have hequivariant' :
+           T.hom.hom.hom (g • t.1) =
+             g • T.hom.hom.hom t.1 := by
+-        simpa only [FintypeCat.comp_apply] using hequivariant
++        change
++          T.hom.hom.hom (g • t.1) =
++            g • T.hom.hom.hom t.1 at hequivariant
++        exact hequivariant
+       have horbit :
+           (Quotient.mk''
+               (T.hom.hom.hom (g • t.1)) :
+@@ -442,12 +445,14 @@ noncomputable def sourceSliceComponentMap
+                         (continuousActionFiber G).map map)
+                       (Over.w f))
+                     t.1
+-                dsimp only at hw
+                 rw [Functor.map_comp] at hw
+                 have hbase :
+                     U.hom.hom.hom (f.left.hom.hom t.1) =
+                       T.hom.hom.hom t.1 := by
+-                  simpa only [FintypeCat.comp_apply] using hw
++                  change
++                    U.hom.hom.hom (f.left.hom.hom t.1) =
++                      T.hom.hom.hom t.1 at hw
++                  exact hw
+                 exact
+                   (congrArg
+                     (fun s : S.obj.V =>
+@@ -649,9 +654,15 @@ noncomputable def sourceSliceComponentFamilyMap
+            apply Sigma.ext
+            · rfl
+            · apply heq_of_eq
+-             simpa only [FintypeCat.comp_apply] using
+-               ConcreteCategory.congr_hom
+-                 ((f point.1).left.hom.comm g) point.2 } :
++             change
++               (f point.1).left.hom.hom (g • point.2) =
++                 g • (f point.1).left.hom.hom point.2
++             have hequivariant := ConcreteCategory.congr_hom
++               ((f point.1).left.hom.comm g) point.2
++             change
++               (f point.1).left.hom.hom (g • point.2) =
++                 g • (f point.1).left.hom.hom point.2 at hequivariant
++             exact hequivariant } :
+         (sourceSliceComponentFamilyAction G S first).obj ⟶
+           (sourceSliceComponentFamilyAction G S second).obj)
+   exact Over.homMk glued (by
+@@ -667,7 +678,6 @@ noncomputable def sourceSliceComponentFamilyMap
+             (continuousActionFiber G).map map)
+           (Over.w (f point.1)))
+         point.2
+-    dsimp only at hw
+     rw [Functor.map_comp] at hw
+     exact congrArg Subtype.val hw)
+ 

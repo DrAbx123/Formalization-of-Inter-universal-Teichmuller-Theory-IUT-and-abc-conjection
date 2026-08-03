@@ -1,7 +1,7 @@
-diff --git "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceAnabelioid.lean" "Iut\\Foundations\\SourceAnabelioid.lean"
+diff --git a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceAnabelioid.lean b/Iut/Foundations/SourceAnabelioid.lean
 index 8970e91..061c126 100644
---- "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceAnabelioid.lean"
-+++ "Iut\\Foundations\\SourceAnabelioid.lean"
+--- a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceAnabelioid.lean
++++ b/Iut/Foundations/SourceAnabelioid.lean
 @@ -576,6 +576,17 @@ theorem fundamentalGroupImage_isClosed
      (morphism : SourcePointedAnabelioidHom source target) :
      IsClosed (morphism.fundamentalGroupImage : Set target.group) := by

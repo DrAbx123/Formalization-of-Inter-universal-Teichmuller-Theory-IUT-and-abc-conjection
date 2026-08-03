@@ -28,6 +28,7 @@ open CategoryTheory Limits
 variable {C : Type (u + 1)} [Category.{u} C] [GaloisCategory C]
   (F : C ⥤ FintypeCat.{u}) [FiberFunctor F]
 
+omit [GaloisCategory C] [FiberFunctor F] in
 /-- Transport the function facts returned after applying `FintypeCat.incl`
 back to the underlying functions of the original `FintypeCat` morphisms.
 Lean 4.32 distinguishes these two coercion paths even though their pointwise

@@ -1,0 +1,24 @@
+diff --git a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceSemiGraph.lean b/Iut/Foundations/SourceSemiGraph.lean
+index 9325515..5cbf8e7 100644
+--- a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceSemiGraph.lean
++++ b/Iut/Foundations/SourceSemiGraph.lean
+@@ -2,6 +2,9 @@
+ Copyright (c) 2026 IUT Lean formalization contributors. All rights reserved.
+ Released under Apache 2.0 license as described in the file LICENSE.
+ Authors: IUT Lean formalization contributors
++
++Modified by LeanFormal contributors for Lean/Mathlib 4.32.2. See
++vendor/promachina/patches/4.32.2 for the exact compatibility patch.
+ -/
+ import Mathlib.Data.Fintype.Card
+ import Mathlib.Data.Set.Card
+@@ -645,7 +648,8 @@ def compactificationInclusion : G.Hom G.compactification where
+   branchEquiv := fun _ => Equiv.refl _
+   map_coincidence := by
+     intro edge branch vertex coincidence
+-    simpa using G.compactification_coincidence_of_some coincidence
++    change G.compactification.coincidence edge branch = some (Sum.inl vertex)
++    exact G.compactification_coincidence_of_some coincidence
+ 
+ namespace Hom
+ 

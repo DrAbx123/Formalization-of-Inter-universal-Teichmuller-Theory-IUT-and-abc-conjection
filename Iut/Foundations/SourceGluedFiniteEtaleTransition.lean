@@ -42,9 +42,13 @@ noncomputable def fiberComponentHomMap
       obtain ⟨automorphism, relation⟩ := relation
       refine ⟨automorphism, ?_⟩
       rw [← relation]
-      simpa only [FintypeCat.comp_apply] using
-        ConcreteCategory.congr_hom
-          (automorphism.hom.naturality morphism) secondPoint)
+      have hnatural := ConcreteCategory.congr_hom
+        (automorphism.hom.naturality morphism) secondPoint
+      change
+        automorphism • data.fiber.map morphism secondPoint =
+          data.fiber.map morphism
+            (automorphism • secondPoint) at hnatural
+      exact hnatural)
 
 /-- Component maps preserve identity morphisms. -/
 theorem fiberComponentHomMap_id_apply
@@ -131,13 +135,21 @@ theorem fiberComponentMap_naturality
   letI := source.fiberFunctor
   refine Quotient.inductionOn' component ?_
   intro point
-  simpa only [fiberComponentHomMap, fiberComponentMap,
-    FintypeCat.comp_apply] using
-      congrArg
-        (Quotient.mk' (s := MulAction.orbitRel (Aut target.fiber)
-          (target.fiber.obj second)))
-        (ConcreteCategory.congr_hom
-          (pointed.fiberIso.hom.naturality morphism) point).symm
+  simp only [fiberComponentHomMap, fiberComponentMap,
+    Quotient.map'_mk'']
+  change
+    @Eq
+      (Quotient (MulAction.orbitRel (Aut target.fiber)
+        (target.fiber.obj second)))
+      (Quotient.mk''
+        (target.fiber.map morphism
+          (pointed.fiberIso.hom.app first point)))
+      (Quotient.mk''
+        (pointed.fiberIso.hom.app second
+          (source.fiber.map (pointed.pullback.map morphism) point)))
+  exact congrArg Quotient.mk''
+    (ConcreteCategory.congr_hom
+      (pointed.fiberIso.hom.naturality morphism) point).symm
 
 end EtaleFundamentalGroup
 

@@ -1,0 +1,70 @@
+diff --git a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceConnectedAnabelioidSlice.lean b/Iut/Foundations/SourceConnectedAnabelioidSlice.lean
+index b9e2f23..3854b8b 100644
+--- a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceConnectedAnabelioidSlice.lean
++++ b/Iut/Foundations/SourceConnectedAnabelioidSlice.lean
+@@ -193,7 +193,11 @@ theorem sourceActionComponentInclusion_isIso_of_equivalentToGalois
+     Over.mk (sourceActionComponentInclusion G S component)
+   let componentInclusion : componentObject ⟶ terminalObject :=
+     Over.homMk (sourceActionComponentInclusion G S component)
+-      (by simp [componentObject, terminalObject])
++      (by
++        change
++          sourceActionComponentInclusion G S component ≫ 𝟙 S =
++            sourceActionComponentInclusion G S component
++        exact Category.comp_id _)
+   haveI : Mono (sourceActionComponentInclusion G S component) := by
+     apply Functor.mono_of_mono_map (continuousActionInclusion G)
+     apply Functor.mono_of_mono_map (Action.forget FintypeCat G)
+@@ -266,7 +270,6 @@ theorem sourceSlice_equivalentToGalois_implies_pretransitive
+     (sourceActionComponentAction_pretransitive G S component
+       ).exists_smul_eq firstInComponent secondInComponent
+   refine ⟨g, ?_⟩
+-  change g • first = second
+   calc
+     g • first = (g • firstInComponent).1 := rfl
+     _ = secondInComponent.1 := congrArg Subtype.val orbitEquality
+@@ -274,6 +277,7 @@ theorem sourceSlice_equivalentToGalois_implies_pretransitive
+ 
+ /-! ## Product functors under a change of slicing object -/
+ 
++set_option backward.isDefEq.respectTransparency false in
+ /-- Product with a slicing object is natural under an isomorphism of slicing
+ objects. -/
+ noncomputable def sourceSliceProductMapIso
+@@ -285,13 +289,30 @@ noncomputable def sourceSliceProductMapIso
+       Over.isoMk
+         (Limits.prod.mapIso iso (Iso.refl X))
+         (by
+-          dsimp
+-          rw [Category.assoc, Limits.prod.lift_fst,
+-            Limits.prod.map_fst]
+-          rw [← Category.assoc, Limits.prod.lift_fst]))
++          simp only [Limits.prod.mapIso_hom, Iso.refl_hom,
++            Over.star_obj_hom, Over.mapIso_functor,
++            Limits.prod.lift_fst]
++          calc
++            Limits.prod.map iso.hom (𝟙 X) ≫ Limits.prod.fst =
++                Limits.prod.fst ≫ iso.hom :=
++              Limits.prod.map_fst iso.hom (𝟙 X)
++            _ = ((Over.star S ⋙ Over.map iso.hom).obj X).hom := by
++              change
++                Limits.prod.fst ≫ iso.hom =
++                  ((Over.map iso.hom).obj ((Over.star S).obj X)).hom
++              rw [Over.map_obj_hom]
++              have hstar := Over.star_obj_hom S X
++              have hstarPost :=
++                congrArg (fun morphism => morphism ≫ iso.hom) hstar
++              simpa only [Limits.prod.lift_fst] using hstarPost.symm))
+     (fun f => by
+-      ext
+-      simp)
++      apply Over.OverMorphism.ext
++      change
++        Limits.prod.map (𝟙 S) f ≫
++              Limits.prod.map iso.hom (𝟙 _) =
++            Limits.prod.map iso.hom (𝟙 _) ≫
++              Limits.prod.map (𝟙 T) f
++      exact Limits.prod.map_swap f iso.hom)
+ 
+ /-! ## Application to the finite-etale factorization -/
+ 

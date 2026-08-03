@@ -1,0 +1,43 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "productionBaseCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+  "refreshedHeadCommit": "36ef280d022fe644b72e358562c2304ab54e2903",
+  "sourceCommit": "04ffcc8e2778a7b8a65d5b482b4a8f5ea2d2960d",
+  "sourceSubject": "Generalize tempered covering theorem to countable bases",
+  "appliedAt": "2026-08-04T05:37:00+08:00",
+  "classification": "direct-proof",
+  "method": "exact git diff applied after git apply --check; local compatibility edits retained",
+  "upstreamMathlib": "v4.30.0",
+  "localMathlib": "v4.32.2",
+  "compileLogs": [
+    "logs/lean/serial-20260804-054453/summary.json",
+    "logs/lean/serial-20260804-054422/summary.json"
+  ],
+  "axiomLog": "logs/lean/axioms-upstream-foundations-20260804-054745/axiom_audit.stdout.log",
+  "files": [
+    {
+      "relativePath": "Iut/Foundations/SourceFiniteSheetSemiGraphCover.lean",
+      "sourceSha256": "78CD13CCAEE6A0BE7D464680EEDFB5267485E0E5568854DF0E27F2DD3789C386",
+      "productionSha256": "78CD13CCAEE6A0BE7D464680EEDFB5267485E0E5568854DF0E27F2DD3789C386",
+      "content": "finite vertex and edge fibers of a finite-sheet projection"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceGluedGaloisLevelSystem.lean",
+      "sourceSha256": "FF81E948FBA331303EA84315E25C8B944EA6AC2BBD2DA1126C2A93E6E9BDB7C7",
+      "productionSha256": "6BB8C89274DCAC6F289F277D630380CCD263EF500F36FD9CB30395055D97FF37",
+      "content": "countable vertex and edge carriers at each Galois level"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceCombinatorialUniversalCover.lean",
+      "sourceSha256": "A5D2FB7E3742B9009FD66E94D3AB139715FAA84CB4A65DF2B6D8C4F5E3C23EA1",
+      "productionSha256": "91DE049407658B0C0FF3832826E6D64681ADF9BE003549F4B2BD03AA0694DD3D",
+      "content": "countability of the composite deck group over a countable base"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceSemiGraphResidualSeparation.lean",
+      "sourceSha256": "DAEAE669458C4FD5E7740B38C5F8B53BCA22191C09BB8E415DF99EFBA20595C8",
+      "productionSha256": "33602AB26EBCD24ED058A0FDCE9A06B6599D01C224917E85708294768DBF5E1A",
+      "content": "countability of finite-sheet separator vertices and edges"
+    }
+  ]
+}

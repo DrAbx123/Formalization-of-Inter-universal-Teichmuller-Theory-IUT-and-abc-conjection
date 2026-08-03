@@ -1,6 +1,7 @@
 import Iut.Foundations.SourceGluedAnabelioid
 import Iut.Foundations.SourceGluedGalois
 import Iut.Foundations.SourceAnabelioidSlice
+import Iut.Foundations.SourceSemiGraphResidualSeparation
 
 /-!
   Trust-boundary audit for the imported semi-graph-of-anabelioids foundation.
@@ -31,3 +32,15 @@ import Iut.Foundations.SourceAnabelioidSlice
 #print axioms Iut.sourceSliceProductAdjDependentSection
 #print axioms Iut.sourceInductionRestrictionAdjunction
 #print axioms Iut.sourceOpenSubgroupFiniteEtaleFactorization
+
+/-! Countable-base and finite-separator kernels ported from
+`promachina/iut-lean@36ef280d`. -/
+
+#print axioms Iut.SourceFiniteSheetSemiGraphCover.projection_vertexFiber_finite
+#print axioms Iut.SourceFiniteSheetSemiGraphCover.projection_edgeFiber_finite
+#print axioms Iut.SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.vertex_countable
+#print axioms Iut.SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.edge_countable
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.deckGroup_countable
+#print axioms Iut.SourceSemiGraphResidualSeparation.separationCover_vertex_countable
+#print axioms Iut.SourceSemiGraphResidualSeparation.separationCover_edge_countable
+#print axioms Iut.SourceSemiGraphResidualSeparation.separationTreeProjection_liftUniversalVertex

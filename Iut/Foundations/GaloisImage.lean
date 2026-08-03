@@ -286,7 +286,6 @@ noncomputable def imageComparisonIso
       inv := reverse
       hom_inv_id := by
         apply (cancel_epi e₁).1
-        change e₁ ≫ (forward ≫ reverse) = e₁ ≫ 𝟙 I₁
         rw [← Category.assoc]
         rw [imageComparison_projection F e₁ m₁ e₂ m₂ x y square]
         rw [Category.assoc]
@@ -294,7 +293,6 @@ noncomputable def imageComparisonIso
         simp
       inv_hom_id := by
         apply (cancel_epi e₂).1
-        change e₂ ≫ (reverse ≫ forward) = e₂ ≫ 𝟙 I₂
         rw [← Category.assoc]
         rw [imageComparison_projection F e₂ m₂ e₁ m₁ x.symm y.symm reverseSquare]
         rw [Category.assoc]

@@ -1,7 +1,7 @@
-diff --git "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\GaloisImage.lean" "Iut\\Foundations\\GaloisImage.lean"
-index 1654cb7..f54dd87 100644
---- "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\GaloisImage.lean"
-+++ "Iut\\Foundations\\GaloisImage.lean"
+diff --git a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/GaloisImage.lean b/Iut/Foundations/GaloisImage.lean
+index 1654cb7..55a450a 100644
+--- a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/GaloisImage.lean
++++ b/Iut/Foundations/GaloisImage.lean
 @@ -37,8 +37,10 @@ noncomputable def range {X Y : Action FintypeCat.{u} G}
          refine ⟨(X.ρ g).hom x, ?_⟩
          calc
@@ -28,3 +28,19 @@ index 1654cb7..f54dd87 100644
  
  theorem toRange_comp_rangeIncl {X Y : Action FintypeCat.{u} G}
      (f : X ⟶ Y) : toRange G f ≫ rangeIncl G f = f := by
+@@ -282,7 +286,6 @@ noncomputable def imageComparisonIso
+       inv := reverse
+       hom_inv_id := by
+         apply (cancel_epi e₁).1
+-        change e₁ ≫ (forward ≫ reverse) = e₁ ≫ 𝟙 I₁
+         rw [← Category.assoc]
+         rw [imageComparison_projection F e₁ m₁ e₂ m₂ x y square]
+         rw [Category.assoc]
+@@ -290,7 +293,6 @@ noncomputable def imageComparisonIso
+         simp
+       inv_hom_id := by
+         apply (cancel_epi e₂).1
+-        change e₂ ≫ (reverse ≫ forward) = e₂ ≫ 𝟙 I₂
+         rw [← Category.assoc]
+         rw [imageComparison_projection F e₂ m₂ e₁ m₁ x.symm y.symm reverseSquare]
+         rw [Category.assoc]

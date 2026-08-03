@@ -1,7 +1,7 @@
-diff --git "a/vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceAnabelioidSlice.lean" "b/Iut\\Foundations\\SourceAnabelioidSlice.lean"
+diff --git a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceAnabelioidSlice.lean b/Iut/Foundations/SourceAnabelioidSlice.lean
 index e4eacc5..5f978ee 100644
---- "a/vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceAnabelioidSlice.lean"
-+++ "b/Iut\\Foundations\\SourceAnabelioidSlice.lean"
+--- a/vendor/promachina/snapshots/0d52e0fd5b53/Iut/Foundations/SourceAnabelioidSlice.lean
++++ b/Iut/Foundations/SourceAnabelioidSlice.lean
 @@ -233,7 +233,6 @@ def projection :
      (fun p : G × T => (p.1 : G ⧸ H))
      (by

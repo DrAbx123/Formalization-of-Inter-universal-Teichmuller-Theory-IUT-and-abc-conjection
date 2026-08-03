@@ -229,22 +229,29 @@ formalization.
 | Current automated axiom boundary after arithmetic-data cleanup | **passed** | `logs/lean/axioms-20260802-233644/axiom_audit.stdout.log`; exactly one permitted production `sorryAx`, at `theorem311_produces_stepXI_contract`. |
 | Current logged aggregate after local prime-place carrier | **passed** | `logs/lean/run-20260802-235652.stdout.log`; `lake build LeanFormal` completed successfully (3072 jobs). |
 | Current automated axiom boundary after local prime-place carrier | **passed** | `logs/lean/axioms-20260802-235652/axiom_audit.stdout.log`; the local carrier declarations use only standard axioms and the sole production `sorryAx` remains `theorem311_produces_stepXI_contract`. |
+| Ported public-foundation closure | **27/27 exit code 0; warning repaired** | The topology-ordered run is `logs/lean/serial-20260804-052013/summary.json`. Its sole diagnostics were two unused simp arguments in `SourceGluedFiniteEtaleTransition`; after removal, the complete affected upper closure passed with zero output in `logs/lean/serial-20260804-053109/summary.json`. |
+| Refreshed countable-base kernels | **passed with zero output** | Exact `promachina@36ef280d` hunks for finite projection fibers, countable Galois levels, countable deck groups, and countable separators passed in `logs/lean/serial-20260804-054453/summary.json` and `logs/lean/serial-20260804-054422/summary.json`. |
+| Ported foundation axiom sample | **passed** | `logs/lean/axioms-upstream-foundations-20260804-054745/axiom_audit.stdout.log`; all sampled declarations use only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx`. A full `Iut/Foundations` declaration scan reports zero top-level custom `axiom`/`opaque` declarations. |
+| Final ported-foundation closure | **27/27, zero diagnostics** | `logs/lean/serial-20260804-055402/summary.json`; all 27 exit codes are 0 and all 54 stdout/stderr logs are empty after the countable-base port. |
 
 ### Public repositories checked at fixed commits
 
 | repository (commit) | build/scope actually observed | status at the IUT wall |
 |---|---|---|
 | [promachina/iut-lean](https://github.com/promachina/iut-lean) `4953e647` | 128 Lean files. The project has an extensive Stage-1 source-facing layer and its own dependency/audit documents. `AlgorithmicOutput` stores `ipl`, `she`, `apt` as `Prop` fields; downstream `CorollarySchema`/`SourceObligations` prove the ordered comparison once certificates, a common-target bound, hull/measure data, and q-positivity are supplied. | **interface**. The repository README explicitly lists full Frobenioids, holomorphic hulls, determinants, and local-field/Haar compatibility as remaining construction work. A passing downstream theorem is conditional on those records. |
-| [promachina/iut-lean](https://github.com/promachina/iut-lean) `02ab3ded` (current HEAD checked 2026-08-03) | 152 Lean files. Since `4953e647`, the source-facing layer adds etale-theta quotients, Galois image/complement carriers, source Frobenioid birationalization/dictionaries/factors, glued anabelioids and finite etale transitions, tempered covering/deck/recovery structures, and a much more detailed `SourceTheorem311`/Step-XI dependency audit. Its `lakefile.toml` pins Mathlib `v4.30.0`, whereas this production project uses Lean/Mathlib `4.32.2`; the definitions are therefore a reference for selective API migration, not a drop-in import. | **source interface with many proved local kernels; final wall still conditional**. The latest source code explicitly keeps algorithmic IPL/SHE/APT and several source endpoints as obligations/opaque fields. A standalone `Iut/Basic.lean` check was blocked before elaboration because Lake attempted to switch the external Mathlib checkout and encountered untracked package-worktree files; this is recorded as an environment/dependency-check limitation, not as a proof result. |
-| [Takkun-kohinata/IUT_LEAN](https://github.com/Takkun-kohinata/IUT_LEAN) `9d56c46` | 68 Lean files. `Multiradial/Cor312.lean` proves its stated abstract corridor; `Diophantine/Szpiro.lean` defines the Szpiro-shaped conclusion but leaves its truth as `DiophantineMainTheorem`; `InitialThetaData/Deferred.lean` documents deferred geometric realization; `LogTheta/Indeterminacy.lean` uses an orbit model for Ind3. | **interface/claim only**. The finite/group-theoretic and numerical lemmas are useful, but the real etale-theta, prime-strip, Kummer, and initial-data constructions are not recovered from the original geometry. |
-| [lana-project/iut4-sec1](https://github.com/lana-project/iut4-sec1) `a7551d2` | 26 Lean files. Six Mathlib-only Section-1 targets are exported. The comparator README marks later targets (tensor bijection/norm, second error, exact prime-counting) as not included or conditional. | **proved only for elementary Section 1 fragments**. It intentionally does not verify IUT I--III or Corollary 3.12. |
-| [com-junkawasaki/iut-lean](https://github.com/com-junkawasaki/iut-lean) `ca4c0dd` | 7 Lean files. Genuine `Polynomial.abc`/Mason--Stothers corollary and numerical hyperbolic curve-type facts. | **not IUT formalization**; no prime strips or Corollary 3.12 objects. |
-| [PriestAmbrose/IUT-Corollary3_12-Lean](https://github.com/PriestAmbrose/IUT-Corollary3_12-Lean) `e5d5d20` | 5 Lean files. Axioms-first skeleton; `Cor312.lean` has the abstract theorem with `sorry`. | **claim only**; useful as a dependency ledger, not evidence for the disputed implication. |
+| [promachina/iut-lean](https://github.com/promachina/iut-lean) `581e2b89` (current HEAD checked 2026-08-04; local production snapshot starts at `0d52e0fd`) | 189 Lean files. Ten commits after the local snapshot add countable-base tempered-cover proofs, bad-local stable-reduction semigraphs, an Andre tempered exact-sequence boundary, an arithmetic tempered-tower wrapper, and source-audit material. Its `lakefile.toml` pins Mathlib `v4.30.0`, whereas this project uses Lean/Mathlib `4.32.2`. | **mixed**. Finite semigraph, finite-fiber/countability, quotient-transition, canonical-map injectivity, deck-projection, and categorical comparison kernels are real constructions. Tame realization, pro-Sigma facts, Andre exactness/completion, stable-log specialization, level exactness, and limit surjectivity/inducing remain structure fields. The exact countable-base hunks through `36ef280d` are ported and audited; the two newest wrappers are reference-only pending generic-kernel extraction. |
+| [Takkun-kohinata/IUT_LEAN](https://github.com/Takkun-kohinata/IUT_LEAN) `9d56c46` (refreshed 2026-08-04; unchanged) | 68 Lean files. `Multiradial/Cor312.lean` proves its stated abstract corridor; `Diophantine/Szpiro.lean` defines the Szpiro-shaped conclusion but leaves its truth as `DiophantineMainTheorem`; `InitialThetaData/Deferred.lean` documents deferred geometric realization; `LogTheta/Indeterminacy.lean` uses an orbit model for Ind3. | **interface/claim only**. The finite/group-theoretic and numerical lemmas are useful, but the real etale-theta, prime-strip, Kummer, and initial-data constructions are not recovered from the original geometry. |
+| [lana-project/iut4-sec1](https://github.com/lana-project/iut4-sec1) `a7551d2` (refreshed 2026-08-04; unchanged) | 26 Lean files. Six Mathlib-only Section-1 targets are exported. The comparator README marks later targets (tensor bijection/norm, second error, exact prime-counting) as not included or conditional. | **proved only for elementary Section 1 fragments**. It intentionally does not verify IUT I--III or Corollary 3.12. |
+| [com-junkawasaki/iut-lean](https://github.com/com-junkawasaki/iut-lean) `ca4c0dd` (refreshed 2026-08-04; unchanged) | 7 Lean files. Genuine `Polynomial.abc`/Mason--Stothers corollary and numerical hyperbolic curve-type facts. | **not IUT formalization**; no prime strips or Corollary 3.12 objects. |
+| [PriestAmbrose/IUT-Corollary3_12-Lean](https://github.com/PriestAmbrose/IUT-Corollary3_12-Lean) `e5d5d20` (refreshed 2026-08-04; unchanged) | 5 Lean files. Axioms-first skeleton; `Cor312.lean` has the abstract theorem with `sorry`. | **claim only**; useful as a dependency ledger, not evidence for the disputed implication. |
 
 These repositories are complementary rather than independent completed proofs:
 the closest source-facing implementation is promachina's, the most explicit
 axioms/deferral ledger is Takkun's, iut4-sec1 covers elementary downstream
 arithmetic, and the other two are scaffolds or unrelated proven mathematics.
+The four decisions used below are `direct-proof`, `migrated-proof`,
+`interface-only`, and `excluded`; packaging or regression declarations are not
+counted as mathematical progress.
 
 ## Outstanding obligations (the checklist to update)
 
@@ -812,3 +819,46 @@ corridors and diagnostics, not a resolution of the controversy.**
   remains one Step-XI `sorryAx` in `logs/lean/boundary-20260803-090331.log`,
   while `logs/lean/custom-axiom-20260803-090331.log` reports zero custom
   top-level declarations.
+- 2026-08-04: refreshed all five public implementation repositories. The
+  default branches of Takkun `9d56c46`, LANA `a7551d2`, com-junkawasaki
+  `ca4c0dd`, and PriestAmbrose `e5d5d20` are unchanged. Promachina was first
+  refreshed at `36ef280d`; a second refresh found `581e2b89` (189 Lean files),
+  ten commits after the fixed local snapshot `0d52e0fd`.
+- 2026-08-04: directly applied the exact promachina countable-base patch for
+  `SourceFiniteSheetSemiGraphCover`, `SourceGluedGaloisLevelSystem`,
+  `SourceCombinatorialUniversalCover`, and
+  `SourceSemiGraphResidualSeparation`. The patch proves finite projection
+  fibers and replaces unnecessary finite-base hypotheses by countability; it
+  introduces no record obligation. The four modules pass with zero output in
+  `logs/lean/serial-20260804-054453/summary.json` and
+  `logs/lean/serial-20260804-054422/summary.json`.
+- 2026-08-04: audited the new bad-local stable-reduction files separately.
+  Their finite semigraphs and compact/noncompact glued-cover equivalences are
+  actual constructions, but `SourceTateNodalTameRealization`,
+  `FiniteEtaleQuotientRealization`, `SourceTateNodalProSigmaCompletion`, and
+  `SourceTateNodalHyperbolicProSigmaFacts` store the decisive geometric and
+  group-theoretic facts as fields. Consequently the five Example-2.10-style
+  conclusions remain `interface-only` and are not counted toward the 3.11 to
+  3.12 wall.
+- 2026-08-04: the 27-file imported foundation closure compiles topologically.
+  After removing the only two unused simp arguments, the affected upper
+  closure is warning-free in `logs/lean/serial-20260804-053109/summary.json`.
+  The expanded `#print axioms` audit passes without `sorryAx` at
+  `logs/lean/axioms-upstream-foundations-20260804-054745/`; the entire
+  `Iut/Foundations` tree contains zero custom top-level `axiom`/`opaque`
+  declarations.
+- 2026-08-04: the final post-port topology-ordered run is
+  `logs/lean/serial-20260804-055402/summary.json`: 27/27 exit code 0 and all 54
+  module logs empty. This is the authoritative warning-free closure evidence.
+- 2026-08-04: audited promachina commits `c8c4a4b4` and `18e1ad97` at refreshed
+  HEAD `581e2b89`. `SourceAndreTemperedExactSequence` stores inclusion
+  injectivity, projection surjectivity/openness, exactness, both profinite
+  completion universal properties, completion injectivity, and commuting
+  squares in `SourceAndreTemperedFundamentalGroupPrerequisite`.
+  `SourceBadLocalArithmeticTemperedTower` genuinely proves quotient
+  transitions and canonical-map injectivity from an exhaustive kernel, but
+  stores stable-log specialization, specialization surjectivity, normality,
+  level exactness, limit surjectivity, and inducing topology as fields. The
+  wrappers are therefore `interface-only`; only the generic group-theoretic
+  kernels are extraction candidates. The declaration audit is recorded in
+  `vendor/promachina/review-581e2b89.json`.
