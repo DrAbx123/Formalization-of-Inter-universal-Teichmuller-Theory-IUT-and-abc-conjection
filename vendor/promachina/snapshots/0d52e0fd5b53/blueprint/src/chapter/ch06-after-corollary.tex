@@ -1,0 +1,60 @@
+\chapter{After Corollary 3.12}
+\label{ch:after-corollary}
+
+\section{IUT IV and arithmetic consequences}
+
+\begin{theorem}[IUT IV consumes the Corollary 3.12 input]
+  \label{thm:iut-iv-consumes-corollary}
+  \uses{cor:conditional-corollary-312}
+  \notready
+  The log-volume estimates in \IUT{} IV should consume a Corollary
+  3.12-shaped bound and turn it into the later Diophantine inequalities.
+\end{theorem}
+
+\begin{proof}
+  The repository treats this as conditional real algebra for now.  This
+  blueprint does not yet expand the IUT IV dependency graph.
+\end{proof}
+
+\begin{corollary}[High-level arithmetic consequences]
+  \label{cor:high-level-arithmetic-consequences}
+  \uses{thm:iut-iv-consumes-corollary}
+  \notready
+  The claimed downstream consequences include Vojta-type inequalities for
+  hyperbolic curves, \(abc\), and Szpiro-type statements.
+\end{corollary}
+
+\begin{proof}
+  These are roadmap nodes only.  They should remain high-level until the
+  Stage 1 source route has been made substantially less conditional.
+\end{proof}
+
+\section{Engineering next steps}
+
+\begin{proposition}[Refactor the large source module]
+  \label{prop:refactor-source-module}
+  \notready
+  The large Stage 1 source file should be split into reviewable modules for
+  finite labels and Gaussian data, Step (xi) hull and determinant endpoints,
+  Step (xii) local Frobenioid shifts, and downstream ordered-real algebra.
+\end{proposition}
+
+\begin{proof}
+  This should be a mechanical refactor preserving theorem names where possible
+  and rebuilding after each move.
+\end{proof}
+
+\begin{proposition}[Keep the blueprint synchronized]
+  \label{prop:keep-blueprint-synchronized}
+  \uses{prop:refactor-source-module}
+  \lean{Iut.Stage1.Experiments.concreteHodgeTheaterLogThetaPrincipalValuationBallThetaClassFiberTransportThetaRegionDefinedPrincipalValuationBallCompactOpenLogKummerMapPossibleRegionFamilyExactXiSelectedQRemark395ValuationBallHaarValuationCoverFiberThetaRegionLocalArithmeticStepXILocalTermClosedCorollary312Endpoint}
+  \leanok
+  Each time a source-facing record is replaced by a construction, the
+  corresponding blueprint node should move from \(\notready\) to a Lean-tagged
+  formal statement, and the dependency graph should be rebuilt.
+\end{proposition}
+
+\begin{proof}
+  The blueprint should become the public map of which mathematical obligations
+  are still assumptions and which have been discharged in Lean.
+\end{proof}

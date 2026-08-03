@@ -1,0 +1,203 @@
+diff --git "a/vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceGluedAnabelioid.lean" "b/Iut\\Foundations\\SourceGluedAnabelioid.lean"
+index eeec697..0d526b3 100644
+--- "a/vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceGluedAnabelioid.lean"
++++ "b/Iut\\Foundations\\SourceGluedAnabelioid.lean"
+@@ -648,9 +648,20 @@ noncomputable def limitCone
+         intro vertex
+         letI := (diagram.vertexAnabelioid vertex).coverCategory
+         letI := (diagram.vertexAnabelioid vertex).galoisCategory
+-        simpa [limitProjection] using
+-          (limit.w
+-            (family ⋙ evaluation (diagram := diagram) vertex) morphism).symm }
++        change
++          (𝟙 ((limitObject (diagram := diagram) family).vertexObject vertex) ≫
++              limit.π
++                (family ⋙ evaluation (diagram := diagram) vertex) second) =
++            limit.π (family ⋙ evaluation (diagram := diagram) vertex) first ≫
++              (family.map morphism).app vertex
++        rw [Category.id_comp]
++        change
++          limit.π (family ⋙ evaluation (diagram := diagram) vertex) second =
++            limit.π (family ⋙ evaluation (diagram := diagram) vertex) first ≫
++              (evaluation (diagram := diagram) vertex).map
++                (family.map morphism)
++        exact (limit.w
++          (family ⋙ evaluation (diagram := diagram) vertex) morphism).symm }
+ 
+ /-- The constituentwise lift from any cone into the pointwise limit. -/
+ noncomputable def limitLift
+@@ -806,6 +817,24 @@ noncomputable def limitConeIsLimit
+       (limit.lift_π
+         ((evaluation (diagram := diagram) vertex).mapCone cone) index).symm
+ 
++/-- Evaluating the constructed pointwise limiting cone at a vertex yields a
++limit cone in that verticial constituent. -/
++noncomputable def evaluationMapLimitConeIsLimit
++    (family : J ⥤ diagram.GluedObject)
++    (vertex : diagram.base.Vertex) :
++    letI := (diagram.vertexAnabelioid vertex).coverCategory
++    IsLimit
++      ((evaluation (diagram := diagram) vertex).mapCone
++        (limitCone (diagram := diagram) family)) := by
++  letI := (diagram.vertexAnabelioid vertex).coverCategory
++  letI := (diagram.vertexAnabelioid vertex).galoisCategory
++  refine IsLimit.ofIsoLimit
++    (limit.isLimit (family ⋙ evaluation (diagram := diagram) vertex)) ?_
++  refine Cone.ext (Iso.refl _) ?_
++  intro index
++  simp only [limitCone, limitObject, evaluation]
++  exact (Category.id_comp _).symm
++
+ /-- Every finite diagram of verticial glued objects has the constructed
+ pointwise limit. -/
+ noncomputable instance hasLimit
+@@ -836,11 +865,8 @@ noncomputable instance evaluationPreservesFiniteLimits
+         { preservesLimit := fun {family} =>
+             preservesLimit_of_preserves_limit_cone
+               (limitConeIsLimit (diagram := diagram) family)
+-              (by
+-                simpa [limitCone, limitProjection, limitObject,
+-                  limitVertexObject] using
+-                  limit.isLimit
+-                    (family ⋙ evaluation (diagram := diagram) vertex)) } }
++              (evaluationMapLimitConeIsLimit
++                (diagram := diagram) family vertex) } }
+ 
+ /-- Pointwise preservation of pullbacks makes every vertex evaluation preserve
+ monomorphisms. -/
+@@ -884,8 +910,7 @@ noncomputable instance pointwiseHasColimit
+ /-- A preserving functor sends a chosen colimit cone to a colimit cone.  We
+ materialize the resulting `HasColimit` instance locally where the canonical
+ comparison isomorphism is used. -/
+-@[reducible]
+-noncomputable def hasColimitCompOfPreserves
++noncomputable abbrev hasColimitCompOfPreserves
+     {C : Type (u + 1)} [Category.{u} C]
+     {D : Type (u + 1)} [Category.{u} D]
+     (family : J ⥤ C) (functor : C ⥤ D)
+@@ -1230,13 +1255,25 @@ noncomputable def colimitCocone
+     { app := colimitInjection (diagram := diagram) family
+       naturality := by
+         intro first second morphism
++        change
++          family.map morphism ≫
++              colimitInjection (diagram := diagram) family second =
++            colimitInjection (diagram := diagram) family first ≫
++              𝟙 (colimitObject (diagram := diagram) family)
++        rw [Category.comp_id]
+         apply Hom.ext
+         intro vertex
+         letI := (diagram.vertexAnabelioid vertex).coverCategory
+         letI := (diagram.vertexAnabelioid vertex).galoisCategory
+-        simpa [colimitInjection] using
+-          colimit.w
+-            (family ⋙ evaluation (diagram := diagram) vertex) morphism }
++        change
++          (evaluation (diagram := diagram) vertex).map
++                (family.map morphism) ≫
++              colimit.ι
++                (family ⋙ evaluation (diagram := diagram) vertex) second =
++            colimit.ι
++              (family ⋙ evaluation (diagram := diagram) vertex) first
++        exact colimit.w
++          (family ⋙ evaluation (diagram := diagram) vertex) morphism }
+ 
+ /-- The constituentwise descent morphism from the pointwise colimit to any
+ cocone point. -/
+@@ -1377,6 +1414,24 @@ noncomputable def colimitCoconeIsColimit
+         ((evaluation (diagram := diagram) vertex).mapCocone cocone)
+         index).symm
+ 
++/-- Evaluating the constructed pointwise colimiting cocone at a vertex yields
++a colimit cocone in that verticial constituent. -/
++noncomputable def evaluationMapColimitCoconeIsColimit
++    (family : J ⥤ diagram.GluedObject) [HasPointwiseColimit family]
++    (vertex : diagram.base.Vertex) :
++    letI := (diagram.vertexAnabelioid vertex).coverCategory
++    IsColimit
++      ((evaluation (diagram := diagram) vertex).mapCocone
++        (colimitCocone (diagram := diagram) family)) := by
++  letI := (diagram.vertexAnabelioid vertex).coverCategory
++  letI := (diagram.vertexAnabelioid vertex).galoisCategory
++  refine IsColimit.ofIsoColimit
++    (colimit.isColimit (family ⋙ evaluation (diagram := diagram) vertex)) ?_
++  refine Cocone.ext (Iso.refl _) ?_
++  intro index
++  simp only [colimitCocone, colimitObject, evaluation]
++  exact Category.comp_id _
++
+ /-- A supported finite diagram has the constructed pointwise colimit. -/
+ noncomputable instance hasColimit
+     (family : J ⥤ diagram.GluedObject) [HasPointwiseColimit family] :
+@@ -1419,11 +1474,8 @@ noncomputable instance evaluationPreservesFiniteCoproducts
+         { preservesColimit := fun {family} =>
+             preservesColimit_of_preserves_colimit_cocone
+               (colimitCoconeIsColimit (diagram := diagram) family)
+-              (by
+-                simpa [colimitCocone, colimitInjection, colimitObject,
+-                  colimitVertexObject] using
+-                  colimit.isColimit
+-                    (family ⋙ evaluation (diagram := diagram) vertex)) } }
++              (evaluationMapColimitCoconeIsColimit
++                (diagram := diagram) family vertex) } }
+ 
+ /-- Constituent pre-Galois categories supply pointwise quotients by a small
+ finite group. -/
+@@ -1462,16 +1514,12 @@ noncomputable instance evaluationPreservesFiniteGroupQuotientSmall
+     { preservesColimit := fun {family} =>
+         preservesColimit_of_preserves_colimit_cocone
+           (colimitCoconeIsColimit (diagram := diagram) family)
+-          (by
+-            simpa [colimitCocone, colimitInjection, colimitObject,
+-              colimitVertexObject] using
+-              colimit.isColimit
+-                (family ⋙ evaluation (diagram := diagram) vertex)) }
++          (evaluationMapColimitCoconeIsColimit
++            (diagram := diagram) family vertex) }
+ 
+ /-- The small construction transports finite-group quotients from any
+ universe to a universe-zero model of the finite group. -/
+-@[reducible]
+-noncomputable def hasQuotientsByFiniteGroupsOfFinite
++noncomputable abbrev hasQuotientsByFiniteGroupsOfFinite
+     (G : Type u) [Group G] [Finite G] :
+     HasColimitsOfShape (SingleObj G) diagram.GluedObject := by
+   let existence :
+@@ -1489,8 +1537,7 @@ noncomputable def hasQuotientsByFiniteGroupsOfFinite
+ 
+ /-- Preservation of finite-group quotients transports from a universe-zero
+ model of the group. -/
+-@[reducible]
+-noncomputable def evaluationPreservesFiniteGroupQuotient
++noncomputable abbrev evaluationPreservesFiniteGroupQuotient
+     (vertex : diagram.base.Vertex)
+     (G : Type u) [Group G] [Finite G] :
+     letI := (diagram.vertexAnabelioid vertex).coverCategory
+@@ -1816,10 +1863,15 @@ noncomputable def complementDesc
+             second.pullback.map (cocone.inr.app second.vertex) =
+           first.pullback.map (cocone.inr.app first.vertex) ≫
+             (cocone.pt.glue first second).hom := by
+-      simpa [complementObject] using
+-        cocone.inr.naturality first second
++      have h := cocone.inr.naturality first second
++      change
++        (complementGlue (diagram := diagram) inclusion first second).hom ≫
++              second.pullback.map (cocone.inr.app second.vertex) =
++            first.pullback.map (cocone.inr.app first.vertex) ≫
++              (cocone.pt.glue first second).hom at h
++      exact h
+     apply BinaryCofan.IsColimit.hom_ext firstEdgeColimit
+-    · simp only [BinaryCofan.mk_pt, BinaryCofan.mk_inl]
++    · simp only [BinaryCofan.mk_inl]
+       calc
+         first.pullback.map (inclusion.app first.vertex) ≫
+               (target.glue first second).hom ≫
+@@ -1852,7 +1904,7 @@ noncomputable def complementDesc
+               (cocone.pt.glue first second).hom := by
+           rw [← Category.assoc, ← Functor.map_comp, firstInlDesc]
+           exact cocone.inl.naturality first second
+-    · simp only [BinaryCofan.mk_pt, BinaryCofan.mk_inr]
++    · simp only [BinaryCofan.mk_inr]
+       let secondDesc := BinaryCofan.IsColimit.desc
+         (complementVertexIsColimit
+           (diagram := diagram) inclusion second.vertex)

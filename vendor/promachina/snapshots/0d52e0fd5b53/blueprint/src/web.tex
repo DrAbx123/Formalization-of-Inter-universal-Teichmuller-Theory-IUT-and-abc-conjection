@@ -1,0 +1,31 @@
+% This file makes the web version of the blueprint.
+
+\documentclass{report}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\usepackage[nameinlink,capitalize]{cleveref}
+\usepackage[showmore,dep_graph,project=../../,dep_by=chapter]{blueprint}
+
+\input{macros/common.tex}
+\input{macros/web.tex}
+
+\home{https://github.com/promachina/iut-lean}
+\github{https://github.com/promachina/iut-lean}
+\dochome{https://promachina.github.io/iut-lean/docs}
+
+\graphcolor{stated}{green}{Stated}
+\graphcolor{can_state}{blue}{Can state}
+\graphcolor{not_ready}{#FFAA33}{Source obligation}
+\graphcolor{proved}{#9CEC8B}{Proved}
+\graphcolor{can_prove}{#A3D6FF}{Can prove}
+\graphcolor{defined}{#B0ECA3}{Defined}
+\graphcolor{fully_proved}{#1CAC78}{Formalized}
+
+\title{A Lean Blueprint for the IUT III Corollary 3.12 Corridor}
+\author{IUT Lean formalization project}
+
+\begin{document}
+\maketitle
+\input{content.tex}
+\end{document}

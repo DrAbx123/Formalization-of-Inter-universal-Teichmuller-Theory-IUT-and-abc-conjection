@@ -1,0 +1,22 @@
+diff --git "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceAnabelioid.lean" "Iut\\Foundations\\SourceAnabelioid.lean"
+index 8970e91..061c126 100644
+--- "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceAnabelioid.lean"
++++ "Iut\\Foundations\\SourceAnabelioid.lean"
+@@ -576,6 +576,17 @@ theorem fundamentalGroupImage_isClosed
+     (morphism : SourcePointedAnabelioidHom source target) :
+     IsClosed (morphism.fundamentalGroupImage : Set target.group) := by
+   change IsClosed (Set.range morphism.fundamentalGroupHom)
++  have range_eq :
++      Set.range morphism.fundamentalGroupHom =
++        Set.range
++          morphism.fundamentalGroupContinuousHom.toContinuousMap := by
++    ext element
++    constructor
++    · rintro ⟨preimage, rfl⟩
++      exact ⟨preimage, rfl⟩
++    · rintro ⟨preimage, rfl⟩
++      exact ⟨preimage, rfl⟩
++  rw [range_eq]
+   simpa only [Set.image_univ] using
+     (isCompact_univ.image
+       morphism.fundamentalGroupContinuousHom.continuous).isClosed

@@ -1,0 +1,28 @@
+diff --git "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\Orbicurve.lean" "Iut\\Foundations\\Orbicurve.lean"
+index 1de2e53..c1fb7ee 100644
+--- "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\Orbicurve.lean"
++++ "Iut\\Foundations\\Orbicurve.lean"
+@@ -471,11 +471,11 @@ variable
+     {X Y : HyperbolicOrbicurve F}
+     {f g h : X.Hom Y}
+ 
+-def id (f : X.Hom Y) :
++noncomputable def id (f : X.Hom Y) :
+     HyperbolicOrbicurve.Hom.TwoCell f f :=
+   ⟨Pseudofunctor.StrongTrans.Modification.id f⟩
+ 
+-def comp
++noncomputable def comp
+     (first : HyperbolicOrbicurve.Hom.TwoCell f g)
+     (second : HyperbolicOrbicurve.Hom.TwoCell g h) :
+     HyperbolicOrbicurve.Hom.TwoCell f h :=
+@@ -831,7 +831,8 @@ noncomputable def geometricFiberMap
+           (target.map.app site).toFunctor ⟶
+         (source.map.app site).toFunctor ⋙
+           𝟭 (X.stack.fiber.obj site) := by
+-    simpa using component.toNatTrans
++    exact component.toNatTrans ≫
++      (Functor.rightUnitor (source.map.app site).toFunctor).inv
+   exact CostructuredArrow.map₂
+     (F := (map.app site).toFunctor)
+     (U := (target.map.app site).toFunctor)

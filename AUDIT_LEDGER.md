@@ -33,6 +33,19 @@ The relevant text was extracted with `pypdf` (the PDF skill workflow) into
 `tmp/motizuki/iut-iv-intro.txt`. The page numbers below are PDF page numbers
 and also show the printed page in the extracted text.
 
+On 2026-08-04 the source layer was made reproducible and page-delimited with
+`tools/extract_pdf_pages_text.py`. Search-oriented `plain` text and
+placement-oriented `layout` text now cover both complete source PDFs, with
+a continuous IUT III Theorem 3.11-to-Corollary 3.12 working text
+(pp. 153--186, including the intervening Remarks 3.11.1--3.11.4), the earlier
+shorter theorem/proof extract, and the semi-graph foundations (pp. 11--12, 20,
+37--40). The source workflow uses the text layer first and returns to a rendered
+page only for extraction conflicts, blocked typing/proof directions, or final
+source-credit review. Exact hashes, extraction limitations, manually confirmed
+formula directions, and the initial upstream/source classification are in
+`papers/motizuki_corpus/SOURCE_TEXT_AUDIT.md`. Machine-extracted glyphs remain
+an index rather than mathematical evidence on their own.
+
 ## Complete author-site corpus and citation map
 
 The author-site crawl now lives under `papers/motizuki_corpus/`. It fetched the
@@ -163,6 +176,7 @@ formalization.
 
 | check | result | evidence |
 |---|---|---|
+| Original-source text reproducibility | **passed** | `logs/source-audit/run-20260804-020842/summary.json`; both source SHA-256 values match, both full pagewise extracts have all physical page markers, and the focused source extracts have 21/21 and 7/7 markers. The log explicitly sets `mathematicalProofClaim` to `false`. |
 | Serial source-module audit | **27/27 exit code 0** | `logs/lean/serial-20260802-082127/summary.json`; every module was compiled with an explicit `.lake/build/lib/lean/...olean` output. |
 | Production aggregate | **passed** | `logs/lean/run-20260802-083015.status.json`; `lake build LeanFormal`, `Build completed successfully (3027 jobs)`. |
 | ABC without `sorry` | **expected failure** | `logs/lean/abc-20260802-082834/without-sorry.stderr.log`; unsolved `∃ K` goal, exit code 1. |

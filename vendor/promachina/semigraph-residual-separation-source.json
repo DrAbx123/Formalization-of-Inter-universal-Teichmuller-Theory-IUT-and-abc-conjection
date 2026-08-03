@@ -1,0 +1,200 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+  "upstreamMathlib": "v4.30.0",
+  "localMathlib": "v4.32.2",
+  "targetModule": "Iut.Foundations.SourceSemiGraphResidualSeparation",
+  "copiedAt": "2026-08-04T01:19:43.3905685+08:00",
+  "fileCount": 27,
+  "files": [
+    {
+      "module": "Iut.Foundations.GaloisComplement",
+      "relativePath": "Iut/Foundations/GaloisComplement.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "CA76606C177AAF50FDF183A4293C1AECB58A44B44DFD22B005C81B493899636C",
+      "copiedSha256": "CA76606C177AAF50FDF183A4293C1AECB58A44B44DFD22B005C81B493899636C"
+    },
+    {
+      "module": "Iut.Foundations.GaloisImage",
+      "relativePath": "Iut/Foundations/GaloisImage.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "32913C0532256192A68CFD84FB4AA03D89D09A554C831EC34521F933BB03E1C8",
+      "copiedSha256": "32913C0532256192A68CFD84FB4AA03D89D09A554C831EC34521F933BB03E1C8"
+    },
+    {
+      "module": "Iut.Foundations.Orbicurve",
+      "relativePath": "Iut/Foundations/Orbicurve.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "2E669120BCA9EED382344638331322F4C0E2BB61D9E7426EF70E798754ECAC08",
+      "copiedSha256": "2E669120BCA9EED382344638331322F4C0E2BB61D9E7426EF70E798754ECAC08"
+    },
+    {
+      "module": "Iut.Foundations.SourceAnabelioid",
+      "relativePath": "Iut/Foundations/SourceAnabelioid.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "0A94538C72BA25928CF0BCBAFDCFB61AF2BA3A810F8A18378EE52EC6AB0EDEC8",
+      "copiedSha256": "0A94538C72BA25928CF0BCBAFDCFB61AF2BA3A810F8A18378EE52EC6AB0EDEC8"
+    },
+    {
+      "module": "Iut.Foundations.SourceAnabelioidComponents",
+      "relativePath": "Iut/Foundations/SourceAnabelioidComponents.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "9AE10CB31FD1F95059558167B66498F900F546DCF33218EC23762D33B0369769",
+      "copiedSha256": "9AE10CB31FD1F95059558167B66498F900F546DCF33218EC23762D33B0369769"
+    },
+    {
+      "module": "Iut.Foundations.SourceAnabelioidSlice",
+      "relativePath": "Iut/Foundations/SourceAnabelioidSlice.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "5FD306C2881D55630D1DC4A471F948B5FC92A1455AD5C756D7FE63F022D6E9C7",
+      "copiedSha256": "5FD306C2881D55630D1DC4A471F948B5FC92A1455AD5C756D7FE63F022D6E9C7"
+    },
+    {
+      "module": "Iut.Foundations.SourceCombinatorialUniversalCover",
+      "relativePath": "Iut/Foundations/SourceCombinatorialUniversalCover.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "87859856157A27DCACC70DF81F921ED9BD0CF3C2955D54926F25978D9ED6AEB2",
+      "copiedSha256": "87859856157A27DCACC70DF81F921ED9BD0CF3C2955D54926F25978D9ED6AEB2"
+    },
+    {
+      "module": "Iut.Foundations.SourceConnectedAnabelioidSlice",
+      "relativePath": "Iut/Foundations/SourceConnectedAnabelioidSlice.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "D125C47A728E0FE3E31EFD52EEAEA4BBDDE013751949F471C1E23EC189952809",
+      "copiedSha256": "D125C47A728E0FE3E31EFD52EEAEA4BBDDE013751949F471C1E23EC189952809"
+    },
+    {
+      "module": "Iut.Foundations.SourceContinuousAnabelioid",
+      "relativePath": "Iut/Foundations/SourceContinuousAnabelioid.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "5B638F6B67B759344AC4C64DDD20EB124E7753AE1B8912BE7C11DCE9F72CD76D",
+      "copiedSha256": "5B638F6B67B759344AC4C64DDD20EB124E7753AE1B8912BE7C11DCE9F72CD76D"
+    },
+    {
+      "module": "Iut.Foundations.SourceFiniteSheetSemiGraphCover",
+      "relativePath": "Iut/Foundations/SourceFiniteSheetSemiGraphCover.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "D4FDF5CBB57DA12FF063E9C81A17C8F0F8B5E8B765A12B69A537267B01C8A95B",
+      "copiedSha256": "D4FDF5CBB57DA12FF063E9C81A17C8F0F8B5E8B765A12B69A537267B01C8A95B"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedAnabelioid",
+      "relativePath": "Iut/Foundations/SourceGluedAnabelioid.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "E7849E6BF4AC24189D00070223D33D6F4AA52C875A7792689C83F4C9504D6DDE",
+      "copiedSha256": "E7849E6BF4AC24189D00070223D33D6F4AA52C875A7792689C83F4C9504D6DDE"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedConnectedFiniteEtaleCover",
+      "relativePath": "Iut/Foundations/SourceGluedConnectedFiniteEtaleCover.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "71FACAF7D2001DC0F67AE9179E7C170085EBD589DD783B2FF597EA74F47AFBF0",
+      "copiedSha256": "71FACAF7D2001DC0F67AE9179E7C170085EBD589DD783B2FF597EA74F47AFBF0"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedFiniteEtaleCover",
+      "relativePath": "Iut/Foundations/SourceGluedFiniteEtaleCover.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "BBFF6EF2149274329490A18EDA5A9093191470FF43116509D45C78EB16DB1049",
+      "copiedSha256": "BBFF6EF2149274329490A18EDA5A9093191470FF43116509D45C78EB16DB1049"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedFiniteEtaleTransition",
+      "relativePath": "Iut/Foundations/SourceGluedFiniteEtaleTransition.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "70AC7EA16C6CAB26878FA60EDBD72092D60713AF0E1131E1C23B98BB9FF8D815",
+      "copiedSha256": "70AC7EA16C6CAB26878FA60EDBD72092D60713AF0E1131E1C23B98BB9FF8D815"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedGalois",
+      "relativePath": "Iut/Foundations/SourceGluedGalois.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "8A6511B410D7F8178ECB3ACA99A14131352091883436804B8A5734BE490AA761",
+      "copiedSha256": "8A6511B410D7F8178ECB3ACA99A14131352091883436804B8A5734BE490AA761"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedGaloisLevelSystem",
+      "relativePath": "Iut/Foundations/SourceGluedGaloisLevelSystem.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "F3F24ECA5B4AACC36136C37718C9EE21B8FA449324AB22CA96572F9C289F61B1",
+      "copiedSha256": "F3F24ECA5B4AACC36136C37718C9EE21B8FA449324AB22CA96572F9C289F61B1"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedIsolatedFiniteEtaleCover",
+      "relativePath": "Iut/Foundations/SourceGluedIsolatedFiniteEtaleCover.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "80072B6E9971484CF4828EFBFCEB7594EA06AA07020AC3DCF75838BD5C4E678F",
+      "copiedSha256": "80072B6E9971484CF4828EFBFCEB7594EA06AA07020AC3DCF75838BD5C4E678F"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedIsolatedGaloisLevelSystem",
+      "relativePath": "Iut/Foundations/SourceGluedIsolatedGaloisLevelSystem.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "E7EEA9FB1A52BF84809380BFE500B07C1D0B427172B19C27B0AE06E0B5E397C1",
+      "copiedSha256": "E7EEA9FB1A52BF84809380BFE500B07C1D0B427172B19C27B0AE06E0B5E397C1"
+    },
+    {
+      "module": "Iut.Foundations.SourceGluedTotalAnabelioid",
+      "relativePath": "Iut/Foundations/SourceGluedTotalAnabelioid.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "96D80EA6A54B5BDD9E1179DEE84AA837B4EFA0C0C8EA8AC216BDA09B686AB09B",
+      "copiedSha256": "96D80EA6A54B5BDD9E1179DEE84AA837B4EFA0C0C8EA8AC216BDA09B686AB09B"
+    },
+    {
+      "module": "Iut.Foundations.SourceProfiniteCosetSystem",
+      "relativePath": "Iut/Foundations/SourceProfiniteCosetSystem.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "679C0E429947293CF2BEF65EBA3E47E648B0381CA1C0FF10734E97226688A1CD",
+      "copiedSha256": "679C0E429947293CF2BEF65EBA3E47E648B0381CA1C0FF10734E97226688A1CD"
+    },
+    {
+      "module": "Iut.Foundations.SourceProfiniteSemiGraphSystem",
+      "relativePath": "Iut/Foundations/SourceProfiniteSemiGraphSystem.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "84DA5D37CE536C0BA9BE6CA47CE19D370BEA97D80C87971F169F131C39DD839C",
+      "copiedSha256": "84DA5D37CE536C0BA9BE6CA47CE19D370BEA97D80C87971F169F131C39DD839C"
+    },
+    {
+      "module": "Iut.Foundations.SourceReducedWordFiniteSeparation",
+      "relativePath": "Iut/Foundations/SourceReducedWordFiniteSeparation.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "541F13F0DBA1BF8DBF1A47B4983D8E8763BAE48A766465B1926733A6FA881AAA",
+      "copiedSha256": "541F13F0DBA1BF8DBF1A47B4983D8E8763BAE48A766465B1926733A6FA881AAA"
+    },
+    {
+      "module": "Iut.Foundations.SourceSemiGraph",
+      "relativePath": "Iut/Foundations/SourceSemiGraph.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "67C213B7BA9C8C9957DB6126356448ADD60A8D1663C52133CA550A67031516CC",
+      "copiedSha256": "67C213B7BA9C8C9957DB6126356448ADD60A8D1663C52133CA550A67031516CC"
+    },
+    {
+      "module": "Iut.Foundations.SourceSemiGraphAction",
+      "relativePath": "Iut/Foundations/SourceSemiGraphAction.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "8761032B08CA2A3D3339169E5E55984286C887548548F822BFF03081A41D10C5",
+      "copiedSha256": "8761032B08CA2A3D3339169E5E55984286C887548548F822BFF03081A41D10C5"
+    },
+    {
+      "module": "Iut.Foundations.SourceSemiGraphOfAnabelioids",
+      "relativePath": "Iut/Foundations/SourceSemiGraphOfAnabelioids.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "455A12EFEB397019F1844FC8AAB84FEFCD61CDB3622E59714A70F4D60D02F98A",
+      "copiedSha256": "455A12EFEB397019F1844FC8AAB84FEFCD61CDB3622E59714A70F4D60D02F98A"
+    },
+    {
+      "module": "Iut.Foundations.SourceSemiGraphOfSubgroups",
+      "relativePath": "Iut/Foundations/SourceSemiGraphOfSubgroups.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "341E23E299710418C6FEABF04ACC4032FD47A9CDFDA9A7A49036D13729EF56C7",
+      "copiedSha256": "341E23E299710418C6FEABF04ACC4032FD47A9CDFDA9A7A49036D13729EF56C7"
+    },
+    {
+      "module": "Iut.Foundations.SourceSemiGraphResidualSeparation",
+      "relativePath": "Iut/Foundations/SourceSemiGraphResidualSeparation.lean",
+      "sourceCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "sourceSha256": "CAB93633FAB2029F41DC7FA774A6CC046C6524AEB1474027B5433245E8FE2E8B",
+      "copiedSha256": "CAB93633FAB2029F41DC7FA774A6CC046C6524AEB1474027B5433245E8FE2E8B"
+    }
+  ]
+}

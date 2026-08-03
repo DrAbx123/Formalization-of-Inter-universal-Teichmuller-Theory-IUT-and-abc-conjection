@@ -1,0 +1,42 @@
+diff --git "a/vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceGluedGalois.lean" "b/Iut\\Foundations\\SourceGluedGalois.lean"
+index a1ba1fc..b4721a4 100644
+--- "a/vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceGluedGalois.lean"
++++ "b/Iut\\Foundations\\SourceGluedGalois.lean"
+@@ -438,15 +438,21 @@ theorem complementFiberIsEmptyOfEpi
+     have leftFac :
+         inclusion ≫ BinaryCofan.IsColimit.desc decomposition
+           sourceMap complementLeft = sourceMap := by
+-      simpa only [BinaryCofan.mk_inl] using
+-        BinaryCofan.IsColimit.inl_desc decomposition
+-          sourceMap complementLeft
++      have h := BinaryCofan.IsColimit.inl_desc decomposition
++        sourceMap complementLeft
++      change
++        inclusion ≫ BinaryCofan.IsColimit.desc decomposition
++            sourceMap complementLeft = sourceMap at h
++      exact h
+     have rightFac :
+         inclusion ≫ BinaryCofan.IsColimit.desc decomposition
+           sourceMap complementRight = sourceMap := by
+-      simpa only [BinaryCofan.mk_inl] using
+-        BinaryCofan.IsColimit.inl_desc decomposition
+-          sourceMap complementRight
++      have h := BinaryCofan.IsColimit.inl_desc decomposition
++        sourceMap complementRight
++      change
++        inclusion ≫ BinaryCofan.IsColimit.desc decomposition
++            sourceMap complementRight = sourceMap at h
++      exact h
+     exact leftFac.trans rightFac.symm
+   have complementMapEquality : complementLeft = complementRight := by
+     calc
+@@ -650,8 +656,7 @@ noncomputable instance rootFiberFunctor
+ 
+ /-- A connected verticial gluing is a Galois category after choosing a root
+ vertex. -/
+-@[reducible]
+-noncomputable def galoisCategory (root : diagram.base.Vertex) :
++noncomputable abbrev galoisCategory (root : diagram.base.Vertex) :
+     GaloisCategory diagram.GluedObject :=
+   { preGaloisCategory (diagram := diagram) with
+     hasFiberFunctor :=

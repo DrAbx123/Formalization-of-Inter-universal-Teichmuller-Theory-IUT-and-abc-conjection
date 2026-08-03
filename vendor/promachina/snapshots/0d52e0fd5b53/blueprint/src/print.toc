@@ -1,0 +1,24 @@
+\contentsline {chapter}{\numberline {1}Aim and Scope}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Purpose of this blueprint}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Current repository status}{2}{section.1.2}%
+\contentsline {chapter}{\numberline {2}The Source Stage 1 Route}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The source objects}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Theorem 3.11 and Step (x)}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Step (xi)}{7}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Formal Interface}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Real-line copies and regions}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Algorithmic output and source ledger}{9}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Signed real algebra}{10}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Route to Corollary 3.12}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Diagnostic finite label and Gaussian layer}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Nonarchimedean upper-semi route}{11}{section.4.2}%
+\contentsline {section}{\numberline {4.3}The Corollary 3.12 node}{12}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Open Source Obligations}{14}{chapter.5}%
+\contentsline {section}{\numberline {5.1}The obligation boundary}{14}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Source-native Definition 3.1 foundation}{14}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Legacy finite M2--M3 models}{15}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Obligations to discharge next}{16}{section.5.4}%
+\contentsline {chapter}{\numberline {6}After Corollary 3.12}{74}{chapter.6}%
+\contentsline {section}{\numberline {6.1}IUT IV and arithmetic consequences}{74}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Engineering next steps}{74}{section.6.2}%
+\contentsline {chapter}{\numberline {7}References}{75}{chapter.7}%

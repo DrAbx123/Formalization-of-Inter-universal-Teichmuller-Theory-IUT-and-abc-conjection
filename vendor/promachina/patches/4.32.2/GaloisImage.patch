@@ -1,0 +1,30 @@
+diff --git "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\GaloisImage.lean" "Iut\\Foundations\\GaloisImage.lean"
+index 1654cb7..f54dd87 100644
+--- "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\GaloisImage.lean"
++++ "Iut\\Foundations\\GaloisImage.lean"
+@@ -37,8 +37,10 @@ noncomputable def range {X Y : Action FintypeCat.{u} G}
+         refine ⟨(X.ρ g).hom x, ?_⟩
+         calc
+           f.hom ((X.ρ g).hom x) = (Y.ρ g).hom (f.hom x) := by
+-            simpa only [← FintypeCat.comp_apply] using
+-              ConcreteCategory.congr_hom (f.comm g) x
++            have h := ConcreteCategory.congr_hom (f.comm g) x
++            change f.hom ((X.ρ g).hom x) =
++              (Y.ρ g).hom (f.hom x) at h
++            exact h
+           _ = (Y.ρ g).hom y.1 := congrArg _ hx⟩)
+     map_one' := by aesop
+     map_mul' := by aesop }
+@@ -56,8 +58,10 @@ noncomputable def toRange {X Y : Action FintypeCat.{u} G}
+   comm g := by
+     ext x
+     apply Subtype.ext
+-    simpa only [FintypeCat.comp_apply] using
+-      ConcreteCategory.congr_hom (f.comm g) x
++    have h := ConcreteCategory.congr_hom (f.comm g) x
++    change f.hom ((X.ρ g).hom x) =
++      (Y.ρ g).hom (f.hom x) at h
++    exact h
+ 
+ theorem toRange_comp_rangeIncl {X Y : Action FintypeCat.{u} G}
+     (f : X ⟶ Y) : toRange G f ≫ rangeIncl G f = f := by

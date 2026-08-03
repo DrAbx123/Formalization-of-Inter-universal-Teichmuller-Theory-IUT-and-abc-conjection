@@ -1,0 +1,162 @@
+\chapter{Formal Interface}
+\label{ch:formal-interface}
+
+\section{Real-line copies and regions}
+
+\begin{definition}[Labeled real-line copies]
+  \label{def:real-line-copies}
+  \lean{Iut.RealLineCopy.Copy,Iut.RealLineCopy.Point,Iut.RealLineCopy.Transport}
+  \leanok
+  The formalization treats ordered real-line copies and positive-scale
+  transports explicitly.  A comparison cannot silently identify a
+  \ThetaPilot{} real line, a \qPilot{} real line, and the final signed
+  log-volume target unless a transport has been supplied.
+\end{definition}
+
+\begin{definition}[Regions and measures]
+  \label{def:regions-and-measures}
+  \lean{Iut.RealLineCopy.Region,Iut.RealLineCopy.RegionComparison,Iut.RealLineCopy.RegionMeasure}
+  \leanok
+  Region comparisons package a source-to-target transport together with a
+  target region.  Region measures are abstract monotone real-valued measures
+  used to model log-volume estimates.
+\end{definition}
+
+\begin{definition}[Common target bound]
+  \label{def:common-target-bound}
+  \lean{Iut.RealLineCopy.RegionComparisonFamily.CommonTargetBound,Iut.RealLineCopy.TransportedRegionFamily}
+  \leanok
+  A common target bound records that every choice in a family of transported
+  regions is bounded by the same measured target.  This is the formal shape of
+  the post-hull upper-bound interface.
+\end{definition}
+
+\section{Algorithmic output and source ledger}
+
+\begin{definition}[Algorithmic output]
+  \label{def:algorithmic-output}
+  \lean{Iut.RealLineCopy.AlgorithmicOutput}
+  \leanok
+  An algorithmic output packages transported region-family data together with
+  qualitative certificate slots for \(\IPL\), \(\SHE\), \(\APT\), hull plus
+  determinant, and common-container compatibility.
+\end{definition}
+
+\begin{definition}[Source obligation ledger]
+  \label{def:source-obligation-ledger}
+  \lean{Iut.Stage1.SourceObligationLedger}
+  \leanok
+  The source obligation ledger records the data required to promote a
+  charted common-container comparison to the signed Corollary 3.12 endpoint.
+  It keeps the chosen output, membership proof, target volume, \(\Theta\) bound,
+  \qPilot{} positivity, and normalization proof in one auditable package.
+\end{definition}
+
+\begin{lemma}[Ledger three-term comparison]
+  \label{lem:ledger-three-term-comparison}
+  \uses{def:source-obligation-ledger}
+  \lean{Iut.Stage1.SourceObligationLedger.qSigned_le_thetaSigned,Iut.Stage1.SourceObligationLedger.qSigned_le_thetaSigned_eq_threeTerm,Iut.Stage1.SourceObligationLedger.qSigned_le_thetaSigned_eq_membership_commonBound}
+  \leanok
+  The ledger proves \(q_{\mathrm{signed}}\le\Theta_{\mathrm{signed}}\) by the
+  explicit chain
+  \[
+    q_{\mathrm{signed}}
+      \le \text{chosen target volume}
+      \le \Theta_{\mathrm{signed}}.
+  \]
+  The second comparison is tied to the charted common bound produced by the
+  supplied certificate; it is not an arbitrary convenient \(\Theta\) bound.
+\end{lemma}
+
+\begin{proof}
+  The Lean equalities expose the comparison as the ledger's three-term
+  comparison and, more concretely, as membership in the chosen target followed
+  by the common-bound inequality.
+\end{proof}
+
+\begin{definition}[Stage 1 comparison endpoint]
+  \label{def:stage1-comparison-endpoint}
+  \lean{Iut.Stage1.Stage1Comparison,Iut.Stage1.Corollary312ComparisonData}
+  \leanok
+  A Stage 1 comparison endpoint is the final signed real comparison
+  \[
+    q_{\mathrm{signed}} \le \Theta_{\mathrm{signed}},
+  \]
+  tagged by the \qPilot{} and \ThetaPilot{} sides.  The endpoint type is not a
+  source proof; the source route must construct it from the ledger.
+\end{definition}
+
+\begin{lemma}[Projection warning]
+  \label{lem:projection-warning}
+  \lean{Iut.Stage1.corollary312_from_stage1_comparison}
+  \leanok
+  Once a completed endpoint has been supplied, the formal Corollary
+  3.12-shaped inequality is a projection from that endpoint.
+\end{lemma}
+
+\begin{proof}
+  The Lean theorem intentionally does no source mathematics.  It prevents us
+  from confusing the endpoint package with a proof that the package is
+  constructible from \IUT{} I--III.
+\end{proof}
+
+\section{Signed real algebra}
+
+\begin{definition}[Corollary 3.12 predicate shape]
+  \label{def:corollary-312-predicate-shape}
+  \lean{Iut.Stage1.Corollary312Inequality}
+  \leanok
+  The bare predicate states the target signed pilot inequality for
+  already-tagged \ThetaPilot{} and \qPilot{} log-volumes.  It is a proposition
+  shape, not by itself a proof that source obligations construct the needed
+  comparison.
+\end{definition}
+
+\begin{lemma}[Signed comparison gives the corollary shape]
+  \label{lem:signed-comparison-gives-corollary}
+  \uses{def:corollary-312-predicate-shape}
+  \lean{Iut.Stage1.corollary312_of_signed_le}
+  \leanok
+  If \(q_{\mathrm{signed}}\le \Theta_{\mathrm{signed}}\), then the corresponding
+  tagged pilot log-volumes satisfy the Corollary 3.12 inequality.
+\end{lemma}
+
+\begin{proof}
+  This is a direct sign conversion: the stored pilot log-volume value is the
+  positive magnitude, while the source display is written in signed form.
+\end{proof}
+
+\begin{theorem}[Final ordered-real calculation]
+  \label{thm:final-real-calculation}
+  \lean{Iut.Stage1.IUTStage1Corollary312SignedCThetaBound.cTheta_ge_neg_one}
+  \leanok
+  Suppose \(q_{\mathrm{signed}}\le \Theta_{\mathrm{signed}}\),
+  \(0<-q_{\mathrm{signed}}\), and
+  \[
+    \Theta_{\mathrm{signed}}\le
+      \CTheta\cdot(-q_{\mathrm{signed}}).
+  \]
+  Then \(-1\le \CTheta\).
+\end{theorem}
+
+\begin{proof}
+  This is pure ordered-real algebra.  The hard source issue is therefore not
+  this calculation, but the construction of the signed comparison consumed by
+  it.
+\end{proof}
+
+\begin{theorem}[Strict and boundary alternatives]
+  \label{thm:strict-boundary-alternatives}
+  \lean{Iut.Stage1.IUTStage1Corollary312SignedCThetaBound.cTheta_eq_neg_one_or_gt_neg_one}
+  \leanok
+  Under the same hypotheses, either \(\CTheta=-1\) or \(-1<\CTheta\).  In the
+  boundary case, the formal corridor also proves equality of the signed
+  \qPilot{} and \ThetaPilot{} readings and negativity of the \ThetaPilot{}
+  reading.
+\end{theorem}
+
+\begin{proof}
+  The endpoint is a dichotomy for the final signed real inequality.  It should
+  be read only after the source route has supplied the comparison
+  \(q_{\mathrm{signed}}\le \Theta_{\mathrm{signed}}\).
+\end{proof}

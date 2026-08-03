@@ -15,12 +15,15 @@ import LeanFormal.IUT.Foundations.Arithmetic.PadicValuation
 import LeanFormal.IUT.Foundations.NumberField.FinitePlaces
 import LeanFormal.IUT.Foundations.NumberField.FinitePlaceExtension
 import LeanFormal.IUT.Foundations.NumberField.LocalQParameter
+import LeanFormal.IUT.Foundations.NumberField.LocalQParameterExtension
+import LeanFormal.IUT.Foundations.NumberField.LocalQParameterRamification
 import LeanFormal.IUT.Foundations.NumberField.Places
 import LeanFormal.IUT.Foundations.LinearAlgebra.FiniteDeterminant
 import LeanFormal.IUT.Foundations.Theta.GaussianKernel
 import LeanFormal.IUT.Foundations.Theta.GaussianSquareSum
 import LeanFormal.IUT.Foundations.Coordinates.RealLineTransport
 import LeanFormal.IUT.Foundations.Volumes.WeightedVolume
+import LeanFormal.IUT.Audit.Upstream.PromachinaReducedWord
 import LeanFormal.IUT.Foundations.Geometry.FiniteTransitiveAction
 import LeanFormal.IUT.Foundations.Geometry.WeierstrassModel
 import LeanFormal.IUT.Foundations.Geometry.PuncturedEllipticCurve

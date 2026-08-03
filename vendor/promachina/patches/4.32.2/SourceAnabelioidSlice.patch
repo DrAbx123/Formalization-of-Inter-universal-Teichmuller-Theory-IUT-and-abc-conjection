@@ -1,0 +1,132 @@
+diff --git "a/vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceAnabelioidSlice.lean" "b/Iut\\Foundations\\SourceAnabelioidSlice.lean"
+index e4eacc5..5f978ee 100644
+--- "a/vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\SourceAnabelioidSlice.lean"
++++ "b/Iut\\Foundations\\SourceAnabelioidSlice.lean"
+@@ -233,7 +233,6 @@ def projection :
+     (fun p : G × T => (p.1 : G ⧸ H))
+     (by
+       rintro a b ⟨h, hb1, _⟩
+-      change (a.1 : G ⧸ H) = (b.1 : G ⧸ H)
+       rw [hb1]
+       exact (QuotientGroup.mk_mul_of_mem a.1 h.property).symm)
+ 
+@@ -745,10 +744,9 @@ noncomputable instance sourceOpenCosetSliceFiber_mulAction :
+     exact one_smul G x.val
+   mul_smul h k x := by
+     apply Subtype.ext
+-    change ((h * k : H) : G) • x.val =
++    change ((h : G) * (k : G)) • x.val =
+       (h : G) • ((k : G) • x.val)
+-    simpa only [Subgroup.coe_mul] using
+-      mul_smul (h : G) (k : G) x.val
++    exact mul_smul (h : G) (k : G) x.val
+ 
+ /-- The definitionally distinct subtype carried by `H.toSubgroup` acts by
+ the same restricted `G`-action.  This is the group type used by the literal
+@@ -910,7 +908,9 @@ theorem sourceInducedIdentityFiber_first_mem
+     (QuotientGroup.mk (1 : G) : G ⧸ H.toSubgroup) at hfiber
+   have hinv : g⁻¹ ∈ H.toSubgroup := by
+     simpa only [mul_one] using QuotientGroup.eq.mp hfiber
+-  simpa only [inv_inv] using H.toSubgroup.inv_mem hinv
++  have hg : g ∈ H.toSubgroup := by
++    simpa only [inv_inv] using H.toSubgroup.inv_mem hinv
++  exact (OpenSubgroup.mem_toSubgroup (U := H)).mp hg
+ 
+ /-- The chosen representative of an induced identity-fiber class. -/
+ noncomputable def sourceInducedIdentityFiberRepresentative
+@@ -980,6 +980,7 @@ theorem sourceInducedIdentityFiberToOriginal_original
+   have hp_first : p.1 = (k⁻¹ : H) := by
+     have hmul :=
+       congrArg (fun g : G => g * (k : G)⁻¹) hk_group
++    change p.1 = (k : G)⁻¹
+     simpa only [one_mul, mul_assoc, mul_inv_cancel, mul_one] using hmul.symm
+   have hh : h = k⁻¹ := by
+     apply Subtype.ext
+@@ -1043,8 +1044,9 @@ noncomputable instance sourceInducedIdentityFiber_mulAction :
+     exact one_smul G q.val
+   mul_smul h k q := by
+     apply Subtype.ext
+-    simpa only [Subgroup.coe_mul] using
+-      mul_smul (h : G) (k : G) q.val
++    change ((h : G) * (k : G)) • q.val =
++      (h : G) • ((k : G) • q.val)
++    exact mul_smul (h : G) (k : G) q.val
+ 
+ end SourceInducedIdentityFiber
+ 
+@@ -1118,7 +1120,6 @@ noncomputable def sourceInducedSliceFiberEvaluation
+       p.1 • p.2.val)
+     (by
+       rintro a b ⟨h, hb1, hb2⟩
+-      change a.1 • a.2.val = b.1 • b.2.val
+       have hb2val :
+           b.2.val = (h⁻¹ : H.toSubgroup) • a.2.val :=
+         congrArg Subtype.val hb2
+@@ -1233,9 +1234,11 @@ theorem sourceInducedSliceFiberEvaluation_injective
+                 (b.1 : G ⧸ H.toSubgroup) := by
+             have hmap :=
+               congrArg X.hom.hom.hom hqr
+-            simpa only [
+-              sourceInducedSliceFiberEvaluation_mk,
+-              sourceInducedSliceFiberEvaluation_over] using hmap
++            rw [sourceInducedSliceFiberEvaluation_over,
++              sourceInducedSliceFiberEvaluation_over] at hmap
++            change (a.1 : G ⧸ H.toSubgroup) =
++              (b.1 : G ⧸ H.toSubgroup) at hmap
++            exact hmap
+           have hmem :
+               a.1⁻¹ * b.1 ∈ H.toSubgroup :=
+             QuotientGroup.eq.mp hcoset
+@@ -1257,6 +1260,7 @@ theorem sourceInducedSliceFiberEvaluation_injective
+             have hinv :=
+               congrArg (fun z : X.left.obj.V =>
+                 (a.1⁻¹ * b.1)⁻¹ • z) ha
++            change b.2.val = (a.1⁻¹ * b.1)⁻¹ • a.2.val
+             simpa only [← mul_smul, inv_mul_cancel, one_smul] using
+               hinv.symm
+ 
+@@ -1441,7 +1445,7 @@ variable (T : Over S)
+ 
+ instance : FunLike (SourceDependentSection T) S.obj.V T.left.obj.V where
+   coe := toFun
+-  coe_injective' first second h := by
++  coe_injective first second h := by
+     cases first
+     cases second
+     cases h
+@@ -1586,7 +1590,6 @@ def sourceDependentSectionMapFunction
+             (fun map : T.left ⟶ S =>
+               (continuousActionFiber G).map map)
+             (Over.w f)
+-        dsimp only at hwFiber
+         rw [Functor.map_comp] at hwFiber
+         have hpoint :=
+           ConcreteCategory.congr_hom hwFiber (value s)
+@@ -1812,7 +1815,6 @@ noncomputable def sourceSliceHomToDependentSectionFunction
+                 ((sourceSliceProductFunctor G S).obj X).left ⟶ S =>
+               (continuousActionFiber G).map map)
+             (Over.w f)
+-        dsimp only at hwFiber
+         rw [Functor.map_comp] at hwFiber
+         have hpoint :=
+           ConcreteCategory.congr_hom hwFiber point
+@@ -2103,7 +2105,8 @@ theorem sourceContinuousAction_comp_apply
+     Functor.map_comp (continuousActionFiber G) f g
+   have hpoint :=
+     ConcreteCategory.congr_hom hmap x
+-  simpa only [FintypeCat.comp_apply] using hpoint
++  change (f ≫ g).hom.hom x = g.hom.hom (f.hom.hom x) at hpoint
++  exact hpoint
+ 
+ /-- On left objects, the slice product functor maps `f` by
+ `id_S x f`. -/
+@@ -2394,9 +2397,6 @@ noncomputable def sourceRestrictionHomToInductionFunction
+       p.1 • (show X.obj.V from f.hom.hom p.2))
+     (by
+       rintro a b ⟨h, hb1, hb2⟩
+-      change
+-        a.1 • (show X.obj.V from f.hom.hom a.2) =
+-          b.1 • (show X.obj.V from f.hom.hom b.2)
+       rw [hb1, hb2]
+       have hequivariant :=
+         sourceContinuousActionMap_equivariant H f h⁻¹ a.2

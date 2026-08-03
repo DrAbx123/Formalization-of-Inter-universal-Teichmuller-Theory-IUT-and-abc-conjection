@@ -1,0 +1,84 @@
+\chapter{Aim and Scope}
+
+\section{Purpose of this blueprint}
+
+This blueprint records the first formalization target for the repository:
+the narrow corridor from \IUT{} III, Theorem 3.11 to Corollary 3.12.
+It is not a blueprint for the whole proof of the \(abc\) conjecture, and it
+does not treat the correctness of \IUT{} as an assumption.  Its job is to make
+the objects, comparison levels, indeterminacies, and real-valued estimates
+visible enough that \leanfour{} can distinguish proved consequences from
+source obligations.
+
+\begin{definition}[Stage 1 target]
+  \label{def:stage1-target}
+  \lean{Iut.Stage1.theorem311ToCorollary312Labels}
+  \leanok
+  The first target is the implication
+  \[
+    \text{\IUT{} III, Theorem 3.11}
+      \Longrightarrow
+    \text{\IUT{} III, Corollary 3.12}.
+  \]
+  Following Mochizuki's 2026 formalization report, we refine this into the
+  route
+  \[
+    \text{Theorem 3.11}
+      \xrightarrow{\APT+\IPL}
+    \text{``Theorem 3.11.5''}
+      \xrightarrow{\SHE+\IPL}
+    \text{Corollary 3.12}.
+  \]
+  The intermediate label ``3.11.5'' is not a separate theorem in the source
+  papers.  It names the reorganized boundary obtained by moving the
+  holomorphic hull plus determinant operation before the final simultaneous
+  comparison of the \ThetaPilot{} and the \qPilot{}.
+\end{definition}
+
+\begin{remark}
+  \label{rem:neutrality}
+  This blueprint is neutral about the Mochizuki--Scholze--Stix dispute.  A
+  completed Stage 1 route would say that the stated source hypotheses imply
+  the Corollary 3.12 inequality.  It would not by itself prove that those
+  source hypotheses are constructible from \IUT{} I--III.
+\end{remark}
+
+\section{Current repository status}
+
+\begin{proposition}[Three levels of availability]
+  \label{prop:availability-levels}
+  The current Lean development distinguishes three kinds of availability.
+  First, elementary ordered-real consequences are proved directly.  Second,
+  route theorems prove that named source-facing records imply the desired
+  signed comparison.  Third, some records are still obligations standing for
+  Hodge-theater, Frobenioid, log-Kummer, hull, determinant, \SHE{}, \IPL{},
+  and \APT{} constructions not yet built from the source papers.
+\end{proposition}
+
+\begin{proof}
+  The code contains no proof placeholders in the current source files, and the
+  project builds through the experiment surface.  The remaining gap is not a
+  Lean elaboration gap; it is the mathematical construction of the source
+  records consumed by the route theorems.
+\end{proof}
+
+\begin{definition}[Read order]
+  \label{def:read-order}
+  A reader should use the following order.  First read the source-facing
+  statement of the Stage 1 route in \cref{ch:stage1-source}.  Then read the
+  formal interface in \cref{ch:formal-interface}.  The actual conditional
+  route through the corollary is in \cref{ch:corollary-route}.  The unresolved
+  source obligations are collected in \cref{ch:source-obligations}.  Later
+  consequences are only sketched in \cref{ch:after-corollary}.
+\end{definition}
+
+\begin{definition}[Two status axes]
+  \label{def:two-status-axes}
+  Each blueprint node should be read with two independent status axes.  Its
+  Lean status says whether the displayed declaration checks, proves a theorem,
+  or only records a diagnostic report.  Its source status says whether the
+  corresponding mathematics has been constructed from \IUT{} I--III, is a
+  conditional record field, is still a source obligation, or is only a later
+  roadmap node.  In this project, a Lean-checked record can still be a
+  source-level obligation.
+\end{definition}

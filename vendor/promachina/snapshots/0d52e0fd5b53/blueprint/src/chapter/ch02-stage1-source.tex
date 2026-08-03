@@ -1,0 +1,1964 @@
+\chapter{The Source Stage 1 Route}
+\label{ch:stage1-source}
+
+\section{The source objects}
+
+\begin{definition}[Initial theta and theater data]
+  \label{def:initial-theta-data}
+  \lean{Iut.InitialThetaData}
+  \lean{Iut.ThetaLTorsionRepresentationData.IsKernelField}
+  \lean{Iut.ThetaLTorsionRepresentationData.ImageContainsSL2}
+  \lean{Iut.ThetaFQParameterOrderData.OrdersPrimeToL}
+  \leanok
+  The source construction begins with the initial \(\Theta\)-data of \IUT{} I:
+  a number field, an elliptic curve, bad places, label data, and the
+  arithmetic hypotheses from which Hodge theaters are built.  The mod-\(l\)
+  representation, its kernel field, containment of
+  \(\mathrm{SL}_2(\mathbb Z/l\mathbb Z)\), and positive q-parameter orders
+  prime to \(l\) at the bad \(F\)-places are explicit predicates and data
+  rather than free propositions.
+\end{definition}
+
+\begin{definition}[Hodge theater histories]
+  \label{def:hodge-theater-histories}
+  \lean{Iut.ThetaArithmeticHistory}
+  \lean{Iut.Stage1HodgeTheaterSource}
+  \lean{Iut.Stage1HodgeTheaterSource.ofInitialThetaData}
+  \lean{Iut.Stage1HodgeTheaterSource.histories_not_identified}
+  \leanok
+  A Hodge theater carries an arithmetic holomorphic structure.  The Stage 1
+  source now constructs the domain history of the \qPilot{} and the
+  codomain history of the \ThetaPilot{} as distinct constructors.  Their
+  separation is therefore a theorem of the datatype, not an inequality between
+  caller-supplied strings.
+\end{definition}
+
+\begin{definition}[Prime strips and links]
+  \label{def:prime-strip-links}
+  \lean{Iut.ThetaPrimeStrip}
+  \lean{Iut.ThetaBridgeSource}
+  \lean{Iut.ThetaPlusMinusEllNFHodgeTheater}
+  \lean{Iut.Stage1HodgeTheaterSource.zeroColumn_primeStrip_compatible}
+  \lean{Iut.Stage1HodgeTheaterSource.oneColumn_primeStrip_compatible}
+  \leanok
+  The \(\Theta^{\times\mu}_{\mathrm{LGP}}\)-link between the \(0\)- and
+  \(1\)-columns has a value-group portion and a unit portion.  The value-group
+  portion relates \qPilot{} data at \((0,0)\) to \ThetaPilot{} data at
+  \((1,0)\).  At the IUT I boundary, prime strips are indexed by their owner
+  history and project the global orbicurve, selected places, local orbicurves,
+  cusps, and q-orders from the same initial theta datum.  The
+  \(\Theta^{\pm\ell}\) and \(\Theta^{\mathrm{NF}}\) components are glued by an
+  equality of their typed gluing-role prime strips.  The later \(\IPL\)
+  property remains part of the Theorem 3.11 route.
+\end{definition}
+
+\begin{definition}[Topological pseudo-monoids]
+  \label{def:source-topological-pseudo-monoids}
+  \lean{Iut.SourceTopologicalPseudoMonoid}
+  \lean{Iut.SourceTopologicalPseudoMonoid.MultiplicationDomain}
+  \lean{Iut.SourceTopologicalPseudoMonoid.partialMul}
+  \lean{Iut.SourceTopologicalPseudoMonoid.continuous_partialMul}
+  \lean{Iut.SourceTopologicalPseudoMonoid.partialMul_assoc}
+  \lean{Iut.SourceTopologicalPseudoMonoid.IsDivisible}
+  \lean{Iut.SourceTopologicalPseudoMonoid.IsCyclotomic}
+  \lean{Iut.SourceTopologicalPseudoMonoid.Iso.maps_domain_iff}
+  \lean{Iut.SourceTopologicalGroupPseudoMonoidActionPair}
+  \lean{Iut.SourceTopologicalGroupPseudoMonoidActionPair.action_maps_domain_iff}
+  \lean{Iut.SourceTopologicalGroupPseudoMonoidActionPair.action_partialMul}
+  \lean{Iut.SourceTopologicalGroupPseudoMonoidActionPair.fixedPseudoMonoid.mul_mem_iff}
+  \lean{Iut.SourceProfinitePseudoMonoidActionPair.quotientAction_comp}
+  \lean{Iut.SourceProfinitePseudoMonoidActionPair.descend}
+  \lean{Iut.SourceProfinitePseudoMonoidActionPair.comap_descend}
+  \leanok
+  Following IUT~I, Section~0, a topological pseudo-monoid is the embedded
+  image of a topological space in a topological abelian group.  Its product is
+  defined exactly for pairs whose ambient product remains in that image; the
+  image need not contain the identity and need not be closed under arbitrary
+  products.  The restricted product is continuous, commutative, and
+  associative whenever both composites are defined.  Divisibility retains
+  both ambient roots and the power-membership equivalence, while
+  cyclotomicity retains the torsion identification with \(\mathbb Q/\mathbb Z\)
+  and stability under torsion.  Continuous morphisms preserve defined
+  products, isomorphisms reflect their domain, and continuous group actions
+  are by these pseudo-monoid automorphisms.  For Definition~5.2(v), the
+  invariant carrier is constructed as a sub-pseudo-monoid and is proved to
+  inherit every product defined in the original carrier.  A profinite action
+  whose kernel acts trivially descends through a surjective profinite
+  quotient; continuity follows from the compact-to-Hausdorff quotient
+  topology, and pullback of the descended action recovers the original one.
+  These results implement the fixed-point and
+  $\pi_1^{\kappa\text{-sol}}$ factorization mechanisms.  They do not construct
+  the ambient overgroup, rational fundamental group, or the coric
+  rational-function carriers supplied by the cited absolute-anabelian
+  reconstruction algorithms.
+\end{definition}
+
+\begin{definition}[Source Frobenioid prime strips]
+  \label{def:source-frobenioid-prime-strips}
+  \lean{Iut.PreFrobenioid.RationalMonoidTransport}
+  \lean{Iut.PreFrobenioid.CharacteristicSplitting}
+  \lean{Iut.SplitFrobenioidPresentation}
+  \lean{Iut.SplitTopologicalMonoidPresentation}
+  \lean{Iut.SourceDPrimeStrip.canonical}
+  \lean{Iut.SourceDMonoAnalyticPrimeStrip.canonical}
+  \lean{Iut.SourceFPrimeStrip}
+  \lean{Iut.SourceFPrimeStrip.canonical}
+  \lean{Iut.SourceFPrimeStrip.associatedDNonarchimedeanEquivalence}
+  \lean{Iut.SourceFPrimeStrip.associatedD_archimedean_eq}
+  \lean{Iut.IUTINonarchimedeanLocalModel.dToCoreOpenEmbedding}
+  \lean{Iut.IUTINonarchimedeanLocalModel.dToCore_injective}
+  \lean{Iut.IUTINonarchimedeanLocalModel.dToCore_open_range}
+  \lean{Iut.SourceFinitePlaceReconstruction.carrierEquivAlgebraicClosure}
+  \lean{Iut.SourceFinitePlaceReconstruction.continuous_stageIntegralToInd}
+  \lean{Iut.SourceFinitePlaceReconstruction.exists_stage_representation}
+  \lean{Iut.SourceFinitePlaceReconstruction.indIntegralMonoidEquivSourceMLF}
+  \lean{Iut.SourceFinitePlaceReconstruction.indIntegralMonoidEquivSourceMLF_galois}
+  \lean{Iut.SourceFinitePlaceReconstruction.carrierMulEquiv_galoisContinuousLinearMap}
+  \lean{Iut.SourceFinitePlaceReconstruction.continuous_indGaloisMulAut}
+  \lean{Iut.SourceFinitePlaceReconstruction.indGaloisContinuousMulEquiv_mul}
+  \lean{Iut.SourceFinitePlaceReconstruction.continuous_finiteStageGaloisEvaluation}
+  \lean{Iut.SourceFinitePlaceReconstruction.continuous_stageGaloisAction}
+  \lean{Iut.SourceFinitePlaceReconstruction.continuous_galoisLinearMap_comp_stageToCarrier}
+  \lean{Iut.SourceFinitePlaceReconstruction.continuous_indGaloisAction_comp_stageIntegralToInd}
+  \lean{Iut.SourceFinitePlaceReconstruction.stageIntegralTransition_trans}
+  \lean{Iut.SourceFinitePlaceReconstruction.continuous_stageGaloisIntegralAction}
+  \lean{Iut.SourceFinitePlaceReconstruction.stageIntegralTransition_galois}
+  \lean{Iut.SourceFinitePlaceReconstruction.integralIndSystem}
+  \lean{Iut.SourceFinitePlaceReconstruction.stageIntegralToIndHom_transition}
+  \lean{Iut.SourceFinitePlaceReconstruction.stageIntegralToIndHom_galois}
+  \lean{Iut.SourceFinitePlaceReconstruction.integralIndSystemLimit}
+  \lean{Iut.SourceFinitePlaceReconstruction.integralIndSequentialPresentation}
+  \lean{Iut.SourceFinitePlaceReconstruction.denseRange_algebraMap_base}
+  \lean{Iut.SourceFinitePlaceReconstruction.exists_stage_primitive_generator}
+  \lean{Iut.SourceFinitePlaceReconstruction.exists_global_polynomial_root_same_adjoin}
+  \lean{Iut.SourceFinitePlaceReconstruction.exists_global_polynomial_root_generating_stage}
+  \lean{Iut.SourceFinitePlaceReconstruction.globalPolynomialRootStage_surjective}
+  \lean{Iut.SourceFinitePlaceReconstruction.stageIndexCountable}
+  \lean{Iut.SourceFinitePlaceReconstruction.integralIndSourceSequentialPresentation}
+  \lean{Iut.SourceSelectedFinitePlace.integralIndSystem}
+  \lean{Iut.SourceSelectedFinitePlace.integralIndSystemLimit}
+  \lean{Iut.SourceSelectedFinitePlace.integralIndSequentialPresentation}
+  \lean{Iut.SourceFMonoAnalyticPrimeStrip}
+  \lean{Iut.SourceFMonoAnalyticPrimeStrip.canonical}
+  \lean{Iut.sourceFMonoAnalyticPrimeStripCategory}
+  \lean{Iut.SourceFMonoAnalyticPrimeStripCapsule}
+  \lean{Iut.SourceFGloballyRealifiedMonoAnalyticPrimeStrip}
+  \lean{Iut.SourceFGloballyRealifiedMonoAnalyticPrimeStrip.canonical}
+  \lean{Iut.sourceFPrimeStripToD}
+  \lean{Iut.SourceFPrimeStripCapsule}
+  \lean{Iut.SourceThetaHodgeTheater.associatedF}
+  \lean{Iut.SourceThetaHodgeTheater.MonoAnalyticTransport}
+  \lean{Iut.SourceThetaHodgeTheater.associatedFMonoAnalytic}
+  \lean{Iut.SourceFThetaBridge}
+  \lean{Iut.SourceFThetaBridge.associatedD}
+  \lean{Iut.SourceFThetaBridge.associatedD_lift_unique}
+  \leanok
+  The transitive Frobenioids I dependency is retained explicitly:
+  Definition~2.7 pre-model type includes its standing isotropic-type
+  hypothesis, so every object is isotropic in addition to the existence of a
+  base--Frobenius pair.  The model proof reuses its established pointwise
+  isotropic theorem, and a negative regression proves that a pair alone is
+  insufficient when an object is non-isotropic.
+  \(O^\triangleright(-)\) is a contravariant functor on the isotropic
+  linear category, and a characteristic splitting is a subfunctor whose
+  product with the units is objectwise bijective and satisfies the
+  isotropic-hull condition.  Thus a split Frobenioid is not identified with
+  a Frobenius-degree trivialization.  At nonarchimedean places an
+  \(F^{\sim}\)-component is an actual split Frobenioid; at archimedean
+  places it also carries the compact/noncompact \(TM^{\sim}\)
+  factorization, tied to the selected characteristic splitting.
+  Given the actual Examples~3.2--3.5 model package, Lean constructs the
+  canonical \(D\), \(D^{\sim}\), \(F\), \(F^{\sim}\), and globally realified
+  \(F^{\sim}\) strips directly from its constituents.  No further component
+  equivalence, prime correspondence, characteristic splitting, or
+  currency-exchange map is accepted by these constructors.  The finite
+  \(D\)-strip obtained by forgetting \(F\)-structure is compared with the
+  canonical \(D_v\) by the model Frobenioid's actual base-category
+  equivalence; at infinity the two constituents agree literally.  The
+  mono-analytic strips form the Definition~5.2(iii) category using complete
+  structured equivalences modulo the Section~0 natural-isomorphism relation,
+  with proved identity, composition, and associativity laws and genuine
+  finite capsules.
+  Example~3.2(i) identifies the group represented by \(D_v\) with the
+  arithmetic fundamental group of \(X_v\).  The source model now uses exactly
+  this group, and the sign-quotient geometry constructs its open embedding
+  into the arithmetic fundamental group of \(C_v\), with injectivity and open
+  image proved.  This is the geometric target of Definition~5.2(v), not yet
+  the absolute-anabelian algorithm recovering it from an abstract \(D_v\)
+  group.
+  For an actual finite place, the algebraic closure is now the filtered
+  topological-module colimit of its finite Galois local subfields.  Restricting
+  this colimit to its nonzero integral elements gives continuous finite-stage
+  inclusions that exhaust the carrier, a multiplicative equivalence with
+  \(O_{\overline{K_v}}^\triangleright\), and the literal compatible absolute
+  Galois action.  Normality of each finite stage now gives a continuous
+  restriction of every Galois automorphism; the colimit universal property
+  produces the corresponding continuous ind-automorphism, and Lean proves
+  that these automorphisms satisfy the identity and composition laws and
+  restrict continuously in both directions to
+  \(O_{\overline{K_v}}^\triangleright\).  In accordance with the meaning of
+  the prefix ``ind-'' in Absolute Anabelian Topics~III, Section~0, Lean also
+  retains the finite Galois integral stages as an actual filtered system of
+  topological monoids.  Its transitions are continuous and equivariant;
+  continuity of Krull restriction to the finite Galois group, together with
+  its discrete topology, proves joint continuity of evaluation on every
+  stage.  The stage inclusions are injective, exhaust
+  \(O_{\overline{K_v}}^\triangleright\), and commute with the limit action.
+  The global number field is dense in \(K_v\).  Primitive elements,
+  same-degree polynomial approximation, continuity of roots, and Krasner's
+  lemma show that every finite Galois stage is generated by a root of a
+  polynomial over the global field.  These polynomial-root witnesses form a
+  countable type and surject onto the stage type.  The countable
+  filtered-category theorem therefore constructs a monotone cofinal
+  natural-number subsystem, hence the strict positive-integer presentation
+  used by the paper.  Reconstruction from the abstract \(D_v\) group remains
+  open.
+  A globally realified strip additionally carries the global Frobenioid,
+  its prime/place bijection, all local characteristic and realified monoids,
+  and commuting currency-exchange isomorphisms \(\rho_v\), compared
+  componentwise with the Example~3.5 model.
+  Holomorphic \(F\)-prime-strips form the isomorphism-only category required
+  by Definition~5.2(iii), hence admit genuine capsules, and their associated
+  \(D\)-prime-strips are functorial.  The \(F\)-strip associated to a
+  Definition~3.6 theta-Hodge theater is derived, not supplied independently.
+  Its mono-analytic \(F^\vdash\)-strip is constructed only from an explicit
+  structure-preserving transport of the rational monoids, characteristic
+  splittings, and selected archimedean splitting; equivalences of the bare
+  carrier categories are insufficient.
+  Consequently, selected \(F\)-level theta-bridge arrows induce a
+  \(D\)-theta bridge, with the Corollary~5.3 uniqueness of selected lifts
+  exposed as a separate theorem.  Proposition~2.2's construction of the
+  rational-monoid transport, the Examples~3.2--3.5 model constructions,
+  mono-analyticization, global realification, the remaining reconstruction
+  content of Definition~5.2(v), and clauses~(vi)--(viii) remain explicit
+  source obligations.  Their exact endpoints are separated into
+  issues~\#34--\#37 rather than hidden as fields of the canonical
+  constructors.
+\end{definition}
+
+\begin{definition}[Capsules and processions]
+  \label{def:source-processions}
+  \lean{Iut.CategoryCapsule}
+  \lean{Iut.CategoryCapsule.FullPolyMorphism}
+  \lean{Iut.CategoryCapsule.FullPolyMorphism.pairwiseCompositeSet}
+  \lean{Iut.CategoryCapsule.InhabitedFullPolyMorphism}
+  \lean{Iut.CategoryCapsule.InhabitedFullPolyMorphism.pairwiseCompositeSet_eq_univ}
+  \lean{Iut.CategoryCapsule.EmptyIntermediateRegression.pairwiseCompositeSet_ne_univ}
+  \lean{Iut.CategoryProcession}
+  \lean{Iut.CategoryProcession.Hom}
+  \lean{Iut.CategoryProcessionObject}
+  \lean{Iut.IUTIPositiveLabel.signLabelEquiv}
+  \lean{Iut.SourceDThetaBridgeCore}
+  \lean{Iut.SourceDThetaBridgeCore.procession}
+  \lean{Iut.SourceDThetaBridgeCore.procession_label_indeterminacy}
+  \lean{Iut.SourceDMonoAnalyticization}
+  \lean{Iut.SourceDThetaBridgeCore.monoAnalyticProcession}
+  \lean{Iut.SourceDThetaBridgeCore.monoAnalyticProcession_label_indeterminacy}
+  \leanok
+  The capsule conventions of \IUT{} I, Section 0 and Definition~4.10 are
+  formalized directly.  A capsule-full poly-morphism contains the possibly
+  empty set of all componentwise isomorphisms over a fixed injection, and its
+  pairwise composite is an explicit multiplicity-free range.  An
+  \(n\)-procession has a \(j\)-capsule in position \(j\), and its categorical
+  morphisms use order-preserving injections together with inhabited
+  capsule-full sets.  No member is selected.  Every endpoint member then
+  factors through the intermediate capsule, proving that composition is
+  exactly the paper's pairwise composite set.  A discrete two-object
+  regression records why this inhabitation condition is necessary: two input
+  sets may be empty even when the full endpoint set is not.  Capsules and
+  processions carry the identity and composition operations required by the
+  categories used in Proposition~4.11.  The positive representatives
+  \(1,\ldots,l^\ast\) are proved equivalent to the nonzero Tate labels modulo
+  sign.  Consequently, a Proposition~4.7 evaluation-label bijection derives
+  the nested holomorphic \(l^\ast\)-procession and its exact \(l^\ast!\)
+  indeterminacy.  An actual natural mono-analyticization functor maps this to
+  the mono-analytic procession while preserving the cardinality and factorial
+  proofs.  Construction of that functor from the source subcategories,
+  derivation of the label bijection from evaluation sections, and bridge
+  functoriality remain source obligations.
+\end{definition}
+
+\begin{definition}[Toy degree-preorder realization]
+  \label{def:iut-i-theater-realization}
+  \uses{def:initial-theta-data,def:hodge-theater-histories,def:prime-strip-links}
+  \lean{Iut.ToyIUTIHodgeTheaterRealization}
+  \lean{Iut.ToyIUTIHodgeTheaterRealization.ofStage1HodgeTheaterSource}
+  \lean{Iut.Stage1HodgeTheaterSource.hasToyIUTIRealization}
+  \lean{Iut.Stage1.IUTStage1InitialThetaPrimitiveSourcePacket}
+  \leanok
+  The typed source constructs local and global effective-divisor
+  degree preorder categories, the theta-link equivalence, and the
+  \(\Theta^{\pm\ell}/\Theta^{\mathrm{NF}}\) gluing equivalences.  This
+  degree-level test double does not prove Definition~3.6, Corollary~3.7,
+  Definitions~4.1 and~5.2, Proposition~6.7, Remark~6.12.2, or
+  Definition~6.13 of \IUT{} I.  Frobenioid and Kummer structure is not
+  asserted by this model.
+\end{definition}
+
+\begin{definition}[Countable temperoids]
+  \label{def:countable-temperoids}
+  \lean{Iut.SourceTemperoidAction}
+  \lean{Iut.SourceConnectedTemperoid}
+  \lean{Iut.SourceConnectedTemperoid.connected_iff_nonempty_pretransitive}
+  \lean{Iut.SourceConnectedTemperoid.hom_surjective}
+  \lean{Iut.SourceTemperoidAction.finiteInclusion}
+  \lean{Iut.SourceTemperoidAction.finiteInclusionFullyFaithful}
+  \lean{Iut.SourceTemperoidKernelQuotient.connectedAdjunction}
+  \lean{Iut.SourceTemperoidKernelQuotient.connectedRestrictionFullyFaithful}
+  \leanok
+  For a topological group $G$, $B^{\mathrm{temp}}(G)$ is constructed as
+  the category of countable discrete sets with a continuous $G$-action.
+  Its connected objects are exactly the nonempty transitive actions, and every
+  equivariant map between connected objects is an epimorphism.  An open continuous
+  surjection \(\Pi\twoheadrightarrow G\) induces fully faithful restriction on
+  connected temperoids; its left adjoint divides a \(\Pi\)-action by the
+  kernel.  The descended action uses the image of a representative's open
+  stabilizer for continuity, so the proof does not assume a finite carrier.
+  Finite continuous actions embed fully faithfully in this category.
+\end{definition}
+
+\begin{definition}[Tempered semi-graph cusp rigidity]
+  \label{def:tempered-semigraph-cusp-rigidity}
+  \lean{Iut.SourceSemiGraph}
+  \lean{Iut.SourceSemiGraph.verticialCardinality}
+  \lean{Iut.SourceSemiGraph.isClosed_iff_verticialCardinality_eq_two}
+  \lean{Iut.SourceSemiGraph.Hom}
+  \lean{Iut.SourceSemiGraph.Hom.incidentBranchMap}
+  \lean{Iut.SourceSemiGraph.Hom.IsImmersion}
+  \lean{Iut.SourceSemiGraph.Hom.IsExcision}
+  \lean{Iut.SourceSemiGraph.Hom.IsProper}
+  \lean{Iut.SourceSemiGraph.Hom.isProper_iff_preserves_verticialCardinality}
+  \lean{Iut.SourceSemiGraph.Hom.IsGraphCovering}
+  \lean{Iut.SourceSemiGraph.Sub}
+  \lean{Iut.SourceSemiGraph.compactification}
+  \lean{Iut.SourceSemiGraph.compactification_isGraph}
+  \lean{Iut.SourceSemiGraph.Hom.compactificationMap}
+  \lean{Iut.SourceSemiGraph.Action}
+  \lean{Iut.SourceSemiGraph.Action.branchStabilizer_le_edgeStabilizer}
+  \lean{Iut.SourceSemiGraph.Action.branchStabilizer_le_vertexStabilizer}
+  \lean{Iut.SourceSemiGraph.Action.actIncidentBranch_bijective}
+  \lean{Iut.SourceCofilteredFiniteActionSystem}
+  \lean{Iut.SourceCofilteredFiniteActionSystem.actSection}
+  \lean{Iut.SourceCofilteredFiniteActionSystem.sectionAction}
+  \lean{Iut.SourceCofilteredFiniteActionSystem.sectionStabilizer}
+  \lean{Iut.SourceCofilteredFiniteActionSystem.mem_sectionStabilizer_iff_forall_coordinate}
+  \lean{Iut.SourceCofilteredFiniteActionSystem.sectionStabilizer_eq_iInf_coordinateStabilizer}
+  \lean{Iut.SourcePointedAnabelioidHom}
+  \lean{Iut.SourcePointedAnabelioidHom.fundamentalGroupHom}
+  \lean{Iut.SourcePointedAnabelioidHom.fundamentalGroupHom_comp}
+  \lean{Iut.SourcePointedAnabelioidHom.TwoIso}
+  \lean{Iut.SourcePointedAnabelioidHom.TwoIso.fundamentalGroupHom_eq_conjugate}
+  \lean{Iut.SourcePointedAnabelioidHom.fundamentalGroupImageContinuousMulEquiv}
+  \lean{Iut.SourceFiberFunctorComparison.fiberFunctorIso}
+  \lean{Iut.SourceAnabelioidHom}
+  \lean{Iut.SourceAnabelioidHom.fiberIso}
+  \lean{Iut.SourceAnabelioidHom.toPointedHom}
+  \lean{Iut.SourceAnabelioidHom.fundamentalGroupHom_innerConjugate_of_fiberIso}
+  \lean{Iut.SourceAnabelioidHom.MorphismClass}
+  \lean{Iut.SourceOuterHom}
+  \lean{Iut.SourceConjugator}
+  \lean{Iut.SourceConjugatorCategory}
+  \lean{Iut.SourceExactPullbackCategory}
+  \lean{Iut.SourceAnabelioidHom.ofContinuousHom}
+  \lean{Iut.SourceAnabelioidHom.restrictionConjugatorEquiv}
+  \lean{Iut.SourceAnabelioidHom.grothendieckCategoricalEquivalence}
+  \lean{Iut.SourceAnabelioidHom.categoricallyEquivalent_restriction_fundamentalGroupHom}
+  \lean{Iut.SourceAnabelioidHom.grothendieckCorrespondence}
+  \lean{Iut.SourceAnabelioidHom.grothendieckCorrespondence_symm_mk}
+  \lean{Iut.SourcePointedAnabelioidHom.BasepointTwoIso}
+  \lean{Iut.SourcePointedAnabelioidHom.BasepointTwoIso.fundamentalGroupHom_eq}
+  \lean{Iut.SourcePointedAnabelioidHom.PointedMorphismClass}
+  \lean{Iut.SourceAnabelioidHom.basepointTwoIso_restriction_fundamentalGroupHom}
+  \lean{Iut.SourceAnabelioidHom.pointedGrothendieckCorrespondence}
+  \lean{Iut.SourceAnabelioidHom.morphismClassToOuterHom_identity}
+  \lean{Iut.SourceAnabelioidHom.morphismClassToOuterHom_comp}
+  \lean{Iut.SourcePointedAnabelioidEquivalence.toUnpointedHom_outerHom}
+  \lean{Iut.SourceConnectedFiniteEtaleHom.toUnpointedHom_outerHom}
+  \lean{Iut.continuousAction_preGaloisCategory}
+  \lean{Iut.continuousAction_fiberFunctor}
+  \lean{Iut.continuousAction_isFundamentalGroup}
+  \lean{Iut.continuousActionEtaleFundamentalGroup}
+  \lean{Iut.continuousActionPointedHom}
+  \lean{Iut.continuousActionPointedHom_fundamentalGroupHom}
+  \lean{Iut.SourceConnectedFiniteEtaleHom}
+  \lean{Iut.SourceConnectedFiniteEtaleHom.ofProfiniteOpenEmbedding}
+  \lean{Iut.SourceConnectedFiniteEtaleHom.ofProfiniteOpenEmbedding_fundamentalGroupHom}
+  \lean{Iut.SourcePaperInducedSet.equivStandard}
+  \lean{Iut.SourcePaperInducedSet.toStandard_smul}
+  \lean{Iut.sourceInducedSet_stabilizer_isOpen}
+  \lean{Iut.sourceInducedAction}
+  \lean{Iut.sourcePaperInducedAction}
+  \lean{Iut.sourcePaperInducedActionIso}
+  \lean{Iut.sourceOpenCosetSliceEquivalence}
+  \lean{Iut.sourceSliceForgetAdjProduct}
+  \lean{Iut.sourceInductionRestrictionAdjunction}
+  \lean{Iut.sourceOpenSubgroupRestrictionSliceIso}
+  \lean{Iut.SourceFiniteEtaleFunctorFactorization}
+  \lean{Iut.sourceOpenSubgroupFiniteEtaleFactorization}
+  \lean{Iut.SourcePointedSemiGraphOfAnabelioids}
+  \lean{Iut.SourcePointedSemiGraphOfAnabelioids.vertexFundamentalGroupImageEquiv}
+  \lean{Iut.SourcePointedSemiGraphOfAnabelioids.edgeFundamentalGroupImageEquiv}
+  \lean{Iut.SourcePointedSemiGraphOfAnabelioids.branchTransport}
+  \lean{Iut.SourcePointedSemiGraphOfAnabelioids.subgroupDiagram}
+  \lean{Iut.SourcePointedSemiGraphOfAnabelioids.subgroupDiagram_vertexGroup_isClosed}
+  \lean{Iut.SourcePointedSemiGraphOfAnabelioids.subgroupDiagram_edgeGroup_isClosed}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.branchCosetMap}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.branchCosetMap_smul}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.cosetSemiGraph}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.cosetAction}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.stabilizer_leftCoset_eq_conjugate}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.cosetAction_vertexStabilizer_eq_conjugate}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.cosetAction_edgeStabilizer_eq_conjugate}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.cosetAction_branchStabilizer_eq_edgeStabilizer}
+  \lean{Iut.SourceProfiniteCosetSystem.levelSubgroup}
+  \lean{Iut.SourceProfiniteCosetSystem.carrier}
+  \lean{Iut.SourceProfiniteCosetSystem.system}
+  \lean{Iut.SourceProfiniteCosetSystem.cosetSection}
+  \lean{Iut.SourceProfiniteCosetSystem.iInf_levelSubgroup_eq}
+  \lean{Iut.SourceProfiniteCosetSystem.sectionFiber}
+  \lean{Iut.SourceProfiniteCosetSystem.sectionFiber_nonempty}
+  \lean{Iut.SourceProfiniteCosetSystem.sectionFiber_isClosed}
+  \lean{Iut.SourceProfiniteCosetSystem.sectionFiber_directed}
+  \lean{Iut.SourceProfiniteCosetSystem.cosetSection_surjective}
+  \lean{Iut.SourceProfiniteCosetSystem.cosetSection_injective}
+  \lean{Iut.SourceProfiniteCosetSystem.cosetSectionEquiv}
+  \lean{Iut.SourceProfiniteCosetSystem.sectionStabilizer_baseSection_eq}
+  \lean{Iut.SourceProfiniteCosetSystem.sectionStabilizer_cosetSection_eq_conjugate}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.profiniteVertexSection}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.profiniteEdgeSection}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.profiniteVertexSectionEquiv}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.profiniteEdgeSectionEquiv}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.profiniteVertexSection_stabilizer_eq}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.profiniteEdgeSection_stabilizer_eq}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevel}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelSemiGraph}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevel_vertices_finite}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevel_edges_finite}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevel_branchCosetMap_transition}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelTransition}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelVertexMap_comp}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelEdgeMap_comp}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelVertexMap_surjective}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelEdgeMap_surjective}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelVertexMap_action}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelEdgeMap_action}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelTransition_totalBranchMap_comp}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelTransition_totalBranchMap_surjective}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelTransition_totalBranchMap_action}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelTransition_isProper}
+  \lean{Iut.SourceGraphAction}
+  \lean{Iut.SourceGraphAction.dist_image}
+  \lean{Iut.SourceFiniteTree.induce_degree_ne_one_connected}
+  \lean{Iut.SourceGraphAction.exists_invariant_subtree_card_le_two}
+  \lean{Iut.SourceGraphAction.finite_fixesVertexOrEdge}
+  \lean{Iut.SourceGraphAction.fixesVertexOrEdge}
+  \lean{Iut.SourceSemiGraphTree}
+  \lean{Iut.SourceSemiGraphTree.Action.fixedOpenEdge_of_fixed_boundary}
+  \lean{Iut.SourceSemiGraphTree.Action.fixesVertexOrEdge}
+  \lean{Iut.SourceGraphAction.fixes_path_pointwise}
+  \lean{Iut.SourceGraphAction.subgroup_fixes_geodesic_pointwise}
+  \lean{Iut.SourceSemiGraphTree.Action.FixesSubjoint}
+  \lean{Iut.SourceSemiGraphTree.Action.fixesSubjoint_of_three_fixed_vertices}
+  \lean{Iut.SourceSemiGraphTree.edge_abuts_vertex}
+  \lean{Iut.SourceSemiGraphTree.Action.OverBase}
+  \lean{Iut.SourceSemiGraphTree.Action.OverBase.not_swap_edge}
+  \lean{Iut.SourceSemiGraphTree.Action.OverBase.fixedVertex_of_fixesVertexOrEdge}
+  \lean{Iut.SourceCompactSemiGraphAction}
+  \lean{Iut.SourceCompactSemiGraphAction.deckMap_range_finite}
+  \lean{Iut.SourceCompactSemiGraphAction.fixesVertexOrEdge}
+  \lean{Iut.SourceCompactSemiGraphAction.fixesVertex}
+  \lean{Iut.SourceCompactSemiGraphAction.fixesSubjoint_of_three_fixed_vertices}
+  \lean{Iut.SourceSemiGraphTree.Action.EquivariantLocalMap}
+  \lean{Iut.SourceSemiGraphTree.Action.FixedSubjoint.map}
+  \lean{Iut.SourceCofilteredFixedSubjointSystem}
+  \lean{Iut.SourceCofilteredFixedSubjointSystem.exists_compatible_fixedSubjoints}
+  \lean{Iut.SourceEstrangedIncidentBranchSystem}
+  \lean{Iut.SourceEstrangedIncidentBranchSystem.subgroup_eq_bot_of_le_branch_intersection}
+  \lean{Iut.SourceEstrangedIncidentBranchSystem.not_le_two_branches_of_ne_bot}
+  \lean{Iut.SourceSemiGraphTree.Action.adjacent_of_fixedVertexSet_eq_pair}
+  \lean{Iut.SourceSemiGraphTree.Action.FixedVertex.map}
+  \lean{Iut.SourceCofilteredFixedVertexSystem}
+  \lean{Iut.SourceCofilteredFixedVertexSystem.exists_compatible_fixedVertices}
+  \lean{Iut.SourceCofilteredFixedVertexSystem.three_compatible_fixedVertices_not_pairwise_distinct}
+  \lean{Iut.SourceIUTIProposition24PartI}
+  \lean{Iut.SourceIUTIProposition24PartI.CuspidalInertia}
+  \lean{Iut.SourceIUTIProposition24PartI.CuspidalInertia.conjugate_le_arithmeticTempered_iff}
+  \lean{Iut.SourceIUTIProposition24PartI.CuspidalInertia.conjugate_classification}
+  \lean{Iut.SourceIUTIProposition24PartI.CuspidalInertia.inertia_le_conjugate_arithmeticTempered_iff}
+  \leanok
+  The source semi-graph is first represented by a type of vertices, a type of
+  edges, a two-element dependent branch fiber for each edge, and a partial
+  coincidence map.  This retains loops, parallel edges, and closed, open, and
+  isolated edges.  General morphisms carry branch-fiber equivalences and
+  preserve only source abutments, exactly allowing an open branch to become
+  verticial.  Lean constructs incident-branch maps, immersion and excision,
+  proves that branchwise properness is equivalent to preservation of verticial
+  cardinality, constructs sub-semi-graphs by truncating omitted abutments, and
+  proves that compactification is a graph and constructs the compactification
+  morphism induced by every general morphism.
+  A coherent raw action is then defined on vertices, edges, and total branches.
+  Fixing an incident branch forces fixation of its edge and abutting vertex,
+  and every acting element permutes incident branches bijectively.  For a
+  cofiltered finite system, Lean constructs the componentwise action on
+  compatible sections and proves that the stabilizer of a compatible system is
+  the intersection of all finite-level coordinate stabilizers.  This is the
+  action-and-stabilizer portion of Remark~2.2.1; the graph-of-groups
+  identification is then constructed on the Bass--Serre coset semi-graph.
+  Branch transport elements allow general loop-edge and HNN-type incidence
+  maps.  These maps are equivariant for the ambient action, and Lean proves
+  that every lifted vertex and edge stabilizer is exactly the corresponding
+  conjugate constituent subgroup.  For a closed constituent subgroup $H$ in a
+  profinite ambient group $G$, open normal subgroups $N$ index actual finite
+  coset levels $G/(H\vee N)$.  Lean constructs their equivariant transition
+  functor and derives $\bigcap_N(H\vee N)=H$ from profinite separation.  For
+  an arbitrary compatible system, its coordinate representative fibers are
+  nonempty, closed, and directed; compactness produces one ambient element in
+  their intersection.  Consequently $G/H$ is equivalent to the full type of
+  compatible systems, and the compatible vertex and edge stabilizers equal
+  the Bass--Serre stabilizers.
+  For every profinite group $G$, Lean now constructs $\mathcal B(G)$ as the
+  actual Galois category of finite discrete continuous $G$-actions and proves
+  that its canonical fiber functor has fundamental group $G$.  Restriction
+  along a continuous homomorphism is exact and induces that same homomorphism
+  on certified fundamental groups.  Thus an open embedding $H\hookrightarrow
+  G$ constructs the connected finite-etale open-image morphism
+  $\mathcal B(H)\to\mathcal B(G)$.  Lean constructs the exact left-diagonal
+  quotient convention of Proposition~1.2.1(v), proves it equivariantly
+  equivalent to standard induction, and constructs the natural equivalence
+  $\mathcal B(H)\simeq\mathcal B(G)_{G/H}$.  The source adjunction
+  $j_{G/H}\dashv(-\times G/H)$ and an explicit induction--restriction
+  adjunction identify restriction with product by $G/H$ under this
+  equivalence.  For an arbitrary finite continuous $G$-set $S$, Lean
+  constructs the conjugation action on dependent sections of every
+  $T\to S$, proves the natural currying equivalence
+  \[
+    \operatorname{Hom}_{\mathcal B(G)_S}(S\times X,T)
+      \simeq
+    \operatorname{Hom}_{\mathcal B(G)}(X,\Gamma_S(T)),
+  \]
+  and obtains the second adjunction
+  $(-\times S)\dashv\Gamma_S$.  Thus product by every $S$ preserves finite
+  limits and finite colimits, proving Proposition~1.2.1(iii), and the
+  pullback is packaged by the factorization criterion of
+  Definition~1.2.2.  Lean also forms the finite orbit set $\pi_0(S)$,
+  restricts an object over $S$ to every orbit, and glues an orbit-indexed
+  family by dependent disjoint union.  Explicit natural isomorphisms in both
+  directions prove
+  \[
+    \mathcal B(G)_S \simeq
+      \prod_{c\in\pi_0(S)}\mathcal B(G)_{S_c}.
+  \]
+  For the canonical representative $s_c$, continuity makes
+  $\operatorname{Stab}_G(s_c)$ open.  An equivariant orbit--stabilizer
+  isomorphism and Proposition~1.2.1(v) then identify the $c$-factor with the
+  certified connected anabelioid
+  $\mathcal B(\operatorname{Stab}_G(s_c))$.  This proves
+  Proposition~1.2.1(i) in the continuous-action model.  Conversely, suppose a
+  Definition~1.2.2 factorization has connected Galois source.  Lean proves that
+  terminal objects of Galois categories are connected and transports this
+  property through the slice equivalence.  Every noninitial orbit subobject of
+  the slice terminal object is therefore an isomorphism, so the slicing action
+  is nonempty and transitive.  Its stabilizer $H$ is open, the action is
+  isomorphic to $G/H$, the source is equivalent to $\mathcal B(H)$, and the
+  original pullback becomes restriction along $H\leq G$.  For a pointed exact
+  equivalence, the quasi-inverse and both triangle $2$-isomorphisms also derive
+  a continuous profinite-group equivalence.  Lean now also makes the
+  ``appropriate basepoints'' choice of Remark~1.2.2.1: it transports the
+  canonical fiber functor of $\mathcal B(H)$ back across the source
+  equivalence and certifies $H$ as its fundamental group.  With this basepoint,
+  the original pullback is an exact pointed morphism whose derived
+  profinite-group map is literally the inclusion $H\hookrightarrow G$.  This
+  inclusion is proved to be an open embedding, yielding the connected
+  finite-etale morphism asserted by the remark.  For the broader
+  Proposition~1.1.4, Lean derives an isomorphism between arbitrary fiber
+  functors, defines unpointed morphisms using only exact pullbacks, and proves
+  that all comparison choices contribute precisely target inner conjugacy.
+  For the standard models $\mathcal B(G)$ and $\mathcal B(H)$, it defines the
+  source category of homomorphisms and explicit conjugators and the target
+  category of exact pullbacks and natural isomorphisms.  Lemma~1.1.5 supplies
+  the bijection on arrows, yielding the categorical equivalence of part~(i);
+  the established quotient correspondence is its decategorification and
+  preserves identities and composition.  Requiring a natural isomorphism to
+  commute with the chosen fiber identifications removes the conjugacy
+  ambiguity, yielding part~(ii)'s bijection with actual continuous
+  homomorphisms.  The pointed-equivalence and connected finite-etale endpoints
+  map to the same outer-hom class.
+  \lean{Iut.sourceDependentSection_continuous}
+  \lean{Iut.sourceSliceDependentSectionHomEquiv}
+  \lean{Iut.sourceSliceProductAdjDependentSection}
+  \lean{Iut.sourceSliceProduct_preservesFiniteColimits}
+  \lean{Iut.sourceSliceComponentProductEquivalence}
+  \lean{Iut.sourceActionComponentCosetActionIso}
+  \lean{Iut.sourceSliceAnabelioidEquivalence}
+  \lean{Iut.sourceActionComponentEtaleFundamentalGroup}
+  \lean{Iut.SourcePointedAnabelioidEquivalence.fundamentalGroupHom_bijective}
+  \lean{Iut.SourceEquivalenceBasepoint.etaleFundamentalGroup}
+  \lean{Iut.SourceFiniteEtaleFunctorFactorization.connectedPointedHom_fundamentalGroupHom_eq}
+  \lean{Iut.SourceFiniteEtaleFunctorFactorization.connectedObjectProfiniteInclusion_isOpenEmbedding}
+  \lean{Iut.SourceFiniteEtaleFunctorFactorization.connectedFiniteEtaleHom}
+  \lean{Iut.SourcePointedAnabelioidEquivalence.fundamentalGroupContinuousMulEquiv}
+  \lean{Iut.sourceSlice_equivalentToGalois_implies_pretransitive}
+  \lean{Iut.SourceFiniteEtaleFunctorFactorization.connectedObjectCosetActionIso}
+  \lean{Iut.SourceFiniteEtaleFunctorFactorization.connectedSourcePullbackIsoRestriction}
+  Each constituent anabelioid is now an actual Galois category with a chosen
+  fiber functor and certified profinite fundamental group.  Branch and
+  constituent-to-total morphisms are exact contravariant functors.  A
+  categorical $2$-isomorphism derives its basepoint discrepancy, hence the
+  conjugating branch transport, and Lean constructs the preceding closed
+  subgroup diagram from the images of the induced fundamental-group maps.
+  The constituent systems are assembled into normal-open coset semi-graphs.
+  Normality extends every branch transport from $H_e$ to $H_e\vee N$; quotient
+  maps give proper semi-graph morphisms with finite component fibers.  Lean
+  proves incidence compatibility, surjectivity, identity and composition, and
+  deck equivariance for their vertex, edge, and branch maps.  It also constructs
+  the canonical proper projection from each normal-open level to the source
+  semi-graph.
+  
+  Lean realizes the combinatorial part of Definition~3.5 and
+  Proposition~3.6 through a faithful barycentric incidence graph, with separate
+  nodes for vertices, edges, and branches so that loops, parallel incidences,
+  and open branches are retained.  Based reduced walks form its universal tree;
+  extension performs immediate cancellation one step at a time.  Removing the
+  compactification-boundary lifts gives a source semi-graph whose projection is
+  a graph covering.
+
+  The construction now consumes the actual pointed connected Galois levels of
+  the glued category $\mathcal B(\mathbb G)$.  At a verticial level, the complete
+  composite deck group retains the full automorphism group of the Galois object,
+  including symmetries invisible on the incidence graph, and couples it to the
+  lifted universal-tree permutation.  Its action is faithful on incidence plus
+  constituent-fiber data, transitive over the source incidence graph, countable,
+  and discrete.  A pointed refinement induces a surjective equivariant incidence
+  map and a lawful group homomorphism of complete deck groups commuting with the
+  canonical reduced-walk map.  For the isolated-edge case, the finite level is
+  already its own combinatorial universal cover; the complete constituent
+  automorphism group and its surjective refinement maps are retained.
+
+  The finite-level deck groups now form a lawful group-valued inverse diagram.
+  Lean equips its literal inverse limit with the coarsest topology making all
+  discrete coordinate projections continuous.  The actual complete deck
+  transitions are surjective.  Moreover, bounded lifts of the distinguished
+  tree vertex form nonempty finite cofiltered systems: finite-tree compactness
+  therefore proves that every literal limit projection is surjective, without
+  asserting compactness for arbitrary countable inverse systems.  Thus the
+  full deck groups themselves give the required tempered presentation; the
+  canonical image presentation remains available and is proved isomorphic and
+  homeomorphic to the literal limit.  Finite intersections of coordinate kernels
+  form the identity-neighborhood basis, and cofinal changes of level induce
+  topological group equivalences, with no stricter canonicity claimed than the
+  paper's up-to-inner-automorphism convention.  Thus Proposition~3.6(i) is
+  formalized, including the isolated-edge case.
+  
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelProjection}
+  \lean{Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelProjection_isProper}
+  \lean{Iut.SourceCombinatorialUniversalCover.UniversalVertex.tree_isTree}
+  \lean{Iut.SourceCombinatorialUniversalCover.SourceSemiGraphUniversalCover.projection_isGraphCovering}
+  \lean{Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.deckAction_transitive_compositeFiber}
+  \lean{Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.deckAction_faithful}
+  \lean{Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.refinementIncidenceMap_surjective}
+  \lean{Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.deckTransition}
+  \lean{Iut.SourceCombinatorialUniversalCover.SourceIsolatedGaloisCombinatorialUniversalCover.deckTransition_surjective}
+  \lean{Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.literalTemperedPresentation_projection_surjective}
+  \lean{Iut.SourceTemperedGroupPresentation.nhds_one_hasBasis_projectionKernels}
+  \lean{Iut.SourceTemperedGroupPresentation.cofinalContinuousMulEquiv}
+  \lean{Iut.SourceCountableGroupDiagram.imageTransition_surjective}
+  \lean{Iut.SourceCountableGroupDiagram.rawLimitContinuousMulEquivImageLimit}
+  \lean{Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.rawDeckLimitContinuousMulEquiv}
+  \lean{Iut.SourceCombinatorialUniversalCover.SourceIsolatedGaloisCombinatorialUniversalCover.temperedPresentation}
+  \lean{Iut.SourceSemiGraphOfAnabelioids.CovObject}
+  \lean{Iut.SourceSemiGraphOfAnabelioids.CovObject.coverProjection}
+  \lean{Iut.SourceSemiGraphOfAnabelioids.CovObject.finiteInclusionFullyFaithful}
+  \lean{Iut.SourceSemiGraphOfAnabelioids.CovObject.IsTempered}
+  \lean{Iut.SourceSemiGraphOfAnabelioids.CovObject.TemperedCover}
+  \lean{Iut.SourceSemiGraphOfAnabelioids.CovObject.finiteTemperedInclusionFullyFaithful}
+  \lean{Iut.SourceSemiGraphOfAnabelioids.CovObject.temperedCovInclusionFullyFaithful}
+  \lean{Iut.SourceSemiGraphOfAnabelioids.CovObject.finiteRecoveryIso}
+  \lean{Iut.SourceSemiGraphOfAnabelioids.CovObject.exists_finiteInclusion_preimage}
+  \lean{Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.temperedToProfiniteHom}
+  \lean{Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.continuous_temperedToProfiniteHom}
+  
+  The literal countable constituent-cover category $B^{\mathrm{cov}}(G)$ is
+  now constructed from vertex actions and coherent edge-gluing isomorphisms.
+  Its associated countable covering semigraph and projection are explicit.
+  Definition~3.5(ii) is represented by the finite constituent kernels that
+  split every vertex and edge action; the resulting $B^{\mathrm{temp}}(G)$ is
+  a full geometric subcategory, not an alias of an action category.  Finite
+  glued covers land in it, and $B(G)\hookrightarrow B^{\mathrm{temp}}(G)$ is
+  proved fully faithful.  Conversely, finite constituent actions are lifted
+  back through the finite anabelioid equivalences, their edge gluing is
+  recovered by full faithfulness, and the resulting object of $B(G)$ maps
+  isomorphically to the original geometric cover.  Thus the finite geometric
+  part recovers $B(G)$ essentially surjectively as well.  The compatible
+  finite Galois symmetries retained in
+  every deck coordinate construct a pointed homomorphism from the tempered
+  group to the actual automorphism group of the root fiber functor.  Its
+  action on each pointed Galois object is given by the corresponding finite
+  coordinate, which proves continuity for the inverse-limit topology.  The
+  A single globally splitting Galois level now recovers an arbitrary tempered
+  geometric cover: evaluation on all maps from its universal cover is
+  constituentwise bijective, and the orbits of this generally nontransitive
+  deck action retain every countable geometric component.  The remaining
+  open portion of Issue~\#54 is the functorial passage between these
+  finite-level presentations and the literal inverse-limit action category,
+  together with the unit, counit, and triangle laws.
+  \lean{Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.fullTemperedClassification}
+
+  The connected quotient classification is now complete once a geometric
+  cover is exhibited as a subcover of one finite-level universal cover.
+  Geometric subcovering is represented by an actual morphism from the
+  universal cover.  Maps from that source to the connected target carry the
+  inverse-precomposition deck action; point-connectedness makes this map set
+  countable and transitive.  Evaluation descends through the diagonal
+  quotient and is proved constituentwise bijective, hence identifies the
+  associated quotient with the independently constructed target.  Moreover,
+  associated quotients are point-connected exactly when their auxiliary deck
+  actions are transitive.  The remaining geometric step is to derive such a
+  finite-level dominating morphism directly from Definition~3.5(ii), before
+  the countable-component and inverse-limit assembly.
+
+  The combinatorial path-lifting input for that remaining step is now
+  source-independent.  For any cover defined by branch permutations, a
+  chosen sheet over the basepoint determines a morphism from the based
+  universal semigraph cover.  The composite with the sheet-forgetting
+  projection is proved equal to the original universal projection.  Thus the
+  forthcoming finite-split domination argument may use the paper's ordinary
+  graph-cover lift rather than accepting a lift as additional data.
+
+  A finite group acting on an arbitrary simple tree fixes a vertex or an edge
+  setwise.  Lean proves this by constructing the finite connected invariant
+  hull of one orbit and repeatedly pruning its invariant leaves until at most
+  two vertices remain.  A group action by tree automorphisms also preserves
+  graph distance; if a subgroup fixes two vertices, it fixes every vertex on
+  their unique geodesic.  The source compactification is represented by marking
+  the original vertices and requiring each appended boundary point to have a
+  unique neighbor.  A fixed appended point therefore determines a fixed open
+  edge.  Three distinct fixed original vertices also yield two fixed incident
+  branches, hence a fixed subjoint.  This formalizes Lemma~1.8(ii)(a--c) in the
+  marked-compactification encoding.  For the first step of Theorem~3.7(iii),
+  a continuous compact-group action through the discrete deck group has finite
+  image, so the preceding fixed-component theorem applies to the compact
+  group.  Its oriented branch map over the base prevents an edge swap, while
+  connectedness and the existence of an original vertex ensure that every
+  edge abuts an original vertex.  Thus the compact group fixes an original
+  vertex, as in the next sentence of the source proof.  At cofinal levels with
+  three fixed vertices, the fixed-subjoint theorem no longer requires a finite
+  acting group.  An equivariant locally injective quotient map transports the
+  resulting subjoint to a finite level, and the finite cofiltered-limit theorem
+  supplies a compatible system of such finite-level subjoints.  Definition~2.4(iv)
+  is encoded on incident branch subgroups; Lean proves that containment in two
+  estranged branch images forces the contained subgroup to be trivial.  Given
+  the resulting cofinal two-point bounds, a second finite cofiltered-limit
+  argument supplies a compatible fixed-vertex system, and a common-predecessor
+  argument proves that there are at most two such systems.  If a level has
+  exactly two fixed vertices, their unique geodesic is a single edge.  The exact subgroup
+  configuration of \IUT{} I, Proposition~2.4(i), is typed separately.  From
+  its compact-conjugate rigidity conclusion, normality of the geometric
+  subgroup, and a nontrivial compact cusp inertia subgroup, Lean derives the
+  two cusp-conjugacy conclusions of Corollary~2.5.  The associated topological
+  realization and raw tree/action bridge, arbitrary finite semi-graph quotients, Remark~2.2.1's
+  derivation of the two branch containments and the stabilizer-to-verticial
+  subgroup identification, assembly of the cofinal pair bound from these
+  pieces, maximal-compact/verticial classification, the
+  inverse-limit proof of Proposition~2.4(i), and construction of cusp inertia
+  from stable reduction remain open.
+\end{definition}
+
+\begin{definition}[Mono-theta environments and inverse-limit group]
+  \label{def:mono-theta-environment-limit}
+  \uses{def:initial-theta-data,def:tempered-semigraph-cusp-rigidity}
+  \lean{Iut.TopologicalGroupCat}
+  \lean{Iut.ContinuousAutomorphism.inner_range_normal}
+  \lean{Iut.ContinuousOuterSubgroup}
+  \lean{Iut.SourceMonoThetaEnvironment}
+  \lean{Iut.SourceMonoThetaProjectiveSystem}
+  \lean{Iut.SourceMonoThetaProjectiveSystem.inverseLimit}
+  \lean{Iut.SourceIUTIIDefinition27PartI}
+  \lean{Iut.SourceTopologicalSubquotient}
+  \lean{Iut.SourceTopologicalSubquotient.projection}
+  \lean{Iut.SourceTopologicalSubquotient.comap}
+  \lean{Iut.SourceTopologicalSubquotient.comapToOriginal_injective}
+  \lean{Iut.SourceTopologicalSubquotient.comapToOriginal_surjective_of_cuspidalInertia}
+  \lean{Iut.SourceProfiniteSubquotient}
+  \lean{Iut.SourceProfiniteSubquotient.toTopologicalSubquotient}
+  \lean{Iut.SourceProfiniteSubquotient.nonclosed_denominator_not_canonical}
+  \lean{Iut.SourceIUTIICorollary25CuspidalRestriction}
+  \lean{Iut.SourceIUTIICorollary25CuspidalRestriction.restrictionMulEquiv}
+  \lean{Iut.SourceIUTIICorollary25CuspidalRestriction.restrictionContinuousMulEquiv}
+  \lean{Iut.SourceIUTIIDefinition27PartII}
+  \lean{Iut.SourceIUTIIDefinition27PartII.exteriorCyclotomeSubquotient}
+  \lean{Iut.SourceIUTIIDefinition27PartII.lDeltaThetaSubquotient}
+  \lean{Iut.SourceIUTIIDefinition27PartII.restrictedTemperedSubquotient}
+  \lean{Iut.SourceIUTIIDefinition27PartII.localGaloisSubquotient}
+  \lean{Iut.SourceIUTIIDefinition27PartII.cyclotomicRigidity_source}
+  \lean{Iut.SourceIUTIIDefinition27PartII.narrowInverseImage_le_wide}
+  \lean{Iut.EtaleTheta.ThetaCenter}
+  \lean{Iut.EtaleTheta.thetaCenter_le_center}
+  \lean{Iut.EtaleTheta.thetaCenter_isMulCommutative}
+  \lean{Iut.EtaleTheta.LDeltaTheta}
+  \lean{Iut.EtaleTheta.lDeltaTheta_le_thetaCenter}
+  \lean{Iut.EtaleTheta.lDeltaTheta_le_center}
+  \lean{Iut.EtaleTheta.LDeltaThetaNumerator}
+  \lean{Iut.EtaleTheta.LDeltaThetaDenominator}
+  \lean{Iut.EtaleTheta.lDeltaThetaProjection_ker}
+  \lean{Iut.EtaleTheta.lDeltaThetaProjection_surjective}
+  \lean{Iut.EtaleTheta.lDeltaThetaSubquotientEquiv}
+  \lean{Iut.EtaleTheta.ProfiniteLowerCentralTopology}
+  \lean{Iut.EtaleTheta.ProfiniteLowerCentralTopology.thetaQuotient_isSES}
+  \lean{Iut.EtaleTheta.ProfiniteLowerCentralTopology.ellipticAbelianization_isSES}
+  \lean{Iut.EtaleTheta.ProfiniteLowerCentralTopology.modLThetaQuotient_isSES}
+  \lean{Iut.EtaleTheta.ProfiniteLowerCentralTopology.modLEllipticAbelianization_isSES}
+  \lean{Iut.EtaleTheta.ProfiniteLowerCentralTopology.thetaCenter_isSES}
+  \lean{Iut.EtaleTheta.ProfiniteLowerCentralTopology.lDeltaThetaSubquotientContinuousMulEquiv}
+  \lean{Iut.GlobalLTorsionCoverInput.standardGeometricLDeltaThetaSubquotient}
+  \lean{Iut.GlobalLTorsionCoverInput.standardGeometricLDeltaThetaMulEquiv}
+  \lean{Iut.GlobalLTorsionCoverInput.standardArithmeticLDeltaThetaSubquotient}
+  \lean{Iut.GlobalLTorsionCoverInput.standardGeometricToArithmeticLDeltaThetaMulEquiv}
+  \lean{Iut.GlobalLTorsionCoverInput.standardArithmeticLDeltaThetaMulEquiv}
+  \lean{Iut.GlobalLTorsionCoverInput.arithmeticThetaQuotientExact_isSES}
+  \lean{Iut.GlobalLTorsionCoverInput.arithmeticEllipticQuotientExact_isSES}
+  \lean{Iut.GlobalLTorsionCoverInput.standardThetaRootArithmeticSubgroup_isOpen}
+  \lean{Iut.GlobalLTorsionCoverInput.standardThetaRootSubquotient}
+  \lean{Iut.GlobalLTorsionCoverInput.standardThetaRootContinuousMulEquiv}
+  \lean{Iut.GlobalLTorsionCoverInput.standardModLThetaCenterSubquotient}
+  \lean{Iut.GlobalLTorsionCoverInput.standardModLThetaCenterNumerator_eq_center_preimage}
+  \lean{Iut.GlobalLTorsionCoverInput.standardModLThetaCenterContinuousMulEquivCenterImage}
+  \lean{Iut.GlobalLTorsionCoverInput.standardThetaCenterImageEquiv}
+  \lean{Iut.GlobalLTorsionCoverInput.standardModLThetaCenterMulEquiv}
+  \lean{Iut.ProfiniteFundamentalExactSequence.localGaloisSubquotient}
+  \lean{Iut.ProfiniteFundamentalExactSequence.localGalois_denominator_eq_geometric_range_comap}
+  \lean{Iut.ProfiniteFundamentalExactSequence.localGaloisContinuousMulEquiv}
+  \lean{Iut.ProfiniteFundamentalExactSequence.localGaloisContinuousMulEquiv_projection}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisSubquotient}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisContinuousMulEquiv}
+  \leanok
+  The source boundary for Etale Theta Definition~2.13 uses genuine
+  topological groups, continuous automorphisms, the proved-normal exact range
+  of inner automorphisms, the full inverse image of a subgroup of the outer
+  automorphism group, a cyclic \(\mu_N\)-kernel, and
+  the conjugacy class of the image of a continuous injective theta section.
+  The IUT~II Definition~2.7 system is an actual functor with a certified
+  categorical inverse limit; its ambient homomorphism has the exterior
+  cyclotome as exact kernel and the tempered subgroup as exact image.  The two
+  groups in Definition~2.7(ii) are computed as inverse images, and each of its
+  four subquotients is represented by an actual topological quotient \(U/N\)
+  by a normal subgroup.  The \(\ell\Delta^\Theta\) coefficient has the stronger
+  certified profinite boundary: its numerator and denominator are closed, its
+  quotient is homeomorphic to an actual profinite group, and a nonclosed
+  denominator cannot instantiate this field.  Pullback is the derived quotient
+  \(f^{-1}(U)/f^{-1}(N)\): the exterior cyclotome is restricted from the exact
+  kernel in part (i), and the other three objects are pulled back from ambient
+  subquotients.  Restricted cyclotomic rigidity is a continuous group
+  equivalence between these derived endpoints.  For the local orbicurve exact
+  sequence, the full arithmetic group modulo the geometric image is now
+  constructed and proved topologically equivalent to the stored local Galois
+  group.  Lean now distinguishes the integral and finite theta directions.
+  The integral \(\Delta^\Theta\) is the kernel of the two-step-nilpotent
+  quotient to the elliptic abelianization; a lower-central commutator
+  calculation proves that this kernel is central and hence commutative.  The
+  subgroup \(\ell\Delta^\Theta\) is the literal range of the \(\ell\)-th-power
+  homomorphism on that center, and is consequently central, normal, and closed
+  as a compact image.  Pullback
+  through \(\Delta_X\to\Delta_X^\Theta\) gives a literal numerator and
+  lower-central denominator, and the first isomorphism theorem identifies the
+  resulting geometric subquotient with \(\ell\Delta^\Theta\) by a
+  homeomorphism.  Its numerator and denominator are transported through the
+  injective geometric-to-arithmetic profinite map, preserving closedness and
+  giving an actual arithmetic-image subquotient homeomorphic to the geometric
+  coefficient group.  For a subgraph inclusion,
+  the canonical map from the pulled-back quotient is proved injective; the two
+  cusp-inertia facts cited in IUT~II, Corollary~2.5(i), derive its surjectivity
+  and hence its algebraic and topological isomorphisms.  The isomorphism itself
+  is not stored as an input.  Separately, the
+  profinite theta-root cover is the proved-open inverse image of the selected
+  Galois section in \(\Pi_X^{\mathrm{ell}}\).  The quotient
+  \[
+    \ker(\Pi_X\to\Pi_X^{\mathrm{ell}})/
+    \ker(\Pi_X\to\Pi_X^\Theta)
+  \]
+  is recorded under its correct name: the finite mod-\(\ell\) theta-center
+  residue.  It is identified topologically with the arithmetic exponent-\(\ell\)
+  theta-center kernel and is not conflated with the integral subgroup
+  \(\ell\Delta^\Theta\).  The abstract cusp-conjugacy consequences of
+  \IUT{} I, Corollary~2.5 are now derived from Proposition~2.4(i).  Construction
+  of the arithmetic tempered group and subgraph inclusion, derivation of
+  Proposition~2.4(i) and the remaining generation/surjectivity facts from the
+  stable-reduction semi-graph, identification of all three generic
+  Definition~2.7 inputs, the full reduction morphisms, and the link to
+  Corollary~2.8 remain source obligations.
+\end{definition}
+
+\begin{definition}[Continuous theta-value germs and Gaussian monoids]
+  \label{def:continuous-theta-evaluation}
+  \uses{def:mono-theta-environment-limit}
+  \lean{Iut.ContinuousOneCocycle}
+  \lean{Iut.ContinuousH1}
+  \lean{Iut.ContinuousH1.toGerm}
+  \lean{Iut.ContinuousH1Germ}
+  \lean{Iut.ContinuousH1GermRepresentative.pullback}
+  \lean{Iut.ContinuousH1Germ.restrict}
+  \lean{Iut.ContinuousH1Germ.restrictMonoidHom}
+  \lean{Iut.EquivariantOrbitMap}
+  \lean{Iut.EquivariantOrbitMap.onOrbitQuotients}
+  \lean{Iut.independentConjugacyMulAction}
+  \lean{Iut.SourceIUTIIThetaEvaluationOrbits}
+  \lean{Iut.SourceIUTIIIndependentConjugacyEvaluationAlgorithm}
+  \lean{Iut.SourceIUTIIIndependentConjugacyEvaluationAlgorithm.toEquivariantOrbitMap}
+  \lean{Iut.SourceIUTIIIndependentConjugacyEvaluationAlgorithm.onIndependentConjugacyClasses}
+  \lean{Iut.SourceIUTIICorollary28RestrictionStages}
+  \lean{Iut.SourceIUTIICorollary28RestrictionStages.afterSecond}
+  \lean{Iut.SourceIUTIICorollary28RestrictionStages.totalRestrictionMonoidHom}
+  \lean{Iut.SourceIUTIICorollary28RestrictionStages.afterSecond_zero_representatives}
+  \lean{Iut.sourceConstantTorsion}
+  \lean{Iut.sourceSplittingUpToTorsionMap}
+  \lean{Iut.SourceSplittingUpToTorsion}
+  \lean{Iut.sourceZeroLabelSplittingUpToTorsion}
+  \lean{Iut.SourceIUTIIZeroLabelConstantComparison}
+  \lean{Iut.SourceIUTIIZeroLabelConstantComparison.zeroToDiagonalMonoidHom}
+  \lean{Iut.SourceIUTIIZeroLabelConstantComparison.zeroDiagonalSubmonoid_eq_diagonalRangeSubmonoid}
+  \lean{Iut.SourceIUTIIZeroLabelConstantComparison.zeroToDiagonalMulEquiv}
+  \lean{Iut.SourceIUTIIZeroLabelConstantComparison.zeroToDiagonalContinuousMulEquiv}
+  \lean{Iut.SourceIUTIIZeroLabelConstantComparison.zeroToDiagonalMonoidHom_equivariant}
+  \lean{Iut.etaleThetaUnitActionOnSignLabel}
+  \lean{Iut.iutIISignQuotientPermHom}
+  \lean{Iut.iutIISignQuotientPermHom_transitive}
+  \lean{Iut.iutIISignQuotientAction_transitive}
+  \lean{Iut.SourceTopologicalGroupMonoidActionPair}
+  \lean{Iut.SourceTopologicalGroupMonoidActionPair.Iso}
+  \lean{Iut.SourceTopologicalGroupMonoidActionPair.Iso.castTarget}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.outerTransport_one}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.outerTransport_mul}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.fromBase}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.diagonalMonoidHom}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.diagonalMonoidHom_injective}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.diagonalRangeSubmonoid}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.diagonalRangeContinuousMulEquiv}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.diagonalRangeContinuousMulEquiv_equivariant}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.diagonalUnitSubmonoid}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.diagonalActionHom}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.diagonalMonoidHom_equivariant}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.gaussianMonoid}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.profile_mem_gaussianMonoid}
+  \lean{Iut.SourceIUTIISymmetrizingIsomorphisms.gaussianMonoidActionHom}
+  \lean{Iut.MulEquivsDifferBySingleInner}
+  \lean{Iut.singleInnerIsomorphismSetoid}
+  \lean{Iut.SourceSingleInnerIsomorphismClass}
+  \lean{Iut.SourceIUTIISynchronizedRestrictionIsomorphismClass}
+  \lean{Iut.SourceIUTIICorollary35RestrictionContext}
+  \lean{Iut.SourceIUTIICorollary35RestrictionDiagram}
+  \lean{Iut.SourceIUTIICorollary35SingleBasepointAction}
+  \lean{Iut.RestrictionDiagramsDifferBySingleInner}
+  \lean{Iut.singleInnerRestrictionDiagramSetoid}
+  \lean{Iut.SourceIUTIISynchronizedRestrictionDiagramClass}
+  \lean{Iut.SourceIUTIICorollary35RestrictionDiagram.synchronizedClassToMonoidIsomorphismClass}
+  \lean{Iut.SourceIUTIIValueProfile}
+  \lean{Iut.TorsionUnitSubgroup}
+  \lean{Iut.SourceIUTIIMultiplicativeTorsionAction}
+  \lean{Iut.SourceIUTIIMultiplicativeTorsionAction.actionMap_injective}
+  \lean{Iut.SourceIUTIIMultiplicativeTorsionAction.toTorsionUnitSubgroup}
+  \lean{Iut.SourceIUTIIMultiplicativeTorsionAction.toTorsionThetaValueFamily}
+  \lean{Iut.SourceIUTIIMultiplicativeTorsionAction.thetaValues_eq_orbitCarriers}
+  \lean{Iut.SourceIUTIIMultiplicativeTorsionAction.toFiniteOrderAction}
+  \lean{Iut.SourceIUTIIMultiplicativeFiniteOrderAction}
+  \lean{Iut.SourceIUTIIMultiplicativeFiniteOrderAction.orbitCarrier_subset_torsion}
+  \lean{Iut.SourceIUTIITorsionThetaValueFamily}
+  \lean{Iut.SourceIUTIIInfiniteThetaRelation}
+  \lean{Iut.SourceTorsionCyclotomicCommMonoid}
+  \lean{Iut.SourceTorsionCyclotomicTopologicalCommMonoid}
+  \lean{Iut.SourceMonoidCyclotome}
+  \lean{Iut.SourceMLFAlgebraicIntegerRing}
+  \lean{Iut.SourceMLFIntegralMonoid}
+  \lean{Iut.SourceMLFAbsoluteGaloisGroup}
+  \lean{Iut.SourceMLFIntegralMonoid.galoisAction}
+  \lean{Iut.SourceMLFIntegralMonoid.algebraicClosure_isFractionRing}
+  \lean{Iut.SourceMLFIntegralMonoid.groupificationEquivAlgebraicClosureUnits}
+  \lean{Iut.SourceMLFIntegralMonoid.torsionUnit}
+  \lean{Iut.SourceMLFIntegralMonoid.torsionUnit_image}
+  \lean{Iut.SourceMLFCyclotome.rationalCircleToComplexTorsion_bijective}
+  \lean{Iut.SourceMLFCyclotome.torsionUnitsMap_bijective}
+  \lean{Iut.SourceMLFCyclotome.rationalCircleMulEquivAlgebraicClosureUnitsTorsion}
+  \lean{Iut.SourceMLFIntegralMonoid.torsionToAlgebraicClosureTorsion_bijective}
+  \lean{Iut.SourceMLFIntegralMonoid.torsionEquivAlgebraicClosureTorsion}
+  \lean{Iut.SourceMLFIntegralMonoid.groupificationRootableByNat}
+  \lean{Iut.SourceTorsionCyclotomicCommMonoid.rootsOfUnity_finite}
+  \lean{Iut.SourceTorsionCyclotomicCommMonoid.rationalCircle_torsion_natCard}
+  \lean{Iut.SourceTorsionCyclotomicCommMonoid.rootsOfUnityEquiv}
+  \lean{Iut.SourceTorsionCyclotomicCommMonoid.rootsOfUnity_natCard}
+  \lean{Iut.SourceTorsionCyclotomicCommMonoid.RootsOfUnityGroup}
+  \lean{Iut.SourceTorsionCyclotomicCommMonoid.rootsOfUnityGroup_natCard}
+  \lean{Iut.SourceKummerFaithfulness.eq_one_of_roots_of_residuallyFinite}
+  \lean{Iut.SourceKummerFaithfulness.residuallyFinite_of_profinite}
+  \lean{Iut.SourceKummerFaithfulness.eq_one_of_roots_in_profinite}
+  \lean{Iut.SourceKummerFaithfulness.FiniteExtension}
+  \lean{Iut.SourceKummerFaithfulness.SemiAbelianRationalPointFamily}
+  \lean{Iut.SourceKummerFaithfulness.TorusRationalPointFamily}
+  \lean{Iut.SourceKummerFaithfulness.KummerFaithful}
+  \lean{Iut.SourceKummerFaithfulness.TorallyKummerFaithful}
+  \lean{Iut.SourceKummerFaithfulness.AdditiveKummerMap.injective_of_trivial_infinitelyDivisible}
+  \lean{Iut.SourceKummerFaithfulness.MultiplicativeKummerMap.injective_of_roots_eq_one}
+  \lean{Iut.SourceMLFKummerFaithfulness.finite_quotient_map}
+  \lean{Iut.SourceMLFKummerFaithfulness.units_residuallyFinite_of_finite_quotients}
+  \lean{Iut.SourceMLFKummerFaithfulness.integralClosureUnits_residuallyFinite}
+  \lean{Iut.SourceMLFKummerFaithfulness.fieldUnit_eq_one_of_roots}
+  \lean{Iut.SourceMLFKummerFaithfulness.finiteExtensionGMUnit_eq_one_of_roots}
+  \lean{Iut.SourceMLFKummerFaithfulness.finiteExtensionGMKummerMap_injective}
+  \lean{Iut.SourceMonoidCyclotome.topology}
+  \lean{Iut.SourceMonoidCyclotome.boundedCoe_isClosedEmbedding}
+  \lean{Iut.SourceMonoidCyclotome.asProfinite}
+  \lean{Iut.SourceMonoidCyclotome.eq_one_of_roots}
+  \lean{Iut.SourceMLFModelTMStructure}
+  \lean{Iut.SourceMLFModelTMStructure.canonical}
+  \lean{Iut.SourceMLFModelTMPair}
+  \lean{Iut.SourceMLFModelTMPair.monoAnalytic}
+  \lean{Iut.SourceMLFModelTMPair.monoAnalytic_augmentation_apply}
+  \lean{Iut.SourceMLFGaloisTMPairData}
+  \lean{Iut.SourceMLFGaloisTMPairData.cyclotomeAction}
+  \lean{Iut.SourceMLFGaloisTMPair}
+  \lean{Iut.SourceMLFGaloisTMPair.monoAnalytic}
+  \lean{Iut.SourceMLFGaloisTMPair.monoAnalytic_augmentation_apply}
+  \lean{Iut.SourceMLFGaloisComparison.continuous_autCongr}
+  \lean{Iut.SourceMLFGaloisComparison.continuousAutCongr}
+  \lean{Iut.SourceMLFGaloisComparison.separableClosureEquivAlgebraicClosure}
+  \lean{Iut.SourceMLFGaloisComparison.absoluteGaloisEquiv}
+  \lean{Iut.SourceMLFGaloisTMPair.monoAnalyticSeparable}
+  \lean{Iut.SourceMLFGaloisTMPair.pullbackActingGroup}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.mlfGaloisTMPair}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.unitKummerEmbedding}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.unitKummer_injective}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisTMPair}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisTMPair_action}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisCoefficientAction}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisCoefficientAction_act}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisH1Restriction}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisRestrictedMonoidKummer}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisRestrictedMonoidKummer_commutes}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisRestrictedUnitKummer}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisRestrictedUnitKummer_commutes}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisUnitKummerEmbedding}
+  \lean{Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisUnitKummer_injective}
+  \lean{Iut.SourceFiniteTimesMuKummerInput}
+  \lean{Iut.SourceFiniteTimesMuKummerInput.timesMuMonoid}
+  \lean{Iut.SourceFiniteTimesMuKummerInput.timesMuUnitsEquiv}
+  \lean{Iut.SourceFiniteTimesMuKummerFrobenioid}
+  \lean{Iut.SourceFiniteTimesMuKummerFrobenioid.rationalUnitsEquiv}
+  \lean{Iut.SourceArchimedeanKummerSystem.unitQuotientPresentation}
+  \lean{Iut.SourceArchimedeanKummerSystem.noncompact_eq_one_of_isUnit}
+  \lean{Iut.SourceArchimedeanKummerSystem.quotientSplitTopologicalMonoid}
+  \lean{Iut.SourceArchimedeanKummerSystem.quotientSplitTransition}
+  \lean{Iut.SourceArchimedeanKummerSystem.FrobenioidStage}
+  \lean{Iut.SourceArchimedeanKummerSystem.FrobenioidSystem}
+  \lean{Iut.SourceArchimedeanKummerSystem.FrobenioidSystem.divisor_compatible}
+  \lean{Iut.SourceArchimedeanKummerSystem.FrobenioidSystem.frobeniusDegree_compatible}
+  \lean{Iut.SourceArchimedeanKummerSystem.FrobenioidSystem.carrierDiagram}
+  \lean{Iut.SourceArchimedeanKummerSystem.FrobenioidSystem.baseDiagram}
+  \lean{Iut.SourceArchimedeanKummerSystem.FrobenioidSystem.rationalMonoidDiagram}
+  \lean{Iut.SourceArchimedeanKummerSystem.MultiplicativelyCofinalSubset.indexInclusionFinal}
+  \lean{Iut.SourceArchimedeanKummerSystem.MultiplicativelyCofinalSubset.isColimitEquivRestricted}
+  \lean{Iut.SourceMLFGaloisTMPair.grothendieckAction}
+  \lean{Iut.SourceMLFGaloisTMPair.fixedSubmonoid}
+  \lean{Iut.SourceMLFIntegralMonoid.absoluteOpenStabilizer}
+  \lean{Iut.SourceMLFGaloisTMPair.openStabilizer}
+  \lean{Iut.SourceMLFGaloisTMPair.openStabilizer_fixed}
+  \lean{Iut.SourceMLFGaloisTMPair.continuousCyclotomeAction}
+  \lean{Iut.SourceMLFGaloisTMPair.rootableRationalPowers}
+  \lean{Iut.SourceMLFGaloisTMPair.groupificationRootableByNat}
+  \lean{Iut.SourceMLFGaloisTMPair.CompatibleRootSystem}
+  \lean{Iut.SourceMLFGaloisTMPair.CompatibleRootSystem.ofModel}
+  \lean{Iut.SourceMLFGaloisTMPair.CompatibleRootSystem.quotient_pow_den}
+  \lean{Iut.SourceMLFGaloisTMPair.CompatibleRootSystem.galoisTranslate}
+  \lean{Iut.SourceMLFGaloisTMPair.CompatibleRootSystem.quotientUnit_exists}
+  \lean{Iut.SourceMLFGaloisTMPair.KummerRootRealization}
+  \lean{Iut.SourceMLFGaloisTMPair.KummerRootRealization.ofRootSystem}
+  \lean{Iut.SourceMLFGaloisTMPair.KummerRootRealization.ratioCyclotome}
+  \lean{Iut.SourceMLFGaloisTMPair.KummerRootRealization.ratioCyclotome_continuous}
+  \lean{Iut.SourceMLFGaloisTMPair.ContinuousKummerRootRealization}
+  \lean{Iut.SourceMLFGaloisTMPair.ContinuousKummerRootRealization.cocycle}
+  \lean{Iut.SourceMLFGaloisTMPair.CompatibleRootComparison}
+  \lean{Iut.SourceMLFGaloisTMPair.CompatibleRootComparison.comparisonUnit_exists}
+  \lean{Iut.SourceMLFGaloisTMPair.CompatibleRootComparison.ofModel}
+  \lean{Iut.SourceMLFGaloisTMPair.CompatibleRootComparison.germ_eq}
+  \lean{Iut.SourceMLFGaloisTMPair.CompatibleRootComparison.localClass_eq}
+  \lean{Iut.SourceMLFGaloisTMPair.ContinuousModelKummerRootChoice}
+  \lean{Iut.SourceMLFGaloisTMPair.KummerRootTheory}
+  \lean{Iut.SourceMLFGaloisTMPair.KummerRootTheory.ofContinuousEquiv}
+  \lean{Iut.SourceMLFGaloisTMPair.KummerRootTheory.chosen_rootSystem}
+  \lean{Iut.SourceMLFGaloisTMPair.KummerRootTheory.kummerMap}
+  \lean{Iut.SourceMLFGaloisTMPair.KummerRootTheory.canonicalKummerMap}
+  \lean{Iut.SourceMLFGaloisTMPair.ContinuousLocalModelKummerRootRealization}
+  \lean{Iut.SourceMLFGaloisTMPair.LocalKummerRootTheory}
+  \lean{Iut.SourceMLFGaloisTMPair.LocalKummerRootTheory.ofContinuousEquiv}
+  \lean{Iut.SourceMLFGaloisTMPair.LocalKummerRootTheory.chosen_rootSystem}
+  \lean{Iut.SourceMLFGaloisTMPair.LocalKummerRootTheory.kummerMap}
+  \lean{Iut.SourceMLFGaloisTMPair.LocalKummerRootTheory.local_toGerm_eq_global}
+  \lean{Iut.SourceMLFGaloisTMPair.LocalKummerRootTheory.canonicalKummerMap}
+  \lean{Iut.SourceMLFGaloisTMPair.LocalKummerRootTheory.canonicalKummerMap_toGerm}
+  \lean{Iut.SourceMLFGaloisTMPair.augmentation}
+  \lean{Iut.SourceMLFGaloisTMPair.augmentation_surjective}
+  \lean{Iut.SourceMLFGaloisTMPair.augmentation_image_isOpen}
+  \lean{Iut.SourceMLFGaloisTMPair.augmentationOpenImage}
+  \lean{Iut.SourceMLFGaloisTMPair.fixedFieldOfOpenSubgroup}
+  \lean{Iut.SourceMLFGaloisTMPair.fixedFieldOfOpenSubgroup_finiteDimensional}
+  \lean{Iut.SourceMLFGaloisTMPair.modelGroupificationEquiv}
+  \lean{Iut.SourceMLFGaloisTMPair.modelGroupificationEquiv_action}
+  \lean{Iut.SourceMLFGaloisTMPair.fixedFieldIntegralUnit}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.canonical}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.monoAnalytic}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.canonical_monoidKummer}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.canonical_unitKummer}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.monoidKummer}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.unitKummer}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.fixed_roots_of_unitKummer_eq_one}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.unit_eq_one_of_unitKummer_eq_one}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.unitKummer_injective}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.canonical_unitKummer_injective}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.monoAnalytic_unitKummer_injective}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.constantSubgroup}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.torsionUnitImage}
+  \lean{Iut.SourceIUTIIUnitKummerEmbedding.torsionUnitImage_eq_constant_torsion}
+  \lean{Iut.SourceIUTIIThetaEvaluationOrbits.toTorsionThetaValueFamily}
+  \lean{Iut.SourceIUTIIThetaEvaluationOrbits.toTorsionThetaValueFamily_thetaValues}
+  \lean{Iut.SourceIUTIITorsionThetaValueFamily.representativeProfile}
+  \lean{Iut.SourceIUTIITorsionThetaValueFamily.profiles_differByPointwiseTorsion}
+  \lean{Iut.SourceIUTIIValueProfile.equivPi}
+  \lean{Iut.SourceIUTIIValueProfile.natCard_eq_twoEll_pow_lStar}
+  \lean{Iut.sourceGaussianMonoid}
+  \lean{Iut.ValueProfilesDifferByPointwiseTorsion}
+  \lean{Iut.sourceTwoEllGaussianSubmonoid}
+  \lean{Iut.sourceTwoEllGaussianSubmonoid_eq}
+  \lean{Iut.SourceIUTIITorsionThetaValueFamily.twoEllGaussianSubmonoid_eq}
+  \lean{Iut.SourceIUTIITorsionThetaValueFamily.profileIndependentTwoEllGaussianSubmonoid}
+  \lean{Iut.SourceIUTIITorsionThetaValueFamily.twoEllGaussianSubmonoid_eq_profileIndependent}
+  \lean{Iut.ValueProfileRootSystemsDifferByDiagonalTorsion}
+  \lean{Iut.sourceInfiniteGaussianMonoid}
+  \lean{Iut.sourceInfiniteGaussianMonoid_eq_of_differByDiagonalTorsion}
+  \lean{Iut.sourceConstantTorsion_unitKummer}
+  \lean{Iut.sourceConstantTorsion_map}
+  \lean{Iut.sourceConstantTorsionQuotientCongr}
+  \lean{Iut.SourceSplittingUpToTorsion.map}
+  \lean{Iut.SourceFiniteGaussianSplittingUpToTorsion}
+  \lean{Iut.SourceInfiniteGaussianSplittingUpToTorsion}
+  \lean{Iut.sourceGaussianMonoid_carrier_eq_splittingFactorProduct}
+  \lean{Iut.sourceInfiniteGaussianMonoid_carrier_eq_splittingFactorProduct}
+  \lean{Iut.sourceCorollary35FiniteGaussianSplittingOfProposition31}
+  \lean{Iut.sourceCorollary35InfiniteGaussianSplittingOfProposition31}
+  \lean{Iut.SourceTorsionDetectingRestriction}
+  \lean{Iut.SourceTorsionDetectingRestriction.splittingUpToTorsion}
+  \lean{Iut.SourceIUTIIPointedInversion}
+  \lean{Iut.SourceIUTIIPointedInversion.decompositionInclusion}
+  \lean{Iut.SourceIUTIICorollary112PointedRestriction}
+  \lean{Iut.SourceIUTIICorollary112PointedRestriction.detects_constant_torsion}
+  \lean{Iut.SourceIUTIICorollary112PointedRestriction.toTorsionDetectingRestriction}
+  \lean{Iut.SourceIUTIICorollary112PointedRestriction.splittingUpToTorsion}
+  \lean{Iut.sourceCorollary35FiniteGaussianSplittingOfRestrictionData}
+  \lean{Iut.sourceCorollary35InfiniteGaussianSplittingOfRestrictionData}
+  \lean{Iut.SourceIUTIICorollary28RestrictionStages.totalRestriction_mem_afterSecond_theta_carrier}
+  \lean{Iut.SourceIUTIICorollary28RestrictionStages.totalRestriction_mem_afterSecond_infiniteTheta_carrier}
+  \lean{Iut.SourceIUTIICorollary28RestrictionStages.zeroThetaTorsionDetectingRestriction}
+  \lean{Iut.SourceIUTIICorollary28RestrictionStages.zeroInfiniteThetaTorsionDetectingRestriction}
+  \lean{Iut.SourceIUTIICorollary28RestrictionStages.zeroThetaSplittingUpToTorsion}
+  \lean{Iut.SourceIUTIICorollary28RestrictionStages.zeroInfiniteThetaSplittingUpToTorsion}
+  \lean{Iut.thetaPowerValueProfile}
+  \lean{Iut.thetaPowerGaussianMonoid}
+  \lean{Iut.SourceIUTIIHodgeArakelovThetaPilot}
+  \lean{Iut.SourceIUTIIHodgeArakelovThetaPilot.thetaPowerProfile}
+  \lean{Iut.SourceIUTIIHodgeArakelovThetaPilot.finiteGaussianMonoid}
+  \lean{Iut.SourceIUTIIHodgeArakelovThetaPilot.infiniteGaussianMonoid}
+  \lean{Iut.SourceIUTIIHodgeArakelovThetaPilot.twoEllGaussianSubmonoid_eq_profileIndependent}
+  \lean{Iut.SourceIUTIIHodgeArakelovThetaPilot.thetaOrbit_natCard}
+  \lean{Iut.SourceIUTIIHodgeArakelovThetaPilot.valueProfiles_natCard}
+  \lean{Iut.SourceIUTIIHodgeArakelovThetaPilot.zeroTheta_carrier_subset_torsion}
+  \leanok
+  Continuous nonabelian \(H^1\) is defined as continuous crossed
+  homomorphisms modulo coboundaries.  The displayed direct limit over open
+  subgroups is an explicit quotient of cocycle germs.  Pullback along a
+  continuous group homomorphism is constructed on representatives and proved
+  to descend to the quotient.  For abelian coefficients, pointwise
+  multiplication descends to commutative group structures on both continuous
+  \(H^1\) and its germ colimit, and restriction is a homomorphism.  Given the
+  two paper homomorphisms and
+  equivariance with the \(\mu_{2\ell}\)- and \(\mu\)-actions, the first and
+  second restricted theta-orbit families are derived rather than stored as
+  output fields.  Identity representatives at the zero label survive both
+  restrictions, and every ambient orbit value is proved to map into the
+  corresponding final orbit.  The inertia choice and ambient-subgroup choice carry
+  independent copies of the conjugacy action; a two-variable equivariant
+  evaluation descends to the corresponding product-action orbit quotients.
+  The defining infinite-theta condition is stated exactly: membership means
+  that some positive power agrees with a theta value up to torsion.  At the
+  constant boundary, the model arithmetic monoid is literally the nonzero
+  part of the integral closure of the MLF valuation ring in its algebraic
+  closure.  Its Krull-topological absolute Galois group and algebraic action
+  are constructed, a model pair has a continuous surjective Galois
+  augmentation, and every general pair is required to be isomorphic to such
+  a model.  Following Absolute Anabelian Topics~III, Remark~3.1.1, the exact
+  \(T_{\rm M}\) certificate uses the equivalent topology-free monoid
+  presentation; an arbitrary topology therefore cannot certify a model.
+  The torsion-cyclotomic structure is no longer supplied as a certificate.
+  Lean identifies the rational circle with all finite-order complex units,
+  proves that embeddings between algebraically closed characteristic-zero
+  fields are bijective on \(n\)-th roots by their exact cardinalities, and
+  proves that every finite-order element of
+  \(\overline{k}^{\times}\) is an integral unit.  Thus the identification
+  \(O_{\overline{k}}^{\triangle,\mu}\cong\mathbb Q/\mathbb Z\), the
+  identity-augmentation mono-analytic model pair, and its coefficient-identity
+  unit-Kummer embedding are source-constructed without caller data.
+  The fraction-field theorem identifies the actual Grothendieck group of this
+  cancellative monoid with \(\overline{k}^{\times}\).  Algebraic closedness
+  makes this group rootable, and injectivity of divisible abelian groups
+  extends the prescribed map \(\mathbb Z\to\overline{k}^{\times}\) across
+  \(\mathbb Z\to\mathbb Q\).  Thus coherent compatible rational roots are
+  now constructed from the literal model and transported to every model pair;
+  Kummer theories must realize those roots rather than supply arbitrary ones.
+  Two systems agree on integer exponents, so their quotient at \(q\) has order
+  dividing the denominator of \(q\).  This finite-order element and its inverse
+  are integral, hence construct an actual unit of
+  \(O_{\overline{k}}^{\triangle}\); transport through the model isomorphism
+  constructs every root-system comparison rather than assuming it.
+  Applying Galois to the constructed root system and comparing it with the
+  original constructs every integral Galois root ratio from a fixed-point
+  proof.  Krull stabilizers of the underlying algebraic integers are open and
+  transport to the general pair.  The root ratios are locally constant in
+  discrete units, hence continuous in the pointwise cyclotome topology.  The
+  latter is a closed subspace of a product of finite root-of-unity groups, so
+  Lean proves that it is compact, Hausdorff, totally disconnected, and bundles
+  it as a profinite space.  The ratios are proved multiplicative, killed
+  on \(\mathbb Z\), descended through \(\mathbb Q/\mathbb Z\), and assembled
+  into continuous cocycles.  Comparing two root systems gives the explicit
+  coboundary between their cocycles.  Hence both Kummer maps
+  \(M^H\to H^1(H,\mu_{\mathbb Z}(M))\) and
+  \(M\to\varinjlim_JH^1(J,\mu_{\mathbb Z}(M))\) are derived monoid
+  homomorphisms, and the canonical local map is proved compatible with the
+  canonical germ map.
+  The unit Kummer homomorphism is its restriction, never an independently
+  supplied field; injectivity proves that \(M_{\rm TM}^{\mu}\) is exactly the
+  image of the torsion units.  Proposition~3.2(ii) constructs the map but does
+  not assert injectivity.  Following Definition~1.5 and Remark~1.5.4(i), Lean
+  now proves that the integral-closure unit group in every finite MLF extension
+  is residually finite: Krull intersection separates a nontrivial unit, while
+  reduction modulo a suitable power of the base maximal ideal gives a finite
+  quotient.  This proves precisely the integral-unit input used by the
+  $M_{\rm TM}^{\times}$ map; it is not identified with the full toral
+  condition.  Separately, Lean proves the full $\mathbb G_m(L)=L^\times$
+  case for every finite local-field extension $L/K$: divisibility by every
+  positive integer first forces the discrete valuation to vanish, and the
+  valuation-ring-unit theorem then forces the element itself to be one.
+  Kummer-map injectivity is derived from this root rigidity and the standard
+  kernel characterization, rather than stored.  Actual arbitrary-torus and
+  semi-abelian rational-point families remain explicit obligations.  For a
+  compact IUT acting group, Lean also proves that the image of
+  each open germ domain under the arithmetic augmentation is open: it has
+  finite index, and compactness makes its image closed.  Infinite Galois
+  correspondence then constructs the associated finite fixed extension.
+  Equality of a constructed unit Kummer germ with one is now unpacked into a
+  common open subgroup and an explicit coboundary.  Evaluating its cochain at
+  (1/n) adjusts the compatible root; Lean proves that the adjusted root has
+  (n)-th power equal to the original unit and is fixed by the common
+  subgroup.  Transport to the finite fixed extension makes the root and its
+  inverse integral by the power criterion.  Residual finiteness of that
+  integral-unit group forces the original unit to be one, so the constructed
+  unit Kummer homomorphism is injective without a stored faithfulness field.
+  The local endpoint is now the exact one used by Initial Theta data.  Lean
+  proves continuity of Galois conjugation across an algebra equivalence by
+  pulling each finite-intermediate-field stabilizer back to the stabilizer of
+  its inverse image.  In characteristic zero, the separable closure therefore
+  gives a topological absolute-Galois group equivalent to the algebraic-closure
+  model.  The canonical valuation on every finite number-field completion is
+  proved compatible with its topology and makes the completion an MLF.  These
+  results transport the canonical pair and its injective coefficient-identity
+  unit Kummer map to the literal local absolute Galois group stored by each
+  finite Initial Theta core.  Exactness then identifies that group with the
+  arithmetic fundamental-group quotient by the geometric image.  Lean
+  transports the MLF pair and faithful canonical unit Kummer map to this
+  literal quotient, pulls back the cyclotomic coefficient action, constructs
+  the induced continuous-\(H^1\) restriction, and proves the monoid and unit
+  Kummer restriction squares commute.  Constructing the restricted-tempered
+  mono-theta map to this endpoint remains open.
+  At a finite place, the Definition~4.9 input now ties the selected splitting
+  at an isotropic reference object to an actual MLF-Galois \(TM\)-pair, a
+  stable characteristic submonoid, and the genuine \(\operatorname{Ism}\)
+  Kummer orbit.  Lean constructs the bad-place quotient by
+  \(\mu_{2\ell}\) and the good-place characteristic factor, forms the literal
+  product with \(O^{\times\mu}\), and proves that this is its complete unit
+  group.  The reconstruction output must have the original base category and
+  this exact reference rational monoid, so an unrelated Frobenioid cannot
+  inhabit the interface.  Derivation of that output from Frobenioids~I,
+  Theorem~5.2(ii), remains explicit.
+  At an archimedean place, the exact \(N\)-stage replaces the compact factor by
+  \(S^1/\mu_N\) and retains the original noncompact factor.  Lean proves that
+  this noncompact factor has no nontrivial units and constructs the continuous
+  transition which is the torsion-quotient map on the compact factor and the
+  identity on the noncompact factor.  A reconstructed stage must be an actual
+  split Frobenioid whose split topological monoid is structure-preservingly
+  isomorphic to this exact product and whose base is equivalent to the original
+  base.  Its transition functors preserve the base projection, FSM morphisms,
+  divisors, and Frobenius degrees.  Carrier categories, bases, and reference
+  rational monoids then form strict divisibility-indexed diagrams.  Every
+  multiplicatively cofinal restriction is proved final, so it preserves and reflects the universal
+  colimit cocone.  Construction of these stages and transition functors from
+  the original archimedean \(TM\)/Frobenioid data remains explicit.
+  Definition~4.9(vi)--(viii) is now represented by a universe-polymorphic
+  \(F^{\vdash\times\mu}\)-prime-strip boundary.  It fixes the bad/good
+  finite construction at every selected finite place and the complete
+  torsion-quotient system at every archimedean place.  The corresponding
+  \(F^\times\)- and \(F^{\times\mu}\)-components are the actual wide
+  subcategories of divisor-zero isometries.  The global record retains the
+  realified Frobenioid, prime/place bijection, and every \(\rho_v\).  Its pilot
+  is computed by transporting typed cyclic bad-place generators through these
+  \(\rho_v\)'s and applying a global reconstruction function, and its
+  arithmetic degree is required to be negative.  Supplying this reconstruction
+  from Corollaries~4.6 and~4.10 remains open.  At each finite place, the
+  structure-preserving isomorphism layer now transports the topological Galois
+  group, arithmetic action, unit-mod-torsion quotient, every open-subgroup
+  invariant Kummer image, both product generators, the reconstructed split
+  Frobenioid, its base, reference object, and rational monoid.  Identity and
+  composition are constructed, and preservation of the genuine
+  \(\operatorname{Ism}\)-orbit is derived.  At an archimedean place, the
+  system isomorphism transports the original split Frobenioid, every torsion
+  quotient, quotient and orientation maps, level transitions, reconstructed
+  stages, bases, divisors, Frobenius degrees, FSM morphisms, split products,
+  and rational transitions.  Identity and composition are constructed.  The
+  level maps restrict to the isometry coarsifications and form a natural
+  transformation of complete divisibility diagrams with equivalence
+  components.  The assembled globally realified isomorphism now combines
+  these place-indexed local equivalences with a
+  structure-preserving equivalence of the global Frobenioids, the prime/place
+  and \(\rho_v\) squares, bad-place generator and currency compatibility,
+  reconstruction for every character tuple, and arithmetic-degree
+  compatibility.  Identity and composition are constructed.  Compatibility
+  of the distinguished pilot character, pilot object, and pilot degree is
+  derived.  Following IUT~I, Section~0, the place-indexed and globally
+  realified full poly-isomorphisms are literal quotients of all complete
+  representatives.  Categorical equivalences are identified by natural
+  isomorphism, while group, monoid, quotient, splitting, prime, and local
+  currency maps remain pointwise data.  Identity, composition, unit laws,
+  associativity, representative existence, and exact nonemptiness criteria
+  are proved.  Constructing and populating these records from the source
+  evaluation and reconstruction algorithms remains open.
+  A pointed inversion carries an
+  actual decomposition subgroup; restriction along its continuous inclusion
+  derives torsion detection from the precise equality
+  \(M_{\rm TM}^{\times}\cap\operatorname{res}^{-1}(\mathrm{tors})=
+  M_{\rm TM}^{\mu}\), and hence derives the splitting.
+  Quotienting an actual constant subgroup by its exact torsion
+  subgroup gives a precise multiplication parametrization; it is proved
+  bijective when every zero-label theta value is constant torsion.  Given a
+  zero-to-base action-pair comparison, the zero-to-label comparisons derive a
+  graph proved equal to the diagonal range from Corollary~3.5(i).  The zero
+  factor is continuously and multiplicatively equivalent to this graph,
+  equivariant for all transported labeled actions.
+  Multiplication by \((\mathbb Z/\ell)^\times\) descends to
+  the exact EtaleTheta sign-label quotient, factors through
+  \((\mathbb Z/\ell)^\times/\{\pm1\}\), and the resulting action on all
+  nonzero absolute labels is proved transitive.  After sign identification,
+  symmetrization retains one
+  topological group/monoid action pair at every nonzero absolute label;
+  its outer transports satisfy identity and multiplication coherence, and
+  action-compatible isomorphisms derive an injective diagonal monoid map.  Its
+  actual range is a submonoid continuously and multiplicatively equivalent to
+  the base monoid, and this equivalence intertwines the transported action.
+  Thus the label set is not replaced by a coarse one-point quotient.  Its diagonal
+  restriction-isomorphism synchronization is represented first by the exact
+  quotient for the equivalence relation ``differ by one global inner action.''
+  More precisely, the full compatible diagram
+  \(\Pi_X\leftarrow\Pi_v\leftarrow G_v^{\langle|F_l|\rangle}\), together with
+  its equivariant monoid isomorphism, is quotiented by one base-group element
+  that acts simultaneously on the group map and monoid map.  This full
+  quotient maps to the monoid-only quotient.  Thus the conjugator cannot
+  depend on a label, group element, or monoid element.  Construction of the
+  diagram and action from the paper data remains open.  The diagonal
+  unit submonoid and finite Gaussian monoid are constructed inside the
+  heterogeneous direct product of these labeled factors.  The base group acts
+  diagonally through the symmetrizing group isomorphisms; constants are
+  equivariant, diagonal units are stable, and profile stability induces an
+  actual action by automorphisms of the Gaussian monoid.  For a value
+  profile, the homogeneous finite Gaussian monoid is the submonoid of
+  the direct product generated by diagonal units and natural profile powers;
+  a chosen compatible root system gives the rational-root Gaussian monoid,
+  with root ambiguity stated as diagonal torsion.  Root systems differing by
+  this permitted ambiguity are proved to generate the same infinite Gaussian
+  monoid.  The specialized profile consists of the actual elements
+  \(q^{j^2}\).  The \(n\)-torsion of \(\mathbb Q/\mathbb Z\) is proved to
+  have exactly \(n\) elements and is explicitly equivalent to the
+  roots-of-unity group of a torsion-cyclotomic monoid.  A multiplicative
+  realization of the \(\mu_{2\ell}\)-action is required to be injective,
+  hence acts freely, and derives its exact torsion-unit range and the
+  theta-value family from the continuous \(H^1\) orbits; the resulting
+  multiplicative orbit set is proved equal to the original action orbit at
+  every label.  Any two
+  simultaneous choices from it are proved to differ by independent
+  coordinatewise \(2\ell\)-torsion.  Its representative family constructs a
+  canonical common \(2\ell\)-multiple Gaussian submonoid.  The ambiguity
+  vanishes after taking \(2\ell\)-th powers, so every selected profile yields
+  exactly this common object.  The source Hodge--Arakelov pilot places every
+  \(q^{j^2}\) in its actual continuous-\(H^1\) theta orbit and every
+  compatible positive root in the corresponding infinite-theta orbit.  It
+  derives both Gaussian monoids, every \(2\ell\)-element orbit cardinality,
+  the full \((2\ell)^{\ell^\ast}\) profile count, and zero-label torsion.
+  Multiplicative equivalences preserve the exact
+  constant-torsion subgroup, the two quotient factors, and splitting
+  bijectivity.  The finite and infinite Gaussian carriers are proved to be
+  precisely the products
+  \(\Psi_{\rm cns}^{\times}\cdot\xi^{\mathbb N}\) and
+  \(\Psi_{\rm cns}^{\times}\cdot\xi^{\mathbb Q_{\geq 0}}\).
+  A multiplicative finite-order action proves that a zero-label orbit based at
+  the identity consists entirely of torsion.  Thus the actual composite
+  continuous-\(H^1\) restriction constructs both finite and infinite
+  zero-label splittings once torsion detection on the constant subgroup is
+  proved.  More generally, a restriction homomorphism that sends theta values to torsion and detects
+  torsion on constants is proved to derive the splitting used in
+  Corollaries~1.12, 2.6, 2.8 and Proposition~3.1.  Consequently, once that
+  restriction datum and the Corollary~2.8 Gaussian restriction equivalence
+  are supplied together with the two factor identifications, both Gaussian
+  splittings and their compatibility are derived without accepting a
+  Proposition~3.1 splitting proof as input.
+  Construction of the paper's
+  subgroup/subquotient and decomposition-group homomorphisms, their actions
+  and input orbits from the mono-theta system, the symmetrizing isomorphisms,
+  root choices, independent conjugacy compatibility, and both restriction
+  maps with their torsion and factor-identification proofs remain source
+  obligations.
+\end{definition}
+
+\begin{definition}[Toy Hodge--Arakelov degree pilots]
+  \label{def:hodge-arakelov-concrete-pilots}
+  \uses{def:initial-theta-data,def:iut-i-theater-realization}
+  \lean{Iut.Stage1.ToyIUTIIHodgeArakelovEvaluationData}
+  \lean{Iut.Stage1.ToyIUTIIHodgeArakelovEvaluationData.ofInitialThetaData}
+  \lean{Iut.Stage1.ToyIUTIIHodgeArakelovEvaluationData.thetaValueEvaluationSource}
+  \lean{Iut.Stage1.ToyIUTIIHodgeArakelovEvaluationData.signOrbitAverage_eq}
+  \lean{Iut.Stage1.ToyIUTIIHodgeArakelovEvaluationData.coordinateAverage_translation_invariant}
+  \lean{Iut.Stage1.IUTStage1InitialThetaPrimitiveSourcePacket.ofInitialThetaData}
+  \leanok
+  This finite degree model computes the positive, \(l\)-prime q-order and
+  the square-weight profile expected from \(q^{j^2}\).  At each bad place,
+  the calculation uses the theta-root torsor, its base-point coordinate
+  equivalence, typed
+  \(\mathbb Z/l\mathbb Z\) labels, sign classes, balanced-square weights, and
+  coordinate, weighted, and sign-orbit averages.  Positivity, normalization,
+  sign invariance, and translation invariance are proved.  It does not
+  construct the cohomology classes, restriction algorithm, Gaussian monoids,
+  or Gaussian Frobenioids of IUT~II, and therefore discharges no paper-level
+  evaluation claim.
+\end{definition}
+
+\section{Theorem 3.11 and Step (x)}
+
+\begin{definition}[Source-shaped Theorem 3.11 interfaces]
+  \label{def:source-theorem-311-interfaces}
+  \lean{Iut.SourceMonoAnalyticTensorPacket}
+  \lean{Iut.SourceMonoAnalyticTensorPacket.distinguishedSubmodule}
+  \lean{Iut.SourceLGPGaussianLogThetaLattice}
+  \lean{Iut.SourceLGPGaussianLogThetaLattice.monoAnalyticProcession}
+  \lean{Iut.SourceLGPGaussianLogThetaLattice.verticalCoricityToCommon}
+  \lean{Iut.SourceLGPGaussianLogThetaLattice.commonMonoAnalyticProcession}
+  \lean{Iut.SourceTheorem311LocalData}
+  \lean{Iut.SourceTheorem311Ind1Action.ofProcessionFunctor}
+  \lean{Iut.SourceTheorem311Ind2Action}
+  \lean{Iut.SourceTheorem311LocalInd2Action.action}
+  \lean{Iut.SourceTheorem311Ind2SummandAction.packetAction_on_tensor}
+  \lean{Iut.SourceTensorPacketKummerIso}
+  \lean{Iut.SourcePacketIntegralConstruction.logShellRegion}
+  \lean{Iut.SourcePacketIntegralConstruction.logShellRegion_eq_unitBall}
+  \lean{Iut.SourceArchimedeanLogShellDefinition.exponential_principalLog}
+  \lean{Iut.SourceArchimedeanLogShellDefinition.principalLog_mem_unitBall}
+  \lean{Iut.SourceAutHolomorphicSemiGerm.neighborhoodSystem}
+  \lean{Iut.SourceAutHolomorphicSemiGerm.iInter_neighborhood_eq_unitCircle}
+  \lean{Iut.SourceAutHolomorphicSemiGerm.exists_neighborhood_subset_of_mem}
+  \lean{Iut.SourceAutHolomorphicSemiGerm.multiplication_holomorphicOn_levels}
+  \lean{Iut.SourceAutHolomorphicSemiGerm.multiplication_tendsto_unitNeighborhoodFilter}
+  \lean{Iut.SourceAutHolomorphicSemiGerm.inversion_holomorphicAtLevel}
+  \lean{Iut.SourceAutHolomorphicSemiGerm.inversion_tendsto_unitNeighborhoodFilter}
+  \lean{Iut.SourceAutHolomorphicSemiGerm.puncturedNeighborhood_eq_inner_union_outer}
+  \lean{Iut.SourceAutHolomorphicSemiGerm.innerSide_eq_connectedComponentIn}
+  \lean{Iut.SourceAutHolomorphicSemiGerm.outerSide_eq_connectedComponentIn}
+  \lean{Iut.SourceAutHolomorphic.autHolomorphicSubgroup}
+  \lean{Iut.SourceAutHolomorphic.AutHolomorphic.restrict_mul}
+  \lean{Iut.SourceAutHolomorphic.AutHolomorphic.restrict_inv}
+  \lean{Iut.SourceAutHolomorphicSemiGerm.levelAutHolomorphic}
+  \lean{Iut.SourceAutHolomorphicSemiGerm.levelInclusion_hasAmbientHolomorphicLift}
+  \lean{Iut.SourceAutHolomorphicRigidity.Automorphism.exists_integer_exponent}
+  \lean{Iut.SourceAutHolomorphicRigidity.Automorphism.exponent_eq_one_or_neg_one}
+  \lean{Iut.SourceAutHolomorphicRigidity.Automorphism.toAutHolomorphic_eq_identity}
+  \lean{Iut.SourceAutHolomorphicRigidity.Automorphism.ambientGerm_eq_identity}
+  \lean{Iut.SourceArchimedeanLogShellDefinition.semiGermSelectedSide_eq_connectedComponentIn}
+  \lean{Iut.SourceArchimedeanLogShellDefinition.semiGermNeighborhoodSystem_cofinal}
+  \lean{Iut.SourceArchimedeanLogShellDefinition.semiGermMultiplication_tendsto}
+  \lean{Iut.SourceArchimedeanLogShellDefinition.semiGermInversion_tendsto}
+  \lean{Iut.SourceArchimedeanLogShellDefinition.SemiGermGroupAutomorphism.rigid}
+  \lean{Iut.SourceArchimedeanPacketUnitData.summandSemiGermNeighborhoodSystem}
+  \lean{Iut.SourceArchimedeanPacketUnitData.UnitTuple.semiGermUnit}
+  \lean{Iut.SourceArchimedeanPacketUnitData.principalLogTensor_mem_unitBall}
+  \lean{Iut.SourceArchimedeanPacketLogLinkStep}
+  \lean{Iut.SourceGaloisLocalUnitData}
+  \lean{Iut.SourceNonarchimedeanLogShellDefinition.invariantLocalUnits_fixed}
+  \lean{Iut.SourceNonarchimedeanPacketUnitLogData.packetUnitLogSubgroup}
+  \lean{Iut.SourceNonarchimedeanPacketUnitLogData.packetUnitLogSubgroup_le_packetLattice}
+  \lean{Iut.SourceNonarchimedeanPacketLogLinkStep}
+  \lean{Iut.SourceNonarchimedeanPacketLogLinkStep.graph_le_packetUnitLogSubgroup_prod}
+  \lean{Iut.SourceNonarchimedeanPacketLogLinkStep.related_of_unitTuplesRelated}
+  \lean{Iut.SourceForwardRelation}
+  \lean{Iut.SourceForwardDomain}
+  \lean{Iut.SourceForwardRange}
+  \lean{Iut.sourceForwardIndex_sub_eq}
+  \lean{Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalPacketUnitLogSubgroup_image}
+  \lean{Iut.SourceTheorem311VerticalLocalKummer}
+  \lean{Iut.SourceTheorem311VerticalLogLink.logarithm_eq_of_differsByRootOfUnity}
+  \lean{Iut.SourceTheorem311VerticalLogLinkFamily.adjacent_logarithm_eq_on_overlap}
+  \lean{Iut.SourceTheorem311CoricContainer}
+  \lean{Iut.SourceTheorem311Ind3System}
+  \lean{Iut.SourceTheorem311Ind3System.nonarchLogIterateRelation}
+  \lean{Iut.SourceTheorem311Ind3System.nonarchLogIterateDomain}
+  \lean{Iut.SourceTheorem311Ind3System.nonarchLogIterateRange}
+  \lean{Iut.SourceTheorem311Ind3System.nonarch_logKummer_contained}
+  \lean{Iut.SourceTheorem311Ind3System.nonarch_logKummer_contained_of_mem_range}
+  \lean{Iut.SourceTheorem311Ind3System.logShellRegion_eq_unitBall}
+  \lean{Iut.SourceTheorem311Ind3System.archLogIterateRelation}
+  \lean{Iut.SourceTheorem311Ind3System.archLogIterateDomain}
+  \lean{Iut.SourceTheorem311Ind3System.archLogIterateRange}
+  \lean{Iut.SourceTheorem311Ind3System.archLogBallPreimage_subset_logShellRegion}
+  \lean{Iut.SourceTheorem311Ind3System.archLogBall_relationally_surjective}
+  \lean{Iut.SourceTheorem311Ind3System.arch_direct_units_contained}
+  \lean{Iut.SourceTheorem311Ind3System.arch_direct_localBalls_contained}
+  \lean{Iut.SourceLGPSplittingMonoidAction}
+  \lean{Iut.SourceTheorem311BadPrimeLogKummerData}
+  \lean{Iut.SourceTheorem311BadPrimeLogKummerData.AdmissibleAcrossLog}
+  \lean{Iut.SourceTheorem311BadPrimeLogKummerData.logarithm_eq_of_admissibleAcrossLog}
+  \lean{Iut.SourceTopologicalGroupMonoidActionPair.Hom}
+  \lean{Iut.SourceKappaLocalizationDiagram}
+  \lean{Iut.SourceKappaLocalizationDiagram.inclusion_isEmbedding}
+  \lean{Iut.SourceKappaLocalizationDiagram.inclusion_injective}
+  \lean{Iut.SourceKappaLocalizationDiagramIso}
+  \lean{Iut.SourceKappaLocalizationDiagramIso.localizationSquare}
+  \lean{Iut.SourceKappaLocalizationDiagramIso.inclusionSquare}
+  \lean{Iut.SourceTheorem311LabeledData}
+  \lean{Iut.SourceTheorem311LabeledKummerIso}
+  \lean{Iut.SourceTheorem311MultiradialPresentation}
+  \lean{Iut.SourceTheorem311MultiradialAlgorithm.Quotient}
+  \lean{Iut.SourceTheorem311PermutationBiCoricCompatibility.quotientEquiv}
+  \lean{Iut.SourceFPrimeStripHom.NaturallyIsomorphic}
+  \lean{Iut.SourceFPrimeStripFullPolyIsomorphism}
+  \lean{Iut.SourceFPrimeStripFullPolyIsomorphism.comp_assoc}
+  \lean{Iut.SourceFPrimeStripPolyIsomorphismSquare}
+  \lean{Iut.SourceFTimesMuPrimeStripFullPolyIsomorphism}
+  \lean{Iut.SourceFTimesMuPrimeStripFullPolyIsomorphism.comp_inverse_assoc}
+  \lean{Iut.SourceFTimesMuPrimeStripPolyIsomorphismSquare}
+  \lean{Iut.SourceFMonoAnalyticPrimeStripFullPolyIsomorphism}
+  \lean{Iut.SourceFMonoAnalyticPrimeStripFullPolyIsomorphism.canonical}
+  \lean{Iut.SourceFMonoAnalyticPrimeStripFullPolyIsomorphism.canonical_inverse}
+  \lean{Iut.SourceFMonoAnalyticPrimeStripFullPolyIsomorphism.comp_assoc}
+  \lean{Iut.SourceFTimesMuReconstructionFullness}
+  \lean{Iut.SourceFTimesMuReconstructionAlgorithm}
+  \lean{Iut.SourceFTimesMuReconstructionAlgorithm.mapFullPolyIsomorphism}
+  \lean{Iut.SourceFTimesMuReconstructionAlgorithm.mapFullPolyIsomorphism_comp}
+  \lean{Iut.SourceFTimesMuReconstructionAlgorithm.mapFullPolyIsomorphism_surjective}
+  \lean{Iut.SourceFTimesMuReconstructionAlgorithm.mapFullPolyIsomorphism_inverse}
+  \lean{Iut.SourceFTimesMuPrimeStripPolyIsomorphismSquare.ofUpperHorizontal}
+  \lean{Iut.SourceIndexedHorizontalKummerSquare}
+  \lean{Iut.SourceTheorem311TrianglePrimeStripSquare}
+  \lean{Iut.SourceTheorem311EnvironmentPrimeStripFamily}
+  \lean{Iut.SourceTheorem311TimesMuPrimeStripFamily}
+  \lean{Iut.SourceTheorem311TimesMuPrimeStripConstruction.toFamily}
+  \lean{Iut.SourceTheorem311TimesMuPrimeStripConstruction.thetaLink_full}
+  \lean{Iut.SourceTheorem311TimesMuPrimeStripConstruction.toCommon}
+  \lean{Iut.SourceTheorem311TimesMuPrimeStripConstruction.fromCommon}
+  \lean{Iut.SourceTheorem311TimesMuPrimeStripConstruction.toTriangleSquare}
+  \lean{Iut.SourceTheorem311TimesMuTrianglePrimeStripSquare}
+  \lean{Iut.SourceTheorem311EnvironmentMonoAnalyticPrimeStripFamily.toTimesMu}
+  \lean{Iut.SourceTheorem311EnvironmentTimesMuPrimeStripFamily}
+  \lean{Iut.SourceTheorem311EnvironmentTimesMuPrimeStripSquare.ofTriangle}
+  \lean{Iut.SourceTheorem311MonoThetaProjectiveSystemFamily}
+  \lean{Iut.SourceTheorem311LabeledHorizontalKummerSquare}
+  \lean{Iut.SourceTheorem311LabeledHorizontalKummerSquare.localizationAutomorphismEquiv}
+  \lean{Iut.SourceTheorem311LabeledHorizontalKummerSquare.inclusionAutomorphismEquiv}
+  \lean{Iut.SourceTheorem311HorizontalCorridorBoundary}
+  \lean{Iut.SourceTheorem311HorizontalCorridorBoundary.primeStripClauseA}
+  \lean{Iut.SourceTheorem311HorizontalEvaluationCompatibility.descend}
+  \lean{Iut.SourceTheorem311Ind3DirectionalCompatibility.map}
+  \lean{Iut.sourceTheorem311StrictBoolInd3_not_quotient_eq}
+  \leanok
+  The source layer now represents a local packet by the genuine dependent
+  tensor product of its \(j+1\) place-indexed direct sums.  The
+  \(I_{\mathbb Q}(S_{j+1,j};v)\) submodule is the span of pure tensors whose
+  distinguished factor lies in the summand indexed by \(v\).  Integral
+  regions must be either nonarchimedean lattices or archimedean seminorm unit
+  balls and must prove their rational spans.  The \(\mathbb Z^2\)-indexed
+  lattice contains actual F-theta bridges and distinct Hodge theaters; its
+  horizontal theta-links, mono-analytic processions, and vertically coric
+  procession maps are constructed.  \(\Ind{1}\) is derived from a functor on
+  the category of processions.  \(\Ind{2}\) accepts only the independent
+  actions on individual place summands; the direct-sum action, tensor action,
+  full dependent-product action, and their laws are derived.  The complete
+  presentation also carries its bad-place splitting monoids, number-field
+  embeddings, and objects of the four Frobenioid categories.  Its exact
+  quotient is the equivalence closure generated by Ind1 and Ind2.  A bi-coric
+  bridge member induces a procession isomorphism, and a transport intertwining
+  both actions descends, by a proved relation-induction argument, to an
+  equivalence of these quotients.
+
+  Horizontal evaluation descends only through the exact \(\Ind{1}/\Ind{2}\)
+  quotient.  The \(\Ind{3}\) interface preserves its one-way orientation into
+  inclusions, relational surjections, or log-volume inequalities; a strict
+  two-point regression shows that a forward \(\Ind{3}\) step is not quotient
+  equality.
+
+  The vertical interface uses placewise continuous linear Kummer
+  equivalences, their induced tensor maps, complete localization diagrams of
+  topological group/pseudo-monoid action pairs, number-field ring equivalences,
+  splitting-monoid equivalences, and
+  structure-preserving equivalences of the realified and non-realified split
+  Frobenioids.  \(\Ind{3}\) fixes one vertically coric \(n,\circ\) container
+  while \(m\) varies.  At nonarchimedean places it contains both direct Kummer
+  images and forward iterated-log images.  The direct finite-place subgroup is
+  no longer supplied as arbitrary packet data: it is generated by pure tensors
+  of the summandwise invariant-unit logarithm images.  Each such invariant-unit
+  type is itself the fixed subgroup of an explicit continuous profinite Galois
+  action, rather than an unrelated type carrying an invariant name.  The
+  generated packet subgroup lies in the closed tensor lattice and is
+  transported exactly by the vertical Kummer equivalence.  A finite log-link
+  step is represented as a partial correspondence between the actual fixed
+  units in every summand.  Lean applies the summand logarithms, tensors related
+  tuples, takes the additive closure of the resulting graph, and recursively
+  composes adjacent steps.  It proves that an (r)-fold iterate starting at
+  (m-r) ends at (m), and derives containment of the endpoint's Kummer image
+  from its unit-log subgroup membership.  Thus neither a direct multi-step map
+  nor a final iterated-containment proof is accepted by the concrete Ind3
+  constructor.  At an archimedean summand the Hermitian seminorm is normalized
+  by \(\pi\), so its unit ball is exactly Definition~1.1(ii)'s raw complex
+  radius-\(\pi\) disk; there is no second radius-\(\pi\) ball of the normalized
+  metric.  Lean uses \(\arg(z)i\) to construct a principal logarithm in this
+  ball for every genuine \(S^1\)-unit and proves that exponentiating recovers
+  the unit.  Choosing one place per tensor factor, the direct-sum and tensor
+  metric equations put the resulting pure unit tensor, and every selected
+  local radius-\(\pi\) tensor, in the packet unit ball.  Each unit is also
+  canonically a point of the exact \(S^1\) core of an antitone projective system
+  of open annuli.  Lean identifies their intersection with \(S^1\) and proves
+  that they are cofinal among all neighborhoods of \(S^1\), restricts ambient
+  complex differentiability to every level, proves that ambient multiplication
+  and inversion preserve the neighborhood filters, and proves that deleting
+  \(S^1\) leaves the two radial
+  connected components.  The component determined by
+  \(\mathcal O^{\triangleright}_{\mathbb C}\setminus S^1\) is selected by a
+  connected-component theorem rather than an arbitrary input.  For every
+  connected annulus \(U_n\), Lean now derives the actual group
+  \(\operatorname{Aut}_{\mathrm{hol}}(U_n)\) from biholomorphic self-maps and
+  proves identity, composition, inversion, and restriction laws.  For a
+  groupification-induced holomorphic automorphism of \(\mathbb C^\times\),
+  pullback along the exponential covering yields an integer exponent;
+  bijectivity restricts it to \(1\) or \(-1\), and preservation of the selected
+  inner component rules out inversion.  The induced filter germ is therefore
+  proved equal to the identity.  An infinite-place log-link step is only a
+  partial correspondence on these semi-germ core-point tuples.
+  Recursive composition derives every positive iterate, its domain and range,
+  the participating endpoint-ball subset, and relational surjectivity onto the
+  source domain.  Direct Kummer containment follows from the full vertical
+  unit-ball image.  Thus the concrete Ind3 constructor accepts no arbitrary
+  archimedean subgroup, multi-step domain, preimage set, iterate map,
+  surjectivity proof, or direct containment.  The general Riemann-surface and
+  RC-holomorphic local-morphism category of
+  \emph{Absolute Anabelian Topics III}, Definition~2.1 and Corollary~2.3,
+  extension of rigidity from groupification-induced maps to every purely local
+  group-germ automorphism, and co-holomorphic Kummer reconstruction are not yet
+  formalized.  Equality to the common
+  measure-derived log-volume implies independence of \(m\).  A multiplicative log-link into
+  a rational module provably kills roots of unity.  At a bad prime, cross-link
+  the actual unit groups of the splitting monoids map multiplicatively into
+  the log-link domain.  Cross-link admissibility is derived from membership in
+  the current and next domains together with an explicit root-of-unity quotient
+  in the next domain; it is not an arbitrary relation field.  Admissible inputs
+  have the same additive log image.
+  Horizontal compatibility is no longer an unindexed field of a single
+  column.  Its boundary contains two column assemblies, proves that they use
+  the same lattice at indices \(n\) and \(n+1\), and fixes all four corners of
+  every square.  The active clauses~(iii)(a)--(b) interface now accepts only
+  the Definition~4.9 \(F^{\vdash\times\mu}\)-prime-strips.  Each triangle
+  corner is computed by one functorial reconstruction algorithm from the
+  mono-analytic transport of its actual site or vertically coric theater.  The
+  same algorithm computes every environment strip and comparison from the
+  Proposition~2.1(vi) mono-analytic data and derives the inverse laws.  Thus no
+  prebuilt times-\(\mu\) family enters the active corridor.  The ordinary-\(F\)
+  square remains only as precursor scaffolding.  Following the convention of
+  IUT~I, Section~0, a
+  times-\(\mu\) prime-strip full
+  poly-isomorphism is represented by a componentwise
+  equivalence map modulo natural isomorphism on its categorical components;
+  it is not a strict categorical isomorphism of prime-strip records.  Lean
+  proves that identity and composition descend to these classes, together
+  with associativity and cancellation of selected inverse pairs.  A
+  prime-strip square quantifies in both directions over all horizontal
+  classes; its chosen upper and lower classes only witness nonemptiness.  The
+  Corollary~4.10(iv) is retained as a representative-level rigidity law for
+  every actual adjacent horizontal pair: lifting the underlying mono-analytic map of any output
+  equivalence recovers that output up to structured natural isomorphism.  Lean
+  proves from this law that every times-\(\mu\) horizontal class has a
+  mono-analytic preimage.  The corridor accepts neither a clause~(a) square,
+  a chosen theta-link member, an arbitrary quotient-level fullness witness,
+  nor chosen Kummer maps.  Every mono-analytic strip carries structure-preserving maps to
+  and from the common model with two-sided Section~0 inverse laws.  Lean
+  therefore derives the canonical theta-link and both Theorem~1.5 Kummer
+  directions, proves their cancellation, reconstructs the upper and vertical maps, defines the
+  lower map by Kummer conjugation, and proves commutativity and both
+  all-class transport directions.  The triangle
+  and environment prime-strip squares range over every \(m\); the environment
+  family carries two-sided natural comparison classes with the triangle
+  strips, and its square is proved class-by-class in both directions by
+  conjugating the triangle square and cancelling those comparisons.  These
+  facts validate the exact typed coarsification, reconstruction, fullness
+  boundary, and conjugation mechanism.  Constructing the finite/archimedean
+  outputs, proving representative-level reconstruction fullness, and deriving
+  the coherent model comparisons from Corollaries~4.5, 4.6, 4.10 and
+  Theorem~1.5 remain open.  The
+  mono-theta square ranges over every \(m\) and bad
+  place and uses actual projective systems with levelwise environment
+  realizations.  Clause~(iii)(d) no longer collapses
+  \(\{\pi_1^{\kappa\text{-sol}}\ltimes M_\infty^\kappa\}\) and its localizations
+  to two profinite groups.  For every \(m\), absolute label, and selected place,
+  it retains the global action pair, the local \(M_\infty^\kappa\) and
+  \(M_\infty^{\kappa\times}\) action pairs, the equivariant localization map,
+  and the equivariant topological embedding that realizes the displayed
+  inclusion.  These are genuine partial-product
+  pseudo-monoids, not total-monoid surrogates.  Horizontal and vertical Kummer
+  isomorphisms preserve both arrows, and site/common coherence is equality of
+  the complete diagram transports.  The resulting arrow-category squares
+  transport the full automorphism groups.  Constructing these diagrams from
+  Corollary~4.8 and the cyclotomic-rigidity algorithm remains open.
+  Compatible evaluations descend
+  to the equivalence relation generated jointly by \(\Ind{1}\)--\(\Ind{3}\).
+
+  These declarations remain a partial construction of Theorem~3.11.  The
+  tensor packets, vertical Kummer maps, finite integral images, and finite
+  direct unit-log containment are constructed from the typed lattice data.
+  Constructing that lattice data, its summand unit/log inputs, splitting
+  monoids, fields, and Frobenioids from the preceding source theorems remains
+  open, as do the general RC-holomorphic local-morphism classification and
+  rigidity for arbitrary purely local group-germ automorphisms,
+  construction of the adjacent finite and infinite unit correspondences from
+  the Gaussian log-theta lattice, and construction of the indexed horizontal
+  isomorphisms and their equivariance from the actual theta links.
+\end{definition}
+
+\begin{definition}[Source full vertical log-links]
+  \label{def:source-full-vertical-log-links}
+  \uses{def:source-theorem-311-interfaces}
+  \lean{Iut.SourceSelectedLocalFullLogLink}
+  \lean{Iut.SourceSelectedLocalFullLogLink.NonarchimedeanRelated}
+  \lean{Iut.SourceSelectedLocalFullLogLink.ArchimedeanRelated}
+  \lean{Iut.SourceSelectedLocalFullLogLink.nonarchimedean_target_unique}
+  \lean{Iut.SourceSelectedLocalFullLogLink.archimedean_target_unique}
+  \lean{Iut.SourceAbsoluteLGPVerticalFullLogLinks}
+  \lean{Iut.SourceAbsoluteLGPVerticalFullLogLinks.toVerticalUpperSemiData}
+  \leanok
+  A selected-place full log-link in the sense of IUT~III,
+  Definition~1.1, consists of a continuous rational-linear post-composition
+  between the actual ind-topological logarithmic modules, a compatible ring
+  equivalence of their realized logarithmic fields, and continuous injective
+  realizations of the adjacent target's local units.  At a finite place the
+  adjacent relation asserts that the source \(p\)-adic logarithm equals a
+  realized target invariant unit.  At an infinite place it asserts the same
+  equality for the source principal logarithm and a realized target circle
+  unit.  These are partial relations: existence is not assumed, while
+  injectivity proves uniqueness of any target.
+
+  A family of these links on all adjacent lattice sites derives the finite
+  packet graph and archimedean semi-germ relation componentwise, and hence
+  constructs the complete \(Ind{3}\) upper-semi input.  Constructing the
+  full links from the cited \(Psi_{\mathrm{cns}}\), Frobenioid, and
+  poly-isomorphism data remains a source obligation.
+\end{definition}
+
+\begin{definition}[Assembled source Theorem 3.11 column and corridor boundaries]
+  \label{def:source-theorem-311-column-boundary}
+  \uses{def:source-theorem-311-interfaces,def:source-full-vertical-log-links}
+  \lean{Iut.SourceTheorem311ColumnBoundary}
+  \lean{Iut.SourceTheorem311ColumnBoundary.presentation}
+  \lean{Iut.SourceTheorem311ColumnBoundary.ind1Action}
+  \lean{Iut.SourceTheorem311ColumnBoundary.ind2Action}
+  \lean{Iut.SourceTheorem311ColumnBoundary.ind3System}
+  \lean{Iut.SourceTheorem311ColumnBoundary.verticalLocalKummer}
+  \lean{Iut.SourceTheorem311ColumnBoundary.badPrime_logarithm_eq}
+  \lean{Iut.SourceTheorem311HorizontalCorridorBoundary}
+  \lean{Iut.SourceTheorem311HorizontalCorridorBoundary.siteKappaClauseD_localization_commutes}
+  \lean{Iut.SourceTheorem311HorizontalCorridorBoundary.siteKappaClauseD_inclusion_commutes}
+  \lean{Iut.SourceTheorem311HorizontalCorridorBoundary.commonKappaClauseD_localization_commutes}
+  \lean{Iut.SourceTheorem311HorizontalCorridorBoundary.commonKappaClauseD_inclusion_commutes}
+  \leanok
+  At one fixed horizontal column, the source assembly forces the
+  multiradial presentation and the vertical family to use the same common
+  local construction.  Its inputs are the absolute-label Gaussian
+  log-theta lattice, mono-analytic log-shell algorithm, finite-stage integral
+  data, full local log-links, splitting and labeled Kummer data, and the
+  multiradial functor.  From these Lean derives
+  the adjacent finite and archimedean packet relations,
+  the actual procession action, independent summand action, generated
+  \(\Ind{1}/\Ind{2}\) quotient, vertical packet Kummer maps, \(\Ind{3}\)
+  system, vertical log-volume independence, and roots-only bad-prime logarithm
+  equality.  A separate corridor joins two such boundaries on the same
+  lattice at adjacent columns and carries the universally indexed horizontal
+  squares and their coherence with vertical Kummer.  Its labeled clause~(d)
+  data preserve the full global/local Corollary~4.8 localization diagram and
+  every local inclusion, rather than a collapsed profinite-group arrow.
+
+  This assembly is not an existence proof for its upstream inputs.  Its role
+  is to replace the unrelated finite adapters by one coherent source boundary
+  and to identify precisely which constructions from IUT~I--III remain.
+\end{definition}
+
+\begin{definition}[Indeterminacy generator interface]
+  \label{def:indeterminacy-generator-interface}
+  \lean{Iut.Stage1.IUTStage1Theorem311IndeterminacySourceData,Iut.Stage1.IUTStage1Theorem311IndeterminacySourceData.DirectionalReachability,Iut.Stage1.IUTStage1Theorem311IndeterminacySourceData.DirectionalReachability.ind3}
+  \leanok
+  The Stage 1 interface names the three source-facing indeterminacy
+  relations separately: procession automorphism, local tensor symmetry, and
+  upper-semi compatibility.  Only the first two generate the equality
+  quotient.  The third generates one-way directional reachability, never a
+  symmetric identification.  This is a Lean-checked naming interface, not yet
+  a construction of the source Step (x) estimates.
+\end{definition}
+
+\begin{definition}[Step (x) averaged corridor record]
+  \label{def:step-x-averaged-corridor-record}
+  \lean{Iut.Stage1.IUTStage1ProcessionNormalizedIndeterminacyCorridor,Iut.Stage1.IUTStage1ProcessionNormalizedIndeterminacyCorridor.before_average_le_ind3UpperBound}
+  \leanok
+  The averaged corridor record is the conditional Lean shape of Step (x):
+  \(\Ind{1}\) and \(\Ind{2}\) preserve the procession-normalized average, and
+  \(\Ind{3}\) supplies the upper-semi bound.  Its Lean theorem proves the
+  resulting averaged inequality from those record fields.
+\end{definition}
+
+\begin{proposition}[Step (x) corridor]
+  \label{prop:step-x-corridor}
+  \uses{def:indeterminacy-generator-interface,def:step-x-averaged-corridor-record}
+  \notready
+  The source Step (x) data should produce a corridor
+  \[
+    A_0 = A_1 = A_2 \le U_{\Ind{3}},
+  \]
+  where \(A_0,A_1,A_2\) are the averaged log-volumes before
+  indeterminacy, after \(\Ind{1}\), and after \(\Ind{2}\), and
+  \(U_{\Ind{3}}\) is the upper-semi target coming from \(\Ind{3}\).
+\end{proposition}
+
+\begin{proof}
+  In the current code this is an interface-level object.  The proof from the
+  source papers must still account for the log-volume invariance under
+  \(\Ind{1}\) and \(\Ind{2}\), the upper-semi orientation of \(\Ind{3}\), and
+  the normalization conventions for averaging over labels.
+\end{proof}
+
+\begin{definition}[Legacy finite M3 procession model]
+  \label{def:constructed-m3-procession}
+  \uses{def:hodge-arakelov-concrete-pilots,prop:step-x-corridor}
+  \lean{Iut.Stage1.IUTIIIProcessionChoice}
+  \lean{Iut.Stage1.IUTIIIProcessionChoice.typedCore}
+  \lean{Iut.Stage1.IUTIIIProcessionChoice.quotientPossibleImage}
+  \lean{Iut.Stage1.IUTIIIVerticalLogKummer.correspondenceLaws}
+  \lean{Iut.Stage1.IUTIIIHorizontalCompatibility.ofM2}
+  \leanok
+  The numerical Gaussian pilots construct a finite coordinate model with two
+  actual \(\mathbb Z/l\mathbb Z\)-translation actions.  Their generated
+  equality quotient preserves orbit averages and nonempty possible images.
+  Natural-number lifts give the correctly oriented \(\Ind{3}\) upper-semi
+  relation and do not collapse in that quotient. At every model point,
+  the bad-local quotient torsor maps bijectively to the evaluated vertical
+  target; its graph, range, and log-volume image are exact, and its finite
+  discrete image is compact-open.  The horizontal object retains the distinct
+  zero/one histories and carries the typed theta link, gluing, Gaussian
+  evaluation, and finite transport laws named \(\IPL/\SHE/\APT\). This
+  definition is a regression model and does not discharge Theorem~3.11.
+\end{definition}
+
+\begin{theorem}[Legacy degree-level Theorem 3.11 wrapper]
+  \label{thm:theorem-311-source-output}
+  \uses{def:initial-theta-data,def:hodge-theater-histories,def:prime-strip-links,def:constructed-m3-procession}
+  \lean{Iut.Stage1.IUTIIITheorem311ConstructedSource}
+  \lean{Iut.Stage1.IUTIIITheorem311ConstructedSource.ofInitialThetaData}
+  \lean{Iut.Stage1.IUTStage1InitialThetaPrimitiveSourcePacket.ofInitialThetaData}
+  \leanok
+  Initial \(\Theta\)-data constructs a finite degree-level regression wrapper
+  shaped after Theorem 3.11, including model multiradial possibilities and
+  \(\Ind{1}\), \(\Ind{2}\), and \(\Ind{3}\) behavior.  The older qualitative
+  packet is not a field of this source and is available only through an
+  explicitly named legacy adapter.  It does not construct the source objects
+  of Definition~\ref{def:source-theorem-311-interfaces} and does not prove
+  Theorem~3.11.  Analytic Step (xi) hull and determinant enrichment is outside
+  this wrapper.
+\end{theorem}
+
+\section{Step (xi)}
+
+\begin{definition}[Simultaneous holomorphic expressibility]
+  \label{def:she}
+  \notready
+  The \(\SHE\) property says that the relevant output possibilities may be
+  expressed relative to the arithmetic holomorphic structure in the \(1\)-column
+  while keeping the \qPilot{} log-volume fixed as input data.
+\end{definition}
+
+\begin{definition}[Algorithmic parallel transport]
+  \label{def:apt}
+  \notready
+  The \(\APT\) property records how the multiradial algorithm transports data
+  through gluings up to indeterminacy.  It belongs primarily to the implication
+  from Theorem 3.11 to the reorganized hull-plus-determinant checkpoint.
+\end{definition}
+
+\begin{definition}[Hull plus determinant checkpoint]
+  \label{def:hdd}
+  \notready
+  The \(\HDD\) checkpoint is the composite of descent with holomorphic hull
+  and determinant formation.  It is the source-side operation that turns
+  multiradial output regions into objects comparable with the \qPilot{} at
+  the level of signed real log-volume.
+\end{definition}
+
+\begin{proposition}[Step (xi) upper-ray input]
+  \label{prop:step-xi-upper-ray-input}
+  \uses{thm:theorem-311-source-output,def:she,def:hdd}
+  \notready
+  The multiradial construction, followed by holomorphic hull, determinant, and
+  log-volume, should produce a signed upper ray
+  \[
+    \R_{\le -|\log(\Theta)|}
+  \]
+  of possible output log-volumes, and the \qPilot{} reading
+  \(-|\log(q)|\) should lie in this ray.
+\end{proposition}
+
+\begin{proof}
+  This is the central source obligation.  It is exactly where the comparison
+  must avoid identifying the arithmetic holomorphic histories too early while
+  still obtaining a common log-volume container in which the final inequality
+  is meaningful.
+\end{proof}
+
+\begin{proposition}[Localized Step (xi) \(C_\Theta\) source]
+  \label{prop:localized-step-xi-ctheta-source}
+  \uses{prop:step-xi-upper-ray-input}
+  \lean{Iut.Stage1.Experiments.concreteHodgeTheaterLogThetaPrincipalValuationBallThetaClassFiberTransportThetaRegionDefinedPrincipalValuationBallCompactOpenLogKummerMapPossibleRegionFamilyExactXiSelectedQRemark395SourceDerivedCThetaAuditViaGraphPointwiseLogShellExactCompactOpenImage}
+  \lean{Iut.Stage1.Experiments.concreteHodgeTheaterLogThetaPrincipalValuationBallThetaClassFiberTransportThetaRegionDefinedPrincipalValuationBallCompactOpenLogKummerMapPossibleRegionFamilyExactXiSelectedQRemark395ValuationBallHaarValuationCoverFiberThetaRegionLocalArithmeticStepXILocalTermClosedCorollary312Endpoint}
+  \leanok
+  The current source-derived exact-\(\Xi(P_B)\) route starts from compact-open
+  log-Kummer map data over the transported theta-region family and constructs
+  the graph, pointwise log-shell, valuation-ball, and Remark~3.9.5
+  exact-family audit internally.  The strongest local-arithmetic
+  valuation-cover boundary then starts from a named localized vector-bundle
+  determinant source: its weighted adjusted local terms give the Step~(xi)
+  finite sum for the canonical \(C_\Theta\)-scale, while the local arithmetic
+  upper term is decomposed into the Step~(xi) term, a Haar normalization
+  defect, and a main-log term.  The localized-determinant constructor removes
+  the separate determinant-source handoff: the constructed Remark~3.9.5 source
+  is projected from the same localized vector-bundle determinant source.
+  \lean{Iut.Stage1.IUTStage1SourcePackage.IUTStage1Remark395ConstructedHolomorphicHullDeterminantSource.ofLocalizedVectorBundleDeterminantSource}
+  \lean{Iut.Stage1.IUTStage1SourcePackage.IUTStage1Remark395ConstructedHolomorphicHullDeterminantSource.ofLocalizedVectorBundleDeterminantSource_endpoint}
+  \lean{Iut.Stage1.Experiments.concreteHodgeTheaterLogThetaQuotientThetaPilotSource_toOneSidedLocalizedDeterminantStepXILocalTermCThetaSource}
+\end{proposition}
+
+\begin{proof}
+  Lean first carries the compact-open log-Kummer source through the
+  source-derived exact-\(\Xi(P_B)\) global \(C_\Theta\) audit.  At the
+  local-term boundary it identifies the localized determinant source with the
+  formula-matching Step~(xi) source by construction, derives the displayed
+  Ob3/Ob4 and valuation-cover handoffs, and invokes the finite-sum closed
+  Corollary~3.12 endpoint.
+\end{proof}

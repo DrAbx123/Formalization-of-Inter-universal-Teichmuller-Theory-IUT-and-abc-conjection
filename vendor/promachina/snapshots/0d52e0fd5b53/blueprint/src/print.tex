@@ -1,0 +1,22 @@
+% This file makes the printable version of the blueprint.
+
+\documentclass[a4paper]{report}
+
+\usepackage[textwidth=14cm]{geometry}
+\usepackage{expl3}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[unicode,colorlinks=true,linkcolor=blue,urlcolor=magenta,citecolor=blue]{hyperref}
+\usepackage[warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
+\usepackage[nameinlink,capitalize]{cleveref}
+
+\input{macros/common.tex}
+\input{macros/print.tex}
+
+\title{A Lean Blueprint for the IUT III Corollary 3.12 Corridor}
+\author{IUT Lean formalization project}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\input{content.tex}
+\end{document}

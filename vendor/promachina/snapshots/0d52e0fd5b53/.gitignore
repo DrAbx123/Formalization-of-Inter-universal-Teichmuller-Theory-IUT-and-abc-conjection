@@ -1,0 +1,10 @@
+/.lake
+/notes/
+/tmp/
+/blueprint/web/
+/blueprint/print/
+/blueprint/src/*.paux
+.DS_Store
+*.aux
+*.log
+*.out

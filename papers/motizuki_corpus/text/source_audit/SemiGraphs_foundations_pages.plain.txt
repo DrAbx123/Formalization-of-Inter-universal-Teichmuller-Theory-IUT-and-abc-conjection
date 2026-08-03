@@ -1,0 +1,175 @@
+SOURCE: E:\360data\重要数据\我的文档\lean\papers\motizuki_corpus\raw\Semi-graphs of Anabelioids.pdf
+SOURCE_SHA256: DCC05B22FF858AF670C9346CA7A483D4D9B640DF5561EC0E82C27314A2416892
+PDF_PHYSICAL_PAGE_COUNT: 92
+EXTRACTED_PHYSICAL_PAGES: 11,20,37,38
+EXTRACTION_MODE: pypdf plain
+NOTE: Machine extraction is an index, not an authoritative formula transcription.
+
+===== PDF PHYSICAL PAGE 11 =====
+SEMI-GRAPHS OF ANABELIOIDS 11
+Section 1: Zariski’s Main Theorem for Semi-graphs
+In this §, we prove an analogue [cf. Theorem 1.2 below] for semi-graphs of
+“Zariski’s main theorem”(for schemes).
+We begin with some general remarks concerningsemi-graphs [a notion deﬁned
+in [Mzk3], Appendix]. First, we recall that a semi-graph G consists of the following
+collection of data:
+(1) a set V — whose elements we refer to as “vertices”;
+(2) a set E — whose elements we refer to as “edges” —e a c ho fw h o s e
+elements e is a set of cardinality 2 satisfying the property “e ̸= e′ ∈E =⇒
+e ⋂ e′ = ∅”;
+(3) a collection ζof maps ζe [one for each edgee] — which we refer to as the
+“coincidence maps” — such that ζe : e →V ⋃{V} [where we note that
+V ⋂{V} = ∅since V /∈V ] is a map from the set e to the set V ⋃{V}.
+We shall refer to the subset ζ−1
+e (V) ⊆ e [i.e., the inverse image of the subset
+V⊆V ⋃{V} of elements ̸= V]a st h everticial portionof an edgee; to the restriction
+of ζe to the verticial portion of e as the verticial restriction of ζe; and to the
+cardinality of the verticial portion of e as the verticial cardinality of e.A graph G
+is a semi-graph G for which every e ∈E has verticial cardinality precisely 2. We
+shall refer to an element b ∈ e as a branch of the edge e. A semi-graph will be
+called ﬁnite (respectively, countable) if both its set of vertices and its set of edges
+are ﬁnite (respectively, countable). A component of a semi-graph is deﬁned to be
+the datum of either an edge or a vertex of the semi-graph.
+Let G = {V, E,ζ} be a semi-graph.I f e ∈E is an edge of G of verticial
+cardinality 2 whose image via ζe consists of (not necessarily distinct) elements v1,
+v2 of V, then we shall say that e joins v1 to v2.I f v = ζe(b), for some branch b of
+an edge e [so v is a vertex], then we shall say that the edgee meets or abuts to the
+vertex v, and that the branch b of the edge e abuts to the vertex v. Thus, an edge
+of a graph always abuts to at least one vertex, while an edge of a semi-graph may
+abut to no vertices at all. A morphism between semi-graphs
+G = {V, E,ζ}→ G′ = {V′, E′,ζ′}
+is a collection of maps V→V ′; E→E ′; and for each e ∈E mapping to e′,a
+bijection e
+∼
+→ e′ [or, equivalently — since both e and e′ are sets of cardinality 2 —
+an injection e↪ → e′] — all of which are compatible with the verticial restrictions
+of the respective coincidence maps. Thus, here, we allow an edge that abuts to no
+(respectively, precisely one) vertex to map to an edge that abuts to any number
+≥ 0 (respectively, ≥ 1) of vertices.
+A semi-graph G may be thought of as atopological spaceas follows: We regard
+each vertex v as a point [v]. If e is an edge, consisting of branches b
+1, b2,t h e nw e
+regard e as the “interval” given by the set of formal sumsλ1 · [b1]+ λ2 · [b2], where
+
+===== PDF PHYSICAL PAGE 20 =====
+20 SHINICHI MOCHIZUKI
+of GB.I np a r t i c u l a r ,GA′ has fundamental group equal toF. Although, in general,
+the graph GA′ will not necessarily be ﬁnite, it follows from the fact that its funda-
+mental group F is ﬁnitely generated that there exists a ﬁnite subgraph GA ⊆ GA′
+such that the natural injection of fundamental groups π1(GA) ↪→ π1(GA′ )i s ,i n
+fact, a bijection. Moreover, the composite GA ↪→ GA′ → GB is an immersion
+(since it is a composite of immersions). This completes the proof of (i). ⃝
+Another interesting consequence of Theorem 1.2 is the following well-known
+result:
+Corollary 1.7. (Residual Finiteness of F ree Groups) Every discrete free
+group F injects into its proﬁnite completion.
+Proof. Indeed, let G be a connected graphwith π1(G)= F.I f H ⊆ F is the kernel
+of the map from F to its proﬁnite completion, write H → G for the corresponding
+graph-covering.I f H is not a tree, then one veriﬁes immediately that H contains a
+ﬁnite connected subgraph H′ which is not a tree. In particular, H′ admits nontrivial
+ﬁnite graph-coverings. Let G′ be a ﬁnite connected subgraph of G which contains
+the image of H′. Then if we apply Theorem 1.2, (i), to the immersion H′ → G′,w e
+obtain [since ﬁnite graph-coverings of a subgraph of a given graph always extend to
+ﬁnite graph-coverings of the given graph] that there exists a ﬁnite graph-covering
+K′ → G′ whose pull-back to H′ is nontrivial. Thus, if we extend K′ → G′ to a ﬁnite
+graph-covering K → G, we obtain a ﬁnite graph-covering of G whose pull-back to
+H is nontrivial. But this contradicts the deﬁnition of H. ⃝
+Remark 1.7.1. We recall in passing that there is also a pro-l version of this
+residual ﬁniteness result — cf., e.g., [RZ], Proposition 3.3.15.
+Finally, before continuing, we note the following useful result concerningﬁnite
+group actions on semi-graphs, which is implicit in the theory of [Serre]:
+Lemma 1.8. (Finite Group Actions on Semi-graphs) Let G be a con-
+nected semi-graph , equipped with the action of a ﬁnite group G.T h e n :
+(i) Every ﬁnite sub-semi-graph G′ of G is contained in a ﬁnite connected sub-
+semi-graph G′′ of G that is stabilized by the action of G.
+(ii) Suppose thatG is a tree. Then: (a) there exists at least one vertex or edge
+of G that is ﬁxed by G;( b )i fG ﬁxes two distinct vertices w1, w2 of G,t h e nG
+acts trivially on any “geodesic” [i.e., path of closed edges of minimal length] that
+joins w1, w2;( c )i fG ﬁxes three distinct vertices of G, then there exists at least
+one subjoint of G on which G acts trivially.
+Proof. First, we consider assertion (i).S i n c eG is connected, we may assume
+without loss of generality that G′ is connected and contains the G-orbit of some
+
+===== PDF PHYSICAL PAGE 37 =====
+SEMI-GRAPHS OF ANABELIOIDS 37
+no vertices — and hence precisely one edge e, which is necessarily isolated —t h e n
+we shall write Bcov(G)
+def
+= G⊤
+e .
+The deﬁnition of Bcov(G) extends immediately to arbitrary semi-graphs of an-
+abelioids, each connected component of which is countable. Moreover, for such G,
+we have a natural full embedding:
+B(G) ↪→B cov(G)
+An object of Bcov(G) that lies in the essential image of B(G) will be called ﬁnite .
+Now observe that we may associate, in a natural way, to any object ofBcov(G)
+a morphism of countable semi-graphs of anabelioids:
+G′ →G
+[cf. the discussion of §2 following Deﬁnition 2.1 in the case of B(G)].
+Deﬁnition 3.5.
+(i) We shall refer to a morphism of semi-graphs of anabelioids G′ →G that
+may be constructed in this way as a covering of semi-graphs of anabelioids [so, in
+the terminology of §2, coverings of semi-graphs of anabelioids that arise fromﬁnite
+objects of Bcov(G) determine “ﬁnite ´etale coverings of semi-graphs of anabelioids”].
+(ii) Suppose that G′ →G satisﬁes the condition that there exists a ﬁnite ´etale
+covering G′′ →G with the property that, for any component [i.e., vertex or edge] c
+of G, the restriction of G′′ →G to Gc splits the restriction of G′ →G to Gc.T h e n
+we shall say that the covering G′ →G , as well as the object of Bcov(G)t h a tg a v e
+rise to this covering, is tempered. Also, we shall write
+Btemp(G) ⊆B cov(G)
+for the full subcategory determined by the tempered objects. Thus, we have natural
+full embeddings:
+B(G) ↪→B temp(G) ↪→B cov(G)
+(iii) An arrow φ : H1 → H2 of Bcov(G) with connected domain and codomain
+will be calledGalois if, for any two arrowsψ1,ψ2 : K → H1 such thatφ◦ψ1 = φ◦ψ2,
+there exists a [unique] automorphism α ∈ AutH2(H1)o f H1 over H2 such that
+ψ1 = α ◦ψ2.
+Remark 3.5.1. It is immediate from the deﬁnitions that passing to theunderlying
+morphism of semi-graphsyields an equivalence between the datum of alocally trivial
+covering of the semi-graph of anabelioidsG and the datum of a graph-covering with
+countable ﬁbers of the semi-graph G.
+
+===== PDF PHYSICAL PAGE 38 =====
+38 SHINICHI MOCHIZUKI
+Remark 3.5.2. It follows from Remark 2.4.2 that, if G is totally aloof and
+verticially slim, then the construction given above of a covering of semi-graphs of
+anabelioids associated to an object ofBcov(G) determines a naturalfull embeddingof
+Bcov(G)i n t ot h ecategory of totally aloof, verticially slim semi-graphs of anabelioids
+and locally ﬁnite ´etale morphisms over G.
+Now let us assume that the semi-graph of anabelioidsG is connected, countable,
+quasi-coherent, totally elevated, totally aloof,a n dverticially slim.L e t
+{Gi →G } i∈I
+be some coﬁnal [i.e., in B(G)] collection of connected ﬁnite ´etale Galois coverings,
+indexed by a set I.T h u s ,ˆπ1(G) may be constructed as the inverse limit
+lim←−i
+Gal(Gi/G)
+of the resulting inverse system of ﬁnite groups Gal( Gi/G). Let us write
+G∞ ,i →G i
+for the “combinatorial universal covering” of Gi [i.e., the covering of Gi deter-
+mined by the universal graph-covering of the underlying semi-graph Gi;t h u s ,
+Gal(G∞ ,i/Gi)i sa free discrete group]. One veriﬁes immediately that G∞ ,i →G
+is a Galois tempered covering. Then we set:
+πtemp
+1 (G)
+def
+= lim←−i
+Gal(G∞ ,i/G)
+Note that πtemp
+1 (G)i s independent,u pt o inner automorphism, of the choice of the
+coﬁnal system {Gi →G } i∈I.
+Proposition 3.6. (The T empered F undamental Group of a Semi-graph
+of Anabelioids) Let G, G′ be connected, countable, quasi-coherent, totally
+elevated, totally aloof , verticially slim semi-graphs of anabelioids. Then:
+(i) The topological groupπtemp
+1 (G) deﬁned above is tempered.
+(ii) There is a natural equivalence of categories :
+Btemp(πtemp
+1 (G))
+∼
+→B temp(G)
+In particular, the category Btemp(G) is a connected temperoid . We shall refer
+to πtemp
+1 (G) as the tempered fundamental group of G.
+(iii) The full embedding B(G) ↪→B temp(G) induces an injection πtemp
+1 (G) ↪→
+ˆπ1(G) of topological groups.

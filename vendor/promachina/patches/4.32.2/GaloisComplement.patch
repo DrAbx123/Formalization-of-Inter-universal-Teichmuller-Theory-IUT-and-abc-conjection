@@ -1,0 +1,94 @@
+diff --git "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\GaloisComplement.lean" "Iut\\Foundations\\GaloisComplement.lean"
+index 6efd947..12cf9b1 100644
+--- "vendor\\promachina\\snapshots\\0d52e0fd5b53\\Iut\\Foundations\\GaloisComplement.lean"
++++ "Iut\\Foundations\\GaloisComplement.lean"
+@@ -2,6 +2,9 @@
+ Copyright (c) 2026 IUT Lean formalization contributors. All rights reserved.
+ Released under Apache 2.0 license as described in the file LICENSE.
+ Authors: IUT Lean formalization contributors
++
++Modified by LeanFormal contributors for Lean/Mathlib 4.32.2. See
++vendor/promachina/patches/4.32.2 for the exact compatibility patch.
+ -/
+ import Mathlib.CategoryTheory.Galois.Full
+ import Mathlib.CategoryTheory.Limits.Types.Coproducts
+@@ -25,6 +28,41 @@ open CategoryTheory Limits
+ variable {C : Type (u + 1)} [Category.{u} C] [GaloisCategory C]
+   (F : C ⥤ FintypeCat.{u}) [FiberFunctor F]
+ 
++/-- Transport the function facts returned after applying `FintypeCat.incl`
++back to the underlying functions of the original `FintypeCat` morphisms.
++Lean 4.32 distinguishes these two coercion paths even though their pointwise
++applications are the same. -/
++private theorem functionFactsOfIncl
++    {X Z Y : C} (i : X ⟶ Y) (u : Z ⟶ Y)
++    (facts :
++      Function.Injective (ConcreteCategory.hom (F.map i).hom) ∧
++        Function.Injective (ConcreteCategory.hom (F.map u).hom) ∧
++        IsCompl
++          (Set.range (ConcreteCategory.hom (F.map i).hom))
++          (Set.range (ConcreteCategory.hom (F.map u).hom))) :
++    Function.Injective (F.map i) ∧
++      Function.Injective (F.map u) ∧
++      IsCompl (Set.range (F.map i)) (Set.range (F.map u)) := by
++  have rangeI :
++      Set.range (ConcreteCategory.hom (F.map i).hom) =
++        Set.range (ConcreteCategory.hom (F.map i)) := by
++    ext value
++    constructor <;> rintro ⟨preimage, equality⟩ <;>
++      exact ⟨preimage, equality⟩
++  have rangeU :
++      Set.range (ConcreteCategory.hom (F.map u).hom) =
++        Set.range (ConcreteCategory.hom (F.map u)) := by
++    ext value
++    constructor <;> rintro ⟨preimage, equality⟩ <;>
++      exact ⟨preimage, equality⟩
++  refine ⟨?_, ?_, ?_⟩
++  · intro first second equality
++    exact facts.1 equality
++  · intro first second equality
++    exact facts.2.1 equality
++  · rw [← rangeI, ← rangeU]
++    exact facts.2.2
++
+ theorem complementTarget_mem
+     {X₁ Z₁ Y₁ X₂ Z₂ Y₂ : C}
+     (i₁ : X₁ ⟶ Y₁) (u₁ : Z₁ ⟶ Y₁)
+@@ -50,11 +88,11 @@ theorem complementTarget_mem
+   have facts₁' : Function.Injective (F.map i₁) ∧
+       Function.Injective (F.map u₁) ∧
+       IsCompl (Set.range (F.map i₁)) (Set.range (F.map u₁)) := by
+-    simpa using facts₁
++    exact functionFactsOfIncl F i₁ u₁ facts₁
+   have facts₂' : Function.Injective (F.map i₂) ∧
+       Function.Injective (F.map u₂) ∧
+       IsCompl (Set.range (F.map i₂)) (Set.range (F.map u₂)) := by
+-    simpa using facts₂
++    exact functionFactsOfIncl F i₂ u₂ facts₂
+   rw [← facts₂'.2.2.compl_eq]
+   rw [Set.mem_compl_iff]
+   rintro ⟨a, ha⟩
+@@ -118,11 +156,11 @@ noncomputable def complementComparisonActionHom
+   have facts₁' : Function.Injective (F.map i₁) ∧
+       Function.Injective (F.map u₁) ∧
+       IsCompl (Set.range (F.map i₁)) (Set.range (F.map u₁)) := by
+-    simpa using facts₁
++    exact functionFactsOfIncl F i₁ u₁ facts₁
+   have facts₂' : Function.Injective (F.map i₂) ∧
+       Function.Injective (F.map u₂) ∧
+       IsCompl (Set.range (F.map i₂)) (Set.range (F.map u₂)) := by
+-    simpa using facts₂
++    exact functionFactsOfIncl F i₂ u₂ facts₂
+   let target (z : F.obj Z₁) : F.obj Y₂ := F.map y.hom (F.map u₁ z)
+   have target_mem (z : F.obj Z₁) :
+       target z ∈ Set.range (F.map u₂) :=
+@@ -209,7 +247,8 @@ theorem mono_right_of_isColimit_binaryCofan
+   apply (forget₂ (Action FintypeCat (Aut F)) FintypeCat).mono_of_mono_map
+   apply FintypeCat.incl.mono_of_mono_map
+   rw [mono_iff_injective]
+-  simpa using facts.2.1
++  intro first second equality
++  exact facts.2.1 equality
+ 
+ theorem complementComparison_unique
+     {X₁ Z₁ Y₁ X₂ Z₂ Y₂ : C}

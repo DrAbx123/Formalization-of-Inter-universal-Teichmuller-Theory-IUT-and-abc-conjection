@@ -1,0 +1,271 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "fetchedAt": "2026-08-04T01:27:06.3415187+08:00",
+  "historyComplete": true,
+  "masterCommit": "0d52e0fd5b532117a5f804809583da446fb9864b",
+  "remoteBranchCount": 26,
+  "mergedBranchCount": 25,
+  "unmergedBranchCount": 1,
+  "branches": [
+    {
+      "branch": "origin/agent/46-tempered-semigraph-inverse-limit",
+      "tip": "7a0854b289187c98991609d991d742134d7a497e",
+      "mergeBase": "96868cb8270774e8d87ce8cf5e43ea7932bc97e8",
+      "mergedIntoMaster": false,
+      "masterOnly": 244,
+      "branchOnly": 1,
+      "committedAt": "2026-08-01T09:09:43+02:00",
+      "subject": "feat: construct tempered semigraph inverse limit"
+    },
+    {
+      "branch": "origin/agent/54-associated-temperoid-quotient",
+      "tip": "632000d26f1dbc910b1e832145bee1f3d380c3ff",
+      "mergeBase": "632000d26f1dbc910b1e832145bee1f3d380c3ff",
+      "mergedIntoMaster": true,
+      "masterOnly": 62,
+      "branchOnly": 0,
+      "committedAt": "2026-08-03T05:06:42+02:00",
+      "subject": "Construct associated temperoid quotients for #54"
+    },
+    {
+      "branch": "origin/agent/54-deck-transition-surjectivity",
+      "tip": "2aebf417f3029b39f2cc0202e749015e9ff87eb9",
+      "mergeBase": "2aebf417f3029b39f2cc0202e749015e9ff87eb9",
+      "mergedIntoMaster": true,
+      "masterOnly": 28,
+      "branchOnly": 0,
+      "committedAt": "2026-08-03T10:26:10+02:00",
+      "subject": "Prove stabilizer-compatible deck refinement lifting for #54"
+    },
+    {
+      "branch": "origin/agent/54-faithful-morphism-recovery",
+      "tip": "49c36aa5f4ff5853fafecdaff04167aea438b8b7",
+      "mergeBase": "49c36aa5f4ff5853fafecdaff04167aea438b8b7",
+      "mergedIntoMaster": true,
+      "masterOnly": 58,
+      "branchOnly": 0,
+      "committedAt": "2026-08-03T05:31:15+02:00",
+      "subject": "Prove root geometric deck action is free for #54"
+    },
+    {
+      "branch": "origin/agent/54-full-cover-classification",
+      "tip": "7397dda2803667191d237d617496f6bcbbeb13ca",
+      "mergeBase": "7397dda2803667191d237d617496f6bcbbeb13ca",
+      "mergedIntoMaster": true,
+      "masterOnly": 24,
+      "branchOnly": 0,
+      "committedAt": "2026-08-03T11:21:16+02:00",
+      "subject": "Classify arbitrary tempered covers at one level for #54"
+    },
+    {
+      "branch": "origin/agent/54-geometric-associated-quotient",
+      "tip": "84c651d3fedc00158509996ec0846589089cef75",
+      "mergeBase": "84c651d3fedc00158509996ec0846589089cef75",
+      "mergedIntoMaster": true,
+      "masterOnly": 60,
+      "branchOnly": 0,
+      "committedAt": "2026-08-03T05:17:03+02:00",
+      "subject": "Descend equivariant constituent maps for #54"
+    },
+    {
+      "branch": "origin/agent/54-geometric-deck-action",
+      "tip": "09fe0f31dcba68aa3fd9af85d3eb663bda724438",
+      "mergeBase": "09fe0f31dcba68aa3fd9af85d3eb663bda724438",
+      "mergedIntoMaster": true,
+      "masterOnly": 64,
+      "branchOnly": 0,
+      "committedAt": "2026-08-03T04:51:32+02:00",
+      "subject": "Construct the geometric deck-group action for #54"
+    },
+    {
+      "branch": "origin/agent/54-tempered-deck-path-lifting",
+      "tip": "e3318a29647acfaa4571a085813a75bbc82e31de",
+      "mergeBase": "e3318a29647acfaa4571a085813a75bbc82e31de",
+      "mergedIntoMaster": true,
+      "masterOnly": 30,
+      "branchOnly": 0,
+      "committedAt": "2026-08-03T10:01:09+02:00",
+      "subject": "Prove local incidence path lifting for #54"
+    },
+    {
+      "branch": "origin/agent/55-finite-etale-cover",
+      "tip": "6025efbd7b1f53001506c82f2065b2a4cf31e39a",
+      "mergeBase": "6025efbd7b1f53001506c82f2065b2a4cf31e39a",
+      "mergedIntoMaster": true,
+      "masterOnly": 129,
+      "branchOnly": 0,
+      "committedAt": "2026-08-02T12:16:15+02:00",
+      "subject": "feat: construct finite-etale semigraph covers"
+    },
+    {
+      "branch": "origin/agent/55-finite-etale-transitions",
+      "tip": "af7be4407d4c68055ba0306399969014cedbd00c",
+      "mergeBase": "af7be4407d4c68055ba0306399969014cedbd00c",
+      "mergedIntoMaster": true,
+      "masterOnly": 127,
+      "branchOnly": 0,
+      "committedAt": "2026-08-02T12:27:29+02:00",
+      "subject": "feat: construct finite-etale cover refinements"
+    },
+    {
+      "branch": "origin/agent/55-glued-category",
+      "tip": "c718a81b540122c75e1c668b4cc406c953244416",
+      "mergeBase": "c718a81b540122c75e1c668b4cc406c953244416",
+      "mergedIntoMaster": true,
+      "masterOnly": 143,
+      "branchOnly": 0,
+      "committedAt": "2026-08-02T09:45:14+02:00",
+      "subject": "feat: construct glued total anabelioid and Galois levels"
+    },
+    {
+      "branch": "origin/agent/55-glued-finite-limits",
+      "tip": "8dd0f7fce755dcd34a8a436bd0404adc5eec7642",
+      "mergeBase": "8dd0f7fce755dcd34a8a436bd0404adc5eec7642",
+      "mergedIntoMaster": true,
+      "masterOnly": 141,
+      "branchOnly": 0,
+      "committedAt": "2026-08-02T10:12:18+02:00",
+      "subject": "feat: construct finite limits in the glued anabelioid"
+    },
+    {
+      "branch": "origin/agent/55-total-anabelioid",
+      "tip": "9462ded948ed386c9d4c3245fe8d064fb379d431",
+      "mergeBase": "9462ded948ed386c9d4c3245fe8d064fb379d431",
+      "mergedIntoMaster": true,
+      "masterOnly": 125,
+      "branchOnly": 0,
+      "committedAt": "2026-08-02T12:41:44+02:00",
+      "subject": "feat: dispatch the total anabelioid construction"
+    },
+    {
+      "branch": "origin/agent/66-corrected-generic-birationalization",
+      "tip": "83e212c621fa310765cb47b8f10683440fd51a18",
+      "mergeBase": "83e212c621fa310765cb47b8f10683440fd51a18",
+      "mergedIntoMaster": true,
+      "masterOnly": 122,
+      "branchOnly": 0,
+      "committedAt": "2026-08-02T13:47:15+02:00",
+      "subject": "docs: record corrected birationalization boundary"
+    },
+    {
+      "branch": "origin/agent/66-generic-birational-base-identity",
+      "tip": "c367ac06e7f277aaf5a3572cb321fa520a37e901",
+      "mergeBase": "c367ac06e7f277aaf5a3572cb321fa520a37e901",
+      "mergedIntoMaster": true,
+      "masterOnly": 207,
+      "branchOnly": 0,
+      "committedAt": "2026-08-02T02:15:28+02:00",
+      "subject": "feat: classify generic birational base-identity roofs"
+    },
+    {
+      "branch": "origin/agent/66-generic-birational-coangular",
+      "tip": "56af55bcab8b34f440a000a6d63d6bac6f9a6a13",
+      "mergeBase": "56af55bcab8b34f440a000a6d63d6bac6f9a6a13",
+      "mergedIntoMaster": true,
+      "masterOnly": 201,
+      "branchOnly": 0,
+      "committedAt": "2026-08-02T03:41:58+02:00",
+      "subject": "feat: preserve generic birational co-angularity"
+    },
+    {
+      "branch": "origin/agent/66-generic-birational-factorization-uniqueness",
+      "tip": "8b8e0a082cde1e0535a6ddc3623e2d89fffe2a96",
+      "mergeBase": "8b8e0a082cde1e0535a6ddc3623e2d89fffe2a96",
+      "mergedIntoMaster": true,
+      "masterOnly": 165,
+      "branchOnly": 0,
+      "committedAt": "2026-08-02T06:16:26+02:00",
+      "subject": "feat: finish generic birational Frobenioid axioms"
+    },
+    {
+      "branch": "origin/agent/66-generic-birational-frobenius-degree",
+      "tip": "506a9c0d69041b361724a4bf235239fbe1a8d138",
+      "mergeBase": "506a9c0d69041b361724a4bf235239fbe1a8d138",
+      "mergedIntoMaster": true,
+      "masterOnly": 167,
+      "branchOnly": 0,
+      "committedAt": "2026-08-02T06:06:22+02:00",
+      "subject": "feat: construct birational Frobenius degree witnesses"
+    },
+    {
+      "branch": "origin/agent/66-generic-birational-isotropic",
+      "tip": "5e70fbe94dec7c07d201987d9a65b34178905cb1",
+      "mergeBase": "5e70fbe94dec7c07d201987d9a65b34178905cb1",
+      "mergedIntoMaster": true,
+      "masterOnly": 203,
+      "branchOnly": 0,
+      "committedAt": "2026-08-02T02:38:02+02:00",
+      "subject": "feat: preserve generic birational isotropic objects"
+    },
+    {
+      "branch": "origin/agent/66-generic-birational-pullback",
+      "tip": "2949e45e85994702f8513eb53ff5c994dfeb3519",
+      "mergeBase": "2949e45e85994702f8513eb53ff5c994dfeb3519",
+      "mergedIntoMaster": true,
+      "masterOnly": 199,
+      "branchOnly": 0,
+      "committedAt": "2026-08-02T03:59:44+02:00",
+      "subject": "feat: classify generic birational pullbacks"
+    },
+    {
+      "branch": "origin/agent/66-generic-birational-reflection",
+      "tip": "b6b894c2ff3d62152bdd897f5f522333dbba0493",
+      "mergeBase": "b6b894c2ff3d62152bdd897f5f522333dbba0493",
+      "mergedIntoMaster": true,
+      "masterOnly": 205,
+      "branchOnly": 0,
+      "committedAt": "2026-08-02T02:23:43+02:00",
+      "subject": "feat: reflect generic birational morphism classes"
+    },
+    {
+      "branch": "origin/agent/75-kummer-faithfulness-scope",
+      "tip": "3de1d7c10d7ea845a21ab4b74edd2b4c6c84fd8f",
+      "mergeBase": "3de1d7c10d7ea845a21ab4b74edd2b4c6c84fd8f",
+      "mergedIntoMaster": true,
+      "masterOnly": 223,
+      "branchOnly": 0,
+      "committedAt": "2026-08-01T22:18:29+02:00",
+      "subject": "feat: separate integral-unit and full Kummer faithfulness"
+    },
+    {
+      "branch": "origin/agent/issue-53-complete-cover-factorization",
+      "tip": "71f19d8d3ce95cc6826975df8423e476409a9164",
+      "mergeBase": "71f19d8d3ce95cc6826975df8423e476409a9164",
+      "mergedIntoMaster": true,
+      "masterOnly": 82,
+      "branchOnly": 0,
+      "committedAt": "2026-08-03T02:00:49+02:00",
+      "subject": "Complete finite graph-cover factorization for #53"
+    },
+    {
+      "branch": "origin/agent/issue-53-separator-path-lifting",
+      "tip": "616be1a43a1d6b67b3f8df790b6234b68b8306c0",
+      "mergeBase": "616be1a43a1d6b67b3f8df790b6234b68b8306c0",
+      "mergedIntoMaster": true,
+      "masterOnly": 80,
+      "branchOnly": 0,
+      "committedAt": "2026-08-03T02:09:46+02:00",
+      "subject": "Prove finite separator path-lifting uniqueness for #53"
+    },
+    {
+      "branch": "origin/issue-197-action-cover-full-faithful",
+      "tip": "90fe943c8faf9622dc69ca4ff2538487d123d252",
+      "mergeBase": "90fe943c8faf9622dc69ca4ff2538487d123d252",
+      "mergedIntoMaster": true,
+      "masterOnly": 3,
+      "branchOnly": 0,
+      "committedAt": "2026-08-03T18:05:03+02:00",
+      "subject": "Recover action morphisms from tempered covers"
+    },
+    {
+      "branch": "origin/master",
+      "tip": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "mergeBase": "0d52e0fd5b532117a5f804809583da446fb9864b",
+      "mergedIntoMaster": true,
+      "masterOnly": 0,
+      "branchOnly": 0,
+      "committedAt": "2026-08-03T18:49:28+02:00",
+      "subject": "Merge pull request #208 from promachina/issue-197-action-cover-essential-surjectivity"
+    }
+  ]
+}

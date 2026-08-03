@@ -1,5 +1,5 @@
 import LeanFormal.IUT.Audit.Status
-import LeanFormal.IUT.Foundations.NumberField.FinitePlaceExtension
+import LeanFormal.IUT.Foundations.NumberField.FinitePlaces
 
 /-!
   The valuation-theoretic kernel of a local q-parameter.
@@ -18,7 +18,7 @@ import LeanFormal.IUT.Foundations.NumberField.FinitePlaceExtension
 
 namespace LeanFormal.IUT
 
-universe u v
+universe u
 
 noncomputable section
 
@@ -102,77 +102,6 @@ noncomputable def pow (parameter : FinitePlaceQCandidate place)
     (parameter.pow n hn).q = parameter.q ^ n :=
   rfl
 
-section Extension
-
-variable {k : Type v} [Field k] [NumberField k] [Algebra k K]
-
-/-- A valuation-theoretic q-candidate maps to every finite place above it. -/
-noncomputable def map
-    (place : NumberField.FinitePlace K)
-    (parameter : FinitePlaceQCandidate (comap (k := k) place)) :
-    FinitePlaceQCandidate place where
-  q := completionMap (k := k) place parameter.q
-  q_ne_zero := by
-    intro h
-    exact parameter.q_ne_zero
-      (completionMap_injective place (by simpa using h))
-  valuation_lt_one := by
-    rw [← valuation_completionMap]
-    exact pow_lt_one₀ bot_le parameter.valuation_lt_one
-      (ramificationIdx_ne_zero place)
-
-@[simp] theorem map_q
-    (place : NumberField.FinitePlace K)
-    (parameter : FinitePlaceQCandidate (comap (k := k) place)) :
-    (map place parameter).q = completionMap (k := k) place parameter.q :=
-  rfl
-
-/-- The mapped valuation is the lower valuation raised to the ramification
-index. -/
-theorem valuation_map
-    (place : NumberField.FinitePlace K)
-    (parameter : FinitePlaceQCandidate (comap (k := k) place)) :
-    (Valued.v (map place parameter).q :
-        WithZero (Multiplicative Int)) =
-      (Valued.v parameter.q : WithZero (Multiplicative Int)) ^
-        (comap (k := k) place).maximalIdeal.asIdeal.ramificationIdx'
-          place.maximalIdeal.asIdeal := by
-  exact (valuation_completionMap place parameter.q).symm
-
-/-- The positive integer exponent scales by the ramification index. -/
-theorem exponent_map
-    (place : NumberField.FinitePlace K)
-    (parameter : FinitePlaceQCandidate (comap (k := k) place)) :
-    (map place parameter).exponent =
-      ((comap (k := k) place).maximalIdeal.asIdeal.ramificationIdx'
-          place.maximalIdeal.asIdeal : Int) * parameter.exponent := by
-  let e :=
-    (comap (k := k) place).maximalIdeal.asIdeal.ramificationIdx'
-      place.maximalIdeal.asIdeal
-  have hunzero :
-      WithZero.unzero (map place parameter).valuation_ne_zero =
-        WithZero.unzero parameter.valuation_ne_zero ^ e := by
-    apply WithZero.coe_injective
-    simp only [WithZero.coe_unzero, WithZero.coe_pow]
-    exact valuation_map place parameter
-  rw [exponent, exponent, hunzero, Int.toAdd_pow]
-  push_cast
-  ring
-
-/-- The natural-valued local order scales by the ramification index. -/
-theorem order_map
-    (place : NumberField.FinitePlace K)
-    (parameter : FinitePlaceQCandidate (comap (k := k) place)) :
-    (map place parameter).order =
-      (comap (k := k) place).maximalIdeal.asIdeal.ramificationIdx'
-          place.maximalIdeal.asIdeal * parameter.order := by
-  apply Int.ofNat_injective
-  rw [Int.ofNat_toNat (le_of_lt (map place parameter).exponent_pos),
-    Nat.cast_mul, Int.ofNat_toNat (le_of_lt parameter.exponent_pos),
-    exponent_map]
-
-end Extension
-
 end FinitePlaceQCandidate
 
 /--
@@ -209,13 +138,9 @@ def localQParameterValuationKernel : Obligation :=
       "At every actual number-field finite completion, an irreducible " ++
         "element of the completed DVR gives a nonzero q-candidate of " ++
         "valuation below one. Its positive discrete order and closure under " ++
-        "positive powers are proved. Along a finite-place extension, candidates " ++
-        "map through the actual completion embedding, and their valuation " ++
-        "exponent and natural order scale by the ramification index. This is " ++
-        "not yet a Tate parameter of a specified elliptic curve."
-    dependsOn :=
-      [ "Foundations.NumberField.finite-places",
-        "Foundations.NumberField.finite-place-extension" ] }
+        "positive powers are proved. This is not yet a Tate parameter of a " ++
+        "specified elliptic curve."
+    dependsOn := ["Foundations.NumberField.finite-places"] }
 
 def ellipticTateUniformization : Obligation :=
   { id := "Foundations.Geometry.elliptic-tate-uniformization"

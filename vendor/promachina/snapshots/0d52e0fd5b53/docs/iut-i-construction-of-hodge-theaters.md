@@ -1,0 +1,10668 @@
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I:
+CONSTRUCTION OF HODGE THEATERS
+Shinichi Mochizuki
+May 2020
+Abstract. The present paper is the first in a series of four papers, the
+goal of which is to establish an arithmetic version of Teichm¨ uller theory for number
+fields equipped with an elliptic curve — which we refer to as “inter-universal
+Teichm¨ uller theory” — by applying the theory of semi-graphs of anabelioids,
+Frobenioids, the´ etale theta function, and log-shells developed in earlier papers by
+the author. We begin by fixing what we call “initial Θ-data”, which consists of
+an elliptic curve EF over a number field F , and a prime number l ≥ 5, as well as
+some other technical data satisfying certain technical properties. This data deter-
+mines various hyperbolic orbicurves that are related via finite ´ etale coverings to the
+once-punctured elliptic curve XF determined by EF . These finite ´ etale coverings
+admit various symmetry properties arising from the additive and multiplicative
+structures on the ring Fl = Z/lZ acting on the l-torsion points of the elliptic curve.
+We then construct “Θ±ellNF-Hodge theaters” associated to the given Θ-data. These
+Θ±ellNF-Hodge theaters may be thought of as miniature models of conventional
+scheme theory in which the two underlying combinatorial dimensions of a
+number field — which may be thought of as corresponding to the additive and
+multiplicative structures of a ring or, alternatively, to the group of units and
+value group of a local field associated to the number field — are, in some sense,
+“dismantled” or “disentangled” from one another. All Θ±ellNF-Hodge theaters
+are isomorphic to one another, but may also be related to one another by means of a
+“Θ-link”, which relates certain Frobenioid-theoretic portions of one Θ±ellNF-Hodge
+theater to another in a fashion that is not compatible with the respective conven-
+tional ring/scheme theory structures. In particular, it is a highly nontrivial
+problem to relate the ring structures on either side of the Θ-link to one another. This
+will be achieved, up to certain “relatively mild indeterminacies”, in future papers
+in the series by applying the absolute anabelian geometry developed in earlier
+papers by the author. The resulting description of an “alien ring structure” [asso-
+ciated, say, to the domain of the Θ-link] in terms of a given ring structure [associated,
+say, to the codomain of the Θ-link] will be applied in the final paper of the series to
+obtain results in diophantine geometry. Finally, we discuss certain technical results
+concerning profinite conjugates of decomposition and inertia groups in the tem-
+pered fundamental group of a p-adic hyperbolic curve that will be of use in the
+development of the theory of the present series of papers, but are also of independent
+interest.
+Contents:
+Introduction
+§0. Notations and Conventions
+§1. Complements on Coverings of Punctured Elliptic Curves
+Typeset by AMS-TEX
+1
+2 SHINICHI MOCHIZUKI
+§2. Complements on Tempered Coverings
+§3. Chains of Θ-Hodge Theaters
+§4. Multiplicative Combinatorial Teichm¨ uller Theory
+§5. ΘNF-Hodge Theaters
+§6. Additive Combinatorial Teichm¨ uller Theory
+Introduction
+§I1. Summary of Main Results
+§I2. Gluing Together Models of Conventional Scheme Theory
+§I3. Basepoints and Inter-universality
+§I4. Relation to Complex and p-adic Teichm¨ uller Theory
+§I5. Other Galois-theoretic Approaches to Diophantine Geometry
+Acknowledgements
+§I1. Summary of Main Results
+The present paper is the first in a series of four papers, the goal of which is
+to establish an arithmetic version of Teichm¨ uller theory for number fields
+equipped with an elliptic curve, by applying the theory of semi-graphs of anabe-
+lioids, Frobenioids, the´ etale theta function, and log-shells developed in [SemiAnbd],
+[FrdI], [FrdII], [EtTh], and [AbsTopIII] [cf., especially, [EtTh] and [AbsTopIII]].
+Unlike many mathematical papers, which are devoted to verifying properties of
+mathematical objects that are either well-known or easily constructed from well-
+known mathematical objects, in the present series of papers, most of our eﬀorts
+will be devoted to constructing new mathematical objects. It is only in the final
+portion of the third paper in the series, i.e., [IUTchIII], that we turn to the task of
+proving properties of interest concerning the mathematical objects constructed. In
+the fourth paper of the series, i.e., [IUTchIV], we show that these properties may
+be combined with certain elementary computations to obtain diophantine results
+concerning elliptic curves over number fields.
+We refer to §0 below for more on the notations and conventions applied in the
+present series of papers. The starting point of our constructions is a collection of
+initial Θ-data[cf. Definition3.1]. Roughlyspeaking,thisdataconsists,essentially,
+of
+· an elliptic curve EF over a number field F,
+· an algebraic closure F of F,
+· a prime number l ≥5,
+· a collection of valuations V of a certain subfield K ⊆F, and
+· a collection of valuations Vbad
+mod of a certain subfield Fmod ⊆F
+thatsatisfycertaintechnicalconditions—werefertoDefinition3.1formoredetails.
+Here, we write Fmod ⊆F for the field of moduli of EF, K ⊆F for the extension field
+of F determined by the l-torsion points of EF, XF ⊆EF for the once-punctured
+elliptic curve obtained by removing the origin from EF, and XF →CF for the
+hyperbolic orbicurve obtained by forming the stack-theoretic quotient of XF by the
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 3
+natural action of {±1}. Then F is assumed to be Galois over Fmod, Gal(K/F)
+is assumed to be isomorphic to a subgroup of GL2(Fl) that contains SL2(Fl), EF
+is assumed to have stable reduction at all of the nonarchimedean valuations of F,
+def
+CK
+= CF ×F K is assumed to be a K-core [cf. [CanLift], Remark 2.1.1], V
+is assumed to be a collection of valuations of K such that the natural inclusion
+Fmod ⊆F ⊆K induces a bijection V∼
+→Vmod between V and the set Vmod of all
+valuations of the number field Fmod, and
+Vbad
+mod ⊆ Vmod
+is assumed to be some nonempty set of nonarchimedean valuations of odd residue
+characteristic over which EF has bad [i.e., multiplicative] reduction — i.e., roughly
+speaking, the subset of the set of valuations where EF has bad multiplicative reduc-
+tion that will be “of interest” to us in the context of the theory of the present series
+of papers. Then we shall write Vbad def
+= Vbad
+mod ×Vmod V ⊆ V, Vgood
+def
+mod
+= Vmod \Vbad
+mod,
+Vgood def
+= V\Vbad. Also, weshallapplythesuperscripts“non”and“arc”toV, Vmod
+to denote the subsets of nonarchimedean and archimedean valuations, respectively.
+This data determines, up to K-isomorphism [cf. Remark 3.1.3], a finite ´ etale
+covering CK →CK of degree l such that the base-changed covering
+XK
+def
+= CK ×CF XF → XK
+def
+= XF ×F K
+arises from a rank one quotient EK[l] Q (∼
+= Z/lZ) of the module EK[l] of l-
+def
+torsion points of EK(K) [where we write EK
+= EF ×F K] which, at v ∈Vbad
+,
+restricts to the quotient arising from coverings of the dual graph of the special fiber.
+Moreover, the above data also determines a cusp
+ϵ
+of CK which, at v ∈Vbad, corresponds to the canonical generator, up to ±1, of Q
+[i.e., the generator determined by the unique loop of the dual graph of the special
+fiber]. Furthermore, at v ∈Vbad, one obtains a natural finite ´ etale covering of
+degree l
+→ Xv
+X
+def
+= XK ×K Kv (→ Cv
+def
+= CK ×K Kv)
+v
+by extracting l-th roots of the theta function; at v ∈Vgood, one obtains a natural
+finite ´ etale covering of degree l
+X
+− →v
+→ Xv
+def
+= XK ×K Kv (→ Cv
+def
+= CK ×K Kv)
+determined by ϵ. More details on the structure of the coverings CK, XK, X
+v [for
+v ∈Vbad], X
+− →v [for v ∈Vgood] may be found in [EtTh], §2, as well as in §1 of the
+present paper.
+In this situation, the objects
+l def = (l−1)/2; l± def = (l+1)/2; Fl
+def
+= F×
+l /{±1}; F ±
+l
+def
+= Fl {±1}
+4 SHINICHI MOCHIZUKI
+[cf. the discussion at the beginning of §4; Definitions 6.1, 6.4] will play an important
+role in the discussion to follow. The natural action of the stabilizer in Gal(K/F) of
+the quotient EK[l] Q on Q determines a natural poly-action of Fl on CK, i.e.,
+a natural isomorphism of Fl with some subquotient of Aut(CK) [cf. Example 4.3,
+(iv)]. The Fl -symmetry constituted by this poly-action of Fl may be thought
+of as being essentially arithmetic in nature, in the sense that the subquotient of
+Aut(CK) that gives rise to this poly-action of Fl is induced, via the natural map
+Aut(CK) →Aut(K), by a subquotient of Gal(K/F) ⊆Aut(K). In a similar vein,
+the natural action of the automorphisms of the scheme XK on the cusps of XK
+determines a natural poly-action of F ±
+l on XK, i.e., a natural isomorphism of F ±
+l
+with some subquotient of Aut(XK) [cf. Definition 6.1, (v)]. The F ±
+l -symmetry
+constituted by this poly-action of F ±
+l may be thought of as being essentially geo-
+metric in nature, in the sense that the subgroup AutK(XK) ⊆Aut(XK) [i.e., of
+K-linear automorphisms] maps isomorphically onto the subquotient of Aut(XK)
+that gives rise to this poly-action of F ±
+l . On the other hand, the global Fl-
+symmetry of CK only extends to a “{1}-symmetry” [i.e., in essence, fails to extend!]
+of the local coverings X
+v [for v ∈Vbad] and X
+− →v [for v ∈Vgood], while the global
+F ±
+l -symmetry of XK only extends to a “{±1}-symmetry” [i.e., in essence, fails to
+extend!] of the local coverings X
+v [for v ∈Vbad] and X
+− →v [for v ∈Vgood] — cf. Fig.
+I1.1 below.
+{±1} {X
+or X
+v
+− →v}v∈V
+F ±
+l XK CK
+Fig. I1.1: Symmetries of coverings of XF
+We shall write Πv for the tempered fundamental group of X
+v, when v ∈Vbad
+[cf. Definition 3.1, (e)]; we shall write Πv for the´ etale fundamental group of X
+− →v,
+when v ∈Vgood [cf. Definition 3.1, (f)]. Also, for v ∈Vnon, we shall write Πv Gv
+forthequotientdeterminedbytheabsolute Galois groupofthebasefieldKv. Often,
+in the present series of papers, we shall consider various types of collections of data
+— which we shall refer to as “prime-strips” — indexed by v ∈V (∼
+→Vmod) that
+are isomorphic to certain data that arise naturally from X
+v [when v ∈Vbad] or X
+− →v
+[when v ∈Vgood]. The main types of prime-strips that will be considered in the
+present series of papers are summarized in Fig. I1.2 below.
+Perhaps the most basic kind of prime-strip is a D-prime-strip. When v ∈
+Vnon, the portion of a D-prime-strip labeled by v is given by a category equivalent
+to [the full subcategory determined by the connected objects of] the category of
+tempered coverings of X
+v [when v ∈Vbad] or finite ´ etale coverings of X
+− →v [when
+v ∈Vgood]. When v ∈Varc, an analogous definition may be obtained by applying
+thetheory of Aut-holomorphic orbispacesdevelopedin [AbsTopIII], §2. One variant
+ofthenotionofaD-prime-stripisthenotionofaD⊢-prime-strip. Whenv ∈Vnon
+,
+the portion of a D⊢-prime-strip labeled by v is given by a category equivalent to
+[the full subcategory determined by the connected objects of] the Galois category
+Fl
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 5
+associated to Gv; when v ∈Varc, an analogous definition may be given. In some
+sense, D-prime-strips may be thought of as abstractions of the “local arithmetic
+holomorphic structure” of [copies of] Fmod [which we regard as equipped with
+the once-punctured elliptic curve XF] — cf. the discussion of [AbsTopIII], §I3. On
+the other hand, D⊢-prime-strips may be thought of as “mono-analyticizations”
+[i.e., roughly speaking, the arithmetic version of the underlying real analytic struc-
+tureassociatedtoaholomorphicstructure]ofD-prime-strips—cf. thediscussionof
+[AbsTopIII], §I3. Throughout the present series of papers, we shall use the notation
+⊢
+to denote mono-analytic structures.
+Next, we recall the notion of a Frobenioid over a base category [cf. [FrdI]
+for more details]. Roughly speaking, a Frobenioid [typically denoted “F”] may
+be thought of as a category-theoretic abstraction of the notion of a category of
+line bundles or monoids of divisors over a base category [typically denoted “D”]
+of topological localizations [i.e., in the spirit of a “topos”] such as a Galois cate-
+gory. In addition to D- and D⊢-prime-strips, we shall also consider various types
+of prime-strips that arise from considering various natural Frobenioids — i.e., more
+concretely, various natural monoids equipped with a Galois action — at v ∈V. Per-
+haps the most basic type of prime-strip arising from such a natural monoid is an
+F-prime-strip. Suppose, for simplicity, that v ∈Vbad. Then v and F determine,
+up to conjugacy, an algebraic closure Fv of Kv. Write
+· OFv
+for the ring of integers of Fv;
+· O◃
+Fv
+⊆OFv
+for the multiplicative monoid of nonzero integers;
+· O×
+Fv
+⊆OFv
+for the multiplicative monoid of units;
+· Oμ
+Fv
+⊆OFv
+for the multiplicative monoid of roots of unity;
+· Oμ2l
+Fv
+⊆OFv
+for the multiplicative monoid of 2l-th roots of unity;
+· q
+∈OFv
+for a 2l-th root of the q-parameter of EF at v.
+v
+Thus, OFv
+, O◃
+, O×
+, Oμ
+, and Oμ2l
+are equipped with natural Gv-actions. The
+Fv
+Fv
+Fv
+Fv
+portion of an F-prime-strip labeled by v is given by data isomorphic to the monoid
+O◃
+, equipped with its natural Πv ( Gv)-action [cf. Fig. I1.2]. There are various
+Fv
+mono-analytic versions of the notion of an F-prime-strip; perhaps the most basic
+is the notion of an F⊢-prime-strip. The portion of an F⊢-prime-strip labeled by
+v is given by data isomorphic to the monoid O×
+×qN
+, equipped with its natural
+Fv
+v
+Gv-action [cf. Fig. I1.2]. Often we shall regard these various mono-analytic ver-
+sions of an F-prime-strip as being equipped with an additional global realified
+Frobenioid, which, at a concrete level, corresponds, essentially, to considering var-
+ious arithmetic degrees ∈R at v ∈V (∼
+→Vmod) that are related to one another by
+means of the product formula. Throughout the present series of papers, we shall
+use the notation
+6 SHINICHI MOCHIZUKI
+to denote such prime-strips.
+Type of prime-strip Model at v ∈Vbad Reference
+D Πv I, 4.1, (i)
+D⊢ Gv I, 4.1, (iii)
+F Πv O◃
+Fv
+I, 5.2, (i)
+F⊢ Gv O×
+Fv
+× qN
+v
+I, 5.2, (ii)
+F⊢× Gv O×
+Fv
+II, 4.9, (vii)
+F⊢×μ Gv O×μ
+Fv
+def
+= O×
+Fv
+/Oμ
+Fv
+II, 4.9, (vii)
+F⊢ ×μ Gv O×μ
+Fv
+× qN
+v
+II, 4.9, (vii)
+F⊢ Gv qN
+III, 2.4, (ii)
+v
+F⊢⊥ Gv Oμ2l
+Fv
+× qN
+v
+III, 2.4, (ii)
+F... = F⊢... + global realified Frobenioid associated to Fmod
+Fig. I1.2: Types of prime-strips
+In some sense, the main goal of the present paper may be thought of as the
+construction of Θ±ellNF-Hodge theaters [cf. Definition 6.13, (i)]
+†HTΘ±ellNF
+— which may be thought of as “miniature models of conventional scheme the-
+ory” — given, roughly speaking, by systems of Frobenioids. To any such
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 7
+Θ±ellNF-Hodge theater †HTΘ±ellNF, one may associate a D-Θ±ellNF-Hodge the-
+ater [cf. Definition 6.13, (ii)]
+†HTD-Θ±ellNF
+— i.e., the associated system of base categories.
+One may think of a Θ±ellNF-Hodge theater †HTΘ±ellNF as the result of gluing
+together a Θ±ell-Hodge theater †HTΘ±ell
+to a ΘNF-Hodge theater †HTΘNF [cf. Re-
+mark 6.12.2, (ii)]. In a similar vein, one may think of a D-Θ±ellNF-Hodge theater
+†HTD-Θ±ellNF as the result of gluing together a D-Θ±ell-Hodge theater †HTD-Θ±ell
+to a D-ΘNF-Hodge theater †HTD-ΘNF. A D-Θ±ell-Hodge theater †HTD-Θ±ell
+may
+be thought of as a bookkeeping device that allows one to keep track of the action
+of the F ±
+l -symmetry on the labels
+(−l < ... <−1 < 0 < 1 < ... < l )
+— which we think of as elements ∈Fl — in the context of the [orbi]curves XK,
+X
+v [for v ∈Vbad], and X
+− →v [for v ∈Vgood]. The F ±
+l -symmetry is represented in a
+D-Θ±ell-Hodge theater †HTD-Θ±ell by a category equivalent to [the full subcategory
+determined by the connected objects of] the Galois category of finite´ etale coverings
+of XK. On the other hand, each of the labels referred to above is represented in
+a D-Θ±ell-Hodge theater †HTD-Θ±ell
+by a D-prime-strip. In a similar vein, a
+D-ΘNF-Hodge theater †HTD-ΘNF may be thought of as a bookkeeping device that
+allows one to keep track of the action of the Fl -symmetry on the labels
+(1 < ... < l )
+— which we think of as elements ∈Fl — in the context of the orbicurves CK,
+X
+v [for v ∈Vbad], and X
+− →v [for v ∈Vgood]. The Fl -symmetry is represented in a
+D-ΘNF-Hodge theater †HTD-ΘNF by a category equivalent to [the full subcategory
+determined by the connected objects of] the Galois category of finite´ etale coverings
+of CK. On the other hand, each of the labels referred to above is represented in a D-
+ΘNF-Hodge theater †HTD-ΘNF by a D-prime-strip. The combinatorial structure
+of D-ΘNF- and D-Θ±ell-Hodge theaters summarized above [cf. also Fig. I1.3 below]
+is one of the main topics of the present paper and is discussed in detail in §4 and
+§6. The left-hand portion of Fig. I1.3 corresponds to the D-Θ±ell-Hodge theater;
+the right-hand portion of Fig. I1.3 corresponds to the D-ΘNF-Hodge theater; these
+left-hand and right-hand portions are glued together by identifying D-prime-strips
+in such a way that the labels 0 ̸= ±t ∈ Fl on the left are identified with the
+corresponding label j ∈Fl on the right [cf. Proposition 6.7; Remark 6.12.2; Fig.
+6.5].
+In this context, we remark that many of the constructions of [AbsTopIII] were
+intended as prototypes for constructions of the present series of papers. For in-
+stance, the global theory of [AbsTopIII], §5, was intended as a sort of simplified
+prototype for the Θ±ellNF-Hodge theaters of the present paper, i.e., except with
+the various label bookkeeping devices deleted. The various panalocal objects of [Ab-
+sTopIII], §5, were intended as prototypes for the various types of prime-strips that
+8 SHINICHI MOCHIZUKI
+appear in the present series of papers. Perhaps most importantly, the theory of the
+log-Frobenius functor and log-shells developed in [AbsTopIII], §3, §4, §5, was in-
+tended as a prototype for the theory of the log-link that is developed in [IUTchIII].
+In particular, although most of the main ideas and techniques of [AbsTopIII],
+§3, §4, §5, will play an important role in the present series of papers, many of the
+constructions performed in [AbsTopIII], §3, §4, §5, will not be applied in a direct,
+literal sense in the present series of papers.
+The F ±
+l -symmetry has the advantange that, being geometric in nature, it
+allows one to permute various copies of “Gv” [where v ∈Vnon] associated to dis-
+tinct labels ∈Fl without inducing conjugacy indeterminacies. This phenomenon,
+which we shall refer to as conjugate synchronization, will play a key role in
+the Kummer theory surrounding the Hodge-Arakelov-theoretic evaluation of the
+theta function at l-torsion points that is developed in [IUTchII]— cf. the dis-
+cussion of Remark 6.12.6; [IUTchII], Remark 3.5.2, (ii), (iii); [IUTchII], Remark
+4.5.3, (i). By contrast, the Fl -symmetry is more suited to situations in which one
+must descend from K to Fmod. In the present series of papers, the most important
+such situation involves the Kummer theory surrounding the reconstruction of
+the number field Fmod from the ´ etale fundamental group of CK — cf. the dis-
+cussion of Remark 6.12.6; [IUTchII], Remark 4.7.6. This reconstruction will be
+discussed in Example 5.1 of the present paper. Here, we note that such situations
+necessarily induce global Galois permutations of the various copies of “Gv” [where
+v ∈Vnon] associated to distinct labels ∈Fl that are only well-defined up to con-
+jugacy indeterminacies. In particular, the Fl -symmetry is ill-suited to situations,
+such as those that appear in the theory of Hodge-Arakelov-theoretic evaluation that
+is developed in [IUTchII], that require one to establish conjugate synchronization.
+{±1}−l < ... <−1 < 0
+< 1 < ... < l
+⇒
+1 < ...
+< l
+⇐
+1 < ...
+< l
+⇓ ⇓
+± → ±
+F ±
+l ↓
+± ← ±
+→
+↑
+↑
+Fl ↓
+←
+Fig. I1.3: The combinatorial structure of a D-Θ±ellNF-Hodge theater
+[cf. Figs. 4.4, 4.7, 6.1, 6.3, 6.5 for more details]
+Ultimately, when, in [IUTchIV], we consider diophantine applications of the
+theory developed in the present series of papers, we will take the prime number
+l to be “large”, i.e., roughly of the order of the square root of the height of the
+elliptic curve EF [cf. [IUTchIV], Corollary 2.2, (ii), (C1)]. When l is regarded as
+large, the arithmetic of the finite field Fl “tends to approximate” the arithmetic of
+the ring of rational integers Z. That is to say, the decomposition that occurs in
+a Θ±ellNF-Hodge theater into the “additive” [i.e., F ±
+l -] and “multiplicative” [i.e.,
+Fl -] symmetries of the ring Fl may be regarded as a sort of rough, approximate
+approach to the issue of “disentangling” the multiplicative and additive struc-
+tures, i.e., “dismantling” the “two underlying combinatorial dimensions” [cf.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 9
+the discussion of [AbsTopIII], §I3], of the ring Z — cf. the discussion of Remarks
+6.12.3, 6.12.6.
+Alternatively, this decomposition into additive and multiplicative symmetries
+in the theory of Θ±ellNF-Hodge theaters may be compared to groups of addi-
+tive and multiplicative symmetries of the upper half-plane [cf. Fig. I1.4
+below]. Here, the “cuspidal” geometry expressed by the additive symmetries of
+the upper half-plane admits a natural “associated coordinate”, namely, the clas-
+sical q-parameter, which is reminiscent of the way in which the F ±
+l -symmetry
+is well-adapted to the Kummer theory surrounding the Hodge-Arakelov-theoretic
+evaluation of the theta function at l-torsion points [cf. the above discussion].
+By contrast, the “toral”, or “nodal” [cf. the classical theory of the structure of
+Hecke correspondences modulo p], geometry expressed by the multiplicative sym-
+metries of the upper half-plane admits a natural “associated coordinate”, namely,
+theclassicalbiholomorphicisomorphismoftheupperhalf-planewiththeunit disc,
+which is reminiscent of the way in which the Fl -symmetry is well-adapted to the
+Kummer theory surrounding the number field Fmod [cf. the above discussion].
+For more details, we refer to the discussion of Remark 6.12.3, (iii).
+From the point of view of the scheme-theoretic Hodge-Arakelov theory devel-
+opedin[HASurI],[HASurII],thetheoryofthecombinatorial structureofaΘ±ellNF-
+Hodge theater — and, indeed, the theory of the present series of papers! — may
+be regarded as a sort of
+solution to the problem of constructing “global multiplicative sub-
+spaces” and “global canonical generators” [cf. the quotient“Q” and
+the cusp “ϵ” that appear in the above discussion!]
+— the nonexistence of which in a “naive, scheme-theoretic sense” constitutes the
+main obstruction to applying the theory of [HASurI], [HASurII] to diophantine
+geometry [cf. the discussion of Remark 4.3.1]. Indeed, prime-strips may be
+thought of as “local analytic sections” of the natural morphism Spec(K) →
+Spec(Fmod). Thus, it is precisely by working with such “local analytic sections” —
+i.e., more concretely, by working with the collection of valuations V, as opposed to
+the set of all valuations of K — that one can, in some sense, “simulate” the notions
+of a “global multiplicative subspace” or a “global canonical generator”. On the other
+hand, such “simulated global objects” may only be achieved at the cost of
+“dismantling”, or performing “surgery” on, the global prime struc-
+ture of the number fields involved [cf. the discussion of Remark 4.3.1]
+—aquitedrasticoperation, whichhastheeﬀectofprecipitatingnumerous technical
+diﬃculties, whose resolution, via the theory of semi-graphs of anabelioids, Frobe-
+nioids, the´ etale theta function, and log-shells developed in [SemiAnbd], [FrdI],
+[FrdII], [EtTh], and [AbsTopIII], constitutes the bulk of the theory of the present
+series of papers! From the point of view of “performing surgery on the global prime
+structure of a number field”, the labels ∈Fl that appear in the “arithmetic”
+Fl -symmetry may be thought of as a sort of “miniature finite approxima-
+tion” of this global prime structure, in the spirit of the idea of “Hodge theory at
+finite resolution” discussed in [HASurI], §1.3.4. On the other hand, the labels ∈Fl
+that appear in the “geometric” F ±
+l -symmetry may be thought of as a sort
+10 SHINICHI MOCHIZUKI
+of “miniature finite approximation” of the natural tempered Z-coverings [i.e.,
+tempered coverings with Galois group Z] of the Tate curves determined by EF at
+v ∈Vbad, again in the spirit of the idea of “Hodge theory at finite resolution”
+discussed in [HASurI], §1.3.4.
+Classical upper half-plane Θ±ellNF-Hodge theaters
+in inter-universal
+Teichm¨ uller theory
+Additive z → z +a, F ±
+l-
+symmetry z →−z +a (a ∈R) symmetry
+“Functions” assoc’d q
+to add. symm. def
+= e2πiz theta fn. evaluated at
+l-tors. [cf. I, 6.12.6, (ii)]
+Basepoint assoc’d single cusp V±
+to add. symm. at infinity [cf. I, 6.1, (v)]
+Combinatorial
+prototype assoc’d to add. symm.
+cusp cusp
+Multiplicative z →z·cos(t)−sin(t)
+z·sin(t)+cos(t), Fl-
+symmetry z →z·cos(t)+sin(t)
+z·sin(t)−cos(t) (t ∈R) symmetry
+“Functions” assoc’d to w
+mult. symm. def
+=
+elements of the
+z−i
+z+i number field Fmod
+[cf. I, 6.12.6, (iii)]
+Basepoints assoc’d cos(t)−sin(t)
+sin(t) cos(t) ,
+cos(t) sin(t)
+sin(t)−cos(t) Fl VBor
+= Fl·V±un
+to mult. symm. {entire boundary of H } [cf. I, 4.3, (i)]
+Combinatorial prototype assoc’d to mult. symm. nodes of mod p Hecke correspondence [cf. II, 4.11.4, (iii), (c)] nodes of mod p
+Hecke correspondence
+[cf. II, 4.11.4, (iii), (c)]
+Fig. I1.4: Comparison of F ±
+l -, Fl -symmetries
+with the geometry of the upper half-plane
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 11
+As discussed above in our explanation of the models at v ∈Vbad for F⊢-prime-
+strips, by considering the 2l-th roots of the q-parameters of the elliptic curve EF
+at v ∈Vbad, and, roughly speaking, extending to v ∈Vgood in such a way as to
+satisfy the product formula, one may construct a natural F -prime-strip“Fmod
+”
+[cf. Example 3.5, (ii); Definition 5.2, (iv)]. This construction admits an abstract,
+algorithmic formulation that allows one to apply it to the underlying“Θ-Hodge
+theater” of an arbitrary Θ±ellNF-Hodge theater †HTΘ±ellNF so as to obtain an F-
+prime-strip
+†Fmod
+[cf. Definitions 3.6, (c); 5.2, (iv)]. On the other hand, by formally replacing the
+2l-th roots of the q-parameters that appear in this construction by the reciprocal
+of the l-th root of the Frobenioid-theoretic theta function, which we shall denote
+“Θ
+v” [for v ∈Vbad], studied in [EtTh] [cf. also Example 3.2, (ii), of the present
+paper], one obtains an abstract, algorithmic formulation for the construction of an
+F -prime-strip
+†Ftht
+[cf. Definitions 3.6, (c); 5.2, (iv)] from [the underlying Θ-Hodge theater of] the
+Θ±ellNF-Hodge theater †HTΘ±ellNF
+.
+Now let ‡HTΘ±ellNF be another Θ±ellNF-Hodge theater [relative to the given
+initial Θ-data]. Then we shall refer to the “full poly-isomorphism” of [i.e., the
+collection of all isomorphisms between] F -prime-strips
+†Ftht
+∼
+→ ‡Fmod
+as the Θ-link from [the underlying Θ-Hodge theater of] †HTΘ±ellNF to [the under-
+lying Θ-Hodge theater of] ‡HTΘ±ellNF [cf. Corollary 3.7, (i); Definition 5.2, (iv)].
+One fundamental property of the Θ-link is the property that it induces a collection
+of isomorphisms [in fact, the full poly-isomorphism] between the F⊢×-prime-strips
+†F⊢×
+mod
+∼
+→ ‡F⊢×
+mod
+associated to †Fmod and ‡Fmod [cf. Corollary 3.7, (ii), (iii); [IUTchII], Definition
+4.9, (vii)].
+Now let {nHTΘ±ellNF}n∈Z be a collection of distinct Θ±ellNF-Hodge theaters
+[relative to the given initial Θ-data] indexed by the integers. Thus, by applying the
+constructions just discussed, we obtain an infinite chain
+Θ
+...
+−→ (n−1)HTΘ±ellNF Θ
+−→ nHTΘ±ellNF Θ
+−→ (n+1)HTΘ±ellNF Θ
+−→...
+of Θ-linked Θ±ellNF-Hodge theaters [cf. Corollary 3.8], which will be re-
+ferred to as the Frobenius-picture [associated to the Θ-link]. One fundamen-
+tal property of this Frobenius-picture is the property that it fails to admit per-
+mutation automorphisms that switch adjacent indices n, n + 1, but leave the
+remaining indices ∈ Z fixed [cf. Corollary 3.8]. Roughly speaking, the Θ-link
+nHTΘ±ellNF Θ
+−→ (n+1)HTΘ±ellNF may be thought of as a formal correspondence
+nΘ
+v
+→ (n+1)q
+v
+12 SHINICHI MOCHIZUKI
+[cf. Remark 3.8.1, (i)], which is depicted in Fig. I1.5 below.
+In fact, the Θ-link discussed in the present paper is only a simplified version
+ofthe“Θ-link”thatwillultimatelyplayacentralroleinthepresentseriesofpapers.
+The construction of the version of the Θ-link that we shall ultimately be interested
+in is quite technically involved and, indeed, occupies the greater part of the theory
+to be developed in [IUTchII], [IUTchIII]. On the other hand, the simplified version
+discussed in the present paper is of interest in that it allows one to give a relatively
+straightforward introduction to many of the important qualitative properties of
+the Θ-link — such as the Frobenius-picture discussed above and the´ etale-picture
+to be discussed below — that will continue to be of central importance in the case
+of the versions of the Θ-link that will be developed in [IUTchII], [IUTchIII].
+- - - -
+...
+nHTΘ±ellNF
+nq
+v
+nΘ
+n+1HTΘ±ellNF
+- - - -
+- - - -
+v
+(n+1)q
+v
+(n+1)Θ
+v
+...
+nΘ
+v
+→ (n+1)q
+v
+Fig. I1.5: Frobenius-picture associated to the Θ-link
+NowletusreturntoourdiscussionoftheFrobenius-pictureassociatedtotheΘ-
+link. The D⊢-prime-strip associated to the F⊢×-prime-strip †F⊢×
+mod may, in fact, be
+naturally identified with the D⊢-prime-strip †D⊢
+> associated to a certain F-prime-
+strip †F> [cf. the discussion preceding Example 5.4] that arises from the Θ-Hodge
+theater underlying the Θ±ellNF-Hodge theater †HTΘ±ellNF. The D-prime-strip
+†D> associated to the F-prime-strip †F> is precisely the D-prime-strip depicted
+as “[1 < ... < l ]” in Fig. I1.3. Thus, the Frobenius-picture discussed above
+induces an infinite chain of full poly-isomorphisms
+...
+∼
+→ (n−1)D⊢
+>
+∼
+→ nD⊢
+>
+∼
+→ (n+1)D⊢
+>
+∼
+→...
+of D⊢-prime-strips. That is to say, when regarded up to isomorphism, the D⊢
+-
+prime-strip “(−)D⊢
+>” may be regarded as an invariant — i.e., a “mono-analytic
+core”—ofthevariousΘ±ellNF-HodgetheatersthatoccurintheFrobenius-picture
+[cf. Corollaries 4.12, (ii); 6.10, (ii)]. Unlike the case with the Frobenius-picture,
+the relationships of the various D-Θ±ellNF-Hodge theatersnHTD-Θ±ellNF to this
+mono-analytic core — relationships that are depicted by spokes in Fig. I1.6 below
+— are compatible with arbitrary permutation symmetries among the spokes
+[i.e., among the labels n ∈Z of the D-Θ±ellNF-Hodge theaters] — cf. Corollaries
+4.12, (iii); 6.10, (iii), (iv). The diagram depicted in Fig. I1.6 below will be referred
+to as the´ etale-picture.
+Thus, the ´ etale-picture may, in some sense, be regarded as a collection of
+canonical splittings of the Frobenius-picture. The existence of such splittings
+suggests that
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 13
+by applying various results from absolute anabelian geometry to the
+various tempered and ´ etale fundamental groups that constitute each D-
+Θ±ellNF-Hodge theater in the ´ etale-picture, one may obtain algorithmic
+descriptions of — i.e., roughly speaking, one may take a “glimpse”
+inside — the conventional scheme theory of one Θ±ellNF-Hodge the-
+ater mHTΘ±ellNF in terms of the conventional scheme theory associated
+to another Θ±ellNF-Hodge theaternHTΘ±ellNF [i.e., where n ̸= m].
+Indeed,thispointofviewconstitutesoneofthemain themesofthetheorydeveloped
+in the present series of papers and will be of particular importance in our treatment
+in [IUTchIII] of the main results of the theory.
+nHTD-Θ±ellNF
+...
+|...
+n−1HTD-Θ±ellNF
+— (−)D⊢
+>
+—
+n+1HTD-Θ±ellNF
+...
+|
+...
+n+2HTD-Θ±ellNF
+Fig. I1.6:
+´
+Etale-picture of D-Θ±ellNF-Hodge theaters
+Before proceeding, we recall the “heuristic” notions of Frobenius-like — i.e.,
+“order-conscious” — and´ etale-like — i.e., “indiﬀerent to order”— mathematical
+structures discussed in [FrdI], §I4. These notions will play a key role in the theory
+developed in the present series of papers. In particular, the terms “Frobenius-
+picture” and “´ etale-picture” introduced above are motivated by these notions.
+The main result of the present paper may be summarized as follows.
+Theorem A. (F ±
+l -/Fl -Symmetries, Θ-Links, and Frobenius-/´
+Etale-Pic-
+tures Associated to Θ±ellNF-Hodge Theaters) Fix a collection of initial Θ-
+data [cf. Definition 3.1], which determines, in particular, data (EF, F, l, V) as
+in the above discussion. Then one may construct a Θ±ellNF-Hodge theater [cf.
+Definition 6.13, (i)]
+†HTΘ±ellNF
+— in essence, a system of Frobenioids — associated to this initial Θ-data, as well as
+an associated D-Θ±ellNF-Hodge theater †HTD-Θ±ellNF [cf. Definition 6.13, (ii)]
+14 SHINICHI MOCHIZUKI
+— in essence, the system of base categories associated to the system of Frobenioids
+†HTΘ±ellNF
+.
+(i) (F ±
+l - and Fl -Symmetries) The Θ±ellNF-Hodge theater †HTΘ±ellNF
+may be obtained as the result of gluing together a Θ±ell-Hodge theater †HTΘ±ell
+to
+a ΘNF-Hodge theater †HTΘNF [cf. Remark 6.12.2, (ii)]; a similar statement holds
+for the D-Θ±ellNF-Hodge theater †HTD-Θ±ellNF. The global portion of a D-Θ±ell
+-
+Hodge theater †HTD-Θ±ell consists of a category equivalent to [the full subcategory
+determined by the connected objects of] the Galois category of finite ´ etale coverings
+of the [orbi]curve XK. This global portion is equipped with an F ±
+l -symmetry,
+i.e., a poly-action by F ±
+l on the labels
+(−l < ... <−1 < 0 < 1 < ... < l )
+— which we think of as elements ∈Fl — each of which is represented in the D-
+Θ±ell-Hodge theater †HTD-Θ±ell
+by a D-prime-strip [cf. Fig. I1.3]. The global
+portion of a D-ΘNF-Hodge theater †HTD-ΘNF consists of a category equivalent to
+[the full subcategory determined by the connected objects of] the Galois category of
+finite ´ etale coverings of the orbicurve CK. This global portion is equipped with an
+Fl -symmetry, i.e., a poly-action by Fl on the labels
+(1 < ... < l )
+— which we think of as elements ∈ Fl — each of which is represented in the
+D-ΘNF-Hodge theater †HTD-ΘNF by a D-prime-strip [cf. Fig. I1.3]. The D-
+Θ±ell-Hodge theater †HTD-Θ±ell
+is glued to the D-ΘNF-Hodge theater †HTD-ΘNF
+by identifying D-prime-strips in such a way that the labels 0 ̸= ±t ∈Fl that
+arise in the F ±
+l -symmetry are identified with the corresponding label j ∈Fl that
+arises in the Fl -symmetry [cf. Proposition 6.7; Remark 6.12.2; Fig. 6.5].
+(ii) (Θ-links) By considering the 2l-th roots of the q-parameters“q
+” of
+v
+the elliptic curve EF at v ∈Vbad and extending to other v ∈V in such a way as
+to satisfy the product formula, one may construct a natural F -prime-strip
+†Fmod associated to the Θ±ellNF-Hodge theater †HTΘ±ellNF [cf. Definitions 3.6,
+(c); 5.2, (iv)]. In a similar vein, by considering the reciprocal of the l-th root
+of the Frobenioid-theoretic theta function “Θ
+v” associated to the elliptic curve
+EF at v ∈Vbad and extending to other v ∈V in such a way as to satisfy the
+product formula, one may construct a natural F -prime-strip †Ftht associated
+to the Θ±ellNF-Hodge theater †HTΘ±ellNF [cf. Definitions 3.6, (c); 5.2, (iv)]. Now
+let ‡HTΘ±ellNF be another Θ±ellNF-Hodge theater [relative to the given initial Θ-
+data]. Then we shall refer to the “full poly-isomorphism” of [i.e., the collection of
+all isomorphisms between] F -prime-strips
+†Ftht
+∼
+→ ‡Fmod
+as the Θ-link from [the underlying Θ-Hodge theater of] †HTΘ±ellNF to [the under-
+lying Θ-Hodge theater of] ‡HTΘ±ellNF [cf. Corollary 3.7, (i); Definition 5.2, (iv)].
+The Θ-link induces the full poly-isomorphism between the F⊢×-prime-strips
+†F⊢×
+∼
+mod
+→ ‡F⊢×
+mod
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 15
+associated to †Fmod and ‡Fmod [cf. Corollary 3.7, (ii), (iii); [IUTchII], Definition
+4.9, (vii)].
+´
+(iii) (Frobenius-/
+Etale-Pictures) Let {nHTΘ±ellNF}n∈Z be a collection of
+distinct Θ±ellNF-Hodge theaters [relative to the given initial Θ-data] indexed
+by the integers. Then the infinite chain
+Θ
+...
+−→ (n−1)HTΘ±ellNF Θ
+−→ nHTΘ±ellNF Θ
+−→ (n+1)HTΘ±ellNF Θ
+−→...
+of Θ-linked Θ±ellNF-Hodge theaters will be referred to as the Frobenius-
+picture [associated to the Θ-link] — cf. Fig. I1.5; Corollary 3.8. The Frobenius-
+picture fails to admit permutation automorphisms that switch adjacent indices
+n, n+1, but leave the remaining indices ∈Z fixed. The Frobenius-picture induces
+an infinite chain of full poly-isomorphisms
+...
+∼
+→ (n−1)D⊢
+>
+∼
+→ nD⊢
+>
+∼
+→ (n+1)D⊢
+>
+∼
+→...
+between the various D⊢-prime-stripsnD⊢
+>, i.e., in essence, the D⊢-prime-strips
+associated to the F⊢×-prime-stripsnF⊢×
+mod. The relationships of the various D-
+Θ±ellNF-Hodge theatersnHTD-Θ±ellNF to the “mono-analytic core” constituted
+by the D⊢-prime-strip “(−)D⊢
+>” regarded up to isomorphism — relationships that are
+depicted by spokes in Fig. I1.6 — are compatible with arbitrary permutation
+symmetries among the spokes, i.e., among the labels n ∈Z of the D-Θ±ellNF-
+Hodge theaters [cf. Corollaries 4.12, (ii), 6.10, (i)]. The diagram depicted in Fig.
+I1.6 will be referred to as the´ etale-picture.
+In addition to the main result discussed above, we also prove a certain technical
+result concerning tempered fundamental groups — cf. Theorem B below —
+that will be of use in our development of the theory of Hodge-Arakelov-theoretic
+evaluation in [IUTchII]. This result is essentially a routine application of the the-
+ory of maximal compact subgroups of tempered fundamental groups developed in
+[SemiAnbd] [cf., especially, [SemiAnbd], Theorems 3.7, 5.4, as well as Remark 2.5.3,
+(ii), of the present paper]. Here, we recall that this theory of [SemiAnbd] may be
+thought of as a sort of “Combinatorial Section Conjecture” [cf. Remark 2.5.1
+of the present paper; [IUTchII], Remark 1.12.4] — a point of view that is of particu-
+lar interest in light of the historical remarks made in §I5 below. Moreover, Theorem
+B is of interest independently of the theory of the present series of papers in that
+it yields, for instance, a new proof of the normal terminality of the tempered fun-
+damental group in its profinite completion, a result originally obtained in [Andr´ e],
+Lemma 3.2.1, by means of other techniques [cf. Remark 2.4.1]. This new proof
+is of interest in that, unlike the techniques of [Andr´ e], which are only available in
+the profinite case, this new proof [cf. Proposition 2.4, (iii)] holds in the case of
+pro-Σ-completions, for more general Σ [i.e., not just the case of Σ = Primes].
+Theorem B. (Profinite Conjugates of Tempered Decomposition and
+Inertia Groups) Let k be a mixed-characteristic [nonarchimedean] local
+field, X a hyperbolic curve over k. Write
+Πtp
+X
+16 SHINICHI MOCHIZUKI
+for the tempered fundamental group πtp
+1 (X) [relative to a suitable basepoint]
+of X [cf. [Andr´ e], §4; [SemiAnbd], Example 3.10]; ΠX for the´ etale fundamental
+group [relative to a suitable basepoint] of X. Thus, we have a natural inclusion
+Πtp
+X → ΠX
+which allows one to identify ΠX with the profinite completion of Πtp
+X. Then every
+decomposition group in ΠX (respectively, inertia group in ΠX) associated to
+a closed point or cusp of X (respectively, to a cusp of X) is contained in Πtp
+X if
+and only if it is a decomposition group in Πtp
+X (respectively, inertia group in Πtp
+X)
+associated to a closed point or cusp of X (respectively, to a cusp of X). Moreover,
+a ΠX-conjugate of Πtp
+X contains a decomposition group in Πtp
+X (respectively, inertia
+group in Πtp
+X) associated to a closed point or cusp of X (respectively, to a cusp of
+X) if and only if it is equal to Πtp
+X.
+Theorem B is [essentially] given as Corollary 2.5 [cf. also Remark 2.5.2] in
+§2. Here, we note that although, in the statement of Corollary 2.5, the hyperbolic
+curve X is assumed to admit stable reduction over the ring of integers Ok of k, one
+verifies immediately [by applying Proposition 2.4, (iii)] that this assumption is, in
+fact, unnecessary.
+Finally, we remark that one important reason for the need to apply Theorem B
+in the context of the theory of Θ±ellNF-Hodge theaters summarized in Theorem A
+is the following. The F ±
+l -symmetry, which will play a crucial role in the theory
+of the present series of papers [cf., especially, [IUTchII], [IUTchIII]], depends, in an
+essential way, on the synchronization of the ±-indeterminacies that occur locally
+at each v ∈V [cf. Fig. I1.1]. Such a synchronization may only be obtained by
+making use of the global portion of the Θ±ell-Hodge theater under consideration.
+On the other hand, in order to avail oneself of such global ±-synchronizations
+[cf. Remark 6.12.4, (iii)], it is necessary to regard the various labels of the F ±
+l-
+symmetry
+(−l < ... <−1 < 0 < 1 < ... < l )
+as conjugacy classes of inertia groups of the [necessarily] profinite geometric ´ etale
+fundamental group of XK. That is to say, in order to relate such global profinite
+conjugacy classes to the corresponding tempered conjugacy classes [i.e., conjugacy
+classes with respect to the geometric tempered fundamental group] of inertia groups
+at v ∈Vbad [i.e., where the crucial Hodge-Arakelov-theoretic evaluation is to be
+performed!], it is necessary to apply Theorem B — cf. the discussion of Remark
+4.5.1; [IUTchII], Remark 2.5.2, for more details.
+§I2. Gluing Together Models of Conventional Scheme Theory
+As discussed in §I1, the system of Frobenioids constituted by a Θ±ellNF-Hodge
+theater is intended to be a sort of miniature model of conventional scheme the-
+ory. One then glues multiple Θ±ellNF-Hodge theaters {nHTΘ±ellNF}n∈Z together
+v
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 17
+by means of the full poly-isomorphisms between the “subsystems of Frobenioids”
+constituted by certain F -prime-strips
+†Ftht
+∼
+→ ‡Fmod
+to form the Frobenius-picture. One fundamental observation in this context is
+the following:
+these gluing isomorphisms — i.e., in essence, the correspondences
+nΘ
+v
+→ (n+1)q
+— and hence the geometry of the resulting Frobenius-picture lie outside
+the framework of conventional scheme theory in the sense that they
+do not arise from ring homomorphisms!
+In particular, although each particular modelnHTΘ±ellNF of conventional scheme
+theory is constructed within the framework of conventional scheme theory, the
+relationship between the distinct [albeit abstractly isomorphic, as Θ±ellNF-Hodge
+theaters!] conventional scheme theories represented by, for instance, neighboring
+Θ±ellNF-Hodge theatersnHTΘ±ellNF
+,
+n+1HTΘ±ellNF cannot be expressed scheme-
+theoretically. Inthiscontext, itisalsoimportanttonotethatsuchgluingoperations
+are possible precisely because of the relatively simple structure — for instance,
+by comparison to the structure of a ring! — of the Frobenius-like structures
+constituted by the Frobenioids that appear in the various F -prime-strips involved,
+i.e., in essence, collections of monoids isomorphic to N or R≥0 [cf. Fig. I1.2].
+anti-holomorphic
+reflection
+one model
+another model
+. . .
+Θ-link
+Θ-link
+Θ-link
+. . .
+of conventional
+scheme theory
+of conventional
+scheme theory
+Fig. I2.1: Depiction of Frobenius- and ´ etale-pictures of Θ±ellNF-Hodge theaters
+via glued topological surfaces
+18 SHINICHI MOCHIZUKI
+If one thinks of the geometry of “conventional scheme theory” as being analo-
+gous to the geometry of “Euclidean space”, then the geometry represented by the
+Frobenius-picture corresponds to a “topological manifold”, i.e., which is obtained by
+gluing together various portions of Euclidean space, but which is not homeomorphic
+to Euclidean space. This point of view is illustrated in Fig. I2.1 above, where the
+various Θ±ellNF-Hodge theaters in the Frobenius-picture are depicted as [two-
+dimensional! — cf. the discussion of §I1] twice-punctured topological surfaces
+of genus one, glued together along tubular neighborhoods of cycles, which
+correspond to the [one-dimensional! — cf. the discussion of §I1] mono-analytic
+data that appears in the isomorphism that constitutes the Θ-link. The permuta-
+tion symmetries in the ´ etale-picture [cf. the discussion of §I1] are depicted in Fig.
+I2.1 as the anti-holomorphic reflection [cf. the discussion of multiradiality in
+[IUTchII], Introduction!] around a gluing cycle between topological surfaces.
+Another elementary example that illustrates the spirit of the gluing operations
+discussed in the present series of papers is the following. For i = 0,1, let Ri be
+a copy of the real line; Ii ⊆ Ri the closed unit interval [i.e., corresponding to
+[0,1] ⊆R]. Write C0 ⊆I0 for the Cantor set and
+φ : C0
+∼
+→I1
+for the bijection arising from the Cantor function. Then if one thinks of R0 and
+R1 as being glued to one another by means of φ, then it is a highly nontrivial
+problem
+to describe structures naturally associated to the “alien” ring structure
+of R0 — such as, for instance, the subset of algebraic numbers ∈R0—
+in terms that only require the use of the ring structure of R1.
+A slightly less elementary example that illustrates the spirit of the gluing op-
+erations discussed in the present series of papers is the following. This example is
+technically much closer to the theory of the present series of papers than the exam-
+ples involving topological surfaces and Cantor sets given above. For simplicity, let
+us write
+G O×, G O◃
+for the pairs “Gv O×
+”, “Gv O◃
+” [cf. the notation of the discussion
+Fv
+Fv
+surrounding Fig. I1.2]. Recall from [AbsTopIII], Proposition 3.2, (iv), that the
+operation
+(G O◃) → G
+of “forgetting O◃” determines a bijection from the group of automorphisms of the
+pair G O◃ — i.e., thought of as an abstract ind-topological monoid equipped
+with a continuous action by an abstract topological group — to the group of au-
+tomorphisms of the topological group G. By contrast, we recall from [AbsTopIII],
+Proposition 3.3, (ii), that the operation
+(G O×) → G
+of “forgetting O×” only determines a surjection from the group of automorphisms
+of the pair G O× — i.e., thought of as an abstract ind-topological monoid
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 19
+equipped with a continuous action by an abstract topological group — to the group
+of automorphisms of the topological group G; that is to say, the kernel of this
+surjection is given by the natural action of Z× on O×. In particular, if one works
+with two copies Gi O◃
+i , where i = 0,1, of G O◃, which one thinks of as being
+glued to one another by means of an indeterminate isomorphism
+(G0 O×
+0 )∼
+→ (G1 O×
+1 )
+[i.e., whereonethinksofeach(Gi O×
+i ), fori = 0,1, asanabstractind-topological
+monoid equipped with a continuous action by an abstract topological group], then,
+in general, it is a highly nontrivial problem
+to describe structures naturally associated to (G0 O◃
+0 ) in terms that
+only require the use of (G1 O◃
+1 ).
+One such structure which is of interest in the context of the present series of papers
+[cf., especially, the theory of [IUTchII], §1] is the natural cyclotomic rigidity
+isomorphism between the group of torsion elements of O◃
+0 and an analogous
+group of torsion elements naturally associated to G0 — i.e., a structure that is
+manifestly not preserved by the natural action of Z× on O×
+0 !
+In the context of the above discussion of Fig. I2.1, it is of interest to note the
+important role played by Kummer theory in the present series of papers [cf. the
+Introductions to [IUTchII], [IUTchIII]]. From the point of view of Fig. I2.1, this
+role corresponds to the precise specification of the gluing cycle within each twice-
+punctured genus one surface in the illustration. Of course, such a precise specifi-
+cation depends on the twice-punctured genus one surface under consideration, i.e.,
+the same gluing cycle is subject to quite diﬀerent “precise specifications”, relative
+to the twice-punctured genus one surface on the left and the twice-punctured genus
+one surface on the right. This state of aﬀairs corresponds to the quite diﬀerent
+Kummer theories to which the monoids/Frobenioids that appear in the Θ-link are
+subject, relative to the Θ±ellNF-Hodge theater in the domain of the Θ-link and
+the Θ±ellNF-Hodge theater in the codomain of the Θ-link. At first glance, it might
+appear that the use of Kummer theory, i.e., of the correspondence determined by
+constructing Kummer classes, to achieve this precise specification of the relevant
+monoids/Frobenioids within each Θ±ellNF-Hodge theater is somewhat arbitrary,
+i.e., that one could perhaps use other correspondences [i.e., correspondences not
+determined by Kummer classes] to achieve such a precise specification. In fact,
+however, the rigidity of the relevant local and global monoids equipped with Ga-
+lois actions [cf. Corollary 5.3, (i), (ii), (iv)] implies that, if one imposes the natural
+condition of Galois-compatibility, then
+the correspondence furnished by Kummer theory is the only accept-
+able choice for constructing the required“precise specification of the
+relevant monoids/Frobenioids within each Θ±ellNF-Hodge theater”
+— cf. also the discussion of [IUTchII], Remark 3.6.2, (ii).
+The construction of the Frobenius-picture described in §I1 is given in the
+present paper. More elaborate versions of this Frobenius-picture will be discussed
+in [IUTchII], [IUTchIII]. Once one constructs the Frobenius-picture, one natural
+20 SHINICHI MOCHIZUKI
+and fundamental problem, which will, in fact, be one of the main themes of the
+present series of papers, is the problem of
+describing an alien “arithmetic holomorphic structure” [i.e., an
+alien “conventional scheme theory”] corresponding to somemHTΘ±ellNF
+in terms of a “known arithmetic holomorphic structure” corresponding to
+nHTΘ±ellNF [where n ̸= m]
+— a problem, which, as discussed in §I1, will be approached, in the final portion of
+[IUTchIII], by applying various results from absolute anabelian geometry [i.e.,
+more explicitly, the theory of [SemiAnbd], [EtTh], and [AbsTopIII]] to the various
+tempered and ´ etale fundamental groups that appear in the´ etale-picture.
+The relevance to this problem of the extensive theory of “reconstruction of
+ring/scheme structures” provided by absolute anabelian geometry is evident from
+the statement of the problem. On the other hand, in this context, it is of interest to
+note that, unlike conventional anabelian geometry, which typically centers on the
+goal of reconstructing a “known scheme-theoretic object”, in the present series of
+papers, wewishtoapplytechniquesandresultsfromanabeliangeometryinorderto
+analyze the structure of an unknown, essentially non-scheme-theoretic object,
+namely, the Frobenius-picture, as described above. Put another way, relative
+to the point of view that “Galois groups are arithmetic tangent bundles” [cf. the
+theory of the arithmetic Kodaira-Spencer morphism in [HASurI]], one may think
+of conventional anabelian geometry as corresponding to the computation of the
+automorphisms of a scheme as
+H0(arithmetic tangent bundle)
+andoftheapplicationofabsoluteanabeliangeometrytotheanalysisoftheFrobenius-
+picture, i.e., to the solution of the problem discussed above, as corresponding to
+the computation of
+H1(arithmetic tangent bundle)
+— i.e., the computation of “deformations of the arithmetic holomorphic
+structure” of a number field equipped with an elliptic curve.
+In the context of the above discussion, we remark that the word “Hodge” in the
+term “Hodge theater” was intended as a reference to the use of the word “Hodge”
+in such classical terminology as “variation of Hodge structure” [cf. also the
+discussion of Hodge filtrations in [AbsTopIII], §I5], for instance, in discussions of
+Torelli maps [the most fundamental special case of which arises from the tautologi-
+cal family of one-dimensional complex tori parametrized by the upper half-plane!],
+where a “Hodge structure” corresponds precisely to the specification of a partic-
+ular holomorphic structure in a situation in which one considers variations of the
+holomorphic structure on a fixed underlying real analytic structure. That is to say,
+later, in [IUTchIII], we shall see that the position occupied by a “Hodge theater”
+within a much larger framework that will be referred to as the “log-theta-lattice” [cf.
+the discussion of §I4 below] corresponds precisely to the specification of a partic-
+ular arithmetic holomorphic structure in a situation in which such arithmetic
+holomorphic structures are subject to deformation.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 21
+§I3. Basepoints and Inter-universality
+As discussed in §I2, the present series of papers is concerned with considering
+“deformations of the arithmetic holomorphic structure” of a number field — i.e., so
+to speak, with performing “surgery on the number field”. At a more concrete
+level, this means that one must consider situations in which two distinct “theaters”
+for conventional ring/scheme theory — i.e., two distinct Θ±ellNF-Hodge theaters
+— are related to one another by means of a “correspondence”, or “filter”, that fails
+to be compatible with the respective ring structures. In the discussion so far of
+the portion of the theory developed in the present paper, the main example of such
+a “filter” is given by the Θ-link. As mentioned earlier, more elaborate versions
+of the Θ-link will be discussed in [IUTchII], [IUTchIII]. The other main example
+of such a non-ring/scheme-theoretic “filter” in the present series of papers is the
+log-link, which we shall discuss in [IUTchIII] [cf. also the theory of [AbsTopIII]].
+One important aspect of such non-ring/scheme-theoretic filters is the property
+that they are incompatible with various constructions that depend on the ring
+structure of the theaters that constitute the domain and codomain of such a filter.
+From the point of view of the present series of papers, perhaps the most impor-
+tant example of such a construction is given by the various´ etale fundamental
+groups — e.g., Galois groups — that appear in these theaters. Indeed, these
+groups are defined, essentially, as automorphism groups of some separably closed
+field, i.e., the field that arises in the definition of the fiber functor associated to the
+basepoint determined by a geometric point that is used to define the ´ etale fun-
+damental group — cf. the discussion of [IUTchII], Remark 3.6.3, (i); [IUTchIII],
+Remark 1.2.4, (i); [AbsTopIII], Remark 3.7.7, (i). In particular, unlike the case
+with ring homomorphisms or morphisms of schemes with respect to which the ´ etale
+fundamental group satisfies well-known functoriality properties, in the case of non-
+ring/scheme-theoretic filters, the only “type of mathematical object” that makes
+sense simultaneously in both the domain and codomain theaters of the filter is the
+notion of a topological group. In particular, the only data that can be considered in
+relating ´ etale fundamental groups on either side of a filter is the´ etale-like struc-
+ture constituted by the underlying abstract topological group associated to
+such an ´ etale fundamental group, i.e., devoid of any auxiliary data arising from the
+construction of the group “as an ´ etale fundamental group associated to a base-
+point determined by a geometric point of a scheme”. It is this fundamental aspect
+of the theory of the present series of papers — i.e.,
+of relating the distinct set-theoretic universes associated to the distinct
+fiberfunctors/basepointsoneithersideofsuchanon-ring/scheme-theoretic
+filter
+— that we refer to as inter-universal. This inter-universal aspect of the theory
+manifestly leads to the issue of considering
+the extent to which one can understand various ring/scheme structures
+by considering only the underlying abstract topological group of some
+´ etale fundamental group arising from such a ring/scheme structure
+— i.e., in other words, of considering the absolute anabelian geometry [cf. the
+Introductions to [AbsTopI], [AbsTopII], [AbsTopIII]] of the rings/schemes under
+consideration.
+22 SHINICHI MOCHIZUKI
+At this point, the careful reader will note that the above discussion of the
+inter-universal aspects of the theory of the present series of papers depends, in
+an essential way, on the issue of distinguishing diﬀerent “types of mathematical
+objects”andhence, inparticular, onthenotion of a “type of mathematical object”.
+This notion may be formalized via the language of “species”, which we develop
+in the final portion of [IUTchIV].
+Another important “inter-universal” phenomenon in the present series of pa-
+pers—i.e., phenomenonwhich, liketheabsoluteanabelianaspectsdiscussedabove,
+arises from a “deep sensitivity to particular choices of basepoints” — is the phe-
+nomenon of conjugate synchronization, i.e., of synchronization between conju-
+gacy indeterminacies of distinct copies of various local Galois groups, which, as was
+mentioned in §I1, will play an important role in the theory of [IUTchII], [IUTchIII].
+The various rigidity properties of the´ etale theta function established in [EtTh]
+constitute yet another inter-universal phenomenon that will play an important role
+in theory of [IUTchII], [IUTchIII].
+§I4. Relation to Complex and p-adic Teichm¨ uller Theory
+In order to understand the sense in which the theory of the present series
+of papers may be thought of as a sort of “Teichm¨ uller theory” of number fields
+equipped with an elliptic curve, it is useful to recall certain basic, well-known facts
+concerning the classical complex Teichm¨ uller theory of Riemann surfaces of
+finite type [cf., e.g., [Lehto], Chapter V, §8]. Although such a Riemann surface is
+one-dimensional from a complex, holomorphic point of view, this single complex
+dimension may be thought of consisting of two underlying real analytic dimensions.
+Relative to a suitable canonical holomorphic coordinate z = x+iy on the Riemann
+surface, the Teichm¨ uller deformation may be written in the form
+z → ζ= ξ +iη= Kx+iy
+— where 1 < K < ∞is the dilation factor associated to the deformation. That is
+to say, the Teichm¨ uller deformation consists of dilating one of the two underlying
+real analytic dimensions, while keeping the other dimension fixed. Moreover,
+the theory of such Teichm¨ uller deformations may be summarized as consisting of
+the explicit description of a varying holomorphic structure within a
+fixed real analytic “container”
+— i.e., the underlying real analytic surface associated to the given Riemann surface.
+On the other hand, as discussed in [AbsTopIII], §I3, one may think of the ring
+structure of a number field F as a single “arithmetic holomorphic dimen-
+sion”, which, in fact, consists of two underlying “combinatorial dimensions”,
+corresponding to
+· its additive structure “ ” and its multiplicative structure “ ”.
+When, for simplicity, the number field F is totally imaginary, one may think of
+these two combinatorial dimensions as corresponding to the
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 23
+· two cohomological dimensions of the absolute Galois group GF of F.
+A similar statement holds in the case of the absolute Galois group Gk of a nonar-
+chimedean local field k. In the case of complex archimedean fields k [i.e.,
+topological fields isomorphic to the field of complex numbers equipped with its
+usual topology], the two combinatorial dimensions of k may also be thought of as
+corresponding to the
+· two underlying topological/real dimensions of k.
+Alternatively, in both the nonarchimedean and archimedean cases, one may think
+of the two underlying combinatorial dimensions of k as corresponding to the
+· group of units O×
+k and value group k×/O×
+k of k.
+Indeed, in the nonarchimedean case, local class field theory implies that this last
+point of view is consistent with the interpretation of the two underlying combi-
+natorial dimensions via cohomological dimension; in the archimedean case, the
+consistency of this last point of view with the interpretation of the two underly-
+ing combinatorial dimensions via topological/real dimension is immediate from the
+definitions.
+This last interpretation in terms of groups of units and value groups is of
+particular relevance in the context of the theory of the present series of papers.
+That is to say, one may think of the Θ-link
+†Ftht
+∼
+→ ‡Fmod
+{†Θ
+v
+→ ‡q
+v
+}v∈Vbad
+— which, as discussed in §I1, induces a full poly-isomorphism
+†F⊢×
+mod
+∼
+→ ‡F⊢×
+mod
+{O×
+Fv
+∼ → O×
+Fv
+— as a sort of “Teichm¨ uller deformation relative to a Θ-dilation”, i.e., a de-
+formation of the ring structure of the number field equipped with an elliptic
+curve constituted by the given initial Θ-data in which one dilates the underlying
+combinatorial dimension corresponding to the local value groups relative to a “Θ-
+factor”, whileoneleavesfixed, uptoisomorphism, theunderlyingcombinatorialdi-
+mension corresponding to the local groups of units [cf. Remark 3.9.3]. This point
+of view is reminiscent of the discussion in §I1 of “disentangling/dismantling”
+of various structures associated to a number field.
+In [IUTchIII], we shall consider two-dimensional diagrams of Θ±ellNF-Hodge
+theaters which we shall refer to as log-theta-lattices. The two dimensions of such
+diagrams correspond precisely to the two underlying combinatorial dimensions of
+a ring. Of these two dimensions, the “theta dimension” consists of the Frobenius-
+picture associated to [more elaborate versions of] the Θ-link. Many of the impor-
+tant properties that involve this “theta dimension” are consequences of the theory
+of [FrdI], [FrdII], [EtTh]. On the other hand, the “log dimension” consists of iter-
+ated copies of the log-link, i.e., diagrams of the sort that are studied in [AbsTopIII].
+}v∈Vbad
+24 SHINICHI MOCHIZUKI
+That is to say, whereas the “theta dimension” corresponds to “deformations of the
+arithmetic holomorphic structure” of the given number field equipped with an el-
+liptic curve, this “log dimension” corresponds to “rotations of the two underlying
+combinatorial dimensions” of a ring that leave the arithmetic holomorphic struc-
+ture fixed — cf. the discussion of the “juggling of , induced by log” in
+[AbsTopIII], §I3. The ultimate conclusion of the theory of [IUTchIII] is that
+the “a priori unbounded deformations” of the arithmetic holomorphic
+structure given by the Θ-link in fact admit canonical bounds, which
+may be thought of as a sort of reflection of the “hyperbolicity” of the
+given number field equipped with an elliptic curve
+— cf. [IUTchIII], Corollary 3.12. Such canonical bounds may be thought of as
+analogues for a number field of canonical bounds that arise from diﬀerentiating
+Frobenius liftings in the context of p-adic hyperbolic curves — cf. the discus-
+sion in the final portion of [AbsTopIII], §I5. Moreover, such canonical bounds are
+obtained in [IUTchIII] as a consequence of
+the explicit description of a varying arithmetic holomorphic struc-
+ture within a fixed mono-analytic “container”
+— cf. the discussion of §I2! — furnished by [IUTchIII], Theorem 3.11 [cf. also
+the discussion of [IUTchIII], Remarks 3.12.2, 3.12.3, 3.12.4], i.e., a situation that
+is entirely formally analogous to the summary of complex Teichm¨ uller theory given
+above.
+The significance of the log-theta-lattice is best understood in the context of
+the analogy between the inter-universal Teichm¨ uller theory developed in the
+present series of papers and the p-adic Teichm¨ uller theory of [pOrd], [pTeich].
+Here, we recall for the convenience of the reader that the p-adic Teichm¨ uller theory
+of [pOrd], [pTeich] may be summarized, [very!] roughly speaking, as a sort of
+generalization, to the case of “quite general” p-adic hyperbolic curves, of
+the classical p-adic theory surrounding the canonical representation
+π1( (P1 \{0,1,∞})Qp ) → π1( (Mell)Qp ) → PGL2(Zp)
+— where the “π1(−)’s” denote the´ etale fundamental group, relative to a suitable
+basepoint; (Mell)Qp
+denotes the moduli stack of elliptic curves over Qp; the first
+arrow denotes the morphism induced by the elliptic curve over the projective line
+minus three points determined by the classical Legendre form of the Weierstrass
+equation; the second arrow is the representation determined by the p-power torsion
+points of the tautological elliptic curve over (Mell)Qp. In particular, the reader who
+is familiar with the theory of the classical representation of the above display, but
+notwiththetheoryof[pOrd], [pTeich], mayneverthelessappreciate, toasubstantial
+degree, theanalogybetweentheinter-universal Teichm¨ uller theorydevelopedinthe
+present series of papers and the p-adic Teichm¨ uller theory of [pOrd], [pTeich] by
+thinking in terms of the
+well-known classical properties of this classical representation.
+In some sense, the gap between the “quite general” p-adic hyperbolic curves that
+appear in p-adic Teichm¨ uller theory and the classical case of (P1 \{0,1,∞})Qp may
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 25
+be thought of, roughly speaking, as corresponding, relative to the analogy with the
+theoryofthepresentseriesofpapers, tothegapbetweenarbitrary number fields
+and the rational number field Q. This point of view is especially interesting in
+the context of the discussion of §I5 below.
+The analogy between the inter-universal Teichm¨ uller theory developed in
+thepresentseriesofpapersandthep-adic Teichm¨ uller theoryof[pOrd], [pTeich]
+is described to a substantial degree in the discussion of [AbsTopIII], §I5, i.e., where
+the “future Teichm¨ uller-like extension of the mono-anabelian theory” may be un-
+derstood as referring precisely to the inter-universal Teichm¨ uller theory developed
+in the present series of papers. The starting point of this analogy is the correspon-
+dence between a number field equipped with a [once-punctured] elliptic curve [in the
+present series of papers] and a hyperbolic curve over a positive characteristic perfect
+field equipped with a nilpotent ordinary indigenous bundle [in p-adic Teichm¨ uller
+theory] — cf. Fig. I4.1 below. That is to say, in this analogy, the number field—
+which may be regarded as being equipped with a finite collection of “exceptional”
+valuations, namely, in the notation of §I1, the valuations lying over Vbad
+mod — corre-
+sponds to the hyperbolic curve over a positive characteristic perfect field — which
+may be thought of as a one-dimensional function field over a positive characteristic
+perfect field, equipped with a finite collection of “exceptional” valuations, namely,
+the valuations corresponding to the cusps of the curve.
+On the other hand, the [once-punctured] elliptic curve in the present series
+of papers corresponds to the nilpotent ordinary indigenous bundle in p-adic Te-
+ichm¨ uller theory. Here, we recall that an indigenous bundle may be thought of as a
+sort of “virtual analogue” of the first cohomology group of the tautological elliptic
+curve over the moduli stack of elliptic curves. Indeed, the canonical indigenous
+bundle over the moduli stack of elliptic curves arises precisely as the first de Rham
+cohomology module of this tautological elliptic curve. Put another way, from the
+point of view of fundamental groups, an indigenous bundle may be thought of as
+a sort of “virtual analogue” of the abelianized fundamental group of the tau-
+tological elliptic curve over the moduli stack of elliptic curves. By contrast, in the
+present series of papers, it is of crucial importance to use the entire nonabelian
+profinite ´ etale fundamental group — i.e., not just its abelizanization! — of the
+given once-punctured elliptic curve over a number field. Indeed, only by working
+with the entire profinite´ etale fundamental group can one avail oneself of the crucial
+absolute anabelian theory developed in [EtTh], [AbsTopIII] [cf. the discussion
+of §I3]. This state of aﬀairs prompts the following question:
+To what extent can one extend the indigenous bundles that appear in clas-
+sical complex and p-adic Teichm¨ uller theory to objects that serve as “vir-
+tual analogues” of the entire nonabelian fundamental group of the
+tautological once-punctured elliptic curve over the moduli stack of [once-
+punctured] elliptic curves?
+Although this question lies beyond the scope of the present series of papers, it is
+26 SHINICHI MOCHIZUKI
+the hope of the author that this question may be addressed in a future paper.
+Inter-universal Teichm¨ uller theory p-adic Teichm¨ uller theory
+number field hyperbolic curve C over a
+F positive characteristic perfect field
+[once-punctured] elliptic curve X over F nilpotent ordinary
+indigenous bundle
+P over C
+Θ-link arrows of the log-theta-lattice mixed characteristic extension
+structure of a ring of Witt vectors
+log-link arrows of the log-theta-lattice the Frobenius morphism
+in positive characteristic
+the entire log-theta-lattice the resulting canonical lifting
++ canonical Frobenius action;
+canonical Frobenius lifting
+over the ordinary locus
+relatively straightforward original construction of log-theta-lattice relatively straightforward
+original construction of
+canonical liftings
+highly nontrivial description of alien arithmetic holomorphic structure via absolute anabelian geometry highly nontrivial
+absolute anabelian
+reconstruction of
+canonical liftings
+Fig. I4.1: Correspondence between inter-universal Teichm¨ uller theory and
+p-adic Teichm¨ uller theory
+Now let us return to our discussion of the log-theta-lattice, which, as discussed
+above, consists of two types of arrows, namely, Θ-link arrows and log-link ar-
+rows. As discussed in [IUTchIII], Remark 1.4.1, (iii) — cf. also Fig. I4.1 above,
+as well as Remark 3.9.3, (i), of the present paper — the Θ-link arrows correspond
+to the “transition from pnZ/pn+1Z to pn−1Z/pnZ”, i.e., the mixed characteris-
+tic extension structure of a ring of Witt vectors, while the log-link arrows, i.e.,
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 27
+the portion of theory that is developed in detail in [AbsTopIII], and which will be
+incorporated into the theory of the present series of papers in [IUTchIII], corre-
+spond to the Frobenius morphism in positive characteristic. As we shall see in
+[IUTchIII], these two types of arrows fail to commute [cf. [IUTchIII], Remark 1.4.1,
+(i)]. This noncommutativity, or “intertwining”, of the Θ-link and log-link arrows
+of the log-theta-lattice may be thought of as the analogue, in the context of the
+theory of the present series of papers, of the well-known “intertwining between the
+mixed characteristic extension structure of a ring of Witt vectors and the Frobenius
+morphism in positive characteristic” that appears in the classical p-adic theory. In
+particular, taken as a whole, the log-theta-lattice in the theory of the present series
+of papers may be thought of as an analogue, for number fields equipped with a
+[once-punctured] elliptic curve, of the canonical lifting, equipped with a canon-
+ical Frobenius action — hence also the canonical Frobenius lifting over the
+ordinary locus of the curve — associated to a positive characteristic hyperbolic
+curve equipped with a nilpotent ordinary indigenous bundle in p-adic Teichm¨ uller
+theory [cf. Fig. I4.1 above; the discussion of [IUTchIII], Remarks 3.12.3, 3.12.4].
+Finally, we observe that it is of particular interest in the context of the present
+discussion that a theory is developed in [CanLift], §3, that yields an absolute
+anabelian reconstruction for the canonical liftings of p-adic Teichm¨ uller the-
+ory. That is to say, whereas the original construction of such canonical liftings
+given in [pOrd], §3, is relatively straightforward, the anabelian reconstruction given
+in [CanLift], §3, of, for instance, the canonical lifting modulo p2 of the logarith-
+mic special fiber consists of a highly nontrivial anabelian argument. This state of
+aﬀairs is strongly reminiscent of the stark contrast between the relatively straight-
+forwardconstructionofthelog-theta-latticegiveninthepresentseriesofpapersand
+the description of an “alien arithmetic holomorphic structure” given in [IUTchIII],
+Theorem 3.11 [cf. the discussion in the earlier portion of the present §I4], which
+is achieved by applying highly nontrivial results in absolute anabelian geometry—
+cf. Fig. I4.1 above. In this context, we observe that the absolute anabelian theory
+of [AbsTopIII], §1, which plays a central role in the theory surrounding [IUTchIII],
+Theorem 3.11, corresponds, in the theory of [CanLift], §3, to the absolute anabelian
+reconstruction of the logarithmic special fiber given in [AbsAnab], §2 [i.e., in essence,
+thetheoryofabsoluteanabeliangeometryoverfinitefieldsdevelopedin[Tama1]; cf.
+also [Cusp], §2]. Moreover, just as the absolute anabelian theory of [AbsTopIII], §1,
+follows essentially by combining a version of “Uchida’s Lemma” [cf. [AbsTopIII],
+Proposition 1.3] with the theory of Belyi cuspidalization — i.e.,
+[AbsTopIII], §1 = Uchida Lem. + Belyi cuspidalization
+— the absolute anabelian geometry over finite fields of [Tama1], [Cusp], follows
+essentially by combining a version of “Uchida’s Lemma” with an application [to
+the counting of rational points] of the Lefschetz trace formula for [powers of] the
+Frobenius morphism on a curve over a finite field — i.e.,
+[Tama1], [Cusp] = Uchida Lem. + Lefschetz trace formula for Frob.
+— cf. the discussion of [AbsTopIII], §I5. That is to say, it is perhaps worthy of
+note that in the analogy between the inter-universal Teichm¨ uller theory developed
+in the present series of papers and the p-adic Teichm¨ uller theory of [pOrd], [pTeich],
+[CanLift], the application of the theory of Belyi cuspidalization over number fields
+28 SHINICHI MOCHIZUKI
+and mixed characteristic local fields may be thought of as corresponding to the
+Lefschetz trace formula for [powers of] the Frobenius morphism on a curve over a
+finite field, i.e.,
+Belyi cuspidalization ←→ Lefschetz trace formula for Frobenius
+[Here, we note in passing that this correspondence may be related to the corre-
+spondence discussed in [AbsTopIII], §I5, between Belyi cuspidalization and the
+Verschiebung on positive characteristic indigenous bundles by considering the ge-
+ometry of Hecke correspondences modulo p, i.e., in essence, graphs of the Frobenius
+morphism in characteristic p!] It is the hope of the author that these analogies and
+correspondences might serve to stimulate further developments in the theory.
+§I5. Other Galois-theoretic Approaches to Diophantine Geometry
+The notion of anabelian geometry dates back to a famous “letter to Falt-
+ings” [cf. [Groth]], written by Grothendieck in response to Faltings’ work on the
+Mordell Conjecture [cf. [Falt]]. Anabelian geometry was apparently originally con-
+ceived by Grothendieck as a new approach to obtaining results in diophantine
+geometry such as the Mordell Conjecture. At the time of writing, the author is
+not aware of any expositions by Grothendieck that expose this approach in detail.
+Nevertheless, it appears that the thrust of this approach revolves around applying
+the Section Conjecture for hyperbolic curves over number fields to obtain a con-
+tradiction by applying this Section Conjecture to the “limit section” of the Galois
+sections associated to any infinite sequence of rational points of a proper hyperbolic
+curve over a number field [cf. [MNT], §4.1(B), for more details]. On the other hand,
+to the knowledge of the author, at least at the time of writing, it does not appear
+that any rigorous argument has been obtained either by Grothendieck or by other
+mathematicians for deriving a new proof of the Mordell Conjecture from the [as
+yet unproven] Section Conjecture for hyperbolic curves over number fields. Nev-
+ertheless, one result that has been obtained is a new proof by M. Kim [cf. [Kim]]
+of Siegel’s theorem concerning Q-rational points of the projective line minus three
+points — a proof which proceeds by obtaining certain bounds on the cardinality
+of the set of Galois sections, without applying the Section Conjecture or any other
+results from anabelian geometry.
+In light of the historical background just discussed, the theory exposed in
+the present series of papers — which yields, in particular, a method for applying
+results in absolute anabelian geometry to obtain diophantine results such
+as those given in [IUTchIV] — occupies a somewhat curious position, relative to
+the historical development of the mathematical ideas involved. That is to say, at a
+purely formal level, the implication
+anabelian geometry=⇒ diophantine results
+at first glance looks something like a “confirmation” of Grothendieck’s original
+intuition. On the other hand, closer inspection reveals that the approach of the
+theory of the present series of papers — that is to say, the precise content of the
+relationship between anabelian geometry and diophantine geometry established in
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 29
+the present series of papers — diﬀers quite fundamentally from the sort of approach
+that was apparently envisioned by Grothendieck.
+Perhaps the most characteristic aspect of this diﬀerence lies in the central role
+played by anabelian geometry over p-adic fields in the present series of papers.
+That is to say, unlike the case with number fields, one central feature of anabelian
+geometry over p-adic fields is the fundamental gap between relative and absolute
+results [cf., e.g., [AbsTopI], Introduction]. This fundamental gap is closely related
+to the notion of an “arithmetic Teichm¨ uller theory for number fields” [cf.
+the discussion of §I4 of the present paper; [AbsTopIII], §I3, §I5] — i.e., a theory of
+deformations not for the “arithmetic holomorphic structure” of a hyperbolic curve
+over a number field, but rather for the “arithmetic holomorphic structure” of the
+number field itself! Totheknowledgeoftheauthor, theredoesnotexistanymention
+of such ideas [i.e., relative vs. absolute p-adic anabelian geometry; the notion of an
+arithmetic Teichm¨ uller theory for number fields] in the works of Grothendieck.
+As discussed in §I4, one fundamental theme of the theory of the present series
+of papers is the issue of the
+explicit description of the relationship between the additive structure and
+the multiplicative structure of a ring/number field/local field.
+Relative to the above discussion of the relationship between anabelian geometry
+and diophantine geometry, it is of interest to note that this issue of understand-
+ing/describing the relationship between addition and multiplication is, on the one
+hand, a central theme in the proofs of various results in anabelian geometry [cf.,
+e.g., [Tama1], [pGC], [AbsTopIII]] and, on the other hand, a central aspect of the
+diophantine results obtained in [IUTchIV].
+Fromahistoricalpointofview, itisalsoofinteresttonotethatresultsfromab-
+solute anabelian geometry are applied in the present series of papers in the context
+of the canonical splittings of the Frobenius-picture that arise by considering the
+´ etale-picture [cf. the discussion in §I1 preceding Theorem A]. This state of aﬀairs
+is reminiscent — relative to the point of view that the Grothendieck Conjecture
+constitutes a sort of “anabelian version” of the Tate Conjecture for abelian varieties
+[cf. the discussion of [MNT], §1.2] — of the role played by the Tate Conjecture for
+abelian varieties in obtaining the diophantine results of [Falt], namely, by means
+of the various semi-simplicity properties of the Tate module that arise as formal
+consequences of the Tate Conjecture. That is to say, such semi-simplicity proper-
+ties may also be thought of as “canonical splittings” that arise from Galois-theoretic
+considerations [cf. the discussion of “canonical splittings” in the final portion of
+[CombCusp], Introduction].
+Certain aspects of the relationship between the inter-universal Teichm¨ uller
+theory of the present series of papers and other Galois-theoretic approaches to dio-
+phantine geometry are best understood in the context of the analogy, discussed in
+§I4, between inter-universal Teichm¨ uller theory and p-adic Teichm¨ uller theory.
+One way to think of the starting point of p-adic Teichm¨ uller is as an attempt to
+construct a p-adic analogue of the theory of the action of SL2(Z) on the upper
+half-plane, i.e., of the natural embedding
+ρR : SL2(Z) → SL2(R)
+30 SHINICHI MOCHIZUKI
+of SL2(Z) as a discrete subgroup. This leads naturally to consideration of the
+representation
+ρZ
+=
+p
+ρZp
+: SL2(Z)∧ → SL2(Z) =
+SL2(Zp)
+p∈Primes
+— where we write SL2(Z)∧ for the profinite completion of SL2(Z). If one thinks
+of SL2(Z)∧ as the geometric ´ etale fundamental group of the moduli stack of elliptic
+curves over a field of characteristic zero, then the p-adic Teichm¨ uller theory of
+[pOrd], [pTeich] does indeed constitute a generalization of ρZp to more general p-
+adic hyperbolic curves.
+From a representation-theoretic point of view, the next natural direction
+in which to further develop the theory of [pOrd], [pTeich] consists of attempting to
+generalize the theory of representations into SL2(Zp) obtained in [pOrd], [pTeich]
+to a theory concerning representations into SLn(Zp) for arbitrary n ≥2. This is
+precisely the motivation that lies, for instance, behind the work of Joshi and Pauly
+[cf. [JP]].
+On the other hand, unlike the original motivating representation ρR, the rep-
+resentation ρZ is far from injective, i.e., put another way, the so-called Congruence
+Subgroup Property fails to hold in the case of SL2. This failure of injectivity means
+that working with
+ρZ only allows one to access a relatively limited portion of SL2(Z)∧
+.
+From this point of view, a more natural direction in which to further develop the
+theory of [pOrd], [pTeich] is to consider the “anabelian version”
+ρΔ : SL2(Z)∧ → Out(Δ1,1)
+of ρZ — i.e., the natural outer representation on the geometric ´ etale fundamen-
+tal group Δ1,1 of the tautological family of once-punctured elliptic curves over the
+moduli stack of elliptic curves over a field of characteristic zero. Indeed, unlike the
+case with ρZ, one knows [cf. [Asada]] that ρΔ is injective. Thus, the “arithmetic
+Teichm¨ uller theory for number fields equipped with a [once-punctured] el-
+liptic curve” constituted by the inter-universal Teichm¨ uller theory developed in
+the present series of papers may [cf. the discussion of §I4!] be regarded as a
+realization of this sort of “anabelian” approach to further developing the p-adic
+Teichm¨ uller theory of [pOrd], [pTeich].
+In the context of these two distinct possible directions for the further develop-
+ment of the p-adic Teichm¨ uller theory of [pOrd], [pTeich], it is of interest to recall
+the following elementary fact:
+If G is a free pro-p group of rank ≥2, then a [continuous] representation
+ρG : G → GLn(Qp)
+can never be injective!
+Indeed, assume that ρG is injective and write... ⊆Hj ⊆... ⊆Im(ρG) ⊆GLn(Qp)
+foranexhaustivesequenceofopennormalsubgroupsoftheimageofρG. Thensince
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 31
+theHj areclosedsubgroupsofGLn(Qp), hencep-adicLiegroups, itfollowsthatthe
+Qp-dimension dim(Hab
+j ⊗Qp) of the tensor product with Qp of the abelianization
+of Hj may be computed at the level of Lie algebras, hence is bounded by the Qp-
+dimension of the p-adic Lie group GLn(Qp), i.e., we have dim(Hab
+j ⊗Qp) ≤n2, in
+contradiction to the well-known fact since G∼
+= Im(ρG) is free pro-p of rank ≥2, it
+holds that dim(Hab
+j ⊗Qp) →∞as j →∞. Note, moreover, that
+this sort of argument, i.e., concerning the asymptotic behavior of the
+abelianizations — or, more generally, of the Lie algebras associated to
+the pro-algebraic groups determined by associated Tannakian categories
+of representations — of open subgroups, is characteristic of the sort of
+proofs that typically occur in anabelian geometry [cf., e.g., the proofs
+of [Tama1], [pGC], [CombGC], as well as [Cusp], §3!].
+That is to say, the above argument to the eﬀect that ρG can never be injective is a
+typical instance of the more general phenomenon that
+so long as one restricts oneself to representation theory into GLn(Qp)
+[or even more general groups that arise as groups of Qp-valued points
+of pro-algebraic groups], one can never access the sort of asymptotic
+phenomena that form the “technical core” [cf., e.g., the proofs of
+[Tama1], [pGC], [CombGC], as well as [Cusp], §3!] of various important
+results in anabelian geometry.
+Put another way, the two “directions” discussed above — i.e., representation-
+theoretic and anabelian — appear to be essentially mutually alien to one
+another.
+In this context, it is of interest to observe that the diophantine results de-
+rived in [IUTchIV] from the inter-universal Teichm¨ uller theory developed in the
+present series of papers concern essentially asymptotic behavior, i.e., they do
+not concern properties of “a specific rational point over a specific number field”,
+but rather properties of the asymptotic behavior of “varying rational points over
+varying number fields”. One important aspect of this asymptotic nature of the dio-
+phantine results derived in [IUTchIV] is that there are no distinguished number
+fields that occur in the theory, i.e., the theory — being essentially asymptotic in
+nature! — is “invariant” with respect to the operation of passing to finite exten-
+sions of the number field involved [which, from the point of view of the absolute
+Galois group GQ of Q, corresponds precisely to the operation of passing to smaller
+and smaller open subgroups, as in the above discussion!]. This contrasts sharply
+with the “representation-theoretic approach to diophantine geometry” constituted
+by such works as [Wiles], where specific rational points over the specific number field
+Q — or, for instance, in generalizations of [Wiles] involving Shimura varieties, over
+specific number fields characteristically associated to the Shimura varieties involved
+— play a central role.
+Acknowledgements:
+The research discussed in the present paper profited enormously from the gen-
+eroussupportthattheauthorreceivedfromtheResearch Institute for Mathematical
+32 SHINICHI MOCHIZUKI
+Sciences, a Joint Usage/Research Center located in Kyoto University. At a per-
+sonal level, I would like to thank Fumiharu Kato, Akio Tamagawa, Go Yamashita,
+Mohamed Sa¨ ıdi, Yuichiro Hoshi, Ivan Fesenko, Fucheng Tan, Emmanuel Lepage,
+Arata Minamide, and Wojciech Porowski for many stimulating discussions con-
+cerning the material presented in this paper. In particular, I would like to thank
+Emmanuel Lepage for his stimulating comments [summarized in Remark 2.5.3] on
+[SemiAnbd]. Also, I feel deeply indebted to Go Yamashita, Mohamed Sa¨ ıdi, and
+Yuichiro Hoshi for their meticulous reading of and numerous comments concerning
+the present paper. In particular, the introduction of the theory of κ-coric functions
+was motivated by various stimulating discussions with Yuichiro Hoshi. Finally, I
+would like to express my deep gratitude to Ivan Fesenko for his quite substantial
+eﬀorts to disseminate — for instance, in the form of a survey that he wrote — the
+theory discussed in the present series of papers.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 33
+Section 0: Notations and Conventions
+Monoids and Categories:
+We shall use the notation and terminology concerning monoids and categories
+of [FrdI], §0.
+We shall refer to a topological space P equipped with a continuous map
+P ×P ⊇S → P
+as a topological pseudo-monoid if there exists a topological abelian group M [whose
+group operation will be written multiplicatively] and an embedding of topological
+spaces ι : P →M such that S= {(a,b) ∈P ×P |ι(a)·ι(b) ∈ι(P) ⊆M}, and
+the map S →P is obtained by restricting the group operation M ×M →M on
+M to P by means of ι. Here, if M is equipped with the discrete topology, then
+we shall refer to the resulting P simply as a pseudo-monoid. In particular, every
+topologicalpseudo-monoiddetermines, inanevidentfashion, anunderlyingpseudo-
+monoid. Let P be a pseudo-monoid. Then we shall say that the pseudo-monoid
+P is divisible if M and ι may be taken such that for each positive integer n, every
+element of M admits an n-th root in M, and, moreover, an element a ∈M lies
+in ι(P) if and only if an lies in ι(P). We shall say that the pseudo-monoid P is
+cyclotomic if M and ι may be taken such that the subgroup μM ⊆M of torsion
+elements of M is isomorphic to the group Q/Z, μM ⊆ι(P), and μM·ι(P) ⊆ι(P).
+We shall refer to an isomorphic copy of some object as an isomorph of the
+object.
+If Cand Dare categories, then we shall refer to as an isomorphism C→Dany
+isomorphism class of equivalences of categories C→D. [Note that this terminology
+diﬀers from the standard terminology of category theory, but will be natural in the
+context of the theory of the present series of papers.] Thus, from the point of view
+of “coarsifications of 2-categories of 1-categories” [cf. [FrdI], Appendix, Definition
+A.1, (ii)], an “isomorphism C→D” is precisely an “isomorphism in the usual sense”
+of the [1-]category constituted by the coarsification of the 2-category of all small
+1-categories relative to a suitable universe with respect to which Cand Dare small.
+Let Cbe a category; A,B ∈Ob(C). Then we define a poly-morphism A →B
+to be a collection of morphisms A →B [i.e., a subset of the set of morphisms
+A →B]; if all of the morphisms in the collection are isomorphisms, then we shall
+refer to the poly-morphism as a poly-isomorphism; if A= B, then we shall re-
+fer to a poly-isomorphism A∼
+→B as a poly-automorphism. We define the full
+poly-isomorphism A∼
+→B to be the poly-morphism given by the collection of all
+isomorphisms A∼
+→B. The composite of a poly-morphism {fi : A →B}i∈I with a
+poly-morphism {gj : B →C}j∈J is defined to be the poly-morphism given by the
+set [i.e., where “multiplicities” are ignored] {gj ◦fi : A →C}(i,j)∈I×J.
+Let Cbe a category. We define a capsule of objects of Cto be a finite collection
+{Aj}j∈J [i.e., where J is a finite index set] of objects Aj of C; if |J|denotes the
+34 SHINICHI MOCHIZUKI
+cardinality of J, then we shall refer to a capsule with index set J as a |J|-capsule;
+also, we shall write π0({Aj}j∈J) def
+= J. A morphism of capsules of objects of C
+{Aj}j∈J →{A′
+j′}j′∈J′
+is defined to consist of an injection ι : J →J′, together with, for each j ∈J, a
+morphism Aj →A′
+ι(j) of objects of C. Thus, the capsules of objects of Cform a
+category Capsule(C). A capsule-full poly-morphism
+{Aj}j∈J →{A′
+j′}j′∈J′
+between two objects of Capsule(C) is defined to be the poly-morphism associated
+to some [fixed] injection ι : J →J′ which consists of the set of morphisms of
+Capsule(C) given by collections of [arbitrary] isomorphisms Aj
+∼
+→A′
+ι(j), for j ∈
+J. A capsule-full poly-isomorphism is a capsule-full poly-morphism for which the
+associated injection between index sets is a bijection.
+If X is a connected noetherian algebraic stack which is generically scheme-like
+[cf. [Cusp], §0], then we shall write
+B(X)
+for the category of finite ´ etale coverings of X [and morphisms over X]; if A is a
+noetherian [commutative] ring [with unity],thenweshallwriteB(A) def
+= B(Spec(A)).
+Thus, [cf. [FrdI], §0] the subcategory of connected objects B(X)0 ⊆B(X) may
+be thought of as the subcategory of connected finite ´ etale coverings of X [and
+morphisms over X].
+Let Π be a topological group. Then let us write
+Btemp(Π)
+for the category whose objects are countable [i.e., of cardinality ≤the cardinality
+of the set of natural numbers], discrete sets equipped with a continuous Π-action,
+and whose morphisms are morphisms of Π-sets [cf. [SemiAnbd], §3]. If Π may be
+written as an inverse limit of an inverse system of surjections of countable discrete
+topological groups, then we shall say that Π is tempered [cf. [SemiAnbd], Definition
+3.1, (i)]. A category Cequivalent to a category of the form Btemp(Π), where Π is a
+tempered topological group, is called a connected temperoid [cf. [SemiAnbd], Defi-
+nition 3.1, (ii)]. Thus, if Cis a connected temperoid, then Cis naturally equivalent
+to (C0)⊤ [cf. [FrdI], §0]. Moreover, if Π is Galois-countable [cf. Remark 2.5.3, (i),
+(T1)], then one can reconstruct [cf. Remark 2.5.3, (i), (T5)] the topological group Π,
+up to inner automorphism, category-theoretically from Btemp(Π) or Btemp(Π)0 [i.e.,
+the subcategory of connected objects of Btemp(Π)]; in particular, for any Galois-
+countable [cf. Remark 2.5.3, (i), (T1)] connected temperoid C, it makes sense to
+write
+π1(C), π1(C0)
+for the topological groups, up to inner automorphism, obtained by applying this
+reconstruction algorithm [cf. Remark 2.5.3, (i), (T5)].
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 35
+In this context, if C1, C2 are connected temperoids, then it is natural to define
+a morphism
+C1 →C2
+to be an isomorphism class of functors C2 →C1 that preserves finite limits and
+countablecolimits. [Notethatthisdiﬀers—butonlyslightly! —fromthedefinition
+given in [SemiAnbd], Definition 3.1, (iii). This diﬀerence does not, however, have
+any eﬀect on the applicability of results of [SemiAnbd] in the context of the present
+series of papers.] In a similar vein, we define a morphism
+C0
+1 →C0
+2
+tobeamorphism(C0
+1)⊤ →(C0
+2)⊤ [wherewerecallthatwehavenaturalequivalences
+∼
+of categories Ci
+→(C0
+i )⊤ for i = 1,2]. One verifies immediately that an “isomor-
+phism” relative to this terminology is equivalent to an “isomorphism of categories”
+in the sense defined at the beginning of the present discussion of “Monoids and
+Categories”. Finally, if Π1, Π2 are Galois-countable [cf. Remark 2.5.3, (i), (T1)]
+tempered topological groups, then we recall that there is a natural bijective corre-
+spondence between
+(a) the set of continuous outer homomorphisms Π1 →Π2,
+(b) the set of morphisms Btemp(Π1) →Btemp(Π2), and
+(c) the set of morphisms Btemp(Π1)0 →Btemp(Π2)0
+— cf. Remark 2.5.3, (ii), (E7); [SemiAnbd], Proposition 3.2.
+Suppose that for i = 1,2, Ci and C′
+i are categories. Then we shall say that two
+isomorphism classes of functors φ : C1 →C2, φ′ : C′
+1 →C′
+2 are abstractly equivalent
+if, for i = 1,2, there exist isomorphisms αi : Ci
+∼ →C′
+i such that φ′ ◦α1 = α2 ◦φ. We
+shall also apply this terminology to morphisms between [connected] temperoids,
+as well as to morphisms between subcategories of connected objects of [connected]
+temperoids.
+Numbers:
+WeshallusetheabbreviationsNF(“numberfield”), MLF(“mixed-characteris-
+tic [nonarchimedean] local field”), CAF (“complex archimedean field”), as defined
+in [AbsTopI], §0; [AbsTopIII], §0. We shall denote the set of prime numbers by
+Primes.
+Let F be a number field [i.e., a finite extension of the field of rational numbers].
+Then we shall write
+V(F) = V(F)arc V(F)non
+for the set of valuations of F, that is to say, the union of the sets of archimedean
+[i.e., V(F)arc] and nonarchimedean [i.e., V(F)non] valuations of F. Here, we note
+that this terminology “valuation”, as it is applied in the present series of papers,
+corresponds to such terminology as “place” or “absolute value” in the work of other
+authors. Let v ∈V(F). Then we shall write Fv for the completion of F at v and
+say that an element of F or Fv is integral [at v] if it is of norm ≤1 with respect
+to the valuation v; if, moreover, L is any [possibly infinite] Galois extension of F,
+36 SHINICHI MOCHIZUKI
+then, by a slight abuse of notation, we shall write Lv for the completion of L at
+some valuation ∈V(L) that lies over v. If v ∈V(F)non, then we shall write pv
+for the residue characteristic of v. If v ∈V(F)arc, then we shall write pv ∈Fv
+for the unique positive real element of Fv whose natural logarithm is equal to 1
+[i.e., “e = 2.71828...”]. By passing to appropriate projective or inductive limits,
+we shall also apply the notation “V(F)”, “Fv”, “pv” in situations where “F” is an
+infinite extension of Q.
+Curves:
+We shall use the terms hyperbolic curve, cusp, stable log curve, and smooth
+log curve as they are defined in [SemiAnbd], §0. We shall use the term hyperbolic
+orbicurve as it is defined in [Cusp], §0.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 37
+Section 1: Complements on Coverings of Punctured Elliptic Curves
+In the present §1, we discuss certain routine complements — which will be of
+use in the present series of papers — to the theory of coverings of once-punctured
+elliptic curves, as developed in [EtTh], §2.
+Let l ≥5 be an integer prime to 6; X a hyperbolic curve of type (1,1) over a
+field k of characteric zero; C a hyperbolic orbicurve of type (1,l-tors)± [cf. [EtTh],
+Definition 2.1] over k, whose k-core C [cf. [CanLift], Remark 2.1.1; [EtTh], the
+discussion at the beginning of §2] also forms a k-core of X. Thus, C determines,
+up to k-isomorphism, a hyperbolic orbicurve X def
+= C ×C X of type (1,l-tors) [cf.
+[EtTh], Definition 2.1] over k. Moreover, if we write Gk for the absolute Galois
+group of k [relative to an appropriate choice of basepoint], Π(−) for the arithmetic
+fundamental group of a geometrically connected, geometrically normal, generically
+scheme-like k-algebraic stack of finite type “(−)” [i.e., the ´ etale fundamental group
+π1((−))], and Δ(−) for the geometric fundamental group of “(−)” [i.e., the kernel
+of the natural surjection Π(−) Gk], then we obtain natural cartesian diagrams
+X −→ X
+ΠX −→ ΠX
+ΔX −→ ΔX
+⏐ ⏐ ⏐ ⏐
+⏐ ⏐ ⏐ ⏐
+⏐ ⏐ ⏐ ⏐
+C −→ C
+ΠC −→ ΠC
+ΔC −→ ΔC
+of finite ´ etale coverings of hyperbolic orbicurves and open immersions of profinite
+groups. Finally, let us make the following assumption:
+(∗) The natural action of Gk on Δab
+X ⊗(Z/lZ) [where the superscript “ab”
+denotes the abelianization] is trivial.
+Next, let ϵ be a nonzero cusp of C — i.e., a cusp that arises from a nonzero
+elementofthequotient“Q”thatappearsinthedefinitionofa“hyperbolicorbicurve
+of type (1,l-tors)±” given in [EtTh], Definition 2.1. Write ϵ0 for the unique “zero
+cusp” [i.e., “non-nonzero cusp”] of X; ϵ′
+, ϵ′′ for the two cusps of X that lie over ϵ;
+and
+ΔX Δab
+X ⊗(Z/lZ) Δϵ
+for the quotient of Δab
+X ⊗(Z/lZ) by the images of the inertia groups of all nonzero
+cusps ̸= ϵ′,ϵ′′ of X. Thus, we obtain a natural exact sequence
+0 −→ Iϵ′ ×Iϵ′′ −→ Δϵ −→ ΔE ⊗(Z/lZ) −→ 0
+— where we write E for the genus one compactification of X, and Iϵ′, Iϵ′′ for
+the respective images in Δϵ of the inertia groups of the cusps ϵ′
+, ϵ′′ [so we have
+noncanonical isomorphisms Iϵ′
+∼
+= Z/lZ∼
+= Iϵ′′].
+Next, let us observe that Gk, Gal(X/C) (∼
+= Z/2Z) act naturally on the above
+exact sequence. Write ι ∈Gal(X/C) for the unique nontrivial element. Then ι
+induces an isomorphism Iϵ′
+∼
+= Iϵ′′; if we use this isomorphism to identify Iϵ′, Iϵ′′,
+then one verifies immediately that ι acts on the term “Iϵ′ ×Iϵ′′” of the above exact
+sequence by switching the two factors. Moreover, one verifies immediately that ι
+38 SHINICHI MOCHIZUKI
+acts on ΔE⊗(Z/lZ) via multiplication by−1. In particular, since l is odd, it follows
+that the action by ι on Δϵ determines a decomposition into eigenspaces
+Δϵ
+∼
+→Δ+
+ϵ ×Δ−
+ϵ
+— i.e., where ι acts on Δ+
+ϵ (respectively, Δ−
+ϵ ) by multiplication by +1 (respectively,
+−1). Moreover, the natural composite maps
+Iϵ′ →Δϵ Δ+
+ϵ ; Iϵ′′ →Δϵ Δ+
+ϵ
+∼
+determine isomorphisms Iϵ′
+→Δ+
+∼
+ϵ , Iϵ′′
+→Δ+
+ϵ . Since the natural action of Gk
+on Δϵ clearly commutes with the action of ι, we thus conclude that the quotient
+ΔX Δϵ Δ+
+ϵ determines quotients
+ΠX JX; ΠC JC
+— where the surjections ΠX Gk, ΠC Gk induce natural exact sequences
+1 →Δ+
+ϵ →JX →Gk →1, 1 →Δ+
+ϵ ×Gal(X/C) →JC →Gk →1; we have a
+natural inclusion JX →JC.
+Next, letusconsiderthecusp“2ϵ”ofC —i.e., thecuspwhoseinverseimagesin
+X correspond to the points of E obtained by multiplying ϵ′
+, ϵ′′ by 2, relative to the
+grouplawoftheellipticcurvedeterminedbythepair(X,ϵ0). Since2 ̸= ±1 (mod l)
+[aconsequenceofourassumptionthatl ≥5], itfollowsthatthedecomposition group
+associated to this cusp “2ϵ” determines a section
+σ : Gk →JC
+of the natural surjection JC Gk. Here, we note that although, a priori, σ is only
+determined by 2ϵ up to composition with an inner automorphism of JC determined
+by an element of Δ+
+ϵ ×Gal(X/C), in fact, since [in light of the assumption (∗)!]
+the natural [outer] action of Gk on Δ+
+ϵ ×Gal(X/C) is trivial, we conclude that σ
+is completely determined by 2ϵ, and that the subgroup Im(σ) ⊆JC determined by
+the image of σ is normal in JC. Moreover, by considering the decomposition groups
+associated to the cusps of X lying over 2ϵ, we conclude that Im(σ) lies inside the
+subgroup JX ⊆JC. Thus, the subgroups Im(σ) ⊆JX, Im(σ) ×Gal(X/C) ⊆JC
+determine [the horizontal arrows in] cartesian diagrams
+X
+− → −→ X
+⏐ ⏐ ⏐ ⏐
+C
+− → −→ C
+ΠX
+− →
+ΠC
+− →
+−→ ΠX
+⏐ ⏐ ⏐ ⏐
+−→ ΠC
+ΔX
+− →
+ΔC
+− →
+⏐ ⏐ ⏐ ⏐
+−→ ΔC
+of finite ´ etale cyclic coverings of hyperbolic orbicurves and open immersions [with
+normal image] of profinite groups; we have Gal(C
+− →/C)∼
+= Z/lZ, Gal(X/C)∼
+= Z/2Z,
+and Gal(X
+− →/C)∼
+→Gal(X/C)×Gal(C
+− →/C)∼
+= Z/2lZ.
+Definition 1.1. We shall refer to a hyperbolic orbicurve over k that arises, up to
+isomorphism, as the hyperbolic orbicurve X
+− →(respectively, C
+− →) constructed above
+for some choice of l, ϵ as being of type (1,l-tors
+−−→) (respectively, (1,l-tors
+−−→)±).
+−→ ΔX
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 39
+Remark 1.1.1. The arrow “→” in the notation “X
+− →”, “C
+− →”, “(1,l-tors
+−−→)”,
+“(1,l-tors
+−−→)±” may be thought of as denoting the “archimedean, ordered labels
+1,2,...
+” — i.e., determined by the choice of ϵ! — on the {±1}-orbits of ele-
+ments of the quotient “Q” that appears in the definition of a “hyperbolic orbicurve
+of type (1,l-tors)±” given in [EtTh], Definition 2.1.
+Remark 1.1.2. We observe that X
+− →, C
+− →are completely determined, up to k-
+isomorphism, by the data (X/k, C, ϵ).
+Corollary 1.2. (Characteristic Nature of Coverings) Suppose that k is
+an NF or an MLF. Then there exists a functorial group-theoretic algorithm
+[cf. [AbsTopIII], Remark 1.9.8, for more on the meaning of this terminology] to
+reconstruct
+ΠX, ΠC
+− →, ΠC (respectively, ΠC)
+together with the conjugacy classes of the decomposition group(s) determined by the
+set(s) of cusps {ϵ′,ϵ′′}; {ϵ}(respectively, {ϵ}) from ΠX
+− → (respectively, ΠC
+− →). Here,
+the asserted functoriality is with respect to isomorphisms of topological groups; we
+reconstruct ΠX, ΠC
+− →, ΠC (respectively, ΠC) as a subgroup of Aut(ΠX
+− →) (respectively,
+Aut(ΠC
+− →)).
+Proof. For simplicity, we consider the non-resp’d case; the resp’d case is entirely
+similar [but slightly easier]. The argument is similar to the arguments applied in
+[EtTh], Proposition 1.8; [EtTh], Proposition 2.4. First, we recall that ΠX
+− →, ΠX, and
+ΠC are slim [cf., e.g., [AbsTopI], Proposition 2.3, (ii)], hence embed naturally into
+Aut(ΠX
+− →), and that one may recover the subgroup ΔX
+− → ⊆ΠX
+− → via the algorithms of
+[AbsTopI],Theorem2.6, (v), (vi). Next, werecallthatthealgorithmsof[AbsTopII],
+Corollary 3.3, (i), (ii) — which are applicable in light of [AbsTopI], Example 4.8
+— allow one to reconstruct ΠC [together with the natural inclusion ΠX
+− →
+→ΠC],
+as well as the subgroups ΔX ⊆ΔC ⊆ΠC. In particular, l may be recovered via
+the formula l2 = [ΔX : ΔX]·[ΔX : ΔX
+− →] = [ΔX : ΔX
+− →] = [ΔC : ΔX
+− →]/2. Next, let
+us set H def = Ker(ΔX Δab
+X ⊗(Z/lZ)). Then ΠX ⊆ΠC may be recovered via the
+[easily verified] equality of subgroups ΠX = ΠX
+− →·H. The conjugacy classes of the
+decomposition groups of ϵ0
+, ϵ′
+, ϵ′′ in ΠX may be recovered as the decomposition
+groups of cusps [cf. [AbsTopI], Lemma 4.5, as well as Remark 1.2.2, (ii), below]
+whoseimageinGal(X
+− →/X) = ΠX/ΠX
+isnontrivial. Next, toreconstructΠC ⊆ΠC,
+− →
+it suﬃces to reconstruct the splitting of the surjection Gal(X/C) = ΠC/ΠX
+ΠC/ΠX = Gal(X/C) determined by Gal(X/C) = ΠC/ΠX; but [since l is prime to
+3!] this splitting may be characterized [group-theoretically!] as the unique splitting
+that stabilizes the collection of conjugacy classes of subgroups of ΠX determined
+by the decomposition groups of ϵ0
+, ϵ′
+, ϵ′′. Now ΠC
+− → ⊆ΠC may be reconstructed
+by applying the observation that (Z/2Z∼
+=) Gal(X
+− →/C− →) ⊆Gal(X
+− →/C) (∼
+= Z/2lZ)
+is the unique maximal subgroup of odd index. Finally, the conjugacy classes of
+the decomposition groups of ϵ′
+, ϵ′′ in ΠX may be recovered as the decomposition
+groups of cusps [cf. [AbsTopI], Lemma 4.5, as well as Remark 1.2.2, (ii), below]
+whose image in Gal(X
+− →/X) = ΠX/ΠX
+− →
+is nontrivial, but which are not fixed [up to
+40 SHINICHI MOCHIZUKI
+conjugacy] by the outer action of Gal(X/C) = ΠC/ΠX on ΠX. This completes the
+proof of Corollary 1.2. ⃝
+Remark 1.2.1. It follows immediately from Corollary 1.2 that
+Autk(X
+− →) = Gal(X
+− →/C) (∼
+= Z/2lZ); Autk(C
+− →) = Gal(C
+− →/C) (∼
+= Z/lZ)
+[cf. [EtTh], Remark 2.6.1].
+Remark 1.2.2. The group-theoretic algorithm for reconstructing the decomposi-
+tion groups of cusps given [AbsTopI], Lemma 4.5 — which is based on the argument
+given in the proof of [AbsAnab], Lemma 1.3.9 — contains some minor, inessential
+inaccuracies. In light of the importance of this group-theoretic algorithm for the
+theory of the present series of papers, we thus pause to discuss how these inaccu-
+racies may be amended.
+(i) The final portion [beginning with the third sentence] of the second paragraph
+of the proof of [AbsAnab], Lemma 1.3.9, should be replaced by the following text:
+Since ri may be recovered group-theoretically, given any finite ´ etale cov-
+erings
+Zi →Vi →Xi
+such that Zi is cyclic [hence Galois], of degree a power of l, over Vi,
+one may determine group-theoretically whether or not Zi →Vi is totally
+ramified [i.e., at some point of Zi], since this condition is easily verified
+to be equivalent to the condition that the covering Zi → Vi admit a
+factorization Zi →Wi →Vi, where Wi →Vi is finite ´ etale of degree l,
+and rWi < l·rVi. Moreover, this group-theoreticity of the condition that a
+cyclic covering be totally ramified extends immediately to the case of pro-l
+cyclic coverings Zi →Vi. Thus, by Lemma 1.3.7, we conclude that the
+inertia groups of cusps in(ΔXi)(l) [i.e., themaximalpro-l quotientofΔXi]
+may be characterized [group-theoretically!] as the maximal subgroups of
+(ΔXi)(l) that correspond to [profinite] coverings satisfying this condition.
+(ii) The final portion [beginning with the third sentence] of the statement of
+[AbsTopI], Lemma 4.5, (iv), should be replaced by the following text:
+Then the decomposition groups of cusps ⊆ H∗ may be character-
+ized [“group-theoretically”] as the maximal closed subgroups I ⊆H∗
+isomorphic to Zl which satisfy the following condition: We have
+d
+χcyclo
+G ((Il
+·J)ab ⊗Ql)+1 < l·{d
+χcyclo
+G ((I·J)ab ⊗Ql)+1}
+[i.e., “the covering of curves corresponding to J ⊆I·J is totally ramified
+at some cusp”] for every characteristic open subgroup J ⊆H∗ such that
+J ̸= I·J.
+Remark 1.2.3. The minor, inessential inaccuracies in the group-theoretic al-
+gorithms of [AbsAnab], Lemma 1.3.9; [AbsTopI], Lemma 4.5, that were discussed
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 41
+in Remark 1.2.2 are closely related to certain minor, inessential inaccuracies in
+the theory of [CombGC]. Thus, it is of interest, in the context of the discussion of
+Remark 1.2.2, to pause to discuss how these inaccuracies may be amended. These
+inaccuracies arise in the arguments applied in [CombGC], Definition 1.4, (v), (vi),
+and [CombGC], Remarks 1.4.2, 1.4.3, and 1.4.4, to prove [CombGC], Theorem
+1.6. These arguments are formulated in a somewhat confusing way and should be
+modified as follows:
+(i) First of all, we remark that in [CombGC], as well as in the following dis-
+cussion, a “Galois” finite ´ etale covering is to be understood as being connected.
+(ii) In the second sentence of [CombGC], Definition 1.4, (v), the cuspidal and
+nodal cases of the notion of a purely totally ramified covering are in fact unnecessary
+and may be deleted. Also, the terminology introduced in [CombGC], Definition
+1.4, (vi), concerning finite ´ etale coverings that descend is unnecessary and may be
+deleted.
+(iii) The text of [CombGC], Remark 1.4.2, should be replaced by the following
+text:
+Let G′ →Gbe a Galois finite ´ etale covering of degree a positive power of
+l, where Gis of pro-Σ PSC-type, Σ = {l}. Then one verifies immediately
+that, if we assume further that the covering G′ →Gis cyclic, then G′ →G
+is cuspidally totally ramified if and only if the inequality
+r(G′′) < l·r(G)
+— where we write G′ → G′′ → G for the unique [up to isomorphism]
+factorization of the finite ´ etale covering G′ →Gas a composite of finite
+´ etale coverings such that G′′ →Gis of degree l — is satisfied. Suppose
+further that G′ →Gis a [not necessarily cyclic!] Πunr
+G -covering [so n(G′) =
+deg(G′/G)·n(G)]. Then one verifies immediately that G′ →Gis verticially
+purely totally ramified if and only if the equality
+i(G′) = deg(G′/G)·(i(G)−1)+1
+is satisfied. Also, we observe that this last inequality is equivalent to the
+following equality involving the expression “i(...)−n(...)” [cf. Remark
+1.1.3]:
+i(G′)−n(G′) = deg(G′/G)·(i(G)−n(G)−1)+1
+(iv) The text of [CombGC], Remark 1.4.3, should be replaced by the following
+text:
+Suppose that Gis of pro-Σ PSC-type, Σ = {l}. Then one verifies immedi-
+ately that the cuspidal edge-like subgroups of ΠG may be characterized as
+the maximal [cf. Proposition 1.2, (i)] closed subgroups A ⊆ΠG isomorphic
+to Zl which satisfy the following condition:
+for every characteristic open subgroup ΠG′ ⊆ΠG, if we write
+G′ → G′′ → G for the finite ´ etale coverings corresponding to
+42 SHINICHI MOCHIZUKI
+def
+ΠG′ ⊆ΠG′′
+= A·ΠG′ ⊆ΠG, then the cyclic finite ´ etale covering
+G′ →G′′ is cuspidally totally ramified.
+[Indeed, the necessity of this characterization is immediate from the def-
+initions; the suﬃciency of this characterization follows by observing that
+since the set of cusps of a finite ´ etale covering of Gis always finite, the
+above condition implies that there exists a compatible system of cusps of
+the various G′ that arise, each of which is stabilized by the action of A.] On
+the other hand, in order to characterize the unramified verticial subgroups
+of Πunr
+G , it suﬃces — by considering stabilizers of vertices of underlying
+semi-graphs of finite ´ etale Πunr
+G -coverings of G— to give a functorial char-
+acterization of the set of vertices of G [i.e., which may also be applied
+to finite ´ etale Πunr
+G -coverings of G]. This may be done, for sturdy G, as
+follows. Write Munr
+G for the abelianization of Πunr
+G . For each vertex v of
+the underlying semi-graph G of G, write Munr
+G [v] ⊆Munr
+G for the image of
+the Πunr
+G -conjugacy class of unramified verticial subgroups of Πunr
+G associ-
+ated to v. Then one verifies immediately, by constructing suitable abelian
+Πunr
+G -coverings of Gvia suitable gluing operations [i.e., as in the proof of
+Proposition 1.2], that the inclusions Munr
+G [v] ⊆Munr
+G determine a split
+injection
+Munr
+G [v] → Munr
+G
+v
+[wherev rangesovertheverticesofG],whoseimagewedenotebyMunr-vert
+G ⊆
+Munr
+G . Now we consider elementary abelian quotients
+φ : Munr
+G Q
+— i.e., where Q is an elementary abelian group. We identify such quotients
+whenever their kernels coincide and order such quotients by means of the
+relation of “domination” [i.e., inclusion of kernels]. Then one verifies im-
+mediately that such a quotient φ : Munr
+G Q corresponds to a verticially
+purely totally ramified covering of Gif and only if there exists a vertex v
+of G such that φ(Munr
+G [v]) = Q, φ(Munr
+G [v′]) = 0 for all vertices v′ ̸= v of
+G. In particular, one concludes immediately that
+the elementary abelian quotients φ : Munr
+G Q whose restric-
+tion to Munr-vert
+G surjects onto Q and has the same kernel as the
+quotient
+Munr-vert
+G Munr
+G [v] Munr
+G [v]⊗Fl
+— where the first “ ” is the natural projection; the second “ ”
+is given by reduction modulo l — may be characterized as the
+maximal quotients [i.e., relative to the relation of domination]
+among those elementary abelian quotients of Munr
+G that corre-
+spond to verticially purely totally ramified coverings of G.
+Thus, since Gis sturdy, the set of vertices of Gmay be characterized as
+the set of [nontrivial!] quotients Munr-vert
+G Munr
+G [v]⊗Fl.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 43
+(v) The text of [CombGC], Remark 1.4.4, should be replaced by the following
+text:
+Suppose that G is of pro-Σ PSC-type, where Σ = {l}, and that G is
+noncuspidal. Then, in the spirit of the cuspidal portion of Remark 1.4.3,
+we observe the following: One verifies immediately that the nodal edge-like
+subgroups of ΠG may be characterized as the maximal [cf. Proposition 1.2,
+(i)] closed subgroups A ⊆ΠG isomorphic to Zl which satisfy the following
+condition:
+for every characteristic open subgroup ΠG′ ⊆ΠG, if we write
+G′ → G′′ → G for the finite ´ etale coverings corresponding to
+def
+ΠG′ ⊆ΠG′′
+= A·ΠG′ ⊆ΠG, then the cyclic finite ´ etale covering
+G′ →G′′ is nodally totally ramified.
+Here, we note further that [one verifies immediately that] the finite ´ etale
+covering G′ →G′′ is nodally totally ramified if and only if it is module-wise
+nodal.
+(vi) The text of the second paragraph of the proof of [CombGC], Theorem 1.6,
+should be replaced by the following text [which may be thought as being appended
+to the end of the first paragraph of the proof of [CombGC], Theorem 1.6]:
+Then the fact that α is group-theoretically cuspidal follows formally from
+the characterization of cuspidal edge-like subgroups given in Remark 1.4.3
+and the characterization of cuspidally totally ramified cyclic finite ´ etale
+coverings given in Remark 1.4.2.
+(vii) The text of the final paragraph of the proof of [CombGC], Theorem 1.6,
+should be replaced by the following text [which may be thought of as a sort of
+“easy version” of the argument given in the proof of the implication “(iii) =⇒(i)”
+of [CbTpII], Proposition 1.5]:
+Finally, we consider assertion (iii). Suﬃciency is immediate. On the
+other hand, necessity follows formally from the characterization of unram-
+ified verticial subgroups given in Remark 1.4.3 and the characterization
+of verticially purely totally ramified finite ´ etale coverings given in Remark
+1.4.2.
+44 SHINICHI MOCHIZUKI
+Section 2: Complements on Tempered Coverings
+In the present §2, we discuss certain routine complements — which will be of
+use in the present series of papers — to the theory of tempered coverings of graphs
+of anabelioids, as developed in [SemiAnbd], §3 [cf. also the closely related theory
+of [CombGC]].
+Let Σ, Σ be nonempty sets of prime numbers such that Σ ⊆Σ;
+G
+a semi-graph of anabelioids of pro-Σ PSC-type [cf. [CombGC], Definition 1.1, (i)],
+whose underlying semi-graph we denote by G. Write Πtp
+G for the tempered funda-
+mental group of G[cf. the discussion preceding [SemiAnbd], Proposition 3.6, as
+well as Remark 2.5.3, (i), (T6), of the present paper] and ΠG for the pro-Σ [i.e.,
+maximal pro-Σ quotient of the profinite] fundamental group of G[cf. the discussion
+preceding [SemiAnbd], Definition 2.2] — both taken with respect to appropriate
+choices of basepoints. Thus, since discrete free groups of finite rank inject into
+their pro-l completions for any prime number l [cf., e.g., [RZ], Proposition 3.3.15],
+it follows that we have a natural injection [cf. [SemiAnbd], Proposition 3.6, (iii), as
+well as Remark 2.5.3, (ii), (E7), of the present paper, when Σ = Primes; the proof
+in the case of arbitrary Σ is entirely similar]
+Πtp
+G →ΠG
+that we shall use to regard Πtp
+G as a subgroup of ΠG and ΠG as the pro-Σ completion
+of Πtp
+G.
+Next, let
+H
+be the semi-graph of anabelioids associated to a connected sub-semi-graph H ⊆
+G. One verifies immediately that the restriction of Hto the maximal subgraph
+[cf. the discussion at the beginning of [SemiAnbd], §1] of H coincides with the
+restriction to the maximal subgraph of the underlying semi-graph of some semi-
+graph of anabelioids of pro-Σ PSC-type. That is to say, roughly speaking, up to the
+possible omission of some of the cuspidal edges, H“is” a semi-graph of anabelioids
+of pro-Σ PSC-type. In particular, since the omission of cuspidal edges clearly does
+not aﬀect either the tempered or pro-Σ fundamental groups, we shall apply the
+notation introduced above for “G” to H. We thus obtain a natural commutative
+diagram
+Πtp
+H −→ ΠH
+⏐ ⏐ ⏐ ⏐
+Πtp
+G −→ ΠG
+of [outer] inclusions [cf. [SemiAnbd], Proposition 2.5, (i), when Σ = Primes; in
+light of the well-known structure of fundamental groups of hyperbolic Riemann
+surfaces of finite type, a similar proof may be given in the case of arbitrary Σ, i.e.,
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 45
+by considering successive composites of finite ´ etale Galois coverings that restrict to
+trivial coverings over the closed edges and finite ´ etale abelian [Galois] coverings ob-
+tained by gluing together suitable abelian coverings] of topological groups, which we
+shall use to regard all of the groups in the diagram as subgroups of ΠG. In partic-
+ular, one may think of Πtp
+H (respectively, ΠH) as the decomposition subgroup in Πtp
+G
+(respectively, ΠG) [which is well-defined up to Πtp
+G - (respectively, ΠG-)conjugacy]
+associated to the sub-semi-graph H.
+The following result is the central technical result underlying the theory of the
+present §2.
+Proposition 2.1. (Profinite Conjugates of Nontrivial Compact Sub-
+groups) In the notation of the above discussion, let Λ ⊆ Πtp
+G be a nontrivial
+compact subgroup, γ ∈ΠG an element such that γ·Λ·γ−1 ⊆Πtp
+G [or, equiva-
+lently, Λ ⊆γ−1
+·Πtp
+G·γ]. Then γ ∈Πtp
+G.
+Proof. Write Γ for the “pro-Σ semi-graph” associated to the universal pro-Σ´ etale
+covering of G[i.e., the covering corresponding to the subgroup {1}⊆ΠG]; Γtp for
+the “pro-semi-graph” associated to the universal tempered covering of G[i.e., the
+covering corresponding to the subgroup {1}⊆Πtp
+G ]. Thus, we have a natural dense
+map Γtp →Γ. Let us refer to a [“pro-”]vertex of Γ that occurs as the image of
+a [“pro-”]vertex of Γtp as tempered. Since Λ, γ·Λ·γ−1 are compact subgroups of
+Πtp
+G , it follows from [SemiAnbd], Theorem 3.7, (iii) [cf. also [SemiAnbd], Example
+3.10, as well as Remark 2.5.3, (ii), (E7), of the present paper], that there exist
+verticial subgroups Λ′
+,Λ′′ ⊆Πtp
+G such that Λ ⊆Λ′
+, γ·Λ·γ−1 ⊆Λ′′. Thus, Λ′
+,
+Λ′′ correspond to tempered vertices v′
+, v′′ of Γ; {1}̸= γ·Λ·γ−1 ⊆γ·Λ′
+·γ−1, so
+(γ·Λ′
+·γ−1) Λ′′ ̸= {1}. Since Λ′′
+, γ·Λ′
+·γ−1 are both verticial subgroups of
+ΠG, it thus follows either from [AbsTopII], Proposition 1.3, (iv), or from [NodNon],
+Proposition 3.9, (i), that the corresponding vertices v′′, (v′)γ of Γ are either equal
+or adjacent. In particular, since v′′ is tempered, we thus conclude that (v′)γ is
+tempered. Thus, v′, (v′)γ are tempered, so γ ∈Πtp
+G , as desired. ⃝
+Next, relative to the notation “C”, “N” and related terminology concerning
+commensurators and normalizers discussed, for instance, in [SemiAnbd], §0; [Com-
+bGC], §0, we have the following result.
+Proposition 2.2. (Commensurators of Decomposition Subgroups As-
+sociated to Sub-semi-graphs) In the notation of the above discussion, ΠH (re-
+spectively, Πtp
+H) is commensurably terminal in ΠG (respectively, ΠG [hence, also
+in Πtp
+G ]). In particular, Πtp
+G is commensurably terminal in ΠG.
+Proof. First, letusobservethatbyallowing, inProposition2.1, Λtorangeoverthe
+open subgroups of any verticial [hence, in particular, nontrivial compact!] subgroup
+of Πtp
+G , we conclude from Proposition 2.1 that
+Πtp
+G is commensurably terminal in ΠG
+46 SHINICHI MOCHIZUKI
+— cf. Remark 2.2.2 below. In particular, by applying this fact to H[cf. the discus-
+sion preceding Proposition 2.1], we conclude that Πtp
+H is commensurably terminal
+in ΠH. Next, let us observe that it is immediate from the definitions that
+Πtp
+H ⊆CΠtp
+G (Πtp
+H) ⊆CΠG (Πtp
+H) ⊆CΠG (ΠH)
+[where we think of ΠH, ΠG, respectively, as the pro-Σ completions of Πtp
+H, Πtp
+G ].
+On the other hand, by the evident pro-Σ analogue of [SemiAnbd], Corollary 2.7,
+(i) [cf. also the argument involving gluing of abelian coverings in the discussion
+preceding Proposition 2.1], we have CΠG (ΠH) = ΠH. Thus, by the commensurable
+terminality of Πtp
+H in ΠH, we conclude that
+Πtp
+H ⊆CΠG (Πtp
+H) ⊆CΠH(Πtp
+H) = Πtp
+H
+— as desired. ⃝
+Remark 2.2.1. It follows immediately from the theory of [SemiAnbd] [cf., e.g.,
+[SemiAnbd], Corollary 2.7, (i)] that, in fact, Propositions 2.1 and 2.2 can be proven
+for much more general semi-graphs of anabelioids Gthan the sort of Gthat appears
+in the above discussion. We leave the routine details of such generalizations to the
+interested reader.
+Remark 2.2.2. Recall that when Σ = Primes, the fact that
+Πtp
+G is normally terminal in ΠG
+may also be derived from the fact that any nonabelian finitely generated free group
+is normally terminal [cf. [Andr´ e], Lemma 3.2.1; [SemiAnbd], Lemma 6.1, (i)] in its
+profinite completion. In particular, the proof of the commensurable terminality of
+Πtp
+G in ΠG that is given in the proof of Proposition 2.2 may be thought of as a new
+proof of this normal terminality that does not require one to invoke [Andr´ e], Lemma
+3.2.1, whichisessentiallyanimmediateconsequenceoftheratherdiﬃcultconjugacy
+separability result given in [Stb1], Theorem 1. This relation of Proposition 2.1 to
+the theory of [Stb1] is interesting in light of the discrete analogue given in Theorem
+2.6 below of [the “tempered version of Theorem 2.6” constituted by] Proposition
+2.4 [which is essentially a formal consequence of Proposition 2.1].
+Now let k be an MLF, k an algebraic closure of k, Gk
+def = Gal(k/k), X a
+hyperbolic curve over k that admits stable reduction over the ring of integers Ok of
+k. Write
+Πtp
+X, Δtp
+X
+fortherespective“Σ-tempered”quotientsofthetempered fundamental groupsπtp
+1 (X),
+πtp
+def
+1 (Xk) [relative to suitable basepoints] of X, Xk
+= X×kk [cf. [Andr´ e], §4; [Semi-
+Anbd], Example 3.10]. That is to say, πtp
+1 (Xk) Δtp
+X is the quotient determined
+by the intersection of the kernels of all continuous surjections of πtp
+1 (Xk) onto ex-
+tensions of a finite group of order a product [possibly with multiplicities] of primes
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 47
+∈Σ by a discrete free group of finite rank; πtp
+1 (X) Πtp
+X is the quotient of πtp
+1 (X)
+determined by the kernel of the quotient of πtp
+1 (Xk) Δtp
+X. Write ΔX for the
+pro-Σ [i.e., maximal pro-Σ quotient of the profinite] fundamental group of Xk; ΠX
+for the quotient of the profinite fundamental group of X by the subgroup of the
+profinite fundamental group of Xk that determines the quotient ΔX. Thus, since
+discrete free groups of finite rank inject into their pro-l completions for any prime
+number l [cf., e.g., [RZ], Proposition 3.3.15], we have natural inclusions
+Πtp
+X → ΠX, Δtp
+X → ΔX
+[cf., e.g., [SemiAnbd], Proposition 3.6, (iii), as well as Remark 2.5.3, (ii), (E7),
+of the present paper, when Σ = Primes]; ΔX may be identified with the pro-Σ
+completion of Δtp
+X; ΠX is generated by the images of Πtp
+X and ΔX.
+Now suppose that the residue characteristic p of k is not contained in Σ;
+that the semi-graph of anabelioids Gof the above discussion is the pro-Σ semi-graph
+of anabelioids associated to the geometric special fiber of the stable model X of X
+over Ok [cf., e.g., [SemiAnbd], Example 3.10]; and that the sub-semi-graph H ⊆G
+is stabilized by the natural action of Gk on G. Thus, we have natural surjections
+Δtp
+X Πtp
+G ; ΔX ΠG
+of topological groups.
+Corollary 2.3. (Subgroups of Tempered Fundamental Groups Associ-
+ated to Sub-semi-graphs) In the notation of the above discussion:
+(i) The closed subgroups
+Δtp
+def = Δtp
+X,H
+X ×Πtp
+G
+Πtp
+H ⊆ Δtp
+X; ΔX,H
+def
+= ΔX ×ΠG
+ΠH ⊆ ΔX
+are commensurably terminal. In particular, the natural outer actions of Gk on
+Δtp
+X, ΔX determine natural outer actions of Gk on Δtp
+X,H, ΔX,H.
+(ii) The closure of Δtp
+X,H ⊆Δtp
+X ⊆ΔX in ΔX is equal to ΔX,H.
+(iii) Suppose that [at least] one of the following conditions holds: (a) Σ contains
+a prime number l / ∈Σ {p}; (b) Σ = Primes. Then ΔX,H is slim. In particular,
+the natural outer actions of Gk on Δtp
+X,H, ΔX,H [cf. (i)] determine natural exact
+sequences of center-free topological groups [cf. (ii); the slimness of ΔX,H;
+[AbsAnab], Theorem 1.1.1, (ii)]
+1 →Δtp
+X,H →Πtp
+X,H →Gk →1
+1 →ΔX,H →ΠX,H →Gk →1
+— where Πtp
+X,H, ΠX,H are defined so as to render the sequences exact.
+(iv) Suppose that the hypothesis of (iii) holds. Then the images of the natural
+inclusions Πtp
+X,H →Πtp
+X, ΠX,H →ΠX are commensurably terminal.
+48 SHINICHI MOCHIZUKI
+(v) We have: ΔX,H Δtp
+X = Δtp
+X,H ⊆ΔX.
+(vi) Let
+Ix ⊆Δtp
+X (respectively, Ix ⊆ΔX)
+be an inertia group associated to a cusp x of X. Write ξ for the cusp of the stable
+model X corresponding to x. Then the following conditions are equivalent:
+(a) Ix lies in a Δtp
+X- (respectively, ΔX-) conjugate of Δtp
+X,H (respectively,
+ΔX,H);
+(b) ξ meets an irreducible component of the special fiber of X that is con-
+tained in H.
+Proof. Assertion (i) follows immediately from Proposition 2.2. Assertion (ii) fol-
+lows immediately from the definitions of the various tempered fundamental groups
+involved, together with the following elementary observation: If G F is a surjec-
+tion of finitely generated free discrete groups, which induces a surjection G F
+between the respective pro-Σ completions [so, since discrete free groups of finite
+rank inject into their pro-l completions for any prime number l [cf., e.g., [RZ],
+Proposition 3.3.15], we think of G and F as subgroups of G and F, respectively],
+then H def = Ker(G F) is dense in H def = Ker(G F), relative to the pro-Σ topol-
+ogy of G. Indeed, let ι : F →G be a section of the given surjection G F [which
+exists since F is free]. Then if {gi}i∈N is a sequence of elements of G that converges,
+in the pro-Σ topology of G, to a given element h ∈H, and maps to a sequence of
+elements {fi}i∈N of F [which necessarily converges, in the pro-Σ topology of F, to
+the identity element 1 ∈F], then one verifies immediately that {gi·ι(fi)−1}i∈N is
+a sequence of elements of H that converges, in the pro-Σ topology of G, to h. This
+completes the proof of the observation and hence of assertion (ii).
+Next, weconsiderassertion(iii). Inthefollowing, wegive, ineﬀect, two distinct
+proofs of the slimness of ΔX,H: one is elementary, but requires one to assume that
+condition (a) holds; the other depends on the highly nontrivial theory of [Tama2]
+and requires one to assume that condition (b) holds. If condition (a) holds, then
+let us set Σ∗ def = Σ {l}. If condition (b) holds, but condition (a) does not hold [so
+Σ = Primes = Σ {p}], then let us set Σ∗ def = Σ. Thus, in either case, p ̸∈Σ∗, and
+Σ ⊆Σ∗ ⊆Σ.
+Let J ⊆ΔX be a normal open subgroup. Write JH
+def
+= J ΔX,H; J J∗ for
+the maximal pro-Σ∗ quotient; J∗
+H ⊆J∗ for the image of JH in J∗. Now suppose that
+α ∈ΔX,H commutes with JH. Let v be a vertex of the dual graph of the geometric
+special fiber of a stable model XJ of the covering XJ of Xk determined by J. Write
+Jv ⊆J for the decomposition group [well-defined up to conjugation in J] associated
+to v; J∗
+v ⊆J∗ for the image of Jv in J∗. Then let us observe that
+(†) there exists an open subgroup J0 ⊆ΔX which is independent of J, v,
+and α such that if J ⊆J0, then for arbitrary v [and α] as above, it holds
+that J∗
+v J∗
+H (⊆J∗) is infinite and nonabelian.
+Indeed, suppose that condition (a) holds. Now it follows immediately from the
+definitions that the image of the homomorphism Jv ⊆J ⊆ΔX ΠG is pro-Σ; in
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 49
+particular, since l ̸∈Σ, and Ker(Jv ⊆J ⊆ΔX ΠG) ⊆Jv JH, it follows that
+Jv JH, hence also J∗
+v J∗
+H, surjects onto the maximal pro-l quotient of Jv, which
+is isomorphic to the pro-l completion of the fundamental group of a hyperbolic
+Riemann surface, hence [as is well-known] is infinite and nonabelian [so we may
+def
+take J0
+= ΔX]. Now suppose that condition (b) holds, but condition (a) does
+not hold. Then it follows immediately from [Tama2], Theorem 0.2, (v), that, for
+an appropriate choice of J0, if J ⊆J0, then every v corresponds to an irreducible
+component that either maps to a point in X or contains a node that maps to a
+smooth point of X. In particular, it follows that for every choice of v, there exists
+at least one pro-Σ, torsion-free, pro-cyclic subgroup F ⊆Jv that lies in Ker(Jv ⊆
+J ⊆ΔX ΠG) ⊆Jv JH and, moreover, maps injectively into J∗. Thus, we
+obtain an injection F →J∗
+v J∗
+H; a similar statement holds when F is replaced by
+any Jv-conjugate of F. Moreover, it follows from the well-known structure of the
+pro-Σ completion of the fundamental group of a hyperbolic Riemann surface [such
+as J∗
+v] that the image of the Jv-conjugates of such a group F topologically generate
+a closed subgroup of J∗
+v J∗
+H which is infinite and nonabelian. This completes the
+proof of (†).
+Next, let us observe that it follows by applying either [AbsTopII], Proposition
+1.3, (iv), or [NodNon], Proposition 3.9, (i), to the various ΔX-conjugates in J∗ of
+J∗
+v J∗
+H as in (†) that the fact that α commutes with J∗
+v J∗
+H implies that α fixes
+v. If condition (a) holds, then the fact that conjugation by α on the maximal pro-l
+quotient of Jv [which, as we saw above, is a quotient of J∗
+v J∗
+H] is trivial implies
+[cf. the argument concerning the inertia group “Iv ⊆Dv” in the latter portion
+of the proof of [SemiAnbd], Corollary 3.11] that α not only fixes v, but also acts
+trivially on the irreducible component of the special fiber of XJ determined by v;
+since v as in (†) is arbitrary, we thus conclude that α acts on the abelianization
+(J∗)ab of J∗ as a unipotent automorphism of finite order, hence that α acts trivially
+on (J∗)ab; since J as in (†) is arbitrary, we thus conclude [cf., e.g., the proof of
+[Config], Proposition 1.4] that α is the identity element, as desired. Now suppose
+that condition (b) holds, but condition (a) does not hold. Then since J and v as
+in (†) are arbitrary, we thus conclude again from [Tama2], Theorem 0.2, (v), that
+α fixes not only v, but also every closed point on the irreducible component of the
+special fiber of XJ determined by v, hence that α acts trivially on this irreducible
+component. Again since J and v as in (†) are arbitrary, we thus conclude that
+α is the identity element, as desired. This completes the proof of assertion (iii).
+In light of the exact sequences of assertion (iii), assertion (iv) follows immediately
+from assertion (i). Assertion (vi) follows immediately from a similar argument to
+the argument applied in the proof of [CombGC], Proposition 1.5, (i), by passing to
+pro-Σ completions.
+Finally, it follows immediately from the definitions of the various tempered
+fundamental groups involved that to verify assertion (v), it suﬃces to verify the
+following analogue of assertion (v) for a nonabelian finitely generated free discrete
+group G: for any finitely generated subgroup F ⊆G, if we use the notation “∧”
+to denote the pro-Σ completion, then F G= F. But to verify this assertion
+concerning G, it follows immediately from [SemiAnbd], Corollary 1.6, (ii), that we
+may assume without loss of generality that the inclusion F ⊆G admits a splitting
+G F [i.e., such that the composite F →G F is the identity on F], in which
+50 SHINICHI MOCHIZUKI
+case the desired equality “F G= F” follows immediately. This completes the
+proof of assertion (v), and hence of Corollary 2.3. ⃝
+Next, we observe the following arithmetic analogue of Proposition 2.1.
+Proposition 2.4. (Profinite Conjugates of Nontrivial Arithmetic Com-
+pact Subgroups) In the notation of the above discussion:
+(i) Let Λ ⊆Δtp
+X be a nontrivial pro-Σ compact subgroup, γ ∈ΠX an
+element such that γ·Λ·γ−1 ⊆Δtp
+X [or, equivalently, Λ ⊆γ−1
+·Δtp
+X·γ]. Then
+γ ∈Πtp
+X.
+(ii) Suppose that Σ = Primes. Let Λ ⊆ Πtp
+X be a [nontrivial] compact
+subgroup whose image in Gk is open, γ ∈ΠX an element such that γ·Λ·γ−1 ⊆
+Πtp
+X [or, equivalently, Λ ⊆γ−1
+·Πtp
+X·γ]. Then γ ∈Πtp
+X.
+(iii) Δtp
+X (respectively, Πtp
+X) is commensurably terminal in ΔX (respec-
+tively, ΠX).
+Proof. First, we consider assertion (i). We begin by observing that since [as is
+well-known — cf., e.g., [Config], Remark 1.2.2] ΔX is strongly torsion-free, it follows
+that there exists a finite index characteristic open subgroup J ⊆Δtp
+X such that, if
+we write GJ for the pro-Σ semi-graph of anabelioids associated to the special fiber of
+the stable model [i.e., over the ring of integers Ok of k] of the finite´ etale covering of
+X ×k k determined by J, then J Λ has nontrivial image in the pro-Σ completion
+of the abelianization of J, hence in Πtp
+GJ [since, as is well-known, our assumption
+that p / ∈Σ implies that the surjection J Πtp
+GJ induces an isomorphism between
+the pro-Σ completions of the respective abelianizations]. Since the quotient Πtp
+X
+surjects onto Gk, and J is open of finite index in Δtp
+X, we may assume without loss
+of generality that γ lies in the closure J of J in ΠX. Since J Λ has nontrivial
+image in Πtp
+GJ , it thus follows from Proposition 2.1 [applied to GJ] that the image
+of γ via the natural surjection on pro-Σ completions J ΠGJ lies in Πtp
+GJ . Since,
+by allowing J to vary, Πtp
+X (respectively, ΠX) may be written as an inverse limit of
+the topological groups Πtp
+X/Ker(J Πtp
+GJ ) (respectively, ΠX/Ker(J ΠGJ )), we
+thus conclude that [the original] γ lies in Πtp
+X, as desired.
+Next, we consider assertion (ii). First, let us observe that it follows from a sim-
+ilar argument to the argument applied to prove Proposition 2.1 — where, instead of
+applying [SemiAnbd], Theorem 3.7, (iii), we apply its arithmetic analogue, namely,
+[SemiAnbd], Theorem 5.4, (ii); [SemiAnbd], Example 5.6 [cf. also Remark 2.5.3,
+(ii), (E5), (E7), ofthe presentpaper] —thatthe imageofγ in ΠX/Ker(ΔX ΠG∗)
+lies in Πtp
+X/Ker(Δtp
+X Πtp
+G∗), where [by invoking the hypothesis that Σ = Primes]
+we take G∗ to be a semi-graph of anabelioids as in [SemiAnbd], Example 5.6, i.e.,
+the semi-graph of anabelioids whose finite ´ etale coverings correspond to arbitrary
+admissible coverings of the geometric special fiber of the stable model X. Here, we
+note that when one applies either [AbsTopII], Proposition 1.3, (iv), or [NodNon],
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 51
+Proposition 3.9, (i) — after, say, restricting the outer action of Gk on Πtp
+G∗ to a
+closed pro-Σ subgroup of the inertia group Ik of Gk that maps isomorphically onto
+the maximal pro-Σ quotient of Ik — to the vertices “v′′”, “(v′)γ”, one may only
+conclude that these two vertices either coincide, are adjacent, or admit a common
+adjacent vertex; but this is still suﬃcient to conclude the temperedness of “(v′)γ”
+fromthatof“v′′”. Now[justasintheproofofassertion(i)]byapplying[theevident
+analogue of] this observation to the quotients Πtp
+X Πtp
+X/Ker(J Πtp
+G∗
+J ) — where
+J ⊆Δtp
+X is a finite index characteristic open subgroup, and G∗
+J is the semi-graph of
+anabelioids whose finite´ etale coverings correspond to arbitrary admissible coverings
+of the special fiber of the stable model over Ok of the finite ´ etale covering of X×k k
+determined by J — we conclude that γ ∈Πtp
+X, as desired.
+Finally, we consider assertion (iii). Just as in the proof of Proposition 2.2, the
+commensurable terminality of Δtp
+X in ΔX follows immediately from assertion (i),
+by allowing, in assertion (i), Λ to range over the open subgroups of a pro-Σ Sylow
+subgroup of a decomposition group ⊆Δtp
+X associated to an irreducible component
+of the special fiber of X. The commensurable terminality of Πtp
+X in ΠX then follows
+immediately from the commensurable terminality of Δtp
+X in ΔX. ⃝
+Remark 2.4.1. Thus, when Σ = Primes, the proof given above of Proposition
+2.4, (iii), yields a new proof of [Andr´ e], Corollary 6.2.2 [cf. also [SemiAnbd], Lemma
+6.1, (ii), (iii)] which is independent of [Andr´ e], Lemma 3.2.1, hence also of [Stb1],
+Theorem 1 [cf. the discussion of Remark 2.2.2].
+Corollary 2.5. (Profinite Conjugates of Tempered Decomposition and
+Inertia Groups) In the notation of the above discussion, suppose further that
+Σ = Primes. Then every decomposition group in ΠX (respectively, inertia
+group in ΠX) associated to a closed point or cusp of X (respectively, to a cusp of
+X) is contained in Πtp
+X if and only if it is a decomposition group in Πtp
+X (respectively,
+inertia group in Πtp
+X) associated to a closed point or cusp of X (respectively, to a
+cusp of X). Moreover, a ΠX-conjugate of Πtp
+X contains a decomposition group in
+Πtp
+X (respectively, inertia group in Πtp
+X) associated to a closed point or cusp of X
+(respectively, to a cusp of X) if and only if it is equal to Πtp
+X.
+Proof. Let Dx ⊆Πtp
+X be the decomposition group in Πtp
+X associated to a closed
+def
+point or cusp x of X; Ix
+= Dx Δtp
+X. Then the decomposition groups of ΠX
+associated to x are precisely the ΠX-conjugates of Dx; the decomposition groups
+of Πtp
+X associated to x are precisely the Πtp
+X-conjugates of Dx. Since Dx is compact
+and surjects onto an open subgroup of Gk, it thus follows from Proposition 2.4,
+(ii), that a ΠX-conjugate of Dx is contained in Πtp
+X if and only if it is, in fact, a
+Πtp
+X-conjugate of Dx, and that a ΠX-conjugate of Πtp
+X contains Dx if and only if
+it is, in fact, equal to Πtp
+X. In a similar vein, when x is a cusp of X [so Ix
+∼
+= Z],
+it follows — i.e., by applying Proposition 2.4, (i), to the unique maximal pro-Σ
+subgroup of Ix — that a ΠX-conjugate of Ix is contained in Πtp
+X if and only if it is,
+in fact, a Πtp
+X-conjugate of Ix, and that a ΠX-conjugate of Πtp
+X contains Ix if and
+only if it is, in fact, equal to Πtp
+X. This completes the proof of Corollary 2.5. ⃝
+52 SHINICHI MOCHIZUKI
+Remark 2.5.1. The content of Corollary 2.5 may be regarded as a sort of [very
+weak!] version of the “Section Conjecture” of anabelian geometry — i.e., as the
+assertion that certain sections of the tempered fundamental group [namely, those
+that arise from geometric sections of the profinite fundamental group] are geometric
+as sections of the tempered fundamental group. This point of view is reminiscent
+of the point of view of [SemiAnbd], Remark 6.9.1. Perhaps one way of summarizing
+this circle of ideas is to state that one may think of
+(i) the classification of maximal compact subgroups of tempered fundamental
+groups given in [SemiAnbd], Theorem 3.7, (iv); [SemiAnbd], Theorem 5.4,
+(ii) [cf. also Remark 2.5.3, (ii), (E5), (E7), of the present paper], or, for
+that matter,
+(ii) the more elementary fact that “any finite group acting on a tree [without
+inversion] fixes at least one vertex” [cf. [SemiAnbd], Lemma 1.8, (ii)] from
+which these results of [SemiAnbd] are derived
+as a sort of combinatorial version of the Section Conjecture.
+Remark 2.5.2. Ultimately, when we apply Corollary 2.5 in [IUTchII], it will
+only be necessary to apply the portion of Corollary 2.5 that concerns inertia groups
+of cusps, i.e., the portion whose proof only requires the use of Proposition 2.4,
+(i), which is essentially an immediate consequence of Proposition 2.1. That is to
+say, the theory developed in [IUTchII] [and indeed throughout the present series of
+papers] will never require the application of Proposition 2.4, (ii), i.e., whose proof
+depends on a slightly more complicated version of the proof of Proposition 2.1.
+Remark 2.5.3. In light of the importance of the theory of [SemiAnbd] in the
+present §2, we pause to discuss certain minor oversights on the part of the author
+in the exposition of [SemiAnbd].
+(i) Certain pathologies occur in the theory of tempered fundamental groups
+if one does not impose suitable countability hypotheses. In order to discuss these
+countability hypotheses, it will be convenient to introduce some terminology as
+follows:
+(T1) We shall say that a tempered group is Galois-countable if its topol-
+ogy admits a countable basis. We shall say that a connected temperoid
+is Galois-countable if it arises from a Galois-countable tempered group.
+We shall say that a temperoid is Galois-countable if it arises from a col-
+lection of Galois-countable connected temperoids. We shall say that a
+connected quasi-temperoid is Galois-countable if it arises from a Galois-
+countable connected temperoid. We shall say that a quasi-temperoid is
+Galois-countableifitarisesfromacollectionofGalois-countableconnected
+quasi-temperoids.
+(T2) We shall say that a semi-graph of anabelioids Gis Galois-countable if it
+is countable, and, moreover, admits a countable collection of finite ´ etale
+coverings {Gi →G}i∈I such that for any finite ´ etale covering H→G,
+there exists an i ∈I such that the base-changed covering H×G Gi →Gi
+splits over the constituent anabelioid associated to each component of [the
+underlying semi-graph of] Gi.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 53
+(T3) We shall say that a semi-graph of anabelioids Gis strictly coherent if it
+is coherent [cf. [SemiAnbd], Definition 2.3, (iii)], and, moreover, each of
+the profinite groups associated to components c of [the underlying semi-
+graph of] G[cf. the final sentence of [SemiAnbd], Definition 2.3, (iii)] is
+topologically generated by N generators, for some positive integer N that
+is independent of c. In particular, it follows that if Gis finite and coherent,
+then it is strictly coherent.
+(T4) One verifies immediately that every strictly coherent, countable semi-
+graph of anabelioids is Galois-countable.
+(T5) One verifies immediately that if, in [SemiAnbd], Remark 3.2.1, one as-
+sumesinaddition thatthetemperoid XisGalois-countable, thenitfollows
+that its associated tempered fundamental group πtemp
+1 (X) is well-defined
+and Galois-countable.
+(T6) One verifies immediately that if, in the discussion of the paragraph
+preceding [SemiAnbd], Proposition 3.6, one assumes in addition that the
+semi-graph of anabelioids Gis Galois-countable, then it follows that its
+associated tempered fundamental group πtemp
+1 (G) and temperoid Btemp(G)
+are well-defined and Galois-countable.
+Here, we note that, in (T5) and (T6), the Galois-countability assumption is nec-
+essary in order to ensure that the index sets of “universal covering pro-objects”
+implicit in the definition of the tempered fundamental group may to be taken to
+be countable. This countability of the index sets involved implies that the various
+objects that constitute such a universal covering pro-object admit a compatible sys-
+tem of basepoints, i.e., that the obstruction to the existence of such a compatible
+”
+system — which may be thought of as an element of a sort of “nonabelian R1 lim ←−
+— vanishes. In order to define the tempered fundamental group in an intrinsi-
+cally meaningful fashion, it is necessary to know the existence of such a compatible
+system of basepoints.
+(ii) The eﬀects of the omission of Galois-countability hypotheses in [SemiAnbd],
+§3 [cf. the discussion of (i)], on the remainder of [SemiAnbd], as well as on subse-
+quent papers of the author, may be summarized as follows:
+(E1) Firstofall, weobservethatalltopologicalsubquotientsofabsolute Galois
+groups of fields of countable cardinality are Galois-countable.
+(E2) Also, we observe that if k is a field whose absolute Galois group is Galois-
+countable, and U is a nonempty open subscheme of a connected proper
+k-scheme X that arises as the underlying scheme of a log scheme that is
+log smooth over k [where we regard Spec(k) as equipped with the trivial
+log structure], and whose interior is equal to U, then the tamely ramified
+arithmetic fundamental group of U [i.e., that arises by considering finite
+´ etale coverings of U with tame ramification over the divisors that lie in
+the complement of U in X] is itself Galois-countable [cf., e.g., [AbsTopI],
+Proposition 2.2].
+(E3) Next, we observe, with regard to [SemiAnbd], Examples 2.10, 3.10,
+and 5.6, that the tempered groups and temperoids that appear in these
+Examples are Galois-countable [cf. (E1), (E2)], while the semi-graphs of
+54 SHINICHI MOCHIZUKI
+anabelioids that appear in these Examples are strictly coherent [cf. item
+(T3) of (i)], hence [cf. item (T4) of (i)] Galois-countable. In particular,
+there is no eﬀect on the theory of objects discussed in these Examples.
+(E4) It follows immediately from (E3) that there is no eﬀect on [SemiAnbd],
+§6.
+(E5) It follows immediately from items (T3), (T4) of (i), together with the
+assumptions of finiteness and coherence in the discussion of the para-
+graph immediately preceding [SemiAnbd], Definition 4.2, the assumption
+of coherence in [SemiAnbd], Definition 5.1, (i), and the assumption of
+[SemiAnbd], Definition 5.1, (i), (d), that there is no eﬀect on [SemiAnbd],
+§4, §5. [Here, we note that since the notion of a tempered covering of a
+semi-graph of anabelioids is only defined in the case where the semi-graph
+of anabelioids is countable, it is implicit in [SemiAnbd], Proposition 5.2,
+and [SemiAnbd], Definition 5.3, that the semi-graphs of anabelioids under
+consideration are countable.]
+(E6) There is no eﬀect on [SemiAnbd], §1, §2, or the Appendix of [SemiAnbd],
+since tempered fundamental groups are never discussed in these portions
+of [SemiAnbd].
+(E7) In the Definitions/Propositions/Theorems/Corollaries of [SemiAnbd]
+that are numbered 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, one must assume
+that all tempered groups, temperoids, and semi-graphs of anabelioids that
+appear are Galois-countable. On the other hand, it follows immediately
+from (E1), (E2), and (E3) that there is no eﬀect on the remaining portions
+of [SemiAnbd], §3.
+(E8) In [QuCnf] and [FrdII], one must assume that all tempered groups and
+[quasi-]temperoids that appear are Galois-countable.
+(E9) There is no eﬀect on any papers of the author other than [SemiAnbd]
+and the papers discussed in (E8).
+(iii) The assertion stated in the second display of [SemiAnbd], Remark 2.4.2,
+is false as stated. [The automorphisms of the semi-graphs of anabelioids in [Semi-
+Anbd], Example 2.10, that arise from “Dehn twists” constitute a well-known coun-
+terexample to this assertion.] This assertion should be replaced by the following
+slightly modified version of this assertion:
+The isomorphism classes of the φv completely determine the isomorphism
+class of each of the φe, as well as each isomorphism φb, up to composi-
+tion with an automorphism of the composite 1-morphism of anabelioids
+Ge →Hf →Hw that arises from an automorphism of the 1-morphism of
+anabelioids Ge →Hf.
+Also, in the discussion following this assertion [as well as the various places where
+this discussion is applied, i.e., [SemiAnbd], Remark 3.5.2; the second paragraph of
+[SemiAnbd], §4; [SemiAnbd], Definition 5.1, (iv)], it is necessary to assume further
+that the semi-graphs of anabelioids that appear satisfy the condition that every
+edge abuts to at least one vertex.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 55
+(iv) The phrase “is Galois” at the end of the first sentence of the proof of
+[SemiAnbd], Proposition 3.2, should read “is a countable coproduct of Galois ob-
+jects”.
+(v)In thefirstsentenceof[SemiAnbd], Definition3.5, (ii), the phrase“Suppose
+that” should read “Suppose that each connected component of”; the phrase “splits
+the restriction of” should read “splits the restriction of this connected component
+of”.
+(vi) In order to carry out the argument stated in the proof of [SemiAnbd],
+Proposition 5.2, (i), it is necessary to strengthen the conditions (c) and (d) of
+[SemiAnbd], Definition 5.1, (i), as follows. This strengthening of the conditions (c)
+and (d) of [SemiAnbd], Definition 5.1, (i), has no eﬀect either on the remainder
+of [SemiAnbd] or on subsequent papers of the author. Suppose that G is as in
+[SemiAnbd], Definition5.1, (i). Thenwebeginbymakingthefollowingobservation:
+(O1) Suppose that Gis finite. Then Gadmits a cofinal, countable collection
+of connected finite ´ etale Galois coverings {Gi →G}i∈I, each of which is
+characteristic [i.e., any pull-back of the covering via an element of Aut(G)
+is isomorphic to the original covering]. [For instance, one verifies immedi-
+ately, by applying the finiteness and coherence of G, that such a collection
+of coverings may be obtained by considering, for n a positive integer, the
+composite of all connected finite ´ etale Galois coverings of degree ≤n.] We
+may assume, without loss of generality, that this collection of coverings
+arises from a projective system, which we denote by G. Thus, we obtain a
+natural exact sequence
+1 −→ Gal(G/G) −→ Aut(G/G) −→ Aut(G) −→ 1
+— where we write “Aut(G/G)” for the group of pairs of compatible auto-
+morphisms of Gand G.
+This observation (O1) has the following immediate consequence:
+(O2) Suppose that we are in the situation of (O1). Consider, for i ∈I, the
+finite index normal subgroup
+Auti(G/G) ⊆ Aut(G/G)
+of elements of Aut(G/G) that induce the identity automorphism on the
+underlying semi-graph Gi of Gi, as well as on Gal(Gi/G). Then one
+verifies immediately [from the definition of a semi-graph of anabelioids;
+cf. also [SemiAnbd], Proposition 2.5, (i)] that the intersection of the
+Auti(G/G), for i ∈ I, is = {1}. Thus, the Auti(G/G), for i ∈ I, de-
+termine a natural profinite topology on Aut(G/G) and hence also on the
+quotient Aut(G), which is easily seen to be compatible with the profinite
+topology on Gal(G/G) and, moreover, independent of the choice of G.
+The new version of the condition (c) of [SemiAnbd], Definition 5.1, (i), that we
+wish to consider is the following:
+(cnew) The action of H on G is trivial; the resulting homomorphism H →
+Aut(G[c]), where c ranges over the components [i.e., vertices and edges]
+56 SHINICHI MOCHIZUKI
+of G, is continuous [i.e., relative to the natural profinite group topology
+defined in (O2) on Aut(G[c])].
+It is immediate that (cnew) implies (c). Moreover, we observe in passing that:
+(O3) In fact, since H is topologically finitely generated [cf. [SemiAnbd], Defi-
+nition 5.1, (i), (a)], it holds [cf. [NS], Theorem 1.1] that every finite index
+subgroup of H is open in H. Thus, the conditions (c) and (cnew) in fact
+hold automatically.
+The new version of the condition (d) of [SemiAnbd], Definition 5.1, (i), that we
+wish to consider is the following:
+(dnew) There is a finite set C∗ of components [i.e., vertices and edges] of G
+such that for every component c of G, there exists a c∗ ∈C∗ and an
+isomorphism of semi-graphs of anabelioids G[c]∼ →G[c∗] that is compatible
+with the action of H on both sides.
+It is immediate that (dnew) implies (d). The reason that, in the context of the
+proof of [SemiAnbd], Proposition 5.2, (i), it is necessary to consider the stronger
+conditions (cnew) and (dnew) is as follows. It suﬃces to show that, given a connected
+finite ´ etale covering G′ →G, after possibly replacing H by an open subgroup of
+H, the action of H on Glifts to an action on G′ that satisfies the conditions of
+[SemiAnbd], Definition 5.1, (i). Such a lifting of the action of H on Gto an action
+on the portion of G′ that lies over the vertices of G follows in a straightforward
+manner from the original conditions (a), (b), (c), and (d). On the other hand,
+in order to conclude that such a lifting is [after possibly replacing H by an open
+subgroup of H] compatible with the gluing conditions arising from the structure of
+G′ over the edges of G, it is necessary to assume further that the “component-wise
+versions (cnew), (dnew)” of the original “vertex-wise conditions (c), (d)” hold. This
+issue is closely related to the issue discussed in (iii) above.
+Finally, we observe that Proposition 2.4, Corollary 2.5 admit the following
+discrete analogues, which may be regarded as generalizations of [Andr´ e], Lemma
+3.2.1 [cf. Theorem 2.6 below in the case where H= F= G is free]; [EtTh], Lemma
+2.17, (i).
+Theorem 2.6. (Profinite Conjugates of Discrete Subgroups) Let F be
+a group that contains a subgroup of finite index G ⊆F such that G is either a
+free discrete group of finite rank or an orientable surface group [i.e., a
+fundamental group of a compact orientable topological surface of genus ≥2]; H ⊆F
+an infinite subgroup. Since F is residually finite [cf., e.g., [Config], Proposition 7.1,
+(ii)], we shall write H,G ⊆F ⊆F, where F denotes the profinite completion of
+F. Let γ ∈F be an element such that
+γ·H·γ−1 ⊆F [or, equivalently, H ⊆γ−1
+·F·γ].
+def
+Write HG
+= H G. Then γ ∈F·NF(HG), i.e., γ·HG·γ−1 = δ·HG·δ−1, for
+some δ ∈F. If, moreover, HG is nonabelian, then γ ∈F.
+Proof. Let us first consider the case where HG is abelian. In this case, it follows
+from Lemma 2.7, (iv), below, that HG is cyclic. Thus, by applying Lemma 2.7,
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 57
+(ii), it follows that by replacing G by an appropriate finite index subgroup of G,
+we may assume that the natural composite homomorphism HG →G Gab is a
+split injection. In particular, by Lemma 2.7, (v), we conclude that NG(HG) = HG,
+where we write HG for the closure of HG in the profinite completion G of G. Next,
+let us observe that by multiplying γ on the left by an appropriate element of F, we
+may assume that γ ∈G. Thus, we have γ·HG·γ−1 ⊆F G= G. Next, let us
+recall that G is conjugacy separable. Indeed, this is precisely the content of [Stb1],
+Theorem 1, when G is free; [Stb2], Theorem 3.3, when G is an orientable surface
+group. Since G is conjugacy separable, it follows that γ·HG·γ−1 = ϵ·HG·ϵ−1 for
+some ϵ ∈G, so γ ∈G·NG(HG) = G·HG ⊆F·NF(HG), as desired. This completes
+the proof of Theorem 2.6 when HG is abelian.
+Thus, let us assume for the remainder of the proof of Theorem 2.6 that HG is
+nonabelian. Then, byapplyingLemma 2.7, (iii), it followsthat, after replacing Gby
+an appropriate finite index subgroup of G, we may assume that there exist elements
+x,y ∈HG that generate a free abelian subgroup of rank two M ⊆Gab such that
+the injection M →Gab splits. Write Hx,Hy ⊆HG for the subgroups generated,
+respectively, by x and y; Hx,Hy ⊆G for the respective closures of Hx, Hy. Then
+by Lemma 2.7, (v), we conclude that NG(Hx) = Hx, NG(Hy) = Hy. Next, let us
+observe that by multiplying γ on the left by an appropriate element of F, we may
+assume that γ ∈G. Thus, we have γ·HG·γ−1 ⊆F G= G. In particular, by
+applying the portion of Theorem 2.6 that has already been proven to the subgroups
+Hx,Hy ⊆G, we conclude that γ ∈G·NG(Hx) = G·Hx, γ ∈G·NG(Hy) = G·Hy.
+Thus, byprojectingtoGab, andapplyingthefactthatM isofrank two, weconclude
+that γ ∈G, as desired. This completes the proof of Theorem 2.6. ⃝
+Remark 2.6.1. Note that in the situation of Theorem 2.6, if HG is abelian, then
+— unlike the tempered case discussed in Proposition 2.4! — it is not necessarily
+the case that F= γ−1
+·F·γ.
+Lemma 2.7. (Well-known Properties of Free Groups and Orientable
+Surface Groups) Let G be a group as in Theorem 2.6. Write G for the profinite
+completion of G. Then:
+(i) Any subgroup of G generated by two elements of G is free.
+(ii) Let x ∈G be an element ̸= 1. Then there exists a finite index subgroup
+G1 ⊆G such that x ∈G1, and x has nontrivial image in the abelianization Gab
+1
+of G1.
+(iii) Let x,y ∈ G be noncommuting elements of G. Then there exists a
+finite index subgroup G1 ⊆G and a positive integer n such that xn,yn ∈G1, and
+the images of xn and yn in the abelianization Gab
+1 of G1 generate a free abelian
+subgroup of rank two.
+(iv) Any abelian subgroup of G is cyclic.
+(v) Let T ⊆G be a closed subgroup such that there exists a continuous surjec-
+tion of topological groups G Z that induces an isomorphism T∼
+→Z. Then T is
+normally terminal in G.
+58 SHINICHI MOCHIZUKI
+(vi) Suppose that G is nonabelian. Write N ⊆G for the kernel of the natural
+surjection G Gab to the abelianization Gab of G. Then the centralizer ZG(N)
+of N in G is trivial.
+(vii) In the notation of (vi), let α be an automorphism of the profinite group
+G that preserves and restricts to the identity on the subgroup N. Then α is the
+identity automorphism of G.
+Proof. First, we consider assertion (i). If G is free, then assertion (i) follows
+from the well-known fact that any subgroup of a free group is free. If G is an
+orientable surface group, then assertion (i) follows immediately — i.e., by consid-
+ering the noncompact covering of a compact surface that corresponds to an infinite
+index subgroup of G of the sort discussed in assertion (i) — from a classical result
+concerning the fundamental group of a noncompact surface due to Johansson [cf.
+[Stl], p. 142; the discussion preceding [FRS], Theorem A1]. This completes the
+proof of assertion (i). Next, we consider assertion (ii). Since G is residually finite
+[cf., e.g., [Config], Proposition 7.1, (ii)], it follows that there exists a finite index
+normal subgroup G0 ⊆G such that x ̸∈G0. Thus, it suﬃces to take G1 to be the
+subgroup of G generated by G0 and x. This completes the proof of assertion (ii).
+Next, we consider assertion (iii). By applying assertion (i) to the subgroup J
+of G generated by x and y, it follows from the fact that x and y are noncommuting
+elements of G that J is a free group of rank 2, hence that xa
+·yb
+̸= 1, for all
+(a,b) ∈Z ×Z such that (a,b) ̸= (0,0). Next, let us recall the well-known fact
+that the abelianization of any finite index subgroup of G is torsion-free. Thus,
+by applying assertion (ii) to x and y, we conclude that there exists a finite index
+subgroup G0 ⊆G and a positive integer m such that xm,ym ∈G0, and xm and ym
+have nontrivial image in the abelianization Gab
+0 of G0. Now suppose that xma
+·ymb
+lies in the kernel of the natural surjection G0 Gab
+0 for some (a,b) ∈ Z ×Z
+such that (a,b) ̸= (0,0). Since G is residually finite, and [as we observed above]
+xma
+·ymb
+̸= 1, it follows, by applying assertion (ii) to G0, that there exists a finite
+index subgroup G1 ⊆G0 and a positive integer n that is divisible by m such that
+xn,yn,xma
+·ymb ∈G1, and the image of xma
+·ymb in Gab
+1 is nontrivial. Since Gab
+1
+is torsion-free, it thus follows that the image of xna
+·ynb in Gab
+1 is nontrivial. On
+the other hand, by considering the natural homomorphism Gab
+1 →Gab
+0 , we thus
+conclude that the images of xn and yn in Gab
+1 generate a free abelian subgroup of
+rank two, as desired. This completes the proof of assertion (iii).
+Next, we consider assertion (iv). By assertion (i), it follows that any abelian
+subgroup of G generated by two elements is free, hence cyclic. In particular, we
+conclude that any abelian subgroup J of G is equal to the union of the groups
+that appear in some chain G1 ⊆G2 ⊆... ⊆G of cyclic subgroups of G. On
+the other hand, by applying assertion (ii) to some generator of G1, it follows that
+there exists a finite index subgroup G0 and a positive integer n such that Gn
+j ⊆G0
+for all j = 1,2,..., and, moreover, Gn
+1 has nontrivial image in Gab
+0 . Thus, by
+considering the image in [the finitely generated abelian group] Gab
+0 of the chain
+of cyclic subgroups Gn
+1 ⊆Gn
+2 ⊆..., we conclude that this chain, hence also the
+original chain G1 ⊆G2 ⊆..., must terminate. Thus, J is cyclic, as desired. This
+completes the proof of assertion (iv).
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 59
+Next, we consider assertion (v). By considering the surjection G Z, we con-
+clude immediately that the normalizer NG(T) of T in G is equal to the centralizer
+ZG(T) of T in G. If ZG(T) ̸= T, then it follows immediately that, for some prime
+number l, there exists a closed [abelian] subgroup T1 ⊆ZG(T) containing the pro-l
+portion of T such that there exists a continuous surjection Zl ×Zl T1 whose ker-
+nel lies in l·(Zl ×Zl). In particular, one computes easily that the l-cohomological
+dimension of T1 is ≥2. On the other hand, since T1 is of infinite index in G, it
+follows immediately that there exists an open subgroup G1 ⊆G of G such that
+T1 ⊆G1, and, moreover, there exists a continuous surjection φ : G1 Zl whose
+kernel Ker(φ) contains T1. In particular, since the cohomology of T1 may be com-
+puted as the direct limit of the cohomologies of open subgroups of G containing T1,
+it follows immediately from the existence of φ, together with the well-known struc-
+ture of the cohomology of open subgroups of G, that the l-cohomological dimension
+of T1 is 1, a contradiction. This completes the proof of assertion (v).
+Next, we consider assertion (vi). Write N ⊆G for the kernel of the natu-
+ral surjection G Gab to the abelianization Gab of G. It follows immediately
+from the “tautological universal property” of a free group or an orientable sur-
+face group [i.e., regarded as the quotient of a free group by a single relation] that
+N is not cyclic, hence by assertion (iv), that N is nonabelian. Thus, by asser-
+tion (iii), there exist a finite index subgroup G1 ⊆G equipped with a surjection
+β : G1 Z ×Z and elements x,y ∈ N G1 such that β(x) = (1,0) and
+β(y) = (0,1). In particular, it follows from assertion (v) that the closed subgroups
+Tx,Ty ⊆G topologically generated by x and y, respectively, are normally termi-
+nal in the profinite completion G1 ⊆ G of G1. But this implies formally that
+ZG(N) G1 ⊆ ZG1(Tx) ZG1(Ty) ⊆ Tx Ty = {1}[where the last equal-
+ity follows from the existence of the surjection G1 Z×Z induced by β]. Since [as
+is well-known] the abelianizations of all open subgroups of G are torsion-free, we
+thus conclude that ZG(N) = {1}, as desired. This completes the proof of assertion
+(vi). Finally, we consider assertion (vii). If x ∈G, y ∈N [so x·y·x−1 ∈N], then
+x·y·x−1 = α(x·y·x−1) = α(x)·α(y)·α(x)−1 = α(x)·y·α(x)−1. We thus
+conclude from assertion (vi) that α(x)·x−1 ∈ZG(N) = {1}, i.e., that α(x) = x.
+This completes the proof of assertion (vii). ⃝
+Corollary 2.8. (Subgroups of Topological Fundamental Groups of Com-
+plex Hyperbolic Curves) Let Z be a hyperbolic curve over C. Write ΠZ for
+the usual topological fundamental group of Z; ΠZ for the profinite completion of
+ΠZ. Let H ⊆ΠZ be an infinite subgroup [such as a cuspidal inertia group!];
+γ ∈ΠZ an element such that
+γ·H·γ−1 ⊆ΠZ [or, equivalently, H ⊆γ−1
+·ΠZ·γ].
+Then γ ∈ΠZ·NΠZ (H), i.e., γ·H·γ−1 = δ·H·δ−1, for some δ ∈ΠZ. If, moreover,
+H is nonabelian, then γ ∈ΠZ.
+Remark 2.8.1. Corollary 2.8 is an immediate consequence of Theorem 2.6. In
+fact, in the present series of papers, we shall only apply Corollary 2.8 in the case
+60 SHINICHI MOCHIZUKI
+where Z is non-proper, and H is a cuspidal inertia group. In this case, the proof
+of Theorem 2.6 may be simplified somewhat, but we chose to include the general
+version given here, for the sake of completeness.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 61
+Section 3: Chains of Θ-Hodge Theaters
+In the present §3, we construct chains of “Θ-Hodge theaters”. Each “Θ-Hodge
+theater” is to be thought of as a sort of miniature model of the conventional
+scheme-theoretic arithmetic geometry that surrounds the theta function.
+This miniature model is formulated via the theory of Frobenioids [cf. [FrdI]; [FrdII];
+[EtTh], §3, §4, §5]. On the other hand, the link [cf. Corollary 3.7, (i)] between
+adjacent members of such chains is purely Frobenioid-theoretic, i.e., it lies outside
+the framework of ring theory/scheme theory. It is these chains of Θ-Hodge theaters
+that form the starting point of the theory of the present series of papers.
+Definition 3.1. We shall refer to as initial Θ-data any collection of data
+(F/F, XF, l, CK, V, Vbad
+mod, ϵ)
+that satisfies the following conditions:
+(a) F is a number field such that √−1 ∈F; F is an algebraic closure of F.
+Write GF
+def = Gal(F/F).
+(b) XF is a once-punctured elliptic curve [i.e., a hyperbolic curve of type
+(1,1)] over F that admits stable reduction over all v ∈V(F)non. Write EF
+for the elliptic curve over F determined by XF [so XF ⊆EF];
+XF →CF
+for the hyperbolic orbicurve [cf. §0] over F obtained by forming the stack-
+theoretic quotient of XF by the unique F-involution [i.e., automorphism
+of order two] “−1” of XF; Fmod ⊆F for the field of moduli [cf., e.g.,
+[AbsTopIII], Definition 5.1, (ii)] of XF; Fsol ⊆F for the maximal solvable
+def
+= V(Fmod). Then
+Vbad
+mod ⊆Vmod
+is a nonempty set of nonarchimedean valuations of Fmod of odd residue
+characteristic such that XF has bad [i.e., multiplicative] reduction at the
+elements of V(F) that lie over Vbad
+mod ⊆Vmod. Write Vgood
+def
+mod
+= Vmod \Vbad
+mod
+[where we note that XF may in fact have bad reduction at some of the
+elementsofV(F)thatlieoverVgood
+mod ⊆Vmod!]; V(F) def
+= Vmod×Vmod V(F)
+for ∈{bad,good};
+extension of Fmod in F; Vmod
+ΔX
+ΠXF
+def
+= π1(XF) ⊆ΠCF
+def
+= π1(XF ×F F) ⊆ΔC
+def
+= π1(CF)
+def
+= π1(CF ×F F)
+for the´ etale fundamental groups [relative to appropriate choices of base-
+points] of XF, CF, XF ×F F, CF ×F F. [Thus, we have natural exact
+sequences 1 →Δ(−) →Π(−)F →GF →1 for “(−)” taken to be either
+“X” or “C”.] Here, we suppose further that the field extension F/Fmod
+62 SHINICHI MOCHIZUKI
+is Galois of degree prime to l, and that the 2·3-torsion points of EF are
+rational over F.
+(c) l is a prime number ≥5 such that the image of the outer homomorphism
+GF →GL2(Fl)
+determined by the l-torsion points of EF contains the subgroup SL2(Fl) ⊆
+GL2(Fl); write K ⊆F for the finite Galois extension of F determined by
+the kernel of this homomorphism. Also, we suppose that l is prime to the
+[residue characteristics of the] elements of Vbad
+mod, as well as to the orders
+of the q-parameters of EF [i.e., in the terminology of [GenEll], Definition
+3.3, the “local heights” of EF] at the primes of V(F)bad
+.
+(d) CK isahyperbolic orbicurve of type (1,l-tors)± [cf. [EtTh], Definition2.1]
+over K, with K-core [cf. [CanLift], Remark 2.1.1; [EtTh], the discussion
+def
+at the beginning of §2] given by CK
+= CF ×F K. [Thus, by (c), it follows
+that CK is completely determined, up to isomorphism over F, by CF.] In
+particular, CK determines, up to K-isomorphism, a hyperbolic orbicurve
+XK of type (1,l-tors) [cf. [EtTh], Definition 2.1] over K, together with
+natural cartesian diagrams
+XK −→ XF
+ΠXK
+−→ ΠXF
+ΔX −→ ΔX
+⏐ ⏐ ⏐ ⏐
+⏐ ⏐ ⏐ ⏐
+⏐ ⏐ ⏐ ⏐
+CK −→ CF
+ΠCK
+−→ ΠCF
+ΔC −→ ΔC
+of finite ´ etale coverings of hyperbolic orbicurves and corresponding open
+immersionsofprofinite groups. Finally, werecall from [EtTh], Proposition
+2.2, that ΔC admits uniquely determined open subgroups ΔX ⊆ΔC ⊆
+ΔC, which may be thought of as corresponding to finite ´ etale coverings
+def
+of CF
+= C ×F F by hyperbolic orbicurves XF, CF of type (1,l-torsΘ),
+(1,l-torsΘ)±, respectively [cf. [EtTh], Definition 2.3].
+(e) V ⊆V(K) is a subset that induces a natural bijection
+V∼
+→Vmod
+— i.e., a section of the natural surjection V(K) Vmod. Write Vnon def
+=
+V V(K)non
+, Varc def
+= V V(K)arc
+, Vgood def
+= V V(K)good
+, Vbad def
+=
+V V(K)bad. For each v ∈V(K), we shall use the subscript v to de-
+note the result of base-changing hyperbolic orbicurves over F or K to
+Kv. Thus, for each v ∈V(K) lying under a v ∈V(F), we have natural
+cartesian diagrams
+X
+−→ Xv −→ Xv
+ΔX −→ ΠX
+−→ ΠXv
+v
+v
+⏐ ⏐ ⏐ ⏐ ⏐ ⏐
+⏐ ⏐ ⏐ ⏐ ⏐ ⏐
+C
+−→ Cv −→ Cv
+ΔC −→ ΠC
+−→ ΠCv
+v
+v
+of profinite ´ etale coverings of hyperbolic orbicurves and corresponding
+injections of profinite groups [i.e.,´ etale fundamental groups]. Here, the
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 63
+subscript v denotes base-change with respect to F → Fv; the various
+profinite groups “Π(−)” admit natural outer surjections onto the decom-
+position group Gv ⊆GK
+def = Gal(F/K) determined, up to GK-conjugacy,
+by v. If v ∈Vbad, then we assume further that the hyperbolic orbicurve
+Cv is of type (1,Z/lZ)± [cf. [EtTh], Definition 2.5, (i)]. [Here, we note
+that it follows from the portion of (b) concerning 2-torsion points that the
+¨
+base field Kv satisfies the assumption “K=
+K” of [EtTh], Definition 2.5,
+(i).] Finally, we observe that when v ∈Vbad, it follows from the theory
+of [EtTh], §2 — i.e., roughly speaking, “by extracting an l-th root of the
+theta function” — that X
+v, C
+admit natural models
+v
+X
+v, Cv
+overKv,whicharehyperbolicorbicurvesof type(1,(Z/lZ)Θ),(1,(Z/lZ)Θ)±,
+respectively [cf. [EtTh], Definition 2.5, (i)]; these models determine open
+subgroups ΠX
+⊆ΠC
+⊆ΠC
+. If v ∈Vbad, then, relative to the notation
+v
+v
+v
+of Remark 3.1.1 below, we shall write Πv
+def = Πtp
+X
+.
+v
+(f) ϵ is a cusp of the hyperbolic orbicurve CK [cf. (d)] that arises from
+a nonzero element of the quotient “Q” that appears in the definition of
+a “hyperbolic orbicurve of type (1,l-tors)±” given in [EtTh], Definition
+2.1. If v ∈V, then let us write ϵv for the cusp of Cv determined by
+ϵ. If v ∈Vbad, then we assume that ϵv is the cusp that arises from the
+canonical generator [up to sign] “±1” of the quotient “Z” that appears
+in the definition of a “hyperbolic orbicurve of type (1,Z/lZ)±” given in
+def
+[EtTh], Definition 2.5, (i). Thus, the data (XK
+= XF ×F K,CK,ϵ)
+determines hyperbolic orbicurves
+X
+− →K, C− →K
+of type (1,l-tors
+−−→), (1,l-tors
+−−→)±, respectively [cf. Definition 1.1, Remark
+1.1.2], as well as open subgroups ΠX
+⊆ΠC
+⊆ΠCF , ΔX
+− →K
+− →K
+− → ⊆ΔC
+− → ⊆ΔC,
+and, for v ∈Vgood, ΠX
+⊆ΠC
+⊆ΠCv
+. If v ∈Vgood, then we shall write
+− →v
+− →v
+Πv
+def = ΠX
+.
+− →v
+Remark 3.1.1. Relative to the notation of Definition 3.1, (e), suppose that
+v ∈Vnon. Then in addition to the various profinite groups Π(−)v, Δ(−), one also
+has corresponding tempered fundamental groups
+Πtp
+(−)v
+; Δtp
+(−)v
+[cf. [Andr´ e], §4; [SemiAnbd], Example 3.10], whose profinite completions may be
+identified with Π(−)v, Δ(−). Here, we note that unlike “Δ(−)”, the topological
+group Δtp
+(−)v
+depends, a priori, on v.
+64 SHINICHI MOCHIZUKI
+Remark 3.1.2.
+(i) Observe that the open subgroup ΠXK ⊆ΠCK may be constructed group-
+theoretically from the topological group ΠCK . Indeed, it follows immediately from
+the construction of the coverings “X”, “C” in the discussion at the beginning
+of [EtTh], §2 [cf. also [AbsAnab], Lemma 1.1.4, (i)], that the closed subgroup
+ΔX ⊆ΠCK may be characterized by a rather simple explicit algorithm. Since the
+decomposition groups of ΠCK
+at the nonzero cusps — i.e., the cusps whose inertia
+groups are contained in ΔX [cf. the discussion at the beginning of §1] — are also
+group-theoretic [cf., e.g., [AbsTopI], Lemma 4.5, as well as Remark 1.2.2, (ii), of the
+present paper], the above observation follows immediately from the easily verified
+fact that the image of any of these decomposition groups associated to nonzero
+cusps coincides with the image of ΠXK
+in ΠCK /ΔX.
+(ii) In light of the observation of (i), it makes sense to adopt the following
+convention:
+Instead of applying the group-theoretic reconstruction algorithm of [Ab-
+sTopIII], Theorem 1.9 [cf. also the discussion of [AbsTopIII], Remark
+2.8.3], directly to ΠCK [or topological groups isomorphic to ΠCK ], we
+shall apply this reconstruction algorithm to the open subgroup ΠXK ⊆
+ΠCK
+to reconstruct the function field of XK, equipped with its natural
+Gal(XK/CK)∼
+= ΠCK /ΠXK
+-action.
+Inthiscontext,weshallrefertothisapproachofapplying[AbsTopIII],Theorem1.9,
+as the Θ-approach to [AbsTopIII], Theorem 1.9. Note that, for v ∈Vgood Vnon
+(respectively, v ∈ Vbad), one may also adopt a “Θ-approach” to applying [Ab-
+sTopIII], Theorem 1.9, to ΠC
+v or [by applying Corollary 1.2] ΠX
+, ΠC
+(respec-
+− →v
+− →v
+tively, to Πtp
+C
+or [by applying [EtTh], Proposition 2.4] Πtp
+X
+). In the present series
+v
+v
+of papers, we shall always think of [AbsTopIII], Theorem 1.9 [as well as the other
+resultsof[AbsTopIII]thatariseasconsequencesof[AbsTopIII],Theorem1.9]asbe-
+ing applied to [isomorphs of] ΠCK or, for v ∈Vgood Vnon (respectively, v ∈Vbad),
+ΠC
+v, ΠX
+, ΠC
+(respectively, Πtp
+C
+, Πtp
+X
+) via the “Θ-approach” [cf. also Remark
+− →v
+− →v
+v
+v
+3.4.3, (i), below].
+(iii) Recall from the discussion at the beginning of [EtTh], §2, the tautological
+extension
+1 →ΔΘ →ΔΘ
+X →Δell
+X →1
+— where ΔΘ
+def = [ΔX,ΔX]/[ΔX,[ΔX,ΔX]]; ΔΘ
+X
+def = ΔX/[ΔX,[ΔX,ΔX]]; Δell
+def
+=
+X
+Δab
+X . The extension class ∈H2(Δell
+X ,ΔΘ) of this extension determines a tautological
+isomorphism
+∼
+MX
+→ΔΘ
+— where we recall from [AbsTopIII], Theorem 1.9, (b), that the module “MX
+”
+of [AbsTopIII], Theorem 1.9, (b) [cf. also [AbsTopIII], Proposition 1.4, (ii); [Ab-
+sTopIII],Remark1.10.1, (ii)], maybenaturally identifiedwithHom(H2(Δell
+X ,Z),Z).
+In particular, we obtain a tautological isomorphism
+MX
+∼
+→(l·ΔΘ)
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 65
+[i.e., since [ΔX : ΔX] = l]. In particular, we observe that if we write ΠCFmod
+for the ´ etale fundamental group of the orbicurve CFmod discussed in Remark 3.1.7,
+(i), below, then MX
+∼
+→(l·ΔΘ) may be regarded as a characteristic subquotient
+of ΠCFmod , hence admits a natural conjugation action by ΠCFmod . From the point
+of view of the theory of the present series of papers, the significance of the “Θ-
+∼
+approach” lies precisely in the existence of this tautological isomorphism MX
+→(l·
+ΔΘ), which will be applied in [IUTchII] at v ∈Vbad. That is to say, the Θ-approach
+involves applying the reconstruction algorithm of [AbsTopIII], Theorem 1.9, via the
+cyclotome MX, which may be identified, via the above tautological isomorphism,
+with the cyclotome (l·ΔΘ), which plays a central role in the theory of [EtTh] —
+cf., especially, the discussion of “cyclotomic rigidity” in [EtTh], Corollary 2.19, (i).
+(iv) If one thinks of the prime number l as being “large”, then the role played
+by the covering X in the above discussion of the “Θ-approach” is reminiscent of the
+roleplayedbytheuniversal covering of a complex elliptic curve by the complex plane
+in the holomorphic reconstruction theory of [AbsTopIII], §2 [cf., e.g., [AbsTopIII],
+Propositions 2.5, 2.6].
+Remark 3.1.3. Since Vbad
+mod ̸= ∅[cf. Definition 3.1, (b)], it follows immediately
+from Definition 3.1, (d), (e), (f), that the data (F/F, XF, l, CK, V, Vbad
+mod, ϵ) is,
+in fact, completely determined by the data (F/F, XF, CK, V, Vbad
+mod), and that
+CK is completely determined up to K-isomorphism by the data (F/F, XF, l, V).
+Finally, we remark that for given data (XF, l, Vbad
+mod), distinct choices of “V” will
+not aﬀect the theory in any significant way.
+Remark 3.1.4. It follows immediately from the definitions that at each v ∈Vbad
+[which is necessarily prime to l — cf. Definition 3.1, (c)] (respectively, each v ∈
+Vgood Vnon which is prime to l; each v ∈Vgood Vnon), X
+v (respectively, X
+− →v;
+Xv) admits a stable model over the ring of integers of Kv.
+Remark 3.1.5. Note that since the 3-torsion points of EF are rational over F,
+and F is Galois over Fmod [cf. Definition 3.1, (b)], it follows [cf., e.g., [IUTchIV],
+Proposition 1.8, (iv)] that K is Galois over Fmod. In addition to working with
+the field Fmod and various extensions of Fmod contained in F, we shall also have
+occasion to work with the algebraic stack
+Smod
+def = Spec(OK) // Gal(K/Fmod)
+obtained by forming the stack-theoretic quotient [i.e., “//”] of the spectrum of the
+ring of integers OK of K by the Galois group Gal(K/Fmod). Thus, any finite exten-
+sionL ⊆F ofFmod inF determines, byformingtheintegralclosureofSmod inL, an
+algebraic stack Smod,L over Smod. In particular, by considering arithmetic line bun-
+dles over such Smod,L, one may associate to any finite quotient Gal(F/Fmod) Q
+a Frobenioid via [the easily verified “stack-theoretic version” of] the construction
+of [FrdI], Example 6.3. One verifies immediately that an appropriate analogue of
+[FrdI], Theorem 6.4, holds for such stack-theoretic versions of the Frobenioids con-
+structed in [FrdI], Example 6.3. Also, we observe that upon passing to either the
+66 SHINICHI MOCHIZUKI
+perfection or the realification, such stack-theoretic versions become naturally iso-
+morphic to the non-stack-theoretic versions [i.e., of [FrdI], Example 6.3, as stated].
+Remark 3.1.6. In light of the important role played by the various orbicurves
+constructed in [EtTh], §2, in the present series of papers, we take the opportunity
+to correct an unfortunate — albeit in fact irrelevant! — error in [EtTh]. In the
+discussionpreceding[EtTh], Definition2.1, onemustinfactassumethattheinteger
+l is odd in order for the quotient ΔX to be well-defined. Since, ultimately, in [EtTh]
+[cf. the discussion following [EtTh], Remark 5.7.1], as well as in the present series
+of papers, this is the only case that is of interest, this oversight does not aﬀect
+either the present series of papers or the bulk of the remainder of [EtTh]. Indeed,
+the only places in [EtTh] where the case of even l is used are [EtTh], Remark 2.2.1,
+and the application of [EtTh], Remark 2.2.1, in the proof of [EtTh], Proposition
+˙
+2.12, for the orbicurves “
+C”. Thus, [EtTh], Remark 2.2.1, must be deleted; in
+[EtTh], Proposition 2.12, one must in fact exclude the case where the orbicurve
+˙
+under consideration is “
+C”. On the other hand, this theory involving [EtTh],
+Proposition 2.12 [cf., especially, [EtTh], Corollaries 2.18, 2.19] is only applied after
+the discussion following [EtTh], Remark 5.7.1, i.e., which only treats the curves
+“X”. That is to say, ultimately, in [EtTh], as well as in the present series of papers,
+odd l.
+one is only interested in the curves “X”, whose treatment only requires the case of
+Remark 3.1.7.
+(i) Observe that it follows immediately from the definition of Fmod and the K-
+coricity of CK [cf. Definition 3.1, (b), (d)] that CF admits a unique [up to unique
+isomorphism] model
+CFmod
+over Fmod. If v ∈Vmod, then we shall write Cv for the result of base-changing this
+model to (Fmod)v. When applying the group-theoretic reconstruction algorithm
+of [AbsTopIII], Theorem 1.9 [cf. Remark 3.1.2, (ii)], it will frequently be useful to
+considercertainspecial types of rational functions onCFmod andCv, asfollows.
+Let L be a field which is equal either to Fmod or to (Fmod)v for some v ∈Vmod.
+Write CL for the model just discussed of CF over L. Thus, one verifies immediately
+that the coarse space |CL|associated to the algebraic stack CL is isomorphic to
+the aﬃne line over L. Now suppose that we are given an algebraic closure LC
+of the function field LC of CL. Write L for the algebraic closure of L determined
+by LC. We shall refer to a closed point of the proper smooth curve determined
+by some finite subextension ⊆LC of LC as a critical point if it maps to a closed
+point of the [proper smooth] compactification |CL|cpt of |CL|that arises from one
+of the 2-torsion points of EF; we shall refer to a critical point which does not
+map to the closed point of |CL|cpt that arises from the unique cusp of CL as strictly
+critical. Thus, as one might imagine from the central importance of 2-torsion points
+in the elementary theory of elliptic curves, the strictly critical points of |CL|cpt may
+be thought of as the “most fundamental/canonical non-cuspidal points” of
+|CL|cpt. We shall refer to a rational function f ∈LC on CL as κ-coric — where we
+think of the κ as standing for “Kummer” — if
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 67
+· whenever f ̸∈ L, it holds that, over L, f has precisely one pole [of
+unrestricted order], but at least two distinct zeroes;
+· the divisor of zeroes and poles of f is defined over a number field and
+avoids the critical points;
+· f restricts to a root of unity at every strictly critical point of |CL|cpt
+.
+Thus, the first displayed condition, taken together with the latter portion of the
+second displayed condition, may be understood as the condition that there exist
+a unique non-critical L-rational point of |CL|cpt with respect to which [i.e., if one
+takes this L-rational point to be the “point at infinity”] f may be thought of as a
+polynomial on the aﬃne line over L with non-critical zeroes. In particular, it
+follows from the first displayed condition that, whenever f ̸∈L, it is never the case
+that both f and f−1 are κ-coric. By contrast, the third displayed condition may be
+understood as the condition that restriction to the strictly critical points determines
+a sort of canonical splitting up to roots of unity [which will play an important
+role in the present series of papers — cf., e.g., the discussion of Example 5.1, (v);
+Definition 5.2, (vi), (viii); Remark 5.2.3, below] of the set of nonzero constant [i.e.,
+L-] multiples of κ-coric functions into a direct product, up to roots of unity, of
+the set of κ-coric functions and the set of nonzero elements of L. In particular, it
+follows from the third displayed condition that if c ∈L and f ∈LC are such that
+both f and c·f are κ-coric, then c is a root of unity.
+(ii) We maintain the notation of (i). Let L be an intermediate field between
+L and L that is solvably closed [cf. [GlSol], Definition 1, (i)], i.e., has no nontrivial
+abelian extensions. Observe that, since |CL|cpt has precisely 4 critical points, it
+follows immediately from the elementary theory of polynomial functions on
+the aﬃne line over L [i.e., the complement in |CL|cpt of some L-rational point
+|CL|cpt] that there exists a κ-coric fsol ∈LC [i.e., a rational function on the aﬃne
+line over L] of degree 4. In particular, it follows immediately from the elementary
+theory of polynomial functions on the aﬃne line [i.e., |CL|] over L [together with
+“Hensel’s lemma” — cf., e.g., the method of proof of [AbsTopII], Lemma 2.1]
+(respectively, from the existence of fsol [together with the well-known fact that the
+symmetric group on 4 letters is solvable]) that
+every element of L (respectively, L ) appears as a value of some κ-coric
+rational function on CL at some L- (respectively, L -) valued point of CL
+that is not critical.
+If L= Fmod, then write UL for the group L× of nonzero elements of L; if L=
+(Fmod)v for some v ∈Vmod, then write UL for the group of units [i.e., relative
+to the unique valuation on L that extends v] of L. We shall say that an element
+f ∈LC is ∞κ-coric if there exists a positive integer n such that fn is a κ-coric
+element of LC; we shall say that an element f ∈LC is ∞κ×-coric if there exists
+an element c ∈UL such that c·f ∈LC is ∞κ-coric. Thus, an element f ∈LC is
+κ-coric if and only if it is∞κ-coric. Also, one verifies immediately that
+an ∞κ×-coric element f ∈LC is ∞κ-coric if and only if it restricts to a
+root of unity at some [or, equivalently, every] strictly critical point of the
+proper smooth curve determined by some finite subextension ⊆LC of the
+function field LC that contains f.
+subextension of K generated by the l-th roots of unity; LC(κ-sol) ⊆ LC for the
+subfield of LC generated by the κ-solvable elements of LC; LC(CK) ⊆ LC for the
+subfield of LC generated over LC by the images of the F(μl)·LC-linear embeddings
+68 SHINICHI MOCHIZUKI
+Finally, one verifies immediately that the operation of multiplication determines a
+structure of pseudo-monoid [cf. §0] on the sets of κ-, ∞κ-, and∞κ×-coric rational
+functions; moreover, in the case of∞κ- and ∞κ×-coric rational functions, the re-
+sulting pseudo-monoid is divisible and cyclotomic. These pseudo-monoids will be
+of use in discussions concerning the Kummer theory of rational functions on CL
+[cf. Example 5.1, (i), (v); Definition 5.2, (v), (vi), (vii), (viii), below].
+(iii)Wemaintainthenotationof(i)and(ii)andassumefurtherthatL= Fmod,
+L= F. We shall say that an element f ∈LC is κ-solvable if it is an F×
+sol-multiple
+[cf. Definition 3.1, (b)] of a∞κ-coric element of LC. Thus, one verifies immediately
+that an element f ∈LC is κ-solvable if and only if there exists a positive integer
+n such that fn is a ∞κ×-coric element of Fsol·LC. Write F(μl) ⊆K for the
+into LC of the function field of CK. Thus, the fact that the extension F/Fmod is
+Galois of degree prime to l [cf. Definition 3.1, (b)] implies that
+the subgroup Gal(K/F(μl)) ⊆Gal(K/Fmod) is normal and may be char-
+acterized as the unique subgroup of Gal(K/Fmod) that is [abstractly]
+isomorphic to SL2(Fl)
+[cf. Remark 3.1.5; [GenEll], Lemma 3.1, (i)]. Moreover, we observe that it follows
+immediately from the well-known fact that the finite group SL2(Fl) is perfect [cf.
+Definition 3.1, (c); [GenEll], Lemma 3.1, (ii)], together with the definition of the
+term“
+∞κ×-coric”[cf., especially,thefactthatthezeroes and poles avoid the critical
+points!], that
+the subfields LC(CK) ⊆ LC ⊇ F(μl)·LC(κ-sol) are linearly disjoint
+over F(μl)·LC.
+In particular, it follows that there is a natural isomorphism
+Gal(LC(CK)/F(μl)·LC)∼
+→ Gal(LC(CK)·LC(κ-sol)/F(μl)·LC(κ-sol))
+— i.e., one may regard Gal(LC(CK)/F(μl)·LC) as being equipped with an action
+on LC(CK)·LC(κ-sol) that restricts to the trivial action on F(μl)·LC(κ-sol).
+(iv)Wemaintainthenotationof(iii). Inthefollowing, weshallwrite“Out(−)”
+for the group of outer automorphisms of the topological group in parentheses. Con-
+sider the tautological exact sequence of Galois groups
+1 → Gal(LC/LC(κ-sol)) → Gal(LC/LC) → Gal(LC(κ-sol)/LC) → 1
+[cf. the discussion of (iii)]. Let us refer to a subgroup of Gal(LC/LC(κ-sol)) as
+a κ-sol-open subgroup if it is the intersection with Gal(LC/LC(κ-sol)) of a normal
+open subgroup of Gal(LC/LC). Thus, the subgroups
+Autκ-sol(Gal(LC/LC(κ-sol))) ⊆ Aut(Gal(LC/LC(κ-sol)))
+Outκ-sol(Gal(LC/LC(κ-sol))) ⊆ Out(Gal(LC/LC(κ-sol)))
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 69
+ofautomorphisms/outerautomorphismsofthetopologicalgroupGal(LC/LC(κ-sol))
+that preserve each κ-sol-open subgroup — i.e., of“κ-sol-automorphisms/κ-sol-outer
+automorphisms” — admit natural compatible homomorphisms
+Autκ-sol(Gal(LC/LC(κ-sol))) → Aut(Q)
+Outκ-sol(Gal(LC/LC(κ-sol))) → Out(Q)
+foreachquotientGal(LC/LC(κ-sol)) Qbyaκ-sol-opensubgroup. Thekernelsof
+these natural homomorphisms [for varying “Q”] determine natural profinite topolo-
+gies on Autκ-sol(Gal(LC/LC(κ-sol))), Outκ-sol(Gal(LC/LC(κ-sol))), with respect to
+which each arrow of the commutative diagram of homomorphisms
+Gal(LC/LC) −→ Autκ-sol(Gal(LC/LC(κ-sol)))
+⏐ ⏐ ⏐ ⏐
+Gal(LC(κ-sol)/LC) −→ Outκ-sol(Gal(LC/LC(κ-sol)))
+thatarises, viaconjugation, fromtheexact sequenceconsideredaboveiscontinuous.
+Finally, we observe that
+Gal(LC/LC(κ-sol)) is center-free; in particular, the above commutative
+diagram of homomorphisms of topological groups is cartesian.
+Indeed, let us first observe that it follows immediately from the definitions that
+Gal(F·LC(κ-sol)/F·LC) is abelian. Thus, it follows formally, by applying Lemma
+2.7, (vi), (vii), to the geometric fundamental groups of the various genus zero aﬃne
+hyperbolic curves whose function field is equal to LC, that the conjugacy action by
+any element α in the center of Gal(LC/LC(κ-sol)) on such a [center-free] geometric
+fundamental group is trivial and hence, by [the special case that was already known
+to Belyi of] the Galois injectivity result discussed in [NodNon], Theorem C, that α
+is the identity element of Gal(LC/LC(κ-sol)), as desired.
+Given initial Θ-data as in Definition 3.1, the theory of Frobenioids given in
+[FrdI], [FrdII], [EtTh] allows one to construct various associated Frobenioids, as
+follows.
+Example 3.2. Frobenioids at Bad Nonarchimedean Primes. Let v ∈
+Vbad
+= V V(K)bad. The theory of the “Frobenioid-theoretic theta function” dis-
+cussed in [EtTh], §5, may be thought of as a sort of formal, category-theoretic way
+to formulate various elementary classical facts [which are reviewed in [EtTh], §1]
+concerning the theory of the line bundles and divisors related to the classical theta
+function on a Tate curve over an MLF. We give a brief review of this theory of
+[EtTh], §5, as follows:
+(i) By the theory of [EtTh], the hyperbolic curve X
+determines a tempered
+v
+Frobenioid
+F
+v
+[i.e., the category denoted “D” in the discussion at the beginning of [EtTh], §5].
+We recall from the theory of [EtTh] that Dv may be thought of as the category
+of connected tempered coverings — i.e., “Btemp(X
+v)0” in the notation of [EtTh],
+Example 3.9 — of the hyperbolic curve X
+v. In the following, we shall write
+D⊢
+v
+70 SHINICHI MOCHIZUKI
+[i.e., the Frobenioid denoted “C” in the discussion at the beginning of [EtTh], §5;
+cf. also the discussion of Remark 3.2.4 below] over a base category
+Dv
+def
+= B(Kv)0
+[cf. the notational conventions concerning categories discussed in §0]. Also, we
+observe that D⊢
+v may be naturally regarded [by pulling back finite ´ etale coverings
+via the structure morphism X
+→Spec(Kv)] as a full subcategory
+v
+D⊢
+v ⊆Dv
+of Dv, and that we have a natural functor Dv → D⊢
+v, which is left-adjoint to
+the natural inclusion functor D⊢
+v →Dv [cf. [FrdII], Example 1.3, (ii)]. If (−)
+is an object of Dv, then we shall denote by “T(−)” the Frobenius-trivial object [a
+notion which is category-theoretic — cf. [FrdI], Definition 1.2, (iv); [FrdI], Corollary
+4.11, (iv); [EtTh], Proposition 5.1] of F
+v [which is completely determined up to
+isomorphism] that lies over “(−)”.
+(ii) Next, let us recall [cf. [EtTh], Proposition 5.1; [FrdI], Corollary 4.10] that
+the birationalization
+F÷
+v
+def
+= Fbirat
+v
+maybereconstructed category-theoretically from F
+v [cf. Remark3.2.1below]. Write
+¨
+Y
+→X
+v
+v
+¨
+for the tempered covering determined by the object “
+Ylog” in the discussion at the
+¨
+beginning of [EtTh], §5. Thus, we may think of
+Y
+v as an object of Dv [cf. the
+object “Abs” of [EtTh], §5, in the “double underline case”]. Then let us recall the
+“Frobenioid-theoretic l-th root of the theta function”, which is normalized so as to
+attain the value 1 at the point “√−1” [cf. [EtTh], Theorem 5.7]; we shall denote
+the reciprocal of [i.e., “1 over”] this theta function by
+∈O×(T÷
+¨
+Y
+)
+Θ
+v
+v
+— where we use the superscript “÷” to denote the image in F÷
+v of an object of F
+v.
+Here, we recall that Θv
+is completely determined up to multiplication by a 2l-th root
+of unity [i.e., an element of μ2l(T÷
+¨
+Y
+)] and the action of the group of automorphismsv
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 71
+l·Z ⊆Aut(T¨
+Y
+) [i.e., we write Z for the group denoted “Z” in [EtTh], Theorem
+v
+5.7; cf. also the discussion preceding [EtTh], Definition 1.9]. Moreover, we recall
+from the theory of [EtTh], §5 [cf. the discussion at the beginning of [EtTh], §5;
+[EtTh], Theorem 5.7] that
+T¨
+Y
+[regarded up to isomorphism] and
+v
+Θ
+v [regarded up to the μ2l(T÷
+¨
+Y
+), l·Z indeterminacies discussed above]
+v
+may be reconstructed category-theoretically from F
+v [cf. Remark 3.2.1 below].
+(iii)Next, werecallfrom[EtTh], Corollary3.8, (ii)[cf. also[EtTh], Proposition
+5.1], that the pv-adic Frobenioid constituted by the “base-field-theoretic hull” [cf.
+[EtTh], Remark 3.6.2]
+Cv ⊆F
+v
+[i.e., we write Cv for the subcategory “Cbs-fld” of [EtTh], Definition 3.6, (iv)] may
+be reconstructed category-theoretically from F
+v [cf. Remark 3.2.1 below].
+(iv)Writeqv fortheq-parameteroftheellipticcurveEv overKv. Thus, wemay
+think of qv as an element qv ∈O◃(TX
+) (∼
+= O◃
+Kv). Note that it follows from our as-
+v
+sumption concerning 2-torsion [cf. Definition 3.1, (b)], together with the definition
+of “K” [cf. Definition 3.1, (c)], that qv admits a 2l-th root in O◃(TX
+) (∼
+= O◃
+Kv).
+v
+Then one computes immediately from the final formula of [EtTh], Proposition 1.4,
+(ii), that the value of Θ
+v
+at−qv is equal to
+def
+= q1/2l
+v ∈O◃(TX
+)
+q
+v
+v
+— where the notation “q
+1/2l
+v ” [hence also q
+] is completely determined up to a
+v
+μ2l(TX
+)-multiple. Write ΦCv
+for the divisor monoid [cf. [FrdI], Definition 1.1,
+v
+(iv)] of the pv-adic Frobenioid Cv. Then the image of q
+determines a constant
+v
+section [i.e., a sub-monoid on Dv isomorphic to N] “logΦ(q
+)” of ΦCv. Moreover,
+v
+the resulting submonoid [cf. Remark 3.2.2 below]
+ΦC⊢
+v
+def
+= N·logΦ(q
+)|D⊢
+v
+v
+⊆ΦCv|D⊢
+v
+determinesapv-adic Frobenioidwithbase categorygivenbyD⊢
+v [cf. [FrdII],Example
+1.1, (ii)]
+C⊢
+v (⊆ Cv ⊆ F
+v
+→ F÷
+v )
+— which may be thought of as a subcategory of Cv. Also, we observe that [since the
+q-parameter q
+∈Kv, it follows that] q
+determines a μ2l(−)-orbit of characteristic
+v
+v
+splittings [cf. [FrdI], Definition 2.3]
+τ⊢
+v
+72 SHINICHI MOCHIZUKI
+on C⊢
+v.
+¨
+Y
+v is equal to Kv [cf. the discussion
+¨
+Y
+v
+(−)∼ → O×
+CΘ
+v
+(v) Next, let us recall that the base field of
+of Definition 3.1, (e)]. Write
+DΘ
+v ⊆(Dv)¨
+Y
+v
+for the full subcategory of the category (Dv)¨
+Y
+[cf. the notational conventions
+v
+concerning categories discussed in §0] determined by the products in Dv of
+with objects of D⊢
+v. Thus, one verifies immediately that “forming the product
+¨
+with
+Y
+” determines a natural equivalence of categories D⊢
+∼ →DΘ
+v
+v . Moreover, for
+v
+AΘ ∈Ob(DΘ
+v ), the assignment
+AΘ →O×(TAΘ)·(ΘN
+v|TAΘ ) ⊆O×(T÷
+AΘ)
+determines a monoid O◃
+CΘ
+(−) on DΘ
+v [in the sense of [FrdI], Definition 1.1, (ii)];
+v
+write O×
+CΘ
+(−) ⊆O◃
+CΘ
+(−) for the submonoid determined by the invertible elements.
+v
+v
+Next, let us observe that, relative to the natural equivalence of categories D⊢
+∼ →DΘ
+v
+v
+— which we think of as mapping Ob(D⊢
+v) ∋A →AΘ def
+¨
+=
+Y
+×A ∈Ob(DΘ
+v ) — we
+v
+have natural isomorphisms
+O◃
+C⊢
+v
+(−)∼ → O◃
+CΘ
+v
+(−); O×
+C⊢
+v
+(−)
+(−) are the monoids associated to the Frobenioid C⊢
+v as in
+[FrdI], Proposition 2.2] which are compatible with the assignment
+q
+|TA →Θ
+v|TAΘ
+and the natural isomorphism [i.e., induced by the natural projection AΘ =
+¨
+Y
+×
+v
+A →A] O×(TA)∼ →O×(TAΘ). In particular, we conclude that the monoid O◃
+CΘ
+(−)
+v
+determines — in a fashion consistent with the notation of [FrdI], Proposition 2.2!
+— a pv-adic Frobenioid with base category given by DΘ
+v [cf. [FrdII], Example 1.1,
+(ii)]
+CΘ
+v (⊆ F÷
+v )
+— which may be thought of as a subcategory of F÷
+v , and which is equipped with a
+τΘ
+v
+determined by Θv. Moreover, we have a natural equivalence of categories
+C⊢
+∼ →CΘ
+v
+v
+[where O◃
+C⊢
+v
+(−), O×
+C⊢
+v
+v
+μ2l(−)-orbit of characteristic splittings [cf. [FrdI], Definition 2.3]
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 73
+that maps τ⊢
+v to τΘ
+v . This fact may be stated more succinctly by writing
+F⊢
+∼ →FΘ
+v
+v
+— where we write F⊢
+v
+def = (C⊢
+v ,τ⊢
+v ); FΘ
+v
+def = (CΘ
+v ,τΘ
+v ). In the following, we shall refer
+to a pair such as F⊢
+v or FΘ
+v consisting of a Frobenioid equipped with a collection
+of characteristic splittings as a split Frobenioid.
+(vi) Here, it is useful to recall [cf. Remark 3.2.1 below] that:
+(a) the subcategory D⊢
+v ⊆Dv may be reconstructed category-theoretically
+from Dv [cf. [AbsAnab], Lemma 1.3.8];
+(b) the category DΘ
+v may be reconstructed category-theoretically from Dv [cf.
+(a); the discussion at the beginning of [EtTh], §5];
+(c) thecategoryD⊢
+v (respectively,DΘ
+v )maybereconstructed category-theoretically
+from C⊢
+v (respectively, CΘ
+v ) [cf. [FrdI], Theorem 3.4, (v); [FrdII], Theorem
+1.2, (i); [FrdII], Example 1.3, (i); [AbsAnab], Theorem 1.1.1, (ii)];
+(d) the category Dv may be reconstructed category-theoretically either from
+F
+v [cf. [EtTh], Theorem 4.4; [EtTh], Proposition 5.1] or from Cv [cf.
+[FrdI], Theorem 3.4, (v); [FrdII], Theorem 1.2, (i); [FrdII], Example 1.3,
+(i); [SemiAnbd], Example 3.10; [SemiAnbd], Remark 3.4.1].
+Next, let us observe that by (b), (d), together with the discussion of (ii) concerning
+the category-theoreticity of Θ
+v, it follows [cf. Remark 3.2.1 below] that
+(e) one may reconstruct the split Frobenioid FΘ
+v [up to the l·Z indeterminacy
+in Θ
+v discussed in (ii); cf. also Remark 3.2.3 below] category-theoretically
+from F
+v [cf. [FrdI], Theorem 3.4, (i), (v); [EtTh], Proposition 5.1].
+Next, let us recall that the values of Θ
+v may be computed by restricting the cor-
+responding Kummer class, i.e., the“´ etale theta function” [cf. [EtTh], Proposition
+1.4, (iii); the proof of [EtTh], Theorem 1.10, (ii); the proof of [EtTh], Theorem 5.7],
+which may be reconstructed category-theoretically from Dv [cf. [EtTh], Corollary
+2.8, (i)]. Thus, by applying the isomorphisms of cyclotomes of [AbsTopIII], Corol-
+lary 1.10, (c); [AbsTopIII], Remark 3.2.1 [cf. also [AbsTopIII], Remark 3.1.1], to
+these Kummer classes, one concludes from (a), (d) that
+(f) one may reconstruct the split Frobenioid F⊢
+v category-theoretically from
+Cv, hence also [cf. (iii)] from F
+v [cf. Remark 3.2.1 below].
+Remark 3.2.1.
+(i) In [FrdI], [FrdII], and [EtTh] [cf. [EtTh], Remark 5.1.1], the phrase “recon-
+structed category-theoretically” is interpreted as meaning “preserved by equivalences
+of categories”. From the point of view of the theory of [AbsTopIII] — i.e., the dis-
+cussion of “mono-anabelian” versus “bi-anabelian” geometry [cf. [AbsTopIII], §I2,
+74 SHINICHI MOCHIZUKI
+(Q2)] — this sort of definition is “bi-anabelian” in nature. In fact, it is not diﬃcult
+to verify that the techniques of [FrdI], [FrdII], and [EtTh] all result in explicit re-
+construction algorithms, whose input data consists solely of the category structure
+of the given category, of a “mono-anabelian” nature that do not require the use of
+some fixed reference model that arises from scheme theory [cf. the discussion of
+[AbsTopIII], §I4]. For more on the foundational aspects of such “mono-anabelian
+reconstruction algorithms”, we refer to the discussion of [IUTchIV], Example 3.5.
+(ii) One reason that we do not develop in detail here a “mono-anabelian ap-
+proach to the geometry of categories” along the lines of [AbsTopIII] is that, unlike
+the case with the mono-anabelian theory of [AbsTopIII], which plays a quite essen-
+tial role in the theory of the present series of papers, much of the category-theoretic
+reconstruction theory of [FrdI], [FrdII], and [EtTh] is not of essential importance
+in the development of the theory of the present series of papers. That is to say, for
+instance, instead of quoting results to the eﬀect that the base categories or divisor
+monoids of various Frobenioids may be reconstructed category-theoretically, one
+could instead simply work with the data consisting of “the category constituted by
+the Frobenioid equipped with its pre-Frobenioid structure” [cf. [FrdI], Definition
+1.1, (iv)]. Nevertheless, we chose to apply the theory of [FrdI], [FrdII], and [EtTh]
+partly because it simplifies the exposition [i.e., reduces the number of auxiliary
+structures that one must carry around], but more importantly because it renders
+explicit precisely which structures arising from scheme-theory are “categorically
+intrinsic” and which merely amount to “arbitrary, non-intrinsic choices” which,
+when formulated intrinsically, correspond to various “indeterminacies”. This ex-
+plicitness is of particular importance with respect to phenomena related to the unit-
+linear Frobenius functor [cf. [FrdI], Proposition 2.5] and the Frobenioid-theoretic
+indeterminacies studied in [EtTh], §5.
+Remark 3.2.2. Although the submonoid ΦC⊢
+v is not “absolutely primitive” in the
+sense of [FrdII], Example 1.1, (ii), it is “very close to being absolutely primitive”,
+in the sense that [as is easily verified] there exists a positive integer N such that
+N·ΦC⊢
+is absolutely primitive. This proximity to absolute primitiveness may also
+v
+be seen in the existence of the characteristic splittings τ⊢
+v.
+Remark 3.2.3.
+¨
+(i) Let α ∈AutDv(
+Y
+v). Then observe that α determines, in a natural way, an
+automorphism αD of the functor D⊢
+v →Dv obtained by composing the equivalence
+of categories D⊢
+∼ →DΘ
+v
+v [i.e., which maps Ob(D⊢
+v) ∋A →AΘ ∈Ob(DΘ
+v )] discussed
+in Example 3.2, (v), with the natural functor DΘ
+v ⊆(Dv)¨
+Y
+→Dv. Moreover,
+v
+αD induces, in a natural way, an isomorphism αO◃ of the monoid O◃
+CΘ
+(−) on
+v
+DΘ
+v associated to Θ
+v in Example 3.2, (v), onto the corresponding monoid on DΘ
+v
+associated to the α-conjugate Θα
+of Θ
+v
+v. Thus, it follows immediately from the
+discussion of Example 3.2, (v), that
+αO◃ — hence also α — induces an isomorphism of the split Frobenioid
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 75
+FΘ
+v associated to Θ
+onto the split Frobenioid FΘα
+v associated to Θα
+v
+v
+lies over the identity functor on DΘ
+v.
+which
+In particular, the expression“FΘ
+v , regarded up to the l·Z indeterminacy in Θ
+v
+discussed in Example 3.2, (ii)” may be understood as referring to the various split
+Frobenioids “FΘα
+¨
+v ”, as α ranges over the elements of AutDv(
+Y
+v), relative to the
+identifications given by these isomorphisms of split Frobenioids induced by the
+¨
+various elements of AutDv(
+Y
+v).
+(Dv)¨
+Y
+(ii) Suppose that A ∈Ob(Dv) lies in the image of the natural functor DΘ
+v ⊆
+→Dv, and that ψ : B →TA is a linear morphism in the Frobenioid F
+v.
+v
+Then ψ induces an injective homomorphism
+O×(T÷
+A) →O×(B÷)
+[cf. [FrdI], Proposition 1.11, (iv)]. In particular, one may pull-back sections of the
+monoid O◃
+CΘ
+v
+(−) on DΘ
+v of Example 3.2, (v), to B. Such pull-backs are useful, for
+instance, when one considers the roots of Θ
+v, as in the theory of [EtTh], §5.
+Remark 3.2.4. Before proceeding, we pause to discuss certain minor oversights
+on the part of the author in the discussion of the theory of tempered Frobenioids
+in [EtTh], §3, §4. Let Zlog
+∞ be as in the discussion at the beginning of [EtTh], §3.
+Here, we recall that Zlog
+∞ is obtained as the “universal combinatorial covering” of
+the formal log scheme associated to a stable log curve with split special fiber over
+the ring of integers of a finite extension of an MLF of residue characteristic p [cf.
+loc. cit. for more details]; we write Zlog for the generic fiber of the stable log curve
+under consideration.
+(i) First, let us consider the following conditions on a nonzero meromorphic
+function f on Zlog
+∞ :
+(a) For every N ∈N≥1, it holds that f admits an N-th root over some
+tempered covering of Zlog
+.
+(b) For every N ∈N≥1 which is prime to p, it holds that f admits an N-th
+root over some tempered covering of Zlog
+.
+(c) The divisor of zeroes and poles of f is a log-divisor.
+It is immediate that (a) implies (b). Moreover, one verifies immediately, by consid-
+ering the ramification divisors of the tempered coverings that arise from extracting
+roots of f, that (b) implies (c). When N is prime to p, if f satisfies (c), then
+it follows immediately from the theory of admissible coverings [cf., e.g., [PrfGC],
+§2, §8] that there exists a finite log ´ etale covering Ylog →Zlog whose pull-back
+Ylog
+∞ →Zlog
+∞ to the generic fiber Zlog
+∞ of Zlog
+∞ is suﬃcient
+(R1) to annihilate all ramification over the cusps or special fiber of Zlog
+∞ that
+might arise from extracting an N-th root of f, as well as
+76 SHINICHI MOCHIZUKI
+(R2) to split all extensions of the function fields of irreducible components of
+the special fiber of Zlog
+∞ that might arise from extracting an N-th root of
+f.
+That is to say, in this situation, it follows that f admits an N-th root over the
+tempered covering of Zlog given by the “universal combinatorial covering” of Ylog
+.
+In particular, it follows that (c) implies (b). Thus, in summary, we have:
+(a) =⇒ (b) ⇐⇒ (c).
+On the other hand, unfortunately, it is not clear to the author at the time of writing
+whether or not (c) [or (b)] implies (a).
+(ii) Observe that it follows from the theory of [EtTh], §1 [cf., especially, [EtTh],
+Proposition 1.3] that the theta function that forms the main topic of interest of
+[EtTh] satisfies condition (a) of (i).
+(iii) In [EtTh], Definition 3.1, (ii), a meromorphic function f as in (i) is defined
+to be “log-meromorphic” if it satisfies condition (c) of (i). On the other hand, in the
+proof of [EtTh], Proposition 4.2, (iii), it is necessary to use property (a) of (i) —
+i.e., despite the fact that, as remarked in (i), it is not clear whether or not property
+(c) implies property (a). The author apologizes for any confusion caused by this
+oversight on his part.
+(iv) The problem pointed out in (iii) may be remedied — at least from the
+point of view of the theory of [EtTh] — via either of the following two approaches:
+(A) One may modify [EtTh], Definition 3.1, (ii), by taking the definition of a
+“log-meromorphic” function to be a function that satisfies condition (a) [i.e., as
+opposed to condition (c)] of (i). [In light of the content of this modified definition,
+perhaps a better term for this class of meromorphic functions would be “tempered-
+meromorphic”.] Then the remainder of the text of [EtTh] goes through without
+change.
+(B) One may modify [EtTh], Definition 4.1, (i), by assuming that the meromorphic
+function “f ∈ O×(Abirat)” of [EtTh], Definition 4.1, (i), satisfies the following
+“Frobenioid-theoretic version” of condition (a):
+(d) For every N ∈N≥1, there exists a linear morphism A′ →A in Csuch
+that the pull-back of f to A′ admits an N-th root.
+[Here, we recall that, as discussed in (ii), the Frobenioid-theoretic theta functions
+that appear in [EtTh] satisfy (d).] Note that since the rational function monoid of
+the Frobenioid C, as well as the linear morphisms of C, are category-theoretic [cf.
+[FrdI], Theorem 3.4, (iii), (v); [FrdI], Corollary 4.10], this condition (d) is category-
+theoretic. Thus, if one modifies [EtTh], Definition 4.1, (i), in this way, then the
+remainder of the text of [EtTh] goes through without change, except that one must
+replace the reference to the definition of “log-meromorphic” [i.e., [EtTh], Definition
+3.1, (ii)] that occurs in the proof of [EtTh], Proposition 4.2, (iii), by a reference to
+condition (d) [i.e., in the modified version of [EtTh], Definition 4.1, (i)].
+(v) In the discussion of (iv), we note that the approach of (A) results in a
+slightlydiﬀerentdefinitionofthenotionofa“tempered Frobenioid”fromtheoriginal
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 77
+definition given in [EtTh]. Put another way, the approach of (B) has the advantage
+that it does not result in any modification of the definition of the notion of a
+“tempered Frobenioid”; that is to say, the approach of (B) only results in a slight
+reductionintherangeofapplicabilityofthetheoryof[EtTh],§4,whichisessentially
+irrelevant from the point of view of the present series of papers, since [cf. (ii)] theta
+functions lie within this reduced range of applicability. On the other hand, the
+approach of (A) has the advantage that one may consider the Kummer theory
+of arbitrary rational functions of the tempered Frobenioid without imposing any
+further hypotheses. Thus, for the sake of simplicity, in the present series of papers,
+we shall interpret the notion of a “tempered Frobenioid” via the approach of (A).
+(vi) Strictly speaking, the definition of the monoid “Φell
+W” given in [EtTh],
+Example 3.9, (iii), leads to certain technical diﬃculties, which are, in fact, entirely
+irrelevant to the theory of [EtTh]. These technical diﬃculties may be averted by
+making the following slight modifications to the text of [EtTh], Example 3.9, as
+follows:
+(1) In the discussion following the first display of [EtTh], Example 3.9, (i),
+the phrase “Ylog is of genus 1” should be replaced by the phrase “Ylog is
+of genus 1 and has either precisely one cusp or precisely two cusps whose
+diﬀerence is a 2-torsion element of the underlying elliptic curve”.
+(2) In the discussion following the first display of [EtTh], Example 3.9, (i),
+the phrase
+˙
+the lower arrow of the diagram to be “
+Xlog
+→˙
+Clog”
+should be replaced by the phrase
+˙
+the lower arrow of the diagram to be “
+Xlog →˙
+Clog”.
+(3) In the discussion following the first display of [EtTh], Example 3.9, (ii),
+the phrase “unramified over the cusps of ...” should be replaced by the
+phrase “unramified over the cusps as well as over the generic points of the
+irreducible components of the special fibers of the stable models of ...”.
+Also, the phrase “tempered coverings of the underlying ...” should be
+replaced by the phrase “tempered admissible coverings of the underlying
+...”.
+In a word, the thrust of both the original text and the slight modifications just
+discussed is that the monoid “Φell
+W” is to be defined to be just large enough to
+include precisely those divisors which are necessary in order to treat the theta
+functions that appear in [EtTh].
+Example 3.3. Vgood Vnon. Then:
+(i) Write
+Frobenioids at Good Nonarchimedean Primes. Let v ∈
+Dv
+def
+= B(X
+− →v)0; D⊢
+v
+def
+= B(Kv)0
+78 SHINICHI MOCHIZUKI
+[cf. §0]. Thus, D⊢
+v may be naturally regarded [by pulling back finite ´ etale coverings
+via the structure morphism X
+− →v
+→Spec(Kv)] as a full subcategory
+D⊢
+v ⊆Dv
+of Dv, and we have a natural functor Dv →D⊢
+v, which is left-adjoint to the natural
+inclusion functor D⊢
+v →Dv [cf. [FrdII], Example 1.3, (ii)]. For Spec(L) ∈Ob(D⊢
+v)
+[i.e., L is a finite separable extension of Kv], write ord(O◃
+L) def
+= O◃
+L/O×
+L as in [FrdII],
+Example 1.1, (i). Thus, the assignment [cf. §0]
+ΦCv : Spec(L) →ord(O◃
+L)pf
+determines a monoid ΦCv on [D⊢
+v, hence, by pull-back via the natural functor Dv →
+D⊢
+v, on] Dv; the assignment
+ΦC⊢
+v : Spec(L) →ord(Z◃
+pv) (⊆ord(O◃
+L)pf)
+determines an absolutely primitive [cf. [FrdII], Example 1.1, (ii)] submonoid ΦC⊢
+v
+on D⊢
+v; these monoids ΦC⊢
+v , ΦCv
+determine pv-adic Frobenioids
+C⊢
+v ⊆Cv
+⊆
+ΦCv|D⊢
+v
+[cf. [FrdII], Example 1.1, (ii), where we take “Λ” to be Z], whose base categories
+are given by D⊢
+v, Dv [in a fashion compatible with the natural inclusion D⊢
+v ⊆Dv],
+respectively. Also, we shall write
+v
+F
+def
+= Cv
+[cf. the notation of Example 3.2, (i)]. Finally, let us observe that the element
+pv ∈Z◃
+pv ⊆O◃
+Kv
+determines a characteristic splitting
+τ⊢
+v
+on C⊢
+v [cf. [FrdII], Theorem 1.2, (v)]. Write F⊢
+v
+def = (C⊢
+v ,τ⊢
+v ) for the resulting split
+Frobenioid.
+(ii) Next, let us write log(pv) for the element pv of (i) considered additively and
+consider the monoid on D⊢
+v
+O◃
+C⊢
+v
+(−) = O×
+C⊢
+v
+(−)× (N·log(pv))
+associated to C⊢
+v [cf. [FrdI], Proposition 2.2]. By replacing “log(pv)” by the formal
+log(Θ)
+symbol “log(pv)·log(Θ) = log(p
+v )”, we obtain a monoid
+(−) def
+= O×
+CΘ
+v
+(−)× (N·log(pv)·log(Θ))
+O◃
+CΘ
+v
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 79
+[i.e., where O×
+CΘ
+(−) def
+= O×
+C⊢
+(−)], which is naturally isomorphic to O◃
+and which
+C⊢
+v
+v
+v
+arises as the monoid “O◃(−)” of [FrdI], Proposition 2.2, associated to some pv-adic
+Frobenioid CΘ
+v with base category DΘ
+def
+= D⊢
+v
+v equipped with a characteristic splitting
+τΘ
+v determined by log(pv)·log(Θ). In particular, we have a natural equivalence
+F⊢
+∼ →FΘ
+v
+v
+= Cv
+— where FΘ
+v
+def = (CΘ
+v ,τΘ
+v ) — of split Frobenioids.
+(iii) Here, it is useful to recall that
+(a) the subcategory D⊢
+v ⊆Dv may be reconstructed category-theoretically
+from Dv [cf. [AbsAnab], Lemma 1.3.8];
+(b) thecategoryD⊢
+v (respectively,DΘ
+v )maybereconstructed category-theoretically
+from C⊢
+v (respectively, CΘ
+v ) [cf. [FrdI], Theorem 3.4, (v); [FrdII], Theorem
+1.2, (i); [FrdII], Example 1.3, (i); [AbsAnab], Theorem 1.1.1, (ii)];
+(c) thecategoryDv maybereconstructed category-theoretically from F
+v
+[cf. [FrdI], Theorem 3.4, (v); [FrdII], Theorem 1.2, (i); [FrdII], Example
+1.3, (i); [AbsAnab], Lemma 1.3.1].
+Notethatitfollowsimmediatelyfromthecategory-theoreticity of the divisor monoid
+ΦCv [cf. [FrdI], Corollary 4.11, (iii); [FrdII], Theorem 1.2, (i)], together with (a),
+(c), and the definition of C⊢
+v [cf. also [AbsAnab], Proposition 1.2.1, (v)], that
+(d) C⊢
+v may be reconstructed category-theoretically from F
+v.
+Finally, by applying the algorithmically constructed field structure on the image
+of the Kummer map of [AbsTopIII], Proposition 3.2, (iii) [cf. Remark 3.1.2; Re-
+mark 3.3.2 below], it follows that one may construct the element “pv” of O◃
+Kv
+category-theoretically from F
+v, hence that the characteristic splitting τ⊢
+v may be
+reconstructed category-theoretically from F
+v. [Here, we recall that the curve XF is
+“of strictly Belyi type” — cf. [AbsTopIII], Remark 2.8.3.] In particular,
+(e) one may reconstruct the split Frobenioids F⊢
+v , FΘ
+v category-theoretically
+from F
+v.
+Remark 3.3.1. A similar remark to Remark 3.2.1 [i.e., concerning the phrase
+“reconstructed category-theoretically”] applies to the Frobenioids Cv, C⊢
+v constructed
+in Example 3.3.
+Remark 3.3.2. 3.3, (i), consists of essentially the same data as an “MLF-Galois TM-pair of strictly
+Belyi type” (respectively, “MLF-Galois TM-pair of mono-analytic type”), in the
+sense of [AbsTopIII], Definition 3.1, (ii) [cf. [AbsTopIII], Remark 3.1.1]. A similar
+Note that the pv-adic Frobenioid Cv (respectively, C⊢
+v ) of Example
+80 SHINICHI MOCHIZUKI
+remark applies to the pv-adic Frobenioid Cv (respectively, C⊢
+v ) of Example 3.2, (iii),
+(iv) [cf. [AbsTopIII], Remark 3.1.3].
+Example 3.4. (i) Write
+Frobenioids at Archimedean Primes. Let v ∈Varc. Then:
+Xv, Cv, Xv, Cv, X
+− →v, C
+− →v
+fortheAut-holomorphic orbispaces[cf. [AbsTopIII],Definition2.1, (i); [AbsTopIII],
+Remark 2.1.1] determined, respectively, by the hyperbolic orbicurves XK, CK, XK,
+CK, X
+− →K, C
+− →K
+at v. Thus, for ∈{Xv,Cv,Xv,Cv, X
+− →v, C
+− →v}, we have a complex
+archimedean topological field [i.e., a “CAF” — cf. §0]
+A
+[cf. [AbsTopIII], Definition 4.1, (i)] which may be algorithmically constructed from
+; write A def
+= A \{0}[cf. Remark 3.4.3, (i), below]. Next, let us write
+Dv
+def
+= X
+− →v
+and
+Cv
+for the archimedean Frobenioid as in [FrdII], Example 3.3, (ii) [i.e., “C” of loc. cit.],
+where we take the base category [i.e., “D” of loc. cit.] to be the one-morphism
+category determined by Spec(Kv). Thus, the linear morphisms among the pseudo-
+terminal objects of C determine unique isomorphisms [cf. [FrdI], Definition 1.3,
+(iii), (c)] among the respective topological monoids“O◃(−)” — where we recall
+[cf. [FrdI], Theorem 3.4, (iii); [FrdII], Theorem 3.6, (i), (vii)] that these topological
+monoids may be reconstructed category-theoretically from C. In particular, it makes
+sense to write “O◃(Cv)”, “O×(Cv) ⊆O◃(Cv)”. Moreover, we observe that, by
+construction, there is a natural isomorphism
+O◃(Cv)∼ →O◃
+Kv
+of topological monoids. Thus, one may also think of Cv as a “Frobenioid-theoretic
+representation” of the topological monoid O◃
+Kv [cf. [AbsTopIII], Remark 4.1.1].
+∼
+Observe that there is a natural topological isomorphism Kv
+→ADv, which may be
+restricted to O◃
+Kv
+to obtain an inclusion of topological monoids
+κv : O◃(Cv) →ADv
+— which we shall refer to as the Kummer structure on Cv [cf. Remark 3.4.2 below].
+Write
+F
+def = (Cv,Dv,κv)
+v
+[cf. Example 3.2, (i); Example 3.3, (i)].
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 81
+(ii)Next, recallthecategoryTM⊢ of“split topological monoids”of[AbsTopIII],
+Definition 5.6, (i) — i.e., the category whose objects (C,
+− → C) consist of a topolog-
+ical monoid C isomorphic to O◃
+C and a topological submonoid
+− → C ⊆ C [neces-
+sarily isomorphic to R≥0] such that the natural inclusions C× →C [where C×
+,
+which is necessarily isomorphic to S1, denotes the topological submonoid of invert-
+ible elements],
+− → C →C determine an isomorphism C× ×
+− → C∼
+→C of topological
+monoids, and whose morphisms (C1,
+− → C1) →(C2,
+− → C2) are isomorphisms of topo-
+∼
+logical monoids C1
+→C2 that induce isomorphisms
+− → C1
+∼
+→
+− → C2. Note that the
+CAF’s Kv, ADv determine, in a natural way, objects of TM⊢. Write
+τ⊢
+v
+for the resulting characteristic splitting of the Frobenioid C⊢
+def
+v
+= Cv, i.e., so that we
+may think of the pair (O◃(C⊢
+v ),τ⊢
+v ) as the object of TM⊢ determined by Kv;
+D⊢
+v
+for the object of TM⊢ determined by ADv;
+F⊢
+v
+def = (C⊢
+v ,D⊢
+v,τ⊢
+v )
+for the [ordered] triple consisting of C⊢
+v , D⊢
+v, and τ⊢
+v . Thus, the object (O◃(C⊢
+v ),τ⊢
+v )
+of TM⊢ is isomorphic to D⊢
+v. Moreover, C⊢
+v (respectively, D⊢
+v; F⊢
+v ) may be algorith-
+mically reconstructed from F
+v (respectively, Dv; F
+v).
+(iii) Next, let us observe that pv ∈Kv [cf. §0] may be thought of as a(n) [non-
+identity] element of the noncompact factor ΦC⊢
+v [i.e., the factor denoted by a “→” in
+the definition of TM⊢] of the object (O◃(C⊢
+v ),τ⊢
+v ) of TM⊢. This noncompact factor
+ΦC⊢
+v is isomorphic, as a topological monoid, to R≥0; let us write ΦC⊢
+v additively
+and denote by log(pv) the element of ΦC⊢
+v determined by pv. Thus, relative to
+the natural action [by multiplication!] of R≥0 on ΦC⊢
+v , it follows that log(pv) is a
+generator of ΦC⊢
+v . In particular, we may form a new topological monoid
+def
+= R≥0·log(pv)·log(Θ)
+ΦCΘ
+v
+log(Θ)
+isomorphictoR≥0 thatisgeneratedbyaformal symbol“log(pv)·log(Θ) = log(p
+v )”.
+Moreover, if we denote by O×
+C⊢
+the compact factor of the object (O◃(C⊢
+v ),τ⊢
+v ) of
+v
+TM⊢, and set O×
+CΘ
+v
+def
+= O×
+C⊢
+v
+, then we obtain a new split Frobenioid (CΘ
+v ,τΘ
+v ), isomor-
+phic to (C⊢
+v ,τ⊢
+v ), such that
+O◃(CΘ
+v ) = O×
+CΘ
+v
+×ΦCΘ
+v
+82 SHINICHI MOCHIZUKI
+—wherewenotethatthisequalitygivesrisetoanatural isomorphism of split Frobe-
+nioids (C⊢
+v ,τ⊢
+v )∼
+→(CΘ
+v ,τΘ
+v ), obtained by “forgetting the formal symbol log(Θ)”. In
+particular, we thus obtain a natural isomorphism
+F⊢
+∼ →FΘ
+v
+v
+— where we write FΘ
+v
+def = (CΘ
+v ,DΘ
+v ,τΘ
+v ) for the [ordered] triple consisting of CΘ
+v ,
+DΘ
+def
+= D⊢
+v
+v, τΘ
+v . Finally, we observe that FΘ
+v may be algorithmically reconstructed
+from F
+v.
+Remark 3.4.1. A similar remark to Remark 3.2.1 [i.e., concerning the phrase
+“reconstructed category-theoretically”] applies to the phrase “algorithmically recon-
+structed” that was applied in the discussion of Example 3.4.
+Remark 3.4.2. discussed in Example 3.4, (i), is as follows. In the terminology of [AbsTopIII], Def-
+inition 2.1, (i), (iv), the structure of CAF on ADv determines, via pull-back by κv,
+an Aut-holomorphic structure on the groupification O◃(Cv)gp of O◃(Cv), together
+with a [tautological!] co-holomorphicization O◃(Cv)gp →ADv. Conversely, if one
+starts with this Aut-holomorphic structure on [the groupification of] the topological
+monoid O◃(Cv), together with the co-holomorphicization O◃(Cv)gp →ADv, then
+One way to think of the Kummer structure
+κv : O◃(Cv) →ADv
+one verifies immediately that one may recover the inclusion of topological monoids
+κv. [Indeed, this follows immediately from [AbsTopIII], Corollary 2.3, together
+with the elementary fact that every holomorphic automorphism of the complex Lie
+group C× that preserves the submonoid of elements of norm ≤1 is equal to the
+identity.] That is to say, in summary,
+the Kummer structure κv is completely equivalent to the collection
+of data consisting of the Aut-holomorphic structure [induced by κv] on
+thegroupificationO◃(Cv)gp ofO◃(Cv),togetherwiththeco-holomorphi-
+cization [induced by κv] O◃(Cv)gp →ADv
+.
+ThesignificanceofthinkingofKummerstructuresinthiswayliesintheobservation
+that [unlike inclusions of topological monoids!]
+the co-holomorphicization induced by κv is compatible with the log-
+arithm operation discussed in [AbsTopIII], Corollary 4.5.
+Indeed, this observation may be thought of as a rough summary of a substantial
+portion of the content of [AbsTopIII], Corollary 4.5. Put another way, thinking of
+Kummer structures in terms of co-holomorphicizations allows one to separate out
+the portion of the structures involved that is not compatible with this logarithm
+operation — i.e., the monoid structures! — from the portion of the structures
+involved that is compatible with this logarithm operation — i.e., the tautological
+co-holomorphicization.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 83
+= ADv
+v
+Remark 3.4.3.
+(i) In the notation of Example 3.4, write A× ⊆A for the topological group
+of units [i.e., of elements of norm 1] of the CAF A [so A× is noncanonically iso-
+morphic to the unit circle S1]; Aμ ⊆A× for the subgroup of torsion elements
+[so Aμ is noncanonically isomorphic to Q/Z]; Ev for the Aut-holomorphic space
+[cf. [AbsTopIII], Definition 2.1, (i)] determined by the elliptic curve obtained by
+compactifying XK at v. Now recall from the construction of “A ” in [AbsTopIII],
+Corollary 2.7 [cf. also [AbsTopIII], Definition 4.1, (i)] via the technique of “holo-
+morphic elliptic cuspidalization”, thatonehasanatural isomorphism of CAF’s
+AX
+− →v
+∼
+→ AX
+— which may be used to “identify” AX
+= ADv
+with AX
+− →v
+v. Indeed, thinking of
+“AX
+= ADv
+” as “AX
+− →v
+v” is natural from the point of view of the“Θ-approach”
+discussed in Remark 3.1.2, (ii). Moreover, by allowing A×
+X
+to “act” [cf. the algo-
+v
+rithm discussed in [AbsTopIII], Corollary 2.7, (e)] on points in a suﬃciently small
+neighborhood of [but not equal to!] a given point “x” of Ev, one may regard the
+“circle” A×
+X
+as a deformation retract of the complement of x in a suitable small
+v
+neighborhood of x in Ev. In particular,
+from the point of view of the“Θ-approach” discussed in Remark 3.1.2,
+(ii), it is natural to think of “AX
+” as “AX
+− →v
+v” and to regard
+Hom(Q/Z,Aμ
+X
+) = Hom(Q/Z,A×
+X
+v
+v
+[a profinite group which is noncanonically isomorphic to Z] as the result
+of identifying the cuspidal inertia groups of the various points “x” of
+Ev
+= ADv
+)
+— cf. discussion of the cuspidal inertia groups “Ix” in [AbsTopIII], Proposition
+1.4, (i), (ii). Indeed, this interpretation of AX
+= ADv via cuspidal inertia groups
+− →v
+may be thought of as a sort of archimedean version of the “Θ-approach” discussed
+in Remark 3.1.2, (ii).
+(ii)Weobservethatjustasthetheoryofelliptic cuspidalization[cf. [AbsTopII],
+Example 3.2; [AbsTopII], Corollaries 3.3, 3.4] admits a straightforward holomorphic
+analogue, i.e., the theory of “holomorphic elliptic cuspidalization” [cf. [AbsTopIII],
+Corollary2.7]referredtoin(i)above,thetheoryofBelyi cuspidalization[cf. [Ab-
+sTopII], Example 3.6; [AbsTopII], Corollaries 3.7, 3.8; [AbsTopIII], Remark 2.8.3]
+admits a straightforward holomorphic analogue, i.e., a theory of “holomorphic
+Belyi cuspidalization”. We leave the routine details to the reader. Here, we ob-
+serve that one immediate consequence of such “holomorphic Belyi cuspidalizations”
+may be stated as follows:
+the set of NF-points [i.e., points defined over a number field] of the
+underlying topological space of the Aut-holomorphic space Dv may be
+reconstructed via a functorial algorithm from the [abstract] Aut-
+holomorphic space Dv.
+84 SHINICHI MOCHIZUKI
+Example 3.5. Global Realified Frobenioids.
+(i) Write
+Cmod
+fortherealification[cf. [FrdI],Theorem6.4, (ii)]oftheFrobenioidof[FrdI],Example
+6.3 [cf. also Remark 3.1.5 of the present paper], associated to the number field Fmod
+and the trivial Galois extension [i.e., the Galois extension of degree 1] of Fmod [so
+the base category of Cmod is, in the terminology of [FrdI], equivalent to a one-
+morphism category]. Thus, the divisor monoid ΦCmod
+of Cmod may be thought of
+as a single abstract monoid, whose set of primes, which we denote Prime(Cmod)
+[cf. [FrdI], §0], is in natural bijective correspondence with Vmod [cf. the discussion
+of [FrdI], Example 6.3]. Moreover, the submonoid ΦCmod,v of ΦCmod corresponding
+to v ∈Vmod is naturally isomorphic to ord(O◃
+(Fmod)v)pf ⊗R≥0 (∼
+= R≥0) [i.e., to
+ord(O◃
+(Fmod)v) (∼
+= R≥0) if v ∈ Varc
+mod]. In particular, pv determines an element
+log⊢
+mod(pv) ∈ΦCmod,v. Write v ∈V for the element of V that corresponds to v.
+Then observe that regardless of whether v belongs to Vbad
+, Vgood Vnon, or Varc
+,
+the realification Φrlf
+C⊢
+of the divisor monoid ΦC⊢
+of C⊢
+v [which, as is easily verified,
+v
+v
+is a constant monoid over the corresponding base category] may be regarded as a
+single abstract monoid isomorphic to R≥0. Write logΦ(pv) ∈Φrlf
+for the element
+C⊢
+v
+defined by pv and
+Cρv
+: Cmod →(C⊢
+v )rlf
+for the natural restriction functor [cf. the theory of poly-Frobenioids developed in
+[FrdII], §5] to the realification of the Frobenioid C⊢
+v [cf. [FrdI], Proposition 5.3].
+Thus, one verifies immediately that Cρv is determined, up to isomorphism, by the
+isomorphism of topological monoids [which are isomorphic to R≥0]
+ρv : ΦCmod,v
+∼
+→Φrlf
+C⊢
+v
+induced by Cρv — which, by considering the natural “volume interpretations” of
+the arithmetic divisors involved, is easily computed to be given by the assignment
+log⊢
+mod(pv) → 1
+[Kv:(Fmod)v]logΦ(pv).
+(ii) In a similar vein, one may construct a“Θ-version” [i.e., as in Examples
+3.2, (v); 3.3, (ii); 3.4, (iii)] of the various data constructed in (i). That is to say, we
+set
+ΦCtht
+def = ΦCmod
+·log(Θ)
+— i.e., an isomorphic copy of ΦCmod generated by a formal symbol log(Θ). This
+monoid ΦCtht
+thusdetermines aFrobenioidCtht, equipped with a natural equivalence
+of categories Cmod
+∼ →Ctht and a natural bijection Prime(Ctht)∼
+→Vmod. For v ∈
+Vmod, the element log⊢
+mod(pv) of the submonoid ΦCmod,v ⊆ΦCmod
+thus determines
+an element log⊢
+mod(pv)·log(Θ) of a submonoid ΦCtht,v ⊆ΦCtht
+. Write v ∈V for the
+elementofVthatcorrespondstov. ThentherealificationΦrlf
+ofthedivisormonoid
+CΘ
+v
+ΦCΘ
+of CΘ
+v [which, as is easily verified, is a constant monoid over the correspondingv
+Write
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 85
+base category] may be regarded as a single abstract monoid isomorphic to R≥0.
+CρΘ
+v
+: Ctht →(CΘ
+v )rlf
+for the natural restriction functor [cf. (i) above; the theory of poly-Frobenioids de-
+veloped in [FrdII], §5] to the realification of the Frobenioid CΘ
+v [cf. [FrdI], Proposi-
+tion5.3]. Thus, oneverifiesimmediatelythatCρΘ
+v isdetermined, uptoisomorphism,
+by the isomorphism of topological monoids [which are isomorphic to R≥0]
+ρΘ
+v : ΦCtht,v
+∼
+→Φrlf
+CΘ
+v
+induced by CρΘ
+. If v ∈Vgood, then write logΦ(pv)·log(Θ) ∈Φrlf
+for the element
+v
+CΘ
+v
+determined by logΦ(pv); thus, [cf. (i)] ρΘ
+v is given by the assignment log⊢
+mod(pv)·
+log(Θ) → 1
+[Kv:(Fmod)v]logΦ(pv)·log(Θ). On the other hand, if v ∈Vbad, then let us
+write
+logΦ(Θv) ∈Φrlf
+CΘ
+v
+for the element determined by Θv [cf. Example 3.2, (v)] and logΦ(pv) for the
+constant section of ΦCv determined by pv [cf. the notation “logΦ(q
+)” of Example
+v
+3.2, (iv)]; in particular, it makes sense to write logΦ(pv)/logΦ(q
+) ∈Q>0; thus, [cf.
+v
+(i)] ρΘ
+v is given by the assignment
+logΦ(Θv)
+log⊢
+mod(pv)·log(Θ) →
+logΦ(pv)
+[Kv : (Fmod)v]
+·
+logΦ(q
+)
+v
+— cf. Remark 3.5.1, (i), below. Note that, for arbitrary v ∈V, the various ρv,
+ρΘ
+v are compatible with the natural isomorphisms Cmod
+∼ →Ctht, C⊢
+∼ →CΘ
+v
+v [cf. §0].
+This fact may be expressed as a natural isomorphism between collections of data
+[consisting of a category, a bijection of sets, a collection of data indexed by V, and
+a collection of isomorphisms indexed by V]
+Fmod
+∼
+→ Ftht
+— where we write
+Fmod
+def = (Cmod, Prime(Cmod)∼
+→V, {F⊢
+v }v∈V, {ρv}v∈V)
+Ftht
+def = (Ctht, Prime(Ctht)∼
+→V, {FΘ
+v }v∈V, {ρΘ
+v }v∈V)
+[and we apply the natural bijection V∼
+→Vmod]; cf. Remark 3.5.2 below.
+(iii) One may also construct a“D-version” — which, from the point of view of
+the theory of [AbsTopIII], one may also think of as a “log-shell version” — of the
+various data constructed in (i), (ii). To this end, we write
+Dmod
+86 SHINICHI MOCHIZUKI
+for a [i.e., another] copy of Cmod. Thus, one may associate to Dmod various objects
+ΦDmod, Prime(Dmod)∼
+→Vmod, logD
+mod(pv) ∈ ΦDmod,v ⊆ ΦDmod [for v ∈ Vmod]
+that map to the corresponding objects associated to Cmod under the tautological
+equivalence of categories Cmod
+∼ →Dmod. Write v ∈V for the element of V that
+corresponds to v. Next, suppose that v ∈Vnon; then let us recall from [AbsTopIII],
+Proposition 5.8, (iii), that [since the profinite group associated to D⊢
+v is the absolute
+Galois group of an MLF] one may construct algorithmically from D⊢
+v a topological
+monoid isomorphic to R≥0
+(R⊢
+≥0)v
+[i.e., the topological monoid determined by the nonnegative elements of the ordered
+topological group “Rnon(G)” of loc. cit.] equipped with a distinguished “Frobenius
+element” ∈(R⊢
+≥0)v; if ev is the absolute ramification index of the MLF Kv, then we
+shall write logD
+Φ(pv) ∈(R⊢
+≥0)v for the result of multiplying this Frobenius element
+by [the positive real number] ev. Next, suppose that v ∈Varc; then let us recall
+from [AbsTopIII], Proposition 5.8, (vi), that [since, by definition, D⊢
+v ∈Ob(TM⊢)]
+one may construct algorithmically from D⊢
+v a topological monoid isomorphic to R≥0
+(R⊢
+≥0)v
+[i.e., the topological monoid determined by the nonnegative elements of the ordered
+topological group “Rarc(G)” of loc. cit.] equipped with a distinguished “Frobenius
+element” ∈(R⊢
+≥0)v; we shall write logD
+Φ(pv) ∈(R⊢
+≥0)v for the result of dividing this
+Frobenius element by [the positive real number] 2π. In particular, for every v ∈V,
+we obtain a uniquely determined isomorphism of topological monoids [which are
+isomorphic to R≥0]
+ρD
+v : ΦDmod,v
+∼
+→(R⊢
+≥0)v
+by assigning logD
+mod(pv) → 1
+[Kv:(Fmod)v]logD
+Φ(pv). Thus, we obtain data [consisting of
+a Frobenioid, a bijection of sets, a collection of data indexed by V, and a collection
+of isomorphisms indexed by V]
+FD
+def = (Dmod, Prime(Dmod)∼
+→V, {D⊢
+v}v∈V, {ρD
+v }v∈V)
+[where we apply the natural bijection V∼
+→Vmod], which, by [AbsTopIII], Proposi-
+tion 5.8, (iii), (vi), may be reconstructed algorithmically from the data {D⊢
+v}v∈V.
+Remark 3.5.1.
+(i) The formal symbol “log(Θ)” may be thought of as the result of identifying
+the various formal quotients “logΦ(Θv)/logΦ(q
+)”, as v varies over the elements of
+v
+Vbad
+.
+(ii) The global Frobenioids Cmod, Ctht of Example 3.5 may be thought of as
+“devices for currency exchange” between the various “local currencies” constituted
+by the divisor monoids at the various v ∈V.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 87
+(iii) One may also formulate the data contained in Fmod, Ftht via the language
+of poly-Frobenioids as developed in [FrdII], §5, but we shall not pursue this topic in
+the present series of papers.
+Remark 3.5.2. ventions.
+In Example 3.5, as well as in the following discussion, we shall
+often speak of “isomorphisms of collections of data”, relative to the following con-
+(i) Such isomorphisms are always assumed to satisfy various evident compati-
+bility conditions, relative to the various relationships stipulated between the various
+constituent data, whose explicit mention we shall omit for the sake of simplicity.
+(ii) In situations where the collections of data consist partially of various cat-
+egories, the portion of the “isomorphism of collections of data” involving corre-
+sponding categories is to be understood as an isomorphism class of equivalences of
+categories [cf. §0].
+Definition 3.6. Fixacollectionofinitial Θ-data(F/F, XF, l, CK, V, Vbad
+mod, ϵ)
+as in Definition 3.1. In the following, we shall use the various notations introduced
+inDefinition3.1forvariousobjectsassociatedtothisinitialΘ-data. Thenwedefine
+a Θ-Hodge theater [relative to the given initial Θ-data] to be a collection of data
+†HTΘ = ({†F
+v}v∈V,
+†Fmod)
+that satisfies the following conditions:
+(a) If v ∈Vnon, then †F
+is a category which admits an equivalence of cate-
+v
+gories †F
+∼ →F
+v
+v [where F
+v is as in Examples 3.2, (i); 3.3, (i)]. In partic-
+ular, †F
+admits a natural Frobenioid structure [cf. [FrdI], Corollary 4.11,
+v
+(iv)], which may be constructed solely from the category-theoretic struc-
+ture of †F
+. Write †Dv,
+†D⊢
+†DΘ
+†F⊢
+†FΘ
+v,
+v ,
+v ,
+v for the objects constructed
+v
+category-theoretically from †F
+v that correspond to the objects without a
+(iii)].
+(b) If v ∈Varc, then †F
+is a collection of data (†Cv,
+†Dv,
+†κv) — where †Cv
+v
+is a category equivalent to the category Cv of Example 3.4, (i); †Dv is an
+Aut-holomorphic orbispace; and †κv : O◃(†Cv) →A†Dv
+is an inclusion
+of topological monoids, which we shall refer to as the Kummer structure
+on †Cv — such that there exists an isomorphism of collections of data
+†F
+∼ →F
+v
+v [where F
+v is as in Example 3.4, (i)]. Write †D⊢
+†DΘ
+†F⊢
+v,
+v ,
+v ,
+†FΘ
+v for the objects constructed algorithmically from †F
+v that correspond
+to the objects without a “†” discussed in Example 3.4, (ii), (iii).
+(c) †Fmod is a collection of data
+(†Cmod, Prime(†Cmod)∼
+→V, {†F⊢
+v }v∈V, {†ρv}v∈V)
+“†” discussed in Examples 3.2, 3.3 [cf., especially, Examples 3.2, (vi); 3.3,
+88 SHINICHI MOCHIZUKI
+— where †Cmod is a category which admits an equivalence of categories
+†Cmod
+∼ →Cmod [whichimpliesthat†Cmod admitsanaturalcategory-theore-
+tically constructible Frobenioid structure — cf. [FrdI], Corollary 4.11,
+(iv); [FrdI], Theorem 6.4, (i)]; Prime(†Cmod)∼
+→V is a bijection of sets,
+where we write Prime(†Cmod) for the set of primes constructed from the
+category †Cmod [cf. [FrdI], Theorem 6.4, (iii)]; †F⊢
+v is as discussed in
+(a), (b) above; †ρv : Φ†Cmod,v
+∼
+→Φrlf
+†C⊢
+[where we use notation as in the
+v
+discussion of Example 3.5, (i)] is an isomorphism of topological monoids.
+Moreover, werequirethatthereexistanisomorphism of collections of data
+†Fmod
+∼
+→Fmod [where Fmod is as in Example 3.5, (ii)]. Write †Ftht,
+†FD
+for the objects constructed algorithmically from †Fmod that correspond to
+the objects without a “†” discussed in Example 3.5, (ii), (iii).
+Remark 3.6.1. When we discuss various collections of Θ-Hodge theaters, labeled
+by some symbol “ ” in place of a “†”, we shall apply the notation of Definition 3.6
+with “†” replaced by “ ” to denote the various objects associated to the Θ-Hodge
+theater labeled by “ ”.
+Remark 3.6.2. If †HTΘ and ‡HTΘ are Θ-Hodge theaters, then there is an
+evident notion of isomorphism of Θ-Hodge theaters †HTΘ∼
+→‡HTΘ [cf. Remark
+3.5.2]. We leave the routine details to the interested reader.
+Corollary 3.7. (Θ-Links Between Θ-Hodge Theaters) Fix a collection of
+initial Θ-data (F/F, XF, l, CK, V, Vbad
+mod, ϵ) as in Definition 3.1. Let
+†HTΘ = ({†F
+v}v∈V,
+†Fmod); ‡HTΘ = ({‡F
+v}v∈V,
+‡Fmod)
+be Θ-Hodge theaters [relative to the given initial Θ-data]. Then:
+(i) (Θ-Link) The full poly-isomorphism [cf. §0] between collections of data
+[cf. Remark 3.5.2]
+†Ftht
+∼
+→‡Fmod
+is nonempty [cf. Remark 3.7.1 below]. We shall refer to this full poly-isomorphism
+as the Θ-link
+†HTΘ Θ
+−→ ‡HTΘ
+.
+from †HTΘ to ‡HTΘ
+(ii) (Preservation of “D⊢”) Let v ∈V. Recall the tautological isomor-
+phisms D⊢
+∼
+→ DΘ
+v
+v for= †,‡— i.e., which arise from the definitions when
+v ∈Vgood [cf. Examples 3.3, (ii); 3.4, (iii)], and which arise from a natural product
+functor [cf. Example 3.2, (v)] when v ∈Vbad. Then we obtain a composite [full]
+poly-isomorphism
+†D⊢
+v
+∼
+→ †DΘ
+v
+∼
+→ ‡D⊢
+v
+by composing the tautological isomorphism just mentioned with the poly-isomorphism
+induced by the Θ-link poly-isomorphism of (i).
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 89
+(iii) (Preservation of “O×”) Let v ∈V. Recall the tautological isomor-
+phisms O×
+C⊢
+∼ →O×
+CΘ
+[where we omit the notation “(−)”] for= †,‡— i.e.,
+v
+v
+which arise from the definitions when v ∈Vgood [cf. Examples 3.3, (ii); 3.4, (iii)],
+and which are induced by the natural product functor [cf. Example 3.2, (v)] when
+v ∈Vbad. Then, relative to the corresponding composite isomorphism of (ii), we
+obtain a composite [full] poly-isomorphism
+O×
+†C⊢
+v
+∼ → O×
+†CΘ
+v
+∼ → O×
+‡C⊢
+v
+by composing the tautological isomorphism just mentioned with the poly-isomorphism
+induced by the Θ-link poly-isomorphism of (i).
+Proof. The various assertions of Corollary 3.7 follow immediately from the defini-
+tions and the discussion of Examples 3.2, 3.3, 3.4, and 3.5. ⃝
+Remark 3.7.1. One verifies immediately that there exist many distinct isomor-
+phisms †Ftht
+∼
+→‡Fmod as in Corollary 3.7, (i), none of which is conferred a “dis-
+tinguished” status, i.e., in the fashion of the “natural isomorphism Fmod
+∼
+→Ftht
+”
+discussed in Example 3.5, (ii).
+The following result follows formally from Corollary 3.7.
+Corollary 3.8. (Frobenius-pictures of Θ-Hodge Theaters) Fix a collection
+of initial Θ-data as in Corollary 3.7. Let {nHTΘ}n∈Z be a collection of distinct
+Θ-Hodge theaters indexed by the integers. Then by applying Corollary 3.7, (i),
+with †HTΘ def
+= nHTΘ
+,
+‡HTΘ def
+= (n+1)HTΘ, we obtain an infinite chain
+Θ
+...
+−→ (n−1)HTΘ Θ
+−→ nHTΘ Θ
+−→ (n+1)HTΘ Θ
+−→...
+of Θ-linked Θ-Hodge theaters. This infinite chain may be represented symboli-
+cally as an oriented graph⃗
+Γ [cf. [AbsTopIII], §0]
+... → • → • → • →...
+— i.e., where the arrows correspond to the “ Θ
+−→’s”, and the “•’s” correspond to the
+“nHTΘ”. This oriented graph⃗
+Γ admits a natural action by Z — i.e., a translation
+symmetry — but it does not admit arbitrary permutation symmetries. For
+instance,⃗
+Γ does not admit an automorphism that switches two adjacent vertices,
+but leaves the remaining vertices fixed. Put another way, from the point of view of
+the discussion of [FrdI], §I4, the mathematical structure constituted by this infinite
+chain is “Frobenius-like”, or “order-conscious”. It is for this reason that
+we shall refer to this infinite chain in the following discussion as the Frobenius-
+picture.
+90 SHINICHI MOCHIZUKI
+Remark 3.8.1.
+(i) Perhaps the central defining aspect of the Frobenius-picture is the fact that
+the Θ-link maps
+nΘ
+v
+→ (n+1)q
+v
+[i.e., where v ∈Vbad — cf. the discussion of Example 3.2, (v)]. From this point of
+view, the Frobenius-picture may be depicted as in Fig. 3.1 below — i.e., each box
+is a Θ-Hodge theater; the “ ” may be thought of as denoting the scheme theory
+that lies between “q
+” and “Θ
+v”; the “- - - -” denotes the Θ-link.
+v
+- - - -
+nq
+v
+nΘ
+v- - - -
+(n+1)q
+v
+(n+1)Θ
+v- - - -
+...
+...
+nΘ
+v
+→ (n+1)q
+v
+Fig. 3.1: Frobenius-picture of Θ-Hodge theaters
+(ii) It is perhaps not surprising [cf. the theory of [FrdI]] that the Frobenius-
+picture involves, in an essential way, the divisor monoid portion [i.e., “q
+” and
+v
+“Θ
+v”] of the various Frobenioids that appear in a Θ-Hodge theater. Put another
+way,
+it is as if the “Frobenius-like nature” of the divisor monoid portion of the
+Frobenioids involved induces the “Frobenius-like nature” of the Frobenius-
+picture.
+By contrast, observe that for v ∈V, the isomorphisms
+...
+∼
+→ nD⊢
+v
+∼
+→ (n+1)D⊢
+v
+∼
+→...
+of Corollary 3.7, (ii), imply that if one thinks of the various (−)D⊢
+v as being only
+known up to isomorphism, then
+one may regard (−)D⊢
+v as a sort of constant invariant of the various
+Θ-Hodge theaters that constitute the Frobenius-picture
+— cf. Remark 3.9.1 below. This observation is the starting point of the theory of
+the´ etale-picture [cf. Corollary 3.9, (i), below]. Note that by Corollary 3.7, (iii), we
+also obtain isomorphisms
+...
+∼ → O×
+nC⊢
+v
+∼ → O×
+(n+1)C⊢
+v
+∼
+→...
+lying over the isomorphisms involving the “(−)D⊢
+v” discussed above.
+(iii) In the situation of (ii), suppose that v ∈Vnon. Then (−)D⊢
+v is simply
+the category of connected objects of the Galois category associated to the profinite
+group Gv. That is to say, one may think of (−)D⊢
+v as representing“Gv up to
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 91
+isomorphism”. Then each nDv represents an “isomorph of the topological group
+Πv, labeled by n, which is regarded as an extension of some isomorph of Gv that
+is independent of n”. In particular, the quotients corresponding to Gv of the
+copies of Πv that arise from nHTΘ for diﬀerent n are only related to one another
+via some indeterminate isomorphism. Thus, from the point of view of the theory of
+[AbsTopIII] [cf. [AbsTopIII], §I3; [AbsTopIII], Remark 5.10.2, (ii)], each Πv gives
+rise to a well-defined ring structure — i.e., a “holomorphic structure” — which is
+obliterated by the indeterminate isomorphism between the quotient isomorphs of
+Gv arising fromnHTΘ for distinct n.
+(iv) In the situation of (ii), suppose that v ∈Varc. Then (−)D⊢
+v is an object
+of TM⊢; eachnDv represents an “isomorph of the Aut-holomorphic orbispace X
+− →v,
+labeled by n, whose associated [complex archimedean] topological field AX
+gives
+− →v
+rise to an isomorph of D⊢
+v that is independent of n”. In particular, the various
+isomorphs of D⊢
+v associated to the copies of X
+that arise from nHTΘ for diﬀerent
+− →v
+n are only related to one another via some indeterminate isomorphism. Thus, from
+the point of view of the theory of [AbsTopIII] [cf. [AbsTopIII], §I3; [AbsTopIII],
+Remark 5.10.2, (ii)], each X
+− →v gives rise to a well-defined ring structure — i.e., a
+“holomorphic structure” — which is obliterated by the indeterminate isomorphism
+between the isomorphs of D⊢
+v arising fromnHTΘ for distinct n.
+The discussion of Remark 3.8.1, (iii), (iv), may be summarized as follows.
+´
+Corollary 3.9. (
+Etale-pictures of Θ-Hodge Theaters) In the situation of
+Corollary 3.8, let v ∈V. Then:
+nDv
+... |
+...
+|
+(n−1)Dv
+— — D⊢
+v
+— — (n+1)Dv
+...
+|
+|
+...
+(n+2)Dv
+´
+Fig. 3.2:
+Etale-picture of Θ-Hodge theaters
+92 SHINICHI MOCHIZUKI
+nDv
+... |
+...
+|
+(n−1)Dv
+— — D⊢
+v O×
+C⊢
+v
+— — (n+1)Dv
+...
+|
+|
+...
+(n+2)Dv
+Fig. 3.3:
+´
+Etale-picture plus units
+(i) We have a diagram as in Fig. 3.2 above, which we refer to as the´ etale-
+picture. Here, each horizontal and vertical “— —” denotes the relationship be-
+tween (−)Dv and D⊢
+v — i.e., an extension of topological groups when v ∈Vnon
+,
+or the underlying object of TM⊢ arising from the associated topological field when
+v ∈Varc — discussed in Remark 3.8.1, (iii), (iv). The ´ etale-picture [unlike the
+Frobenius-picture!] admits arbitrary permutation symmetries among the la-
+bels n ∈Z corresponding to the various Θ-Hodge theaters. Put another way, the
+´ etale-picture may be thought of as a sort of canonical splitting of the Frobenius-
+picture.
+(ii) In a similar vein, we have a diagram as in Fig. 3.3 above, obtained
+by replacing the “D⊢
+v” in the middle of Fig. 3.2 by “D⊢
+v O×
+C⊢
+”. Here, each
+v
+horizontal and vertical “— —” denotes the relationship between (−)Dv and D⊢
+v
+discussed in (i); when v ∈Vnon, the notation “D⊢
+v O×
+C⊢
+” denotes an isomorph
+v
+of the pair consisting of the category D⊢
+v together with the group-like monoid O×
+C⊢
+v
+on D⊢
+v; when v ∈Varc, the notation “D⊢
+v O×
+C⊢
+” denotes an isomorph of the
+v
+pair consisting of the object D⊢
+v ∈Ob(TM⊢) and the topological group O×
+C⊢
+[which
+v
+is isomorphic — but not canonically! — to the compact factor of D⊢
+v]. Just as in
+the case of (i), this diagram admits arbitrary permutation symmetries among
+the labels n ∈Z corresponding to the various Θ-Hodge theaters.
+Remark 3.9.1. If one formulates things relative to the language of [AbsTopIII],
+Definition3.5, then(−)D⊢
+v constitutesacore. Relativetothetheoryof[AbsTopIII],
+§5, this core is essentially the mono-analytic core discussed in [AbsTopIII], §I3;
+[AbsTopIII], Remark 5.10.2, (ii). Indeed, the symbol “⊢” is intended — both in
+[AbsTopIII] and in the present series of papers! — as an abbreviation for the term
+“mono-analytic”.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 93
+Remark 3.9.2. Whereas the´ etale-picture of Corollary 3.9, (i), will remain valid
+throughout the development of the remainder of the theory of the present series of
+papers, the local units “O×
+C⊢
+” that appear in Corollary 3.9, (ii), will ultimately cease
+v
+to be a constant invariantofvariousenhancedversionsoftheFrobenius-picturethat
+will arise in the theory of [IUTchIII]. In a word, these enhancements revolve around
+the incorporation into each Hodge theater of the “rotation of addition [i.e., ‘ ’]
+and multiplication [i.e., ‘ ’]” in the style of the theory of [AbsTopIII].
+Remark 3.9.3.
+(i) As discussed in [AbsTopIII], §I3; [AbsTopIII], Remark 5.10.2, (ii), the
+“mono-analytic core” {D⊢
+v}v∈V may be thought of as a sort of fixed underly-
+ing real-analytic surface associated to a number field on which various holo-
+morphic structures are imposed. Then the Frobenius-picture in its entirety may
+be thought of as a sort of global arithmetic analogue of the notion of a Te-
+ichm¨ uller geodesic in classical complex Teichm¨ uller theory or, alternatively, as a
+global arithmetic analogue of the canonical liftings of p-adic Teichm¨ uller theory
+[cf. the discussion of [AbsTopIII], §I5].
+(ii) Recall that in classical complex Teichm¨ uller theory, one of the two real di-
+mensions of the surface is dilated as one moves along a Teichm¨ uller geodesic, while
+the other of the two real dimensions is held fixed. In the case of the Frobenius-
+picture of Corollary 3.8, the local units “O×” correspond to the dimension that
+is held fixed, while the local value groups are subject to“Θ-dilations” as one
+moves along the diagram constituted by the Frobenius-picture. Note that in order
+to construct such a mathematical structure in which the local units and local value
+groups are treated independently, it is of crucial importance to avail oneself of
+the various characteristic splittings that appear in the split Frobenioids of Ex-
+amples 3.2, 3.3, 3.4. Here, we note in passing that, in the case of Example 3.2,
+this splitting corresponds to the “constant multiple rigidity” of the ´ etale theta
+function, which forms a central theme of the theory of [EtTh].
+(iii) In classical complex Teichm¨ uller theory, the two real dimensions of the
+surface that are treated independently of one another correspond to the real and
+imaginary parts of the coordinate obtained by locally integrating the square root
+of a given square diﬀerential. In particular, it is of crucial importance in classical
+complex Teichm¨ uller theory that these real and imaginary parts not be “subject to
+confusion with one another”. In the case of the square root of a square diﬀerential,
+the only indeterminacy that arises is indeterminacy with respect to multiplication
+by−1, an operation that satisfies the crucial property of preserving the real and
+imaginary parts of a complex number. By contrast, it is interesting to note that
+if, for n ≥3, one attempts to construct Teichm¨ uller deformations in the
+fashion of classical complex Teichm¨ uller theory by means of coordinates
+obtained by locally integrating the n-th root of a given section of the n-
+th tensor power of the sheaf of diﬀerentials, then one must contend with
+an indeterminacy with respect to multiplication by an n-th root of unity,
+an operation that results in an essential confusion between the real and
+imaginary parts of a complex number.
+94 SHINICHI MOCHIZUKI
+⃗
+(iv) Whereas linear movement along the oriented graph
+Γ of Corollary 3.8 cor-
+responds to the linear flow along a Teichm¨ uller geodesic, the “rotation of addition
+[i.e., ‘ ’] and multiplication [i.e., ‘ ’]” in the style of the theory of [AbsTopIII]
+— which will be incorporated into the theory of the present series of papers in
+[IUTchIII] [cf. Remark 3.9.2] — corresponds to rotations around a fixed point in
+the complex geometry arising from Teichm¨ uller theory [cf., e.g., the discussion of
+[AbsTopIII], §I3; the hyperbolic geometry of the upper half-plane, regarded as the
+“Teichm¨ uller space” of compact Riemann surfaces of genus 1]. Alternatively, in the
+analogy with p-adic Teichm¨ uller theory, this “rotation of and ” corresponds
+to the Frobenius morphism in positive characteristic — cf. the discussion of [Ab-
+sTopIII], §I5.
+Remark 3.9.4. At first glance, the assignment “nΘ
+v
+→(n+1)q
+” [cf. Remark
+v
+3.8.1, (i)] may strike the reader as being nothing more than a “conventional eval-
+uation map” [i.e., of the theta function at a torsion point — cf. the discussion of
+Example 3.2, (iv)]. Although we shall ultimately be interested, in the theory of the
+present series of papers, in such “Hodge-Arakelov-style evaluation maps” [within
+a fixed Hodge theater!] of the theta function at torsion points [cf. the theory of
+[IUTchII]], the Θ-link considered here diﬀers quite fundamentally from such con-
+ventional evaluation maps in the following respect:
+the value (n+1)q
+belongs to a distinct scheme theory — i.e., the
+v
+scheme theory represented by the distinct Θ-Hodge theater (n+1)HTΘ
+—
+from the base nq
+[which belongs to the scheme theory represented by the
+v
+Θ-Hodge theaternHTΘ] over which the theta functionnΘ
+is constructed.
+v
+The distinctness of the ring/scheme theories of distinct Θ-Hodge theaters may be
+seen, for instance, in the indeterminacy of the isomorphism between the associated
+isomorphs of D⊢
+v, an indeterminacy which has the eﬀect of obliterating the ring
+structure — i.e., the “arithmetic holomorphic structure” — associated to nDv for
+distinct n [cf. the discussion of Remark 3.8.1, (iii), (iv)].
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 95
+Section 4: Multiplicative Combinatorial Teichm¨ uller Theory
+In the present §4, we begin to prepare for the construction of the various
+“enhancements” to the Θ-Hodge theaters of §3 that will be made in §5. More
+precisely, in the present §4, we discuss the combinatorial aspects of the “D” — i.e.,
+intheterminologyofthetheoryofFrobenioids, the“base category”—portionofthe
+notions to be introduced in §5 below. In a word, these combinatorial aspects revolve
+around the “functorial dynamics” imposed upon the various number fields and
+local fields involved by the “labels”
+∈ Fl
+def
+= F×
+l /{±1}
+— where we note that the set Fl is of cardinality l def = (l−1)/2 — of the l-torsion
+points at which we intend to conduct, in [IUTchII], the “Hodge-Arakelov-theoretic
+evaluation” of the ´ etale theta function studied in [EtTh] [cf. Remarks 4.3.1; 4.3.2;
+4.5.1, (v); 4.9.1, (i)].
+In the following, we fix a collection of initial Θ-data
+(F/F, XF, l, CK, V, Vbad
+mod, ϵ)
+as in Definition 3.1; also, we shall use the various notations introduced in Definition
+3.1 for various objects associated to this initial Θ-data.
+Definition 4.1.
+(i) We define a holomorphic base-prime-strip, or D-prime-strip, [relative to the
+given initial Θ-data] to be a collection of data
+†D= {†Dv}v∈V
+that satisfies the following conditions: (a) if v ∈Vnon, then †Dv is a category which
+admits an equivalence of categories †Dv
+∼ →Dv [where Dv is as in Examples 3.2, (i);
+3.3, (i)]; (b) if v ∈Varc, then †Dv is an Aut-holomorphic orbispace such that there
+exists an isomorphism of Aut-holomorphic orbispaces †Dv
+∼ →Dv [where Dv is as in
+Example3.4, (i)]. Observethatifv ∈Vnon, thenπ1(†Dv)determines, inafunctorial
+fashion, a topological [in fact, profinite if v ∈Vgood] group corresponding to “Cv
+”
+[cf. Corollary 1.2 if v ∈Vgood; [EtTh], Proposition 2.4, if v ∈Vbad], which contains
+π1(†Dv) as an open subgroup; thus, if we write †Dv for B(−)0 of this topological
+group, then we obtain a natural morphism †Dv →†Dv [cf. §0]. In a similar vein, if
+v ∈Varc, then since X
+− →v
+admits a Kv-core, a routine translation into the “language
+of Aut-holomorphic orbispaces” of the argument given in the proof of Corollary 1.2
+[cf. also [AbsTopIII], Corollary 2.4] reveals that †Dv determines, in a functorial
+fashion, an Aut-holomorphic orbispace †Dv corresponding to “Cv”, together with
+a natural morphism †Dv →†Dv of Aut-holomorphic orbispaces. Thus, in summary,
+one obtains a collection of data
+†D= {†Dv}v∈V
+96 SHINICHI MOCHIZUKI
+completely determined by †D.
+(ii) Suppose that we are in the situation of (i). Then observe that by applying
+the group-theoretic algorithm of [AbsTopI], Lemma 4.5 [cf., especially, [AbsTopI],
+Lemma 4.5, (v), as well as Remark 1.2.2, (ii), of the present paper], to construct
+the set of conjugacy classes of cuspidal decomposition groups of the topological
+group π1(†Dv) when v ∈Vnon, or by considering π0(−) of a cofinal collection of
+“neighborhoods of infinity” [i.e., complements of compact subsets] of the underlying
+topological space of †Dv when v ∈Varc, it makes sense to speak of the set of cusps
+of †Dv; a similar observation applies to †Dv, for v ∈V. If v ∈V, then we define
+a label class of cusps of †Dv to be the set of cusps of †Dv that lie over a single
+LabCusp(†Dv)
+“nonzero cusp” [i.e., a cusp that arises from a nonzero element of the quotient “Q”
+that appears in the definition of a “hyperbolic orbicurve of type (1,l-tors)±” given
+in [EtTh], Definition 2.1] of †Dv; write
+for the set of label classes of cusps of †Dv. Thus, for each v ∈V, LabCusp(†Dv)
+admits a natural Fl -torsor structure [i.e., which arises from the natural action of
+F×
+l on the quotient “Q” of [EtTh], Definition 2.1]. Moreover, [for any v ∈V!] one
+may construct, solely from †Dv, a canonical element
+∈LabCusp(†Dv)
+†ηv
+determined by “ϵv” [cf. the notation of Definition 3.1, (f)]. [Indeed, this follows
+from [EtTh], Corollary 2.9, for v ∈Vbad, from Corollary 1.2 for v ∈Vgood Vnon
+,
+andfromtheevidenttranslationintothe“languageofAut-holomorphicorbispaces”
+of Corollary 1.2 for v ∈Varc.]
+(iii) We define a mono-analytic base-prime-strip, or D⊢-prime-strip, [relative
+to the given initial Θ-data] to be a collection of data
+†D⊢
+= {†D⊢
+v}v∈V
+that satisfies the following conditions: (a) if v ∈Vnon, then †D⊢
+v is a category which
+admits an equivalence of categories †D⊢
+∼ →D⊢
+v
+v [where D⊢
+v is as in Examples 3.2,
+(i); 3.3, (i)]; (b) if v ∈Varc, then †D⊢
+v is an object of the category TM⊢ [so, if D⊢
+v
+is as in Example 3.4, (ii), then there exists an isomorphism †D⊢
+∼ →D⊢
+v
+v in TM⊢].
+(iv) A morphism of D- (respectively, D⊢-) prime-strips is defined to be a col-
+lection of morphisms, indexed by V, between the various constituent objects of the
+prime-strips. Following the conventions of §0, one thus has a notion of capsules of
+D- (respectively, D⊢-) and morphisms of capsules of D- (respectively, D⊢-) prime-
+strips. Note that to any D-prime-strip †D, one may associate, in a natural way,
+a D⊢-prime-strip †D⊢ — which we shall refer to as the mono-analyticization of
+†D — by considering appropriate subcategories at the nonarchimedean primes [cf.
+Examples 3.2, (i), (vi); 3.3, (i), (iii)], or by applying the construction of Example
+3.4, (ii), at the archimedean primes.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 97
+(v) Write
+D def
+= B(CK)0
+[cf. §0]. Then recall from [AbsTopIII], Theorem 1.9 [cf. Remark 3.1.2], that
+there exists a group-theoretic algorithm for reconstructing, from π1(D ) [cf. §0],
+the algebraic closure “F” of the base field “K”, hence also the set of valuations
+“V(F)” [e.g., as a collection of topologies on F — cf., e.g., [AbsTopIII], Corollary
+2.8]. Moreover, for w ∈ V(K)arc, let us recall [cf. Remark 3.1.2; [AbsTopIII],
+Corollaries 2.8, 2.9] that one may reconstruct group-theoretically, from π1(D ), the
+Aut-holomorphic orbispace Cw associated to Cw. Let †D be a category equivalent
+to D . Then let us write
+V(†D )
+for the set of valuations [i.e., “V(F)”], equipped with its natural π1(†D )-action,
+V(†D ) def
+= V(†D )/π1(†D )
+for the quotient of V(†D ) by π1(†D ) [i.e., “V(K)”], and, for w ∈V(†D )arc
+,
+C(†D ,w)
+[i.e., “Cw” — cf. the discussion of [AbsTopIII], Definition 5.1, (ii)] for the Aut-
+holomorphic orbispace obtained by applying these group-theoretic reconstruction
+algorithms to π1(†D ). Now if U is an arbitrary Aut-holomorphic orbispace, then
+let us define a morphism
+U →†D
+to be a morphism of Aut-holomorphic orbispaces [cf. [AbsTopIII], Definition 2.1,
+(ii)] U →C(†D ,w) for some w ∈V(†D )arc. Thus, it makes sense to speak of the
+pre-composite (respectively, post-composite) of such a morphism U →†D with
+a morphism of Aut-holomorphic orbispaces (respectively, with an isomorphism [cf.
+§0] †D∼
+→‡D [i.e., where ‡D is a category equivalent to D ]). Finally, just as in
+the discussion of (ii) in the case of “v ∈Vgood Vnon”, we may apply [AbsTopI],
+Lemma 4.5 [cf. also Remark 1.2.2, (ii), of the present paper], to conclude that it
+makes sense to speak of the set of cusps of †D , as well as the set of label classes
+of cusps
+LabCusp(†D )
+of †D , which admits a natural Fl -torsor structure.
+(vi) Let †D be a category equivalent to D ,
+strip. If v ∈V, then we define a poly-morphism †Dv →†D to be a collection of
+morphisms †Dv →†D [cf. §0 when v ∈Vnon; (v) when v ∈Varc]. We define a
+poly-morphism
+†D →†D
+to be a collection of poly-morphisms {†Dv →†D }v∈V. Finally, if {eD}e∈E is a
+capsule of D-prime-strips, then we define a poly-morphism
+{eD}e∈E →†D (respectively, {eD}e∈E →†D)
+†D= {†Dv}v∈V a D-prime-
+98 SHINICHI MOCHIZUKI
+tobeacollectionofpoly-morphisms{eD →†D }e∈E (respectively,{eD →†D}e∈E).
+The following result follows immediately from the discussion of Definition 4.1,
+(ii).
+Proposition 4.2. (The Set of Label Classes of Cusps of a Base-Prime-
+Strip) Let †D= {†Dv}v∈V be a D-prime-strip. Then for any v,w ∈V, there
+exist bijections
+LabCusp(†Dv)∼
+→LabCusp(†Dw)
+that are uniquely determined by the condition that they be compatible with
+the assignments †ηv
+→ †ηw [cf. Definition 4.1, (ii)], as well as with the Fl-
+torsor structures on either side. In particular, these bijections are preserved
+by arbitrary isomorphisms of D-prime-strips. Thus, by identifying the various
+“LabCusp(†Dv)” via these bijections, it makes sense to write LabCusp(†D).
+Finally, LabCusp(†D) is equipped with a canonical element, arising from the †ηv
+[for v ∈V], as well as a natural Fl -torsor structure; in particular, this canonical
+element and Fl -torsor structure determine a natural bijection
+LabCusp(†D)∼
+→ Fl
+that is preserved by isomorphisms of D-prime-strips.
+Remark 4.2.1. Note that if, in Examples 3.3, 3.4 — i.e., at v ∈ Vgood
+—
+one defines “Dv” by means of “Cv” instead of “X
+− →v
+”, then there does not exist
+a system of bijections as in Proposition 4.2. Indeed, by the Tchebotarev density
+theorem[cf., e.g., [Lang], ChapterVIII,§4, Theorem10], itfollowsimmediatelythat
+there exist v ∈V such that, for a suitable embedding Gal(K/F) →GL2(Fl), the
+decomposition subgroup in Gal(K/F) →GL2(Fl) determined [up to conjugation]
+by v is equal to the subgroup of diagonal matrices with determinant 1. Thus, if
+†D= {†Dv}v∈V,
+†D= {†Dv}v∈V are as in Definition 4.1, (i), then for such a v, the
+automorphism group of †Dv acts transitively on the set of label classes of cusps of
+†Dv, while the automorphism group of †Dw acts trivially [by [EtTh], Corollary 2.9]
+on the set of label classes of cusps of †Dw for any w ∈Vbad
+.
+Example 4.3. Model Base-NF-Bridges. In the following, we construct the
+“models” for the notion of a “base-NF-bridge” [cf. Definition 4.6, (i), below].
+(i) Write
+Autϵ(CK) ⊆ Aut(CK)∼
+= Out(ΠCK )∼
+= Aut(D )
+— where the first “∼
+=” follows, for instance, from [AbsTopIII], Theorem 1.9 — for
+the subgroup of elements which fix the cusp ϵ. Now let us recall that the profi-
+nite group ΔX may be reconstructed group-theoretically from ΠCK [cf. [AbsTopII],
+Corollary 3.3, (i), (ii); [AbsTopII], Remark 3.3.2; [AbsTopI], Example 4.8]. Since
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 99
+inner automorphisms of ΠCK clearly act by multiplication by ±1 on the l-torsion
+points of EF [i.e., on Δab
+X ⊗Fl], we obtain a natural homomorphism Out(ΠCK ) →
+Aut(Δab
+X ⊗Fl)/{±1}. Thus, it follows immediately from the discussion of the nota-
+tion “K”, “CK”, and “ϵ” in Definition 3.1, (c), (d), (f) [cf. also Remark 3.1.5; the
+discussion preceding [EtTh], Definition 2.1; the discussion of [EtTh], Remark 2.6.1],
+that, relativetoanisomorphismAut(Δab
+X ⊗Fl)/{±1}∼
+→GL2(Fl)/{±1}arisingfrom
+a suitable choice of basis for Δab
+X ⊗Fl, if we write Im(GFmod) ⊆GL2(Fl)/{±1}for
+the image of the natural action [i.e., modulo {±1}] of GFmod
+def = Gal(F/Fmod) on
+the l-torsion points of EF [cf. the homomorphism of the display of Definition 3.1,
+(c); the model “CFmod” discussed in Remark 3.1.7], then the images of the groups
+Autϵ(CK), Aut(CK) may be identified with the subgroups consisting of elements
+of the form
+∗ ∗
+0 ±1
+⊆
+∗ ∗
+0 ∗
+⊆ Im(GFmod) ⊇ SL2(Fl)/{±1}
+— i.e., “semi-unipotent, up to ±1” and “Borel” subgroups — of Im(GFmod) ⊆
+GL2(Fl)/{±1}. Write
+AutSL
+ϵ (CK) ⊆ Autϵ(CK), AutSL(CK) ⊆ Aut(CK)
+fortherespectivesubgroupsofelementsthatact triviallyonthesubfieldF(μl) ⊆K
+[cf. Remark 3.1.7, (iii)] and
+V±un def = Autϵ(CK)·V ⊆ VBor def = Aut(CK)·V ⊆ V(K)
+for the resulting subsets of V(K). Thus, one verifies immediately that the subgroup
+Autϵ(CK) ⊆Aut(CK) is normal, and that we have natural isomorphisms
+AutSL(CK)/AutSL
+ϵ (CK)∼
+→ Aut(CK)/Autϵ(CK)∼
+→ Fl
+— so we may think of VBor as the Fl -orbit of V±un. Also, we observe that [in light
+of the above discussion] it follows immediately that there exists a group-theoretic
+algorithm for reconstructing, from π1(D ) [i.e., an isomorph of ΠCK ] the subgroup
+Autϵ(D ) ⊆Aut(D )
+determined by Autϵ(CK).
+(ii) Let v ∈Vnon. Then the natural restriction functor on finite ´ etale coverings
+arising from the natural composite morphism X
+− →v
+→ Cv → CK if v ∈ Vgood
+(respectively, X
+→Cv →CK if v ∈Vbad) determines [cf. Examples 3.2, (i);
+v
+3.3, (i)] a natural morphism φNF
+•,v : Dv →D [cf. §0 for the definition of the term
+“morphism”]. Write
+φNF
+v : Dv →D
+for the poly-morphism given by the collection of morphisms Dv →D of the form
+β ◦φNF
+•,v ◦α
+100 SHINICHI MOCHIZUKI
+— where α ∈Aut(Dv)∼
+= Aut(X
+− →v) (respectively, α ∈Aut(Dv)∼
+= Aut(X
+v)); β ∈
+Autϵ(D )∼
+= Autϵ(CK) [cf., e.g., [AbsTopIII], Theorem 1.9].
+(iii) Let v ∈Varc. Thus, [cf. Example 3.4, (i)] we have a tautological morphism
+∼
+Dv = X
+− →v
+4.1, (v)]. Write
+→Cv
+→C(D ,v), hence a morphism φNF
+•,v : Dv →D [cf. Definition
+φNF
+v : Dv →D
+for the poly-morphism given by the collection of morphisms Dv →D of the form
+β ◦φNF
+•,v ◦α
+—whereα ∈Aut(Dv)∼
+= Aut(X
+=
+− →v)[cf. [AbsTopIII],Corollary2.3]; β ∈Autϵ(D )∼
+Autϵ(CK).
+(iv) For each j ∈Fl , let
+Dj= {Dvj }v∈V
+— where we use the notation vj to denote the pair (j,v) — be a copy of the
+“tautological D-prime-strip” {Dv}v∈V. Let us denote by
+φNF
+1 : D1 →D
+[where, by abuse of notation, we write “1” for the element of Fl determined by 1]
+the poly-morphism determined by the collection {φNF
+v1
+: Dv1
+→D }v∈V of copies of
+the poly-morphisms φNF
+v constructed in (ii), (iii). Note that φNF
+1 is stabilized by the
+action of Autϵ(CK) on D . Thus, it makes sense to consider, for arbitrary j ∈Fl ,
+the poly-morphism
+φNF
+j : Dj →D
+obtained [via any isomorphism D1
+∼
+= Dj] by post-composing with the “poly-action”
+[i.e., action via poly-automorphisms — cf. (i)] of j ∈Fl on D . Let us write
+D def
+= {Dj}j∈Fl
+for the capsule of D-prime-strips indexed by j ∈Fl [cf. Definition 4.1, (iv)] and
+denote by
+φNF : D →D
+the poly-morphism given by the collection of poly-morphisms {φNF
+j }j∈Fl
+. Thus,
+φNF is equivariant with respect to the natural poly-action of Fl on D and the
+natural permutation poly-action of Fl , via capsule-full [cf. §0] poly-automorphisms,
+ontheconstituentsofthecapsuleD . Inparticular, weobtainanatural poly-action
+of Fl on the collection of data (D ,D ,φNF).
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 101
+Remark 4.3.1.
+(i) Suppose, for simplicity, in the following discussion that F= Fmod. Note
+that the morphism of schemes Spec(K) →Spec(F) [or, equivalently, the homomor-
+phism of rings F →K] does not admit a section. This nonexistence of a section
+is closely related to the nonexistence of a “global multiplicative subspace” of the
+sort discussed in [HASurII], Remark 3.7. In the context of loc. cit., this nonexis-
+tence of a “global multiplicative subspace” may be thought of as a concrete way
+of representing the principal obstruction to applying the scheme-theoretic Hodge-
+Arakelov theory of [HASurI], [HASurII] to diophantine geometry. From this point
+of view, if one thinks of the ring structure of F, K as a sort of “arithmetic holo-
+morphic structure” [cf. [AbsTopIII], Remark 5.10.2, (ii)], then one may think of
+the [D-]prime-strips that appear in the discussion of Example 4.3 as defining, via
+the arrows φNF
+j of Example 4.3, (iv),
+“arithmetic collections of local analytic sections” of Spec(K) →Spec(F)
+— cf. Fig. 4.1 below, where each “·−·−
+...
+−·−·” represents a [D-]prime-strip.
+In fact, if, for the sake of brevity, we abbreviate the phrase “collection of local an-
+alytic” by the term “local-analytic”, then each of these sections may be thought of
+as yielding not only an “arithmetic local-analytic global multiplicative sub-
+space”, but also an “arithmetic local-analytic global canonical generator”
+[i.e., up to multiplication by ±1, of the quotient of the module of l-torsion points of
+the elliptic curve in question by the “arithmetic local-analytic global multiplicative
+subspace”]. We refer to Remark 4.9.1, (i), below, for more on this point of view.
+·−·−·−
+·−·−·−
+·−·−·−
+·−·−·−
+−·−·−·
+...
+−·−·−·
+...
+... K
+−·−·−·
+−·−·−·
+...
+...
+Gal(K/F)
+⊆ GL2(Fl)
+⏐ ⏐
+·−·−·−
+...
+−·−·−· F
+Fig. 4.1: Prime-strips as “sections” of Spec(K) →Spec(F)
+(ii) The way in which these “arithmetic local-analytic sections” constituted
+by the [D-]prime-strips fail to be [globally] “arithmetically holomorphic” may be
+understood from several closely related points of view. The first point of view was
+already noted above in (i) — namely:
+(a) these sections fail to extend to ring homomorphisms K →F.
+The second point of view involves the classical phenomenon of decomposition of
+primes in extensions of number fields. The decomposition of primes in extensions
+102 SHINICHI MOCHIZUKI
+of number fields may be represented by a tree, as in Fig. 4.2, below. If one thinks
+of the tree in large parentheses of Fig. 4.2 as representing the decomposition of
+primes over a prime v of F in extensions of F [such as K!], then the “arithmetic
+local-analytic sections” constituted by the D-prime-strips may be thought of as
+(b) an isomorphism, or identification, between v [i.e., a prime of F] and
+v′ [i.e., a prime of K] which [manifestly — cf., e.g., [NSW], Theorem
+12.2.5] fails to extend to an isomorphism between the respective prime
+decomposition trees over v and v′
+.
+If one thinks of the relation “∈” between sets in axiomatic set theory as determining
+a “tree”, then
+thepointofviewof(b)isreminiscentofthepointofviewof[IUTchIV],§3,
+where one is concerned with constructing some sort of artificial solution to
+the “membership equation a ∈a” [cf. the discussion of [IUTchIV], Remark
+3.3.1, (i)].
+The third point of view consists of the observation that although the “arithmetic
+local-analytic sections” constituted by the D-prime-strips involve isomorphisms of
+the various local absolute Galois groups,
+(c) these isomorphisms of local absolute Galois groups fail to extend to a
+section of global absolute Galois groups GF GK [i.e., a section of the
+natural inclusion GK →GF].
+Here, we note that in fact, by the Neukirch-Uchida theorem [cf. [NSW], Chapter
+XII, §2], one may think of (a) and (c) as essentially equivalent. Moreover, (b) is
+closely related to this equivalence, in the sense that the proof [cf., e.g., [NSW],
+Chapter XII, §2] of the Neukirch-Uchida theorem depends in an essential fashion
+on a careful analysis of the prime decomposition trees of the number fields involved.
+⎛ ⎜ ⎜ ⎜ ⎜ ⎜ ⎜ ⎜ ⎜ ⎜ ⎝
+...
+\|/ ... ...
+v′ v′′ v′′′
+\ | /
+v
+⎞ ⎟ ⎟ ⎟ ⎟ ⎟ ⎟ ⎟ ⎟ ⎟ ⎠
+⊇
+⎛ ⎜ ...
+⎜ ⎝
+\|/
+⎞ ⎟ v′
+⎟ ⎠
+Fig. 4.2: Prime decomposition trees
+(iii) In some sense, understanding more precisely the content of the failure of
+these “arithmetic local-analytic sections” constituted by the D-prime-strips to be
+“arithmetically holomorphic” is a central theme of the theory of the present series
+of papers — a theme which is very much in line with the spirit of classical complex
+Teichm¨ uller theory.
+Remark 4.3.2. The incompatibility of the “arithmetic local-analytic sections” of
+Remark 4.3.1, (i), with global prime distributions and global absolute Galois groups
+[cf. the discussion of Remark 4.3.1, (ii)] is precisely the technical obstacle that
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 103
+will necessitate the application — in [IUTchIII] — of the absolute p-adic mono-
+anabelian geometry developed in [AbsTopIII], in the form of “panalocalization along
+the various prime-strips” [cf. [IUTchIII] for more details]. Indeed,
+the mono-anabelian theory developed in [AbsTopIII] represents the cul-
+mination of earlier research of the author during the years 2000 to 2007
+concerning absolute p-adic anabelian geometry — research that was
+motivated precisely by the goal of developing a geometry that would allow
+one to work with the “arithmetic local-analytic sections” constituted by
+the prime-strips, so as to overcome the principal technical obstruction to
+applying the Hodge-Arakelov theory of [HASurI], [HASurII] [cf. Remark
+4.3.1, (i)].
+Note that the “desired geometry” in question will also be subject to other require-
+ments. For instance, in [IUTchIII] [cf. also [IUTchII], §4], we shall make essential
+use of the global arithmetic — i.e., the ring structure and absolute Galois groups —
+of number fields. As observed above in Remark 4.3.1, (ii), these global arithmetic
+structures are not compatible with the “arithmetic local-analytic sections” consti-
+tuted by the prime-strips. In particular, this state of aﬀairs imposes the further
+requirement that the “geometry” in question be compatible with globalization, i.e.,
+that it give rise to the global arithmetic of the number fields in question in a fashion
+that is independent of the various local geometries that appear in the “arithmetic
+local-analytic sections” constituted by the prime-strips, but nevertheless admits lo-
+calization operations to these various local geometries [cf. Fig. 4.3; the discussion
+of [IUTchII], Remark 4.11.2, (iii); [AbsTopIII], Remark 3.7.6, (iii), (v)].
+local geometry
+at v
+... local geometry
+at v′... local geometry
+at v′′
+↖ ↑ ↗
+global geometry
+Fig. 4.3: Globalizability
+Finally, inorderforthe“desiredgeometry”tobeapplicabletothetheorydeveloped
+in the present series of papers, it is necessary for it to be based on“´ etale-like
+structures”, so as to give rise to canonical splittings, as in the´ etale-picture discussed
+in Corollary 3.9, (i). Thus, in summary, the requirements that we wish to impose
+on the “desired geometry” are the following:
+(a) local independence of global structures,
+(b) globalizability, in a fashion that is independent of local structures,
+(c) the property of being based on´ etale-like structures.
+Note, in particular, that properties (a), (b) at first glance almost appear to con-
+tradict one another. In particular, the simultaneous realization of (a), (b) is highly
+104 SHINICHI MOCHIZUKI
+nontrivial. For instance, in the case of a function field of dimension one over a
+base field, the simultaneous realization of properties (a), (b) appears to require
+that one restrict oneself essentially to working with structures that descend to the
+base field! It is thus a highly nontrivial consequence of the theory of [AbsTopIII]
+that the mono-anabelian geometry of [AbsTopIII] does indeed satisfy all of these
+requirements (a), (b), (c) [cf. the discussion of [AbsTopIII], §I1].
+Remark 4.3.3.
+(i) One important theme of [AbsTopIII] is the analogy between the mono-
+anabelian theory of [AbsTopIII] and the theory of Frobenius-invariant indige-
+nous bundles of the sort that appear in p-adic Teichm¨ uller theory [cf. [AbsTopIII],
+§I5]. In fact, [although this point of view is not mentioned in [AbsTopIII]] one may
+“compose” this analogy with the analogy between the p-adic and complex theo-
+ries discussed in [pOrd], Introduction; [pTeich], Introduction, §0, and consider the
+analogy between the mono-anabelian theory of [AbsTopIII] and the classical ge-
+ometry of the upper half-plane H. In addition to being more elementary than
+the p-adic theory, this analogy with the classical geometry of the upper half-plane
+H also has the virtue that
+since it revolves around the canonical K¨ ahler metric — i.e., the Poin-
+car´ e metric — on the upper half-plane, it renders more transparent the
+relationship between the theory of the present series of papers and clas-
+sical Arakelov theory [which also revolves, to a substantial extent, around
+K¨ ahler metrics at the archimedean primes].
+(ii) The essential content of the mono-anabelian theory of [AbsTopIII] may be
+summarized by the diagram
+Π k× log −→ k Π (∗)
+— where k is a finite extension of Qp; k is an algebraic closure of k; Π is the arith-
+metic fundamental group of a hyperbolic orbicurve over k; log is the p-adic loga-
+rithm [cf. [AbsTopIII], §I1]. On the other hand, if (E,∇E) denotes the “tautological
+indigenous bundle” on H [i.e., the first de Rham cohomology of the tautological
+elliptic curve over H], then one has a natural Hodge filtration 0 →ω →E→τ →0
+def
+[where ω, τ
+= ω−1 are holomorphic line bundles on H], together with a natural
+complex conjugation operation ιE : E→E. The composite
+ω → E ιE −→ E τ
+then determines an Hermitian metric |−|ω on ω. For any trivializing section f of
+ω, the (1,1)-form
+def
+=
+1
+κH
+∂∂ log(|f|2
+ω)
+2πi
+isthecanonical K¨ ahler metric[i.e., Poincar´ emetric]onH. Thenonecanalready
+identify various formal similarities between κH and the diagram (∗) reviewed above:
+Indeed, at a purely formal [but by no means coincidental!] level, the “log” that
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 105
+appears in the definition of κH is reminiscent of the “log-Frobenius operation” log.
+At a less formal level, the “Galois group” Π is reminiscent — cf. the point of view
+that “Galois groups are arithmetic tangent bundles”, a point of view that underlies
+the theory of the arithmetic Kodaira-Spencer morphism discussed in [HASurI]! —
+of ∂. If one thinks of complex conjugation as a sort of “archimedean Frobenius” [cf.
+[pTeich], Introduction, §0], then ∂ is reminiscent of the “Galois group” Π operating
+on the opposite side [cf. ιE] of the log-Frobenius operation log. The Hodge filtration
+of Ecorresponds to the ring structures of the copies of k on either side of log [cf.
+the discussion of [AbsTopIII], Remark 3.7.2]. Finally, perhaps most importantly
+from the point of view of the theory of the present series of papers:
+the fact that log-shells play the role in the theory of [AbsTopIII] of “canon-
+ical rigid integral structures” [cf. [AbsTopIII], §I1] — i.e., “canonical stan-
+dard units of volume” — is reminiscent of the fact that the K¨ ahler metric
+κH also plays the role of determining a canonical notion of volume on H.
+(iii) From the point of view of the analogy discussed in (ii), property (a) of
+Remark 4.3.2 may be thought of as corresponding to the local representabil-
+ity via the [positive] (1,1)-form κH — on, say, a compact quotient S of H — of
+the [positive] global degree of [the result of descending to S] the line bundle ω;
+property (b) of Remark 4.3.2 may be thought of as corresponding to the fact that
+this (1,1)-form κH that gives rise to a local representation on S of the notion of
+a positive global degree not only exists locally on S, but also admits a canonical
+global extension to the entire Riemann surface S which may be related to the
+algebraic theory [i.e., of algebraic rational functions on S].
+(iv) The analogy discussed in (ii) may be summarized as follows:
+mono-anabelian theory geometry of the upper-half plane H
+the Galois group Π the diﬀerential operator ∂
+the Galois group Π on the opposite side of log ∂
+the diﬀerential operator
+the ring structures of the copies of k on either side of log the Hodge filtration of E,
+ιE, |−|E
+log-shells as canonical units of volume the canonical K¨ ahler volume
+κH
+Example 4.4. Model Base-Θ-Bridges. In the following, we construct the
+“models” for the notion of a “base-Θ-bridge” [cf. Definition 4.6, (ii), below]. We
+continue to use the notation of Example 4.3.
+(i) Let v ∈Vbad. Recall that there is a natural bijection between the set
+|Fl| def
+= Fl/{±1}= 0 Fl
+106 SHINICHI MOCHIZUKI
+[i.e., the set of {±1}-orbits of Fl] and the set of cusps of the hyperbolic orbicurve
+Cv [cf. [EtTh], Corollary 2.9]. Thus, [by considering fibers over Cv] we obtain
+labels ∈|Fl|of various collections of cusps of Xv, X
+. Write
+v
+μ− ∈Xv(Kv)
+for the unique torsion point of order 2 whose closure in any stable model of Xv
+over OKv intersects the same irreducible component of the special fiber of the stable
+model as the [unique] cusp labeled 0 ∈|Fl|. Now observe that it makes sense to
+speak of the points ∈Xv(Kv) obtained as μ−-translates of the cusps, relative to the
+group scheme structure of the elliptic curve determined by Xv [i.e., whose origin
+is given by the cusp labeled 0 ∈|Fl|]. We shall refer to these μ−-translates of the
+cusps with labels ∈|Fl|as the evaluation points of Xv. Note that the value of
+the theta function “Θ
+v” of Example 3.2, (ii), at a point lying over an evaluation
+point arising from a cusp with label j ∈|Fl|is contained in the μ2l-orbit of
+j2
+{q
+}j ≡ j
+v
+[cf. Example 3.2, (iv); [EtTh], Proposition 1.4, (ii)] — where j ranges over the
+elements of Z that map to j ∈|Fl|. In particular, it follows immediately from the
+definition of the covering X
+→Xv [i.e., by considering l-th roots of the theta
+v
+function! — cf. [EtTh], Definition 2.5, (i)] that the points of X
+that lie over
+v
+evaluation points of Xv are all defined over Kv. We shall refer to the points
+∈X
+v(Kv) that lie over the evaluation points of Xv as the evaluation points of X
+v
+and to the various sections
+Gv →Πv = Πtp
+X
+v
+of the natural surjection Πv Gv that arise from the evaluation points as the
+evaluation sections of Πv Gv. Thus, each evaluation section has an associ-
+ated label ∈|Fl|. Note that there is a group-theoretic algorithm for constructing
+the evaluation sections from [isomorphs of] the topological group Πv. Indeed, this
+followsimmediatelyfrom[theproofsof][EtTh],Corollary2.9[concerningthegroup-
+theoreticity of the labels]; [EtTh], Proposition 2.4 [concerning the group-theoreticity
+of ΠC
+v, ΠX
+v]; [SemiAnbd], Corollary 3.11 [concerning the dual semi-graphs of the
+special fibers of stable models], applied to Δtp
+X
+⊆Πtp
+X
+= Πv; [SemiAnbd], The-
+v
+v
+orem 6.8, (iii) [concerning the group-theoreticity of the decomposition groups of
+μ−-translates of the cusps].
+(ii) We continue to suppose that v ∈Vbad. Let
+D> = {D>,w}w∈V
+be a copy of the “tautological D-prime-strip” {Dw}w∈V. For each j ∈Fl , write
+φΘ
+vj
+: Dvj
+→D>,v
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 107
+for the poly-morphism given by the collection of morphisms [cf. §0] obtained by
+composing with arbitrary isomorphisms Dvj
+∼ →Btemp(Πv)0
+, Btemp(Πv)0∼ →D>,v
+the various morphisms Btemp(Πv)0 →Btemp(Πv)0 that arise [i.e., via composition
+with the natural surjection Πv Gv] from the evaluation sections labeled j. Now
+if Cis any isomorph of Btemp(Πv)0, then let us write
+πgeo
+1 (C) ⊆π1(C)
+for the subgroup corresponding to Δtp
+X
+⊆Πtp
+X
+= Πv, a subgroup which we re-
+v
+v
+call may be reconstructed group-theoretically [cf., e.g., [AbsTopI], Theorem 2.6,
+(v); [AbsTopI], Proposition 4.10, (i)]. Then we observe that for each constituent
+morphism Dvj
+→ D>,v of the poly-morphism φΘ
+vj , the induced homomorphism
+π1(Dvj ) →π1(D>,v) [well-defined, up to composition with an inner automorphism]
+is compatible with the respective outer actions [of the domain and codomain of this
+homomorphism] on πgeo
+1 (Dvj ), πgeo
+1 (D>,v) for some [not necessarily unique, but
+determined up to finite ambiguity — cf. [SemiAnbd], Theorem 6.4!] outer isomor-
+phism πgeo
+1 (Dvj )∼
+→πgeo
+1 (D>,v). We shall refer to this fact by saying that“φΘ
+is
+vj
+compatible with the outer actions on the respective geometric [tempered] fundamen-
+tal groups”.
+(iii) Let v ∈Vgood. For each j ∈Fl , write
+φΘ
+vj
+: Dvj
+∼ →D>,v
+for the full poly-isomorphism [cf. §0].
+(iv) For each j ∈Fl , write
+→D>,v}v∈V and
+φΘ
+j : Dj →D>
+for the poly-morphism determined by the collection {φΘ
+vj
+: Dvj
+φΘ : D →D>
+for the poly-morphism {φΘ
+j }j∈Fl
+. Thus, whereas the capsule D admits a nat-
+ural permutation poly-action by Fl , the “labels” — i.e., in eﬀect, elements of
+LabCusp(D>) [cf. Proposition 4.2] — determined by the various collections of
+evaluation sections corresponding to a given j ∈ Fl are held fixed by arbitrary
+automorphisms of D> [cf. Proposition 4.2].
+Example 4.5. Transport of Label Classes of Cusps via Model Base-
+Bridges. We continue to use the notation of Examples 4.3, 4.4.
+(i) Let j ∈Fl , v ∈V. Recall from Example 4.3, (iv), that the data of the
+arrow φNF
+j : Dj →D at v consists of an arrow φNF
+vj
+: Dvj
+→D . If v ∈Vnon, then
+φNF
+vj induces various outer homomorphisms π1(Dvj ) →π1(D ); thus,
+108 SHINICHI MOCHIZUKI
+by considering cuspidal inertia groups of π1(D ) whose unique index l
+subgroup is contained in the image of this homomorphism [cf. Corollary
+2.5 when v ∈Vbad; the discussion of Remark 4.5.1 below],
+weconcludethatthesehomomorphismsinduceanatural isomorphism of Fl -torsors
+LabCusp(D )∼
+→LabCusp(Dvj ). In a similar vein, if v ∈Varc, then it follows from
+Definition 4.1, (v), that φNF
+vj consists of certain morphisms of Aut-holomorphic
+orbispaces which induce various outer homomorphisms π1(Dvj ) →π1(D ) from
+the [discrete] topological fundamental group π1(Dvj ) to the profinite group π1(D );
+thus,
+by considering the closures in π1(D ) of the images of cuspidal inertia
+groups of π1(Dvj ) [cf. the discussion of Remark 4.5.1 below],
+weconcludethatthesehomomorphismsinduceanatural isomorphism of Fl -torsors
+LabCusp(D )∼
+→LabCusp(Dvj ). Now let us observe that it follows immediately
+from the definitions that, as one allows v to vary, these isomorphisms of Fl -torsors
+LabCusp(D )∼
+→LabCusp(Dvj ) are compatible with the natural bijections in the
+first display of Proposition 4.2, hence determine an isomorphism of Fl -torsors
+LabCusp(D )∼
+→LabCusp(Dj). Next, let us note that the data of the arrow
+φΘ
+j : Dj →D> at the various v ∈V determines an isomorphism of Fl -torsors
+LabCusp(Dj)∼
+→LabCusp(D>) [which may be composed with the previous isomor-
+phism of Fl -torsors LabCusp(D )∼
+→LabCusp(Dj)]. Indeed, this is immediate
+from the definitions when v ∈Vgood; when v ∈Vbad, it follows immediately from
+the discussion of Example 4.4, (ii).
+(ii) The discussion of (i) may be summarized as follows:
+for each j ∈Fl , restriction at the various v ∈V via φNF
+j , φΘ
+j determines
+an isomorphism of Fl -torsors
+φLC
+j : LabCusp(D )∼
+→LabCusp(D>)
+such that φLC
+j is obtained from φLC
+1 by composing with the action by
+j ∈Fl.
+Write [ϵ] ∈LabCusp(D ) for the element determined by ϵ. Then we observe that
+φLC
+j ([ϵ]) →j; φLC
+1 (j·[ϵ]) →j
+via the natural bijection LabCusp(D>)∼
+→Fl of Proposition 4.2. In particular,
+the element [ϵ] ∈LabCusp(D ) may be characterized as the unique element η ∈
+LabCusp(D ) such that evaluation at η yields the assignment φLC
+j →j.
+Remark 4.5.1.
+(i) Let G be a group. If H ⊆G is a subgroup, g ∈G, then we shall write
+Hg def
+= g·H·g−1. Let J ⊆H ⊆G be subgroups. Suppose further that each of the
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 109
+subgroups J, H of G is only known up to conjugacy in G. Put another way, we
+suppose that we are in a situation in which there are independent G-conjugacy
+indeterminaciesinthespecificationofthesubgroupsJ andH. Thus, forinstance,
+there is no natural way to distinguish the given inclusion ι : J →H from its γ-
+conjugate ιγ : Jγ →Hγ, for γ ∈G. Moreover, it may happen to be the case that
+for some g ∈G, not only J, but also Jg ⊆H [or, equivalently J ⊆Hg−1]. Here, the
+subgroups J, Jg of H are not necessarily conjugate in H; indeed, the abstract pairs
+of a group and a subgroup given by (H,J) and (H,Jg) need not be isomorphic
+[i.e., it is not even necessarily the case that there exists an automorphism of H
+that maps J onto Jg]. In particular, the existence of the independent G-conjugacy
+indeterminacies in the specification of J and H means that one cannot specify the
+inclusion ι : J →H independently of the inclusion ζ : J →Hg−1 [i.e., arising from
+Jg ⊆H]. One way to express this state of aﬀairs is as follows. Write “ out
+→ ”
+for the outer homomorphism determined by an injective homomorphism between
+groups. Then the collection of factorizations J out
+→ H out
+→ G of the natural
+“outer” inclusion J out
+→ G through some G-conjugate of H — i.e., put another
+way,
+the collection of outer homomorphisms
+J out
+→ H
+that are compatible with the “structure morphisms” J out
+→ G,
+H out
+→ G determined by the natural inclusions
+— is well-defined, in a fashion that is compatible with independent G-conjugacy
+indeterminacies in the specification of J and H. That is to say, this collection
+of outer homomorphisms amounts to the collection of inclusions Jg1 →Hg2, for
+g1,g2 ∈G. By contrast, to specify the inclusion ι : J →H [together with, say,
+its G-conjugates {ιγ}γ∈G] independently of the inclusion ζ : J →Hg−1 [and its G-
+conjugates {ζγ}γ∈G] amounts to the imposition of a partial synchronization—
+i.e., a partial deactivation — of the [a priori!] independent G-conjugacy indeter-
+minacies in the specification of J and H. Moreover, such a “partial deactivation”
+can only be eﬀected at the cost of introducing certain arbitrary choices into the
+construction under consideration.
+(ii) Relative to the factorizations considered in (i), we make the following
+observation. Given a G-conjugate H∗ of H and a subgroup I ⊆H∗, the condition
+on I that
+(∗⊆) I be a G-conjugate of J
+is a condition that is independent of the datum H∗, while the condition on I that
+(∗
+∼
+=) I be a G-conjugate of J such that (H∗,I)∼
+= (H,J)
+[where the “∼
+=” denotes an isomorphism of pairs consisting of a group and a sub-
+group — cf. the discussion of (i)] is a condition that depends, in an essential fashion,
+on the datum H∗. Here, (∗⊆) is precisely the condition that one must impose when
+one considers arbitrary factorizations as in (i), while (∗
+∼
+=) is the condition that one
+must impose when one wishes to restrict one’s attention to factorizations whose
+110 SHINICHI MOCHIZUKI
+first arrow gives rise to a pair isomorphic to the pair determined by ι. That is to
+say, the dependence of (∗
+∼
+=) on the datum H∗ may be regarded as an explicit formu-
+lation of the necessity for the “imposition of a partial synchronization” as discussed
+in (i), while the corresponding independence, exhibited by (∗⊆), of the datum H∗
+may be regarded as an explicit formulation of the lack of such a necessity when one
+considers arbitrary factorizations as in (i). Finally, we note that by reversing the
+direction of the inclusion “⊆”, one may consider a subgroup I ⊆G that contains a
+given G-conjugate J∗ of J, i.e., I ⊇J∗; then analogous observations may be made
+concerning the condition (∗⊇) on I that I be a G-conjugate of H.
+(iii) The abstract situation described in (i) occurs in the discussion of Example
+4.5, (i), at v ∈Vbad. That is to say, the group “G” (respectively, “H”; “J”) of (i)
+corresponds to the group π1(D ) (respectively, the image of π1(Dvj ) in π1(D ); the
+uniqueindexl opensubgroupofacuspidalinertiagroupofπ1(D ))ofExample4.5,
+(i). Here, we recall that the homomorphism π1(Dvj ) →π1(D ) is only known up to
+composition with an inner automorphism — i.e., up to π1(D )-conjugacy; a cuspi-
+dal inertia group of π1(D ) is also only determined by an element ∈LabCusp(D )
+up to π1(D )-conjugacy. Moreover, it is immediate from the construction of the
+“model D-NF-bridges” of Example 4.3 [cf. also Definition 4.6, (i), below] that there
+is no natural way to synchronize these indeterminacies. Indeed, from the
+point of view of the discussion of Remark 4.3.1, (ii), by considering the actions of
+the absolute Galois groups of the local and global base fields involved on the cuspi-
+dal inertia groups that appear, one sees that such a synchronization would amount,
+roughly speaking, to a Galois-equivariant splitting [i.e., relative to the global abso-
+lute Galois groups that appear] of the “prime decomposition trees” of Remark 4.3.1,
+(ii) — which is absurd [cf. [IUTchII], Remark 2.5.2, (iii), for a more detailed discus-
+sion of this sort of phenomenon]. This phenomenon of the “non-synchronizability”
+of indeterminacies arising from local and global absolute Galois groups is reminis-
+cent of the discussion of [EtTh], Remark 2.16.2. On the other hand, by Corollary
+2.5, one concludes in the present situation the highly nontrivial fact that
+a factorization “J →H →G” is uniquely determined by the com-
+posite J →G, i.e., by the G-conjugate of J that one starts with, without
+resorting to any a priori “synchronization of indeterminacies”.
+(iv) A similar situation to the situation of (iii) occurs in the discussion of
+Example 4.5, (i), at v ∈Varc. That is to say, in this case, the group “G” (re-
+spectively, “H”; “J”) of (i) corresponds to the group π1(D ) (respectively, the
+image of π1(Dvj ) in π1(D ); a cuspidal inertia group of π1(Dvj )) of Example 4.5,
+(i). In this case, although it does not hold that a factorization“J →H →G” is
+uniquely determined by the composite J →G, i.e., by the G-conjugate of J that
+one starts with [cf. Remark 2.6.1], it does nevertheless hold, by Corollary 2.8, that
+the H-conjugacy class of the image of J via the arrow J →H that occurs in such
+a factorization is uniquely determined.
+(v) The property observed at v ∈Varc in (iv) is somewhat weaker than the
+rather strong property observed at v ∈Vbad in (iii). In the present series of pa-
+pers, however, we shall only be concerned with such subtle factorization proper-
+ties at v ∈Vbad, where we wish to develop, in [IUTchII], the theory of “Hodge-
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 111
+Arakelov-theoretic evaluation” by restricting certain cohomology classes via an ar-
+row “J →H” appearing in a factorization“J →H →G” of the sort discussed
+in (i). In fact, in the context of the theory of Hodge-Arakelov-theoretic evaluation
+that will be developed in [IUTchII], a slightly modified version of the phenome-
+non discussed in (iii) — which involves the “additive” version to be developed in
+§6 of the “multiplicative” theory developed in the present §4 — will be of central
+importance.
+Definition 4.6.
+(i) We define a base-NF-bridge, or D-NF-bridge, [relative to the given initial
+Θ-data] to be a poly-morphism
+‡φNF
+−→ ‡D )
+†DJ
+†φNF
+−→ †D
+— where †D is a category equivalent to D ; †DJ = {†Dj}j∈J is a capsule of D-
+prime-strips, indexed by a finite index set J — such that there exist isomorphisms
+D∼
+→†D , D∼
+→†DJ, conjugation by which maps φNF →†φNF. We define a(n)
+[iso]morphism of D-NF-bridges
+†φNF
+(†DJ
+−→ †D ) → (‡DJ′
+to be a pair of poly-morphisms
+†DJ
+∼
+→‡DJ′; †D∼
+→‡D
+— where †DJ
+∼
+→‡DJ′ is a capsule-full poly-isomorphism [cf. §0]; †D →‡D is a
+poly-morphism which is an Autϵ(†D )- [or, equivalently, Autϵ(‡D )-] orbit [cf. the
+discussion of Example 4.3, (i)] of isomorphisms — which are compatible with †φNF
+,
+‡φNF. There is an evident notion of composition of morphisms of D-NF-bridges.
+(ii) We define a base-Θ-bridge, or D-Θ-bridge, [relative to the given initial
+Θ-data] to be a poly-morphism
+†DJ
+†φΘ
+−→ †D>
+— where †D> is a D-prime-strip; †DJ = {†Dj}j∈J is a capsule of D-prime-strips,
+indexed by a finite index set J — such that there exist isomorphisms D>
+∼
+→†D>,
+D∼
+→†DJ, conjugation by which maps φΘ →†φΘ. We define a(n) [iso]morphism
+of D-Θ-bridges
+(†DJ
+†φΘ
+−→ †D>) → (‡DJ′
+to be a pair of poly-morphisms
+†DJ
+∼
+→‡DJ′; †D>
+∼
+→‡D>
+— where †DJ
+∼
+→‡DJ′ is a capsule-full poly-isomorphism; †D>
+poly-isomorphism — which are compatible with †φΘ
+,
+notion of composition of morphisms of D-Θ-bridges.
+‡φΘ
+−→ ‡D>)
+∼
+→‡D> is the full
+‡φΘ. There is an evident
+112 SHINICHI MOCHIZUKI
+(iii) We define a base-ΘNF-Hodge theater, or D-ΘNF-Hodge theater, [relative
+to the given initial Θ-data] to be a collection of data
+†φNF
+†HTD-ΘNF = (†D
+←− †DJ
+†φΘ
+−→ †D>)
+— where †φNF is a D-NF-bridge; †φΘ is a D-Θ-bridge — such that there exist
+isomorphisms
+D∼
+→†D ; D∼
+→†DJ; D>
+∼
+→†D>
+conjugation by which maps φNF →†φNF
+, φΘ →†φΘ. A(n) [iso]morphism of D-
+ΘNF-Hodge theaters is defined to be a pair of morphisms between the respective
+associated D-NF- and D-Θ-bridges that are compatible with one another in the
+sense that they induce the same bijection between the index sets of the respective
+capsules of D-prime-strips. There is an evident notion of composition of morphisms
+of D-ΘNF-Hodge theaters.
+Proposition 4.7. Bridges) Let
+(Transport of Label Classes of Cusps via Base-
+†HTD-ΘNF = (†D
+†φNF
+←− †DJ
+†φΘ
+−→ †D>)
+be a D-ΘNF-Hodge theater [relative to the given initial Θ-data]. Then:
+(i) The structure at the various v ∈Vbad of the D-Θ-bridge †φΘ [i.e., in-
+volving evaluation sections — cf. Example 4.4, (i), (ii); Definition 4.6, (ii)]
+determines a bijection
+†χ : π0(†DJ) = J∼
+→Fl
+— i.e., determines labels ∈Fl for the constituent D-prime-strips of the capsule
+†DJ.
+(ii) For each j ∈J, restriction at the various v ∈V [cf. Example 4.5] via the
+portion of †φNF
+,
+†φΘ indexed by j determines an isomorphism of Fl -torsors
+†φLC
+j : LabCusp(†D )∼
+→LabCusp(†D>)
+such that †φLC
+j is obtained from †φLC
+1 [where, by abuse of notation, we write “1 ∈J”
+for the element of J that maps via †χ to the image of 1 in Fl ] by composing with
+the action by †χ(j) ∈Fl.
+(iii) There exists a unique element
+[†ϵ] ∈LabCusp(†D )
+such that for each j ∈ J, the natural bijection LabCusp(†D>)∼
+→Fl of the
+second display of Proposition 4.2 maps †φLC
+j ([†ϵ]) = †φLC
+1 (†χ(j)·[†ϵ]) →†χ(j). In
+particular, the element [†ϵ] determines an isomorphism of Fl -torsors
+†ζ : LabCusp(†D )∼
+→J (∼
+→Fl )
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 113
+[where the bijection in parentheses is the bijection †χ of (i)] between “global
+cusps” [i.e., “†χ(j)·[†ϵ]”] and capsule indices [i.e., j ∈J∼
+→Fl ]. Finally,
+when considered up to composition with multiplication by an element of Fl , the
+bijection †ζ is independent of the choice of †φNF within the Fl -orbit of †φNF
+relative to the natural poly-action of Fl on †D [cf. Example 4.3, (iv); Fig. 4.4
+below].
+Proof. Assertion (i) follows immediately from the definitions [cf. Example 4.4,
+(i), (ii), (iv); Definition 4.6], together with the bijection of the second display of
+Proposition 4.2. Assertions (ii) and (iii) follow immediately from the intrinsic
+nature of the constructions of Example 4.5. ⃝
+Remark 4.7.1. The significance of the natural bijection †ζ of Proposition 4.7,
+(iii), lies in the following observation: Suppose that one wishes to work with the
+global data †D in a fashion that is independent of the local data [i.e., “prime-strip
+data”] †D>,
+†DJ [cf. Remark 4.3.2, (b)]. Then
+by replacing the capsule index set J by the set of global label classes of
+cuspsLabCusp(†D )via†ζ , oneobtainsanobject—i.e., LabCusp(†D )
+— constructed via [i.e., “native to”] the global data that is immune to the
+“collapsing” of J∼
+→Fl — i.e., of Fl -orbits of V±un
+— even at primes
+v ∈V of the sort discussed in Remark 4.2.1!
+That is to say, this “collapsing” of [i.e., failure of Fl to act freely on] Fl -orbits
+of V±un is a characteristically global consequence of the global prime decomposition
+treesdiscussedinRemark4.3.1, (ii)[cf. theexamplediscussedinRemark4.2.1]. We
+refer to Remark 4.9.3, (ii), below for a discussion of a closely related phenomenon.
+Remark 4.7.2.
+(i) At the level of labels [cf. the content of Proposition 4.7], the structure of a
+D-ΘNF-Hodge theater may be summarized via the diagram of Fig. 4.4 below — i.e.,
+wheretheexpression“[1 < 2 < ... < (l−1) < l ]”correspondsto†D>; the
+expression “(1 2 ... l−1 l )” corresponds to †DJ; the lower right-
+hand “Fl -cycle of ’s” corresponds to †D ; the “⇑” corresponds to the associated
+D-Θ-bridge; the “⇒” corresponds to the associated D-NF-bridge; the “/ ’s” denote
+D-prime-strips.
+(ii) Note that the labels arising from †D> correspond, ultimately, to various
+irreducible components in the special fiber of a certain tempered covering of a
+[“geometric”!] Tate curve [a special fiber which consists of a chain of copies
+of the projective line — cf. [EtTh], Corollary 2.9]. In particular, these labels are
+obtainedbycounting—inanintuitive, archimedean, additivefashion—thenumber
+of irreducible components between a given irreducible component and the “origin”.
+That is to say, the portion of the diagram of Fig. 4.4 corresponding to †D> may
+be described by the following terms:
+geometric, additive, archimedean, hence Frobenius-like [cf. Corol-
+lary 3.8].
+114 SHINICHI MOCHIZUKI
+By contrast, the various “ ’s” in the portion of the diagram of Fig. 4.4 correspond-
+ing to †D arise, ultimately, from various primes of an [“arithmetic”!] number
+field. These primes are permuted by the multiplicative group Fl = F×
+l /{±1}, in a
+cyclic — i.e., nonarchimedean — fashion. Thus, the portion of the diagram of Fig.
+4.4 corresponding to †D may be described by the following terms:
+arithmetic, multiplicative, nonarchimedean, hence´ etale-like [cf.
+the discussion of Remark 4.3.2].
+That is to say, the portions of the diagram of Fig. 4.4 corresponding to †D>,
+†D
+diﬀer quite fundamentally in structure. In particular, it is not surprising that the
+only “common ground” of these two fundamentally structurally diﬀerent portions
+consists of an underlying set of cardinality l [i.e., the portion of the diagram of
+Fig. 4.4 corresponding to †DJ].
+(iii) The bijection †ζ — or, perhaps more appropriately, its inverse
+(†ζ )−1 : J∼
+→LabCusp(†D )
+— may be thought of as relating arithmetic [i.e., if one thinks of the elements of
+the capsule index set J as collections of primes of a number field] to geometry [i.e.,
+if one thinks of the elements of LabCusp(†D ) as corresponding to the [geometric!]
+cusps of the hyperbolic orbicurve]. From this point of view,
+(†ζ )−1 maybethoughtofasasortof“combinatorial Kodaira-Spencer
+morphism” [cf. the point of view of [HASurI], §1.4].
+We refer to Remark 4.9.2, (iv), below, for another way to think about †ζ.
+[1 < 2 < ... < j < ... < (l−1) < l ]
+D> = /
+⇑ φΘ
+1
+/ 2
+/.
+.
+.
+l−1
+DJ / l
+φNF
+⇒
+−→
+↗ ↘
+Fl
+↑ D= ↓
+B(CK)0
+/
+↖ ↙
+...
+Fig. 4.4: The combinatorial structure of a D-ΘNF-Hodge theater
+The following result follows immediately from the definitions.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 115
+Proposition 4.8. (First Properties of Base-NF-Bridges, Base-Θ-Bridges,
+and Base-ΘNF-Hodge Theaters) Relative to a fixed collection of initial Θ-
+data:
+(i) The set of isomorphisms between two D-NF-bridges forms an Fl-
+torsor.
+(ii) The set of isomorphisms between two D-Θ-bridges (respectively, two
+D-ΘNF-Hodge theaters) is of cardinality one.
+(iii) Given a D-NF-bridge and a D-Θ-bridge, the set of capsule-full poly-
+isomorphisms between the respective capsules of D-prime-strips which allow one to
+glue the given D-NF- and D-Θ-bridges together to form a D-ΘNF-Hodge theater
+forms an Fl -torsor.
+(iv) Given a D-NF-bridge, there exists a [relatively simple — cf. the discussion
+of Examples 4.4, (i), (ii), (iii); 4.5, (i), (ii)] functorial algorithm for construct-
+ing, up to an Fl -indeterminacy [cf. (i), (iii)], from the given D-NF-bridge a
+D-ΘNF-Hodge theater whose underlying D-NF-bridge is the given D-NF-bridge.
+Proposition 4.9. (Symmetries arising from Forgetful Functors) Relative
+to a fixed collection of initial Θ-data:
+(i) (Base-NF-Bridges) The operation of associating to a D-ΘNF-Hodge the-
+ater the underlying D-NF-bridge of the D-ΘNF-Hodge theater determines a natural
+functor
+category of
+D-ΘNF-Hodge theaters
+and isomorphisms of
+D-ΘNF-Hodge theaters
+→
+category of
+D-NF-bridges
+and isomorphisms of
+D-NF-bridges
+†HTD-ΘNF → (†D
+†φNF
+←− †DJ)
+whose output data admits an Fl -symmetry which acts simply transitively on
+the index set [i.e., “J”] of the underlying capsule of D-prime-strips [i.e., “†DJ”] of
+this output data.
+(ii) (Holomorphic Capsules) The operation of associating to a D-ΘNF-
+Hodge theater the underlying capsule of D-prime-strips of the D-ΘNF-Hodge theater
+determines a natural functor
+category of
+D-ΘNF-Hodge theaters
+and isomorphisms of
+D-ΘNF-Hodge theaters
+→
+category of l -capsules
+of D-prime-strips
+and capsule-full poly-
+isomorphisms of l -capsules
+†HTD-ΘNF → †DJ
+116 SHINICHI MOCHIZUKI
+whose output data admits an Sl -symmetry [where we write Sl for the symmet-
+ric group on l letters] which acts transitively on the index set [i.e., “J”] of this
+output data. Thus, this functor may be thought of as an operation that consists of
+forgetting the labels ∈Fl [i.e., forgetting the bijection J∼
+→Fl of Proposition
+4.7, (i)]. In particular, if one is only given this output data †DJ up to isomorphism,
+then there is a total of precisely l possibilities for the element ∈Fl to which a
+given index j ∈J corresponds [cf. Proposition 4.7, (i)], prior to the application of
+this functor.
+(iii) (Mono-analytic Capsules) By composing the functor of (ii) with the
+mono-analyticization operation discussed in Definition 4.1, (iv), one obtains a
+natural functor
+category of
+D-ΘNF-Hodge theaters
+and isomorphisms of
+D-ΘNF-Hodge theaters
+→
+category of l -capsules
+of D⊢-prime-strips
+and capsule-full poly-
+isomorphisms of l -capsules
+†HTD-ΘNF → †D⊢
+J
+whose output data satisfies the same symmetry properties with respect to labels as
+the output data of the functor of (ii).
+Proof. Assertions (i), (ii), (iii) follow immediately from the definitions [cf. also
+Proposition 4.8, (i), in the case of assertion (i)]. ⃝
+Remark 4.9.1.
+(i) Ultimately, in the theory of the present series of papers [cf., especially,
+[IUTchII], §2], we shall be interested in
+evaluating the´ etale theta function of [EtTh] — i.e., in the spirit of
+the Hodge-Arakelov theory of [HASurI], [HASurII] — at the various
+D-prime-strips of †DJ, in the fashion stipulated by the labels discussed
+in Proposition 4.7, (i).
+These values of the ´ etale theta function will be used to construct various arithmetic
+line bundles. We shall be interested in computing the arithmetic degrees — in
+the form of various “log-volumes” — of these arithmetic line bundles. In order to
+compute these global log-volumes, it is necessary to be able to compare the log-
+volumes that arise at D-prime-strips with diﬀerent labels. It is for this reason that
+the non-labeled output data of the functors of Proposition 4.9, (i), (ii), (iii) [cf. also
+Proposition 4.11, (i), (ii), below], are of crucial importance in the theory of the
+present series of papers. That is to say,
+the non-labeled output data of the functors of Proposition 4.9, (i), (ii),
+(iii) [cf. also Proposition 4.11, (i), (ii), below] — which allow one to
+consider isomorphisms between the D-prime-strips that were originally
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 117
+assigned diﬀerent labels — make possible the comparison of objects
+[e.g., log-volumes] constructed relative to diﬀerent labels.
+In Proposition 4.11, (i), (ii), below, we shall see that by considering “processions”,
+one may perform such comparisons in a fashion that minimizes the label indeter-
+minacy that arises.
+(ii) Since the Fl -symmetry that appears in Proposition 4.9, (i), is transitive,
+it follows that one may use this action to perform comparisons as discussed in (i).
+This prompts the question:
+WhatisthediﬀerencebetweenthisFl -symmetryandtheSl -symmetry
+of the output data of the functors of Proposition 4.9, (ii), (iii)?
+In a word, restricting to the Fl -symmetry of Proposition 4.9, (i), amounts to the
+imposition of a “cyclic structure” on the index set J [i.e., a structure of Fl -torsor
+on J]. Thus, relative to the issue of comparability raised in (i), this Fl -symmetry
+allows comparison between — i.e., involves isomorphisms between the non-labeled
+D-prime-strips corresponding to — distinct members of this index set J, without
+disturbing the cyclic structure on J. This cyclic structure may be thought of as
+a sort of combinatorial manifestation of the link to the global object †D that
+appears in a D-NF-bridge. On the other hand,
+in order to compare these D-prime-strips indexed by J “in the abso-
+lute” to D-prime-strips that have nothing to do with J, it is necessary to
+“forget the cyclic structure on J”
+.
+This is precisely what is achieved by considering the functors of Proposition 4.9,
+(ii), (iii), i.e., by working with the “full Sl -symmetry”.
+Remark 4.9.2.
+(i) The various elements of the index set of the capsule of D-prime-strips of a
+D-NF-bridge are synchronized in their correspondence with the labels “1,2,...,l ”,
+in the sense that this correspondence is completely determined up to composition
+with the action of an element of Fl . In particular, this correspondence is always
+bijective.
+One may regard this phenomenon of synchronization, or cohesion, as
+an important consequence of the fact that the number field in question is
+represented in the D-NF-bridge via a single copy [i.e., as opposed to a
+capsule whose index set is of cardinality ≥2] of D.
+Indeed, consider a situation in which each D-prime-strip in the capsule †DJ is
+equipped with its own “independent globalization”, i.e., copy of D , to which it
+is related by a copy of “φNF
+j ”, which [in order not to invalidate the comparability
+of distinct labels — cf. Remark 4.9.1, (i)] is regarded as being known only up to
+composition with the action of an element of Fl . Then if one thinks of the [mani-
+festly mutually disjoint — cf. Definition 3.1, (f); Example 4.3, (i)] Fl -translates of
+V±un V(K)bad [whose union is equal to VBor V(K)bad] as being labeled by the
+elements of Fl , then each D-prime-strip in the capsule †DJ — i.e., each “•” in Fig.
+4.5 below — is subject, as depicted in Fig. 4.5, to an independent indeterminacy
+118 SHINICHI MOCHIZUKI
+concerning the label ∈Fl to which it is associated. In particular, the set of all
+possibilities for each association includes correspondences between the index set J
+of the capsule †DJ and the set of labels Fl which fail to be bijective. Moreover,
+although Fl arises essentially as a subquotient of a Galois group of extensions of
+number fields [cf. the faithful poly-action of Fl on primes of V(K)], the fact that
+it also acts faithfully on conjugates of the cusp ϵ [cf. Example 4.3, (i)] implies that
+“working with elements of V(K) up to Fl -indeterminacy” may only be done at the
+expense of “working with conjugates of the cusp ϵ up to Fl -indeterminacy”. That is
+to say, “working with nonsynchronized labels” is inconsistent with the construction
+of the crucial bijection †ζ in Proposition 4.7, (iii).
+• → 1? 2? 3?··· l ?
+• → 1? 2? 3?··· l ?
+.
+.
+.
+.
+.
+.
+• → 1? 2? 3?··· l ?
+Fig. 4.5: Nonsynchronized labels
+(ii) In the context of the discussion of (i), we observe that the “single copy” of
+D may also be thought of as a “single connected component”, hence — from
+the point of view of Galois categories — as a “single basepoint”.
+(iii) In the context of the discussion of (i), it is interesting to note that since
+the natural action of Fl on Fl is transitive, one obtains the same “set of all
+possibilities for each association”, regardless of whether one considers independent
+Fl -indeterminacies at each index of J or independent Sl -indeterminacies at each
+index of J [cf. the discussion of Remark 4.9.1, (ii)].
+(iv) The synchronized indeterminacy [cf. (i)] exhibited by a D-NF-bridge
+— i.e., at a more concrete level, the crucial bijection †ζ of Proposition 4.7, (iii) —
+may be thought of as a sort of combinatorial model of the notion of a “holo-
+morphic structure”. By contrast, the nonsynchronized indeterminacies dis-
+cussed in (i) may be thought of as a sort of combinatorial model of the notion of
+a “real analytic structure”. Moreover, we observe that the theme of the above
+discussion — in which one considers
+“how a given combinatorial holomorphic structure is ‘embedded’ within
+its underlying combinatorial real analytic structure”
+— is very much in line with the spirit of classical complex Teichm¨ uller theory.
+(v) From the point of view discussed in (iv), the main results of the “multi-
+plicative combinatorial Teichm¨ uller theory” developed in the present §4 may
+be summarized as follows:
+(a) globalizability of labels, in a fashion that is independent of local structures
+[cf. Remark 4.3.2, (b); Proposition 4.7, (iii)];
+(b) comparability of distinct labels [cf. Proposition 4.9; Remark 4.9.1, (i)];
+(c) absolute comparability [cf. Proposition 4.9, (ii), (iii); Remark 4.9.1, (ii)];
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 119
+(d) minimization of label indeterminacy — without sacrificing the symmetry
+necessary to perform comparisons! — via processions [cf. Proposition
+4.11, (i), (ii), below].
+Remark 4.9.3.
+(i) Ultimately, in the theory of the present series of papers [cf. [IUTchIII]],
+we would like to apply the mono-anabelian theory of [AbsTopIII] to the various
+local and global arithmetic fundamental groups [i.e., isomorphs of ΠCK , Πv for
+v ∈Vnon] that appear in a D-ΘNF-Hodge theater [cf. the discussion of Remark
+4.3.2]. To do this, it is of essential importance to have available not only the
+absolute Galois groups of the various local and global base fields involved, but
+also the geometric fundamental groups that lie inside the isomorphs of ΠCK , Πv
+involved. Indeed, in the theory of [AbsTopIII], it is precisely the outer Galois action
+of the absolute Galois group of the base field on the geometric fundamental group
+that allows one to reconstruct the ring structures group-theoretically in a fashion
+that is compatible with localization/globalization operations as shown in Fig. 4.3.
+Here, we pause to recall that in [AbsTopIII], Remark 5.10.3, (i), one may find a
+discussion of the analogy between this phenomenon of “entrusting of arithmetic
+moduli” [to the outer Galois action on the geometric fundamental group] and the
+Kodaira-Spencer isomorphism of an indigenous bundle — an analogy that
+is reminiscent of the discussion of Remark 4.7.2, (iii).
+(ii) Next, let us observe that the state of aﬀairs discussed in (i) has important
+implications concerning the circumstances that necessitate the use of “X
+− →v
+” [i.e., as
+opposed to “Cv”] in the definition of “Dv” in Examples 3.3, 3.4 [cf. Remark 4.2.1].
+Indeed, localization/globalization operations as shown in Fig. 4.3 give rise, when
+applied to the various geometric fundamental groups involved, to various bijections
+between local and global sets of label classes of cusps. Now suppose that one uses
+“Cv” instead of “X
+− →v
+” in the definition of “Dv” in Examples 3.3, 3.4. Then the
+existence of v ∈V of the sort discussed in Remark 4.2.1, together with the condition
+of compatibility with localization/globalization operations as shown in Fig. 4.3 —
+where we take, for instance,
+(v of Fig. 4.3) def = (v′ of Fig. 4.3) def = (v of Remark 4.2.1)
+(w of Remark 4.2.1)
+— imply that, at a combinatorial level, one is led, in eﬀect, to a situation of the
+sort discussed in Remark 4.9.2, (i), i.e., a situation involving nonsynchronized
+labels [cf. Fig. 4.5], which, as discussed in Remark 4.9.2, (i), is incompatible with
+the construction of the crucial bijection †ζ of Proposition 4.7, (iii), an object which
+will play an important role in the theory of the present series of papers.
+Definition 4.10. Let Cbe a category, n a positive integer. Then we shall refer
+to as a procession of length n, or n-procession, of Cany diagram of the form
+P1 → P2 → ... → Pn
+120 SHINICHI MOCHIZUKI
+— where each Pj [for j = 1,...,n] is a j-capsule [cf. §0] of objects of C; each
+arrow Pj →Pj+1 [for j = 1,...,n−1] denotes the collection of all capsule-full
+poly-morphisms [cf. §0] from Pj to Pj+1. A morphism from an n-procession of Cto
+an m-procession of C
+(P1 →... →Pn) → (Q1 →... →Qm)
+consists of an order-preserving injection ι : {1,...,n} →{1,...,m}[so n ≤m],
+together with a capsule-full poly-morphism Pj →Qι(j) for each j = 1,...,n.
+/ → / / → / / / → ... → (/ ... / )
+Fig. 4.6: An l -procession of D-prime-strips
+Proposition 4.11. collection of initial Θ-data:
+(Processions of Base-Prime-Strips) Relative to a fixed
+(i) (Holomorphic Processions) Given a D-Θ-bridge †φΘ : †DJ → †D>
+[cf. Definition 4.6, (ii)], with underlying capsule of D-prime-strips †DJ, denote
+by Prc(†DJ) the l -procession of D-prime-strips [cf. Fig. 4.6, where each
+“/ ” denotes a D-prime-strip] determined by considering the [“sub”]capsules of
+†DJ corresponding to the subsets S1 ⊆... ⊆Sj
+def
+= {1,2,...,j}⊆... ⊆Sl
+def
+= Fl
+[where, by abuse of notation, we use the notation for positive integers to denote the
+images of these positive integers in Fl ], relative to the bijection †χ : J∼
+→Fl of
+Proposition 4.7, (i). Then the assignment †φΘ →Prc(†DJ) determines a natural
+functor
+category of
+D-Θ-bridges
+and isomorphisms of
+D-Θ-bridges
+→
+category of processions
+of D-prime-strips
+and morphisms of
+processions
+†φΘ → Prc(†DJ)
+whose output data satisfies the following property: for each n ∈{1,...,l }, there
+are precisely n possibilities for the element ∈Fl to which a given index of the
+index set of the n-capsule that appears in the procession constituted by this output
+data corresponds, prior to the application of this functor. That is to say, by tak-
+ing the product, over elements of Fl , of cardinalities of “sets of possibilies”, one
+concludes that
+by considering processions — i.e., the functor discussed above, possi-
+bly pre-composed with the functor †HTD-ΘNF →†φΘ that associates to
+a D-ΘNF-Hodge theater its associated D-Θ-bridge — the indeterminacy
+consisting of (l )(l ) possibilities that arises in Proposition 4.9, (ii), is
+reduced to an indeterminacy consisting of a total of l ! possibilities.
+(ii) (Mono-analytic Processions) By composing the functor of (i) with the
+mono-analyticization operation discussed in Definition 4.1, (iv), one obtains a
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 121
+natural functor
+category of
+D-Θ-bridges
+and isomorphisms of
+D-Θ-bridges
+→
+category of processions
+of D⊢-prime-strips
+and morphisms of
+processions
+†φΘ → Prc(†D⊢
+J)
+whose output data satisfies the same indeterminacy properties with respect to labels
+as the output data of the functor of (i).
+Proof. Assertions (i), (ii) follow immediately from the definitions. ⃝
+The following result is an immediate consequence of our discussion.
+´
+Corollary 4.12. (
+Etale-pictures of Base-ΘNF-Hodge Theaters) Relative
+to a fixed collection of initial Θ-data:
+(i) Consider the [composite] functor
+†HTD-ΘNF → †D> → †D⊢
+>
+— from the category of D-ΘNF-Hodge theaters and isomorphisms of D-ΘNF-Hodge
+theaters [cf. Definition 4.6, (iii)] to the category of D⊢-prime-strips and isomor-
+phisms of D⊢-prime-strips — obtained by assigning to the D-ΘNF-Hodge theater
+†HTD-ΘNF the mono-analyticization [cf. Definition 4.1, (iv)] †D⊢
+> of the D-
+prime-strip †D> that appears as the codomain of the underlying D-Θ-bridge [cf.
+Definition 4.6, (ii)] of †HTD-ΘNF. If †HTD-ΘNF
+,
+‡HTD-ΘNF are D-ΘNF-Hodge
+theaters, then we define the base-ΘNF-, or D-ΘNF-, link
+†HTD-ΘNF D
+−→ ‡HTD-ΘNF
+from †HTD-ΘNF to ‡HTD-ΘNF to be the full poly-isomorphism
+†D⊢
+>
+∼
+→ ‡D⊢
+>
+between the D⊢-prime-strips obtained by applying the functor discussed above to
+†HTD-ΘNF
+,
+‡HTD-ΘNF
+.
+(ii) If
+...
+D
+−→ (n−1)HTD-ΘNF D
+−→ nHTD-ΘNF D
+−→ (n+1)HTD-ΘNF D
+−→...
+[where n ∈Z] is an infinite chain of D-ΘNF-linked D-ΘNF-Hodge theaters
+[cf. the situation discussed in Corollary 3.8], then we obtain a resulting chain of
+full poly-isomorphisms
+...
+∼
+→ nD⊢
+>
+∼
+→ (n+1)D⊢
+>
+∼
+→...
+122 SHINICHI MOCHIZUKI
+[cf. the situation discussed in Remark 3.8.1, (ii)] between the D⊢-prime-strips ob-
+tained by applying the functor of (i). That is to say, the output data of the functor
+of (i) forms a constant invariant [cf. the discussion of Remark 3.8.1, (ii)] —
+i.e., a mono-analytic core [cf. the situation discussed in Remark 3.9.1] — of the
+above infinite chain.
+(iii) If we regard each of the D-ΘNF-Hodge theaters of the chain of (ii) as a
+spoke emanating from the mono-analytic core discussed in (ii), then we obtain a
+diagram — i.e., an´ etale-picture of D-ΘNF-Hodge theaters — as in Fig. 4.7
+below [cf. the situation discussed in Corollary 3.9, (i)]. In Fig. 4.7, “>⊢” denotes
+the mono-analytic core; “/ →/ / →...” denotes the “holomorphic” proces-
+sions of Proposition 4.11, (i), together with the remaining [“holomorphic”] data of
+the corresponding D-ΘNF-Hodge theater. Finally, [cf. the situation discussed in
+Corollary 3.9, (i)] this diagram satisfies the important property of admitting arbi-
+trary permutation symmetries among the spokes [i.e., among the labels n ∈Z
+of the D-ΘNF-Hodge theaters].
+/ → / / →...
+...
+|...
+—
+/ → / / →...
+>⊢
+—
+/ → / / →...
+...
+|
+...
+/ → / / →...
+Fig. 4.7:
+´
+Etale-picture of D-ΘNF-Hodge theaters
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 123
+Section 5: ΘNF-Hodge Theaters
+In the present §5, we continue our discussion of various “enhancements” to the
+Θ-Hodge theaters of §3. Namely, we define the notion of a ΘNF-Hodge theater
+[cf. Definition 5.5, (iii)] and observe that these ΘNF-Hodge theaters satisfy the
+same “functorial dynamics” [cf. Corollary 5.6; Remark 5.6.1] as the base-ΘNF-
+Hodge theaters discussed in §4.
+Let
+†HTD-ΘNF = (†D
+†φNF
+←− †DJ
+†φΘ
+−→ †D>)
+be a D-ΘNF-Hodge theater [cf. Definition 4.6], relative to a fixed collection of initial
+Θ-data (F/F, XF, l, CK, V, Vbad
+mod, ϵ) as in Definition 3.1.
+Example 5.1. Global Frobenioids.
+(i) By applying the anabelian result of [AbsTopIII], Theorem 1.9, via the
+“Θ-approach” discussed in Remark 3.1.2, to π1(†D ), we may construct group-
+theoretically from π1(†D ) an isomorph of “F×” — which we shall denote
+M (†D )
+— equipped with its natural π1(†D )-action. Here, we recall that this construction
+includes a reconstruction of the field structure on M (†D ) def
+= M (†D ) {0}.
+Next, let us recall [cf. Remark 3.1.7, (i)] the unique model CFmod of the F-core CF
+over Fmod. Observe that one may construct group-theoretically from π1(†D ), in a
+functorial fashion, a profinite group corresponding to “CFmod” [cf. the algorithms of
+[AbsTopII], Corollary 3.3, (i), which are applicable in light of [AbsTopI], Example
+4.8], which contains π1(†D ) as an open subgroup; write †D for B(−)0 of this
+profinite group, so we obtain a natural morphism
+†D →†D
+— i.e., a “category-theoretic version” of the natural morphism of hyperbolic orbi-
+curves CK →CFmod — together with a natural extension of the action of π1(†D )
+on M (†D ) to π1(†D ). In particular, by taking π1(†D )-invariants, we obtain
+a submonoid/subfield
+Mmod(†D ) ⊆M (†D ), Mmod(†D ) ⊆M (†D )
+correspondingtoF×
+mod ⊆F×
+, Fmod ⊆F. Inasimilarvein, byapplying[AbsTopIII],
+Theorem 1.9 — cf., especially, the construction of the Belyi cuspidalizations of [Ab-
+sTopIII], Theorem 1.9, (a), and of the field“K×
+ZNF ∪{0}” of [AbsTopIII], Theorem
+1.9, (d), (e)—weconcludethatwemayconstructgroup-theoreticallyfromπ1(†D ),
+in a functorial fashion, an isomorph
+πrat
+1 (†D ) ( π1(†D ))
+124 SHINICHI MOCHIZUKI
+of the absolute Galois group of the function field of CFmod [i.e., equipped with its
+natural surjection to π1(†D ) and well-defined up to inner automorphisms deter-
+mined by elements of the kernel of this natural surjection], as well as isomorphs
+of the pseudo-monoids of κ-, ∞κ-, and∞κ×-coric rational functions associated to
+CFmod [cf. the discussion of Remark 3.1.7, (i), (ii); [AbsTopII], Corollary 3.3, (iii),
+which is applicable in light of [AbsTopI], Example 4.8] — which we shall denote
+Mκ (†D ), M
+∞κ(†D ), M
+∞κ×(†D )
+— equipped with their natural πrat
+1 (†D )-actions. Thus, Mκ (†D ) may be iden-
+tified with the subset of πrat
+1 (†D )-invariants of M
+∞κ(†D ), and M (†D ) may
+be identified with a certain subset [i.e., indeed, a certain “sub-pseudo-monoid”!]
+of M
+∞κ×(†D ). Next, let us observe that it also follows from the group-theoretic
+constructions recalled above that one may reconstruct the quotients of π1(†D ),
+π1(†D ) that correspond, respectively, to the absolute Galois groups of K, Fmod.
+Thus, by forming the quotient of πrat
+1 (†D ) by the intersection of the kernel of the
+action of πrat
+1 (†D ) on M
+∞κ(†D ) with the inverse image in πrat
+1 (†D ) of the kernel
+of the maximal solvable quotient of [the quotient of πrat
+1 (†D ) that corresponds to]
+the absolute Galois group of Fmod, we obtain a group-theoretic construction for a
+quotient
+πrat
+1 (†D ) πκ-sol
+1 (†D )
+— whose kernel we denote by π
+rat/κ-sol
+1 (†D ) — that corresponds to the quotient
+“Gal(LC/LC) Gal(LC(κ-sol)/LC)” of Remark 3.1.7, (iv), as well as pseudo-
+monoids equipped with natural πκ-sol
+1 (†D )-actions
+M
+∞κ(†D ), Mκ-sol(†D ), Msol(†D )
+— where Mκ-sol(†D ), Msol(†D ) denote the respective subsets of π
+rat/κ-sol
+1 (†D )-
+invariants of M
+∞κ×(†D ), M (†D ). Moreover, by applying the characterization
+of the subgroup “Gal(K/F(μl)) ⊆Gal(K/Fmod)” given in Remark 3.1.7, (iii), we
+obtain a group-theoretic construction for subgroups
+AutSL
+ϵ (†D ) ⊆ AutSL(†D ) ⊆ Aut(†D )
+that correspond to the subgroups “AutSL
+ϵ (CK) ⊆AutSL(CK) ⊆Aut(CK)” of Ex-
+ample 4.3, (i), hence induce natural isomorphisms
+AutSL(†D )/AutSL
+ϵ (†D )∼
+→ Aut(†D )/Autϵ(†D )∼
+→ Fl
+— i.e., which, in the spirit of Example 4.3, (iv), may be thought of as a poly-
+action of Fl on †D . Finally, we observe that although this poly-action of Fl on
+πrat
+1 (†D ) is only well-defined up to conjugation by elements of the subgroup
+πrat
+1 (†D ) def
+= πrat
+1 (†D )×π1(†D ) π1(†D )
+ofπrat
+1 (†D ), itfollowsformallyfromthelinear disjointnesspropertydiscussedin
+Remark 3.1.7, (iii), that, by regarding this poly-action of Fl as arising from the ac-
+tion of elements of AutSL(†D ), one may conclude that, if we write π
+rat/κ-sol
+1 (†D )
+def
+rat/κ-sol
+= π
+1 (†D ) πrat
+1 (†D ), then
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 125
+the resulting poly-action of Fl on πrat
+1 (†D ) is, in fact, well-defined
+rat/κ-sol
+up to π
+1 (†D )-conjugacy indeterminacies, hence, in particular,
+that the induced poly-action on [the domain, codomain, and arrow that
+constitute] the“κ-sol-outer representation”
+πκ-sol
+1 (†D ) → Outκ-sol(π
+rat/κ-sol
+1 (†D ))
+— i.e., which may be associated to and is, in fact, equivalent to the exact
+rat/κ-sol
+sequence 1 →π
+1 (†D ) →πrat
+1 (†D ) →πκ-sol
+1 (†D ) →1, regarded
+rat/κ-sol
+up to π
+1 (†D )-conjugacy indeterminacies [cf. the discussion of Re-
+mark 3.1.7, (iv)] — is, in fact, well-defined without any conjugacy
+indeterminacies, and, moreover, equal to the trivial action.
+We shall refer to this phenomenon [cf. also Remark 5.1.5 below] as the phenomenon
+of κ-sol-conjugate synchronization.
+(ii) Next, let us recall [cf. Definition 4.1, (v)] that the field structure on
+M (†D ) [i.e., “F”] allows one to reconstruct group-theoretically from π1(†D )
+the set of valuations V(†D ) [i.e., “V(F)”] on M (†D ) equipped with its natural
+π1(†D )-action, hencealsothemonoidon†D [i.e., inthesenseof[FrdI],Definition
+1.1, (ii)]
+Φ (†D )(−)
+that associates to an object A ∈ Ob(†D ) the monoid Φ (†D )(A) of “stack-
+theoretic” [cf. Remark 3.1.5] arithmetic divisors on the corresponding subfield
+M (†D )A ⊆M (†D ) [i.e., the monoid denoted “Φ(−)” in [FrdI], Example 6.3;
+cf. also Remark 3.1.5 of the present paper], together with the natural morphism
+of monoids M (†D )A →Φ (†D )(A)gp [cf. the discussion of [FrdI], Example
+6.3; Remark 3.1.5 of the present paper]. As discussed in [FrdI], Example 6.3 [cf.
+also Remark 3.1.5 of the present paper], this data determines, by applying [FrdI],
+Theorem 5.2, (ii), a model Frobenioid
+F (†D )
+over the base category †D.
+(iii) Let †F be any category equivalent to F (†D ). Thus, †F is equipped
+with a natural Frobenioid structure [cf. [FrdI], Corollary 4.11; [FrdI], Theorem 6.4,
+(i); Remark 3.1.5 of the present paper]; write Base(†F ) for the base category of
+this Frobenioid. Suppose further that we have been given a morphism
+†D →Base(†F )
+which is abstractly equivalent [cf. §0] to the natural morphism †D →†D [cf. (i)].
+In the following discussion, we shall use the resulting [uniquely determined, in light
+of the F-coricity of CF, together with [AbsTopIII], Theorem 1.9!] isomorphism
+Base(†F )∼
+→†D to identify Base(†F ) with †D . Let us denote by
+†F def
+= †F |†D (→†F )
+126 SHINICHI MOCHIZUKI
+the restriction of †F to †D via the natural morphism †D →†D and by
+†Fmod
+def
+= †F |terminal objects (⊆†F )
+the restriction of †F to the full subcategory of †D determined by the terminal
+objects [i.e., “CFmod”] of †D . Thus, when the data denoted here by the label “†”
+arises [in the evident sense] from data as discussed in Definition 3.1, the Frobenioid
+†Fmod may be thought of as the Frobenioid of arithmetic line bundles on the stack
+“Smod” of Remark 3.1.5.
+(iv) We continue to use the notation of (iii). We shall denote by a superscript
+“birat” the birationalizations [which are category-theoretic — cf. [FrdI], Corollary
+4.10; [FrdI], Theorem 6.4, (i); Remark 3.1.5 of the present paper] of the Frobe-
+nioids †F ,
+†F ,
+†Fmod; we shall also use this superscript to denote the images
+of objects and morphisms of these Frobenioids in their birationalizations. Thus, if
+A ∈Ob(†F ), then O×(Abirat) may be naturally identified with the multiplicative
+group of nonzero elements of the number field [i.e., finite extension of Fmod] cor-
+responding to A. In particular, by allowing A to vary among the Frobenius-trivial
+objects [a notion which is category-theoretic — cf. [FrdI], Definition 1.2, (iv); [FrdI],
+Corollary 4.11, (iv); [FrdI], Theorem 6.4, (i); Remark 3.1.5 of the present paper]
+of †F that lie over Galois objects of †D , we obtain a pair [i.e., consisting of a
+topological group acting continuously on a discrete abelian group]
+π1(†D ) O ×
+— which we consider up to the action by the “inner automorphisms of the pair”
+arising from conjugation by π1(†D ). Write Φ†F for the divisor monoid of the
+Frobenioid †F [which is category-theoretic — cf. [FrdI], Corollary 4.11, (iii);
+[FrdI], Theorem 6.4, (i); Remark 3.1.5 of the present paper]. Thus, for each
+p ∈ Prime(Φ†F (A)) [where we use the notation “Prime(−)” as in [FrdI], §0],
+the natural homomorphism O×(Abirat) →Φ†F (A)gp [cf. [FrdI], Proposition 4.4,
+(iii)] determines — i.e., by taking the inverse image via this homomorphism of
+[the union with {0}of] the subset of Φ†F (A) constituted by p — a submonoid
+O◃
+p ⊆O×(Abirat). That is to say, in more intuitive terms, this submonoid is the
+submonoid of integral elements of O×(Abirat) with respect to the valuation de-
+termined by p of the number field corresponding to A. Write O×
+p ⊆O◃
+p for the
+submonoidofinvertible elements. Thus, byallowingAtovaryamongtheFrobenius-
+trivial objects of †F that lie over Galois objects of †D and considering the way
+in which the natural action of Aut†F (A) on O×(Abirat) permutes the various sub-
+monoids O◃
+p , it follows that for each p0 ∈Prime(Φ†F (A0)), where A0 ∈Ob(†F )
+lies over a terminal object of †D , we obtain a closed subgroup [well-defined up to
+conjugation]
+Πp0 ⊆π1(†D )
+by considering the elements of Aut†F (A) that fix the submonoid O◃
+p , for some
+system of p’s lying over p0. That is to say, in more intuitive terms, the subgroup
+Πp0 is simply the decomposition group associated to some v ∈Vmod. In particular,
+it follows that p0 is nonarchimedean if and only if the p-cohomological dimension
+of Πp0 is equal to 2+1 = 3 for infinitely many prime numbers p [cf., e.g., [NSW],
+Theorem 7.1.8, (i)].
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 127
+(v) We continue to use the notation of (iv). Let us write
+π1(†D ) †M , πκ-sol
+1 (†D ) †Msol,
+†Mmod
+for the pair π1(†D ) O × discussed in (iv) and its respective subsets [i.e.,
+†Msol,
+†Mmod] of π
+rat/κ-sol
+1 (†D )-, πrat
+1 (†D )-invariants. We shall refer to a pair
+[i.e., consistingofapseudo-monoidequippedwithacontinuousactionbyπrat
+1 (†D )]
+πrat
+1 (†D ) †M
+∞κ (respectively, πrat
+1 (†D ) †M
+∞κ×)
+as an ∞κ-coric (respectively,∞κ×-coric) structure on †F if it is isomorphic [i.e.,
+as a pair consisting of a pseudo-monoid equipped with a continuous action by
+πrat
+1 (†D )] to the pair
+πrat
+1 (†D ) M
+∞κ(†D ) (respectively, πrat
+1 (†D ) M
+∞κ×(†D ))
+of (i). Thus, the πrat
+1 (†D )-action that appears in an∞κ-coric (respectively,∞κ×-
+coric) structure necessarily factors (respectively, does not factor) through the natu-
+ral surjection πrat
+1 (†D ) πκ-sol
+1 (†D ) of (i). Suppose that we have been given an
+∞κ-coric (respectively,∞κ×-coric) structure on †F . If “(−)” is a [commutative]
+monoid, then let us write
+μZ((−)) def = Hom(Q/Z,(−))
+[cf. [AbsTopIII], Definition 3.1, (v); [AbsTopIII], Definition 5.1, (v)]; note that this
+notational convention also makes sense if “(−)” is a cyclotomic pseudo-monoid [cf.
+§0]. Also, let us write μΘ
+Z (π1(†D )) for the cyclotome“μZ(Π(−))” of [AbsTopIII],
+Theorem 1.9, which we think of as being applied “via the Θ-approach” [cf. Remark
+3.1.2] to π1(†D ). Then let us observe that M
+∞κ(†D ) (respectively, M
+∞κ×(†D ))
+is, in eﬀect, constructed [cf. [AbsTopIII], Theorem 1.9, (d)] as a subset of
+lim
+−→
+H
+H1(H,μΘ
+Z (π1(†D )))
+—whereH rangesovertheopensubgroupsofπκ-sol
+1 (†D )(respectively,πrat
+1 (†D )).
+Ontheotherhand,considerationofKummer classes[i.e.,oftheactionofπκ-sol
+1 (†D )
+(respectively, πrat
+1 (†D )) on N-th roots of elements, for positive integers N] yields
+a natural injection of †M
+∞κ (respectively, †M
+∞κ×) into
+lim
+−→
+H
+H1(H,μZ(†M
+∞κ)) (respectively, lim−→
+H
+H1(H,μZ(†M
+∞κ×)))
+—whereH rangesovertheopensubgroupsofπκ-sol
+1 (†D )(respectively,πrat
+1 (†D )),
+and we observe that the asserted injectivity follows immediately from the corre-
+sponding injectivity in the case of M
+∞κ(†D ) (respectively, M
+∞κ×(†D )). In par-
+ticular, it follows immediately, by considering divisors of zeroes and poles [cf. the
+definition of a “κ-coric function” given in Remark 3.1.7, (i)] associated to Kum-
+mer classes of rational functions as in [AbsTopIII], Proposition 1.6, (iii), from the
+elementary observation that, relative to the natural inclusion Q →Z⊗Q,
+Q>0 Z×
+= {1}
+128 SHINICHI MOCHIZUKI
+that there exists a unique isomorphism of cyclotomes
+μΘ
+Z (π1(†D ))∼
+→ μZ(†M
+∞κ) (respectively, μΘ
+Z (π1(†D ))∼
+→ μZ(†M
+∞κ×))
+such that the resulting isomorphism between direct limits of cohomology modules
+as considered above induces an isomorphism
+M
+∞κ(†D )∼
+→ †M
+∞κ (respectively, M
+∞κ×(†D )∼
+→ †M
+∞κ×)
+[i.e., of pseudo-monoids equipped with continuous actions by πrat
+1 (†D )]. In a
+similar vein, it follows immediately from the theory summarized in [AbsTopIII],
+Theorem 1.9, (d), that there exists a unique isomorphism of cyclotomes
+μΘ
+Z (π1(†D ))∼
+→ μZ(†M )
+such that the resulting isomorphism between direct limits of cohomology modules
+induces isomorphisms
+M (†D )∼
+→ †M , Msol(†D )∼
+→ †Msol, Mmod(†D )∼
+→ †Mmod
+[i.e., of monoids equipped with continuous actions by π1(†D )] in a fashion that is
+compatible with the integral submonoids“O◃
+p ” [cf. the discussion of (iv)], relative to
+the ring structure constructed in [AbsTopIII], Theorem 1.9, (e), on the domains of
+these isomorphisms. In particular, it follows immediately from the above discussion
+that
+†F alwaysadmitsan∞κ-coric(respectively,∞κ×-coric)structure, which
+is, moreover, unique up to a uniquely determined isomorphism [i.e., of
+pseudo-monoids equipped with continuous actions by πrat
+1 (†D )].
+Thus, in the following, we shall regard, without further notice, this uniquely de-
+termined ∞κ-coric (respectively,∞κ×-coric) structure on †F as a collection of
+data that is naturally associated to †F . Here, we observe that the various iso-
+morphisms of the last few displays allow one to regard the pseudo-monoids †M
+∞κ,
+†M
+∞κ× as being related to the Frobenioid †F via †M [cf. the definition of †M
+at the beginning of the present (v)] and the morphisms
+†M
+∞κ → †M
+∞κ×, (†M
+∞κ)× → (†M
+∞κ×)× ∼
+→ †M
+induced by the various isomorphisms of the last few displays, together with the
+corresponding inclusions/equalities
+M
+∞κ(†D ) ⊆ M
+∞κ×(†D ),
+(M
+∞κ(†D ))× ⊆ (M
+∞κ×(†D ))×
+= M (†D )
+— where we use the superscript “×” to denote the subset of invertible elements
+of a pseudo-monoid [cf. the discussion of the initial portion of (i)]. Also, we shall
+write
+†Mκ ⊆ †M
+∞κ,
+†Mκ-sol ⊆ †M
+∞κ×
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 129
+for the respective “sub-pseudo-monoids” of πrat
+1 (†D )-, π
+rat/κ-sol
+1 (†D )-invariants.
+In this context, we observe further that it follows immediately from the discus-
+sion of Remark 3.1.7, (i), (ii), (iii) [cf. also [AbsTopII], Corollary 3.3, (iii), which
+is applicable in light of [AbsTopI], Example 4.8], and the theory summarized in
+[AbsTopIII], Theorem 1.9 [cf., especially, [AbsTopIII], Theorem 1.9, (a), (d), (e)],
+that
+any ∞κ×-coric structure πrat
+1 (†D ) †M
+∞κ× on †F determines
+an associated ∞κ-coric structure
+πrat
+1 (†D ) †M
+∞κ ⊆ †M
+∞κ×
+by considering the subset of elements for which the restriction of the as-
+sociated Kummer class [as in the above discussion] to some [or, equiva-
+lently, every] subgroup of πrat
+1 (†D ) that corresponds to an open subgroup
+of the decomposition group of some strictly critical point of CFmod
+is a torsion element [i.e., corresponds to a root of unity],
+and, moreover, that
+the operation of restricting Kummer classes [as in the above discus-
+sion] arising from †Mκ ⊆ †M
+∞κ to subgroups of πκ-sol
+1 (†D ) that cor-
+respond to decomposition groups of non-critical Fmod-, Fsol-valued
+points of CFmod yields a functorial algorithm for reconstructing the
+monoids with πκ-sol
+1 (†D )-action †Mmod,
+†Msol, together with the field
+structure — and hence, in particular, the topologies determined by the
+valuations — on the union of †Mmod,
+†Msol with {0}, from the∞κ-coric
+structure associated to †F.
+A similar statement to the statement of the last display holds, if one makes the
+following substitutions:
+“πκ-sol
+1 (†D )” “πrat
+1 (†D )”;
+“Fmod-, Fsol-” “F-”; “†Mmod,
+†Msol
+” “†M ”.
+In particular, we obtain a purely category-theoretic construction, from the category
+†F , of the natural bijection
+Prime(†Fmod)∼
+→ Vmod
+— where we write Prime(†Fmod) for the set of primes [cf. [FrdI], §0] of the divisor
+monoid of †Fmod; we think of Vmod as the set of π1(†D )-orbits of V(†D ). Now,
+in the notation of the discussion of (iv), suppose that p is nonarchimedean [i.e., lies
+over a nonarchimedean p0]. Thus, p determines a valuation, hence, in particular, a
+topologyonthering{0}∪O×(Abirat). WriteO×
+p ,O◃
+p fortherespectivecompletions,
+with respect to this topology, of the monoids O×
+p , O◃
+p . Then O◃
+p may be identified
+with the multiplicative monoid of nonzero integral elements of the completion of the
+number field corresponding to A at the prime of this number field determined by
+p. Thus, again by allowing A to vary and considering the resulting system of ind-
+topological monoids“O◃
+p ”, we obtain a construction, for nonarchimedean p0, of the
+pair [i.e., consisting of a topological group acting continuously on an ind-topological
+monoid]
+130 SHINICHI MOCHIZUKI
+Πp0 O◃
+p0
+— which [since Πp0 is commensurably terminal in π1(†D ) — cf., e.g., [AbsAnab],
+Theorem 1.1.1, (i)] we consider up to the action by the “inner automorphisms of
+the pair” arising from conjugation by Πp0. In the language of [AbsTopIII], §3, this
+pair is an “MLF-Galois TM-pair of strictly Belyi type” [cf. [AbsTopIII], Definition
+3.1, (ii); [AbsTopIII], Remark 3.1.3].
+(vi) Before proceeding, we observe that the discussion of (iv), (v) concerning
+†D may also be carried out for †F ,
+†D . We leave the routine details to
+†F ,
+the reader.
+(vii) Next, let us consider the index set J of the capsule of D-prime-strips †DJ.
+def
+For j ∈J, write Vj
+= {vj}v∈V. Thus, we have a natural bijection Vj
+∼
+→V, i.e.,
+given by sending vj →v. These bijections determine a “diagonal subset”
+V⟨J⟩ ⊆ VJ
+def
+=
+j∈J
+Vj
+— which also admits a natural bijection V⟨J⟩
+∼
+→V. Thus, we obtain natural bijec-
+tions
+V⟨J⟩
+∼
+→Vj
+∼
+→Prime(†Fmod)∼
+→Vmod
+for j ∈J. Write
+†F⟨J⟩
+†Fj
+def
+= {†Fmod,V⟨J⟩
+def
+= {†Fmod,Vj
+∼
+→Prime(†Fmod)}
+∼
+→Prime(†Fmod)}
+for j ∈J. That is to say, we think of †Fj as a copy of †Fmod “situated on” the
+constituent labeled j of the capsule †DJ; we think of †F⟨J⟩ as a copy of †Fmod
+“situated in a diagonal fashion on” all the constituents of the capsule †DJ. Thus,
+we have a natural embedding of categories
+†F⟨J⟩ → †FJ
+def
+=
+j∈J
+†Fj
+— where, by abuse of notation, we write †F⟨J⟩ for the underlying category of [i.e.,
+the first member of the pair] †F⟨J⟩. Here, we remark that we do not regard the
+category †FJ as being equipped with a Frobenioid structure. Write
+†F R
+j ; †F R
+⟨J⟩; †F R
+J
+def
+=
+j∈J
+†F R
+j
+for the respective realifications [or product of the underlying categories of the re-
+alifications] of the corresponding Frobenioids whose notation does not contain a
+superscript “R”. [Here, we recall that the theory of realifications of Frobenioids is
+discussed in [FrdI], Proposition 5.3.]
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 131
+n·
+· v
+◦...◦...◦
+.
+.
+.
+n′
+·
+· v′
+◦...◦...◦
+.
+.
+.
+n′′
+·
+· v′′
+◦...◦...◦
+Fig. 5.1: Constant distribution
+Remark 5.1.1. Thus, †F⟨J⟩ may be thought of as the Frobenioid associated to
+divisors on VJ [i.e., finiteformalsumsofelementsofthissetwithcoeﬃcientsinZor
+R] whose dependence on j ∈J is constant — that is to say, divisors corresponding
+to “constant distributions” on VJ. Such constant distributions are depicted in Fig.
+5.1 above. On the other hand, the product of [underlying categories of] Frobenioids
+†FJ may be thought of as a sort of category of “arbitrary distributions” on VJ,
+i.e., divisors on VJ whose dependence on j ∈J is arbitrary.
+Remark 5.1.2. The constructions of Example 5.1 manifestly only require the
+D-NF-bridge portion †φNF of the D-ΘNF-Hodge theater †HTD-ΘNF
+.
+Remark 5.1.3. In the context of the discussion of Example 5.1, (v), (vi), we note
+that unlike the case with †F ,
+†F ,
+†M ,
+†Msol,
+†M
+†M
+∞κ,
+∞κ×, or †Mκ-sol, one
+cannot perform Kummer theory [cf. [FrdII], Definition 2.1, (ii)] with †Fmod,
+†Mmod,
+or †Mκ . [That is to say, in more concrete terms, [unlike the case with F×
+, F×
+sol,
+or ∞κ-/∞κ×-coric rational functions] it is not necessarily the case that elements of
+F×
+mod or κ-coric rational functions admit N-th roots, for N a nonnegative integer!]
+The fact that one can perform Kummer theory with †F ,
+†F , or †M implies that
+†M equipped with its natural π1(†D )-action, as well as the “birational monoid
+portions” of †F or †F , satisfy various strong rigidity properties [cf. Corollary 5.3,
+(i), below]. For instance, these rigidity properties allow one to recover the additive
+structure on [the union with {0}of] †M equipped with its natural π1(†D )-action
+[cf. the discussion of Example 5.1, (v), (vi)]. That is to say,
+the additive structure — or, equivalently, ring/field structure — on
+[the union with {0}of] the “birational monoid portion” of †Fmod may only
+be recovered if one is given the additional datum consisting of the natural
+embedding †Fmod →†F [cf. Example 5.1, (iii)].
+132 SHINICHI MOCHIZUKI
+Put another way, if one only considers the category †Fmod without the embedding
+†Fmod →†F , then †Fmod is subject to a “Kummer black-out” — one con-
+sequence of which is that there is no way to recover the additive structure on the
+“birational monoid portion” of †Fmod [cf. also Remark 5.1.5 below]. In subsequent
+discussions, we shall refer to these observations concerning †F ,
+†F ,
+†M ,
+†Msol,
+†M
+†M
+∞κ,
+∞κ×,
+†Mκ-sol,
+†Fmod,
+†Mmod, and †Mκ by saying that †F ,
+†F ,
+†M ,
+†Msol,
+†M
+†M
+∞κ,
+∞κ×, and †Mκ-sol are Kummer-ready, whereas †Fmod,
+†Mmod,
+and †Mκ are Kummer-blind. In particular, the various copies of [and products
+of copies of] †Fmod — i.e., †Fj ,
+†F⟨J⟩,
+†FJ — considered in Example 5.1, (vii),
+are also Kummer-blind.
+Remark 5.1.4. The various functorial reconstruction algorithms for number
+fields discussed in Example 5.1 are based on the technique of Belyi cuspidaliza-
+tion, as applied in the theory of [AbsTopIII], §1. At a more concrete level, this
+theory of [AbsTopIII], §1, may be thought of revolving around the point of view
+that
+elements of number fields may be expressed geometrically by means of
+Belyi maps.
+Moreover, if one thinks of such elements of number fields as “analytic functions”,
+then the remainder of the theory of [AbsTopIII] [cf., especially, [AbsTopIII], §5]
+may be thought of as a sort of theory of
+“analytic continuation” of the “analytic functions” constituted by ele-
+ments of number fields in the context of the various logarithm maps
+at the various localizations of these number fields.
+This point of view is very much in line with the points of view discussed in Re-
+marks 4.3.2, 4.3.3. Moreover, the geometric representation of elements of number
+fields via Belyi maps [i.e., whose existence may be regarded as a reflection of
+the hyperbolic nature of the projective line minus three points] is reminiscent of —
+indeed, may perhaps be regarded as an arithmetic analogue of — the “categories
+of hyperbolic analytic continuations”, i.e., of copies of the upper half-plane
+regarded as equipped with their natural hyperbolic metrics, discussed in the
+“Motivating Example” given in the Introduction to [GeoAnbd]. Here, it is perhaps
+of interest to note that the inequalities“≤1” satisfied by the derivatives [i.e., with
+respect to the respective Poincar´ e metrics] of the holomorphic maps that appear
+in this “Motivating Example” in [GeoAnbd] are reminiscent of the monotonically
+decreasing nature of the various “degrees” — i.e., over Q of the ramification locus of
+the endomorphisms of the projective line over Q — that appear in the construction
+of Belyi maps [where we recall that this monotonic decreasing of degrees is the key
+observation that allows one to obtain Belyi maps which are unramified over the
+projective line minus three points].
+Remark 5.1.5. Althoughthephenomenonofκ-sol-conjugate synchronization
+discussed in the final portion of Example 5.1, (i), will not play as central a role
+in the present series of papers as the conjugate synchronization of local Galois
+groupsthatwillbediscussedin[IUTchII],[IUTchIII],ithasthefollowinginteresting
+consequence:
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 133
+The Kummer theory of
+“(πrat
+1 (†D ) ) πκ-sol
+1 (†D ) †M
+∞κ”, “†Mmod”, “πκ-sol
+1 (†D ) †Msol
+”
+— i.e., of the abstract analogues of “
+∞κ-coric functions”,
+“F×
+mod
+”, and
+“F×
+sol
+” as in Remark 3.1.7, (iii) — that was discussed in Example 5.1,
+(v), may be performed in a fashion that is compatible without any
+conjugacy indeterminacies with the poly-action of (AutSL(†D ) )
+Fl.
+Here, we pause, however, to make the following observation: At first glance, it may
+appear as though the analogue obtained by Uchida of the Neukirch-Uchida theorem
+for maximal solvable quotients of absolute Galois groups of number fields [reviewed,
+for instance, in [GlSol], §3] — or, perhaps, some future mono-anabelian version
+of this result of Uchida — may be applied, in the context of the“κ-sol-Kummer
+theory” just discussed, to reconstruct the ring structure on the number fields
+involved [i.e., in the fashion of Example 5.1, (v)]. In fact, however,
+such a “solvable-Uchida-type” reconstruction is, in eﬀect, meaning-
+less from the point of view of the theory of the present series of papers
+since it is fundamentally incompatible with the localization opera-
+tions that occur in the structure of a D-ΘNF-Hodge theater — cf. the
+discussion of Remarks 4.3.1, 4.3.2.
+Indeed, such a compatibility with localization would imply that the reconstruction
+of the ring structure may somehow be “restricted” to the absolute Galois groups of
+completionsatnonarchimedeanprimesofanumberfield, i.e., incontradictiontothe
+well-known fact that absolute Galois groups of such completions at nonarchimedean
+primes admit automorphisms that do not arise from field automorphisms [cf., e.g.,
+[NSW], the Closing Remark preceding Theorem 12.2.7]. Finally, we note that this
+incompatibilityof“solvable-Uchida-type”reconstructionsofringstructureswiththe
+theory of the present series of papers is also interesting in the context of the point
+of view discussed in Remark 5.1.4: Suppose, for instance, that it was the case that
+the outer action of the absolute Galois group of a number field on the geometric fun-
+damental group of a hyperbolic curve over the number field in fact factors through
+the maximal solvable quotient of the absolute Galois group. Then it is conceivable
+that some sort of version of the mono-anabelian theory of [AbsTopIII], §1, for ex-
+tensions of such a maximal solvable quotient by the geometric fundamental group
+under consideration could be applied in the theory of the present series of papers to
+give a reconstruction of the ring structure of a number field that only requires the
+use of such extensions and is, moreover, compatible with the localization operations
+that occur in the various types of “Hodge theaters” that appear in the theory of
+the present series of papers — a state of aﬀairs that would be fundamentally at
+odds with a quite essential portion of the “spirit” of the theory of the present
+series of papers, namely, the point of view of“dismantling the two underlying
+combinatorial dimensions of a ring”. In fact, however,
+the outer action referred to above does not admit such a “solvable fac-
+torization”.
+Indeed, the nonexistence of such a “solvable factorization” is a formal consequence
+of the the Galois injectivity result discussed in [NodNon], Theorem C — a result
+that depends, in an essential way, on the theory of Belyi maps. Put another way,
+134 SHINICHI MOCHIZUKI
+Belyi maps not only play the role of allowing one to perform the sort of
+“arithmetic analytic continuation via Belyi cuspidalizations”[i.e.,
+discussed in Remark 5.1.4] that is of central importance in the theory of
+the presentseries of papers, but also play the role of assuring one that such
+“arithmetic analytic continuations” cannot be extended to the case of
+extensions associated to “solvable factorizations” of outer actions of
+the sort just discussed.
+Definition 5.2.
+(i) We define a holomorphic Frobenioid-prime-strip, or F-prime-strip, [relative
+to the given initial Θ-data] to be a collection of data
+‡F= {‡Fv}v∈V
+that satisfies the following conditions: (a) if v ∈Vnon, then ‡Fv is a category ‡Cv
+which admits an equivalence of categories ‡Cv
+∼ →Cv [where Cv is as in Examples
+3.2, (iii); 3.3, (i)]; (b) if v ∈Varc, then ‡Fv = (‡Cv,
+‡Dv,
+‡κv) is a collection of data
+consisting of a category, an Aut-holomorphic orbispace, and a Kummer structure
+suchthatthereexistsanisomorphismofcollectionsofdata‡Fv
+∼ →F
+v = (Cv,Dv,κv)
+[where F
+v is as in Example 3.4, (i)].
+(ii) We define a mono-analytic Frobenioid-prime-strip, or F⊢-prime-strip, [rel-
+ative to the given initial Θ-data] to be a collection of data
+‡F⊢
+= {‡F⊢
+v }v∈V
+that satisfies the following conditions: (a) if v ∈Vnon, then ‡F⊢
+v is a split Frobe-
+nioid, whoseunderlyingFrobenioidwedenoteby‡C⊢
+v , whichadmitsanisomorphism
+‡F⊢
+∼ →F⊢
+v
+v [where F⊢
+v is as in Examples 3.2, (v); 3.3, (i)]; (b) if v ∈Varc, then
+‡F⊢
+v is a triple of data, consisting of a Frobenioid ‡C⊢
+v , an object of TM⊢, and a
+splitting of the Frobenioid, such that there exists an isomorphism of collections of
+data ‡F⊢
+∼ →F⊢
+v
+v [where F⊢
+v is as in Example 3.4, (ii)].
+(iii) A morphism of F- (respectively, F⊢-) prime-strips is defined to be a col-
+lection of isomorphisms, indexed by V, between the various constituent objects of
+the prime-strips. Following the conventions of §0, one thus has notions of cap-
+sules of F- (respectively, F⊢-) and morphisms of capsules of F- (respectively, F⊢-)
+prime-strips.
+(iv) We define a globally realified mono-analytic Frobenioid-prime-strip, or F-
+prime-strip, [relative to the given initial Θ-data] to be a collection of data
+‡F = (‡C , Prime(‡C )∼
+→V,
+‡F⊢
+, {‡ρv}v∈V)
+that satisfies the following conditions: (a) ‡C is a category [which is, in fact,
+equipped with a Frobenioid structure] that is isomorphic to the category Cmod of
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 135
+Example 3.5, (i); (b) “Prime(−)” is defined as in the discussion of Example 3.5,
+(i); (c) Prime(‡C )∼
+→V is a bijection of sets; (d) ‡F⊢ = {‡F⊢
+v }v∈V is an F⊢-prime-
+strip; (e) ‡ρv : Φ‡C ,v
+∼
+→Φrlf
+‡C⊢
+, where “Φ‡C ,v” and “Φrlf
+” are defined as in the
+‡C⊢
+v
+v
+discussion of Example 3.5, (i), is an isomorphism of topological monoids [both of
+which are, in fact, isomorphic to R≥0]; (f) the collection of data in the above display
+is isomorphic to the collection of data Fmod of Example 3.5, (ii). A morphism of
+F -prime-strips is defined to be an isomorphism between collections of data as
+discussed above. Following the conventions of §0, one thus has notions of capsules
+of F -prime-strips and morphisms of capsules of F -prime-strips.
+(v) Let ‡D= {‡Dw}w∈V be a D-prime-strip, v ∈Vnon. Write v ∈Vmod for
+the valuation determined by v. Then [cf. the discussion of Example 5.1, (i); Re-
+mark 3.1.7, (i)] one may construct group-theoretically from π1(‡Dv), in a functorial
+fashion, a profinite group corresponding to “Cv” [cf. the algorithms of [AbsTopII],
+Corollary 3.3, (i), which are applicable in light of [AbsTopI], Example 4.8; [Ab-
+sTopIII], Theorem 1.9], which contains π1(‡Dv) as an open subgroup; we write ‡Dv
+for B(−)0 of this profinite group, so we obtain a natural morphism
+‡Dv →‡Dv
+— i.e., a “category-theoretic version” of the natural morphism of hyperbolic orbi-
+curves X
+v
+= XK ×K Kv →Cv if v ∈Vbad, or X
+= X
+×K Kv →Cv if v ∈Vgood
+− →v
+− →K
+.
+Next, let us observe [cf. Remark 3.1.7, (i); the construction of the Belyi cuspidal-
+izations of [AbsTopIII], Theorem 1.9, (a), and of the field“K×
+ZNF” of [AbsTopIII],
+Theorem 1.9, (d), (e)] that one may construct group-theoretically from π1(‡Dv), in
+a functorial fashion, an isomorph
+πrat
+1 (‡Dv) ( π1(‡Dv))
+of the´ etale fundamental group [i.e., equipped with its natural surjection to π1(‡Dv)
+and well-defined up to inner automorphisms determined by elements of the kernel
+of this natural surjection] of the scheme obtained by base-changing to (Fmod)v the
+generic point of CFmod. Next, let us recall [cf. [AbsTopIII], Corollary 1.10, (b), (c),
+(d), (d′)] that one may construct group-theoretically from π1(‡Dv), in a functorial
+fashion, an ind-topological monoid [which is naturally isomorphic to O◃
+]
+Fv
+Mv(‡Dv)
+equipped with its natural π1(‡Dv)-action, as well as isomorphs of the pseudo-
+monoids of κ-, ∞κ-, and∞κ×-coric rational functions associated to Cv [cf. the
+discussion of Remark 3.1.7, (i), (ii); [AbsTopII], Corollary 3.3, (iii), which is appli-
+cable in light of [AbsTopI], Example 4.8; [AbsTopIII], Theorem 1.9, (a), (d), (e);
+[AbsTopIII], Corollary 1.10, (d), (d′)] — which we shall denote
+Mκv(‡Dv), M
+∞κv(‡Dv), M
+∞κ×v(‡Dv)
+— equipped with their natural πrat
+1 (‡Dv)-actions. Thus, Mκv(‡Dv) may be iden-
+tified with the subset of πrat
+1 (‡Dv)-invariants of M
+∞κv(‡Dv), and [if we use the
+(vi) We continue to use the notation of (v). Suppose further that ‡F=
+{‡Fw}w∈V is an F-prime-strip whose associated D-prime-strip [cf. Remark 5.2.1,
+136 SHINICHI MOCHIZUKI
+superscript “×” to denote the subset of invertible elements of a pseudo-monoid,
+then] Mv(‡Dv)× may be identified with M
+∞κ×v(‡Dv)×
+.
+(i), below] is equal to ‡D= {‡Dw}w∈V. Let
+π1(‡Dv) ‡Mv
+be an ind-topological monoid equipped with a continuous action by π1(‡Dv) that
+is isomorphic [i.e., as an ind-topological monoid equipped with a continuous action
+by π1(‡Dv)] to the pair π1(‡Dv) Mv(‡Dv) constructed in (v). One may regard
+determined [cf. Remark 3.3.2] by the pair
+such a pair π1(‡Dv) ‡Mv as being related to the Frobenioid ‡Fv [cf. (i), (a)]
+via the unique isomorphism corresponding to the identity automorphism of ‡D=
+{‡Dw}w∈V [cf. Corollary 5.3, (ii), below] between ‡Fv and the pv-adic Frobenioid
+π1(‡Dv) ‡Mv
+obtained by restricting the action of the pair π1(‡Dv) ‡Mv to the open subgroup
+π1(‡Dv) ⊆π1(‡Dv) [cf. (v)]. We shall refer to a pair [i.e., consisting of a pseudo-
+monoid equipped with a continuous action by πrat
+1 (‡Dv)]
+πrat
+1 (‡Dv) ‡M
+∞κv (respectively, πrat
+1 (‡Dv) ‡M
+∞κ×v)
+as an ∞κ-coric (respectively,∞κ×-coric) structure on ‡Fv if it is isomorphic [i.e.,
+as a pair consisting of a pseudo-monoid equipped with a continuous action by
+πrat
+1 (‡Dv)] to the pair
+πrat
+1 (‡Dv) M
+∞κv(‡Dv) (respectively, πrat
+1 (‡Dv) M
+∞κ×v(‡Dv))
+of(v). Supposethatwehavebeengivensuchan∞κ-coric(respectively,∞κ×-coric)
+structureon‡Fv. Inthefollowing, weshallusethenotationalconvention“μZ((−))”
+introduced in Example 5.1, (v). Also, let us write μΘ
+Z (π1(‡Dv)) for the cyclotome
+“μZ(Π(−))”of[AbsTopIII],Theorem1.9, whichwethinkofasbeingapplied“via the
+Θ-approach” [cf. Remark 3.1.2] to π1(‡Dv). Then let us observe that M
+∞κv(‡Dv)
+(respectively, M
+∞κ×v(‡Dv)) is, in eﬀect, constructed [cf. [AbsTopIII], Theorem 1.9,
+(d)] as a subset of
+lim
+−→
+H1(H,μΘ
+Z (π1(‡Dv)))
+H
+— where H ranges over the open subgroups of πrat
+1 (‡Dv). On the other hand,
+consideration of Kummer classes [i.e., of the action of πrat
+1 (‡Dv) on N-th roots of
+elements, for positive integers N] yields a natural injection of ‡M
+∞κv (respectively,
+‡M
+∞κ×v) into
+lim
+−→H H1(H,μZ(‡M
+∞κv)) (respectively, lim−→H H1(H,μZ(‡M
+∞κ×v)))
+— where H ranges over the open subgroups of πrat
+1 (‡Dv), and we observe that the
+asserted injectivity follows immediately from the corresponding injectivity in the
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 137
+case of M
+∞κv(‡Dv) (respectively, M
+∞κ×v(‡Dv)). In particular, it follows imme-
+diately [cf. the discussion of Example 5.1, (v)], by considering divisors of zeroes
+and poles [cf. the definition of a “κ-coric function” given in Remark 3.1.7, (i)]
+associated to Kummer classes of rational functions as in [AbsTopIII], Proposition
+1.6, (iii), from the elementary observation that, relative to the natural inclusion
+Q →Z⊗Q,
+Q>0 Z×
+= {1}
+that there exists a unique isomorphism of cyclotomes
+μΘ
+Z (π1(‡Dv))∼
+→ μZ(‡M
+∞κv) (respectively, μΘ
+Z (π1(‡Dv))∼
+→ μZ(‡M
+∞κ×v))
+such that the resulting isomorphism between direct limits of cohomology modules
+as considered above induces an isomorphism
+M
+∞κv(‡Dv)∼
+→ ‡M
+∞κv (respectively, M
+∞κ×v(‡Dv)∼
+→ ‡M
+∞κ×v)
+[i.e.,ofpseudo-monoidsequippedwithcontinuousactionsbyπrat
+1 (‡Dv)]. Inasimilar
+vein, it follows immediately from the theory summarized in [AbsTopIII], Corollary
+1.10, (d), (d′), that there exists a unique isomorphism of cyclotomes
+μΘ
+Z (π1(‡Dv))∼
+→ μZ(‡Mv)
+such that the resulting isomorphism between direct limits of cohomology modules
+induces an isomorphism
+Mv(‡Dv)∼
+→ ‡Mv
+[i.e., of monoids equipped with continuous actions by π1(‡Dv)]. In particular, it
+follows immediately from the above discussion that
+‡Fv always admits an∞κ-coric (respectively,∞κ×-coric) structure, which
+is, moreover, unique up to a uniquely determined isomorphism [i.e., of
+pseudo-monoids equipped with continuous actions by πrat
+1 (‡Dv)].
+Thus, in the following, we shall regard, without further notice, this uniquely deter-
+mined ∞κ-coric (respectively,∞κ×-coric) structure on ‡Fv as a collection of data
+that is naturally associated to ‡Fv. Here, we observe that the various isomorphisms
+of the last few displays allow one to regard the pseudo-monoids ‡M
+‡M
+∞κv,
+∞κ×v
+as being related to the Frobenioid ‡Fv via ‡Mv [cf. the discussion at the begin-
+ning of the present (vi) concerning the relationship between ‡Mv and ‡Fv] and the
+morphisms
+‡M
+∞κv → ‡M
+∞κ×v,
+‡M×
+∞κv → ‡M×
+∞κ×v
+∼
+→ ‡M×
+v
+induced by the various isomorphisms of the last few displays, together with the
+corresponding inclusions/equalities
+M
+∞κv(‡Dv) ⊆ M
+∞κ×v(‡Dv),
+M
+∞κv(‡Dv)× ⊆ M
+∞κ×v(‡Dv)×
+= Mv(‡Dv)×
+138 SHINICHI MOCHIZUKI
+[cf. the discussion at the end of (v)]. Also, we shall write
+‡Mκv ⊆ ‡M
+∞κv
+for the “sub-pseudo-monoid” of πrat
+1 (‡Dv)-invariants. In this context, we observe
+further that it follows immediately from the discussion of Remark 3.1.7, (i), (ii) [cf.
+also [AbsTopII], Corollary 3.3, (iii), which is applicable in light of [AbsTopI], Ex-
+ample 4.8], and the theory summarized in [AbsTopIII], Theorem 1.9 [cf., especially,
+[AbsTopIII], Theorem 1.9, (a), (d), (e)], and [AbsTopIII], Corollary 1.10, (h), that
+any ∞κ×-coric structure πrat
+1 (‡Dv) ‡M
+∞κ×v on ‡Fv determines
+an associated ∞κ-coric structure
+πrat
+1 (‡Dv) ‡M
+∞κv ⊆ ‡M
+∞κ×v
+by considering the subset of elements for which the restriction of the
+associated Kummer class [as in the above discussion] to some [or, equiv-
+alently, every — cf. Remark 5.2.3 below] subgroup of πrat
+1 (‡Dv) that cor-
+responds to an open subgroup of the decomposition group of some
+strictly critical point of Cv determines a torsion element ∈‡M×
+∼
+→
+v
+‡M×
+∞κ×v [i.e., corresponds to a root of unity],
+and, moreover, that
+the operation of restricting Kummer classes [as in the above discus-
+sion] arising from ‡Mκv ⊆ ‡M
+∞κv to subgroups of πrat
+1 (‡Dv) that corre-
+spond to decomposition groups of non-critical (Fmod)v-valued points
+of Cv yields a functorial algorithm for reconstructing the submonoid
+of π1(‡Dv)-invariants of ‡Mgp
+v [where the superscript “gp” denotes the
+groupification], together with the ind-topological field structure on the
+union of this monoid with {0}, from the∞κ-coric structure ‡M
+∞κv
+associated to ‡Fv.
+A similar statement to the statement of the last display holds, if one replaces the
+phrase “(Fmod)v-valued points” by the phrase “Fv-valued points” and the phrase
+“submonoid of π1(‡Dv)-invariantsof‡Mgp
+v ”bythephrase“pairπ1(‡Dv) ‡Mgp
+v ”.
+(vii) Let ‡D= {‡Dw}w∈V be a D-prime-strip, v ∈Varc. Write v ∈Vmod for the
+valuation determined by v. Then [cf. the discussion of Example 5.1, (i); Remark
+3.1.7, (i)]onemayconstructalgorithmicallyfromtheAut-holomorphic space‡Dv, in
+a functorial fashion, an Aut-holomorphic orbispace ‡Dv corresponding to “Cv” [cf.
+the algorithms of [AbsTopIII], Corollary 2.7, (a)], together with a natural morphism
+‡Dv →‡Dv
+— i.e., an “Aut-holomorphic orbispace version” of the natural morphism of hy-
+perbolic orbicurves X
+− →v
+def
+= X
+− →K
+×K Kv →Cv ×(Fmod)v
+Kv. Here, we observe [cf.
+the fact that CK is a K-core; [AbsTopIII], Corollary 2.3] that one has a natural
+isomorphism
+Aut(‡Dv)∼
+→ Gal(Kv/(Fmod)v) (→ Z/2Z)
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 139
+— i.e., obtained by considering whether an automorphism of ‡Dv is holomorphic
+or anti-holomorphic — from the group of automorphisms of the Aut-holomorphic
+orbispace ‡Dv onto the Galois group Gal(Kv/(Fmod)v) . Write
+‡Drat
+v → ‡Dv
+for the projective system of Aut-holomorphic orbispaces that arise as universal
+covering spaces of “co-finite” open sub-orbispaces of ‡Dv [i.e., open sub-orbispaces
+determined by forming complements of finite sets of points of the underlying topo-
+logical orbispace of ‡Dv] that contain every strictly critical point [cf. Remark 3.1.7,
+(i)], as well as every point that is not an NF-point [cf. Remark 3.4.3, (ii)], of
+‡Dv. Thus, ‡Drat
+v is well-defined up to the action of deck transformations over ‡Dv
+[cf. the countability of the set of NF-points of ‡Dv; the discussion of compatible
+systems of basepoints at the end of Remark 2.5.3, (i)]. Next, let us recall the
+complex archimedean topological field A‡Dv [cf. the discussion of Example 3.4, (i),
+as well as Definition 3.6, (b); the discussion of (i) of the present Definition 5.2].
+Write Aut(A‡Dv) for the group of automorphisms (∼
+= Z/2Z) of the topological field
+A‡Dv. Observe that it follows immediately from the construction of A‡Dv in [Ab-
+sTopIII], Corollary 2.7, (e), that A‡Dv is equipped with a natural Aut-holomorphic
+structure [cf. [AbsTopIII], Definition 4.1, (i)], as well as with a tautological co-
+holomorphicization [cf. [AbsTopIII], Definition 2.1, (iv); [AbsTopIII], Proposition
+2.6, (a)] with ‡Dv. Write
+Mv(‡Dv) ⊆ A‡Dv
+for the topological submonoid consisting of nonzero elements of norm ≤1 [i.e.,
+“O◃
+C ”]. Thus, A‡Dv may be identified with the union with {0}of the groupification
+Mv(‡Dv)gp. Moreover, the pseudo-monoids of κ-, ∞κ-, and∞κ×-coric rational
+functions associated to Cv [cf. the discussion of Remark 3.1.7, (i), (ii)] may be
+represented, via algorithmic constructions [cf. [AbsTopIII], Corollary 2.7, (b)], as
+pseudo-monoids of “meromorphic functions”
+Mκv(‡Dv), M
+∞κv(‡Dv), M
+∞κ×v(‡Dv)
+— i.e., as sets of morphisms of Aut-holomorphic orbispaces from [some constituent
+of the projective system] ‡Drat
+v to Mv(‡Dv)gp that are compatible with the tauto-
+logical co-holomorphicization just discussed and, moreover, satisfy conditions corre-
+sponding to the conditions of the final display of Remark 3.1.7, (i). Here, Mκv(‡Dv)
+may be identified with the subset of elements of M
+∞κv(‡Dv) that descend to some
+co-finite open sub-orbispace of ‡Dv and, moreover, are equivariant with respect to
+theuniqueembeddingAut(‡Dv) →Aut(A‡Dv); [ifweusethesuperscript“×”tode-
+note the subset of invertible elements of a pseudo-monoid, then] Mv(‡Dv)× may be
+identified with M
+∞κ×v(‡Dv)×; we observe that both Mv(‡Dv)× and M
+∞κ×v(‡Dv)×
+are isomorphic, as abstract topological monoids, to S1 [i.e., “O×
+C ”].
+(viii) We continue to use the notation of (vii). Suppose further that ‡F=
+{‡Fw}w∈V is an F-prime-strip whose associated D-prime-strip [cf. Remark 5.2.1,
+(i), below] is equal to ‡D= {‡Dw}w∈V. Write
+‡Mv
+140 SHINICHI MOCHIZUKI
+for the topological monoid [i.e., “O◃(‡Cv)” — cf. the discussion of Example 3.4, (i);
+Definition 3.6, (b)] that appears as the domain of the Kummer structure portion
+of the data that constitutes ‡Fv [cf. (i) of the present Definition 5.2]. Thus, the
+Kummer structure portion of ‡Fv may be regarded as an isomorphism of
+topological monoids
+Mv(‡Dv)∼
+→ ‡Mv
+[both of which are abstractly isomorphic to O◃
+C ]. In particular, the Kummer struc-
+ture determines an isomorphism of topological groups Mv(‡Dv)gp ∼
+→ ‡Mgp
+v [both
+of which are abstractly isomorphic to C×], hence also a natural action of Aut(A‡Dv)
+on ‡Mgp
+v . Next, let us observe that the pseudo-monoid of∞κ- (respectively,∞κ×-)
+coric rational functions associated to Cv [cf. the discussion of Remark 3.1.7, (i),
+(ii)] may be represented, via algorithmic constructions [cf. [AbsTopIII], Corollary
+2.7, (b)], as the pseudo-monoid of “meromorphic functions”
+‡M
+∞κv (respectively, ‡M
+∞κ×v)
+by considering the set of maps from [some constituent of the projective system]
+‡Drat
+v to
+‡Mgp
+v
+that satisfy the following condition: the map from [some constituent of the pro-
+jective system] ‡Drat
+v to Mv(‡Dv)gp obtained by composing the given map with the
+inverse of [the result of applying “gp” to] the Kummer structure isomorphism
+Mv(‡Dv)∼
+→ ‡Mv determines an element of the pseudo-monoid M
+∞κv(‡Dv) (re-
+spectively, M
+∞κ×v(‡Dv)) discussed in (vii) above. We shall refer to
+‡M
+∞κv (respectively, ‡M
+∞κ×v)
+as the [uniquely determined]∞κ-coric (respectively,∞κ×-coric) structure on ‡Fv
+and write
+‡Mκv ⊆ ‡M
+∞κv
+for the subset of elements that descend to some co-finite open sub-orbispace of ‡Dv
+and, moreover, are equivariant with respect to the unique embedding Aut(‡Dv) →
+Aut(A‡Dv). In the following, we shall use the notational convention “μZ((−))”
+introduced in Example 5.1, (v). Also, let us write
+μΘ
+Z (‡Dv) def = Hom(Q/Z,Mv(‡Dv)gp)
+= Hom(Q/Z,Mv(‡Dv)μ) = Hom(Q/Z,Mv(‡Dv)×)
+— where Mv(‡Dv)× ⊆Mv(‡Dv) denotes the topological group of units of Mv(‡Dv);
+Mv(‡Dv)μ ⊆Mv(‡Dv)× denotes the subgroup of torsion elements; we observe that
+the Kummer structure isomorphism discussed above induces a natural “Kummer
+structure cyclotomic isomorphism” μΘ
+Z (‡Dv)∼
+→ μZ(‡Mv) [of profinite groups
+abstractly isomorphic to Z]; the superscript “Θ” may be thought of as expressing
+the fact that we wish to apply to “μΘ
+Z (−)” the interpretation via the archimedean
+version of the Θ-approach, i.e., the interpretation in terms of cuspidal inertia
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 141
+groups, discussed in Remark 3.4.3, (i). In this context, we observe that these
+cuspidal inertia groups may be interpreted as profinite completions of subgroups of
+the group of deck transformations
+πrat
+1 (‡Dv)
+determined, up to inner automorphism, by the projective system of covering spaces
+‡Drat
+v → ‡Dv. Here, we observe that the pseudo-monoids M
+∞κv(‡Dv), ‡M
+∞κv
+(respectively, M
+∞κ×v(‡Dv), ‡M
+∞κ×v) admit natural πrat
+1 (‡Dv)-actions in such a
+way that each of the pairs
+πrat
+1 (‡Dv) M
+∞κv(‡Dv), πrat
+1 (‡Dv) ‡M
+∞κv
+(respectively, πrat
+1 (‡Dv) M
+∞κ×v(‡Dv), πrat
+1 (‡Dv) ‡M
+∞κ×v)
+is well-defined up to πrat
+1 (‡Dv)-conjugacy. Next, let us observe that by consider-
+ing the action of the various cuspidal inertia groups just discussed on elements of
+the pseudo-monoid ‡M
+∞κv (respectively, ‡M
+∞κ×v) — i.e., in eﬀect, by consider-
+ing, in the fashion of [AbsTopIII], Proposition 1.6, (iii), “local Kummer classes”
+at the points that give rise to these cuspidal inertia groups — we obtain vari-
+ous Q-multiples — i.e., corresponding to the order of zeroes or poles at the point
+that gives rise to the cuspidal inertia group under consideration — of the Kummer
+structure cyclotomic isomorphism μΘ
+Z (‡Dv)∼
+→ μZ(‡Mv) discussed above. In par-
+ticular, relative to the natural identification [cf. the various definitions involved!]
+of μZ(‡Mv) with μZ(‡M
+∞κv) (respectively, μZ(‡M
+∞κ×v)), it follows immediately
+[cf. the discussion of Example 5.1, (v)], by considering [i.e., in the fashion just dis-
+cussed] divisors of zeroes and poles [cf. the definition of a “κ-coric function” given
+in Remark 3.1.7, (i)] of meromorphic functions, from the elementary observation
+that, relative to the natural inclusion Q →Z⊗Q,
+Q>0 Z×
+= {1}
+that one may algorithmically reconstruct the Kummer structure cyclotomic
+isomorphism
+μΘ
+Z (‡Dv)∼
+→ μZ(‡M
+∞κv) (respectively, μΘ
+Z (‡Dv)∼
+→ μZ(‡M
+∞κ×v))
+— hence also the Kummer structure isomorphism Mv(‡Dv)μ ∼
+→ ‡Mμ
+∞κv
+(respectively, Mv(‡Dv)μ ∼
+→ ‡Mμ
+∞κ×v) [where the superscript “μ’s” denote the
+subgroups of torsion elements] — from
+the projective system of coverings of Aut-holomorphic orbispaces
+‡Drat
+v →‡Dv,togetherwiththeabstract pseudo-monoidwithπrat
+1 (‡Dv)-
+action πrat
+1 (‡Dv) ‡M
+∞κv (respectively, πrat
+1 (‡Dv) ‡M
+∞κ×v).
+Since, moreover, a rational algebraic function is completely determined by its divisor
+of zeroes and poles together with its value at a single point, we thus conclude that
+one may algorithmically reconstruct the isomorphism(s) of pseudo-monoids
+142 SHINICHI MOCHIZUKI
+determined by the Kummer structure on ‡Fv [i.e., by the Kummer structure
+isomorphism Mv(‡Dv)∼
+→ ‡Mv discussed above]
+Mκv(‡Dv)∼
+→ ‡Mκv, M
+∞κv(‡Dv)∼
+→ ‡M
+∞κv
+(respectively, M
+∞κ×v(‡Dv)∼
+→ ‡M
+∞κ×v)
+from
+the projective system of coverings of Aut-holomorphic orbispaces
+‡Drat
+v →‡Dv,togetherwiththeabstract pseudo-monoidwithπrat
+1 (‡Dv)-
+action πrat
+1 (‡Dv) ‡M
+∞κv (respectively, πrat
+1 (‡Dv) ‡M
+∞κ×v) and
+the collection of splittings
+‡M
+∞κv
+‡Mμ
+∞κv (respectively, ‡M
+∞κ×v
+‡M×
+∞κ×v)
+— where the superscript “μ” (respectively, “×”) denotes the subgroup of
+torsion elements (respectively, the topological group of units, which con-
+tains the subgroup of torsion elements as a dense subgroup) of ‡M
+∞κv
+(respectively, ‡M
+∞κ×v) — determined [and parametrized], via the oper-
+ation of restriction, by the collection of systems of strictly critical
+points of ‡Drat
+v →‡Dv [i.e., systems of points lying over some strictly
+critical point of ‡Dv].
+In this context, we observe further that it follows immediately from the discussion
+of Remark 3.1.7, (ii) [cf. also [AbsTopIII], Corollary 2.7, (b)], that
+the ∞κ-coric structure
+‡M
+∞κv ⊆ ‡M
+∞κ×v
+on ‡Fv may be constructed from the∞κ×-coric structure ‡M
+∞κ×v
+on ‡Fv by considering the subset of elements for which the restriction
+to some [or, equivalently, every] system of strictly critical points of
+‡Drat
+v →‡Dv is a torsion element ∈‡M×
+∼
+→‡M×
+v
+∞κ×v [i.e., corresponds
+to a root of unity],
+and, moreover, that
+the operation of restricting elements of ‡Mκv ⊆ ‡M
+∞κv to systems
+of points of ‡Drat
+v that lie over Aut(‡Dv)-invariant non-critical points
+of ‡Dv yields a functorial algorithm for reconstructing the submonoid
+of Aut(‡Dv)-invariants of ‡Mgp
+v [where the superscript “gp” denotes the
+groupification],togetherwiththetopological fieldstructureontheunion
+of this monoid with {0}, from the∞κ-coric structure ‡M
+∞κv associated
+to ‡Fv.
+A similar statement to the statement of the last display holds if one replaces the
+phrase “Aut(‡Dv)-invariant” by the phrase “arbitrary” and the phrase “submonoid
+of Aut(‡Dv)-invariants of ‡Mgp
+v ” by the phrase “monoid ‡Mgp
+v ”.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 143
+Remark 5.2.1.
+(i) Note that it follows immediately from Definitions 4.1, (i), (iii); 5.2, (i),
+(ii); Examples 3.2, (vi), (c), (d); 3.3, (iii), (b), (c), that there exists a functorial
+algorithmforconstructingD-(respectively, D⊢-)prime-stripsfromF-(respectively,
+F⊢-) prime-strips.
+(ii) In a similar vein, it follows immediately from Definition 5.2, (i), (ii); Exam-
+ples 3.2, (vi), (f); 3.3, (iii), (e); 3.4, (i), (ii), that there exists a functorial algorithm
+for constructing from an F-prime-strip ‡F= {‡Fv}v∈V an F⊢-prime-strip ‡F⊢
+‡F → ‡F⊢ = {‡F⊢
+v }v∈V
+— which we shall refer to as the mono-analyticization of ‡F. Next, let us recall from
+the discussion of Example 3.5, (i), the relatively simple structure of the category
+“Cmod”, i.e., which may be summarized, roughly speaking, as a collection, indexed
+by V∼
+→Vmod, of copies of the topological monoid R≥0, which are related to one
+anotherbya“productformula”. Inparticular, itfollowsimmediately[cf. Definition
+5.2, (i)] from the rigidity of the divisor monoids associated to the Frobenioids that
+appear at each of the components at v ∈V of an F-prime-strip [cf., especially,
+the topological field structure of the field “ADv” of Example 3.4, (i)!] that one
+may also construct from the F-prime-strip ‡F, via a functorial algorithm [cf. the
+constructions of Example 3.5, (i), (ii)], a collection of data
+‡F → ‡F def = (‡C , Prime(‡C )∼
+→V,
+‡F⊢
+, {‡ρv}v∈V)
+— i.e., consisting of a category [which is, in fact, equipped with a Frobenioid
+structure], a bijection, the F⊢-prime-strip ‡F⊢, and an isomorphism of topological
+monoids associated to ‡C and ‡F⊢, respectively, at each v ∈V — which is iso-
+morphic to the collection of data Fmod of Example 3.5, (ii), i.e., which forms an
+F -prime-strip [cf. Definition 5.2, (iv)].
+Remark 5.2.2. Thus, from the point of view of the discussion of Remark 5.1.3,
+F-prime-strips are Kummer-ready [i.e., at v ∈Vnon — cf. the theory of [FrdII], §2],
+whereas F⊢-prime-strips are Kummer-blind.
+Remark 5.2.3. In the context of the construction of ∞κ-coric structures from
+∞κ×-coric structures in Definition 5.2, (vi), we make the following observation.
+When v ∈Vbad, it is natural to take the decomposition groups corresponding to
+strictly critical points [i.e., to which one restricts the Kummer classes under con-
+sideration] to be decomposition groups that correspond to the point of Cv that
+arises as the image of the zero-labeled evaluation points [i.e., evaluation points
+corresponding to the label 0 ∈|Fl|— cf. the discussion of Example 4.4, (i)]. In the
+notation of Example 4.4, (i), this point of Cv may also be described simply as the
+point that arises as the image of the point “μ−”.
+Corollary 5.3. Θ-data:(Isomorphisms of Global Frobenioids, Frobenioid-Prime-
+Strips, and Tempered Frobenioids) Relative to a fixed collection of initial
+144 SHINICHI MOCHIZUKI
+(i) For i = 1,2, let iF (respectively, iF ) be a category which is equiv-
+alent to the category †F (respectively, †F ) of Example 5.1, (iii). Thus, iF
+(respectively, iF ) is equipped with a natural Frobenioid structure [cf. [FrdI],
+Corollary 4.11; [FrdI], Theorem 6.4, (i); Remark 3.1.5 of the present paper]. Write
+Base(iF ) (respectively, Base(iF )) for the base category of this Frobenioid. Then
+the natural map
+Isom(1F ,
+2F ) →Isom(Base(1F ),Base(2F ))
+(respectively, Isom(1F ,
+2F ) →Isom(Base(1F ),Base(2F )))
+[cf. [FrdI], Corollary 4.11; [FrdI], Theorem 6.4, (i); Remark 3.1.5 of the present
+paper] is bijective.
+(ii) For i = 1,2, let iF be an F-prime-strip; iD the D-prime-strip associated
+to iF [cf. Remark 5.2.1, (i)]. Then the natural map
+Isom(1F,
+2F) →Isom(1D,
+2D)
+[cf. Remark 5.2.1, (i)] is bijective.
+(iii) For i = 1,2, let iF⊢ be an F⊢-prime-strip; iD⊢ the D⊢-prime-strip
+associated to iF⊢ [cf. Remark 5.2.1, (i)]. Then the natural map
+Isom(1F⊢
+,
+2F⊢) →Isom(1D⊢
+,
+2D⊢)
+[cf. Remark 5.2.1, (i)] is surjective.
+(iv) Let v ∈Vbad. Recall the category F
+v of Example 3.2, (i). Thus, F
+v
+is equipped with a natural Frobenioid structure [cf. [FrdI], Corollary 4.11;
+[EtTh], Proposition 5.1], with base category Dv. Then the natural homomorphism
+Aut(F
+v) →Aut(Dv) [cf. Example 3.2, (vi), (d)] is bijective.
+Proof. Assertion (i) follows immediately from the category-theoreticity of the “iso-
+morphism M (†D )∼
+→ †M ” of Example 5.1, (v) [cf. also the surrounding
+discussion; Example 5.1, (vi)]. [Here, we note in passing that this argument is en-
+tirely similar tothe techniqueapplied to the proof of the equivalence“ThT∼
+→EA ”
+of [AbsTopIII], Corollary 5.2, (iv).] Assertion (ii) (respectively, (iii)) follows imme-
+diately from [AbsTopIII], Proposition 3.2, (iv); [AbsTopIII], Proposition 4.2, (i) [cf.
+also [AbsTopIII], Remarks 3.1.1, 4.1.1; the discussion of Definition 5.2, (vi), (viii),
+of the present paper] (respectively, [AbsTopIII], Proposition 5.8, (ii), (v)).
+Finally, we consider assertion (iv). First, we recall that since automorphisms
+of Dv = Btemp(X
+v)0 necessarily arise from automorphisms of the scheme X
+v [cf.
+[AbsTopIII], Theorem 1.9; [AbsTopIII], Remark 1.9.1], surjectivity follows immedi-
+ately from the construction of F
+v. Thus, it remains to verify injectivity. To this
+end, let α ∈Ker(Aut(F
+v) →Aut(Dv)). For simplicity, we suppose [without loss of
+generality] that α lies over the identity self-equivalence of Dv. Then I claim that
+to show that α is [isomorphic to — cf. §0] the identity self-equivalence of F
+v, it
+suﬃces to verify that
+α induces [cf. [FrdI], Corollary 4.11; [EtTh], Proposition 5.1] the identity
+on the rational function and divisor monoids of F
+v.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 145
+Indeed, recall that since F
+is a Frobenioid of model type [cf. [EtTh], Definition 3.6,
+v
+(ii)], it follows from [FrdI], Corollary 5.7, (i), (iv), that α preserves base-Frobenius
+pairs. Thus, once one shows that α induces the identity on the rational function
+and divisor monoids of F
+v, it follows, by arguing as in the construction of the
+equivalence of categories given in the proof of [FrdI], Theorem 5.2, (iv), that the
+variousunitsobtainedin[FrdI],Proposition5.6, determine[cf. Remark5.3.3below;
+the argument of the first paragraph of the proof of [FrdI], Proposition 5.6] an
+isomorphism between α and the identity self-equivalence of F
+v, as desired.
+Thus, we proceed to show that α induces the identity on the rational func-
+tion and divisor monoids of F
+v, as follows. In light of the category-theoreticity [cf.
+[EtTh], Theorem 5.6] of the cyclotomic rigidity isomorphism of [EtTh], Proposition
+5.5, the fact that α induces the identity on the rational function monoid follows
+immediately from the naturality of the Kummer map [cf. the discussion of Remark
+3.2.4; [FrdII], Definition 2.1, (ii)], which is injective by [EtTh], Proposition 3.2,
+(iii) — cf. the argument of [EtTh], Theorem 5.7, applied to verify the category-
+theoreticity of the Frobenioid-theoretic theta function. Next, we consider the eﬀect
+ofα onthedivisormonoidofF
+v. Tothisend, letusfirstrecallthatα preservescus-
+pidal and non-cuspidal elements of the monoids that appear in this divisor monoid
+[cf. Remark 3.2.4, (vi); [EtTh], Proposition 5.3, (i)]. In particular, by considering
+the non-cuspidal portion of the divisor of the Frobenioid-theoretic theta function
+and its conjugates [each of which is preserved by α, since α has already been shown
+to induce the identity on the rational function monoid of F
+v], we conclude that α
+induces the identity on the non-cuspidal elements of the monoids that appear in
+the divisor monoid of F
+v [cf. [EtTh], Proposition 5.3, (v), (vi), for a discussion
+of closely related facts]. In a similar vein, since any divisor of degree zero on an
+elliptic curve that is supported on the torsion points of the elliptic curve admits a
+positive multiple which is principal, it follows by considering the cuspidal portions
+of divisors of appropriate rational functions [each of which is preserved by α, since
+α has already been shown to induce the identity on the rational function monoid of
+F
+v] that α also induces the identity on the cuspidal elements of the monoids that
+appear in the divisor monoid of F
+v. This completes the proof of assertion (iv). ⃝
+Remark 5.3.1.
+(i) In the situation of Corollary 5.3, (ii), let
+φ : 1D →2D
+be a morphism of D-prime-strips [i.e., which is not necessarily an isomorphism!]
+that induces an isomorphism between the respective collections of data indexed by
+v ∈Vgood, as well as an isomorphism φ⊢ : 1D⊢ ∼
+→2D⊢ between the associated
+D⊢-prime-strips [cf. Definition 4.1, (iv)]. Then let us observe that by applying
+Corollary 5.3, (ii), it follows that φ lifts to a uniquely determined “arrow”
+ψ : 1F →2F
+— which we think of as “lying over” φ — defined as follows: First, let us recall
+that, in light of our assumptions on φ, it follows immediately from the construction
+146 SHINICHI MOCHIZUKI
+[cf. Examples 3.2, (iii); 3.3, (i); 3.4, (i)] of the various p-adic and archimedean
+Frobenioids [cf. [FrdII], Example 1.1, (ii); [FrdII], Example 3.3, (ii)] that appear
+in an F-prime-strip that it makes sense to speak of the “pull-back” — i.e., by
+forming the “categorical fiber product” [cf. [FrdI], §0; [FrdI], Proposition 1.6] —
+of the Frobenioids that appear in the F-prime-strip 2F via the various morphisms
+at v ∈V that constitute φ. That is to say, it follows from our assumptions on
+φ [cf. also [AbsTopIII], Proposition 3.2, (iv)] that φ determines a pulled-back F-
+prime-strip“φ∗(2F)”, whose associated D-prime-strip [cf. Remark 5.2.1, (i)] is
+tautologically equal to 1D. On the other hand, by Corollary 5.3, (ii), it follows
+that this tautological equality of associated D-prime-strips uniquely determines an
+isomorphism 1F∼
+→φ∗(2F). Then we define the arrow ψ : 1F → 2F to be the
+collection of data consisting of φ and this isomorphism 1F∼
+→φ∗(2F); we refer to ψ
+as the “morphism uniquely determined by φ” or the “uniquely determined morphism
+that lies over φ”. Also, we shall apply various terms used to describe a morphism
+φ of D-prime-strips to the “arrow” of F-prime-strips determined by φ.
+(ii) The conventions discussed in (i) concerning liftings of morphisms of D-
+prime-strips may also be applied to poly-morphisms. We leave the routine details
+to the reader.
+Remark 5.3.2. Just as in the case of Corollary 5.3, (i), (ii), the rigidity property
+of Corollary 5.3, (iv), may be regarded as being essentially a consequence of the
+“Kummer-readiness” [cf. Remarks 5.1.3, 5.2.2] of the tempered Frobenioid F
+—
+v
+cf. also the arguments applied in the proofs of [AbsTopIII], Proposition 3.2, (iv);
+[AbsTopIII], Corollary 5.2, (iv).
+Remark 5.3.3. We take this opportunity to rectify a minor oversight in [FrdI].
+The hypothesis that the Frobenioids under consideration be of “unit-profinite type”
+in [FrdI], Proposition 5.6 — hence also in [FrdI], Corollary 5.7, (iii) — may be
+removed. Indeed, if, in the notation of the proof of [FrdI], Proposition 5.6, one
+writes φ′
+p
+= cp·φp, where cp ∈O×(A), for p ∈Primes, then one has
+c2·c2
+p·φ2·φp = c2·φ2·cp·φp = φ′
+2·φ′
+p
+= φ′
+p·φ′
+2
+= cp·φp·c2·φ2 = cp·cp
+2·φp·φ2 = cp·cp
+2·φ2·φp
+— so c2·c2
+p
+= cp·cp
+2, i.e., cp = cp−1
+2 , for p ∈Primes. Thus, φ′
+= c−1
+p
+2·φp·c2, so by
+def
+taking u
+= c−1
+2 , one may eliminate the final two paragraphs of the proof of [FrdI],
+Proposition 5.6.
+Let
+†HTΘ = ({†F
+v}v∈V,
+†Fmod)
+be a Θ-Hodge theater [relative to the given initial Θ-data — cf. Definition 3.6] such
+that the associated D-prime-strip {†Dv}v∈V is [for simplicity] equal to the D-prime-
+strip †D> of the D-ΘNF-Hodge theater in the discussion preceding Example 5.1.
+Write
+†F>
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 147
+fortheF-prime-striptautologicallyassociatedtothisΘ-Hodgetheater[cf. thedata
+“{†F
+v}v∈V” of Definition 3.6; Definition 5.2, (i); Example 3.2, (iii); Example 3.3,
+(i)]. Thus, †D> may be identified with the D-prime-strip associated [cf. Remark
+5.2.1, (i)] to †F>.
+Example 5.4. Model Θ- and NF-Bridges.
+(i) For j ∈J, let
+†Fj= {†Fvj }vj∈Vj
+be an F-prime-strip whose associated D-prime-strip [cf. Remark 5.2.1, (i)] is equal
+to †Dj,
+†F⟨J⟩= {†Fv⟨J⟩}v⟨J⟩∈V⟨J⟩
+an F-prime-strip whose associated D-prime-strip we denote by †D⟨J⟩ [cf. Example
+5.1, (vii)]. Write
+†FJ
+def
+=
+†Fj
+j∈J
+— where the “formal product ” is to be understood as denoting the capsule with
+index set J for which the datum indexed by j is given by †Fj. Thus, †F⟨J⟩ may be
+related to †F>, in a natural fashion, via the full poly-isomorphism
+†F⟨J⟩
+∼
+→ †F>
+and to †FJ via the “diagonal arrow”
+†F⟨J⟩ → †FJ =
+j∈J
+— i.e., the arrow defined as the collection of data indexed by J for which the
+datum indexed by j is given by the full poly-isomorphism †F⟨J⟩
+∼
+→†Fj. Thus, we
+think of †Fj as a copy of †F> “situated on” the constituent labeled j of the capsule
+†DJ; we think of †F⟨J⟩ as a copy of †F> “situated in a diagonal fashion on” all the
+constituents of the capsule †DJ.
+(ii) Note that in addition to thinking of †F> as being related to †Fj [for j ∈J]
+via the full poly-isomorphism †F>
+∼
+→†Fj, we may also regard †F> as being related
+to †Fj [for j ∈J] via the poly-morphism
+†ψΘ
+j : †Fj →†F>
+uniquely determined by †φΘ
+j [i.e., as discussed in Remark 5.3.1]. Write
+†ψΘ : †FJ →†F>
+for the collection of arrows {†ψΘ
+j }j∈J — which we think of as “lying over” the
+collection of arrows †φΘ = {†φΘ
+j }j∈J.
+(iii) Next, let †F ,
+†F be as in Example 5.1, (iii); δ ∈LabCusp(†D ). Thus,
+[cf. the discussion of Example 4.3, (i)] there exists a unique Autϵ(†D )-orbit of
+†Fj
+148 SHINICHI MOCHIZUKI
+isomorphisms †D∼ →D that maps δ →[ϵ] ∈LabCusp(D ). We shall refer to
+as a δ-valuation ∈V(†D ) [cf. Definition 4.1, (v)] any element that maps to an
+element of V±un [cf. Example 4.3, (i)] via this Autϵ(†D )-orbit of isomorphisms.
+Note that the notion of a δ-valuation may also be defined intrinsically by means
+of the structure of D-NF-bridge †φNF. Indeed, [one verifies immediately that] a
+δ-valuation may be defined as a valuation ∈V(†D ) that lies in the “image” [in
+the evident sense] via †φNF of the unique D-prime-strip †Dj of the capsule †DJ
+such that the bijection LabCusp(†D )∼
+→LabCusp(†Dj) induced by †φNF [cf. the
+discussion of Example 4.5, (i)] maps δ to the element of LabCusp(†Dj) that is
+“labeled 1”, relative to the bijection of the second display of Proposition 4.2.
+(iv) We continue to use the notation of (iii). Then let us observe that by
+localizing at each of the δ-valuations ∈V(†D ), one may construct, in a natural
+way, an F-prime-strip
+†F |δ
+— which is well-defined up to isomorphism — from †F [i.e., in the notation of
+Example 5.1, (iv), from O ×, equipped with its natural π1(†D )-action]. Indeed,
+at a nonarchimedean δ-valuation v, this follows by considering the pv-adic Frobe-
+nioids [cf. Remark 3.3.2] associated to the restrictions to suitable open subgroups
+of Πp0 π1(†D ) (⊆π1(†D ) ⊆π1(†D )) determined by δ ∈LabCusp(†D ) [i.e.,
+open subgroups corresponding to the coverings “X”, “X
+− →” discussed in Definition
+3.1, (e), (f); cf. also Remark 3.1.2, (i)], where Πp0 is chosen [among its π1(†D )-
+conjugates] so as to correspond to v, of the pairs
+“Πp0 O◃
+”
+p0
+of Example 5.1, (v) [cf. also Example 5.1, (vi)]. [Here, we note that, when v
+lies over an element of Vbad
+mod, one must replace these “suitable open subgroups” by
+their tempered analogues, i.e., by applying the mono-anabelian algorithm implicit
+in the proof of [SemiAnbd], Theorem 6.6.] On the other hand, at an archimedean δ-
+valuation v, this follows by applying the functorial algorithm for reconstructing the
+corresponding Aut-holomorphic orbispace at v given in [AbsTopIII], Corollaries 2.8,
+2.9, together with the discussion concerning the “isomorphism M (†D )∼
+→ †M ”
+in Example 5.1, (v) [cf. also Example 5.1, (vi)]. Here, we observe that since
+the natural projection map V±un →Vmod fails to be injective, in order to relate
+the restrictions obtained at diﬀerent elements in a fiber of this map in a well-
+defined fashion, it is necessary to regard †F |δ as being well-defined only up to
+isomorphism. Nevertheless, despite this indeterminacy inherent in the definition
+of †F |δ, it still makes sense to define, for an F-prime-strip ‡F with underlying
+D-prime-strip ‡D [cf. Remark 5.2.1, (i)], a poly-morphism
+‡F →†F
+to be a full poly-isomorphism ‡F∼
+→†F |δ for some δ ∈LabCusp(†D ) [cf. Def-
+inition 4.1, (vi)]. Moreover, it makes sense to pre-compose such poly-morphisms
+with isomorphisms of F-prime-strips and to post-compose such poly-morphisms
+with isomorphisms between isomorphs of †F . Here, we note that such a poly-
+morphism ‡F →†F may be thought of as “lying over” an induced poly-morphism
+‡D →†D [cf. Definition 4.1, (vi)], and that any poly-morphism ‡F →†F is
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 149
+fixed by pre-composition with automorphisms of ‡F, as well as by post-composition
+with automorphisms ∈Autϵ(†F ). Also, we observe that such a poly-morphism
+‡F →†F is compatible with the local and global∞κ-coric structures [cf. Ex-
+ample 5.1, (v); Definition 5.2, (vi), (viii)] that appear in the domain and codomain
+of this poly-morphism in the following sense: the operation of restriction of associ-
+ated Kummer classes [cf. the discussion of Example 5.1, (v); Definition 5.2, (vi),
+(viii); the constructions discussed in the present item (iv)] determines a collection,
+indexed by v ∈V, of poly-morphisms of pseudo-monoids
+πrat
+1 (†D ) †M
+∞κ → ‡M
+∞κv ⊆ ‡M
+∞κ×v
+v∈V
+—where the global data in the domain of the arrow that appears in the displayis re-
+garded as only beingdefined up toautomorphisms induced byinner automorphisms
+of πrat
+1 (†D ) [cf. the discussion of Example 5.1, (i)]; the local data in the codomain
+of the arrow that appears in the display is regarded as only being defined up to au-
+tomorphisms induced by automorphisms of the F-prime-strip ‡F [cf. Definition 5.2,
+(vi), (viii); Corollary 5.3, (ii)]; the arrow of the display is equivariant with respect to
+the various homomorphisms πrat
+1 (‡Dv) →πrat
+1 (†D ) [i.e., relative to the respective
+actions of these groups on the pseudo-monoids in the domain and codomain of the
+arrow] induced [cf. the constructions discussed in the present item (iv), as well as
+the theory summarized in [AbsTopIII], Theorem 1.9, and [AbsTopIII], Corollaries
+1.10, 2.8] by the given poly-morphism ‡F →†F ; when v ∈Varc, we regard the
+pseudo-monoids ‡M
+∞κv ⊆ ‡M
+∞κ×v as being equipped with the various splittings
+discussed in Definition 5.2, (viii). Finally, if {eF}e∈E is a capsule of F-prime-strips
+whose associated capsule of D-prime-strips [cf. Remark 5.2.1, (i)] we denote by
+{eD}e∈E, then we define a poly-morphism
+{eF}e∈E →†F (respectively, {eF}e∈E →†F)
+to be a collection of poly-morphisms {eF →†F }e∈E (respectively, {eF →†F}e∈E)
+[cf. Definition 4.1, (vi)]. Thus, a poly-morphism {eF}e∈E →†F (respectively,
+{eF}e∈E → †F) may be thought of as “lying over” an induced poly-morphism
+{eD}e∈E →†D (respectively, {eD}e∈E →†D) [cf. Definition 4.1, (vi)].
+(v) We continue to use the notation of (iv). Now observe that by Corollary
+5.3, (ii), there exists a unique poly-morphism
+†ψNF : †FJ →†F
+that lies over †φNF
+.
+(vi)Wecontinuetousethenotationof(v). Nowobservethatitfollowsfromthe
+definition of †Fmod in terms of terminal objects of †D [cf. Example 5.1, (iii)] that
+any poly-morphism †F⟨J⟩ →†F [cf. the notation of (i)] induces, via “restriction”
+[in the evident sense], an isomorphism class of functors [cf. Definition 5.2, (i); the
+notation of Example 5.1, (vii)]
+(†F →†F ⊇) †Fmod
+∼
+→†F⟨J⟩ → †Fv⟨J⟩
+150 SHINICHI MOCHIZUKI
+for each v⟨J⟩ ∈V⟨J⟩ — where, by abuse of notation when v⟨J⟩ ∈Varc
+⟨J⟩, we write
+“†Fv⟨J⟩
+” for the category portion of the “collection of data” that appears in Def-
+inition 5.2, (i), (b) — which is independent of the choice of the poly-morphism
+†F⟨J⟩ →†F [i.e., among its Fl -conjugates]. That is to say, the fact that †Fmod
+is defined in terms of terminal objects of †D [cf. also the definition of Fmod given
+in Definition 3.1, (b)!] implies that this particular isomorphism class of functors is
+immune to [i.e., fixed by] the various indeterminacies that appear in the choice of
+†F⟨J⟩ →†F . Let us write
+(†F →†F ⊇) †Fmod
+∼
+→†F⟨J⟩ → †F⟨J⟩
+for the collection of isomorphism classes of restriction functors just defined, as v⟨J⟩
+ranges over the elements of V⟨J⟩. In a similar vein, we also obtain collections of
+natural isomorphism classes of restriction functors
+†FJ → †FJ; †Fj → †Fj
+for j ∈J. Finally, just as in Example 5.1, (vii), we obtain natural realifications
+†F R
+⟨J⟩ → †FR
+⟨J⟩; †F R
+J → †FR
+J; †F R
+j → †FR
+j
+of the various F-prime-strips — i.e., realifications [cf. [FrdI], Corollary 5.4; [FrdII],
+Theorem 1.2, (i); [FrdII], Theorem 3.6, (i)] of each of the Frobenioid [that is to say,
+category] portions of the data of Definition 5.2, (i), (a), (b) — and isomorphism
+classes of restriction functors discussed so far.
+(vii) We shall refer to as “pivotal distributions” the objects constructed in (vi)
+†Fpvt → †Fpvt; †F R
+pvt → †FR
+pvt
+in the case j = 1 — cf. Fig. 5.2 below.
+n·
+· v
+◦ ...
+.
+.
+.
+n′
+·
+· v′
+◦ ...
+.
+.
+.
+n′′
+·
+· v′′
+◦ ...
+Fig. 5.2: Pivotal distribution
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 151
+Remark 5.4.1. The constructions of Example 5.4, (i), (ii) (respectively, Example
+5.4, (iii), (iv), (v), (vi), (vii)) manifestly only require the D-Θ-bridge portion †φΘ
+(respectively, D-NF-bridge portion †φNF) of the D-ΘNF-Hodge theater †HTD-ΘNF
+[cf. Remark 5.1.2].
+Remark 5.4.2.
+(i) At this point, it is useful to consider the various copies of †Fmod and its re-
+alifications introduced so far from the point of view of “log-volumes”, i.e., arith-
+metic degrees [cf., e.g., the discussion of [FrdI], Example 6.3; [FrdI], Theorem 6.4;
+Remark 3.1.5 of the present paper]. That is to say, since †Fj may be thought of as
+a sort of “section of †FJ over †Fmod
+” — i.e., a sort of “section of K over Fmod
+” [cf.
+the discussion of prime-strips in Remark 4.3.1] — one way to think of log-volumes
+of †F⟨J⟩ is as quantities that diﬀer by a factor of l — i.e., corresponding, to the
+cardinality of J∼
+→Fl — from log-volumes of †Fj . Put another way, this amounts
+to thinking of arithmetic degrees that appear in the various factors of †FJ as being
+averaged over the elements of J and hence of arithmetic degrees that
+appear in †F⟨J⟩ as the “resulting averages”.
+This sort of averaging may be thought of as a sort of abstract, Frobenioid-theoretic
+analogue of the normalization of arithmetic degrees that is often used in the theory
+of heights [cf., e.g., [GenEll], Definition 1.2, (i)] that allows one to work with heights
+in such a way that the height of a point remains invariant with respect to change
+of the base field.
+(ii) On the other hand, to work with the various isomorphisms of Frobenioids
+— such as †Fj
+∼
+→†F⟨J⟩ — involved amounts [since the arithmetic degree is an
+intrinsic invariant of the Frobenioids involved — cf. [FrdI], Theorem 6.4, (iv);
+Remark 3.1.5 of the present paper] to thinking of arithmetic degrees that appear
+in the various factors of †FJ as being
+summed [i.e., without dividing by a factor of l ] over the elements of J
+and hence of arithmetic degrees that appear in †F⟨J⟩ as the “resulting
+sums”.
+This point of view may be thought of as a sort of abstract, Frobenioid-theoretic
+analogue of the normalization of arithmetic degrees or heights in which the height
+of a point is multiplied by the degree of the field extension when one executes a
+change of the base field.
+The notions defined in the following “Frobenioid-theoretic lifting” of Definition
+4.6 will play a central role in the theory of the present series of papers.
+Definition 5.5.
+(i) We define an NF-bridge [relative to the given initial Θ-data] to be a collec-
+tion of data
+(‡FJ
+‡ψNF
+−→ ‡F ‡F )
+152 SHINICHI MOCHIZUKI
+as follows:
+(a) ‡FJ = {‡Fj}j∈J is a capsule of F-prime-strips, indexed by a finite index
+set J. Write ‡DJ = {‡Dj}j∈J for the associated capsule of D-prime-strips
+[cf. Remark 5.2.1, (i)].
+(b) ‡F ,
+‡F are categories equivalent to the categories †F ,
+†F , respec-
+tively, of Example 5.1, (iii). Thus, each of ‡F ,
+‡F is equipped with
+a natural Frobenioid structure [cf. [FrdI], Corollary 4.11; [FrdI], Theo-
+rem 6.4, (i); Remark 3.1.5 of the present paper]; write ‡D ,
+‡D for the
+respective base categories of these Frobenioids.
+(c) The arrow “ ” consists of the datum of a morphism ‡D →‡D
+which is abstractly equivalent [cf. §0] to the natural morphism †D →
+†D of Example 5.1, (i), together with the datum of an isomorphism
+‡F∼
+→‡F |‡D [cf. the discussion of Example 5.1, (iii)].
+(d) ‡ψNF is a poly-morphism that lifts [uniquely! — cf. Corollary 5.3, (ii)] a
+poly-morphism ‡φNF : ‡DJ →‡D such that ‡φNF forms a D-NF-bridge
+[cf. Example 5.4, (v); Remark 5.4.1].
+Thus, one verifies immediately that any NF-bridge as above determines an as-
+sociated D-NF-bridge (‡φNF : ‡DJ → ‡D ). We define a(n) [iso]morphism of
+NF-bridges
+(1FJ1
+1ψNF
+−→ 1F 1F ) → (2FJ2
+2ψNF
+−→ 2F 2F )
+to be a collection of arrows
+1FJ1
+∼
+→2FJ2; 1F∼
+→2F ; 1F∼
+→2F
+— where 1FJ1
+∼
+→2FJ2 is a capsule-full poly-isomorphism [cf. §0], hence induces a
+poly-isomorphism 1DJ1
+∼
+→2DJ2; 1F∼
+→2F is a poly-isomorphism which lifts
+a poly-isomorphism 1D∼
+→ 2D such that the pair of arrows 1DJ1
+∼
+→ 2DJ2,
+1D∼
+→2D forms a morphism between the associated D-NF-bridges; 1F∼
+→2F
+is an isomorphism — which are compatible [in the evident sense] with the iψNF [for
+i = 1,2], as well as with the respective “ ’s”. It is immediate that any morphism
+of NF-bridges induces a morphism between the associated D-NF-bridges. There is
+an evident notion of composition of morphisms of NF-bridges.
+(ii) We define a Θ-bridge [relative to the given initial Θ-data] to be a collection
+of data
+(‡FJ
+‡ψΘ
+−→ ‡F>
+‡HTΘ)
+as follows:
+(a) ‡FJ = {‡Fj}j∈J is a capsule of F-prime-strips, indexed by a finite index
+set J. Write ‡DJ = {‡Dj}j∈J for the associated capsule of D-prime-strips
+[cf. Remark 5.2.1, (i)].
+(b) ‡HTΘ is a Θ-Hodge theater.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 153
+(c) ‡F> is the F-prime-strip tautologically associated to ‡HTΘ [cf. the
+discussion preceding Example 5.4]; we use the notation “ ” to denote
+this relationship between ‡F> and ‡HTΘ. Write ‡D> for the D-prime-
+strip associated to ‡F> [cf. Remark 5.2.1, (i)].
+(d) ‡ψΘ = {‡ψΘ
+j }j∈J is the collection of poly-morphisms ‡ψΘ
+j : ‡Fj →‡F>
+determined [i.e., as discussed in Remark 5.3.1] by a D-Θ-bridge ‡φΘ =
+{‡φΘ
+j : ‡Dj →‡D>}j∈J.
+Thus, one verifies immediately that any Θ-bridge as above determines an associated
+D-Θ-bridge (‡φΘ : ‡DJ → ‡D>). We define a(n) [iso]morphism of Θ-bridges
+1ψΘ
+2ψΘ
+(1FJ1
+−→ 1F>
+1HTΘ) → (2FJ2
+−→ 2F>
+2HTΘ)
+to be a collection of arrows
+1FJ1
+∼
+→2FJ2; 1F>
+∼
+→2F>; 1HTΘ∼
+→2HTΘ
+— where 1FJ1
+∼
+→2FJ2 is a capsule-full poly-isomorphism [cf. §0]; 1F>
+∼
+→2F> is
+the full poly-isomorphism; 1HTΘ∼
+→2HTΘ is an isomorphism of Θ-Hodge theaters
+[cf. Remark 3.6.2] — which are compatible [in the evident sense] with the iψΘ [for
+i = 1,2], as well as with the respective “ ’s” [cf. Corollary 5.6, (i), below]. It
+is immediate that any morphism of Θ-bridges induces a morphism between the
+associated D-Θ-bridges. There is an evident notion of composition of morphisms
+of Θ-bridges.
+(iii) We define a ΘNF-Hodge theater [relative to the given initial Θ-data] to be
+a collection of data
+‡HTΘNF = (‡F ‡F
+‡ψNF
+←− ‡FJ
+‡ψΘ
+−→ ‡F>
+‡HTΘ)
+— where the data (‡F ‡F ←− ‡FJ) forms an NF-bridge; the data
+(‡FJ −→ ‡F> ‡HTΘ) forms a Θ-bridge — such that the associated data
+{‡φNF
+,
+‡φΘ}[cf. (i), (ii)] forms a D-ΘNF-Hodge theater. A(n) [iso]morphism of
+ΘNF-Hodge theaters is defined to be a pair of morphisms between the respective
+associatedNF-andΘ-bridgesthatarecompatiblewithoneanotherinthesensethat
+they induce the same bijection between the index sets of the respective capsules of
+F-prime-strips. There is an evident notion of composition of morphisms of ΘNF-
+Hodge theaters.
+Corollary 5.6. (Isomorphisms of Θ-Hodge Theaters, NF-Bridges, Θ-
+Bridges, and ΘNF-Hodge Theaters) Relative to a fixed collection of initial
+Θ-data:
+(i) The natural functorially induced map from the set of isomorphisms be-
+tween two Θ-Hodge theaters to the set of isomorphisms between the respective
+associated D-prime-strips [cf. the discussion preceding Example 5.4; Remark
+5.2.1, (i)] is bijective.
+(ii) The natural functorially induced map from the set of isomorphisms be-
+tween two NF-bridges (respectively, two Θ-bridges; two ΘNF-Hodge the-
+aters) to the set of isomorphisms between the respective associated D-NF-bridges
+154 SHINICHI MOCHIZUKI
+(respectively, associated D-Θ-bridges; associated D-ΘNF-Hodge theaters) is
+bijective.
+(iii) Given an NF-bridge and a Θ-bridge, the set of capsule-full poly-isomorphisms
+between the respective capsules of F-prime-strips which allow one to glue the given
+NF- and Θ-bridges together to form a ΘNF-Hodge theater forms an Fl -torsor.
+Proof. First, we consider assertion (i). Sorting through the data listed in the
+definition of a Θ-Hodge theater †HTΘ [cf. Definition 3.6], one verifies immediately
+that the only data that is not contained in the associated F-prime-strip †F> [cf.
+the discussion preceding Example 5.4] is the global data of Definition 3.6, (c), and
+the tempered Frobenioids isomorphic to “F
+v” [cf. Example 3.2, (i)] at the v ∈Vbad
+.
+That is to say, for v ∈Vgood, one verifies immediately that
+†F>,v = †F
+v
+[cf. Example 3.3, (i); Example 3.4, (i); Definition 3.6; Definition 5.2, (i)]. On
+the other hand, one verifies immediately that this global data may be obtained
+by applying the functorial algorithm “‡F → ‡F ” summarized in the second
+display of Remark 5.2.1, (ii), to the associated F-prime-strips that appear. Thus,
+assertion (i) follows by applying Corollary 5.3, (ii), to the associated F-prime-
+strips and Corollary 5.3, (iv), to the various tempered Frobenioids at v ∈Vbad
+.
+This completes the proof of assertion (i). In light of assertion (i), assertions (ii),
+(iii) follow immediately from the definitions and Corollary 5.3, (i), (ii) [cf. also
+Proposition 4.8, (iii), in the case of assertion (iii)]. ⃝
+Remark 5.6.1. Observe that the various “functorial dynamics” studied in
+§4 — i.e., more precisely, analogues of Propositions 4.8, (i), (ii); 4.9; 4.11 — apply
+to the NF-bridges, Θ-bridges, and ΘNF-Hodge theaters studied in the present §5.
+Indeed, such analogues follow immediately from Corollaries 5.3, (ii), (iii); 5.6, (ii).
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 155
+Section 6: Additive Combinatorial Teichm¨ uller Theory
+In the present §6, we discuss the additive analogue — i.e., which revolves
+around the “functorial dynamics” that arise from labels
+∈Fl
+— of the “multiplicative combinatorial Teichm¨ uller theory” developed in §4 for
+labels ∈Fl . These considerations lead naturally to certain enhancements of the
+variousHodge theatersconsideredin§5. Ontheotherhand, despitetheresemblance
+of the theory of the present §6 to the theory of §4, §5, the theory of the present
+§6 is, in certain respects — especially those respects that form the analogue of the
+theory of §5 — substantially technically simpler.
+In the following, we fix a collection of initial Θ-data
+(F/F, XF, l, CK, V, Vbad
+mod, ϵ)
+as in Definition 3.1; also, we shall use the various notations introduced in Definition
+3.1 for various objects associated to this initial Θ-data.
+Definition 6.1.
+(i) We shall write
+F ±
+l
+def
+= Fl {±1}
+for the group determined by forming the semi-direct product with respect to the
+natural inclusion {±1} →F×
+l and refer to an element of F ±
+l that maps to +1
+(respectively,−1) via the natural surjection F ±
+l {±1}as positive (respectively,
+negative). We shall refer to as an F±
+l -group any set E equipped with a {±1}-orbit
+of bijections E∼
+→Fl. Thus, any F±
+l -group E is equipped with a natural Fl-module
+structure. We shall refer to as an F±
+l -torsor any set T equipped with an F ±
+l -orbit
+of bijections T∼
+→Fl [relative to the action of F ±
+l on Fl by automorphisms of
+the form Fl ∋z →±z +λ ∈Fl, for λ ∈Fl]. Thus, if T is an F±
+l -torsor, then the
+abeliangroupofautomorphismsoftheunderlying setof Fl givenbythetranslations
+Fl ∋z →z +λ ∈Fl, for λ ∈Fl, determines an abelian group
+Aut+(T)
+of “positive automorphisms” of the underlying set of T. Moreover, Aut+(T) is
+equipped with a natural structure of F±
+l -group [such that the abelian group struc-
+ture of Aut+(T) coincides with the Fl-module structure of Aut+(T) induced by this
+F±
+l -group structure]. Finally, if T is an F±
+l -torsor, then we shall write
+Aut±(T)
+for the group of automorphisms of the underlying set of T determined [relative to
+the F±
+l -torsor structure on T] by the group of automorphisms of the underlying set
+of Fl given by F ±
+l [so Aut+(T) ⊆Aut±(T) is the unique subgroup of index 2].
+156 SHINICHI MOCHIZUKI
+(ii) Let
+†D= {†Dv}v∈V
+be a D-prime-strip [relative to the given initial Θ-data]. Observe [cf. the discussion
+of Definition 4.1, (i)] that if v ∈Vnon, then π1(†Dv) determines, in a functorial
+fashion, a topological [in fact, profinite if v ∈Vgood] group corresponding to “Xv
+”
+[cf. Corollary 1.2 if v ∈Vgood; [EtTh], Proposition 2.4, if v ∈Vbad], which contains
+π1(†Dv) as an open subgroup; thus, if we write †D±
+v for B(−)0 of this topological
+group, then we obtain a natural morphism †Dv →†D±
+v [cf. §0]. In a similar vein, if
+v ∈Varc, then since X
+− →v
+admits a Kv-core, a routine translation into the “language
+of Aut-holomorphic orbispaces” of the argument given in the proof of Corollary 1.2
+[cf. also [AbsTopIII], Corollary 2.4] reveals that †Dv determines, in a functorial
+fashion, an Aut-holomorphic orbispace †D±
+v corresponding to “Xv”, together with
+a natural morphism †Dv →†D±
+v of Aut-holomorphic orbispaces. Thus, in summary,
+one obtains a collection of data
+†D±
+= {†D±
+v }v∈V
+completely determined by †D.
+(iii) Suppose that we are in the situation of (ii). Then observe [cf. the dis-
+cussion of Definition 4.1, (ii)] that by applying the group-theoretic algorithm of
+[AbsTopI], Lemma 4.5 [cf. also Remark 1.2.2, (ii), of the present paper], to the
+topological group π1(†Dv) when v ∈Vnon, or by considering π0(−) of a cofinal
+collection of “neighborhoods of infinity” [i.e., complements of compact subsets] of
+the underlying topological space of †Dv when v ∈Varc, it makes sense to speak of
+the set of cusps of †Dv; a similar observation applies to †D±
+v , for v ∈V. If v ∈V,
+then we define a ±-label class of cusps of †Dv to be the set of cusps of †Dv that lie
+over a single cusp [i.e., corresponding to an arbitrary element of the quotient “Q”
+that appears in the definition of a “hyperbolic orbicurve of type (1,l-tors)” given
+in [EtTh], Definition 2.1] of †D±
+v ; write
+LabCusp±(†Dv)
+for the set of ±-label classes of cusps of †Dv. Thus, [for any v ∈V!] LabCusp±(†Dv)
+admits a natural action by F×
+l [cf. [EtTh], Definition 2.1], as well as a zero element
+†η0
+∈LabCusp±(†Dv)
+v
+and a ±-canonical element
+†η±
+∈LabCusp±(†Dv)
+v
+— which is well-defined up to multiplication by ±1, and which may be constructed
+solely from †Dv [cf. Definition 4.1, (ii)] — such that, relative to the natural bijection
+LabCusp±(†Dv)\{†η0
+v} /{±1}∼
+→LabCusp(†Dv)
+[cf. the notation of Definition 4.1, (ii)], we have †η±
+v
+→†ηv. In particular, we
+obtain a natural bijection
+LabCusp±(†Dv)∼
+→ Fl
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 157
+— which is well-defined up to multiplication by ±1 and compatible, relative to the
+natural bijection to “LabCusp(−)” of the preceding display, with the natural bijec-
+tion of the second display of Proposition 4.2. That is to say, in the terminology of
+(i), LabCusp±(†Dv) is equipped with a natural F±
+l -group structure. This F±
+l -group
+structure determines a natural surjection
+Aut(†Dv) {±1}
+— i.e., by considering the induced automorphism of LabCusp±(†Dv). Write
+Aut+(†Dv) ⊆Aut(†Dv)
+fortheindextwosubgroupof“positive automorphisms”[i.e., thekerneloftheabove
+surjection] and Aut−(†Dv) def = Aut(†Dv) \Aut+(†Dv) [i.e., where “\” denotes the
+set-theoretic complement] for the subset of “negative automorphisms”. In a similar
+vein, we shall write
+Aut+(†D) ⊆Aut(†D)
+for the subgroup of “positive automorphisms” [i.e., automorphisms each of whose
+components, for v ∈V, is positive], and, if α ∈{±1}V [i.e., where we write {±1}V
+for the set of set-theoretic maps from V to {±1}],
+Autα(†D) ⊆Aut(†D)
+for the subset of “α-signed automorphisms” [i.e., automorphisms each of whose
+components, for v ∈V, is positive if α(v) = +1 and negative if α(v) =−1].
+(iv) Suppose that we are in the situation of (ii). Let
+‡D= {‡Dv}v∈V
+be another D-prime-strip [relative to the given initial Θ-data]. Then for any v ∈V,
+we shall refer to as a +-full poly-isomorphism †Dv
+∼
+→‡Dv any poly-isomorphism
+obtained as the Aut+(†Dv)- [or, equivalently, Aut+(‡Dv)-] orbit of an isomorphism
+†Dv
+∼
+→‡Dv. In particular, if †D= ‡D, then there are precisely two +-full poly-
+isomorphisms †Dv
+∼
+→‡Dv, namely, the +-full poly-isomorphism determined by the
+identity isomorphism, which we shall refer to as positive, and the unique non-
+positive +-full poly-isomorphism, which we shall refer to as negative. In a similar
+vein, we shall refer to as a +-full poly-isomorphism †D∼
+→‡D any poly-isomorphism
+obtained as the Aut+(†D)- [or, equivalently, Aut+(‡D)-] orbit of an isomorphism
+†D∼
+→‡D. In particular, if †D= ‡D, then the set of +-full poly-isomorphisms
+†D∼
+→‡D is in natural bijective correspondence [cf. the discussion of (iii) above]
+with the set {±1}V; we shall refer to the +-full poly-isomorphism †D∼
+→‡D that
+corresponds to α ∈ {±1}V as the α-signed +-full poly-isomorphism. Finally, a
+capsule-+-full poly-morphism between capsules of D-prime-strips
+{†Dt}t∈T
+∼ →{‡Dt′}t′∈T′
+isdefinedtobeapoly-morphismbetweentwocapsulesofD-prime-stripsdetermined
+by +-full poly-isomorphisms †Dt
+∼
+→‡Dι(t) [where t ∈T] between the constituent
+objects indexed by corresponding indices, relative to some injection ι : T →T′
+.
+158 SHINICHI MOCHIZUKI
+(v) Write
+D ± def
+= B(XK)0
+[cf. §0; the situation discussed in Definition 4.1, (v)]. Thus, we have a finite ´ etale
+double covering D ± →D= B(CK)0. Just as in the case of D [cf. Example
+4.3, (i)], one may construct, in a category-theoretic fashion from D ±, the outer
+homomorphism
+Aut(D ±) →GL2(Fl)/{±1}
+arising from the l-torsion points of the elliptic curve EF [i.e., from the Galois ac-
+tion on Δab
+X ⊗Fl]. Moreover, it follows from the construction of XK that, relative
+to the natural isomorphism Aut(D ±)∼
+→Aut(XK) [cf., e.g., [AbsTopIII], Theo-
+rem 1.9], the image of the above outer homomorphism is equal to a subgroup of
+GL2(Fl)/{±1}that contains a Borel subgroup of SL2(Fl)/{±1}[cf. the discussion
+of Example 4.3, (i)] — i.e., the Borel subgroup corresponding to the rank one quo-
+tient of Δab
+X ⊗Fl that gives rise to the covering XK →XK. In particular, this rank
+one quotient determines a natural surjective homomorphism
+Aut(D ±) Fl
+[which may be reconstructed category-theoretically from D ±!] — whose kernel
+we denote by Aut±(D ±) ⊆Aut(D ±). One verifies immediately that the sub-
+group Aut±(D ±) ⊆Aut(D ±)∼
+→Aut(XK) contains the subgroup AutK(XK) ⊆
+Aut(XK) of K-linear automorphisms and acts transitively on the cusps of XK.
+Next, let us write Autcsp(D ±) ⊆Aut±(D ±) for the subgroup [which may be re-
+constructed category-theoretically from D ±! — cf. [AbsTopI], Lemma 4.5, as well
+as Remark 1.2.2, (ii), of the present paper] of automorphisms that fix the cusps of
+XK. Then one obtains natural outer isomorphisms
+AutK(XK)∼
+→ Aut±(D ±)/Autcsp(D ±)∼
+→ F ±
+l
+[cf. the discussion preceding [EtTh], Definition 2.1] — where the second outer
+isomorphism depends, in an essential way, on the choice of the cusp ϵ of CK [cf.
+Definition 3.1, (f)]. Put another way, if we write Aut+(D ±) ⊆Aut±(D ±) for the
+unique index two subgroup containing Autcsp(D ±), then the cusp ϵ determines a
+natural F±
+l -group structure on the subgroup
+Aut+(D ±)/Autcsp(D ±) ⊆ Aut±(D ±)/Autcsp(D ±)
+[which corresponds to the subgroup Gal(XK/XK) ⊆AutK(XK) via the natural
+outer isomorphisms of the preceding display] and, in the notation of (vi) below, a
+natural F±
+l -torsor structure on the set LabCusp±(D ±). Write
+V± def = Aut±(D ±)·V = Autcsp(D ±)·V ⊆ V(K)
+[cf. the discussion of Example 4.3, (i); Remark 6.1.1 below] — where the “=”
+followsimmediatelyfromthenatural outer isomorphismsdiscussedabove. Then[by
+considering what happens at the elements of V± Vbad] one verifies immediately
+that the subgroup Aut±(D ±) ⊆Aut(D ±)∼
+= Aut(XK) may be identified with
+the subgroup of Aut(XK) that stabilizes V±
+.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 159
+(vi) Let
+†D ±
+be any category isomorphic to D ±. Then just as in the discussion of (iii) in the
+case of “v ∈Vnon”, it makes sense [cf. [AbsTopI], Lemma 4.5, as well as Remark
+1.2.2, (ii), of the present paper] to speak of the set of cusps of †D ±, as well as the
+set of ±-label classes of cusps
+LabCusp±(†D ±)
+— which, in this case, may be identified with the set of cusps of †D ±
+.
+(vii) Recall from [AbsTopIII], Theorem 1.9 [applied via the“Θ-approach” dis-
+cussed in Remark 3.1.2], that [just as in the case of D — cf. the discussion of
+Definition 4.1, (v)] there exists a group-theoretic algorithm for reconstructing, from
+π1(D ±) [cf. §0], the algebraic closure “F” of the base field “K”, hence also the set
+of valuations“V(F)” from D ± [e.g., as a collection of topologies on F — cf., e.g.,
+[AbsTopIII], Corollary 2.8]. Moreover, for w ∈V(K)arc, let us recall [cf. Remark
+3.1.2; [AbsTopIII], Corollaries 2.8, 2.9] that one may reconstruct group-theoretically,
+from π1(D ±), the Aut-holomorphic orbispace Xw associated to Xw. Let †D ± be
+as in (vi). Then let us write
+V(†D ±)
+for the set of valuations [i.e., “V(F)”], equipped with its natural π1(†D ±)-action,
+V(†D ±) def
+= V(†D ±)/π1(†D ±)
+for the quotient of V(†D ±) by π1(†D ±) [i.e., “V(K)”], and, for w ∈V(†D ±)arc
+,
+X(†D ±,w)
+[i.e., “Xw” — cf. the discussion of [AbsTopIII], Definition 5.1, (ii)] for the Aut-
+holomorphic orbispace obtained by applying these group-theoretic reconstruction
+algorithms to π1(†D ±). Now if U is an arbitrary Aut-holomorphic orbispace, then
+let us define a morphism
+U →†D ±
+to be a morphism of Aut-holomorphic orbispaces [cf. [AbsTopIII], Definition 2.1,
+(ii)] U →X(†D ±,w) for some w ∈V(†D ±)arc. Thus, it makes sense to speak of
+the pre-composite (respectively, post-composite) of such a morphism U →†D ±
+with a morphism of Aut-holomorphic orbispaces (respectively, with an isomorphism
+[cf. §0] †D ± ∼
+→‡D ± [i.e., where ‡D ± is a category equivalent to D ±]).
+Remark 6.1.1. In fact, in the notation of Example 4.3, (i); Definition 6.1, (v), it
+is not diﬃcult to verify [cf. Remark 3.1.2, (i)] that V±
+= V±un (⊆V(K)).
+Example 6.2. Model Base-Θ±-Bridges.
+(i)Inthefollowing, letusthinkofFl asanF±
+l -group[relativetothetautological
+F±
+l -group structure]. Let
+D≻ = {D≻,v}v∈V; Dt = {Dvt}v∈V
+160 SHINICHI MOCHIZUKI
+— where t ∈Fl, and we use the notation vt to denote the pair (t,v) [cf. Example
+4.3, (iv)] — be copies of the “tautological D-prime-strip” {Dv}v∈V [cf. Examples
+4.3, (iv); 4.4, (ii)]. For each t ∈Fl, write
+φΘ±
+vt
+: Dvt
+→D≻,v; φΘ±
+t : Dt →D≻
+for the respective positive +-full poly-isomorphisms, i.e., relative to the respective
+identifications with the “tautological D-prime-strip” {Dv}v∈V. Write D± for the
+capsule {Dt}t∈Fl [cf. the constructions of Example 4.4, (iv)] and
+φΘ±
+± : D± →D≻
+for the collection of poly-morphisms {φΘ±
+t }t∈Fl.
+(ii) The collection of data
+(D±,D≻,φΘ±
+± )
+admits a natural poly-automorphism of order two−1Fl defined as follows: the
+poly-automorphism−1Fl acts on Fl as multiplication by−1 and induces the poly-
+∼
+isomorphisms Dt
+→D−t [for t ∈Fl] and D≻
+∼
+→D≻ determined [i.e., relative to
+the respective identifications with the “tautological D-prime-strip” {Dv}v∈V] by
+the +-full poly-automorphism whose sign at every v ∈V is negative. One verifies
+immediately that−1Fl, defined in this way, is compatible [in the evident sense] with
+φΘ±
+±.
+(iii) Let α ∈{±1}V. Then α determines a natural poly-automorphism αΘ± of
+order ∈{1,2}of the collection of data
+(D±,D≻,φΘ±
+± )
+as follows: the poly-automorphism αΘ±
+acts on Fl as the identity and on Dt, for
+t ∈Fl, and D≻ as the α-signed +-full poly-automorphism. One verifies immediately
+that αΘ±, defined in this way, is compatible [in the evident sense] with φΘ±
+±.
+Example 6.3. Model Base-Θell-Bridges.
+(i) In the following, let us think of Fl as an F±
+l -torsor [relative to the tauto-
+logical F±
+l -torsor structure]. Let
+Dt = {Dvt}v∈V
+[for t ∈Fl] and D± be as in Example 6.2, (i); D ± as in Definition 6.1, (v). In the
+following, let us fix an isomorphism of F±
+l -torsors
+LabCusp±(D ±)∼
+→Fl
+[cf. thediscussionofDefinition6.1,(v)],whichweshallusetoidentifyLabCusp±(D ±)
+with Fl. Note that this identification induces an isomorphism of groups
+Aut±(D ±)/Autcsp(D ±)∼
+→F ±
+l
+→D ± of the form
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 161
+[cf. the discussion of Definition 6.1, (v)], which we shall use to identify the group
+Aut±(D ±)/Autcsp(D ±) with the group F ±
+l . If v ∈Vgood Vnon (respectively,
+v ∈Vbad), then the natural restriction functor on finite ´ etale coverings arising from
+the natural composite morphism X
+− →v
+→Xv →XK (respectively, X
+→Xv →
+v
+XK) determines [cf. Examples 3.2, (i); 3.3, (i)] a natural morphism φΘell
+•,v : Dv →
+D ± [cf. the discussion of Example 4.3, (ii)]. If v ∈Varc, then [cf. Example 3.4, (i)]
+∼
+we have a tautological morphism Dv = X
+− →v
+→Xv
+→X(D ±,v), hence a morphism
+φΘell
+•,v : Dv →D ± [cf. the discussion of Example 4.3, (iii)]. For arbitrary v ∈V,
+write
+φΘell
+→D ±
+v0
+: Dv0
+for the poly-morphism given by the collection of morphisms Dv0
+β ◦φΘell
+•,v ◦α
+—whereα ∈Aut+(Dv0); β ∈Autcsp(D ±); weapplythetautologicalidentification
+of Dv with Dv0 [cf. the discussion of Example 4.3, (ii), (iii), (iv)]. Write
+φΘell
+0 : D0 →D ±
+for the poly-morphism determined by the collection {φΘell
+v0
+: Dv0
+→D ±}v∈V [cf.
+the discussion of Example 4.3, (iv)]. Note that the presence of “β” in the defini-
+tion of φΘell
+v0 implies that it makes sense to post-compose φΘell
+0 with an element of
+Aut±(D ±)/Autcsp(D ±)∼
+→F ±
+l . Thus, for any t ∈Fl ⊆F ±
+l , let us write
+φΘell
+t : Dt →D ±
+for the result of post-composing φΘell
+0 with the “poly-action” [i.e., action via poly-
+automorphisms] of t on D ± [and pre-composing with the tautological identification
+of D0 with Dt] and
+φΘell
+± : D± →D ±
+for the collection of arrows {φΘell
+t }t∈Fl.
+(ii) Let γ ∈F ±
+l . Then γ determines a natural poly-automorphism γ± of D±
+as follows: the automorphism γ± acts on Fl via the usual action of F ±
+l on Fl and,
+∼
+for t ∈Fl, induces the +-full poly-isomorphism Dt
+→Dγ(t) whose sign at every
+v ∈V is equal to the sign of γ [cf. the construction of Example 6.2, (ii)]. Thus, we
+obtain a natural poly-action of F ±
+l on D±. On the other hand, the isomorphism
+Aut±(D ±)/Autcsp(D ±)∼
+→F ±
+l of (i) determines a natural poly-action of F ±
+l
+on D ±. Moreover, one verifies immediately that φΘell
+± is equivariant with respect
+to these poly-actions of F ±
+l on D± and D ±; in particular, we obtain a natural
+poly-action
+F ±
+l (D±,D ±,φΘell
+± )
+of F ±
+l on the collection of data (D±,D ±,φΘell
+± ) [cf. the discussion of Example
+4.3, (iv)].
+162 SHINICHI MOCHIZUKI
+Definition 6.4. In the following, we shall write l± def
+= l +1 = (l+1)/2. [Here,
+we recall that the notation “l ” was introduced at the beginning of §4.]
+(i) We define a base-Θ±-bridge, or D-Θ±-bridge, [relative to the given initial
+Θ-data] to be a poly-morphism
+†φΘ±
+†DT
+±
+−→ †D≻
+— where †D≻ is a D-prime-strip; T is an F±
+l -group; †DT = {†Dt}t∈T is a capsule
+of D-prime-strips, indexed by [the underlying set of] T — such that there exist
+isomorphisms
+∼
+D≻
+→†D≻, D±
+∼
+→†DT
+∼
+— where we require that the bijection of index sets Fl
+→T induced by the second
+isomorphismdetermineanisomorphism of F±
+l -groups—conjugationbywhichmaps
+φΘ±
+± →†φΘ±
+± . In this situation, we shall write
+†D|T|
+for the l±-capsule obtained from the l-capsule †DT by forming the quotient |T|of
+the index set T of this underlying capsule by the action of {±1}and identifying
+the components of the capsule †DT indexed by the elements in the fibers of the
+quotient T |T|via the constituent poly-morphisms of †φΘ±
+± = {†φΘ±
+t }t∈T [so
+each constituent D-prime-strip of †D|T| is only well-defined up to a positive auto-
+morphism, but this indeterminacy will not aﬀect applications of this construction
+— cf. Propositions 6.7; 6.8, (ii); 6.9, (i), below]. Also, we shall write
+†DT
+for the l -capsule determined by the subset T def
+= |T|\{0}of nonzero elements of
+|T|. We define a(n) [iso]morphism of D-Θ±-bridges
+†φΘ±
+(†DT
+±
+−→ †D≻) → (‡DT′
+‡φΘ±
+±
+−→ ‡D≻)
+to be a pair of poly-morphisms
+†DT
+∼
+→‡DT′; †D≻
+∼
+→‡D≻
+— where †DT
+∼
+→‡DT′ is a capsule-+-full poly-isomorphism whose induced mor-
+phism on index sets T∼
+→T′ is an isomorphism of F±
+l -groups; †D≻
+∼
+→‡D≻ is a
++-full poly-isomorphism — which are compatible with †φΘ±
+± ,
+‡φΘ±
+± . There is an
+evident notion of composition of morphisms of D-Θ±-bridges.
+(ii) We define a base-Θell-bridge [i.e., a “base-Θ-elliptic-bridge”], or D-Θell
+-
+bridge, [relative to the given initial Θ-data] to be a poly-morphism
+†φΘell
+†DT
+±
+−→ †D ±
+— where †D ± is a category equivalent to D ±; T is an F±
+l -torsor; †DT = {†Dt}t∈T
+is a capsule of D-prime-strips, indexed by [the underlying set of] T — such that
+there exist isomorphisms
+D ± ∼
+→†D ±
+, D±
+∼
+→†DT
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 163
+∼
+— where we require that the bijection of index sets Fl
+→T induced by the second
+isomorphism determine an isomorphism of F±
+l -torsors — conjugation by which
+maps φΘell
+± →†φΘell
+± . We define a(n) [iso]morphism of D-Θell-bridges
+†φΘell
+(†DT
+±
+‡φΘell
+−→ †D ±) → (‡DT′
+±
+−→ ‡D ±)
+to be a pair of poly-morphisms
+†DT
+∼
+→‡DT′; †D ± ∼
+→‡D ±
+— where †DT
+∼
+→‡DT′ is a capsule-+-full poly-isomorphism whose induced mor-
+phism on index sets T∼
+→T′ is an isomorphism of F±
+l -torsors; †D ± →‡D ± is a
+poly-morphism which is an Autcsp(†D ±)- [or, equivalently, Autcsp(‡D ±)-] orbit
+of isomorphisms — which are compatible with †φΘell
+± ,
+‡φΘell
+± . There is an evident
+notion of composition of morphisms of D-Θell-bridges.
+(iii) We define a base-Θ±ell-Hodge theater, or D-Θ±ell-Hodge theater, [relative
+to the given initial Θ-data] to be a collection of data
+†φΘ±
+†HTD-Θ±ell = (†D≻
+±
+←− †DT
+†φΘell
+±
+−→ †D ±)
+—whereT isanF±
+l -group; †φΘ±
+± isaD-Θ±-bridge; †φΘell
+± isaD-Θell-bridge[relative
+to the F±
+l -torsor structure determined by the F±
+l -group structure on T] — such that
+there exist isomorphisms
+D≻
+∼
+→†D≻; D±
+∼
+→†DT; D ± ∼
+→†D ±
+conjugation by which maps φΘ±
+± →†φΘ±
+± , φΘell
+± →†φΘell
+± . A(n) [iso]morphism of
+D-Θ±ell-Hodge theaters is defined to be a pair of morphisms between the respective
+associated D-Θ±- and D-Θell-bridges that are compatible with one another in the
+sense that they induce the same poly-isomorphism between the respective capsules
+of D-prime-strips. There is an evident notion of composition of morphisms of D-
+Θ±ell-Hodge theaters.
+The following additive analogue of Proposition 4.7 follows immediately from
+the various definitions involved. Put another way, the content of Proposition 6.5
+below may be thought of as a sort of “intrinsic version” of the constructions carried
+out in Examples 6.2, 6.3.
+Proposition 6.5. Bridges) Let
+(Transport of ±-Label Classes of Cusps via Base-
+†HTD-Θ±ell = (†D≻
+†φΘ±
+±
+←− †DT
+†φΘell
+±
+−→ †D ±)
+be a D-Θ±ell-Hodge theater [relative to the given initial Θ-data]. Then:
+(i) For each v ∈V, t ∈T, the D-Θell-bridge †φΘell
+± induces a [single, well-
+defined!] bijection of sets of ±-label classes of cusps
+†ζΘell
+vt : LabCusp±(†Dvt)∼
+→LabCusp±(†D ±)
+164 SHINICHI MOCHIZUKI
+that is compatible with the respective F±
+l -torsor structures. Moreover, for w ∈V,
+the bijection
+†ξΘell
+vt,wt
+def = (†ζΘell
+wt )−1 ◦(†ζΘell
+vt ) : LabCusp±(†Dvt)∼
+→LabCusp±(†Dwt)
+is compatible with the respective F±
+l -group structures. Write
+LabCusp±(†Dt)
+for the F±
+l -group obtained by identifying the various F±
+l -groups LabCusp±(†Dvt),
+as v ranges over the elements of V, via the various †ξΘell
+vt,wt. Finally, the various
+†ζΘell
+vt determine a [single, well-defined!] bijection
+†ζΘell
+t : LabCusp±(†Dt)∼
+→LabCusp±(†D ±)
+— which is compatible with the respective F±
+l -torsor structures.
+(ii) For each v ∈V, t ∈T, the D-Θ±-bridge †φΘ±
+± induces a [single, well-
+defined!] bijection of sets of ±-label classes of cusps
+†ζΘ±
+vt : LabCusp±(†Dvt)∼
+→LabCusp±(†D≻,v)
+that is compatible with the respective F±
+l -group structures. Moreover, for w ∈V,
+the bijections
+†ξΘ±
+≻,v,w
+def = (†ζΘ±
+w0 )◦†ξΘell
+v0,w0
+◦(†ζΘ±
+v0 )−1 : LabCusp±(†D≻,v)∼
+→LabCusp±(†D≻,w);
+†ξΘ±
+vt,wt
+def = (†ζΘ±
+wt )−1 ◦†ξΘ±
+≻,v,w ◦(†ζΘ±
+vt ) : LabCusp±(†Dvt)∼
+→LabCusp±(†Dwt)
+— where, by abuse of notation, we write “0” for the zero element of the F±
+l -group T
+— are compatible with the respective F±
+l -group structures, and we have †ξΘ±
+=
+vt,wt
+†ξΘell
+. Write
+vt,wt
+LabCusp±(†D≻)
+for the F±
+l -group obtained by identifying the various F±
+l -groups LabCusp±(†D≻,v),
+as v ranges over the elements of V, via the various †ξΘ±
+≻,v,w. Finally, for any t ∈T,
+the various †ζΘ±
+vt ,
+†ζΘell
+vt determine, respectively, a [single, well-defined!] bijection
+†ζΘ±
+t : LabCusp±(†Dt)∼
+→LabCusp±(†D≻)
+— which is compatible with the respective F±
+l -group structures.
+(iii) The assignment
+T ∋t →†ζΘell
+t (0) ∈LabCusp±(†D ±)
+— where, by abuse of notation, we write “0” for the zero element of the F±
+l -group
+LabCusp±(†Dt) — determines a [single, well-defined!] bijection
+(†ζ±)−1 : T∼
+→LabCusp±(†D ±)
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 165
+[i.e., whose inverse we denote by †ζ±] — which is compatible with the respective
+F±
+l -torsor structures. Moreover, for any t ∈T, the composite bijection
+(†ζΘell
+0 )−1 ◦(†ζΘell
+t )◦(†ζΘ±
+t )−1 ◦(†ζΘ±
+0 ) : LabCusp±(†D0)∼
+→LabCusp±(†D0)
+coincides with the automorphism of the set LabCusp±(†D0) determined, relative to
+the F±
+l -group structure on this set, by the action of (†ζΘell
+0 )−1((†ζ±)−1(t)).
+(iv) Let α ∈Aut±(†D ±)/Autcsp(†D ±). Then if one replaces †φΘell
+± by α ◦
+†φΘell
+± [cf. Proposition 6.6, (iv), below], then the resulting “†ζΘell
+t ” is related to the
+“†ζΘell
+t ” determined by the original †φΘell
+± by post-composition with the image of α
+via the natural bijection [cf. the discussion of Definition 6.1, (v)]
+Aut±(†D ±)/Autcsp(†D ±)∼
+→Aut±(LabCusp±(†D ±)) (∼
+= F ±
+l )
+determined by the tautological action of Aut±(†D ±)/Autcsp(†D ±) on the set of
+±-label classes of cusps LabCusp±(†D ±).
+Next, let us observe that it follows immediately from the various definitions
+involved [cf. the discussion of Definition 6.1; Examples 6.2, 6.3], together with the
+explicit description of the various poly-automorphisms discussed in Examples 6.2,
+(ii), (iii); 6.3, (ii) [cf. also the various properties discussed in Proposition 6.5], that
+we have the following additive analogue of Proposition 4.8.
+Proposition 6.6. (First Properties of Base-Θ±-Bridges, Base-Θell-Bridges,
+and Base-Θ±ell-Hodge Theaters) Relative to a fixed collection of initial Θ-
+data:
+(i) The set of isomorphisms between two D-Θ±-bridges forms a torsor
+over the group
+{±1} × {±1}V
+— where the first (respectively, second) factor corresponds to poly-automorphisms of
+the sort described in Example 6.2, (ii) (respectively, Example 6.2, (iii)). Moreover,
+the first factor may be thought of as corresponding to the induced isomorphisms of
+F±
+l -groups between the index sets of the capsules involved.
+(ii) The set of isomorphisms between two D-Θell-bridges forms an F ±
+l-
+torsor — i.e., more precisely, a torsor over a finite group that is equipped with a
+natural outer isomorphism to F ±
+l . Moreover, this set of isomorphisms maps
+bijectively, by considering the induced bijections, to the set of isomorphisms of
+F±
+l -torsors between the index sets of the capsules involved.
+(iii) The set of isomorphisms between two D-Θ±ell-Hodge theaters forms
+a {±1}-torsor. Moreover, this set of isomorphisms maps bijectively, by consid-
+ering the induced bijections, to the set of isomorphisms of F±
+l -groups between the
+index sets of the capsules involved.
+166 SHINICHI MOCHIZUKI
+(iv) Given a D-Θ±-bridge and a D-Θell-bridge, the set of capsule-+-full poly-
+isomorphisms between the respective capsules of D-prime-strips which allow one to
+glue the given D-Θ±- and D-Θell-bridges together to form a D-Θ±ell-Hodge theater
+forms a torsor over the group
+F ±
+l × {±1}V
+— where the first factor corresponds to the F ±
+l of (ii); the subgroup {±1} ×
+{±1}V corresponds to the group of (i). Moreover, the first factor may be thought
+of as corresponding to the induced isomorphisms of F±
+l -torsors between the index
+sets of the capsules involved.
+(v) Given a D-Θell-bridge, there exists a [relatively simple — cf. the discus-
+sion of Example 6.2, (i)] functorial algorithm for constructing, up to an F ±
+l-
+indeterminacy [cf. (ii), (iv)], from the given D-Θell-bridge a D-Θ±ell-Hodge
+theater whose underlying D-Θell-bridge is the given D-Θell-bridge.
+[−l < ... <−2 <−1 < 0 < 1 < 2 < ... < l ]
+D≻ = /±
+⇑ φΘ±
+±
+{±1} (−l < ... <−2 <−1 < 0 < 1 < 2 < ... < l )
+(/± /± /± /± /± /± /± )
+DT
+⇓ φΘell
+±
+± −→ ±
+↗ ↘
+± F ±
+l ±
+↑ D ± = ↓
+± B(XK)0 ±
+↖ ↙
+±... ±
+Fig. 6.1: The combinatorial structure of a D-Θ±ell-Hodge theater
+Remark 6.6.1. The underlying combinatorial structure of a D-Θ±ell-Hodge
+theater — or, essentially equivalently [cf. Definition 6.11, Corollary 6.12 below], of
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 167
+a Θ±ell-Hodge theater — is illustrated in Fig. 6.1 above. Thus, Fig. 6.1 may be
+thought of as a sort of additive analogue of the multiplicative situation illustrated
+in Fig. 4.4. In Fig. 6.1, the “⇑” corresponds to the associated [D-]Θ±-bridge, while
+the “⇓” corresponds to the associated [D-]Θell-bridge; the “/±’s” denote D-prime-
+strips.
+Proposition 6.7. (Base-Θ-Bridges Associated to Base-Θ±-Bridges) Rel-
+ative to a fixed collection of initial Θ-data, let
+†φΘ±
+†DT
+±
+−→ †D≻
+be a D-Θ±-bridge, as in Definition 6.4, (i). Then by replacing †DT by †DT [cf.
+Definition 6.4, (i)], identifying the D-prime-strip †D≻ with the D-prime-strip †D0
+via †φΘ±
+0 [cf. the discussion of Definition 6.4, (i)] to form a D-prime-strip †D>,
+replacing the various +-full poly-morphisms that occur in †φΘ±
+± at the v ∈Vgood
+by the corresponding full poly-morphisms, and replacing the various +-full poly-
+morphisms that occur in †φΘ±
+± at the v ∈Vbad by the poly-morphisms described [via
+group-theoretic algorithms!] in Example 4.4, (i), (ii), we obtain a functorial
+algorithm for constructing a [well-defined, up to a unique isomorphism!] D-Θ-
+bridge
+†φΘ
+†DT
+−→ †D>
+as in Definition 4.6, (ii). Thus, the newly constructed D-Θ-bridge is related to the
+given D-Θ±-bridge via the following correspondences:
+†DT|(T\{0}) →†DT ; †D0,
+†D≻ →†D>
+— each of which maps precisely two D-prime-strips to a single D-prime-strip.
+Proof. The various assertions of Proposition 6.7 follow immediately from the
+various definitions involved. ⃝
+Next, we consider additive analogues of Propositions 4.9, 4.11; Corollary 4.12.
+Proposition 6.8. (Symmetries arising from Forgetful Functors) Relative
+to a fixed collection of initial Θ-data:
+(i) (Base-Θell-Bridges) The operation of associating to a D-Θ±ell-Hodge the-
+ater the underlying D-Θell-bridge of the D-Θ±ell-Hodge theater determines a nat-
+ural functor
+category of
+D-Θ±ell-Hodge theaters
+and isomorphisms of
+D-Θ±ell-Hodge theaters
+→
+category of
+D-Θell-bridges
+and isomorphisms of
+D-Θell-bridges
+†HTD-Θ±ell
+→ (†DT
+†φΘell
+±
+−→ †D ±)
+168 SHINICHI MOCHIZUKI
+whose output data admits an F ±
+l -symmetry — i.e., more precisely, a symme-
+try given by the action of a finite group that is equipped with a natural outer
+isomorphism to F ±
+l — which acts doubly transitively [i.e., transitively with
+stabilizers of order two] on the index set [i.e., “T”] of the underlying capsule of
+D-prime-strips [i.e., “†DT”] of this output data.
+(ii) (Holomorphic Capsules) The operation of associating to a D-Θ±ell
+-
+Hodge theater †HTD-Θ±ell
+the l±-capsule
+†D|T|
+associated to the underlying D-Θ±-bridge of †HTD-Θ±ell [cf. Definition 6.4, (i)]
+determines a natural functor
+category of
+D-Θ±ell-Hodge theaters
+and isomorphisms of
+D-Θ±ell-Hodge theaters
+→
+category of l±-capsules
+of D-prime-strips
+and capsule-full poly-
+isomorphisms of l±-capsules
+†HTD-Θ±ell
+→ †D|T|
+whose output data admits an Sl±-symmetry [where we write Sl± for the symmet-
+ric group on l± letters] which acts transitively on the index set [i.e., “|T|”] of this
+output data. Thus, this functor may be thought of as an operation that consists of
+forgetting the labels ∈|Fl|= Fl/{±1}[i.e., forgetting the bijection |T|∼ →|Fl|
+determined by the F±
+l -group structure of T — cf. Definition 6.4, (i)]. In particular,
+if one is only given this output data †D|T| up to isomorphism, then there is a total
+of precisely l± possibilities for the element ∈|Fl|to which a given index |t|∈|T|
+corresponds, prior to the application of this functor.
+(iii) (Mono-analytic Capsules) By composing the functor of (ii) with the
+mono-analyticization operation discussed in Definition 4.1, (iv), one obtains a
+natural functor
+category of
+D-Θ±ell-Hodge theaters
+and isomorphisms of
+D-Θ±ell-Hodge theaters
+→
+category of l±-capsules
+of D⊢-prime-strips
+and capsule-full poly-
+isomorphisms of l±-capsules
+†HTD-Θ±ell
+→ †D⊢
+|T|
+whose output data satisfies the same symmetry properties with respect to labels as
+the output data of the functor of (ii).
+Proof. Assertions (i), (ii), (iii) follow immediately from the definitions [cf. also
+Proposition 6.6, (ii), in the case of assertion (i)]. ⃝
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 169
+/± → /±/± → /±/±/± → ... → /±/±/± ... /±
+Fig. 6.2: An l±-procession of D-prime-strips
+Proposition 6.9. (Processions of Base-Prime-Strips) Relative to a fixed
+collection of initial Θ-data:
+(i) (Holomorphic Processions) Given a D-Θ±-bridge †φΘ±
+± : †DT →†D≻,
+with underlying capsule of D-prime-strips †DT [cf. Definition 6.4, (i)], denote
+by Prc(†DT) the l±-procession of D-prime-strips [cf. Fig. 6.2, where each
+“/±” denotes a D-prime-strip] determined by considering the [“sub”]capsules of
+the capsule †D|T| of Definition 6.4, (i), corresponding to the subsets S±
+1 ⊆... ⊆
+S±
+def
+t
+= {0,1,2,...,t−1}⊆... ⊆S±
+l± = |Fl|[where, by abuse of notation, we use the
+notation for nonnegative integers to denote the images of these nonnegative integers
+in |Fl|], relative to the bijection |T|∼ →|Fl|determined by the F±
+l -group structure of
+T [cf. Definition 6.4, (i)]. Then the assignment †φΘ±
+± →Prc(†DT) determines a
+natural functor
+category of
+D-Θ±-bridges
+and isomorphisms of
+D-Θ±-bridges
+→
+category of processions
+of D-prime-strips
+and morphisms of
+processions
+†φΘ±
+± → Prc(†DT)
+whose output data satisfies the following property: for each n ∈{1,...,l±}, there
+are precisely n possibilities for the element ∈ |Fl| to which a given index of
+the index set of the n-capsule that appears in the procession constituted by this
+output data corresponds, prior to the application of this functor. That is to say,
+by taking the product, over elements of |Fl|, of cardinalities of “sets of possibilies”,
+one concludes that
+by considering processions — i.e., the functor discussed above, possibly
+pre-composed with the functor †HTD-Θ±ell
+→†φΘ±
+± that associates to a
+D-Θ±ell-Hodge theater its associated D-Θ±-bridge — the indeterminacy
+consisting of (l±)(l±) possibilities that arises in Proposition 6.8, (ii), is
+reduced to an indeterminacy consisting of a total of l±! possibilities.
+(ii) (Mono-analytic Processions) By composing the functor of (i) with the
+mono-analyticization operation discussed in Definition 4.1, (iv), one obtains a
+natural functor
+category of
+D-Θ±-bridges
+and isomorphisms of
+D-Θ±-bridges
+→
+category of processions
+of D⊢-prime-strips
+and morphisms of
+processions
+†φΘ±
+± → Prc(†D⊢
+T)
+170 SHINICHI MOCHIZUKI
+whose output data satisfies the same indeterminacy properties with respect to labels
+as the output data of the functor of (i).
+(iii) The functors of (i), (ii) are compatible, respectively, with the functors of
+Proposition 4.11, (i), (ii), relative to the functor [i.e., determined by the functorial
+algorithm] of Proposition 6.7, in the sense that the natural inclusions
+Sj= {1,...,j} → S±
+t = {0,1,...,t−1}
+[cf. the notation of Proposition 4.11] — where j ∈{1,...,l }and t def
+= j + 1—
+determine natural transformations
+†φΘ±
+± → Prc(†DT ) →Prc(†DT)
+†φΘ±
+± → Prc(†D⊢
+T ) →Prc(†D⊢
+T)
+from the respective composites of the functors of Proposition 4.11, (i), (ii), with the
+functor [determined by the functorial algorithm] of Proposition 6.7 to the functors
+of (i), (ii).
+Proof. Assertions (i), (ii), (iii) follow immediately from the definitions. ⃝
+The following result is an immediate consequence of our discussion.
+´
+Corollary 6.10. (
+Etale-pictures of Base-Θ±ell-Hodge Theaters) Relative
+to a fixed collection of initial Θ-data:
+(i) Consider the [composite] functor
+†HTD-Θ±ell
+→ †D> → †D⊢
+>
+— from the category of D-Θ±ell-Hodge theaters and isomorphisms of D-Θ±ell-Hodge
+theaters [cf. Definition 6.4, (iii)] to the category of D⊢-prime-strips and isomor-
+phisms of D⊢-prime-strips — obtained by assigning to the D-Θ±ell-Hodge theater
+†HTD-Θ±ell
+the mono-analyticization [cf. Definition 4.1, (iv)] †D⊢
+> of the D-
+prime-strip †D> associated, via the functorial algorithm of Proposition 6.7, to the
+underlying D-Θ±-bridge of †HTD-Θ±ell
+. If †HTD-Θ±ell
+,
+‡HTD-Θ±ell
+are D-Θ±ell
+-
+Hodge theaters, then we define the base-Θ±ell-, or D-Θ±ell-, link
+†HTD-Θ±ell D
+−→ ‡HTD-Θ±ell
+from †HTD-Θ±ell
+to ‡HTD-Θ±ell
+to be the full poly-isomorphism
+†D⊢
+>
+∼
+→ ‡D⊢
+>
+between the D⊢-prime-strips obtained by applying the functor discussed above to
+†HTD-Θ±ell
+,
+‡HTD-Θ±ell
+.
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 171
+(ii) If
+...
+D
+−→ (n−1)HTD-Θ±ell D
+−→ nHTD-Θ±ell D
+−→ (n+1)HTD-Θ±ell D
+−→...
+[where n ∈Z] is an infinite chain of D-Θ±ell-linked D-Θ±ell-Hodge theaters
+[cf. the situation discussed in Corollary 3.8], then we obtain a resulting chain of
+full poly-isomorphisms
+...
+∼
+→ nD⊢
+>
+∼
+→ (n+1)D⊢
+>
+∼
+→...
+[cf. the situation discussed in Remark 3.8.1, (ii)] between the D⊢-prime-strips ob-
+tained by applying the functor of (i). That is to say, the output data of the functor
+of (i) forms a constant invariant [cf. the discussion of Remark 3.8.1, (ii)] —
+i.e., a mono-analytic core [cf. the situation discussed in Remark 3.9.1] — of the
+above infinite chain.
+/± → /±/± →...
+...
+|...
+/± → /±/± →...
+—
+>⊢= {0,≻}⊢
+—
+/± → /±/± →...
+...
+|
+...
+/± → /±/± →...
+Fig. 6.3:
+´
+Etale-picture of D-Θ±ell-Hodge theaters
+(iii) If we regard each of the D-Θ±ell-Hodge theaters of the chain of (ii) as
+a spoke emanating from the mono-analytic core discussed in (ii), then we ob-
+tain a diagram — i.e., an´ etale-picture of D-Θ±ell-Hodge theaters — as in
+Fig. 6.3 [cf. the situation discussed in Corollary 3.9, (i)]. In Fig. 6.3, “>⊢”
+denotes the mono-analytic core, obtained [cf. (i); Proposition 6.7] by identifying
+the mono-analyticized D-prime-strips of the D-Θ±ell-Hodge theater labeled “0” and
+“≻”; “/± →/±/± →...” denotes the “holomorphic” processions of Proposition
+6.9, (i), together with the remaining [“holomorphic”] data of the corresponding D-
+Θ±ell-Hodge theater. In particular, the mono-analyticizations of the zero-labeled
+D-prime-strips — i.e., the D-prime-strips corresponding to the first “/±” in the pro-
+cessions just discussed — in the various spokes are identified with one another.
+Put another way, the coric D⊢-prime-strip “>⊢” may be thought of as being equipped
+with various distinct “holomorphic structures” — i.e., D-prime-strip struc-
+tures that give rise to the D⊢-prime-strip structure — corresponding to the various
+172 SHINICHI MOCHIZUKI
+spokes. Finally, [cf. the situation discussed in Corollary 3.9, (i)] this diagram sat-
+isfies the important property of admitting arbitrary permutation symmetries
+among the spokes [i.e., among the labels n ∈Z of the D-Θ±ell-Hodge theaters].
+(iv) The constructions of (i), (ii), (iii) are compatible, respectively, with
+the constructions of Corollary 4.12, (i), (ii), (iii), relative to the functor [i.e.,
+determined by the functorial algorithm] of Proposition 6.7, in the evident sense [cf.
+the compatibility discussed in Proposition 6.9, (iii)].
+Finally, we conclude with additive analogues of Definition 5.5, Corollary 5.6.
+Definition 6.11.
+(i) We define a Θ±-bridge [relative to the given initial Θ-data] to be a poly-
+morphism
+†ψΘ±
+†FT
+±
+−→ †F≻
+— where †F≻ is an F-prime-strip; T is an F±
+l -group; †FT = {†Ft}t∈T is a capsule
+of F-prime-strips, indexed by [the underlying set of] T — that lifts a D-Θ±-bridge
+†φΘ±
+± : †DT →†D≻ [cf. Corollary 5.3, (ii)]. In this situation, we shall write
+†F|T|
+for the l±-capsule obtained from the l-capsule †FT by forming the quotient |T|of
+the index set T of this underlying capsule by the action of {±1}and identifying the
+components of the capsule †FT indexed by the elements in the fibers of the quotient
+T |T|via the constituent poly-morphisms of †ψΘ±
+± = {†ψΘ±
+t }t∈T [so each con-
+stituent F-prime-strip of †F|T| is only well-defined up to a positive automorphism
+[i.e., up to an automorphism such that the induced automorphism of the associated
+D-prime-strip is positive], but this indeterminacy will not aﬀect applications of this
+construction — cf. the discussion of Definition 6.4, (i)]. Also, we shall write
+†FT
+for the l -capsule determined by the subset T def
+= |T|\{0}of nonzero elements of
+|T|. We define a(n) [iso]morphism of Θ±-bridges
+†ψΘ±
+(†FT
+±
+−→ †F≻) → (‡FT′
+‡ψΘ±
+±
+−→ ‡F≻)
+to be a pair of poly-isomorphisms
+†FT
+∼
+→‡FT′; †F≻
+∼
+→‡F≻
+that lifts a morphism between the associated D-Θ±-bridges †φΘ±
+± ,
+an evident notion of composition of morphisms of Θ±-bridges.
+‡φΘ±
+± . There is
+(ii) We define a Θell-bridge [relative to the given initial Θ-data]
+†FT
+†ψΘell
+±
+−→ †D ±
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 173
+— where †D ± is a category equivalent to D ±; T is an F±
+l -torsor; †FT = {†Ft}t∈T
+is a capsule of F-prime-strips, indexed by [the underlying set of] T — to be a
+D-Θell-bridge †φΘell
+± : †DT →†D ± — where we write †DT for the capsule of D-
+prime-strips associated to †FT [cf. Remark 5.2.1, (i)]. We define a(n) [iso]morphism
+of Θell-bridges
+(†FT
+†ψΘell
+±
+−→ †D ±) → (‡FT′
+‡ψΘell
+±
+−→ ‡D ±)
+to be a pair of poly-isomorphisms
+†FT
+∼
+→‡FT′; †D ± ∼
+→‡D ±
+that determines a morphism between the associated D-Θell-bridges †φΘell
+± ,
+There is an evident notion of composition of morphisms of Θell-bridges.
+‡φΘell
+±.
+(iii) We define a Θ±ell-Hodge theater [relative to the given initial Θ-data] to be
+a collection of data
+†HTΘ±ell = (†F≻
+†ψΘ±
+±
+←− †FT
+†ψΘell
+±
+−→ †D ±)
+—where†ψΘ±
+± isaΘ±-bridge; †ψΘell
+± isaΘell-bridge—suchthattheassociated data
+{†φΘ±
+± ,
+†φΘell
+± }[cf. (i), (ii)] forms a D-Θ±ell-Hodge theater. A(n) [iso]morphism of
+Θ±ell-Hodge theaters is defined to be a pair of morphisms between the respective
+associated Θ±- and Θell-bridges that are compatible with one another in the sense
+that they induce the same poly-isomorphism between the respective capsules of
+F-prime-strips. There is an evident notion of composition of morphisms of Θ±ell
+-
+Hodge theaters.
+Corollary 6.12. (Isomorphisms of Θ±-Bridges, Θell-Bridges, and Θ±ell
+-
+Hodge Theaters) Relative to a fixed collection of initial Θ-data:
+(i) The natural functorially induced map from the set of isomorphisms be-
+tween two Θ±-bridges (respectively, two Θell-bridges; two Θ±ell-Hodge the-
+aters) to the set of isomorphisms between the respective associated D-Θ±-bridges
+(respectively, associated D-Θell-bridges; associated D-Θ±ell-Hodge theaters)
+is bijective.
+(ii) Given a Θ±-bridge and a Θell-bridge, the set of capsule-+-full poly-isomor-
+phisms between the respective capsules of F-prime-strips which allow one to glue
+the given Θ±- and Θell-bridges together to form a Θ±ell-Hodge theater forms a
+torsor over the group
+F ±
+l × {±1}V
+[cf. Proposition 6.6, (iv)]. Moreover, the first factor may be thought of as corre-
+sponding to the induced isomorphisms of F±
+l -torsors between the index sets of the
+capsules involved.
+Proof. Assertions (i), (ii) follow immediately from Definition 6.11; Corollary 5.3,
+(ii) [cf. also Proposition 6.6, (iv), in the case of assertion (ii)]. ⃝
+174 SHINICHI MOCHIZUKI
+Remark 6.12.1. By applying Corollary 6.12, a similar remark to Remark 5.6.1
+may be made concerning the Θ±-bridges, Θell-bridges, and Θ±ell-Hodge theaters
+studied in the present §6. We leave the routine details to the reader.
+Remark 6.12.2. Relative to a fixed collection of initial Θ-data:
+(i) Suppose that (†FT → †F≻) is a Θ±-bridge; write (†DT → †D≻) for
+the associated D-Θ±-bridge [cf. Definition 6.11, (i)]. Then Proposition 6.7 gives
+a functorial algorithm for constructing a D-Θ-bridge (†DT → †D>) from this
+D-Θ±-bridge (†DT → †D≻). Suppose that this D-Θ-bridge (†DT → †D>)
+arises as the D-Θ-bridge associated to a Θ-bridge (‡FJ → ‡F> ‡HTΘ) [so
+J= T — cf. Definition 5.5, (ii)]. Then since the portion “‡FJ →‡F>” of this
+Θ-bridge is completely determined [cf. Definition 5.5, (ii), (d)] by the associated
+D-Θ-bridge, one verifies immediately that
+one may regard this portion “‡FJ →‡F>” of the Θ-bridge as having been
+constructedviaafunctorial algorithmsimilartothefunctorialalgorithmof
+Proposition 6.7 [cf. also Definition 5.5, (ii), (d); the discussion of Remark
+5.3.1] from the Θ±-bridge (†FT → †F≻).
+Since, moreover, isomorphisms between Θ-bridges are in natural bijective corre-
+spondence with isomorphisms between the associated D-Θ-bridges [cf. Corollary
+5.6, (ii)], it thus follows immediately [cf. Corollary 5.3, (ii)] that isomorphisms
+between Θ-bridges are in natural bijective correspondence with isomorphisms be-
+tween the portions of Θ-bridges [i.e., “‡FJ →‡F>”] considered above. Thus, in
+summary, if (‡FJ → ‡F> ‡HTΘ) is a Θ-bridge for which the portion
+“‡FJ →‡F>” is obtained via the functorial algorithm discussed above from the
+Θ±-bridge (†FT → †F≻), then, for simplicity, we shall describe this state of aﬀairs
+by saying that
+the Θ-bridge (‡FJ → ‡F> ‡HTΘ) is glued to the Θ±-bridge
+(†FT → †F≻) via the functorial algorithm of Proposition 6.7.
+We leave the routine details of giving a more explicit description [say, in the style
+of the statement of Proposition 6.7] of such functorial algorithms to the reader. A
+similar [but easier!] construction may be given for D-Θ-bridges and D-Θ±-bridges.
+(ii) Now observe that
+by gluing a Θ±ell-Hodge theater [cf. Definition 6.11, (iii)] to a ΘNF-
+Hodge theater [cf. Definition 5.5, (iii)] along the respective associated
+Θ±- and Θ-bridges via the functorial algorithm of Proposition 6.7 [cf. (i)],
+one obtains the notion of a
+“Θ±ellNF-Hodge theater”
+— cf. Definition 6.13, (i), below. Here, we note that by Proposition 4.8, (ii);
+Corollary 5.6, (ii), the gluing isomorphism that occurs in such a gluing operation
+is unique. Then by applying Propositions 4.8, 6.6, and Corollaries 5.6, 6.12, one
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 175
+may verify analogues of these results for such Θ±ellNF-Hodge theaters. In a similar
+vein, one may glue a D-Θ±ell-Hodge theater to a D-ΘNF-Hodge theater to obtain a
+“D-Θ±ellNF-Hodge theater” [cf. Definition 6.13, (ii), below]. We leave the routine
+details to the reader.
+Remark 6.12.3.
+(i) One way to think of the notion of a ΘNF-Hodge theater studied in §4 is as
+a sort of
+total space of a local system of Fl -torsors
+over a “base space” that represents a sort of “homotopy” between a number field
+and a Tate curve [i.e., the elliptic curve under consideration at the v ∈Vbad]. From
+this point of view, the notion of a Θ±ell-Hodge theater studied in the present §6
+may be thought of as a sort of
+total space of a local system of F ±
+l -torsors
+over a similar “base space”. Here, it is interesting to note that these Fl - and F ±
+l-
+torsors arise, on the one hand, from the l-torsion points of the elliptic curve under
+consideration, hence may be thought of as
+discrete approximations of
+[the geometric portion of] this elliptic curve over a number field
+[cf. the point of view of scheme-theoretic Hodge-Arakelov theory discussed in [HA-
+SurI],§1.3.4]. Ontheotherhand, ifonethinksintermsofthetempered fundamental
+groups of the Tate curves that occur at v ∈Vbad, then these Fl - and F ±
+l -torsors
+may be thought of as
+finite approximations of the copy of “Z”
+that occurs as the Galois group of a well-known tempered covering of the Tate
+curve [cf. the discussion of [EtTh], Remark 2.16.2]. Note, moreover, that if one
+works with Θ±ellNF-Hodge theaters [cf. Remark 6.12.2, (ii)], then one is, in eﬀect,
+working with both the additive and the multiplicative structures of this copy
+of Z — although, unlike the situation that occurs when one works with rings,
+i.e., in which the additive and multiplicative structures are “entangled” with
+one another in some sort of complicated fashion [cf. the discussion of [AbsTopIII],
+Remark 5.6.1], if one works with Θ±ellNF-Hodge theaters, then each of the additive
+and multiplicative structures occurs in an independent fashion [i.e., in the form of
+Θ±ell- and ΘNF-Hodge theaters], i.e., “extracted” from this entanglement.
+(ii) At this point, it is useful to recall that the idea of a distinct [i.e., from the
+copy of Z implicit in the “base space”] “local system-theoretic” copy of Z occurring
+over a “base space” that represents a number field is reminiscent not only of the
+discussion of [EtTh], Remark 2.16.2, but also of the Teichm¨ uller-theoretic point of
+viewdiscussedin[AbsTopIII],§I5. Thatistosay, relativetotheanalogywithp-adic
+Teichm¨ uller theory, the “base space” that represents a number field corresponds to
+a hyperbolic curve in positive characteristic, while the “local system-theoretic”
+176 SHINICHI MOCHIZUKI
+copy of Z — which, as discussed in (i), also serves as a discrete approximation of
+the [geometric portion of the] elliptic curve under consideration — corresponds to
+a nilpotent ordinary indigenous bundle over the positive characteristic hyperbolic
+curve.
+(iii)Relativetotheanalogydiscussedin(ii)betweenthe“localsystem-theoretic”
+copy of Z of (i) and the indigenous bundles that occur in p-adic Teichm¨ uller theory,
+it is interesting to note that the two combinatorial dimensions [cf. [AbsTopIII], Re-
+mark 5.6.1] corresponding to the additive and multiplicative [i.e., “F ±
+l -” and
+“Fl -”] symmetries of Θ±ell-, ΘNF-Hodge theaters may be thought of as corre-
+sponding, respectively, to the two real dimensions
+z·cos(t)+sin(t)
+·z →z +a, z →−z +a;
+z·cos(t)−sin(t)
+·z →
+z·sin(t)+cos(t), z →
+z·sin(t)−cos(t)
+— where a,t ∈R; z denotes the standard coordinate on H — of transformations of
+the upper half-plane H, i.e., an object that is very closely related to the canonical
+indigenous bundles that occur in the classical complex uniformization theory of
+hyperbolic Riemann surfaces [cf. the discussions of Remarks 4.3.3, 5.1.4]. Here,
+it is also of interest to observe that the above additive symmetry of the upper
+half-plane is closely related to the coordinate on the upper half-plane determined
+by the “classical q-parameter”
+q
+def
+= e2πiz
+— a situation that is reminiscent of the close relationship, in the theory of the
+present series of papers, between the F ±
+l -symmetry and the Kummer theory
+surrounding the Hodge-Arakelov-theoretic evaluation of the theta function on the
+l-torsion points at bad primes [cf. Remark 6.12.6, (ii), below; the theory of
+[IUTchII]]. Moreover, the fixed basepoint “V±” [cf. Definition 6.1, (v)] with respect
+to which one considers l-torsion points in the context of the F ±
+l -symmetry is rem-
+iniscent of the fact that the above additive symmetries of the upper half-plane fix
+the cusp at infinity. Indeed, taken as a whole, the geometry and coordinate natu-
+rally associated to this additive symmetry of the upper half-plane may be thought
+of, at the level of “combinatorial prototypes”, as the geometric apparatus as-
+sociated to a cusp [i.e., as opposed to a node — cf. the discussion of [NodNon],
+Introduction]. By contrast, the “toral” multiplicative symmetry of the upper
+half-plane recalled above is closely related to the coordinate on the upper half-plane
+that determines a biholomorphic isomorphism with the unit disc
+def
+w
+=
+z−i
+z+i
+— a situation that is reminiscent of the close relationship, in the theory of the
+present series of papers, between the Fl -symmetry and the Kummer theory
+surrounding the number field Fmod [cf. Remark 6.12.6, (iii), below; the theory of
+§5 of the present paper]. Moreover, the action of Fl on the “collection of basepoints
+for the l-torsion points” VBor
+= Fl·V±un [cf. Example 4.3, (i)] in the context of
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 177
+the Fl -symmetry is reminiscent of the fact that the multiplicative symmetries of
+the upper half-plane recalled above act transitively on the entire boundary of the
+upper half-plane. That is to say, taken as a whole, the geometry and coordinate
+naturally associated to this multiplicative symmetry of the upper half-plane may
+be thought of, at the level of “combinatorial prototypes”, as the geometric
+apparatus associated to a node, i.e., of the sort that occurs in the reduction modulo
+p of a Hecke correspondence [cf. the discussion of [IUTchII], Remark 4.11.4, (iii),
+(c); [NodNon], Introduction]. Finally, we note that, just as in the case of the
+F ±
+l -, Fl -symmetries discussed in the present paper, the only “coric” symmetries,
+i.e., symmetries common to both the additive and multiplicative symmetries of the
+upper half-plane recalled above, are the symmetries “{±1}” [i.e., the symmetries
+z →z,−z in the case of the upper half-plane]. The observations of the above
+discussion are summarized in Fig. 6.4 below.
+Remark 6.12.4.
+(i) Just as in the case of the Fl -symmetry of Proposition 4.9, (i), the F ±
+l-
+symmetry of Proposition 6.8, (i), will eventually be applied, in the theory of the
+present series of papers [cf. theory of [IUTchII], [IUTchIII]], to establish an
+explicit network of comparison isomorphisms
+relating various objects — such as log-volumes — associated to the non-labeled
+prime-strips that are permuted by this symmetry [cf. the discussion of Remark
+4.9.1, (i)]. Moreover, just as in the case of the Fl -symmetry studied in §4 [cf. the
+discussion of Remark 4.9.2], one important property of this “network of comparison
+isomorphisms” is that it operates without “label crushing” [cf. Remark 4.9.2, (i)]
+— i.e., without disturbing the bijective relationship between the set of indices of
+the symmetrized collection of prime-strips and the set of labels ∈T∼
+→Fl under
+consideration. Finally, just as in the situation studied in §4,
+this crucial synchronization of labels is essentially a consequence of
+the single connected component
+— or, at a more abstract level, the single basepoint — of the global object [i.e.,
+“†D ±” in the present §6; “†D ” in §4] that appears in the [D-Θ±ell- or D-ΘNF-]
+Hodge theater under consideration [cf. Remark 4.9.2, (ii)].
+(ii) At a more concrete level, the “synchronization of labels” discussed in (i) is
+realized by means of the crucial bijections
+†ζ : LabCusp(†D )∼
+→J; †ζ± : LabCusp±(†D ±)∼
+→T
+of Propositions 4.7, (iii); 6.5, (iii). Here, we pause to observe that it is precisely the
+existence of these
+bijections relating index sets of capsules of D-prime-strips to sets of
+global [±-]label classes of cusps
+178 SHINICHI MOCHIZUKI
+Classical upper half-plane Θ±ellNF-Hodge theaters
+in inter-universal
+Teichm¨ uller theory
+Additive z → z +a, F ±
+l-
+symmetry z →−z +a (a ∈R) symmetry
+“Functions” assoc’d q
+to add. symm. def
+= e2πiz theta fn. evaluated at
+l-tors. [cf. I, 6.12.6, (ii)]
+Basepoint assoc’d single cusp V±
+to add. symm. at infinity [cf. I, 6.1, (v)]
+Combinatorial
+prototype assoc’d to add. symm.
+cusp cusp
+Multiplicative z →z·cos(t)−sin(t)
+z·sin(t)+cos(t), Fl-
+symmetry z →z·cos(t)+sin(t)
+z·sin(t)−cos(t) (t ∈R) symmetry
+“Functions” assoc’d to w
+mult. symm. def
+=
+elements of the
+z−i
+z+i number field Fmod
+[cf. I, 6.12.6, (iii)]
+Basepoints assoc’d cos(t)−sin(t)
+sin(t) cos(t) ,
+cos(t) sin(t)
+sin(t)−cos(t) Fl VBor
+= Fl·V±un
+to mult. symm. {entire boundary of H } [cf. I, 4.3, (i)]
+Combinatorial prototype assoc’d to mult. symm. nodes of mod p Hecke correspondence [cf. II, 4.11.4, (iii), (c)] nodes of mod p
+Hecke correspondence
+[cf. II, 4.11.4, (iii), (c)]
+Coric symmetries z →z,−z {±1}
+Fig. 6.4: Comparison of F ±
+l -, Fl -symmetries
+with the geometry of the upper half-plane
+that distinguishes the finer “combinatorially holomorphic” [cf. Remarks 4.9.1,
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 179
+(ii); 4.9.2, (iv)] Fl - and F ±
+l-symmetries of Propositions 4.9, (i); 6.8, (i), from
+the coarser “combinatorially real analytic” [cf. Remarks 4.9.1, (ii); 4.9.2, (iv)]
+Sl - and Sl±-symmetries of Propositions 4.9, (ii), (iii); 6.8, (ii), (iii) — i.e., which
+do not admit a compatible bijection between the index sets of the capsules involved
+and some sort of set of [±-]label classes of cusps [cf. the discussion of Remark 4.9.2,
+(i)]. This relationship with a set of [±-]label classes of cusps will play a crucial role
+in the theory of the Hodge-Arakelov-theoretic evaluation of the ´ etale theta function
+that will be developed in [IUTchII].
+(iii) On the other hand, one significant feature of the additive theory of the
+present §6 which does not appear in the multiplicative theory of §4 is the phe-
+nomenon of “global ±-synchronization” — i.e., at a more concrete level, the
+various isomorphisms “†ξ” that appear in Proposition 6.5, (i), (ii) — between
+the ±-indeterminacies that occur at the various v ∈ V. Note that this global
+±-synchronization is a necessary “pre-condition” [i.e., since the natural addi-
+tive action of Fl on Fl is not compatible with the natural surjection Fl |Fl|] for
+the additive portion [i.e., corresponding to Fl ⊆F ±
+l ] of the F ±
+l -symmetry of
+Proposition 6.8, (i). This “additive portion” of the F ±
+l -symmetry plays the crucial
+role of allowing one to relate the zero and nonzero elements of Fl [cf. the discussion
+of Remark 6.12.5 below].
+(iv) One important property of both the “†ζ’s” discussed in (ii) and the “†ξ’s”
+discussed in (iii) is that they are constructed by means of functorial algorithms
+fromtheintrinsic structureofaD-Θ±ell-orD-ΘNF-Hodgetheater[cf. Propositions
+4.7, (iii); 6.5, (i), (ii), (iii)] — i.e., not by means of comparison with some fixed
+reference model [cf. the discussion of [AbsTopIII], §I4], such as the objects
+constructed in Examples 4.3, 4.4, 4.5, 6.2, 6.3. This property will be of crucial
+importance when, in the theory of [IUTchIII], we combine the theory developed in
+the present series of papers with the theory of log-shells developed in [AbsTopIII].
+Remark 6.12.5.
+(i) One fundamental diﬀerence between the Fl -symmetry of §4 and the F ±
+l-
+symmetry of the present §6 lies in the inclusion of the zero element ∈Fl in the
+symmetry under consideration. This inclusion of the zero element ∈Fl means,
+in particular, that the resulting network of comparison isomorphisms [cf. Remark
+6.12.4, (i)]
+allowsonetorelatethe“zero-labeled” prime-striptothevarious“nonzero-
+labeled” prime-strips, i.e., the prime-strips labeled by nonzero elements
+∈Fl [or, essentially equivalently, ∈Fl ].
+Moreover, as reviewed in Remark 6.12.4, (ii), the F ±
+l -symmetry allows one to
+relate the zero-labeled and non-zero-labeled prime-strips to one another in a “com-
+binatorially holomorphic” fashion, i.e., in a fashion that is compatible with the
+various natural bijections [i.e., “†ζ”] with various sets of global ±-label classes of
+cusps. Here, it is useful to recall that evaluation at [torsion points closely related to]
+the zero-labeled cusps [cf. the discussion of “evaluation points” in Example 4.4, (i)]
+plays an important role in the theory of normalization of the ´ etale theta function
+180 SHINICHI MOCHIZUKI
+— cf. the theory of ´ etale theta functions “of standard type”, as discussed in [EtTh],
+Theorem 1.10; the theory to be developed in [IUTchII].
+(ii) Whereas the F ±
+l -symmetry of the theory of the present §6 has the ad-
+vantage that it allows one to relate zero-labeled and non-zero-labeled prime-strips,
+it has the [tautological!] disadvantage that it does not allow one to “insulate”
+the non-zero-labeled prime-strips from confusion with the zero-labeled prime-strip.
+ThisissuewillbeofsubstantialimportanceinthetheoryofGaussian Frobenioids
+[to be developed in [IUTchII]], i.e., Frobenioids that, roughly speaking, arise from
+the theta values
+j2
+{q
+}j
+v
+[cf. the discussion of Example 4.4, (i)] at the non-zero-labeled evaluation points.
+Moreover, ultimately, in[IUTchII],[IUTchIII],weshallrelatetheseGaussianFrobe-
+nioids to various global arithmetic line bundles on the number field F. This will
+require the use of both the additive and the multiplicative structures on the number
+field; in particular, it will require the use of the theory developed in §5.
+(iii) By contrast, since, in the theory of the present series of papers, we shall
+not be interested in analogues of the Gaussian Frobenioids that involve the zero-
+labeled evaluation points, we shall not require an “additive analogue” of the portion
+[cf. Example 5.1] of the theory developed in §5 concerning global Frobenioids.
+Remark 6.12.6.
+(i) Another fundamental diﬀerence between the Fl -symmetry of §4 and the
+F ±
+l -symmetry of the present §6 lies in the geometric nature of the “single base-
+point” [cf. the discussion of Remark 6.12.4] that underlies the F ±
+l -symmetry. That
+is to say, the various labels ∈T∼
+→Fl that appear in a [D-]Θ±ell-Hodge theater cor-
+respond — throughout the various portions [e.g., bridges] of the [D-]Θ±ell-Hodge
+theater — to collections of cusps in a single copy [i.e., connected component] of
+“Dv” at each v ∈V; these collections of cusps are permuted by the F ±
+l -symmetry
+of the [D-]Θell-bridge [cf. Proposition 6.8, (i)] without permuting the collection of
+valuations V± (⊆V(K)) [cf. the discussion of Definition 6.1, (v)]. This contrasts
+sharply with the arithmetic nature of the “single basepoint” [cf. the discussion
+of Remark 6.12.4] that underlies the Fl -symmetry of §4, i.e., in the sense that
+the Fl -symmetry [cf. Proposition 4.9, (i)] permutes the various Fl -translates of
+V±
+= V±un ⊆VBor (⊆V(K)) [cf. Example 4.3, (i); Remark 6.1.1].
+(ii) The geometric nature of the “single basepoint” of the F ±
+l -symmetry of
+a [D-]Θ±ell-Hodge theater [cf. (i)] is more suited to the theory of the
+Hodge-Arakelov-theoretic evaluation of the´ etale theta function
+to be developed in [IUTchII], in which the existence of a “single basepoint” cor-
+responding to a single connected component of “Dv” for v ∈Vbad plays a central
+role.
+(iii) By contrast, the arithmetic nature of the “single basepoint” of the Fl-
+symmetry of a [D-]ΘNF-Hodge theater [cf. (i)] is more suited to the
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 181
+explicit construction of the number field Fmod [cf. Example 5.1]
+— i.e., to the construction of an object which is invariant with respect to the
+Aut(CK)/Autϵ(CK)∼
+→Fl -symmetries that appear in the discussion of Example
+4.3, (iv). That is to say, if one attempts to carry out a similar construction to
+the construction of Example 5.1 with respect to the copy of D ± that appears
+in a [D-]Θell-bridge, then one must sacrifice the crucial ridigity with respect to
+Aut(D ±)/Aut±(D ±)∼
+→Fl [cf. Definition 6.1, (v)] that arises from the struc-
+ture [i.e., definition] of a [D-]Θell-bridge [cf. Example 6.3; Definition 6.4, (ii)].
+Moreover, if one sacrifices this Fl -rigidity, then one no longer has a situation in
+which the symmetry under consideration is defined relative to a single copy of “Dv
+”
+at each v ∈V, i.e., defined with respect to a “single geometric basepoint”. In par-
+ticular, once one sacrifices this Fl -rigidity, the resulting symmetries are no longer
+compatible with the theory of the Hodge-Arakelov-theoretic evaluation of the ´ etale
+theta function to be developed in [IUTchII] [cf. (ii)].
+(iv) One way to understand the diﬀerence discussed in (iii) between the global
+portions[i.e.,theportionsinvolvingcopiesofD ,D ±]ofa[D-]ΘNF-Hodgetheater
+and a [D-]Θ±ell-Hodge theater is as a reflection of the fact that whereas the Borel
+subgroup
+∗ ∗
+0 ∗
+⊆ SL2(Fl)
+is normally terminal in SL2(Fl) [cf. the discussion of Example 4.3], the “semi-
+unipotent” subgroup
+±1 ∗
+0 ±1
+⊆ SL2(Fl)
+[which corresponds to the subgroup Aut±(D ±) ⊆Aut(D ±) — cf. the discussion
+of Definition 6.1, (v)] fails to be normally terminal in SL2(Fl).
+(v) In summary, taken as a whole, a [D-]Θ±ellNF-Hodge theater [cf. Remark
+6.12.2, (ii)] may be thought of as a sort of
+“intricate relay between geometric and arithmetic basepoints”
+that allows one to carry out, in a consistent fashion, both
+(a) the theory of the Hodge-Arakelov-theoretic evaluation of the ´ etale theta
+function to be developed in [IUTchII] [cf. (ii)] and
+(b) the explicit construction of the number field Fmod in Example 5.1 [cf.
+(iii)].
+Moreover, if one thinks of Fl as a finite approximation of Z [cf. Remark 6.12.3],
+then this intricate relay between geometric and arithmetic — or, alternatively, F ±
+l
+[i.e., additive!]- and Fl [i.e., multiplicative!]- basepoints — may be thought of as a
+sort of
+global combinatorial resolution of the two combinatorial dimen-
+sions — i.e., additive and multiplicative [cf. [AbsTopIII], Remark
+5.6.1] — of the ring Z.
+182 SHINICHI MOCHIZUKI
+Finally, we observe in passing that — from a computational point of view [cf. the
+theory of [IUTchIV]!] — it is especially natural to regard Fl as a “good approxima-
+tion” of Z when l is “suﬃciently large”, as is indeed the case in the situations
+discussed in [GenEll], §4 [cf. also Remark 3.1.2, (iv)].
+−l < ... <−1 < 0
+< 1 < ... < l
+{Fv }v∈Vbad
+.
+.
+.
+1 < ...
+< l
+D≻ = /± D> = /
+⇑ φΘ±
+±
+glue ⇒ {0,≻}= > glue ⇐ ⇑ φΘ
+{±1}−l < ... <−1 < 0
+< 1 < ... < l
+1 < ...
+< l
+/± ... /± /± /± ... /± / ... /
+DT DJ
+⇓ φΘell
+± ⇓ φNF
+Fmod
+± → ±
+F ±
+↑
+l ↓
+∩
+F F
+± ← ±
+.
+→
+↑
+.
+Fl ↓
+←
+D ± = B(XK)0
+D= B(CK)0
+.
+Fig. 6.5: The combinatorial structure of a Θ±ellNF-Hodge theater
+[cf. also Figs. 4.4, 4.7, 6.1, 6.3, 6.6]
+Definition 6.13.
+(i) We define a Θ±ellNF-Hodge theater [relative to the given initial Θ-data]
+†HTΘ±ellNF
+to be a triple, consisting of the following data: (a) a Θ±ell-Hodge theater †HTΘ±ell
+[cf. Definition 6.11, (iii)]; (b) a ΘNF-Hodge theater †HTΘNF [cf. Definition 5.5,
+(iii)]; (c) the [necessarily unique!] gluing isomorphism between †HTΘ±ell
+and
+†HTΘNF [cf. the discussion of Remark 6.12.2, (i), (ii)]. An illustration of the
+combinatorial structure of a Θ±ellNF-Hodge theater is given in Fig. 6.5 above [cf.
+also Fig. 6.6 below].
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 183
+(ii) We define a D-Θ±ellNF-Hodge theater [relative to the given initial Θ-data]
+†HTD-Θ±ellNF
+tobeatriple,consistingofthefollowingdata: (a)aD-Θ±ell-Hodge theater†HTD-Θ±ell
+[cf. Definition 6.4, (iii)]; (b) a D-ΘNF-Hodge theater †HTD-ΘNF [cf. Definition 4.6,
+(iii)]; (c) the [necessarily unique!] gluing isomorphism between †HTD-Θ±ell
+and
+†HTD-ΘNF [cf. the discussion of Remark 6.12.2, (i), (ii)].
+Frobenioid
+that appears in a Θ±ellNF-Hodge theater
+Brief description Reference
+Data at v ∈V of When v ∈Vnon
+,
+F-prime-strip corresponds corresponding to each to
+/±
+, / Πv O◃
+Fv
+I, 5.2, (i)
+F
+at v ∈Vbad v
+tempered Frobenioid over the portion of D> at v I, 5.5, (ii), (iii);
+I, 3.6, (a); discussion
+preceding I, 5.4
+[non-realified]
+Fmod global Frobenioid I, 5.5, (i), (iii);
+corresponding to I, 5.1, (iii)
+Fmod
+[non-realified]
+F global Frobenioid I, 5.5, (i), (iii);
+corresponding to I, 5.1, (ii), (iii)
+π1(D ) F
+[non-realified]
+F global Frobenioid I, 5.5, (i), (iii);
+corresponding to I, 5.1, (iii)
+π1(D ) F
+Fig. 6.6: The Frobenioids that appear in a Θ±ellNF-Hodge theater
+184 SHINICHI MOCHIZUKI
+Bibliography
+[Andr´ e] Y. Andr´ e, On a Geometric Description of Gal(Qp/Qp) and a p-adic Avatar of
+GT, Duke Math. J. 119 (2003), pp. 1-39.
+[Asada] M. Asada, The faithfulness of the monodromy representations associated with
+certain families of algebraic curves, J. Pure Appl. Algebra 159 (2001), pp.
+123-147.
+[Falt] G. Faltings, Endlichkeitss¨ atze f¨ ur Abelschen Variet¨ aten ¨ uber Zahlk¨ orpern, In-
+vent. Math. 73 (1983), pp. 349-366.
+[FRS] B. Fine, G. Rosenberger, and M. Stille, Conjugacy pinched and cyclically
+pinched one-relator groups, Rev. Mat. Univ. Complut. Madrid 10 (1997), pp.
+207-227.
+[Groth] A. Grothendieck, letter to G. Faltings (June 1983) in Lochak, L. Schneps, Geo-
+metric Galois Actions; 1. Around Grothendieck’s Esquisse d’un Programme,
+London Math. Soc. Lect. Note Ser. 242, Cambridge Univ. Press (1997).
+[NodNon] Y. Hoshi, S. Mochizuki, On the Combinatorial Anabelian Geometry of Nodally
+Nondegenerate Outer Representations, Hiroshima Math. J. 41 (2011), pp. 275-
+342.
+[CbTpII] Y. Hoshi, S. Mochizuki, Topics Surrounding the Combinatorial Anabelian Ge-
+ometry of Hyperbolic Curves II: Tripods and Combinatorial Cuspidalization,
+RIMS Preprint 1762 (November 2012).
+[JP] K. Joshi and C. Pauly, Hitchin-Mochizuki morphism, Opers and Frobenius-
+destabilized vector bundles over curves, Adv. Math. 274 (2015), pp. 39-75.
+[Kim] M. Kim, The motivic fundamental group of P1 \{0,1,∞}and the theorem of
+Siegel, Invent. Math. 161 (2005), pp. 629-656.
+[Lang] S. Lang, Algebraic number theory, Addison-Wesley Publishing Co. (1970).
+[Lehto] O. Lehto, Univalent Functions and Teichm¨ uller Spaces, Graduate Texts in
+Mathematics 109, Springer-Verlag (1987).
+[PrfGC] S. Mochizuki, The Profinite Grothendieck Conjecture for Closed Hyperbolic
+Curves over Number Fields, J. Math. Sci. Univ. Tokyo 3 (1996), pp. 571-627.
+[pOrd] S. Mochizuki, A Theory of Ordinary p-adic Curves, Publ. Res. Inst. Math. Sci.
+32 (1996), pp. 957-1151.
+[pTeich] S. Mochizuki, Foundations of p-adic Teichm¨ uller Theory, AMS/IP Studies
+in Advanced Mathematics 11, American Mathematical Society/International
+Press (1999).
+[pGC] S. Mochizuki, The Local Pro-p Anabelian Geometry of Curves, Invent. Math.
+138 (1999), pp. 319-423.
+[HASurI] S. Mochizuki, A Survey of the Hodge-Arakelov Theory of Elliptic Curves I,
+Arithmetic Fundamental Groups and Noncommutative Algebra, Proceedings of
+¨
+INTER-UNIVERSAL TEICHM
+ULLER THEORY I 185
+Symposia in Pure Mathematics 70, American Mathematical Society (2002),
+pp. 533-569.
+[HASurII] S. Mochizuki, A Survey of the Hodge-Arakelov Theory of Elliptic Curves II,
+Algebraic Geometry 2000, Azumino, Adv. Stud. Pure Math. 36, Math. Soc.
+Japan (2002), pp. 81-114.
+[AbsAnab] S. Mochizuki, The Absolute Anabelian Geometry of Hyperbolic Curves, Galois
+Theory and Modular Forms, Kluwer Academic Publishers (2004), pp. 77-122.
+[CanLift] S. Mochizuki, The Absolute Anabelian Geometry of Canonical Curves, Kazuya
+Kato’s fiftieth birthday, Doc. Math. 2003, Extra Vol., pp. 609-640.
+[GeoAnbd] S. Mochizuki, The Geometry of Anabelioids, Publ. Res. Inst. Math. Sci. 40
+(2004), pp. 819-881.
+[SemiAnbd] S. Mochizuki, Semi-graphs of Anabelioids, Publ. Res. Inst. Math. Sci. 42
+(2006), pp. 221-322.
+[QuCnf] S. Mochizuki, Conformal and quasiconformal categorical representation of hy-
+perbolic Riemann surfaces, Hiroshima Math. J. 36 (2006), pp. 405-441.
+[GlSol] S. Mochizuki, Global Solvably Closed Anabelian Geometry, Math. J. Okayama
+Univ. 48 (2006), pp. 57-71.
+[CombGC] S. Mochizuki, A combinatorial version of the Grothendieck conjecture, Tohoku
+Math. J. 59 (2007), pp. 455-479.
+[Cusp] S. Mochizuki, Absolute anabelian cuspidalizations of proper hyperbolic curves,
+J. Math. Kyoto Univ. 47 (2007), pp. 451-539.
+[FrdI] S. Mochizuki, The Geometry of Frobenioids I: The General Theory, Kyushu J.
+Math. 62 (2008), pp. 293-400.
+[FrdII] S. Mochizuki, The Geometry of Frobenioids II: Poly-Frobenioids, Kyushu J.
+Math. 62 (2008), pp. 401-460.
+´
+[EtTh] S. Mochizuki, The
+Etale Theta Function and its Frobenioid-theoretic Manifes-
+tations, Publ. Res. Inst. Math. Sci. 45 (2009), pp. 227-349.
+[AbsTopI] S. Mochizuki, Topics in Absolute Anabelian Geometry I: Generalities, J. Math.
+Sci. Univ. Tokyo 19 (2012), pp. 139-242.
+[AbsTopII] S.Mochizuki,TopicsinAbsoluteAnabelianGeometryII:DecompositionGroups
+and Endomorphisms, J. Math. Sci. Univ. Tokyo 20 (2013), pp. 171-269.
+[AbsTopIII] S. Mochizuki, Topics in Absolute Anabelian Geometry III: Global Reconstruc-
+tion Algorithms, J. Math. Sci. Univ. Tokyo 22 (2015), pp. 939-1156.
+[GenEll] S.Mochizuki,ArithmeticEllipticCurvesinGeneralPosition,Math. J. Okayama
+Univ. 52 (2010), pp. 1-28.
+[CombCusp] S. Mochizuki, On the Combinatorial Cuspidalization of Hyperbolic Curves,
+Osaka J. Math. 47 (2010), pp. 651-715.
+[IUTchII] S. Mochizuki, Inter-universal Teichm¨ uller Theory II: Hodge-Arakelov-theoretic
+Evaluation, RIMS Preprint 1757 (August 2012), to appear in Publ. Res. Inst.
+Math. Sci.
+186 SHINICHI MOCHIZUKI
+[IUTchIII] S. Mochizuki, Inter-universal Teichm¨ uller Theory III: Canonical Splittings of
+the Log-theta-lattice, RIMS Preprint 1758 (August 2012), to appear in Publ.
+Res. Inst. Math. Sci.
+[IUTchIV] S. Mochizuki, Inter-universal Teichm¨ uller Theory IV: Log-volume Computa-
+tions and Set-theoretic Foundations, RIMS Preprint 1759 (August 2012), to
+appear in Publ. Res. Inst. Math. Sci.
+[MNT] S. Mochizuki, H. Nakamura, A. Tamagawa, The Grothendieck conjecture on
+the fundamental groups of algebraic curves, Sugaku Expositions 14 (2001), pp.
+31-53.
+[Config] S. Mochizuki, A. Tamagawa, The algebraic and anabelian geometry of config-
+uration spaces, Hokkaido Math. J. 37 (2008), pp. 75-131.
+[NSW] J.Neukirch,A.Schmidt,K.Wingberg,Cohomology of number fields,Grundlehren
+der Mathematischen Wissenschaften 323, Springer-Verlag (2000).
+[NS] N. Nikolov and D. Segal, Finite index subgroups in profinite groups, C. R.
+Math. Acad. Sci. Paris 337 (2003), pp. 303-308.
+[RZ] Ribes and Zaleskii, Profinite Groups, Ergebnisse der Mathematik und ihrer
+Grenzgebiete 3, Springer-Verlag (2000).
+[Stb1] P. F. Stebe, A residual property of certain groups, Proc. Amer. Math. Soc. 26
+(1970), pp. 37-42.
+[Stb2] P. F. Stebe, Conjugacy separability of certain Fuchsian groups, Trans. Amer.
+Math. Soc. 163 (1972), pp. 173-188.
+[Stl] J. Stillwell, Classical topology and combinatorial group theory. Second edition,
+Graduate Texts in Mathematics 72, Springer-Verlag (1993).
+[Tama1] A. Tamagawa, The Grothendieck Conjecture for Aﬃne Curves, Compositio
+Math. 109 (1997), pp. 135-194.
+[Tama2] A. Tamagawa, Resolution of nonsingularities of families of curves, Publ. Res.
+Inst. Math. Sci. 40 (2004), pp. 1291-1336.
+[Wiles] A. Wiles, Modular elliptic curves and Fermat’s last theorem, Ann. of Math.
+141 (1995), pp. 443-551.
+Updated versions of preprints are available at the following webpage:
+http://www.kurims.kyoto-u.ac.jp/~motizuki/papers-english.html

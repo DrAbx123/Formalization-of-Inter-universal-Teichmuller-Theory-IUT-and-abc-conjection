@@ -1,0 +1,1947 @@
+/-
+Copyright (c) 2026 IUT Lean formalization contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: IUT Lean formalization contributors
+-/
+import Iut.Foundations.SourceHodgeArakelovEvaluation
+import Iut.Foundations.SourceSplitKummerFrobenioid
+import Iut.Foundations.SourceArchimedeanKummerSystem
+import Iut.Foundations.SourceTimesMuPrimeStrip
+import Iut.Foundations.SourceTimesMuPrimeStripIsomorphism
+import Iut.Foundations.SourceTimesMuPrimeStripFullPolyIsomorphism
+import Iut.Foundations.SourceModelFrobenioidRationalNaturality
+import Iut.Foundations.SourceFrobenioidBirationalization
+import Iut.Foundations.SourceFrobenioidBirationalDictionary
+import Iut.Foundations.SourceFrobenioidBirationalAxioms
+import Iut.Foundations.SourceFrobenioidBirationalFactor
+import Iut.Foundations.SourceModelFrobenioidGenericBirational
+import Iut.Foundations.SourceFiniteLocalMLFComparison
+import Iut.Foundations.SourceTheorem311
+import Iut.Foundations.SourceTheorem311Assembly
+import Iut.Foundations.SourceDefinition52LocalJointContinuity
+import Iut.Foundations.SourceDefinition52IndSystem
+import Iut.Foundations.SourceDefinition52Sequential
+import Iut.Foundations.SourcePrimeStripConstructions
+import Iut.Foundations.SourceTemperedSemigraph
+import Iut.Foundations.SourceContinuousAnabelioid
+import Iut.Foundations.SourceAnabelioidSlice
+import Iut.Foundations.SourceAnabelioidComponents
+import Iut.Foundations.SourceAnabelioidEquivalence
+import Iut.Foundations.SourceAnabelioidGrothendieck
+import Iut.Foundations.SourceConnectedAnabelioidSlice
+import Iut.Foundations.SourceTemperoid
+import Iut.Foundations.SourceTemperoidQuotient
+import Iut.Foundations.SourceTemperoidAssociatedQuotient
+import Iut.Foundations.SourceFiniteLocalCoveringCategory
+import Iut.Foundations.SourceConnectedFiniteEtaleConverse
+import Iut.Foundations.SourceSemiGraphOfAnabelioids
+import Iut.Foundations.SourceGluedAnabelioid
+import Iut.Foundations.SourceGluedGalois
+import Iut.Foundations.SourceGluedTotalAnabelioid
+import Iut.Foundations.SourceGluedFiniteEtaleCover
+import Iut.Foundations.SourceGluedFiniteEtaleTransition
+import Iut.Foundations.SourceGluedConnectedFiniteEtaleCover
+import Iut.Foundations.SourceGluedGaloisLevelSystem
+import Iut.Foundations.SourceGluedIsolatedFiniteEtaleCover
+import Iut.Foundations.SourceGluedIsolatedGaloisLevelSystem
+import Iut.Foundations.SourceCombinatorialUniversalCover
+import Iut.Foundations.SourceFiniteSheetUniversalLift
+import Iut.Foundations.SourceTemperedDeckGroup
+import Iut.Foundations.SourceTemperedActionFactorization
+import Iut.Foundations.SourceTemperoidOrbitDecomposition
+import Iut.Foundations.SourceTemperedCoveringCategory
+import Iut.Foundations.SourceTemperedFiniteRecovery
+import Iut.Foundations.SourceTemperedFiniteComponentComparison
+import Iut.Foundations.SourceTemperoidRestrictionComponentFamily
+import Iut.Foundations.SourceTemperedGraphCoverRealization
+import Iut.Foundations.SourceTemperedGaloisSplitter
+import Iut.Foundations.SourceTemperedGaloisComponentMap
+import Iut.Foundations.SourceTemperedTargetSheetLift
+import Iut.Foundations.SourceTemperedGeometricDomination
+import Iut.Foundations.SourceTemperedUniversalCoverDeckAction
+import Iut.Foundations.SourceTemperedGeometricDeckAction
+import Iut.Foundations.SourceTemperedAssociatedCoverQuotient
+import Iut.Foundations.SourceTemperedSubcoverClassification
+import Iut.Foundations.SourceTemperedConnectedCoverClassification
+import Iut.Foundations.SourceTemperedGeometricComponents
+import Iut.Foundations.SourceTemperedCoverCoproduct
+import Iut.Foundations.SourceTemperedActionCoverEquivalence
+import Iut.Foundations.SourceTemperedActionCoverEssentialSurjectivity
+import Iut.Foundations.SourceTemperedFullCoverClassification
+import Iut.Foundations.SourceTemperedUniversalCoverRefinement
+import Iut.Foundations.SourceTemperedDeckTransitionSurjectivity
+import Iut.Foundations.SourceTemperedDeckProjectionSurjectivity
+import Iut.Foundations.SourceTemperedActionCoverObjects
+import Iut.Foundations.SourceTemperedFiniteGraphCoverRealization
+import Iut.Foundations.SourceTemperedProfiniteInjection
+
+open Iut
+
+/-!
+# M1-M3 source endpoint axiom audit
+
+This audit keeps the source-faithful Kummer and pointed-restriction endpoints
+visible to Lean's axiom reporter.
+-/
+
+#print axioms Iut.DivisorialMonoidOn.gpPullback_comp
+#print axioms
+  Iut.FrobenioidRationalMonoidTransport.linearEndomorphismPullback_relation
+#print axioms
+  Iut.FrobenioidRationalMonoidTransport.linearEndomorphismPullback_unique
+#print axioms
+  Iut.FrobenioidRationalMonoidTransport.rationalMonoidTransport
+#print axioms
+  Iut.FrobenioidRationalMonoidTransport.isIsotropic_source_iff_target_of_coAngular_linear
+#print axioms Iut.FrobenioidBirationalization.unitTransport_id
+#print axioms Iut.FrobenioidBirationalization.unitTransport_comp
+#print axioms
+  Iut.FrobenioidBirationalization.unitTransport_eq_refl_of_baseIdentity
+#print axioms
+  Iut.FrobenioidBirationalization.baseIdentity_coAngularPreStep_commutes
+#print axioms Iut.FrobenioidBirationalization.hasCoAngularPreStepSquares
+#print axioms
+  Iut.FrobenioidBirationalization.CoAngularPreStepOver.colimitComparisonEquiv
+#print axioms Iut.FrobenioidBirationalization.birationalCategory_isConnected
+#print axioms Iut.FrobenioidBirationalization.groupifiedBirationalFunctor_fac
+#print axioms
+  Iut.FrobenioidBirationalization.structureFunctor_eq_groupifiedComposite
+#print axioms Iut.FrobenioidBirationalization.localizationFunctor_faithful
+#print axioms Iut.FrobenioidBirationalization.localization_map_epi
+#print axioms Iut.FrobenioidBirationalization.birational_totallyEpimorphic
+#print axioms
+  Iut.FrobenioidBirationalization.localization_map_frobeniusDegree_eq_iff
+#print axioms Iut.FrobenioidBirationalization.localization_map_isPreStep_iff
+#print axioms Iut.FrobenioidBirationalization.roofValue_isPreStep_iff
+#print axioms
+  Iut.FrobenioidBirationalization.isBaseIdentity_iff_nonempty_baseIdentityRoof
+#print axioms
+  Iut.FrobenioidBirationalization.localization_map_isIso_iff_coAngularPreStep
+#print axioms Iut.FrobenioidBirationalization.roofValue_isIso_iff
+#print axioms Iut.FrobenioidBirationalization.localization_map_isIsometric
+#print axioms
+  Iut.FrobenioidBirationalization.isCoAngular_of_localization_map_isCoAngular
+#print axioms
+  Iut.FrobenioidBirationalization.isCoAngular_and_isBaseIso_of_localization_map_isOfFrobeniusType
+#print axioms
+  Iut.FrobenioidBirationalization.isIsotropic_of_localization_obj_isIsotropic
+#print axioms
+  Iut.FrobenioidBirationalization.localization_obj_isIsotropic_of_isIsotropic
+#print axioms Iut.FrobenioidBirationalization.localization_obj_isIsotropic_iff
+#print axioms Iut.FrobenioidBirationalization.localization_map_isCoAngular_iff
+#print axioms
+  Iut.FrobenioidBirationalization.localization_map_isOfFrobeniusType_iff
+#print axioms
+  Iut.FrobenioidBirationalization.localization_map_isPullback_iff
+#print axioms Iut.FrobenioidBirationalization.roofValue_isCoAngular_iff
+#print axioms
+  Iut.FrobenioidBirationalization.roofValue_isOfFrobeniusType_iff
+#print axioms Iut.FrobenioidBirationalization.roofValue_isPullback_iff
+#print axioms Iut.FrobenioidBirationalization.birational_baseRepresented
+#print axioms Iut.FrobenioidBirationalization.birational_commonPreSteps
+#print axioms
+  Iut.FrobenioidBirationalization.birational_pullbackBaseSlices
+#print axioms Iut.FrobenioidBirationalization.birationalUnitTransportEquiv
+#print axioms Iut.FrobenioidBirationalization.birational_unitTransport
+#print axioms
+  Iut.FrobenioidBirationalization.birational_unitTransport_unique
+#print axioms
+  Iut.FrobenioidBirationalization.linearBaseIdentityEndomorphism_commutes
+#print axioms
+  Iut.FrobenioidBirationalization.birational_linearBaseIdentityEndomorphism_isIso
+#print axioms
+  Iut.FrobenioidBirationalization.birational_linearBaseIdentityEndomorphism_commutes
+#print axioms
+  Iut.FrobenioidBirationalization.birational_unitTransport_dependsOnlyOnBase
+#print axioms
+  Iut.FrobenioidBirationalization.birational_preFrobenioidPresentation
+#print axioms Iut.FrobenioidBirationalization.birational_frobenioidAxioms
+#print axioms
+  Iut.FrobenioidBirationalization.birational_frobenioidPresentation
+#print axioms
+  Iut.FrobenioidBirationalization.birationalLinearBaseIdentityEndomorphismGroup
+#print axioms
+  Iut.FrobenioidBirationalization.groupifiedBirationalFunctor_map_rationalFunction_base
+#print axioms
+  Iut.FrobenioidBirationalization.groupifiedBirationalFunctor_map_rationalFunction_frobeniusDegree
+#print axioms
+  Iut.FrobenioidBirationalization.birationalRationalFunctionDivisorHom
+#print axioms Iut.FrobenioidBirationalization.birationalDivisorRange
+#print axioms
+  Iut.FrobenioidBirationalization.mem_birationalDivisorRange_iff
+#print axioms
+  Iut.FrobenioidBirationalization.birationalRationalFunctionDivisorHom_surjective
+#print axioms
+  Iut.FrobenioidBirationalization.groupifiedBirationalFunctor_map_base
+#print axioms
+  Iut.FrobenioidBirationalization.groupifiedBirationalFunctor_map_frobeniusDegree
+#print axioms
+  Iut.FrobenioidBirationalization.birationalRationalFunctionPullback
+#print axioms
+  Iut.FrobenioidBirationalization.birationalRationalFunctionPullback_relation
+#print axioms
+  Iut.FrobenioidBirationalization.groupifiedBirationalFunctor_map_rationalFunctionPullback_divisor
+#print axioms
+  Iut.FrobenioidBirationalization.gpPullback_mem_birationalDivisorRange_of_pullback
+#print axioms Iut.FrobenioidBirationalization.birational_isPullback_of_isIso
+#print axioms
+  Iut.FrobenioidBirationalization.gpPullback_mem_birationalDivisorRange_iff_of_isIso
+#print axioms
+  Iut.FrobenioidBirationalization.localizationLinearBaseIdentityEndomorphism_central
+#print axioms
+  Iut.FrobenioidBirationalization.birational_groupifiedDivisor_eq_zero_iff_sourceUnitImage
+#print axioms
+  Iut.FrobenioidBirationalization.birationalRationalFunctionDivisorHom_eq_one_iff_sourceUnitImage
+#print axioms
+  Iut.FrobenioidBirationalization.birational_faithfulUpToUnits
+#print axioms
+  Iut.FrobenioidBirationalization.birational_isIso_iff_isPreStep_and_isCoAngular
+#print axioms Iut.FrobenioidBirationalization.birational_coAngular_comp
+#print axioms
+  Iut.FrobenioidBirationalization.birational_coAngular_parallelToCoAngularPreStep
+#print axioms
+  Iut.FrobenioidBirationalization.birational_outgoingDivisorOrderFullyFaithful
+#print axioms
+  Iut.FrobenioidBirationalization.birational_outgoingDivisorRepresentative_unique
+#print axioms Iut.FrobenioidBirationalization.birational_incomingDivisor
+#print axioms
+  Iut.FrobenioidBirationalization.birational_incomingDivisorOrderFullyFaithful
+#print axioms
+  Iut.FrobenioidBirationalization.birational_incomingDivisorRepresentative_unique
+#print axioms
+  Iut.FrobenioidBirationalization.birational_pullback_linear_lbInvertible
+#print axioms Iut.FrobenioidBirationalization.birational_factorization
+#print axioms
+  Iut.FrobenioidBirationalization.birational_factorization_frobeniusDegree
+#print axioms
+  Iut.FrobenioidBirationalization.birational_factorizationPullbackComparison
+#print axioms
+  Iut.FrobenioidBirationalization.birational_factorizationFrobeniusComparison
+#print axioms Iut.FrobenioidBirationalization.birational_factorizationIso
+#print axioms
+  Iut.FrobenioidBirationalization.birational_frobenioidFactorizationIso_ext
+#print axioms
+  Iut.FrobenioidBirationalization.birational_factorizationIso_unique
+#print axioms
+  Iut.FrobenioidBirationalization.localizationPreStepFactorization
+#print axioms
+  Iut.FrobenioidBirationalization.birational_preStep_coAngularThenIsometric
+#print axioms
+  Iut.FrobenioidBirationalization.birational_preStep_isometricThenCoAngular
+#print axioms
+  Iut.FrobenioidBirationalization.birational_preStepFactorizationIso
+#print axioms
+  Iut.FrobenioidBirationalization.birational_preStepFactorizationIso_unique
+#print axioms Iut.FrobenioidBirationalization.birational_preStep_mono
+#print axioms Iut.FrobenioidBirationalization.birational_frobeniusDegree
+#print axioms Iut.FrobenioidBirationalization.birational_isotropicHull
+#print axioms
+  Iut.FrobenioidBirationalization.birational_isotropic_closedUnderTargets
+#print axioms
+  Iut.FrobenioidBirationalization.birational_isCoAngular_of_isotropicSource
+#print axioms
+  Iut.FrobenioidBirationalization.birational_iso_over_baseIso_of_isotropic
+#print axioms
+  Iut.FrobenioidBirationalization.BirationalIsotropicBaseRepresentative
+#print axioms
+  Iut.FrobenioidBirationalization.birationalIsotropicBaseRepresentative
+#print axioms
+  Iut.FrobenioidBirationalization.birational_isIsotropic_source_of_coAngular_linear
+#print axioms
+  Iut.FrobenioidBirationalization.BirationalDivisorSubfunctor
+#print axioms
+  Iut.FrobenioidBirationalization.BirationalDivisorSubfunctor.pullback_comp
+#print axioms
+  Iut.FrobenioidBirationalization.RestrictedGroupifiedElementaryFrobenioid.inclusion_faithful
+#print axioms
+  Iut.FrobenioidBirationalization.birationalBaseDivisorRange
+#print axioms
+  Iut.FrobenioidBirationalization.mem_birationalBaseDivisorRange_iff
+#print axioms
+  Iut.FrobenioidBirationalization.gpPullback_mem_birationalBaseDivisorRange
+#print axioms
+  Iut.FrobenioidBirationalization.birationalDivisorSubfunctor
+#print axioms
+  Iut.FrobenioidBirationalization.birationalRestrictedElementaryInclusion_faithful
+#print axioms
+  Iut.FrobenioidBirationalization.birationalNormalizedDivisor_mem
+#print axioms
+  Iut.FrobenioidBirationalization.birationalRestrictedFactorFunctor
+#print axioms
+  Iut.FrobenioidBirationalization.birationalRestrictedFactorIso
+#print axioms
+  Iut.SourceModelFrobenioid.GenericBirationalSpecialization.genericToColimitComparison_fac
+#print axioms
+  Iut.SourceModelFrobenioid.GenericBirationalSpecialization.groupifiedDivisorFunctor_specializationIso
+#print axioms
+  Iut.SourceModelFrobenioid.GenericBirationalSpecialization.restrictedFactor_specializationIso
+#print axioms
+  Iut.FrobenioidBirationalization.birationalDivisorRangeToBase
+#print axioms
+  Iut.FrobenioidBirationalization.birationalRationalFunctionDivisorRangeHom
+#print axioms
+  Iut.FrobenioidBirationalization.birationalBaseDivisorHom
+#print axioms
+  Iut.FrobenioidBirationalization.birationalBaseDivisorHom_surjective
+#print axioms
+  Iut.FrobenioidBirationalization.birationalBaseDivisorHom_eq_one_iff_sourceUnitImage
+#print axioms
+  Iut.FrobenioidBirationalization.IsBirationalDivisorImage
+#print axioms
+  Iut.FrobenioidBirationalization.birationalDivisorSubfunctor_isBirationalDivisorImage
+#print axioms
+  Iut.FrobenioidBirationalization.birationalDivisorSubfunctor_unique
+
+#print axioms Iut.SourceCombinatorialUniversalCover.UniversalVertex.tree_isTree
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceSemiGraphUniversalCover.projection_isGraphCovering
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.deckAction_transitive_compositeFiber
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.deckAction_faithful
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.refinementIncidenceMap_surjective
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.deckTransition
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceIsolatedGaloisCombinatorialUniversalCover.deckTransition_surjective
+#print axioms Iut.SourceTemperedGroupPresentation.nhds_one_hasBasis_projectionKernels
+#print axioms Iut.SourceTemperedGroupPresentation.cofinalContinuousMulEquiv
+#print axioms Iut.SourceCountableGroupDiagram.imageTransition_surjective
+#print axioms Iut.SourceCountableGroupDiagram.rawLimitContinuousMulEquivImageLimit
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.rawDeckLimitContinuousMulEquiv
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceIsolatedGaloisCombinatorialUniversalCover.temperedPresentation
+
+#print axioms Iut.SourceMLFIntegralMonoid.galoisAction
+#print axioms
+  Iut.SourceKummerFaithfulness.AdditiveKummerMap.injective_of_trivial_infinitelyDivisible
+#print axioms Iut.SourceKummerFaithfulness.MultiplicativeKummerMap.injective_of_roots_eq_one
+#print axioms Iut.SourceKummerFaithfulness.eq_one_of_roots_in_profinite
+#print axioms Iut.SourceMLFKummerFaithfulness.finite_quotient_map
+#print axioms Iut.SourceMLFKummerFaithfulness.units_residuallyFinite_of_finite_quotients
+#print axioms Iut.SourceMLFKummerFaithfulness.integralClosureUnits_residuallyFinite
+#print axioms Iut.SourceMLFKummerFaithfulness.fieldUnit_eq_one_of_roots
+#print axioms Iut.SourceMLFKummerFaithfulness.finiteExtensionGMUnit_eq_one_of_roots
+#print axioms Iut.SourceMLFKummerFaithfulness.finiteExtensionGMKummerMap_injective
+#print axioms Iut.SourceTorsionCyclotomicCommMonoid.rootsOfUnity_finite
+#print axioms Iut.SourceTorsionCyclotomicCommMonoid.rationalCircle_torsion_natCard
+#print axioms Iut.SourceTorsionCyclotomicCommMonoid.rootsOfUnityEquiv
+#print axioms Iut.SourceTorsionCyclotomicCommMonoid.rootsOfUnity_natCard
+#print axioms Iut.SourceTorsionCyclotomicCommMonoid.rootsOfUnityGroup_natCard
+#print axioms Iut.SourceTopologicalPseudoMonoid.carrier_isEmbedding
+#print axioms Iut.SourceTopologicalPseudoMonoid.continuous_partialMul
+#print axioms Iut.SourceTopologicalPseudoMonoid.partialMul_assoc
+#print axioms Iut.SourceTopologicalPseudoMonoid.Iso.maps_domain_iff
+#print axioms Iut.SourceTopologicalGroupPseudoMonoidActionPair.action_maps_domain_iff
+#print axioms Iut.SourceTopologicalGroupPseudoMonoidActionPair.action_partialMul
+#print axioms Iut.SourceTopologicalGroupPseudoMonoidActionPair.fixedPseudoMonoid.mul_mem_iff
+#print axioms Iut.SourceTopologicalGroupPseudoMonoidActionPair.fixedPseudoMonoid.inclusion_isEmbedding
+#print axioms Iut.SourceProfinitePseudoMonoidActionPair.quotientAction_comp
+#print axioms Iut.SourceProfinitePseudoMonoidActionPair.descend
+#print axioms Iut.SourceProfinitePseudoMonoidActionPair.comap_descend
+#print axioms Iut.SourceProfinitePseudoMonoidActionPair.comap_kernelActsTrivially
+#print axioms Iut.IUTINonarchimedeanLocalModel.dToCoreOpenEmbedding
+#print axioms Iut.IUTINonarchimedeanLocalModel.dToCore_injective
+#print axioms Iut.IUTINonarchimedeanLocalModel.dToCore_open_range
+#print axioms Iut.SourceFinitePlaceReconstruction.carrierEquivAlgebraicClosure
+#print axioms Iut.SourceFinitePlaceReconstruction.continuous_stageIntegralToInd
+#print axioms Iut.SourceFinitePlaceReconstruction.exists_stage_representation
+#print axioms Iut.SourceFinitePlaceReconstruction.indIntegralMonoidEquivSourceMLF
+#print axioms Iut.SourceFinitePlaceReconstruction.indIntegralMonoidEquivSourceMLF_galois
+#print axioms Iut.SourceFinitePlaceReconstruction.carrierMulEquiv_galoisContinuousLinearMap
+#print axioms Iut.SourceFinitePlaceReconstruction.continuous_indGaloisMulAut
+#print axioms Iut.SourceFinitePlaceReconstruction.indGaloisContinuousMulEquiv_mul
+#print axioms Iut.SourceFinitePlaceReconstruction.continuous_finiteStageGaloisEvaluation
+#print axioms Iut.SourceFinitePlaceReconstruction.continuous_stageGaloisAction
+#print axioms Iut.SourceFinitePlaceReconstruction.continuous_galoisLinearMap_comp_stageToCarrier
+#print axioms Iut.SourceFinitePlaceReconstruction.continuous_indGaloisAction_comp_stageIntegralToInd
+#print axioms Iut.SourceFinitePlaceReconstruction.stageIntegralTransition_trans
+#print axioms Iut.SourceFinitePlaceReconstruction.continuous_stageGaloisIntegralAction
+#print axioms Iut.SourceFinitePlaceReconstruction.stageIntegralTransition_galois
+#print axioms Iut.SourceFinitePlaceReconstruction.integralIndSystem
+#print axioms Iut.SourceFinitePlaceReconstruction.stageIntegralToIndHom_transition
+#print axioms Iut.SourceFinitePlaceReconstruction.stageIntegralToIndHom_galois
+#print axioms Iut.SourceFinitePlaceReconstruction.integralIndSystemLimit
+#print axioms Iut.SourceFinitePlaceReconstruction.integralIndSequentialPresentation
+#print axioms Iut.SourceFinitePlaceReconstruction.denseRange_algebraMap_base
+#print axioms Iut.SourceFinitePlaceReconstruction.exists_stage_primitive_generator
+#print axioms Iut.SourceFinitePlaceReconstruction.exists_global_polynomial_root_same_adjoin
+#print axioms Iut.SourceFinitePlaceReconstruction.exists_global_polynomial_root_generating_stage
+#print axioms Iut.SourceFinitePlaceReconstruction.globalPolynomialRootStage_surjective
+#print axioms Iut.SourceFinitePlaceReconstruction.stageIndexCountable
+#print axioms Iut.SourceFinitePlaceReconstruction.integralIndSourceSequentialPresentation
+#print axioms Iut.AutHolomorphicOrbispaceIso.refl
+#print axioms Iut.SourceDPrimeStrip.canonical
+#print axioms Iut.SourceDMonoAnalyticPrimeStrip.canonical
+#print axioms Iut.SourceFPrimeStrip.canonical
+#print axioms Iut.SourceFPrimeStrip.associatedDNonarchimedeanEquivalence
+#print axioms Iut.SourceFPrimeStrip.associatedD_archimedean_eq
+#print axioms Iut.SourceFMonoAnalyticPrimeStrip.canonical
+#print axioms Iut.sourceFMonoAnalyticPrimeStripCategory
+#print axioms Iut.SourceFMonoAnalyticPrimeStripCapsule
+#print axioms Iut.SourceFGloballyRealifiedMonoAnalyticPrimeStrip.canonical
+#print axioms Iut.SourceSelectedFinitePlace.integralIndSystem
+#print axioms Iut.SourceSelectedFinitePlace.integralIndSystemLimit
+#print axioms Iut.SourceSelectedFinitePlace.integralIndSequentialPresentation
+#print axioms Iut.SourceTopologicalGroupPseudoMonoidActionPair.Iso.trans_hom
+#print axioms Iut.SourceKappaLocalizationDiagram.inclusion_injective
+#print axioms Iut.hasGoodReductionOnMinimalModel_smul_iff
+#print axioms Iut.hasMultiplicativeReductionOnMinimalModel_smul_iff
+#print axioms Iut.hasGoodReductionOnMinimalModel_minimal_iff
+#print axioms Iut.hasMultiplicativeReductionOnMinimalModel_minimal_iff
+#print axioms Iut.hasGoodReductionOnMinimalModel_map_variableChange_iff
+#print axioms Iut.hasMultiplicativeReductionOnMinimalModel_map_variableChange_iff
+#print axioms Iut.puncturedWeierstrassInversionPolynomialHom_polynomial
+#print axioms Iut.puncturedWeierstrassInversionCoordinateRingHom_involutive
+#print axioms Iut.puncturedWeierstrassInversion_involutive
+#print axioms Iut.PuncturedEllipticSchemeRealization.puncturedScheme_eq_weierstrassAffine
+#print axioms Iut.PuncturedEllipticSchemeRealization.curve_puncture_eq_origin
+#print axioms Iut.PuncturedEllipticSchemeRealization.inversion_involutive
+#print axioms Iut.PuncturedEllipticCurveScalarExtension.curve_eq_baseChange
+#print axioms Iut.PuncturedEllipticCurveScalarExtension.result_puncture_eq_origin
+#print axioms Iut.SignQuotientOrbicurveScalarExtension.result_xF
+#print axioms Iut.SignQuotientOrbicurveScalarExtension.result_cF
+#print axioms Iut.SignQuotientOrbicurveScalarExtension.result_quotientMap
+#print axioms Iut.SourceThetaKCoreData.xK_eq_scalarExtension
+#print axioms Iut.SourceThetaKCoreData.cK_eq_scalarExtension
+#print axioms Iut.SourceThetaKCoreData.quotientMap_eq_scalarExtension
+#print axioms Iut.ThetaFinitePlace.residueCharacteristic_prime
+#print axioms Iut.SourceThetaSelectedPlaceData.toValuations
+#print axioms Iut.SourceInitialThetaDefinition.ofClauses
+#print axioms Iut.SourceInitialThetaDefinition.fieldTower
+#print axioms Iut.SourceInitialThetaDefinition.valuations
+#print axioms Iut.SourceInitialThetaDefinition.toCore
+#print axioms Iut.SourceInitialThetaDefinition.toCore_kernelField
+#print axioms Iut.SourceThetaArithmeticHistory.zero_ne_one
+#print axioms Iut.SourceDThetaBridgeCore.IsomorphismMember.historyIndex_compatible
+#print axioms Iut.SourceThetaFiniteLocalCoreData.x_eq_scalarExtension
+#print axioms Iut.SourceThetaFiniteLocalCoreData.c_eq_scalarExtension
+#print axioms Iut.SourceThetaFiniteLocalCoreData.quotientMap_eq_scalarExtension
+#print axioms Iut.SourceThetaInfiniteLocalCoreData.x_eq_scalarExtension
+#print axioms Iut.SourceThetaInfiniteLocalCoreData.c_eq_scalarExtension
+#print axioms Iut.SourceThetaInfiniteLocalCoreData.quotientMap_eq_scalarExtension
+#print axioms Iut.SignQuotientOrbicurveData.absoluteGalois_def
+#print axioms Iut.ThetaValuationData.selectedPlaceEquiv
+#print axioms Iut.ThetaFinitePlace.comap_comap
+#print axioms Iut.ThetaValuationData.toModuli_toIntermediate
+#print axioms Iut.ThetaValuationData.selectedPlaces_eq_vnon_union_varc
+#print axioms Iut.ThetaValuationData.vnon_disjoint_varc
+#print axioms Iut.ThetaValuationData.vnon_eq_vbad_union_vgood
+#print axioms Iut.ThetaValuationData.vbad_disjoint_vgood
+#print axioms Iut.ProfiniteDecompositionGroupData.embedding_range
+#print axioms
+  Iut.SourceThetaFiniteLocalCoreData.xDiagram_galois_range_eq_placeStabilizer
+#print axioms
+  Iut.SourceThetaFiniteLocalCoreData.cDiagram_galois_range_eq_placeStabilizer
+#print axioms
+  Iut.SourceThetaInfiniteLocalCoreData.xDiagram_galois_range_eq_placeStabilizer
+#print axioms
+  Iut.SourceThetaInfiniteLocalCoreData.cDiagram_galois_range_eq_placeStabilizer
+#print axioms
+  Iut.TypeOneCuspidalAtlasScalarExtension.toNonzeroCuspScalarExtension
+#print axioms
+  Iut.TypeOneCuspidalAtlasScalarExtension.toNonzeroCuspScalarExtension_origin
+#print axioms Iut.SourceInitialThetaCore.finiteLocalEpsilon_atlas_eq
+#print axioms Iut.SourceInitialThetaCore.infiniteLocalEpsilon_atlas_eq
+#print axioms Iut.SourceInitialThetaCore.finiteLocalEpsilon_signLabel
+#print axioms Iut.SourceInitialThetaCore.infiniteLocalEpsilon_signLabel
+#print axioms Iut.SourceInitialThetaCore.selectedFPlace_toModuli
+#print axioms Iut.SourceInitialThetaCore.selectedFPlace_mem_badMod
+#print axioms Iut.SourceInitialThetaCore.selectedFPlace_hasMultiplicativeReduction
+#print axioms Iut.SourceInitialThetaCore.selectedFQParameter
+#print axioms Iut.SourceInitialThetaCore.q_orders_prime_to_l
+#print axioms Iut.PuncturedEllipticCurve.galoisActionOnPoint_mul
+#print axioms Iut.PuncturedEllipticCurve.galoisActionOnPoint_stabilizer_isOpen
+#print axioms Iut.PuncturedEllipticCurve.galoisActionOnLTorsionLinearEquiv_mul
+#print axioms Iut.PuncturedEllipticCurve.galoisLTorsionMatrixRepresentation_acts
+#print axioms Iut.PuncturedEllipticCurve.galoisLTorsionMatrixRepresentation_ker_isOpen
+#print axioms Iut.PuncturedEllipticCurve.galoisLTorsionMatrixRepresentation_continuous
+#print axioms Iut.PuncturedEllipticCurve.galoisLTorsionKernelField_fixingSubgroup
+#print axioms Iut.PuncturedEllipticCurve.galoisLTorsionKernelField_finiteDimensional
+#print axioms Iut.PuncturedEllipticCurve.galoisLTorsionKernelField_isGalois
+#print axioms Iut.PuncturedEllipticCurve.galoisLTorsionKernelField_numberField
+#print axioms Iut.ThetaLTorsionRepresentationData.representation_continuous
+#print axioms Iut.ThetaLTorsionRepresentationData.representation_acts_on_torsion
+#print axioms Iut.ThetaLTorsionRepresentationData.embeddedK_eq_kernelFixedField
+#print axioms Iut.ThetaLTorsionRepresentationData.isKernelField
+#print axioms Iut.SourceMonoidCyclotome.boundedCoe_isClosedEmbedding
+#print axioms Iut.SourceMonoidCyclotome.asProfinite
+#print axioms Iut.SourceMonoidCyclotome.eq_one_of_roots
+#print axioms Iut.SourceMLFIntegralMonoid.groupificationToAlgebraicClosureUnits_surjective
+#print axioms Iut.SourceMLFIntegralMonoid.groupificationEquivAlgebraicClosureUnits
+#print axioms Iut.SourceMLFIntegralMonoid.torsionUnit_image
+#print axioms Iut.SourceMLFGaloisTMPair.augmentation_surjective
+#print axioms Iut.SourceMLFGaloisTMPair.openStabilizer_fixed
+#print axioms Iut.SourceMLFGaloisTMPair.continuousCyclotomeAction
+#print axioms Iut.SourceMLFGaloisTMPair.unitModuloTorsion_eq_one_iff
+#print axioms Iut.SourceMLFGaloisTMPair.unitAction_mem_torsion_iff
+#print axioms Iut.SourceMLFGaloisTMPair.unitModuloTorsionActionHom_mk
+#print axioms Iut.SourceMLFGaloisTMPair.unitModuloTorsionActionMulAut_mk
+#print axioms Iut.SourceMLFGaloisTMPair.TimesMuKummerIsomorphism.sourceDifference_smul_first
+#print axioms Iut.SourceMLFGaloisTMPair.TimesMuKummerIsomorphism.orbitOf_eq
+#print axioms Iut.SourceSplitKummerMonoid.unitQuotient_isUnit_eq_one
+#print axioms Iut.SourceMLFGaloisTMPair.badTimesMuUnitsEquiv
+#print axioms Iut.SourceMLFGaloisTMPair.goodTimesMuUnitsEquiv
+#print axioms Iut.SourceMLFGaloisTMPair.unitAction_mem_rootsOfUnity_iff
+#print axioms Iut.SourceMLFGaloisTMPair.badPerpMonoid_stable
+#print axioms Iut.SourceMLFGaloisTMPair.badCharacteristicAction_mk
+#print axioms Iut.SourceMLFGaloisTMPair.badTimesMuUnitsEquiv_equivariant
+#print axioms Iut.SourceMLFGaloisTMPair.goodTimesMuUnitsEquiv_equivariant
+#print axioms Iut.SourceFiniteTimesMuKummerInput.timesMuUnitsEquiv
+#print axioms Iut.SourceFiniteTimesMuKummerFrobenioid.rationalUnitsEquiv
+#print axioms Iut.SourceArchimedeanKummerSystem.rootsOfUnity_isClosed
+#print axioms Iut.SourceArchimedeanKummerSystem.continuousQuotientMap_isOpenQuotientMap
+#print axioms Iut.SourceArchimedeanKummerSystem.rootsOfUnity_le_of_dvd
+#print axioms Iut.SourceArchimedeanKummerSystem.transition_ker
+#print axioms Iut.SourceArchimedeanKummerSystem.continuousTransition_comp
+#print axioms Iut.SourceArchimedeanKummerSystem.orientedQuotientMap_ker
+#print axioms Iut.SourceArchimedeanKummerSystem.noncompact_eq_one_of_isUnit
+#print axioms Iut.SourceArchimedeanKummerSystem.quotientSplitTopologicalMonoid
+#print axioms Iut.SourceArchimedeanKummerSystem.MultiplicativelyCofinalSubset.isColimitEquivRestricted
+#print axioms Iut.SourceArchimedeanKummerSystem.continuousOrientedQuotientMap_isOpenQuotientMap
+#print axioms Iut.SourceArchimedeanKummerSystem.orientationAutomorphism_ne
+#print axioms Iut.SourceArchimedeanKummerSystem.unitQuotientDiagram
+#print axioms Iut.SourceArchimedeanKummerSystem.restrictedOrientedQuotientNaturalTransformation
+#print axioms Iut.sourceTimesMuNoncompact_eq_one_of_isUnit
+#print axioms Iut.SourceArchimedeanTimesMuQuotientSystem.reversedQuotientMap_kernel
+#print axioms Iut.SourceArchimedeanTimesMuQuotientSystem.transition_reversedQuotientMap
+#print axioms Iut.SourceArchimedeanTimesMuSystem.isColimitEquivRestricted
+#print axioms Iut.SourceFTimesMuPrimeStrip.archimedeanTimesMuIsometryTransition
+#print axioms Iut.SourceFTimesMuPilotReconstruction.pilotObject_negative
+#print axioms Iut.SourceMLFGaloisTMPair.TimesMuKummerIsomorphism.transport
+#print axioms Iut.SourceFiniteTimesMuKummerFrobenioidEquivalence.trans
+#print axioms Iut.SourceFiniteTimesMuKummerFrobenioidEquivalence.kummerStructure_compatible
+#print axioms Iut.SourceArchimedeanTimesMuStageEquivalence.isometryFunctor
+#print axioms Iut.SourceArchimedeanTimesMuSystemEquivalence.trans
+#print axioms
+  Iut.SourceArchimedeanTimesMuSystemEquivalence.carrierNaturalTransformation_app_isEquivalence
+#print axioms Iut.SourceFTimesMuPrimeStripEquivalence.trans
+#print axioms Iut.SourceFrobenioidEquivalence.trans
+#print axioms Iut.SourceFGloballyRealifiedTimesMuPrimeStripEquivalence.trans
+#print axioms
+  Iut.SourceFGloballyRealifiedTimesMuPrimeStripEquivalence.localPilotCharacter_compatible
+#print axioms
+  Iut.SourceFGloballyRealifiedTimesMuPrimeStripEquivalence.pilotObjectIso
+#print axioms
+  Iut.SourceFGloballyRealifiedTimesMuPrimeStripEquivalence.pilotObject_arithmeticDegree_compatible
+#print axioms
+  Iut.SourceMLFGaloisTMPairEquivalence.StructurallyEqual.comp
+#print axioms
+  Iut.SplitFrobenioidEquivalence.NaturallyIsomorphic.comp
+#print axioms
+  Iut.SourceFiniteTimesMuKummerFrobenioidEquivalence.NaturallyIsomorphic.comp
+#print axioms
+  Iut.SourceArchimedeanTimesMuSystemEquivalence.NaturallyIsomorphic.comp
+#print axioms
+  Iut.SourceFTimesMuPrimeStripFullPolyIsomorphism.comp_assoc
+#print axioms
+  Iut.SourceFTimesMuPrimeStripFullPolyIsomorphism.nonempty_iff
+#print axioms
+  Iut.SourceFGloballyRealifiedTimesMuPrimeStripFullPolyIsomorphism.comp_assoc
+#print axioms
+  Iut.SourceFGloballyRealifiedTimesMuPrimeStripFullPolyIsomorphism.nonempty_iff
+#print axioms Iut.SourceModelFrobenioid.gpPullback_id
+#print axioms Iut.SourceModelFrobenioid.gpPullback_comp
+#print axioms Iut.SourceModelFrobenioid.Input.gpPullback_mem_birationalDivisors
+#print axioms Iut.SourceModelFrobenioid.Hom.comp
+#print axioms Iut.SourceModelFrobenioid.Carrier.comp_rationalFunction
+#print axioms Iut.SourceModelFrobenioid.Carrier.structureFunctor
+#print axioms Iut.SourceModelFrobenioid.Carrier.grothendieck_add_denominator
+#print axioms Iut.SourceModelFrobenioid.Carrier.commonLower_add_left
+#print axioms Iut.SourceModelFrobenioid.Carrier.commonLower_add_right
+#print axioms Iut.SourceModelFrobenioid.Carrier.localizationRepresentative
+#print axioms Iut.SourceModelFrobenioid.Carrier.commonPreSteps
+#print axioms Iut.SourceModelFrobenioid.Carrier.pullbackArrow_isPullback
+#print axioms Iut.SourceModelFrobenioid.Carrier.pullbackSliceProjection_bijective
+#print axioms Iut.SourceModelFrobenioid.Carrier.pullbackBaseSlices
+#print axioms Iut.SourceModelFrobenioid.Carrier.value_eq_zeroObject
+#print axioms Iut.SourceModelFrobenioid.Carrier.isConnected
+#print axioms Iut.SourceModelFrobenioid.Carrier.epi
+#print axioms Iut.SourceModelFrobenioid.Carrier.preFrobenioidPresentation
+#print axioms Iut.SourceModelFrobenioid.Carrier.inverseOfPreStepIsometric
+#print axioms Iut.SourceModelFrobenioid.Carrier.isIso_of_preStep_isometric
+#print axioms Iut.SourceModelFrobenioid.Carrier.isIsotropic
+#print axioms Iut.SourceModelFrobenioid.Carrier.isCoAngular
+#print axioms Iut.SourceModelFrobenioid.Carrier.isOfFrobeniusType_iff
+#print axioms Iut.SourceModelFrobenioid.Carrier.zeroFrobeniusTrivialization
+#print axioms Iut.SourceModelFrobenioid.Carrier.baseRepresented
+#print axioms Iut.SourceModelFrobenioid.Carrier.frobeniusDegreeWitness
+#print axioms Iut.SourceModelFrobenioid.Carrier.isotropicHull
+#print axioms Iut.SourceModelFrobenioid.Carrier.coAngular_comp
+#print axioms Iut.SourceModelFrobenioid.Carrier.baseIsoTransportEquiv
+#print axioms Iut.SourceModelFrobenioid.Carrier.baseIsoTransport_conjugates
+#print axioms Iut.SourceModelFrobenioid.Carrier.unitTransport
+#print axioms Iut.SourceModelFrobenioid.Carrier.unitTransport_unique
+#print axioms Iut.SourceModelFrobenioid.Carrier.unitTransport_dependsOnlyOnBase
+#print axioms Iut.SourceModelFrobenioid.Carrier.outgoingDivisorRepresentative
+#print axioms Iut.SourceModelFrobenioid.Carrier.outgoingDivisorOrderFullyFaithful
+#print axioms Iut.SourceModelFrobenioid.Carrier.outgoingDivisorRepresentative_unique
+#print axioms Iut.SourceModelFrobenioid.Carrier.incomingDivisor
+#print axioms Iut.SourceModelFrobenioid.Carrier.incomingDivisorRepresentative
+#print axioms Iut.SourceModelFrobenioid.Carrier.incomingDivisorOrderFullyFaithful
+#print axioms Iut.SourceModelFrobenioid.Carrier.incomingDivisorRepresentative_unique
+#print axioms Iut.SourceModelFrobenioid.Carrier.factorization
+#print axioms Iut.SourceModelFrobenioid.Carrier.isIso_linear_isometric
+#print axioms Iut.SourceModelFrobenioid.Carrier.pullback_linear_lbInvertible
+#print axioms Iut.SourceModelFrobenioid.Carrier.factorizationPullbackComparison
+#print axioms Iut.SourceModelFrobenioid.Carrier.factorizationFrobeniusComparison
+#print axioms Iut.SourceModelFrobenioid.Carrier.factorizationIso
+#print axioms Iut.SourceModelFrobenioid.Carrier.factorizationIso_unique
+#print axioms Iut.SourceModelFrobenioid.Carrier.preStep_mono
+#print axioms Iut.SourceModelFrobenioid.Carrier.preStep_coAngularThenIsometric
+#print axioms Iut.SourceModelFrobenioid.Carrier.preStep_isometricThenCoAngular
+#print axioms Iut.SourceModelFrobenioid.Carrier.preStepFactorizationIso
+#print axioms Iut.SourceModelFrobenioid.Carrier.preStepFactorizationIso_unique
+#print axioms Iut.SourceModelFrobenioid.Carrier.faithfulUnitRationalFunction
+#print axioms Iut.SourceModelFrobenioid.Carrier.faithfulUnit
+#print axioms Iut.SourceModelFrobenioid.Carrier.faithfulUpToUnits
+#print axioms Iut.SourceModelFrobenioid.Carrier.frobenioidAxioms
+#print axioms Iut.SourceModelFrobenioid.Carrier.frobenioidPresentation
+#print axioms Iut.SourceModelFrobenioid.Carrier.linearEndomorphismPullbackHom
+#print axioms Iut.SourceModelFrobenioid.Carrier.rationalMonoidTransport
+#print axioms Iut.SourceModelFrobenioid.Carrier.zeroBaseArrow_isPullback
+#print axioms Iut.SourceModelFrobenioid.Carrier.zeroFrobeniusNaturalTransformation
+#print axioms Iut.PreFrobenioid.IsPreModelType.isIsotropic
+#print axioms Iut.PreFrobenioid.baseFrobeniusPair_not_sufficient
+#print axioms Iut.SourceModelFrobenioid.Carrier.isPreModelType
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.inclusionFunctor_faithful
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.inclusionFunctor_map_divisorClass
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.inclusion_map_isIso_of_preStep
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.isConnected
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.epi
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.rationalFunctionEquiv
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.rationalFunctionEndomorphism_divisorClass
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.isFrobeniusNormalizedType
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.isModelTypeForConcreteBirationalization
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.pullbackBaseSlices
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.frobeniusDegreeWitness
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.unitTransport
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.factorizationIso
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.faithfulUpToUnits
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.frobenioidAxioms
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.frobenioidPresentation
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.pullbackBaseSlices
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.frobeniusDegreeWitness
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.unitTransport
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.factorizationIso
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.faithfulUpToUnits
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.frobenioidAxioms
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.frobenioidPresentation
+#print axioms Iut.SourceModelFrobenioid.Carrier.CoAngularPreStepOver.commonRefinement
+#print axioms Iut.SourceModelFrobenioid.Carrier.CoAngularPreStepOver.colimitComparison_surjective
+#print axioms Iut.SourceModelFrobenioid.Carrier.CoAngularPreStepOver.colimitComparison_injective
+#print axioms Iut.SourceModelFrobenioid.Carrier.CoAngularPreStepOver.colimitComparisonEquiv
+#print axioms Iut.SourceModelFrobenioid.Carrier.CoAngularPreStepOver.compositionSquare
+#print axioms Iut.SourceModelFrobenioid.Carrier.CoAngularPreStepOver.roofValue_compositeRoof
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.composition_on_roof_iota
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.localizationFunctor_faithful
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.localizationFunctor_map_isIso_of_preStep
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.comparisonEquivalence
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.isFrobeniusNormalizedType
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.isGroupLikeType
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.isConnected
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.epi
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.preFrobenioidPresentation
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.rationalFunctionEquiv
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.linearBaseIdentityEndomorphism_isIso
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.rationalFunctionEndomorphism_groupifiedDivisorClass
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.isModelTypeForColimitBirationalization
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.linearEndomorphismPullback_conjugates
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.rationalMonoidTransport
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.zeroIsotropicLinearFunctor
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.rationalMonoidFunctor
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.rationalFunctionNatIso
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.rationalFunctionNatIso_divisor_compatible
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.linearEndomorphismUnit
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.rationalUnitEquiv
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.rationalUnitFunctor
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.rationalUnitNatIso
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.rationalUnitNatIso_divisor_compatible
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.isIso_iff_isPreStep
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.isIsotropic
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.isPullback_iff_isLinear
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.isBaseIdentity_iff_nonempty_baseIdentityRoof
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.isIso_iff_isPreStep
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.isIsotropic
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.isPullback_iff_isLinear
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.localization_map_isIso_iff_coAngularPreStep
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.localization_map_isPullback_iff
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.localization_map_isPreStep_iff_isPreStep
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.localization_map_isCoAngular_iff_isCoAngular
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.localization_map_isBaseIso_iff_isBaseIso
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.localization_map_frobeniusDegree_eq_iff
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.localization_map_isOfFrobeniusType_iff
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.localization_map_isIsometric
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.localization_obj_isIsotropic_iff
+#print axioms Iut.SourceModelFrobenioid.GroupifiedElementaryFrobenioid.inclusion_faithful
+#print axioms Iut.SourceModelFrobenioid.BirationalObject.groupifiedDivisorFunctor_factorization
+#print axioms Iut.SourceModelFrobenioid.Carrier.groupifiedStructureComparison
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.groupifiedDivisorFunctor_factorization
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.birationalDivisorHom_surjective
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.birationalDivisorHom_eq_one_iff_sourceUnitImage
+#print axioms
+  Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.birationalDivisorSubfunctor_unique
+#print axioms Iut.SourceMLFGaloisTMPair.CompatibleRootSystem.ofModel
+#print axioms Iut.SourceMLFGaloisTMPair.CompatibleRootSystem.quotientUnit_exists
+#print axioms Iut.SourceMLFGaloisTMPair.KummerRootRealization.ofRootSystem
+#print axioms Iut.SourceMLFCyclotome.rationalCircleToComplexTorsion_bijective
+#print axioms Iut.SourceMLFCyclotome.torsionUnitsMap_bijective
+#print axioms Iut.SourceMLFCyclotome.rationalCircleMulEquivAlgebraicClosureUnitsTorsion
+#print axioms Iut.SourceMLFIntegralMonoid.torsionToAlgebraicClosureTorsion_bijective
+#print axioms Iut.SourceMLFIntegralMonoid.torsionEquivAlgebraicClosureTorsion
+#print axioms Iut.SourceMLFModelTMStructure.canonical
+#print axioms Iut.SourceMLFModelTMPair.monoAnalytic
+#print axioms Iut.SourceMLFModelTMPair.monoAnalytic_augmentation_apply
+#print axioms Iut.SourceMLFGaloisTMPair.monoAnalytic
+#print axioms Iut.SourceMLFGaloisTMPair.monoAnalytic_augmentation_apply
+#print axioms Iut.EtaleTheta.thetaCenter_le_center
+#print axioms Iut.EtaleTheta.thetaCenter_isMulCommutative
+#print axioms Iut.EtaleTheta.lDeltaTheta_le_thetaCenter
+#print axioms Iut.EtaleTheta.lDeltaTheta_le_center
+#print axioms Iut.EtaleTheta.lDeltaTheta_normal
+#print axioms Iut.EtaleTheta.lDeltaThetaProjection_ker
+#print axioms Iut.EtaleTheta.lDeltaThetaProjection_surjective
+#print axioms Iut.EtaleTheta.lDeltaThetaSubquotientEquiv
+#print axioms
+  Iut.EtaleTheta.ProfiniteLowerCentralTopology.thetaCommutatorKernel_isClosed
+#print axioms
+  Iut.EtaleTheta.ProfiniteLowerCentralTopology.derivedSubgroup_isClosed
+#print axioms
+  Iut.EtaleTheta.ProfiniteLowerCentralTopology.lPowerKernel_isClosed
+#print axioms
+  Iut.EtaleTheta.ProfiniteLowerCentralTopology.ellipticLPowerKernel_isClosed
+#print axioms
+  Iut.EtaleTheta.ProfiniteLowerCentralTopology.thetaQuotient_isSES
+#print axioms
+  Iut.EtaleTheta.ProfiniteLowerCentralTopology.ellipticAbelianization_isSES
+#print axioms
+  Iut.EtaleTheta.ProfiniteLowerCentralTopology.modLThetaQuotient_isSES
+#print axioms
+  Iut.EtaleTheta.ProfiniteLowerCentralTopology.modLEllipticAbelianization_isSES
+#print axioms
+  Iut.EtaleTheta.ProfiniteLowerCentralTopology.thetaCenter_isSES
+#print axioms
+  Iut.EtaleTheta.ProfiniteLowerCentralTopology.modLThetaProjection_ker_isClosed
+#print axioms
+  Iut.EtaleTheta.ProfiniteLowerCentralTopology.modLEllipticProjection_ker_isClosed
+#print axioms
+  Iut.EtaleTheta.ProfiniteLowerCentralTopology.lDeltaThetaSubquotientContinuousMulEquiv
+#print axioms Iut.SourceProfiniteSubquotient.canonical_denominator_isClosed
+#print axioms Iut.SourceProfiniteSubquotient.nonclosed_denominator_not_canonical
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardGeometricLDeltaThetaMulEquiv
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardArithmeticLDeltaThetaDenominator_normal
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardGeometricToArithmeticLDeltaThetaMulEquiv
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardArithmeticLDeltaThetaMulEquiv
+#print axioms
+  Iut.GlobalLTorsionCoverInput.arithmeticThetaQuotient_isOpenQuotientMap
+#print axioms
+  Iut.GlobalLTorsionCoverInput.arithmeticEllipticQuotient_isOpenQuotientMap
+#print axioms
+  Iut.GlobalLTorsionCoverInput.arithmeticThetaQuotientExact_isSES
+#print axioms
+  Iut.GlobalLTorsionCoverInput.arithmeticEllipticQuotientExact_isSES
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardGeometricToArithmeticLDeltaThetaMulEquiv_projection
+#print axioms
+  Iut.SourceSemiGraph.isClosed_iff_verticialCardinality_eq_two
+#print axioms
+  Iut.SourceSemiGraph.Hom.isProper_iff_preserves_verticialCardinality
+#print axioms Iut.SourceSemiGraph.Sub.coincidence_eq_some_iff
+#print axioms Iut.SourceSemiGraph.compactification_isGraph
+#print axioms Iut.SourceSemiGraph.Hom.compactificationMap
+#print axioms
+  Iut.SourceSemiGraph.Action.branchStabilizer_le_edgeStabilizer
+#print axioms
+  Iut.SourceSemiGraph.Action.branchStabilizer_le_vertexStabilizer
+#print axioms Iut.SourceSemiGraph.Action.actIncidentBranch_bijective
+#print axioms
+  Iut.SourceCofilteredFiniteActionSystem.mem_sectionStabilizer_iff_forall_coordinate
+#print axioms
+  Iut.SourceCofilteredFiniteActionSystem.sectionStabilizer_eq_iInf_coordinateStabilizer
+#print axioms Iut.continuous_mapAut_whiskeringLeft
+#print axioms Iut.continuous_conjAut
+#print axioms Iut.continuousAction_preGaloisCategory
+#print axioms Iut.continuousAction_fiberFunctor
+#print axioms Iut.continuousAction_isFundamentalGroup
+#print axioms Iut.continuousActionEtaleFundamentalGroup
+#print axioms Iut.continuousActionPointedHom_fundamentalGroupHom
+#print axioms Iut.EtaleFundamentalGroup.coverActionEquivalence
+#print axioms Iut.SourceConnectedCoveringCategory.connected_iff_pretransitive
+#print axioms Iut.SourceActionKernelQuotient.connectedAdjunction
+#print axioms Iut.SourceConnectedTemperoid.connected_iff_nonempty_pretransitive
+#print axioms Iut.SourceConnectedTemperoid.hom_surjective
+#print axioms Iut.SourceTemperoidAction.finiteInclusion
+#print axioms Iut.SourceTemperoidAction.finiteInclusionFullyFaithful
+#print axioms Iut.SourceTemperoidKernelQuotient.connectedAdjunction
+#print axioms Iut.SourceTemperoidKernelQuotient.connectedRestrictionFullyFaithful
+#print axioms Iut.SourceTemperoidAssociatedQuotient.continuous_localSMul
+#print axioms Iut.SourceTemperoidAssociatedQuotient.action
+#print axioms Iut.SourceTemperoidAssociatedQuotient.functor
+#print axioms Iut.SourceTemperoidAssociatedQuotient.sourceIsoOfHomCommutes
+#print axioms Iut.SourceTemperoidAssociatedQuotient.baseInsertionEquiv
+#print axioms Iut.SourceTemperoidAssociatedQuotient.functorFaithful
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.covObject
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.covObject_isTempered
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.functor
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.IsPointConnected
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.reachable_of_same_component
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.reachable_of_coverAdjacent
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.isPointConnected_of_coverSemiGraph_isConnected
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.source_isConnected_of_bijective_hom
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceSemiGraphUniversalCover.semiGraphCover_isConnected
+#print axioms Iut.SourceFiniteLevelUniversalCover.coverSemiGraph_isConnected
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.covObject_isPointConnected
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.map_mk_of_isPointConnected
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.auxiliaryMap_smul_of_isPointConnected
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.associatedTemperedFunctor
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.rootVertexDeckAction_isCancel
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.rootVertexDeckAction_isPretransitive
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.rootAssociatedCarrierEquiv
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.recoverAuxiliaryFunction
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.recoverAuxiliaryFunction_map
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.recoverAuxiliaryMap
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.associatedTemperedFunctor_map_recoverAuxiliaryMap
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.associatedTemperedFunctorFull
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.associatedTemperedFunctorFaithful
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.covObject_isPointConnected_iff_pretransitive
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.vertexDeckAction_isPretransitive
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.homEvaluationIso
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.finiteLevelClassificationOfSubcover
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.connectedTemperedClassification
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.componentCovObject_isGeometricallyConnected
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.componentCovObject_isTempered
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.componentwiseTemperedClassification
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.Coproduct.covObject_isTempered
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.componentDecompositionIso
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.componentwiseAssociatedQuotientClassification
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.AssociatedQuotient.globallyTemperedClassification
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.refinementSplitsUniversalCover
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.refinementBranchEdgeFamilyIso_naturality
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.explicitUniversalCoverRefinementHom
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.universalCoverRefinementHom_root
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.universalCoverRefinementHom_eq_explicit
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.universalCoverRefinementHom_deck
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.geometricUniversalCoverFunctor
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.UniversalVertex.mapHom_surjective_of_locallySurjective
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.baseIncidenceProjection_isLocallySurjective
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.exists_kernelAutomorphism_of_fiber_eq
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.refinementIncidenceMap_kernel_transitive
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.incidenceNeighbor_stabilizer_transitive
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.refinementIncidenceMap_isLocallySurjective
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.refinementTreeMap_surjective
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.deckTransition_surjective
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.literalTemperedPresentation_projection_surjective
+#print axioms
+  Iut.ProfiniteFundamentalExactSequence.connectedBaseEmbeddingFullyFaithful
+#print axioms
+  Iut.SourceThetaFiniteLocalCoreData.connectedBaseFieldAdjunction
+#print axioms
+  Iut.SourceInitialThetaCore.goodFiniteBaseFieldEmbeddingFullyFaithful
+#print axioms
+  Iut.SourceConnectedFiniteEtaleHom.ofProfiniteOpenEmbedding_fundamentalGroupHom
+#print axioms Iut.SourcePaperInducedSet.equivStandard
+#print axioms Iut.SourcePaperInducedSet.toStandard_smul
+#print axioms Iut.sourceInducedSet_stabilizer_isOpen
+#print axioms Iut.sourceInducedAction
+#print axioms Iut.sourcePaperInducedAction
+#print axioms Iut.sourcePaperInducedActionIso
+#print axioms Iut.sourceOpenCosetSliceEquivalence
+#print axioms Iut.sourceSliceForgetAdjProduct
+#print axioms Iut.sourceDependentSection_continuous
+#print axioms Iut.sourceSliceDependentSectionHomEquiv
+#print axioms Iut.sourceSliceProductAdjDependentSection
+#print axioms Iut.sourceSliceProduct_preservesFiniteColimits
+#print axioms Iut.sourceSliceComponentsGlueNatIso
+#print axioms Iut.sourceSliceComponentsSplitNatIso
+#print axioms Iut.sourceSliceComponentProductEquivalence
+#print axioms Iut.sourceActionComponentCosetActionIso
+#print axioms Iut.sourceActionComponentConnectedFactorEquivalence
+#print axioms Iut.sourceSliceAnabelioidEquivalence
+#print axioms Iut.sourceActionComponentEtaleFundamentalGroup
+#print axioms Iut.sourceInductionRestrictionAdjunction
+#print axioms Iut.sourceOpenSubgroupRestrictionSliceIso
+#print axioms Iut.sourceOpenSubgroupFiniteEtaleFactorization
+#print axioms
+  Iut.SourcePointedAnabelioidHom.fundamentalGroupHom_comp
+#print axioms
+  Iut.SourcePointedAnabelioidHom.fundamentalGroupHom_identity
+#print axioms
+  Iut.SourcePointedAnabelioidHom.TwoIso.fundamentalGroupHom_eq_conjugate
+#print axioms
+  Iut.SourcePointedAnabelioidHom.fundamentalGroupImageContinuousMulEquiv
+#print axioms
+  Iut.SourcePointedAnabelioidEquivalence.fundamentalGroupHom_bijective
+#print axioms
+  Iut.SourcePointedAnabelioidEquivalence.fundamentalGroupContinuousMulEquiv
+#print axioms Iut.SourceFiberFunctorComparison.fiberFunctorIso
+#print axioms Iut.SourceAnabelioidHom.fiberIso
+#print axioms
+  Iut.SourceAnabelioidHom.fundamentalGroupHom_innerConjugate_of_fiberIso
+#print axioms Iut.SourceAnabelioidHom.ofContinuousHom
+#print axioms Iut.SourceAnabelioidHom.restrictionConjugatorEquiv
+#print axioms Iut.SourceAnabelioidHom.grothendieckCategoricalEquivalence
+#print axioms
+  Iut.SourceAnabelioidHom.categoricallyEquivalent_restriction_fundamentalGroupHom
+#print axioms Iut.SourceAnabelioidHom.grothendieckCorrespondence
+#print axioms
+  Iut.SourceAnabelioidHom.grothendieckCorrespondence_symm_mk
+#print axioms
+  Iut.SourcePointedAnabelioidHom.BasepointTwoIso.fundamentalGroupHom_eq
+#print axioms
+  Iut.SourceAnabelioidHom.basepointTwoIso_restriction_fundamentalGroupHom
+#print axioms Iut.SourceAnabelioidHom.pointedGrothendieckCorrespondence
+#print axioms Iut.SourceAnabelioidHom.morphismClassToOuterHom_identity
+#print axioms Iut.SourceAnabelioidHom.morphismClassToOuterHom_comp
+#print axioms
+  Iut.sourceSlice_equivalentToGalois_implies_pretransitive
+#print axioms
+  Iut.SourceFiniteEtaleFunctorFactorization.connectedObjectCosetActionIso
+#print axioms
+  Iut.SourceFiniteEtaleFunctorFactorization.connectedSourcePullbackIsoRestriction
+#print axioms
+  Iut.SourceEquivalenceBasepoint.etaleFundamentalGroup
+#print axioms
+  Iut.SourceFiniteEtaleFunctorFactorization.connectedPointedHom_fundamentalGroupHom_eq
+#print axioms
+  Iut.SourceFiniteEtaleFunctorFactorization.connectedObjectProfiniteInclusion_isOpenEmbedding
+#print axioms
+  Iut.SourceFiniteEtaleFunctorFactorization.connectedFiniteEtaleHom
+#print axioms
+  Iut.SourceFiniteEtaleFunctorFactorization.connectedFiniteEtaleHom_fundamentalGroupHom_eq
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.IncidentBranch.pullback
+#print axioms Iut.SourceSemiGraph.IsConnected.edge_abuts_of_nonempty
+#print axioms Iut.SourceSemiGraph.IsConnected.uniqueEdge
+#print axioms Iut.SourceSemiGraph.IsConnected.edge_isIsolated_of_isEmpty
+#print axioms Iut.SourceSemiGraphOfAnabelioids.GluedObject.Hom.id
+#print axioms Iut.SourceSemiGraphOfAnabelioids.GluedObject.Hom.comp
+#print axioms Iut.SourcePointedAnabelioidHom.pullbackFaithful
+#print axioms Iut.SourcePointedAnabelioidHom.pullbackReflectsIsomorphisms
+#print axioms Iut.SourcePointedAnabelioidHom.pullbackPreservesEpimorphisms
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.componentwiseInverse
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.isIso_app_of_path
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.evaluationReflectsIsomorphisms
+#print axioms Iut.SourceSemiGraphOfAnabelioids.GluedObject.evaluation
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.evaluationPreservesFiniteLimits
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.evaluationPreservesFiniteCoproducts
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.evaluationPreservesFiniteGroupQuotient
+#print axioms Iut.SourceSemiGraphOfAnabelioids.GluedObject.branchComparison
+#print axioms Iut.SourceSemiGraphOfAnabelioids.GluedObject.limitObject
+#print axioms Iut.SourceSemiGraphOfAnabelioids.GluedObject.limitConeIsLimit
+#print axioms Iut.SourceSemiGraphOfAnabelioids.GluedObject.colimitObject
+#print axioms Iut.SourceSemiGraphOfAnabelioids.GluedObject.colimitCoconeIsColimit
+#print axioms Iut.SourceSemiGraphOfAnabelioids.GluedObject.hasFiniteCoproducts
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.hasQuotientsByFiniteGroupsOfFinite
+#print axioms CategoryTheory.PreGaloisCategory.complementComparisonIso
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.complementObject
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.complementCofanIsColimit
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.preGaloisCategory
+#print axioms CategoryTheory.PreGaloisCategory.imageFactorization
+#print axioms CategoryTheory.PreGaloisCategory.imageComparisonIso
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.imageObject
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.image_fac
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.complementFiberIsEmptyOfEpi
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.evaluationPreservesEpimorphisms
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.rootFiberFunctor
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.galoisCategory
+#print axioms Iut.SourceSemiGraphOfAnabelioids.totalAnabelioid
+#print axioms Iut.SourceSemiGraphOfAnabelioids.totalAnabelioid_eq_glued
+#print axioms Iut.SourceSemiGraphOfAnabelioids.totalAnabelioid_eq_uniqueEdge
+#print axioms Iut.EtaleFundamentalGroup.fiberComponentEquiv
+#print axioms Iut.EtaleFundamentalGroup.fiberComponentMap
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.coverComponentMap
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.finiteEtaleCoverProjection
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.finiteEtaleCoverProjection_isProper
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.finiteEtaleCoverVertexFiberFinite
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.finiteEtaleCoverEdgeFiberFinite
+#print axioms Iut.EtaleFundamentalGroup.fiberComponentHomMap_comp_apply
+#print axioms Iut.EtaleFundamentalGroup.fiberComponentMap_naturality
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.coverComponentMap_naturality
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.finiteEtaleCoverTransition
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.finiteEtaleCoverVertexMap_comp
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.finiteEtaleCoverEdgeMap_comp
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.finiteEtaleCoverTransition_branch_over_base
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.finiteEtaleCoverTransition_isProper
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.finiteEtaleCoverSemiGraph_isConnected_of_isConnected
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.semiGraph_connected
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.exists_galoisLevel_over_connected
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.fiberCosetEquiv
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.automorphismAction
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.vertexAction_transitive_on_projection_fiber
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.edgeAction_transitive_on_projection_fiber
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.automorphismTransition_surjective
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.transition_branch_automorphism
+#print axioms
+  Iut.EtaleFundamentalGroup.fiberComponentSubsingletonOfIsConnected
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.isolatedFiniteEtaleCoverProjection
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.isolatedFiniteEtaleCoverProjection_isProper
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.isolatedFiniteEtaleCoverSemiGraph_isConnected
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.IsolatedGaloisLevel.semiGraph_connected
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.IsolatedGaloisLevel.exists_galoisLevel_over_connected
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.IsolatedGaloisLevel.fiberCosetEquiv
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.IsolatedGaloisLevel.automorphismAction
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.IsolatedGaloisLevel.edgeAction_transitive_on_projection_fiber
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.IsolatedGaloisLevel.automorphismTransition_surjective
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.IsolatedGaloisLevel.transition_branch_automorphism
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.isolatedFiniteEtaleCoverTransition
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.isolatedFiniteEtaleCoverTransition_edgeMap_comp
+#print axioms
+  Iut.SourcePointedSemiGraphOfAnabelioids.vertexFundamentalGroupImageEquiv
+#print axioms
+  Iut.SourcePointedSemiGraphOfAnabelioids.edgeFundamentalGroupImageEquiv
+#print axioms
+  Iut.SourcePointedSemiGraphOfAnabelioids.subgroupDiagram
+#print axioms
+  Iut.SourcePointedSemiGraphOfAnabelioids.subgroupDiagram_vertexGroup_isClosed
+#print axioms
+  Iut.SourcePointedSemiGraphOfAnabelioids.subgroupDiagram_edgeGroup_isClosed
+#print axioms Iut.SourceSemiGraphSubgroupDiagram.branchCosetMap_smul
+#print axioms Iut.SourceSemiGraphSubgroupDiagram.cosetAction
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.stabilizer_leftCoset_eq_conjugate
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.cosetAction_vertexStabilizer_eq_conjugate
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.cosetAction_edgeStabilizer_eq_conjugate
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.cosetAction_branchStabilizer_eq_edgeStabilizer
+#print axioms Iut.SourceProfiniteCosetSystem.transition_equivariant
+#print axioms Iut.SourceProfiniteCosetSystem.iInf_levelSubgroup_eq
+#print axioms Iut.SourceProfiniteCosetSystem.sectionFiber_isClosed
+#print axioms Iut.SourceProfiniteCosetSystem.sectionFiber_directed
+#print axioms Iut.SourceProfiniteCosetSystem.cosetSection_surjective
+#print axioms Iut.SourceProfiniteCosetSystem.cosetSection_injective
+#print axioms Iut.SourceProfiniteCosetSystem.cosetSectionEquiv
+#print axioms
+  Iut.SourceProfiniteCosetSystem.sectionStabilizer_baseSection_eq
+#print axioms
+  Iut.SourceProfiniteCosetSystem.sectionStabilizer_cosetSection_eq_conjugate
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.profiniteVertexSection_stabilizer_eq
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.profiniteEdgeSection_stabilizer_eq
+#print axioms Iut.SourceSemiGraphSubgroupDiagram.profiniteVertexSectionEquiv
+#print axioms Iut.SourceSemiGraphSubgroupDiagram.profiniteEdgeSectionEquiv
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevel_vertexCoset_finite
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevel_edgeCoset_finite
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevel_branchCosetMap_transition
+#print axioms Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelTransition
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelVertexMap_comp
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelEdgeMap_comp
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelVertexMap_surjective
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelEdgeMap_surjective
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelVertexMap_action
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelEdgeMap_action
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelTransition_totalBranchMap_comp
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelTransition_totalBranchMap_surjective
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelTransition_totalBranchMap_action
+#print axioms
+  Iut.SourceSemiGraphSubgroupDiagram.normalOpenLevelTransition_isProper
+#print axioms Iut.SourceGraphAction.dist_image
+#print axioms Iut.SourceFiniteTree.exists_degree_ne_one
+#print axioms Iut.SourceFiniteTree.induce_degree_ne_one_connected
+#print axioms Iut.SourceGraphAction.exists_invariant_subtree_card_le_two
+#print axioms Iut.SourceGraphAction.finite_fixesVertexOrEdge
+#print axioms Iut.SourceGraphAction.fixesVertexOrEdge
+#print axioms
+  Iut.SourceSemiGraphTree.Action.fixedOpenEdge_of_fixed_boundary
+#print axioms Iut.SourceSemiGraphTree.Action.fixesVertexOrEdge
+#print axioms
+  Iut.SourceSemiGraphTree.Action.fixesSubjoint_of_three_fixed_vertices
+#print axioms Iut.SourceSemiGraphTree.edge_abuts_vertex
+#print axioms Iut.SourceSemiGraphTree.Action.OverBase.not_swap_edge
+#print axioms
+  Iut.SourceSemiGraphTree.Action.OverBase.fixedVertex_of_fixesVertexOrEdge
+#print axioms Iut.SourceCompactSemiGraphAction.deckMap_range_finite
+#print axioms Iut.SourceCompactSemiGraphAction.fixesVertexOrEdge
+#print axioms Iut.SourceCompactSemiGraphAction.fixesVertex
+#print axioms
+  Iut.SourceCompactSemiGraphAction.fixesSubjoint_of_three_fixed_vertices
+#print axioms
+  Iut.SourceCofilteredFixedSubjointSystem.exists_compatible_fixedSubjoints
+#print axioms
+  Iut.SourceEstrangedIncidentBranchSystem.subgroup_eq_bot_of_le_branch_intersection
+#print axioms
+  Iut.SourceEstrangedIncidentBranchSystem.not_le_two_branches_of_ne_bot
+#print axioms
+  Iut.SourceSemiGraphTree.Action.adjacent_of_fixedVertexSet_eq_pair
+#print axioms
+  Iut.SourceCofilteredFixedVertexSystem.exists_compatible_fixedVertices
+#print axioms
+  Iut.SourceCofilteredFixedVertexSystem.three_compatible_fixedVertices_not_pairwise_distinct
+#print axioms Iut.SourceGraphAction.fixes_path_pointwise
+#print axioms Iut.SourceGraphAction.subgroup_fixes_geodesic_pointwise
+#print axioms
+  Iut.SourceIUTIProposition24PartI.CuspidalInertia.conjugate_le_arithmeticTempered_iff
+#print axioms
+  Iut.SourceIUTIProposition24PartI.CuspidalInertia.conjugate_classification
+#print axioms
+  Iut.SourceIUTIProposition24PartI.CuspidalInertia.inertia_le_conjugate_arithmeticTempered_iff
+#print axioms Iut.SourceTopologicalSubquotient.comapToOriginal_injective
+#print axioms
+  Iut.SourceTopologicalSubquotient.comapToOriginal_surjective_of_cuspidalInertia
+#print axioms
+  Iut.SourceIUTIICorollary25CuspidalRestriction.restriction_surjective
+#print axioms
+  Iut.SourceIUTIICorollary25CuspidalRestriction.restrictionMulEquiv
+#print axioms
+  Iut.SourceIUTIICorollary25CuspidalRestriction.restrictionMulEquiv_projection
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardThetaRootArithmeticSubgroup_isOpen
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardThetaRootContinuousMulEquiv
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardModLThetaCenterNumerator_eq_center_preimage
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardModLThetaCenterProjection_ker
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardModLThetaCenterProjection_surjective
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardModLThetaCenterContinuousMulEquivCenterImage
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardModLThetaCenterContinuousMulEquivCenterImage_projection
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardThetaCenterImageHom_bijective
+#print axioms
+  Iut.GlobalLTorsionCoverInput.standardModLThetaCenterMulEquiv
+#print axioms Iut.SourceMLFGaloisComparison.continuous_autCongr
+#print axioms Iut.SourceMLFGaloisComparison.continuousAutCongr
+#print axioms Iut.SourceMLFGaloisComparison.separableClosureEquivAlgebraicClosure
+#print axioms Iut.SourceMLFGaloisComparison.absoluteGaloisEquiv
+#print axioms Iut.SourceMLFGaloisTMPair.monoAnalyticSeparable
+#print axioms
+  Iut.ProfiniteFundamentalExactSequence.localGalois_denominator_eq_geometric_range_comap
+#print axioms
+  Iut.ProfiniteFundamentalExactSequence.localGaloisContinuousMulEquiv
+#print axioms
+  Iut.ProfiniteFundamentalExactSequence.localGaloisContinuousMulEquiv_projection
+#print axioms Iut.SourceMLFGaloisTMPair.pullbackActingGroup
+#print axioms Iut.SourceThetaFiniteLocalCoreData.mlfGaloisTMPair
+#print axioms
+  Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisContinuousMulEquiv
+#print axioms Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisTMPair_action
+#print axioms
+  Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisCoefficientAction_act
+#print axioms Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisH1Restriction
+#print axioms
+  Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisRestrictedMonoidKummer_commutes
+#print axioms
+  Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisRestrictedUnitKummer_commutes
+#print axioms Iut.SourceThetaFiniteLocalCoreData.unitKummer_injective
+#print axioms Iut.SourceThetaFiniteLocalCoreData.xLocalGaloisUnitKummer_injective
+#print axioms Iut.SourceMLFGaloisTMPair.CompatibleRootComparison.ofModel
+#print axioms Iut.SourceMLFGaloisTMPair.KummerRootTheory.chosen_rootSystem
+#print axioms Iut.SourceMLFGaloisTMPair.KummerRootRealization.ratioCyclotome_mul_group
+#print axioms Iut.SourceMLFGaloisTMPair.KummerRootRealization.ratioCyclotome_continuous
+#print axioms Iut.SourceMLFGaloisTMPair.CompatibleRootComparison.germ_eq
+#print axioms Iut.SourceMLFGaloisTMPair.KummerRootTheory.kummerValue_mul
+#print axioms Iut.SourceMLFGaloisTMPair.LocalKummerRootTheory.local_toGerm_eq_global
+#print axioms Iut.SourceMLFGaloisTMPair.KummerRootTheory.canonicalKummerMap
+#print axioms Iut.SourceMLFGaloisTMPair.LocalKummerRootTheory.canonicalKummerMap
+#print axioms Iut.SourceMLFGaloisTMPair.LocalKummerRootTheory.canonicalKummerMap_toGerm
+#print axioms Iut.SourceMLFGaloisTMPair.augmentation_image_isOpen
+#print axioms Iut.SourceMLFGaloisTMPair.fixedFieldOfOpenSubgroup_finiteDimensional
+#print axioms Iut.SourceMLFGaloisTMPair.modelGroupificationEquiv_action
+#print axioms Iut.SourceIUTIIUnitKummerEmbedding.fixed_roots_of_unitKummer_eq_one
+#print axioms Iut.SourceIUTIIUnitKummerEmbedding.unit_eq_one_of_unitKummer_eq_one
+#print axioms Iut.SourceIUTIIUnitKummerEmbedding.unitKummer_injective
+#print axioms Iut.SourceIUTIIUnitKummerEmbedding.canonical_monoidKummer
+#print axioms Iut.SourceIUTIIUnitKummerEmbedding.canonical_unitKummer
+#print axioms Iut.SourceIUTIIUnitKummerEmbedding.canonical_unitKummer_injective
+#print axioms Iut.SourceIUTIIUnitKummerEmbedding.monoAnalytic_unitKummer_injective
+#print axioms Iut.SourceIUTIIUnitKummerEmbedding.torsionUnitImage_eq_constant_torsion
+#print axioms Iut.sourceConstantTorsion_unitKummer
+#print axioms Iut.SourceIUTIICorollary112PointedRestriction.detects_constant_torsion
+#print axioms Iut.SourceIUTIICorollary112PointedRestriction.splittingUpToTorsion
+#print axioms Iut.SourceIUTIIValueProfile.natCard_eq_twoEll_pow_lStar
+#print axioms Iut.SourceIUTIIMultiplicativeTorsionAction.actionMap_injective
+#print axioms Iut.SourceIUTIIHodgeArakelovThetaPilot.valueProfiles_natCard
+#print axioms Iut.SourceIUTIIHodgeArakelovThetaPilot.zeroTheta_carrier_subset_torsion
+#print axioms Iut.IUTIIAbsoluteThetaLabel.card_eq_lPlusMinus
+#print axioms Iut.SourceIndTopologicalLocalFieldPresentation.transition_id
+#print axioms Iut.SourceIndTopologicalLocalFieldPresentation.transition_comp
+#print axioms Iut.SourceSelectedFinitePlace.toSelected
+#print axioms Iut.SourceSelectedInfinitePlace.toSelected
+#print axioms Iut.SourceSelectedPlace.LogFieldCarrier
+
+namespace Iut.SourceFiniteLocalFieldStages
+
+#print axioms transitionLinearMap
+#print axioms transitionContinuousLinearMap
+#print axioms stageDiagram
+#print axioms moduleCocone
+#print axioms moduleIsColimit
+#print axioms stageField
+#print axioms module
+#print axioms fieldPresentation
+#print axioms toAlgebraicClosureLinearMap
+#print axioms toAlgebraicClosureLinearMap_injective
+#print axioms toAlgebraicClosureLinearMap_surjective
+#print axioms carrierEquivAlgebraicClosure
+#print axioms selectedCompletionEmbedding
+#print axioms continuous_selectedCompletionEmbedding
+#print axioms stage_fixingSubgroup_isOpen
+#print axioms stage_fixedField_fixingSubgroup
+#print axioms selectedCompletionBasis
+#print axioms selectedStageGenerators
+#print axioms selectedStage
+#print axioms selectedCompletionEmbedding_mem_selectedStage
+#print axioms stageEmbeddingUlift
+#print axioms carrierEquivLogFieldCarrier
+#print axioms localFieldRealization
+
+end Iut.SourceFiniteLocalFieldStages
+
+namespace Iut.SourceInfiniteLocalFieldStages
+
+#print axioms rationalPlace_isReal
+#print axioms rationalCompletionEquivReal
+#print axioms rationalCompletionEmbedding
+#print axioms continuous_rationalCompletionEmbedding
+#print axioms complexScalarTower
+#print axioms complexFiniteDimensional
+#print axioms stageField
+#print axioms stageDiagram
+#print axioms module
+#print axioms fieldPresentation
+#print axioms selectedCompletionEmbedding
+#print axioms continuous_selectedCompletionEmbedding
+#print axioms selectedCompletionEmbedding_injective
+#print axioms selectedBaseCompletionRingHom
+#print axioms continuous_selectedBaseCompletionRingHom
+#print axioms selectedCompletionEmbedding_algebraMap
+#print axioms selectedCompletion_finiteDimensional
+#print axioms selectedCompletion_isAlgebraicClosure
+#print axioms stageEmbeddingUlift
+#print axioms carrierEquivLogFieldCarrier
+#print axioms localFieldRealization
+
+end Iut.SourceInfiniteLocalFieldStages
+
+#print axioms Iut.SourceMonoAnalyticLogShell.fieldPresentation
+#print axioms Iut.SourceMonoAnalyticIntegralStructure.isClosed_logShellCarrier
+#print axioms Iut.SourceMonoAnalyticIntegralStructure.logShellCarrier_eq_lattice
+#print axioms Iut.SourceMonoAnalyticIntegralStructure.logShellCarrier_eq_unitBall
+#print axioms Iut.sourcePStar_pos
+#print axioms Iut.sourcePStar_ne_zero
+#print axioms Iut.SourceRationalPlace.residuePrime_prime
+#print axioms Iut.SourceNonarchimedeanLogShellDefinition.invariantLocalUnits_fixed
+#print axioms Iut.SourceNonarchimedeanLogShellDefinition.preLogShell_isCompact
+#print axioms Iut.SourceNonarchimedeanLogShellDefinition.Transport.preLogShell_image
+#print axioms Iut.SourceArchimedeanLogShellDefinition.lowerEndpoint_mem
+#print axioms Iut.SourceArchimedeanLogShellDefinition.upperEndpoint_mem
+#print axioms Iut.SourceArchimedeanLogShellDefinition.upperEndpoint_sub_lowerEndpoint
+#print axioms Iut.SourceArchimedeanLogShellDefinition.neg_mem_iff
+#print axioms Iut.SourceArchimedeanLogShellDefinition.rotationOrbit_eq_closedBall
+#print axioms Iut.SourceArchimedeanLogShellDefinition.complexExponential_isCoveringMap
+#print axioms Iut.SourceArchimedeanLogShellDefinition.complexExponential_eq_one_iff
+#print axioms Iut.SourceArchimedeanLogShellDefinition.rootQuotient_deckGroup_eq_rootsOfUnity
+#print axioms Iut.SourceArchimedeanLogShellDefinition.rootQuotientPowerLift_isQuotientMap
+#print axioms Iut.SourceArchimedeanLogShellDefinition.rootQuotientExponential_zero
+#print axioms Iut.SourceArchimedeanLogShellDefinition.rootQuotientHomeomorphUnits_exponential
+#print axioms Iut.SourceArchimedeanLogShellDefinition.rootQuotientExponential_isCoveringMap
+#print axioms Iut.SourceArchimedeanLogShellDefinition.rootQuotientExponential_eq_one_iff
+#print axioms Iut.SourceArchimedeanLogShellDefinition.rootQuotientExponential_eq_one_iff_mem_periodLattice
+#print axioms Iut.SourceArchimedeanLogShellDefinition.quotientLowerEndpoint_mem
+#print axioms Iut.SourceArchimedeanLogShellDefinition.quotientUpperEndpoint_mem
+#print axioms Iut.SourceArchimedeanLogShellDefinition.quotientUpperEndpoint_sub_lowerEndpoint
+#print axioms Iut.SourceArchimedeanLogShellDefinition.image_quotientFundamentalSegment
+#print axioms Iut.SourceArchimedeanLogShellDefinition.exponential_isCoveringMap
+#print axioms Iut.SourceArchimedeanLogShellDefinition.exponential_eq_one_iff
+#print axioms Iut.SourceArchimedeanLogShellDefinition.exponential_principalLog
+#print axioms Iut.SourceArchimedeanLogShellDefinition.principalLog_mem_unitBall
+#print axioms Iut.SourceArchimedeanLogShellDefinition.image_unitBall_eq_rotationOrbit
+#print axioms Iut.SourceAutHolomorphicSemiGerm.iInter_neighborhood_eq_unitCircle
+#print axioms Iut.SourceAutHolomorphicSemiGerm.exists_neighborhood_subset_of_mem
+#print axioms Iut.SourceAutHolomorphicSemiGerm.multiplication_holomorphicOn_levels
+#print axioms
+  Iut.SourceAutHolomorphicSemiGerm.multiplication_tendsto_unitNeighborhoodFilter
+#print axioms Iut.SourceAutHolomorphicSemiGerm.inversion_holomorphicAtLevel
+#print axioms
+  Iut.SourceAutHolomorphicSemiGerm.inversion_tendsto_unitNeighborhoodFilter
+#print axioms Iut.SourceAutHolomorphicSemiGerm.puncturedNeighborhood_eq_inner_union_outer
+#print axioms Iut.SourceAutHolomorphicSemiGerm.innerSide_eq_connectedComponentIn
+#print axioms Iut.SourceAutHolomorphicSemiGerm.outerSide_eq_connectedComponentIn
+#print axioms Iut.SourceAutHolomorphic.HasAmbientHolomorphicLift.comp
+#print axioms Iut.SourceAutHolomorphic.AutHolomorphic.restrict_mul
+#print axioms Iut.SourceAutHolomorphic.AutHolomorphic.restrict_inv
+#print axioms Iut.SourceAutHolomorphicSemiGerm.levelInclusion_hasAmbientHolomorphicLift
+#print axioms Iut.SourceAutHolomorphicSemiGerm.restrictToLevel_mul
+#print axioms Iut.SourceAutHolomorphicSemiGerm.restrictToLevel_inv
+#print axioms
+  Iut.SourceAutHolomorphicRigidity.Automorphism.exponentialLift_eq_exp_exponentCoefficient
+#print axioms Iut.SourceAutHolomorphicRigidity.Automorphism.exists_integer_exponent
+#print axioms Iut.SourceAutHolomorphicRigidity.Automorphism.exponent_eq_one_or_neg_one
+#print axioms
+  Iut.SourceAutHolomorphicRigidity.Automorphism.toAutHolomorphic_eq_identity
+#print axioms
+  Iut.SourceAutHolomorphicRigidity.Automorphism.ambientGerm_eq_identity
+#print axioms
+  Iut.SourceArchimedeanLogShellDefinition.semiGermSelectedSide_eq_connectedComponentIn
+#print axioms
+  Iut.SourceArchimedeanLogShellDefinition.semiGermNeighborhoodSystem_cofinal
+#print axioms Iut.SourceArchimedeanLogShellDefinition.semiGermMultiplication_tendsto
+#print axioms Iut.SourceArchimedeanLogShellDefinition.semiGermInversion_tendsto
+#print axioms
+  Iut.SourceArchimedeanLogShellDefinition.SemiGermGroupAutomorphism.rigid
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.sourceDefinition_residuePrime
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.transport_preLogShell
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.sourceLocalUnitsEquiv_id
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.sourceLocalUnitsEquiv_comp
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.transport_logShell
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.transport_measuredRegion
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.transport_logVolume
+
+#print axioms Iut.SourceMonoAnalyticTensorPacket.ind2CoordinateIndex_card
+#print axioms Iut.SourceMonoAnalyticTensorPacket.placeTupleIndex_card
+#print axioms Iut.SourcePacketFiniteFieldDecomposition.fieldSummandIndex_card
+#print axioms Iut.SourceMonoAnalyticTensorPacket.inverse_tprod_mem_distinguishedSubmodule
+#print axioms Iut.SourceTheorem311Ind1Action.ofProcessionFunctor_act_apply
+#print axioms Iut.CategoryProcession.MemberHom.componentSelf_comp
+#print axioms Iut.CategoryCapsule.InhabitedFullPolyMorphism.members_comp_surjective
+#print axioms Iut.CategoryCapsule.InhabitedFullPolyMorphism.pairwiseCompositeSet_eq_univ
+#print axioms Iut.CategoryCapsule.EmptyIntermediateRegression.pairwiseCompositeSet_ne_univ
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.factorTransport_comp
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.TensorTopology.reindexLinearEquiv_trans
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.packetMemberTransport_id
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.packetMemberTransport_comp
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.packetInd1Action
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.localInd1PacketAction
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.LocalConstruction.toLocalInd1Action
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.PresentationConstruction.toInd1Action
+#print axioms Iut.SourceDThetaBridgeCore.IsomorphismMember.processionObjectIso
+#print axioms Iut.SourceDThetaBridgeCore.IsomorphismMember.monoAnalyticProcessionMemberObjectIso
+#print axioms Iut.SourceLGPGaussianLogThetaLattice.verticalCoricityToCommon
+#print axioms Iut.SourceTheorem311Ind2SummandAction.factorAction_on_summand
+#print axioms Iut.SourceTheorem311Ind2SummandAction.packetAction_mul
+#print axioms Iut.SourceTheorem311LocalInd2Action.action_apply
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.ind2ActionAbove_mul
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.localInd2Action
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.LocalConstruction.toLocalInd2Action
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.factorTransport_on_summand
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.TensorTopology.congr_distinguishedSubmodule
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.tensorPacketKummerIso
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalPacketKummerIso
+#print axioms Iut.SourceTheorem311LocalData.processionLogVolume
+#print axioms Iut.SourceNormalizedLogVolume.PacketNormalization.valueOn_dilateRegion
+#print axioms Iut.SourceSelectedPlace.moduliLocalDegree
+#print axioms Iut.SourceSelectedPlace.moduliRationalLocalDegree
+#print axioms Iut.ThetaFinitePlace.completionNontriviallyNormedField
+#print axioms Iut.ThetaFinitePlace.completionSecondCountableTopology
+#print axioms Iut.ThetaFinitePlace.rationalCompletionLocallyCompactSpace
+#print axioms Iut.ThetaFinitePlace.underlyingPrime_comap_asIdeal
+#print axioms Iut.ThetaFinitePlace.rationalValuation_isEquiv_restriction
+#print axioms Iut.ThetaFinitePlace.rationalWithValMap_uniformContinuous
+#print axioms Iut.ThetaFinitePlace.rationalDenseRingHom
+#print axioms Iut.ThetaFinitePlace.continuous_rationalDenseRingHom
+#print axioms Iut.ThetaFinitePlace.completionRingHom
+#print axioms Iut.ThetaFinitePlace.continuous_completionRingHom
+#print axioms Iut.ThetaFinitePlace.completionRingHom_ratCast
+#print axioms Iut.ThetaFinitePlace.completionAlgebra
+#print axioms Iut.ThetaFinitePlace.completionContinuousSMul
+#print axioms Iut.ThetaFinitePlace.completionScalarTower
+#print axioms Iut.ThetaFinitePlace.finiteDimensional
+#print axioms Iut.ThetaFinitePlace.properSpace
+#print axioms Iut.SourceTopologicalLocalField.ofFinitePlace
+#print axioms Iut.SourceTopologicalLocalField.finitePlaceIntegerRing_mem_iff_norm_le_one
+#print axioms Iut.SourceTopologicalLocalField.finitePlaceIntegerRing_isCompact
+#print axioms Iut.SourceTopologicalLocalField.finitePlaceIntegerRing_isOpen
+#print axioms Iut.SourceNonarchimedeanLocalFieldIntegers.ofFinitePlace
+
+namespace Iut.SourceTopologicalLocalField.LocalDegreeTower
+
+#print axioms localDegree_eq_relativeDegree_mul_moduliDegree
+
+end Iut.SourceTopologicalLocalField.LocalDegreeTower
+
+namespace Iut.SourcePacketFiniteFieldStage
+
+#print axioms localTensor_finrank
+#print axioms field_finrank_sum
+#print axioms field_finrank_sum_eq_factor_finrank_product
+
+end Iut.SourcePacketFiniteFieldStage
+
+namespace Iut.SourceNonarchimedeanLocalFieldIntegers
+
+#print axioms normalizedLogVolume_value_eq_zero
+#print axioms Iut.ThetaFinitePlace.residueCharacteristic_eq_natGenerator
+#print axioms rationalPrime_eq_residueCharacteristic
+#print axioms rationalPrime_prime
+#print axioms log_rationalPrimeScale
+#print axioms localPrimeLogVolumeShift_eq_degree_mul_packetLogVolumeShift
+#print axioms rationalPrimeQuotientModule
+#print axioms padicScalarFieldMap
+#print axioms continuous_padicScalarFieldMap
+#print axioms padicScalarFieldMap_mem_integerRing
+#print axioms padicScalarMap
+#print axioms continuous_padicScalarMap
+#print axioms padicFieldRingHom
+#print axioms continuous_padicFieldRingHom
+#print axioms padicScalarMap_coe_eq_padicFieldRingHom
+#print axioms padicIntegerFieldRingHom
+#print axioms padicFieldBasis
+#print axioms eventually_padicPrime_pow_smul_basis_mem
+#print axioms padicIntegralScaleExponent
+#print axioms padicIntegralScaleExponent_spec
+#print axioms scaledPadicFieldBasis
+#print axioms scaledPadicFieldBasis_apply
+#print axioms integralBasisVector
+#print axioms padicBasisLattice
+#print axioms padicBasisLattice_fg
+#print axioms padicBasisLattice_isOpen
+#print axioms integerAddSubgroupModuleFinite
+#print axioms integerSubringModuleFinite
+#print axioms isIntegral_iff_mem_integerRing
+#print axioms padicIsIntegralClosure
+#print axioms padicIntegralBasis
+#print axioms PAdicIntegralClosure.padicPrime_smul
+#print axioms PAdicIntegralClosure.coefficientReduction_surjective
+#print axioms PAdicIntegralClosure.coefficientReduction_ker
+#print axioms PAdicIntegralClosure.quotientLinearEquiv
+#print axioms PAdicIntegralClosure.quotient_finrank_eq
+#print axioms PAdicIntegralClosure.toRationalPrimeResidueModule
+#print axioms RationalPrimeResidueModule.quotientFintype
+#print axioms RationalPrimeResidueModule.quotient_card_eq
+#print axioms ResidueQuotientFormula.residueCosets_cover_integerRing
+#print axioms ResidueQuotientFormula.residueCosets_pairwiseDisjoint
+#print axioms ResidueQuotientFormula.scaledRing_measure_eq_scale
+#print axioms ResidueQuotientFormula.toHaarDegreeFormula
+#print axioms normalizedHaarMeasure_rationalPrimeDilation
+#print axioms normalizedLogVolume_admissible_rationalPrimeDilation
+#print axioms normalizedLogVolume_rawLogVolume_rationalPrimeDilation
+#print axioms normalizedLogVolume_valueOn_rationalPrimeDilation
+
+end Iut.SourceNonarchimedeanLocalFieldIntegers
+
+#print axioms Iut.SourcePacketMeasuredField.NonarchimedeanPrimeDilation.ofIntegers
+
+namespace Iut.SourcePacketFiniteMeasuredFieldDecomposition
+
+#print axioms blockFieldDecomposition_image_blockFieldProductRegion
+#print axioms blockRadializedRegion_blockFieldProductRegion
+#print axioms blockProductMeasure_blockFieldProductRegion
+#print axioms blockVolume_valueOn_blockFieldProductAdmissibleRegion
+
+end Iut.SourcePacketFiniteMeasuredFieldDecomposition
+
+namespace Iut.SourcePacketFiniteStageLogVolume.DirectProductPrimeNormalization
+
+#print axioms factor_localDegree
+#print axioms block_degree_sum
+#print axioms blockDilation_image_blockFieldProductRegion
+#print axioms blockVolume_valueOn_dilatedFieldRegions_eq_degreeProduct
+#print axioms stageDilation_image_packetAdmissibleRegion
+#print axioms valueOn_dilatedPacketAdmissibleRegion
+
+end Iut.SourcePacketFiniteStageLogVolume.DirectProductPrimeNormalization
+
+#print axioms Iut.SourcePacketMeasuredField.ofNonarchimedean
+#print axioms Iut.SourceArchimedeanLocalFieldModel.complexNorm_image_integralRegion
+#print axioms Iut.SourceArchimedeanLocalFieldModel.radialLengthMeasure_unitRadialInterval
+#print axioms Iut.SourceArchimedeanLocalFieldModel.completedRadialLengthMeasure_image_integralRegion
+#print axioms Iut.SourceArchimedeanLocalFieldModel.normalizedLogVolume_value_eq_zero
+#print axioms Iut.SourceArchimedeanLocalFieldModel.addCircleVolume_image_of_injOn
+#print axioms Iut.SourceArchimedeanLocalFieldModel.angularLengthMeasure_univ
+#print axioms Iut.SourceArchimedeanLocalFieldModel.angularLengthMeasure_mul_image
+#print axioms Iut.SourceArchimedeanLocalFieldModel.continuous_complexAngularProjection
+
+namespace Iut.SourceArchimedeanLocalFieldModel.AngularRegion
+
+#print axioms angularVolume_pos
+#print axioms angularVolume_lt_top
+#print axioms angularVolume_mulLeft
+#print axioms angularLogVolume_mulLeft
+
+end Iut.SourceArchimedeanLocalFieldModel.AngularRegion
+
+namespace Iut.SourceArchimedeanLocalFieldModel.ExponentialRegion
+
+#print axioms angularLengthMeasure_angularImage
+#print axioms completedRadialLengthMeasure_fieldCarrier_eq_angular
+#print axioms normalizedLogVolume_valueOn_eq_angularLogVolume
+
+end Iut.SourceArchimedeanLocalFieldModel.ExponentialRegion
+
+#print axioms Iut.SourceArchimedeanLocalFieldModel.radialLengthMeasure_packetScale
+#print axioms Iut.SourceArchimedeanLocalFieldModel.radialization_image_packetDilation
+#print axioms Iut.SourceArchimedeanLocalFieldModel.completedRadialLengthMeasure_packetDilation
+#print axioms Iut.SourceArchimedeanLocalFieldModel.packetNormalization
+#print axioms Iut.SourcePacketMeasuredField.ofArchimedean
+#print axioms Iut.SourcePacketMeasuredField.integral_measure_eq_one
+#print axioms Iut.SourcePacketMeasuredField.normalizationOffset_eq_zero
+#print axioms SourcePacketFiniteFieldDecomposition.stageEmbedding_injective
+
+namespace Iut.SourcePacketFiniteMeasuredFieldDecomposition
+
+#print axioms blockFieldDecomposition_image_integralRegion
+#print axioms blockIntegralRegion_iff
+#print axioms blockRadializedRegion_integralRegion
+#print axioms blockRadializedRegion_integralRegion_measurable
+#print axioms blockProductMeasure_integralRegion
+#print axioms blockVolume_normalizationOffset_eq_zero
+#print axioms blockVolume_value_eq_zero
+#print axioms packetRadializedRegion_productRegion
+#print axioms stageEmbedding_preimage_embeddedPacketIntegralRegion
+
+end Iut.SourcePacketFiniteMeasuredFieldDecomposition
+
+namespace Iut.SourcePacketFiniteStageLogVolume
+
+#print axioms weightChoice_card_factor
+#print axioms normalizedReplicaSum_eq_inverseMultiplicitySum
+#print axioms weightedLift_productRegion
+#print axioms weightedContent_productRegion
+#print axioms normalized_log_weightedContent_productRegion
+#print axioms toNormalizedLogVolume_valueOn_admissibleProductRegion_eq_weightedSum
+
+namespace Compatible
+
+#print axioms blockRadial_measurePreserving
+#print axioms stageKummer_image_packetIntegralRegion
+#print axioms packetRadialEquiv_image_radializedRegion
+#print axioms replica_measurePreserving
+#print axioms replicaEquiv_image_weightedLift
+#print axioms weightedContent_image
+#print axioms toNormalizedLogVolume_compatible
+#print axioms normalizedLogVolume_value_eq
+#print axioms packetKummer_image_embeddedPacketIntegralRegion
+
+end Compatible
+
+end Iut.SourcePacketFiniteStageLogVolume
+
+#print axioms Iut.SourcePacketFiniteStageVolume.normalizedLogVolume_value_eq_zero
+#print axioms Iut.SourcePacketIntegralConstruction.logShellRegion_eq_packetLattice
+#print axioms Iut.SourcePacketIntegralConstruction.logShellRegion_eq_unitBall
+
+-- Legacy block-indexed volume lemmas remain visible but are not source endpoints.
+#print axioms Iut.SourcePacketLogVolumeDecomposition.algebraicDecomposition
+#print axioms Iut.SourcePacketLogVolumeDecomposition.radializedRegion_integralRegion
+#print axioms Iut.SourcePacketLogVolumeDecomposition.productMeasure_radializedIntegralRegion
+#print axioms Iut.SourcePacketLogVolumeDecomposition.weightedLift_integralRegion
+#print axioms Iut.SourcePacketLogVolumeDecomposition.weightedContent_integralRegion
+#print axioms Iut.SourcePacketLogVolumeDecomposition.multiplicity_val
+#print axioms Iut.SourcePacketLogVolumeDecomposition.normalizationDenominator_pos
+#print axioms Iut.SourcePacketLogVolumeDecomposition.normalizationScale_pos
+#print axioms Iut.SourcePacketLogVolumeDecomposition.toNormalizedLogVolume_value
+#print axioms Iut.SourcePacketLogVolumeDecomposition.Compatible.radializeCoordinates_coordinateEquiv
+#print axioms Iut.SourcePacketLogVolumeDecomposition.Compatible.coordinate_measurePreserving
+#print axioms Iut.SourcePacketLogVolumeDecomposition.Compatible.replica_measurePreserving
+#print axioms Iut.SourcePacketLogVolumeDecomposition.Compatible.replicaEquiv_image_weightedLift
+#print axioms Iut.SourcePacketLogVolumeDecomposition.Compatible.weightedContent_image
+#print axioms Iut.SourcePacketLogVolumeDecomposition.Compatible.normalizationOffset_eq
+#print axioms Iut.SourcePacketLogVolumeDecomposition.Compatible.toNormalizedLogVolume_compatible
+#print axioms Iut.SourceNormalizedLogVolume.Compatible.valueOn_mapRegion
+#print axioms Iut.SourceTheorem311VerticalLocalKummer.logVolume_compatible
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.transport_logVolume
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.factorTransport_integralLattice_image
+#print axioms Iut.SourceNonarchimedeanLogShellDefinition.preLogShell_le_lattice
+#print axioms Iut.SourceNonarchimedeanPacketUnitLogData.packetUnitLogSubgroup_le_packetLattice
+#print axioms Iut.SourceNonarchimedeanPacketUnitLogData.packetUnitLogSubgroup_image
+#print axioms Iut.SourceNonarchimedeanPacketUnitLogData.pureLogTensorOfUnitTuple_mem
+#print axioms Iut.SourceNonarchimedeanPacketLogLinkStep.graph_le_packetUnitLogSubgroup_prod
+#print axioms Iut.SourceNonarchimedeanPacketLogLinkStep.related_of_unitTuplesRelated
+#print axioms Iut.SourceArchimedeanPacketUnitData.factorMetric_factorValue
+#print axioms Iut.SourceArchimedeanPacketUnitData.pureBallTensor_mem_unitBall
+#print axioms Iut.SourceArchimedeanPacketUnitData.principalLogTensor_mem_unitBall
+#print axioms Iut.SourceArchimedeanPacketUnitData.UnitTuple.semiGermUnit
+#print axioms Iut.sourceForwardIndex_sub_eq
+#print axioms Iut.SourceTheorem311Ind3System.nonarch_logKummer_contained
+#print axioms Iut.SourceTheorem311Ind3System.nonarch_logKummer_contained_of_mem_range
+#print axioms Iut.SourceTheorem311Ind3System.archLogBallPreimage_subset_logShellRegion
+#print axioms Iut.SourceTheorem311Ind3System.archLogBall_relationally_surjective
+#print axioms Iut.SourceTheorem311Ind3System.arch_direct_ball_contained
+#print axioms Iut.SourceTheorem311Ind3System.arch_direct_units_contained
+#print axioms Iut.SourceTheorem311Ind3System.arch_direct_localBalls_contained
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalFactorUnitLogSubgroup_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalPureUnitLogTensors_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalPacketUnitLogSubgroup_image
+#print axioms Iut.SourceNonarchimedeanPacketShells.packetLattice_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalSummandLattice_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalFactorLattice_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalPureIntegralTensors_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalPacketLattice_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalDistinguishedLattice_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalFullNonarchimedeanIntegral_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalDistinguishedNonarchimedeanIntegral_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalSummandSeminorm_compatible
+#print axioms Iut.SourceMonoAnalyticLogShellAlgorithm.transportAbove_archimedean_inner
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalSummandInner_compatible
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalFactorInner_compatible
+#print axioms Iut.SourceTensorPacketKummerIso.packetInner_compatible
+#print axioms Iut.SourceTensorPacketKummerIso.packetSeminorm_compatible
+#print axioms Iut.SourceTensorPacketKummerIso.distinguishedUnitBall_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalPacketInner_compatible
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalPacketSeminorm_compatible
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalFullArchimedeanIntegral_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalDistinguishedArchimedeanIntegral_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalFullIntegral_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.verticalDistinguishedIntegral_image
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.VerticalPacketIntegralConstruction.logVolumeFunctional_compatible
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.VerticalLocalConstruction.toTheorem311VerticalLocalKummer
+#print axioms Iut.SourceAbsoluteLGPGaussianLogThetaLattice.VerticalFamilyConstruction.toTheorem311Ind3System
+#print axioms Iut.SourceLGPGaussianLogThetaLattice.monoAnalyticProcession_capsule_card
+#print axioms Iut.IUTIIAbsoluteThetaLabel.tensorIndex_zero
+#print axioms Iut.IUTIIAbsoluteThetaLabel.tensorIndex_nonzero_pos
+#print axioms Iut.IUTIIAbsoluteThetaLabel.tensorIndex_lt_l
+#print axioms Iut.SourceArchimedeanIntegralStructure.isClosed_unitBall
+#print axioms Iut.SourceTheorem311Ind3System.logVolume_eq_common
+#print axioms Iut.SourceTheorem311Ind3System.logVolume_eq_logVolume
+#print axioms Iut.SourceTheorem311Ind3System.logShellRegion_eq_unitBall
+#print axioms Iut.SourceTheorem311VerticalLogLink.rootsOfUnity_logarithm_eq_zero
+#print axioms Iut.SourceTheorem311VerticalLogLink.logarithm_eq_of_differsByRootOfUnity
+#print axioms Iut.SourceTheorem311VerticalLogLinkFamily.adjacent_logarithm_eq_on_overlap
+#print axioms Iut.SourceTheorem311BadPrimeLogKummerData.logarithm_eq_of_admissibleAcrossLog
+#print axioms Iut.SourceFPrimeStripFullPolyIsomorphism.comp_assoc
+#print axioms Iut.SourceFPrimeStripFullPolyIsomorphism.comp_inverse_assoc
+#print axioms Iut.SourceFTimesMuPrimeStripFullPolyIsomorphism.comp_assoc
+#print axioms Iut.SourceFTimesMuPrimeStripFullPolyIsomorphism.comp_inverse_assoc
+#print axioms Iut.SourceFMonoAnalyticPrimeStripFullPolyIsomorphism.comp_assoc
+#print axioms Iut.SourceFMonoAnalyticPrimeStripFullPolyIsomorphism.canonical
+#print axioms Iut.SourceFMonoAnalyticPrimeStripFullPolyIsomorphism.canonical_inverse
+#print axioms Iut.SourceFTimesMuReconstructionAlgorithm.mapFullPolyIsomorphism_id
+#print axioms Iut.SourceFTimesMuReconstructionAlgorithm.mapFullPolyIsomorphism_comp
+#print axioms Iut.SourceFTimesMuReconstructionAlgorithm.mapFullPolyIsomorphism_surjective
+#print axioms Iut.SourceFTimesMuReconstructionAlgorithm.mapFullPolyIsomorphism_inverse
+#print axioms Iut.SourceFTimesMuPrimeStripPolyIsomorphismSquare.ofUpperHorizontal
+#print axioms Iut.SourceTheorem311TimesMuPrimeStripConstruction.thetaLink_full
+#print axioms Iut.SourceTheorem311TimesMuPrimeStripConstruction.toTriangleSquare
+#print axioms Iut.SourceIndexedHorizontalKummerSquare.automorphismEquiv
+#print axioms Iut.SourceTheorem311EnvironmentPrimeStripSquare.ofTriangle
+#print axioms Iut.SourceTheorem311EnvironmentTimesMuPrimeStripSquare.ofTriangle
+#print axioms Iut.SourceTheorem311EnvironmentMonoAnalyticPrimeStripFamily.toTimesMu
+#print axioms Iut.SourceKappaLocalizationDiagramIso.trans
+#print axioms Iut.SourceKappaLocalizationDiagramIso.localizationSquare
+#print axioms Iut.SourceKappaLocalizationDiagramIso.inclusionSquare
+#print axioms Iut.SourceTheorem311LabeledHorizontalKummerSquare.localizationAutomorphismEquiv
+#print axioms Iut.SourceTheorem311LabeledHorizontalKummerSquare.inclusionAutomorphismEquiv
+#print axioms Iut.SourceTheorem311TwoActionEquivalence.quotientEquiv
+#print axioms Iut.SourceTheorem311PermutationBiCoricCompatibility.quotientEquiv
+#print axioms Iut.SourceTheorem311HorizontalEvaluationCompatibility.descend_mk
+#print axioms Iut.SourceTheorem311Ind3DirectionalCompatibility.map
+#print axioms Iut.sourceTheorem311StrictBoolInd3_not_quotient_eq
+#print axioms Iut.SourceTheorem311IndeterminacyQuotient.sound_ind1
+#print axioms Iut.SourceTheorem311IndeterminacyQuotient.sound_ind2
+#print axioms Iut.SourceTheorem311ColumnBoundary.quotient_sound_ind1
+#print axioms Iut.SourceTheorem311ColumnBoundary.quotient_sound_ind2
+#print axioms Iut.SourceTheorem311ColumnBoundary.vertical_logVolume_compatible
+#print axioms Iut.SourceTheorem311ColumnBoundary.ind3_logVolume_independent
+#print axioms Iut.SourceTheorem311ColumnBoundary.badPrime_logarithm_eq
+#print axioms Iut.SourceTheorem311HorizontalCorridorBoundary.right_theater_eq
+#print axioms Iut.SourceTheorem311HorizontalCorridorBoundary.primeStripClauseA
+#print axioms Iut.SourceTheorem311HorizontalCorridorBoundary.primeStripClauseA_commutes
+#print axioms Iut.SourceTheorem311HorizontalCorridorBoundary.environmentPrimeStripClauseB_commutes
+#print axioms Iut.SourceTheorem311HorizontalCorridorBoundary.monoThetaClauseC_commutes
+#print axioms Iut.SourceTheorem311HorizontalCorridorBoundary.siteKappaClauseD_localization_commutes
+#print axioms Iut.SourceTheorem311HorizontalCorridorBoundary.siteKappaClauseD_inclusion_commutes
+#print axioms Iut.SourceTheorem311HorizontalCorridorBoundary.commonKappaClauseD_localization_commutes
+#print axioms Iut.SourceTheorem311HorizontalCorridorBoundary.commonKappaClauseD_inclusion_commutes
+#print axioms Iut.SourceSelectedLocalFullLogLink.nonarchimedean_target_unique
+#print axioms Iut.SourceSelectedLocalFullLogLink.archimedean_target_unique
+#print axioms Iut.OrbicurveGeometry.signature_eq
+#print axioms Iut.HyperbolicOrbicurve.signature_eq_of_stack_eq
+#print axioms Iut.HyperbolicOrbicurve.no_incompatible_signature_on_same_stack
+#print axioms Iut.EtaleStackBaseChangePresentation
+#print axioms Iut.OrbicurveEtaleFundamentalGroup.toEtaleFundamentalGroup
+#print axioms Iut.profiniteKernelExactSequence
+#print axioms Iut.OrbicurveFundamentalGroupData.exactSequence
+#print axioms Iut.OrbicurveCuspidalDecompositionData.exactSequence
+#print axioms Iut.OrbicurveCuspidalDecompositionData.ambientEmbedding
+#print axioms Iut.OncePuncturedEllipticGeometryCertificate.signature_eq
+#print axioms Iut.OrbicurveScalarExtension.signature_preserved
+#print axioms Iut.SignQuotientOrbicurveData.isTypeOneOneSignQuotientPair
+#print axioms Iut.TypeOneLTorsionStackRealization.isTypeOneLTorsionPair
+#print axioms Iut.ArrowedTypeOneStackRealization.isArrowedTypeOnePair
+#print axioms Iut.ThetaRootStackRealization.isThetaRootTypePair
+#print axioms Iut.SourceThetaBadLocalStandardData.isTypeOneZModLPair
+#print axioms Iut.SourceThetaBadLocalThetaRootStackRealization.isTypeOneZModLThetaPair
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.coverProjection
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.finiteInclusionFullyFaithful
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.finiteCovObject_isTempered
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.finiteTemperedInclusionFullyFaithful
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.temperedCovInclusionFullyFaithful
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.finiteRecoveryIso
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.exists_finiteInclusion_preimage
+#print axioms Iut.SourceTemperedGroupPresentation.exists_projectionKernel_le_of_mem_nhds_one
+#print axioms Iut.SourceCountableGroupDiagram.imagePresentation_projection_surjective
+#print axioms Iut.SourceCountableGroupDiagram.connectedActionLevelFactorization
+#print axioms Iut.sourceTemperoidOrbitAction_pretransitive
+#print axioms Iut.sourceConnectedTemperoidOrbit
+#print axioms Iut.sourceTemperoidOrbitDecompositionIso
+#print axioms Iut.sourceTemperoidOrbitFiberMap
+#print axioms Iut.sourceTemperoidOrbitFiberMap_surjective
+#print axioms Iut.SourceTemperedGroupPresentation.orbitLevelFactorization
+#print axioms Iut.SourceTemperedGroupPresentation.descendedAction_pretransitive
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.literalLimitActionEquivalence
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.literalOrbitLevelFactorization
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.finiteDeckOrbitAction
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.finiteDeckOrbitCover_isGeometricallyConnected
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.actionCoverObject
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.actionCoverFunctor
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.recoveredActionMap
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.actionCoverFunctorFull
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.actionCoverFunctorFaithful
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.classifiedActionCoverIso
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.actionCoverFunctorEssSurj
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.actionCoverEquivalence
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.actionCoverUnit_naturality
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.actionCoverCounit_naturality
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.actionCoverFunctor_triangle
+#print axioms
+  Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.coverActionFunctor_triangle
+namespace Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover
+
+#print axioms deckVertex_orbitRel_iff_projection_eq
+#print axioms deckEdge_orbitRel_iff_projection_eq
+#print axioms deckVertexComponentCompatibility
+#print axioms deckVertexActionIso
+#print axioms deckVertexActionIso_hom_apply_fst
+#print axioms deckVertexActionIso_hom_apply_val
+#print axioms deckEdgeComponentCompatibility
+#print axioms deckEdgeActionIso
+#print axioms deckEdgeActionIso_hom_apply_fst
+#print axioms deckEdgeActionIso_hom_apply_val
+#print axioms deckFiniteBranchActionIso_hom_apply
+#print axioms deckBranchEdgeFamilyIso_naturality
+#print axioms deckBranchEdgeFamilyIso_inv_naturality
+#print axioms deckCovHom
+#print axioms deckCovHom_one
+#print axioms deckCovHom_mul
+#print axioms deckCovAut
+#print axioms deckCovActionHom
+
+end Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover
+#print axioms Iut.SourceTemperoidComponentFamilyAction.componentEquiv
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.finiteComponentEquiv_incidence
+#print axioms Iut.sourceRestrictedComponentFamilyActionIso
+#print axioms Iut.SourceFiniteLevelUniversalCover.restrictedBranchIndexEquivEdgeIndex
+#print axioms Iut.SourceFiniteLevelUniversalCover.branchEdgeFamilyIso
+#print axioms Iut.SourceFiniteLevelUniversalCover.covObject
+#print axioms Iut.SourceFiniteLevelUniversalCover.covObject_isTempered
+#print axioms Iut.SourceFiniteLevelUniversalCover.componentEquiv_incidence
+#print axioms Iut.SourceFiniteLevelUniversalCover.coverComparison_isGraphCovering
+#print axioms Iut.SourceFiniteGraphCoverRealization.restrictedBranchIndexEquivEdgeIndex
+#print axioms Iut.SourceFiniteGraphCoverRealization.covObject
+#print axioms Iut.SourceFiniteGraphCoverRealization.covObject_isTempered
+#print axioms Iut.SourceFiniteGraphCoverRealization.coverComparison_isGraphCovering
+#print axioms Iut.SourceFiniteGraphCoverRealization.finiteObjectCovIso
+#print axioms Iut.SourceFiniteGraphCoverRealization.exists_galoisLevel_refinement
+#print axioms Iut.SourceFiniteSheetSemiGraphCover.UniversalLift.hom
+#print axioms Iut.SourceFiniteSheetSemiGraphCover.UniversalLift.projection_comp_hom
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.GaloisSplitterRefinement.isSplitBy
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.exists_galoisLevel_splitting
+#print axioms
+  Iut.SourceSemiGraphOfAnabelioids.CovObject.exists_galoisLevel_splitting_of_isPointConnected
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.sourceTemperoidComponentFamilyHomOfStabilizerFixes
+#print axioms Iut.SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.vertex_fixes_all_of_fixes
+#print axioms Iut.SourceSemiGraphOfAnabelioids.GluedObject.GaloisLevel.edge_fixes_all_of_fixes
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.galoisVertexStabilizerFixesTarget
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.galoisEdgeStabilizerFixesTarget
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.connectedVertexCarrierEquiv
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.TargetSheetLift.branchRepresentativeCorrection_spec
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.TargetSheetLift.transport
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.TargetSheetLift.vertexPoint
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.TargetSheetLift.edgePoint
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.TargetSheetLift.branchCarrierEquiv_edgePoint
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.sourceTemperoidComponentFamilyHom_ext
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.GeometricDomination.branchHalfNaturality
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.GeometricDomination.branchNaturality
+#print axioms Iut.SourceSemiGraphOfAnabelioids.CovObject.GeometricDomination.hom
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.rawTemperedToProfiniteHom_app_point
+#print axioms Iut.SourceSemiGraphResidualSeparation.separationTreeProjection_injective
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.injective_rawTemperedToProfiniteHom
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.injective_temperedToProfiniteHom
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.continuous_temperedToProfiniteHom
+#print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.transportedTemperedToProfiniteHom_eq_conjugate
+
+/-!
+The following negative elaboration checks lock the new geometric indices in
+place.  A finite-etale cover, its certified fundamental group, or a cuspidal
+decomposition datum for `X` must not elaborate at the corresponding type for
+an unrelated orbicurve `Y`.
+-/
+
+section OrbicurveGeometricIndexNegativeTests
+
+variable {F : Type} [Field F]
+variable {X Y : HyperbolicOrbicurve F}
+variable {G : ProfiniteGrp}
+
+set_option linter.unusedVariables false in
+example (cover : OrbicurveFiniteEtaleCover X) : True := by
+  fail_if_success
+    exact (show OrbicurveFiniteEtaleCover Y from cover)
+  trivial
+
+set_option linter.unusedVariables false in
+example (groups : OrbicurveEtaleFundamentalGroup X G) : True := by
+  fail_if_success
+    exact (show OrbicurveEtaleFundamentalGroup Y G from groups)
+  trivial
+
+set_option linter.unusedVariables false in
+example
+    {groupsX : OrbicurveFundamentalGroupData X G}
+    {groupsY : OrbicurveFundamentalGroupData Y G}
+    (cusp : OrbicurveCuspidalDecompositionData groupsX) : True := by
+  fail_if_success
+    exact (show OrbicurveCuspidalDecompositionData groupsY from cusp)
+  trivial
+
+end OrbicurveGeometricIndexNegativeTests

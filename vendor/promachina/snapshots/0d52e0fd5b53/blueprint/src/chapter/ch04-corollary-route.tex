@@ -1,0 +1,176 @@
+\chapter{Route to Corollary 3.12}
+\label{ch:corollary-route}
+
+\section{Diagnostic finite label and Gaussian layer}
+
+\begin{definition}[Finite label square-weight profile]
+  \label{def:finite-label-profile}
+  \lean{Iut.Stage1.IUTStage1ZModSquareWeightProfile,Iut.Stage1.IUTStage1ZModSquareWeightProfile.GaussianMonoidDegreeEvaluation}
+  \leanok
+  The current finite model records the \(j^2\)-weighted Gaussian degree
+  behavior of theta labels.  It separates raw coordinate square weights,
+  sign-quotient full labels, zero and nonzero classes, and several averaged
+  log-volume conventions.
+\end{definition}
+
+\begin{proposition}[Diagnostic: no silent scalar absorption]
+  \label{prop:no-silent-scalar-absorption}
+  \uses{def:finite-label-profile}
+  \lean{Iut.Stage1.Experiments.no_labelIndependent_transport_scale_absorbs_j2}
+  \leanok
+  At the representative level, one label-independent scalar cannot absorb all
+  \(j^2\)-weighted theta degrees when the environment degree is nonzero.  This
+  is a counter-collapse diagnostic: it shows that the formalization does not
+  silently erase the \(q^{j^2}\) issue inside a real-line identification, but
+  it does not discharge the source Step (xi) hull/log-volume comparison.
+\end{proposition}
+
+\begin{proof}
+  This is represented in the finite-label experiment surface.  The exact Lean
+  declarations distinguish representative square weights from descended
+  full-label data and from the final hull/log-volume endpoint.
+\end{proof}
+
+\section{Nonarchimedean upper-semi route}
+
+\begin{definition}[Local \(\Ind{3}\) orientation]
+  \label{def:ind3-local-orientation}
+  \lean{Iut.Stage1.Experiments.Ind3FirstPassDashboard,Iut.Stage1.Experiments.ind3FirstPassDashboard}
+  \leanok
+  The experiment dashboard is a Lean-checked status report.  It records that
+  missing real alignment blocks the final route, that nonarchimedean
+  \(\Ind{3}\) entries have the current packet-to-theta orientation, and that
+  archimedean entries have the reverse orientation for this route.  It should
+  not be read as a source construction of the \(\Ind{3}\) comparison.
+\end{definition}
+
+\begin{theorem}[Nonarchimedean entry reaches the signed comparison]
+  \label{thm:nonarchimedean-entry-final-q-theta}
+  \uses{def:finite-label-profile,def:ind3-local-orientation,def:stage1-comparison-endpoint}
+  \lean{Iut.Stage1.Experiments.nonarchimedeanEntry_finalQTheta}
+  \leanok
+  A nonarchimedean local \(\Ind{3}\) entry, together with the required
+  real-line/log-volume alignments and structured \(\SHE\) square-weight
+  transport audit, implies
+  \[
+    q_{\mathrm{signed}}\le \Theta_{\mathrm{signed}}.
+  \]
+\end{theorem}
+
+\begin{proof}
+  The theorem composes the local nonarchimedean alignment with the
+  Hodge-descent packet-to-theta route.  It still assumes the relevant
+  source-facing records; it proves that those records have the correct formal
+  shape to feed the endpoint.
+\end{proof}
+
+\begin{theorem}[Strongest current packet-calibrated route]
+  \label{thm:packet-calibrated-route}
+  \uses{thm:nonarchimedean-entry-final-q-theta,thm:strict-boundary-alternatives}
+  \lean{Iut.Stage1.IUTStage1SourcePackage.PlaceAuditedMultiradialThetaHullEndpoint.LogVolumeChartAudit.FLZModCuspLabelThetaHodgeDescentPacketTransportAudit.boundarySignedEqualityOrStrictCTheta_of_gaussianKummerForgettingPacketCalibratedEntry}
+  \leanok
+  In the strongest current route, Gaussian identity at the canonical full
+  label \(1\), the finite Kummer-plus-forgetting product-log-volume chain,
+  packet-normalized theta-source equality, packet-normalized \(\Ind{3}\)
+  target calibration, and packet-normalized entry-target calibration imply
+  \[
+    \bigl(q_{\mathrm{signed}}=\Theta_{\mathrm{signed}}
+       \;\wedge\; \Theta_{\mathrm{signed}}<0\bigr)
+       \quad\text{or}\quad
+    -1<\CTheta.
+  \]
+\end{theorem}
+
+\begin{proof}
+  The route first constructs the needed nonarchimedean log-Kummer upper-semi
+  compatibility from the Kummer transfer and mono-analytic forgetting chain.
+  It then derives the target-side equalities through packet-normalized
+  calibration rather than taking the direct theta-to-entry equality as a
+  primitive input.
+\end{proof}
+
+\begin{definition}[Packet-calibrated hypothesis ledger]
+  \label{def:packet-calibrated-hypothesis-ledger}
+  \uses{thm:packet-calibrated-route}
+  \notready
+  The strongest current route consumes a large family of source-facing
+  hypotheses: a source package, hull/determinant obligations, a log-volume
+  chart audit, a Hodge-descent transport packet, source and target Gaussian
+  profiles and evaluations, canonical full-label \(1\) preservation, source
+  and target log-volume equalities, finite Kummer transfer, mono-analytic
+  forgetting, a nonarchimedean entry and membership proof, packet-normalized
+  calibrations, \qPilot{} positivity, and the displayed \(\CTheta\) upper
+  bound.  This node is intentionally marked not ready: the theorem checks
+  the conditional route after these inputs are supplied, but the source
+  construction of the inputs remains the mathematical work.
+\end{definition}
+
+\section{The Corollary 3.12 node}
+
+\begin{definition}[\(\Theta\) finite-real endpoint]
+  \label{def:theta-finite-real-endpoint}
+  \lean{Iut.Stage1.Experiments.corollary312StatementEndpoint_theta_ne_plusInfinity}
+  \notready
+  Corollary 3.12 starts from an extended signed \(\Theta\) log-volume and must
+  conclude that the endpoint is finite real-valued.  The current Lean theorem
+  projects this fact from a statement-endpoint record; the source construction
+  of that record remains open.
+\end{definition}
+
+\begin{definition}[\qPilot{} positivity]
+  \label{def:q-pilot-positivity}
+  \lean{Iut.Stage1.Experiments.corollary312StatementEndpoint_q_neg}
+  \notready
+  The final \(\CTheta\) algebra requires \(0<-q_{\mathrm{signed}}\), or
+  equivalently that the signed \qPilot{} log-volume is negative.  The current
+  theorem extracts this from the statement-endpoint record; a source proof
+  must still construct the record from the prime-strip data.
+\end{definition}
+
+\begin{definition}[Displayed \(\CTheta\) upper bound]
+  \label{def:displayed-ctheta-upper-bound}
+  \lean{Iut.Stage1.Experiments.corollary312StatementEndpoint_realTheta_le_cTheta_absLogQ}
+  \notready
+  The displayed source hypothesis
+  \[
+    \Theta_{\mathrm{signed}}
+      \le \CTheta\cdot(-q_{\mathrm{signed}})
+  \]
+  is a separate input to the ordered-real lower bound for \(\CTheta\).  It
+  should remain visible rather than being folded into the signed comparison.
+\end{definition}
+
+\begin{theorem}[\(\CTheta\) lower bound from signed data]
+  \label{thm:ctheta-lower-bound-from-signed-data}
+  \uses{def:q-pilot-positivity,def:displayed-ctheta-upper-bound,thm:final-real-calculation}
+  \lean{Iut.Stage1.Experiments.corollary312SignedCTheta_lower_bound}
+  \leanok
+  Once the signed comparison, \qPilot{} positivity, and displayed
+  \(\CTheta\) upper bound have been supplied, the ordered-real conclusion
+  \(-1\le\CTheta\) is Lean-checked algebra.
+\end{theorem}
+
+\begin{proof}
+  This is not source mathematics; it is the real-inequality consequence of the
+  signed endpoint data.
+\end{proof}
+
+\begin{corollary}[Conditional Corollary 3.12 endpoint]
+  \label{cor:conditional-corollary-312}
+  \uses{prop:step-xi-upper-ray-input,lem:ledger-three-term-comparison,lem:signed-comparison-gives-corollary,def:theta-finite-real-endpoint,def:q-pilot-positivity,def:displayed-ctheta-upper-bound,thm:ctheta-lower-bound-from-signed-data,thm:packet-calibrated-route,def:packet-calibrated-hypothesis-ledger}
+  \lean{Iut.Stage1.SourceObligationLedger.corollary312}
+  \notready
+  If the source constructions of \IUT{} III supply the required
+  multiradial output, \(\IPL\), \(\SHE\), \(\APT\), hull-plus-determinant
+  comparison, log-Kummer upper-semi compatibility, and packet-normalized
+  calibrations, then the Corollary 3.12-shaped signed pilot inequality follows.
+  The Lean tag points to the conditional route theorem from the source ledger,
+  not merely to the bare predicate that states the target inequality.
+\end{corollary}
+
+\begin{proof}
+  The Lean code already proves the endpoint from the named route records.
+  What is not yet proved is that the source papers construct all of those
+  records without collapsing the histories, labels, or comparison levels that
+  the dispute requires us to keep separate.
+\end{proof}

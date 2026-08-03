@@ -1,0 +1,46 @@
+name: Lean CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+      - uses: leanprover/lean-action@v1
+
+      - name: Build Lean project
+        run: lake build
+
+      - name: Check Stage 1 dependency audit
+        run: lake env lean Iut/Stage1/IUTStage1StepXIDependencyAudit.lean
+
+      - name: Check blueprint Lean declarations
+        run: lake exe checkdecls blueprint/lean_decls
+
+  docs:
+    runs-on: ubuntu-latest
+    needs: proof
+    if: github.event_name != 'pull_request'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v5
+      - uses: leanprover/lean-action@v1
+      - uses: leanprover-community/docgen-action@v1
+        with:
+          homepage: docgen_site
