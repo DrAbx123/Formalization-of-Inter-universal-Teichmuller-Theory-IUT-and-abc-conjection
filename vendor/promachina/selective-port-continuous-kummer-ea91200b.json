@@ -1,0 +1,79 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "auditedHead": "ea91200be2a0a6287ade838553127f68ec38d864",
+  "license": "Apache-2.0",
+  "sources": [
+    {
+      "sourceFile": "Iut/Foundations/ContinuousH1.lean",
+      "sourceFileLastCommit": "d961653d3a60940badafbb7f4980eb8b4ca44cf4",
+      "sourceGitBlob": "809abdd508cb3aeb217c36b351a2b6f62fb1b852",
+      "sourceSha256": "F73ADDC0AD98669BED2B469A3E2CB8EA9D6F13BA69EDD301BC17D4A822FC6307",
+      "productionFile": "Iut/Foundations/ContinuousH1.lean",
+      "productionSha256": "1D2964C84D957B03A7C51BA72924C315C9FBCADFBCB661FD5F35F3EB25C1A6EF",
+      "adaptation": "Exact source file with only the unused broad SourceMonoThetaEnvironment import removed."
+    },
+    {
+      "sourceFile": "Iut/Foundations/SourceThetaEvaluation.lean",
+      "sourceFileLastCommit": "3de1d7c10d7ea845a21ab4b74edd2b4c6c84fd8f",
+      "sourceGitBlob": "4baf22ba7fd746e9d26a0e9c7aaaa21bb26a8f46",
+      "productionFile": "LeanFormal/IUT/IUTII/Kummer/RationalRootSystem.lean",
+      "productionSha256": "6507B3FDC294971770E70746D629344A27CAB4BFC1A6257072F2E5791394FF52",
+      "adaptation": "Extracted the rational-root idea and rebuilt it with Mathlib's injective divisible abelian groups; no upstream MLF wrapper was retained."
+    },
+    {
+      "sourceFile": "Iut/Foundations/SourceThetaEvaluation.lean",
+      "sourceFileLastCommit": "3de1d7c10d7ea845a21ab4b74edd2b4c6c84fd8f",
+      "sourceGitBlob": "4baf22ba7fd746e9d26a0e9c7aaaa21bb26a8f46",
+      "productionFile": "LeanFormal/IUT/IUTII/Kummer/ContinuousKummerGerm.lean",
+      "productionSha256": "7F4C38C0A25021607A8767416D8A50EF774B4F4910C8B182735D773CB408E7E7",
+      "adaptation": "Rebuilt the root-ratio construction against the explicit ContinuousH1 API, genuine Hom(Q/Z,B) coefficients, and a supplied discrete continuous action."
+    }
+  ],
+  "reuse": [
+    "continuous nonabelian H1 and open-subgroup direct-limit germs",
+    "extension of integer powers to compatible rational powers",
+    "root-ratio cocycle and its descent through Q/Z",
+    "root-choice independence by an explicit coboundary"
+  ],
+  "excluded": [
+    "MLF presentation wrappers",
+    "Frobenioid evaluation at a universal-cover pro-object",
+    "existence of the group-theoretic/Frobenioid Kummer isomorphism",
+    "identification with IUT II Definition 4.9's final Ism orbit"
+  ],
+  "verification": {
+    "warningFreeClosure": [
+      "logs/lean/serial-20260804-104828/summary.json",
+      "logs/lean/serial-20260804-110554/summary.json"
+    ],
+    "axiomAudit": [
+      "logs/lean/axioms-20260804-105006/axiom_audit.stdout.log",
+      "logs/lean/axioms-20260804-110734/axiom_audit.stdout.log"
+    ],
+    "productionCustomAxiomScan": "logs/lean/custom-axiom-20260804-105339.log",
+    "foundationCustomAxiomScan": "logs/lean/custom-axiom-foundations-20260804-105339.log"
+  },
+  "canonicalMap": {
+    "productionFile": "LeanFormal/IUT/IUTII/Kummer/CanonicalKummerMap.lean",
+    "productionSha256": "7476886D5E1730C49B9C73DE2AB17940456674E3A23FD7D54C2F81B749ACE72C",
+    "method": "New group-side construction from the audited germ layer; no theorem is copied as an existence field.",
+    "proved": [
+      "open stabilizer for every element under a discrete continuous action",
+      "independence of root system and open subgroup",
+      "product-root germ multiplication",
+      "genuine group homomorphism on all coefficient units"
+    ]
+  },
+  "localGaloisAction": {
+    "productionFile": "LeanFormal/IUT/IUTII/Kummer/LocalGaloisKummerAction.lean",
+    "productionSha256": "26B7B53547843FED6C5FE6DC758CCC557123608325563A4376F569D699D22932",
+    "method": "Uses Mathlib's Krull-topology stabilizer theorem for integral field extensions and an explicitly declared discrete topology on algebraic-closure units.",
+    "proved": [
+      "unit stabilizer equals the corresponding field stabilizer",
+      "open stabilizers and joint continuity of the local action",
+      "local group-side Kummer germ homomorphism"
+    ],
+    "boundary": "The ind-topological integral monoid, finite-stage colimit action, and Frobenioid evaluation are not identified with this discrete carrier."
+  },
+  "semanticBoundary": "The files construct a continuous Kummer germ for one open-subgroup-fixed unit, a group-side homomorphism on all divisible coefficient units, and a discrete local absolute-Galois specialization. They do not identify that discrete carrier with the source's ind-topological integral monoid, evaluate the Frobenioid side, or construct the group/Frobenioid Kummer comparison."
+}

@@ -1,0 +1,32 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "auditedHead": "ea91200be2a0a6287ade838553127f68ec38d864",
+  "sourceFiles": [
+    {
+      "path": "Iut/Foundations/KummerFaithfulness.lean",
+      "lastCommit": "3de1d7c10d7ea845a21ab4b74edd2b4c6c84fd8f",
+      "gitBlob": "17d5720a118583a696e8144a4fcccb7faaa359af"
+    },
+    {
+      "path": "Iut/Foundations/SourceMLFKummerFaithfulness.lean",
+      "lastCommit": "3de1d7c10d7ea845a21ab4b74edd2b4c6c84fd8f",
+      "gitBlob": "547c4be8bdf12affea0a0f9140a53715cbc99f9a"
+    }
+  ],
+  "license": "Apache-2.0",
+  "productionFile": "LeanFormal/IUT/IUTII/Kummer/LocalFieldRigidity.lean",
+  "productionSha256": "DA15AF9FF0B2B778DE8023441BE1287B4BCE4DC22178A168E893943256D3F696",
+  "selectedMathematics": [
+    "residually finite groups have no nontrivial element with roots of every positive degree",
+    "valuation-ring units of a nonarchimedean local field form the required profinite group",
+    "the discrete valuation of a full field unit with all positive roots vanishes",
+    "full local-field G_m root rigidity",
+    "injectivity from the standard multiplicative Kummer-kernel characterization"
+  ],
+  "excludedAsNotYetNeeded": [
+    "abstract arbitrary semi-abelian rational-point families",
+    "abstract arbitrary torus rational-point families",
+    "finite algebra quotient and integral-closure residual-finiteness machinery"
+  ],
+  "semanticBoundary": "This proves the full multiplicative group G_m over a nonarchimedean local field. It does not prove Kummer faithfulness for every torus or every semi-abelian variety."
+}

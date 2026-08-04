@@ -1,0 +1,45 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "license": "Apache-2.0",
+  "master": "7bea5b0314ad4d9c3046a7549ca9962b8f546af8",
+  "reviewedBranch": "agent/37-source-f-bridges",
+  "head": "87d595c721cb6a353ea5aff7ccee9cc8ff136f62",
+  "checkedAt": "2026-08-05T03:24:00+08:00",
+  "relationToMaster": "one commit ahead of master",
+  "changedFiles": 9,
+  "foundationLeanDelta": {
+    "added": [
+      "Iut/Foundations/SourceDefinition55FBridges.lean"
+    ],
+    "modified": [
+      "Iut/Foundations/SourceFThetaBridge.lean"
+    ],
+    "netInsertedLinesAcrossCommit": 1258,
+    "netDeletedLinesAcrossCommit": 58
+  },
+  "sourceTrustScan": {
+    "topLevelAxiom": 0,
+    "topLevelOpaque": 0,
+    "explicitSorry": 0
+  },
+  "reusableConstructedKernel": [
+    "SourceFPrimeStripPullbackLiftCandidate composes a selected source isomorphism with a projection and proves that forgetting the composite recovers the represented D-arrow.",
+    "The selected F-poly-arrow is derived as the range of the reconstructed lifts; nonemptiness and the associated-D existence statement are then proved.",
+    "Definition 5.5 bridge isomorphism members retain their D-level representative and derive the selected F-level components, avoiding caller-supplied bijectivity fields.",
+    "Identity, composition, associated-D maps, and the resulting equivalences on the selected member types are constructed once all recognition inputs are supplied."
+  ],
+  "interfaceBoundary": [
+    "Every F-prime-strip pullback starts from SourceFPrimeStripPullbackLiftRecognition.candidate_exists and candidates_equivalent; the commit does not construct the pullback from initial theta data.",
+    "The global Frobenioids, their restriction diagram, each local-to-global F-lift, theater isomorphisms, and F-theta bridge isomorphisms are all selected from recognition records by Classical.choice.",
+    "The selected F-poly-arrow is defined as the range of one canonical selected lift per represented D-arrow. Its uniqueness theorem is therefore a theorem about that selected range, not a construction or uniqueness proof for every source-valid pullback realization.",
+    "Definition 5.5(iii) common-capsule gluing is explicitly absent."
+  ],
+  "intersectionWithLocalWork": {
+    "localTheorem": "LeanFormal.IUT.LocalIntegralMonoid.timesMuEvaluationComparison",
+    "upstreamInterface": "SourceNonarchimedeanSelectedPlaceCompatibility.unitEmbedding",
+    "result": "The local theorem proves a stronger multiplicative, Galois-equivariant, times-mu exact-image comparison for the concrete Q_p integral-unit carrier. It does not yet provide the upstream embedding into the reconstructed infinity-kappa-times pseudo-monoid, its integral ind-system comparison, or the initial-theta selected-place type bridge."
+  },
+  "decision": "Do not port this branch now. Reuse the pullback-lift and D-to-F member architecture only after the project has constructed the exact Definition 5.5 recognition hypotheses from its initial-theta and Frobenioid objects.",
+  "impactOnCLayer": "Useful future architecture for F_NF and F_theta bridges, but no immediate closure of universal-cover Frobenioid evaluation, Definition 4.9 group reconstruction, initial theta data, Hodge theaters, theta-links, or log-links.",
+  "impactOnTheorem311Corollary312": "No direct discharge of the IUT-specific multiradial output, Ind1-Ind3, IPL, SHE, APT, holomorphic hull, determinant/tensor normalization, or actual log-volume comparison."
+}

@@ -1,0 +1,32 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "previousHead": "c7c06e23d191037424ba5d1a336a31a8cf73dc78",
+  "head": "bbb736cd34a5214a4270bf1e5285a6c6bb1b66d4",
+  "checkedAt": "2026-08-04T09:12:00+08:00",
+  "newCommits": 2,
+  "substantiveCommit": "cbf22bc0fc8c6ed6d4842b44980236714c34bb99",
+  "changedFiles": 7,
+  "leanFilesChanged": [
+    "Iut/Foundations/OrbicurvePullback.lean",
+    "Iut/Foundations/SourceInitialThetaData.lean",
+    "Iut/SourceTrace/M1M3PaperLedger.lean",
+    "Iut/SourceTrace/M1M3SourceAxiomAudit.lean"
+  ],
+  "reusableConstructedKernel": [
+    "profiniteIsoOpenEmbedding",
+    "openSubgroupClosedSubgroup",
+    "openSubgroupProfiniteGrp",
+    "openSubgroupProfiniteInclusion",
+    "OrbicurveFiniteEtaleCover.arithmeticOpenSubgroup",
+    "OrbicurveFiniteEtaleCover.geometricOpenSubgroup"
+  ],
+  "interfaceBoundary": [
+    "Scalar extension still receives resultFiniteEtale as a structure field.",
+    "Source fundamental groups are identified with cover stabilizers by supplied arithmeticEquiv and geometricEquiv fields.",
+    "Exact-sequence inclusion squares and projection compatibility remain supplied fields.",
+    "Sign, l-torsion, and theta-root realizations now require finite-etale certificates but do not construct those certificates from initial theta geometry."
+  ],
+  "decision": "Do not bulk-port the 5280-line interface. Reuse the generic open-subgroup/stabilizer constructions only when the local C-layer reaches their exact hypotheses.",
+  "impactOnTemperedActionCoverClosure": "none",
+  "impactOnTheorem311Corollary312": "none yet"
+}

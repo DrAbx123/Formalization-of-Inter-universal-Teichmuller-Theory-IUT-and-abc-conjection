@@ -737,6 +737,8 @@ noncomputable instance finiteInclusionFull
               (SourcePointedAnabelioidHom.finiteTemperificationPullbackIso
                 (diagram.branchMorphism second.branch second.abuts)).hom.naturality
                   (component second.vertex)
+            simp only [Functor.comp_map, component, Functor.map_preimage]
+              at hnatural
             change
               edgeFunctor.map
                     (second.pullback.map (component second.vertex)) ≫
@@ -755,6 +757,8 @@ noncomputable instance finiteInclusionFull
               ((SourcePointedAnabelioidHom.finiteTemperificationPullbackIso
                 (diagram.branchMorphism first.branch first.abuts)).inv.naturality
                   (component first.vertex)).symm
+            simp only [Functor.comp_map, component, Functor.map_preimage]
+              at hnatural
             change
               sourceFirstComparison.inv ≫
                     edgeFunctor.map
@@ -772,6 +776,15 @@ noncomputable instance finiteInclusionFull
           rw [finiteCovObject_glue_hom diagram root source first second,
             finiteCovObject_glue_hom diagram root target first second]
             at countableNaturality
+          change
+            (sourceFirstComparison.inv ≫
+                edgeFunctor.map (source.glue first second).hom ≫
+                sourceSecondComparison.hom) ≫
+                second.temperoidPullback.map (map.app second.vertex) =
+              first.temperoidPullback.map (map.app first.vertex) ≫
+                targetFirstComparison.inv ≫
+                edgeFunctor.map (target.glue first second).hom ≫
+                targetSecondComparison.hom at countableNaturality
           have leftTransport :
               (sourceFirstComparison.inv ≫
                   edgeFunctor.map (source.glue first second).hom ≫
@@ -784,6 +797,7 @@ noncomputable instance finiteInclusionFull
                   second.temperoidPullback.map (map.app second.vertex) := by
             simp only [Category.assoc] at secondCompatibility ⊢
             rw [secondCompatibility]
+            rfl
           have rightTransport :
               (sourceFirstComparison.inv ≫
                   edgeFunctor.map
@@ -808,10 +822,12 @@ noncomputable instance finiteInclusionFull
                   targetFirstComparison.inv) ≫
                   edgeFunctor.map (target.glue first second).hom ≫
                   targetSecondComparison.hom := by
-            simpa only [sourceFirstComparison, sourceSecondComparison,
-              targetFirstComparison, targetSecondComparison, edgeFunctor,
-              Category.assoc, IncidentBranch.temperoidPullback,
-              finiteCovObject, finiteInclusion] using countableNaturality
+            calc
+              _ = first.temperoidPullback.map (map.app first.vertex) ≫
+                    targetFirstComparison.inv ≫
+                    edgeFunctor.map (target.glue first second).hom ≫
+                    targetSecondComparison.hom := countableNaturality
+              _ = _ := by rw [Category.assoc]
           apply (cancel_epi sourceFirstComparison.inv).1
           apply (cancel_mono targetSecondComparison.hom).1
           exact leftTransport.trans (middleEquality.trans rightTransport.symm) }

@@ -145,24 +145,42 @@ The following distinction is enforced in code:
 | `Foundations/NumberField/FinitePlaceExtension` | **proved** | For a finite place above its contraction, the height-one prime is proved to lie over the lower prime; Mathlib's ramification theorem gives the valuation formula and uniform continuity on the dense valued fields. The induced map between actual adic completions is continuous and injective. Density and continuity extend the ramification formula to every completed element. The map restricts to an injective local homomorphism of completed valuation rings and induces an injective residue-field map. Tate uniformization is not inferred. |
 | `Foundations/Geometry/ReductionBaseChange` | **proved** | Integral Weierstrass models map through commuting coefficient-ring/field squares. Integral equations with discriminant valuation one or unit `c4` are proved minimal. Good and multiplicative reduction are transported through the completion map; split multiplicative reduction is transported by the actual residue-field embedding and `Polynomial.Splits.map`. These are conditional preservation theorems, not proofs that the IUT input curve has the required reduction at any place. |
 | `Foundations/Volumes/WeightedVolume` | **proved** | Finite weighted-average inequalities from ordinary ordered-field arithmetic. The file uses a minimal Mathlib import set; no local replacement for finite-sum machinery is introduced. |
-| `IUTI/InitialTheta`, `IUTI/HodgeTheater`, `IUTII/Frobenioid`, `IUTII/Kummer` | **claim only / interface vocabulary** | These files register source obligations as metadata; they do not construct the paper's geometric objects. |
+| `IUTI/InitialTheta`, `IUTI/HodgeTheater`, `IUTII/Frobenioid`, `IUTII/Kummer` | **mixed: 28 proved / 6 interface / 5 pending obligations** | The directories now contain real arithmetic, local integral-monoid, torsion-cyclotomic, exact local unit-evaluation image, MLF `TM`-pair, Kummer, theta-quotient, and prime-strip kernels. They still do not construct the paper's initial theta data, complete Frobenioids, Hodge theaters, theta-links, or log-links. The unweighted obligation ratio is 28/39 = 71.8%; because the remaining interface/pending items are the largest source constructions, the work-weighted C-layer estimate is approximately 44%, not 71.8%. |
 | `IUTII/Frobenioid/PrimeStripArithmetic` | **proved arithmetic kernel** | Finite interval prime-index set, primality projection, and interval monotonicity are proved with Mathlib's finite-order API; this is not an IUT Frobenioid prime strip. |
 | `IUTII/Frobenioid/PrimeStripDegree` | **proved arithmetic kernel** | A finite family of ordinary commutative value monoids with official `MonoidHom` degree maps into `Multiplicative ℝ`; local multiplication and finite global degree additivity are proved. The data are not claimed to be an etale/Frobenioid realization. |
 | `IUTI/HodgeTheater/PrimeStripCore` | **proved source-data kernel / realization pending** | `DPrimeStrip` and `FPrimeStrip` use Mathlib groups, surjective `MonoidHom`s, `Subgroup.ker`, `MulAut` actions, and the proved degree kernel. Forgetful maps, geometric kernels, action laws, and global degree laws compile and are axiom-audited; no arithmetic-geometric existence theorem is asserted. |
 | `IUTI/HodgeTheater/HodgeTheaterCore` | **interface with proved link algebra** | A source-facing theater carries explicit initial arithmetic data, a concrete F-prime-strip carrier, and a finite theta packet. Prime-strip equivalence, theta-q/scale alignment, symmetry, composition, and three-theater source-to-target transport are proved. Existence of the paper's theaters, histories, anabelian reconstruction, and Hodge-Arakelov compatibility remain pending. |
 | `IUTI/HodgeTheater/LocalPrimePlaces` | **proved local carrier kernel / realization pending** | Rational-prime labels, finite prime-interval labels, `ℚ_[p]`, algebraic-closure absolute Galois groups, the induced action on local units, and a nontrivial local q-parameter use Mathlib definitions. The projection is intentionally the identity because the etale fundamental-group quotient is not yet constructed. |
+| `IUTII/Kummer/TimesMuQuotient` | **proved algebraic quotient/action kernel / IUT identification pending** | For an actual commutative unit group, the quotient by the full torsion subgroup, its canonical map and kernel, descended automorphism action, equivariance, action laws, and torsion-freeness are proved. The `FPrimeStrip` bridge uses the canonical unit group `(F.Mon v)ˣ`; no ind-topology or group/Frobenioid Kummer comparison is asserted. |
+| `IUTII/Kummer/TimesMuIsm` | **proved conditional Ism/orbit kernel / representative existence pending** | Open-subgroup fixed units, invariant images modulo torsion, the exact equivariant/image-preserving Ism subgroup, compatible isomorphisms, their Ism action, and uniqueness of the resulting orbit are constructed and proved. Lean constructs the identity representative for one action but does not assert that the paper's distinct group-theoretic and Frobenioid actions admit a compatible representative. |
+| `IUTII/Kummer/LocalFieldRigidity` | **proved local-field `G_m` rigidity / broader Kummer faithfulness pending** | Residual-finiteness root rigidity, profiniteness of valuation-ring units, triviality of a local-field unit with roots of every positive degree, and injectivity from the standard multiplicative Kummer-kernel characterization are proved. Arbitrary-torus and semi-abelian Kummer faithfulness are not claimed. |
+| `Iut/Foundations/ContinuousH1` | **proved continuous-cohomology kernel** | Continuous nonabelian `H^1`, restriction, open-subgroup germ representatives, coboundary equivalence, and the abelian germ group laws are constructed. This is an exact upstream port except for removal of one unused broad import; it does not supply an IUT arithmetic action. |
+| `IUTII/Kummer/RationalRootSystem` | **proved compatible-root kernel** | A single compatible rational-power homomorphism is obtained by extending `Z -> B` across `Z -> Q` using injectivity of divisible abelian groups. Algebraically closed field units instantiate it; unrelated choices for each degree are not used. |
+| `IUTII/Kummer/ContinuousKummerGerm` | **proved one-unit continuous Kummer germ / global and Frobenioid comparison pending** | For an open-subgroup-fixed unit, compatible rational roots produce a continuous crossed homomorphism into the genuine cyclotome `Hom(Q/Z,B)`, a local continuous `H^1` class, and a germ. Changing the root system is proved to be an explicit coboundary. A homomorphism on all units, local absolute Galois continuity, Frobenioid evaluation, and the group/Frobenioid comparison remain pending. |
+| `IUTII/Kummer/CanonicalKummerMap` | **proved group-side Kummer homomorphism / local arithmetic instantiation pending** | Every element of a divisible commutative discrete coefficient group has an open stabilizer. On intersections of stabilizers, product root systems prove the germ multiplication law, and the canonical map `B ->* H1_germ` is constructed. The local absolute Galois action, Frobenioid evaluation, and the Definition 4.9 group/Frobenioid comparison remain pending. |
+| `IUTII/Kummer/LocalGaloisKummerAction` | **proved discrete local Galois action / ind-topological and Frobenioid realization pending** | For `Gal(Qbar_p/Q_p)` with its Krull topology and an explicitly declared discrete topology on algebraic-closure units, the unit stabilizer is identified with the field stabilizer and proved open from integrality. This yields a genuine continuous action and local group-side Kummer homomorphism. It is not the source's ind-topological integral monoid or Frobenioid evaluation. |
+| `IUTII/Frobenioid/LocalTorsionCyclotome` | **proved local torsion-cyclotomic/rootability construction** | Lean proves the multiplicative rational circle `Q/Z` equivalent to all roots of unity in an algebraic closure of a characteristic-zero field, composes this with the proved integral-unit torsion equivalence, and transports algebraic-closure divisibility to `RootableBy Nat` on the actual local Grothendieck groupification. No cyclotomic structure is accepted as a field or premise. |
+| `IUTII/Frobenioid/LocalMLFTMPair` | **proved canonical mono-analytic MLF `TM` model / Frobenioid comparison pending** | The acting group is the actual Krull-topological `Gal(Qbar_p/Q_p)`, the augmentation is the continuous identity surjection, and the arithmetic monoid/action are the proved local integral model. Pullbacks of genuine Krull-open stabilizers are proved to fix their elements. Unit and `times-mu` actions feed the existing Ism kernel, but no distinct group/Frobenioid comparison is asserted. |
+| `IUTII/Frobenioid/LocalGroupificationAction` | **proved discrete continuous groupification action** | The local integral-monoid action is extended through the Grothendieck-group universal property. Its stabilizer is pulled back from the genuine Krull-open stabilizer of the corresponding algebraic-closure unit. The unit embedding is proved injective and equivariant, and the groupification equivalence is proved equivariant with the actual algebraic-closure action. This is not a Frobenioid evaluation or the source's unit-valued Kummer comparison. |
+| `IUTII/Frobenioid/LocalIntegralUnitKummer` | **proved integral-unit root realization / Frobenioid comparison pending** | Compatible rational roots in the actual local Grothendieck group are used to prove every Galois root ratio is torsion, lift it uniquely to an integral unit, and construct the resulting unit-valued `Q/Z` cyclotome, continuous crossed cocycle, and `H^1` germ. No Kummer comparison is assumed as data. |
+| `IUTII/Frobenioid/LocalUnitKummerMap` | **proved canonical unit Kummer homomorphism / Frobenioid comparison pending** | Any two compatible-root choices are proved to differ by an explicit coboundary. Product root realizations prove multiplication of germs, yielding a genuine monoid homomorphism from local integral units. This still supplies only the group-side map. |
+| `IUTII/Frobenioid/LocalUnitKummerInjectivity` | **proved mono-analytic injectivity / Definition 4.9 comparison pending** | A trivial germ yields roots of every positive degree fixed by one open subgroup. The fixed field is finite over `Q_p`; its integral-closure unit group is residually finite, using an explicit equivalence between the canonical valuation ring and `Z_p`. Hence the constructed mono-analytic integral-unit Kummer homomorphism is injective. Frobenioid-side evaluation and the group/Frobenioid comparison are not asserted. |
+| `IUTII/Frobenioid/LocalMLFPrimeStripBridge` | **proved definitional compatibility / categorical Frobenioid evaluation pending** | The integral F-prime-strip value object was corrected from `(LocalIntegralMonoid p)^x` to `LocalIntegralMonoid p`, so the generic Kummer layer takes units exactly once. Its monoid, unit, and `times-mu` actions are then proved by `rfl` to be the canonical local MLF `TM` actions. This is not yet the universal-cover Frobenioid evaluation functor. |
+| `IUTII/Frobenioid/LocalIntegralUnitEvaluationImage` | **proved exact arithmetic evaluation image / universal-cover evaluation pending** | The integral-unit evaluation has exactly the algebraic-closure units whose value and inverse are integral. The induced equivalence is proved compatible with the natural Galois action, descends through the full torsion quotient, and maps every open-subgroup invariant image exactly onto its counterpart, yielding a real carrier-level `Ism` orbit. This does not identify the carrier with `O^triangle(A)` until the paper's universal-cover pro-object and categorical Frobenioid evaluation have been constructed. |
 | `IUTII/Theta/FiniteThetaPacket` | **proved concrete lower packet / IUT identification pending** | A finite interval subtype supplies the standard Mathlib `Fintype`; the Gaussian packet is positive, nonzero, sign-symmetric, and has a proved finite log-volume identity. This is a lower numerical packet, not yet the paper's etale theta or Hodge-Arakelov object. |
 | `IUTII/Theta/EtaleThetaQuotient` | **proved algebraic lower-central kernel / geometric realization pending** | The lower-central theta quotient, elliptic abelianization, exponent-`l` power quotients, canonical surjections, and central theta kernel are constructed with Mathlib commutator/normal-closure/QuotientGroup APIs. Profinite closedness, etale fundamental groups, and the rank-two arithmetic identification remain explicit obligations. |
 | `IUTIII/Theorem311/*` | **claim only / interface vocabulary, with a proved generic kernel** | Theorem 3.11 output and Ind1--3 are tracked as obligations, not derived from number-field or elliptic-curve data. `Indeterminacy/QuotientTransport` proves representative-independent transport for arbitrary Setoids, but supplies no IUT-specific carriers or relations. |
 | `IUTIII/Theorem311/Indeterminacy/OrbitTransport` | **proved group-action kernel** | Equivariant maps descend through Mathlib's official `MulAction.orbitRel` quotient, and a three-layer orbit transport has a representative formula. This is the Ind1/Ind2 mechanism, not the IUT-specific Galois/Kummer construction. |
 | `IUTIII/Theorem311/Indeterminacy/UpperSemi` | **proved order kernel** | Set-valued upper-semi correspondences, singleton monotone maps, and composition are proved over standard preorders; this captures the logical direction of Ind3 without supplying the paper's log-Kummer correspondence. |
 | `Iut/Foundations/SourceTemperedDeck*` | **proved tempered-deck kernel / arithmetic realization pending** | The literal deck groups, refinement transitions, locally-surjective universal-tree lifting, finite bounded lift fibers, cofiltered compatible sections, and every raw/literal deck projection are constructed and proved. The chain has no `sorryAx`; it does not construct stable reduction, Andre exactness, an arithmetic tempered tower, IPL/SHE/APT, or the Theorem 3.11 output. |
+| `Iut/Foundations/SourceTemperedGaloisSplitter` through `SourceTemperedGeometricDomination` | **proved alternative construction kernel / paper-object identity pending** | Lean constructs a pointed Galois splitter, local component maps, universal sheet lift, corrected target points, branch naturality, and a literal domination morphism. These declarations are usable proved mathematics with no `sorryAx`. Their proof architecture targets *Semi-graphs of Anabelioids*, Proposition 3.6(ii), but exact definition-by-definition identity or a proved equivalence with every paper object has not yet been audited; they are not counted as IUT III Theorem 3.11, Ind1--3, IPL/SHE/APT, or Corollary 3.12. |
+| `Iut/Foundations/SourceTemperedActionFactorization` through `SourceTemperedActionCoverEquivalence` | **proved 26-module action-cover classification kernel / paper-object identity pending** | The fixed `promachina@c7c06e23` chain constructs orbit factorization, component families, literal tempered covers, finite and componentwise associated quotients, normalized universal-cover refinements, the action-cover functor, and its full/faithful instances. All 26 modules compile with zero diagnostics and the sampled endpoints have no `sorryAx`. Thirteen files are byte-identical and thirteen contain only audited Lean 4.32.2 proof migrations. This remains a proposed construction of the *Semi-graphs of Anabelioids*, Proposition 3.6(ii), mechanism; exact definition-by-definition identity with the paper is pending, and none of IUT III Theorem 3.11, Ind1--3, IPL/SHE/APT, Corollary 3.12, or ABC is thereby proved. |
 | `IUT_SUBTARGETS.md` | **research-target registry** | Separates proved Lean kernels, source-faithful IUT obligations, and external open-problem candidates; no candidate is counted as proved by the current project. |
 | `IUTIII/Corollary312/StepXI/*` | **interface plus one marked `sorry`** | `cor312_of_constructed_stepXI` and the ordered corridor are proved from a supplied contract; `theorem311_produces_stepXI_contract` is the sole `sorryAx` reachable from the production entry point. `HolomorphicHull/Volume` additionally proves finite positive-packet determinant, tensor-product, rescaling, log-volume, and weighted-hull identities using the official `Matrix.det`, `Matrix.det_diagonal`, and `Finset` APIs. It does not construct the paper's holomorphic hull, local/global tensor normalization, or q-pilot objects. |
 | `IUTIII/Corollary312/StepXI/FiniteCertificateBridge` | **interface** | `FiniteStepXILinkEvidence` makes `targetSigned`, IPL/SHE/APT evidence, and both comparison bounds explicit; from those supplied fields, Lean constructs a `StepXIContract` and proves the ordered conclusion. It does not prove any of the supplied source-facing fields. |
 | `IUTIII/Corollary312/Routes` | **three claimed routes recorded / all pending** | The source-labelled Mochizuki 3.11.5 reorganization, Joshi's arithmetic-Teichmuller/Rosetta-Stone route, and Sarkisyan's explicitly claimed Erdos--Kac route are separate typed tags and audit obligations. No preprint result is imported as an axiom, and no route certificate is constructed. |
 | `ABCBridge/Statement` | **proved statement layer** | `ABCConjecture` is the standard epsilon/constant radical proposition; the radical lemmas are checked against Mathlib. This is not a proof of the conjecture. |
-| `ABCBridge/UnprovedTarget` | **sorry target** | The target is accepted only with the explicit `sorry`; it is not imported by the production project. |
+| `ABCBridge/UnprovedTarget` | **pending metadata only** | The former unused `abc_conjecture_target := by sorry` declaration was removed. The file now records the unproved ABC target without creating a Lean theorem or a second `sorryAx`. |
 | `Audit/Status.Obligation` | **proved audit metadata** | Obligations now carry optional `dependsOn`, `externalAxioms`, and named `sorryItems` lists; defaults preserve existing source metadata while key pending boundaries populate the lists explicitly. |
 | `tools/check_no_custom_axioms.ps1` | **passed audit gate** | Scans production `LeanFormal/IUT` source for top-level `axiom`/`opaque` declarations; current result is zero. This is separate from the allowed, explicitly isolated `sorryAx` boundary. |
 | `papers/motizuki_corpus/UPSTREAM_REUSE.md` | **provenance register** | Fixed commits and source surfaces for promachina, Takkun, LANA, com-junkawasaki, and PriestAmbrose are recorded with `proved`/`interface`/`diagnostic`/`external-claim` labels. It is a bibliography and reuse policy, not a mathematical intermediary layer. |
@@ -239,13 +257,22 @@ formalization.
 | Mathlib 4.32.2 compatibility patch audit | **20/20 reverse checks passed** | `vendor/promachina/patches/4.32.2/MANIFEST.json`; the tracked closure now has 31 files, of which 20 are patched and 11 are byte-identical to the fixed source snapshot. |
 | Tempered deck transition/projection closure | **3/3, zero diagnostics** | `logs/lean/serial-20260804-065656/summary.json`; the deck-group file is byte-identical to `promachina@c7c06e23`, while the transition and projection files contain only recorded Lean 4.32.2 normalization migrations. All six stdout/stderr logs are empty. |
 | Tempered deck axiom sample | **passed** | `logs/lean/axioms-upstream-foundations-20260804-065850/axiom_audit.stdout.log`; ten samples from bounded lifts through the literal tempered projection use only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx`. |
+| Tempered geometric-domination closure | **5/5, zero diagnostics** | `logs/lean/serial-20260804-080846/summary.json`; the Galois splitter, component map, universal sheet lift, target sheet lift, and geometric domination modules all compile, and all ten stdout/stderr logs are empty. |
+| Tempered geometric-domination axiom sample | **passed** | `logs/lean/axioms-upstream-foundations-20260804-081211/axiom_audit.stdout.log`; nine splitter/lift/naturality/domination declarations use only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx`. |
+| Tempered/action-cover construction closure | **26/26, zero diagnostics** | The first thirteen modules are covered by `logs/lean/serial-20260804-071152/summary.json`, `serial-20260804-072531`, `serial-20260804-073549`, `serial-20260804-074140`, and `serial-20260804-080846`; the final thirteen are in `logs/lean/serial-20260804-085836/summary.json`. All 26 exit codes are 0 and all 52 stdout/stderr logs are empty. |
+| Tempered/action-cover endpoint axiom audit | **passed** | `logs/lean/axioms-upstream-foundations-20260804-090536/status.json`; finite-level full/faithful, connected/componentwise/global classification, refinement, geometric inverse-system, and action-cover full/faithful endpoints use only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx`. |
+| Local integral-unit Kummer closure | **passed; zero diagnostics** | `logs/lean/local-unit-kummer-injectivity-20260805/lake-targets-zero-warning.log`; the root-choice-independent Kummer map and mono-analytic injectivity targets both build without warnings or errors. |
+| Local integral-unit Kummer production and axiom audit | **passed** | `logs/lean/local-unit-kummer-injectivity-20260805/Project.log` and `axiom_audit.final.log`; all new sampled declarations use only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx`. The custom declaration scan is in `custom_axioms.log` and reports zero top-level `axiom`/`opaque`. |
+| Current aggregate after local integral-unit Kummer injectivity | **passed; zero diagnostics** | `logs/lean/local-unit-kummer-injectivity-20260805/LeanFormal.log`; `lake build LeanFormal` completed successfully (3738 jobs). The only production `sorryAx` remains `theorem311_produces_stepXI_contract`. |
 
 ### Public repositories checked at fixed commits
 
 | repository (commit) | build/scope actually observed | status at the IUT wall |
 |---|---|---|
 | [promachina/iut-lean](https://github.com/promachina/iut-lean) `4953e647` | 128 Lean files. The project has an extensive Stage-1 source-facing layer and its own dependency/audit documents. `AlgorithmicOutput` stores `ipl`, `she`, `apt` as `Prop` fields; downstream `CorollarySchema`/`SourceObligations` prove the ordered comparison once certificates, a common-target bound, hull/measure data, and q-positivity are supplied. | **interface**. The repository README explicitly lists full Frobenioids, holomorphic hulls, determinants, and local-field/Haar compatibility as remaining construction work. A passing downstream theorem is conditional on those records. |
-| [promachina/iut-lean](https://github.com/promachina/iut-lean) `c7c06e23` (current HEAD checked 2026-08-04; local production snapshot starts at `0d52e0fd`) | 190 Lean files. Eleven commits after the local snapshot add countable-base tempered-cover proofs, bad-local stable-reduction semigraphs, an Andre tempered exact-sequence boundary, an arithmetic tempered-tower wrapper, a selected finite-place covering wrapper, and source-audit material. Its `lakefile.toml` pins Mathlib `v4.30.0`, whereas this project uses Lean/Mathlib `4.32.2`. | **mixed**. Finite semigraph, finite-fiber/countability, nested quotient, canonical-map injectivity, connected-covering, kernel-orbit, countable-temperoid, adjunction, deck-projection, and categorical comparison kernels are real constructions. Tame realization, pro-Sigma facts, Andre exactness/completion, stable-log specialization, level exactness, limit surjectivity/inducing, and the selected bad-place stable/Andre/tower family remain fields. The reusable generic kernels are now ported and audited; the selected-place wrapper remains `interface-only`. |
+| [promachina/iut-lean](https://github.com/promachina/iut-lean) `bbb736cd` (current HEAD checked 2026-08-04; local production snapshot starts at `0d52e0fd`) | 190 Lean files plus the Definition 3.1 finite-etale certification update. The latest commit adds generic open-subgroup/stabilizer constructions and strengthens sign/l-torsion/theta-root records with finite-etale and derived-fundamental-group certificates. Its `lakefile.toml` pins Mathlib `v4.30.0`, whereas this project uses Lean/Mathlib `4.32.2`. | **mixed**. The generic profinite open-subgroup and cover-fiber stabilizer constructions are real and reusable. The decisive finite-etale existence, source-group/stabilizer equivalences, and exact-sequence compatibility remain supplied structure fields; the update improves type discipline but does not construct Definition 3.1 geometry. Details are in `vendor/promachina/review-bbb736cd.json`. |
+| [promachina/iut-lean](https://github.com/promachina/iut-lean) `2eb61e1b` (checked 2026-08-05) | 16 commits after `ea91200b`, 29 changed files/20 Lean files: Tate coefficients, local/global Frobenioid reconstruction packages, archimedean geometry, bad-place evaluation sections, and a D-theta bridge. The changed Lean tree has no top-level `axiom`, `opaque`, or explicit `sorry`. | **mixed, selective reuse only**. The derived section/decomposition-group, finite-branch, realified-ray, and categorical transport proofs are real. The analytic geometry, Andre splitting, reconstruction, and local/global Frobenioid existence are still prerequisite/reconstruction structure fields. The reusable torsion-cyclotome and groupification-rootability proof was specialized to our actual local monoid; wrappers were not bulk-ported. See `vendor/promachina/review-2eb61e1b.json`. |
+| [promachina/iut-lean](https://github.com/promachina/iut-lean) `7bea5b03` (checked 2026-08-05) | Two substantive commits add 2835 foundation lines for Topics I chain reconstruction and IUT I Definition 5.2(v)-(viii) local coric reconstruction. The changed source has no top-level `axiom`, `opaque`, or explicit `sorry`. | **conditional reconstruction framework; no bulk port**. The comparison types and derived critical-predicate/unit-equivalence kernels are useful, but final objects are selected from `candidate_exists`, `candidates_isomorphic`, and `compatible_exists` recognition fields. Our new Kummer injectivity can later discharge one selected-place injectivity field only after the missing type bridge, Frobenioid embedding, and exact-image proof exist. See `vendor/promachina/review-7bea5b03.json`. |
 | [Takkun-kohinata/IUT_LEAN](https://github.com/Takkun-kohinata/IUT_LEAN) `9d56c46` (refreshed 2026-08-04; unchanged) | 68 Lean files. `Multiradial/Cor312.lean` proves its stated abstract corridor; `Diophantine/Szpiro.lean` defines the Szpiro-shaped conclusion but leaves its truth as `DiophantineMainTheorem`; `InitialThetaData/Deferred.lean` documents deferred geometric realization; `LogTheta/Indeterminacy.lean` uses an orbit model for Ind3. | **interface/claim only**. The finite/group-theoretic and numerical lemmas are useful, but the real etale-theta, prime-strip, Kummer, and initial-data constructions are not recovered from the original geometry. |
 | [lana-project/iut4-sec1](https://github.com/lana-project/iut4-sec1) `a7551d2` (refreshed 2026-08-04; unchanged) | 26 Lean files. Six Mathlib-only Section-1 targets are exported. The comparator README marks later targets (tensor bijection/norm, second error, exact prime-counting) as not included or conditional. | **proved only for elementary Section 1 fragments**. It intentionally does not verify IUT I--III or Corollary 3.12. |
 | [com-junkawasaki/iut-lean](https://github.com/com-junkawasaki/iut-lean) `ca4c0dd` (refreshed 2026-08-04; unchanged) | 7 Lean files. Genuine `Polynomial.abc`/Mason--Stothers corollary and numerical hyperbolic curve-type facts. | **not IUT formalization**; no prime strips or Corollary 3.12 objects. |
@@ -908,3 +935,255 @@ corridors and diagnostics, not a resolution of the controversy.**
   `master` remains `c7c06e23`; 24 of 25 non-master branch tips are ancestors
   of it, and the sole unmerged tip `7a0854b2` has exactly the same Git tree as
   its parent. No additional mathematical file is available to port.
+- 2026-08-04: closed the five-module Galois-splitter-to-geometric-domination
+  batch under Lean/Mathlib 4.32.2. The serial run is 5/5 with ten empty logs
+  at `logs/lean/serial-20260804-080846/summary.json`; the representative axiom
+  audit passes without `sorryAx` at
+  `logs/lean/axioms-upstream-foundations-20260804-081211/`. This is recorded
+  as a proved alternative construction kernel for *Semi-graphs of
+  Anabelioids*, Proposition 3.6(ii), while exact identity/equivalence with the
+  paper's complete objects remains a separate semantic audit obligation.
+- 2026-08-04: closed the complete 26-module tempered/action-cover batch from
+  action factorization through the full and faithful action-cover functor.
+  The aggregate evidence consists of six topology-ordered serial runs ending
+  at `logs/lean/serial-20260804-085836/summary.json`: 26/26 exit code 0 and all
+  52 module logs empty. The expanded endpoint audit passes without `sorryAx`
+  at `logs/lean/axioms-upstream-foundations-20260804-090536/`. Exact source
+  and production SHA-256 values are recorded in
+  `vendor/promachina/selective-ports-tempered-action-cover-c7c06e23.json`.
+  This is not counted as IUT III Theorem 3.11 or Corollary 3.12.
+- 2026-08-04: added the algebraic `xmu` quotient required by IUT II,
+  Definition 4.9(i), in `IUTII/Kummer/TimesMuQuotient.lean`. For an actual
+  commutative unit group, Lean forms the quotient by `CommGroup.torsion`,
+  proves the quotient map surjective with exactly that kernel, proves every
+  multiplicative automorphism preserves torsion, descends an arbitrary group
+  action, and proves equivariance, the identity/composition laws, and that the
+  quotient is torsion-free. The `FPrimeStrip` bridge first takes the canonical
+  unit group of its value monoid and lifts the existing action via
+  `Units.mapEquiv`; this avoids assuming an unrelated group structure on the
+  monoid and follows the source's `O^x(A)/O^mu(A)` construction. No topology,
+  ind-system, Ism-orbit, or Kummer isomorphism is asserted here.
+- 2026-08-04: the first `xmu` compile log at
+  `logs/lean/serial-20260804-095002/summary.json` records the rejected direct
+  `CommGroup (F.Mon v)` bridge: Lean correctly exposed that its multiplication
+  need not be definitionally the `FPrimeStrip` multiplication. The canonical
+  unit-group revision compiles warning-free with empty stdout/stderr in
+  `logs/lean/serial-20260804-095354/summary.json`.
+- 2026-08-04: the production entry passed with empty stdout/stderr in
+  `logs/lean/serial-20260804-095517/summary.json`. The expanded endpoint audit
+  is `logs/lean/axioms-20260804-095813/axiom_audit.stdout.log`: every new
+  theorem uses only `propext`, `Classical.choice`, and `Quot.sound`, while the
+  strict boundary still contains exactly the single pre-existing Step-XI
+  `sorryAx`; see `logs/lean/boundary-20260804-095813.log`. The production tree
+  has zero custom top-level `axiom`/`opaque` declarations in
+  `logs/lean/custom-axiom-20260804-095802.log`.
+- 2026-08-04: refreshed `promachina/iut-lean` again at `ea91200b`, two commits
+  after the prior `bbb736cd` audit. The new selected-place base-change batch
+  derives local curves, quotient stacks, pullback functors, selected-place
+  stabilizer images, and indexed local cover/cusp/theta-root diagrams from
+  tighter preceding data. It does not alter the Definition 4.9(i) quotient/Ism
+  kernel, whose source file was last changed at `3de1d7c1`. The selected local
+  constructions are candidates for the later initial-theta/Hodge-theater use
+  point, not a reason to import the 857-line wrapper now.
+- 2026-08-04: adapted the reusable Definition 4.9(i) Ism kernel into
+  `IUTII/Kummer/TimesMuIsm.lean`. For arbitrary actual group actions, Lean now
+  constructs each open-subgroup fixed group and its image modulo torsion,
+  proves the image is pointwise fixed, constructs the exact equivariant and
+  image-preserving Ism subgroup, constructs its action on compatible Kummer
+  isomorphisms, and proves all compatible representatives define the same
+  orbit. It constructs the identity representative for one action but does not
+  assert that the paper's group-theoretic and Frobenioid actions are isomorphic.
+  Source attribution and the exact semantic boundary are recorded in
+  `vendor/promachina/selective-port-times-mu-ea91200b.json`.
+- 2026-08-04: the first Ism adaptation log
+  `logs/lean/serial-20260804-100541/summary.json` records only Lean 4.32.2
+  coercion/noncomputability migration failures. The corrected module is
+  warning-free with empty stdout/stderr in
+  `logs/lean/serial-20260804-100702/summary.json`; no mathematical assumption or
+  conclusion changed in the correction.
+- 2026-08-04: the production entry after the Ism port passed with empty
+  stdout/stderr in `logs/lean/serial-20260804-100833/summary.json`. The seven
+  new endpoint samples in
+  `logs/lean/axioms-20260804-100903/axiom_audit.stdout.log` use only `propext`,
+  `Classical.choice`, and `Quot.sound`; the strict boundary still reports only
+  the one pre-existing Step-XI `sorryAx` in
+  `logs/lean/boundary-20260804-100903.log`. The post-port custom declaration
+  scan reports zero top-level `axiom`/`opaque` declarations in
+  `logs/lean/custom-axiom-20260804-100931.log`.
+- 2026-08-04: added the target-directed local-field `G_m` Kummer-rigidity
+  chain in `IUTII/Kummer/LocalFieldRigidity.lean`, selected from the corrected
+  upstream faithfulness split at `3de1d7c1`. Lean proves residual-finiteness
+  root rigidity, realizes valuation-ring units as a profinite group, proves a
+  full local-field unit with roots of every positive degree has zero discrete
+  valuation and is the identity, and derives injectivity of any multiplicative
+  Kummer map with the standard kernel characterization. It does not state or
+  prove the stronger arbitrary-torus or semi-abelian clauses. Exact source
+  blobs, exclusions, and scope are recorded in
+  `vendor/promachina/selective-port-local-field-kummer-ea91200b.json`.
+- 2026-08-04: the initial local-field rigidity log
+  `logs/lean/serial-20260804-101250/summary.json` records one mistyped quotient
+  symbol and two Lean 4.32.2 explicit-argument migrations. The corrected module
+  compiles warning-free with empty stdout/stderr in
+  `logs/lean/serial-20260804-101448/summary.json`; no theorem statement or
+  mathematical step changed.
+- 2026-08-04: the production entry after the local-field rigidity addition
+  passed with empty stdout/stderr in
+  `logs/lean/serial-20260804-101553/summary.json`. The six new endpoint samples
+  in `logs/lean/axioms-20260804-101648/axiom_audit.stdout.log` use only
+  `propext`, `Classical.choice`, and `Quot.sound`; the strict boundary still
+  reports exactly the one pre-existing Step-XI `sorryAx` in
+  `logs/lean/boundary-20260804-101648.log`.
+- 2026-08-04: the post-local-field custom declaration scan reports zero
+  top-level production `axiom`/`opaque` declarations in
+  `logs/lean/custom-axiom-20260804-101945.log`.
+- 2026-08-04: added `Iut/Foundations/ContinuousH1.lean`,
+  `IUTII/Kummer/RationalRootSystem.lean`, and
+  `IUTII/Kummer/ContinuousKummerGerm.lean`. Lean now constructs continuous
+  `H^1` germs, one coherent rational root system, the root-ratio crossed
+  homomorphism for an open-subgroup-fixed unit, its continuity, and its
+  independence from the compatible-root choice. No Frobenioid evaluation or
+  group/Frobenioid Kummer isomorphism is inferred.
+- 2026-08-04: the four-module production closure is warning-free with eight
+  empty logs in `logs/lean/serial-20260804-104828/summary.json`. The expanded
+  axiom audit in `logs/lean/axioms-20260804-105006/axiom_audit.stdout.log`
+  reports only `propext`, `Classical.choice`, and `Quot.sound` for the new
+  endpoints; the production boundary still has exactly the one pre-existing
+  Step-XI `sorryAx`. Both custom-declaration scans report zero declarations in
+  `logs/lean/custom-axiom-20260804-105339.log` and
+  `logs/lean/custom-axiom-foundations-20260804-105339.log`. Exact source and
+  production hashes and exclusions are recorded in
+  `vendor/promachina/selective-port-continuous-kummer-ea91200b.json`.
+- 2026-08-04: added `IUTII/Kummer/CanonicalKummerMap.lean`. The canonical
+  construction proves open stabilizers, common-subgroup/root-system
+  independence, product-root compatibility, and a genuine group homomorphism
+  from all divisible discrete coefficient units to the continuous Kummer-germ
+  group. The affected closure is 4/4 with empty diagnostics in
+  `logs/lean/serial-20260804-110554/summary.json`. The expanded endpoint audit
+  passes in `logs/lean/axioms-20260804-110734/axiom_audit.stdout.log`; only the
+  pre-existing Step-XI `sorryAx` remains. The production hash is recorded in
+  `vendor/promachina/selective-port-continuous-kummer-ea91200b.json`.
+- 2026-08-04: added `IUTII/Kummer/LocalGaloisKummerAction.lean`. With the
+  Krull topology on `Gal(Qbar_p/Q_p)` and an explicit discrete topology on
+  algebraic-closure units, Lean identifies unit and field stabilizers and
+  applies Mathlib's integral-extension stabilizer theorem. The resulting
+  local action and group-side Kummer homomorphism compile warning-free in
+  `logs/lean/serial-20260804-111713/summary.json`. The source's ind-topological
+  integral monoid and Frobenioid evaluation remain outside this module.
+- 2026-08-04: the five-module affected closure through `Project.lean` passes
+  with 10/10 empty diagnostic logs in
+  `logs/lean/serial-20260804-111855/summary.json`. The expanded endpoint audit
+  passes in `logs/lean/axioms-20260804-112123/axiom_audit.stdout.log`; the only
+  `sorryAx` is still `theorem311_produces_stepXI_contract`. The production and
+  imported-foundation custom-declaration scans both report zero in
+  `logs/lean/custom-axiom-20260804-112206.log` and
+  `logs/lean/custom-axiom-foundations-20260804-112206.log`.
+- 2026-08-05: refreshed `promachina/iut-lean` from the previously audited
+  `ea91200b` to `2eb61e1b` (16 commits, 29 changed files, 20 Lean files, 26
+  remote branches). The new batches cover Tate coefficients, nonarchimedean
+  and global Frobenioid reconstruction packages, archimedean local geometry,
+  bad-place evaluation sections, and a D-theta bridge. The changed Lean tree
+  has no top-level `axiom`, `opaque`, or explicit `sorry`, but the decisive
+  analytic geometry, Andre splitting, reconstruction, and local/global
+  Frobenioid existence remain fields of prerequisite/reconstruction records.
+  The declaration-level decision is recorded in
+  `vendor/promachina/review-2eb61e1b.json`; these wrappers were not bulk-ported.
+- 2026-08-05: added `LocalTorsionCyclotome.lean`. The exact upstream
+  rational-circle/root-of-unity proof was adapted only for the Lean 4.32.2
+  `CommGroup.mem_torsion` API, then specialized to the already proved local
+  integral monoid. Lean proves `Q/Z` equivalent to its full torsion-unit group,
+  transports algebraic-closure divisibility to `RootableBy Nat` on the actual
+  Grothendieck groupification, and constructs one coherent rational-root
+  system. No cyclotomic equivalence is accepted as input.
+- 2026-08-05: added `LocalMLFTMPair.lean`. The canonical model uses the actual
+  Krull-topological `Gal(Qbar_p/Q_p)`, continuous identity augmentation, local
+  integral monoid, and its proved action. Every model augmentation pulls back
+  the genuine Krull-open stabilizer, and Lean proves the pullback fixes its
+  element. The induced unit and `times-mu` actions instantiate the existing
+  Ism kernel, while the group/Frobenioid Kummer comparison remains unasserted.
+- 2026-08-05: corrected `LocalIntegralFPrimeStrip.Mon` from the unit group of
+  the integral monoid to the integral monoid itself. The previous wrapper
+  caused the generic Kummer layer to take units twice. The new
+  `LocalMLFPrimeStripBridge.lean` proves by definitional equality that the
+  corrected strip's monoid, unit, and `times-mu` actions are exactly those of
+  the canonical MLF `TM` pair. This changes the local wrapper to the intended
+  mathematical carrier; it does not alter any lower theorem or infer a
+  categorical Frobenioid evaluation.
+- 2026-08-05: fetched all public `promachina/iut-lean` branch refs after the
+  local `TM`/prime-strip bridge closed. `master` remained at `2eb61e1b`; the
+  newly visible refs are older work branches, and all except the tempered
+  semigraph inverse-limit branch are already merged into `master`. The
+  upstream ledger itself still marks construction from Frobenioid evaluation
+  and finite/archimedean reconstruction outputs as open, so no reconstruction
+  wrapper was imported. The reusable groupification-action proof was instead
+  specialized to our actual local monoid in `LocalGroupificationAction.lean`.
+  Its action, Krull-open stabilizer, discrete continuity, unit embedding, and
+  comparison with algebraic-closure units are all proved without new
+  assumptions. The branch-level decision is recorded in
+  `vendor/promachina/review-branches-20260805.json`.
+- 2026-08-05: the final affected module logs are in
+  `logs/lean/build-serial-20260805-010000`; all final stdout/stderr diagnostics
+  are empty. The expanded audit at
+  `logs/lean/axioms-20260805-010000/axiom_audit.stdout.log` reports only
+  `propext`, `Classical.choice`, and `Quot.sound` for every new theorem. Its
+  only `sorryAx` remains
+  `LeanFormal.IUT.theorem311_produces_stepXI_contract`. The final aggregate
+  log `logs/lean/build-20260805-010000/LeanFormal.stdout.log` reports
+  `Build completed successfully (3729 jobs)`; stderr is empty and the combined
+  warning/error scan has zero matches. The C-layer ledger now contains 24
+  proved, 6 interface, and 5 pending obligations (24/35 unweighted; about 40%
+  by remaining mathematical work).
+- 2026-08-05: `LocalGroupificationAction.lean` passed its standalone Lake
+  build, the production `Project` target, and the full `LeanFormal` build
+  (`3730` jobs). Final logs are under
+  `logs/lean/local-groupification-20260805/`; the initial missing-olean build
+  ordering diagnostic is retained separately as
+  `Project.initial-missing-olean.log`. The final module, project, and aggregate
+  logs contain no warning or error. `axiom_audit.log` reports only `propext`,
+  `Classical.choice`, and `Quot.sound` for all six sampled declarations from
+  the new module. Production still has no custom top-level `axiom` or
+  `opaque`; its sole explicit `sorry` and sole audited `sorryAx` remain the
+  `theorem311_produces_stepXI_contract` bridge.
+- 2026-08-05: completed the actual local integral-unit Kummer map and its
+  mono-analytic injectivity theorem. Root-choice comparison is an explicit
+  coboundary, multiplication is proved on common open subgroups, and a trivial
+  germ yields roots of every degree in one finite fixed field. The residual-
+  finiteness step uses a proved ring equivalence between the canonical
+  valuation ring of `Q_p` and Mathlib's `Z_p`, not an assumed local-field
+  instance. The three new C-layer obligations are proved without `sorryAx`;
+  Frobenioid-side evaluation and the IUT II Definition 4.9 comparison remain
+  pending. Final target, Project, axiom, custom-axiom, and aggregate logs are
+  under `logs/lean/local-unit-kummer-injectivity-20260805/`; the aggregate is
+  3738 jobs with zero diagnostics. The C-layer ledger is now 27 proved, 6
+  interface, and 5 pending obligations (27/38 unweighted; approximately 43%
+  by remaining mathematical work).
+- 2026-08-05: fetched `promachina/iut-lean` through `7bea5b03`. The new Topics I
+  chain and Definition 5.2 coric files are axiom/sorry-free, but their exported
+  reconstructions select candidates from supplied recognition existence and
+  uniqueness fields. They are retained as a specification and future source
+  of derived constructors, not bulk-ported. The precise intersection with the
+  newly proved Kummer injectivity and the remaining prerequisites is recorded
+  in `vendor/promachina/review-7bea5b03.json`.
+- 2026-08-05: checked IUT II, Definition 4.9(i), directly on source PDF pages
+  153--155 and added `LocalIntegralUnitEvaluationImage.lean`. Lean proves that
+  the concrete local unit evaluation has exactly the algebraic-closure units
+  whose value and inverse are integral. The induced multiplicative equivalence
+  is Galois-equivariant, descends to the full-torsion quotient, and preserves
+  every open-subgroup invariant image, producing a real carrier-level `Ism`
+  orbit. This does not claim that the carrier is the paper's `O^triangle(A)`:
+  the universal-cover pro-object, categorical Frobenioid evaluation,
+  ind-topology, and group-reconstruction identification remain pending.
+- 2026-08-05: the new local evaluation-image target and production `Project`
+  build passed with zero diagnostics; the latter completed 3737 jobs. The full
+  `LeanFormal` build completed 3739 jobs. Logs are under
+  `logs/lean/local-integral-unit-evaluation-image-20260805/`. The four sampled
+  new endpoints use only `propext`, `Classical.choice`, and `Quot.sound`;
+  custom top-level `axiom`/`opaque` remains zero, and the only production
+  `sorryAx` is still `theorem311_produces_stepXI_contract`.
+- 2026-08-05: fetched the one-commit-ahead upstream F-bridge branch
+  `87d595c7`. Its Definition 5.5 design removes caller-supplied selected
+  F-arrows and injectivity fields, then derives the selected range and its
+  associated-D uniqueness from reconstructed pullback lifts. The pullback,
+  global Frobenioid restriction, local-to-global lifts, and theater
+  isomorphisms still originate in `candidate_exists` recognition records, and
+  Definition 5.5(iii) gluing is absent. No code was ported; the reusable kernel
+  and exact boundary are recorded in `vendor/promachina/review-87d595c7.json`.

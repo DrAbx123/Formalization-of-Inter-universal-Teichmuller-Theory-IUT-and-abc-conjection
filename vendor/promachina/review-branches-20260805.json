@@ -1,0 +1,44 @@
+{
+  "reviewedAt": "2026-08-05T00:00:00+08:00",
+  "repository": "https://github.com/promachina/iut-lean",
+  "license": "Apache-2.0",
+  "master": "2eb61e1b037635a5346f7265f520b458155303ed",
+  "masterChangedSincePreviousAudit": false,
+  "newlyFetchedBranchRefs": 25,
+  "unmergedIntoMaster": [
+    {
+      "branch": "agent/46-tempered-semigraph-inverse-limit",
+      "commit": "7a0854b2",
+      "decision": "not ported",
+      "reason": "Tempered inverse-limit work is outside the current C-layer local Frobenioid/Kummer dependency path."
+    }
+  ],
+  "mergedBranchFamiliesReviewed": [
+    {
+      "family": "agent/54 and issue-197 tempered action-cover classification",
+      "decision": "already selectively ported and audited in the B-layer closure"
+    },
+    {
+      "family": "agent/55 finite-etale and glued anabelioid construction",
+      "decision": "not ported for the current step; no direct local Kummer/Frobenioid evaluation output"
+    },
+    {
+      "family": "agent/66 generic birational Frobenioid axioms",
+      "decision": "reference only",
+      "reason": "The generic model proofs are real, but instantiating their input with the paper's local arithmetic Frobenioid remains a separate obligation."
+    },
+    {
+      "family": "agent/75 Kummer faithfulness scope",
+      "decision": "reuse proof architecture selectively",
+      "reason": "It correctly separates integral-unit faithfulness from full G_m faithfulness. The groupification-action kernel was specialized locally; unit-valued Kummer injectivity remains the next proof obligation."
+    }
+  ],
+  "upstreamOpenBoundary": "The upstream source ledger explicitly leaves construction of the finite-place split Kummer input from Frobenioid evaluation and the reconstruction outputs open.",
+  "portedInThisReview": [
+    {
+      "localModule": "LeanFormal/IUT/IUTII/Frobenioid/LocalGroupificationAction.lean",
+      "upstreamSource": "Iut/Foundations/SourceThetaEvaluation.lean",
+      "semanticBoundary": "Actual Grothendieck-group action, Krull-open stabilizers, discrete continuity, unit embedding, and algebraic-closure equivariance only; no Frobenioid evaluation or Kummer injectivity claim."
+    }
+  ]
+}

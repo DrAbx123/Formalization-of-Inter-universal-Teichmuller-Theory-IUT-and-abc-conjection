@@ -1,0 +1,39 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "previousHead": "2eb61e1b037635a5346f7265f520b458155303ed",
+  "head": "7bea5b0314ad4d9c3046a7549ca9962b8f546af8",
+  "checkedAt": "2026-08-05T03:05:00+08:00",
+  "newCommitsIncludingMerges": 4,
+  "substantiveCommits": [
+    "6114b4d0b0219db1cbad93547c5fb67070ac03fb",
+    "0d1e75bde2994fbfbba9667caf41d679b61d458f"
+  ],
+  "changedFiles": 19,
+  "leanFilesChanged": 6,
+  "newFoundationLeanLines": 2835,
+  "newFoundationFiles": [
+    "Iut/Foundations/SourceAbsoluteAnabelianTopicsIChainReconstruction.lean",
+    "Iut/Foundations/SourceDefinition52CoricReconstruction.lean"
+  ],
+  "sourceTrustScan": {
+    "topLevelAxiom": 0,
+    "topLevelOpaque": 0,
+    "explicitSorry": 0
+  },
+  "reusableConstructedKernel": [
+    "SourceTopicsIChainTheory recursively extends supplied elementary reconstruction equivalences to whole chains.",
+    "SourceCriticalCoricPredicateSystem constructs infinity-kappa and fixed kappa carriers from a supplied stable ambient predicate and critical-torsion test.",
+    "SourceCoricIntegralUnitEmbedding.unitEquiv derives a unit equivalence once the embedding, exact image, and injectivity are available.",
+    "Definition 5.2 comparison records preserve outer, deck, equivariant, and holomorphic/co-holomorphic ambiguities explicitly."
+  ],
+  "interfaceBoundary": [
+    "Topics I reconstruction still starts from SourceTopicsIChainReconstructionPrerequisite, which supplies the recognition and elementary reconstruction hypotheses cited from Topics I.",
+    "Finite core, rational cuspidalization, integral ind-system, critical coric carrier, cyclotomic comparison, restricted field, archimedean core, and covering system are selected from candidate_exists or compatible_exists fields by Classical.choice.",
+    "SourceNonarchimedeanSelectedPlaceCompatibility supplies the reconstructed/concrete ind-system comparison, the Frobenioid-side unit embedding, its exact image through SourceCoricIntegralUnitEmbedding, and injectivity.",
+    "The new files do not construct the recognition structures from this project's initial theta data or prove IUT II Definition 4.9's group/Frobenioid Kummer comparison."
+  ],
+  "localIntersection": "The proved LeanFormal mono-analytic integral-unit Kummer injectivity can eventually discharge the unitEmbedding_injective field after a type bridge and an actual Frobenioid-side embedding with exact image are constructed. It does not supply those missing objects.",
+  "decision": "Do not bulk-port either new file now. Retain the recognition/comparison design and reuse individual derived constructors only when the current C-layer has constructed their exact hypotheses.",
+  "impactOnCLayer": "Useful specification and a future target for the newly proved local Kummer injectivity, but no immediate closure of initial-theta realization, Frobenioid evaluation, Definition 4.9 comparison, Hodge theaters, theta-links, or log-links.",
+  "impactOnTheorem311Corollary312": "No direct discharge of the IUT-specific Ind1-Ind3 construction, IPL, SHE, APT, holomorphic hull, determinant/tensor normalization, or actual log-volume comparison."
+}

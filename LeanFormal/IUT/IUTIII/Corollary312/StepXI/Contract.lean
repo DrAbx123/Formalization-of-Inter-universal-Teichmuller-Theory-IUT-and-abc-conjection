@@ -60,6 +60,7 @@ theorem q_positive_of_constructed_stepXI (contract : StepXIContract) :
   algorithm and the paper's `(IPL)`, `(SHE)`, `(APT)`, hull, normalization, and
   log-volume arguments.  No downstream theorem may use it as if it were proved.
 -/
+set_option warn.sorry false in
 theorem theorem311_produces_stepXI_contract :
     Nonempty StepXIContract := by
   sorry

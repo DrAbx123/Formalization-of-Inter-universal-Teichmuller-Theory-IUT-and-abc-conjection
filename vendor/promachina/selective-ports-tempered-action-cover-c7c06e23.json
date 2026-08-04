@@ -1,0 +1,192 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "sourceCommit": "c7c06e23d191037424ba5d1a336a31a8cf73dc78",
+  "upstreamMathlib": "v4.30.0",
+  "localLeanMathlib": "v4.32.2",
+  "scope": "26-module tempered/action-cover construction kernel",
+  "classification": "13 byte-identical proofs and 13 Lean 4.32.2 proof migrations",
+  "statementAudit": "No hypotheses, quantified domains, constructed objects, or theorem conclusions were changed. Migrations are explicit change/exact normalization, dependent-index alignment, redundant elaboration-step removal, or Prop-valued def-to-theorem reclassification.",
+  "compileLogs": [
+    "logs/lean/serial-20260804-071152/summary.json",
+    "logs/lean/serial-20260804-072531/summary.json",
+    "logs/lean/serial-20260804-073549/summary.json",
+    "logs/lean/serial-20260804-074140/summary.json",
+    "logs/lean/serial-20260804-080846/summary.json",
+    "logs/lean/serial-20260804-085836/summary.json"
+  ],
+  "compileResult": {
+    "modules": 26,
+    "failed": 0,
+    "stdoutStderrLogs": 52,
+    "nonemptyLogs": 0
+  },
+  "axiomAudit": {
+    "status": "logs/lean/axioms-upstream-foundations-20260804-090536/status.json",
+    "exitCode": 0,
+    "sorryAxFound": false,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "mathematicalScope": "A proved alternative construction kernel targeting Semi-graphs of Anabelioids Proposition 3.6(ii). Exact paper-object identity remains to be audited. This is not IUT III Theorem 3.11, Ind1-Ind3, IPL, SHE, APT, Corollary 3.12, or ABC.",
+  "files": [
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedActionFactorization.lean",
+      "status": "byte-identical-proof",
+      "sourceSha256": "A3EDC8818C238D35A90C87E97179206C96EBFC05AD63850627642C60D96647EC",
+      "productionSha256": "A3EDC8818C238D35A90C87E97179206C96EBFC05AD63850627642C60D96647EC"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperoidOrbitDecomposition.lean",
+      "status": "byte-identical-proof",
+      "sourceSha256": "AE2A6899F4C5FD46E5CFD9D2C7F26489E4B513FAE4B938CEFB89F08E5298B02B",
+      "productionSha256": "AE2A6899F4C5FD46E5CFD9D2C7F26489E4B513FAE4B938CEFB89F08E5298B02B"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperoidComponentFamily.lean",
+      "status": "lean-4.32.2-proof-migration",
+      "sourceSha256": "4ED23AC6536B3511461EF2B0B7051AC27F60DD5D4AC813FBDB7015C03B62C413",
+      "productionSha256": "8939E66E4579D4D376D5107C893708A06B54FD2E61ECCF99F47A08E45E9D99CD"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperoidRestrictionComponentFamily.lean",
+      "status": "byte-identical-proof",
+      "sourceSha256": "8F708EC4F5E0B64D2DA8A44F78FDE468DC4FD8AC5DBD97497921E30D2BA2CF21",
+      "productionSha256": "8F708EC4F5E0B64D2DA8A44F78FDE468DC4FD8AC5DBD97497921E30D2BA2CF21"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceConnectedFiniteEtaleConverse.lean",
+      "status": "byte-identical-proof",
+      "sourceSha256": "D62730972A05449EE7085088783C10443B59C6767C23E1E5C4EA0551A7C580BE",
+      "productionSha256": "D62730972A05449EE7085088783C10443B59C6767C23E1E5C4EA0551A7C580BE"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedCoveringCategory.lean",
+      "status": "lean-4.32.2-proof-migration",
+      "sourceSha256": "99911CF7DA91A15A206493632F1F37191DFAFB30670F9F71F66C910B4A3B88B0",
+      "productionSha256": "C8B0E25F43FC76B91F57F32F9092EEA68088218AA5B39AF7451831ED4B19E8F6"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedFiniteComponentComparison.lean",
+      "status": "lean-4.32.2-proof-migration",
+      "sourceSha256": "0A560C91A3DDD952989BC35FB712CA3FD1BE3C798B7EE404C1532327E76F6092",
+      "productionSha256": "AD2CA420E45CE002F152CF36EB5B98476599CEA699285AAE33A857AA92149E92"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedGraphCoverRealization.lean",
+      "status": "lean-4.32.2-proof-migration",
+      "sourceSha256": "CAF04D755928BC812B56008D81CA0D5B978088669489BD95F397C0E876C69468",
+      "productionSha256": "A48D61C50B97585A49E42ABEFA35E7A1B4AE445DF3B27D3BE33044FF762327DE"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedGaloisSplitter.lean",
+      "status": "byte-identical-proof",
+      "sourceSha256": "C359EE065B0ADD9E5382B37F20EE1681F20E2F683F6D92129B23F1746A8B5AA9",
+      "productionSha256": "C359EE065B0ADD9E5382B37F20EE1681F20E2F683F6D92129B23F1746A8B5AA9"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedGaloisComponentMap.lean",
+      "status": "byte-identical-proof",
+      "sourceSha256": "E7CFF346200288C477AA9DB4D9C70CDE6AE6ACAE4F319621E5192B81F5C188DC",
+      "productionSha256": "E7CFF346200288C477AA9DB4D9C70CDE6AE6ACAE4F319621E5192B81F5C188DC"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceFiniteSheetUniversalLift.lean",
+      "status": "lean-4.32.2-proof-migration",
+      "sourceSha256": "61153E2FED90F8322D421692FBA040375391A90F34FFD2409AF8779251B650D7",
+      "productionSha256": "28715B2E6AC75E5AF17B9F274EFD6770DBDBCEB6636CB60C5BE52B000AE8C6B0"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedTargetSheetLift.lean",
+      "status": "byte-identical-proof",
+      "sourceSha256": "1658DACFA03BDB7461630BE5D4C0C397FBAFAEEA934BF1FBFB1F3C34D70576D5",
+      "productionSha256": "1658DACFA03BDB7461630BE5D4C0C397FBAFAEEA934BF1FBFB1F3C34D70576D5"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedGeometricDomination.lean",
+      "status": "lean-4.32.2-proof-migration",
+      "sourceSha256": "D098BD2DB3607C4AD21E810116A2034A30F871FD83200BBA78AB2CFD4DA6EE4E",
+      "productionSha256": "D70E01BDBC0246EFD9EBF123F98511DED88BAF199E49C053C735C969EDD41D0D"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperoidAssociatedQuotient.lean",
+      "status": "lean-4.32.2-prop-declaration-migration",
+      "sourceSha256": "7715AE832715A1CC237F03C3B1927A703868E628805345EE9323C7F4E1218DE7",
+      "productionSha256": "F83414286A18DDF9802554ABB80BC9F5FD5BE71B5CB5E2E8E36F649991166DE6"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedUniversalCoverDeckAction.lean",
+      "status": "byte-identical-proof",
+      "sourceSha256": "B001F904AFC6051A7C81D5D60047315E9B1CF8B1FF71B756D83F4D57FF6CCF5F",
+      "productionSha256": "B001F904AFC6051A7C81D5D60047315E9B1CF8B1FF71B756D83F4D57FF6CCF5F"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedGeometricDeckAction.lean",
+      "status": "lean-4.32.2-proof-migration",
+      "sourceSha256": "07B98F2F437536C2CDE874D43078F65B91D0ACDE377AB2DE32B74ACA49CD1C30",
+      "productionSha256": "674CAEEA3F2DA392E30B2A0625358E504F17834D39C60158486455FBBD2A00A2"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedAssociatedCoverQuotient.lean",
+      "status": "lean-4.32.2-prop-declaration-migration",
+      "sourceSha256": "32962599412726603BA72F398EDE617AAB5CD45E0712CA42C3E06F829C3D15D6",
+      "productionSha256": "2553C7508FA1862F1033F3F0B6100BAC0DC49B7CDD7EE1361FE5A4CAAFC5663A"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedSubcoverClassification.lean",
+      "status": "byte-identical-proof",
+      "sourceSha256": "26662E618F54AB2C401612A3407B23B0427FB3420CD913016506FE7E9EBD711A",
+      "productionSha256": "26662E618F54AB2C401612A3407B23B0427FB3420CD913016506FE7E9EBD711A"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedConnectedCoverClassification.lean",
+      "status": "byte-identical-proof",
+      "sourceSha256": "E323AC90B899A409146803CD737089819741725F922478CDB6D874DF7D50F67B",
+      "productionSha256": "E323AC90B899A409146803CD737089819741725F922478CDB6D874DF7D50F67B"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedGeometricComponents.lean",
+      "status": "lean-4.32.2-proof-migration",
+      "sourceSha256": "C7AA1FD5ED6577CCEE66D017CB18FA9A290240E439C99EE23037034C2076DB98",
+      "productionSha256": "1DB9E499BEB49795373CC03BB7641E40E129EED7F1B470E2DD5D67B5689C6ECC"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedCoverCoproduct.lean",
+      "status": "byte-identical-proof",
+      "sourceSha256": "921B5D5413F68FFDC3E04D3621AF5F746677E79EF85FD4ED9E96CFB71EDF0A06",
+      "productionSha256": "921B5D5413F68FFDC3E04D3621AF5F746677E79EF85FD4ED9E96CFB71EDF0A06"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedActionCoverObjects.lean",
+      "status": "byte-identical-proof",
+      "sourceSha256": "D86CB20F69E71D62514A11687B23245009CFDA6CE112046FFB8D4DBAB4591ECE",
+      "productionSha256": "D86CB20F69E71D62514A11687B23245009CFDA6CE112046FFB8D4DBAB4591ECE"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedFullCoverClassification.lean",
+      "status": "byte-identical-proof",
+      "sourceSha256": "0FD68CF3879EA39BA0B2950BC7E68EA4D845C3C2B15B570C4B2F2B17675F9423",
+      "productionSha256": "0FD68CF3879EA39BA0B2950BC7E68EA4D845C3C2B15B570C4B2F2B17675F9423"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedUniversalCoverRefinement.lean",
+      "status": "lean-4.32.2-proof-migration",
+      "sourceSha256": "51A886E947320F94379544147E5B9CF54AB25CF76C2B59954110A4EA0DEA663B",
+      "productionSha256": "3324C4CB0AFECB47E2F53D720955EF18E2057282839961DB870DFAE38579567A"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedActionCoverFunctor.lean",
+      "status": "lean-4.32.2-proof-migration",
+      "sourceSha256": "D070AB9BC90D63BE4265B294B91BF286ECF7BB016E439F3B6AF6D8F12C530D7E",
+      "productionSha256": "421AEBDBF576E6AAC0F3ECFA89D658774A6FDB8B373A3EF18D987BC337D7DDE9"
+    },
+    {
+      "relativePath": "Iut/Foundations/SourceTemperedActionCoverEquivalence.lean",
+      "status": "lean-4.32.2-proof-migration",
+      "sourceSha256": "D04CDE30FE2CFCD65D1318751D02FEB4614B2F0DFE14DFFACF0712E8215A232D",
+      "productionSha256": "F4073838CC079A81EF1C961BCCFE404F30940F3A9C5BA22FB4AE1BA87230A687"
+    }
+  ]
+}

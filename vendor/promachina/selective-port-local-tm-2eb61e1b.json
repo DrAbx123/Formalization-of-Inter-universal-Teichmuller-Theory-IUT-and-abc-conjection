@@ -1,0 +1,54 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "auditedHead": "2eb61e1b037635a5346f7265f520b458155303ed",
+  "license": "Apache-2.0",
+  "source": {
+    "file": "Iut/Foundations/SourceThetaEvaluation.lean",
+    "lastCommit": "3de1d7c10d7ea845a21ab4b74edd2b4c6c84fd8f",
+    "gitBlob": "4baf22ba7fd746e9d26a0e9c7aaaa21bb26a8f46"
+  },
+  "production": [
+    {
+      "file": "LeanFormal/IUT/IUTII/Frobenioid/LocalTorsionCyclotome.lean",
+      "sha256": "7C0007E4145CAD3D82651BEA94303EB850859B74653D8BE8F25768CC64A7AE21",
+      "adaptation": "The rational-circle and roots-of-unity equivalences retain the upstream proof. Lean 4.32.2 element-inferred CommGroup.mem_torsion calls replace the 4.30.0 explicit-type API. The groupification rootability proof is specialized to the already proved Q_p integral monoid and uses the existing compatible-root API."
+    },
+    {
+      "file": "LeanFormal/IUT/IUTII/Frobenioid/LocalMLFTMPair.lean",
+      "sha256": "866810911BDA3B44C3945230E47E1E6B7E5D5E43B112F9794DD81EC157E90DFD",
+      "adaptation": "A target-directed Q_p specialization of the source model-pair boundary. It uses the actual Krull-topological absolute Galois group, continuous identity augmentation, proved integral monoid action, and existing times-mu Ism kernel."
+    },
+    {
+      "file": "LeanFormal/IUT/IUTII/Frobenioid/LocalMLFPrimeStripBridge.lean",
+      "sha256": "EA0BE6A8CC7C81DE1F9105BDAEC7B45DAEAA9A3B3759E985BE5EDA613F11CD4D",
+      "adaptation": "A local proof that the corrected integral F-prime-strip monoid, unit, and times-mu actions are definitionally the canonical MLF TM actions. The F-prime-strip value object is the integral monoid itself, avoiding a second Units wrapper."
+    }
+  ],
+  "proved": [
+    "Q/Z is multiplicatively equivalent to all finite-order units in an algebraic closure of any characteristic-zero field",
+    "torsion units of the local integral monoid are equivalent to Q/Z",
+    "the local monoid groupification is RootableBy every positive natural degree",
+    "one compatible rational-root system exists in the actual groupification",
+    "the canonical mono-analytic Q_p MLF TM pair has continuous identity augmentation",
+    "Krull-open stabilizers pull back along every model augmentation and fix their monoid elements",
+    "the induced unit and times-mu actions instantiate the existing Ism kernel"
+  ],
+  "excluded": [
+    "Berkovich analytic geometry",
+    "Andre tempered splitting",
+    "finite or global Frobenioid reconstruction wrappers",
+    "Frobenioid-side evaluation",
+    "existence of a group/Frobenioid times-mu Kummer isomorphism",
+    "theta-link and log-link construction"
+  ],
+  "verification": {
+    "moduleLogs": "logs/lean/build-serial-20260805-010000",
+    "axiomAudit": "logs/lean/axioms-20260805-010000/axiom_audit.stdout.log",
+    "fullBuild": "logs/lean/build-20260805-010000/LeanFormal.stdout.log",
+    "fullBuildJobs": 3729,
+    "warningOrErrorMatches": 0,
+    "customTopLevelAxiomOrOpaque": 0,
+    "explicitSorry": 1,
+    "sorryBoundary": "LeanFormal.IUT.theorem311_produces_stepXI_contract"
+  }
+}

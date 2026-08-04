@@ -1,0 +1,44 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "previousHead": "ea91200be2a0a6287ade838553127f68ec38d864",
+  "head": "2eb61e1b037635a5346f7265f520b458155303ed",
+  "checkedAt": "2026-08-05T01:00:00+08:00",
+  "newCommits": 16,
+  "changedFiles": 29,
+  "leanFilesChanged": 20,
+  "upstreamBranches": 26,
+  "sourceTrustScan": {
+    "topLevelAxiom": 0,
+    "topLevelOpaque": 0,
+    "explicitSorry": 0,
+    "note": "The three grep hits for opaque occur in prose comments, not declarations."
+  },
+  "substantiveBatches": [
+    "Tate q-parameter Weierstrass coefficients",
+    "nonarchimedean local Frobenioid reconstruction package",
+    "archimedean Aut-holomorphic Kummer model",
+    "global realified Frobenioid reconstruction package",
+    "IUT I Examples 3.2-3.5 reference package",
+    "bad-place evaluation sections",
+    "model D-theta bridge"
+  ],
+  "reusableConstructedKernel": [
+    "SourceBadLocalEvaluationSplittingPrerequisite.evaluationSection",
+    "SourceBadLocalEvaluationSplittingPrerequisite.evaluationDecompositionProjectionIso",
+    "SourceBadLocalEvaluationReconstructionPrerequisite.evaluationTemperoidMorphism_injective",
+    "SourceDThetaBridge finite bad/good branch assembly",
+    "SourceRealifiedPrimeSummand and normalized ray comparison",
+    "FrobenioidStructureEquivalence and FrobenioidRestriction type boundaries"
+  ],
+  "interfaceBoundary": [
+    "SourceBadLocalEvaluationGeometry supplies the compactified group, stable-component predicate, distinguished order-two existence, noncuspidality, rational lifts, and rationality as fields.",
+    "SourceBadLocalEvaluationSplittingPrerequisite supplies Andre's splitting and its landing in the theta-root open subgroup.",
+    "SourceBadLocalEvaluationReconstructionPrerequisite supplies the outer reconstruction map and its evaluation theorem.",
+    "IUTIFiniteLocalFrobenioidReconstruction supplies both Frobenioid presentations, carrier/base equivalences, split presentations, and comparison data.",
+    "IUTIGlobalArithmeticFrobenioidReconstruction supplies the global integral/realified Frobenioids, realification, local restrictions, and structure-preserving comparisons.",
+    "The source README continues to state that the active route is not a construction of Theorem 3.11 or Corollary 3.12."
+  ],
+  "decision": "Do not bulk-port the reconstruction wrappers. Reuse exact derived kernels only when the local source objects satisfy their hypotheses. The previously audited SourceThetaEvaluation rootability and rational-circle torsion construction is directly relevant and was selectively adapted to the already proved local integral monoid.",
+  "impactOnCLayer": "Useful type discipline and derived lemmas, but no direct closure of the remaining initial-theta, Berkovich/tempered, full Frobenioid, Hodge-theater, theta-link, or log-link existence obligations.",
+  "impactOnTheorem311Corollary312": "No direct discharge of Ind1-Ind3, IPL, SHE, APT, holomorphic hull, determinant/tensor normalization, or log-volume comparison."
+}

@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "integrationBaseline": "bbb736cd34a5214a4270bf1e5285a6c6bb1b66d4",
+  "sourceFileLastCommit": "5cebc947e10d2d7d6ff67e71513e9c8e5ab47330",
+  "source": "Iut/Foundations/Frobenioid.lean",
+  "destination": "Iut/Foundations/Frobenioid.lean",
+  "sourceSha256": "892A0240FBA61AFA153F2993B12817EDF0E88B8EAA471D004C7F7DDC94B8B347",
+  "adaptation": "One documentation-comment line was reordered so the repository's lexical axiom scanner does not misclassify it as an opaque declaration. All Lean declarations and proofs are byte-for-byte unchanged.",
+  "purpose": "Definition layer required by IUT I Definition 5.2(ii): FrobenioidPresentation, CharacteristicSplitting, SplitFrobenioidPresentation, and split-Frobenioid equivalences.",
+  "excluded": [
+    "SourceModelFrobenioid*.lean",
+    "SourceDefinition52*.lean",
+    "SourcePrimeStripConstructions.lean",
+    "Stage1 wrappers"
+  ],
+  "exclusionReason": "No current theorem obligation needs their model-construction closure; SourcePrimeStripConstructions only repackages a supplied IUTIThetaHodgeTheaterModels value and does not construct that value from initial theta data."
+}

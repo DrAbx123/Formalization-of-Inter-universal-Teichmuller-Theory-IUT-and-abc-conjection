@@ -1,0 +1,24 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "auditedHead": "ea91200be2a0a6287ade838553127f68ec38d864",
+  "sourceFile": "Iut/Foundations/SourceThetaEvaluation.lean",
+  "sourceFileLastCommit": "3de1d7c10d7ea845a21ab4b74edd2b4c6c84fd8f",
+  "sourceGitBlob": "4baf22ba7fd746e9d26a0e9c7aaaa21bb26a8f46",
+  "license": "Apache-2.0",
+  "productionFile": "LeanFormal/IUT/IUTII/Kummer/TimesMuIsm.lean",
+  "productionSha256": "6632F5156DFD3FE96E6E58B63E47937C5FC4E8D9DF8DC276BA7FEA79D7579F97",
+  "reuse": [
+    "open-subgroup fixed-unit subgroup",
+    "invariant image in the full torsion quotient",
+    "equivariant invariant-image-preserving Ism subgroup",
+    "Ism action on compatible Kummer isomorphisms",
+    "source-difference construction and uniqueness of the orbit"
+  ],
+  "adaptation": [
+    "parameterized the construction by arbitrary Mathlib group actions",
+    "reused the local TimesMuQuotient action instead of the upstream MLF wrapper",
+    "made Set/Subgroup coercions explicit for Lean 4.32.2",
+    "did not port topology, MLF presentation wrappers, or split-Frobenioid records"
+  ],
+  "semanticBoundary": "No group-theoretic-to-Frobenioid Kummer isomorphism is constructed. The compatible-isomorphism type may be empty for distinct source and target actions; only the identity representative is constructed unconditionally."
+}

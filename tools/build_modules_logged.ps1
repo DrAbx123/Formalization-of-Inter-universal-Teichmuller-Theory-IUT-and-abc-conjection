@@ -36,11 +36,30 @@ param(
     'LeanFormal/IUT/IUTI/HodgeTheater/HodgeTheaterCore.lean',
     'LeanFormal/IUT/IUTI/HodgeTheater/LocalPrimePlaces.lean',
     'LeanFormal/IUT/IUTII/Frobenioid/LocalPrimeStrip.lean',
+    'LeanFormal/IUT/IUTII/Frobenioid/LocalIntegralMonoid.lean',
+    'LeanFormal/IUT/IUTII/Frobenioid/LocalTorsionUnits.lean',
+    'LeanFormal/IUT/IUTII/Frobenioid/LocalTorsionCyclotome.lean',
+    'LeanFormal/IUT/IUTII/Frobenioid/LocalMLFTMPair.lean',
+    'LeanFormal/IUT/IUTII/Frobenioid/LocalGroupificationAction.lean',
+    'LeanFormal/IUT/IUTII/Frobenioid/LocalIntegralUnitKummer.lean',
+    'LeanFormal/IUT/IUTII/Frobenioid/LocalUnitKummerMap.lean',
+    'LeanFormal/IUT/IUTII/Frobenioid/LocalUnitKummerInjectivity.lean',
+    'LeanFormal/IUT/IUTII/Frobenioid/LocalTimesMuEvaluation.lean',
+    'LeanFormal/IUT/IUTII/Frobenioid/LocalIntegralFPrimeStrip.lean',
+    'LeanFormal/IUT/IUTII/Frobenioid/LocalMLFPrimeStripBridge.lean',
+    'LeanFormal/IUT/IUTII/Frobenioid/LocalIntegralUnitEvaluationImage.lean',
     'LeanFormal/IUT/IUTII/Kummer/KummerPolynomial.lean',
     'LeanFormal/IUT/IUTII/Kummer/RootRealization.lean',
     'LeanFormal/IUT/IUTII/Kummer/CompatibleRoots.lean',
     'LeanFormal/IUT/IUTII/Kummer/NatRootSystem.lean',
     'LeanFormal/IUT/IUTII/Kummer/KummerClass.lean',
+    'LeanFormal/IUT/IUTII/Kummer/RationalRootSystem.lean',
+    'LeanFormal/IUT/IUTII/Kummer/ContinuousKummerGerm.lean',
+    'LeanFormal/IUT/IUTII/Kummer/CanonicalKummerMap.lean',
+    'LeanFormal/IUT/IUTII/Kummer/LocalGaloisKummerAction.lean',
+    'LeanFormal/IUT/IUTII/Kummer/TimesMuQuotient.lean',
+    'LeanFormal/IUT/IUTII/Kummer/TimesMuIsm.lean',
+    'LeanFormal/IUT/IUTII/Kummer/LocalFieldRigidity.lean',
     'LeanFormal/IUT/IUTII/Kummer/KummerRootRatio.lean',
     'LeanFormal/IUT/IUTII/Kummer/VerticalLogKummer.lean',
     'LeanFormal/IUT/IUTII/Kummer/VerticalCorrespondence.lean',
@@ -86,9 +105,8 @@ foreach ($module in $Modules) {
   $oleanPath = Join-Path $repoRoot (Join-Path '.lake\build\lib\lean' $oleanRelative)
   New-Item -ItemType Directory -Force -Path (Split-Path -Parent $oleanPath) | Out-Null
   $started = Get-Date
-  # Keep elaboration deterministic and avoid competing with the editor's
-  # background workers for Mathlib cache locks.
-  & $lakePath env lean -j 1 $module -o $oleanPath 1> $stdoutPath 2> $stderrPath
+  # Keep per-module elaboration bounded while allowing dependency work to overlap.
+  & $lakePath env lean -j 2 $module -o $oleanPath 1> $stdoutPath 2> $stderrPath
   $exitCode = $LASTEXITCODE
   $finished = Get-Date
   $result = [pscustomobject]@{
