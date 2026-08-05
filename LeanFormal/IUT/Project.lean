@@ -5,6 +5,18 @@ Authors: LeanFormal contributors
 -/
 
 import LeanFormal.IUT.Audit.Status
+import Iut.Foundations.SourceModelFrobenioidPresentation
+import Iut.Foundations.SourceModelRationalMonoidTransport
+import Iut.Foundations.SourceModelFrobenioidRationalNaturality
+import Iut.Foundations.SourceModelFrobenioidZeroEvaluation
+import Iut.Foundations.SourceModelFrobenioidIntegralNaturality
+import Iut.Foundations.SourceDefinition52Sequential
+import Iut.Foundations.SourceFiniteStageValuationDivisor
+import Iut.Foundations.SourceFrobenioidRationalMonoidTransport
+import Iut.Foundations.SourceFrobenioidIsotropicBase
+import Iut.Foundations.SourceFrobenioidCoAngularBaseChange
+import Iut.Foundations.SourceFrobenioidBasePullbackLift
+import Iut.Foundations.SourceFrobenioidUniversalProEvaluation
 import LeanFormal.IUT.Foundations.Arithmetic.FiniteLabels
 import LeanFormal.IUT.Foundations.Arithmetic.Radical
 import LeanFormal.IUT.Foundations.Arithmetic.PrimitiveAdditive
@@ -55,6 +67,7 @@ import LeanFormal.IUT.IUTII.Frobenioid.LocalTimesMuEvaluation
 import LeanFormal.IUT.IUTII.Frobenioid.LocalIntegralFPrimeStrip
 import LeanFormal.IUT.IUTII.Frobenioid.LocalMLFPrimeStripBridge
 import LeanFormal.IUT.IUTII.Frobenioid.LocalIntegralUnitEvaluationImage
+import LeanFormal.IUT.IUTII.Frobenioid.MLFIntegralMonoidComparison
 import LeanFormal.IUT.IUTII.Kummer.KummerPolynomial
 import LeanFormal.IUT.IUTII.Kummer.RootRealization
 import LeanFormal.IUT.IUTII.Kummer.CompatibleRoots

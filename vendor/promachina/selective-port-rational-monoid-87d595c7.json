@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "auditedHead": "87d595c721cb6a353ea5aff7ccee9cc8ff136f62",
+  "sourceFile": "Iut/Foundations/SourceFrobenioidRationalMonoidTransport.lean",
+  "sourceFileLastCommit": "5e70fbe94dec7c07d201987d9a65b34178905cb1",
+  "sourceSha256": "FE47F37FEBC398820AC996EDD86566F836EB7531E504DD086FD45262117275D6",
+  "license": "Apache-2.0",
+  "productionFile": "Iut/Foundations/SourceFrobenioidRationalMonoidTransport.lean",
+  "productionSha256": "FE47F37FEBC398820AC996EDD86566F836EB7531E504DD086FD45262117275D6",
+  "reuse": [
+    "co-angular and isotropic source lemmas derived from Frobenioid axioms",
+    "linear endomorphism pullback with identity and composition laws",
+    "isotropic-hull extension and injectivity",
+    "construction of PreFrobenioid.RationalMonoidTransport"
+  ],
+  "adaptation": [],
+  "semanticBoundary": "The theorem constructs the restriction of generic rational-monoid transport to linear arrows between isotropic objects, together with isotropic-hull injection, for an existing FrobenioidPresentation. It does not construct the full D-star or base-category functor, a FrobenioidPresentation, a universal-cover pro-object, an ind-topology, or the IUT II Definition 4.9 evaluation comparison."
+}

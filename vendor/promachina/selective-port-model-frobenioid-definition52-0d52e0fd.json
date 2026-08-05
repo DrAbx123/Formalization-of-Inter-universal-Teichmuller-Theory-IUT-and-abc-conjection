@@ -1,0 +1,93 @@
+{
+  "upstream": "promachina/iut-lean",
+  "snapshot": "0d52e0fd5b53",
+  "license": "Apache-2.0",
+  "modelFrobenioid": [
+    {
+      "file": "SourceModelFrobenioid.lean",
+      "sourceSha256": "beede0e59615bea10e3686827c25b996c01d76b54ef0706b9aa0c75b64a2ef4a",
+      "productionSha256": "beede0e59615bea10e3686827c25b996c01d76b54ef0706b9aa0c75b64a2ef4a",
+      "byteIdentical": true
+    },
+    {
+      "file": "SourceModelFrobenioidDivisorOrder.lean",
+      "sourceSha256": "7174430d25d537e199f05bfa3fab1b5e697846b586e8733baecc99c4602284be",
+      "productionSha256": "4ab51c612fa615fbf65c7312813578c22b3bd159e68a5b705f8ee0b72a9ffcb1",
+      "byteIdentical": false,
+      "migration": "Two Lean 4.32.2 elaboration sites explicitly specify Phi.obj (Object.base object); equations and hypotheses are unchanged."
+    },
+    {
+      "file": "SourceModelFrobenioidFactorization.lean",
+      "sourceSha256": "b85d04c86875298805d33eb0710aa888fc365cb1949610d3eb3a91af39cc3af1",
+      "productionSha256": "b85d04c86875298805d33eb0710aa888fc365cb1949610d3eb3a91af39cc3af1",
+      "byteIdentical": true
+    },
+    {
+      "file": "SourceModelFrobenioidFactorizationUniqueness.lean",
+      "sourceSha256": "d7d69dcb4749e9a89326e946738f2be4da1f0d4ca34f0655dff7c1c104398aea",
+      "productionSha256": "d7d69dcb4749e9a89326e946738f2be4da1f0d4ca34f0655dff7c1c104398aea",
+      "byteIdentical": true
+    },
+    {
+      "file": "SourceModelFrobenioidPreStepFactorization.lean",
+      "sourceSha256": "c2ba1fb401bd61288ca7a9debd9e5186c41a5037855994c83b6823f8cdc9f864",
+      "productionSha256": "c2ba1fb401bd61288ca7a9debd9e5186c41a5037855994c83b6823f8cdc9f864",
+      "byteIdentical": true
+    },
+    {
+      "file": "SourceModelFrobenioidAxioms.lean",
+      "sourceSha256": "89f185635cae4cbed8ad8078eddfe9f996e39afffca83e9c1e0cb74437523b8f",
+      "productionSha256": "89f185635cae4cbed8ad8078eddfe9f996e39afffca83e9c1e0cb74437523b8f",
+      "byteIdentical": true
+    },
+    {
+      "file": "SourceModelFrobenioidPresentation.lean",
+      "sourceSha256": "dec191e9bfea356529070009e0d56d5042213773b634b9eeedc3d9ea671c6e94",
+      "productionSha256": "dec191e9bfea356529070009e0d56d5042213773b634b9eeedc3d9ea671c6e94",
+      "byteIdentical": true
+    }
+  ],
+  "definition52Local": [
+    {
+      "file": "SourceDefinition52LocalReconstruction.lean",
+      "sourceSha256": "5853ab5ef04e655e62972d1e21c59249b4b817cdfc8730610a108ce6e3d03d53",
+      "productionSha256": "0f6d5bdc897b8c40b2acffad8a3781aff6f111d20cbeb1d92785321008ca6fd7",
+      "byteIdentical": false,
+      "migration": "Replaced the high-level SourceFiniteLocalMLFComparison import by SourceFinitePlaceMLFBase; replaced only the finite-place wrapper type; made IsGalois, scalar-tower, continuity, and integral-closure coercions explicit for Lean 4.32.2."
+    },
+    {
+      "file": "SourceDefinition52LocalContinuity.lean",
+      "sourceSha256": "bbba1c02a0d6237b9e19e03bf2f51da1bf8a5964fe8ca0d1a63c24e8f03867ca",
+      "productionSha256": "bbba1c02a0d6237b9e19e03bf2f51da1bf8a5964fe8ca0d1a63c24e8f03867ca",
+      "byteIdentical": true
+    },
+    {
+      "file": "SourceDefinition52LocalJointContinuity.lean",
+      "sourceSha256": "dc0a946769ff80514d1b976a5c582c5dca1ee352ba3e350d4d01eadc1b9fc280",
+      "productionSha256": "76bc91c79e59348f4baff390b643a2a5e66ad0da35ad7c4a42a6d152c82df04d",
+      "byteIdentical": false,
+      "migration": "The same pointwise action equality is supplied explicitly before composing continuous maps."
+    },
+    {
+      "file": "SourceDefinition52IndSystem.lean",
+      "sourceSha256": "f5d714e481164b2aecfcedcaafeecd3ce2bd99098d34187ed70f32b7c124233e",
+      "productionSha256": "358be19cf7e9a6dc03b5e30900de6be659e6faebfb16f88296bbe70c098d0a4c",
+      "byteIdentical": false,
+      "migration": "Imports the extracted topological-monoid package; finite-stage inclusions and integral preservation use explicit coercions and IsIntegral.map; two no-op change tactics were removed."
+    },
+    {
+      "file": "SourceDefinition52Sequential.lean",
+      "sourceSha256": "ec242f47ef0dc17df6f7861d976eacba68f02b4030d63131e2551aa69737c20e",
+      "productionSha256": "d616d6a27b078c9d6ef644613ce7dd04b46e9296a5a61bc91fa0e10db788a291",
+      "byteIdentical": false,
+      "migration": "Countability is transported through AddMonoidAlgebra.coeffEquiv after Mathlib changed AddMonoidAlgebra from a Finsupp alias to a one-field wrapper."
+    }
+  ],
+  "extractedSupport": {
+    "sourceFile": "SourceThetaHodgeTheater.lean",
+    "sourceSha256": "f38120335a1c40efcbb4c914121a6b4272b2f5fb5f649c0d68da794fef071980",
+    "productionFile": "SourceTopologicalMonoidPresentation.lean",
+    "productionSha256": "4434a2b6ea51601614d748d50f164bad54ab553f7abacd8fd31e813327dd545e",
+    "scope": "Only TopologicalMonoidPresentation, ContinuousMonoidHom, coercion, composition, identity, and extensionality were extracted."
+  }
+}

@@ -12,7 +12,15 @@ import Iut.Foundations.SourceTemperedCoveringCategory
 import Iut.Foundations.SourceTemperedGraphCoverRealization
 import Iut.Foundations.SourceTemperedGeometricDomination
 import Iut.Foundations.SourceTemperedActionCoverEquivalence
-import Iut.Foundations.Frobenioid
+import Iut.Foundations.SourceFrobenioidBasePullbackLift
+import Iut.Foundations.SourceFrobenioidUniversalProEvaluation
+import Iut.Foundations.SourceModelFrobenioidPresentation
+import Iut.Foundations.SourceModelRationalMonoidTransport
+import Iut.Foundations.SourceModelFrobenioidRationalNaturality
+import Iut.Foundations.SourceModelFrobenioidZeroEvaluation
+import Iut.Foundations.SourceModelFrobenioidIntegralNaturality
+import Iut.Foundations.SourceFiniteStageValuationDivisor
+import Iut.Foundations.SourceDefinition52Sequential
 
 /-!
   Trust-boundary audit for the imported semi-graph-of-anabelioids foundation.
@@ -155,6 +163,43 @@ ported from `promachina/iut-lean@c7c06e23`. -/
 #print axioms Iut.FrobenioidPresentation
 #print axioms Iut.SplitFrobenioidEquivalence.refl
 #print axioms Iut.SplitFrobenioidEquivalence.trans
+#print axioms Iut.FrobenioidRationalMonoidTransport.isCoAngular_of_isotropicSource
+#print axioms Iut.FrobenioidRationalMonoidTransport.isIsotropic_source_of_coAngular_linear
+#print axioms Iut.FrobenioidRationalMonoidTransport.isIso_of_coAngular_isometric_preStep
+#print axioms Iut.FrobenioidRationalMonoidTransport.rationalMonoidTransport
+#print axioms Iut.FrobenioidIsotropicBase.projection_essSurj
+#print axioms Iut.FrobenioidIsotropicBase.equivalence
+#print axioms Iut.FrobenioidCoAngularBaseChange.isLinear_of_isIso
+#print axioms Iut.FrobenioidCoAngularBaseChange.unitTransport_id
+#print axioms Iut.FrobenioidCoAngularBaseChange.unitTransport_comp
+#print axioms Iut.FrobenioidCoAngularBaseChange.commonCoAngularPreSteps
+#print axioms Iut.FrobenioidCoAngularBaseChange.CommonCoAngularPreStepWitness.rationalMonoidEquiv_eq
+#print axioms Iut.FrobenioidCoAngularBaseChange.baseIsoRationalMonoidEquiv_trans
+#print axioms Iut.FrobenioidBasePullbackLift.isPullback_comp
+#print axioms Iut.FrobenioidBasePullbackLift.baseArrowLift
+#print axioms Iut.FrobenioidBasePullbackLift.BaseArrowLift.pullback_eq
+#print axioms Iut.FrobenioidBasePullbackLift.baseArrowPullback_id
+#print axioms Iut.FrobenioidBasePullbackLift.baseArrowPullback_comp
+#print axioms Iut.FrobenioidBasePullbackLift.baseRationalMonoidFunctor
+#print axioms Iut.FrobenioidUniversalProEvaluation.galoisAction
+#print axioms Iut.FrobenioidUniversalProEvaluation.galoisAction_levelMap
+
+#print axioms Iut.SourceModelFrobenioid.Carrier.frobenioidPresentation
+#print axioms Iut.SourceModelFrobenioid.Carrier.rationalMonoidTransport
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.frobenioidPresentation
+#print axioms Iut.SourceModelFrobenioid.Carrier.ColimitBirationalObject.rationalFunctionNatIso_divisor_compatible
+#print axioms Iut.SourceModelFrobenioid.Carrier.zeroObjectRationalFunctionEquiv
+#print axioms Iut.SourceModelFrobenioid.Carrier.effectiveRationalFunctionPullback
+#print axioms Iut.SourceModelFrobenioid.Carrier.zeroRationalFunctionNatIso
+#print axioms Iut.SourceMLFIntegralMonoid.groupificationEquivAlgebraicClosureUnits
+#print axioms Iut.SourceFinitePlaceReconstruction.indIntegralMonoidEquivSourceMLF
+#print axioms Iut.SourceFinitePlaceReconstruction.indIntegralMonoidEquivSourceMLF_galois
+#print axioms Iut.SourceFinitePlaceReconstruction.continuous_indGaloisMulAut
+#print axioms Iut.SourceFinitePlaceReconstruction.continuous_indGaloisAction_comp_stageIntegralToInd
+#print axioms Iut.SourceFinitePlaceReconstruction.integralIndSystemLimit
+#print axioms Iut.SourceFinitePlaceReconstruction.integralIndSourceSequentialPresentation
+#print axioms Iut.SourceFinitePlaceReconstruction.stageIsIntegral_closure_iff_valuation_le_one
+#print axioms Iut.SourceFinitePlaceReconstruction.stageEffectiveRationalFunctionEquivIntegralMonoid
 
 #print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.refinementSplitsUniversalCover
 #print axioms Iut.SourceCombinatorialUniversalCover.SourceGaloisCombinatorialUniversalCover.associatedTemperedRefinementIso

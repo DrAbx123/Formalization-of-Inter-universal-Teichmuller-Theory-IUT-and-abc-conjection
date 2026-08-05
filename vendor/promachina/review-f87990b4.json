@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "license": "Apache-2.0",
+  "previousMaster": "7bea5b0314ad4d9c3046a7549ca9962b8f546af8",
+  "master": "f87990b40f2284f704450cd3214b7e13358d42a5",
+  "mergedHead": "87d595c721cb6a353ea5aff7ccee9cc8ff136f62",
+  "checkedAt": "2026-08-05T03:36:00+08:00",
+  "mergePullRequest": 231,
+  "tree": "663562f434ba1a753a83ec25e2a58f9818a413e7",
+  "treeIdenticalToPreviouslyReviewedHead": true,
+  "contentDeltaBeyondPreviousReview": 0,
+  "changedFilesFromPreviousMaster": 9,
+  "netInsertedLinesFromPreviousMaster": 1258,
+  "netDeletedLinesFromPreviousMaster": 58,
+  "decision": "No additional port. The merged source is byte-for-byte the F-bridge tree already audited in review-87d595c7.json.",
+  "reason": "The useful range, composition, and associated-D kernels are derived only after recognition records supply pullback, global Frobenioid, local-to-global lift, and theater-isomorphism candidates. Those missing source constructions are still exactly the current boundary.",
+  "directlyReusableCurrentDependency": "Iut/Foundations/SourceFrobenioidRationalMonoidTransport.lean was independently ported byte-identically because it constructs its output from FrobenioidPresentation.axioms rather than from a candidate_exists reconstruction wrapper.",
+  "remainingUnmergedPublicBranch": {
+    "name": "agent/46-tempered-semigraph-inverse-limit",
+    "commit": "7a0854b289187c98991609d991d742134d7a497e",
+    "status": "previously audited; outside the current C-layer Frobenioid-evaluation dependency"
+  }
+}

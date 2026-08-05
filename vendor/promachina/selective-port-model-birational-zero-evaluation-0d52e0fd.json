@@ -1,0 +1,98 @@
+{
+  "upstream": "promachina/iut-lean",
+  "snapshot": "0d52e0fd5b53",
+  "verifiedUnchangedThrough": "65be305d5e7690d5cdfa59621d3160f1a5a2dd68",
+  "license": "Apache-2.0",
+  "hashPolicy": "sourceSha256LF and normalizedProductionSha256 use UTF-8 with LF line endings; productionSha256Raw hashes the checked-out Windows file",
+  "files": [
+    {
+      "file": "SourceFrobenioidModelType.lean",
+      "sourceSha256LF": "9bcde0f3321aa7370c57cebbb957516738b5be07dd06f1701186c401195d482a",
+      "normalizedProductionSha256": "9bcde0f3321aa7370c57cebbb957516738b5be07dd06f1701186c401195d482a",
+      "productionSha256Raw": "8dba5ca3170aa0c115c4a448b8540b17ae9e964a17eb6ad1355775f1fedcc432",
+      "contentIdenticalAfterEolNormalization": true
+    },
+    {
+      "file": "SourceModelRationalMonoidTransport.lean",
+      "sourceSha256LF": "04d9f27e7f72d069b78791a1ad7e467c92116e662151efb473e01e1f0b2345ba",
+      "normalizedProductionSha256": "04d9f27e7f72d069b78791a1ad7e467c92116e662151efb473e01e1f0b2345ba",
+      "productionSha256Raw": "61062d288852d68b4b5887b275148bd4c47aafee4dfc26af2475f71757f5e7df",
+      "contentIdenticalAfterEolNormalization": true
+    },
+    {
+      "file": "SourceModelFrobenioidPreModel.lean",
+      "sourceSha256LF": "b493dc9850e910396056143338ca987af4a0b5babf8b1080dad28220c3ba80b1",
+      "normalizedProductionSha256": "b493dc9850e910396056143338ca987af4a0b5babf8b1080dad28220c3ba80b1",
+      "productionSha256Raw": "461da360cd936ffabfca7fb7cacd2b284255fcc7e7e34d3238feafcfc5f86c76",
+      "contentIdenticalAfterEolNormalization": true
+    },
+    {
+      "file": "SourceModelFrobenioidBirational.lean",
+      "sourceSha256LF": "7e4db79b47d88a746d5f22120041f43e57d9b31eb8fbebb2e13513cc77c51ea0",
+      "normalizedProductionSha256": "7e4db79b47d88a746d5f22120041f43e57d9b31eb8fbebb2e13513cc77c51ea0",
+      "productionSha256Raw": "2656cdc08b7046203def6a406838e867e6a94e04c720c75ea7f03cba3fc8f30d",
+      "contentIdenticalAfterEolNormalization": true
+    },
+    {
+      "file": "SourceModelFrobenioidFilteredBirational.lean",
+      "sourceSha256LF": "f0ef18f633f3ac032f80e67596006af3fe97bf0f16fb513ec3242cc4be36af78",
+      "normalizedProductionSha256": "f0ef18f633f3ac032f80e67596006af3fe97bf0f16fb513ec3242cc4be36af78",
+      "productionSha256Raw": "95035067c50f0f4a295db20940b65e0ec40914e9083d0967b9c41a9e2d801d04",
+      "contentIdenticalAfterEolNormalization": true
+    },
+    {
+      "file": "SourceModelFrobenioidColimitStructure.lean",
+      "sourceSha256LF": "230b85ccbe75917beaabf3f556900b1fb7f7b656992bbdf2ee7de5a6d3173380",
+      "normalizedProductionSha256": "230b85ccbe75917beaabf3f556900b1fb7f7b656992bbdf2ee7de5a6d3173380",
+      "productionSha256Raw": "cf98f2834be40ce83844860e7ea01019ce4473f705c1faf929a063f0a261e5eb",
+      "contentIdenticalAfterEolNormalization": true
+    },
+    {
+      "file": "SourceModelFrobenioidBirationalDictionary.lean",
+      "sourceSha256LF": "e23a9c78a9b484ce1850fcb98816ac160063d8ebdba3acfbff62873a98d6aacd",
+      "normalizedProductionSha256": "e23a9c78a9b484ce1850fcb98816ac160063d8ebdba3acfbff62873a98d6aacd",
+      "productionSha256Raw": "26f3dcbf6093caf026833d1fdc3bc59cc8a88b9dd6170765539b4b07f714620e",
+      "contentIdenticalAfterEolNormalization": true
+    },
+    {
+      "file": "SourceModelFrobenioidBirationalDivisor.lean",
+      "sourceSha256LF": "0bbcdc83ef9e8b73fa4bbb083cc2f2d24e481856c719d706e6f4a56689b8d2f5",
+      "normalizedProductionSha256": "525d814a8db4609ca43f38d9cfd7ab5adb4d35a763708023fde017484952e478",
+      "productionSha256Raw": "0ff1713f513c0918c583ba1e73591eb2720bb8fa711b6f00a48ff381fe1a4ccb",
+      "contentIdenticalAfterEolNormalization": false,
+      "migration": "Removed Functor.comp_obj from two simp-only lists after Lean 4.32.2 reported it unused; goals and proof terms are otherwise unchanged."
+    },
+    {
+      "file": "SourceModelFrobenioidBirationalAxioms.lean",
+      "sourceSha256LF": "9607e09ebd50ca27f22a3a54dea06a47281320be74c74300fac7d7b86660ee19",
+      "normalizedProductionSha256": "cda3df9ee5cbbe79c8528d11742a5a884d7ac0ff7168fa677cdca55014b156d2",
+      "productionSha256Raw": "506ded047c15766218dda153383618a095f0da55087a5753466fc34c31de277d",
+      "contentIdenticalAfterEolNormalization": false,
+      "migration": "Changed the Prop-valued pullbackBaseSlices declaration from def to theorem to satisfy the current linter, and made the same BirationalHom.base projection equality explicit for Lean 4.32.2; the proposition, hypotheses, and proof argument are unchanged."
+    },
+    {
+      "file": "SourceModelFrobenioidColimitAxioms.lean",
+      "sourceSha256LF": "9ccf22236d27bd333e526000d69dfd89fe81812970f01be685988de49d448af5",
+      "normalizedProductionSha256": "9fb3a8c60e09578d82ca0fcb657845134eff4693a13715094ed6973b1d7de7d9",
+      "productionSha256Raw": "ebdfdb01d18b2dce754cf29c0dbe650050fcc8ed646ba028f74e9724b3d0f5ee",
+      "contentIdenticalAfterEolNormalization": false,
+      "migration": "Changed the Prop-valued pullbackBaseSlices and mappedPreStep declarations from def to theorem to satisfy the current linter; their propositions and proof bodies are unchanged."
+    },
+    {
+      "file": "SourceModelFrobenioidRationalNaturality.lean",
+      "sourceSha256LF": "8b0bff88ac80d1dbe48d7028e2d4580301f95236ca9759c5987d03562d3b4a4e",
+      "normalizedProductionSha256": "8b0bff88ac80d1dbe48d7028e2d4580301f95236ca9759c5987d03562d3b4a4e",
+      "productionSha256Raw": "d6f9fbda92188635956f5c34317c5fd3e053c080038e9abdbc8671f5313b2b2f",
+      "contentIdenticalAfterEolNormalization": true
+    }
+  ],
+  "localConstruction": {
+    "file": "SourceModelFrobenioidZeroEvaluation.lean",
+    "productionSha256Raw": "d891bef76cb11dcfe03bdfbcaf258511cb52a398c5de00b637fa8c89976ccf1d",
+    "status": "Locally constructed from the model-arrow balance equation; no upstream source file was copied.",
+    "sourceReferences": [
+      "Frobenioids I, Theorem 5.2",
+      "IUT II, Definition 4.9(iii)"
+    ]
+  }
+}
