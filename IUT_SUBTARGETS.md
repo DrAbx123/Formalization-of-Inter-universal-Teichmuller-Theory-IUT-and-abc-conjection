@@ -33,6 +33,10 @@
 | `Foundations/NumberField/LocalQParameter` | 实际有限处完备化中的非零 `q` 候选、离散阶和正整数幂 | DVR 不可约元给出候选、正阶及幂封闭性已证；尚未证明该候选 uniformize 指定椭圆曲线，不能称为曲线的 Tate 参数 |
 | `Foundations/Geometry/EllipticTorsion` | `E[l]`、绝对 Galois 作用、连续矩阵表示和核固定域 | 点作用/开放稳定子已证；给定真实二维基时，连续表示及有限 Galois 核域已证；二维基存在性、6-torsion 有理性与像包含 `SL₂` 未证 |
 | `IUTII/Kummer/KummerPolynomial`、`RootRealization`、`CompatibleRoots`、`NatRootSystem`、`KummerClass`、`KummerRootRatio`、`VerticalLogKummer` | 多项式根、兼容根链、单位值 Kummer class、根比与上半连续 log 对应内核 | 低层 carrier 与代数律已证；etale/Frobenioid/论文中的垂直对应仍是待构造义务 |
+| `IUTII/Frobenioid/ConcreteLocalKummerExample` | 将实际局部 `q=p` 放入积分闭包群化并构造一致有理根系统 | 非平凡局部 Kummer carrier 已证；尚未证明 etale/Frobenioid theta-link 识别 |
+| `Foundations/Geometry/TateDeckAction` | 代数闭包单位上的 base-field Galois 作用、`q^Z` deck 子群和商群作用 | 单位、子群保持和商群乘法等价已证；Tate uniformization 与曲线点识别仍未证 |
+| `IUTII/Kummer/ConcreteEtaleKummerBridge` | 有限 `Z/lZ` Tate 方向核与实际 `q=p` 兼容根系统的整数桥 | 零标签的 `l`-倍根指数和标签一根已证；几何 etale/Frobenioid theta-link 仍未证 |
+| `IUTI/HodgeTheater/ConcreteIntegralHodgeTheaterExample` | 将 Q(i) arithmetic、有限素点区间、实际 integral F-prime-strip、三层 carrier 与 q=5 Kummer realization 组装 | 一个具体有限 carrier/test input 已证；不等同论文的历史、theta-link 或 etale Hodge theater |
 
 基础基线在 `60/60` 串行构建中逐文件通过；随后新增的 p-adic valuation
 模块单独通过并进入生产聚合，数域 place 批次又在 `3/3` 定向串行中通过。
@@ -59,6 +63,59 @@ q 候选和条件式的实际 Galois 表示/核域；
 曲线联系或源假设伪装成任意布尔标签或结构字段。
 
 这些是可审计的阶段性成果，但它们本身不是“尚未解决的猜想”。
+
+### 最新底层批次（2026-08-06）
+
+本轮按约一千行有效代码作为一个批次，先完成了 C 层上方所依赖的局部
+Tate/Kummer 代数地基：
+
+| 模块 | 已真正证明的内容 | 明确未证明的内容 |
+|---|---|---|
+| `Foundations/Geometry/ConcreteTateParameter` | `q=p` in `Q_p`、严格收缩、q-series 收敛、q-unit 非平凡性及幂收缩 | 不等同指定数域椭圆曲线的 Tate 参数 |
+| `Foundations/Geometry/ConcreteTateKummerPacket` | 实际积分载体、兼容根系统、整数根加法/zsmul、有限 reduction kernel | etale/Frobenioid/Kummer 几何识别 |
+| `Foundations/Geometry/ConcreteTateFiniteLevel` | 实际 kernel 商与 `ZMod l` 的加法等价、代表元与倍数类律 | etale cover 或基本群解释 |
+| `Foundations/Geometry/ConcreteTateDeckQuotient` | `q^Z` deck 子群、局部绝对 Galois 保持性、商作用的恒等/复合 | 曲线点 uniformization 和 Galois-equivariant 点识别 |
+| `Foundations/Geometry/ConcreteTateLocalCarrier` | 上述五个底层对象的依赖组装和投影定理 | stable reduction、source Hodge theater、theta/log-link |
+| `Foundations/Geometry/TateCurveArithmetic` | canonical q-series 的 `b₂,b₄,b₆,b₈,c₄,c₆,Δ` 精确公式、变量变换权、非退化/椭圆性判据，以及带显式 integral/minimal witness 的 good/multiplicative reduction 传输 | `q=p` 的判别式非零、指定输入曲线的实际证书、Tate uniformization、点的 Galois 等变性 |
+| `Foundations/Geometry/TateCurvePadicEstimates` | 对实际 `q=p ∈ Q_p` 证明 Lambert 级数项的几何范数界、有限截断误差、首项严格支配尾项；证明 canonical `a₄/a₆/c₄` 非零，`c₄` 为单位，并构造 `PadicInt` 积分系数/分母/有限 packet 证书 | 输入曲线识别、stable/split multiplicative reduction 存在性、Tate uniformization、Galois-equivariant 点识别、source-faithful theta/log-link |
+| `Foundations/Geometry/TateCurveDiscriminantEstimates` | 将 canonical `Δ` 分解为 `-a₆` 与四项修正，逐项证明严格小范数并聚合为 `||Δ|| = ||q||`；真实证明 canonical q-series 曲线判别式非零、椭圆性、积分 discriminant 见证、余域零像及积分 `c₄` 单位，并提供可复用严格支配/输出包 | 不识别单独给定的数域椭圆曲线；不证明该输入曲线在选定处 stable/split multiplicative reduction、Tate uniformization、点级 Galois 等变性或 source-faithful theta/log-link |
+
+本批次 `lake build` 为 `3850/3850` 且零 warning；唯一允许的生产
+`sorryAx` 仍为 `theorem311_produces_stepXI_contract`。因此 C 层仍不能标记为
+完成，下一批必须先处理指定输入曲线在选定处的真实 stable/split
+multiplicative reduction，以及 q-series 曲线与该输入曲线之间的真实
+Tate uniformization；不能用本批次的 carrier 代替这些定理。
+
+随后完成的 995 行 `TateCurveArithmetic` 批次已在 `3851/3851` 生产构建中
+通过且零 warning。它闭合的是 canonical 方程的算术和证书传输层，不是
+q-series 椭圆性或 Tate uniformization 的存在性；因此 C 层的 source-faithful
+几何部分仍保持未完成状态。
+
+本轮完成的 `TateCurvePadicEstimates` 是上述算术层之后的约 2,400 行有效
+底层估计代码。独立编译日志 `logs/lean/tate-padic-estimates-batch-20260806-r11.log`
+为零错误、零 warning；接入 `LeanFormal.IUT.Project` 后生产构建日志
+`logs/lean/tate-padic-estimates-project-20260806-r4.log` 以 `3850/3850`
+通过且零 warning。关键端点的 `#print axioms` 结果记录在
+`logs/lean/tate-padic-estimates-axiom-audit-r2-20260806.log`，只出现
+`propext`、`Classical.choice`、`Quot.sound`；生产源码自定义
+`axiom/opaque` 扫描为零，见
+`logs/lean/tate-padic-estimates-custom-axiom-scan-20260806.log`。
+这批次把 q-series 的 p-adic估计和积分载体真正闭合，但没有把
+“`c₄` 为单位”误报成“判别式非零”，因此 C 层仍不能标记为完成。
+
+随后完成的 `TateCurveDiscriminantEstimates` 是约 1,000 行的判别式闭合
+批次。它在同一 `q=p ∈ Q_p` 载体上真实证明四项修正均严格小于 `a₆`，从而
+证明 canonical `Δ ≠ 0`、`||Δ|| = ||q||` 和 canonical q-series 曲线的
+椭圆性；同时把 discriminant 传到 `PadicInt` 积分 Weierstrass 模型，证明
+其余域像为零、generic-fiber 像非零且 `c₄` 为单位。独立编译日志为
+`logs/lean/tate-curve-discriminant-batch-20260806-r12.log`，Project 日志为
+`logs/lean/tate-curve-discriminant-project-20260806-r2.log`，全量构建为
+`logs/lean/tate-curve-discriminant-full-20260806.log`（`3853/3853`，零 warning）。
+新模块无 `sorry/axiom/opaque`；端点公理审计为
+`logs/lean/tate-curve-discriminant-axiom-audit-r2-20260806.log`，只含
+Lean/Mathlib 标准基础公理。这个闭合的是 canonical q-series 的椭圆性，
+不是指定数域输入曲线的识别、约化存在性或 Tate uniformization，因此 C 层
+仍不能整体标记为完成。
 
 ## 2. 最有价值的 IUT 内部发布目标
 

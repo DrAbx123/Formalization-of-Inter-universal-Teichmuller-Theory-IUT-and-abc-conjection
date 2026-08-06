@@ -485,7 +485,8 @@ theorem liftedEdge_coincidence_at_branch
   dsimp only
   rw [SourceFiniteLevelUniversalCover.edgeIndexToRestrictedBranchIndex_refl]
   unfold SourceFiniteLevelUniversalCover.liftedEdgeToRestrictedBranchIndex
-  exact SourceCombinatorialUniversalCover.SourceSemiGraphUniversalCover.coincidence_eq_some_of_eq_some
+  exact
+    SourceCombinatorialUniversalCover.SourceSemiGraphUniversalCover.coincidence_eq_some_of_eq_some
       (SourceFiniteLevelUniversalCover.LevelSemiGraph
         diagram root level.object) level.rootVertex liftedEdge branchValue
       ⟨vertex, SourceSemiGraphOfAnabelioids.GluedObject.coverComponentMap

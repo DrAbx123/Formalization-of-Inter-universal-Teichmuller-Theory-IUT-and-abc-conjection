@@ -40,3 +40,18 @@ because its file compiles.
 The current production trust boundary is checked independently by
 `verification/axiom_audit.lean`, `tools/check_axiom_boundary_logged.ps1`, and
 `tools/check_no_custom_axioms.ps1`.
+
+## Latest snapshot review (2026-08-06)
+
+The refreshed `promachina/iut-lean` snapshot at
+`1fa6387f11fb6dc67eb618b8138e6bc64f56b039` was built independently before
+selective reuse.  Its `SourceIUTIIIRemark395WeightedDeterminant.lean` contains
+the same denominator-product arithmetic used locally, but also couples it to
+source-facing holomorphic-hull, realified-line, and realization records.  The
+local production module `LeanFormal/IUT/IUTIII/Corollary312/StepXI/HolomorphicHull/WeightedNormalization.lean`
+therefore keeps only the proved arithmetic kernel and records the geometric
+dependencies separately.  The upstream file is a reference for statement
+alignment, not a bulk import.  The same decision applies to
+`SourceKummerGaussianSynchronization.lean`: its elementary root/profile
+lemmas are already covered by the local Kummer kernels, while its remaining
+construction fields are not silently promoted to theorems.

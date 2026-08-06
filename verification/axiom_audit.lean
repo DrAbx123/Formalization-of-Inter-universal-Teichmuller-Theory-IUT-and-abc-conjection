@@ -8,6 +8,22 @@ import LeanFormal.IUT.Project
 
 open LeanFormal.IUT
 
+/-! Concrete p-adic Tate q-series endpoints added by the C-layer batch. -/
+#print axioms LeanFormal.IUT.TateCurvePadic.q_norm_lt_one
+#print axioms LeanFormal.IUT.TateCurvePadic.series_norm_eq_first
+#print axioms LeanFormal.IUT.TateCurvePadic.a4_ne_zero
+#print axioms LeanFormal.IUT.TateCurvePadic.a6_ne_zero
+#print axioms LeanFormal.IUT.TateCurvePadic.c4_is_unit
+#print axioms LeanFormal.IUT.TateCurvePadic.localCoefficientPacket_exists
+#print axioms LeanFormal.IUT.TateCurvePadic.discriminantNonzeroObligation_iff_elliptic
+#print axioms LeanFormal.IUT.TateCurvePadic.qSeries_chain_delta_is_explicit_goal
+#print axioms LeanFormal.IUT.TateCurvePadic.deltaValue_norm_eq_leading
+#print axioms LeanFormal.IUT.TateCurvePadic.deltaValue_ne_zero
+#print axioms LeanFormal.IUT.TateCurvePadic.canonicalCurve_delta_ne_zero
+#print axioms LeanFormal.IUT.TateCurvePadic.canonicalCurve_is_elliptic
+#print axioms LeanFormal.IUT.TateCurvePadic.integralCurveDelta_residue_zero
+#print axioms LeanFormal.IUT.TateCurvePadic.canonicalEllipticityPacket
+
 #print axioms LeanFormal.IUT.card_Fl
 #print axioms LeanFormal.IUT.natRadical_mul_three_of_pairwise_coprime
 #print axioms LeanFormal.IUT.natRadical_dvd_radical_of_dvd
@@ -253,6 +269,9 @@ open LeanFormal.IUT
 #print axioms LeanFormal.IUT.packetLogVolume_tensor
 #print axioms LeanFormal.IUT.packetDet_rescale
 #print axioms LeanFormal.IUT.packetLogVolume_rescale
+#print axioms LeanFormal.IUT.addHaar_closedBall_unit_pos
+#print axioms LeanFormal.IUT.logClosedBallVolume_smul
+#print axioms LeanFormal.IUT.addHaar_logClosedBallVolume_smul
 #print axioms LeanFormal.IUT.FiniteThetaPacket.toPositivePacket_det_eq_prod
 #print axioms LeanFormal.IUT.FiniteThetaPacket.toPositivePacket_logVolume_eq_log_det
 #print axioms LeanFormal.IUT.FiniteThetaPacket.toPositivePacket_neg_invariant
@@ -301,6 +320,38 @@ open LeanFormal.IUT
 #print axioms Iut.SourceModelFrobenioid.Carrier.zeroObjectRationalFunctionEquiv
 #print axioms Iut.SourceModelFrobenioid.Carrier.effectiveRationalFunctionPullback
 #print axioms Iut.SourceModelFrobenioid.Carrier.zeroRationalFunctionNatIso
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageDivisorialMonoidOn
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageDivisorGrothendieckPullback_apply
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelInput
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageBaseTerminal
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageBase_isConnected
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageBase_arrow_epi
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelPreFrobenioidPresentation
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageDivisorGrothendieckEquivInt_intTo
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelEffectiveSubmonoid_eq
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelEffectiveRationalFunctionEquivIntegralMonoid
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelZeroObjectRationalFunctionEquivIntegralMonoid
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelEffectiveRationalFunctionEquivIntegralMonoid_natural
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageIntegralMonoidFunctor
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelEffectiveToIntegralNatIso
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelZeroObjectToIntegralNatIso
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageIntegralToIndCocone
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageIntegralFilteredColimitToInd
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageIntegralFilteredColimitToInd_cocone
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageIntegralFilteredColimitToInd_surjective
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageIntegralFilteredColimitToInd_injective
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageIntegralFilteredColimitEquivInd
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelZeroObjectFilteredFunctor
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelZeroObjectFilteredColimit
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelZeroObjectToIntegralCocone
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelZeroObjectFilteredColimitToIntegral
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelZeroObjectFilteredColimitToIntegral_cocone
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageIntegralToModelZeroObjectCocone
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageIntegralFilteredColimitToModelZeroObject
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageIntegralFilteredColimitToModelZeroObject_cocone
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelZeroObjectFilteredColimitIsoIntegral
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelZeroObjectFilteredColimitEquivInd
+#print axioms _root_.Iut.SourceFinitePlaceReconstruction.stageModelZeroObjectFilteredColimitEquivSourceMLF
 #print axioms Iut.SourceFinitePlaceReconstruction.integralIndSourceSequentialPresentation
 #print axioms Iut.SourceFinitePlaceReconstruction.stageIsIntegral_closure_iff_valuation_le_one
 #print axioms Iut.SourceFinitePlaceReconstruction.stageEffectiveRationalFunctionEquivIntegralMonoid

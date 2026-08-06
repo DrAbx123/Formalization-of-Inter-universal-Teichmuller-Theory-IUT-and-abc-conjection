@@ -1,0 +1,50 @@
+{
+  "repository": "https://github.com/promachina/iut-lean",
+  "license": "Apache-2.0",
+  "previousMaster": "0d52e0fd5b532117a5f804809583da446fb9864b",
+  "master": "1fa6387f11fb6dc67eb618b8138e6bc64f56b039",
+  "tree": "c32abf9c5b85fb44a1815182a465d714a2706972",
+  "checkedAt": "2026-08-06T05:28:00+08:00",
+  "snapshot": "vendor/promachina/snapshots/1fa6387f11fb6dc67eb618b8138e6bc64f56b039",
+  "trackedFileCount": 310,
+  "leanFileCount": 210,
+  "changedFilesFromPreviousMaster": 88,
+  "netInsertedLinesFromPreviousMaster": 34382,
+  "netDeletedLinesFromPreviousMaster": 1257,
+  "upstreamBuild": {
+    "status": "passed",
+    "exitCode": 0,
+    "jobs": 4443,
+    "errors": 0,
+    "warnings": 109,
+    "librarySuggestionsPanics": 7,
+    "toolchain": "Lean 4.30.0",
+    "mathlibRevision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+    "log": "logs/lean/upstream-full-build-1fa6387f-rerun-20260806-052410.log"
+  },
+  "sourceScan": {
+    "explicitSorryMentions": 0,
+    "topLevelAxiomDeclarations": 0,
+    "topLevelOpaqueDeclarations": 0,
+    "note": "The two textual opaque matches are prose inside documentation comments, not declarations."
+  },
+  "directReuseCandidates": [
+    "Iut/Foundations/SourceIUTIIIRemark395HolomorphicHull.lean",
+    "Iut/Foundations/SourceIUTIIIRemark395WeightedDeterminant.lean",
+    "Iut/Foundations/SourceIUTIIIRemark395Semisimplification.lean",
+    "Iut/Foundations/SourceIUTIIIProposition39.lean",
+    "Iut/Foundations/SourceIUTIProposition24.lean",
+    "Iut/Foundations/SourceVerticalLogLink.lean",
+    "Iut/Foundations/SourceKummerGaussianSynchronization.lean"
+  ],
+  "conditionalFrameworks": [
+    "Iut/Foundations/SourceTheorem311Ind12Construction.lean",
+    "Iut/Foundations/SourceTheorem311HorizontalConstruction.lean",
+    "Iut/Foundations/SourceTheorem311VerticalConstruction.lean",
+    "Iut/Foundations/SourceConcreteHodgeArakelovPilots.lean",
+    "Iut/Foundations/SourceInitialThetaData.lean",
+    "Iut/Foundations/SourceThetaHodgeTheaterAssembly.lean"
+  ],
+  "decision": "Download and audit complete; no bulk production import yet.",
+  "reason": "The new source modules contain useful concrete kernels for hulls, weighted determinants, Kummer saturation, and log-volume, but the Theorem 3.11 construction still exposes recognition/candidate_exists boundaries and uses a different Lean/Mathlib toolchain. Port only theorem bodies after exact type and axiom checks; preserve the local production interfaces and the single explicitly permitted sorry boundary."
+}

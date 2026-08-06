@@ -2,15 +2,15 @@
 Copyright (c) 2026 IUT Lean formalization contributors. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: IUT Lean formalization contributors
-
-Extracted from promachina/iut-lean@581e2b898b8429cbb696f75c4548e732d440650d.
-The carrier was generalized from TopologicalGroupCat to an arbitrary
-topological group; the source-specific topological-group wrapper was omitted.
 -/
 import Mathlib.Topology.Algebra.Group.Quotient
 
 /-!
 # Nested normal quotient systems
+
+Extracted from `promachina/iut-lean@581e2b898b8429cbb696f75c4548e732d440650d`.
+The carrier was generalized from `TopologicalGroupCat` to an arbitrary
+topological group; the source-specific topological-group wrapper was omitted.
 
 A decreasing sequence of normal subgroups defines a tower of quotient groups.
 This module constructs its transition maps and compatible-family limit, then

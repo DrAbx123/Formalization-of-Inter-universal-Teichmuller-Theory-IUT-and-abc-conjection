@@ -1,0 +1,32 @@
+import Iut.Foundations.SourceGluedAnabelioid
+import Iut.Foundations.SourceGluedGalois
+import Iut.Foundations.SourceAnabelioidSlice
+import Iut.Foundations.SourceSemiGraphResidualSeparation
+import Iut.Foundations.SourceNestedNormalQuotientSystem
+import Iut.Foundations.SourceTemperoidQuotient
+import Iut.Foundations.SourceTemperedDeckProjectionSurjectivity
+import Iut.Foundations.SourceTemperoidOrbitDecomposition
+import Iut.Foundations.SourceTemperoidRestrictionComponentFamily
+import Iut.Foundations.SourceConnectedFiniteEtaleConverse
+import Iut.Foundations.SourceTemperedCoveringCategory
+import Iut.Foundations.SourceTemperedGraphCoverRealization
+import Iut.Foundations.SourceTemperedGeometricDomination
+import Iut.Foundations.SourceTemperedActionCoverEquivalence
+import Iut.Foundations.SourceFrobenioidBasePullbackLift
+import Iut.Foundations.SourceFrobenioidUniversalProEvaluation
+import Iut.Foundations.SourceModelFrobenioidPresentation
+import Iut.Foundations.SourceModelRationalMonoidTransport
+import Iut.Foundations.SourceModelFrobenioidRationalNaturality
+import Iut.Foundations.SourceModelFrobenioidZeroEvaluation
+import Iut.Foundations.SourceModelFrobenioidIntegralNaturality
+import Iut.Foundations.SourceFiniteStageValuationDivisor
+import Iut.Foundations.SourceFiniteStageDivisorTransition
+import Iut.Foundations.SourceFiniteStageModelFrobenioid
+import Iut.Foundations.SourceFiniteStageModelEvaluation
+import Iut.Foundations.SourceDefinition52Sequential
+
+/-
+The source-oriented foundation aggregate is intentionally separate from the
+LeanFormal production theorem tree.  It gives Lake a real root target for the
+audited finite-stage Frobenioid and tempered/anabelioid modules.
+-/

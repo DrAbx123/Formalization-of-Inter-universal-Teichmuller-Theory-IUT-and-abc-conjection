@@ -176,6 +176,9 @@ The following distinction is enforced in code:
 | `SourceFrobenioidModelType`, `SourceModelFrobenioidBirational*`, `SourceModelFrobenioidColimit*`, and `SourceModelFrobenioidRationalNaturality` | **proved Frobenioids I Proposition 4.4/Theorem 5.2 birational chain** | The actual filtered Hom-colimit, fully faithful comparison with the concrete birational model, seven Definition 1.3 axiom groups, full Frobenioid presentation, rational-function natural isomorphism, unit restriction, and `DivB` compatibility are constructed. Eight files are content-identical to `promachina/iut-lean@0d52e0fd` after end-of-line normalization. The other three contain only Lean 4.32.2/linter migrations: unused simp arguments removed, Prop-valued `def`s changed to `theorem`s, and one explicit projection `change`; the propositions, hypotheses, and proof arguments are unchanged. This identifies the group-like birational `O^times`, not the integral monoid of IUT II Definition 4.9. |
 | `Iut/Foundations/SourceModelFrobenioidZeroEvaluation` | **proved objectwise integral evaluation kernel / finite-stage comparison proved separately** | At the zero-divisor object of the actual model Frobenioid, Lean constructs a multiplicative equivalence between `O^triangle` and rational functions whose divisor lies in the effective monoid. Surjectivity is obtained from an explicit model arrow satisfying the original balance equation; no supplied recognition or existence field is used. Finite-stage divisor-effectivity versus local valuation-integrality is now proved in `SourceFiniteStageValuationDivisor`; the actual finite-stage ramification transitions, filtered-colimit evaluation comparison, Galois action, ind-topology, groupification, and Kummer compatibility remain pending. |
 | `Iut/Foundations/SourceModelFrobenioidIntegralNaturality` | **proved natural integral-evaluation comparison for every model base arrow** | The zero-divisor section is constructed as a functor. Its transported `O^triangle` monoids and the effective rational-function submonoids are contravariant functors on the full base category, and Lean constructs a natural isomorphism between them. Effectivity under pullback follows from the original divisor naturality and `gpPullback_of`; no transition or recognition field is added. Specializing this generic theorem to the finite Galois stages still requires their genuine ramification-weighted divisor pullbacks. |
+| `Iut/Foundations/SourceFiniteStageDivisorTransition` | **proved genuine finite-stage value-group and divisor transition system** | For every finite-stage inclusion, Mathlib's `ValuativeExtension.mapValueGroupWithZero` is conjugated through the independently chosen `ValueGroupWithZero ≃*o ℤᵐ⁰` normalizations. The resulting additive `ℤ` map is proved strictly monotone, equal to multiplication by a positive ramification index, and natural for units; the induced `ℕ` divisor pullbacks are injective and satisfy identity/composition. No compatibility of noncanonical stage normalizations is assumed. |
+| `Iut/Foundations/SourceFiniteStageModelFrobenioid` | **proved finite-stage model Frobenioid input** | The opposite finite-stage category carries a universe-correct sharp, integral, saturated divisor monoid (`ULift ℕ`), ramification-weighted pullbacks, and the additive group of nonzero stage elements. The model `Input` and its `divisor_natural` field are constructed and proved from the transition theorem and the Grothendieck-group pullback calculation. This is the actual finite-stage carrier/input; the categorical universal-pro evaluation and its identification with `O^triangle` remain pending. |
+| `Iut/Foundations/SourceFiniteStageModelEvaluation` | **proved finite-stage `O^triangle` identification, naturality, and reconstructed ind-colimit** | For the zero-divisor object of the finite-stage model, the generic effective rational-function submonoid is proved equal to the normalized-valuation nonnegative submonoid. An explicit multiplicative equivalence identifies the model `O^triangle` zero-object endomorphisms with the actual nonzero integral stage monoid, and its effective-side map is proved natural for every genuine stage transition. The stage integral `MonCat` filtered colimit is constructed and proved multiplicatively equivalent to the exhaustive `IndIntegralMonoid`. The proof uses the genuine Grothendieck-group equivalence, valuation/integrality theorem, actual `stageIntegralTransition`, and Mathlib filtered representative relation; it does not assert the categorical MLF/CAF `O^triangle` realization. |
 | `Iut/Foundations/SourceMLFIntegralMonoid` and `IUTII/Frobenioid/MLFIntegralMonoidComparison` | **proved arithmetic monoid, groupification, and local comparison** | For an actual valued field, Lean uses the integral closure in its algebraic closure, removes zero, constructs the absolute Galois action, proves the fraction-field property, and identifies the Grothendieck group with algebraic-closure units. The existing `LocalIntegralMonoid p` is proved equivalent, including inclusion, groupification, and Galois action. This is an arithmetic carrier comparison, not yet a Frobenioid evaluation comparison. |
 | `Iut/Foundations/SourceFinitePlaceMLFBase` | **proved finite-place local-field base / packaging only for the ind-colimit record** | The actual completion map `Q_p -> K_v`, continuity, scalar tower, finite dimensionality, nontrivial norm, characteristic zero, valuative relation, second countability, and rational local compactness are constructed from Mathlib and the existing finite-place extension theorem. `SourceFiniteIndTopologicalLocalModule` only packages a filtered topological-module cocone; existence for the required system is supplied by the following reconstruction, not assumed here. |
 | `Iut/Foundations/SourceDefinition52LocalReconstruction` through `SourceDefinition52Sequential` | **proved IUT I Definition 5.2(v) finite-place reconstruction** | Finite Galois intermediate fields form the filtered stages; their module colimit is proved equivalent to the algebraic closure. Nonzero integral stage monoids exhaust the local integral monoid, transitions and the Krull action are continuous and equivariant, and a natural-number-indexed cofinal subsystem is constructed from countably many global-polynomial root witnesses. No candidate-existence record is used. The separate categorical identification with `O^triangle(A)` for an actual MLF/CAF Frobenioid remains pending. |
@@ -1297,3 +1300,460 @@ corridors and diagnostics, not a resolution of the controversy.**
   with the completed finite-place reconstruction. Initial theta existence,
   complete Hodge theaters and histories, theta-links, and log-links remain
   subsequent C-layer obligations.
+- 2026-08-06: completed the finite-stage model Frobenioid input and rebuilt its
+  Lake cache. `SourceFiniteStageModelFrobenioid.lean` now supplies a genuine
+  universe-correct sharp/saturated divisor monoid, ramification-weighted
+  Grothendieck pullback, rational-function additive system, and proved divisor
+  naturality. The target build `lake build
+  Iut.Foundations.SourceFiniteStageModelFrobenioid` completed successfully
+  (`3406` jobs); the cached production target
+  `lake build LeanFormal.IUT.Project` completed successfully (`3820` jobs).
+  The direct Project closure and both production/upstream foundation axiom
+  audits were then run serially with `lake env lean -j 1`; all exited `0` with
+  empty stderr. Logs are under
+  `logs/lean/serial-20260806-0218/`. The new endpoints
+  `stageDivisorialMonoidOn`, `stageDivisorGrothendieckPullback_apply`, and
+  `stageModelInput` depend only on `propext`, `Classical.choice`, and
+  `Quot.sound`; the sole production `sorryAx` remains
+  `LeanFormal.IUT.theorem311_produces_stepXI_contract`. The audit references
+  use root-qualified names so that the cached Project import cannot shadow the
+  `Iut` namespace.
+- 2026-08-06: added `SourceFiniteStageModelEvaluation.lean` by mechanically
+  promoting a standalone zero-diagnostic prototype. It proves the equality
+  between the model's effective rational-function submonoid and the
+  normalized-valuation nonnegative submonoid, then composes the generic model
+  zero-object equivalence with the proved finite-stage integral-monoid
+  equivalence. The module build completed successfully (`3414` jobs), the
+  cached Project build completed successfully (`3821` jobs), and the direct
+  Project closure plus production and upstream foundation axiom audits all
+  exited `0` with empty stderr. The new endpoints use only `propext`,
+  `Classical.choice`, and `Quot.sound`; no new `sorryAx` or custom axiom was
+  introduced. Logs are under `logs/lean/serial-20260806-0230/`.
+  The custom declaration scan was rerun at 2026-08-06 01:29:57 CST and
+  reported `customAxiomDeclarations: 0`.
+  The complete `lake build LeanFormal` aggregate also completed successfully
+  (`3823` jobs); its log is `logs/lean/serial-20260806-0230/aggregate.log`.
+- 2026-08-06: replaced the finite-stage effective-to-integral equivalence's
+  proof-irrelevant submonoid transport with an explicit `MulEquiv`, then proved
+  `stageModelEffectiveRationalFunctionEquivIntegralMonoid_natural`: the model
+  effective pullback along every opposite-stage arrow agrees on the nose with
+  the actual `stageIntegralTransition` after evaluation. This is a genuine
+  finite-stage naturality square, not an ind-limit or MLF/CAF identification.
+  The module target (`3422` jobs), Project target (`3821` jobs), direct Project
+  closure, production/upstream axiom audits, custom-axiom scan, and complete
+  `LeanFormal` aggregate (`3823` jobs) all exited `0`; all Lean stderr logs are
+  empty. Logs are under `logs/lean/serial-20260806-0340/`. The new naturality
+  theorem depends only on `propext`, `Classical.choice`, and `Quot.sound`.
+- 2026-08-06: exposed the finite-stage square as actual functorial data:
+  `stageIntegralMonoidFunctor` is the genuine `MonCat` functor of nonzero
+  integral stages, `stageModelEffectiveToIntegralNatIso` is a proved natural
+  isomorphism from the model effective functor, and
+  `stageModelZeroObjectToIntegralNatIso` composes it with the model
+  `zeroRationalMonoidFunctor`/effective natural isomorphism. The module target
+  (`3422` jobs), Project target (`3821` jobs), direct Project closure,
+  production/upstream axiom audits, custom declaration scan, and full
+  `LeanFormal` aggregate (`3823` jobs) all exited `0` with empty Lean stderr.
+  Logs are under `logs/lean/serial-20260806-0405/`; the new functor and
+  natural-isomorphism endpoints use only `propext`, `Classical.choice`, and
+  `Quot.sound`. This still stops before the categorical MLF/CAF evaluation and
+  the ind-colimit comparison.
+- 2026-08-06: completed the finite-stage ind-limit bridge. The production
+  evaluation module now constructs the actual filtered `MonCat` colimit of
+  the stage integral functor, a cocone into `IndIntegralMonoid`, and a
+  colimit-to-limit monoid hom. Using Mathlib's filtered representative
+  relation, the proved stage-transition compatibility, injectivity, and the
+  previously proved stage exhaustion, Lean establishes both surjectivity and
+  injectivity and packages the result as
+  `stageIntegralFilteredColimitEquivInd`. This is a genuine categorical
+  colimit identification for the reconstructed integral carrier; it is not yet
+  the paper's MLF/CAF `O^triangle` evaluation theorem. The module target
+  (`3424` jobs), Project target (`3823` jobs), direct Project closure,
+  production/upstream axiom audits, custom declaration scan, and full
+  `LeanFormal` aggregate (`3825` jobs) all exited `0` with empty Lean stderr.
+ Logs are under `logs/lean/serial-20260806-0425/`; all new endpoints use only
+ `propext`, `Classical.choice`, and `Quot.sound`.
+- 2026-08-06: lifted the proved finite-stage natural isomorphism from the model
+  `zeroRationalMonoidFunctor` to the actual filtered `MonCat` colimit. The new
+  `stageModelZeroObjectToIntegralCocone` and its inverse cocone give explicit
+  colimit maps; their two composites are proved by the filtered-colimit
+  universal property, yielding
+  `stageModelZeroObjectFilteredColimitIsoIntegral` and the genuine monoid
+  equivalence `stageModelZeroObjectFilteredColimitEquivInd` with
+  `IndIntegralMonoid`. The source-specific categorical MLF/CAF identification
+  is still not claimed. The module was compiled serially in
+  `logs/lean/serial-20260806-continue-6/`; no `sorry`, custom axiom, or opaque
+  declaration was added.
+- 2026-08-06: verified the colimit lift in the complete project closure. The
+  finite-stage module, `LeanFormal.IUT.Project`, production axiom audit,
+  upstream-foundations axiom audit, custom declaration scan, and `lake build
+  LeanFormal` all exited `0`; the aggregate build completed at `3825` jobs and
+  all Lean stderr logs are empty. Logs are under
+  `logs/lean/serial-20260806-continue-7/`. The new colimit equivalence depends
+  only on `propext`, `Classical.choice`, and `Quot.sound`; the sole production
+  `sorryAx` remains `LeanFormal.IUT.theorem311_produces_stepXI_contract`.
+- 2026-08-06: composed the verified model-colimit equivalence with the existing
+  algebraic identification `indIntegralMonoidEquivSourceMLF`, producing
+  `stageModelZeroObjectFilteredColimitEquivSourceMLF`. This is a carrier-level
+  bridge to the explicitly constructed nonzero integral elements of the
+  algebraic closure; it is not yet the paper's categorical MLF/CAF realization
+  or a claim about the full `O^triangle` Frobenioid.
+- 2026-08-06: rebuilt the complete closure after the carrier bridge. The module,
+  Project target, direct Project closure, both axiom audits, custom declaration
+  scan, and aggregate `lake build LeanFormal` all exited `0`; the aggregate
+  completed at `3825` jobs with empty Lean stderr. Logs are under
+  `logs/lean/serial-20260806-continue-9/`. The new
+  `stageModelZeroObjectFilteredColimitEquivSourceMLF` endpoint adds no
+  `sorryAx` or custom axiom.
+- 2026-08-06: proved the finite-stage index category's missing connectivity
+  rather than leaving it as a typeclass premise. `FiniteGaloisIntermediateField`
+  has a bottom object; in the opposite stage category `op ⊥` is constructed as
+  a terminal object, giving `stageBase_isConnected`. Thin-category arrows are
+  proved epimorphisms by the existing Mathlib instance, so the explicit model
+  `stageModelPreFrobenioidPresentation` now packages the constructed
+  `stageModelInput` as a genuine connected, totally epimorphic
+  `PreFrobenioidPresentation`. This is still a pre-Frobenioid presentation:
+  the seven Frobenioid axiom groups and categorical MLF/CAF realization remain
+  unproved.
+- 2026-08-06: verified this pre-Frobenioid block in the complete project. The
+  finite-stage model and evaluation modules, Project closure, production and
+  upstream foundation axiom audits, custom declaration scan, and aggregate
+  `lake build LeanFormal` all exited `0`; the aggregate completed at `3826`
+  jobs. All Lean stderr files contain no non-whitespace diagnostics, so this
+  block introduces no warnings. Logs are under
+  `logs/lean/serial-20260806-model-presentation-6/`. The new endpoints depend
+  only on the standard `propext`, `Classical.choice`, and `Quot.sound` family;
+  no new `sorryAx`, `axiom`, or `opaque` declaration was added.
+- 2026-08-06: promoted the finite-stage endpoint from the verified
+  `PreFrobenioidPresentation` to a full `FrobenioidPresentation` by applying
+  the existing, fully proved Definition 1.3 axiom package to the concrete
+  stage input. The endpoint is
+  `stageModelFrobenioidPresentation`; it uses the already proved terminal
+  object/connectedness and thin-category epimorphism results, so it adds no
+  mathematical assumption. The standalone module compile passed in
+  `logs/lean/serial-20260806-025639/`; the Project target passed in
+  `logs/lean/run-20260806-025705.status.json`; production and upstream axiom
+  audits passed in `logs/lean/axioms-20260806-025759/` and
+  `logs/lean/axioms-upstream-foundations-20260806-025822/`; the custom scan
+  reported zero declarations in
+  `logs/lean/custom-axioms-20260806-0301.stdout.log` (with an empty stderr
+  log);
+  and the complete aggregate passed in
+  `logs/lean/run-20260806-025851.status.json`. This is a complete formal
+  Frobenioid presentation for the finite-stage model, not yet the paper's
+  categorical MLF/CAF realization or an IUT-specific Theorem 3.11 input.
+- 2026-08-06: added `IUTI/InitialTheta/ConcreteArithmeticExample.lean`.
+  Lean constructs the quadratic field `Q(i)` as an `AdjoinRoot`, proves the
+  irreducibility and square-root relation, obtains the number-field/Galois and
+  finite-dimensional identity-tower instances, and supplies a nonsingular
+  Weierstrass model as a `PuncturedEllipticCurve`. The standalone check passed
+  with exit code `0` and empty diagnostics in
+  `logs/lean/concrete-initial-theta-20260806-031842.*`; after materializing its
+  `.olean`, the direct `Project.lean` closure also passed with exit code `0` in
+  `logs/lean/project-concrete-theta-20260806-031951.*`. This upgrades one
+  concrete input from interface data to a genuine proved example, but does not
+  prove general initial-Theta existence, full Hodge theaters, or any
+  IUT-specific Theorem 3.11 obligation.
+- 2026-08-06: added `IUTI/HodgeTheater/ConcreteHodgeTheaterExample.lean`.
+  The proved `Q(i)` arithmetic input is assembled with the actual local
+  F-prime-strip carrier and `FiniteThetaPacket.ofQ` to form a concrete
+  `HodgeTheater`; a reflexive `ThreeTheaterSystem` and its q-transport theorem
+  are also checked. This is a carrier-level instance only. It does not claim
+  distinct paper histories, etale/Frobenioid realization, or
+  Hodge-Arakelov compatibility.
+- 2026-08-06: verified the concrete Hodge-theater example in the complete
+  closure. The standalone module, its Lake target, `Project.lean`, and the
+  `LeanFormal` aggregate all passed with empty diagnostics; the aggregate
+  completed at `3828` jobs (`logs/lean/aggregate-concrete-hodge-theater-20260806-032706.log`).
+  The production boundary still reports exactly the single permitted
+  `theorem311_produces_stepXI_contract` `sorryAx` in
+  `logs/lean/boundary-concrete-hodge-theater-20260806-032744.json`; the
+  upstream-foundation audit reports no `sorryAx`, and the custom declaration
+  scan reports zero `axiom`/`opaque` declarations.
+- 2026-08-06: downloaded the complete `promachina/iut-lean` master snapshot at
+  `1fa6387f11fb6dc67eb618b8138e6bc64f56b039` (tree
+  `c32abf9c5b85fb44a1815182a465d714a2706972`) into
+  `vendor/promachina/snapshots/`. It contains 310 tracked files, 210 Lean
+  files, and is licensed Apache-2.0. Relative to the previously audited
+  `0d52e0fd`, the upstream diff is 88 files and 34,382 inserted lines. The
+  review record is `vendor/promachina/review-1fa6387f.json`; no upstream file
+  has been bulk-imported into production. The independent upstream build is
+  now passed with exit code `0` at 4443 jobs against its pinned Lean 4.30.0 /
+  Mathlib revision. The log is
+  `logs/lean/upstream-full-build-1fa6387f-rerun-20260806-052410.log`; it has
+  no errors but 109 warnings and 7 deterministic LibrarySuggestions heartbeat
+  PANIC messages. The warnings are concentrated in the very large Stage1
+  files and do not turn their recognition interfaces into proofs.
+- 2026-08-06: the completed upstream source scan found no explicit `sorry`,
+  top-level `axiom`, or top-level `opaque` declaration; the two textual
+  `opaque` matches are documentation prose. This is separate from the
+  source's many recognition/candidate fields, which are ordinary structure
+  inputs and remain conditional mathematics rather than hidden axioms.
+- 2026-08-06: added `IUTIII/Corollary312/StepXI/HolomorphicHull/WeightedNormalization.lean`.
+  It ports only the source-faithful arithmetic core of Remark 3.9.5(vii):
+  product common tensor degree, complementary exponents, structure-sheaf
+  subtraction, and the exact denominator-clearing normalized log-volume
+  equality. It introduces no geometric hull, determinant-line realization,
+  Frobenioid identification, or new axiom.
+- 2026-08-06: verified the weighted-normalization addition in the complete
+  production closure. `Project.lean` passed with exit code `0` and empty
+  stderr in `logs/lean/project-check-20260806-055225.*`; `lake build
+  LeanFormal` passed at `3829` jobs with empty stderr in
+  `logs/lean/build-20260806-055251.*`. The production axiom audit passed in
+  `logs/lean/axiom-audit-20260806-055436.*`: exactly one `sorryAx` remains,
+  on `theorem311_produces_stepXI_contract`; all sampled foundational and
+  downstream arithmetic theorems use only Lean's standard logical axioms.
+  The imported upstream-foundation audit passed in
+  `logs/lean/upstream-foundations-audit-20260806-055501.*` with zero
+  `sorryAx`, and `tools/check_no_custom_axioms.ps1` reports zero custom
+  `axiom`/`opaque` declarations at `2026-08-06T05:57:09+08:00`.
+- 2026-08-06: added `Foundations/Volumes/HaarLogVolume.lean`. It uses
+  Mathlib's actual finite-dimensional additive Haar measure, proves positive
+  finite unit closed-ball volume, and proves the exact closed-ball scaling law
+  after applying `Real.log`. The generic theorem exposes positivity of the
+  normalization explicitly; the `Measure.addHaar` corollary derives it from
+  Haar open-set positivity and compactness, so no measure or volume axiom is
+  introduced. The standalone compile passed in
+  `logs/lean/haar-log-volume-20260806-061317.*`; the aggregate passed at
+  `3830` jobs with empty stderr in
+  `logs/lean/build-haar-20260806-061418.*`, and `Project.lean` passed in
+  `logs/lean/project-haar-20260806-061507.*`. The focused production axiom
+  audit passed with the three Haar declarations depending only on
+  `propext`, `Classical.choice`, and `Quot.sound`; exactly one unrelated
+  `sorryAx` remains at `theorem311_produces_stepXI_contract` in
+  `logs/lean/axiom-audit-haar-20260806-061551.*`. The custom declaration scan
+  remains zero.
+- 2026-08-06: completed the source-foundation aggregate `Iut` without changing
+  any mathematical declaration. The five modules that had failed during the
+  high-concurrency aggregate (`SourceProfiniteSemiGraphSystem`,
+  `SourceTemperoidQuotient`, `SourceTemperoidComponentFamily`,
+  `SourceTemperoidAssociatedQuotient`, and `SourceGluedGaloisLevelSystem`)
+  each passed as single-module targets. `SourceFiniteSheetUniversalLift` also
+  passed when isolated after a process-level aggregate crash. Their logs are
+  under `logs/lean/iut-single-*.log`. The final `lake build Iut` completed
+  `4194/4194` targets with exit code `0` in
+  `logs/lean/build-Iut-root-warning-free-20260806-064339.log`.
+- 2026-08-06: resolved the only aggregate style warning by wrapping a long
+  proof line in `Iut/Foundations/SourceTemperedGeometricDomination.lean`.
+  The repaired module and the full `Iut` aggregate both compile with zero
+  warnings; this is a formatting-only change and introduces no axiom, sorry,
+  or mathematical premise.
+- 2026-08-06: added `IUTII/Frobenioid/ConcreteLocalKummerExample.lean` as the
+  next source-facing C-layer unit. It realizes the nontrivial local parameter
+  `q = p` inside the actual valuation-ring integral closure and
+  `LocalIntegralMonoid`, proves its image in the algebraic-closure units is
+  exactly the existing `localQParameterFor`, proves nontriviality after
+  Grothendieck groupification, and instantiates the already proved coherent
+  rational-root construction at that value. This is a concrete local Kummer
+  object, not an etale/Frobenioid theta-link claim. The standalone target
+  passed in `logs/lean/concrete-local-q-roots-fix2-20260806-065229.log`; the
+  production aggregate passed at `3831` jobs with zero warnings in
+  `logs/lean/build-LeanFormal-concrete-local-q-roots-20260806-065257.log`.
+- 2026-08-06: extended that same concrete unit with the actual
+  `LocalMLFModelTMPair.IntegralKummerRootRealization` for the canonical
+  mono-analytic local model and the selected open stabilizer. Its root system
+  is the previously proved coherent groupification system, and the specialized
+  `root_one` theorem compiles without any new premise. The final standalone
+  check is `logs/lean/concrete-local-q-roots-realization-fix2-20260806-065805.log`;
+  the full production aggregate is rerun after this unit is closed.
+- 2026-08-06: added `IUTI/HodgeTheater/ConcreteIntegralHodgeTheaterExample.lean`.
+  It assembles the proved Gaussian arithmetic input, the finite interval
+  `[2,7]`, the actual integral `FPrimeStrip`, a reflexive three-theater carrier,
+  and the selected nontrivial `q=5` `IntegralKummerRootRealization` into one
+  explicit finite input record. The selected place is proved to be the prime
+  `5`; no etale, source-history, theta-link, or Frobenioid-recognition claim is
+  made. The standalone target passed with zero warnings in
+  `logs/lean/concrete-integral-hodge-carrier-final-20260806-070143.log`, and
+  `lake build LeanFormal` passed at `3832` jobs with zero warnings in
+  `logs/lean/build-LeanFormal-concrete-integral-hodge-final-20260806-070208.log`.
+- 2026-08-06: tightened the finite integral theater's theta scale to the
+  actual positive norm `||5||_5` of its selected local q-parameter, rather than
+  an unrelated demonstration constant. Lean proves positivity and the exact
+  identity `||5||_5 = exp(localUnitNormDegreeFor 5 q)`, so the theta packet and
+  local degree are now on one explicit scale. The focused check passed with
+  zero warnings in `logs/lean/concrete-integral-hodge-qnorm-degree-20260806-070538.log`.
+- 2026-08-06: closed the local-scale unit with a fresh production build and
+  axiom audit. `lake build LeanFormal` passed at `3832` jobs with zero warnings
+  in `logs/lean/build-LeanFormal-concrete-local-scale-20260806-070613.log`,
+  and `verification/axiom_audit.lean` passed in
+  `logs/lean/axiom-audit-concrete-local-scale-20260806-070613.log`. No new
+  `sorryAx` or custom declaration was introduced.
+- 2026-08-06: the post-unit custom declaration scan again reports
+  `customAxiomDeclarations = 0` in
+  `logs/lean/custom-axiom-scan-concrete-local-scale-20260806-070806.log`.
+- 2026-08-06: after the two C-layer concrete units, the production axiom audit
+  passed with exit code `0` in
+  `logs/lean/axiom-audit-concrete-integral-hodge-20260806-070308.log`.
+  Sampled declarations depend only on `propext`, `Classical.choice`, and
+  `Quot.sound`; the custom `axiom`/`opaque` scan reports zero declarations in
+  `logs/lean/custom-axiom-scan-concrete-integral-hodge-20260806-070309.log`.
+  The only production `sorry` remains
+  `theorem311_produces_stepXI_contract` in `StepXI/Contract.lean`.
+- 2026-08-06: extended `ConcreteIntegralHodgeTheaterExample` with the exact
+  logarithmic identity
+  `Real.log gaussianFiveThetaQ = Multiplicative.toAdd (localUnitNormDegreeFor 5 q)`
+  and the resulting finite theta-packet log-volume formula. The focused module
+  build passed with exit code `0` and zero diagnostics in
+  `logs/lean/concrete-integral-hodge-log-volume-20260806-071200.log`.
+  The complete production aggregate passed at `3832/3832` with zero warnings in
+  `logs/lean/build-LeanFormal-concrete-log-volume-20260806-071225.log`.
+  The unified post-unit audit is recorded in
+  `logs/lean/unified-c-audit-20260806-071320/`: the axiom audit and strict
+  boundary both exit `0`, the boundary contains exactly the one permitted
+  `sorryAx`, and `check_no_custom_axioms.ps1` reports zero declarations.
+- 2026-08-06: added the next C-layer carrier batch: dependent finite
+  `HodgeTheaterHistory` composition with a concrete three-step finite history,
+  the exact finite cyclic `ZMod l` Tate direction and its kernel/generator
+  order, the integer slice of the concrete local Kummer root system, actual
+  stable/good/multiplicative reduction-place set bridges, and definitional
+  restriction facts for the finite integral F-prime-strip. The aggregate
+  passed at `3840/3840` with zero warnings in
+  `logs/lean/build-LeanFormal-c-candidate-batch-fix2-20260806-073503.log`, and
+  the final unified audit is under
+  `logs/lean/unified-c-candidate-audit-20260806-073557/`. The strict boundary
+  has exactly the single permitted `theorem311_produces_stepXI_contract`
+  `sorryAx`; custom top-level declarations remain zero. These are concrete
+  carriers and derived algebraic facts only: the source's distinct histories,
+  geometric etale/Frobenioid recognition, stable reduction existence, Tate
+  uniformization, and vertical log-Kummer construction remain pending.
+- 2026-08-06: closed the completion-characteristic bridge in
+  `Foundations/Geometry/TateUniformizationContract.lean`. The adic completion
+  now receives the inherited `CharZero` instance from its number field, so the
+  curve-indexed Tate-uniformization contract elaborates without adding a
+  premise or changing any mathematical field. The complete production build
+  passed at `3843/3843` with zero warnings in
+  `logs/lean/build-LeanFormal-c-candidate-batch-fix3-20260806-074413.log`.
+  The unified boundary audit passed in
+  `logs/lean/axioms-20260806-074714/` and
+  `logs/lean/axioms-upstream-foundations-20260806-074743/`: exactly the one
+  permitted Theorem 3.11-to-Step XI `sorryAx`, no upstream `sorryAx`, and zero
+  custom top-level `axiom`/`opaque` declarations. This closes the current
+  carrier batch only; stable-reduction existence, Tate uniformization and
+  Galois equivariance, source-faithful Hodge histories/theta-links/log-links,
+  and the vertical log-Kummer construction remain C-layer obligations.
+- 2026-08-06: added the next source-facing algebraic C-layer batch. In
+  `Foundations/Geometry/TateDeckAction.lean`, a base-field algebra
+  equivalence acts on algebraic-closure units, fixes the actual q-parameter
+  unit, preserves its `q^Z` deck subgroup, and descends to a proved
+  multiplicative quotient equivalence. In
+  `IUTII/Kummer/ConcreteEtaleKummerBridge.lean`, the exact finite
+  `Z/lZ` Tate-direction kernel is connected to the already constructed
+  compatible root system at `q=p`: a zero finite label is an l-fold integer
+  Kummer exponent, and label one is the actual q carrier. These are proved
+  algebraic carriers, not claims of geometric etale descent, Frobenioid
+  recognition, Tate uniformization, or a source theta/log-link. The complete
+  production build passed at `3845/3845` with zero warnings in
+  `logs/lean/build-LeanFormal-c-candidate-batch-fix11-20260806-081532.log`.
+  The unified boundary checks passed in
+  `logs/lean/axioms-20260806-081625/` and
+  `logs/lean/axioms-upstream-foundations-20260806-081649/`: exactly the one
+  permitted Theorem 3.11-to-Step XI `sorryAx`, no upstream `sorryAx`, and zero
+  custom top-level `axiom`/`opaque` declarations.
+
+- 2026-08-06: completed a roughly 1,000-line bottom-up local Tate/Kummer
+  prerequisite batch before adding any higher Hodge-theater or Theorem 3.11
+  construction. `Foundations/Geometry/ConcreteTateParameter.lean` proves the
+  actual `q=p` element in `Q_p`, strict contraction, canonical q-series
+  summability, q-unit nontriviality, and positive-power valuation facts.
+  `ConcreteTateKummerPacket.lean` ties the actual integral carrier to the
+  compatible root system, proves integer-root additive/zsmul laws, and proves
+  the exact finite `Z/lZ` kernel. `ConcreteTateFiniteLevel.lean` constructs
+  the quotient by the actual kernel and its additive equivalence with
+  `ZMod l`, including representative and multiple-class laws.
+  `ConcreteTateDeckQuotient.lean` constructs the actual `q^Z` deck subgroup,
+  proves local absolute-Galois invariance, and descends the action to the
+  quotient with identity/composition and class laws. Finally,
+  `ConcreteTateLocalCarrier.lean` assembles these independently checked
+  packets into one carrier.
+
+  The complete production build passed at `3850/3850` with zero warnings in
+  `logs/lean/build-concrete-tate-1000-line-batch-fix7-20260806-085213.log`.
+  The strict boundary audit passed in
+  `logs/lean/axioms-20260806-085308/`: exactly the one permitted
+  `LeanFormal.IUT.theorem311_produces_stepXI_contract` `sorryAx`. The upstream
+  foundations audit passed in `logs/lean/axioms-upstream-foundations-20260806-085309/`
+  with no `sorryAx`, and `check_no_custom_axioms.ps1` reports zero custom
+  declarations. This batch still does not prove stable or split-multiplicative
+  reduction for an input curve, Tate uniformization with curve points,
+  Galois-equivariant point identification, Frobenioid/etale recognition,
+  source theta/log links, or any Theorem 3.11 obligation.
+- 2026-08-06: completed the next 995-line arithmetic C-layer batch in
+  `Foundations/Geometry/TateCurveArithmetic.lean`. The canonical q-series
+  Weierstrass equation now has proved exact formulas for `b₂`, `b₄`, `b₆`,
+  `b₈`, `c₄`, `c₆`, and `Δ`, together with the standard `c`-relation and
+  nondegeneracy equivalences. Strict contraction gives the nonvanishing
+  denominators used by every positive q-power; summability is retained as an
+  actual complete-field theorem, and norm bounds require an explicit
+  summable-norm premise rather than silently assuming absolute convergence.
+  Variable-change weights for `c₄` and `Δ`, ellipticity from a nonzero
+  discriminant, and the j-invariant invariance are proved from Mathlib's
+  Weierstrass API. Explicit good and multiplicative reduction certificates
+  carry their own integral/minimal model witnesses and transport to the
+  source reduction predicates; the curve-indexed Tate contract transports
+  equation invariants and conditional reduction facts to the represented
+  local curve. The batch does **not** prove the q-series discriminant is
+  nonzero for `q=p`, does not supply a certificate for a chosen arithmetic
+  input curve, and does not construct Tate uniformization or its Galois
+  equivariance. The standalone module is warning-free in
+  `logs/lean/tate-curve-arithmetic-batch-final2.log`; production
+  `lake build LeanFormal` passed `3851/3851` in
+  `logs/lean/build-tate-arithmetic-batch-20260806-final.log`.
+  The production axiom audit in
+  `logs/lean/axiom-audit-tate-arithmetic-20260806.log` contains exactly the
+  permitted `LeanFormal.IUT.theorem311_produces_stepXI_contract` `sorryAx`;
+  the upstream audit has no `sorryAx`, and the custom declaration scan reports
+  `customAxiomDeclarations = 0` in
+  `logs/lean/custom-axiom-scan-tate-arithmetic-20260806.log`.
+- 2026-08-06: completed the next bottom-up p-adic estimate batch in
+  `Foundations/Geometry/TateCurvePadicEstimates.lean`. For every prime label
+  `l >= 5`, the actual `q = l` in `Q_l` now has proved denominator norm one,
+  Lambert-term geometric bounds, finite-shift and finite-`Fin` packet error
+  bounds, and strict first-term dominance. The canonical q-series `a₄` and
+  `a₆` are proved nonzero by the nonarchimedean principal-term argument; the
+  canonical `c₄` has norm one and is a unit. The module also constructs
+  explicit integral `PadicInt` witnesses for `q`, the coefficients and all
+  positive-index denominators, including the local coefficient packet and
+  its audit boundary. These are genuine p-adic estimates, not an assertion
+  that the q-series discriminant is nonzero.
+
+  The standalone module passed with zero diagnostics in
+  `logs/lean/tate-padic-estimates-batch-20260806-r11.log`. After adding it to
+  `LeanFormal/IUT/Project.lean`, the production target passed `3850/3850`
+  with zero diagnostics in
+  `logs/lean/tate-padic-estimates-project-20260806-r4.log`. The selected
+  endpoint axiom audit is
+  `logs/lean/tate-padic-estimates-axiom-audit-r2-20260806.log`; every endpoint
+  uses only `propext`, `Classical.choice`, and `Quot.sound`. The production
+  custom declaration scan is zero in
+  `logs/lean/tate-padic-estimates-custom-axiom-scan-20260806.log`. The full
+  `LeanFormal` aggregate then passed `3852` jobs in
+  `logs/lean/tate-padic-estimates-full-aggregate-20260806.log`.
+  Remaining C-layer obligations are unchanged: nonzero canonical
+  discriminant, identification with an arithmetic input curve, actual
+  stable/split multiplicative reduction, Tate uniformization with points and
+  Galois equivariance, and source-faithful theta/log-link data. The sole
+  production `sorryAx` remains the explicit Theorem 3.11-to-Step XI contract.
+- 2026-08-06: completed the next approximately 1,000-line discriminant batch in
+  `Foundations/Geometry/TateCurveDiscriminantEstimates.lean`. The expanded
+  canonical discriminant is decomposed as `-a₆` plus four correction terms.
+  Each correction is proved to have strictly smaller `p`-adic norm than
+  `a₆`; nested non-archimedean estimates then prove the exact discriminant
+  norm `||Delta|| = ||q||`, nonvanishing, ellipticity of the canonical
+  q-series curve, and the explicit discriminant obligation. An integral
+  `PadicInt` discriminant witness is transported to the integral Weierstrass
+  presentation; its residue is zero while its generic-fiber image is nonzero,
+  and the integral `c₄` remains a unit. General strict-dominance certificates
+  and consumer-facing output packets are included for later C-layer modules.
+  The standalone batch passed with zero diagnostics in
+  `logs/lean/tate-curve-discriminant-batch-20260806-r12.log`; the Project
+  target passed in `logs/lean/tate-curve-discriminant-project-20260806-r2.log`;
+  the full production build passed `3853/3853` in
+  `logs/lean/tate-curve-discriminant-full-20260806.log`. The selected endpoint
+  axiom audit is `logs/lean/tate-curve-discriminant-axiom-audit-r2-20260806.log`:
+  only `propext`, `Classical.choice`, and `Quot.sound` occur for this batch,
+  while the production audit still contains exactly the pre-existing
+  Theorem 3.11-to-Step XI `sorryAx`. The module has no custom `axiom`,
+  `opaque`, or `sorry` declarations. This closes the canonical q-series
+  discriminant obligation only; it still does not identify the curve with a
+  separately supplied arithmetic input or construct stable/split reduction,
+  Tate uniformization, Galois-equivariant points, or source-faithful theta and
+  log links.

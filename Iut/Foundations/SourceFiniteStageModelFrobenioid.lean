@@ -1,5 +1,26 @@
+/-
+Copyright (c) 2026 IUT Lean formalization contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: IUT Lean formalization contributors
+-/
 import Iut.Foundations.SourceFiniteStageDivisorTransition
 import Iut.Foundations.SourceModelFrobenioid
+import Iut.Foundations.SourceModelFrobenioidPresentation
+import Mathlib.CategoryTheory.Limits.IsConnected
+
+/-!
+# The finite-stage model Frobenioid input
+
+The finite Galois reconstruction stages are organized in the opposite
+direction, as required by the contravariant divisor functor.  This module
+constructs the genuine sharp saturated divisor monoid (using a universe-lifted
+copy of `Nat`), its ramification-weighted pullbacks, the additive group of
+nonzero stage elements, and the model Frobenioid `Input`.
+
+The divisor naturality field is proved from the normalized valuation transition
+and the induced Grothendieck-group map.  No finite-stage transition, model
+recognition, or Frobenioid axiom is supplied as an assumption.
+-/
 
 open CategoryTheory
 
@@ -355,6 +376,53 @@ noncomputable def stageModelInput
     rw [stageNormalizedAdditiveValuation_transition]
     rw [stageDivisorGrothendieckPullback_apply]
     rfl
+
+noncomputable def stageBaseTerminal
+    (place : NumberField.FinitePlace K) :
+    CategoryTheory.Limits.IsTerminal
+      (Opposite.op (⊥ : StageIndex place)) :=
+  CategoryTheory.Limits.IsTerminal.ofUniqueHom
+    (Y := Opposite.op (⊥ : StageIndex place))
+    (fun _stage =>
+      (CategoryTheory.homOfLE
+        (bot_le : (⊥ : StageIndex place) ≤ _stage.unop)).op)
+    (fun _stage _arrow => Subsingleton.elim _ _)
+
+theorem stageBase_isConnected
+    (place : NumberField.FinitePlace K) :
+    CategoryTheory.IsConnected (StageBase place) :=
+  CategoryTheory.isConnected_of_isTerminal (StageBase place)
+    (x := Opposite.op (⊥ : StageIndex place))
+    (stageBaseTerminal place)
+
+noncomputable instance stageBase_isConnected_inst
+    (place : NumberField.FinitePlace K) :
+    CategoryTheory.IsConnected (StageBase place) :=
+  stageBase_isConnected place
+
+theorem stageBase_arrow_epi
+    (place : NumberField.FinitePlace K)
+    {source target : StageBase place} (arrow : source ⟶ target) :
+    Epi arrow := by
+  infer_instance
+
+noncomputable def stageModelPreFrobenioidPresentation
+    (place : NumberField.FinitePlace K) :
+    PreFrobenioidPresentation := by
+  letI : CategoryTheory.IsConnected (StageBase place) :=
+    stageBase_isConnected place
+  exact SourceModelFrobenioid.Carrier.preFrobenioidPresentation
+    (stageDivisorialMonoidOn place) (stageModelInput place)
+    (fun {source target} arrow => stageBase_arrow_epi place arrow)
+
+noncomputable def stageModelFrobenioidPresentation
+    (place : NumberField.FinitePlace K) :
+    FrobenioidPresentation := by
+  letI : CategoryTheory.IsConnected (StageBase place) :=
+    stageBase_isConnected place
+  exact SourceModelFrobenioid.Carrier.frobenioidPresentation
+    (Phi := stageDivisorialMonoidOn place) (data := stageModelInput place)
+    (fun {source target} arrow => stageBase_arrow_epi place arrow)
 
 end
 
