@@ -2,8 +2,9 @@ import LeanFormal.IUT.Project
 
 /-!
   The declarations below are the trust-boundary sample for the production
-  project.  The output is recorded by the accompanying audit log; in
-  particular, `theorem311_produces_stepXI_contract` must expose `sorryAx`.
+  project. The output is recorded by the accompanying audit log; the
+  source-facing Step-XI existence obligation is deliberately not exported as
+  a theorem until its construction is proved.
 -/
 
 open LeanFormal.IUT
@@ -23,6 +24,69 @@ open LeanFormal.IUT
 #print axioms LeanFormal.IUT.TateCurvePadic.canonicalCurve_is_elliptic
 #print axioms LeanFormal.IUT.TateCurvePadic.integralCurveDelta_residue_zero
 #print axioms LeanFormal.IUT.TateCurvePadic.canonicalEllipticityPacket
+
+/-! Local reduction endpoints for the canonical p-adic Tate equation. -/
+#print axioms LeanFormal.IUT.TateCurvePadic.canonicalCurve_isMinimal
+#print axioms LeanFormal.IUT.TateCurvePadic.canonicalCurve_hasMultiplicativeReduction
+#print axioms LeanFormal.IUT.TateCurvePadic.canonicalCurve_hasSplitMultiplicativeReduction
+#print axioms LeanFormal.IUT.TateCurvePadic.canonicalCurve_hasStableReductionOnMinimalModel
+#print axioms LeanFormal.IUT.TateCurvePadic.canonicalCurve_reduction_eq_nodalCurve
+#print axioms LeanFormal.IUT.TateCurvePadic.nodalTangentPolynomial_splits
+#print axioms LeanFormal.IUT.TateCurvePadic.nodalTangentPolynomial_natDegree
+#print axioms LeanFormal.IUT.TateCurvePadic.NodalNormalization.recover_point
+#print axioms LeanFormal.IUT.TateCurvePadic.NodalNormalization.parameter_unique_off_node
+#print axioms LeanFormal.IUT.TateCurvePadic.reducedNodalPoint_injective_off_node
+#print axioms LeanFormal.IUT.TateCurvePadic.canonicalLocalReductionPacket_splitMultiplicative
+#print axioms LeanFormal.IUT.TateCurvePadic.concreteTateLocalReductionCarrier_stable
+
+/-! Explicit rational curve over Q_5 and its fully proved local certificate. -/
+#print axioms LeanFormal.IUT.concreteSplitCurveLocal_isElliptic
+#print axioms LeanFormal.IUT.concreteSplitCurveLocal_isMinimal
+#print axioms LeanFormal.IUT.concreteSplitCurveLocal_hasMultiplicativeReduction
+#print axioms LeanFormal.IUT.concreteSplitCurveLocal_hasSplitMultiplicativeReduction
+#print axioms LeanFormal.IUT.concreteSplitCurveLocal_reduction_eq_nodalCurve
+#print axioms LeanFormal.IUT.concreteSplitCurveLocalCertificate
+#print axioms LeanFormal.IUT.concreteFivePlace
+#print axioms LeanFormal.IUT.concreteFivePadicEquiv
+#print axioms LeanFormal.IUT.concreteSplitCurveLocal_map_to_fiveCompletion
+#print axioms LeanFormal.IUT.concreteSplitCurveAtFive_hasSplitMultiplicativeReduction
+#print axioms LeanFormal.IUT.concreteSplitPuncturedCurve_hasSplitMultiplicativeReductionAt_five
+#print axioms LeanFormal.IUT.concreteSplitPuncturedCurve_hasStableReductionAt_five
+#print axioms LeanFormal.IUT.concreteSplitCurveFivePlaceCertificate
+
+/-! Polymorphic quotient and source-facing Tate boundary endpoints. -/
+#print axioms LeanFormal.CyclicQuotient.quotientClass_representative_iff
+#print axioms LeanFormal.CyclicQuotient.descend_surjective
+#print axioms LeanFormal.FiniteCyclicQuotient.Certificate.quotientEquiv_apply_mk
+#print axioms LeanFormal.FiniteCyclicQuotient.Certificate.quotient_mk_eq_iff_reduction_eq
+#print axioms LeanFormal.FiniteCyclicQuotient.IntegerCertificate.quotient_eq_iff_multiple
+#print axioms LeanFormal.FiniteCyclicQuotient.IntegerCertificate.zero_label_iff
+#print axioms LeanFormal.FiniteCyclicQuotientTransport.Square.quotientEquiv_apply_mk
+#print axioms LeanFormal.FiniteCyclicQuotientTransport.Square.quotientEquiv_inverse
+#print axioms LeanFormal.IUT.TatePointComparison.pointEquiv_injective
+#print axioms LeanFormal.IUT.TatePointComparison.galois_naturality_quotient
+#print axioms LeanFormal.IUT.TateCurveComparison.toUniformization
+#print axioms LeanFormal.IUT.InitialThetaTateComparison.local_point_comparison
+#print axioms LeanFormal.IUT.InitialThetaTateComparison.toTateInput_deck_subgroup_stable
+#print axioms LeanFormal.IUT.SourceLocalTateBoundary.finiteLevelEquiv_apply_mk
+#print axioms LeanFormal.IUT.SourceLocalTateBoundary.finiteLevel_zero_iff_multiple
+
+/-! Concrete finite Theorem 3.11 model endpoints. -/
+#print axioms LeanFormal.IUT.ConcreteFiniteTheorem311.ProcessionChoice.ind1_add
+#print axioms LeanFormal.IUT.ConcreteFiniteTheorem311.ProcessionChoice.ind2_add
+#print axioms LeanFormal.IUT.ConcreteFiniteTheorem311.normalizedLogVolume_ind1Step
+#print axioms LeanFormal.IUT.ConcreteFiniteTheorem311.normalizedLogVolume_ind3Step
+#print axioms LeanFormal.IUT.ConcreteFiniteTheorem311.possibleImageUpperSemi_upper
+#print axioms LeanFormal.IUT.ConcreteFiniteTheorem311.finiteOutput
+#print axioms LeanFormal.IUT.ConcreteFiniteTheorem311.finiteOutput_theta_log_det
+#print axioms LeanFormal.IUT.SignedLabel.equiv
+#print axioms LeanFormal.IUT.SignedLabel.translate_add
+#print axioms LeanFormal.IUT.SignedLabel.sum_translate
+#print axioms LeanFormal.IUT.ConcreteFiniteTheorem311.translatedPacket_logVolume_eq_theta
+#print axioms LeanFormal.IUT.ConcreteFiniteTheorem311.translatedPacket_det_eq_base
+#print axioms LeanFormal.IUT.ConcreteFiniteTheorem311.profileLogImage_eq_of_level_eq
+#print axioms LeanFormal.IUT.ConcreteFiniteTheorem311.generatedQuotientMap_eq_iff
+#print axioms LeanFormal.IUT.ConcreteFiniteTheorem311.quotientPossibleLogImage_level_ind3
 
 #print axioms LeanFormal.IUT.card_Fl
 #print axioms LeanFormal.IUT.natRadical_mul_three_of_pairwise_coprime
@@ -291,7 +355,6 @@ open LeanFormal.IUT
 #print axioms LeanFormal.IUT.UpperSemiCorrespondence.upper_of_comp
 #print axioms LeanFormal.IUT.cor312_of_constructed_stepXI
 #print axioms LeanFormal.IUT.q_positive_of_constructed_stepXI
-#print axioms LeanFormal.IUT.theorem311_produces_stepXI_contract
 #print axioms LeanFormal.IUT.Cor312RouteCertificate.conclusion
 #print axioms LeanFormal.IUT.radical_dvd_self
 #print axioms LeanFormal.IUT.IsABCTriple.pairwise_coprime
@@ -356,3 +419,21 @@ open LeanFormal.IUT
 #print axioms Iut.SourceFinitePlaceReconstruction.stageIsIntegral_closure_iff_valuation_le_one
 #print axioms Iut.SourceFinitePlaceReconstruction.stageEffectiveRationalFunctionEquivIntegralMonoid
 #print axioms LeanFormal.IUT.LocalIntegralMonoid.sourceMLF_galoisAction_apply
+
+/-! Concrete source Frobenioid/theta/history bridge endpoints. -/
+#print axioms LeanFormal.IUT.ConcreteSourceFrobenioidBridge.source_stage_model_divisor_natural
+#print axioms LeanFormal.IUT.ConcreteSourceFrobenioidBridge.source_stage_effective_submonoid_eq
+#print axioms LeanFormal.IUT.ConcreteSourceFrobenioidBridge.source_stage_model_zero_object_filtered_colimit_equiv_sourceMLF_bijective
+#print axioms LeanFormal.IUT.ConcreteSourceEtaleThetaBridge.algebraicFiniteThetaLevel
+#print axioms LeanFormal.IUT.ConcreteSourceEtaleThetaBridge.reduction_kernel
+#print axioms LeanFormal.IUT.ConcreteSourceEtaleThetaBridge.q_deck_action_trans
+#print axioms LeanFormal.IUT.ConcreteSourceEtaleThetaBridge.theta_log_volume_eq_local_degree_sum
+#print axioms LeanFormal.IUT.ConcreteSourceEtaleThetaBridge.concreteSourceAlgebraicThetaOutput
+#print axioms LeanFormal.IUT.ConcreteSourceHistoryLinkBridge.sourceHistory_composite_log_volume
+#print axioms LeanFormal.IUT.ConcreteSourceHistoryLinkBridge.sourcePositivePacket_log_det_eq_theta
+#print axioms LeanFormal.IUT.ConcreteSourceHistoryLinkBridge.sourceTensorPacket_log_volume_eq_theta
+#print axioms LeanFormal.IUT.ConcreteSourceHistoryLinkBridge.sourceNormalizationPacket_weighted_identity
+#print axioms LeanFormal.IUT.ConcreteSourceHistoryLinkBridge.concreteSourceHistoryLinkOutput
+#print axioms LeanFormal.IUT.ConcreteFiniteStepXI.finiteColumnContract_conclusion
+#print axioms LeanFormal.IUT.ConcreteFiniteStepXI.finiteColumnContract_q_positive
+#print axioms LeanFormal.IUT.ConcreteFiniteStepXI.columnTensorNormalization_identity

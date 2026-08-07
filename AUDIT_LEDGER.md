@@ -11,6 +11,161 @@ ledger, not a claim that IUT has been proved or refuted. Statuses mean:
   not prove its IUT-specific existence/construction;
 - **not checked**: no local verification yet.
 
+## 2026-08-06 C-layer boundary batch
+
+The following bottom-up modules were added and checked in the production
+aggregate:
+
+- `Iut/Foundations/SourceTateStableGraph.lean` and
+  `SourceTateStableGraphTransport.lean`: the one-component dual graph,
+  compact graph with a marked open edge, and the concrete inclusion's proper,
+  immersion, non-excision, injectivity, and non-surjectivity facts;
+- `Iut/Foundations/SourceTateStableBoundary.lean`: a source-facing arithmetic
+  boundary interface and comparison record, with no hidden realization field
+  promoted to a theorem;
+- `LeanFormal/IUT/Foundations/Geometry/GenericNodalReduction.lean` and
+  `CanonicalNodalEquation.lean`: residue equation `y^2 + x*y = x^3`, tangent
+  polynomial `T*(T+1)`, split roots, and normalization/recovery for the
+  canonical `q = p` local carrier;
+- `TateStableReductionBoundary.lean`, `CanonicalSourceTateBoundary.lean`, and
+  `IUTI/InitialTheta/SplitReductionInput.lean`: assembly of the proved local
+  boundary and the existing stable-reduction implication chain.
+
+The aggregate `lake build LeanFormal` passed `3863/3863` with no diagnostics;
+the complete log is `logs/lean/c-batch-final-20260806.log`.  The selected
+axiom audit is `logs/lean/axiom-audit-final-20260806.log`: the only production
+`sorryAx` remains the explicitly registered
+`LeanFormal.IUT.theorem311_produces_stepXI_contract`.  This batch adds no
+custom `axiom`, `opaque`, or `sorry` declaration.
+
+The boundary check itself passed with `sorryAxLines = 1` in
+`logs/lean/check-axiom-boundary-final-20260806.log`; the production
+`axiom/opaque` scan reports `customAxiomDeclarations = 0` in
+`logs/lean/custom-axiom-scan-final-20260806.log`.
+
+This closes a concrete local Tate/stable-boundary subtarget, not C as a whole.
+It does not identify an arbitrary number-field elliptic curve with the
+canonical `q = p` curve, select the paper's required bad place, construct Tate
+analytic uniformization or point-level Galois equivariance, or realize the
+source tame anabelioid/theta-link data.  Consequently D/E remain interfaces at
+their IUT-specific inputs.
+
+## 2026-08-07 concrete local certificate batch
+
+`LeanFormal/IUT/Foundations/Geometry/ConcreteSplitMultiplicativeCurve.lean`
+and `ConcreteSplitCurvePadic.lean` now provide a second, independently
+checked local carrier: the explicit equation `y^2 + x*y = x^3 + 5` over `Q`
+and its actual base change to `Q_5`/`Z_5`.  The local file proves the exact
+coefficients, nonzero discriminant, ellipticity, integrality, minimality,
+multiplicative and split multiplicative reduction, nodal reduction equation,
+split tangent polynomial (including monicity and degree), and normalization
+recovery away from the node.  `ConcreteSplitCurveLocalCertificate` packages
+these facts only after each field is populated by a proved theorem.
+
+The production aggregate `lake build LeanFormal` passed `3865/3865` with no
+warnings; the complete output is
+`logs/lean/c-concrete-split-certificate-20260807.log`.  The endpoint audit is
+`logs/lean/axiom-audit-concrete-split-20260807.log`: the new certificate uses
+only `propext`, `Classical.choice`, and `Quot.sound`, and the sole production
+`sorryAx` remains `LeanFormal.IUT.theorem311_produces_stepXI_contract`.
+This batch still does not identify a general number-field curve with this
+carrier, select the paper's bad place, construct Tate analytic
+uniformization, or prove source-faithful initial-theta/Hodge-theater links.
+
+## 2026-08-07 rational finite-place bridge batch
+
+`LeanFormal/IUT/Foundations/Geometry/ConcreteSplitCurveFivePlace.lean`
+constructs the finite place of `Q` corresponding to 5 from
+`Rat.HeightOneSpectrum.primesEquiv`, rather than treating 5 as an informal
+label.  Mathlib's actual continuous algebra equivalences between `Q_5` and
+the selected adic completion, and between `Z_5` and its completion integers,
+are used to prove that the global rational curve base-changes to the explicit
+local equation and that split multiplicative reduction transports to the
+completion carrier.  The bundled certificate has no `sorry`, `axiom`, or
+`opaque` declaration.
+
+The aggregate `lake build LeanFormal` passed `3866/3866` with no warnings;
+the final transport log is `logs/lean/c-five-place-transport-20260807.log`,
+and the endpoint axiom audit is
+`logs/lean/axiom-audit-five-place-transport-20260807.log`.  A generic
+dependent-type transport lemma now resolves Mathlib's chosen `maximalIdeal`
+witness, so the global punctured curve's source-facing
+`HasSplitMultiplicativeReductionAt` and stable-reduction predicates are
+proved at the selected place.  Tate analytic point uniformization, Galois
+equivariance, and source-faithful theta/Hodge links remain open.
+
+## 2026-08-07 polymorphic quotient and Tate-boundary batch
+
+The reusable algebra layer now has three deliberately polymorphic modules:
+`Foundations/Algebra/CyclicQuotient.lean` abstracts the `g^Z` quotient over
+any commutative group and proves representative, power, descent, and
+surjectivity laws; `FiniteCyclicQuotient.lean` abstracts finite additive
+quotients over any additive commutative group and specializes the integer
+kernel certificate; `FiniteCyclicQuotientTransport.lean` transports such
+quotients through a commuting carrier/label square.  These APIs are intended
+for reuse by Kummer packets, prime strips, and theta links, so no separate
+copy of the same quotient proof is introduced for each carrier.
+
+`Foundations/Geometry/TatePointQuotientBoundary.lean` retains only the
+source-faithful point comparison record, its injectivity/surjectivity and
+Galois quotient naturality, and the constructor assembling it with the
+coordinate comparison into `CurveIndexedTateUniformization`.  Redundant
+q-unit wrapper lemmas were removed; the already proved deck quotient module is
+used directly.  `IUTI/InitialTheta/TateComparisonBoundary.lean` and
+`SourceLocalTateBoundary.lean` compose these records with dependent
+finite-place/q data and expose finite-level transport projections.
+
+The production aggregate `lake build LeanFormal` passed `3883` jobs with empty
+stderr.  The final style-clean build logs are
+`logs/lean/c-layer-polymorphic-batch-20260807-final2.stdout.log` and
+`logs/lean/c-layer-polymorphic-batch-20260807-final2.stderr.log` (the preceding
+full run is retained as `...final.stdout.log`).  The expanded
+endpoint audit passed at
+`logs/lean/axioms-20260807-071544/axiom_audit.stdout.log`; the strict boundary
+rerun is `logs/lean/axioms-20260807-071608/axiom_audit.stdout.log` with exactly
+one permitted `sorryAx`,
+`LeanFormal.IUT.theorem311_produces_stepXI_contract`.  All new sampled
+quotient, transport, and Tate-boundary declarations use only
+`propext`, `Classical.choice`, and `Quot.sound`; the custom declaration scan
+is `logs/lean/custom-axiom-20260807-polymorphic.log` and reports zero.
+
+This batch proves reusable algebraic infrastructure and checks the exact
+typed boundary.  It does not construct the analytic Tate point comparison or
+source-faithful Initial-Theta existence, so it does not close C and cannot be
+consumed as a completed input for D/E.
+
+## 2026-08-07 concrete finite Theorem 3.11 model batch
+
+`LeanFormal/IUT/IUTIII/Theorem311/ConcreteFiniteModel.lean` ports the useful
+finite part of the public Stage-1 construction onto the project's own proved
+C-stage carrier.  Its `ProcessionChoice` has two `ZMod l` translation
+coordinates and one `Nat` upper-semi level.  The file proves the identity,
+composition, inverse, cancellation, and mutual-commutation laws for the first
+two actions; reflexive/transitive reachability for all three layers; and the
+invariance/monotonicity of the concrete theta log-volume.  It also constructs
+the singleton possible-image correspondence, proves its upper-semi law, and
+reuses the actual finite Kummer quotient, compatible roots, q-deck action, and
+positive theta-packet determinant/log-volume identities.
+
+The standalone compile log is
+`logs/lean/concrete-theorem311-finite-model-standalone-r4.log`; the production
+build is `logs/lean/concrete-theorem311-finite-model-project-20260807.log`
+(`3884/3884`, zero diagnostics).  The expanded endpoint audit is recorded in
+`logs/lean/axioms-20260807-073811/axiom_audit.stdout.log` through
+`logs/lean/concrete-theorem311-finite-model-axiom-boundary-20260807-r2.log`.
+The new declarations use only the standard `propext`, `Classical.choice`, and
+`Quot.sound` foundations; the permitted production `sorryAx` remains solely
+`LeanFormal.IUT.theorem311_produces_stepXI_contract`.  The custom declaration
+scan remains zero.
+
+This is an explicitly labelled finite model boundary, not a proof of the
+paper's arbitrary procession of D-prime-strips, distinct Hodge theaters,
+source log-Kummer correspondence, or the full multiradial algorithm.  In
+particular it does not discharge `(Ind1)`, `(Ind2)`, `(Ind3)` in the source
+setting and does not remove the Step-XI contract boundary.  It is useful as a
+reusable test carrier for those future source-faithful constructions without
+duplicating quotient/action code.
+
 ## Source snapshot
 
 The source page was saved as `tmp/motizuki-papers-japanese.html` on 2026-08-02.
@@ -1757,3 +1912,142 @@ corridors and diagnostics, not a resolution of the controversy.**
   separately supplied arithmetic input or construct stable/split reduction,
   Tate uniformization, Galois-equivariant points, or source-faithful theta and
   log links.
+- 2026-08-06: completed `Foundations/Geometry/TateCurveLocalReduction.lean`.
+  The canonical `q = p` equation now has a proved integral minimal model,
+  multiplicative and split-multiplicative reduction, nodal special fiber
+  `y^2 + x*y = x^3`, tangent polynomial `T*(T+1)` with its two distinct
+  branches, and an explicit normalization/recovery theorem away from the
+  node.  The concrete local-reduction carrier is assembled from these facts;
+  no source input curve, Tate analytic uniformization, or point-level Galois
+  equivariance is silently identified with it.  The standalone log is
+  `logs/lean/tate-curve-local-reduction-standalone-20260806-r7.log`, and the
+  aggregate `lake build LeanFormal` passed `3854/3854` in
+  `logs/lean/lake-build-LeanFormal-20260806-tate.log` with zero diagnostics.
+  The updated endpoint audit is
+  `logs/lean/axioms-20260806-172755/axiom_audit.stdout.log`; new declarations
+  use only `propext`, `Classical.choice`, and `Quot.sound`, the custom
+  `axiom/opaque` scan remains zero, and the only production `sorryAx` is still
+  `theorem311_produces_stepXI_contract`.
+- 2026-08-07: completed and audited the concrete Initial-Theta C boundary
+  batch. The seven modules
+  `ConcreteFinitePlaceBoundary`, `ConcreteInitialThetaTransport`,
+  `ConcreteInitialThetaLinks`, `ConcreteInitialThetaFiniteArithmetic`,
+  `ConcreteInitialThetaCObligations`, `ConcreteInitialThetaLocalArithmetic`,
+  and `ConcreteInitialThetaCStage` contain 2098 lines of non-placeholder
+  code. They construct the actual Q(i) finite place above 5, transport stable
+  and split-multiplicative reduction, assemble a concrete finite prime-strip
+  theater and local Tate/Kummer carrier, prove q/scale/log-volume/history
+  transport, exact finite reduction kernels and coherent integer/rational
+  roots, and expose the result through a named C-stage certificate. The
+  production build passed `3873/3873` with zero diagnostics in
+  `logs/lean/c-initial-theta-c-stage-batch-final-20260807.log`. The source
+  modules contain no `sorry`, `axiom`, or `opaque`; the production audit in
+  `logs/lean/axiom-audit-20260807.log` still has exactly the pre-existing
+  `theorem311_produces_stepXI_contract` `sorryAx`. This closes a concrete
+  local C boundary, not the source-faithful C layer: Tate point
+  uniformization, point-level Galois equivariance, etale/Frobenioid
+  recognition, and source theta/log links remain open.
+
+- 2026-08-07: completed the finite-label transport batch for the explicitly
+  bounded Theorem 3.11 test carrier. `Foundations/Theta/SignedLabelEquiv.lean`
+  constructs a proved bijection between bounded integer representatives and
+  `ZMod l`, including translation composition/inverses, finite sum/product
+  transport, and negation compatibility. `IUTIII/Theorem311/
+  ConcreteFiniteModelTransport.lean` reuses that bijection and the existing
+  packet/determinant/quotient kernels to prove translated-packet determinant
+  and log-volume invariance, tensor/rescaling transport, profile possible-image
+  invariance, the directed `Nat` upper-semi comparison, and the generated
+  quotient map. The quotient image is defined through the proved fact that
+  profile images agree for choices at the same directed level; no quotient
+  value is postulated.
+
+  The standalone modules compile with zero diagnostics. The production build
+  passed `3886/3886` in
+  `logs/lean/c1-transport-20260807/production.stdout.log`. The strict boundary
+  check is recorded in `logs/lean/c1-transport-20260807/axiom-boundary.stdout.log`
+  and its detailed Lean output under
+  `logs/lean/axioms-20260807-081418/`; it reports exactly the pre-existing
+  `LeanFormal.IUT.theorem311_produces_stepXI_contract` `sorryAx`. The custom
+  declaration scan is
+  `logs/lean/c1-transport-20260807/custom-axioms.stdout.log` and reports zero.
+  This batch is a reusable finite test carrier and transport kernel only: it
+  does not prove the source-faithful D-prime-strip procession, distinct Hodge
+  theaters, vertical log-Kummer correspondence, multiradial algorithm, or
+  the Step-XI contract.
+
+- 2026-08-07: completed the finite Step-XI columns/APT/IPL/SHE batch in
+  `IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean`. The module
+  reuses the already audited C-stage packet, determinant/log-volume kernel,
+  weighted normalization, and finite certificate bridge. It constructs a
+  bounded finite column carrier; proves Ind1/Ind2 equivalences and commuting
+  laws, a monotone bounded Ind3 lift, an explicit quotient-carrier APT
+  equivalence, finite IPL/SHE squares, finite hull and weighted-average bounds,
+  exponential determinant/log-volume identities, and tensor/denominator
+  normalization. The resulting `finiteColumnContract` is a proved certificate
+  for this explicit finite model only; no source-facing IUT existence is
+  inferred. The standalone log is
+  `logs/lean/c1-stepXI-columns-20260807/ConcreteFiniteRouteColumns.log` and
+  is empty after a successful compile. The production aggregate passed
+  `3887/3887` with zero warnings in
+  `logs/lean/c1-stepXI-columns-20260807/lake-build.log`. The boundary audit
+  and custom declaration scan are `axiom-boundary.log` and `custom-axioms.log`
+  in the same directory: the sole production `sorryAx` remains
+  `theorem311_produces_stepXI_contract`, and custom `axiom/opaque` declarations
+ remain zero. Corollary 3.12 is therefore not yet source-faithfully proved.
+
+- 2026-08-07: removed only unreferenced temporary review checkouts under
+  `tmp/promachina-*` and empty legacy namespace directories under
+  `LeanFormal/IUT`. The production `Iut/Foundations` source-facing tree,
+  `LeanFormal/IUT/Foundations` proof tree, external research checkouts, and
+  `vendor/promachina/snapshots` provenance were retained. The two foundation
+  directories are distinct dependency layers, not duplicates. This cleanup
+  changes no mathematical declaration or theorem status.
+
+### 2026-08-07 参数化 D 层与 Step-XI 边界批次
+
+本批次新增约 1911 行有效 Lean 代码，分为
+`Theorem311/ParametricCarrier.lean`、`SourceFiniteParameterized.lean`、
+`ParametricDStage.lean`、`ParametricRouteAlgebra.lean` 和
+`Corollary312/StepXI/ParametricStepXI.lean`。`ParametricCarrier` 将
+`Core`、profile、同层 connector 和精确 Ind3 level 公式作为显式载体字段，
+并真实证明路由 level budget、profile 单调性、possible-image 上半连续性、
+同层 connector 的生成关系和 quotient 传递。`ParametricDStage` 为
+Ind1/Ind2/Ind3 单步、三种交换律和任意有限路由构造证书；
+`ParametricRouteAlgebra` 补齐 horizontal route 的商、profile/image 不变性、
+路由拼接和 canonical route 证书。`ParametricStepXI` 只在显式给出 q/Theta
+数值、IPL/SHE/APT 证据和两条比较不等式时组装 `StepXIContract`，没有制造
+论文对象的存在性。
+
+有限 Q(i)-at-5 carrier 已实例化这个参数化层，并与已有 source finite
+packet/history/determinant 代码逐项相等。生产编译日志为
+`logs/lean/parametric-batch-build-20260807.log`，`lake build LeanFormal`
+通过 `3898/3898` 且零 warning。公理审计为
+`logs/lean/parametric-batch-axiom-audit.log` 和
+`logs/lean/parametric-batch-upstream-audit.log`：生产树仍只有预先登记的
+`theorem311_produces_stepXI_contract` 一个 `sorryAx`，上游基础树没有
+`sorryAx`；`logs/lean/parametric-batch-custom-axioms.log` 报告
+`customAxiomDeclarations = 0`。这批次完成的是参数化 D/Step-XI 接口和有限
+实例的真实证明，不是任意 Hodge theater 的 source-faithful Theorem 3.11，
+也没有关闭 Corollary 3.12 的唯一存在性边界。
+
+### 2026-08-07 Source Route determinant-normalization cleanup
+
+`IUTIII/Corollary312/StepXI/SourceRouteDeterminantNormalization.lean` now
+compiles without diagnostics. The module reuses the concrete route normal
+form, source finite arithmetic, and Step-XI boundary; it proves packet
+log-volume/determinant preservation, tensor determinant and log identities,
+positive rescaling laws, and the explicit finite hull inequalities for the
+normalized route. Namespace and dependent-definition mismatches were fixed
+with explicit calculations; no mathematical field or assumption was weakened,
+and the vacuous `weighted.label` projection was removed.
+
+The target log is
+`logs/lean/SourceRouteDeterminantNormalization-20260807-target-r4.log` and
+the aggregate log is
+`logs/lean/LeanFormal-20260807-full-r1.log`; `lake build LeanFormal` passed
+3903/3903 with zero warnings and zero errors. The complete endpoint audit is
+`logs/lean/axiom-audit-20260807-full-r1.log`; the only production `sorryAx`
+line remains `LeanFormal.IUT.theorem311_produces_stepXI_contract`. This is a
+checked finite normalization certificate, not a source-faithful construction
+of the arbitrary Hodge-theater Step-XI input, so Theorem 3.11, Corollary 3.12,
+and ABC remain open in the audit ledger.

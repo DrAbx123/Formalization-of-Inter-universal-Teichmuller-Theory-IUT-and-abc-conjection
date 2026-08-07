@@ -10,9 +10,9 @@ import Mathlib.Tactic
   source-facing construction must eventually replace each proposition by a
   construction from those standard objects.
 
-  The only unfinished theorem in this file is the existence of a package that
-  satisfies the paper's Step-(xi) requirements.  Once that theorem is supplied,
-  the ordered-real conclusion below is an ordinary Lean proof.
+  The source-facing existence of a package satisfying the paper's Step-(xi)
+  requirements is intentionally not declared here.  The ordered-real
+  conclusion below is available only after an explicit contract is supplied.
 -/
 
 namespace LeanFormal.IUT
@@ -54,17 +54,6 @@ theorem q_positive_of_constructed_stepXI (contract : StepXIContract) :
     0 < -contract.qSigned := by
   exact neg_pos.mpr contract.q_negative
 
-/-!
-  This theorem is deliberately the sole missing source-facing construction in
-  this module.  Its proof must be replaced by the actual Theorem 3.11 output
-  algorithm and the paper's `(IPL)`, `(SHE)`, `(APT)`, hull, normalization, and
-  log-volume arguments.  No downstream theorem may use it as if it were proved.
--/
-set_option warn.sorry false in
-theorem theorem311_produces_stepXI_contract :
-    Nonempty StepXIContract := by
-  sorry
-
 end LeanFormal.IUT
 
 namespace LeanFormal.IUT.Audit
@@ -72,10 +61,11 @@ namespace LeanFormal.IUT.Audit
 def stepXIContractConstruction : Obligation :=
   { id := "IUT-III.StepXI.contract-construction"
     source := "IUT III, Theorem 3.11 -> Corollary 3.12, Steps (xi-a)-(xi-g)"
-    status := VerificationStatus.sorryPlaceholder
+    status := VerificationStatus.pending
     note :=
       "The ordered conclusion is proved from a contract; construction of the " ++
-        "contract from IUT source data is unfinished."
+      "contract from IUT source data is unfinished; no placeholder theorem is " ++
+      "exported in the production namespace."
     dependsOn :=
       [ "IUT-III.theorem-3.11-output",
         "IUT-III.Ind1",
@@ -85,6 +75,6 @@ def stepXIContractConstruction : Obligation :=
         "IUT-III.SHE",
         "IUT-III.APT",
         "IUT-III.holomorphic-hull-determinant-log-volume" ]
-    sorryItems := [ "theorem311_produces_stepXI_contract" ] }
+    sorryItems := [] }
 
 end LeanFormal.IUT.Audit

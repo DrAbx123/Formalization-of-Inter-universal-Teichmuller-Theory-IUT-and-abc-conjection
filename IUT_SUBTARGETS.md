@@ -5,6 +5,87 @@
 
 ## 1. 当前可以独立交付的内核
 
+### 2026-08-06 boundary-batch status
+
+The current C-layer progress is a proved local boundary, not completion of
+the paper's C layer.  The canonical `q = p` carrier now has a minimal integral
+model, split multiplicative reduction, nodal special fiber, split tangent
+polynomial, and explicit normalization.  Its concrete source graph has
+connected/finite dual data and a compact marked open edge; the inclusion facts
+are proved.  The source-facing boundary and comparison records are interfaces
+whose fields are projected only where the corresponding data is actually
+proved.
+
+Still missing before a source-faithful D construction: an arbitrary
+number-field input curve and selected bad place, Tate uniformization with
+points and Galois equivariance, tame anabelioid realization, and the actual
+initial-theta/Hodge-theater links.  Therefore the upstream presence of
+Theorem-3.11 and Step-XI files is not evidence that our C layer, or the
+paper's C layer, is complete.
+
+### 2026-08-07 concrete local certificate status
+
+The explicit rational curve `y^2 + x*y = x^3 + 5` is now packaged together
+with its actual `Q_5`/`Z_5` local realization in
+`Foundations/Geometry/ConcreteSplitCurvePadic`.  Its certificate proves the
+integral model, ellipticity, minimality, multiplicative and split
+multiplicative reduction, nodal special fiber, tangent polynomial splitting,
+and the degree-two normalization data.  This closes a concrete local-input
+subtarget, but does not close C: the paper's arbitrary number-field curve and
+selected bad place still have to be identified with this carrier, and Tate
+uniformization with point-level Galois equivariance remains unproved.
+
+### 2026-08-07 rational finite-place bridge status
+
+The new `ConcreteSplitCurveFivePlace` module constructs the actual finite
+place of `Q` above 5 via the height-one/primes equivalence and transports the
+proved `Q_5` split-reduction certificate through the canonical completion
+algebra equivalences.  This proves the local completion carrier for a genuine
+global curve and a genuine selected finite place.  The source-facing
+`HasSplitMultiplicativeReductionAt` and stable-reduction predicates are now
+proved as well, using a generic dependent-type transport lemma for Mathlib's
+noncomputably selected `maximalIdeal`.  Tate point uniformization and
+point-level Galois equivariance remain the next C-layer obligations.
+
+### 2026-08-07 concrete Initial-Theta boundary batch
+
+The seven-module batch under `IUTI/InitialTheta` adds 2098 lines of checked
+code. It constructs the actual Gaussian finite-place input, the finite
+prime-strip/theta carrier, the local q/Kummer packet, exact finite reduction
+kernels and quotient representatives, coherent integer/rational roots,
+three-theater history transport, and a concrete C-stage certificate. The
+production target passed `3873/3873` with zero diagnostics in
+`logs/lean/c-initial-theta-c-stage-batch-final-20260807.log`; the source files
+contain no `sorry`, `axiom`, or `opaque`. This is a proved concrete local
+boundary only. It does not identify the source paper's arbitrary input curve
+with the q-series curve, construct Tate point uniformization or its Galois
+equivariance, or provide source-faithful etale/Frobenioid theta and log links.
+Consequently the source-faithful C layer is not yet complete and D must not
+consume this certificate as a substitute for those missing constructions.
+
+### 2026-08-07 polymorphic quotient and Tate-boundary status
+
+The reusable quotient foundation is now genuinely polymorphic rather than
+duplicated per concrete carrier. `CyclicQuotient` works for any commutative
+group; `FiniteCyclicQuotient` works for any additive commutative group and
+also records the exact integer-kernel specialization; and
+`FiniteCyclicQuotientTransport` carries a finite quotient through a commuting
+carrier/label square. Their representative, kernel, transport, and descent
+laws are Lean-proved and sampled in the endpoint axiom audit.
+
+The Tate boundary was reduced to the mathematical obligations that can be
+reused later: a point comparison record, injectivity/surjectivity, Galois
+quotient naturality, coordinate comparison, and dependent Initial-Theta
+composition. The existence of the point comparison is still a structure
+field. Thus this is a checked interface, not a proof that an arbitrary
+number-field elliptic curve has the required Tate analytic uniformization.
+
+`lake build LeanFormal` passed all `3883` targets with zero diagnostics; the
+build and endpoint audit paths are recorded in `AUDIT_LEDGER.md`. No new
+`sorry`, custom `axiom`, or `opaque` was introduced. C remains incomplete at
+the source-faithful Tate point/uniformization and theta-link obligations; D/E
+must not treat this interface as their missing construction.
+
 这些结果已经在当前 Mathlib/Lean 版本中编译，并且没有自定义 `axiom` 或生产路径中的新增 `sorryAx`：
 
 | 模块 | 数学范围 | 结论 |
@@ -117,6 +198,42 @@ Lean/Mathlib 标准基础公理。这个闭合的是 canonical q-series 的椭�
 不是指定数域输入曲线的识别、约化存在性或 Tate uniformization，因此 C 层
 仍不能整体标记为完成。
 
+本轮新增的 `Foundations/Geometry/TateCurveLocalReduction` 在独立日志
+`logs/lean/tate-curve-local-reduction-standalone-20260806-r7.log` 中通过，
+并随 `lake build LeanFormal` 以 `3854/3854` 通过；公理样本为
+`logs/lean/axioms-20260806-172755/axiom_audit.stdout.log`，新增端点只依赖
+`propext`、`Classical.choice`、`Quot.sound`，自定义声明扫描为零。
+它真实证明了 canonical `q=p` 方程的积分模型极小性、乘法/分裂乘法约化、
+节点方程 `y²+xy=x³`、切线多项式 `T(T+1)` 的分裂与次数、节点外参数恢复
+及具体局部约化 carrier 的组装。它仍不证明 canonical q-series 曲线就是论文
+给定数域椭圆曲线，不提供 Tate analytic uniformization、点级 Galois 等变性，
+也不构造 source-faithful Initial Theta/Hodge theater。因此这是 C 层的真实
+局部约化闭合批次，而不是 C 层整体完成。
+
+### 2026-08-07 有限 Theorem 3.11 载体批次
+
+`IUTIII/Theorem311/ConcreteFiniteModel.lean` 将公开 Stage-1 中确实可复用
+的有限作用模式移植到本项目已经证明的 C-stage 载体：两个 `ZMod l` 平移
+分别代表 Ind1/Ind2 坐标，`Nat` 提升代表有方向的 Ind3 层。该文件真实证明
+了三个作用的律、逆元/消去、层间交换、关系传递、实际 theta log-volume 的
+Ind1/Ind2 不变性、Ind3 单调性，以及 singleton possible-image 的
+`UpperSemiCorrespondence`。同时直接复用有限 Kummer 商、兼容根、q-deck
+action 和 determinant/log-volume 端点，没有复制同一商结构。
+
+独立编译和生产构建分别见
+`logs/lean/concrete-theorem311-finite-model-standalone-r4.log` 和
+`logs/lean/concrete-theorem311-finite-model-project-20260807.log`；生产工程
+为 `3884/3884`、零 warning。公理端点见
+`logs/lean/axioms-20260807-073811/axiom_audit.stdout.log`，仍只有唯一登记的
+`theorem311_produces_stepXI_contract` 使用 `sorryAx`，自定义 `axiom/opaque` 为
+零。
+
+这只完成一个明确标记的有限模型接口，不是论文的 source-faithful
+Ind1/Ind2/Ind3，也没有构造任意 D-prime-strip procession、distinct Hodge
+theater、真正的 vertical log-Kummer correspondence 或 multiradial
+algorithm。因此 D 仍未完成；C 的工作加权进度提高，但 C 不能标记为整体
+完成。
+
 ## 2. 最有价值的 IUT 内部发布目标
 
 下面的目标比直接声称 ABC 更小，而且能直接检验论文中的关键步骤：
@@ -151,3 +268,67 @@ Hall 猜想的标准问题背景是 Mordell 方程中的平方与立方差；Szp
 `M0`（审计和资料库）→ `M1`（具体 Initial Theta/数域/椭圆曲线）→ `M2`（真实 Ind1/2/3）→ `M3`（一个源忠实的 Step-XI 证书）→ `M4`（明确曲线族的受限 Hall/Szpiro/高度结果）→ `M5`（全局 Corollary 3.12 和 ABC）。
 
 只有 `M3` 无 `sorry` 且通过公理审计后，才值得把 `M4` 作为“由 IUT 产生的开放猜想结果”来宣称；在此之前，外部候选都只是研究计划。
+
+### 2026-08-07 有界标签与商传递批次
+
+`Foundations/Theta/SignedLabelEquiv.lean` 真实构造了有界整数标签与
+`ZMod l` 的双射，证明代表元、平移的零元/合成/逆元/双射律，以及有限和、
+有限积和符号取负的兼容性。`IUTIII/Theorem311/
+ConcreteFiniteModelTransport.lean` 在此基础上复用已有 C-stage theta
+packet、determinant/log-volume、Kummer quotient 和 q-deck action，证明
+平移 packet 的体积/行列式不变性、tensor/rescaling 传输、profile
+possible-image 的 Ind1/Ind2 不变性、Ind3 的有向上半连续不等式，以及首两层
+生成关系的显式商和商上 possible-image。商上的 image 由“同 level 的 choice
+具有相同 profile image”的已证定理定义，不是任意填充的商值。
+
+独立模块与正式工程均为零 warning；`lake build LeanFormal` 通过
+`3886/3886`，日志为
+`logs/lean/c1-transport-20260807/production.stdout.log`。边界审计为
+`logs/lean/c1-transport-20260807/axiom-boundary.stdout.log`（详细 Lean
+输出在 `logs/lean/axioms-20260807-081418/`），仍只有预先登记的
+`LeanFormal.IUT.theorem311_produces_stepXI_contract` 一个 `sorryAx`；自定义
+`axiom/opaque` 扫描为零。该批次是可复用的有限测试载体和传递内核，不是
+论文 source-faithful 的 Ind1/Ind2/Ind3，也没有关闭 D、Step XI 或 C 层整体。
+
+### 2026-08-07 有限 Step-XI columns/APT/IPL/SHE 批次
+
+`IUTIII/Corollary312/StepXI/ConcreteFiniteRouteColumns.lean` 直接复用已编译
+的 C-stage、正值 packet、determinant/log-volume、加权归一化和 contract 内核，
+构造有界 `FiniteColumnIndex`。其中 Ind1/Ind2 是真实有限等价，Ind3 是有界
+单调 lift；有限 APT quotient carrier、IPL/SHE commuting square、holomorphic
+hull 的有限 supremum、uniform weighted average、指数 packet 的行列式/对数
+体积、tensor power rescaling 和 denominator-1 normalization 均有 Lean 证明。
+`finiteColumnContract` 只对这个显式有限载体生成证书，不投影成论文任意
+Hodge theater 的存在性。
+
+该模块独立日志为
+`logs/lean/c1-stepXI-columns-20260807/ConcreteFiniteRouteColumns.log`，
+空诊断；生产入口 `lake build LeanFormal` 为 `3887/3887`，零 warning，日志为
+`logs/lean/c1-stepXI-columns-20260807/lake-build.log`。边界审计和自定义声明
+扫描分别为同目录下的 `axiom-boundary.log` 与 `custom-axioms.log`：唯一
+生产 `sorryAx` 仍是 `theorem311_produces_stepXI_contract`，自定义
+`axiom/opaque` 为零。因此 E 层的 source-facing contract 仍未闭合，不能说
+Corollary 3.12 已按论文证明。
+
+### 2026-08-07 目录清理与 3.12 边界复核
+
+删除了未被生产入口引用的 `tmp/promachina-*` 临时审计 checkout 和
+`LeanFormal/IUT` 下的空旧命名目录；保留 `Iut/Foundations`（source-facing）
+与 `LeanFormal/IUT/Foundations`（生产数学基础），因为它们不是重复实现。
+本次清理不改变任何数学声明。
+
+复核结果：`cor312_of_constructed_stepXI` 只证明给定 `StepXIContract` 的有序
+不等式；`theorem311_produces_stepXI_contract` 仍是唯一 `sorryAx`。因此有限
+`finiteColumnContract` 仍只是显式有限模型证书，Corollary 3.12 尚未按
+Mochizuki 原文 source-faithfully 证明，也不能据此声称已经推出 ABC。
+
+### 2026-08-07 有限规范化与零 warning 复核
+
+`Corollary312/StepXI/SourceRouteDeterminantNormalization.lean` 已通过目标构建，
+并在生产聚合 `lake build LeanFormal`（3903/3903）中零 warning、零 error。
+它真实复用并证明有限 route normal form 的 target、packet determinant/log-volume、
+tensor determinant/log-volume、正 rescaling 和 finite hull 比较；修复只涉及
+命名空间、依赖定义的等式计算和无数学内容的错误字段投影，没有改变数学假设。
+该模块仍只覆盖显式有限 carrier。`theorem311_produces_stepXI_contract` 仍是
+唯一登记的生产 `sorryAx`，任意 source-faithful Theorem 3.11、Corollary 3.12
+以及 ABC 仍未完成。

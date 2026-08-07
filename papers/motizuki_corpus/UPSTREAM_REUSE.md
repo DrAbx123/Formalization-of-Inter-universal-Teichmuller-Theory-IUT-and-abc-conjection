@@ -55,3 +55,42 @@ alignment, not a bulk import.  The same decision applies to
 `SourceKummerGaussianSynchronization.lean`: its elementary root/profile
 lemmas are already covered by the local Kummer kernels, while its remaining
 construction fields are not silently promoted to theorems.
+
+The remote `origin/master` was refreshed at `9fd3d576` on 2026-08-06.  Its
+newest C-to-D/E surfaces are useful for statement alignment, but they do not
+show that C is complete.  `SourceBadLocalStableReduction.lean` genuinely proves
+the finite one-component/one-node dual semi-graph facts (connectedness,
+finiteness, closed node, and marked open edge); its tame cover categories and
+pointed pullback are still fields of `SourceTateNodalTameRealization`.
+`SourceIUTIIITheorem311.lean` proves transport and invariance lemmas only after
+the source evaluation, procession, local tensor, upper-semi, and log-volume
+data are supplied.  `SourceIUTIIICorollary312IPLSHE.lean` requires an
+`SourceCorollary312AnalyticStepXIInput` carrying the Theorem 3.11 evaluation,
+Remark 3.9.5 construction, determinant-line realization, admissible regions,
+block log-volume equalities, and a vertical hull region.  The APT descent file
+likewise retains the complete hidden source input before projecting a visible
+output.  These are typed conditional constructions, not proofs of those
+source objects' existence.  They are therefore `interface-only` except for
+the small combinatorial graph lemmas; no bulk import is justified.  The remote
+  repository is Apache-2.0, so any future copied code must retain its copyright,
+  license, attribution, and a local modification record.
+
+## Latest HEAD check (2026-08-07)
+
+The public repository HEAD was checked read-only with `git ls-remote` and is
+`e2da14360c854e3ac1ad946339d581f737766a34` (Apache-2.0). The transient review
+checkout is not part of the production tree; the retained provenance is the
+Apache-2.0 review record and the audited snapshots under
+`vendor/promachina/snapshots/`.
+The newest files add `SourceIUTIIIStepXIPacketCarrier`,
+`SourceIUTIIIStepXIHullDeterminantBound`, measured-hull/preimage records, and
+source-trace updates. Their useful results are projection, compactness, and
+weighted determinant lemmas conditional on a supplied source evaluation and
+packet decomposition. The existence of the source packet, its recognition
+maps, and the source-faithful Step-XI input remain structure fields; no new
+unconditional C-layer or Corollary-3.12 proof was found.
+
+Decision for this tree: `interface-only` for those new files. The current
+finite-label batch instead uses the already proved local packet and quotient
+kernels, and its exact reuse is recorded in `AUDIT_LEDGER.md` and
+`IUT_SUBTARGETS.md`. No upstream wrapper or unverified theorem was imported.

@@ -37,10 +37,10 @@ theorem coordinate_realization :
 
 theorem deck_subgroup_galois_stable
     (sigma : AlgebraicClosure
-        (NumberFieldFinitePlace.Completion input.place) ≃ₐ[
-          NumberFieldFinitePlace.Completion input.place]
+        (NumberFieldFinitePlace.Completion input.place)
+          ≃ₐ[NumberFieldFinitePlace.Completion input.place]
         AlgebraicClosure (NumberFieldFinitePlace.Completion input.place)) :
-    Subgroup.map sigma.toRingEquiv.toMonoidHom
+    Subgroup.map (Units.map sigma.toRingEquiv.toMonoidHom)
         (Subgroup.zpowers
           (NumberFieldFinitePlace.tateParameterUnit input.place
             input.qCandidate.q input.qCandidate.q_ne_zero)) =
