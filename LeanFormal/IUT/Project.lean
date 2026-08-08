@@ -75,6 +75,7 @@ import LeanFormal.IUT.Foundations.Geometry.ConcreteTateDeckQuotient
 import LeanFormal.IUT.Foundations.Geometry.TatePointQuotientBoundary
 import LeanFormal.IUT.IUTI.InitialTheta.SourceObligations
 import LeanFormal.IUT.IUTI.InitialTheta.ArithmeticData
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31Boundary
 import LeanFormal.IUT.IUTI.InitialTheta.ConcreteArithmeticExample
 import LeanFormal.IUT.IUTI.InitialTheta.ConcreteFinitePlaceBoundary
 import LeanFormal.IUT.IUTI.InitialTheta.ConcreteInitialThetaTransport
@@ -162,6 +163,9 @@ import LeanFormal.IUT.IUTIII.Theorem311.ParametricRouteAlgebra
 import LeanFormal.IUT.IUTIII.Theorem311.ConcreteRouteNormalForm
 import LeanFormal.IUT.IUTIII.Theorem311.ConcreteRouteUniqueness
 import LeanFormal.IUT.IUTIII.Theorem311.SourceProcessionBoundary
+import LeanFormal.IUT.IUTIII.Theorem311.SourceFaithfulBoundary
+import LeanFormal.IUT.IUTIII.Theorem311.SourceHodgeTheaterBridge
+import LeanFormal.IUT.IUTIII.Theorem311.SourceDependencyChain
 import LeanFormal.IUT.IUTIII.Corollary312.StepXI.Contract
 import LeanFormal.IUT.IUTIII.Corollary312.Comparison
 import LeanFormal.IUT.IUTIII.Corollary312.Obligations

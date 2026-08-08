@@ -1,0 +1,384 @@
+✔ [3901/3907] Built LeanFormal.IUT.IUTIII.Theorem311.SourceFaithfulBoundary (23s)
+⚠ [3902/3907] Built LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31Boundary (14s)
+warning: LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean:55:0: Definition `LeanFormal.IUT.Theorem311Source.SourcePlacePartition.bad_finite` of class type must be marked with `@[reducible]` or `@[implicit_reducible]`
+warning: LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean:195:0: `SourceTorsionClause`: universes `u`, `v`, `w` only occur together. This usually means there is a `max` expression in the type where none of these universes appear on their own.
+
+Note: This linter can be disabled with `set_option linter.checkUnivs false`
+warning: LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean:306:0: `SourceExactSequenceClause`: universes `u`, `v`, `w` only occur together. This usually means there is a `max` expression in the type where none of these universes appear on their own.
+
+Note: This linter can be disabled with `set_option linter.checkUnivs false`
+warning: LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean:437:0: `SourceOrbicurveClause`: universes `u`, `v`, `w` only occur together. This usually means there is a `max` expression in the type where none of these universes appear on their own.
+
+Note: This linter can be disabled with `set_option linter.checkUnivs false`
+warning: LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean:478:44: remove line break in the source
+
+This part of the code
+  'C.cover} 
+   '
+should be written as
+  'C.cover} (h :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean:506:0: `SourceSectionClause`: universes `u`, `v`, `w` only occur together. This usually means there is a `max` expression in the type where none of these universes appear on their own.
+
+Note: This linter can be disabled with `set_option linter.checkUnivs false`
+warning: LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean:701:0: Definition `LeanFormal.IUT.Theorem311Source.SourceDefinition31Data.bad_finite` of class type must be marked with `@[reducible]` or `@[implicit_reducible]`
+warning: LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean:863:0: Definition `LeanFormal.IUT.Theorem311Source.SourceDefinition31Data.toInitialThetaInput_bad_finite` of class type must be marked with `@[reducible]` or `@[implicit_reducible]`
+warning: LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean:1343:0: Definition `LeanFormal.IUT.Theorem311Source.SourceDefinition31Application.input_bad_finite` of class type must be marked with `@[reducible]` or `@[implicit_reducible]`
+warning: LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Boundary.lean:1481:0: Definition `LeanFormal.IUT.Theorem311Source.SourceDefinition31FieldWitness.bad_witness_finite` of class type must be marked with `@[reducible]` or `@[implicit_reducible]`
+✖ [3903/3907] Building LeanFormal.IUT.IUTIII.Theorem311.SourceHodgeTheaterBridge (12s)
+trace: .> LEAN_PATH=E:\360data\重要数据\我的文档\lean\.lake\packages\Cli\.lake\build\lib\lean;E:\360data\重要数据\我的文档\lean\.lake\packages\batteries\.lake\build\lib\lean;E:\360data\重要数据\我的文档\lean\.lake\packages\Qq\.lake\build\lib\lean;E:\360data\重要数据\我的文档\lean\.lake\packages\aesop\.lake\build\lib\lean;E:\360data\重要数据\我的文档\lean\.lake\packages\proofwidgets\.lake\build\lib\lean;E:\360data\重要数据\我的文档\lean\.lake\packages\importGraph\.lake\build\lib\lean;E:\360data\重要数据\我的文档\lean\.lake\packages\LeanSearchClient\.lake\build\lib\lean;E:\360data\重要数据\我的文档\lean\.lake\packages\plausible\.lake\build\lib\lean;E:\360data\重要数据\我的文档\lean\.lake\packages\mathlib\.lake\build\lib\lean;E:\360data\重要数据\我的文档\lean\.lake\build\lib\lean c:\Users\Administrator\.elan\toolchains\leanprover--lean4---v4.32.2\bin\lean.exe E:\360data\重要数据\我的文档\lean\LeanFormal\IUT\IUTIII\Theorem311\SourceHodgeTheaterBridge.lean -o E:\360data\重要数据\我的文档\lean\.lake\build\lib\lean\LeanFormal\IUT\IUTIII\Theorem311\SourceHodgeTheaterBridge.olean -i E:\360data\重要数据\我的文档\lean\.lake\build\lib\lean\LeanFormal\IUT\IUTIII\Theorem311\SourceHodgeTheaterBridge.ilean -c E:\360data\重要数据\我的文档\lean\.lake\build\ir\LeanFormal\IUT\IUTIII\Theorem311\SourceHodgeTheaterBridge.c --setup E:\360data\重要数据\我的文档\lean\.lake\build\ir\LeanFormal\IUT\IUTIII\Theorem311\SourceHodgeTheaterBridge.setup.json --json
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:56:21: Failed to infer type of binder `k`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:56:19: Failed to infer type of binder `j`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:56:17: Failed to infer type of binder `i`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:55:16: Failed to infer type of binder `i`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:54:13: Failed to infer type of binder `j`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:54:11: Failed to infer type of binder `i`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:65:32: Unknown identifier `SourceHodgeTheaterSystem`
+
+Note: It is not possible to treat `SourceHodgeTheaterSystem` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:68:47: Unknown identifier `S.distinct`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:71:24: Unknown identifier `S.link_refl`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:74:48: Unknown identifier `S.link_trans`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:77:39: Unknown identifier `S.q_naturality`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:80:33: Unknown identifier `S.scale_naturality`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:83:55: Unknown identifier `S.permutation_q`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:86:49: Unknown identifier `S.permutation_scale`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:95:9: Unknown identifier `S.link_q_naturality`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:99:9: Unknown identifier `S.link_scale_naturality`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:102:28: Failed to infer type of binder `i`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:104:8: Unknown identifier `S.permutation.injective`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:104:2: Tactic `apply` failed: could not unify the type of `sorry`
+  ?m.11
+with the goal
+  i = j
+
+i j : ?m.1
+h : (fun i ↦ sorry) i = (fun i ↦ sorry) j
+⊢ i = j
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:109:8: Unknown identifier `S.link_q_naturality`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:113:8: Unknown identifier `S.link_scale_naturality`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:117:6: Unknown identifier `S.permutation_q`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:116:71: unsolved goals
+i : sorry
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:121:6: Unknown identifier `S.permutation_scale`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:120:65: unsolved goals
+l : PrimeGeFive
+i : sorry
+x : SignedLabel l.value
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:124:17: don't know how to synthesize implicit argument `α`
+  @id (?m.4 i)
+context:
+l : PrimeGeFive
+S : sorry
+i : sorry
+⊢ Sort ?u.7
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:130:6: Unknown identifier `S.link_refl`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:129:48: unsolved goals
+i : sorry
+j : sorry
+t : sorry
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:134:6: Unknown identifier `S.link_refl`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:133:48: unsolved goals
+i : sorry
+j : sorry
+t : sorry
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:139:6: Unknown identifier `S.link_trans`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:138:22: unsolved goals
+i : sorry
+j : sorry
+k : sorry
+m : sorry
+t : sorry
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:146:27: Unknown identifier `SourceHodgeTheaterSystem`
+
+Note: It is not possible to treat `SourceHodgeTheaterSystem` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:156:10: Unknown identifier `SourceHodgeTheaterSystem`
+
+Note: It is not possible to treat `SourceHodgeTheaterSystem` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:185:14: Unknown identifier `SourceLGPProcession`
+
+Note: It is not possible to treat `SourceLGPProcession` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+warning: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:187:4: declaration uses `sorry`
+warning: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:208:4: declaration uses `sorry`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:223:54: Unknown identifier `P.ind1_zero`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:226:48: Unknown identifier `P.ind1_add`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:229:36: Unknown identifier `P.ind1_inverse`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:231:54: Unknown identifier `P.ind2_zero`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:234:48: Unknown identifier `P.ind2_add`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:237:36: Unknown identifier `P.ind2_inverse`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:239:54: Unknown identifier `P.ind3_zero`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:242:48: Unknown identifier `P.ind3_add`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:246:2: Unknown identifier `P.ind1_ind2_commute`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:250:2: Unknown identifier `P.ind1_ind3_commute`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:254:2: Unknown identifier `P.ind2_ind3_commute`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:257:40: Unknown identifier `P.ind1_level`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:260:40: Unknown identifier `P.ind2_level`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:263:4: typeclass instance problem is stuck
+  LE ?m.3
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `LE` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:266:54: Unknown identifier `P.ind1_index`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:269:54: Unknown identifier `P.ind2_index`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:272:54: Unknown identifier `P.ind3_index`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:278:6: Unknown identifier `P.ind1_index`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:277:65: unsolved goals
+Label : Type u
+Choice : Type v
+inst✝¹ : AddGroup Label
+inst✝ : Preorder Choice
+g h : Label
+c : Choice
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:282:6: Unknown identifier `P.ind2_index`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:281:65: unsolved goals
+Label : Type u
+Choice : Type v
+inst✝¹ : AddGroup Label
+inst✝ : Preorder Choice
+g h : Label
+c : Choice
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:286:6: Unknown identifier `P.ind3_index`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:285:65: unsolved goals
+Choice : Type v
+inst✝ : Preorder Choice
+m n : ℕ
+c : Choice
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:290:6: Unknown identifier `P.ind1_level`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:289:51: unsolved goals
+Label : Type u
+Choice : Type v
+inst✝¹ : AddGroup Label
+inst✝ : Preorder Choice
+g h : Label
+c : Choice
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:294:6: Unknown identifier `P.ind2_level`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:293:51: unsolved goals
+Label : Type u
+Choice : Type v
+inst✝¹ : AddGroup Label
+inst✝ : Preorder Choice
+g h : Label
+c : Choice
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:297:4: typeclass instance problem is stuck
+  LE ?m.3
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `LE` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:303:6: Unknown identifier `P.ind1_ind2_commute`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:302:53: unsolved goals
+Label : Type u
+Choice : Type v
+inst✝¹ : AddGroup Label
+inst✝ : Preorder Choice
+g h : Label
+m n : ℕ
+c : Choice
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:307:2: Unknown identifier `P.ind1_ind3_commute`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:312:2: Unknown identifier `P.ind2_ind3_commute`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:315:40: Unknown identifier `P.ind1_level`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:318:40: Unknown identifier `P.ind2_level`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:321:4: typeclass instance problem is stuck
+  LE ?m.3
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `LE` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:330:9: Unknown identifier `SourceLGPProcession`
+
+Note: It is not possible to treat `SourceLGPProcession` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:338:9: Unknown identifier `SourceLGPProcession`
+
+Note: It is not possible to treat `SourceLGPProcession` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:362:14: Unknown identifier `SourceLGPProcession`
+
+Note: It is not possible to treat `SourceLGPProcession` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:363:14: Unknown identifier `SourcePacketRealization`
+
+Note: It is not possible to treat `SourcePacketRealization` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:366:14: typeclass instance problem is stuck
+  AddGroup ?m.1
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `AddGroup` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:377:18: typeclass instance problem is stuck
+  AddGroup ?m.1
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `AddGroup` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+warning: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:401:8: declaration uses `sorry`
+warning: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:404:8: declaration uses `sorry`
+warning: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:407:8: declaration uses `sorry`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:420:4: typeclass instance problem is stuck
+  LE ?m.3
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `LE` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:432:4: typeclass instance problem is stuck
+  LE ?m.3
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `LE` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:447:10: typeclass instance problem is stuck
+  Membership ℝ ?m.2
+
+Note: Lean will not try to resolve this typeclass instance problem because the second type argument to `Membership` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:452:59: unsolved goals
+Label : Type u
+Choice : Type v
+inst✝¹ : AddGroup Label
+inst✝ : Preorder Choice
+P : sorry
+Q : sorry
+g h : Label
+c : Choice
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:456:59: unsolved goals
+Label : Type u
+Choice : Type v
+inst✝¹ : AddGroup Label
+inst✝ : Preorder Choice
+P : sorry
+Q : sorry
+g h : Label
+c : Choice
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:460:4: typeclass instance problem is stuck
+  LE ?m.3
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `LE` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:464:67: unsolved goals
+Label : Type u
+Choice : Type v
+inst✝¹ : AddGroup Label
+inst✝ : Preorder Choice
+P : sorry
+Q : sorry
+g h : Label
+c : Choice
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:468:67: unsolved goals
+Label : Type u
+Choice : Type v
+inst✝¹ : AddGroup Label
+inst✝ : Preorder Choice
+P : sorry
+Q : sorry
+g h : Label
+c : Choice
+⊢ sorry = sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:472:10: typeclass instance problem is stuck
+  Membership ℝ ?m.2
+
+Note: Lean will not try to resolve this typeclass instance problem because the second type argument to `Membership` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:480:36: unsolved goals
+Label : Type u
+Choice : Type v
+inst✝¹ : AddGroup Label
+inst✝ : Preorder Choice
+P : sorry
+Q : sorry
+g : Label
+c : Choice
+⊢ Real.log sorry = Real.log sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:485:36: unsolved goals
+Label : Type u
+Choice : Type v
+inst✝¹ : AddGroup Label
+inst✝ : Preorder Choice
+P : sorry
+Q : sorry
+g : Label
+c : Choice
+⊢ Real.log sorry = Real.log sorry
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:490:47: unsolved goals
+Choice : Type v
+inst✝ : Preorder Choice
+P : sorry
+Q : sorry
+n : ℕ
+c : Choice
+⊢ Real.log sorry ≤ Real.log sorry
+warning: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:494:8: declaration uses `sorry`
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:499:39: typeclass instance problem is stuck
+  Membership ℝ ?m.5
+
+Note: Lean will not try to resolve this typeclass instance problem because the second type argument to `Membership` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:503:39: typeclass instance problem is stuck
+  Membership ℝ ?m.5
+
+Note: Lean will not try to resolve this typeclass instance problem because the second type argument to `Membership` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:507:10: typeclass instance problem is stuck
+  Membership ℝ ?m.2
+
+Note: Lean will not try to resolve this typeclass instance problem because the second type argument to `Membership` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:518:9: Unknown identifier `SourceLGPProcession`
+
+Note: It is not possible to treat `SourceLGPProcession` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:519:9: Unknown identifier `SourcePacketRealization`
+
+Note: It is not possible to treat `SourcePacketRealization` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:527:9: Unknown identifier `SourceLGPProcession`
+
+Note: It is not possible to treat `SourceLGPProcession` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:528:9: Unknown identifier `SourcePacketRealization`
+
+Note: It is not possible to treat `SourcePacketRealization` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:555:14: Unknown identifier `SourceLGPProcession`
+
+Note: It is not possible to treat `SourceLGPProcession` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:556:14: Unknown identifier `SourcePacketRealization`
+
+Note: It is not possible to treat `SourcePacketRealization` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:557:14: typeclass instance problem is stuck
+  Preorder ?m.3
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `Preorder` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:558:0: invalid 'include', variable `V` has not been declared in the current scope
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:560:24: typeclass instance problem is stuck
+  Preorder ?m.3
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `Preorder` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+error: LeanFormal/IUT/IUTIII/Theorem311/SourceHodgeTheaterBridge.lean:573:4: maximum number of errors (100; from option `maxErrors`) reached, exiting
+error: Lean exited with code 1
+Some required targets logged failures:
+- LeanFormal.IUT.IUTIII.Theorem311.SourceHodgeTheaterBridge
+error: build failed
