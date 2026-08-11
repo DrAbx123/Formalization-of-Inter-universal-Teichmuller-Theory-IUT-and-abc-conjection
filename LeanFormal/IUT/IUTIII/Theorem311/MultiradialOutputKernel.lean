@@ -1,6 +1,5 @@
 import LeanFormal.IUT.IUTIII.Theorem311.Indeterminacy.UpperSemi
 import Mathlib.Data.Set.Finite.Basic
-import Mathlib.Tactic
 
 namespace LeanFormal.IUT
 

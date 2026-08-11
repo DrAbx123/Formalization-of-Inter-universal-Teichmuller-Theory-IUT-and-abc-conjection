@@ -1,5 +1,7 @@
 import Mathlib.Data.Real.Basic
-import Mathlib.Tactic
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Data.Int.Interval
+import Mathlib.Tactic.Ring
 import LeanFormal.IUT.Foundations.Arithmetic.FiniteLabels
 
 /-!
@@ -101,7 +103,9 @@ variable {l : Nat}
 def neg (j : SignedLabel l) : SignedLabel l :=
   ⟨-j.1, by
     change -(lStar l : Int) ≤ -j.1 ∧ -j.1 ≤ (lStar l : Int)
-    constructor <;> linarith [j.2.1, j.2.2]⟩
+    constructor
+    · exact neg_le_neg j.2.2
+    · simpa using (neg_le_neg j.2.1)⟩
 
 @[simp] theorem neg_val (j : SignedLabel l) : (neg j).1 = -j.1 :=
   rfl

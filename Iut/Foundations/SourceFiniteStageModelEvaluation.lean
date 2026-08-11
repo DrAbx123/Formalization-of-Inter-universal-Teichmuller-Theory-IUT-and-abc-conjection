@@ -1,6 +1,7 @@
 /-
 Copyright (c) 2026 IUT Lean formalization contributors. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
+Authors: IUT Lean formalization contributors
 -/
 import Iut.Foundations.SourceFiniteStageModelFrobenioid
 import Iut.Foundations.SourceModelFrobenioidZeroEvaluation
@@ -8,8 +9,6 @@ import Iut.Foundations.SourceModelFrobenioidIntegralNaturality
 import Iut.Foundations.SourceFiniteStageValuationDivisor
 import Iut.Foundations.SourceDefinition52IndSystem
 import Mathlib.Algebra.Category.MonCat.FilteredColimits
-
-open CategoryTheory CategoryTheory.Limits
 
 /-!
 # Finite-stage model evaluation
@@ -20,6 +19,8 @@ the normalized valuation being nonnegative, and hence to the actual nonzero
 integral stage monoid.  This is a finite-stage arithmetic identification; it
 does not assert the categorical MLF/CAF realization or an ind-limit theorem.
 -/
+
+open CategoryTheory CategoryTheory.Limits
 
 namespace Iut.SourceFinitePlaceReconstruction
 

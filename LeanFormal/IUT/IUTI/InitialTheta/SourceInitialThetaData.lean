@@ -3002,7 +3002,7 @@ end ClauseF
 /-! ## 9. The complete source object and the general theorem -/
 
 structure SourceInitialThetaData (l : PrimeGeFive) where
-  candidate : SourceInitialThetaCandidate l
+  candidate : SourceInitialThetaCandidate.{u} l
   clauseA : ClauseA l candidate
   clauseB : ClauseB l candidate
   clauseC : ClauseC l candidate

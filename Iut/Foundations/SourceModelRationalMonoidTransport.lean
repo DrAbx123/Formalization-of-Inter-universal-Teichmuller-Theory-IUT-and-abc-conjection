@@ -5,8 +5,6 @@ Authors: IUT Lean formalization contributors
 -/
 import Iut.Foundations.SourceModelFrobenioidPresentation
 
-open CategoryTheory
-
 /-!
 # Rational-monoid transport in the model Frobenioid
 
@@ -15,6 +13,8 @@ This file constructs the model instance of the contravariant transport on
 2.2(ii), (iv).  The construction uses the explicit divisor and rational-
 function pullbacks of Theorem 5.2's model category.
 -/
+
+open CategoryTheory
 
 namespace Iut.SourceModelFrobenioid.Carrier
 

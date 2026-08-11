@@ -34,10 +34,30 @@ def terminal {source : HodgeTheater.{ua, uv, upi, umon} l V} :
   | .singleton theater => theater
   | .cons _ rest => rest.terminal
 
+@[simp] theorem terminal_singleton
+    (theater : HodgeTheater.{ua, uv, upi, umon} l V) :
+    (HodgeTheaterHistory.singleton theater).terminal = theater := rfl
+
+@[simp] theorem terminal_cons
+    {source target : HodgeTheater.{ua, uv, upi, umon} l V}
+    (link : HodgeTheaterLink source target)
+    (rest : HodgeTheaterHistory l V target) :
+    (HodgeTheaterHistory.cons link rest).terminal = rest.terminal := rfl
+
 def length {source : HodgeTheater.{ua, uv, upi, umon} l V} :
     HodgeTheaterHistory l V source → Nat
   | .singleton _ => 1
   | .cons _ rest => rest.length + 1
+
+@[simp] theorem length_singleton
+    (theater : HodgeTheater.{ua, uv, upi, umon} l V) :
+    (HodgeTheaterHistory.singleton theater).length = 1 := rfl
+
+@[simp] theorem length_cons
+    {source target : HodgeTheater.{ua, uv, upi, umon} l V}
+    (link : HodgeTheaterLink source target)
+    (rest : HodgeTheaterHistory l V target) :
+    (HodgeTheaterHistory.cons link rest).length = rest.length + 1 := rfl
 
 def composite {source : HodgeTheater.{ua, uv, upi, umon} l V}
     (history : HodgeTheaterHistory l V source) :
@@ -45,6 +65,18 @@ def composite {source : HodgeTheater.{ua, uv, upi, umon} l V}
   := match history with
     | .singleton theater => HodgeTheaterLink.refl theater
     | .cons link rest => HodgeTheaterLink.trans link rest.composite
+
+@[simp] theorem composite_singleton
+    (theater : HodgeTheater.{ua, uv, upi, umon} l V) :
+    (HodgeTheaterHistory.singleton theater).composite =
+      HodgeTheaterLink.refl theater := rfl
+
+@[simp] theorem composite_cons
+    {source target : HodgeTheater.{ua, uv, upi, umon} l V}
+    (link : HodgeTheaterLink source target)
+    (rest : HodgeTheaterHistory l V target) :
+    (HodgeTheaterHistory.cons link rest).composite =
+      HodgeTheaterLink.trans link rest.composite := rfl
 
 theorem length_pos {source : HodgeTheater.{ua, uv, upi, umon} l V}
     (history : HodgeTheaterHistory l V source) :

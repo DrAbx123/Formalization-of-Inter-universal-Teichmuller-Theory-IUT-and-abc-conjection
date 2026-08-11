@@ -8,8 +8,6 @@ import Mathlib.Algebra.Category.MonCat.Colimits
 import Mathlib.CategoryTheory.Galois.Prorepresentability
 import Mathlib.CategoryTheory.Whiskering
 
-open CategoryTheory CategoryTheory.Limits
-
 /-!
 # Evaluation of the Frobenioid rational monoid on a universal pro-object
 
@@ -18,6 +16,8 @@ the cofiltered presentation of the universal covering pro-object.  This file
 evaluates the contravariant functor of Frobenioids I, Proposition 2.2(ii), on
 that presentation by taking the corresponding filtered colimit in `MonCat`.
 -/
+
+open CategoryTheory CategoryTheory.Limits
 
 namespace Iut.FrobenioidUniversalProEvaluation
 

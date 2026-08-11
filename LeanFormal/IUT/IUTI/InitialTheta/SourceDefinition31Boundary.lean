@@ -1,6 +1,7 @@
-import LeanFormal.IUT.IUTIII.Theorem311.SourceFaithfulBoundary
+import LeanFormal.IUT.IUTIII.Theorem311.InitialThetaInputCore
 import Mathlib.Algebra.Group.Hom.Basic
-import Mathlib.Tactic
+import Mathlib.Analysis.Normed.Field.Basic
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
 
 set_option linter.unusedSectionVars false
 set_option linter.unusedVariables false
@@ -54,7 +55,7 @@ theorem selected_nonempty (P : SourcePlacePartition Selected Bad) :
     Nonempty Selected :=
   @SourcePlacePartition.selectedNonempty Selected Bad P
 
-@[implicit_reducible] noncomputable def bad_finite (P : SourcePlacePartition Selected Bad) :
+@[reducible] noncomputable def bad_finite (P : SourcePlacePartition Selected Bad) :
     Fintype Bad :=
   @SourcePlacePartition.badFinite Selected Bad P
 
@@ -168,7 +169,12 @@ theorem q_contracting_square (b : Bad) :
     ‖R.qParameter b‖ ^ 2 < 1 := by
   have h := R.q_norm_lt_one b
   have hp := R.q_norm_pos b
-  nlinarith
+  calc
+    ‖R.qParameter b‖ ^ 2 = ‖R.qParameter b‖ * ‖R.qParameter b‖ := by
+      simp [pow_two]
+    _ < ‖R.qParameter b‖ * 1 := mul_lt_mul_of_pos_left h hp
+    _ = ‖R.qParameter b‖ := mul_one _
+    _ < 1 := h
 
 theorem q_contracting_pow (b : Bad) (n : Nat) :
     ‖R.qParameter b‖ ^ (n + 1) < 1 := by
@@ -188,7 +194,7 @@ theorem q_power_ne_one_of_pos (b : Bad) (n : Nat) (hn : 0 < n) :
   have hlt : ‖R.qParameter b‖ ^ n < 1 := by
     exact pow_lt_one₀ (R.q_norm_nonnegative b)
       (R.q_norm_lt_one b) (Nat.ne_of_gt hn)
-  linarith
+  exact (ne_of_lt hlt) hnorm
 
 end SourceReductionClause
 
@@ -477,8 +483,8 @@ theorem cover_range_eq :
   intro x
   exact C.cover_point_lift x
 
-theorem curve_map_transport {x y : C.cover} (h :
-    C.coverToPunctured x = C.coverToPunctured y) :
+theorem curve_map_transport {x y : C.cover} (h : C.coverToPunctured x =
+    C.coverToPunctured y) :
     C.curveToPunctured (C.coverToPunctured x) =
       C.curveToPunctured (C.coverToPunctured y) := by
   rw [h]
@@ -630,7 +636,10 @@ theorem epsilon_scale_pos : 0 < C.epsilon * C.cuspScale :=
 
 theorem epsilon_lt_scale_mul (hscale : 1 ≤ C.cuspScale) :
     C.epsilon ≤ C.epsilon * C.cuspScale := by
-  nlinarith [C.epsilon_positive]
+  calc
+    C.epsilon = C.epsilon * 1 := (mul_one _).symm
+    _ ≤ C.epsilon * C.cuspScale :=
+      mul_le_mul_of_nonneg_left hscale (le_of_lt C.epsilon_positive)
 
 theorem epsilon_div_cusp_pos : 0 < C.epsilon / C.cuspScale := by
   exact div_pos C.epsilon_positive C.cuspScale_positive
@@ -700,7 +709,7 @@ theorem arithmetic_cusp_spec :
 theorem selected_nonempty : Nonempty S.selectedPlaces :=
   S.reduction.partition.selectedNonempty
 
-@[implicit_reducible] noncomputable def bad_finite : Fintype S.badPlaces :=
+@[reducible] noncomputable def bad_finite : Fintype S.badPlaces :=
   S.reduction.partition.badFinite
 
 def bad_included (b : S.badPlaces) : S.selectedPlaces :=
@@ -862,7 +871,7 @@ theorem toInitialThetaInput_selected_nonempty :
     Nonempty (S.toInitialThetaInput).selectedPlaces :=
   (S.toInitialThetaInput).selectedNonempty
 
-@[implicit_reducible] noncomputable def toInitialThetaInput_bad_finite :
+@[reducible] noncomputable def toInitialThetaInput_bad_finite :
     Fintype (S.toInitialThetaInput).badPlaces :=
   (S.toInitialThetaInput).badFinite
 
@@ -1342,7 +1351,7 @@ theorem input_selected_nonempty : Nonempty A.input.selectedPlaces := by
   rw [A.input_selectedPlaces]
   exact A.source.selected_nonempty
 
-@[implicit_reducible] noncomputable def input_bad_finite : Fintype A.input.badPlaces := by
+@[reducible] noncomputable def input_bad_finite : Fintype A.input.badPlaces := by
   rw [A.input_badPlaces]
   exact A.source.bad_finite
 
@@ -1480,7 +1489,7 @@ theorem selected_witness_nonempty :
     Nonempty W.source.selectedPlaces :=
   W.source.selected_nonempty
 
-@[implicit_reducible] noncomputable def bad_witness_finite : Fintype W.source.badPlaces :=
+@[reducible] noncomputable def bad_witness_finite : Fintype W.source.badPlaces :=
   W.source.bad_finite
 
 theorem source_torsion_witness : W.source.torsion.imageContainsSL2 :=
@@ -1506,11 +1515,11 @@ theorem q_log_abs_negative (b : S.badPlaces) :
   have hlt := S.reduction.q_norm_lt_one b
   simpa using Real.strictMonoOn_log
     (by exact Set.mem_Ioi.mpr hp)
-    (by exact Set.mem_Ioi.mpr (by norm_num : (0 : Real) < 1)) hlt
+    (by exact Set.mem_Ioi.mpr zero_lt_one) hlt
 
 theorem neg_log_q_positive (b : S.badPlaces) :
     0 < -Real.log ‖S.reduction.qParameter b‖ := by
-  linarith [S.q_log_abs_negative b]
+  exact neg_pos.mpr (S.q_log_abs_negative b)
 
 theorem q_log_abs_nonzero (b : S.badPlaces) :
     Real.log ‖S.reduction.qParameter b‖ ≠ 0 := by
@@ -1534,13 +1543,13 @@ theorem q_power_log_negative (b : S.badPlaces) (n : Nat)
     Real.log ‖S.reduction.qParameter b ^ n‖ < 0 := by
   rw [S.q_power_log]
   have h := S.q_log_abs_negative b
-  have hnreal : 0 < (n : Real) := by exact_mod_cast hn
-  nlinarith
+  have hnreal : 0 < (n : Real) := Nat.cast_pos.mpr hn
+  exact mul_neg_of_pos_of_neg hnreal h
 
 theorem q_power_neg_log_positive (b : S.badPlaces) (n : Nat)
     (hn : 0 < n) :
     0 < -Real.log ‖S.reduction.qParameter b ^ n‖ := by
-  linarith [S.q_power_log_negative b n hn]
+  exact neg_pos.mpr (S.q_power_log_negative b n hn)
 
 theorem q_inverse_norm (b : S.badPlaces) :
     ‖(S.reduction.qParameter b)⁻¹‖ =

@@ -2,8 +2,8 @@ import LeanFormal.IUT.IUTIII.Theorem311.MultiradialProfileKernel
 import LeanFormal.IUT.IUTII.Kummer.VerticalLogKummer
 import LeanFormal.IUT.IUTI.HodgeTheater.HodgeTheaterCore
 import LeanFormal.IUT.IUTI.InitialTheta.ArithmeticData
+import LeanFormal.IUT.IUTIII.Theorem311.InitialThetaInputCore
 import LeanFormal.IUT.Audit.Status
-import Mathlib.Tactic
 
 set_option linter.unusedSectionVars false
 set_option linter.unusedVariables false
@@ -40,7 +40,17 @@ open MultiradialKernel.Core
 
 variable {Label : Type u} {Choice : Type v} [AddGroup Label] [Preorder Choice]
 
-/-! ## 0. Source-facing prerequisite records -/
+/-! ## 0. Derived-prerequisite records
+
+  The records in this section are *not* the opening input of the source
+  theorem.  They are the package obtained after the IUT I--II constructions
+  have already supplied the procession, packet, vertical log-Kummer data,
+  evaluation system, and horizontal compatibility.  `SourceOriginalInput`
+  contains the separate opening boundary with only initial Theta-data and the
+  distinct theater family.  Keeping the two namespaces conceptually separate
+  prevents the conditional assembly below from being mistaken for the source
+  theorem itself.
+ -/
 
 /-- A procession is the indexed family of choices used by the multiradial
     representation.  Its laws are the literal group, commutation, and level
@@ -153,22 +163,6 @@ def ProcessionPacketProfile.profile
     (Q : ProcessionPacketProfile P) (c : Choice) :
     Q.profile.possibleImage c = Q.possibleImage c := rfl
 
-/-- The actual initial-theta input is kept explicit.  The extra fields are the
-    source conditions which ordinary number-field APIs do not infer. -/
-structure InitialThetaInput (l : PrimeGeFive) where
-  arithmetic : InitialThetaArithmeticData l
-  selectedPlaces : Type u
-  badPlaces : Type u
-  badIncluded : badPlaces → selectedPlaces
-  selectedNonempty : Nonempty selectedPlaces
-  badFinite : Fintype badPlaces
-  stableReduction : badPlaces → Prop
-  stableReduction_proved : ∀ v, stableReduction v
-  torsionImage : Prop
-  torsionImage_proved : torsionImage
-  cuspParameter : Real
-  cusp_positive : 0 < cuspParameter
-
 /-- Distinct theaters are represented by an injective index and their links.
     The link laws are hypotheses of the source construction and are consumed
     explicitly by the horizontal part below. -/
@@ -279,8 +273,10 @@ theorem VerticalSiteData.archimedean_surjection_at
     ∃ y, y ∈ S ∧ z ≤ y :=
   V.archimedean_surjection m z S hz
 
-/-- The complete explicit boundary consumed by Theorem 3.11. -/
-structure Input (Label : Type u) (Choice : Type v) [AddGroup Label] where
+/-- All cited IUT I--II prerequisites after their constructions have been
+    supplied.  This is intentionally not the opening input of Theorem 3.11. -/
+structure DerivedPrerequisiteInput (Label : Type u) (Choice : Type v)
+    [AddGroup Label] where
   labelPrime : PrimeGeFive
   prime : DPrimeStripProcession Label Choice
   packet : ProcessionPacketProfile prime
@@ -316,9 +312,14 @@ structure Input (Label : Type u) (Choice : Type v) [AddGroup Label] where
       horizontal.right (evaluation.localMap (horizontal.lower c))
 
 /-- The source input has a reusable kernel and profile. -/
-def Input.core (I : Input Label Choice) : Core Label Choice := I.prime.core
+abbrev Input (Label : Type u) (Choice : Type v) [AddGroup Label] :=
+  DerivedPrerequisiteInput Label Choice
 
-def Input.profile (I : Input Label Choice) : Profile I.core :=
+def DerivedPrerequisiteInput.core
+    (I : DerivedPrerequisiteInput Label Choice) : Core Label Choice := I.prime.core
+
+def DerivedPrerequisiteInput.profile
+    (I : DerivedPrerequisiteInput Label Choice) : Profile I.core :=
   I.packet.profile
 
 @[simp] theorem Input.core_base (I : Input Label Choice) :
@@ -1711,13 +1712,14 @@ namespace LeanFormal.IUT.Audit
 def theorem311ExplicitPrerequisiteBoundary : Obligation :=
   { id := "IUT-III.theorem-3.11-explicit-prerequisite-boundary"
     source := "IUT III, Theorem 3.11 (i)--(iii)"
-    status := VerificationStatus.proved
+    status := VerificationStatus.interface
     note :=
-      "Procession laws, packet/determinant compatibility, Ind1/Ind2 quotient " ++
-        "descent, Ind3 upper-semi transport, labelled Kummer bijectivity, " ++
-        "and horizontal LGP/evaluation squares are proved from the explicit " ++
-        "Input boundary. Construction of an inhabitant for arbitrary Definition " ++
-        "3.1 data remains the separate source-faithful obligation."
+      "The conditional procession, packet/determinant, Ind1/Ind2, Ind3, " ++
+        "labelled Kummer, and horizontal compatibility lemmas compile from an " ++
+        "explicit boundary. They are not an unconditional Theorem 3.11 proof: " ++
+        "the initial Theta-data, distinct Hodge theaters, LGP-Gaussian lattice, " ++
+        "D-Theta bridge, and IUT I--II constructions still have to be built " ++
+        "from the foundational mathematics."
     dependsOn :=
       [ "IUT-I.initial-theta-data",
         "IUT-I-II.prime-strips-frobenioids",

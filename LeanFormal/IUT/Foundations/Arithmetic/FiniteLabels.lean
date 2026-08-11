@@ -1,8 +1,10 @@
 import Mathlib.Data.ZMod.Basic
+import Mathlib.Data.ZMod.QuotientGroup
+import Mathlib.Algebra.Field.ZMod
 import Mathlib.GroupTheory.OrderOfElement
 import Mathlib.GroupTheory.QuotientGroup.Basic
 import Mathlib.GroupTheory.Coset.Card
-import Mathlib.Tactic
+import Init.Omega
 
 /-!
   Concrete finite label objects used in the source papers.
@@ -55,8 +57,8 @@ theorem card_compl_zero (hodd : Odd l) [Fact l.Prime] :
   have hprime : Nat.Prime l := Fact.out
   have hne_two : l ≠ 2 := by
     intro hl
-    subst l
-    norm_num at hodd
+    rcases hodd with ⟨k, hk⟩
+    omega
   have hodd' : Odd l := hprime.odd_of_ne_two hne_two
   have hstar := two_mul_lStar_add_one l hodd'
   omega
@@ -65,27 +67,24 @@ end Odd
 
 section Sign
 
-variable (l : Nat) [Fact l.Prime]
+variable (l : Nat)
 
 theorem two_ne_zero_Fl (hl5 : 5 ≤ l) : (2 : Fl l) ≠ 0 := by
   have h : ((2 : Nat) : ZMod l) ≠ 0 := by
     rw [Ne, CharP.cast_eq_zero_iff (ZMod l) l]
     intro hdvd
-    have hle : l ≤ 2 := Nat.le_of_dvd (by norm_num) hdvd
+    have hle : l ≤ 2 := Nat.le_of_dvd (by omega) hdvd
     omega
   simpa using h
 
-theorem neg_eq_self_iff (hl5 : 5 ≤ l) (x : Fl l) :
+theorem neg_eq_self_iff (hl5 : 5 ≤ l) (x : Fl l) [Fact l.Prime] :
     -x = x ↔ x = 0 := by
+  have hodd : Odd l :=
+    (Fact.out : Nat.Prime l).odd_of_ne_two (by omega)
   constructor
   · intro h
     have hxx : x + x = 0 := add_eq_zero_iff_eq_neg.mpr h.symm
-    have h2x : (2 : Fl l) * x = 0 := by
-      rw [two_mul]
-      exact hxx
-    rcases mul_eq_zero.mp h2x with h0 | h0
-    · exact absurd h0 (two_ne_zero_Fl l hl5)
-    · exact h0
+    exact (ZMod.add_self_eq_zero_iff_eq_zero hodd).mp hxx
   · rintro rfl
     simp
 
@@ -106,7 +105,8 @@ theorem orderOf_neg_one_units (hl5 : 5 ≤ l) :
     rw [Units.ext_iff] at h
     simp only [Units.val_neg, Units.val_one] at h
     have h2 : (2 : ZMod l) = 0 := by
-      linear_combination -h
+      have h2' := congrArg (fun z : ZMod l => z + 1) h
+      simpa [one_add_one_eq_two, add_assoc, add_left_comm, add_comm] using h2'.symm
     exact two_ne_zero_Fl l hl5 h2
   have hsq : (-1 : (ZMod l)ˣ) ^ 2 = 1 := neg_one_sq
   exact orderOf_eq_prime hsq hne
@@ -120,11 +120,15 @@ theorem card_LabCusp (hl5 : 5 ≤ l) :
       Nat.card ((ZMod l)ˣ ⧸ negSubgroup l) * Nat.card (negSubgroup l) :=
     Subgroup.card_eq_card_quotient_mul_card_subgroup (negSubgroup l)
   have hG : Nat.card (ZMod l)ˣ = l - 1 := by
-    rw [Nat.card_eq_fintype_card]
-    exact ZMod.card_units l
+    calc
+      Nat.card (ZMod l)ˣ = Nat.card (ZMod l) - 1 :=
+        Nat.card_units (ZMod l)
+      _ = Fintype.card (ZMod l) - 1 := by
+        rw [Nat.card_eq_fintype_card]
+      _ = l - 1 := by rw [card_Fl l]
   have hH : Nat.card (negSubgroup l) = 2 := by
-    rw [negSubgroup, Nat.card_zpowers]
-    exact orderOf_neg_one_units l hl5
+    change Nat.card (Subgroup.zpowers (-1 : (ZMod l)ˣ)) = 2
+    rw [Nat.card_zpowers, orderOf_neg_one_units l hl5]
   have hodd : Odd l := (Fact.out : l.Prime).odd_of_ne_two (by omega)
   have hstar := two_mul_lStar_add_one l hodd
   rw [hG, hH] at hlag

@@ -1,6 +1,6 @@
 import LeanFormal.IUT.IUTIII.Theorem311.MultiradialOutputKernel
+import Mathlib.Data.Real.Basic
 import Mathlib.Data.Set.Finite.Basic
-import Mathlib.Tactic
 
 namespace LeanFormal.IUT
 

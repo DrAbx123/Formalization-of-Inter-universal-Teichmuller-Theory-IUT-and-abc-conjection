@@ -5,8 +5,6 @@ Authors: IUT Lean formalization contributors
 -/
 import Iut.Foundations.SourceFrobenioidCoAngularBaseChange
 
-open CategoryTheory
-
 /-!
 # Pullback lifts of base arrows in a Frobenioid
 
@@ -15,6 +13,8 @@ Proposition 2.2(ii).  Every arrow between the bases of isotropic objects is
 represented, after an isomorphism at its source, by an actual pullback arrow
 whose source is again isotropic.
 -/
+
+open CategoryTheory
 
 namespace Iut.FrobenioidBasePullbackLift
 

@@ -76,6 +76,10 @@ import LeanFormal.IUT.Foundations.Geometry.TatePointQuotientBoundary
 import LeanFormal.IUT.IUTI.InitialTheta.SourceObligations
 import LeanFormal.IUT.IUTI.InitialTheta.ArithmeticData
 import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31Boundary
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31RootLemmas
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31D3D4Root
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31D5D8Root
+import LeanFormal.IUT.IUTI.InitialTheta.Definition31D0D11Aligned
 import LeanFormal.IUT.IUTI.InitialTheta.ConcreteArithmeticExample
 import LeanFormal.IUT.IUTI.InitialTheta.ConcreteFinitePlaceBoundary
 import LeanFormal.IUT.IUTI.InitialTheta.ConcreteInitialThetaTransport
@@ -92,6 +96,7 @@ import LeanFormal.IUT.IUTI.HodgeTheater.SourceObligations
 import LeanFormal.IUT.IUTI.HodgeTheater.ConcreteHodgeTheaterExample
 import LeanFormal.IUT.IUTI.HodgeTheater.ConcreteIntegralHodgeTheaterExample
 import LeanFormal.IUT.IUTI.HodgeTheater.History
+import LeanFormal.IUT.IUTI.HodgeTheater.SourceHodgeTheaterFamily
 import LeanFormal.IUT.IUTI.HodgeTheater.LinkVolumeTransport
 import LeanFormal.IUT.IUTII.Theta.GaussianKernel
 import LeanFormal.IUT.IUTII.Theta.FiniteThetaPacket
@@ -163,9 +168,12 @@ import LeanFormal.IUT.IUTIII.Theorem311.ParametricRouteAlgebra
 import LeanFormal.IUT.IUTIII.Theorem311.ConcreteRouteNormalForm
 import LeanFormal.IUT.IUTIII.Theorem311.ConcreteRouteUniqueness
 import LeanFormal.IUT.IUTIII.Theorem311.SourceProcessionBoundary
+import LeanFormal.IUT.IUTIII.Theorem311.SourceOriginalInput
 import LeanFormal.IUT.IUTIII.Theorem311.SourceFaithfulBoundary
+import LeanFormal.IUT.IUTIII.Theorem311.SourceH1H2Construction
 import LeanFormal.IUT.IUTIII.Theorem311.SourceHodgeTheaterBridge
 import LeanFormal.IUT.IUTIII.Theorem311.SourceDependencyChain
+import LeanFormal.IUT.IUTIII.Theorem311.SourceK1K2Construction
 import LeanFormal.IUT.IUTIII.Corollary312.StepXI.Contract
 import LeanFormal.IUT.IUTIII.Corollary312.Comparison
 import LeanFormal.IUT.IUTIII.Corollary312.Obligations
@@ -179,6 +187,7 @@ import LeanFormal.IUT.IUTIII.Corollary312.StepXI.FiniteCertificateBridge
 import LeanFormal.IUT.IUTIII.Corollary312.StepXI.ConcreteFiniteRouteColumns
 import LeanFormal.IUT.IUTIII.Corollary312.StepXI.ParametricStepXI
 import LeanFormal.IUT.IUTIII.Corollary312.StepXI.SourceProcessionStepXI
+import LeanFormal.IUT.IUTIII.Corollary312.StepXI.SourceSharedBoundary
 import LeanFormal.IUT.IUTIII.Corollary312.StepXI.SourceRouteDeterminantNormalization
 import LeanFormal.IUT.IUTIII.Corollary312.Routes
 import LeanFormal.IUT.IUTIV.Estimates.Section1

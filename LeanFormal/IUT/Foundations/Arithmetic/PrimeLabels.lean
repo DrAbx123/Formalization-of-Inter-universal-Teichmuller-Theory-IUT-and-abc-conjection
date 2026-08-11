@@ -1,6 +1,6 @@
 import LeanFormal.IUT.Audit.Status
 import Mathlib.Data.Nat.Prime.Basic
-import Mathlib.Tactic
+import Init.Omega
 
 /-!
   The ordinary prime label `l ≥ 5` used throughout the finite theta kernels.

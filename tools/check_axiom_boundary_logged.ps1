@@ -9,16 +9,14 @@ if ($auditJson.exitCode -ne 0) {
 
 $stdout = Get-Content -Raw -LiteralPath $auditJson.stdout
 $sorryLines = @($stdout -split "`r?`n" | Where-Object { $_ -match 'sorryAx' })
-$expected = "LeanFormal.IUT.theorem311_produces_stepXI_contract"
 
-if ($sorryLines.Count -ne 1 -or $sorryLines[0] -notmatch [regex]::Escape($expected)) {
+if ($sorryLines.Count -ne 0) {
   Write-Error "unexpected production sorryAx boundary:`n$($sorryLines -join "`n")"
   exit 1
 }
 
 [pscustomobject]@{
   audit = $auditJson
-  expectedSorryAx = $expected
   sorryAxLines = $sorryLines.Count
   boundaryPassed = $true
 } | ConvertTo-Json -Depth 6

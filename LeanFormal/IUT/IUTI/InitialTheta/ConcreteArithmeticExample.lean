@@ -13,7 +13,6 @@ import LeanFormal.IUT.IUTI.InitialTheta.ArithmeticData
 import LeanFormal.IUT.Foundations.Geometry.WeierstrassModel
 import Mathlib.FieldTheory.KummerPolynomial
 import Mathlib.RingTheory.AdjoinRoot
-import Mathlib.Tactic
 
 namespace LeanFormal.IUT
 
@@ -29,7 +28,8 @@ theorem gaussianPolynomial_irreducible : Irreducible gaussianPolynomial := by
   apply X_pow_sub_C_irreducible_of_prime (p := 2) Nat.prime_two
   intro b hb
   have hnonneg : 0 ≤ b ^ 2 := sq_nonneg b
-  linarith
+  rw [hb] at hnonneg
+  exact (not_le_of_gt (neg_lt_zero.mpr zero_lt_one)) hnonneg
 
 local instance gaussianPolynomial_irreducible_fact :
     Fact (Irreducible
@@ -38,7 +38,8 @@ local instance gaussianPolynomial_irreducible_fact :
   apply X_pow_sub_C_irreducible_of_prime (p := 2) Nat.prime_two
   intro b hb
   have hnonneg : 0 ≤ b ^ 2 := sq_nonneg b
-  linarith
+  rw [hb] at hnonneg
+  exact (not_le_of_gt (neg_lt_zero.mpr zero_lt_one)) hnonneg
 
 abbrev GaussianField :=
   AdjoinRoot (Polynomial.X ^ 2 - Polynomial.C (-1) : Polynomial ℚ)
