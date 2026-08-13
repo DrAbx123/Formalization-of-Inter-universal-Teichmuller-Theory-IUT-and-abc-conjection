@@ -674,7 +674,7 @@ namespace LeanFormal.IUT.Audit
 def concreteSourceEtaleThetaBridge : Obligation :=
   { id := "IUT-I-II.concrete-source-algebraic-theta-bridge"
     source := "IUT II, finite etale theta direction and Kummer/Frobenioid carrier"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "The actual finite reduction quotient, exact kernel, generator order, " ++
         "compatible integer/rational roots, q-deck quotient action, theta " ++

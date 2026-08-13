@@ -65,7 +65,7 @@ namespace LeanFormal.IUT.Audit
 def kummerPolynomialKernel : Obligation :=
   { id := "IUT-II.kummer-polynomial-kernel"
     source := "IUT II, Kummer-theoretic polynomial/root prerequisites"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "Mathlib AdjoinRoot objects for X^n-C(a), their root-power relation, " ++
         "non-vanishing, and the local p-adic parameter specialization are proved. " ++

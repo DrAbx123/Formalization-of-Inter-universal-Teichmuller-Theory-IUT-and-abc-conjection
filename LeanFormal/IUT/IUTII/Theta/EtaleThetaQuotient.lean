@@ -181,7 +181,7 @@ namespace LeanFormal.IUT.Audit
 def etaleThetaQuotient : Obligation :=
   { id := "IUT-II.etale-theta-lower-central-quotients"
     source := "IUT II, Section 2; current promachina/iut-lean EtaleThetaQuotient"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "Mathlib commutator, normal-closure, quotient-group, power-kernel, " ++
         "surjection, and central-kernel constructions are proved. The " ++

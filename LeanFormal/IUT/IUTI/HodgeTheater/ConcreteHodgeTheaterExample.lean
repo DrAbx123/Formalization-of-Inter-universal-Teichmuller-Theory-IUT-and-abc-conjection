@@ -46,7 +46,7 @@ namespace LeanFormal.IUT.Audit
 def concreteHodgeTheaterExample : Obligation :=
   { id := "IUT-I.concrete-hodge-theater-carrier"
     source := "IUT I, Sections 4-5 (one explicit carrier instance)"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "A concrete theater and a reflexive three-theater system are assembled " ++
         "from the proved Q(i) arithmetic input, local F-prime strip, and " ++

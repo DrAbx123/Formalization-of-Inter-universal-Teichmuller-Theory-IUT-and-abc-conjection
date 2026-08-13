@@ -768,7 +768,7 @@ namespace LeanFormal.IUT.Audit
 def concreteSourceFrobenioidBridge : Obligation :=
   { id := "IUT-I-II.concrete-source-frobenioid-bridge"
     source := "IUT I-II, Frobenioids I Definition 5.2 and IUT II Definition 4.9"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "The source finite-place reconstruction and its model Frobenioid " ++
         "presentation are instantiated at the actual Q(i) place above 5. " ++

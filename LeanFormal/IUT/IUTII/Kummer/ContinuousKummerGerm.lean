@@ -482,7 +482,7 @@ namespace LeanFormal.IUT.Audit
 def continuousKummerGerm : Obligation :=
   { id := "IUT-II.continuous-unit-kummer-germ"
     source := "IUT II, Example 1.8(ii)--(iv); Absolute Anabelian Topics III, Proposition 3.2(ii)"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "For a genuine discrete continuous group action, an open-subgroup-fixed " ++
         "unit and compatible rational roots construct Q/Z-valued root ratios, " ++

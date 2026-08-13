@@ -304,7 +304,7 @@ namespace LeanFormal.IUT.Audit
 def concreteInitialThetaFiniteArithmetic : Obligation :=
   { id := "IUT-I-II.concrete-initial-theta-finite-arithmetic"
     source := "IUT II theta labels and finite volume normalization"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "The exact prime-at-least-five label, sign quotient, Gaussian square " ++
         "exponents, positive theta scales, local-degree log formula, finite " ++

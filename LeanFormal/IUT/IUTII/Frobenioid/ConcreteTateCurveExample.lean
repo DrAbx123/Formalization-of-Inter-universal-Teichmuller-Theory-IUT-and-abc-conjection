@@ -56,7 +56,7 @@ namespace LeanFormal.IUT.Audit
 def concreteTateCurveQParameter : Obligation :=
   { id := "IUT-I-II.concrete-tate-q-series-at-five"
     source := "IUT I, Definition 3.1(c); selected local q-parameter"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "The canonical Tate q-series equation over Q_5 is instantiated at " ++
         "the same q=5 element used by the proved local Kummer realization. " ++

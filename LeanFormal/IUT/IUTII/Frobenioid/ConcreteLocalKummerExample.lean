@@ -109,7 +109,7 @@ namespace LeanFormal.IUT.Audit
 def concreteLocalQParameterRoots : Obligation :=
   { id := "IUT-II.concrete-local-q-parameter-roots"
     source := "IUT II, local q-parameter and Kummer root system"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "The nontrivial local parameter p is placed in the actual nonzero " ++
         "integral-closure monoid and its Grothendieck groupification. The " ++

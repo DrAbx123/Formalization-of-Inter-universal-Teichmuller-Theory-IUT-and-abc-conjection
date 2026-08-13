@@ -47,7 +47,7 @@ namespace LeanFormal.IUT.Audit
 def hodgeTheaterLinkVolumeTransport : Obligation :=
   { id := "IUT-I.hodge-theater-link-log-volume-transport"
     source := "IUT I, Sections 4--5; theta-link scale transport"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "A proved Hodge-theater link transports every logarithmic scale, the " ++
         "finite scale product, and the finite packet log-volume. The result " ++

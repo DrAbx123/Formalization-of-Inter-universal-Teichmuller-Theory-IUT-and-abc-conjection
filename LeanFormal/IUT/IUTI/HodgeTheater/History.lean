@@ -124,7 +124,7 @@ namespace LeanFormal.IUT.Audit
 def hodgeTheaterHistoryAlgebra : Obligation :=
   { id := "IUT-I.hodge-theater-history-composition"
     source := "IUT I, Sections 4--5; history/link composition"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "Finite dependent histories, their terminal theater, composite link, " ++
         "positive length, and q/scale transport are constructed from the " ++

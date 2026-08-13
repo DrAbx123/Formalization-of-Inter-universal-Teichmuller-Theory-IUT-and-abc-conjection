@@ -91,7 +91,7 @@ namespace LeanFormal.IUT.Audit
 def finiteThetaPacket : Obligation :=
   { id := "IUT-II.finite-theta-packet"
     source := "IUT II, theta special values and finite F_l/cusp labels"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "Bounded integer representatives have a standard finite carrier. A " ++
         "positive real q produces an explicit Gaussian theta packet; Lean " ++

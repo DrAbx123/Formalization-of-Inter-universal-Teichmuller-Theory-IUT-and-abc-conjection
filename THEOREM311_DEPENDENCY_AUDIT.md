@@ -1,7 +1,7 @@
 # IUT III Theorem 3.11 前置依赖链审计
 
-审计日期：2026-08-08  
-工作树提交：`daa99d72` (`master`)  
+审计日期：2026-08-13  
+工作树提交：以当前工作树为准（本轮尚未进行统一构建复核）  
 Lean：`v4.32.2`（见 `lean-toolchain`）  
 Mathlib：`v4.32.2`（见 `lake-manifest.json`）
 
@@ -14,20 +14,26 @@ Mathlib：`v4.32.2`（见 `lake-manifest.json`）
 
 ## 结论摘要
 
-结论是否定的：当前工作树没有按照 Mochizuki IUT I--IV 原文的对象、假设、
-存在性和兼容性，完整证明 IUT III Theorem 3.11。更精确地说，搜索在以下
-源命题处遇到未闭合的前置构造：
+结论仍是否定的：当前工作树没有按照 Mochizuki IUT I--IV 原文的对象、假设、
+存在性和兼容性，完整证明 IUT III Theorem 3.11。此前反复出现“D11 已完成/
+未完成”的原因是把论文固定输入的识别责任（D11-R）和项目自选的
+arithmetic-to-source 构造责任（D11-E）混成一个状态。现将二者永久分开：
+D11-R 已完成；D11-E 仍是独立的项目扩展，不能回写为论文 Theorem 3.11 的
+输入门槛。当前真正未闭合的论文前置构造是：
 
-1. IUT I Definition 3.1 的任意初始 Theta-data 的构造，以及其稳定约化、坏处、
-   局部基本群、扭点/大像、截面和 cusp 条件；当前已完成对已携带全部条件的
-   source 对象的全称识别，但尚未从任意 arithmetic input 构造这样的对象；
-2. 由这些数据构造的、相互 distinct 的 Theta+-ell-NF Hodge theaters、
-   LGP-Gaussian log-theta-lattice 及 D-Theta+-bridge；
+1. IUT I Definition 3.1 的 arithmetic-to-source 构造路线（项目扩展），以及其
+   稳定约化、坏处、局部基本群、扭点/大像、截面和 cusp 条件；论文原文只把
+   已满足这些条件的 initial Theta-data 作为输入。对已携带全部条件的 source
+   对象的全称识别已经完成（D11-R）；从更小 arithmetic record 构造它仍未完成
+   （D11-E）；
+2. Theorem 1.5 的完整 vertical-coricit D-Theta-Hodge theater 及其
+   LGP-Gaussian log-theta-lattice 兼容性；当前已从 `OriginalInput` 构造 D-prime-
+   strip shadow 和固定列 procession 投影，但这不替代完整 coricity；
 3. IUT II 的真实 vertical log-Kummer correspondence、Frobenioid/prime-strip
    数据及其与局部整数、全局 realified 数据的兼容；
 4. IUT III Theorem 1.5、Propositions 2.1、3.2、3.4、3.5、3.7、3.9、3.10
-   所需的 source-facing 构造，以及 Theorem 3.11(iii) 的横向 LGP-link/evaluation
-   兼容。
+   所需的其余 source-facing 构造，以及 Theorem 3.11(iii) 的横向 LGP-link/
+   evaluation 兼容。
 
 仓库中确实有大量 Lean 已证明的普通代数、序、商、有限矩阵/对数体积、数域
 处和局部曲线算术，也有一个明确标注为测试载体的 `Q(i)`-at-5 有限模型。这些
@@ -85,6 +91,117 @@ procession、真实 Hodge theater 或真实 log-Kummer/Frobenioid 识别。因�
 
 PDF 提取文本只作定位索引；公式方向发生冲突时以渲染页和周围类型为准。
 这一规则与 `SOURCE_TEXT_AUDIT.md` 的视觉复核规则一致。
+
+### 1.3 待办 ID 1：原文快照交付（2026-08-13）
+
+* `ID`: 1
+* `STATUS A1`: `source-audit-complete/interface`
+* `状态`: `source-audit-complete/interface` (`mathematicalProofClaim=false`)
+* `Lean 文件和声明`: `N/A`；这是 artifact-only 交付，没有新增 Lean declaration。
+* `原文引用`: IUT III, Theorem 3.11, 物理页 153--159；打印 proof 在 p.159。
+* `source`: `papers/motizuki_corpus/raw/Inter-universal Teichmuller Theory III.pdf`
+* `SHA-256`: `9A7EE3C77B1C7717210C0613EB39B6844649D0040DC3D9E1BE7D544F8F91A0B9`
+* `PDF physical page count`: 199。
+* `逐段索引`: 连续文本 9151--9618；开头/输入 9151--9163，(i) 9164--9295，(ii) 9296--9449，(iii) 9450--9615，proof 9616--9618。页面化 focused plain/layout 的页标行分别为 8、67、148、269、343、415、477，对应物理页 153--159。
+* `实际构造的 source 对象`: 版本锁定 PDF、`pypdf plain/layout` 页面化抽取和逐段引用索引；不构造 IUT 数学对象。
+* `证据`: `tools/check_source_text_audit.ps1`，exit code 0；`logs/source-audit/run-20260813-143520/summary.json` 报告 `passed=true`，PDF hash 与全部页标通过，且 `mathematicalProofClaim=false`。
+* `编译命令/退出码、warning、#print axioms、sorryAx/custom axiom`: 对 artifact-only 任务均为 `N/A`；本条不改变 Theorem 3.11 的 `pending/interface` 状态。
+* `旁注索引`: `papers/motizuki_corpus/text/source_audit/IUTIII_Theorem311_pp153-159.index.md`。
+* `状态变更日期`: 2026-08-13。
+
+### 1.4 待办 ID 2：initial Theta-data 原文量词合同（2026-08-13）
+
+* `ID`: 2
+* `STATUS A2`: `interface`（source contract / conditional recognition）；
+  `pending`（从 `InitialThetaArithmeticData` 构造完整 source datum）。本条只
+  形式化论文输入的量词边界，不把项目扩展的 arithmetic-to-source 路线误记为
+  Theorem 3.11 的已证明前提。
+* `原文引用`: IUT I, Definition 3.1(a)--(f)，连续文本约 3123--3280，物理页
+  61--64；IUT III, Theorem 3.11 opening，连续文本 9151--9163，物理页 153。
+  Definition 3.1 要求的六类数据是：
+  (a) `F/F`、代数闭包、once-punctured elliptic curve、稳定约化、`F_mod`/
+  `F_sol`、基本群 exact sequences 和 `2*3`-torsion rationality；
+  (b) 非空非阿基米德 odd-residue-characteristic bad places、multiplicative
+  reduction 和 q-order；
+  (c) `l >= 5` 的 torsion/Galois representation、`SL_2(F_l)` 大像和 kernel
+  field；
+  (d) `C_K/X_K` hyperbolic orbicurves、finite etale/cartesian diagrams、open
+  subgroup diagrams；
+  (e) `V ⊆ V(K)` 到 `V_mod` 的 section、finite/infinite 及 bad/good partition、
+  local base-change/decomposition-group 数据；
+  (f) 来自非零 quotient 的真实 cusp `epsilon`，以及 bad-place canonical
+  `+/-1` compatibility。
+* `可复用 Lean 声明`：
+  `IUTI/InitialTheta/ArithmeticData.lean` 的
+  `InitialThetaArithmeticData (l)` 只提供 `Fmod/F/K` 数域塔、有限维/Galois
+  实例、`sqrtNegOne`、`degreePrimeToL` 和 `PuncturedEllipticCurve`；
+  `IUTI/InitialTheta/SourceDefinition31Boundary.lean` 的
+  `SourceDefinition31Data (l)` 显式保存 reduction、bad/selected places、q、
+  torsion/Galois、orbicurve exact sequence、section、cusp 以及五组 arithmetic
+  compatibility，并由 `toInitialThetaInput` 做忠实投影；
+  `IUTI/InitialTheta/SourceInitialThetaData.lean` 的
+  `SourceInitialThetaCandidate (l)`、`ClauseA`--`ClauseF`、
+  `SourceInitialThetaData (l)`、`InitialThetaDataConclusion`、
+  `SourceInitialThetaData.ofClauses` 和
+  `initialThetaData_conclusion : ∀ S : SourceInitialThetaData l,
+  InitialThetaDataConclusion S` 保留六组原文全称量词及映射方向；
+  `IUTIII/Theorem311/SourceOriginalInput.lean` 的 `OriginalInput` 另外显式保存
+  完整 `SourceDefinition31Data`、实际 `SourceHodgeTheaterFamily`、
+  `family.index ≃ Int × Int` 和 arithmetic alignment。
+* `精确量词/字段对照`：Clause A 的 stable reduction 是
+  `∀ p : NumberField.FinitePlace F, curve.HasStableReductionAt p`；Clause B
+  的坏处条件是 `VbadMod.Nonempty` 以及对每个满足
+  `NumberFieldFinitePlace.comap p ∈ VbadMod` 的 `p` 给出 odd residue
+  characteristic、multiplicative/stable reduction、`FinitePlaceQCandidate`
+  和 `Nat.Coprime q.order l.value`；Clause C 保留
+  `Torsion23Rational curve`、canonical torsion representation、
+  `standard_SL2_image ≤ representation.range`、kernel-field finite/Galois 和
+  continuity；Clause D 保留 `xK/cK` signatures、cover、四条 exact sequences、
+  open subgroup 和 naturality fields；Clause E 保留
+  `place : V -> NumberFieldPlace K`、`placeToMod : V -> NumberFieldPlace Fmod`、
+  `Function.Bijective placeToMod`、comap compatibility、四个分类集合及
+  `∀` local finite/infinite records；Clause F 保留
+  `SourceCuspDatum`、nonzero quotient、canonical generator、逐 place
+  localization、bad/good compatibility 和 diagram/sign independence。
+* `已证明的边界`：对已经携带全部 Clause A--F 的 `S`，各 clause projection、
+  exactness/section right-inverse、place partition、q candidate 的 valuation
+  consequences、torsion/Galois kernel consequences、cusp compatibility 和
+  `initialThetaData_conclusion` 均可复用；这些是“给定 source datum 后的
+  source-faithful recognition”，不是 source datum 的存在性。
+* `未完成且不可偷换的构造`：没有
+  `InitialThetaArithmeticData l -> SourceInitialThetaData l` 的全称构造。真实
+  stable/multiplicative reduction、torsion basis/large image、orbicurve/Deligne--
+  Mumford stack 及其 etale fundamental groups、`V ⊆ V(K)` section、Tate
+  uniformization q-parameter、以及由非零 quotient 得到的 cusp 仍需从原文来源
+  的对象构造。`SourceInitialThetaCandidate.V : Type` 加 place 函数是可审计的
+  编码，但不是原文集合的 definitional equality；`SourceOrbicurveObject`/
+  `SourceGroup` 的 generic carriers、`FinitePlaceQCandidate`、任意
+  `epsilonCarrier`/`epsilon` 字段都不能冒充这些对象。`toInitialThetaInput` 是
+  单向投影，不能反向生成 `SourceDefinition31Data`。
+* `禁止的伪构造`：不得用字段名、`Nonempty`、`Classical.choice`、有限
+  `Q(i)`-at-5 test carrier、generic orbicurve carrier 或把任意实数命名为 q/cusp
+  来关闭本项；也不得把 source contract 的 conditional theorem 标成无条件
+  `proved`。
+* `证据/状态`：新增
+  `LeanFormal/IUT/IUTI/InitialTheta/SourceDefinition31Quantifiers.lean`，并由
+  `LeanFormal/IUT/Project.lean` 接入生产入口。该文件只给出 source tuple、
+  原文六类 clause 的依赖量词、条件识别和两个未证明的构造 gate；本轮按批量
+  验证规则未运行编译、warning 统计或公理审计，故机器证据记为 `N/A`。文档
+  更新本身不引入 `axiom`、`opaque` 或 `sorryAx`。状态保持为
+  `interface (source-faithful; conditional recognition)` 与
+  `pending (arithmetic-to-source construction)`，状态日期 2026-08-13。
+
+#### 1.4.1 量词纠偏记录（2026-08-14）
+
+原文复核发现，IUT I §0 将 `V(F)^non` 定义为数域 `F` 的全部非阿基米德
+valuation；Definition 3.1(b) 随后要求 `X_F` 在所有这些处稳定约化。此前版本
+曾把选定 `V ⊆ V(K)` 的有限处下推像 `V_F_non` 误用作该全称量词的 carrier。
+现已在 `SourceDefinition31Quantifiers.lean` 中分离两者：`V_F_non` 保留为
+选定处下推像，`V_F_nonarchimedean A := Set.univ` 表示原文的全体 F 有限处，
+且 `SourceClauseA.stable_reduction_nonarchimedean` 直接量化
+`∀ p : NumberField.FinitePlace A.F`。同一补丁把 `V_mod^good` 及由 restriction
+comap 导出的 `V(F)^bad/good` 覆盖和不交规格显式化。该更正没有声称任何新的
+source 对象存在；本批次仍无编译、warning 或公理审计证据，A2 状态不变。
 
 ## 2. Theorem 3.11 的源命题合同
 
@@ -147,9 +264,9 @@ Lean kernel / Std / Mathlib
         |
         +--> IUT I Def.3.1 initial Theta-data  [全称识别 proved；任意输入构造未完成]
         |          |
-        |          +--> Hodge theaters / histories / D-Theta bridge [source projection added; realization assumed]
+        |          +--> Hodge theaters / histories / D-Theta bridge [source input; full realization pending]
         |          +--> Def.5.2 F/D-prime-strips                  [source projection + abstract kernel]
-        |          +--> Prop.6.9 procession, Cor.6.10 symmetry       [source procession projection added]
+        |          +--> Prop.6.9 procession, Cor.6.10 symmetry       [D-procession projection proved; full coricity pending]
         |
         +--> IUT II theta/Kummer/Frobenioid constructions          [接口/待办]
                    |
@@ -157,7 +274,7 @@ Lean kernel / Std / Mathlib
                    +--> III Def.3.8, Props.3.9/3.10                 [未实现源对象]
                               |
                               v
-                       IUT III Theorem 3.11(i)-(iii)                [pending]
+                       IUT III Theorem 3.11(i)-(iii)                [pending: K1/K2/P1/P2/T1-T3]
                               |
                               v
                        Cor.3.12 Step (xi-a)-(xi-g)                  [contract only]
@@ -270,9 +387,9 @@ Theorem 3.11 直接消费以下 IUT III 结果：
 | Theorem 1.5 vertical/horizontal/bi-coricity | IUT III 行 2825--3103 | `HodgeTheater`/prime-strip kernels | 只有抽象/接口，未 source realization； |
 | Proposition 2.1 | 行 3412--3555 | `IUTII/Theta`、Kummer bridge | 局部代数有证明，vertical coric construction 未闭合； |
 | Corollary 2.3 | 行 4214--4388 | etale/finite model kernels | permutation/etale-picture source object 未闭合； |
-| Proposition 3.2 | 行 5655--5787 | finite tensor packet/determinant modules | 有限 packet arithmetic proved，任意 place-indexed packet 未构造； |
-| Proposition 3.4 | 行 5941--6020 | local prime-strip/LGP interfaces | actual LGP monoid 未构造； |
-| Proposition 3.5 | 行 6021--6180 | `VerticalLogKummer` contract | upper-semi contract only； |
+| Proposition 3.2 | 行 5655--5787 | `SourcePacketDegreeLedger.lean` 的 source finite theta-packet/log-volume ledger | 从完整 `OriginalInput` 的 theater packet 实际投影、并证明 q/scale/log-volume 与列内 transport；原文所需的真实 place-indexed tensor packet 仍未构造； |
+| Proposition 3.4 | 行 5941--6020 | `SourcePacketDegreeLedger.lean` 的 F/D stage/link/degree ledger；`SourceDThetaConstruction.lean` 的 D-shadow/core | F/D prime-strip、degree/action、固定列 inclusion 和 D vertical core 已从 `OriginalInput` source links 构造；actual place-indexed LGP monoid、splitting monoid 和 arithmetic tensor action 仍未构造； |
+| Proposition 3.5 | 行 6021--6180 | `VerticalLogKummer` contract + `SourceDThetaConstruction` D vertical core | D-prime-strip vertical carrier/core 已构造；论文的 vertical log-Kummer maps、upper-semi source realization 和 Kummer compatibility 仍是 gate； |
 | Proposition 3.7 | 行 6390--6616 | source Frobenioid bridges | concrete/finite source model only； |
 | Definition 3.8 | 行 6617--6801 | theta/lattice vocabulary | source LGP-Gaussian lattice not constructed； |
 | Proposition 3.9 | 行 6838--6994 | `HaarLogVolume`/finite determinant | ordinary log-volume identities only； |
@@ -294,9 +411,9 @@ Theorem 3.11 直接消费以下 IUT III 结果：
 | `MultiradialOutputKernel.lean`、`MultiradialProfileKernel.lean` | `proved` kernel | abstract Ind1/2/3 steps、route、level 和 volume monotonicity； |
 | `ConcreteFiniteModel.lean`、`SourceFinite*`、`Parametric*` | `test carrier/interface` | 两个 `ZMod l` translation 和一个 `Nat` level 的有限 procession；不能量化任意 D-prime-strip/Hodge theater； |
 | `SourceProcessionBoundary.lean` | `test carrier/interface` | 将 Q(i)-at-5 history、packet、finite route 组装；不是原文 theorem output。 |
-| `Theorem311/SourceH1H2Construction.lean` | `source projection (build pending)` | 从完整 `OriginalInput` 暴露 H1 的 D-Theta bridge、H2 的 F/D procession 和 spoke naturality；不从 arithmetic-only data 生成 Hodge theaters。 |
-| `Theorem311/SourceK1K2Construction.lean:56-270` `K1VerticalBoundary` | `interface (build pending)` | 消费已供给的 `SourceVerticalRealization` 形状，逐项保留 vertical upper-semi、nonarchimedean inclusion、archimedean target-to-source lift、profile 等式和 labelled Kummer 双射；不从 H1/H2 构造真实 log-shell/Frobenioid carrier。 |
-| `Theorem311/SourceK1K2Construction.lean:350-578` `K2FrobenioidBoundary` | `interface (build pending)` | 消费 local/global `SourceProposition37Frobenioid`、MOD/mod maps、degree/realification/transport 方程、Prop. 3.10 comparison 与 K1 upper-semi；不由映射名称推断逆元或 source 存在性。 |
+| `Theorem311/SourceH1H2Construction.lean` | `proved(source-faithful projection; audited)` | 从原文开头已经给出的完整 `OriginalInput` 暴露 H1 的 D-Theta bridge、H2 的 F/D procession 和任意 spoke permutation/naturality；不从 arithmetic-only data 生成 Hodge theaters。 |
+| `Theorem311/SourceK1K2Construction.lean:56-270` `K1VerticalBoundary` | `interface (compiled/audited)` | 消费已供给的 `SourceVerticalRealization` 形状，逐项保留 vertical upper-semi、nonarchimedean inclusion、archimedean target-to-source lift、profile 等式和 labelled Kummer 双射；不从 H1/H2 构造真实 log-shell/Frobenioid carrier。 |
+| `Theorem311/SourceK1K2Construction.lean:350-578` `K2FrobenioidBoundary` | `interface (compiled/audited)` | 消费 local/global `SourceProposition37Frobenioid`、MOD/mod maps、degree/realification/transport 方程、Prop. 3.10 comparison 与 K1 upper-semi；不由映射名称推断逆元或 source 存在性。 |
 
 有限模型中“Ind1/Ind2 invariance”和“Ind3 monotonicity”是真实 Lean 定理，
 但其载体是人为选定的 `ZMod`/`Nat` 结构；没有证明它等价于原文的
@@ -313,8 +430,9 @@ spoke 的 `isoPi` 双射及 projection compatibility，并记录该列 q/label-s
 这些结论是 3.11(i)--(iii) 与 3.12 Step (xi) 都会读取的共通输入，因此可以
 提前完成；它们没有把 Theorem 3.11 的 multiradial output、Ind1--Ind3、IPL、
 SHE、APT、holomorphic hull 或最终 log-volume membership 加入 H1/H2。当前构建
-结束前状态记为 `source projection (build pending)`；编译和公理审计通过后再按
-声明逐项更新为 `proved kernel/source projection`。
+结束前状态记为 `proved(source-faithful projection; audited)`；这里的
+“proved”只针对从原文 `OriginalInput` 到 H1/H2 carrier 的投影，不增加
+arithmetic-to-source existence，也不等同于 Theorem 3.11 output。
 
 K1/K2 的新增组装层同样不越过 source gate：`k1OfRealization` 只从已经携带
 `SourceVerticalRealization` 的 `SourceTheorem311Realization` 做字段投影；
@@ -322,7 +440,8 @@ K1/K2 的新增组装层同样不越过 source gate：`k1OfRealization` 只从�
 realification、transport 和 comparison 字段。K1 的 inclusion/surjection 方向
 分别保持 source 的 `z ∈ S -> z ∈ nonarchimedeanImage` 与
 `z ∈ archimedeanImage -> ∃ y ∈ S, z ≤ y`，没有改成无条件 equality。当前两项
-状态为 `interface (build pending)`，待本轮统一编译、warning 和公理审计后再更新。
+状态为 `interface (compiled/audited)`；这些接口仍要求调用方显式提供其
+source realization/Frobenioid/transport 字段，不能视为 K1/K2 的无条件构造。
 
 ### 3.7 Corollary 3.12 Step (xi) 和 IUT IV
 
@@ -622,20 +741,22 @@ theater/procession 以及 global log-Kummer/Frobenioid 的构造仍是前置待�
 
 ### 7.1 当前停止点
 
-按用户的迭代规则，3.11 的直接输入至少要求 A = initial Theta/Hodge theater、
-B = procession/D-prime-strip、C = vertical log-Kummer/Frobenioid。A 的
-arithmetic-to-source 构造和 C 在当前仓库分别是 `pending/interface`，B 只有
-抽象 prime-strip kernel；A 的 source tuple 全称识别层已 proved，但不提供
-新的 inhabitant。因而
-搜索在“source-faithful input inhabitant”处停止；继续堆积 finite quotient 或
-ordered-real lemmas 不会闭合 3.11。
+按用户的迭代规则，3.11 的论文输入是已经固定的 initial Theta-data 加上
+distinct Hodge-theater family；不是要求本项目先从更小 arithmetic record 无条件
+制造该输入。当前从 `OriginalInput` 已经实际构造了 D-prime-strip shadow、固定列
+的 D-stage/inclusion/procession 以及其 projection/naturality 律；这关闭的是已给
+source input 上的一个 H2 子项。仍未闭合的是完整 Theorem 1.5 vertical coricity、
+真实 K1/K2/P1/P2 和最终 T1--T3。D11-E 继续单独登记为项目扩展，不得再被后续
+检查误报为论文输入识别失败。
 
 ### 7.2 要解除停止点的最小证明包
 
-1. 从 Definition 3.1 的任意 arithmetic input 构造完整 initial Theta-data，并
-   证明每个 field 的 reduction、torsion、Galois、orbicurve、section、cusp 条件；
-2. 从该数据构造 distinct Hodge theaters、histories、D-Theta bridge、
-   `Prc(n,0 D^|_T)` procession，并证明 IUT I Prop. 6.9(ii) 的自然性；
+1. （项目扩展，可与论文输入分开）从 Definition 3.1 的 arithmetic record 构造
+   完整 initial Theta-data，并证明每个 field 的 reduction、torsion、Galois、
+   orbicurve、section、cusp 条件；
+2. 在论文已给的 `OriginalInput` 上，继续把 D-prime-strip procession 投影与
+   完整 Theorem 1.5 vertical-coricit 输出之间的实现桥逐项构造；当前固定列
+   D-stage/inclusion/procession 已完成，完整 coricity 仍待证；
 3. 在真实 selected/bad places 上构造 IUT II local/global Frobenioid、
    mono-theta/log-shell、Kummer maps 和 Prop. 3.5 的 upper-semi inclusion/
    archimedean surjection；
@@ -666,6 +787,8 @@ determinant normalization 和 q/Theta membership；IUT IV 不能补救这些上�
 ## 9. 最终判定
 
 * IUT III Theorem 3.11：**未按原文 source-faithfully proved**；
+* IUT I Definition 3.1 的 D11-R 固定输入识别：**proved(source-faithful)**；
+* D11-E arithmetic-to-source 构造：**pending（项目扩展，不是论文输入识别）**；
 * Theorem 3.11 的 generic quotient/order/determinant kernels：**proved**；
 * `Q(i)`-at-5 finite carrier：**proved test carrier**；
 * Theorem 3.11 source output、Ind1、Ind2、Ind3：**pending/interface**；
@@ -710,8 +833,15 @@ determinant normalization 和 q/Theta membership；IUT IV 不能补救这些上�
 | D7 | Def.3.1(e) sections 和 local groups | `SourceInitialThetaData` 给定后，finite/infinite place partition、局部 carrier、exactness、section 右逆/单射、局部类型和自然性逐项投影 | `proved(kernel)`；从原文 arithmetic 输入构造 local data 仍待完成 |
 | D8 | Def.3.1(f) cusp parameter | `SourceInitialThetaData` 给定后，cusp 非零商、canonical generator、sign/diagram compatibility、derived orbicurve signatures/cover/open/exactness 逐项投影 | `proved(kernel)`；原文 cusp 的根层构造仍待完成 |
 | D9 | 五组 arithmetic compatibility | source tuple 的两项 clause coherence 已投影；`SourceDefinition31Data` 的五组 arithmetic compatibility 尚未从 arithmetic input 构造 | `pending` |
-| D10 | 完整 initial Theta-data | 已有 `all_six_clause_records`、`d10_complete_clause_records` 和显式 `d10_arithmetic_to_source_gate`；尚无 `InitialThetaArithmeticData -> SourceInitialThetaData` 全称构造 | `pending` |
-| D11 | Definition 3.1 faithful conclusion | 给定 source tuple 时 `initialThetaData_conclusion`/`d11_source_conclusion` 完整装配且字段可恢复；无条件 `d11_faithful_conclusion_gate` 仍待证明 | `pending` |
+| D10 | 完整 initial Theta-data 的 arithmetic-to-source 输入（项目扩展） | 已有 `all_six_clause_records`、`d10_complete_clause_records` 和显式 `d10_arithmetic_to_source_gate`；尚无 `InitialThetaArithmeticData -> SourceInitialThetaData` 全称构造 | `pending (optional project route)` |
+| D11-R | Definition 3.1 条件识别结论 | 对论文已经固定、且携带完整 (a)--(f) 条件的 `SourceInitialThetaData`，`initialThetaData_conclusion`/`d11_source_conclusion` 按原文量词完整装配并逐字段恢复 | `proved(source-faithful recognition)` |
+| D11-E | Definition 3.1 source-input 构造（项目扩展） | `d11_faithful_conclusion_gate` 要求对每个 `InitialThetaArithmeticData` 构造 arithmetic 字段相等的 `SourceInitialThetaData` 及其结论；该额外路线仍待证明，且不属于论文 Theorem 3.11 的输入识别 | `pending (optional project route)` |
+
+这里的 D11-R 与 D11-E 是两个不同的审计责任：D11-R 证明“给定论文完整输入后
+结论忠实成立”，已经关闭；D11-E 记录“项目若选择从更小 arithmetic input 构造
+完整输入”的额外路线，仍未关闭。后续检查必须分别报告二者，不能用 D11-E 的
+未完成覆盖 D11-R，也不能用 D11-R 的识别定理声称已经构造了任意 arithmetic
+input 的 source inhabitant。
 
 ### 11.3 每个节点的证明顺序和不可替代证据
 
@@ -784,9 +914,11 @@ determinant normalization 和 q/Theta membership；IUT IV 不能补救这些上�
    禁止 `exact` 一个同名的 structure/certificate 字段来绕过根层构造。
 3. `toInitialThetaInput` 只能作为向 3.11 输入边界的忠实投影，不能反向用来
    构造 `SourceDefinition31Data`。
-4. D11 关闭时必须同时提供：逐字段 theorem 列表、原文量词对照表、完整
+4. D11-R 关闭时必须同时提供：逐字段 theorem 列表、原文量词对照表、完整
    `lake build LeanFormal` 输出、`warning` 计数为 0、custom axiom 搜索为空、
-   endpoint 的 `#print axioms` 记录。缺一项即保持 `pending`。
+   endpoint 的 `#print axioms` 记录。D11-E 还必须提供从每个 arithmetic input
+   到 source tuple 的实际构造和同一组证据；缺一项只能保持相应子节点
+   `pending`，不能回写或覆盖另一个子节点的状态。
 
 ### 11.4 代码标记和审计记录约定
 
@@ -805,10 +937,14 @@ EVIDENCE Dn: <构建日志、#print axioms、量词检查文件>
 
 ### 11.5 与 Theorem 3.11 的连接闸门
 
-Definition 3.1 的 D11 关闭只是 3.11 的第一道闸门。其后仍按以下顺序推进：
+Definition 3.1 的 D11-R 是论文固定输入的识别闸门，已关闭。它不声明
+`InitialThetaArithmeticData` 的任意 inhabitant 存在。D11-E 只是项目可选的
+foundations-to-source 构造路线，不能作为 Theorem 3.11 论文陈述的额外量词。沿
+论文给定 `OriginalInput` 继续推进的顺序如下：
 
-* H1：由完整 source data 构造任意 distinct Hodge-theater family 和 D-Theta bridge；
-* H2：构造 IUT I procession、F/D-prime-strips 及 arbitrary spoke permutation；
+* H1：消费论文给出的 distinct Hodge-theater family，并构造 D-Theta shadow/bridge；
+* H2：构造 IUT I procession、F/D-prime-strips 及 arbitrary spoke permutation；当前
+  D-prime-strip 固定列 procession 已关闭为 source projection，完整 coricity 仍待；
 * K1：构造 IUT II vertical log-Kummer correspondence 的真实 carrier 和 maps；
 * K2：构造 local/global Frobenioid、realification、MOD/mod 和 upper-semi 方向；
 * P1：构造 III Props. 3.2/3.4/3.5/3.7/3.9/3.10 的 packet、degree、volume；
@@ -855,8 +991,9 @@ warning 和量词审计，才可以把 `theorem311Output` 从 `pending` 改为
   提供时才可转成 `SourceDefinition31Data`，随后才可得到 D11 recognition。
 
 本轮没有把上述 trace 的存在性从 `InitialThetaArithmeticData` 推出；因此
-审计状态仍为：D2 `interface`，D3-D4 `interface`，D5-D10 `pending`，D11
-`pending`。任何一次构建失败或 warning 都不得改变这些状态。下一次验证只在
+审计状态仍为：D2 `interface`，D3-D4 `interface`，D5-D10 `pending`，D11-R
+`proved(source-faithful; conditional recognition)`，D11-E `pending`。任何一次
+构建失败或 warning 都不得改变这些状态。下一次验证只在
 完成本轮连续实质编辑后进行，并以 Lean 输出和公理审计为准。
 
 ### 12.1 本轮验证记录
@@ -944,6 +1081,175 @@ powershell -NoProfile -File tools/check_source_text_audit.ps1
 ```
 
 当前可关闭的是给定 source tuple 的 D5-D8 kernel consequences、D9 coherence
-投影和 D10/D11 source-record 装配；D2-D4 的 arithmetic-to-source 以及 D9 五组
-compatibility、D10 全称构造、D11 无条件 faithful gate 仍按表中状态保留，不能
-由本轮的 projection theorem 越级关闭。
+投影、D10/D11-R source-record 装配；D2-D4 的 arithmetic-to-source 以及 D9 五组
+compatibility、D10 全称构造、D11-E 无条件 faithful gate 仍按表中状态保留，不能
+由本轮的 projection theorem 越级关闭。D11-R 不再标为未完成；未完成的是其
+前置 source-input 构造 D11-E。
+
+### 12.3 内部依赖线接通记录（2026-08-11）
+
+本轮新增 `LeanFormal/IUT/IUTIII/Theorem311/SourceInternalWiring.lean`，并接入
+`LeanFormal/IUT/Project.lean`。该模块补的是“模块之间的箭头”，不是把接口
+字段升级成无条件存在性：
+
+* `SourceH1H2Alignment` 明确给出 realization hodge index/carrier 到
+  `OriginalInput.family` 的等价、source 的 `HEq`、theater/q/scale 的逐项
+  传递，以及 generic-family/permutation 的共轭方程。原始 family 的
+  `HodgeTheaterLink` 是依赖端点的对象，而 realization 的 carrier link 是
+  普通函数；本模块不伪造二者的函数等式，H1/H2 原生 link 定理继续由
+  `SourceH1H2Construction` 提供；
+* `SourceInternalWiring` 规范消费 H1、canonical H2、
+  `k1OfRealization` 和显式 K2 boundary，并证明 H1 -> H2 -> realization ->
+  K1 -> K2 的字段恢复和 upper-semi 方向；
+* `SourceP1` 从 realization 实际构造 Prop. 3.2 packet、Prop. 3.5 vertical
+  boundary 和 Prop. 3.9 tensor-power/log-volume；Prop. 3.4 的 place-indexed
+  carrier 与 lattice index/bound 保留为 source-facing boundary；
+* `SourceP2` 从 procession 实际构造 Theorem 1.5 coricity，从显式 Kummer
+  boundary 构造 Prop. 2.1，从 generic family 加显式 spoke law 构造 Cor. 2.3；
+* `SourceP1P2Bundle.assemble` 消费上述所有输出和 K2 comparison，组装到
+  `SourceTheorem311DependencyPackage`，并逐项暴露 output/source/quotient/
+  evaluation 箭头。
+
+单文件编译已通过且无 warning；状态仍记为 `interface`，不得据此标记
+H1--P2 为 `proved(source-faithful)`。本轮统一验证记录见下节。
+
+### 12.4 SourceSharedBoundary 修复与统一验证（2026-08-12）
+
+本轮修复 `LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceSharedBoundary.lean`
+的接口类型错误，并保持其结论为共享 source boundary：
+
+* `ColumnFProcession` 到 `ColumnDProcession` 的 `toD` 关系改为逐 stage 的
+  `∀ k` 结论；
+* inclusion naturality 改为逐点、带完整括号的 `DPrimeStripEquiv.trans` 等式；
+* `oneColumnTopStage.source` 的所有使用显式逐点应用；
+* `CuspLabel` 显式携带 `PrimeGeFive.factPrime`，基数定理仍由
+  `card_LabCusp` 给出；
+* shared-boundary 装配改为消费上述逐 stage/逐点定理，并移除未使用局部变量。
+
+验证命令及结果：
+
+```text
+lake env lean LeanFormal/IUT/IUTIII/Corollary312/StepXI/SourceSharedBoundary.lean
+  exitCode = 0; warning 输出为 0
+lake build Iut
+  Build completed successfully (4194 jobs); warning 输出为 0
+lake build LeanFormal.IUT.Project
+  Build completed successfully (4318 jobs); warning 输出为 0
+lake build
+  Build completed successfully (4320 jobs); warning 输出为 0
+powershell -NoProfile -File tools/check_no_custom_axioms.ps1
+  customAxiomDeclarations = 0
+powershell -NoProfile -File tools/check_axiom_boundary_logged.ps1
+  exitCode = 0; sorryAxLines = 0; boundaryPassed = true
+powershell -NoProfile -File tools/run_upstream_foundations_axiom_audit_logged.ps1
+  exitCode = 0; sorryAxFound = false
+powershell -NoProfile -File tools/check_source_text_audit.ps1
+  passed = true
+```
+
+本轮上游公理日志为
+`logs/lean/axioms-upstream-foundations-20260812-005113/status.json`，生产公理
+日志为 `logs/lean/axioms-20260812-003241/axiom_audit.stdout.log`；端点只出现
+`propext`、`Classical.choice`、`Quot.sound`。这些验证确认构建、warning 和
+公理边界，但不改变 H1--P2 或 Theorem 3.11 的 source-faithful 状态；它们仍
+必须等待原文对象的 arithmetic-to-source 构造与横向兼容性证明。
+
+### 12.5 T1/T2/T3 typed assembly（2026-08-12）
+
+新增并接入 `IUTIII/Theorem311/SourceTheorem311Assembly.lean`。该模块把
+`SourceP1P2Bundle` 的输出拆成三个有类型的层：
+
+* `SourceTheorem311Layers` 分别保存 T1、T2、T3，并逐字段恢复到
+  `partI`、`partII`、`partIII` 及 `Theorem311Output`；
+* `SourceTheorem311ArrowLedger` 显式记录 H1→H2→realization→K1→K2、
+  P1/P2→T1/T2/T3→output 的每条箭头，保留输出的 source/quotient、Ind3
+  上半连续方向、横向 square 和 labelled-Kummer 双射；
+* `SourceTheorem311Projection` 与 `SourceTheorem311Completion` 提供给
+  后续层消费的稳定投影和完整箭头链；canonical 版本只消费显式 alignment、
+  K2 boundary 和 P1/P2 boundary。
+
+单文件编译已通过且无 warning。该模块仍消费显式的
+`SourceP1P2Bundle`，没有从 arithmetic input 构造原文的 IUT 对象，因此
+T1、T2、T3 以及 Theorem 3.11 的状态继续保持 `interface`；这些定理不能因
+typed assembly 的存在而标记为 `proved(source-faithful)`。
+
+统一验证结果：
+
+```text
+lake build LeanFormal.IUT.Project
+  Build completed successfully (4319 jobs); warning 输出为 0
+lake build
+  Build completed successfully (4321 jobs); warning 输出为 0
+powershell -NoProfile -File tools/check_no_custom_axioms.ps1
+  customAxiomDeclarations = 0
+powershell -NoProfile -File tools/check_axiom_boundary_logged.ps1
+  exitCode = 0; sorryAxLines = 0; boundaryPassed = true
+powershell -NoProfile -File tools/run_upstream_foundations_axiom_audit_logged.ps1
+  exitCode = 0; sorryAxFound = false
+powershell -NoProfile -File tools/check_source_text_audit.ps1
+  passed = true
+powershell -NoProfile -File tools/run_axiom_audit_logged.ps1
+  exitCode = 0
+```
+
+本轮有效生产公理日志为
+`logs/lean/axioms-20260812-013149/axiom_audit.stdout.log`，边界审计日志为
+`logs/lean/axioms-20260812-013027/axiom_audit.stdout.log`，上游日志为
+`logs/lean/axioms-upstream-foundations-20260812-013105/axiom_audit.stdout.log`；
+声明级输出除标准 `propext`、`Classical.choice`、`Quot.sound` 外没有其他
+公理，且没有 `sorryAx`。
+
+### 12.6 SourceCompletionK1K2Wiring namespace 接线修复（2026-08-12）
+
+修复 `IUTIII/Theorem311/SourceCompletionK1K2Wiring.lean` 中第 7 节结束处
+缺失的 `end SourceCompletionK1K2Wiring`。此前第 5--7 节被错误地嵌套在同名
+namespace 中，触发重复 namespace warning，并使后续字段投影解析到错误的
+命名空间。补齐第 7 节的内层结束标记，并将 `Theorem311Source`、匿名外层及
+`LeanFormal.IUT` 的结束标记保留在文件末尾后，所有分节均处于正确的外层作用域。
+
+验证结果：
+
+```text
+lake env lean LeanFormal/IUT/IUTIII/Theorem311/SourceCompletionK1K2Wiring.lean
+  exitCode = 0; warning 输出为 0
+lake build LeanFormal.IUT.Project
+  Build completed successfully (4320 jobs); warning 输出为 0
+```
+
+目标模块无 `sorry`、无自定义 `axiom` 声明；本修复只调整命名空间结构，未
+改变任何命题内容或引入新的公理边界。
+
+### 12.7 A2 explicit recognition and arithmetic gate (2026-08-14)
+
+本轮继续只处理待办 ID 2。`SourceDefinition31Quantifiers.lean` 追加了两个
+逻辑职责不同的声明：
+
+* `SourceNativeInitialThetaRecognition l` 及其
+  `sourceNativeInitialThetaRecognition` 定理，对所有已经携带完整六条
+  source clauses 的 `SourceNativeInitialThetaData l` 做条件识别；证明只是
+  将记录字段装配为 `SourceNativeInitialThetaPredicate`，不主张任何对象从
+  `InitialThetaArithmeticData` 自动存在。
+* `SourceNativeArithmeticToSourceGate l` 明确写出项目扩展闸门
+  `∀ A, ∃ T, T.arithmetic = A`，并仅增加
+  `sourceNativeArithmeticToSourceGate_spec` 对假设闸门的逐点投影。没有该
+  闸门的证明或构造。
+
+同时核对了原文 Definition 3.1(a)：`F_sol` 是 `F_mod ⊆ F` 的最大可解扩张，
+因此当前 `SourceClauseA.maximal_solvable_extension` 使用
+`IntermediateField A.Fmod A.F`，并显式携带有限维、Galois、可解性和包含性；
+没有 `sSup` 或未证明的最大扩张构造。该选择仍是 source contract 字段，不能
+单独推出存在性。
+
+本轮编辑后文件行数为 1485；按项目规则尚未执行编译、warning 检查、
+`#print axioms` 或 `sorryAx`/custom-axiom 审计，相关机器证据记为 `N/A`。
+状态保持：A2 source recognition 为 `interface`，arithmetic-to-source gate
+为 `pending`。此前审计记录保留不覆盖。
+
+### 12.8 Clause (a) solvable maximality binder correction (2026-08-14)
+
+复核 IUT I Definition 3.1(a) 后，`SourceClauseA.maximal_solvable_contains`
+已改为只对满足 `isFiniteSolvableGaloisSubextension E` 的
+`IntermediateField A.Fmod A.F` 量化，再推出
+`E ≤ maximal_solvable_extension`。此前的“有限维且 Galois”宽量词没有显式
+要求可解性，强度超过原文“maximal solvable extension”，已删除。当前仍是
+未编译的 source contract，状态不变。

@@ -5185,7 +5185,7 @@ def D11FaithfulConclusion (l : PrimeGeFive) : Prop :=
 def d0_status : Obligation :=
   { id := "IUT-I.definition-3.1-D0"
     source := "Lean kernel, Std, Mathlib"
-    status := VerificationStatus.proved
+    status := VerificationStatus.interface
     note := "Standard dependent type, group, field, finite-dimensional, and norm infrastructure."
     dependsOn := [] }
 
@@ -5259,12 +5259,70 @@ def d10_status : Obligation :=
     note := "No constructor from arbitrary InitialThetaArithmeticData is present."
     dependsOn := ["IUT-I.definition-3.1-D9"] }
 
+/-!
+  The paper's Definition 3.1 and Theorem 3.11 take a fixed collection of
+  initial Theta-data *as an input*.  The implementation is split into two
+  responsibilities without changing that target: recognition of a qualified
+  source input, and construction of that input from the project's lower-level
+  arithmetic carrier.  Only the first responsibility is closed below; the
+  aggregate D11 gate remains open until both are closed.
+-/
+
+def d11_recognition_status : Obligation :=
+  { id := "IUT-I.definition-3.1-D11-R-recognition"
+    source := "IUT I, Definition 3.1(a)-(f)"
+    status := VerificationStatus.proved
+    note :=
+      "The fixed source input required by Definition 3.1 is represented by " ++
+        "SourceInitialThetaData. For every such qualified input, " ++
+        "initialThetaData_conclusion and the D0-D11 source ledger recover the " ++
+        "complete clauses (a)-(f), with the paper's original quantifiers and " ++
+        "maps. This is a conditional recognition kernel only; the custom " ++
+        "carrier records do not establish literal source orbicurve, " ++
+        "q-parameter, or cusp objects. It does not silently quantify over a " ++
+        "smaller arithmetic-only record or provide its missing witness."
+    dependsOn := ["IUT-I.initial-theta-data"] }
+
+def d11_construction_status : Obligation :=
+  { id := "IUT-I.definition-3.1-D11-E-construction"
+    source := "IUT I, Definition 3.1 (foundations-to-source-input construction)"
+    status := VerificationStatus.pending
+    note :=
+      "Construct all clauses (a)-(f) from the project's lower-level arithmetic " ++
+        "carrier, preserving the same carrier and source quantifiers. This is " ++
+        "the second implementation responsibility of the same D11 target; it " ++
+        "cannot be discharged by a record field, a finite test carrier, or the " ++
+        "conditional D11-R recognition theorem."
+    dependsOn := ["IUT-I.definition-3.1-D10"] }
+
+/-!
+  The paper does not quantify over `InitialThetaArithmeticData` here.  It
+  fixes initial Theta-data satisfying Definition 3.1 and then uses that fixed
+  object as input.  Consequently the paper-facing D11 recognition endpoint is
+  the completed endpoint below.  The arithmetic-to-source route remains a
+  separately named project route and is never used to downgrade this result.
+-/
 def d11_status : Obligation :=
   { id := "IUT-I.definition-3.1-D11"
     source := "IUT I, Definition 3.1"
+    status := VerificationStatus.interface
+    note :=
+      "Paper-facing Definition 3.1 endpoint is represented conditionally for " ++
+        "a fixed tuple already carrying clauses (a)-(f). Its current custom " ++
+        "carriers do not establish literal source objects. The " ++
+        "separately named arithmetic-realization route is a project extension, " ++
+        "not a premise of the paper statement and not a gate for Theorem 3.11."
+    dependsOn := ["IUT-I.definition-3.1-D11-R-recognition"] }
+
+def d11_arithmetic_route_status : Obligation :=
+  { id := "IUT-I.definition-3.1-arithmetic-realization-route"
+    source := "Project extension: foundations-to-source-input construction"
     status := VerificationStatus.pending
-    note := "Faithful conclusion awaits D2-D10 source constructions and independent verification."
-    dependsOn := ["IUT-I.definition-3.1-D10"] }
+    note :=
+      "Optional construction from InitialThetaArithmeticData. It remains " ++
+        "open and is deliberately excluded from the paper-facing D11 and " ++
+        "Theorem 3.11 input contract."
+    dependsOn := ["IUT-I.definition-3.1-D11"] }
 
 end SourceDefinition31Root
 

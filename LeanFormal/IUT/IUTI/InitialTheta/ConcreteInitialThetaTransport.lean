@@ -335,7 +335,7 @@ namespace LeanFormal.IUT.Audit
 def concreteInitialThetaTransport : Obligation :=
   { id := "IUT-I.concrete-initial-theta-carrier-transport"
     source := "IUT I, Definition 3.1; IUT II finite local carrier"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "The actual Gaussian finite-place input, finite prime-strip label, " ++
         "finite theta packet, and q/Kummer carrier are assembled without " ++

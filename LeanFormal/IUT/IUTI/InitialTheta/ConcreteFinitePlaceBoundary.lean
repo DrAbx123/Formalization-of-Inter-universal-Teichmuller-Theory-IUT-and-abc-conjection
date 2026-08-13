@@ -129,7 +129,7 @@ namespace LeanFormal.IUT.Audit
 def concreteInitialThetaFinitePlaceBoundary : Obligation :=
   { id := "IUT-I.concrete-initial-theta-finite-place-boundary"
     source := "IUT I, Definition 3.1(b); lying-over and stable reduction"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "The checked Q curve and its actual finite place above 5 are lifted " ++
         "to the Gaussian number field by Mathlib's genuine lying-over " ++

@@ -85,7 +85,7 @@ namespace LeanFormal.IUT.Audit
 def adjoinRootLocalEmbedding : Obligation :=
   { id := "IUT-II.adjoin-root-local-embedding"
     source := "IUT II, Kummer-polynomial preliminary layer"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "The formal AdjoinRoot root is mapped by Mathlib's liftAlgHom to a " ++
         "chosen root in the algebraic closure of ℚ_[p]. Root compatibility " ++

@@ -291,7 +291,7 @@ namespace LeanFormal.IUT.Audit
 def concreteInitialThetaLocalArithmetic : Obligation :=
   { id := "IUT-II.concrete-initial-theta-local-arithmetic"
     source := "IUT II finite Tate/Kummer direction"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "The concrete C boundary exposes q powers, Galois-fixed deck classes, " ++
         "exact finite reduction kernels, quotient representatives, coherent " ++

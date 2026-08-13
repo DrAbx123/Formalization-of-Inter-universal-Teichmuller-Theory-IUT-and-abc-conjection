@@ -276,7 +276,7 @@ namespace LeanFormal.IUT.Audit
 def canonicalContinuousKummerMap : Obligation :=
   { id := "IUT-II.canonical-continuous-kummer-map"
     source := "IUT II, Example 1.8(ii)-(iv); Definition 4.9(i), group-cohomological side"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "Every element has an open stabilizer under a discrete continuous action. " ++
         "Its compatible rational roots define a root-choice and open-subgroup-independent " ++

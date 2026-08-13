@@ -331,7 +331,7 @@ namespace LeanFormal.IUT.Audit
 def concreteInitialThetaCStageAudit : Obligation :=
   { id := "IUT-I-II.concrete-initial-theta-c-stage"
     source := "IUT I-II concrete C-stage certificate"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "A named C-stage certificate exposes the actual selected place, its " ++
         "base-change relation, stable/multiplicative reduction, finite label " ++

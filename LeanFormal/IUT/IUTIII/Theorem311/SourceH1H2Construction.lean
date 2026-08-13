@@ -2612,6 +2612,202 @@ def columnFStage (n : Int) (k : Nat) : FStageCapsule I k where
 def columnDStage (n : Int) (k : Nat) : DStageCapsule I k :=
   (I.columnFStage n k).toD
 
+/-! ### Translation poly-isomorphisms on a fixed column stage
+
+  The lattice translation is already a permutation of the source index.  On a
+  fixed finite column the label set is the same `Fin (k + 1)`; the actual
+  component at label `i` is the source link from `(n,i)` to `(n+a,i)`.  Thus
+  this is a genuine construction from the supplied Hodge-theater family, not
+  an extra field asserting that such a map exists.
+-/
+
+def h2HorizontalFPolyIso (n a : Int) (k : Nat) :
+    H2FStagePolyIso I (I.columnFStage n k)
+      (I.columnFStage (n + a) k) where
+  map := Equiv.refl _
+  component := fun i =>
+    I.fLinkAt n (i.1 : Int) (n + a) (i.1 : Int)
+  naturality := by
+    intro i j
+    change FPrimeStripEquiv.trans
+        (I.fLinkAt n (i.1 : Int) n (j.1 : Int))
+        (I.fLinkAt n (j.1 : Int) (n + a) (j.1 : Int)) =
+      FPrimeStripEquiv.trans
+        (I.fLinkAt n (i.1 : Int) (n + a) (i.1 : Int))
+        (I.fLinkAt (n + a) (i.1 : Int) (n + a) (j.1 : Int))
+    rw [I.fLinkAt_trans, I.fLinkAt_trans]
+
+def h2HorizontalDPolyIso (n a : Int) (k : Nat) :
+    H2DStagePolyIso I (I.columnDStage n k)
+      (I.columnDStage (n + a) k) :=
+  (I.h2HorizontalFPolyIso n a k).toD
+
+@[simp] theorem h2HorizontalFPolyIso_map (n a : Int) (k : Nat)
+    (i : Fin (k + 1)) :
+    (I.h2HorizontalFPolyIso n a k).map i = i := rfl
+
+@[simp] theorem h2HorizontalDPolyIso_map (n a : Int) (k : Nat)
+    (i : Fin (k + 1)) :
+    (I.h2HorizontalDPolyIso n a k).map i = i := rfl
+
+@[simp] theorem h2HorizontalFPolyIso_component (n a : Int) (k : Nat)
+    (i : Fin (k + 1)) :
+    (I.h2HorizontalFPolyIso n a k).component i =
+      I.fLinkAt n (i.1 : Int) (n + a) (i.1 : Int) := rfl
+
+@[simp] theorem h2HorizontalDPolyIso_component (n a : Int) (k : Nat)
+    (i : Fin (k + 1)) :
+    (I.h2HorizontalDPolyIso n a k).component i =
+      I.dLinkAt n (i.1 : Int) (n + a) (i.1 : Int) := rfl
+
+theorem h2HorizontalFPolyIso_bijective (n a : Int) (k : Nat) :
+    Function.Bijective (I.h2HorizontalFPolyIso n a k).map := by
+  exact (I.h2HorizontalFPolyIso n a k).map.bijective
+
+theorem h2HorizontalDPolyIso_bijective (n a : Int) (k : Nat) :
+    Function.Bijective (I.h2HorizontalDPolyIso n a k).map := by
+  exact (I.h2HorizontalDPolyIso n a k).map.bijective
+
+theorem h2HorizontalFPolyIso_natural (n a : Int) (k : Nat)
+    (i j : Fin (k + 1)) :
+    FPrimeStripEquiv.trans
+        ((I.columnFStage n k).link i j)
+        ((I.h2HorizontalFPolyIso n a k).component j) =
+      FPrimeStripEquiv.trans
+        ((I.h2HorizontalFPolyIso n a k).component i)
+        ((I.columnFStage (n + a) k).link
+          ((I.h2HorizontalFPolyIso n a k).map i)
+          ((I.h2HorizontalFPolyIso n a k).map j)) := by
+  exact (I.h2HorizontalFPolyIso n a k).naturality i j
+
+theorem h2HorizontalDPolyIso_natural (n a : Int) (k : Nat)
+    (i j : Fin (k + 1)) :
+    DPrimeStripEquiv.trans
+        ((I.columnDStage n k).link i j)
+        ((I.h2HorizontalDPolyIso n a k).component j) =
+      DPrimeStripEquiv.trans
+        ((I.h2HorizontalDPolyIso n a k).component i)
+        ((I.columnDStage (n + a) k).link
+          ((I.h2HorizontalDPolyIso n a k).map i)
+          ((I.h2HorizontalDPolyIso n a k).map j)) := by
+  exact (I.h2HorizontalDPolyIso n a k).naturality i j
+
+theorem h2HorizontalFPolyIso_component_bijective (n a : Int) (k : Nat)
+    (i : Fin (k + 1)) (v : V) :
+    Function.Bijective
+      (((I.h2HorizontalFPolyIso n a k).component i).isoPi v) := by
+  exact ((I.h2HorizontalFPolyIso n a k).component i).isoPi v |>.bijective
+
+theorem h2HorizontalDPolyIso_component_bijective (n a : Int) (k : Nat)
+    (i : Fin (k + 1)) (v : V) :
+    Function.Bijective
+      (((I.h2HorizontalDPolyIso n a k).component i).isoPi v) := by
+  exact ((I.h2HorizontalDPolyIso n a k).component i).isoPi v |>.bijective
+
+theorem h2HorizontalFPolyIso_projection (n a : Int) (k : Nat)
+    (i : Fin (k + 1)) (v : V)
+    (x : ((I.columnFStage n k).strip i).Pi v) :
+    ((I.columnFStage (n + a) k).strip i).proj v
+        (((I.h2HorizontalFPolyIso n a k).component i).isoPi v x) =
+      ((I.h2HorizontalFPolyIso n a k).component i).isoG v
+        (((I.columnFStage n k).strip i).proj v x) := by
+  exact ((I.h2HorizontalFPolyIso n a k).component i).compatProj_apply v x
+
+theorem h2HorizontalDPolyIso_projection (n a : Int) (k : Nat)
+    (i : Fin (k + 1)) (v : V)
+    (x : ((I.columnDStage n k).strip i).Pi v) :
+    ((I.columnDStage (n + a) k).strip i).proj v
+        (((I.h2HorizontalDPolyIso n a k).component i).isoPi v x) =
+      ((I.h2HorizontalDPolyIso n a k).component i).isoG v
+        (((I.columnDStage n k).strip i).proj v x) := by
+  exact ((I.h2HorizontalDPolyIso n a k).component i).compat_apply v x
+
+theorem h2Horizontal_zero_component (n : Int) (k : Nat)
+    (i : Fin (k + 1)) :
+    HEq ((I.h2HorizontalFPolyIso n 0 k).component i)
+      (FPrimeStripEquiv.refl ((I.columnFStage n k).strip i)) := by
+  change HEq (I.fLinkAt n (i.1 : Int) (n + 0) (i.1 : Int))
+    (FPrimeStripEquiv.refl (I.fPrimeStripAt n (i.1 : Int)))
+  rw [add_zero]
+  exact heq_of_eq (I.fLinkAt_refl n (i.1 : Int))
+
+theorem h2HorizontalD_zero_component (n : Int) (k : Nat)
+    (i : Fin (k + 1)) :
+    HEq ((I.h2HorizontalDPolyIso n 0 k).component i)
+      (DPrimeStripEquiv.refl ((I.columnDStage n k).strip i)) := by
+  change HEq (I.dLinkAt n (i.1 : Int) (n + 0) (i.1 : Int))
+    (DPrimeStripEquiv.refl (I.dPrimeStripAt n (i.1 : Int)))
+  rw [add_zero]
+  exact heq_of_eq (I.dLinkAt_refl n (i.1 : Int))
+
+theorem h2Horizontal_add_component (n a b : Int) (k : Nat)
+    (i : Fin (k + 1)) :
+    HEq (FPrimeStripEquiv.trans
+        ((I.h2HorizontalFPolyIso n a k).component i)
+        ((I.h2HorizontalFPolyIso (n + a) b k).component i))
+      ((I.h2HorizontalFPolyIso n (a + b) k).component i) := by
+  change HEq
+    (FPrimeStripEquiv.trans
+      (I.fLinkAt n (i.1 : Int) (n + a) (i.1 : Int))
+      (I.fLinkAt (n + a) (i.1 : Int) (n + a + b) (i.1 : Int)))
+    (I.fLinkAt n (i.1 : Int) (n + (a + b)) (i.1 : Int))
+  have h : n + (a + b) = n + a + b := by omega
+  rw [h]
+  exact heq_of_eq (I.fLinkAt_trans n (i.1 : Int) (n + a) (i.1 : Int)
+    (n + a + b) (i.1 : Int))
+
+theorem h2HorizontalD_add_component (n a b : Int) (k : Nat)
+    (i : Fin (k + 1)) :
+    HEq (DPrimeStripEquiv.trans
+        ((I.h2HorizontalDPolyIso n a k).component i)
+        ((I.h2HorizontalDPolyIso (n + a) b k).component i))
+      ((I.h2HorizontalDPolyIso n (a + b) k).component i) := by
+  change HEq
+    (DPrimeStripEquiv.trans
+      (I.dLinkAt n (i.1 : Int) (n + a) (i.1 : Int))
+      (I.dLinkAt (n + a) (i.1 : Int) (n + a + b) (i.1 : Int)))
+    (I.dLinkAt n (i.1 : Int) (n + (a + b)) (i.1 : Int))
+  have h : n + (a + b) = n + a + b := by omega
+  rw [h]
+  exact heq_of_eq (I.dLinkAt_trans n (i.1 : Int) (n + a) (i.1 : Int)
+    (n + a + b) (i.1 : Int))
+
+theorem h2Horizontal_inverse_component (n a : Int) (k : Nat)
+    (i : Fin (k + 1)) :
+    HEq (FPrimeStripEquiv.trans
+        ((I.h2HorizontalFPolyIso n a k).component i)
+        ((I.h2HorizontalFPolyIso (n + a) (-a) k).component i))
+      ((H2FStagePolyIso.refl (I.columnFStage n k)).component i) := by
+  change HEq
+    (FPrimeStripEquiv.trans
+      (I.fLinkAt n (i.1 : Int) (n + a) (i.1 : Int))
+      (I.fLinkAt (n + a) (i.1 : Int) (n + a + -a) (i.1 : Int)))
+    (FPrimeStripEquiv.refl (I.fPrimeStripAt n (i.1 : Int)))
+  have h : n + a + -a = n := by omega
+  rw [h]
+  have ht := I.fLinkAt_trans n (i.1 : Int) (n + a) (i.1 : Int)
+    n (i.1 : Int)
+  rw [I.fLinkAt_refl] at ht
+  exact heq_of_eq ht
+
+theorem h2HorizontalD_inverse_component (n a : Int) (k : Nat)
+    (i : Fin (k + 1)) :
+    HEq (DPrimeStripEquiv.trans
+        ((I.h2HorizontalDPolyIso n a k).component i)
+        ((I.h2HorizontalDPolyIso (n + a) (-a) k).component i))
+      ((H2DStagePolyIso.refl (I.columnDStage n k)).component i) := by
+  change HEq
+    (DPrimeStripEquiv.trans
+      (I.dLinkAt n (i.1 : Int) (n + a) (i.1 : Int))
+      (I.dLinkAt (n + a) (i.1 : Int) (n + a + -a) (i.1 : Int)))
+    (DPrimeStripEquiv.refl (I.dPrimeStripAt n (i.1 : Int)))
+  have h : n + a + -a = n := by omega
+  rw [h]
+  have ht := I.dLinkAt_trans n (i.1 : Int) (n + a) (i.1 : Int)
+    n (i.1 : Int)
+  rw [I.dLinkAt_refl] at ht
+  exact heq_of_eq ht
+
 @[simp] theorem columnFStage_source (n : Int) (k : Nat)
     (i : Fin (k + 1)) :
     (I.columnFStage n k).source i = I.indexOf n (i.1 : Int) := rfl

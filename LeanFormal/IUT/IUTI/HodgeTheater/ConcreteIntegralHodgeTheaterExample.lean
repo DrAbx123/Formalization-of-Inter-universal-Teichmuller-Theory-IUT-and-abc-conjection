@@ -112,7 +112,7 @@ namespace LeanFormal.IUT.Audit
 def concreteFiniteIntegralHodgeTheater : Obligation :=
   { id := "IUT-I-II.concrete-finite-integral-hodge-carrier"
     source := "IUT I-II, finite prime-strip and local Kummer carrier"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "A finite interval [2,7], an actual integral F-prime-strip, the proved " ++
         "Q(i) arithmetic input, a reflexive three-theater carrier, and the " ++

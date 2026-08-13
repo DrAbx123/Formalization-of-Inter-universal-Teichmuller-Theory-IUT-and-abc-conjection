@@ -86,7 +86,7 @@ namespace LeanFormal.IUT.Audit
 def localDiscreteGaloisKummerAction : Obligation :=
   { id := "IUT-II.local-discrete-galois-kummer-action"
     source := "IUT II, Example 1.8(ii)-(iv); Mathlib Krull topology theorem"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "For the algebraic closure of Q_p with the explicitly declared discrete " ++
         "unit coefficient topology, the stabilizer of every unit is identified " ++

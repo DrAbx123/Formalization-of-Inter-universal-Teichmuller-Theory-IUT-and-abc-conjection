@@ -298,7 +298,7 @@ namespace LeanFormal.IUT.Audit
 def concreteInitialThetaLinks : Obligation :=
   { id := "IUT-I.concrete-initial-theta-links"
     source := "IUT I, Sections 4-5; finite carrier history"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "The concrete carrier has a reflexive three-theater system and an " ++
         "explicit finite history. Prime-strip equality, theta-q equality, " ++

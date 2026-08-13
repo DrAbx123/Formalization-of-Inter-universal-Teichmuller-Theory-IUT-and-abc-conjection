@@ -134,7 +134,7 @@ namespace LeanFormal.IUT.Audit
 def rationalRootSystem : Obligation :=
   { id := "IUT-II.compatible-rational-roots-from-divisibility"
     source := "IUT II Kummer root layer; Absolute Anabelian Topics III, Proposition 3.2(ii)"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "Divisibility of a commutative group is converted into one compatible " ++
         "rational-power homomorphism by extending Z -> B across Z -> Q. " ++

@@ -36,6 +36,9 @@ namespace OriginalInput
 variable {l : PrimeGeFive} {V : Type uv}
 variable (I : OriginalInput.{ua, uv, upi, umon, ui} l V)
 
+local instance primeFactForSourceShared (l : PrimeGeFive) :
+    Fact (Nat.Prime l.value) := l.factPrime
+
 /-! ## Fixed one-column projections -/
 
 abbrev OneColumnIndex (l : PrimeGeFive) := Fin (lStar l.value + 1)
@@ -83,7 +86,7 @@ def oneColumnTopStage : I.DStageCapsule (lStar l.value) :=
   rfl
 
 theorem oneColumnTopStage_source_injective :
-    Function.Injective I.oneColumnTopStage.source := by
+    Function.Injective (oneColumnTopStage I).source := by
   exact I.columnSource_injective 1 (lStar l.value)
 
 theorem oneColumnTopStage_cardinality :
@@ -92,29 +95,31 @@ theorem oneColumnTopStage_cardinality :
 
 theorem oneColumnTopStage_source_distinct
     (i j : OneColumnIndex l)
-    (h : I.oneColumnTopStage.source i = I.oneColumnTopStage.source j) :
+    (h : (oneColumnTopStage I).source i = (oneColumnTopStage I).source j) :
     i = j :=
-  I.oneColumnTopStage_source_injective h
+  oneColumnTopStage_source_injective (I := I) h
 
-theorem oneColumnProcession_toD :
-    (I.oneColumnFProcession).toD = I.oneColumnDProcession := by
+theorem oneColumnProcession_toD (k : Nat) :
+    (I.oneColumnFProcession.stage k).toD =
+      (I.oneColumnDProcession.stage k) := by
   rfl
 
 theorem oneColumnInclusion_injective {k r : Nat} (h : k ≤ r) :
     Function.Injective ((I.oneColumnDProcession).inclusion h).map :=
-  (I.oneColumnDProcession.inclusion h).map_injective
+  ((I.oneColumnDProcession).inclusion h).map_injective
 
 theorem oneColumnInclusion_naturality {k r : Nat} (h : k ≤ r)
     (i j : Fin (k + 1)) :
     DPrimeStripEquiv.trans
-        ((I.oneColumnDProcession).stage k).link i j
-        ((I.oneColumnDProcession).inclusion h).component j =
+        (DStageCapsule.link ((I.oneColumnDProcession).stage k) i j)
+        (((I.oneColumnDProcession).inclusion h).component j) =
       DPrimeStripEquiv.trans
-        ((I.oneColumnDProcession).inclusion h).component i
-        ((I.oneColumnDProcession).stage r).link
-          ((I.oneColumnDProcession).inclusion h).map i
-          ((I.oneColumnDProcession).inclusion h).map j := by
-  exact (I.oneColumnDProcession.inclusion h).naturality i j
+        (((I.oneColumnDProcession).inclusion h).component i)
+        (DStageCapsule.link ((I.oneColumnDProcession).stage r)
+          (((I.oneColumnDProcession).inclusion h).map i)
+          (((I.oneColumnDProcession).inclusion h).map j)) := by
+  exact DStageInclusion.naturality
+    ((I.oneColumnDProcession).inclusion h) i j
 
 /-! ## Source links and spoke transport used by Step (xi) -/
 
@@ -137,9 +142,9 @@ theorem oneColumnLink_trans (m m' m'' : Int) :
 
 def oneColumnSpoke (P : H2SpokePermutation I)
     (i : OneColumnIndex l) : DPrimeStripEquiv
-      ((I.family.theater (P.permutation I.oneColumnTopStage.source i)).primeStrip.toD)
-      ((I.family.theater (I.oneColumnTopStage.source i)).primeStrip.toD) :=
-  P.dSpokeLink (I.oneColumnTopStage.source i)
+      ((I.family.theater (P.permutation ((oneColumnTopStage I).source i))).primeStrip.toD)
+      ((I.family.theater ((oneColumnTopStage I).source i)).primeStrip.toD) :=
+  P.dSpokeLink ((oneColumnTopStage I).source i)
 
 theorem oneColumnSpoke_bijective (P : H2SpokePermutation I)
     (i : OneColumnIndex l) (v : V) :
@@ -148,23 +153,26 @@ theorem oneColumnSpoke_bijective (P : H2SpokePermutation I)
 
 theorem oneColumnSpoke_projection (P : H2SpokePermutation I)
     (i : OneColumnIndex l) (v : V)
-    (x : ((I.family.theater (P.permutation I.oneColumnTopStage.source i)).primeStrip.toD).Pi v) :
-    ((I.family.theater (I.oneColumnTopStage.source i)).primeStrip.toD).proj v
+    (x : ((I.family.theater
+      (P.permutation ((oneColumnTopStage I).source i))).primeStrip.toD).Pi v) :
+      ((I.family.theater ((oneColumnTopStage I).source i)).primeStrip.toD).proj v
         ((I.oneColumnSpoke P i).isoPi v x) =
       (I.oneColumnSpoke P i).isoG v
-        (((I.family.theater (P.permutation I.oneColumnTopStage.source i)).primeStrip.toD).proj v x) := by
+        (((I.family.theater
+          (P.permutation ((oneColumnTopStage I).source i))).primeStrip.toD).proj v x) := by
   exact (I.oneColumnSpoke P i).compat_apply v x
 
 theorem oneColumnSpoke_naturality (P : H2SpokePermutation I)
     (i j : OneColumnIndex l) :
     DPrimeStripEquiv.trans
         ((I.family.link
-          (P.permutation I.oneColumnTopStage.source i)
-          (P.permutation I.oneColumnTopStage.source j)).primeStripEquiv.toD)
+          (P.permutation ((oneColumnTopStage I).source i))
+          (P.permutation ((oneColumnTopStage I).source j))).primeStripEquiv.toD)
         (I.oneColumnSpoke P j) =
       DPrimeStripEquiv.trans (I.oneColumnSpoke P i)
-        ((I.family.link I.oneColumnTopStage.source i
-          I.oneColumnTopStage.source j).primeStripEquiv.toD) := by
+        ((I.family.link
+          ((oneColumnTopStage I).source i)
+          ((oneColumnTopStage I).source j)).primeStripEquiv.toD) := by
   exact P.dSpoke_naturality _ _
 
 /-! ## q and label-scale transport on the fixed column -/
@@ -201,15 +209,18 @@ theorem oneColumnScale_neg_invariant (m : Int)
 
 theorem oneColumnQ_spoke (P : H2SpokePermutation I)
     (i : OneColumnIndex l) :
-    (I.family.theater (P.permutation I.oneColumnTopStage.source i)).thetaPacket.q =
-      (I.family.theater (I.oneColumnTopStage.source i)).thetaPacket.q :=
+    (I.family.theater
+      (P.permutation ((oneColumnTopStage I).source i))).thetaPacket.q =
+      (I.family.theater ((oneColumnTopStage I).source i)).thetaPacket.q :=
   P.spoke_q _
 
 theorem oneColumnScale_spoke (P : H2SpokePermutation I)
     (i : OneColumnIndex l) (j : SignedLabel l.value) :
-    (I.family.theater (P.permutation I.oneColumnTopStage.source i)).thetaPacket.scale j =
-      (I.family.theater (I.oneColumnTopStage.source i)).thetaPacket.scale j :=
-  P.spoke_scale _ j
+    (I.family.theater
+      (P.permutation ((oneColumnTopStage I).source i))).thetaPacket.scale j =
+      (I.family.theater ((oneColumnTopStage I).source i)).thetaPacket.scale j := by
+  letI : Fact (Nat.Prime l.value) := l.factPrime
+  exact P.spoke_scale _ j
 
 /-! ## Finite label cardinalities for later normalization -/
 
@@ -230,22 +241,23 @@ theorem nonzeroFiniteLabel_cardinality (l : PrimeGeFive) :
 theorem cuspLabel_cardinality (l : PrimeGeFive) :
     Nat.card (CuspLabel l) = lStar l.value := by
   letI : Fact (Nat.Prime l.value) := l.factPrime
-  exact card_LabCusp l.value l.ge_five
+  simpa [CuspLabel] using card_LabCusp l.value l.ge_five
 
 /-! This proposition is intentionally only a shared-input marker. -/
 
 theorem oneColumn_shared_boundary (P : H2SpokePermutation I) :
-    (I.oneColumnFProcession).toD = I.oneColumnDProcession ∧
-      Function.Injective I.oneColumnTopStage.source ∧
+    (∀ k, (I.oneColumnFProcession.stage k).toD =
+      (I.oneColumnDProcession.stage k)) ∧
+      Function.Injective (oneColumnTopStage I).source ∧
       Fintype.card (OneColumnIndex l) = lStar l.value + 1 ∧
       (∀ v, Function.Bijective ((I.oneColumnSpoke P (⟨0, by
-        have hstar := two_mul_lStar_add_one l.value l.odd
-        have hl := l.ge_five
         omega⟩ : OneColumnIndex l)).isoPi v)) := by
-  refine ⟨I.oneColumnProcession_toD, I.oneColumnTopStage_source_injective, ?_, ?_⟩
-  · exact I.oneColumnTopStage_cardinality
+  refine ⟨?_, oneColumnTopStage_source_injective (I := I), ?_, ?_⟩
+  · intro k
+    exact oneColumnProcession_toD (I := I) k
+  · simp [OneColumnIndex]
   · intro v
-    exact I.oneColumnSpoke_bijective P _ v
+    exact oneColumnSpoke_bijective (I := I) P _ v
 
 end OriginalInput
 end Theorem311Source

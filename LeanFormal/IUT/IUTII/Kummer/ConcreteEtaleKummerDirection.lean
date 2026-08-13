@@ -43,7 +43,7 @@ namespace LeanFormal.IUT.Audit
 def concreteIntegerKummerDirection : Obligation :=
   { id := "IUT-II.concrete-integer-kummer-direction"
     source := "IUT II, Kummer system over the local q-parameter"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "The integer exponent slice of the actual compatible rational-root " ++
         "system is defined and its zsmul law is proved. This connects the " ++

@@ -117,7 +117,7 @@ namespace LeanFormal.IUT.Audit
 def naturalRootSystem : Obligation :=
   { id := "IUT-II.natural-compatible-root-system"
     source := "IUT II, Kummer root layer; IUT III, Proposition 3.5"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "The natural-power compatible root-system laws, algebraically closed " ++
         "n-th-root existence, factorial-chain telescope, and the resulting " ++

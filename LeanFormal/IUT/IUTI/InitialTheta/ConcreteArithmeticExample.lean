@@ -88,7 +88,7 @@ namespace LeanFormal.IUT.Audit
 def concreteInitialThetaArithmeticExample : Obligation :=
   { id := "IUT-I.initial-theta-concrete-gaussian"
     source := "IUT I, Definition 3.1 (one explicit arithmetic input)"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "The Gaussian quadratic field Q(i), identity field tower, square-root " ++
         "condition, finite/Galois instances, and a nonsingular Weierstrass " ++

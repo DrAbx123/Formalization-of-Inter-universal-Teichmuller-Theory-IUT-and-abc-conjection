@@ -307,7 +307,7 @@ namespace LeanFormal.IUT.Audit
 def concreteCConstructedBoundaryAudit : Obligation :=
   { id := "IUT-I-II.concrete-c-constructed-boundary"
     source := "IUT I-II concrete C-layer boundary"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "This is the exact proved boundary record: actual arithmetic/finite " ++
         "place, stable and multiplicative reduction, finite theta carrier, " ++

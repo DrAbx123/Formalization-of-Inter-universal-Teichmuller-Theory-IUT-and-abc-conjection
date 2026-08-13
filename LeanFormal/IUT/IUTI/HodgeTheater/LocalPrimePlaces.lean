@@ -102,7 +102,7 @@ namespace LeanFormal.IUT.Audit
 def localPrimePlaceCarrier : Obligation :=
   { id := "IUT-I-II.local-prime-place-carrier"
     source := "IUT I, Definition 5.2; IUT II, local prime-strip input"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "Rational prime labels, local p-adic fields, absolute Galois groups, " ++
         "their action on local units, and a nontrivial local q-parameter are " ++

@@ -150,7 +150,7 @@ namespace LeanFormal.IUT.Audit
 def kummerClass : Obligation :=
   { id := "IUT-II.kummer-class-cocycle"
     source := "IUT II, Kummer-theoretic Galois evaluation; IUT III, Proposition 3.5"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "A compatible unit root system produces a cyclotomic tower; the " ++
         "unit class identity, crossed multiplication law, and change-of-root " ++

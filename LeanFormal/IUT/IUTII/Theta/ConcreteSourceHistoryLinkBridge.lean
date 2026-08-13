@@ -606,7 +606,7 @@ namespace LeanFormal.IUT.Audit
 def concreteSourceHistoryLinkBridge : Obligation :=
   { id := "IUT-I-II.concrete-source-history-link-volume-bridge"
     source := "IUT I-II, Hodge theaters, histories, theta links; IUT III Step XI arithmetic kernel"
-    status := VerificationStatus.proved
+    status := VerificationStatus.testCarrier
     note :=
       "The concrete C-stage theater is placed in a dependent finite history. " ++
         "Its endpoint and composite link transport q, every theta scale, the " ++

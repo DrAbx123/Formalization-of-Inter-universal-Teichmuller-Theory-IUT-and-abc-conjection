@@ -64,7 +64,7 @@ namespace LeanFormal.IUT.Audit
 def finiteEtaleTateDirection : Obligation :=
   { id := "IUT-II.etale-finite-tate-direction"
     source := "IUT II, finite etale theta direction"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "The exact cyclic Z/lZ quotient of the integer Tate direction is " ++
         "constructed with its surjectivity, kernel, generator, and generator " ++

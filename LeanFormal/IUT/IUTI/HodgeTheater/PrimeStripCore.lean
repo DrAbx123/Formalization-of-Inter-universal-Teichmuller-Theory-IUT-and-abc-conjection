@@ -253,7 +253,7 @@ namespace LeanFormal.IUT.Audit
 def primeStripCore : Obligation :=
   { id := "IUT-I-II.prime-strip-core"
     source := "IUT I, Definition 5.2; IUT II, Sections 3-4"
-    status := VerificationStatus.proved
+    status := VerificationStatus.provedKernel
     note :=
       "D/F prime-strip carriers, geometric kernel, mono-analytic forgetful map, " ++
         "group action laws, and global degree additivity are concrete and proved " ++
