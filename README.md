@@ -33,3 +33,5 @@ lake env lean verification/abc_with_sorry.lean
 powershell -File tools/check_axiom_boundary_logged.ps1
 powershell -File tools/check_no_custom_axioms.ps1
 ```
+
+# If it've benefited your project, I'll more than excited.
