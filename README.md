@@ -35,3 +35,4 @@ powershell -File tools/check_no_custom_axioms.ps1
 ```
 
 # If it've benefited your project, I'll more than excited.
+# It's paused cause the ability of the AI is far more than enough to achieve the goal
