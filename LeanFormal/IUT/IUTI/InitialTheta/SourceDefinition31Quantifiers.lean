@@ -4,7 +4,8 @@ import LeanFormal.IUT.IUTI.InitialTheta.ArithmeticData
 import LeanFormal.IUT.Foundations.NumberField.Places
 import LeanFormal.IUT.Foundations.Geometry.LocalReduction
 import LeanFormal.IUT.Foundations.Geometry.TatePointQuotientBoundary
-import LeanFormal.IUT.Foundations.Geometry.EllipticTorsion
+import LeanFormal.IUT.IUTI.InitialTheta.SourceTorsionTransport
+import LeanFormal.IUT.IUTI.InitialTheta.SourcePlaceSelection
 import LeanFormal.IUT.IUTI.InitialTheta.SourceTorsionRankOneQuotient
 import Iut.Foundations.Orbicurve
 import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
@@ -116,6 +117,27 @@ end
 
 end Iut
 
+/-! The exact-sequence carriers are parameters of the structure, not fields.
+    These projections expose those certified parameters for the source
+    records' diagram declarations. -/
+namespace Iut.ProfiniteFundamentalExactSequence
+
+universe u
+
+abbrev geometric
+    {Ggeom Garith Galois : ProfiniteGrp.{u}}
+    (_sequence : ProfiniteFundamentalExactSequence Ggeom Garith Galois) :
+    ProfiniteGrp.{u} :=
+  Ggeom
+
+abbrev arithmetic
+    {Ggeom Garith Galois : ProfiniteGrp.{u}}
+    (_sequence : ProfiniteFundamentalExactSequence Ggeom Garith Galois) :
+    ProfiniteGrp.{u} :=
+  Garith
+
+end Iut.ProfiniteFundamentalExactSequence
+
 /-!
   # IUT I, Definition 3.1: the initial Theta-data quantifier
 
@@ -145,6 +167,7 @@ namespace InitialThetaSource
 open CategoryTheory
 open CategoryTheory.Bicategory
 open AlgebraicGeometry
+open Iut
 open scoped Pseudofunctor.StrongTrans
 open scoped SpecOfNotation
 
@@ -155,6 +178,113 @@ abbrev SourceFbar (A : InitialThetaArithmeticData l) : Type u :=
 
 abbrev SourceAbsoluteGalois (A : InitialThetaArithmeticData l) :=
   SourceFbar A ≃ₐ[A.F] SourceFbar A
+
+/-! The first entry of Definition 3.1 is the algebraic-closure extension
+    `Fbar/F`, not an element of the algebraic closure.  This record keeps the
+    extension carrier and all of its field-theoretic certificates together.
+    The comparison is an actual algebra equivalence, so an isomorphic chosen
+    algebraic closure may be transported without weakening the source datum. -/
+structure SourceFbarExtension
+    (A : InitialThetaArithmeticData l) where
+  carrier : Type u
+  [fieldCarrier : Field carrier]
+  [algebraCarrier : Algebra A.F carrier]
+  [algebraicCarrier : Algebra.IsAlgebraic A.F carrier]
+  [closedCarrier : IsAlgClosed carrier]
+  comparison : carrier ≃ₐ[A.F] AlgebraicClosure A.F
+
+attribute [instance] SourceFbarExtension.fieldCarrier
+  SourceFbarExtension.algebraCarrier
+  SourceFbarExtension.algebraicCarrier
+  SourceFbarExtension.closedCarrier
+
+namespace SourceFbarExtension
+
+variable {l : PrimeGeFive}
+variable {A : InitialThetaArithmeticData l}
+
+noncomputable def comparison_is_algebraEquiv
+    (E : SourceFbarExtension A) :
+    E.carrier ≃ₐ[A.F] AlgebraicClosure A.F :=
+  E.comparison
+
+theorem carrier_is_algClosed
+    (E : SourceFbarExtension A) : IsAlgClosed E.carrier :=
+  inferInstance
+
+theorem carrier_is_algebraic
+    (E : SourceFbarExtension A) (x : E.carrier) :
+    IsAlgebraic A.F x :=
+  Algebra.IsAlgebraic.isAlgebraic x
+
+theorem comparison_injective
+    (E : SourceFbarExtension A) : Function.Injective E.comparison :=
+  E.comparison.injective
+
+theorem comparison_surjective
+    (E : SourceFbarExtension A) : Function.Surjective E.comparison :=
+  E.comparison.surjective
+
+theorem comparison_map_zero
+    (E : SourceFbarExtension A) : E.comparison 0 = 0 :=
+  map_zero E.comparison
+
+theorem comparison_map_one
+    (E : SourceFbarExtension A) : E.comparison 1 = 1 :=
+  map_one E.comparison
+
+theorem comparison_map_add
+    (E : SourceFbarExtension A) (x y : E.carrier) :
+    E.comparison (x + y) = E.comparison x + E.comparison y :=
+  map_add E.comparison x y
+
+theorem comparison_map_mul
+    (E : SourceFbarExtension A) (x y : E.carrier) :
+    E.comparison (x * y) = E.comparison x * E.comparison y :=
+  map_mul E.comparison x y
+
+theorem comparison_map_smul
+    (E : SourceFbarExtension A) (r : A.F) (x : E.carrier) :
+    E.comparison (r • x) = r • E.comparison x :=
+by
+  simp only [Algebra.smul_def, map_mul, E.comparison.commutes]
+
+/-! The canonical extension is the actual Mathlib algebraic closure.  It is
+    the only construction in this file that needs no source hypothesis. -/
+noncomputable def canonical (A : InitialThetaArithmeticData l) :
+    SourceFbarExtension A where
+  carrier := AlgebraicClosure A.F
+  comparison := (AlgEquiv.refl :
+    AlgebraicClosure A.F ≃ₐ[A.F] AlgebraicClosure A.F)
+
+@[simp] theorem canonical_carrier
+    (A : InitialThetaArithmeticData l) :
+    (canonical A).carrier = AlgebraicClosure A.F :=
+  rfl
+
+@[simp] theorem canonical_comparison
+    (A : InitialThetaArithmeticData l) :
+    (canonical A).comparison = (AlgEquiv.refl :
+      AlgebraicClosure A.F ≃ₐ[A.F] AlgebraicClosure A.F) :=
+  rfl
+
+theorem canonical_is_algClosed
+    (A : InitialThetaArithmeticData l) :
+    IsAlgClosed (canonical A).carrier :=
+  inferInstance
+
+theorem canonical_is_algebraic
+    (A : InitialThetaArithmeticData l) (x : (canonical A).carrier) :
+    IsAlgebraic A.F x :=
+  Algebra.IsAlgebraic.isAlgebraic x
+
+theorem comparison_respects_base
+    (E : SourceFbarExtension A) (r : A.F) :
+    E.comparison (algebraMap A.F E.carrier r) =
+      algebraMap A.F (AlgebraicClosure A.F) r := by
+  exact E.comparison.commutes r
+
+end SourceFbarExtension
 
 def sourceTypeOneOne : Iut.OrbicurveSignature where
   genus := 1
@@ -169,7 +299,8 @@ def sourceTypeOneOnePlusMinus : Iut.OrbicurveSignature where
   stackyOrders_ge_two := by
     intro m hm
     simp only [List.mem_singleton] at hm
-    simpa [hm]
+    rcases hm with rfl
+    decide
 
 def sourceTypeOneLTorsion (l : PrimeGeFive) : Iut.OrbicurveSignature where
   genus := 1
@@ -187,10 +318,11 @@ def sourceTypeOneLTorsionPlusMinus (l : PrimeGeFive) : Iut.OrbicurveSignature wh
   punctures := 0
   stackyOrders_ge_two := by
     intro m hm
-    simp only [List.mem_cons, List.mem_singleton] at hm
+    simp only [List.mem_cons, List.not_mem_nil, or_false] at hm
     rcases hm with rfl | rfl
     · decide
-    · exact l.ge_five.trans' (by decide)
+    · have hfive := l.ge_five
+      omega
 
 theorem sourceTypeOneOne_hyperbolic : sourceTypeOneOne.IsHyperbolic := by
   norm_num [sourceTypeOneOne, Iut.OrbicurveSignature.IsHyperbolic,
@@ -203,13 +335,35 @@ theorem sourceTypeOneOnePlusMinus_hyperbolic :
 
 theorem sourceTypeOneLTorsion_hyperbolic (l : PrimeGeFive) :
     (sourceTypeOneLTorsion l).IsHyperbolic := by
+  have hfive := l.ge_five
+  have htwoNat : 2 < l.value := by omega
+  have hpos : (0 : ℚ) < l.value := by
+    exact_mod_cast l.prime.pos
+  have htwo : (2 : ℚ) < (l.value : ℚ) := by
+    exact_mod_cast htwoNat
+  have hinv_two : (l.value : ℚ)⁻¹ < (2 : ℚ)⁻¹ := by
+    exact (inv_lt_inv₀ hpos (by norm_num : (0 : ℚ) < 2)).2 htwo
+  have hinv : (l.value : ℚ)⁻¹ < 1 :=
+    hinv_two.trans (two_inv_lt_one (α := ℚ))
   norm_num [sourceTypeOneLTorsion, Iut.OrbicurveSignature.IsHyperbolic,
     Iut.OrbicurveSignature.eulerCharacteristic]
+  exact hinv
 
 theorem sourceTypeOneLTorsionPlusMinus_hyperbolic (l : PrimeGeFive) :
     (sourceTypeOneLTorsionPlusMinus l).IsHyperbolic := by
+  have hfive := l.ge_five
+  have htwoNat : 2 < l.value := by omega
+  have hpos : (0 : ℚ) < l.value := by
+    exact_mod_cast l.prime.pos
+  have htwo : (2 : ℚ) < (l.value : ℚ) := by
+    exact_mod_cast htwoNat
+  have hinv_two : (l.value : ℚ)⁻¹ < (2 : ℚ)⁻¹ := by
+    exact (inv_lt_inv₀ hpos (by norm_num : (0 : ℚ) < 2)).2 htwo
+  have hinv : (l.value : ℚ)⁻¹ < 1 :=
+    hinv_two.trans (two_inv_lt_one (α := ℚ))
   norm_num [sourceTypeOneLTorsionPlusMinus, Iut.OrbicurveSignature.IsHyperbolic,
     Iut.OrbicurveSignature.eulerCharacteristic]
+  linarith
 
 structure SourceOncePuncturedGeometry
     {F : Type u} [Field F]
@@ -242,7 +396,7 @@ theorem signature_is_hyperbolic
   exact sourceTypeOneOne_hyperbolic
 
 theorem curve_jInvariant_spec
-    (G : SourceOncePuncturedGeometry curve X) :
+    (_G : SourceOncePuncturedGeometry curve X) :
     curve.jInvariant = curve.curve.j :=
   curve.jInvariant_spec
 
@@ -361,7 +515,7 @@ structure SourceOrbicurveSquare
 structure SourceOrbicurveGroupData
     {F : Type u} [Field F]
     (X : Iut.HyperbolicOrbicurve F)
-    (G : Iut.AbsoluteGaloisProfinite F) where
+    (G : ProfiniteGrp.{u}) where
   groups : Iut.OrbicurveFundamentalGroupData X G
 
 /- A finite-etale cover whose source and target orbicurves are fixed in the
@@ -381,7 +535,7 @@ namespace SourceOrbicurveFiniteEtaleCover
 variable {F : Type u} [Field F]
 variable {source target : Iut.HyperbolicOrbicurve F}
 
-theorem map_is_finite_etale
+def map_is_finite_etale
     (cover : SourceOrbicurveFiniteEtaleCover source target) :
     Iut.EtaleStackFiniteEtaleMorphism cover.map :=
   cover.finiteEtale
@@ -392,7 +546,7 @@ namespace SourceOrbicurveGroupData
 
 variable {F : Type u} [Field F]
 variable {X : Iut.HyperbolicOrbicurve F}
-variable {G : Iut.AbsoluteGaloisProfinite F}
+variable {G : ProfiniteGrp.{u}}
 
 abbrev sequence (D : SourceOrbicurveGroupData X G) :=
   D.groups.exactSequence
@@ -464,32 +618,20 @@ structure SourceSignQuotientData
         (V_mod_bijection.symm v)
   epsilon : Iut.OrbicurveBoundaryCusp cK
 
-theorem sourceFbar_spec (S : SourceSignQuotientData A) :
+theorem sourceFbar_spec (_S : SourceSignQuotientData A) :
     IsAlgClosed (SourceFbar A) := inferInstance
 
-theorem sourceFbar_elements_algebraic (S : SourceSignQuotientData A)
+theorem sourceFbar_elements_algebraic (_S : SourceSignQuotientData A)
     (x : SourceFbar A) : IsAlgebraic A.F x :=
   Algebra.IsAlgebraic.isAlgebraic x
 
-theorem sourceAbsoluteGalois_spec (S : SourceSignQuotientData A) :
+theorem sourceAbsoluteGalois_spec (_S : SourceSignQuotientData A) :
     SourceAbsoluteGalois A =
-      AlgebraicClosure A.F ≃ₐ[A.F] AlgebraicClosure A.F := rfl
+      (AlgebraicClosure A.F ≃ₐ[A.F] AlgebraicClosure A.F) := rfl
 
 namespace SourceSignQuotientData
 
 variable {l : PrimeGeFive} {A : InitialThetaArithmeticData l}
-
-abbrev xF (S : SourceSignQuotientData A) : Iut.HyperbolicOrbicurve A.F :=
-  S.xF
-
-abbrev cF (S : SourceSignQuotientData A) : Iut.HyperbolicOrbicurve A.F :=
-  S.cF
-
-abbrev xK (S : SourceSignQuotientData A) : Iut.HyperbolicOrbicurve A.K :=
-  S.xK
-
-abbrev cK (S : SourceSignQuotientData A) : Iut.HyperbolicOrbicurve A.K :=
-  S.cK
 
 theorem xF_once_punctured (S : SourceSignQuotientData A) :
     S.xF.signature = Iut.OrbicurveSignature.oncePuncturedElliptic := by
@@ -497,10 +639,12 @@ theorem xF_once_punctured (S : SourceSignQuotientData A) :
 
 theorem xK_signature (S : SourceSignQuotientData A) :
     S.xK.signature = S.xF.signature := by
+  rw [S.xK_eq_extension]
   exact SourceOrbicurveScalarExtension.signature_preserved S.xKExtension
 
 theorem cK_signature (S : SourceSignQuotientData A) :
     S.cK.signature = S.cF.signature := by
+  rw [S.cK_eq_extension]
   exact SourceOrbicurveScalarExtension.signature_preserved S.cKExtension
 
 theorem selected_places_spec (S : SourceSignQuotientData A) :
@@ -525,16 +669,17 @@ theorem V_mod_good_eq_compl_bad (S : SourceSignQuotientData A) :
 
 theorem V_mod_bad_or_good_cover (S : SourceSignQuotientData A) :
     NumberFieldPlace.finite '' S.V_mod_bad ∪ V_mod_good S = V_mod A := by
-  ext p
-  simp [V_mod_good]
+  rw [V_mod_good_eq_compl_bad S, V_mod_eq_univ]
+  exact Set.union_compl_self _
 
 theorem V_mod_bad_or_good_disjoint (S : SourceSignQuotientData A) :
     Disjoint (NumberFieldPlace.finite '' S.V_mod_bad) (V_mod_good S) := by
+  rw [V_mod_good_eq_compl_bad S]
   rw [Set.disjoint_left]
   intro p hpbad hpgood
-  exact (by simpa [V_mod_good, V_mod] using hpgood) hpbad
+  exact hpgood hpbad
 
-theorem bad_moduli_places_subset (S : SourceSignQuotientData A) :
+theorem bad_moduli_places_subset (_S : SourceSignQuotientData A) :
     ∀ p : NumberField.FinitePlace A.Fmod,
       NumberFieldPlace.finite p ∈ V_mod A := by
   intro p
@@ -555,14 +700,14 @@ theorem bad_residue_characteristic_odd (S : SourceSignQuotientData A)
 def V_F_non (S : SourceSignQuotientData A) :
     Set (NumberField.FinitePlace A.F) :=
   {p | ∃ (w : NumberField.FinitePlace A.K)
-      (hw : NumberFieldPlace.finite w ∈ S.V),
+      (_hw : NumberFieldPlace.finite w ∈ S.V),
       NumberFieldFinitePlace.comap (k := A.F) w = p}
 
 theorem V_F_non_spec (S : SourceSignQuotientData A)
     (p : NumberField.FinitePlace A.F) :
     p ∈ V_F_non S ↔
       ∃ (w : NumberField.FinitePlace A.K)
-        (hw : NumberFieldPlace.finite w ∈ S.V),
+        (_hw : NumberFieldPlace.finite w ∈ S.V),
         NumberFieldFinitePlace.comap (k := A.F) w = p :=
   Iff.rfl
 
@@ -590,11 +735,20 @@ def V_F_good (S : SourceSignQuotientData A) :
 
 theorem V_F_bad_or_good_cover (S : SourceSignQuotientData A) :
     V_F_bad S ∪ V_F_good S = Set.univ := by
-  ext v
-  by_cases h : NumberFieldPlace.comap (k := A.Fmod) v ∈
-      NumberFieldPlace.finite '' S.V_mod_bad
-  · simp [V_F_bad, V_F_good, V_mod_good, V_mod, h]
-  · simp [V_F_bad, V_F_good, V_mod_good, V_mod, h]
+  apply Set.Subset.antisymm
+  · intro v _
+    trivial
+  · intro v _
+    by_cases h : NumberFieldPlace.comap (k := A.Fmod) v ∈
+        NumberFieldPlace.finite '' S.V_mod_bad
+    · left
+      change NumberFieldPlace.comap (k := A.Fmod) v ∈
+        NumberFieldPlace.finite '' S.V_mod_bad
+      exact h
+    · right
+      change NumberFieldPlace.comap (k := A.Fmod) v ∈ V_mod_good S
+      rw [V_mod_good_eq_compl_bad S]
+      exact h
 
 theorem V_F_bad_or_good_disjoint (S : SourceSignQuotientData A) :
     Disjoint (V_F_bad S) (V_F_good S) := by
@@ -637,24 +791,37 @@ def V_good (S : SourceSignQuotientData A) :
 theorem V_non_or_arc_cover (S : SourceSignQuotientData A) :
     V_non S ∪ V_arc S = Set.univ := by
   ext v
-  cases v.1 with
-  | finite w => simp [V_non, V_arc]
-  | infinite w => simp [V_non, V_arc]
+  cases v with
+  | mk place hplace =>
+      cases place with
+      | finite w => simp [V_non, V_arc]
+      | infinite w => simp [V_non, V_arc]
 
 theorem V_non_or_arc_disjoint (S : SourceSignQuotientData A) :
     Disjoint (V_non S) (V_arc S) := by
   rw [Set.disjoint_left]
   intro v hvnon hvarc
-  cases v.1 with
+  rcases v with ⟨place, hplace⟩
+  change NumberFieldPlace.IsFinite place at hvnon
+  change NumberFieldPlace.IsInfinite place at hvarc
+  cases place with
   | finite w => exact NumberFieldPlace.not_isInfinite_finite w hvarc
   | infinite w => exact NumberFieldPlace.not_isFinite_infinite w hvnon
 
 theorem V_bad_or_good_cover (S : SourceSignQuotientData A) :
     V_bad S ∪ V_good S = Set.univ := by
-  ext v
-  by_cases h : V_mod_place S v ∈ NumberFieldPlace.finite '' S.V_mod_bad
-  · simp [V_bad, V_good, h]
-  · simp [V_bad, V_good, h]
+  apply Set.Subset.antisymm
+  · intro v _
+    trivial
+  · intro v _
+    by_cases h : V_mod_place S v ∈
+        NumberFieldPlace.finite '' S.V_mod_bad
+    · left
+      change V_mod_place S v ∈ NumberFieldPlace.finite '' S.V_mod_bad
+      exact h
+    · right
+      change V_mod_place S v ∉ NumberFieldPlace.finite '' S.V_mod_bad
+      exact h
 
 theorem V_bad_or_good_disjoint (S : SourceSignQuotientData A) :
     Disjoint (V_bad S) (V_good S) := by
@@ -662,7 +829,7 @@ theorem V_bad_or_good_disjoint (S : SourceSignQuotientData A) :
   intro v hvbad hvgood
   exact hvgood hvbad
 
-theorem selected_places_equiv (S : SourceSignQuotientData A) :
+noncomputable def selected_places_equiv (S : SourceSignQuotientData A) :
     NumberFieldPlace A.Fmod ≃ {v : NumberFieldPlace A.K // v ∈ S.V} :=
   S.V_mod_bijection
 
@@ -671,7 +838,7 @@ theorem selected_places_comap (S : SourceSignQuotientData A)
     NumberFieldPlace.comap (k := A.Fmod) v.1 = S.V_mod_bijection.symm v :=
   S.V_place_comap v
 
-theorem epsilon_spec (S : SourceSignQuotientData A) :
+noncomputable def epsilon_spec (S : SourceSignQuotientData A) :
     Iut.OrbicurveBoundaryCusp S.cK := S.epsilon
 
 end SourceSignQuotientData
@@ -698,7 +865,7 @@ namespace SourceClauseA
 variable {l : PrimeGeFive} {A : InitialThetaArithmeticData l}
 variable {S : SourceSignQuotientData A}
 
-theorem sqrtNegOne_spec (C : SourceClauseA A S) : HasSqrtNegOne A.F :=
+theorem sqrtNegOne_spec (_C : SourceClauseA A S) : HasSqrtNegOne A.F :=
   A.tower.sqrtNegOne
 theorem stable_spec (C : SourceClauseA A S)
     (p : NumberField.FinitePlace A.F) :
@@ -707,7 +874,7 @@ theorem stable_spec (C : SourceClauseA A S)
 theorem field_moduli_spec (C : SourceClauseA A S) :
     ∃ jModuli : A.Fmod, algebraMap A.Fmod A.F jModuli = A.curve.jInvariant :=
   ⟨C.field_of_moduli.jModuli, C.field_of_moduli.algebraMap_jModuli⟩
-theorem degree_spec (C : SourceClauseA A S) :
+theorem degree_spec (_C : SourceClauseA A S) :
     Nat.Coprime (Module.finrank A.Fmod A.F) l.value :=
   A.tower.degreePrimeToL
 
@@ -724,22 +891,29 @@ theorem maximal_solvable_group (C : SourceClauseA A S) :
       C.maximal_solvable_extension) :=
   C.maximal_solvable_property.2.2
 
-theorem fmod_galois_spec (C : SourceClauseA A S) : IsGalois A.Fmod A.F :=
+theorem fmod_galois_spec (_C : SourceClauseA A S) : IsGalois A.Fmod A.F :=
   inferInstance
 
-theorem f_galois_k_spec (C : SourceClauseA A S) : IsGalois A.F A.K :=
+theorem f_galois_k_spec (_C : SourceClauseA A S) : IsGalois A.F A.K :=
   inferInstance
 
-theorem fbar_algebraic_spec (C : SourceClauseA A S)
+theorem fbar_algebraic_spec (_C : SourceClauseA A S)
     (x : SourceFbar A) : IsAlgebraic A.F x :=
   Algebra.IsAlgebraic.isAlgebraic x
 
-theorem fbar_algClosed_spec (C : SourceClauseA A S) :
+theorem fbar_algClosed_spec (_C : SourceClauseA A S) :
     IsAlgClosed (SourceFbar A) := inferInstance
 
 end SourceClauseA
 
 /-! ## Clause (b): bad places and actual Tate comparisons -/
+
+structure SourceTateComparisonWitness
+    (A : InitialThetaArithmeticData l)
+    (p : NumberField.FinitePlace A.F) where
+  parameter : NumberFieldFinitePlace.FinitePlaceQCandidate p
+  comparison : TateCurveComparison A.curve p parameter
+  order_coprime : Nat.Coprime parameter.order l.value
 
 structure SourceClauseB (A : InitialThetaArithmeticData l)
     (S : SourceSignQuotientData A)
@@ -750,22 +924,20 @@ structure SourceClauseB (A : InitialThetaArithmeticData l)
       A.curve.HasMultiplicativeReductionAt p
   q_comparison :
     ∀ (p : NumberField.FinitePlace A.F)
-      (hp : NumberFieldFinitePlace.comap (k := A.Fmod) p ∈ S.V_mod_bad),
-      ∃ parameter : NumberFieldFinitePlace.FinitePlaceQCandidate p,
-        TateCurveComparison A.curve p parameter ∧
-          Nat.Coprime parameter.order l.value
+      (_hp : NumberFieldFinitePlace.comap (k := A.Fmod) p ∈ S.V_mod_bad),
+      Nonempty (SourceTateComparisonWitness A p)
   residue_characteristic_prime_to_l :
     ∀ (p : NumberField.FinitePlace A.F)
-      (hp : NumberFieldFinitePlace.comap (k := A.Fmod) p ∈ S.V_mod_bad),
+      (_hp : NumberFieldFinitePlace.comap (k := A.Fmod) p ∈ S.V_mod_bad),
       Nat.Coprime l.value
         (NumberFieldFinitePlace.residueCharacteristic
           (NumberFieldFinitePlace.comap (k := A.Fmod) p))
 
 theorem bad_moduli_subset_moduli
-    (B : SourceClauseB A S C)
+    (_B : SourceClauseB A S C)
     (p : NumberField.FinitePlace A.Fmod)
-    (hp : p ∈ S.V_mod_bad) :
-    NumberFieldPlace.finite p ∈ V_mod A := by
+    (_hp : p ∈ S.V_mod_bad) :
+    NumberFieldPlace.finite p ∈ SourceSignQuotientData.V_mod A := by
   exact SourceSignQuotientData.bad_moduli_places_subset S p
 
 namespace SourceClauseB
@@ -773,7 +945,7 @@ namespace SourceClauseB
 variable {l : PrimeGeFive} {A : InitialThetaArithmeticData l}
 variable {S : SourceSignQuotientData A} {C : SourceClauseA A S}
 
-theorem bad_nonempty_spec (B : SourceClauseB A S C) :
+theorem bad_nonempty_spec (_B : SourceClauseB A S C) :
     S.V_mod_bad.Nonempty := S.V_mod_bad_nonempty
 
 theorem multiplicative_spec (B : SourceClauseB A S C)
@@ -785,9 +957,7 @@ theorem multiplicative_spec (B : SourceClauseB A S C)
 theorem q_comparison_spec (B : SourceClauseB A S C)
     (p : NumberField.FinitePlace A.F)
     (hp : NumberFieldFinitePlace.comap (k := A.Fmod) p ∈ S.V_mod_bad) :
-    ∃ parameter : NumberFieldFinitePlace.FinitePlaceQCandidate p,
-      TateCurveComparison A.curve p parameter ∧
-        Nat.Coprime parameter.order l.value := B.q_comparison p hp
+    Nonempty (SourceTateComparisonWitness A p) := B.q_comparison p hp
 
 end SourceClauseB
 
@@ -800,6 +970,10 @@ structure SourceClauseC (A : InitialThetaArithmeticData l)
   torsion23_rational : PuncturedEllipticCurve.Torsion23Rational A.curve
   torsion_basis :
     (Fin 2 → ZMod l.value) ≃ₗ[ZMod l.value] A.curve.LTorsion l
+  /- The K/F carrier comparison is constructed from the actual finite field
+     extension and the two algebraic closures.  Clause (f)'s K-side basis is
+     therefore derived from this transport and the source-supplied F-side
+     basis; it is not an unrelated carrier or an extra axiom. -/
   representation :
     (SourceAbsoluteGalois A) →*
       Matrix.GeneralLinearGroup (Fin 2) (ZMod l.value)
@@ -823,8 +997,44 @@ variable {l : PrimeGeFive} {A : InitialThetaArithmeticData l}
 variable {S : SourceSignQuotientData A} {C : SourceClauseA A S}
 variable {B : SourceClauseB A S C}
 
+noncomputable def k_to_f_torsion_transport
+    (_D : SourceClauseC A S C B) :
+    (A.curve.baseChange A.K).LTorsion l ≃ₗ[ZMod l.value]
+      A.curve.LTorsion l :=
+  InitialThetaSource.PuncturedEllipticCurve.initialThetaKToFTorsionTransport A
+
+noncomputable def k_torsion_basis
+    (D : SourceClauseC A S C B) :
+    (Fin 2 → ZMod l.value) ≃ₗ[ZMod l.value]
+      (A.curve.baseChange A.K).LTorsion l :=
+  D.torsion_basis.trans D.k_to_f_torsion_transport.symm
+
+theorem k_torsion_basis_transport_eq_f_torsion_basis
+    (D : SourceClauseC A S C B) :
+    D.k_torsion_basis.trans D.k_to_f_torsion_transport = D.torsion_basis := by
+  apply LinearEquiv.ext
+  intro x
+  simp [k_torsion_basis]
+
 theorem torsion_spec (D : SourceClauseC A S C B) :
     PuncturedEllipticCurve.Torsion23Rational A.curve := D.torsion23_rational
+
+noncomputable def k_torsion_basis_spec (D : SourceClauseC A S C B) :
+    (Fin 2 → ZMod l.value) ≃ₗ[ZMod l.value]
+      (A.curve.baseChange A.K).LTorsion l :=
+  D.k_torsion_basis
+
+noncomputable def k_to_f_torsion_transport_spec (D : SourceClauseC A S C B) :
+    (A.curve.baseChange A.K).LTorsion l ≃ₗ[ZMod l.value]
+      A.curve.LTorsion l :=
+  D.k_to_f_torsion_transport
+
+theorem k_torsion_basis_transport_spec (D : SourceClauseC A S C B) :
+    D.k_torsion_basis.trans D.k_to_f_torsion_transport = D.torsion_basis :=
+  by
+  apply LinearEquiv.ext
+  intro x
+  simp [k_torsion_basis]
 
 theorem image_spec (D : SourceClauseC A S C B) :
     Subgroup.map Matrix.SpecialLinearGroup.toGL
@@ -837,7 +1047,7 @@ theorem representation_continuous (D : SourceClauseC A S C B) :
   rw [D.representation_eq_canonical]
   exact A.curve.galoisLTorsionMatrixRepresentation_continuous l D.torsion_basis
 
-theorem kernel_field_finite_galois (D : SourceClauseC A S C B) :
+theorem kernel_field_finite_galois (_D : SourceClauseC A S C B) :
     IsGalois A.F A.K :=
   inferInstance
 
@@ -938,7 +1148,7 @@ def selectedFinitePlace
     NumberField.FinitePlace A.K :=
   match v with
   | .finite w => w
-  | .infinite w => False.elim hv
+  | .infinite _w => False.elim hv
 
 def selectedInfinitePlace
     {A : InitialThetaArithmeticData l}
@@ -946,7 +1156,7 @@ def selectedInfinitePlace
     (hv : NumberFieldPlace.IsInfinite v) :
     NumberField.InfinitePlace A.K :=
   match v with
-  | .finite w => False.elim hv
+  | .finite _w => False.elim hv
   | .infinite w => w
 
 noncomputable def sourceKQuotientMap
@@ -1026,7 +1236,7 @@ variable {E : SourceClauseD A S C B D}
 variable {w : NumberField.FinitePlace A.K}
 
 abbrev localField
-    (L : SourceFiniteLocalSource A S C B D E w) :=
+    (_L : SourceFiniteLocalSource A S C B D E w) :=
   NumberFieldFinitePlace.Completion w
 
 abbrev xLocal
@@ -1132,7 +1342,7 @@ variable {E : SourceClauseD A S C B D}
 variable {w : NumberField.InfinitePlace A.K}
 
 abbrev localField
-    (L : SourceInfiniteLocalSource A S C B D E w) :=
+    (_L : SourceInfiniteLocalSource A S C B D E w) :=
   w.Completion
 
 abbrev xLocal
@@ -1210,26 +1420,26 @@ variable {E : SourceClauseD A S C B D}
 theorem selected_is_actual_set (L : SourceClauseE A S C B D E) :
     S.V = S.V_section.selected := L.selected_eq_V
 
-theorem selected_equivalence (L : SourceClauseE A S C B D E) :
+noncomputable def selected_equivalence (L : SourceClauseE A S C B D E) :
     NumberFieldPlace A.Fmod ≃
       {v : NumberFieldPlace A.K // v ∈ S.V} :=
   L.selected_equiv
 
-theorem finite_local_spec
+noncomputable def finite_local_spec
     (L : SourceClauseE A S C B D E)
     (v : {v : NumberFieldPlace A.K // v ∈ S.V})
     (hv : v.1.IsFinite) :
     SourceFiniteLocalSource A S C B D E (selectedFinitePlace hv) :=
   L.finite_local v hv
 
-theorem infinite_local_spec
+noncomputable def infinite_local_spec
     (L : SourceClauseE A S C B D E)
     (v : {v : NumberFieldPlace A.K // v ∈ S.V})
     (hv : v.1.IsInfinite) :
     SourceInfiniteLocalSource A S C B D E (selectedInfinitePlace hv) :=
   L.infinite_local v hv
 
-theorem finite_local_x_global_embedding
+noncomputable def finite_local_x_global_embedding
     (L : SourceClauseE A S C B D E)
     (v : {v : NumberFieldPlace A.K // v ∈ S.V})
     (hv : v.1.IsFinite) :
@@ -1243,7 +1453,7 @@ theorem finite_local_x_global_embedding
       (L.finite_local v hv).xGroups.sequence E.x_groups.sequence :=
   (L.finite_local v hv).xGlobalEmbedding
 
-theorem finite_local_c_global_embedding
+noncomputable def finite_local_c_global_embedding
     (L : SourceClauseE A S C B D E)
     (v : {v : NumberFieldPlace A.K // v ∈ S.V})
     (hv : v.1.IsFinite) :
@@ -1257,7 +1467,7 @@ theorem finite_local_c_global_embedding
       (L.finite_local v hv).cGroups.sequence E.c_groups.sequence :=
   (L.finite_local v hv).cGlobalEmbedding
 
-theorem infinite_local_x_global_embedding
+noncomputable def infinite_local_x_global_embedding
     (L : SourceClauseE A S C B D E)
     (v : {v : NumberFieldPlace A.K // v ∈ S.V})
     (hv : v.1.IsInfinite) :
@@ -1271,7 +1481,7 @@ theorem infinite_local_x_global_embedding
       (L.infinite_local v hv).xGroups.sequence E.x_groups.sequence :=
   (L.infinite_local v hv).xGlobalEmbedding
 
-theorem infinite_local_c_global_embedding
+noncomputable def infinite_local_c_global_embedding
     (L : SourceClauseE A S C B D E)
     (v : {v : NumberFieldPlace A.K // v ∈ S.V})
     (hv : v.1.IsInfinite) :
@@ -1296,12 +1506,12 @@ structure SourceClauseF (A : InitialThetaArithmeticData l)
     (D : SourceClauseC A S C B)
     (E : SourceClauseD A S C B D)
     (L : SourceClauseE A S C B D E) where
-  /- The boundary datum is tied to the same torsion module and basis as
-     Clause (c).  In particular, the cusp is not paired with an arbitrary
-     nonzero element of an unrelated carrier. -/
+  /- The boundary datum is tied to the actual K-side torsion module from
+     Clause (d).  Its relation to the F-side representation is mediated only
+     by the explicit transport supplied in Clause (c). -/
   boundary_origin : TorsionQuotientBoundaryOrigin l A S.cK
-  quotient_basis_eq_torsion_basis :
-    boundary_origin.rank_one_quotient.torsion_basis = D.torsion_basis
+  quotient_basis_eq_k_torsion_basis :
+    boundary_origin.rank_one_quotient.torsion_basis = D.k_torsion_basis
   boundary_cusp_eq_epsilon :
     boundary_origin.cusp = S.epsilon
   cusp_decomposition :
@@ -1317,7 +1527,7 @@ variable {B : SourceClauseB A S C} {D : SourceClauseC A S C B}
 variable {E : SourceClauseD A S C B D}
 variable {L : SourceClauseE A S C B D E}
 
-theorem cusp_spec (F : SourceClauseF A S C B D E L) :
+noncomputable def cusp_spec (F : SourceClauseF A S C B D E L) :
     Iut.OrbicurveBoundaryCusp S.cK := F.boundary_origin.cusp
 
 theorem nonzero_origin_spec (F : SourceClauseF A S C B D E L) :
@@ -1327,6 +1537,12 @@ theorem nonzero_origin_spec (F : SourceClauseF A S C B D E L) :
 theorem quotient_surjective_spec (F : SourceClauseF A S C B D E L) :
     Function.Surjective F.boundary_origin.rank_one_quotient.quotientMap :=
   F.boundary_origin.quotientMap_surjective
+
+theorem quotient_basis_transport_spec (F : SourceClauseF A S C B D E L) :
+    F.boundary_origin.rank_one_quotient.torsion_basis.trans
+        D.k_to_f_torsion_transport = D.torsion_basis := by
+  rw [F.quotient_basis_eq_k_torsion_basis]
+  exact D.k_torsion_basis_transport_eq_f_torsion_basis
 
 theorem quotient_generator_spec (F : SourceClauseF A S C B D E L) :
     F.boundary_origin.rank_one_quotient.quotientEquiv
@@ -1350,13 +1566,13 @@ end SourceClauseF
     auxiliary `source` record retains the actual quotient, group, and scalar
     extension objects used by the six clauses; the equalities below ensure
     that the displayed tuple entries and those auxiliary objects are one and
-    the same source data.  The algebraic closure entry is canonicalized by
-    `SourceFbar`, rather than replaced by an arbitrary carrier. -/
+    the same source data.  The algebraic-closure entry is an actual
+    `SourceFbarExtension`, not an element of its carrier. -/
 structure SourceInitialThetaTuple
-    (A : InitialThetaArithmeticData l) where
-  /- The first printed entry `Fbar/F` is the canonical algebraic closure
-     `SourceFbar A`; it is not an arbitrary carrier. -/
-  fbar : SourceFbar A
+    (A : InitialThetaArithmeticData.{u} l) where
+  /- The first printed entry `Fbar/F` carries the field and algebraic
+     equivalence, rather than selecting one element of `Fbar`. -/
+  fbar : SourceFbarExtension A
   source : SourceSignQuotientData A
   xF : Iut.HyperbolicOrbicurve A.F
   xF_eq_source : xF = source.xF
@@ -1377,16 +1593,16 @@ variable {l : PrimeGeFive} {A : InitialThetaArithmeticData l}
 theorem xF_source_eq (T : SourceInitialThetaTuple A) :
     T.xF = T.source.xF := T.xF_eq_source
 
-theorem fbar_is_canonical (T : SourceInitialThetaTuple A) :
-    SourceFbar A = AlgebraicClosure A.F :=
-  rfl
+noncomputable def fbar_comparison (T : SourceInitialThetaTuple A) :
+    T.fbar.carrier ≃ₐ[A.F] AlgebraicClosure A.F :=
+  T.fbar.comparison
 
 theorem fbar_is_algClosed (T : SourceInitialThetaTuple A) :
-    IsAlgClosed (SourceFbar A) :=
+    IsAlgClosed T.fbar.carrier :=
   inferInstance
 
 theorem fbar_element_is_algebraic
-    (T : SourceInitialThetaTuple A) (x : SourceFbar A) :
+    (T : SourceInitialThetaTuple A) (x : T.fbar.carrier) :
     IsAlgebraic A.F x :=
   Algebra.IsAlgebraic.isAlgebraic x
 
@@ -1403,25 +1619,26 @@ theorem epsilon_source_eq (T : SourceInitialThetaTuple A) :
     T.epsilon = T.cK_eq_source ▸ T.source.epsilon :=
   T.epsilon_eq_source
 
-theorem algebraic_closure_is_canonical (T : SourceInitialThetaTuple A) :
-    SourceFbar A = AlgebraicClosure A.F :=
-  rfl
+noncomputable def algebraic_closure_is_canonical
+    (T : SourceInitialThetaTuple A) :
+    T.fbar.carrier ≃ₐ[A.F] AlgebraicClosure A.F :=
+  T.fbar.comparison
 
 theorem complete_source_recovery (T : SourceInitialThetaTuple A) :
-    SourceFbar A = AlgebraicClosure A.F ∧
+    Nonempty (T.fbar.carrier ≃ₐ[A.F] AlgebraicClosure A.F) ∧
       T.xF = T.source.xF ∧
       T.cK = T.source.cK ∧
       T.V = T.source.V ∧
       T.V_mod_bad = T.source.V_mod_bad ∧
       T.epsilon = T.cK_eq_source ▸ T.source.epsilon := by
-  exact ⟨T.algebraic_closure_is_canonical, T.xF_source_eq,
+  exact ⟨⟨T.algebraic_closure_is_canonical⟩, T.xF_source_eq,
     T.cK_source_eq, T.V_source_eq, T.V_mod_bad_source_eq,
     T.epsilon_source_eq⟩
 
 end SourceInitialThetaTuple
 
 structure SourceNativeInitialThetaData (l : PrimeGeFive) where
-  arithmetic : InitialThetaArithmeticData l
+  arithmetic : InitialThetaArithmeticData.{u} l
   tuple : SourceInitialThetaTuple arithmetic
   clauseA : SourceClauseA arithmetic tuple.source
   clauseB : SourceClauseB arithmetic tuple.source clauseA
@@ -1432,14 +1649,14 @@ structure SourceNativeInitialThetaData (l : PrimeGeFive) where
 
 namespace SourceNativeInitialThetaData
 
-variable {l : PrimeGeFive} (T : SourceNativeInitialThetaData l)
+variable {l : PrimeGeFive} (T : SourceNativeInitialThetaData.{u} l)
 
-theorem clauseA_spec : SourceClauseA T.arithmetic T.tuple.source := T.clauseA
+def clauseA_spec : SourceClauseA T.arithmetic T.tuple.source := T.clauseA
 theorem clauseB_spec : SourceClauseB T.arithmetic T.tuple.source T.clauseA := T.clauseB
-theorem clauseC_spec : SourceClauseC T.arithmetic T.tuple.source T.clauseA T.clauseB := T.clauseC
-theorem clauseD_spec : SourceClauseD T.arithmetic T.tuple.source T.clauseA T.clauseB T.clauseC := T.clauseD
-theorem clauseE_spec : SourceClauseE T.arithmetic T.tuple.source T.clauseA T.clauseB T.clauseC T.clauseD := T.clauseE
-theorem clauseF_spec : SourceClauseF T.arithmetic T.tuple.source T.clauseA T.clauseB T.clauseC T.clauseD T.clauseE := T.clauseF
+def clauseC_spec : SourceClauseC T.arithmetic T.tuple.source T.clauseA T.clauseB := T.clauseC
+def clauseD_spec : SourceClauseD T.arithmetic T.tuple.source T.clauseA T.clauseB T.clauseC := T.clauseD
+def clauseE_spec : SourceClauseE T.arithmetic T.tuple.source T.clauseA T.clauseB T.clauseC T.clauseD := T.clauseE
+def clauseF_spec : SourceClauseF T.arithmetic T.tuple.source T.clauseA T.clauseB T.clauseC T.clauseD T.clauseE := T.clauseF
 
 end SourceNativeInitialThetaData
 
@@ -1448,52 +1665,61 @@ end SourceNativeInitialThetaData
    rather than a theorem asserting that arbitrary arithmetic data has a
    realization. -/
 def SourceNativeInitialThetaPredicate
-    (A : InitialThetaArithmeticData l)
+    (A : InitialThetaArithmeticData.{u} l)
     (T : SourceInitialThetaTuple A) : Prop :=
   ∃
-    (Cₐ : SourceClauseA A T.source)
-    (Cᵦ : SourceClauseB A T.source Cₐ)
-    (C𝚌 : SourceClauseC A T.source Cₐ Cᵦ)
-    (C𝚍 : SourceClauseD A T.source Cₐ Cᵦ C𝚌)
-    (Cₑ : SourceClauseE A T.source Cₐ Cᵦ C𝚌 C𝚍)
-    (C𝒻 : SourceClauseF A T.source Cₐ Cᵦ C𝚌 C𝚍 Cₑ)
+    (clauseA : SourceClauseA A T.source)
+    (clauseB : SourceClauseB A T.source clauseA)
+    (clauseC : SourceClauseC A T.source clauseA clauseB)
+    (clauseD : SourceClauseD A T.source clauseA clauseB clauseC)
+    (clauseE : SourceClauseE A T.source clauseA clauseB clauseC clauseD)
+    (clauseF : SourceClauseF A T.source clauseA clauseB clauseC clauseD clauseE),
+    clauseF = clauseF
 
 theorem sourceNativeInitialThetaData_predicate
-    (T : SourceNativeInitialThetaData l) :
+    (T : SourceNativeInitialThetaData.{u} l) :
     SourceNativeInitialThetaPredicate T.arithmetic T.tuple := by
-  exact ⟨T.clauseA, T.clauseB, T.clauseC, T.clauseD, T.clauseE, T.clauseF⟩
+  exact ⟨T.clauseA, T.clauseB, T.clauseC, T.clauseD, T.clauseE,
+    T.clauseF, rfl⟩
 
 def SourceNativeInitialThetaExists (l : PrimeGeFive) : Prop :=
-  ∃ (A : InitialThetaArithmeticData l)
-    (T : SourceInitialThetaTuple A),
+  ∃ (A : InitialThetaArithmeticData.{u} l)
+    (T : SourceInitialThetaTuple (A := A)),
     SourceNativeInitialThetaPredicate A T
 
 /-! Paper-facing name for the exact Definition 3.1 proposition. -/
 abbrev InitialThetaData (l : PrimeGeFive) : Prop :=
-  SourceNativeInitialThetaExists l
+  SourceNativeInitialThetaExists.{u} l
 
 theorem initialThetaData_iff_source_exists (l : PrimeGeFive) :
-    InitialThetaData l ↔ SourceNativeInitialThetaExists l :=
-  Iff.rfl
+    InitialThetaData.{u} l ↔ SourceNativeInitialThetaExists.{u} l := by
+  rfl
 
 theorem quantifier_iff_exists (l : PrimeGeFive) :
-    (∃ A : InitialThetaArithmeticData l,
-      ∃ T : SourceInitialThetaTuple A,
+    (∃ A : InitialThetaArithmeticData.{u} l,
+      ∃ T : SourceInitialThetaTuple (A := A),
       SourceNativeInitialThetaPredicate A T) ↔
-    SourceNativeInitialThetaExists l := by
-  Iff.rfl
+    SourceNativeInitialThetaExists.{u} l := by
+  rfl
 
 theorem sourceNativeInitialThetaExists_iff_packaged (l : PrimeGeFive) :
-    SourceNativeInitialThetaExists l ↔
-      ∃ T : SourceNativeInitialThetaData l := by
+    SourceNativeInitialThetaExists.{u} l ↔
+      Nonempty (SourceNativeInitialThetaData.{u} l) := by
   constructor
-  · rintro ⟨A, T, Cₐ, Cᵦ, C𝚌, C𝚍, Cₑ, C𝒻⟩
-    exact ⟨{ arithmetic := A, tuple := T, clauseA := Cₐ,
-      clauseB := Cᵦ, clauseC := C𝚌, clauseD := C𝚍,
-      clauseE := Cₑ, clauseF := C𝒻 }⟩
+  · rintro ⟨A, T, clauseA, clauseB, clauseC, clauseD, clauseE, clauseF, _⟩
+    let packaged : SourceNativeInitialThetaData.{u} l :=
+      { arithmetic := A
+        tuple := T
+        clauseA := clauseA
+        clauseB := clauseB
+        clauseC := clauseC
+        clauseD := clauseD
+        clauseE := clauseE
+        clauseF := clauseF }
+    exact ⟨packaged⟩
   · rintro ⟨T⟩
     exact ⟨T.arithmetic, T.tuple, T.clauseA, T.clauseB, T.clauseC,
-      T.clauseD, T.clauseE, T.clauseF⟩
+      T.clauseD, T.clauseE, T.clauseF, rfl⟩
 
 /-!
   This is the exact arithmetic-to-source construction gate. The equality is
@@ -1503,15 +1729,15 @@ theorem sourceNativeInitialThetaExists_iff_packaged (l : PrimeGeFive) :
   and every clause from the cited foundations.
 -/
 def SourceNativeArithmeticToSourceGate (l : PrimeGeFive) : Prop :=
-  ∀ A : InitialThetaArithmeticData l,
-    ∃ T : SourceNativeInitialThetaData l,
+  ∀ A : InitialThetaArithmeticData.{u} l,
+      ∃ T : SourceNativeInitialThetaData.{u} l,
       T.arithmetic = A
 
 theorem sourceNativeArithmeticToSourceGate_spec
     (l : PrimeGeFive)
-    (h : SourceNativeArithmeticToSourceGate l)
-    (A : InitialThetaArithmeticData l) :
-    ∃ T : SourceNativeInitialThetaData l,
+    (h : SourceNativeArithmeticToSourceGate.{u} l)
+    (A : InitialThetaArithmeticData.{u} l) :
+    ∃ T : SourceNativeInitialThetaData.{u} l,
       T.arithmetic = A :=
   h A
 

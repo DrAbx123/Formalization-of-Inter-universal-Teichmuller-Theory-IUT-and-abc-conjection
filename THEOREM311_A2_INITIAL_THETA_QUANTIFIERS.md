@@ -293,3 +293,278 @@ extension" proportionally. It now quantifies only over
 `E <= maximal_solvable_extension`. The earlier broader finite-plus-Galois
 binder was stronger than the source wording and has been removed. This is an
 unverified interface edit; no compilation or audit was run.
+
+## Append-only checklist record (2026-08-14)
+
+The current A2 boundary has been extracted into
+`THEOREM311_A2_SOURCE_COMPLETION_CHECKLIST.md`. It records `interface` for
+the source contract/conditional recognition and `pending` for the faithful
+universal construction from `InitialThetaArithmeticData`; reusable foundation
+results are kept separate from proved A2 closures. This is a documentation-only
+update. No Lean verification or axiom audit was run, and the earlier research
+entries remain unchanged.
+
+## Append-only implementation note: explicit SourceCompletion stage (2026-08-14)
+
+The A2 implementation now adds
+`LeanFormal/IUT/IUTI/InitialTheta/SourceCompletion.lean`. Its
+`SourceCompletionSignQuotient` stage carries the actual orbicurves, sign action,
+quotient universal witness, finite-etale group data, scalar extensions, place
+section, bad-place set, and boundary cusp field-by-field; the constructor
+`SourceCompletionSignQuotient.toSourceSignQuotientData` assembles the existing
+dependent source record without changing any carrier. `SourceCompletion` then
+carries the real Clause A--F records in dependency order and
+`SourceCompletion.toSourceNativeInitialThetaData` assembles the endpoint.
+
+The tuple's first entry was corrected at the same time: `fbar` is now a
+`SourceFbarExtension` carrying a field, `Algebra`, algebraicity,
+algebraic-closedness, and an `AlgEquiv` to `AlgebraicClosure A.F`; it is no
+longer an element of the closure. This is an unverified implementation batch;
+it proves no universal arithmetic-to-source existence statement.
+
+## Append-only source reading note: Clause (c) representation base (2026-08-14)
+
+A source-text check of IUT I, Definition 3.1(b)-(d), pp. 62-63, resolves the
+representation base unambiguously. Clause (c) first uses the outer action
+`G_F = Gal(Fbar/F)` on `E_F[l]`; `K` is then the finite Galois kernel field of
+that representation. Clause (d) subsequently forms the `K`-side covering and
+the rank-one quotient of `E_K[l]`. Therefore the current
+`SourceAbsoluteGalois A := AlgebraicClosure A.F ≃ₐ[A.F] AlgebraicClosure A.F`
+and the separate `A.K` kernel-field identification preserve the source order;
+introducing a new `K`-absolute-Galois carrier at Clause (c) would change the
+source contract rather than repair it. This is a source-contract confirmation,
+not a construction of the representation or its large-image hypothesis.
+
+## Append-only implementation note: K-side torsion boundary correction (2026-08-14)
+
+The rank-one quotient carrier was corrected to the actual base-changed curve:
+`TorsionRankOneQuotientData l (A.curve.baseChange A.K)` and hence its module is
+`(A.curve.baseChange A.K).LTorsion l`. The previous generic quotient helper had
+been partially generalized but still contained stale arithmetic-parameter
+references; those are now removed.
+
+Clause (c) now carries a source-supplied K-side basis, an explicit linear
+transport from K-side torsion to the F-side torsion module, and the equality
+that transports the K basis to the already supplied F-side representation basis.
+Clause (f) binds its boundary quotient basis to that K-side basis and exposes
+the transported F-side equality as a theorem. This is an interface correction:
+no K/F torsion identification is constructed from arithmetic data, and no cusp
+or K-rational descent is claimed. The edit batch remains below the 3000-line
+verification threshold, so compilation, warning, and axiom evidence remain
+`N/A`.
+
+## Append-only research note: no reusable K/F torsion transport (2026-08-14)
+
+A focused search of `EllipticTorsion.lean` and the current IUT foundations found
+no theorem giving a linear equivalence between
+`(A.curve.baseChange A.K).LTorsion l` and `A.curve.LTorsion l`, no K-rational
+descent of the `E_K[l]` carrier, and no identification of the two algebraic
+closures' point sets suitable for the Clause (f) quotient. The reusable results
+remain curve-local: each curve gets its own algebraic-closure torsion, Galois
+action, continuous representation, and kernel field.
+
+Consequently `SourceClauseC.k_to_f_torsion_transport` remains an explicit
+source dependency. It must not be filled by an arbitrary closure equivalence,
+`Classical.choice`, or a same-named carrier. This search is a dependency note,
+not compilation or completion evidence.
+
+## Append-only source-text cross-check: Definition 3.1 clauses (2026-08-14)
+
+A rereading of IUT I, Definition 3.1(a)-(f), pp. 61-64, confirms the exact
+dependency order used by the contract. Clause (a) quantifies stable reduction at
+all nonarchimedean places of `F`; Clause (b) locates bad places over
+`V_mod^bad`; Clause (c) acts first on `E_F[l]` and defines `K` from the kernel;
+Clause (d) then introduces the K-side orbicurves, finite-etale cover, cartesian
+and open-subgroup diagrams; Clause (e) requires independent local diagrams at
+every selected finite and infinite place; and Clause (f) requires the cusp to
+come from the same K-side quotient and its canonical generator up to sign.
+
+The K-side carrier correction therefore fixes only the direction of the torsion
+module; it does not close any of the missing diagram, local-model, or
+canonical-cusp constructions. No weakened carrier or unrelated proposition was
+introduced by this cross-check.
+
+## Append-only implementation note: constructed K/F torsion carrier transport (2026-08-14)
+
+本轮没有把 K-side `LTorsion` 与 F-side `LTorsion` 视为同一类型。新增的
+`SourceTorsionTransport.lean` 先由有限扩张 `A.K/A.F` 构造两代数闭包之间的真实
+`A.F`-代数等价，再由 Weierstrass affine/projective 点群的实际映射构造闭包点
+`AddEquiv`，并限制、升级到实际 `ZMod l`-扭点线性等价。二次 base-change 的曲线
+相等通过 `Projective.map_baseChange` 和 scalar-tower algebra map 证明。
+
+因此 `SourceClauseC` 的 K-side basis 由同一 F-side basis 和该 transport 的逆映射
+派生，compatibility equality 由线性等价的 `trans`/`symm` 恒等式证明；没有引入
+任意 closure equivalence、任意 carrier 选择或 K-rational descent 的假设。
+这只收口一个缺失的载体传输依赖，不关闭 Clause (c) 的 rationality、大像、kernel
+field，也不关闭 Clause (f) 的真实 quotient/cusp。新增代码尚未统一编译，证据仍为
+`N/A`，状态保持 `interface`。
+
+## Append-only verification note: A2 source assembly (2026-08-14)
+
+本批次在超过 1000 行实质编辑后完成了顺序单文件验证。以下 A2 文件均显式
+生成 `.olean`、退出码为 0 且无 warning：`SourceDefinition31Quantifiers.lean`、
+`SourceCompletion.lean`、`SourceTorsionTransport.lean`、`SourcePlaceSelection.lean`
+和 `SourceTorsionRankOneQuotient.lean`。`SourceCompletion.toSourceNativeInitialThetaData`
+及其 arithmetic-preserving projection 因此有当前批次的编译证据；它们只消费
+一个已经携带全部 source 字段的 completion。
+
+定向 `#print axioms` 结果仅为标准 Lean 基础的
+`propext`、`Classical.choice`、`Quot.sound`，无 `sorryAx`；A2 目录的 custom
+axiom 扫描为 0。该结果不构造任意 arithmetic record 的 source witness，故
+`SourceNativeArithmeticToSourceGate` 仍保持 `pending`。总入口编译仍因已有
+缺失的 `Foundations/Arithmetic/Radical.olean` 而不能作为全项目证据。
+
+## Append-only arithmetic prelude construction (2026-08-14)
+
+本轮没有停留在“没有可复用结果”的检索层面，而是新增
+`SourceArithmeticPrelude.lean`，将 arithmetic record 可忠实推出的公共对象
+实际构造出来：规范代数闭包及其 `AlgEquiv`、全量 finite/infinite place
+restriction section 及 selected-place equivalence、以及真实 K/F `LTorsion`
+线性 transport。`SourceCompletion` 现在显式携带该 prelude，且
+`SourceCompletion.ofSourceNative` 使用
+`SourceArithmeticPrelude.fromPlaceSection` 复用同一 source `V_section`，
+所以这些对象不会在各 clause 中被重复选择或错绑。
+
+该构造没有把任何缺失的原文条件放进结论：`V_mod_bad`、stable reduction、q
+parameter、Tate uniformization、large image、kernel-field identification、
+finite-etale diagrams、completion-level local models 和 quotient-origin cusp
+仍未由 arithmetic record 推出。因本轮实质编辑尚未达到 3000 行，尚未进行统一
+编译、零 warning 检查或公理审计；当前状态只能记为 arithmetic prelude
+`interface`/待验证，A2 universal gate 仍为 `pending`。
+
+## Append-only verification note: arithmetic prelude and source package (2026-08-14)
+
+本批次在累计实质编辑超过 3000 行后，实际编译并通过且无 Lean warning 的
+A2 文件为：`SourceTorsionTransport.lean`、`SourcePlaceSelection.lean`、
+`SourceDefinition31Quantifiers.lean`、`SourceArithmeticPrelude.lean`、
+`SourceCompletion.lean`、`SourceTorsionRankOneQuotient.lean`。
+
+`SourceArithmeticPrelude` 从任意 arithmetic record 构造真实闭包比较、全量
+restriction section、selected finite/infinite partition 和 K/F torsion
+transport；`SourceCompletion` 只对已给 source witness 证明这些对象与
+`V_section`/selected-place 字段一致。该批次没有从 arithmetic record 构造
+真实 orbicurve、稳定约化、Tate comparison、large image、local diagrams 或
+cusp origin，因此 universal source gate 仍为 `pending`。尚未执行本批次公理
+审计，不能把 package 或全称门标为 `proved`。
+
+## Append-only audit note: A2 batch trust boundary (2026-08-14)
+
+定向 `#print axioms` 检查了 source predicate、completion assembly、arithmetic
+gate、arithmetic prelude canonical/from-place 构造、K/F torsion transport 和
+rank-one quotient 非零类。所有输出仅含标准基础 `propext`、
+`Classical.choice`、`Quot.sound`，没有 `sorryAx`。对 A2 InitialTheta 源目录
+运行 `check_no_custom_axioms.ps1` 返回 `customAxiomDeclarations: 0`。
+
+总入口 `Project.lean` 在生成 `Radical.olean` 后仍因已有的
+`Foundations/Arithmetic/PadicValuation.olean` 缺失而失败；该缓存问题不属于
+A2 本轮代码。故 A2 文件的单文件编译证据成立，但不能声称全项目零 warning；
+arithmetic-to-source universal gate 继续保持 `pending`。
+
+## Append-only status closure: arithmetic public primitives (2026-08-14)
+
+本批次把三个不属于 Clause A-F 存在性、但确实由 arithmetic record 构造的公共
+对象收口为 `provedKernel`：实际 `AlgebraicClosure A.F` 的
+`SourceFbarExtension.canonical`；`NumberFieldPlace.restrictionSection` 的
+selected-place equivalence、finite/infinite partition 与 comap 左逆；以及实际
+K-side/F-side `LTorsion` 的 `initialThetaKToFTorsionTransport` 与双射性。
+这三个 kernel 结论不改变 source package 的 `interface` 状态，也不改变
+arithmetic-to-source universal gate 的 `pending` 状态。
+
+## Append-only carrier-binding note (2026-08-14)
+
+`SourceArithmeticPrelude.fbar` 与 `.torsionTransport` 现由 arithmetic record
+唯一决定，不再允许通过 prelude 结构字段另行填写；`SourceCompletion` 以真实
+`AlgEquiv` 将 source tuple 的 chosen closure 与 canonical prelude closure
+绑定，并证明其 base-map compatibility 与 bijectivity。该修正只收紧 carrier
+身份，不构造 orbicurve、Clause A-F 或 universal source witness。
+
+## Append-only construction note: singleton odd-place selection (2026-08-14)
+
+新增 `SourcePlaceSelection.singleton A p hodd`，从明确给出的有限处和其奇剩余
+特征证明构造 `V_mod_bad = {p}`、非空性及 odd-characteristic 字段；它不声称
+曲线在该处坏约化、乘法约化或存在 Tate uniformization，故 Clause B 和
+arithmetic-to-source universal gate 仍为 `pending`。
+
+## Append-only gate-consequence construction (2026-08-14)
+
+新增 `SourceArithmeticGateConsequences.lean`，从已给出的
+`SourceNativeArithmeticToSourceGate` 实际投影出 source 端必须出现的条件，且每
+个投影都保留 native witness 与 `T.arithmetic = A`：
+
+* per-arithmetic `SourceCompletion`/native witness 等价；
+* (a) 全部 `F` 非阿基米德处稳定约化、field-of-moduli 和 maximal-solvable；
+* (b) 同一坏处集合上的 odd residue characteristic、multiplicative reduction、
+  `SourceTateComparisonWitness` 和 `l` 互素；
+* (c) 真实扭点有理性、basis、`SL₂` 大像和 kernel-field identification；
+* (d) K-side finite-etale cover/group inclusion；
+* (e) 每个 selected finite/infinite place 的独立 local source；
+* (f) 同一 quotient-origin cusp、`epsilon` 兼容及非零 quotient class。
+
+这些是对 universal gate 的必要条件构造，不是从 arithmetic record 反向制造
+source witness；因此没有改变 source contract 的量词，也没有关闭
+`InitialThetaArithmeticData → SourceNativeInitialThetaData`。本批次尚未达到
+3000 行统一验证门槛，机器证据保持 `N/A`，状态为 gate-consequence
+`interface`、arithmetic-to-source `pending`。
+
+## Append-only place-level construction note (2026-08-14)
+
+`SourcePlaceSelection` 现在实际构造坏模处的选定上方有限处：
+`selected_bad_place_mem` 给出 `V_bad` 归属，`selected_bad_place_is_finite` 给出
+有限性，`selected_bad_place_comap` 证明 restriction section 的 comap 左逆，
+并由 `V_bad_nonempty` 得到 `V_bad` 非空。所有结论使用同一个
+`V_mod_bijection`，没有把下方处与任意上方 carrier 混用。坏约化、Tate
+uniformization 和其 coprimality 仍未由 arithmetic record 推出。
+
+## Append-only construction note: geometric core/place binding (2026-08-14)
+
+新增 `SourceSignQuotientConstruction.lean`。它不把 place 字段留作可独立填写的
+重复接口：`SourceSignQuotientGeometricCore` 携带同一 source 几何、sign quotient、
+群、scalar extension 与 cusp，`SourcePlaceSelection` 携带实际 restriction
+section 及 `V_mod^bad`，构造器将二者绑定为一个 `SourceCompletionSignQuotient`
+并投影为 `SourceSignQuotientData`。这只关闭 place 字段的结构性绑定路线，仍不
+构造 geometric core 或从 arithmetic record 关闭 A2 universal gate。本批次未达
+3000 行验证阈值，新增文件的编译和审计证据保持 `N/A`。
+
+## Append-only staged clause-binding verification (2026-08-15)
+
+`SourceClauseConstructors.lean` 已在修正 sort 与 dependent-index 问题后单文件
+编译通过：
+
+`lake env lean LeanFormal/IUT/IUTI/InitialTheta/SourceClauseConstructors.lean -o .lake/build/lib/lean/LeanFormal/IUT/IUTI/InitialTheta/SourceClauseConstructors.olean`
+
+命令退出码为 `0` 且无 Lean 输出，因而该文件没有 warning。该结果证明的是从
+显式 source objects/witnesses 到 Clause A-F 记录的忠实绑定和 `sourceData` 组装，
+不是从任意 `InitialThetaArithmeticData` 产生 source record；真实 sign quotient、
+reduction、Tate uniformization、kernel-field descent、local diagrams 与 cusp
+origin 仍是未闭合依赖，universal gate 仍为 `pending`。本次尚未执行公理审计，
+不能据此声称 A2 package 或全项目已完成。
+
+## Append-only current checklist marking and verification (2026-08-15)
+
+本轮根据 A2 checklist 的实际证据补记状态。修复
+`SourcePlaceSelection.selected_bad_place_mem` 使用显式 `Equiv.left_inv` 后，
+以下文件逐个编译，均退出码 `0` 且无 Lean 输出：
+
+* `SourcePlaceSelection.lean`
+* `SourceTorsionTransport.lean`
+* `SourceArithmeticPrelude.lean`
+* `SourceDefinition31Quantifiers.lean`
+* `SourceCompletion.lean`
+* `SourceSignQuotientConstruction.lean`
+* `SourceClauseConstructors.lean`
+* `SourceTorsionRankOneQuotient.lean`
+
+因此本轮只把 arithmetic kernel、`SourceCompletion` 到 native 的 source-witness
+组装、geometric-core/place 绑定和 Clause A--F source-facing constructors 标为
+已验证；所有这些声明仍消费显式 source objects/witnesses。定向
+`#print axioms`（`verification/a2_source_axiom_audit.lean`）只报告
+`propext`、`Classical.choice`、`Quot.sound`；
+`check_no_custom_axioms.ps1 -SourceRoot LeanFormal/IUT/IUTI/InitialTheta`
+报告 `customAxiomDeclarations: 0`，没有 `sorryAx`。`InitialThetaArithmeticData →
+SourceCompletion` 及 `InitialThetaArithmeticData → SourceNativeInitialThetaData`
+仍为 `pending`，因为 reduction、真实 orbicurve/group、Tate、local diagrams、
+kernel-field descent 和 cusp origin 尚未由 arithmetic data 构造。
+
+按 A2 范围移除了只从已假设 universal gate 投影必要条件的
+`SourceArithmeticGateConsequences.lean` 及其 `Project.lean` 导入；该文件不再作为
+A2 进度或证明路线。

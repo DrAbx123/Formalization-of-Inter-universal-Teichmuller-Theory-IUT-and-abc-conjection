@@ -76,6 +76,9 @@ import LeanFormal.IUT.Foundations.Geometry.TatePointQuotientBoundary
 import LeanFormal.IUT.IUTI.InitialTheta.SourceObligations
 import LeanFormal.IUT.IUTI.InitialTheta.ArithmeticData
 import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31Quantifiers
+import LeanFormal.IUT.IUTI.InitialTheta.SourceCompletion
+import LeanFormal.IUT.IUTI.InitialTheta.SourceSignQuotientConstruction
+import LeanFormal.IUT.IUTI.InitialTheta.SourceClauseConstructors
 import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31D2Root
 import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31D2Candidate
 import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31Boundary

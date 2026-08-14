@@ -11,8 +11,8 @@ import Iut.Foundations.Orbicurve
   The quotient in IUT I, Definition 3.1(c), is a quotient of the l-torsion
   module onto a free rank-one `ZMod l`-module.  This file constructs the
   quotient from an explicitly supplied torsion basis.  Its source carrier is
-  the actual algebraic-closure torsion module; no field element or cusp is
-  silently substituted for the quotient.
+  the actual algebraic-closure torsion module of the supplied curve; no field
+  element or cusp is silently substituted for the quotient.
 
   The further identification with `E_K[l]` and the construction of the cusp
   require separate descent and boundary comparison theorems.  They are not
@@ -28,68 +28,76 @@ noncomputable section
 namespace InitialThetaSource
 
 structure TorsionRankOneQuotientData (l : PrimeGeFive)
-    (A : InitialThetaArithmeticData l) where
+    {F : Type u} [Field F]
+    (X : PuncturedEllipticCurve F) where
   torsion_basis :
-    (Fin 2 → ZMod l.value) ≃ₗ[ZMod l.value] A.curve.LTorsion l
+    (Fin 2 → ZMod l.value) ≃ₗ[ZMod l.value] X.LTorsion l
 
 namespace TorsionRankOneQuotientData
 
-variable {l : PrimeGeFive} {A : InitialThetaArithmeticData l}
+variable {l : PrimeGeFive}
+variable {F : Type u} [Field F]
+variable {X : PuncturedEllipticCurve F}
 
-abbrev Torsion (D : TorsionRankOneQuotientData l A) :=
-  A.curve.LTorsion l
+def quotientMap (D : TorsionRankOneQuotientData l X) :
+    X.LTorsion l →ₗ[ZMod l.value] ZMod l.value :=
+  (LinearMap.proj (R := ZMod l.value)
+      (φ := fun _ : Fin 2 => ZMod l.value) 0).comp
+      D.torsion_basis.symm.toLinearMap
 
-abbrev Scalar (D : TorsionRankOneQuotientData l A) :=
-  ZMod l.value
-
-def quotientMap (D : TorsionRankOneQuotientData l A) :
-    D.Torsion →ₗ[D.Scalar] D.Scalar :=
-  (LinearMap.proj (R := D.Scalar) 0).comp D.torsion_basis.symm
-
-theorem quotientMap_surjective (D : TorsionRankOneQuotientData l A) :
+theorem quotientMap_surjective (D : TorsionRankOneQuotientData l X) :
     Function.Surjective D.quotientMap := by
-  exact
-    (LinearMap.proj_surjective (R := D.Scalar) 0).comp
-      D.torsion_basis.symm.surjective
+  simpa [quotientMap] using
+    (LinearMap.proj_surjective (R := ZMod l.value)
+      (φ := fun _ : Fin 2 => ZMod l.value) 0).comp
+      D.torsion_basis.symm.bijective.2
 
-abbrev Kernel (D : TorsionRankOneQuotientData l A) :=
+abbrev Kernel (D : TorsionRankOneQuotientData l X) :=
   LinearMap.ker D.quotientMap
 
-abbrev Quotient (D : TorsionRankOneQuotientData l A) :=
-  D.Torsion ⧸ D.Kernel
+abbrev Quotient (D : TorsionRankOneQuotientData l X) :=
+  X.LTorsion l ⧸ D.Kernel
 
-noncomputable def quotientEquiv (D : TorsionRankOneQuotientData l A) :
-    D.Quotient ≃ₗ[D.Scalar] D.Scalar :=
+noncomputable def quotientEquiv (D : TorsionRankOneQuotientData l X) :
+    D.Quotient ≃ₗ[ZMod l.value] ZMod l.value :=
   D.quotientMap.quotKerEquivOfSurjective D.quotientMap_surjective
 
 def standardCoordinate : Fin 2 → ZMod l.value :=
   fun i => if i = 0 then 1 else 0
 
-def distinguishedClass (D : TorsionRankOneQuotientData l A) : D.Quotient :=
-  D.Kernel.mkQ (D.torsion_basis D.standardCoordinate)
+def distinguishedClass (D : TorsionRankOneQuotientData l X) : D.Quotient :=
+  D.Kernel.mkQ (D.torsion_basis (standardCoordinate (l := l)))
 
-theorem quotientMap_basis_standard (D : TorsionRankOneQuotientData l A) :
-    D.quotientMap (D.torsion_basis D.standardCoordinate) = 1 := by
+theorem quotientMap_basis_standard (D : TorsionRankOneQuotientData l X) :
+    D.quotientMap
+        (D.torsion_basis (standardCoordinate (l := l))) = 1 := by
   simp [quotientMap, standardCoordinate]
 
-theorem quotientEquiv_distinguished (D : TorsionRankOneQuotientData l A) :
+theorem quotientEquiv_distinguished (D : TorsionRankOneQuotientData l X) :
     D.quotientEquiv D.distinguishedClass = 1 := by
-  simp [distinguishedClass, quotientEquiv, quotientMap,
-    standardCoordinate]
+  rw [distinguishedClass, quotientEquiv,
+    Submodule.mkQ_apply,
+    LinearMap.quotKerEquivOfSurjective_apply_mk]
+  exact D.quotientMap_basis_standard
 
-theorem distinguishedClass_nonzero (D : TorsionRankOneQuotientData l A) :
+theorem distinguishedClass_nonzero (D : TorsionRankOneQuotientData l X) :
     D.distinguishedClass ≠ 0 := by
   intro h
   have h' := congrArg D.quotientEquiv h
   rw [D.quotientEquiv_distinguished] at h'
-  simpa using h'
+  have hzero : D.quotientEquiv (0 : D.Quotient) = 0 :=
+    D.quotientEquiv.map_zero
+  rw [hzero] at h'
+  have h5 := l.ge_five
+  letI : Fact (1 < l.value) := ⟨by omega⟩
+  exact (one_ne_zero : (1 : ZMod l.value) ≠ 0) h'
 
-theorem quotient_is_rank_one (D : TorsionRankOneQuotientData l A) :
-    Nonempty (D.Quotient ≃ₗ[D.Scalar] D.Scalar) :=
+theorem quotient_is_rank_one (D : TorsionRankOneQuotientData l X) :
+    Nonempty (D.Quotient ≃ₗ[ZMod l.value] ZMod l.value) :=
   ⟨D.quotientEquiv⟩
 
 theorem source_rank_one_quotient_spec
-    (D : TorsionRankOneQuotientData l A) :
+    (D : TorsionRankOneQuotientData l X) :
     Function.Surjective D.quotientMap ∧
       D.distinguishedClass ≠ 0 ∧
       D.quotientEquiv D.distinguishedClass = 1 :=
@@ -101,13 +109,14 @@ end TorsionRankOneQuotientData
 /-!
   A boundary origin is part of the source datum, rather than a later
   proposition about an unrelated field element.  Its domain is the actual
-  nonzero quotient of the algebraic-closure `l`-torsion module, and its
+  nonzero quotient of the K-side algebraic-closure `l`-torsion module, and its
   selected class and cusp are tied by one actual origin map.
 -/
 structure TorsionQuotientBoundaryOrigin (l : PrimeGeFive)
     (A : InitialThetaArithmeticData l)
     (X : Iut.HyperbolicOrbicurve A.K) where
-  rank_one_quotient : TorsionRankOneQuotientData l A
+  rank_one_quotient :
+    TorsionRankOneQuotientData l (A.curve.baseChange A.K)
   originMap :
     {q : rank_one_quotient.Quotient // q ≠ 0} →
       Iut.OrbicurveBoundaryCusp X

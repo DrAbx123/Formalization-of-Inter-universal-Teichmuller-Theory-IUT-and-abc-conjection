@@ -1,0 +1,18 @@
+import LeanFormal.IUT.IUTI.InitialTheta.SourceDefinition31Quantifiers
+import LeanFormal.IUT.IUTI.InitialTheta.SourceTorsionTransport
+import LeanFormal.IUT.IUTI.InitialTheta.SourcePlaceSelection
+import LeanFormal.IUT.IUTI.InitialTheta.SourceArithmeticPrelude
+import LeanFormal.IUT.IUTI.InitialTheta.SourceCompletion
+import LeanFormal.IUT.IUTI.InitialTheta.SourceSignQuotientConstruction
+import LeanFormal.IUT.IUTI.InitialTheta.SourceClauseConstructors
+import LeanFormal.IUT.IUTI.InitialTheta.SourceTorsionRankOneQuotient
+
+#print axioms LeanFormal.IUT.InitialThetaSource.sourceNativeInitialThetaData_predicate
+#print axioms LeanFormal.IUT.InitialThetaSource.SourceCompletion.toSourceNativeInitialThetaData
+#print axioms LeanFormal.IUT.InitialThetaSource.sourceCompletion_to_sourceNative
+#print axioms LeanFormal.IUT.InitialThetaSource.SourceFbarExtension.canonical
+#print axioms LeanFormal.IUT.InitialThetaSource.SourceArithmeticPrelude.canonical
+#print axioms LeanFormal.IUT.InitialThetaSource.PuncturedEllipticCurve.initialThetaKToFTorsionTransport
+#print axioms LeanFormal.IUT.InitialThetaSource.SourcePlaceSelection.selected_bad_place_mem
+#print axioms LeanFormal.IUT.InitialThetaSource.SourceSignQuotientGeometricCore.toSourceSignQuotientData
+#print axioms LeanFormal.IUT.InitialThetaSource.SourceClauseConstructionWitness.sourceData

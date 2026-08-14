@@ -1,4 +1,4 @@
-# LeanFormal IUT audit project
+# Unfinished 100% AI LeanFormal IUT audit project
 
 This repository is a source-oriented, auditable Lean 4 project for the
 bottom-up study of Mochizuki's IUT I--IV papers and the ABC bridge.  The
